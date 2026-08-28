@@ -108,13 +108,8 @@
   white-space: nowrap;
 }
 
-.tagline span,
 .galleryLink span {
   color: var(--proto-electric, #ff4d1f);
-}
-
-.tagline span {
-  padding-inline: 0.35rem;
 }
 
 .actions {

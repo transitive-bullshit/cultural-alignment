@@ -4,13 +4,13 @@ import { SiteHeader } from '@/components/site-header'
 import { toSpatialGalleryItems } from '@/features/spatial-gallery/gallery-items'
 import { SpatialGallery } from '@/features/spatial-gallery/spatial-gallery'
 import { contentCatalog } from '@/lib/content/snapshot'
+import { siteSummary } from '@/lib/site'
 
 import styles from '@/features/spatial-gallery/gallery-page-shell.module.css'
 
 export const metadata: Metadata = {
   title: 'Cultural Alignment',
-  description:
-    'Explore familiar film and television scenes as analogies for unfamiliar AI safety problems.'
+  description: siteSummary
 }
 
 const featuredItems = toSpatialGalleryItems(

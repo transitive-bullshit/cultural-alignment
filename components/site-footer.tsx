@@ -2,7 +2,13 @@ import Link from 'next/link'
 
 import { SiteWordmark } from '@/components/site-wordmark'
 import contentManifest from '@/content/snapshot/manifest.json'
-import { notionSourceUrl, repositoryUrl, xProfileUrl } from '@/lib/site'
+import {
+  notionSourceUrl,
+  repositoryUrl,
+  siteDescription,
+  siteTagline,
+  xProfileUrl
+} from '@/lib/site'
 
 import styles from './site-footer.module.css'
 
@@ -27,8 +33,7 @@ export function SiteFooter() {
       <div className={styles.lead}>
         <SiteWordmark className={styles.wordmark} />
         <p>
-          Familiar stories for unfamiliar AI problems. An open-source archive of
-          cultural analogies for AI safety and alignment.
+          {siteTagline}. {siteDescription}
         </p>
       </div>
 

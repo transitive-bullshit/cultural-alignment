@@ -24,6 +24,7 @@ export function SortableScenarioCollection({
   readonly imageTreatment: ScenarioCollectionImageTreatment
 }) {
   const [sort, setSort] = useState<ScenarioSort>(DEFAULT_SORT)
+  const [announcement, setAnnouncement] = useState('')
   const id = useId()
   const collectionId = `${id}-scenarios`
   const sortLabelId = `${id}-sort-label`
@@ -50,6 +51,7 @@ export function SortableScenarioCollection({
     if (!isScenarioSort(value)) return
 
     setSort(value)
+    setAnnouncement(getSortAnnouncement(value))
     persistPreference(value)
   }
 
@@ -80,11 +82,15 @@ export function SortableScenarioCollection({
             Oldest first
           </ToggleGroupItem>
         </ToggleGroup>
+        <span className='sr-only' role='status' aria-live='polite'>
+          {announcement}
+        </span>
       </div>
 
       <ol
         id={collectionId}
         className={styles.collection}
+        data-scenario-collection
         data-image-treatment={imageTreatment}
         data-layout='continuous'
       >
@@ -116,4 +122,11 @@ function persistPreference(value: ScenarioSort) {
 
 function parsePreference(value: string | null): ScenarioSort {
   return isScenarioSort(value) ? value : DEFAULT_SORT
+}
+
+function getSortAnnouncement(value: ScenarioSort) {
+  if (value === 'newest') return 'Scenes sorted newest first'
+  if (value === 'oldest') return 'Scenes sorted oldest first'
+
+  return 'Scenes restored to their listed order'
 }

@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 import { SiteWordmark } from '@/components/site-wordmark'
 import { GlobalSearch } from '@/features/search/global-search'
+import { siteTagline } from '@/lib/site'
 import { cn } from '@/lib/utils'
 
 import styles from './site-header.module.css'
@@ -57,10 +58,7 @@ export function SiteHeader({
             </ol>
           </nav>
         ) : tagline ? (
-          <p className={styles.tagline}>
-            Familiar stories <span aria-hidden='true'>/</span> unfamiliar AI
-            problems
-          </p>
+          <p className={styles.tagline}>{siteTagline}</p>
         ) : context ? (
           <p className={styles.context}>{context}</p>
         ) : null}

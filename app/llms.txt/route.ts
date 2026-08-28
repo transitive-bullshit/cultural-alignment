@@ -1,5 +1,10 @@
 import { contentCatalog } from '@/lib/content/snapshot'
-import { repositoryUrl, siteUrl } from '@/lib/site'
+import {
+  repositoryUrl,
+  siteDescription,
+  siteTagline,
+  siteUrl
+} from '@/lib/site'
 
 export const dynamic = 'force-static'
 
@@ -12,9 +17,9 @@ export function GET() {
 
   const markdown = `# Cultural Alignment
 
-> Familiar stories for unfamiliar AI problems.
+> ${siteTagline}.
 
-Cultural Alignment is an open-source archive that explains AI safety and alignment concepts through scenes from film and television.
+${siteDescription}
 
 Each scenario is an analogy rather than a substitute for research. Scenario dossiers explain both why an analogy works and where it breaks. The structured scenario data is released under CC0; third-party imagery, clips, titles, and trademarks remain the property of their respective owners.
 

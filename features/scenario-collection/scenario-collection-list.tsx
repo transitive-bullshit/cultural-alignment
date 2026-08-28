@@ -37,6 +37,7 @@ export function ScenarioCollectionList({
   return (
     <ol
       className={styles.collection}
+      data-scenario-collection
       data-image-treatment={imageTreatment}
       data-layout={layout}
     >

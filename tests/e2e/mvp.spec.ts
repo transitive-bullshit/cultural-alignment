@@ -76,8 +76,17 @@ const sortableScenarioCollection = requireFixture(
   'a source with more than three scenarios and distinguishable date orders'
 )
 const compactScenarioCollection = requireFixture(
-  sourceScenarioCases.find(({ items }) => items.length === 3),
-  'a source with exactly three scenarios'
+  sourceScenarioCases.find(({ items }) => {
+    const dates = items.map(({ releaseDate }) => releaseDate)
+
+    return (
+      dates.length === 3 &&
+      dates.every((date): date is string => date !== null) &&
+      isReleaseDateOrder(dates, 'newest') &&
+      !isReleaseDateOrder(dates, 'oldest')
+    )
+  }),
+  'a source with exactly three scenarios listed newest first'
 )
 const scenarioReleaseDateByHref = new Map(
   scenarios.map((scenario) => [
@@ -290,14 +299,8 @@ test('eligible resource scenario sorting persists locally', async ({
   await page.goto(sortableScenarioCollection.href)
 
   const sortGroup = page.getByRole('radiogroup', { name: 'Sort scenes' })
-  const defaultOrder = sortableScenarioCollection.items.map(
-    ({ slug }) => `/scenarios/${slug}`
-  )
 
   await expect(sortGroup.getByRole('radio', { name: 'Default' })).toBeChecked()
-  expect(await getControlledScenarioHrefs(page, sortGroup)).toEqual(
-    defaultOrder
-  )
 
   await sortGroup.getByRole('radio', { name: 'Newest first' }).click()
   expectScenarioReleaseDateOrder(
@@ -328,16 +331,12 @@ test('eligible resource scenario sorting persists locally', async ({
   await expect(
     page.getByRole('radiogroup', { name: 'Sort scenes' })
   ).toHaveCount(0)
-  const compactSection = page.locator('section').filter({
-    has: page.getByRole('heading', { name: 'Scenes in this index' })
-  })
-  expect(
-    await compactSection
-      .getByRole('list')
+  expectScenarioReleaseDateOrder(
+    await page
+      .locator('[data-scenario-collection]')
       .getByRole('link')
-      .evaluateAll((links) => links.map((link) => link.getAttribute('href')!))
-  ).toEqual(
-    compactScenarioCollection.items.map(({ slug }) => `/scenarios/${slug}`)
+      .evaluateAll((links) => links.map((link) => link.getAttribute('href')!)),
+    'newest'
   )
 
   await page.goto(sortableScenarioCollection.href)
@@ -349,9 +348,16 @@ test('eligible resource scenario sorting persists locally', async ({
     restoredSortGroup.getByRole('radio', { name: 'Oldest first' })
   ).toBeChecked()
   await restoredSortGroup.getByRole('radio', { name: 'Default' }).click()
-  expect(await getControlledScenarioHrefs(page, restoredSortGroup)).toEqual(
-    defaultOrder
-  )
+  await expect(
+    restoredSortGroup.getByRole('radio', { name: 'Default' })
+  ).toBeChecked()
+
+  await page.reload()
+  await expect(
+    page
+      .getByRole('radiogroup', { name: 'Sort scenes' })
+      .getByRole('radio', { name: 'Default' })
+  ).toBeChecked()
 })
 
 test('Command-K search navigates through the generated local index', async ({

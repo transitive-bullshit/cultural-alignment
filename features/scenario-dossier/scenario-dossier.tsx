@@ -7,7 +7,7 @@ import { SiteHeader } from '@/components/site-header'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import { SpoilerWarning } from '@/features/spoiler/spoiler-warning'
 import type { ScenarioPage, TaxonomyLink } from '@/lib/content/catalog'
-import { siteUrl } from '@/lib/site'
+import { siteTagline, siteUrl } from '@/lib/site'
 
 import { CopyScenarioMarkdown } from './copy-scenario-markdown'
 import { ScenarioMedia } from './scenario-media'
@@ -25,7 +25,7 @@ export function ScenarioDossier({ scenario }: { scenario: ScenarioPage }) {
   return (
     <main className={`${styles.page} experience-scope`} data-scenario-dossier>
       <SiteHeader
-        context='Familiar stories for unfamiliar AI problems.'
+        context={siteTagline}
         galleryTransitionTypes={['scenario-back']}
       />
 

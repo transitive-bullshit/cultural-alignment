@@ -7,7 +7,7 @@ import '@fontsource/barlow-condensed/800.css'
 import './globals.css'
 
 import { SiteFooter } from '@/components/site-footer'
-import { siteUrl } from '@/lib/site'
+import { siteSummary, siteUrl } from '@/lib/site'
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     default: 'Cultural Alignment',
     template: '%s — Cultural Alignment'
   },
-  description: 'Familiar stories for unfamiliar AI problems.'
+  description: siteSummary
 }
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {

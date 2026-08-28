@@ -16,55 +16,53 @@ export default function PrivacyPage() {
     <InformationPage
       context='Privacy / policy'
       eyebrow='Last updated 29 August 2026'
-      title='A small site with a small data footprint.'
+      title='What this site stores—and what it does not.'
       introduction={
         <p>
           Cultural Alignment has no accounts, comments, advertising, or
-          first-party tracking. This page explains the limited information that
-          may still be handled when you visit.
+          first-party tracking. The remaining data flows are routine web
+          requests, searches, local preferences, and media you choose to load.
         </p>
       }
     >
-      <InformationSection index='01' title='What the site handles'>
+      <InformationSection index='01' title='Requests and search'>
         <p>
-          The site does not ask you to provide personal information and does not
-          currently include its own analytics or advertising scripts. Like most
-          websites, the hosting and network providers may process routine
-          request data such as an IP address, browser details, requested URL,
-          and timestamps for delivery, reliability, and security.
+          The site does not ask for personal information or run its own
+          analytics. Hosting and network providers may process routine request
+          data—such as an IP address, browser details, requested URL, and
+          timestamps—to deliver and secure the site.
         </p>
         <p>
-          Searches from the command palette run against a local index in your
-          browser. Searches submitted on the full search page appear in the page
-          URL and may therefore be present in ordinary server logs or browser
-          history.
+          Command-palette searches stay in your browser. Searches on the full
+          search page appear in the page URL, so they may also appear in browser
+          history and routine server logs.
         </p>
       </InformationSection>
 
-      <InformationSection index='02' title='Local preferences'>
+      <InformationSection index='02' title='Preferences on this device'>
         <p>
-          The spoiler-warning dismissal and your preferred scenario sort order
-          are stored in your browser&rsquo;s local storage so the site can
-          remember those choices. They are not used to identify you, and you can
-          remove them by clearing this site&rsquo;s browser data.
+          This site stores two choices in your browser&rsquo;s local storage:
+          whether you dismissed the spoiler warning, and your preferred scenario
+          sort order. They are not used to identify you. Clear this site&rsquo;s
+          browser data to remove them.
         </p>
       </InformationSection>
 
-      <InformationSection index='03' title='Video and external services'>
+      <InformationSection index='03' title='YouTube and outbound links'>
         <p>
-          Scenario pages can include YouTube clips. The YouTube player and its
-          API are loaded only after you choose to play a clip; from that point,
-          YouTube may receive information under its own privacy policy. Links to
-          Notion, GitHub, X, and other references also take you to services with
-          their own data practices.
+          Scenario pages can include YouTube clips. The player and YouTube API
+          load only after you choose to play one. From that point, YouTube may
+          receive information under its own privacy policy. Following a link to
+          Notion, GitHub, X, or another referenced site takes you to that
+          service, where its privacy policy applies.
         </p>
       </InformationSection>
 
-      <InformationSection index='04' title='Questions and changes'>
+      <InformationSection index='04' title='Updates and contact'>
         <p>
-          This policy will be updated if the site adds accounts, analytics,
-          submissions, or another feature that materially changes its data use.
-          For privacy questions, email{' '}
+          If accounts, analytics, submissions, or another feature materially
+          changes the site&rsquo;s data use, this policy and its date will be
+          updated. For privacy questions, email{' '}
           <a href='mailto:travis@transitivebullsh.it'>
             travis@transitivebullsh.it
           </a>
