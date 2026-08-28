@@ -7,6 +7,13 @@ import { cn } from '@/lib/utils'
 import styles from './site-header.module.css'
 
 export type SiteHeaderProps = {
+  readonly breadcrumb?: {
+    readonly current: string
+    readonly parent: {
+      readonly href: string
+      readonly label: string
+    }
+  }
   readonly className?: string
   readonly context?: string
   readonly galleryTransitionTypes?: string[]
@@ -15,6 +22,7 @@ export type SiteHeaderProps = {
 }
 
 export function SiteHeader({
+  breadcrumb,
   className,
   context,
   galleryTransitionTypes,
@@ -29,7 +37,26 @@ export function SiteHeader({
       <SiteWordmark className={styles.wordmark} />
 
       <div className={styles.center}>
-        {tagline ? (
+        {breadcrumb ? (
+          <nav className={styles.breadcrumb} aria-label='Breadcrumb'>
+            <ol>
+              <li>
+                <Link
+                  className={styles.breadcrumbLink}
+                  href={breadcrumb.parent.href}
+                >
+                  {breadcrumb.parent.label}
+                </Link>
+              </li>
+              <li className={styles.currentBreadcrumb}>
+                <span className={styles.breadcrumbSeparator} aria-hidden='true'>
+                  /
+                </span>
+                <span aria-current='page'>{breadcrumb.current}</span>
+              </li>
+            </ol>
+          </nav>
+        ) : tagline ? (
           <p className={styles.tagline}>
             Familiar stories <span aria-hidden='true'>/</span> unfamiliar AI
             problems

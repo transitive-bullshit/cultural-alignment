@@ -102,8 +102,14 @@ export function ResourceDetailPage({
   return (
     <main className={`experience-scope ${styles.page}`}>
       <SiteHeader
+        breadcrumb={{
+          current: resource.title,
+          parent: {
+            href: presentation.indexHref,
+            label: presentation.singular
+          }
+        }}
         inset
-        context={`${presentation.singular} / ${formatScenarioCount(resource.scenarioCount)}`}
       />
 
       <section className={styles.detailIntro}>

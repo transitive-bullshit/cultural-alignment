@@ -1,7 +1,10 @@
 import { expect, test } from '@playwright/test'
 
+import concepts from '../../content/snapshot/concepts.json' with { type: 'json' }
+import riskFamilies from '../../content/snapshot/risk-families.json' with { type: 'json' }
 import scenarios from '../../content/snapshot/scenarios.json' with { type: 'json' }
 import searchDocuments from '../../content/snapshot/search-documents.json' with { type: 'json' }
+import sources from '../../content/snapshot/sources.json' with { type: 'json' }
 
 const videoScenario = scenarios.find(
   (scenario) => scenario.featured && scenario.video
@@ -9,6 +12,25 @@ const videoScenario = scenarios.find(
 const searchTarget = searchDocuments.find(
   (document) => document.kind === 'concept'
 )!
+
+const resourceBreadcrumbCases = [
+  {
+    indexHref: '/risk-families',
+    resource: riskFamilies[0]!
+  },
+  {
+    indexHref: '/concepts',
+    resource: concepts[0]!
+  },
+  {
+    indexHref: '/sources',
+    resource: sources[0]!
+  }
+] as const
+
+const longestConcept = concepts.reduce((longest, concept) =>
+  concept.title.length > longest.title.length ? concept : longest
+)
 
 test('gallery state, Markdown copy, and media controls work across a dossier round trip', async ({
   context,
@@ -68,6 +90,73 @@ test('gallery state, Markdown copy, and media controls work across a dossier rou
   await media.locator('[data-scenario-media-toggle]').click()
   await expect(media).not.toHaveAttribute('data-playing', 'true')
   await expect(media).toHaveAttribute('data-controls-visible', 'true')
+})
+
+test('resource detail breadcrumbs identify current records and navigate up', async ({
+  page
+}) => {
+  for (const { indexHref, resource } of resourceBreadcrumbCases) {
+    await page.goto(`${indexHref}/${resource.slug}`)
+
+    const breadcrumb = page.getByRole('navigation', { name: 'Breadcrumb' })
+    const parent = breadcrumb.getByRole('link')
+    const current = breadcrumb.locator('[aria-current="page"]')
+
+    await expect(breadcrumb).toBeVisible()
+    await expect(parent).toHaveAttribute('href', indexHref)
+    await expect(current).toHaveText(resource.title)
+
+    await parent.click()
+    await expect(page).toHaveURL(indexHref)
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+  }
+})
+
+test('long resource breadcrumbs stay within the desktop header', async ({
+  page
+}) => {
+  await page.setViewportSize({ width: 1024, height: 900 })
+  await page.goto(`/concepts/${longestConcept.slug}`)
+
+  const breadcrumb = page.getByRole('navigation', { name: 'Breadcrumb' })
+  await expect(breadcrumb).toBeVisible()
+
+  const layout = await breadcrumb.evaluate((element) => {
+    const header = element.closest('header')
+    const wordmark = header?.querySelector<HTMLAnchorElement>('a[href="/"]')
+    const primaryNavigation = header?.querySelector<HTMLElement>(
+      'nav[aria-label="Primary navigation"]'
+    )
+    const parent = element.querySelector<HTMLAnchorElement>('a')
+    const current = element.querySelector<HTMLElement>('[aria-current="page"]')
+
+    if (!wordmark || !primaryNavigation || !parent || !current) return null
+
+    const breadcrumbBounds = element.getBoundingClientRect()
+    const parentText = document.createRange()
+    parentText.selectNodeContents(parent)
+
+    return {
+      clearsPrimaryNavigation:
+        breadcrumbBounds.right <=
+        primaryNavigation.getBoundingClientRect().left,
+      clearsWordmark:
+        breadcrumbBounds.left >= wordmark.getBoundingClientRect().right,
+      currentIsTruncated: current.scrollWidth > current.clientWidth,
+      parentIsUnderlined:
+        getComputedStyle(parent).textDecorationLine.includes('underline'),
+      parentLineCount: parentText.getClientRects().length
+    }
+  })
+
+  expect(layout).toEqual({
+    clearsPrimaryNavigation: true,
+    clearsWordmark: true,
+    currentIsTruncated: true,
+    parentIsUnderlined: true,
+    parentLineCount: 1
+  })
+  expect(await hasHorizontalOverflow(page)).toBe(false)
 })
 
 test('Command-K search navigates through the generated local index', async ({
