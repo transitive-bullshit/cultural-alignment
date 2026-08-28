@@ -69,6 +69,16 @@ body {
   font-family: var(--font-geist-sans), sans-serif;
 }
 
+body:has([data-site-footer='hidden']) [data-site-footer-root] {
+  display: none;
+}
+
+[data-slot='dialog-overlay'][data-motion='none'],
+[data-slot='dialog-content'][data-motion='none'] {
+  animation: none !important;
+  transition: none !important;
+}
+
 .experience-scope {
   --proto-paper: #f4ecdd;
   --proto-raised-paper: #f8f0df;

@@ -9,8 +9,11 @@ type ScrambleLinkProps = {
   readonly children: string
   readonly className?: string
   readonly delay?: number
+  readonly duration?: number
   readonly external?: boolean
   readonly href: string
+  readonly label?: string
+  readonly prefix?: string
 }
 
 /**
@@ -21,8 +24,11 @@ export function ScrambleLink({
   children,
   className,
   delay = 0,
+  duration = 420,
   external = false,
-  href
+  href,
+  label,
+  prefix = ''
 }: ScrambleLinkProps) {
   const copyRef = useRef<HTMLSpanElement>(null)
   const frameRef = useRef<number | null>(null)
@@ -47,8 +53,6 @@ export function ScrambleLink({
     }
 
     const startedAt = performance.now()
-    const duration = 420
-
     const draw = (now: number) => {
       const progress = Math.min((now - startedAt) / duration, 1)
       const eased = 1 - Math.pow(1 - progress, 3)
@@ -72,7 +76,7 @@ export function ScrambleLink({
     }
 
     frameRef.current = requestAnimationFrame(draw)
-  }, [children, stop])
+  }, [children, duration, stop])
 
   useEffect(() => {
     const copy = copyRef.current
@@ -100,18 +104,27 @@ export function ScrambleLink({
 
   const content = (
     <>
-      <span className='sr-only'>{children}</span>
-      <span ref={copyRef} aria-hidden='true'>
+      <span className='sr-only'>
+        {prefix}
         {children}
+      </span>
+      <span aria-hidden='true'>
+        {prefix}
+        <span ref={copyRef}>{children}</span>
       </span>
     </>
   )
 
+  const scrambleOnHover = () => {
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      scramble()
+    }
+  }
+
   const interactionProps = {
-    'aria-label': children,
+    'aria-label': label ?? `${prefix}${children}`,
     className,
-    onFocus: scramble,
-    onPointerEnter: scramble
+    onPointerEnter: scrambleOnHover
   }
 
   if (external) {

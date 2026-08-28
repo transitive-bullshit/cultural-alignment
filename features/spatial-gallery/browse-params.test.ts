@@ -8,33 +8,30 @@ import {
 const validFamilies = new Set(['misalignment', 'malicious-use'])
 
 describe('browse gallery URL state', () => {
-  it('parses a valid single family and oldest-first sort', () => {
+  it('parses a valid single family', () => {
     expect(
       parseBrowseGalleryParams(
         { family: 'misalignment', sort: 'release-asc' },
         validFamilies
       )
-    ).toEqual({ family: 'misalignment', sort: 'release-asc' })
+    ).toEqual({ family: 'misalignment' })
   })
 
-  it('falls back to all families and newest first for invalid input', () => {
+  it('falls back to all families for invalid input', () => {
     expect(
       parseBrowseGalleryParams(
         { family: ['missing', 'misalignment'], sort: 'sideways' },
         validFamilies
       )
-    ).toEqual({ family: null, sort: 'release-desc' })
+    ).toEqual({ family: null })
   })
 
-  it('builds stable URLs that always expose sort state', () => {
-    expect(
-      createBrowseGalleryHref({ family: null, sort: 'release-desc' })
-    ).toBe('/scenarios?sort=release-desc')
+  it('builds stable filter URLs without obsolete sort state', () => {
+    expect(createBrowseGalleryHref({ family: null })).toBe('/scenarios')
     expect(
       createBrowseGalleryHref({
-        family: 'malicious-use',
-        sort: 'release-asc'
+        family: 'malicious-use'
       })
-    ).toBe('/scenarios?family=malicious-use&sort=release-asc')
+    ).toBe('/scenarios?family=malicious-use')
   })
 })

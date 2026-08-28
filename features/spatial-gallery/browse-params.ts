@@ -1,8 +1,5 @@
-import type { ScenarioListQuery } from '@/lib/content/catalog'
-
 export type BrowseGalleryParams = Readonly<{
   family: string | null
-  sort: NonNullable<ScenarioListQuery['sort']>
 }>
 
 export type BrowseSearchParams = Readonly<
@@ -14,14 +11,12 @@ export function parseBrowseGalleryParams(
   validFamilySlugs: ReadonlySet<string>
 ): BrowseGalleryParams {
   const requestedFamily = firstValue(searchParams.family)
-  const requestedSort = firstValue(searchParams.sort)
 
   return {
     family:
       requestedFamily && validFamilySlugs.has(requestedFamily)
         ? requestedFamily
-        : null,
-    sort: requestedSort === 'release-asc' ? 'release-asc' : 'release-desc'
+        : null
   }
 }
 
@@ -29,9 +24,9 @@ export function createBrowseGalleryHref(params: BrowseGalleryParams) {
   const searchParams = new URLSearchParams()
 
   if (params.family) searchParams.set('family', params.family)
-  searchParams.set('sort', params.sort)
+  const query = searchParams.toString()
 
-  return `/scenarios?${searchParams.toString()}`
+  return query ? `/scenarios?${query}` : '/scenarios'
 }
 
 function firstValue(value: string | readonly string[] | undefined) {

@@ -82,46 +82,6 @@ export function BrowseToolbar({
       <p className={styles.resultCount} aria-live='polite'>
         <strong>{String(resultCount).padStart(3, '0')}</strong> scenarios
       </p>
-
-      <ToggleGroup
-        className={styles.sortList}
-        type='single'
-        value={params.sort}
-        variant='outline'
-        size='sm'
-        aria-label='Sort by release date'
-      >
-        <ToggleGroupItem
-          className={styles.sortLink}
-          value='release-desc'
-          asChild
-        >
-          <Link
-            href={createBrowseGalleryHref({
-              ...params,
-              sort: 'release-desc'
-            })}
-            scroll={false}
-          >
-            Newest
-          </Link>
-        </ToggleGroupItem>
-        <ToggleGroupItem
-          className={styles.sortLink}
-          value='release-asc'
-          asChild
-        >
-          <Link
-            href={createBrowseGalleryHref({
-              ...params,
-              sort: 'release-asc'
-            })}
-            scroll={false}
-          >
-            Oldest
-          </Link>
-        </ToggleGroupItem>
-      </ToggleGroup>
     </nav>
   )
 }

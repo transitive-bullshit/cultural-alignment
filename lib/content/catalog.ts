@@ -11,6 +11,7 @@ import {
   type SearchDocument,
   type SearchDocumentKind
 } from './search-documents'
+import { discoverScenarios } from './scenario-discovery'
 import { validateContentSnapshot } from './validate'
 
 export type ScenarioListQuery = {
@@ -53,16 +54,23 @@ export type GalleryScenario = {
   readonly image: ContentImage
 }
 
+export type RelatedScenario = GalleryScenario & {
+  readonly sharedRiskFamilies: readonly TaxonomyLink[]
+  readonly sharedConcepts: readonly TaxonomyLink[]
+}
+
 export type ScenarioPage = {
   readonly id: string
   readonly slug: string
   readonly title: string
   readonly source: SourceIdentity & {
+    readonly href: string
     readonly description?: string
     readonly links: readonly {
       readonly label: string
       readonly href: string
     }[]
+    readonly scenarioCount: number
   }
   readonly episode: ScenarioRecord['episode']
   readonly releaseDate: string | null
@@ -73,6 +81,8 @@ export type ScenarioPage = {
   readonly caveats: string
   readonly riskFamilies: readonly TaxonomyLink[]
   readonly concepts: readonly TaxonomyLink[]
+  readonly moreFromSource: readonly GalleryScenario[]
+  readonly relatedScenarios: readonly RelatedScenario[]
 }
 
 export type ResourceSummary = {
@@ -155,10 +165,14 @@ export function createContentCatalog(input: unknown): ContentCatalog {
       image: scenario.image
     } satisfies GalleryScenario
   })
+  const scenarioCardById = new Map(
+    scenarioCards.map((scenario) => [scenario.id, scenario])
+  )
 
   const scenarioPageBySlug = new Map(
     snapshot.scenarios.map((scenario) => {
       const source = getRequired(sourceById, scenario.sourceId)
+      const discovery = discoverScenarios(scenario, snapshot.scenarios)
 
       const page = {
         id: scenario.id,
@@ -166,8 +180,10 @@ export function createContentCatalog(input: unknown): ContentCatalog {
         title: scenario.title,
         source: {
           ...toSourceIdentity(source),
+          href: `/sources/${source.slug}`,
           description: source.description,
-          links: source.links ?? []
+          links: source.links ?? [],
+          scenarioCount: scenariosBySourceId.get(source.id)?.length ?? 0
         },
         episode: scenario.episode,
         releaseDate: scenario.releaseDate,
@@ -195,7 +211,35 @@ export function createContentCatalog(input: unknown): ContentCatalog {
             title: concept.title,
             href: `/concepts/${concept.slug}`
           }
-        })
+        }),
+        moreFromSource: discovery.moreFromSource.map((related) =>
+          getRequired(scenarioCardById, related.id)
+        ),
+        relatedScenarios: discovery.relatedScenarios.map(
+          ({ scenario: related, sharedConceptIds, sharedRiskFamilyIds }) => ({
+            ...getRequired(scenarioCardById, related.id),
+            sharedRiskFamilies: sharedRiskFamilyIds.map((id) => {
+              const family = getRequired(riskFamilyById, id)
+
+              return {
+                id: family.id,
+                slug: family.slug,
+                title: family.title,
+                href: `/risk-families/${family.slug}`
+              }
+            }),
+            sharedConcepts: sharedConceptIds.map((id) => {
+              const concept = getRequired(conceptById, id)
+
+              return {
+                id: concept.id,
+                slug: concept.slug,
+                title: concept.title,
+                href: `/concepts/${concept.slug}`
+              }
+            })
+          })
+        )
       } satisfies ScenarioPage
 
       return [scenario.slug, page] as const
@@ -223,9 +267,6 @@ export function createContentCatalog(input: unknown): ContentCatalog {
     Object.values(resourceSummaries)
       .flat()
       .map((resource) => [resourceKey(resource.kind, resource.id), resource])
-  )
-  const scenarioCardById = new Map(
-    scenarioCards.map((scenario) => [scenario.id, scenario])
   )
   const resourcePageByKind = {
     source: new Map(

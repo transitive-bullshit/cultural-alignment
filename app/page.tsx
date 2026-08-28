@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import { GalleryPageHeader } from '@/features/spatial-gallery/gallery-page-header'
+import { SiteHeader } from '@/components/site-header'
 import { toSpatialGalleryItems } from '@/features/spatial-gallery/gallery-items'
 import { SpatialGallery } from '@/features/spatial-gallery/spatial-gallery'
 import { contentCatalog } from '@/lib/content/snapshot'
@@ -26,8 +26,11 @@ export default function HomePage() {
   }
 
   return (
-    <main className={`experience-scope ${styles.page}`}>
-      <GalleryPageHeader page='featured' />
+    <main
+      className={`experience-scope ${styles.page}`}
+      data-site-footer='hidden'
+    >
+      <SiteHeader className={styles.galleryHeader} tagline />
       <SpatialGallery
         historyKey='featured'
         items={featuredItems}

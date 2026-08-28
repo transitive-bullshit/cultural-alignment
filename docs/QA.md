@@ -33,20 +33,20 @@ Final integration pass on 2026-08-28:
 - Featured scenarios: 25
 - Two established-state syncs: byte-identical JSON and media hashes
 
-## Review matrix
+## Completed review coverage
 
-Desktop craft:
+- Chrome production preview at 1440×900 desktop and 390×844 phone
+- 2560×900 Chrome wrap/duplication stress capture
+- Mouse wheel, pointer travel/reversal, hover picking, selection, direct URLs, and browser Back
+- Mobile-width drag/tap, filter controls, Dossier reading, spoiler, and video states
+- Eight automated Chromium journeys covering the critical route and persistence paths
 
-- Chromium: 1440×900 and 1920×1080
-- Safari: 1440×900 and 1920×1080
-- Mouse wheel and high-resolution trackpad
-- Standard and Retina density
+## Creator follow-up coverage
 
-Functional responsive:
-
-- Phone: 390×844
-- One tablet viewport
-- Touch drag/tap, orientation change, direct URL, and browser Back
+- Physical macOS high-resolution trackpad Back/Forward feel
+- Safari desktop at 1440×900 and 1920×1080
+- Chrome desktop at 1920×1080 and Retina density
+- One physical tablet, including touch orientation change
 
 ## Manual checks
 
@@ -54,7 +54,7 @@ Functional responsive:
 - Left/right deformation opposes correctly and settles completely flat
 - Exact projected copy alone receives vividness and brackets
 - Pointer picking remains aligned during peak deformation
-- Filter/sort changes update URL and never show excluded cards transiently
+- Family-filter changes update the URL and never show excluded cards transiently
 - Scenario navigation and browser Back restore field position and selection
 - Whole-frame video activation, pause/resume, seeking, and Return to still
 - Missing-video scenario remains composed
@@ -73,23 +73,34 @@ The selected prototype evidence is under `docs/outputs/gate-b`, including 1440×
 - Chrome production preview checked at 1440×900 and 390×844.
 - Fast vertical-wheel travel produced the intended opposing edge shear and returned to a level surface without a blank seam or visible copy pop.
 - Exact filtered-gallery selection and continuous position restored after scenario navigation and browser Back.
-- Direct mobile filter URLs keep the selected family fully visible while both release-sort controls remain available.
+- Direct mobile filter URLs keep the selected family and result count fully visible.
 - The long “K-2SO is Reprogrammed” H1 fits its 566 px desktop grid column without a character cap, forced break, or horizontal overflow.
 - Search layering hides the gallery crosshair over the portalled dialog and returns grouped, working destinations.
 - Risk-family pivots, the designed 404, the missing-video state, and mobile Dossier hierarchy were visually reviewed in the production build.
 
 ## Performance baseline
 
-- Featured page: 25 gallery images observed, 934,914 bytes of committed WebP media.
-- Full gallery initial settled view: 68 gallery requests observed, 2,775,750 bytes of committed WebP media; decoded residency is hard-capped at 64.
+- Featured page: 25 gallery images observed, 934,914 bytes of generated WebP media.
+- Full gallery initial settled view: 68 gallery requests observed, 2,775,750 bytes of generated WebP media; decoded residency is hard-capped at 64.
 - Estimated raw RGBA residency at that ceiling: about 132 MB before browser/GPU bookkeeping.
-- Complete optional media corpus: 7,307,468 bytes of gallery WebP and 21,585,068 bytes of detail WebP; it is not eagerly requested or uploaded.
+- Complete optional media corpus: 7,307,468 bytes of gallery WebP and 21,585,068 bytes of detail WebP; these are intended to ship as static assets but are neither eagerly requested nor simultaneously GPU-resident.
 - Built client static directory: 2.4 MB. Search index: 207,262 bytes.
 - Rapid travel, reversal, hover, filter changes, and gallery/detail/Back cycles remained visually responsive on the primary Chrome review machine; exact frame-time instrumentation was not available through the review browser.
+
+## Release packaging follow-ups
+
+- `public/media/generated` contains the 358 synchronized files locally but is currently ignored by Git, so a clean GitHub checkout will not contain scenario stills and `pnpm content:validate` will fail. The product decision is to keep builds independent of Notion: remove the ignore and commit the generated assets, or establish an explicit artifact-producing build step before deployment. Do not solve this by adding a runtime Notion dependency.
+- The configured pre-commit hook invokes `npx lint-staged`, but `lint-staged` is not a project dependency. Add the development dependency or update the hook before relying on it in a fresh or offline checkout.
+
+## Known content limitations
+
+- All 129 source records currently have `kind: "unknown"` and no authored descriptions or external links.
+- All 65 concept descriptions use the same functional index copy rather than authored concept definitions.
+- Risk-family and concept artwork remains a separate follow-up; current relational pivots intentionally use no placeholder art.
 
 ## Known environment limitations
 
 - Automated wheel events cannot reproduce browser-owned macOS trackpad history swipes faithfully; final native Back/Forward feel requires one physical trackpad check.
 - Exact WebGL screenshots vary by GPU and are reviewed manually rather than used as pixel-diff test oracles.
 - React Three Fiber currently emits a non-blocking upstream `THREE.Clock` deprecation warning; application code does not construct `THREE.Clock`.
-- Deployment and a Vercel preview are intentionally owned by the creator.
+- Deployment and a Vercel preview are intentionally owned by the creator after the release-packaging item above is resolved.

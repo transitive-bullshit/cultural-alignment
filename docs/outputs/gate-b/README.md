@@ -6,7 +6,7 @@ Status: approved and archived. The creator selected Dossier, approved the spatia
 
 The `/prototypes` routes and rejected variant code were removed after approval. Their production replacements are `/`, `/scenarios`, `/scenarios/[slug]`, and the source, risk-family, and concept pivots. This directory preserves the fixed captures and transition recording as decision evidence only.
 
-The user explicitly excluded deployment from this workstream, so these routes are served by the local production preview rather than a Vercel URL.
+The user explicitly excluded deployment from this workstream, so the production replacement routes were reviewed in a local production preview rather than at a Vercel URL.
 
 ## Review artifacts
 
@@ -51,12 +51,12 @@ The user explicitly excluded deployment from this workstream, so these routes ar
 - Dossier opening limited to media and title identity, with H1 before a vertical left-× source list; matching source/episode movie labels collapse to one row
 - Viewport-centered desktop header copy, section 02 as the sole prominent reading panel, and identical reserved border/padding geometry across sections 01–03
 - Viewport-triggered stagger and hover/focus text scramble
-- Click-anywhere YouTube play/pause that preserves the mounted player and playback position, retained Play clip/Return to still controls, contextual media cursor, and composed no-video state
+- Click-anywhere YouTube play/pause with a once-mounted player, retained Play clip/Return to still controls, contextual media cursor, and composed no-video state; Return to still resets playback to the configured clip start
 - Consistent `Play clip`, `Pause clip`, and `Resume clip` terminology across the media cursor and explicit controls
 - Floating Play/Pause label suppression over the explicit playback and Return-to-still controls while preserving the crosshair and whole-frame target
 - Still-only scene labeling, a themed accessible progress scrubber with elapsed/duration display, focused-surface ±10-second seeking, native one-second slider keys, and a once-mounted YouTube player across still/video state changes
 
-## Verification
+## Gate-era verification snapshot
 
 - Exact desktop gallery viewport: 1440×900
 - The prior responsive mobile gallery capture remains at 390×844; this refinement pass was intentionally desktop-only
@@ -78,7 +78,7 @@ The user explicitly excluded deployment from this workstream, so these routes ar
 
 The project build script uses Next.js 16.3.3's documented `--webpack` build fallback. Turbopack development remains enabled; two clean-cache production attempts reproduced an idle Turbopack compiler hang in the local environment, while the webpack production build completed deterministically.
 
-Physical touch/trackpad feel remains a creator-review item for this gate; the gesture paths and first-tap/second-tap logic are implemented, but the in-app QA browser does not emulate a coarse touch pointer.
+Physical touch/trackpad feel remains a creator-owned post-gate review item; the gesture paths and first-tap/second-tap logic are implemented, but the in-app QA browser does not emulate a coarse touch pointer.
 
 Native Back/Forward swipe routing is covered by axis-classification tests and desktop overscroll inspection, but still needs one physical macOS trackpad feel-check because automated wheel events cannot reproduce browser-owned history gestures faithfully.
 

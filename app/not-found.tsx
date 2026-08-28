@@ -1,14 +1,13 @@
 import Link from 'next/link'
 
+import { SiteHeader } from '@/components/site-header'
+
 import styles from './not-found.module.css'
 
 export default function NotFound() {
   return (
     <main className={`${styles.page} experience-scope`}>
-      <header className={styles.header}>
-        <Link href='/'>Cultural Alignment</Link>
-        <span>Archive exception / 404</span>
-      </header>
+      <SiteHeader inset context='Archive exception / 404' />
 
       <section className={styles.message}>
         <p className={styles.code}>404 / RECORD NOT FOUND</p>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import { GalleryPageHeader } from '@/features/spatial-gallery/gallery-page-header'
+import { SiteHeader } from '@/components/site-header'
 import {
   parseBrowseGalleryParams,
   type BrowseSearchParams
@@ -14,7 +14,7 @@ import { BrowseToolbar } from './browse-toolbar'
 
 export const metadata: Metadata = {
   title: 'All scenarios',
-  description: 'Browse every cultural analogy by risk family and release date.'
+  description: 'Browse every cultural analogy by risk family.'
 }
 
 export default async function ScenariosPage({
@@ -29,11 +29,10 @@ export default async function ScenariosPage({
     new Set(families.map(({ slug }) => slug))
   )
   const scenarios = contentCatalog.listScenarioCards({
-    riskFamilySlug: params.family ?? undefined,
-    sort: params.sort
+    riskFamilySlug: params.family ?? undefined
   })
   const items = toSpatialGalleryItems(scenarios)
-  const galleryIdentity = `browse:${params.family ?? 'all'}:${params.sort}`
+  const galleryIdentity = `browse:${params.family ?? 'all'}`
   const initialItem = items[0]
 
   if (!initialItem) {
@@ -41,8 +40,11 @@ export default async function ScenariosPage({
   }
 
   return (
-    <main className={`experience-scope ${styles.page} ${styles.browsePage}`}>
-      <GalleryPageHeader page='browse' />
+    <main
+      className={`experience-scope ${styles.page} ${styles.browsePage}`}
+      data-site-footer='hidden'
+    >
+      <SiteHeader className={styles.galleryHeader} tagline scrambleAlignment />
       <BrowseToolbar
         families={families}
         params={params}

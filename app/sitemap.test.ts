@@ -9,7 +9,7 @@ describe('sitemap', () => {
   it('publishes each browseable static content URL exactly once', () => {
     const entries = sitemap()
     const expectedCount =
-      5 +
+      7 +
       contentCatalog.getStaticSlugs('scenario').length +
       contentCatalog.getStaticSlugs('source').length +
       contentCatalog.getStaticSlugs('risk-family').length +
@@ -24,5 +24,7 @@ describe('sitemap', () => {
     expect(urls).toContain(
       new URL('/concepts/goodharts-law', siteUrl).toString()
     )
+    expect(urls).toContain(new URL('/about', siteUrl).toString())
+    expect(urls).toContain(new URL('/privacy', siteUrl).toString())
   })
 })

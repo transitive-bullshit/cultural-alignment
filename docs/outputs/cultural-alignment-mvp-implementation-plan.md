@@ -1,9 +1,11 @@
 # Cultural Alignment — MVP Implementation Plan
 
-- Status: first OSS MVP complete; deployment deferred to creator
+- Status: local MVP implementation and content expansion complete; repository packaging and deployment follow-ups remain
 - Working title: Cultural Alignment
 - Audience: Codex implementation agents
 - Durable product context: ../PRODUCT.md
+
+This document is an execution history. Sections 1–22 preserve the original staged plan and are non-normative where later creator decisions differ. The dated overrides and completion checklist in section 23 are authoritative; `PRODUCT.md`, `MVP.md`, `DESIGN.md`, `ARCHITECTURE.md`, and `QA.md` describe the shipped system. Do not rerun the feedback gates or restore the removed prototype routes.
 
 ## 1. Implementation directive
 
@@ -18,12 +20,12 @@ Do not reinterpret the project as:
 - a quiz or forced reveal flow;
 - a comprehensive accessibility or low-power project during this MVP.
 
-The implementation must pause for feedback twice:
+The original implementation sequence paused for feedback twice:
 
 1. after full-size static compositions are ready;
 2. after the interactive gallery and three scenario-detail variants are deployed.
 
-Do not generate the full site or build the Notion synchronizer before the second feedback gate has selected the visual direction.
+The creator later pulled synchronization and full expansion into this run after selecting Dossier; section 23 records that override and its completion.
 
 ## 2. What the MVP proves
 
@@ -34,7 +36,7 @@ The first MVP must prove two things:
 
 The implementation checkpoint now uses 25 real scenarios keyed by stable Notion page IDs. These records conform to the final synchronized content contract; they are fixtures, not disposable mock data.
 
-The design prototype is a Vercel preview, not the public launch. It is successful when the creator is proud of the artifact and explicitly approves the direction. No analytics or audience-attention goal is part of acceptance.
+The original plan targeted a Vercel preview, not a public launch. The creator later excluded deployment from this run, so a local production preview and fixed review artifacts served as the approval surface. No analytics or audience-attention goal is part of acceptance.
 
 ## 3. Confirmed product and design decisions
 
@@ -55,11 +57,11 @@ The design prototype is a Vercel preview, not the public launch. It is successfu
 - Bold condensed display face, neutral reading sans, monospace metadata.
 - Scenario imagery is category-neutral.
 - Risk-family colors appear only in family-specific art or filtered chrome, never as a rainbow of card colors.
-- At rest: image plus small source label.
-- On hover/selection: scenario title, index/count, source, release date, corner brackets, and crosshair.
+- At rest: the projected image field remains visually primary.
+- On hover/selection: the exact projected copy becomes vivid, receives proportional corner brackets and a crosshair, and updates the stable lower-left metadata panel.
 - Surrounding images can wash toward the paper ground; the selected image becomes vivid.
 - Use cover sizing, clipped overflow, and optional focal-point data everywhere.
-- Text Scramble runs only when selected metadata changes.
+- Text Scramble is reserved for taxonomy-link entry and deliberate hover/focus.
 - Spinning Text is reserved for the dismissible spoiler sticker.
 - No constant scanlines, ambient glitching, fake diagnostics, or meaningless technical chatter.
 
@@ -75,7 +77,7 @@ The design prototype is a Vercel preview, not the public launch. It is successfu
 
 - Homepage: manually featured scenarios, almost no controls, clear route to all scenarios.
 - All scenarios: one risk-family filter and release-date ascending/descending sorting.
-- Global header and Command-K search eventually spans scenarios, risk families, concepts, and sources.
+- Global header and Command-K search spans scenarios, risk families, concepts, and sources.
 - Blank secondary pages are never linked from primary navigation.
 - Scenario relationship ordering remains an experiment after the working demo; do not invent a permanent rule.
 
@@ -111,7 +113,7 @@ Required:
 
 - only the promoted scenario-detail direction remains;
 - rejected prototype implementations are removed;
-- the ten scenarios work through production routes;
+- the approved 25-scenario featured subset works through production routes;
 - homepage and all-scenarios gallery are integrated;
 - filter, sorting, navigation, back-state restoration, video states, and spoiler dismissal work;
 - search only exposes destinations that actually exist;
@@ -182,7 +184,9 @@ React Three Fiber is the implementation detail of one deep spatial-gallery modul
 - Generate dynamic routes from local slugs and set dynamic parameters to false.
 - Use generated metadata for scenario and resource pages.
 
-### Suggested repository structure
+### Suggested repository structure (historical sketch)
+
+The shipped project uses the existing root-level scaffold and `scripts/sync.ts`; see `ARCHITECTURE.md` for current ownership rather than copying this planning tree.
 
     src/
       app/
@@ -526,7 +530,7 @@ Keep all custom variables in the project's single global Tailwind CSS file. Do n
 - Reading: neutral sans with comfortable long-form measures.
 - Metadata: monospace.
 - Select the actual typefaces during the composition feedback gate.
-- Text Scramble only runs on selection or metadata change; provisional duration 350–650 ms.
+- Text Scramble runs on taxonomy-link entry and deliberate hover/focus; it is not ambient body-copy decoration.
 - Spinning spoiler text uses a slow, steady rotation; provisional full rotation 10–14 seconds.
 
 Motion Primitives references:
@@ -551,7 +555,7 @@ Command reference: https://ui.shadcn.com/docs/components/base/command
 
 ### Spoiler sticker
 
-- Appears on the homepage during a visitor's first experience.
+- Appears on the homepage and scenario Dossier until dismissed.
 - Uses circular spinning text and a clear dismiss target.
 - Stores one versioned local-storage key, for example cultural-alignment:spoiler:v1.
 - Must not dominate the gallery or block exploration.
@@ -595,11 +599,11 @@ All three receive the same ScenarioPage view model and can share genuinely invar
 
 The directions must differ in silhouette, information sequence, media dominance, and scroll behavior. Color swaps do not count.
 
-### Video behavior
+### Video behavior (final selected system)
 
 - Render the local still first.
-- On activation, mount a normal YouTube iframe inside branded outer chrome.
-- Keep player controls intact.
+- On activation, mount a YouTube iframe with native chrome disabled inside the branded media plate.
+- Keep the player instance mounted when returning to the still, reset playback to the configured clip start, and expose branded play/pause, progress, seeking, and return-to-still controls.
 - Missing video uses a deliberately composed media plate, not an empty box.
 
 ### Preview picker
@@ -850,10 +854,10 @@ After synchronization works:
 1. import all 179 scenarios;
 2. switch gallery texture loading from eager to visible/nearby residency;
 3. run the complete gallery against the full snapshot;
-4. implement risk-family index and five rich family pages;
+4. implement risk-family index and five functional family pivots, with richer editorial treatment deferred;
 5. implement concept index and functional concept pivots;
 6. implement source index and functional source pivots;
-7. add artwork references for all families and concepts;
+7. add family/concept artwork when a complete branded set is available; do not ship placeholder art;
 8. include all four resource types in search;
 9. keep source/concept pages out of primary navigation until they contain working content;
 10. test the long tail: one-scenario sources, no-video scenarios, long taxonomy labels, and one-to-six concepts.
@@ -904,7 +908,7 @@ Risk-family pages may receive the richer treatment first. Concept and source pag
 
 ### Playwright journeys
 
-- homepage displays the fixture records marked `featured`; the full set of ten remains available on `/scenarios`;
+- homepage displays all 25 records marked `featured`; the full set of 179 remains available on `/scenarios`;
 - a recognizable card opens the correct scenario;
 - browser Back restores the gallery position;
 - family filter and release sorting update content and URL;
@@ -995,7 +999,7 @@ Record browser, device, bundle size, media transfer, frame-time observations, te
 
 Containment: isolate a single motion proof, lock the design through feedback, and do not expand content until it feels correct.
 
-### Ten cards work but 179 overload memory
+### Prototype density works but 179 overload memory
 
 Containment: content count stays independent of resident texture count; implement visible/nearby pooling before full expansion.
 
@@ -1044,10 +1048,10 @@ Containment: keep site identity in one configuration module and avoid baking tit
 - community scenario submissions and moderation;
 - dark mode;
 - full mobile visual parity;
-- comprehensive keyboard and assistive-technology support;
-- reduced-motion and low-power modes;
+- comprehensive keyboard and assistive-technology support beyond the shipped primary paths;
+- a dedicated low-power rendering mode beyond the shipped reduced-motion behavior and no-WebGL fallback;
 - full accessibility audit;
-- custom player behavior beyond branded outer chrome;
+- custom player behavior beyond the shipped play/pause, progress, seeking, and return-to-still controls;
 - analytics or attention optimization;
 - audio design.
 
@@ -1065,14 +1069,13 @@ Containment: keep site identity in one configuration module and avoid baking tit
 
 Final handoff includes:
 
-- Vercel preview URL;
-- commit SHA;
+- local production-preview instructions;
 - selected detail direction and decision note;
 - exact verification commands and results;
 - screenshots and short motion captures;
 - performance observations;
 - known limitations;
-- recommended next workstream.
+- recommended follow-ups.
 
 ## 22. Codex work packets
 
@@ -1239,8 +1242,10 @@ Continuation authorization — 2026-08-28: the creator selected Dossier, approve
 - [x] Video supports whole-frame play/pause without remounting, retains explicit controls and a stateful cursor, and the no-video state remains intentional.
 - [x] Desktop visual QA at 1440×900 and functional-mobile QA at 390×844 are complete in Chrome; the documented physical trackpad check remains a deployment follow-up.
 - [x] Format, lint, route type generation, TypeScript, 95 unit tests, 8 browser journeys, content validation, and the 388-page production build pass.
+- [ ] The 358 files under `public/media/generated` are included in the repository/deployment artifact; they currently exist locally but are excluded by `.gitignore`.
+- [ ] The configured pre-commit hook has an explicit `lint-staged` dependency or is updated not to invoke it.
 - [ ] Vercel final preview is stable (intentionally deferred to the creator).
 - [x] README, MVP, ARCHITECTURE, DESIGN, QA, CONTRIBUTING, and license files are complete.
 - [x] No post-MVP feature appears as unfinished public UI.
 
-Stop after this checklist and hand the preview back to the creator. The Notion synchronization and full content expansion begin as the next workstream unless explicitly pulled into the same execution run.
+The implementation, Notion synchronization, and full content expansion are complete locally. Generated-media packaging, pre-commit-hook repair, deployment, and the remaining physical macOS trackpad feel-check are follow-ups.

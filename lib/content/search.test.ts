@@ -3,8 +3,10 @@ import { describe, expect, it } from 'vitest'
 import type { SearchDocument } from './catalog'
 import {
   groupSearchResults,
+  normalizeSearchText,
   searchDocumentGroups,
-  searchDocuments
+  searchDocuments,
+  splitSearchTextMatches
 } from './search'
 
 const documents = [
@@ -115,6 +117,40 @@ describe('searchDocuments', () => {
 
   it('returns no grouped results for a zero cap', () => {
     expect(searchDocumentGroups(documents, 'source', 0)).toEqual([])
+  })
+})
+
+describe('splitSearchTextMatches', () => {
+  it('maps normalized punctuation and diacritics back to the original text', () => {
+    expect(splitSearchTextMatches('Goodhart’s law', 'GOODHARTS')).toEqual([
+      { start: 0, text: 'Goodhart’s', isMatch: true },
+      { start: 10, text: ' law', isMatch: false }
+    ])
+    expect(splitSearchTextMatches('Café—rating', 'cafe rating')).toEqual([
+      { start: 0, text: 'Café—rating', isMatch: true }
+    ])
+  })
+
+  it('highlights the tokens present when a query spans multiple fields', () => {
+    expect(splitSearchTextMatches('Black Mirror', 'rating black')).toEqual([
+      { start: 0, text: 'Black', isMatch: true },
+      { start: 5, text: ' Mirror', isMatch: false }
+    ])
+  })
+
+  it('highlights every occurrence without changing unmatched content', () => {
+    expect(splitSearchTextMatches('AI for AI', 'ai')).toEqual([
+      { start: 0, text: 'AI', isMatch: true },
+      { start: 2, text: ' for ', isMatch: false },
+      { start: 7, text: 'AI', isMatch: true }
+    ])
+    expect(splitSearchTextMatches('<AI safety>', '')).toEqual([
+      { start: 0, text: '<AI safety>', isMatch: false }
+    ])
+  })
+
+  it('uses the same normalization as search ranking', () => {
+    expect(normalizeSearchText('  Café—Goodhart’s  ')).toBe('cafe goodharts')
   })
 })
 

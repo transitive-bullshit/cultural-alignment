@@ -6,7 +6,7 @@ web
 
 ## Stack
 
-Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, Three.js/WebGL, Vercel. No application database.
+Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, and Three.js/WebGL, with Vercel as the intended hosting target. No application database.
 
 ## Users
 
@@ -22,32 +22,36 @@ The project treats popular stories as a shared simulation library for unfamiliar
 
 ## Operating Context
 
-The project is personally curated and published through the creator's public persona and GitHub account. Notion is the editorial source. A one-way synchronization command will use the official Notion API to create a normalized, read-only snapshot containing content and embedded assets for the application build. The source code will use the MIT license and the dataset will use CC0.
+The project is personally curated and published through the creator's public persona and GitHub account. Notion is the editorial source. An explicit one-way synchronization command uses the official Notion API and `NOTION_TOKEN`—regardless of the source's public visibility—to create a normalized, read-only snapshot containing content and local image assets. The application builds and runs exclusively from that snapshot.
+
+The source code uses the MIT license. The authored structured dataset uses CC0; that dedication does not cover third-party film and television imagery, titles, trademarks, or linked clips.
 
 ## Capabilities and Constraints
 
 - Core resource models: scenario, source, AI risk family, and AI safety concept.
-- Recognition-first homepage gallery showing a manually featured subset of scenarios.
-- All-scenarios gallery using the same underlying gallery module, with risk-family filtering and release-date sorting.
+- Recognition-first homepage gallery showing 25 scenarios selected by stable Notion page ID.
+- All-scenarios gallery using the same underlying gallery module, with risk-family filtering.
 - Global Command-K/header search across all four resource types.
-- Scenario pages present scene media, source identity, explanation, caveats, tags, and a standard YouTube embed inside branded surrounding chrome.
-- Risk-family pages are richer editorial destinations. Concept and source pages initially act as functional relational pivots.
-- The first visual prototype uses ten hard-coded real scenarios shaped exactly like future synchronized content.
-- Desktop is the primary visual target; mobile must remain functional without matching desktop's full density or effects.
-- Accessibility, reduced-motion behavior, low-power fallbacks, dark mode, popularity/relevance ranking, response/agency material, and community contribution workflows are post-MVP work.
-- The relationship hierarchy after a scenario remains an explicit prototype experiment rather than a preselected rule.
+- Scenario pages present scene media, source identity, explanation, caveats, taxonomy, spoiler handling, more from the same source, and best-effort related scenarios through the Dossier layout. Clips use a YouTube iframe inside branded play/pause, progress, seeking, and return-to-still controls.
+- Source, risk-family, and concept pages act as functional relational pivots. Risk families are the first candidates for richer editorial treatment later.
+- The committed snapshot contains the full collection; content synchronization is an editorial operation, never a request-time dependency.
+- Desktop is the primary visual craft target. Mobile remains functional with a lower-density direct-touch version of the same experience.
+- Targeted keyboard paths, reduced-motion behavior, and a recognizable no-WebGL fallback are included. Comprehensive assistive-technology parity and a dedicated low-power renderer remain post-MVP work.
+- Scenario dossiers link outward to their source, risk families, and concepts. Related scenarios use a deliberately simple, deterministic taxonomy-overlap heuristic rather than a permanent editorial ranking.
+- Dark mode, popularity ranking, response/agency material, and community contribution workflows remain post-MVP work.
 
 ## Brand Commitments
 
-"Cultural Alignment" is a working title only. The public artifact should feel like a distinctive speculative cultural archive: bold, playful, intelligent, authored, visually strange, and interactionally legible. It must not use alien narration, broadcast/transmission framing, investigation framing, forced quizzes, or institutional authority. Photoyoshi's elastic infinite image field is the binding gallery reference. Motion uses elastic exploration, precise selection, and confident dimensional transitions. Interface fiction remains light and visual.
+"Cultural Alignment" is a working title only. The public artifact should feel like a distinctive speculative cultural archive: bold, playful, intelligent, authored, visually strange, and interactionally legible. It must not use alien narration, broadcast/transmission framing, investigation framing, forced quizzes, or institutional authority. Photoyoshi's elastic infinite image field is the binding gallery reference, adapted to a one-dimensional horizontal projected surface. Motion uses elastic exploration, precise selection, and confident dimensional transitions. Interface fiction remains light and visual.
 
-## Evidence on Hand
+## Current Content Baseline
 
 - A curated Notion database containing 179 complete scenarios across 129 media sources.
 - Five AI risk families and 65 currently used AI safety concepts.
 - Every scenario includes a scene description, analogy explanation, caveats, release date, source, and taxonomy assignments; 159 include a YouTube clip.
-- Scenario stills and clips have been manually reviewed by the creator.
-- Separate work will provide consistently branded artwork for all risk families and safety concepts; the MVP may begin with two finished examples and placeholders for the rest.
+- The synchronized snapshot contains 358 local gallery/detail image assets; 25 scenarios are marked as featured.
+- Scenario stills and clips were manually reviewed by the creator.
+- Consistently branded risk-family and concept artwork remains follow-up work. The current resource pivots are complete without placeholder artwork.
 
 ## Product Principles
 
@@ -59,4 +63,4 @@ The project is personally curated and published through the creator's public per
 
 ## Accessibility & Inclusion
 
-The MVP is explicitly desktop-first and prioritizes a differentiated visual identity over accessibility parity. Mobile remains usable. Broader keyboard, reduced-motion, assistive-technology, and low-power support is planned after the visual system is established.
+The MVP is explicitly desktop-first and prioritizes a differentiated visual identity over full accessibility parity. Mobile remains usable; primary links and controls retain DOM keyboard paths; reduced motion disables the automatic gallery coast; video seeking and spoiler dismissal are keyboard operable; and a recognizable non-WebGL fallback exists. A comprehensive assistive-technology audit and a dedicated low-power experience remain follow-up work.

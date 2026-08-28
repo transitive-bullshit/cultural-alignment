@@ -17,6 +17,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/sources',
     '/risk-families',
     '/concepts',
+    '/about',
+    '/privacy',
     ...contentCatalog
       .getStaticSlugs('scenario')
       .map((slug) => `/scenarios/${slug}`),

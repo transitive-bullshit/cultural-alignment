@@ -1,6 +1,13 @@
 'use client'
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import {
+  Fragment,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState
+} from 'react'
 import { useRouter } from 'next/navigation'
 
 import { Button } from '@/components/ui/button'
@@ -21,7 +28,11 @@ import {
   DialogTrigger
 } from '@/components/ui/dialog'
 import type { SearchDocument, StaticContentKind } from '@/lib/content/catalog'
-import { searchDocumentGroups } from '@/lib/content/search'
+import {
+  normalizeSearchText,
+  searchDocumentGroups,
+  splitSearchTextMatches
+} from '@/lib/content/search'
 
 type LoadState = 'idle' | 'loading' | 'ready' | 'error'
 
@@ -123,7 +134,8 @@ export function GlobalSearch({
       </DialogTrigger>
 
       <DialogContent
-        className='gap-0 overflow-hidden p-0 sm:max-w-2xl'
+        className='gap-0 overflow-hidden p-2 sm:max-w-2xl sm:p-3'
+        disableMotion
         showCloseButton={false}
       >
         <DialogHeader className='sr-only'>
@@ -133,31 +145,56 @@ export function GlobalSearch({
           </DialogDescription>
         </DialogHeader>
 
-        <Command shouldFilter={false} loop>
+        <Command
+          className='**:data-[slot=command-input-wrapper]:h-12 **:data-[slot=command-input-wrapper]:px-4 [&_[cmdk-group]]:px-1 [&_[cmdk-item]]:px-3 [&_[cmdk-item]]:py-2.5'
+          shouldFilter={false}
+          loop
+        >
           <CommandInput
             value={query}
             onValueChange={setQuery}
             placeholder='Search the cultural archive…'
             autoFocus
           />
-          <CommandList className='max-h-[min(62vh,35rem)]'>
+          <CommandList className='max-h-[min(62vh,35rem)] py-1'>
             <CommandEmpty>{emptyMessage(loadState, query)}</CommandEmpty>
             {groups.map((group) => (
               <CommandGroup key={group.kind} heading={group.label}>
-                {group.documents.map((document) => (
-                  <CommandItem
-                    key={`${document.kind}:${document.href}`}
-                    value={document.href}
-                    onSelect={() => handleSelect(document.href)}
-                  >
-                    <span className='flex min-w-0 flex-1 flex-col gap-0.5'>
-                      <span className='truncate'>{document.title}</span>
-                      <span className='truncate text-xs text-muted-foreground'>
-                        {document.subtitle}
+                {group.documents.map((document) => {
+                  const context = supportingKeyword(document, query)
+
+                  return (
+                    <CommandItem
+                      key={`${document.kind}:${document.href}`}
+                      value={document.href}
+                      onSelect={() => handleSelect(document.href)}
+                    >
+                      <span className='flex min-w-0 flex-1 flex-col gap-1'>
+                        <span className='truncate font-medium'>
+                          <HighlightedSearchText
+                            value={document.title}
+                            query={query}
+                          />
+                        </span>
+                        <span className='truncate text-xs text-muted-foreground'>
+                          <HighlightedSearchText
+                            value={document.subtitle}
+                            query={query}
+                          />
+                        </span>
+                        {context ? (
+                          <span className='truncate text-xs text-muted-foreground'>
+                            <span className='sr-only'>Matching context: </span>
+                            <HighlightedSearchText
+                              value={context}
+                              query={query}
+                            />
+                          </span>
+                        ) : null}
                       </span>
-                    </span>
-                  </CommandItem>
-                ))}
+                    </CommandItem>
+                  )
+                })}
               </CommandGroup>
             ))}
           </CommandList>
@@ -173,6 +210,81 @@ function emptyMessage(loadState: LoadState, query: string) {
   if (!query.trim()) return 'Type a title, source, risk, or concept.'
 
   return 'No matching records.'
+}
+
+function HighlightedSearchText({
+  value,
+  query
+}: {
+  readonly value: string
+  readonly query: string
+}) {
+  return splitSearchTextMatches(value, query).map((segment) => (
+    <Fragment key={`${segment.start}:${segment.isMatch}`}>
+      {segment.isMatch ? (
+        <mark className='rounded-sm bg-ring/20 px-0.5 text-inherit'>
+          {segment.text}
+        </mark>
+      ) : (
+        segment.text
+      )}
+    </Fragment>
+  ))
+}
+
+function supportingKeyword(document: SearchDocument, query: string) {
+  const queryTokens = normalizeSearchText(query).split(' ').filter(Boolean)
+  const visibleText = normalizeSearchText(
+    `${document.title} ${document.subtitle}`
+  )
+  const missingTokens = queryTokens.filter(
+    (token) => !visibleText.includes(token)
+  )
+
+  if (missingTokens.length === 0) return null
+
+  const keywordMatch = document.keywords
+    .map((keyword, index) => {
+      const normalizedKeyword = normalizeSearchText(keyword)
+
+      return {
+        index,
+        keyword,
+        matchingTokenCount: missingTokens.filter((token) =>
+          normalizedKeyword.includes(token)
+        ).length
+      }
+    })
+    .filter(({ matchingTokenCount }) => matchingTokenCount > 0)
+    .toSorted(
+      (left, right) =>
+        right.matchingTokenCount - left.matchingTokenCount ||
+        left.keyword.length - right.keyword.length ||
+        left.index - right.index
+    )[0]
+
+  if (!keywordMatch) return null
+
+  return searchSnippet(keywordMatch.keyword, missingTokens.join(' '))
+}
+
+function searchSnippet(value: string, query: string, maxLength = 128) {
+  if (value.length <= maxLength) return value
+
+  const firstMatch = splitSearchTextMatches(value, query).find(
+    ({ isMatch }) => isMatch
+  )
+
+  if (!firstMatch) return `${value.slice(0, maxLength).trimEnd()}…`
+
+  const matchLength = firstMatch.text.length
+  const desiredStart =
+    firstMatch.start - Math.max(0, Math.floor((maxLength - matchLength) / 2))
+  const start = Math.max(0, Math.min(desiredStart, value.length - maxLength))
+  const end = Math.min(value.length, start + maxLength)
+  const excerpt = value.slice(start, end).trim()
+
+  return `${start > 0 ? '…' : ''}${excerpt}${end < value.length ? '…' : ''}`
 }
 
 function isSearchDocumentList(input: unknown): input is SearchDocument[] {

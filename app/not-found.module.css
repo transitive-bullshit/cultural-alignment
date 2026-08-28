@@ -19,27 +19,6 @@
   background-size: 52px 52px;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 62px;
-  border-bottom: 1px solid var(--proto-rule);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 10px;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-}
-
-.header a {
-  font-weight: 720;
-  text-decoration: none;
-}
-
-.header span {
-  color: var(--proto-muted-ink);
-}
-
 .message {
   align-self: center;
   max-width: 960px;
@@ -109,10 +88,6 @@
 }
 
 @media (max-width: 680px) {
-  .header span {
-    display: none;
-  }
-
   .message h1 {
     font-size: clamp(66px, 23vw, 112px);
   }

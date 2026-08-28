@@ -17,7 +17,7 @@ pnpm content:validate
 pnpm build
 ```
 
-Use modern TypeScript, omit semicolons, format with `pnpm fix:format`, and lint with `pnpm fix:lint`. Read `AGENTS.md` and the relevant in-repository Next.js 16 guide before changing framework APIs.
+Use modern TypeScript, omit semicolons, format with `pnpm fix:format`, and lint with `pnpm fix:lint`. Read `AGENTS.md` and the relevant guide under `node_modules/next/dist/docs/` before changing Next.js 16 framework APIs. Local browser journeys expect an installed Google Chrome; CI installs Chromium separately.
 
 ## Boundaries
 
@@ -25,7 +25,8 @@ Use modern TypeScript, omit semicolons, format with `pnpm fix:format`, and lint 
 - Add content behavior through `lib/content/catalog.ts`, not ad hoc route joins.
 - Keep spatial-field internals behind the gallery's small public interface.
 - Preserve stable Notion IDs and generated paths in synchronization changes.
-- Do not commit credentials, temporary Notion asset URLs, or hand-edited files inside generated media directories.
+- Regenerate `content/snapshot`, `public/content/search-index.json`, and `public/media/generated` only through `pnpm content:sync`; review and commit their complete atomic diff together.
+- Do not commit credentials, temporary Notion asset URLs, or hand-edited files inside any generated target.
 - Avoid reopening the approved gallery/Dossier direction in unrelated changes.
 
-The code is MIT licensed. Exported snapshot data is CC0 1.0; by contributing content intended for that snapshot, you must have the right to dedicate it under those terms.
+The code is MIT licensed. Authored structured snapshot data is CC0 1.0; by contributing data intended for that snapshot, you must have the right to dedicate it under those terms. Third-party imagery, titles, trademarks, and linked clips are not covered by that dedication.

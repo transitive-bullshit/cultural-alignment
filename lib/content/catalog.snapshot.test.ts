@@ -42,6 +42,42 @@ describe('full content catalog routes', () => {
     }
   })
 
+  it('projects bounded scenario discoveries with valid relational links', () => {
+    let pagesWithMoreFromSource = 0
+    let pagesWithRelatedScenarios = 0
+
+    for (const slug of contentCatalog.getStaticSlugs('scenario')) {
+      const scenario = contentCatalog.getScenarioPage(slug)!
+
+      expect(scenario.moreFromSource.length).toBeLessThanOrEqual(2)
+      expect(scenario.relatedScenarios.length).toBeLessThanOrEqual(2)
+      expect(
+        contentCatalog.getResourcePage('source', scenario.source.slug)
+          ?.scenarioCount
+      ).toBe(scenario.source.scenarioCount)
+
+      if (scenario.moreFromSource.length > 0) pagesWithMoreFromSource += 1
+      if (scenario.relatedScenarios.length > 0) pagesWithRelatedScenarios += 1
+
+      for (const related of scenario.moreFromSource) {
+        expect(related.id).not.toBe(scenario.id)
+        expect(related.source.id).toBe(scenario.source.id)
+        expect(contentCatalog.getScenarioPage(related.slug)).not.toBeNull()
+      }
+
+      for (const related of scenario.relatedScenarios) {
+        expect(related.source.id).not.toBe(scenario.source.id)
+        expect(
+          related.sharedRiskFamilies.length + related.sharedConcepts.length
+        ).toBeGreaterThan(0)
+        expect(contentCatalog.getScenarioPage(related.slug)).not.toBeNull()
+      }
+    }
+
+    expect(pagesWithMoreFromSource).toBeGreaterThan(0)
+    expect(pagesWithRelatedScenarios).toBeGreaterThan(0)
+  })
+
   it('keeps the generated client search index identical to catalog output', () => {
     expect(searchIndex).toEqual(contentCatalog.getSearchDocuments())
     expect(searchIndex).toHaveLength(378)

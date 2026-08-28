@@ -121,14 +121,18 @@ describe('ContentCatalog', () => {
       slug: 'old-b',
       source: {
         slug: 'shared-source',
+        href: '/sources/shared-source',
         title: 'Shared Source',
-        links: [{ label: 'Official site', href: 'https://example.com/source' }]
+        links: [{ label: 'Official site', href: 'https://example.com/source' }],
+        scenarioCount: 5
       },
       riskFamilies: [
         { slug: 'family-a', href: '/risk-families/family-a' },
         { slug: 'family-b', href: '/risk-families/family-b' }
       ],
-      concepts: [{ slug: 'concept-one', href: '/concepts/concept-one' }]
+      concepts: [{ slug: 'concept-one', href: '/concepts/concept-one' }],
+      moreFromSource: [{ slug: 'old-a' }, { slug: 'null-a' }],
+      relatedScenarios: []
     })
     expect(catalog.getScenarioPage('missing')).toBeNull()
   })

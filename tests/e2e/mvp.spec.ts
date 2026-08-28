@@ -11,7 +11,7 @@ test('featured gallery opens a scenario and browser Back restores its field stat
   const selectedTitle = page.getByRole('heading', { level: 1 })
 
   await expect(gallery).toBeVisible()
-  await expect(page.getByRole('link', { name: 'Explore all' })).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Gallery' })).toBeVisible()
   await expect(selectedTitle).toBeVisible()
   await expect(gallery.locator('canvas')).toBeVisible({ timeout: 15_000 })
 
@@ -41,19 +41,15 @@ test('featured gallery opens a scenario and browser Back restores its field stat
   await expect(selectedTitle).toHaveText(selectedBeforeNavigation ?? '')
 })
 
-test('all-scenarios controls reflect family and release sort in the URL', async ({
+test('all-scenarios controls reflect the family filter in the URL', async ({
   page
 }) => {
   await page.goto('/scenarios')
 
   await page.getByRole('radio', { name: 'Misalignment', exact: true }).click()
-  await expect(page).toHaveURL(
-    /\/scenarios\?family=misalignment&sort=release-desc$/
-  )
-
-  await page.getByRole('radio', { name: 'Oldest', exact: true }).click()
-  await expect(page).toHaveURL(
-    /\/scenarios\?family=misalignment&sort=release-asc$/
+  await expect(page).toHaveURL(/\/scenarios\?family=misalignment$/)
+  await expect(page.getByRole('radio', { name: /newest|oldest/i })).toHaveCount(
+    0
   )
   await expect(page.getByText(/scenarios$/).first()).toBeVisible()
 })
@@ -65,6 +61,16 @@ test('scenario, source, family, and concept URLs resolve as relational pivots', 
   await expect(
     page.getByRole('heading', { level: 1, name: 'Lacie Games Her Rating' })
   ).toBeVisible()
+  await expect(
+    page.getByRole('heading', { level: 2, name: 'More from Black Mirror' })
+  ).toBeVisible()
+  await expect(
+    page.getByRole('heading', { level: 2, name: 'Related scenarios' })
+  ).toBeVisible()
+  await expect(
+    page.getByRole('link', { name: /View all \d+ scenarios/i })
+  ).toHaveAttribute('href', '/sources/black-mirror')
+  await expect(page.locator('footer')).toBeVisible()
 
   const source = page.getByRole('link', { name: 'Black Mirror', exact: true })
   await expect(source).toHaveAttribute('href', '/sources/black-mirror')
@@ -102,8 +108,40 @@ test('Command-K search groups the local index and navigates to a working result'
 
   const result = page.getByText('goodhart’s law', { exact: true })
   await expect(result).toBeVisible()
+  await expect(result.locator('mark')).toHaveText(/goodhart/i)
   await result.click()
   await expect(page).toHaveURL('/concepts/goodharts-law')
+})
+
+test('shared footer stays out of galleries and exposes project pages elsewhere', async ({
+  page
+}) => {
+  await page.goto('/')
+  await expect(page.locator('footer')).toBeHidden()
+
+  await page.goto('/scenarios')
+  await expect(page.locator('footer')).toBeHidden()
+
+  await page.goto('/about')
+  await expect(
+    page.getByRole('heading', {
+      level: 1,
+      name: 'Start with a story you already know.'
+    })
+  ).toBeVisible()
+
+  const footer = page.locator('footer')
+  await expect(footer).toBeVisible()
+  await expect(footer.getByRole('link', { name: 'Privacy' })).toHaveAttribute(
+    'href',
+    '/privacy'
+  )
+  await expect(
+    footer.getByRole('link', { name: /Public source database/i })
+  ).toHaveAttribute('href', /notion\.so/)
+  await expect(
+    footer.getByRole('link', { name: /X \/ @transitive_bs/i })
+  ).toHaveAttribute('href', 'https://x.com/transitive_bs')
 })
 
 test('Command-K search opens from a production scenario detail page', async ({
@@ -171,7 +209,7 @@ test.describe('functional phone viewport', () => {
   test('gallery and Dossier remain readable without horizontal overflow', async ({
     page
   }) => {
-    await page.goto('/scenarios?family=misalignment&sort=release-asc')
+    await page.goto('/scenarios?family=misalignment')
     const activeFamily = page.getByRole('radio', {
       name: 'Misalignment',
       exact: true

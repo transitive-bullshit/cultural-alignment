@@ -6,6 +6,12 @@ export type SearchResultGroup = {
   readonly documents: readonly SearchDocument[]
 }
 
+export type SearchTextSegment = {
+  readonly start: number
+  readonly text: string
+  readonly isMatch: boolean
+}
+
 const GROUP_LABELS = {
   scenario: 'Scenarios',
   'risk-family': 'Risk families',
@@ -86,6 +92,72 @@ export function searchDocumentGroups(
   }))
 }
 
+export function splitSearchTextMatches(
+  value: string,
+  query: string
+): readonly SearchTextSegment[] {
+  if (!value) return []
+
+  const normalizedValue = normalizeSearchTextWithSource(value)
+  const normalizedQuery = normalizeSearchText(query)
+
+  if (!normalizedValue.text || !normalizedQuery) {
+    return [{ start: 0, text: value, isMatch: false }]
+  }
+
+  const needles = normalizedValue.text.includes(normalizedQuery)
+    ? [normalizedQuery]
+    : [...new Set(normalizedQuery.split(' '))]
+  const matches = needles
+    .flatMap((needle) => findOriginalMatchRanges(normalizedValue, needle))
+    .toSorted((left, right) => left.start - right.start || left.end - right.end)
+  const mergedMatches: MatchRange[] = []
+
+  for (const match of matches) {
+    const previous = mergedMatches.at(-1)
+
+    if (previous && match.start <= previous.end) {
+      previous.end = Math.max(previous.end, match.end)
+    } else {
+      mergedMatches.push({ ...match })
+    }
+  }
+
+  if (mergedMatches.length === 0) {
+    return [{ start: 0, text: value, isMatch: false }]
+  }
+
+  const segments: SearchTextSegment[] = []
+  let cursor = 0
+
+  for (const match of mergedMatches) {
+    if (match.start > cursor) {
+      segments.push({
+        start: cursor,
+        text: value.slice(cursor, match.start),
+        isMatch: false
+      })
+    }
+
+    segments.push({
+      start: match.start,
+      text: value.slice(match.start, match.end),
+      isMatch: true
+    })
+    cursor = match.end
+  }
+
+  if (cursor < value.length) {
+    segments.push({
+      start: cursor,
+      text: value.slice(cursor),
+      isMatch: false
+    })
+  }
+
+  return segments
+}
+
 function scoreDocument(
   document: SearchDocument,
   query: string,
@@ -134,7 +206,7 @@ function scoreField(
   return null
 }
 
-function normalizeSearchText(value: string) {
+export function normalizeSearchText(value: string) {
   return value
     .normalize('NFKD')
     .replace(/\p{Diacritic}/gu, '')
@@ -143,4 +215,83 @@ function normalizeSearchText(value: string) {
     .replace(/[^a-z0-9]+/g, ' ')
     .trim()
     .replace(/\s+/g, ' ')
+}
+
+type MatchRange = {
+  start: number
+  end: number
+}
+
+type NormalizedSearchText = {
+  readonly text: string
+  readonly characters: readonly {
+    readonly start: number
+    readonly end: number
+  }[]
+}
+
+function normalizeSearchTextWithSource(value: string): NormalizedSearchText {
+  const normalizedCharacters: string[] = []
+  const sourceCharacters: { start: number; end: number }[] = []
+  let sourceOffset = 0
+
+  for (const sourceCharacter of value) {
+    const start = sourceOffset
+    sourceOffset += sourceCharacter.length
+    const normalizedCharacter = sourceCharacter
+      .normalize('NFKD')
+      .replace(/\p{Diacritic}/gu, '')
+      .toLocaleLowerCase('en')
+
+    for (const character of normalizedCharacter) {
+      if (/[a-z0-9]/.test(character)) {
+        normalizedCharacters.push(character)
+        sourceCharacters.push({ start, end: sourceOffset })
+      } else if (
+        character !== "'" &&
+        character !== '’' &&
+        normalizedCharacters.length > 0 &&
+        normalizedCharacters.at(-1) !== ' '
+      ) {
+        normalizedCharacters.push(' ')
+        sourceCharacters.push({ start, end: sourceOffset })
+      }
+    }
+  }
+
+  if (normalizedCharacters.at(-1) === ' ') {
+    normalizedCharacters.pop()
+    sourceCharacters.pop()
+  }
+
+  return {
+    text: normalizedCharacters.join(''),
+    characters: sourceCharacters
+  }
+}
+
+function findOriginalMatchRanges(
+  value: NormalizedSearchText,
+  needle: string
+): readonly MatchRange[] {
+  const ranges: MatchRange[] = []
+  let searchFrom = 0
+
+  while (searchFrom < value.text.length) {
+    const matchStart = value.text.indexOf(needle, searchFrom)
+
+    if (matchStart < 0) break
+
+    const matchEnd = matchStart + needle.length
+    const firstCharacter = value.characters[matchStart]
+    const lastCharacter = value.characters[matchEnd - 1]
+
+    if (firstCharacter && lastCharacter) {
+      ranges.push({ start: firstCharacter.start, end: lastCharacter.end })
+    }
+
+    searchFrom = matchEnd
+  }
+
+  return ranges
 }

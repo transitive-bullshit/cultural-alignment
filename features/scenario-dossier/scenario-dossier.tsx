@@ -3,11 +3,12 @@ import { ViewTransition } from 'react'
 import Link from 'next/link'
 
 import { ScrambleLink } from '@/components/motion/scramble-link'
+import { SiteHeader } from '@/components/site-header'
 import { SpoilerWarning } from '@/features/spoiler/spoiler-warning'
-import { GlobalSearch } from '@/features/search/global-search'
 import type { ScenarioPage, TaxonomyLink } from '@/lib/content/catalog'
 
 import { ScenarioMedia } from './scenario-media'
+import { ScenarioDiscovery } from './scenario-discovery'
 import styles from './scenario-dossier.module.css'
 import { hasDistinctEpisodeLabel } from './source-meta'
 
@@ -18,7 +19,10 @@ import { hasDistinctEpisodeLabel } from './source-meta'
 export function ScenarioDossier({ scenario }: { scenario: ScenarioPage }) {
   return (
     <main className={`${styles.page} experience-scope`}>
-      <DossierHeader />
+      <SiteHeader
+        context='Familiar stories for unfamiliar AI problems.'
+        galleryTransitionTypes={['scenario-back']}
+      />
 
       <article>
         <section className={styles.opening}>
@@ -62,27 +66,12 @@ export function ScenarioDossier({ scenario }: { scenario: ScenarioPage }) {
 
           <Taxonomy scenario={scenario} />
         </section>
+
+        <ScenarioDiscovery scenario={scenario} />
       </article>
 
       <SpoilerWarning className={styles.detailSpoiler} />
     </main>
-  )
-}
-
-function DossierHeader() {
-  return (
-    <header className={styles.header}>
-      <Link className={styles.identity} href='/'>
-        Cultural Alignment
-      </Link>
-      <p>Familiar stories for unfamiliar AI problems.</p>
-      <nav aria-label='Primary navigation'>
-        <GlobalSearch className={styles.headerSearch} />
-        <Link href='/scenarios' transitionTypes={['scenario-back']}>
-          Gallery
-        </Link>
-      </nav>
-    </header>
   )
 }
 

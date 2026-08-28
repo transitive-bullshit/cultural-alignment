@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { GlobalSearch } from '@/features/search/global-search'
+import { SiteHeader } from '@/components/site-header'
 import type {
   ResourceKind,
   ResourcePage,
@@ -59,7 +59,7 @@ export function ResourceIndexPage({
 
   return (
     <main className={`experience-scope ${styles.page}`}>
-      <ArchiveHeader context={`${presentation.indexTitle} / index`} />
+      <SiteHeader inset context={`${presentation.indexTitle} / index`} />
 
       <section className={styles.indexIntro}>
         <p className={styles.eyebrow}>{presentation.eyebrow}</p>
@@ -102,10 +102,9 @@ export function ResourceDetailPage({
 
   return (
     <main className={`experience-scope ${styles.page}`}>
-      <ArchiveHeader
+      <SiteHeader
+        inset
         context={`${presentation.singular} / ${formatScenarioCount(resource.scenarioCount)}`}
-        backHref={presentation.indexHref}
-        backLabel={`All ${presentation.indexTitle.toLocaleLowerCase('en')}`}
       />
 
       <section className={styles.detailIntro}>
@@ -207,7 +206,7 @@ export function SearchResultsPage({
 }) {
   return (
     <main className={`experience-scope ${styles.page}`}>
-      <ArchiveHeader context='Search / archive' />
+      <SiteHeader inset context='Search / archive' />
 
       <section className={styles.searchIntro}>
         <p className={styles.eyebrow}>Cross-resource search</p>
@@ -272,26 +271,6 @@ export function SearchResultsPage({
         )}
       </section>
     </main>
-  )
-}
-
-function ArchiveHeader({
-  context,
-  backHref = '/',
-  backLabel = 'Gallery'
-}: {
-  readonly context: string
-  readonly backHref?: string
-  readonly backLabel?: string
-}) {
-  return (
-    <header className={styles.siteHeader}>
-      <Link href={backHref} className={styles.backLink}>
-        ← {backLabel}
-      </Link>
-      <span>{context}</span>
-      <GlobalSearch className={styles.searchTrigger} />
-    </header>
   )
 }
 

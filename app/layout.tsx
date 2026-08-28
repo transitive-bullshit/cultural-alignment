@@ -6,6 +6,7 @@ import '@fontsource/barlow-condensed/700.css'
 import '@fontsource/barlow-condensed/800.css'
 import './globals.css'
 
+import { SiteFooter } from '@/components/site-footer'
 import { siteUrl } from '@/lib/site'
 
 export const metadata: Metadata = {
@@ -20,7 +21,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html lang='en' className='h-full antialiased'>
-      <body className='min-h-full'>{children}</body>
+      <body className='min-h-full'>
+        {children}
+        <SiteFooter />
+      </body>
     </html>
   )
 }
