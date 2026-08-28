@@ -119,10 +119,11 @@ type CursorPosition = {
 
 type ScenarioMediaModel = Pick<ScenarioPage, 'image' | 'title' | 'video'> & {
   readonly sourceTitle: string
+  readonly eager?: boolean
 }
 
 export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
-  const { image, sourceTitle, title, video } = media
+  const { image, sourceTitle, title, video, eager } = media
   const [hasActivatedVideo, setHasActivatedVideo] = useState(false)
   const [isShowingStill, setIsShowingStill] = useState(true)
   const [isPlaying, setIsPlaying] = useState(false)
@@ -655,6 +656,7 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
           preload
           sizes='(max-width: 820px) 100vw, 57vw'
           style={{ objectPosition }}
+          loading={eager ? 'eager' : undefined}
         />
       ) : null}
 

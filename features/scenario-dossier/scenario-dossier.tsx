@@ -42,7 +42,8 @@ export function ScenarioDossier({ scenario }: { scenario: ScenarioPage }) {
                   title: scenario.title,
                   sourceTitle: scenario.source.title,
                   image: scenario.image,
-                  video: scenario.video
+                  video: scenario.video,
+                  eager: true
                 }}
               />
             </ViewTransition>
