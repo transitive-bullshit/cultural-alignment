@@ -1,0 +1,183 @@
+.sticker {
+  position: relative;
+  width: 104px;
+  height: 104px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--proto-electric);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--proto-paper) 92%, transparent);
+  color: var(--proto-electric);
+  box-shadow: 0 10px 32px rgb(45 42 38 / 10%);
+  font: inherit;
+  isolation: isolate;
+  backdrop-filter: blur(10px);
+  transition:
+    color 180ms var(--proto-ease-out),
+    transform 120ms var(--proto-ease-out);
+}
+
+.sticker::before {
+  position: absolute;
+  z-index: -1;
+  inset: -1px;
+  border-radius: 50%;
+  background: var(--proto-electric);
+  content: '';
+  opacity: 0;
+  transform: scale(0.08);
+  transition:
+    opacity 160ms var(--proto-ease-out),
+    transform 220ms var(--proto-ease-out);
+}
+
+.sticker:focus-visible {
+  color: #fff;
+  outline: 2px solid var(--proto-ink);
+  outline-offset: 4px;
+}
+
+.sticker:focus-visible::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.sticker:active {
+  transform: scale(0.97);
+}
+
+.orbit {
+  position: absolute;
+  z-index: 1;
+  inset: 7px;
+  width: calc(100% - 14px);
+  height: calc(100% - 14px);
+  overflow: visible;
+  animation: spoiler-orbit 14s linear infinite;
+}
+
+.orbit svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.orbit text {
+  fill: currentColor;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 7.35px;
+  font-weight: 600;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+.sticker strong {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: grid;
+  color: var(--proto-ink);
+  font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  transition: color 180ms var(--proto-ease-out);
+  place-items: center;
+}
+
+.dismissCue {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 23px;
+  left: 0;
+  color: var(--proto-muted-ink);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 6px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  transition: color 180ms var(--proto-ease-out);
+}
+
+.sticker:focus-visible strong,
+.sticker:focus-visible .dismissCue {
+  color: #fff;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .sticker:hover {
+    color: #fff;
+  }
+
+  .sticker:hover::before {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .sticker:hover strong,
+  .sticker:hover .dismissCue {
+    color: #fff;
+  }
+}
+
+@keyframes spoiler-orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .sticker {
+    width: 76px;
+    height: 76px;
+  }
+
+  .orbit {
+    inset: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+  }
+
+  .orbit text {
+    font-size: 7.05px;
+  }
+
+  .sticker strong {
+    font-size: 16px;
+  }
+
+  .dismissCue {
+    bottom: 16px;
+    font-size: 5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sticker {
+    transition: color 160ms var(--proto-ease-out);
+  }
+
+  .sticker::before {
+    transform: none;
+    transition: opacity 160ms var(--proto-ease-out);
+  }
+
+  .sticker:focus-visible::before {
+    transform: none;
+  }
+
+  .orbit {
+    animation: none;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .sticker:hover::before {
+      transform: none;
+    }
+  }
+}

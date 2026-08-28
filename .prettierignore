@@ -1,0 +1,4 @@
+# Deterministic generated artifacts; format is owned by scripts/sync.ts.
+content/snapshot/*.json
+public/content/search-index.json
+public/media/generated/

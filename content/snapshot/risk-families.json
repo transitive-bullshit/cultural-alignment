@@ -1,0 +1,32 @@
+[
+  {
+    "id": "0d51d291-e83f-4873-a406-8f4df8851950",
+    "slug": "systemic-structural",
+    "title": "Systemic / structural",
+    "description": "Risks that emerge through institutions, incentives, concentration, and social systems."
+  },
+  {
+    "id": "54f96fa7-7870-4dc6-9896-4eab8703c09c",
+    "slug": "malicious-use",
+    "title": "Malicious use",
+    "description": "Risks created when people intentionally use capable AI systems to cause harm."
+  },
+  {
+    "id": "92ba22f8-faaa-430e-9411-09b631a436b4",
+    "slug": "accidents-malfunctions",
+    "title": "Accidents / malfunctions",
+    "description": "Risks created by system failures, brittle behavior, and unintended operation."
+  },
+  {
+    "id": "9cb76b95-85de-4b11-85fb-24a75faa9dba",
+    "slug": "misalignment",
+    "title": "Misalignment",
+    "description": "Risks created when a system’s learned objectives or behavior diverge from human intent."
+  },
+  {
+    "id": "e1679005-e888-407f-9657-1420b93d157c",
+    "slug": "security-governance",
+    "title": "Security / governance",
+    "description": "Risks shaped by control, oversight, access, deployment, and institutional coordination."
+  }
+]

@@ -1,32 +1,25 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
 
+import '@fontsource-variable/geist'
+import '@fontsource-variable/geist-mono'
+import '@fontsource/barlow-condensed/700.css'
+import '@fontsource/barlow-condensed/800.css'
 import './globals.css'
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin']
-})
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin']
-})
+import { siteUrl } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: 'TODO',
-  description: 'TODO',
-  alternates: {
-    canonical: '/'
-  }
+  metadataBase: siteUrl,
+  title: {
+    default: 'Cultural Alignment',
+    template: '%s — Cultural Alignment'
+  },
+  description: 'Familiar stories for unfamiliar AI problems.'
 }
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
-    <html
-      lang='en'
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
+    <html lang='en' className='h-full antialiased'>
       <body className='min-h-full'>{children}</body>
     </html>
   )
