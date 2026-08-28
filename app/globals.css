@@ -1,6 +1,8 @@
 @import 'tailwindcss';
 
 :root {
+  --font-geist-sans: 'Geist Variable';
+  --font-geist-mono: 'Geist Mono Variable';
   --background: #f4ecdd;
   --foreground: #2d2a26;
   --card: #f8f0df;
@@ -67,6 +69,60 @@ body {
   font-family: var(--font-geist-sans), sans-serif;
 }
 
+.experience-scope {
+  --proto-paper: #f4ecdd;
+  --proto-raised-paper: #f8f0df;
+  --proto-ink: #2d2a26;
+  --proto-muted-paper: #e8dece;
+  --proto-rule: #d8cbb8;
+  --proto-muted-ink: #756d63;
+  --proto-stage: #171713;
+  --proto-stage-ink: #f4ecdd;
+  --proto-electric: #ff4d1f;
+  --proto-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  min-height: 100svh;
+  color: var(--proto-ink);
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+.experience-scope *,
+.experience-scope *::before,
+.experience-scope *::after {
+  box-sizing: border-box;
+}
+
+.experience-scope a {
+  color: inherit;
+}
+
+::view-transition {
+  pointer-events: none;
+}
+
+::view-transition-old(root) {
+  display: none;
+}
+
+::view-transition-new(root) {
+  animation: none;
+}
+
+::view-transition-group(.scenario-media) {
+  z-index: 30;
+  animation-duration: 520ms;
+  animation-timing-function: var(--ease-out);
+}
+
+::view-transition-image-pair(.scenario-media) {
+  animation-name: scenario-media-via-blur;
+}
+
+@keyframes scenario-media-via-blur {
+  35% {
+    filter: blur(2px);
+  }
+}
+
 button:not(:disabled),
 [role='button']:not(:disabled) {
   cursor: pointer;
@@ -74,4 +130,13 @@ button:not(:disabled),
 
 ::selection {
   background: color-mix(in srgb, var(--ring) 25%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+  }
 }

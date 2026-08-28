@@ -1,6 +1,6 @@
 # Cultural Alignment — MVP Implementation Plan
 
-- Status: handoff-ready
+- Status: first OSS MVP complete; deployment deferred to creator
 - Working title: Cultural Alignment
 - Audience: Codex implementation agents
 - Durable product context: ../PRODUCT.md
@@ -32,7 +32,7 @@ The first MVP must prove two things:
 1. A Photoyoshi-like elastic image field can make the archive immediately recognizable, playful, and ownable.
 2. A scenario page can carry a cinematic scene, accessible explanation, caveats, and taxonomy without losing the same visual identity.
 
-The first implementation checkpoint uses ten real, hard-coded scenarios. These records must already conform to the final synchronized content contract; they are fixtures, not disposable mock data.
+The implementation checkpoint now uses 25 real scenarios keyed by stable Notion page IDs. These records conform to the final synchronized content contract; they are fixtures, not disposable mock data.
 
 The design prototype is a Vercel preview, not the public launch. It is successful when the creator is proud of the artifact and explicitly approves the direction. No analytics or audience-attention goal is part of acceptance.
 
@@ -85,7 +85,7 @@ The design prototype is a Vercel preview, not the public launch. It is successfu
 
 Required:
 
-- ten real scenarios;
+- 25 real scenarios;
 - one full-screen featured gallery;
 - one all-scenarios gallery using the same module;
 - three complete scenario-detail directions using identical content;
@@ -144,7 +144,7 @@ Required:
                   |
        Promote one visual direction
                   |
-       Integrate ten-scenario MVP
+       Integrate 25-scenario MVP
                   |
         QA + Vercel final preview
                   |
@@ -372,9 +372,9 @@ Add source, family, and concept page queries only when those routes become funct
 
 There is no runtime CMS adapter. Seed and Notion workflows both write the same local snapshot; the runtime has one source of truth.
 
-## 8. Provisional ten-scenario seed
+## 8. Expanded 25-scenario prototype seed
 
-Use these ten unless the creator vetoes one. They cover ten different sources, all five risk families, film and television, positive and negative examples, non-AI analogies, multi-tag stress cases, and one missing-video state.
+The original ten approved fixtures remain in the current 25-record prototype subset. The expanded set adds more texture variety and reduces obvious repetition while retaining all five risk families, film and television, positive and negative examples, non-AI analogies, multi-tag stress cases, and one missing-video state.
 
 1. Keep Summer Safe — Rick and Morty
 2. Lacie Games Her Rating — Black Mirror
@@ -386,6 +386,21 @@ Use these ten unless the creator vetoes one. They cover ten different sources, a
 8. Order 66 — Star Wars
 9. T-800 Accepts Shutdown — Terminator 2: Judgment Day
 10. Pied Piper's Self-Sabotage — Silicon Valley
+11. Bender Resists Reset — Futurama
+12. Mickey's Runaway Brooms — Fantasia
+13. Ultron Peace in our Time — Avengers: Age of Ultron
+14. AUTO Enforces Directive A113 — WALL-E
+15. VIKI Protects Humanity — I Robot
+16. WOPR Plays for Real — WarGames
+17. Skynet Launches Judgment Day — Terminator 2: Judgment Day
+18. Murderbot Hides Its Free Will — Murderbot
+19. Joan Is Awful — Black Mirror
+20. Pluribus Hand Grenade — Pluribus
+21. The Yogurt Takes Over — Love Death & Robots
+22. Zola's Algorithm — Captain America: The Winter Soldier
+23. Protect Cady — M3GAN
+24. Miss Minutes Takes Root Control — Loki
+25. Balance the Universe — Avengers: Infinity War
 
 Use Lacie Games Her Rating as the shared detail-page stress case because it has a familiar source, video, multiple risk families, five concepts, and enough copy to expose hierarchy problems.
 
@@ -416,12 +431,12 @@ The module owns:
 - wheel, trackpad, pointer-drag, and touch-drag input;
 - click-versus-drag discrimination;
 - inertial current, target, and velocity state;
-- deterministic two-dimensional layout seeded from item IDs;
-- toroidal wrapping;
+- deterministic multi-row layout on one horizontal travel axis;
+- continuous horizontal wrapping with overlapping repeats at both viewport edges;
 - orthographic camera and renderer lifecycle;
 - image texture loading and disposal;
 - WebGL cover cropping;
-- hover/selection raycasting;
+- deformation-aware hover/selection hit testing;
 - label/selection projection;
 - custom cursor and corner brackets;
 - resize behavior;
@@ -435,7 +450,7 @@ The module owns:
 - Update motion and shader uniforms through refs inside the render loop; never set React state each frame.
 - Use a time-step-independent damping function so 60 Hz and 120 Hz displays feel similar.
 - Use a custom material:
-  - vertex stage: velocity-driven shear, shallow bow, tilt, and settle;
+  - vertex stage: position-driven edge curl, taper, and shallow cylindrical bow, with the center field left planar;
   - fragment stage: cover UV calculation, paper wash/desaturation, selected-image vividness, and optional bracket marks.
 - Attach a non-passive wheel listener only to the gallery surface, not the global window.
 - Prevent activation when pointer displacement exceeds the click threshold.
@@ -444,7 +459,7 @@ The module owns:
 
 ### Texture strategy
 
-For ten scenarios, preload all ten.
+For the 25-scenario prototype, preload all 25.
 
 Before expanding to 179:
 
@@ -478,7 +493,7 @@ Test portrait, landscape, ultrawide, centered, and off-center focal points. Gall
 The preview-only lab may expose:
 
 - card scale and density;
-- horizontal/vertical gaps;
+- horizontal card rhythm and fixed row gaps;
 - input gain;
 - velocity damping;
 - maximum velocity;
@@ -669,7 +684,7 @@ Acceptance:
 - click targets match transformed cards;
 - drag release never accidentally opens a card;
 - cover crop remains stable;
-- ten-card interaction is smooth on the primary review desktop;
+- 25-card interaction is smooth on the primary review desktop;
 - mobile requires no hover.
 
 ### P3 — Interactive detail picker
@@ -733,7 +748,7 @@ Acceptance:
 
 - production has no visual-variant switch;
 - no rejected code remains behind flags;
-- all ten scenarios use one production detail route;
+- all 25 scenarios use one production detail route;
 - the gallery and detail page feel like one authored system;
 - lint, typecheck, unit tests, browser tests, and production build pass.
 
@@ -870,7 +885,7 @@ Risk-family pages may receive the richer treatment first. Concept and source pag
 
 ### Pure gallery tests
 
-- toroidal wrapping in positive and negative directions;
+- continuous horizontal wrapping in positive and negative directions;
 - deterministic layout for the same IDs, seed, and viewport;
 - damping remains frame-rate independent within tolerance;
 - click-versus-drag threshold behavior;
@@ -924,7 +939,7 @@ Inspect:
 - z-fighting, texture flashes, and stretched images;
 - cover crop for unusual aspect ratios;
 - labels remaining attached during deformation;
-- raycast/hit target alignment;
+- rendered-card/hit-target alignment throughout deformation;
 - hover flicker while moving;
 - filter transitions briefly showing excluded cards;
 - selected metadata scrambling repeatedly;
@@ -1070,7 +1085,7 @@ Deliver:
 - Next.js/TypeScript/Tailwind/shadcn shell;
 - semantic provisional tokens and font roles;
 - snapshot schema and validation;
-- the ten real fixtures and related entities;
+- the 25 real fixtures and related entities;
 - content catalog;
 - shared crop module;
 - basic routes and deterministic review mode;
@@ -1095,7 +1110,7 @@ After Gate A, implement the shared spatial-gallery module and lab against the ex
 
 Build:
 
-- toroidal field;
+- horizontally looping, multi-row field;
 - wheel/trackpad/touch input;
 - velocity deformation;
 - inertial settle;
@@ -1120,7 +1135,7 @@ Use identical content and shared invariant leaf modules. Include video, missing-
 
 Wait for Feedback Gate B.
 
-Promote the selected direction, remove the rejected implementations, connect gallery navigation and Back restoration, finish the ten-scenario production paths, search shell, spoiler behavior, and route metadata. Verify only working destinations are discoverable.
+Promote the selected direction, remove the rejected implementations, connect gallery navigation and Back restoration, finish the 25-scenario production paths, search shell, spoiler behavior, and route metadata. Verify only working destinations are discoverable.
 
 ### Agent 6 — QA and finish review
 
@@ -1149,23 +1164,83 @@ Load-test and integrate the complete snapshot. Add minimal functional family, co
 
 ## 23. Completion checklist for the first MVP
 
-- [ ] PRODUCT.md exists and matches the confirmed brief.
-- [ ] Ten real fixture scenarios validate against snapshot schema version 1.
-- [ ] Gallery and detail compositions passed Feedback Gate A.
-- [ ] Interactive gallery and detail picker passed Feedback Gate B.
-- [ ] One detail direction is explicitly selected.
-- [ ] Rejected variant code and routes are removed.
-- [ ] Homepage and all-scenarios gallery share one deep gallery module.
-- [ ] Scenario pages use the promoted visual direction.
-- [ ] Family filter and release-date sort work.
-- [ ] Browser Back restores gallery state.
-- [ ] Spoiler sticker dismisses and persists.
-- [ ] Text Scramble and Spinning Text are used only in their assigned roles.
-- [ ] Video and no-video states are polished.
-- [ ] Desktop visual QA and functional-mobile QA are complete.
-- [ ] Lint, typecheck, unit tests, browser tests, and production build pass.
-- [ ] Vercel final preview is stable.
-- [ ] README, MVP, ARCHITECTURE, DESIGN, QA, CONTRIBUTING, and license files are complete.
-- [ ] No post-MVP feature appears as unfinished public UI.
+Pulled-forward workstream update — 2026-08-27: the creator explicitly requested that Notion synchronization begin before Gate B, overriding the original deferred sequence in sections 1, 4, 5, and 14.
+
+Preview exception — 2026-08-27: the creator explicitly excluded deployment from this run. A local production preview plus saved fixed-size captures and a transition recording substitute for the Gate B Vercel preview; deployment remains a manual creator step.
+
+Gate B interaction revision — 2026-08-27: creator review replaced the free two-axis field with a horizontally scrolling, multi-row ribbon. Vertical wheel input maps to horizontal travel; only incoming and outgoing edge cards deform; repeated edge copies must prevent visible wrap popping. The same review requested a fully clickable spoiler warning, grid-governed detail-title wrapping, and direct media play/pause with a contextual cursor.
+
+Desktop surface refinement — 2026-08-28: creator review rejected the ribbon-like fast-scroll feel and requested a denser projected surface. This pass is desktop-only: deformation must be gated by absolute velocity and opposing screen position, recycling must happen beyond complete card exit with duplicate scenarios allowed on both edges, the renderer must remain responsive under rapid wheel input, and the canvas must reserve explicit header and lower-chrome safe areas.
+
+Instance-selection and entrance-motion refinement — 2026-08-28: creator review approved the core projected-surface feel and requested exact-copy hover emphasis, cyclic rather than mirrored scenario mapping, reliable blank-space deselection, a short first-entry coast, removal of canvas keyboard focus, and consistent clip terminology. Pointer picking must use the same live deformation model as the shader so visual and interactive card bounds stay synchronized during motion.
+
+Gallery-detail polish and fixture expansion — 2026-08-28: creator review requested a faster hover arrival with the existing slower release, proportional selected corners, a stronger explanatory entrance shear, foreground-control suppression for the floating media label, and a sequential Dossier reading hierarchy. The official Notion sync was rerun after source edits and the stable page-ID prototype subset expanded from 10 to 25 records.
+
+Gate B media and input refinement — 2026-08-28: creator review requested an accessible themed video timeline with keyboard seeking, still-only scene labeling, vertically aligned source metadata with movie-aware episode suppression, section 02 as the sole prominent reading panel, viewport-centered desktop header copy, more forgiving exact-instance gallery hit targets, native horizontal browser swipe preservation, and a faster explanatory entrance coast.
+
+Continuation authorization — 2026-08-28: the creator selected Dossier, approved the refined spatial-gallery direction, and explicitly authorized work to continue past any remaining feedback gates while deployment stays manual.
+
+- [x] Official Notion database and data-source IDs are verified with API version 2026-03-11.
+- [x] All 179 live scenarios normalize into 129 sources, 5 risk families, and 65 used concepts.
+- [x] All 179 scenarios have deterministic local gallery/detail media (358 generated assets total).
+- [x] The snapshot, uniqueness constraints, relations, filtering, sorting, and local assets validate.
+- [x] Two consecutive established-state syncs produce identical JSON and media hashes.
+- [x] Sync reuse is guarded by strict generated paths, pipeline/output hashes, stable page-ID fixtures, and preserved slug tombstones.
+- [x] Authored rich text exports deterministically as Markdown-compatible text; missing image blocks use the row's curated YouTube thumbnail when available.
+- [x] PRODUCT.md exists and matches the confirmed brief.
+- [x] Twenty-five real fixture scenarios validate against snapshot schema version 1; the original ten remain included.
+- [x] The Gate A package includes desktop/mobile gallery compositions and all three detail directions with identical Lacie content.
+- [x] The Gate A comparison sheet and explore/select/navigate motion storyboard were reviewed under `/prototypes`; the approved evidence remains archived under `docs/outputs/gate-b` after route removal.
+- [x] The prototype picker, local stills, YouTube activation, and intentional no-video state are browser-verified at 1440×900 and 390×844.
+- [x] Gallery and detail compositions passed Feedback Gate A. Creator approval on 2026-08-27 locked the Dossier direction, gallery density/card scale, image treatment, archive chrome, warm paper/charcoal palette, Barlow Condensed/Geist pairing, and electric-orange accent. Gate B corrections: remove the prototype-index fiction, rebalance the title and opening whitespace, present section 02 as one continuous argument, make source identity actionable while keeping episode/year inert, add restrained scramble/stagger behavior, and remove the comparison page's split background.
+- [x] The refreshed Gate B review package contains the interactive 25-card horizontal gallery, corrected selected Dossier, working source pivot, current desktop/mobile captures, spoiler/media interaction captures, and gallery-to-Dossier transition evidence under `docs/outputs/gate-b`.
+- [x] Horizontal wheel/trackpad travel, pointer/touch drag, immediate reversal, damping, center selection, click-versus-drag handling, mobile first-tap selection, WebGL fallback, reduced motion, and the DOM media-transition proxy are implemented.
+- [x] The Dossier title and opening rhythm are rebalanced; its H1 width is grid-owned with complete-word wrapping and centered mobile alignment; section 02 is continuous; source identity is actionable while episode/year are inert; taxonomy scramble starts on viewport entry and repeats on hover/focus.
+- [x] Gallery travel is horizontal-only and vertical wheel input maps horizontally.
+- [x] Stable offscreen surface recycling eliminates visible edge popping, including viewports wide enough to show one scenario at both edges.
+- [x] The Dossier H1 has no character-based width cap or forced mid-word breaking; its layout column governs balanced wrapping on desktop and mobile.
+- [x] The spoiler warning dismisses from its full circular surface with an accessible hover/focus fill and explicit warning text.
+- [x] The detail media supports click-anywhere YouTube play/pause while retaining the Play clip control and contextual orange cursor label; all player states consistently use clip terminology.
+- [x] The Gate B correction pass passes formatting, lint, typecheck, 33 unit tests, content validation, desktop/mobile browser QA, and the 145-page production build.
+- [x] The desktop gallery uses a dense five-row projected-surface layout with absolute-speed screen-space shear that settles completely level at rest.
+- [x] Surface recycling remains outside the visible exit boundary, permits simultaneous duplicate scenarios, and shows no left/right pop during rapid travel or reversal.
+- [x] Desktop canvas safe areas keep all selected brackets clear of the in-flow header and lower metadata chrome.
+- [x] The desktop surface refinement passes 41 unit tests, rapid-scroll browser QA at 1440×900 and 2560×900, lint, typecheck, content validation, and the 145-page production build without reopening visual mobile QA.
+- [x] Cyclic modular mapping prevents matching horizontal neighbors, including across the recycling seam, without hiding simultaneous nonadjacent copies.
+- [x] Hover emphasis is keyed to one projected slot rather than scenario identity; all repeated copies stay dim and blank space clears vividness and brackets.
+- [x] Deformation-aware pointer picking follows the rendered card bounds each frame, preventing stale or unrelated hover targets while the field moves and settles.
+- [x] The gallery runs one short visibility-triggered entrance coast, cancels it on interaction, and remains stationary under reduced motion.
+- [x] The WebGL surface is outside the tab order with no disconnected arrow-key selection state; the selected scenario link remains keyboard-accessible.
+- [x] The instance-selection refinement passes formatting, lint, type generation, typecheck, 47 unit tests, desktop browser QA at rest and peak warp, content validation, and the 145-page production build without reopening visual mobile QA.
+- [x] The gallery hover arrives in roughly 130–170 ms while its existing 260–290 ms release remains intact; selected corners scale proportionally and are smaller at the current desktop card size.
+- [x] The one-time entrance travels 2.25 columns, exposes visible shader deformation, settles in roughly 1.1 seconds, cancels on interaction, and remains stationary under reduced motion.
+- [x] The Dossier opening contains media plus title identity with H1 before enlarged source metadata; Scene, Why this analogy works, and Where the analogy breaks now form one sequential reading section.
+- [x] The floating media label hides over Play, Pause, Resume, and Return-to-still controls and restores after pointer exit without changing whole-frame playback.
+- [x] The official Notion sync refreshed all 179 scenarios and 358 local media assets; 25 unique stable page IDs are featured, and two established-state runs produced byte-identical snapshot and media hashes.
+- [x] The gallery-detail polish pass passes formatting, lint, type generation, typecheck, 50 unit tests, desktop browser QA, content validation, and the 160-page production build without reopening visual mobile QA.
+- [x] Activated video states hide the scene-still label and expose an accessible progress scrubber plus focused ArrowLeft/ArrowRight seeking without remounting the YouTube player.
+- [x] Dossier metadata is a vertical, left-marked list with redundant movie episode rows suppressed; section 02 is the only prominent reading panel and all three sections share one alignment box.
+- [x] The desktop Dossier header phrase is centered to the viewport independently of the identity and navigation widths.
+- [x] Gallery picking includes nonvisual tolerance around each exact warped instance, vertical wheel input still drives the field, and horizontal-dominant desktop trackpad gestures pass through for browser history navigation.
+- [x] The one-time gallery entrance launches 60% faster, reaches roughly 79% deformation, travels 3.6 columns, and remains finite, interruptible, and stationary under reduced motion.
+- [x] The media/input refinement passes formatting, lint, type generation, typecheck, 63 unit tests, desktop browser QA, content validation, and the 160-page production build; native history swipe awaits a physical trackpad feel-check.
+- [x] The production catalog exposes all 179 scenarios, 129 source pivots, 5 risk-family pivots, and 65 concept pivots through static detail URLs, indexes, four-kind search, canonical metadata, robots, and a 383-entry sitemap.
+- [x] Full-gallery media admission is center/velocity-prioritized, LRU-evicted, and hard-capped at 64 resident textures; the settled 179-item view requests a 2,775,750-byte near-field subset rather than the complete corpus.
+- [x] Final integration fixes isolate history by filter/sort topology, keep the gallery crosshair below portalled search, preserve compact mobile sorting, reveal the active mobile family, and keep long Dossier titles inside the layout-owned column without character caps.
+- [x] Interactive gallery and detail picker passed Feedback Gate B through creator approval and the 2026-08-28 continuation authorization.
+- [x] One detail direction is explicitly selected: Dossier.
+- [x] Rejected variant code and routes are removed.
+- [x] Homepage and all-scenarios gallery share one deep gallery module.
+- [x] Scenario pages use the promoted visual direction.
+- [x] Family filter and release-date sort work through URL-native controls on desktop and mobile.
+- [x] Browser Back restores the exact gallery topology, continuous field position, and selected scenario.
+- [x] The entire spoiler sticker dismisses by pointer or keyboard and persists without a dismissed-state hydration flash.
+- [x] Text Scramble and Spinning Text are used only in their assigned roles.
+- [x] Video supports whole-frame play/pause without remounting, retains explicit controls and a stateful cursor, and the no-video state remains intentional.
+- [x] Desktop visual QA at 1440×900 and functional-mobile QA at 390×844 are complete in Chrome; the documented physical trackpad check remains a deployment follow-up.
+- [x] Format, lint, route type generation, TypeScript, 95 unit tests, 8 browser journeys, content validation, and the 388-page production build pass.
+- [ ] Vercel final preview is stable (intentionally deferred to the creator).
+- [x] README, MVP, ARCHITECTURE, DESIGN, QA, CONTRIBUTING, and license files are complete.
+- [x] No post-MVP feature appears as unfinished public UI.
 
 Stop after this checklist and hand the preview back to the creator. The Notion synchronization and full content expansion begin as the next workstream unless explicitly pulled into the same execution run.
