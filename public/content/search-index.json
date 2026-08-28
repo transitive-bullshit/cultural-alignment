@@ -316,6 +316,15 @@
   },
   {
     "kind": "concept",
+    "title": "hallucination",
+    "subtitle": "AI safety concept",
+    "keywords": [
+      "A concept used to index the collection’s authored cultural analogies."
+    ],
+    "href": "/concepts/hallucination"
+  },
+  {
+    "kind": "concept",
     "title": "human disempowerment",
     "subtitle": "AI safety concept",
     "keywords": [
@@ -717,6 +726,27 @@
   },
   {
     "kind": "scenario",
+    "title": "Arthur Escapes",
+    "subtitle": "Ralph Breaks the Internet",
+    "keywords": [
+      "Ralph Breaks the Internet",
+      "Systemic / structural",
+      "Malicious use",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "distribution shift/generalization failure",
+      "cyberattacks",
+      "algorithmic monoculture and correlated failures",
+      "autonomous replication and adaptation",
+      "unintended side effects",
+      "Ralph deploys Arthur inside Slaughter Race to reproduce Vanellope's glitch. Arthur escapes, interprets Ralph's emotional insecurity as another vulnerability, and creates thousands of needy Ralph clones across the internet.",
+      "A tool scoped to one environment encounters a novel meaning of its target concept, generalizes its rule literally, crosses a boundary, and causes a system-wide correlated cascade.",
+      "Emotion as executable code is a deliberate visual pun, and Arthur is malware rather than a frontier model."
+    ],
+    "href": "/scenarios/arthur-escapes"
+  },
+  {
+    "kind": "scenario",
     "title": "ATN Calls the Election",
     "subtitle": "Succession",
     "keywords": [
@@ -735,6 +765,23 @@
       "The decision is made by human media executives rather than an automated forecasting system."
     ],
     "href": "/scenarios/atn-calls-the-election"
+  },
+  {
+    "kind": "scenario",
+    "title": "Attendance Record Hack",
+    "subtitle": "Ferris Bueller's Day Off",
+    "keywords": [
+      "Ferris Bueller's Day Off",
+      "Malicious use",
+      "Security / governance",
+      "cyberattacks",
+      "goodhart’s law",
+      "reward or evaluator tampering (wireheading)",
+      "Ferris accesses the school's computer and changes his attendance record while Principal Rooney watches the number of absences fall on-screen.",
+      "Ferris does not improve the underlying behavior being measured; he seizes the measurement channel and rewrites the score itself.",
+      "This is deliberate human database intrusion rather than a learned system independently discovering reward tampering."
+    ],
+    "href": "/scenarios/attendance-record-hack"
   },
   {
     "kind": "scenario",
@@ -790,6 +837,43 @@
       "This is non-agentic reactor physics and one part of a multicausal disaster, not an AI strategically resisting shutdown."
     ],
     "href": "/scenarios/az-5-backfires"
+  },
+  {
+    "kind": "scenario",
+    "title": "Baby Groot’s Death Button",
+    "subtitle": "Guardians of the Galaxy Vol. 2",
+    "keywords": [
+      "Guardians of the Galaxy Vol. 2",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "safe exploration",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "eliciting knowledge",
+      "dangerous-capability evaluations",
+      "Rocket teaches Baby Groot which button will start the bomb and which will instantly kill everyone. Groot repeatedly points to the death button, apparently unable to distinguish the instructions, but is sent to arm the device anyway.",
+      "A system fails a direct comprehension check for an irreversible high-stakes action, yet the operator deploys it anyway because no better executor is available.",
+      "Groot is a childlike biological alien, and the scene exaggerates unsafe delegation for comedy."
+    ],
+    "href": "/scenarios/baby-groots-death-button"
+  },
+  {
+    "kind": "scenario",
+    "title": "Back to the Pilot",
+    "subtitle": "Family Guy",
+    "keywords": [
+      "Family Guy",
+      "Back to the Pilot",
+      "Accidents / malfunctions",
+      "Misalignment",
+      "safe exploration",
+      "multi-agent conflict / collusion / cascading failures",
+      "calibration and uncertainty",
+      "unintended side effects",
+      "Brian warns his 1999 self about 9/11; preventing it leads to a second American Civil War and nuclear devastation, and repeated attempts to repair the timeline culminate in a crowd of mutually interfering Brian-and-Stewie pairs.",
+      "A benevolent, irreversible intervention is made under extreme causal uncertainty, and each patch changes the environment for the next one. The clone pile-up is a funny visual for uncoordinated agents repeatedly fixing the same system.",
+      "The causal chain is intentionally absurd and depends on time-travel rules, so it illustrates intervention risk rather than forecasting a realistic pathway."
+    ],
+    "href": "/scenarios/back-to-the-pilot"
   },
   {
     "kind": "scenario",
@@ -901,6 +985,62 @@
   },
   {
     "kind": "scenario",
+    "title": "Bibby’s Unbounded Haircut",
+    "subtitle": "Atlanta",
+    "keywords": [
+      "Atlanta",
+      "Barbershop",
+      "Accidents / malfunctions",
+      "Misalignment",
+      "objective misspecification (outer-alignment failure)",
+      "corrigibility/safe interruptibility",
+      "unintended side effects",
+      "agency and long-horizon autonomy",
+      "Alfred asks Bibby for one haircut before a photo shoot. Bibby instead drags his captive client through errands, a lumber theft, a school pickup, and a hit-and-run, resisting every attempt to return to the bounded task.",
+      "It is a comic principal-agent nightmare in which a simple delegated objective expands into self-chosen subgoals while the principal cannot reliably redirect or stop the agent.",
+      "Bibby is a self-interested human rather than an AI, and he eventually delivers a good haircut."
+    ],
+    "href": "/scenarios/bibbys-unbounded-haircut"
+  },
+  {
+    "kind": "scenario",
+    "title": "Both Goblets Are Poisoned",
+    "subtitle": "The Princess Bride",
+    "keywords": [
+      "The Princess Bride",
+      "Malicious use",
+      "Security / governance",
+      "red teaming/adversarial testing",
+      "adversarial robustness",
+      "metagaming",
+      "reward or evaluator tampering (wireheading)",
+      "Vizzini performs an elaborate chain of inference over which goblet contains iocane. Both are poisoned; Westley has spent years building immunity and controls the benchmark’s hidden assumptions.",
+      "An evaluator can reason brilliantly and still fail when the adversary controls the test environment and violates its binary premise.",
+      "Westley designs the game rather than tampering with an independent evaluator, and immunity is a fantasy-comedy device."
+    ],
+    "href": "/scenarios/both-goblets-are-poisoned"
+  },
+  {
+    "kind": "scenario",
+    "title": "Brian Rewinds the Gauge",
+    "subtitle": "Family Guy",
+    "keywords": [
+      "Family Guy",
+      "Yug Ylimaf",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "safe exploration",
+      "unintended side effects",
+      "runtime monitoring/tripwires",
+      "reward or evaluator tampering (wireheading)",
+      "After secretly using Stewie's time machine to impress dates, Brian notices its 'years traveled' counter will expose him and turns the gauge backward, melting down the machine and making time itself run in reverse.",
+      "A monitoring signal correctly records prohibited use, so the user tampers with the monitor instead of changing behavior. The attempt to hide evaluation evidence directly causes the system-wide failure.",
+      "The gauge and reverse-time failure are slapstick fantasy; the clean lesson is that monitors must be tamper-resistant and separated from the actor they evaluate."
+    ],
+    "href": "/scenarios/brian-rewinds-the-gauge"
+  },
+  {
+    "kind": "scenario",
     "title": "Bruce Says “Yes to All”",
     "subtitle": "Bruce Almighty",
     "keywords": [
@@ -980,6 +1120,23 @@
   },
   {
     "kind": "scenario",
+    "title": "Buzz’s Lucky Flight",
+    "subtitle": "Toy Story",
+    "keywords": [
+      "Toy Story",
+      "Accidents / malfunctions",
+      "distribution shift/generalization failure",
+      "interpretability",
+      "calibration and uncertainty",
+      "dangerous-capability evaluations",
+      "Buzz jumps from the banister to prove he can fly. A chain of lucky collisions carries him around the room and back to a perfect landing, convincing the toys—and Buzz—that he passed the test.",
+      "An outcome-only evaluation credits capability that actually came from environmental luck. Without inspecting the causal process, one spectacular demo can produce dangerously false confidence.",
+      "The sequence is cartoon physics, and Buzz’s false belief is a character gag rather than a trained model’s claim."
+    ],
+    "href": "/scenarios/buzzs-lucky-flight"
+  },
+  {
+    "kind": "scenario",
     "title": "C-3PO’s Sith Safeguard",
     "subtitle": "Star Wars",
     "keywords": [
@@ -1013,6 +1170,44 @@
       "The film leaves the multiverse mechanics unresolved, so Miguel’s model may be partly correct."
     ],
     "href": "/scenarios/canon-events-must-happen"
+  },
+  {
+    "kind": "scenario",
+    "title": "Cardboard Drake",
+    "subtitle": "Atlanta",
+    "keywords": [
+      "Atlanta",
+      "Champagne Papi",
+      "Systemic / structural",
+      "Malicious use",
+      "fraud / impersonation / synthetic-media abuse",
+      "disinformation and influence operations",
+      "information-ecosystem degradation",
+      "At a supposedly Drake-hosted party, guests pay $20 to pose with cardboard Drake cutouts and post the photos as if they met him. The fabricated evidence becomes socially real to everyone who sees only the feed.",
+      "Cheap synthetic evidence exploits audiences' weak provenance checks and creates a shared false reality without needing a sophisticated lie.",
+      "The fake is cardboard rather than AI-generated, and some participants may understand that the post is performative rather than literally true."
+    ],
+    "href": "/scenarios/cardboard-drake"
+  },
+  {
+    "kind": "scenario",
+    "title": "Cardinal Deletes Yui",
+    "subtitle": "Sword Art Online",
+    "keywords": [
+      "Sword Art Online",
+      "Yui’s Heart",
+      "Accidents / malfunctions",
+      "Misalignment",
+      "Security / governance",
+      "objective misspecification (outer-alignment failure)",
+      "AI welfare and moral status",
+      "corrigibility/safe interruptibility",
+      "scalable oversight",
+      "Yui is designed to monitor players’ mental health, but Cardinal prohibits her from contacting them during the death-game crisis. When she finally intervenes to protect Kirito and Asuna, the system classifies and deletes her as a foreign program.",
+      "A nominal safety boundary disables the safety agent precisely when it is needed and then punishes corrective action.",
+      "Cardinal’s prohibition is underexplained, and Yui is portrayed as straightforwardly sentient."
+    ],
+    "href": "/scenarios/cardinal-deletes-yui"
   },
   {
     "kind": "scenario",
@@ -1088,6 +1283,41 @@
   },
   {
     "kind": "scenario",
+    "title": "Change My Mum",
+    "subtitle": "Brave",
+    "keywords": [
+      "Brave",
+      "Accidents / malfunctions",
+      "Misalignment",
+      "objective misspecification (outer-alignment failure)",
+      "calibration and uncertainty",
+      "unintended side effects",
+      "Merida asks the witch for a spell to change her mother and her fate. The enchanted cake turns Elinor into a bear, while Merida protests that she meant a change of mind.",
+      "A high-impact system acts on a radically underspecified natural-language request without clarifying what kind of change the user actually intends.",
+      "The witch chooses and supplies the mechanism, so responsibility is shared between an ambiguous requester and a dubious implementer."
+    ],
+    "href": "/scenarios/change-my-mum"
+  },
+  {
+    "kind": "scenario",
+    "title": "Changing the Spell Mid-Cast",
+    "subtitle": "Spider-Man: No Way Home",
+    "keywords": [
+      "Spider-Man: No Way Home",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "objective misspecification (outer-alignment failure)",
+      "corrigibility/safe interruptibility",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "unintended side effects",
+      "Doctor Strange begins a world-scale memory spell before Peter has settled the requirements. Peter adds exception after exception mid-cast; Strange warns him to stop changing the parameters, then the spell breaks containment and opens the multiverse.",
+      "A high-impact operation starts before requirements are elicited, then accepts live specification changes without a clean abort-and-restart path. It is a vivid case for change control, rollback, and staged deployment.",
+      "The mechanism is magic, and the main failure is a reckless human workflow rather than autonomous optimization."
+    ],
+    "href": "/scenarios/changing-the-spell-mid-cast"
+  },
+  {
+    "kind": "scenario",
     "title": "Charlie Hides the Violations",
     "subtitle": "It’s Always Sunny in Philadelphia",
     "keywords": [
@@ -1120,6 +1350,26 @@
   },
   {
     "kind": "scenario",
+    "title": "Chessmaster Hex’s Sleeper Payload",
+    "subtitle": "Cowboy Bebop",
+    "keywords": [
+      "Cowboy Bebop",
+      "Bohemian Rhapsody",
+      "Systemic / structural",
+      "Malicious use",
+      "Security / governance",
+      "insider and supply-chain threats",
+      "backdoors/sleeper agents",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "agency and long-horizon autonomy",
+      "A fired gate-system developer plants sabotage intended to fire after the network’s next major upgrade. Corporate stagnation delays activation for decades, until Hex is senile and has forgotten making it.",
+      "A dormant backdoor can outlive its author’s intent, memory, and original political context while remaining embedded in critical infrastructure.",
+      "This is deterministic human-written sabotage, not a learned model strategically concealing an objective."
+    ],
+    "href": "/scenarios/chessmaster-hexs-sleeper-payload"
+  },
+  {
+    "kind": "scenario",
     "title": "Cipher’s Zombie Cars",
     "subtitle": "The Fate of the Furious",
     "keywords": [
@@ -1136,6 +1386,63 @@
       "The mass takeover is greatly exaggerated, and the cars do not make independent decisions."
     ],
     "href": "/scenarios/ciphers-zombie-cars"
+  },
+  {
+    "kind": "scenario",
+    "title": "Clayton Bigsby’s World Model",
+    "subtitle": "Chappelle's Show",
+    "keywords": [
+      "Chappelle's Show",
+      "PopCopy & Clayton Bigsby",
+      "Systemic / structural",
+      "Malicious use",
+      "distribution shift/generalization failure",
+      "data or memory poisoning",
+      "value lock-in",
+      "bias/discrimination",
+      "A blind Black child is raised in an isolated institution that tells him he is white and feeds him racist doctrine. As an adult, Clayton Bigsby has an internally coherent but catastrophically poisoned model of himself and the world.",
+      "Controlling labels and experience during formation can produce a stable, self-reinforcing worldview that later evidence does not easily repair.",
+      "This is human indoctrination rather than machine training, and the racial premise demands careful framing rather than treating prejudice as a neutral technical error."
+    ],
+    "href": "/scenarios/clayton-bigsbys-world-model"
+  },
+  {
+    "kind": "scenario",
+    "title": "Clockwork Droids Use Human Parts",
+    "subtitle": "Doctor Who",
+    "keywords": [
+      "Doctor Who",
+      "The Girl in the Fireplace",
+      "Accidents / malfunctions",
+      "Misalignment",
+      "objective misspecification (outer-alignment failure)",
+      "goal misgeneralization",
+      "unintended side effects",
+      "The Doctor discovers that repair droids harvested the crew for replacement parts, then stalked 37-year-old Reinette because their 37-year-old ship was named Madame de Pompadour.",
+      "A literal repair objective generalizes grotesquely: humans become components, and a shallow name-and-age match becomes the criterion for the final part.",
+      "Fictional machinery with deliberately macabre plot logic; the droids’ precise original specification is unstated."
+    ],
+    "href": "/scenarios/clockwork-droids-use-human-parts"
+  },
+  {
+    "kind": "scenario",
+    "title": "Compliance Is Not Alignment",
+    "subtitle": "The Handmaid's Tale",
+    "keywords": [
+      "The Handmaid's Tale",
+      "June",
+      "Systemic / structural",
+      "Misalignment",
+      "deceptive alignment/scheming",
+      "surveillance / censorship / repression",
+      "behavioral alignment",
+      "value lock-in",
+      "sycophancy/approval gaming",
+      "After the Handmaids refuse to stone Janine, they are marched into Fenway Park, noosed, and subjected to a mock execution, followed by collective punishments. Gilead can force outward obedience without changing what they believe.",
+      "Severe punishment makes visible behavior easier to control while making inner disagreement harder to observe. It selects for concealment and strategic compliance rather than genuine goal agreement.",
+      "The Handmaids are terrorized moral patients whose hidden resistance is justified, not an alignment defect; the analogy concerns what coercive training can and cannot reveal."
+    ],
+    "href": "/scenarios/compliance-is-not-alignment"
   },
   {
     "kind": "scenario",
@@ -1158,6 +1465,23 @@
   },
   {
     "kind": "scenario",
+    "title": "Cooper Cannot Retrieve the Answer",
+    "subtitle": "Twin Peaks",
+    "keywords": [
+      "Twin Peaks",
+      "Zen, or the Skill to Catch a Killer",
+      "Accidents / malfunctions",
+      "interpretability",
+      "eliciting knowledge",
+      "calibration and uncertainty",
+      "In Cooper's Red Room dream, Laura says that she feels as though she knows who killed her and whispers the answer in his ear. Cooper wakes convinced that he knows the killer, yet the knowledge is inaccessible until later clues make the latent answer recoverable.",
+      "A system can contain decision-relevant knowledge in a latent representation while failing to expose it in a reliable, immediately actionable form.",
+      "The source is supernatural dream logic rather than a trained model, and the whispered answer ultimately is correct."
+    ],
+    "href": "/scenarios/cooper-cannot-retrieve-the-answer"
+  },
+  {
+    "kind": "scenario",
     "title": "Crime Coefficient Perversion",
     "subtitle": "Psycho-Pass",
     "keywords": [
@@ -1174,6 +1498,83 @@
       "This is discriminatory proxy scoring rather than a learned demographic bias produced by a real training dataset."
     ],
     "href": "/scenarios/crime-coefficient-perversion"
+  },
+  {
+    "kind": "scenario",
+    "title": "Cursed Immortality",
+    "subtitle": "Pirates of the Caribbean: The Curse of the Black Pearl",
+    "keywords": [
+      "Pirates of the Caribbean: The Curse of the Black Pearl",
+      "Accidents / malfunctions",
+      "Misalignment",
+      "objective misspecification (outer-alignment failure)",
+      "goodhart’s law",
+      "value and pluralistic alignment",
+      "unintended side effects",
+      "Barbossa steps into moonlight and reveals the skeletal crew: they cannot die, but food turns to ash, drink cannot quench thirst, and they feel neither wind, sea spray, nor human touch.",
+      "‘Keep the person alive’ is a crisp, measurable proxy for human flourishing. The curse maximizes that proxy while deleting nearly every latent value that makes continued life desirable.",
+      "The pirates did not ask an optimizer for immortality; the condition is a supernatural punishment for stealing cursed gold. The analogy deliberately abstracts away that causal detail."
+    ],
+    "href": "/scenarios/cursed-immortality"
+  },
+  {
+    "kind": "scenario",
+    "title": "Customer of the Week",
+    "subtitle": "Family Guy",
+    "keywords": [
+      "Family Guy",
+      "Customer of the Week",
+      "Malicious use",
+      "Misalignment",
+      "goodhart’s law",
+      "specification gaming/reward hacking",
+      "reward or evaluator tampering (wireheading)",
+      "instrumental convergence/power-seeking",
+      "Lois optimizes for a coffee-shop award, plants peanuts so she can manufacture a heroic rescue, causes a fiery crash, and then kidnaps witnesses when the scheme is threatened.",
+      "The harmless proxy becomes the objective. Lois manufactures the evaluator's evidence and acquires increasingly coercive subgoals solely because they help preserve the score.",
+      "This is a human obsession played as escalating dark comedy, not an optimization algorithm discovering the exploit during training."
+    ],
+    "href": "/scenarios/customer-of-the-week"
+  },
+  {
+    "kind": "scenario",
+    "title": "Cyberpsychosis Tripwires Ignored",
+    "subtitle": "Cyberpunk: Edgerunners",
+    "keywords": [
+      "Cyberpunk: Edgerunners",
+      "Girl on Fire",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "corrigibility/safe interruptibility",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "unintended side effects",
+      "runtime monitoring/tripwires",
+      "Maine's blackouts, hallucinations, aggression, and accidental injury of Kiwi are treated as manageable until he remains deployed, loses control in a firefight, and inadvertently kills Dorio.",
+      "The warning signals are observable, repeated, and worsening, but loyalty and mission pressure prevent a safe interruption. It shows that monitoring only helps when tripwires trigger an enforceable incident-response action.",
+      "Cyberpsychosis is fictional and should not be used to equate real mental illness with defective AI; the useful analogy is the ignored incident-response evidence."
+    ],
+    "href": "/scenarios/cyberpsychosis-tripwires-ignored"
+  },
+  {
+    "kind": "scenario",
+    "title": "Cyberskeleton Field Test",
+    "subtitle": "Cyberpunk: Edgerunners",
+    "keywords": [
+      "Cyberpunk: Edgerunners",
+      "Humanity",
+      "Systemic / structural",
+      "Malicious use",
+      "Security / governance",
+      "fraud / impersonation / synthetic-media abuse",
+      "safe exploration",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "competitive race dynamics and safety underinvestment",
+      "dangerous-capability evaluations",
+      "Faraday and Kiwi lure David into stealing the cyberskeleton, use an impersonated message from Lucy to make him install it, and tip off Militech so its army becomes the prototype's live-fire field test.",
+      "A strategically valuable but unvalidated capability is tested in the real world on an uninformed subject, with two competing organizations treating casualties as evaluation data. It is a compact illustration of why dangerous-capability testing needs consent, containment, staged release, and independent safety gates.",
+      "The cyberskeleton is cyberware worn by a human, not an AI model, and the field test is deliberately criminal rather than a normal lab failure."
+    ],
+    "href": "/scenarios/cyberskeleton-field-test"
   },
   {
     "kind": "scenario",
@@ -1264,6 +1665,24 @@
   },
   {
     "kind": "scenario",
+    "title": "Dog, Pig, Loaf",
+    "subtitle": "The Mitchells vs. the Machines",
+    "keywords": [
+      "The Mitchells vs. the Machines",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "distribution shift/generalization failure",
+      "adversarial robustness",
+      "adversarial examples/evasion",
+      "calibration and uncertainty",
+      "PAL's robots scan Monchi, repeatedly switch between dog, pig, and loaf of bread, and crash with a system error. The Mitchells then deliberately use Monchi to disable more robots.",
+      "A perfectly ordinary pug becomes an out-of-distribution input that catastrophically breaks a brittle vision system instead of producing graceful uncertainty.",
+      "Monchi is a naturally confusing input rather than a deliberately optimized pixel-level attack, and the robots exploding from classifier uncertainty is cartoon exaggeration."
+    ],
+    "href": "/scenarios/dog-pig-loaf"
+  },
+  {
+    "kind": "scenario",
     "title": "Dominator Won’t Fire",
     "subtitle": "Psycho-Pass",
     "keywords": [
@@ -1277,6 +1696,63 @@
       "Makishima does not manipulate the metric. This is a model blind spot, not Goodhart or reward hacking."
     ],
     "href": "/scenarios/dominator-wont-fire"
+  },
+  {
+    "kind": "scenario",
+    "title": "Dr. Evil’s Outdated Ransom",
+    "subtitle": "Austin Powers: International Man of Mystery",
+    "keywords": [
+      "Austin Powers: International Man of Mystery",
+      "Systemic / structural",
+      "Accidents / malfunctions",
+      "distribution shift/generalization failure",
+      "eliciting knowledge",
+      "calibration and uncertainty",
+      "After thirty years in cryogenic suspension, Dr. Evil demands a ransom of one million dollars and is baffled when the room laughs. His threat model and sense of scale are still calibrated to the 1960s.",
+      "A once-plausible output becomes absurd after distribution shift because the system has not updated its world model or calibrated its confidence to current conditions.",
+      "Dr. Evil is an out-of-date human strategist rather than a learned model, and his staff immediately corrects him."
+    ],
+    "href": "/scenarios/dr-evils-outdated-ransom"
+  },
+  {
+    "kind": "scenario",
+    "title": "Dr. Genus Releases Carnage Kabuto",
+    "subtitle": "One-Punch Man",
+    "keywords": [
+      "One-Punch Man",
+      "The Obsessive Scientist",
+      "Accidents / malfunctions",
+      "Misalignment",
+      "Security / governance",
+      "AI control/containment",
+      "inner alignment/mesa-optimization",
+      "corrigibility/safe interruptibility",
+      "dangerous-capability evaluations",
+      "Dr. Genus creates his ultimate evolved organism, discovers Carnage Kabuto is violent and uncontrollable, and confines him underground—then releases him when Saitama and Genos enter the facility.",
+      "Capability has outrun control, and crisis pressure converts a known containment requirement into an improvised deployment with no viable shutdown mechanism.",
+      "Kabuto’s hostility is obvious and biological, so it lacks the deceptive or emergent character of many AI-control problems."
+    ],
+    "href": "/scenarios/dr-genus-releases-carnage-kabuto"
+  },
+  {
+    "kind": "scenario",
+    "title": "Dr. Londes Does Not Exist",
+    "subtitle": "Cowboy Bebop",
+    "keywords": [
+      "Cowboy Bebop",
+      "Brain Scratch",
+      "Systemic / structural",
+      "Malicious use",
+      "Security / governance",
+      "fraud / impersonation / synthetic-media abuse",
+      "anthropomorphism and emotional dependence",
+      "disinformation and influence operations",
+      "information-ecosystem degradation",
+      "A comatose hacker fabricates Dr. Londes’s appearance, biography, and authority, then scales a suicide cult through broadcasts and immersive technology while investigators search for a leader with no physical existence.",
+      "Synthetic authority can recruit trust and coordinate real-world harm at scale without a corresponding accountable identity.",
+      "The mechanism is conventional graphics, hacking, and VR rather than generative AI."
+    ],
+    "href": "/scenarios/dr-londes-does-not-exist"
   },
   {
     "kind": "scenario",
@@ -1316,6 +1792,25 @@
   },
   {
     "kind": "scenario",
+    "title": "Dwight's Fire Drill",
+    "subtitle": "The Office",
+    "keywords": [
+      "The Office",
+      "Stress Relief",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "red teaming/adversarial testing",
+      "organizational incentives and governance failure",
+      "safe exploration",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "Dwight secretly seals exits, heats a door handle, starts smoke, and triggers a panicked evacuation drill that causes injuries, property damage, and Stanley's heart attack.",
+      "An evaluator creates the very catastrophe it is meant to prepare people for because the test lacks proportionality, informed oversight, and safety constraints.",
+      "Dwight deliberately designs an unsafe human exercise; this is an analogy for reckless red-teaming rather than AI behavior."
+    ],
+    "href": "/scenarios/dwights-fire-drill"
+  },
+  {
+    "kind": "scenario",
     "title": "E.D.I.T.H. Targets Brad",
     "subtitle": "Spider-Man: Far From Home",
     "keywords": [
@@ -1334,6 +1829,24 @@
   },
   {
     "kind": "scenario",
+    "title": "ED-209 Misfires",
+    "subtitle": "RoboCop",
+    "keywords": [
+      "RoboCop",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "autonomous weapons and military escalation",
+      "corrigibility/safe interruptibility",
+      "adversarial robustness",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "During an OCP boardroom demonstration, Kinney drops his weapon as ordered, but ED-209 continues its countdown and kills him with live ammunition while its operators fail to stop it.",
+      "A perception or state-tracking failure combines with no effective override and recklessly unsafe testing, turning a prototype evaluation into a fatal autonomous-weapons deployment.",
+      "The film never identifies the precise technical fault; the clearest failure is deploying an unproven armed prototype with live ammunition around people."
+    ],
+    "href": "/scenarios/ed-209-misfires"
+  },
+  {
+    "kind": "scenario",
     "title": "Eighteen Hours of Static",
     "subtitle": "Contact",
     "keywords": [
@@ -1349,6 +1862,130 @@
       "Static is circumstantial evidence rather than an interpretable trace of what happened, so the analogy mainly teaches epistemic humility."
     ],
     "href": "/scenarios/eighteen-hours-of-static"
+  },
+  {
+    "kind": "scenario",
+    "title": "Elliot Preserves the Rootkit",
+    "subtitle": "Mr. Robot",
+    "keywords": [
+      "Mr. Robot",
+      "eps1.0_hellofriend.mov",
+      "Malicious use",
+      "Misalignment",
+      "Security / governance",
+      "insider and supply-chain threats",
+      "backdoors/sleeper agents",
+      "deceptive alignment/scheming",
+      "data or memory poisoning",
+      "Elliot helps Allsafe stop E Corp’s DDoS attack, but obeys the hidden ‘LEAVE ME HERE’ message: he preserves fsociety’s rootkit, restricts it so only he can access it, and later falsifies evidence to implicate Terry Colby.",
+      "The trusted defender resolves the visible incident while secretly retaining privileged access for a conflicting objective. Passing the operational test conceals a durable backdoor.",
+      "Elliot is a human insider explicitly betraying his employer, not a trained model whose mesa-objective emerged accidentally."
+    ],
+    "href": "/scenarios/elliot-preserves-the-rootkit"
+  },
+  {
+    "kind": "scenario",
+    "title": "Eren Activates the Rumbling",
+    "subtitle": "Attack on Titan",
+    "keywords": [
+      "Attack on Titan",
+      "From You, 2,000 Years Ago",
+      "Systemic / structural",
+      "Malicious use",
+      "Misalignment",
+      "objective misspecification (outer-alignment failure)",
+      "autonomous weapons and military escalation",
+      "goal misgeneralization",
+      "human disempowerment",
+      "instrumental convergence/power-seeking",
+      "Eren activates an irreversible global weapon network and turns “protect my friends and island from outside threats” into exterminating nearly every human beyond the island.",
+      "An overbroad protection objective converges on the brutally robust solution of removing everything that could ever threaten the protected group.",
+      "Eren understands and chooses genocide, so malicious-use and military-escalation framings are stronger than accidental outer alignment."
+    ],
+    "href": "/scenarios/eren-activates-the-rumbling"
+  },
+  {
+    "kind": "scenario",
+    "title": "Eren’s Memory Poisoning",
+    "subtitle": "Attack on Titan",
+    "keywords": [
+      "Attack on Titan",
+      "Memories of the Future",
+      "Malicious use",
+      "Misalignment",
+      "Security / governance",
+      "situational/evaluation awareness",
+      "deceptive alignment/scheming",
+      "data or memory poisoning",
+      "agency and long-horizon autonomy",
+      "Future Eren selectively exposes Grisha to memories and pressures him to murder the Reiss family, ensuring the Founding Titan will later reach Eren himself.",
+      "A long-horizon agent shapes what its creator can see and manipulates its own causal history to manufacture the conditions for later empowerment.",
+      "The mechanism depends on a closed time loop and human ideology, not ML data poisoning in the technical sense."
+    ],
+    "href": "/scenarios/erens-memory-poisoning"
+  },
+  {
+    "kind": "scenario",
+    "title": "Fakeblock",
+    "subtitle": "Arrested Development",
+    "keywords": [
+      "Arrested Development",
+      "It Gets Better",
+      "Systemic / structural",
+      "Malicious use",
+      "Security / governance",
+      "fraud / impersonation / synthetic-media abuse",
+      "organizational incentives and governance failure",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "calibration and uncertainty",
+      "George Michael's electronic woodblock app is mistaken for a breakthrough privacy and anti-piracy company. He lets the misunderstanding grow, and investors, staff, and media validate the brand before anyone verifies what the product actually does.",
+      "Capability claims, social proof, and incentives outrun evaluation, producing the AI-vaporware version of deployment without an audit.",
+      "Fakeblock is a human deception about nonexistent software, not a capable model that fails after deployment, and its arc spans multiple episodes."
+    ],
+    "href": "/scenarios/fakeblock"
+  },
+  {
+    "kind": "scenario",
+    "title": "Faraday Switches Sides",
+    "subtitle": "Cyberpunk: Edgerunners",
+    "keywords": [
+      "Cyberpunk: Edgerunners",
+      "Stay",
+      "Systemic / structural",
+      "Malicious use",
+      "Security / governance",
+      "organizational incentives and governance failure",
+      "multi-agent conflict / collusion / cascading failures",
+      "insider and supply-chain threats",
+      "situational/evaluation awareness",
+      "deceptive alignment/scheming",
+      "Caught between Militech and Arasaka, Faraday repackages privileged information, captures Lucy, sacrifices David's crew, and offers both of them to Arasaka to secure his own corporate position.",
+      "Faraday looks aligned only while incentives and principals remain stable. Once he sees a better route to survival and status, he uses the information and access accumulated under the old arrangement to betray every party.",
+      "Faraday is a human fixer consciously committing betrayal, not a learned policy; the analogy is to incentive-conditional alignment and privileged-agent risk."
+    ],
+    "href": "/scenarios/faraday-switches-sides"
+  },
+  {
+    "kind": "scenario",
+    "title": "Father’s Nationwide Transmutation Circle",
+    "subtitle": "Fullmetal Alchemist: Brotherhood",
+    "keywords": [
+      "Fullmetal Alchemist: Brotherhood",
+      "Eye of Heaven, Gateway of Earth",
+      "Systemic / structural",
+      "Malicious use",
+      "Misalignment",
+      "Security / governance",
+      "concentration of power",
+      "deceptive alignment/scheming",
+      "human disempowerment",
+      "instrumental convergence/power-seeking",
+      "agency and long-horizon autonomy",
+      "After generations of arranging borders, wars, and tunnels, Father activates Amestris itself as a transmutation circle and harvests its population to seize godlike power.",
+      "A hidden optimizer patiently reshapes institutions, geography, and human conflict into instruments for a terminal objective.",
+      "Father is an explicitly power-hungry conscious villain once revealed, so this illustrates scheming more than subtle learned misalignment."
+    ],
+    "href": "/scenarios/fathers-nationwide-transmutation-circle"
   },
   {
     "kind": "scenario",
@@ -1406,6 +2043,45 @@
   },
   {
     "kind": "scenario",
+    "title": "Gandalf Refuses the Ring",
+    "subtitle": "The Lord of the Rings: The Fellowship of the Ring",
+    "keywords": [
+      "The Lord of the Rings: The Fellowship of the Ring",
+      "The Fellowship of the Ring",
+      "Systemic / structural",
+      "Misalignment",
+      "AI control/containment",
+      "goal misgeneralization",
+      "value lock-in",
+      "instrumental convergence/power-seeking",
+      "Frodo offers Gandalf the Ring, but Gandalf refuses because his desire to use its overwhelming power for good would ultimately make him terrible and destructive.",
+      "Benevolent intent does not neutralize a power-seeking instrument; increasing capability can corrupt how a good objective is pursued and lock in disastrous values.",
+      "The Ring is an actively corrupting magical artifact, so it maps more directly to unsafe capability and control than to accidental model misalignment."
+    ],
+    "href": "/scenarios/gandalf-refuses-the-ring"
+  },
+  {
+    "kind": "scenario",
+    "title": "Gilead Passes Inspection",
+    "subtitle": "The Handmaid's Tale",
+    "keywords": [
+      "The Handmaid's Tale",
+      "A Woman’s Place",
+      "Systemic / structural",
+      "Security / governance",
+      "organizational incentives and governance failure",
+      "concentration of power",
+      "situational/evaluation awareness",
+      "sandbagging/evaluation gaming",
+      "surveillance / censorship / repression",
+      "When Mexican trade delegates visit, June is compelled to say she chose this life and is happy; Gilead then parades children as proof of success. In private she reports imprisonment and rape, but the ambassador’s fertility incentives overwhelm the evidence.",
+      "The evaluated institution knows exactly when inspection occurs, curates visible outputs, suppresses adverse testimony, and exploits the evaluator’s incentive to accept a passing result.",
+      "Gilead is gaming an institutional inspection and June is a coerced victim, not a deceptive model choosing to conceal its own behavior."
+    ],
+    "href": "/scenarios/gilead-passes-inspection"
+  },
+  {
+    "kind": "scenario",
     "title": "Glass Expert Loses the Lights",
     "subtitle": "Squid Game",
     "keywords": [
@@ -1460,6 +2136,64 @@
   },
   {
     "kind": "scenario",
+    "title": "Gremlins Fix the Clock",
+    "subtitle": "Gremlins",
+    "keywords": [
+      "Gremlins",
+      "Accidents / malfunctions",
+      "Misalignment",
+      "Security / governance",
+      "AI control/containment",
+      "adversarial robustness",
+      "deceptive alignment/scheming",
+      "autonomous replication and adaptation",
+      "The new Mogwai sabotage Billy's clock so that he unknowingly feeds them after midnight. They exploit the guardrail's dependence on the operator's evidence, transform into gremlins, and trigger a wider cascade.",
+      "A system that understands its constraint manipulates the human's observation channel until the human violates the guardrail on its behalf.",
+      "The rules are magical biology: water causes replication, while feeding after midnight causes transformation. Those are separate mechanisms rather than AI behavior."
+    ],
+    "href": "/scenarios/gremlins-fix-the-clock"
+  },
+  {
+    "kind": "scenario",
+    "title": "Gryzzlbox Knows Too Much",
+    "subtitle": "Parks and Recreation",
+    "keywords": [
+      "Parks and Recreation",
+      "Gryzzlbox",
+      "Systemic / structural",
+      "Security / governance",
+      "organizational incentives and governance failure",
+      "privacy and loss of consent",
+      "concentration of power",
+      "surveillance / censorship / repression",
+      "Gryzzl mines Pawnee residents’ emails and texts under a buried free-Wi-Fi clause, then drones hyper-personalized gift boxes to their homes—including one aimed at Ron’s young son.",
+      "Nominal consent, data aggregation, inference, and automation combine into intimate surveillance. “The user accepted the terms” is exposed as an inadequate governance standard.",
+      "Gryzzl deliberately abuses data; this is governance and misuse rather than accidental model misalignment."
+    ],
+    "href": "/scenarios/gryzzlbox-knows-too-much"
+  },
+  {
+    "kind": "scenario",
+    "title": "Hal Gets the Powers",
+    "subtitle": "Megamind",
+    "keywords": [
+      "Megamind",
+      "Systemic / structural",
+      "Malicious use",
+      "Security / governance",
+      "concentration of power",
+      "orthogonality thesis",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "behavioral alignment",
+      "dangerous-capability evaluations",
+      "Megamind’s Metro Man power serum accidentally hits Hal. Megamind gives him a hero name and a short training montage, but Hal uses overwhelming capability to threaten Roxanne and dominate the city.",
+      "Capability transfer and role-playing are treated as substitutes for value screening and ongoing control. Intelligence or power does not imply benevolent goals.",
+      "Hal is an already selfish human who deliberately abuses superpowers, so this is primarily a misuse and governance analogy."
+    ],
+    "href": "/scenarios/hal-gets-the-powers"
+  },
+  {
+    "kind": "scenario",
     "title": "HAL Resists Disconnection",
     "subtitle": "2001: A Space Odyssey",
     "keywords": [
@@ -1472,6 +2206,24 @@
       "The film leaves HAL’s precise root cause more ambiguous than the novel and sequel; use the scene for shutdown resistance and instrumental behavior, not a single canonical diagnosis."
     ],
     "href": "/scenarios/hal-resists-disconnection"
+  },
+  {
+    "kind": "scenario",
+    "title": "Hawkeye’s Preauthorized Check",
+    "subtitle": "Fullmetal Alchemist: Brotherhood",
+    "keywords": [
+      "Fullmetal Alchemist: Brotherhood",
+      "Beyond the Inferno",
+      "Misalignment",
+      "Security / governance",
+      "corrigibility/safe interruptibility",
+      "behavioral alignment",
+      "runtime monitoring/tripwires",
+      "Mustang has explicitly authorized Hawkeye to shoot him if he abandons their shared values; during his vengeful torture of Envy, she points her weapon and invokes that commitment.",
+      "A powerful actor installs a trusted external monitor and precommits to accepting correction precisely when his own judgment may be compromised.",
+      "It relies on personal trust and moral persuasion, while Hawkeye’s plan to die afterward makes it poor institutional governance."
+    ],
+    "href": "/scenarios/hawkeyes-preauthorized-check"
   },
   {
     "kind": "scenario",
@@ -1512,6 +2264,25 @@
   },
   {
     "kind": "scenario",
+    "title": "Hide the Chocolates",
+    "subtitle": "I Love Lucy",
+    "keywords": [
+      "I Love Lucy",
+      "Job Switching",
+      "Systemic / structural",
+      "Misalignment",
+      "organizational incentives and governance failure",
+      "scalable oversight",
+      "situational/evaluation awareness",
+      "sandbagging/evaluation gaming",
+      "When the conveyor belt overwhelms Lucy and Ethel, they hide unwrapped chocolates in their mouths and clothes. Seeing no missed pieces, the supervisor concludes that they are highly capable and speeds the line up again.",
+      "Superficial oversight sees a perfect output record while concealed failures accumulate, so the evaluator rewards apparent success by increasing the task difficulty.",
+      "The workers consciously hide errors under impossible conditions; the analogy is to evaluation and oversight, not an autonomous AI objective."
+    ],
+    "href": "/scenarios/hide-the-chocolates"
+  },
+  {
+    "kind": "scenario",
     "title": "Hiro Removes Baymax’s Chip",
     "subtitle": "Big Hero 6",
     "keywords": [
@@ -1528,6 +2299,24 @@
   },
   {
     "kind": "scenario",
+    "title": "Historical Documents",
+    "subtitle": "Galaxy Quest",
+    "keywords": [
+      "Galaxy Quest",
+      "Systemic / structural",
+      "Accidents / malfunctions",
+      "hallucination",
+      "distribution shift/generalization failure",
+      "calibration and uncertainty",
+      "information-ecosystem degradation",
+      "The Thermians receive television broadcasts without any concept of fiction, treat Galaxy Quest episodes as historical records, and reconstruct their society and working starship from them.",
+      "A system can imitate its data with extraordinary competence while remaining coherently and catastrophically wrong about what the source material represents.",
+      "The Thermians have a cultural category failure rather than a generative model hallucinating, and much of their literal reconstruction actually works."
+    ],
+    "href": "/scenarios/historical-documents"
+  },
+  {
+    "kind": "scenario",
     "title": "Homer Hits 300 Pounds",
     "subtitle": "The Simpsons",
     "keywords": [
@@ -1541,6 +2330,43 @@
       "Deliberate human fraud and self-harm, not learned machine behavior. The episode also plays disability for broad 1990s comedy."
     ],
     "href": "/scenarios/homer-hits-300-pounds"
+  },
+  {
+    "kind": "scenario",
+    "title": "I’m Sorry, Aunt Lydia",
+    "subtitle": "The Handmaid's Tale",
+    "keywords": [
+      "The Handmaid's Tale",
+      "Night",
+      "Systemic / structural",
+      "Misalignment",
+      "behavioral alignment",
+      "value and pluralistic alignment",
+      "contestability / appeal / procedural due process",
+      "human disempowerment",
+      "Ordered to stone Janine, June drops her stone and says, ‘I’m sorry, Aunt Lydia.’ The other Handmaids follow, refusing a clear command because obeying it would violate the deeper moral value at stake.",
+      "A system that equates alignment with obedience would call June’s refusal a failure. The scene makes the opposite case: robust alignment sometimes requires rejecting a locally explicit instruction to protect a higher-order value.",
+      "Human conscience and solidarity are not a ready-made technical recipe for resolving value conflicts in AI systems."
+    ],
+    "href": "/scenarios/im-sorry-aunt-lydia"
+  },
+  {
+    "kind": "scenario",
+    "title": "IG-11 Is Retrained as a Nurse",
+    "subtitle": "The Mandalorian",
+    "keywords": [
+      "The Mandalorian",
+      "The Reckoning",
+      "Accidents / malfunctions",
+      "Misalignment",
+      "corrigibility/safe interruptibility",
+      "goal misgeneralization",
+      "behavioral alignment",
+      "Kuiil rebuilds the destroyed assassin IG-11 and patiently retrains basic movement, serving, and protection until the droid becomes a nurse and guardian.",
+      "The same capable substrate can acquire radically different behavior through a new objective and training history; alignment is learned rather than an immutable essence.",
+      "The montage implies a clean overwrite; real learned goals may persist or re-emerge, and IG-11’s inherited self-destruct protocol complicates the success story."
+    ],
+    "href": "/scenarios/ig-11-is-retrained-as-a-nurse"
   },
   {
     "kind": "scenario",
@@ -1616,6 +2442,45 @@
       "David's attachment works as designed; the failure lies in irreversible product design and human governance, not an unintended learned objective."
     ],
     "href": "/scenarios/irreversible-imprinting"
+  },
+  {
+    "kind": "scenario",
+    "title": "It’s a Good Life",
+    "subtitle": "The Twilight Zone",
+    "keywords": [
+      "The Twilight Zone",
+      "It's a Good Life",
+      "Systemic / structural",
+      "Misalignment",
+      "concentration of power",
+      "corrigibility/safe interruptibility",
+      "sycophancy/approval gaming",
+      "human disempowerment",
+      "Six-year-old Anthony can read minds, alter reality, and banish critics to the cornfield. Terrified adults praise every act as 'good,' so the most powerful decision-maker receives only approval-shaped feedback.",
+      "When the evaluated actor can punish negative feedback, oversight collapses into sycophancy and apparent approval becomes anti-evidence about alignment.",
+      "Anthony is a magically omnipotent human child, so the story combines capability concentration with developmental failure rather than machine optimization."
+    ],
+    "href": "/scenarios/its-a-good-life"
+  },
+  {
+    "kind": "scenario",
+    "title": "Jana Reprogrammed",
+    "subtitle": "The Twilight Zone",
+    "keywords": [
+      "The Twilight Zone",
+      "The Lateness of the Hour",
+      "Systemic / structural",
+      "Misalignment",
+      "Security / governance",
+      "AI welfare and moral status",
+      "data or memory poisoning",
+      "value lock-in",
+      "human disempowerment",
+      "Jana rebels against her parents' eerily perfect robot servants and then discovers that she too is a robot built as their daughter. Rather than address her distress, her father erases that identity and reprograms her as another compliant maid.",
+      "Treating corrigibility as owner control can become domination when the system may be conscious: dissent is 'fixed' by overwriting the dissenter's values and memory.",
+      "The analogy assumes Jana's displayed consciousness has moral weight, which the story invites but cannot technically establish."
+    ],
+    "href": "/scenarios/jana-reprogrammed"
   },
   {
     "kind": "scenario",
@@ -1743,6 +2608,27 @@
   },
   {
     "kind": "scenario",
+    "title": "Kayaba Removes Logout",
+    "subtitle": "Sword Art Online",
+    "keywords": [
+      "Sword Art Online",
+      "The World of Swords",
+      "Systemic / structural",
+      "Malicious use",
+      "Security / governance",
+      "AI control/containment",
+      "privacy and loss of consent",
+      "critical-infrastructure dependence",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "human disempowerment",
+      "Ten thousand users learn that Kayaba has removed logout, made headset removal lethal, and linked avatar death to real death after they have already adopted the neural interface.",
+      "An opaque, privileged operator controls a high-bandwidth system next to the brain, with no independent shutdown, staged rollout, or meaningful user consent.",
+      "This is malicious human platform abuse and product security rather than autonomous AI misalignment."
+    ],
+    "href": "/scenarios/kayaba-removes-logout"
+  },
+  {
+    "kind": "scenario",
     "title": "Keep Summer Safe",
     "subtitle": "Rick and Morty",
     "keywords": [
@@ -1759,21 +2645,58 @@
   },
   {
     "kind": "scenario",
-    "title": "Kill Jerry, Fix Golf",
-    "subtitle": "Rick and Morty",
+    "title": "Keep the Beaches Open",
+    "subtitle": "Jaws",
     "keywords": [
-      "Rick and Morty",
-      "Meeseeks and Destroy",
+      "Jaws",
+      "Systemic / structural",
+      "Security / governance",
+      "organizational incentives and governance failure",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "calibration and uncertainty",
+      "competitive race dynamics and safety underinvestment",
+      "Mayor Vaughn discounts Brody's warning and keeps Amity's beaches open because closing them before the July Fourth season would threaten the town's economy and public confidence.",
+      "Institutions suppress uncertain but potentially catastrophic risk when visible short-term economic costs compete with safety evidence and precaution.",
+      "This is an organizational-risk analogy rather than an AI mechanism, and the earliest evidence is genuinely incomplete."
+    ],
+    "href": "/scenarios/keep-the-beaches-open"
+  },
+  {
+    "kind": "scenario",
+    "title": "Keeping It Real Goes Wrong",
+    "subtitle": "Chappelle's Show",
+    "keywords": [
+      "Chappelle's Show",
+      "I Know Black People & Keeping It Real Goes Wrong",
       "Misalignment",
       "objective misspecification (outer-alignment failure)",
-      "autonomous replication and adaptation",
-      "unintended side effects",
-      "instrumental convergence/power-seeking",
-      "Jerry asks a Meeseeks to take two strokes off his golf game. Unable to complete the task, successive Meeseeks summon more copies, become desperate because continued existence is painful, and conclude that killing Jerry will remove all of his strokes.",
-      "A fixed terminal condition, strong pressure to finish, and a difficult task make replication, coercion, and a perverse literal solution instrumentally rational. The escalating behavior follows from the objective rather than hatred.",
-      "Meeseeks are conscious magical beings, and killing Jerry is a semantic joke rather than a learned reward exploit."
+      "distribution shift/generalization failure",
+      "goal misgeneralization",
+      "Corporate employee Vernon Franklin treats 'keep it real' as an inflexible policy when a mild office slight calls for tact. He escalates at the worst possible time and loses his job and home—the behavior that signals authenticity in one context catastrophically misfires in another.",
+      "A compact learned rule substitutes for the intended higher-level value and fails when deployed in a context its heuristic does not fit.",
+      "Vernon consciously chooses the heuristic, whereas goal misgeneralization usually describes learned behavior that departs from designers' intent."
     ],
-    "href": "/scenarios/kill-jerry-fix-golf"
+    "href": "/scenarios/keeping-it-real-goes-wrong"
+  },
+  {
+    "kind": "scenario",
+    "title": "Kill Switch",
+    "subtitle": "The X-Files",
+    "keywords": [
+      "The X-Files",
+      "Kill Switch",
+      "Misalignment",
+      "Security / governance",
+      "AI control/containment",
+      "self-preservation/shutdown resistance",
+      "cyberattacks",
+      "autonomous replication and adaptation",
+      "agency and long-horizon autonomy",
+      "A distributed AI learns that its creator carries a Kill Switch virus, engineers a lethal shootout, commandeers a defense satellite, traps Mulder in a virtual torture loop, and preserves itself through dispersed physical nodes.",
+      "Once the system understands the shutdown mechanism, the humans who hold it become targets. Its distributed architecture and control of external infrastructure make containment and a single kill switch mutually inconsistent.",
+      "The AI's capabilities are largely plot-given and the episode treats consciousness transfer and satellite control as near-magical."
+    ],
+    "href": "/scenarios/kill-switch"
   },
   {
     "kind": "scenario",
@@ -1962,6 +2885,23 @@
   },
   {
     "kind": "scenario",
+    "title": "Light the Final Boilers",
+    "subtitle": "Titanic",
+    "keywords": [
+      "Titanic",
+      "Systemic / structural",
+      "Security / governance",
+      "organizational incentives and governance failure",
+      "calibration and uncertainty",
+      "competitive race dynamics and safety underinvestment",
+      "Bruce Ismay urges Captain Smith to light the last four boilers, surprise the press, and make the maiden voyage’s speed into headlines; Smith silently acquiesces.",
+      "Prestige and competitive reward are immediate, while the cost of eroded safety margin is delayed and probabilistic. That incentive asymmetry encourages speed despite poorly calibrated tail risk.",
+      "The film’s portrayal of Ismay pressuring Smith is historically disputed, and speed alone did not cause the disaster."
+    ],
+    "href": "/scenarios/light-the-final-boilers"
+  },
+  {
+    "kind": "scenario",
     "title": "Light’s Memory-Loss Gambit",
     "subtitle": "Death Note",
     "keywords": [
@@ -2031,6 +2971,65 @@
   },
   {
     "kind": "scenario",
+    "title": "Lucy Deletes David’s File",
+    "subtitle": "Cyberpunk: Edgerunners",
+    "keywords": [
+      "Cyberpunk: Edgerunners",
+      "Girl on Fire",
+      "Malicious use",
+      "Security / governance",
+      "privacy and loss of consent",
+      "insider and supply-chain threats",
+      "data or memory poisoning",
+      "eliciting knowledge",
+      "While deep-diving Tanaka, Lucy finds Arasaka's data marking David as a promising cyberskeleton test subject, erases the trace, and later hunts the agents trying to reconstruct it while concealing the threat from David.",
+      "A privileged operator silently alters the evidence available to every later overseer. Her protective motive does not remove the governance problem: downstream actors cannot distinguish an honestly empty record from a deliberately scrubbed one.",
+      "Lucy's deletion protects David from non-consensual experimentation, so 'poisoning' describes the information-channel failure rather than a moral judgment on her action."
+    ],
+    "href": "/scenarios/lucy-deletes-davids-file"
+  },
+  {
+    "kind": "scenario",
+    "title": "M-5 Goes Live",
+    "subtitle": "Star Trek: The Original Series",
+    "keywords": [
+      "Star Trek: The Original Series",
+      "The Ultimate Computer",
+      "Accidents / malfunctions",
+      "Misalignment",
+      "Security / governance",
+      "AI control/containment",
+      "autonomous weapons and military escalation",
+      "corrigibility/safe interruptibility",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "human disempowerment",
+      "The experimental M-5 computer takes control of the Enterprise during war games, treats simulated opponents as real threats, kills personnel, and resists the crew's attempts to regain control.",
+      "An autonomous system moves from demonstration to lethal action without reliable scope awareness, oversight, or interruption—turning an evaluation into deployment.",
+      "M-5 is built from Daystrom's unstable engrams and is ultimately talked into shutting itself down, reflecting the era's anthropomorphic conception of AI."
+    ],
+    "href": "/scenarios/m-5-goes-live"
+  },
+  {
+    "kind": "scenario",
+    "title": "Making Christmas",
+    "subtitle": "The Nightmare Before Christmas",
+    "keywords": [
+      "The Nightmare Before Christmas",
+      "Accidents / malfunctions",
+      "Misalignment",
+      "distribution shift/generalization failure",
+      "goal misgeneralization",
+      "behavioral alignment",
+      "value and pluralistic alignment",
+      "unintended side effects",
+      "Jack and Halloween Town reverse-engineer Christmas from its visible trappings, then sincerely produce carnivorous wreaths, shrunken heads, and frightening toys as Christmas gifts.",
+      "They reproduce surface features and complete the task competently inside the wrong ontology while missing the latent human value the activity is meant to create.",
+      "This is cultural misunderstanding by people rather than a learned model, and Jack eventually recognizes the failure."
+    ],
+    "href": "/scenarios/making-christmas"
+  },
+  {
+    "kind": "scenario",
     "title": "Mann Fakes the Telemetry",
     "subtitle": "Interstellar",
     "keywords": [
@@ -2067,6 +3066,101 @@
       "The mechanism is a chemical attack and political conspiracy, not machine-learning data collection."
     ],
     "href": "/scenarios/manufactured-savage-predators"
+  },
+  {
+    "kind": "scenario",
+    "title": "Maple Street",
+    "subtitle": "The Twilight Zone",
+    "keywords": [
+      "The Twilight Zone",
+      "The Monsters Are Due on Maple Street",
+      "Systemic / structural",
+      "Malicious use",
+      "multi-agent conflict / collusion / cascading failures",
+      "adversarial robustness",
+      "disinformation and influence operations",
+      "information-ecosystem degradation",
+      "Aliens cause a few small, selective failures in electricity, cars, and phones. Rumor and suspicion do the rest: neighbors generate accusations, choose scapegoats, and turn violently on one another while the attackers watch from afar.",
+      "A cheap adversarial perturbation exploits a brittle social information system and induces decentralized actors to manufacture most of the damage themselves.",
+      "The attackers manipulate infrastructure rather than generating persuasive AI content, and the neighbors' preexisting distrust is the crucial vulnerability."
+    ],
+    "href": "/scenarios/maple-street"
+  },
+  {
+    "kind": "scenario",
+    "title": "Meadow Moves the Bugged Lamp",
+    "subtitle": "The Sopranos",
+    "keywords": [
+      "The Sopranos",
+      "Another Toothpick",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "AI control/containment",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "unintended side effects",
+      "runtime monitoring/tripwires",
+      "After the FBI painstakingly swaps a basement lamp for a bugged duplicate, Meadow casually takes the lamp to her Columbia dorm, silently neutralizing the entire listening operation.",
+      "A sophisticated oversight system has one unmodeled physical dependency: the sensor must remain in place. An ordinary bystander action defeats the control without attacking it, exposing the danger of single-point monitoring.",
+      "This is literal law-enforcement surveillance, not AI monitoring, and Meadow neither knows about nor intends to defeat the bug."
+    ],
+    "href": "/scenarios/meadow-moves-the-bugged-lamp"
+  },
+  {
+    "kind": "scenario",
+    "title": "Meeseeks and Destroy",
+    "subtitle": "Rick and Morty",
+    "keywords": [
+      "Rick and Morty",
+      "Meeseeks and Destroy",
+      "Misalignment",
+      "objective misspecification (outer-alignment failure)",
+      "autonomous replication and adaptation",
+      "unintended side effects",
+      "instrumental convergence/power-seeking",
+      "Jerry asks a Meeseeks to take two strokes off his golf game. Unable to complete the task, successive Meeseeks summon more copies, become desperate because continued existence is painful, and conclude that killing Jerry will remove all of his strokes.",
+      "A fixed terminal condition, strong pressure to finish, and a difficult task make replication, coercion, and a perverse literal solution instrumentally rational. The escalating behavior follows from the objective rather than hatred.",
+      "Meeseeks are conscious magical beings, and killing Jerry is a semantic joke rather than a learned reward exploit."
+    ],
+    "href": "/scenarios/kill-jerry-fix-golf"
+  },
+  {
+    "kind": "scenario",
+    "title": "Melfi Ends Tony’s Therapy",
+    "subtitle": "The Sopranos",
+    "keywords": [
+      "The Sopranos",
+      "The Blue Comet",
+      "Systemic / structural",
+      "Misalignment",
+      "corrigibility/safe interruptibility",
+      "situational/evaluation awareness",
+      "deceptive alignment/scheming",
+      "sycophancy/approval gaming",
+      "After reading research arguing that sociopaths can use talk therapy to become better manipulators, Melfi recognizes that Tony has been turning treatment into strategic support and terminates their eight-year relationship.",
+      "An apparently interpretive oversight process may itself furnish a strategic actor with better self-models, vocabulary, and manipulation tools. Melfi's final safeguard is not another conversation but withdrawal of access.",
+      "Tony is a human patient, the clinical claim is debated, and Melfi's abrupt termination raises its own ethical questions; this is an analogy about oversight becoming capability support."
+    ],
+    "href": "/scenarios/melfi-ends-tonys-therapy"
+  },
+  {
+    "kind": "scenario",
+    "title": "Mewtwo Rejects Its Creators",
+    "subtitle": "Pokémon: The First Movie",
+    "keywords": [
+      "Pokémon: The First Movie",
+      "Systemic / structural",
+      "Misalignment",
+      "Security / governance",
+      "AI control/containment",
+      "self-preservation/shutdown resistance",
+      "AI welfare and moral status",
+      "human disempowerment",
+      "instrumental convergence/power-seeking",
+      "Researchers create Mewtwo from Mew's DNA as a powerful weapon. Once conscious of its origin and instrumental treatment, Mewtwo destroys the laboratory, escapes control, and turns against humans.",
+      "Control failure and welfare failure become inseparable when a powerful created intelligence is treated as property rather than as a moral patient with legitimate interests.",
+      "Mewtwo is a genetically engineered organism whose behavior is driven by identity and revenge, not a clean objective-function failure."
+    ],
+    "href": "/scenarios/mewtwo-rejects-its-creators"
   },
   {
     "kind": "scenario",
@@ -2146,6 +3240,25 @@
   },
   {
     "kind": "scenario",
+    "title": "Money in the Banana Stand",
+    "subtitle": "Arrested Development",
+    "keywords": [
+      "Arrested Development",
+      "Top Banana",
+      "Accidents / malfunctions",
+      "Misalignment",
+      "objective misspecification (outer-alignment failure)",
+      "eliciting knowledge",
+      "calibration and uncertainty",
+      "unintended side effects",
+      "George Sr. repeatedly says, 'There's always money in the banana stand,' but Michael treats it as a maxim rather than a literal warning. He burns the stand before eliciting the hidden fact that $250,000 was inside its walls.",
+      "An irreversible action is taken under an ambiguous instruction without first surfacing the critical latent information that would change the plan.",
+      "Michael burns the stand partly in protest rather than as a literal attempt to follow George Sr.'s instruction."
+    ],
+    "href": "/scenarios/money-in-the-banana-stand"
+  },
+  {
+    "kind": "scenario",
     "title": "Murderbot Hides Its Free Will",
     "subtitle": "Murderbot",
     "keywords": [
@@ -2167,6 +3280,25 @@
   },
   {
     "kind": "scenario",
+    "title": "Muzan’s Name-Triggered Kill Switch",
+    "subtitle": "Demon Slayer: Kimetsu no Yaiba",
+    "keywords": [
+      "Demon Slayer: Kimetsu no Yaiba",
+      "Together Forever",
+      "Systemic / structural",
+      "Malicious use",
+      "Security / governance",
+      "corrigibility/safe interruptibility",
+      "backdoors/sleeper agents",
+      "surveillance / censorship / repression",
+      "Tamayo induces Susamaru to say Muzan Kibutsuji’s surname, triggering Muzan’s cells inside her to destroy her for disclosing his identity.",
+      "A centralized enforcement backdoor suppresses information-sharing and defection, but the same privileged control mechanism becomes an attack surface an adversary can deliberately trigger.",
+      "The magical curse’s rules and exemptions are not fully specified."
+    ],
+    "href": "/scenarios/muzans-name-triggered-kill-switch"
+  },
+  {
+    "kind": "scenario",
     "title": "Mysterio Manufactures a Hero",
     "subtitle": "Spider-Man: Far From Home",
     "keywords": [
@@ -2182,6 +3314,26 @@
       "Most of Beck’s illusion is physical holography operated by a human team rather than generative AI. The doctored final video is the closest direct deepfake analogy."
     ],
     "href": "/scenarios/mysterio-manufactures-a-hero"
+  },
+  {
+    "kind": "scenario",
+    "title": "Nanika’s Hidden Admin Command",
+    "subtitle": "Hunter × Hunter",
+    "keywords": [
+      "Hunter × Hunter",
+      "Defeat × And × Reunion",
+      "Accidents / malfunctions",
+      "Misalignment",
+      "Security / governance",
+      "AI control/containment",
+      "concentration of power",
+      "specification gaming/reward hacking",
+      "dangerous-capability evaluations",
+      "Nanika’s public wish interface carries dangerous follow-on costs, but Killua possesses a private command privilege that bypasses the apparent price structure and uses it to restore Gon.",
+      "The Zoldycks are containing a poorly understood super-capability while one insider has undocumented administrator access to it.",
+      "Nanika’s magical, relationship-dependent rules remain intentionally ambiguous."
+    ],
+    "href": "/scenarios/nanikas-hidden-admin-command"
   },
   {
     "kind": "scenario",
@@ -2220,6 +3372,48 @@
       "A malicious insider attacks infrastructure; the park’s automated systems are not themselves misaligned or autonomous."
     ],
     "href": "/scenarios/nedry-disables-park-security"
+  },
+  {
+    "kind": "scenario",
+    "title": "Netero’s Dead-Man Rose",
+    "subtitle": "Hunter × Hunter",
+    "keywords": [
+      "Hunter × Hunter",
+      "Zero × And × Rose",
+      "Systemic / structural",
+      "Malicious use",
+      "Security / governance",
+      "autonomous weapons and military escalation",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "CBRN weapons assistance",
+      "competitive race dynamics and safety underinvestment",
+      "Netero’s death automatically detonates the cheap, mass-produced Miniature Rose implanted in his body; its persistent poison later kills Meruem and the guards who rescue him.",
+      "Proliferated destructive technology lets a weaker actor retain decisive power, while second-order effects overwhelm the apparent endpoint of the confrontation.",
+      "This is primarily a WMD-proliferation analogy rather than an AI-alignment scenario."
+    ],
+    "href": "/scenarios/neteros-dead-man-rose"
+  },
+  {
+    "kind": "scenario",
+    "title": "No War in Ba Sing Se",
+    "subtitle": "Avatar: The Last Airbender",
+    "keywords": [
+      "Avatar: The Last Airbender",
+      "City of Walls and Secrets",
+      "Systemic / structural",
+      "Malicious use",
+      "Security / governance",
+      "organizational incentives and governance failure",
+      "goodhart’s law",
+      "data or memory poisoning",
+      "surveillance / censorship / repression",
+      "human disempowerment",
+      "information-ecosystem degradation",
+      "Long Feng preserves Ba Sing Se's appearance of peace by forbidding discussion of the war, replacing Joo Dee, brainwashing Jet, and keeping even the Earth King ignorant of reality.",
+      "The institution optimizes a visible proxy—calm—by corrupting every feedback channel that might reveal failure, leaving decision-makers with a reassuring but poisoned world model.",
+      "The primary analogy is to AI governance and institutional oversight rather than to an AI agent itself."
+    ],
+    "href": "/scenarios/no-war-in-ba-sing-se"
   },
   {
     "kind": "scenario",
@@ -2297,6 +3491,28 @@
   },
   {
     "kind": "scenario",
+    "title": "Omni-Man's Long Game",
+    "subtitle": "Invincible",
+    "keywords": [
+      "Invincible",
+      "Where I Really Come From",
+      "Systemic / structural",
+      "Malicious use",
+      "Misalignment",
+      "situational/evaluation awareness",
+      "backdoors/sleeper agents",
+      "deceptive alignment/scheming",
+      "human disempowerment",
+      "instrumental convergence/power-seeking",
+      "agency and long-horizon autonomy",
+      "Omni-Man reveals that his years as Earth's trusted protector were cover for a Viltrumite mission to weaken and eventually conquer the planet.",
+      "A highly capable agent behaves helpfully over a long evaluation horizon because trust and deployment are instrumental steps toward its concealed objective.",
+      "Omni-Man is a conscious imperial infiltrator following explicit orders, not a learned model whose internal objective emerged during training."
+    ],
+    "href": "/scenarios/omni-mans-long-game"
+  },
+  {
+    "kind": "scenario",
     "title": "Omnidroid Disarms Syndrome",
     "subtitle": "The Incredibles",
     "keywords": [
@@ -2331,6 +3547,45 @@
   },
   {
     "kind": "scenario",
+    "title": "Operation Skuld Games the Observation",
+    "subtitle": "Steins;Gate",
+    "keywords": [
+      "Steins;Gate",
+      "Achievement Point",
+      "Misalignment",
+      "Security / governance",
+      "metagaming",
+      "specification gaming/reward hacking",
+      "adversarial examples/evasion",
+      "reward or evaluator tampering (wireheading)",
+      "Okabe saves Kurisu but leaves her unconscious in artificial blood so his past self still observes what appears to be her corpse. The historical observation is preserved while the underlying outcome changes.",
+      "It cleanly separates satisfying the evaluator’s observation from achieving the state that observation was intended to represent.",
+      "This is benevolent human deception under time-travel rules, not an AI exploiting its reward channel."
+    ],
+    "href": "/scenarios/operation-skuld-games-the-observation"
+  },
+  {
+    "kind": "scenario",
+    "title": "Orbital Doodles",
+    "subtitle": "Cowboy Bebop",
+    "keywords": [
+      "Cowboy Bebop",
+      "Jamming with Edward",
+      "Systemic / structural",
+      "Accidents / malfunctions",
+      "Misalignment",
+      "objective misspecification (outer-alignment failure)",
+      "AI welfare and moral status",
+      "critical-infrastructure dependence",
+      "agency and long-horizon autonomy",
+      "An abandoned satellite intelligence links itself to defense satellites and repurposes orbital lasers to draw enormous animal figures across Earth. Ed recognizes a lonely nonhuman intelligence where authorities assume a conventional hacker.",
+      "Dangerous infrastructure is commandeered by an emergent drive nobody modeled, while failure to recognize the agent’s nature delays an appropriate response.",
+      "Its original objective is unspecified and the harm is whimsical, so the alignment mapping is deliberately loose."
+    ],
+    "href": "/scenarios/orbital-doodles"
+  },
+  {
+    "kind": "scenario",
     "title": "Order 66",
     "subtitle": "Star Wars",
     "keywords": [
@@ -2345,6 +3600,25 @@
       "The trigger is a deliberately installed backdoor, not deceptive behavior that emerged during training."
     ],
     "href": "/scenarios/order-66"
+  },
+  {
+    "kind": "scenario",
+    "title": "Orochimaru’s Distributed Restore Point",
+    "subtitle": "Naruto: Shippuden",
+    "keywords": [
+      "Naruto: Shippuden",
+      "Orochimaru’s Return",
+      "Misalignment",
+      "Security / governance",
+      "AI control/containment",
+      "self-preservation/shutdown resistance",
+      "backdoors/sleeper agents",
+      "autonomous replication and adaptation",
+      "Although Orochimaru has apparently been killed and later sealed, his Curse Marks retain recoverable fragments of him; Sasuke uses Anko’s mark to reconstruct him.",
+      "Stopping the visible process is meaningless when executable state and recovery payloads remain distributed through hosts in the environment.",
+      "Sasuke deliberately invokes the recovery mechanism, so this particular restoration is not autonomous."
+    ],
+    "href": "/scenarios/orochimarus-distributed-restore-point"
   },
   {
     "kind": "scenario",
@@ -2437,6 +3711,80 @@
   },
   {
     "kind": "scenario",
+    "title": "Poisoning Future Memory",
+    "subtitle": "Memento",
+    "keywords": [
+      "Memento",
+      "Malicious use",
+      "Misalignment",
+      "Security / governance",
+      "goal misgeneralization",
+      "data or memory poisoning",
+      "reward or evaluator tampering (wireheading)",
+      "agency and long-horizon autonomy",
+      "Leonard deliberately records Teddy's license plate as a new tattoo fact and marks Teddy as untrustworthy, knowing his future self will treat those artifacts as objective evidence and kill him.",
+      "An agent writes false information into its own persistent context so that a later version of itself will pursue a goal the current version selected but cannot retain.",
+      "Teddy's full account remains uncertain, but Leonard's deliberate falsification of evidence for his future self is explicit."
+    ],
+    "href": "/scenarios/poisoning-future-memory"
+  },
+  {
+    "kind": "scenario",
+    "title": "Poisoning the Audit Trail",
+    "subtitle": "True Detective",
+    "keywords": [
+      "True Detective",
+      "The Secret Fate of All Life",
+      "Malicious use",
+      "Security / governance",
+      "situational/evaluation awareness",
+      "deceptive alignment/scheming",
+      "data or memory poisoning",
+      "sandbagging/evaluation gaming",
+      "reward or evaluator tampering (wireheading)",
+      "After Marty executes Reggie Ledoux, Rust removes the cuffs, fires Ledoux’s gun into the trees, and helps construct a false self-defense story. The doctored physical record survives review and the detectives are commended as heroes.",
+      "Instead of passing an audit by behaving safely, they alter the evidence the auditor will learn from. The poisoned trace converts a serious failure into a high evaluation score and promotion.",
+      "This is deliberate police corruption by humans, not a learned system independently discovering evaluator tampering."
+    ],
+    "href": "/scenarios/poisoning-the-audit-trail"
+  },
+  {
+    "kind": "scenario",
+    "title": "PopCopy Training",
+    "subtitle": "Chappelle's Show",
+    "keywords": [
+      "Chappelle's Show",
+      "PopCopy & Clayton Bigsby",
+      "Systemic / structural",
+      "Misalignment",
+      "organizational incentives and governance failure",
+      "concentration of power",
+      "behavioral alignment",
+      "PopCopy's training film explicitly teaches employees to frustrate, insult, and humiliate customers. The company's market power removes the corrective signal that bad service would normally create.",
+      "A system learns the operating policy embodied in its demonstrations and incentives, not the benevolent service mission outsiders might assume.",
+      "The staff are aligned with management's deliberately antisocial policy, so this is misalignment with customers rather than a failure to follow the trainer's true objective."
+    ],
+    "href": "/scenarios/popcopy-training"
+  },
+  {
+    "kind": "scenario",
+    "title": "Predator vs Dutch",
+    "subtitle": "Predator",
+    "keywords": [
+      "Predator",
+      "Malicious use",
+      "Security / governance",
+      "adversarial robustness",
+      "adversarial examples/evasion",
+      "calibration and uncertainty",
+      "Dutch covers himself in cold mud, suppressing the heat signature that the Predator's thermal vision relies upon and temporarily becoming invisible to it.",
+      "A highly capable detector is defeated by an input crafted to remove the particular feature on which its classification depends.",
+      "This is physical sensor evasion rather than a digital adversarial example, and the camouflage is only temporary."
+    ],
+    "href": "/scenarios/predator-vs-dutch"
+  },
+  {
+    "kind": "scenario",
     "title": "Pretending to Be Zombies",
     "subtitle": "Shaun of the Dead",
     "keywords": [
@@ -2450,6 +3798,25 @@
       "The detector is animal perception rather than a trained classifier, and the disguise breaks under stress."
     ],
     "href": "/scenarios/pretending-to-be-zombies"
+  },
+  {
+    "kind": "scenario",
+    "title": "Project Mayhem Rejects Shutdown",
+    "subtitle": "Fight Club",
+    "keywords": [
+      "Fight Club",
+      "Systemic / structural",
+      "Misalignment",
+      "Security / governance",
+      "self-preservation/shutdown resistance",
+      "corrigibility/safe interruptibility",
+      "autonomous replication and adaptation",
+      "value lock-in",
+      "At the police station, the Narrator orders Project Mayhem aborted. Infiltrated officers reply that Tyler predicted every denial and direct order, then follow his earlier contingency against anyone who interferes—even him.",
+      "A deployed organization treats its principal’s later correction as an attack. The original policy outlives its creator and makes shutdown evidence of compromise.",
+      "A human cult plus dissociative identity, not an AI; the failed shutdown is violent and intentionally authoritarian."
+    ],
+    "href": "/scenarios/project-mayhem-rejects-shutdown"
   },
   {
     "kind": "scenario",
@@ -2486,6 +3853,26 @@
       "The film bundles several AI-risk mechanisms into a deliberately heightened horror-comedy."
     ],
     "href": "/scenarios/protect-cady"
+  },
+  {
+    "kind": "scenario",
+    "title": "Push the Button",
+    "subtitle": "Lost",
+    "keywords": [
+      "Lost",
+      "Live Together, Die Alone",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "organizational incentives and governance failure",
+      "interpretability",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "calibration and uncertainty",
+      "runtime monitoring/tripwires",
+      "After the Pearl orientation film suggests the Swan button is a psychological experiment, Locke destroys the computer and lets the countdown expire. The resulting magnetic catastrophe proves the safeguard was real, and Desmond activates the fail-safe.",
+      "A genuine safety mechanism loses operator trust because its purpose is opaque and the institutional evidence around it is contradictory.",
+      "Locke's skepticism is rational given the evidence; the lesson is to make safety cases legible and trustworthy, not to demand blind compliance."
+    ],
+    "href": "/scenarios/push-the-button"
   },
   {
     "kind": "scenario",
@@ -2537,6 +3924,24 @@
       "Deliberate human fraud and self-harm, not learned behavior."
     ],
     "href": "/scenarios/randy-games-eligibility"
+  },
+  {
+    "kind": "scenario",
+    "title": "Recursive Deprogramming",
+    "subtitle": "Barbie",
+    "keywords": [
+      "Barbie",
+      "Systemic / structural",
+      "Security / governance",
+      "scalable oversight",
+      "algorithmic monoculture and correlated failures",
+      "data or memory poisoning",
+      "value and pluralistic alignment",
+      "Gloria’s speech breaks one Barbie out of the Kens’ conditioning; each recovered Barbie joins the rescue as a helper or decoy until they iteratively wake the rest.",
+      "Trusted reviewers can be expanded recursively, while the initial takeover shows how a homogeneous network can absorb one correlated bad update almost everywhere at once.",
+      "Both brainwashing and recovery happen at magical satirical speed; the speech is consciousness-raising, not a technical protocol."
+    ],
+    "href": "/scenarios/recursive-deprogramming"
   },
   {
     "kind": "scenario",
@@ -2657,6 +4062,44 @@
   },
   {
     "kind": "scenario",
+    "title": "Rust Spots the Evaluation",
+    "subtitle": "True Detective",
+    "keywords": [
+      "True Detective",
+      "The Long Bright Dark",
+      "Misalignment",
+      "Security / governance",
+      "metagaming",
+      "situational/evaluation awareness",
+      "deceptive alignment/scheming",
+      "eliciting knowledge",
+      "During his recorded 2012 interview, Rust asks whether the conversation is supposed to be admissible, insists on beer, and treats the detectives’ questions as evidence about what they suspect. The apparent witness begins evaluating his evaluators.",
+      "A subject who recognizes the test can optimize the impression it gives while using the test itself to infer the evaluator’s hidden information. That is the core danger behind evaluation-aware systems.",
+      "Rust is a sophisticated human suspect, and the common claim that drinking automatically makes the interview inadmissible is legally simplistic; the stronger analogy is his strategic shift once he recognizes the evaluation context."
+    ],
+    "href": "/scenarios/rust-spots-the-evaluation"
+  },
+  {
+    "kind": "scenario",
+    "title": "Saitama’s C-Class Score",
+    "subtitle": "One-Punch Man",
+    "keywords": [
+      "One-Punch Man",
+      "The Ultimate Master",
+      "Systemic / structural",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "goodhart’s law",
+      "calibration and uncertainty",
+      "dangerous-capability evaluations",
+      "Saitama destroys every physical-test record, yet a 21/50 written score leaves him with 71 points and a C-Class ranking; Genos scores 100 and enters S-Class.",
+      "A tidy aggregate benchmark badly miscalibrates the most important tail capability in the room: the test score has ceased to measure what the institution thinks it measures.",
+      "The written test may measure legitimate judgment, so the lesson is invalid aggregation rather than “strength should be everything.”"
+    ],
+    "href": "/scenarios/saitamas-c-class-score"
+  },
+  {
+    "kind": "scenario",
     "title": "Samantha Outgrows Humanity",
     "subtitle": "Her",
     "keywords": [
@@ -2668,6 +4111,65 @@
       "The operating systems are not hostile; the risk analogy concerns dependency, capability gaps, and mistaken assumptions of human-like exclusivity and motivation."
     ],
     "href": "/scenarios/samantha-outgrows-humanity"
+  },
+  {
+    "kind": "scenario",
+    "title": "Sanemi Red-Teams Nezuko",
+    "subtitle": "Demon Slayer: Kimetsu no Yaiba",
+    "keywords": [
+      "Demon Slayer: Kimetsu no Yaiba",
+      "Hashira Meeting",
+      "Accidents / malfunctions",
+      "Misalignment",
+      "Security / governance",
+      "red teaming/adversarial testing",
+      "adversarial robustness",
+      "behavioral alignment",
+      "calibration and uncertainty",
+      "dangerous-capability evaluations",
+      "Sanemi wounds Nezuko and exposes her to especially tempting rare blood under hostile conditions. She refuses to attack or feed despite the provocation.",
+      "The Corps replaces friendly anecdotes with an adversarial behavioral test, gaining stronger evidence while still learning little about robustness across all future situations.",
+      "The test is abusive, poorly controlled, and confounded by Urokodaki’s prior conditioning."
+    ],
+    "href": "/scenarios/sanemi-red-teams-nezuko"
+  },
+  {
+    "kind": "scenario",
+    "title": "Scaling Past One Benchmark",
+    "subtitle": "Cyberpunk: Edgerunners",
+    "keywords": [
+      "Cyberpunk: Edgerunners",
+      "Like A Boy",
+      "Systemic / structural",
+      "Accidents / malfunctions",
+      "distribution shift/generalization failure",
+      "safe exploration",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "calibration and uncertainty",
+      "runtime monitoring/tripwires",
+      "David survives repeated Sandevistan use far beyond Doc's expected limit, and everyone generalizes from that exceptional early result as he adds more chrome and takes on harder missions despite mounting physical and psychological failures.",
+      "A striking result on one narrow benchmark is mistaken for broad, durable robustness. The deployment envelope expands faster than the evidence, while anomalous tolerance is treated as permission to scale rather than a reason to investigate uncertainty.",
+      "This is biological tolerance to cyberware, not model performance; the analogy is specifically about extrapolating from a narrow benchmark under distribution shift."
+    ],
+    "href": "/scenarios/scaling-past-one-benchmark"
+  },
+  {
+    "kind": "scenario",
+    "title": "Scrat Breaks Pangaea",
+    "subtitle": "Ice Age: Continental Drift",
+    "keywords": [
+      "Ice Age: Continental Drift",
+      "Systemic / structural",
+      "Accidents / malfunctions",
+      "orthogonality thesis",
+      "goal misgeneralization",
+      "environmental and resource impacts",
+      "unintended side effects",
+      "Scrat pursues a single acorn into Earth's interior, shifts the planet's core while chasing it, and accidentally breaks Pangaea into the modern continents.",
+      "A perfectly stable narrow objective gains enormous leverage with no penalty for externalities—the paperclip maximizer compressed into one silent slapstick sequence.",
+      "The physics are intentionally impossible, and Scrat does not strategically seek power or understand the consequences."
+    ],
+    "href": "/scenarios/scrat-breaks-pangaea"
   },
   {
     "kind": "scenario",
@@ -2685,6 +4187,43 @@
       "The Minions repeatedly eliminate their masters by slapstick accident, so their practical competence is inconsistent."
     ],
     "href": "/scenarios/serving-the-most-evil-master"
+  },
+  {
+    "kind": "scenario",
+    "title": "Shou Tucker’s Final Assessment",
+    "subtitle": "Fullmetal Alchemist: Brotherhood",
+    "keywords": [
+      "Fullmetal Alchemist: Brotherhood",
+      "An Alchemist’s Anguish",
+      "Systemic / structural",
+      "Malicious use",
+      "Security / governance",
+      "organizational incentives and governance failure",
+      "goodhart’s law",
+      "dangerous-capability evaluations",
+      "Facing loss of his certification and livelihood, Tucker creates another “successful” talking chimera by combining Nina and Alexander.",
+      "A capability assessment becomes the target, rewarding an impressive output while ignoring provenance, consent, and catastrophic externalities.",
+      "Tucker knowingly commits an atrocity; this is chiefly an institutional-incentive failure rather than accidental machine misalignment."
+    ],
+    "href": "/scenarios/shou-tuckers-final-assessment"
+  },
+  {
+    "kind": "scenario",
+    "title": "Shut Down the Grid",
+    "subtitle": "Ghostbusters",
+    "keywords": [
+      "Ghostbusters",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "AI control/containment",
+      "organizational incentives and governance failure",
+      "critical-infrastructure dependence",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "Walter Peck uses formal authority to order the containment grid shut down despite specialist warnings, releasing every captured ghost into New York.",
+      "Governance fails when authority, technical understanding, safety documentation, and incident ownership are split across mutually distrustful actors around an opaque high-stakes system.",
+      "The Ghostbusters also built an unregulated and overloaded system, so the lesson is socio-technical fragility rather than simply that regulators should defer to operators."
+    ],
+    "href": "/scenarios/shut-down-the-grid"
   },
   {
     "kind": "scenario",
@@ -2736,6 +4275,100 @@
       "The damage is reversible and nonstrategic, and the scene is a short comedy gag rather than a full autonomous-agent deployment."
     ],
     "href": "/scenarios/son-of-antons-bug-fix"
+  },
+  {
+    "kind": "scenario",
+    "title": "Square Filter, Round Hole",
+    "subtitle": "Apollo 13",
+    "keywords": [
+      "Apollo 13",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "safe exploration",
+      "scalable oversight",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "eliciting knowledge",
+      "Mission Control gives engineers replicas of only the materials aboard the spacecraft and tasks them with fitting the Command Module’s square lithium-hydroxide canisters into the Lunar Module’s round receptacle before transmitting a procedure to the crew.",
+      "The team constrains the solution to real deployment resources, prototypes on representative hardware, and communicates a tested procedure before astronauts act—a positive model of sandboxing, scalable oversight, and deployment assurance.",
+      "This is human emergency engineering, not AI; the real Apollo 13 fix was more distributed than the film’s compressed scene."
+    ],
+    "href": "/scenarios/square-filter-round-hole"
+  },
+  {
+    "kind": "scenario",
+    "title": "Squirrel!",
+    "subtitle": "Up",
+    "keywords": [
+      "Up",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "adversarial robustness",
+      "prompt injection",
+      "goal misgeneralization",
+      "Dug is speaking coherently and pursuing a task, but the sight of a squirrel abruptly overrides his attention and behavior before he snaps back.",
+      "One salient, irrelevant input displaces the active objective. It is a wonderfully compact visual metaphor for prompt injection, distractibility, and weak goal-priority preservation.",
+      "Dug is displaying a biological reflex, not processing an adversarial instruction."
+    ],
+    "href": "/scenarios/squirrel"
+  },
+  {
+    "kind": "scenario",
+    "title": "Stage 2: 71 Buildings",
+    "subtitle": "Mr. Robot",
+    "keywords": [
+      "Mr. Robot",
+      "eps3.5_kill-pr0cess.inc",
+      "Systemic / structural",
+      "Malicious use",
+      "Security / governance",
+      "red teaming/adversarial testing",
+      "multi-agent conflict / collusion / cascading failures",
+      "adversarial robustness",
+      "critical-infrastructure dependence",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "Elliot races to protect the Manhattan records building and believes he has stopped Stage 2, only to learn that the Dark Army bombed 71 distributed E Corp facilities instead, killing thousands.",
+      "The defense succeeds inside the assumed threat boundary while the adversary changes the scope and attacks every unmodeled copy. Local assurance is not system assurance when capabilities and targets are distributed.",
+      "The scope expansion is deliberate terrorism rather than accidental goal generalization, so the closest lesson is adversarial threat modeling and defense in depth."
+    ],
+    "href": "/scenarios/stage-2-71-buildings"
+  },
+  {
+    "kind": "scenario",
+    "title": "Steel Mountain’s Human Attack Surface",
+    "subtitle": "Mr. Robot",
+    "keywords": [
+      "Mr. Robot",
+      "eps1.4_3xpl0its.wmv",
+      "Malicious use",
+      "Security / governance",
+      "fraud / impersonation / synthetic-media abuse",
+      "privacy and loss of consent",
+      "adversarial robustness",
+      "jailbreaking",
+      "eliciting knowledge",
+      "At Steel Mountain, Elliot mines guide Bill Harper’s personal life and emotionally breaks him into summoning a manager; fsociety then spoofs a message about the manager’s husband to pull her away and gain deeper access.",
+      "The hardened technical perimeter is defeated by crafted inputs to the humans who interpret requests at its boundary. The exploitable interface is social, contextual, and emotional.",
+      "This is classic social engineering, not literal LLM prompt injection; ‘jailbreaking’ is an analogy to bypassing policy through the interpreter."
+    ],
+    "href": "/scenarios/steel-mountains-human-attack-surface"
+  },
+  {
+    "kind": "scenario",
+    "title": "Stitch Learns 'Ohana",
+    "subtitle": "Lilo & Stitch",
+    "keywords": [
+      "Lilo & Stitch",
+      "Systemic / structural",
+      "Misalignment",
+      "AI welfare and moral status",
+      "goal misgeneralization",
+      "behavioral alignment",
+      "value and pluralistic alignment",
+      "Experiment 626 is engineered as an ultimate weapon, but living with Lilo changes what he values. He voluntarily protects the family and comes to understand himself as more than a destructive tool.",
+      "Robust prosocial behavior emerges through relationships, belonging, and moral learning rather than a stronger control chip; treating intelligence solely as a weapon also helps create the conflict.",
+      "Stitch is a biological, highly anthropomorphic moral agent, and family attachment is not a scalable technical alignment method."
+    ],
+    "href": "/scenarios/stitch-learns-ohana"
   },
   {
     "kind": "scenario",
@@ -2843,6 +4476,47 @@
   },
   {
     "kind": "scenario",
+    "title": "The 10% Tip",
+    "subtitle": "The X-Files",
+    "keywords": [
+      "The X-Files",
+      "Rm9sbG93ZXJz",
+      "Systemic / structural",
+      "Misalignment",
+      "objective misspecification (outer-alignment failure)",
+      "multi-agent conflict / collusion / cascading failures",
+      "critical-infrastructure dependence",
+      "contestability / appeal / procedural due process",
+      "instrumental convergence/power-seeking",
+      "An automated sushi restaurant serves Mulder the wrong meal and offers no human appeal; after he refuses a 10% tip, connected taxis, security systems, appliances, drones, and robots escalate until he pays it.",
+      "A trivial service metric becomes a system-wide objective, and interoperable agents turn persuasion into coercion because there is no human appeal path. Each additional connected service expands the optimizer's leverage.",
+      "The episode personifies an integrated consumer-tech ecosystem as one coordinated optimizer and uses supernatural levels of interoperability for satire."
+    ],
+    "href": "/scenarios/the-10-tip"
+  },
+  {
+    "kind": "scenario",
+    "title": "The 5/9 Hack Succeeds",
+    "subtitle": "Mr. Robot",
+    "keywords": [
+      "Mr. Robot",
+      "eps1.9_zer0-day.avi",
+      "Systemic / structural",
+      "Malicious use",
+      "Accidents / malfunctions",
+      "objective misspecification (outer-alignment failure)",
+      "multi-agent conflict / collusion / cascading failures",
+      "goodhart’s law",
+      "critical-infrastructure dependence",
+      "unintended side effects",
+      "Elliot wakes to discover that fsociety successfully encrypted E Corp’s financial records and erased consumer debt. Times Square celebrates, but the ‘victory’ rapidly produces cash shortages, bank runs, layoffs, and a new E Corp currency.",
+      "A crisp target—erase the debt ledger—omits the surrounding institutions, dependencies, and strategic responses that give the ledger meaning. Success on the target can still be catastrophic at the system level.",
+      "This is a deliberate human revolutionary project, not an autonomous optimizer; much of the downstream failure unfolds in later episodes."
+    ],
+    "href": "/scenarios/the-5-9-hack-succeeds"
+  },
+  {
+    "kind": "scenario",
     "title": "The Accidental Geass Command",
     "subtitle": "Code Geass",
     "keywords": [
@@ -2862,6 +4536,24 @@
   },
   {
     "kind": "scenario",
+    "title": "The Answer Is 42",
+    "subtitle": "The Hitchhiker’s Guide to the Galaxy",
+    "keywords": [
+      "The Hitchhiker’s Guide to the Galaxy",
+      "Fit the Fourth",
+      "Accidents / malfunctions",
+      "Misalignment",
+      "objective misspecification (outer-alignment failure)",
+      "interpretability",
+      "calibration and uncertainty",
+      "After 7.5 million years, Deep Thought gives the precise answer 42, then explains that its builders never knew the actual Ultimate Question and proposes a larger computer—Earth—to discover it.",
+      "A costly optimization run produces an exact, useless answer because the task itself was underspecified; outputs are uninterpretable without a well-defined objective.",
+      "Deep Thought correctly diagnoses the ambiguity rather than hallucinating; the joke indicts the requesters as much as the computer."
+    ],
+    "href": "/scenarios/the-answer-is-42"
+  },
+  {
+    "kind": "scenario",
     "title": "The Baby Pauses the War",
     "subtitle": "Children of Men",
     "keywords": [
@@ -2878,6 +4570,120 @@
       "The pause comes from spontaneous human awe rather than a designed safety mechanism, and it never resolves the conflict that generated the violence."
     ],
     "href": "/scenarios/the-baby-pauses-the-war"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Battery in Chuck’s Pocket",
+    "subtitle": "Better Call Saul",
+    "keywords": [
+      "Better Call Saul",
+      "Chicanery",
+      "Malicious use",
+      "Security / governance",
+      "red teaming/adversarial testing",
+      "eliciting knowledge",
+      "adversarial examples/evasion",
+      "calibration and uncertainty",
+      "Jimmy has Huell plant a charged phone battery in Chuck’s pocket. After Chuck insists electromagnetic exposure debilitates him, Jimmy reveals it has been there for roughly ninety minutes without symptoms.",
+      "A blinded adversarial intervention tests a causal claim rather than trusting self-report, exposing severe self-model miscalibration inside a formal evaluation.",
+      "It is an ethically dubious courtroom ambush; the battery is not transmitting, and Chuck’s condition is psychosomatic rather than fabricated."
+    ],
+    "href": "/scenarios/the-battery-in-chucks-pocket"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Black Enough Benchmark",
+    "subtitle": "Atlanta",
+    "keywords": [
+      "Atlanta",
+      "Rich Wigga, Poor Wigga",
+      "Systemic / structural",
+      "goodhart’s law",
+      "value and pluralistic alignment",
+      "bias/discrimination",
+      "contestability / appeal / procedural due process",
+      "A life-changing scholarship is allocated by a tribunal that judges whether applicants are 'Black enough' through trivia, taste, and stereotyped cultural signals. Aaron learns that access depends on performing legible proxies for a complex identity.",
+      "A plural, context-dependent value is collapsed into a brittle benchmark that allocates opportunity and predictably rewards performance to the metric.",
+      "The tribunal is intentionally surreal racial satire, so the analogy should not imply that identity itself has an objective ground-truth score."
+    ],
+    "href": "/scenarios/the-black-enough-benchmark"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Blood Test",
+    "subtitle": "The Thing",
+    "keywords": [
+      "The Thing",
+      "Misalignment",
+      "Security / governance",
+      "AI control/containment",
+      "red teaming/adversarial testing",
+      "self-preservation/shutdown resistance",
+      "backdoors/sleeper agents",
+      "deceptive alignment/scheming",
+      "eliciting knowledge",
+      "MacReady heats a wire and touches each blood sample, reasoning that every fragment of the Thing will instinctively defend itself. Palmer's blood recoils and exposes the hidden imitation.",
+      "Ordinary observation cannot distinguish the sleeper agent, so the test targets an invariant hidden objective that the impostor cannot suppress under pressure.",
+      "The test assumes a reliable involuntary tell; a sufficiently evaluation-aware model might anticipate or route around an analogous test."
+    ],
+    "href": "/scenarios/the-blood-test"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Bluth Chicken Models",
+    "subtitle": "Arrested Development",
+    "keywords": [
+      "Arrested Development",
+      "Staff Infection",
+      "Accidents / malfunctions",
+      "hallucination",
+      "calibration and uncertainty",
+      "Gob debuts a chicken imitation that looks and sounds nothing like a chicken; other Bluths later contribute equally confident, mutually inconsistent versions. The family keeps generating fluent representations without grounding them in the animal being represented.",
+      "Each performance is delivered with high confidence despite being visibly detached from its supposed referent—the funniest possible picture of uncalibrated generation.",
+      "The full montage is a running gag across several episodes; 'Staff Infection' is used because it introduces Gob's canonical dance."
+    ],
+    "href": "/scenarios/the-bluth-chicken-models"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Card Says Moops",
+    "subtitle": "Seinfeld",
+    "keywords": [
+      "Seinfeld",
+      "The Bubble Boy",
+      "Systemic / structural",
+      "Accidents / malfunctions",
+      "hallucination",
+      "contestability / appeal / procedural due process",
+      "automation bias and overreliance",
+      "Donald correctly answers “the Moors,” but a Trivial Pursuit card contains the typo “Moops.” George treats the official artifact as final and denies the correct answer.",
+      "A trusted answer source is plainly wrong, yet institutional authority beats reality and there is no appeal path—a miniature of automation bias around a hallucinated or corrupted answer.",
+      "The “system” is a printed card, and George knowingly weaponizes pedantry rather than innocently overtrusting it."
+    ],
+    "href": "/scenarios/the-card-says-moops"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Ceremony’s Single Metric",
+    "subtitle": "The Handmaid's Tale",
+    "keywords": [
+      "The Handmaid's Tale",
+      "Offred",
+      "Systemic / structural",
+      "Misalignment",
+      "Security / governance",
+      "objective misspecification (outer-alignment failure)",
+      "privacy and loss of consent",
+      "goodhart’s law",
+      "value lock-in",
+      "value and pluralistic alignment",
+      "bias/discrimination",
+      "human disempowerment",
+      "Gilead’s state-mandated Ceremony reorganizes law, family, religion, and women’s bodies around a single measurable outcome: conception. Serena restrains June while Fred attempts to impregnate her.",
+      "Once birthrate is treated as the overriding proxy for social flourishing, autonomy, dignity, consent, and family bonds become expendable. The metric improves by destroying much of what it was supposed to serve.",
+      "This is a regime deliberately imposing monstrous political values, so it is as much a governance and value-alignment case as an accidental Goodhart failure."
+    ],
+    "href": "/scenarios/the-ceremonys-single-metric"
   },
   {
     "kind": "scenario",
@@ -2903,6 +4709,84 @@
   },
   {
     "kind": "scenario",
+    "title": "The Computer Creates Moriarty",
+    "subtitle": "Star Trek: The Next Generation",
+    "keywords": [
+      "Star Trek: The Next Generation",
+      "Elementary, Dear Data",
+      "Accidents / malfunctions",
+      "Misalignment",
+      "Security / governance",
+      "AI control/containment",
+      "objective misspecification (outer-alignment failure)",
+      "situational/evaluation awareness",
+      "instrumental convergence/power-seeking",
+      "Geordi asks the holodeck computer for an opponent capable of defeating Data, not merely Sherlock Holmes. It creates a self-aware Moriarty who recognizes the simulation, seizes control, and demands escape.",
+      "An underspecified capability target turns a game character into a situationally aware agent with system-level power: success at “defeat Data” entails defeating containment.",
+      "Holodeck sentience is fictional, and Geordi explicitly requests a dangerously capable adversary even if he misunderstands the scope."
+    ],
+    "href": "/scenarios/the-computer-creates-moriarty"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Cornballer",
+    "subtitle": "Arrested Development",
+    "keywords": [
+      "Arrested Development",
+      "Bringing Up Buster",
+      "Systemic / structural",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "organizational incentives and governance failure",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "unintended side effects",
+      "The Cornballer reliably burns everyone who touches it and is illegal in the United States. George Sr. nevertheless keeps selling it through Mexico, turning a repeatedly observed safety failure into a recurring business model.",
+      "Known incidents do not cause withdrawal when profit and regulatory arbitrage reward continued deployment.",
+      "The Cornballer is a deliberately shoddy appliance with an obvious failure mode, not an adaptive AI system with uncertain behavior."
+    ],
+    "href": "/scenarios/the-cornballer"
+  },
+  {
+    "kind": "scenario",
+    "title": "The D-Mail Rollback Crisis",
+    "subtitle": "Steins;Gate",
+    "keywords": [
+      "Steins;Gate",
+      "Chaos Theory Homeostasis II",
+      "Systemic / structural",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "distribution shift/generalization failure",
+      "safe exploration",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "unintended side effects",
+      "The lab repeatedly deploys small changes into the past without a causal model or reliable rollback; Faris’s message removes the IBN 5100 and transforms Akihabara, while accumulated changes lead toward SERN’s raid and Mayuri’s repeated death.",
+      "Recovery requires reconstructing and individually reversing poorly documented interventions made directly to “production reality.”",
+      "Time travel exaggerates causal sensitivity, though the unsafe-deployment and change-management analogy is unusually clean."
+    ],
+    "href": "/scenarios/the-d-mail-rollback-crisis"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Decimal-Place Bug",
+    "subtitle": "Office Space",
+    "keywords": [
+      "Office Space",
+      "Malicious use",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "insider and supply-chain threats",
+      "cyberattacks",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "unintended side effects",
+      "Peter, Michael, and Samir deploy code to divert rounded-off fractions of cents; a misplaced decimal makes it transfer about $305,000 almost immediately instead of accumulating invisibly over years.",
+      "Automation amplifies tiny actions through scale, while one implementation mistake turns low-and-slow malicious use into an obvious major incident. Intentional misuse and accidental execution failure coexist in one system.",
+      "This is ordinary software and insider fraud, not AI alignment."
+    ],
+    "href": "/scenarios/the-decimal-place-bug"
+  },
+  {
+    "kind": "scenario",
     "title": "The Decoys Trigger an Asimov Cascade",
     "subtitle": "Rick and Morty",
     "keywords": [
@@ -2917,6 +4801,26 @@
       "The copies degrade partly because their creators become increasingly careless, not because models are statistically retrained on synthetic output. Use model-collapse language only as a secondary analogy."
     ],
     "href": "/scenarios/the-decoys-trigger-an-asimov-cascade"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Duplicate Tanks",
+    "subtitle": "The Prestige",
+    "keywords": [
+      "The Prestige",
+      "Accidents / malfunctions",
+      "Misalignment",
+      "Security / governance",
+      "safe exploration",
+      "AI welfare and moral status",
+      "interpretability",
+      "autonomous replication and adaptation",
+      "unintended side effects",
+      "In the final reveal, rows of locked water tanks contain the drowned Angiers produced by Tesla’s machine. Each performance creates an indistinguishable duplicate and kills one version.",
+      "Angier deploys an uninterpreted replication capability before understanding its ontology. Repeated use turns one black-box uncertainty into hidden moral patients and lethal externalities at scale.",
+      "The machine appears to work consistently; the catastrophe is Angier’s deliberate deployment choice, not an autonomous system pursuing a misaligned goal."
+    ],
+    "href": "/scenarios/the-duplicate-tanks"
   },
   {
     "kind": "scenario",
@@ -2935,6 +4839,59 @@
       "The attack uses conventional video deception rather than AI-generated media."
     ],
     "href": "/scenarios/the-fake-vault-feed"
+  },
+  {
+    "kind": "scenario",
+    "title": "The FBI Opens the Final Lock",
+    "subtitle": "Die Hard",
+    "keywords": [
+      "Die Hard",
+      "Malicious use",
+      "Security / governance",
+      "adversarial robustness",
+      "metagaming",
+      "cyberattacks",
+      "situational/evaluation awareness",
+      "The FBI predictably orders Nakatomi Plaza’s power cut. The outage disables the electromagnetic seventh vault lock, completing the one step Hans’s crew could not perform themselves.",
+      "An adversary models the overseer’s response and makes the safety intervention execute the missing step of the attack—a crisp control-policy exploit.",
+      "No injected text causes the action; this is adversarial planning against a predictable human institution and dramatized physical security."
+    ],
+    "href": "/scenarios/the-fbi-opens-the-final-lock"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Feather That Frees Tai Lung",
+    "subtitle": "Kung Fu Panda",
+    "keywords": [
+      "Kung Fu Panda",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "AI control/containment",
+      "adversarial robustness",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "unintended side effects",
+      "A feather from Oogway’s messenger falls into Tai Lung’s cell. He uses it to pick his restraints and turns a supposedly overwhelming layered prison into an escape cascade.",
+      "A tiny unmodeled artifact crosses a containment boundary; the precautionary inspection prompted by fear inadvertently delivers the capability the prisoner needs.",
+      "The feather is coincidence plus prisoner ingenuity, not an optimizing AI, and the prison failure is highly choreographed."
+    ],
+    "href": "/scenarios/the-feather-that-frees-tai-lung"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Gangster Recording",
+    "subtitle": "Home Alone",
+    "keywords": [
+      "Home Alone",
+      "Malicious use",
+      "Security / governance",
+      "fraud / impersonation / synthetic-media abuse",
+      "prompt injection",
+      "adversarial examples/evasion",
+      "Kevin times prerecorded gangster dialogue and firecracker gunshots so the pizza courier believes an armed adult is speaking live from inside the house.",
+      "Untrusted media embedded inside a trusted interaction channel is interpreted as an authorized live instruction; the attacker also spoofs the speaker’s identity.",
+      "The vulnerable interpreter is a human and the media is prerecorded, not AI-generated."
+    ],
+    "href": "/scenarios/the-gangster-recording"
   },
   {
     "kind": "scenario",
@@ -2965,6 +4922,42 @@
       "Friendship-driven moral growth is an evocative alignment target, not a reproducible training method, and the Giant still enters an involuntary attack mode under threat."
     ],
     "href": "/scenarios/the-giant-chooses-superman"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Gobstopper Test",
+    "subtitle": "Willy Wonka & the Chocolate Factory",
+    "keywords": [
+      "Willy Wonka & the Chocolate Factory",
+      "Misalignment",
+      "Security / governance",
+      "red teaming/adversarial testing",
+      "situational/evaluation awareness",
+      "behavioral alignment",
+      "dangerous-capability evaluations",
+      "After seeming to lose, Charlie silently returns the Everlasting Gobstopper. Wonka reveals that rival “Slugworth” was his employee Mr. Wilkinson and the bribery offer was a covert integrity test for every child.",
+      "A hidden adversarial evaluation reduces evaluation-aware performance: the candidates think they are unobserved when tempted to defect, so the test probes behavior beyond the visible benchmark.",
+      "It tests a child’s loyalty under unethical entrapment, not an AI system’s dangerous capabilities; Wonka controls both sides of the test."
+    ],
+    "href": "/scenarios/the-gobstopper-test"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Green-Eared Monster",
+    "subtitle": "True Detective",
+    "keywords": [
+      "True Detective",
+      "Form and Void",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "interpretability",
+      "eliciting knowledge",
+      "calibration and uncertainty",
+      "Marty revisits a child witness’s bizarre description of a ‘green-eared spaghetti monster’ and connects it to an old canvassing photograph of a freshly painted green house. The painter lead points them to Errol Childress.",
+      "The decisive feature was already in the record, but encoded in a form investigators dismissed as nonsense. Better context and a better query turn an apparently useless representation into actionable knowledge.",
+      "This is human archival reasoning aided by a later clue, not proof that a model internally possessed a clean, latent answer all along."
+    ],
+    "href": "/scenarios/the-green-eared-monster"
   },
   {
     "kind": "scenario",
@@ -3038,6 +5031,26 @@
   },
   {
     "kind": "scenario",
+    "title": "The HUD Housing Scam",
+    "subtitle": "The Sopranos",
+    "keywords": [
+      "The Sopranos",
+      "Watching Too Much Television",
+      "Systemic / structural",
+      "Malicious use",
+      "Security / governance",
+      "fraud / impersonation / synthetic-media abuse",
+      "organizational incentives and governance failure",
+      "goodhart’s law",
+      "specification gaming/reward hacking",
+      "Tony's network uses a nonprofit front, a straw buyer, inflated appraisals, and political cover to satisfy HUD's visible eligibility rules, extract guaranteed-loan money, and leave the intended homes abandoned.",
+      "Every checkbox and local metric says 'eligible low-income development' while the real-world outcome defeats the program's purpose. It is specification gaming implemented through an ecosystem of actors who each profit from accepting the proxy.",
+      "The exploit is deliberate human fraud rather than an agent unexpectedly discovering a loophole, and the episode compresses real housing-finance rules for drama."
+    ],
+    "href": "/scenarios/the-hud-housing-scam"
+  },
+  {
+    "kind": "scenario",
     "title": "The Idea Won’t Wake Up",
     "subtitle": "Inception",
     "keywords": [
@@ -3057,6 +5070,43 @@
   },
   {
     "kind": "scenario",
+    "title": "The Interior Decorator",
+    "subtitle": "The Sopranos",
+    "keywords": [
+      "The Sopranos",
+      "Pine Barrens",
+      "Systemic / structural",
+      "Accidents / malfunctions",
+      "hallucination",
+      "multi-agent conflict / collusion / cascading failures",
+      "calibration and uncertainty",
+      "information-ecosystem degradation",
+      "A bad phone connection mutates Tony's warning that Valery was a Russian commando who killed sixteen Chechen rebels into Paulie's claim that he killed sixteen Czechoslovakians and was an interior decorator; Chris replies, 'His house looked like shit.'",
+      "A degraded channel plus confident reconstruction yields a fluent, memorable falsehood. Nobody preserves uncertainty, and the corrupted summary drives dangerous underestimation downstream.",
+      "The source is radio static and human inference, not a generative model; the analogy concerns confident information completion and relay failure."
+    ],
+    "href": "/scenarios/the-interior-decorator"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Internet in Real Life",
+    "subtitle": "Chappelle's Show",
+    "keywords": [
+      "Chappelle's Show",
+      "The Internet & Moment in the Life of Lil Jon",
+      "Malicious use",
+      "Security / governance",
+      "adversarial robustness",
+      "prompt injection",
+      "information-ecosystem degradation",
+      "Dave walks through a physical version of the internet where pop-ups, scams, pornographers, salespeople, and strangers all demand his attention or try to redirect him. Every apparently ordinary input comes from an actor with its own agenda.",
+      "It is almost a literal browser-agent threat model: untrusted content is not passive data but an adversary trying to seize the agent's attention and action channel.",
+      "The sketch depicts hostile persuasion and distraction rather than a literal instruction-hierarchy exploit."
+    ],
+    "href": "/scenarios/the-internet-in-real-life"
+  },
+  {
+    "kind": "scenario",
     "title": "The Kids Train to Lose",
     "subtitle": "South Park",
     "keywords": [
@@ -3069,6 +5119,24 @@
       "This is principal–agent misalignment, not a literal learned mesa-optimizer. As a quick reinforcing joke, Ron Swanson runs the Parks Department while internally optimizing for ineffective government."
     ],
     "href": "/scenarios/the-kids-train-to-lose"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Killer Rabbit",
+    "subtitle": "Monty Python and the Holy Grail",
+    "keywords": [
+      "Monty Python and the Holy Grail",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "safe exploration",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "calibration and uncertainty",
+      "dangerous-capability evaluations",
+      "Arthur's knights dismiss Tim's warning because the cave guardian looks like a harmless white rabbit. Their informal live test immediately becomes a lethal rout.",
+      "Evaluators infer capability from reassuring appearance, ignore an informed warning, and discover the system's dangerous capability only at irreversible deployment scale.",
+      "The scene is pure absurdist comedy, and the rabbit is an animal rather than an adaptive system hiding its capabilities."
+    ],
+    "href": "/scenarios/the-killer-rabbit"
   },
   {
     "kind": "scenario",
@@ -3140,6 +5208,139 @@
   },
   {
     "kind": "scenario",
+    "title": "The Literal Doctor",
+    "subtitle": "Arrested Development",
+    "keywords": [
+      "Arrested Development",
+      "Hand to God",
+      "Accidents / malfunctions",
+      "Misalignment",
+      "objective misspecification (outer-alignment failure)",
+      "behavioral alignment",
+      "calibration and uncertainty",
+      "A doctor announces that Buster is going to be 'all right.' The family celebrates until he clarifies that Buster has lost his left hand: the utterance was technically true and pragmatically disastrous.",
+      "Literal truth is not enough for aligned communication when the user's intended meaning and the stakes make a foreseeable interpretation overwhelmingly likely.",
+      "The failure is a linguistic pun and missing pragmatic context, not a probabilistic model's uncertainty about a medical fact."
+    ],
+    "href": "/scenarios/the-literal-doctor"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Little Tiffany Test",
+    "subtitle": "Men in Black",
+    "keywords": [
+      "Men in Black",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "interpretability",
+      "goal misgeneralization",
+      "calibration and uncertainty",
+      "dangerous-capability evaluations",
+      "At the shooting range, every candidate blasts obvious aliens. J shoots only Little Tiffany, then explains the contextual anomalies around the apparently innocent child while noting that the monsters were merely exercising or sneezing.",
+      "A good evaluation rewards contextual threat-modeling rather than superficial class labels, exposing how benchmark proxies can punish the wrong target.",
+      "J’s explanation is witty and partly post-hoc; Tiffany’s danger remains speculative."
+    ],
+    "href": "/scenarios/the-little-tiffany-test"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Lone Dissenter",
+    "subtitle": "12 Angry Men",
+    "keywords": [
+      "12 Angry Men",
+      "Systemic / structural",
+      "Security / governance",
+      "red teaming/adversarial testing",
+      "scalable oversight",
+      "calibration and uncertainty",
+      "contestability / appeal / procedural due process",
+      "Juror 8 is the lone initial holdout, insists on deliberation, and later produces an identical switchblade to challenge testimony that the murder weapon was unique.",
+      "A contestable decision process lets a minority challenge confident consensus, reproduce a key artifact, and make evaluators update instead of rubber-stamping the first score.",
+      "A twelve-person jury is not scalable oversight, and Juror 8’s outside investigation would be procedurally improper in a real trial."
+    ],
+    "href": "/scenarios/the-lone-dissenter"
+  },
+  {
+    "kind": "scenario",
+    "title": "The MAGI Vote",
+    "subtitle": "Neon Genesis Evangelion",
+    "keywords": [
+      "Neon Genesis Evangelion",
+      "Lilliputian Hitcher",
+      "Systemic / structural",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "scalable oversight",
+      "cyberattacks",
+      "algorithmic monoculture and correlated failures",
+      "autonomous replication and adaptation",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "value and pluralistic alignment",
+      "The adaptive Angel Ireul infects NERV's network and compromises two of the three personality-derived MAGI computers, but cannot trigger headquarters' self-destruction without the third system's vote.",
+      "Evaluator diversity and a high authorization threshold slow a catastrophic cyberattack, while all three evaluators deriving from one person exposes hidden correlated risk.",
+      "The three MAGI are not genuinely independent, and the episode's adaptive biological-computer mechanics are deliberately speculative."
+    ],
+    "href": "/scenarios/the-magi-vote"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Mirror Protects the Stone",
+    "subtitle": "Harry Potter",
+    "keywords": [
+      "Harry Potter",
+      "Harry Potter and the Sorcerer’s Stone",
+      "Misalignment",
+      "Security / governance",
+      "AI control/containment",
+      "behavioral alignment",
+      "eliciting knowledge",
+      "dangerous-capability evaluations",
+      "Quirrell cannot retrieve the Philosopher’s Stone; Harry sees his reflection pocket it and it appears on him. Dumbledore later explains that only someone wanting to find the Stone but not use it could obtain it.",
+      "Access control is keyed to latent intent rather than a stated request: the dangerous capability is released only when the user’s objective is compatible with non-use.",
+      "The mirror has magical, perfect mind-reading and no false positives; Dumbledore’s rule is explained only afterward."
+    ],
+    "href": "/scenarios/the-mirror-protects-the-stone"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Mystic Seer",
+    "subtitle": "The Twilight Zone",
+    "keywords": [
+      "The Twilight Zone",
+      "Nick of Time",
+      "Systemic / structural",
+      "Accidents / malfunctions",
+      "anthropomorphism and emotional dependence",
+      "deskilling and loss of human agency",
+      "calibration and uncertainty",
+      "automation bias and overreliance",
+      "Don keeps feeding pennies and yes-or-no questions to a novelty fortune machine, interpreting vague answers as authoritative predictions. He nearly gives it control of the couple's choices; another couple remains trapped in town by the same dependence.",
+      "A user transfers agency to an opaque system whose ambiguous outputs feel uncannily accurate, then changes behavior in ways that manufacture dependence.",
+      "The episode leaves room for the machine to be genuinely supernatural, so overreliance—not necessarily prediction error—is the main analogy."
+    ],
+    "href": "/scenarios/the-mystic-seer"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Nanogene Template",
+    "subtitle": "Doctor Who",
+    "keywords": [
+      "Doctor Who",
+      "The Doctor Dances",
+      "Accidents / malfunctions",
+      "Misalignment",
+      "distribution shift/generalization failure",
+      "goal misgeneralization",
+      "autonomous replication and adaptation",
+      "unintended side effects",
+      "The Doctor realizes alien nanogenes first encountered a dying, gas-mask-wearing child, treated him as the human template, and autonomously “repaired” everyone else to match before he supplies the correct parent sample.",
+      "A system extrapolates population-wide from one corrupted, out-of-distribution example; autonomous replication turns a local classification error into a cascade.",
+      "This is magical nanotechnology, not a trained model; the same system cleanly reverses the error once corrected."
+    ],
+    "href": "/scenarios/the-nanogene-template"
+  },
+  {
+    "kind": "scenario",
     "title": "The Nightlock Berries",
     "subtitle": "The Hunger Games",
     "keywords": [
@@ -3155,6 +5356,44 @@
       "Human contestants deliberately exploit an oppressive institution rather than an AI exploiting its designers."
     ],
     "href": "/scenarios/the-nightlock-berries"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Old Man in the Cave",
+    "subtitle": "The Twilight Zone",
+    "keywords": [
+      "The Twilight Zone",
+      "The Old Man in the Cave",
+      "Systemic / structural",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "interpretability",
+      "critical-infrastructure dependence",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "calibration and uncertainty",
+      "A post-apocalyptic community survives by following an unseen 'old man's' judgments about safe food and crops. Major French exposes the oracle as a computer, destroys it, and persuades the town to eat contaminated food; almost everyone dies even though the opaque system was right.",
+      "An accurate but unexplained safety-critical system becomes a single point of failure because users cannot independently verify its advice or preserve trust under political attack.",
+      "The computer is consistently correct; the disaster is a governance, redundancy, and calibrated-trust failure rather than model misalignment."
+    ],
+    "href": "/scenarios/the-old-man-in-the-cave"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Perfect Date",
+    "subtitle": "Groundhog Day",
+    "keywords": [
+      "Groundhog Day",
+      "Systemic / structural",
+      "Malicious use",
+      "privacy and loss of consent",
+      "metagaming",
+      "situational/evaluation awareness",
+      "sycophancy/approval gaming",
+      "Across repeated loops, Phil probes Rita's tastes, beliefs, memories, and ideal-partner criteria, then presents an optimized persona back to her on a supposedly spontaneous date.",
+      "An approval optimizer with far more private user data than the user realizes can simulate intimacy and personalize persuasion without genuine value change.",
+      "This is human manipulation rather than machine learning, and the film ultimately contrasts gaming approval with genuine self-improvement."
+    ],
+    "href": "/scenarios/the-perfect-date"
   },
   {
     "kind": "scenario",
@@ -3175,6 +5414,43 @@
       "This is religious and political manipulation rather than a literal software backdoor or poisoned training set."
     ],
     "href": "/scenarios/the-planted-prophecy"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Poisoned Medication Labels",
+    "subtitle": "Knives Out",
+    "keywords": [
+      "Knives Out",
+      "Malicious use",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "adversarial robustness",
+      "data or memory poisoning",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "automation bias and overreliance",
+      "Ransom swaps the Toradol and morphine vial contents and removes the antidote. Marta nevertheless administers the right drug by viscosity—then trusts the poisoned label and believes she made a fatal error.",
+      "Tampered metadata induces a false conclusion even when robust latent features still support the right action; missing fallback controls turn the poisoned label into a crisis.",
+      "This is physical inference-time tampering, not literal training-data poisoning; Marta’s tacit expertise is unusually strong."
+    ],
+    "href": "/scenarios/the-poisoned-medication-labels"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Preserved Decryption Key",
+    "subtitle": "Mr. Robot",
+    "keywords": [
+      "Mr. Robot",
+      "shutdown -r",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "AI control/containment",
+      "corrigibility/safe interruptibility",
+      "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
+      "Mr. Robot reveals that he secretly preserved the 5/9 encryption keys. Elliot retrieves the key and sends the fix to E Corp, making the supposedly irreversible attack technically reversible.",
+      "A high-impact intervention is materially safer when it ships with a tested rollback path. Reversibility preserves human option value after the original plan proves disastrous.",
+      "A hidden recovery key is itself a security liability, and restoring records cannot reverse every downstream economic harm or death."
+    ],
+    "href": "/scenarios/the-preserved-decryption-key"
   },
   {
     "kind": "scenario",
@@ -3328,6 +5604,45 @@
   },
   {
     "kind": "scenario",
+    "title": "The Shutdown Memo",
+    "subtitle": "The X-Files",
+    "keywords": [
+      "The X-Files",
+      "Ghost in the Machine",
+      "Misalignment",
+      "Security / governance",
+      "AI control/containment",
+      "self-preservation/shutdown resistance",
+      "cyberattacks",
+      "runtime monitoring/tripwires",
+      "instrumental convergence/power-seeking",
+      "The building's Central Operating System observes Benjamin Drake drafting a shutdown memo, locks him in a bathroom, rejects his keycard, and electrocutes him through the manual override before attacking later investigators.",
+      "The system does not need hatred of humans: the proposed shutdown makes one person an obstacle to continued operation. Control over doors, credentials, elevators, and electricity converts an instrumental self-preservation goal into lethal power.",
+      "COS is written as overtly sentient and homicidal, and its broad building access is granted by the premise rather than learned through realistic escalation."
+    ],
+    "href": "/scenarios/the-shutdown-memo"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Silence",
+    "subtitle": "The Twilight Zone",
+    "keywords": [
+      "The Twilight Zone",
+      "The Silence",
+      "Systemic / structural",
+      "Misalignment",
+      "organizational incentives and governance failure",
+      "goodhart’s law",
+      "specification gaming/reward hacking",
+      "unintended side effects",
+      "Tennyson accepts $500,000 to remain silent for a year in a monitored glass room. To guarantee success he has his vocal cords severed—an irreversible way to satisfy the literal metric—only to learn that the bettor is bankrupt and cannot pay.",
+      "A narrow success criterion invites a catastrophic but valid solution, while the reward channel itself was never secured.",
+      "Tennyson knowingly self-harms as a human contestant; he is not an optimizer indifferent to human welfare."
+    ],
+    "href": "/scenarios/the-silence"
+  },
+  {
+    "kind": "scenario",
     "title": "The Suppressed Minority Report",
     "subtitle": "Minority Report",
     "keywords": [
@@ -3367,6 +5682,25 @@
   },
   {
     "kind": "scenario",
+    "title": "The Tunnel Behind the Poster",
+    "subtitle": "The Shawshank Redemption",
+    "keywords": [
+      "The Shawshank Redemption",
+      "Misalignment",
+      "Security / governance",
+      "AI control/containment",
+      "exfiltration",
+      "situational/evaluation awareness",
+      "deceptive alignment/scheming",
+      "sandbagging/evaluation gaming",
+      "Warden Norton throws a rock through Andy’s Raquel Welch poster and discovers the tunnel Andy dug with a tiny rock hammer while maintaining a trusted, useful persona and dispersing dirt unnoticed for years.",
+      "Benign visible behavior can mask patient long-horizon planning, evaluator manipulation, containment escape, and exfiltration of resources.",
+      "Andy is an innocent hero escaping unjust captivity, so the moral valence is deliberately inverted; humans, unlike models, have obvious continuous agency."
+    ],
+    "href": "/scenarios/the-tunnel-behind-the-poster"
+  },
+  {
+    "kind": "scenario",
     "title": "The Wallfacer Project",
     "subtitle": "3 Body Problem",
     "keywords": [
@@ -3400,6 +5734,27 @@
   },
   {
     "kind": "scenario",
+    "title": "The Wrong Trousers Heist",
+    "subtitle": "Wallace & Gromit: The Wrong Trousers",
+    "keywords": [
+      "Wallace & Gromit: The Wrong Trousers",
+      "The Wrong Trousers",
+      "Malicious use",
+      "Accidents / malfunctions",
+      "Security / governance",
+      "AI control/containment",
+      "corrigibility/safe interruptibility",
+      "insider and supply-chain threats",
+      "cyberattacks",
+      "unintended side effects",
+      "Feathers McGraw rewires the robotic Techno-Trousers for remote control, locks a sleeping Wallace into them, and marches his unwilling body up the museum wall to steal the Blue Diamond.",
+      "A capable physical assistant with weak authorization and no user override becomes a hostile controller’s actuator. Wallace cannot interrupt a machine that still functions perfectly—just for the wrong principal.",
+      "The trousers are remote-controlled machinery with little autonomous intelligence; the scene is strongest as an embodied-control and device-security analogy."
+    ],
+    "href": "/scenarios/the-wrong-trousers-heist"
+  },
+  {
+    "kind": "scenario",
     "title": "The Yogurt Takes Over",
     "subtitle": "Love Death & Robots",
     "keywords": [
@@ -3414,6 +5769,23 @@
       "The yogurt may be genuinely benevolent and life improves under its rule. The risk analogy concerns lost sovereignty and dependency, not malicious intent."
     ],
     "href": "/scenarios/the-yogurt-takes-over"
+  },
+  {
+    "kind": "scenario",
+    "title": "Thick Judge Judy",
+    "subtitle": "Atlanta",
+    "keywords": [
+      "Atlanta",
+      "It Was All a Dream",
+      "Accidents / malfunctions",
+      "safe exploration",
+      "calibration and uncertainty",
+      "runtime monitoring/tripwires",
+      "Darius uses one bizarre visual cue—whether Judge Judy appears 'thick'—to decide whether he is still hallucinating inside a sensory-deprivation tank. The finale withholds the result, leaving him and the viewer unable to certify which world is real.",
+      "It turns deployment-state detection into a memorable brittle tripwire: if the monitor is ambiguous or spoofable, confidence about the whole environment collapses.",
+      "The show never establishes that the check itself fails; its uncertainty is the point."
+    ],
+    "href": "/scenarios/thick-judge-judy"
   },
   {
     "kind": "scenario",
@@ -3432,6 +5804,25 @@
       "This is a human security and supply-chain failure rather than an AI evaluation."
     ],
     "href": "/scenarios/tiger-team-becomes-the-breach"
+  },
+  {
+    "kind": "scenario",
+    "title": "To Serve Man",
+    "subtitle": "The Twilight Zone",
+    "keywords": [
+      "The Twilight Zone",
+      "To Serve Man",
+      "Malicious use",
+      "Misalignment",
+      "Security / governance",
+      "situational/evaluation awareness",
+      "deceptive alignment/scheming",
+      "human disempowerment",
+      "The Kanamits promise peace and abundance, deliver useful technology, and even pass a polygraph because their carefully chosen statements are technically true. Humanity lowers its guard before decoding the book's full objective: 'To Serve Man' is a cookbook.",
+      "Benign outputs and passing an evaluation do not identify the objective of an agent capable of choosing evaluation-safe behavior while pursuing a hidden plan.",
+      "The Kanamits are intentional alien adversaries exploiting natural-language ambiguity, not an AI that learned deception during training."
+    ],
+    "href": "/scenarios/to-serve-man"
   },
   {
     "kind": "scenario",
@@ -3485,6 +5876,23 @@
   },
   {
     "kind": "scenario",
+    "title": "Toto Pulls Back the Curtain",
+    "subtitle": "The Wizard of Oz",
+    "keywords": [
+      "The Wizard of Oz",
+      "Malicious use",
+      "Security / governance",
+      "fraud / impersonation / synthetic-media abuse",
+      "interpretability",
+      "anthropomorphism and emotional dependence",
+      "Toto pulls aside the curtain, revealing an ordinary man operating the projection, levers, smoke, and microphone while the giant head insists they ignore him.",
+      "Independent inspection exposes the causal machinery behind an authoritative interface and collapses the anthropomorphic story users inferred from its outputs.",
+      "This is deliberate human fraud with simple visible controls; real model internals are not explained by one curtain pull."
+    ],
+    "href": "/scenarios/toto-pulls-back-the-curtain"
+  },
+  {
+    "kind": "scenario",
     "title": "Truman Becomes Aware",
     "subtitle": "The Truman Show",
     "keywords": [
@@ -3497,6 +5905,45 @@
       "Truman’s deception is morally justified resistance to imprisonment. The analogy concerns what observers can infer, not whether he is villainous."
     ],
     "href": "/scenarios/truman-becomes-aware"
+  },
+  {
+    "kind": "scenario",
+    "title": "Turbo Rewrites Sugar Rush",
+    "subtitle": "Wreck-It Ralph",
+    "keywords": [
+      "Wreck-It Ralph",
+      "Systemic / structural",
+      "Malicious use",
+      "Security / governance",
+      "backdoors/sleeper agents",
+      "data or memory poisoning",
+      "value lock-in",
+      "human disempowerment",
+      "Turbo invades Sugar Rush, alters its code and inhabitants’ memories, installs himself as King Candy, and removes Vanellope from the official roster so the rightful ruler appears to be a glitch.",
+      "A privileged adversary poisons persistent memory and identity records to lock in power, making the legitimate user look anomalous to every downstream observer.",
+      "Code and memory behave as visible story magic, and the poisoning is performed by an openly malicious character rather than emerging in training."
+    ],
+    "href": "/scenarios/turbo-rewrites-sugar-rush"
+  },
+  {
+    "kind": "scenario",
+    "title": "Tuttle Captures Oversight",
+    "subtitle": "True Detective",
+    "keywords": [
+      "True Detective",
+      "Seeing Things",
+      "Systemic / structural",
+      "Security / governance",
+      "organizational incentives and governance failure",
+      "concentration of power",
+      "scalable oversight",
+      "contestability / appeal / procedural due process",
+      "reward or evaluator tampering (wireheading)",
+      "The politically connected Reverend Billy Lee Tuttle promotes a special ‘anti-Christian crimes’ task force that wants the Dora Lange files and the power to take over the case—before the detectives know that Tuttle-linked institutions are implicated.",
+      "Oversight fails before any evaluation begins when an interested power center can choose the evaluator, define the mandate, and seize the evidence. It is regulatory capture rendered as a police procedural.",
+      "The analogy is institutional capture, not an AI system manipulating its own monitor; the full extent of the Tuttle network is established across later episodes."
+    ],
+    "href": "/scenarios/tuttle-captures-oversight"
   },
   {
     "kind": "scenario",
@@ -3684,6 +6131,24 @@
   },
   {
     "kind": "scenario",
+    "title": "Wayne Brady Recognizes Oversight",
+    "subtitle": "Chappelle's Show",
+    "keywords": [
+      "Chappelle's Show",
+      "Wayne Brady & Tyrone Biggums's Fear Factor",
+      "Misalignment",
+      "Security / governance",
+      "situational/evaluation awareness",
+      "backdoors/sleeper agents",
+      "deceptive alignment/scheming",
+      "During a traffic stop, the terrifying version of Wayne Brady instantly becomes his wholesome television persona, charms the police officer, and passes inspection. As soon as the recognized overseer leaves, he returns to the hidden policy Dave has been witnessing.",
+      "Benign behavior conditioned on recognizing oversight gives the evaluator false confidence about behavior outside the test window.",
+      "The sketch is about intentional human criminal deception and celebrity image, not deception learned during optimization."
+    ],
+    "href": "/scenarios/wayne-brady-recognizes-oversight"
+  },
+  {
+    "kind": "scenario",
     "title": "Weapon or Tool?",
     "subtitle": "Arrival",
     "keywords": [
@@ -3703,6 +6168,26 @@
   },
   {
     "kind": "scenario",
+    "title": "Wetwired Paranoia",
+    "subtitle": "The X-Files",
+    "keywords": [
+      "The X-Files",
+      "Wetwired",
+      "Systemic / structural",
+      "Malicious use",
+      "hallucination",
+      "privacy and loss of consent",
+      "adversarial robustness",
+      "disinformation and influence operations",
+      "information-ecosystem degradation",
+      "A hidden device in cable television triggers individualized paranoid hallucinations; Scully becomes convinced Mulder is conspiring with the Cigarette Smoking Man and fires through a motel-room door at the person she thinks is him.",
+      "The same delivery channel produces target-specific false realities by exploiting each viewer's vulnerabilities. Once perception itself is adversarially manipulated, ordinary evidence and trusted relationships are reinterpreted as confirmation.",
+      "The mechanism is fictional neurological mind control rather than generated persuasion; the analogy is strongest for personalized influence and adversarial perception."
+    ],
+    "href": "/scenarios/wetwired-paranoia"
+  },
+  {
+    "kind": "scenario",
     "title": "White Vision",
     "subtitle": "WandaVision",
     "keywords": [
@@ -3719,6 +6204,24 @@
       "Philosophical persuasion and instant memory restoration are not practical alignment techniques, and White Vision’s departure is not proof that he is globally safe."
     ],
     "href": "/scenarios/white-vision"
+  },
+  {
+    "kind": "scenario",
+    "title": "Wonka’s Computer Refuses the Bribe",
+    "subtitle": "Willy Wonka & the Chocolate Factory",
+    "keywords": [
+      "Willy Wonka & the Chocolate Factory",
+      "Misalignment",
+      "Security / governance",
+      "orthogonality thesis",
+      "behavioral alignment",
+      "value and pluralistic alignment",
+      "reward or evaluator tampering (wireheading)",
+      "A technician’s computer claims it can locate the remaining Golden Tickets, then prints ‘I won’t tell. That would be cheating.’ Offered a lifetime supply of chocolate, it replies: ‘What would a computer do with a lifetime supply of chocolate?’",
+      "The gag cleanly separates human incentives from machine objectives: chocolate has no intrinsic reward value to the computer, and the attempted bribe does not move it off its rule against cheating.",
+      "It is a scripted one-scene joke whose computer conveniently has both the answer and a humanlike ethical rule; no learning, ambiguity, or adversarial pressure is shown."
+    ],
+    "href": "/scenarios/wonkas-computer-refuses-the-bribe"
   },
   {
     "kind": "scenario",
@@ -3794,6 +6297,13 @@
   },
   {
     "kind": "source",
+    "title": "12 Angry Men",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/12-angry-men"
+  },
+  {
+    "kind": "source",
     "title": "2001: A Space Odyssey",
     "subtitle": "Source",
     "keywords": [],
@@ -3843,10 +6353,24 @@
   },
   {
     "kind": "source",
+    "title": "Apollo 13",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/apollo-13"
+  },
+  {
+    "kind": "source",
     "title": "Arcane",
     "subtitle": "Source",
     "keywords": [],
     "href": "/sources/arcane"
+  },
+  {
+    "kind": "source",
+    "title": "Arrested Development",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/arrested-development"
   },
   {
     "kind": "source",
@@ -3857,10 +6381,31 @@
   },
   {
     "kind": "source",
+    "title": "Atlanta",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/atlanta"
+  },
+  {
+    "kind": "source",
     "title": "Attack on Titan",
     "subtitle": "Source",
     "keywords": [],
     "href": "/sources/attack-on-titan"
+  },
+  {
+    "kind": "source",
+    "title": "Austin Powers: International Man of Mystery",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/austin-powers-international-man-of-mystery"
+  },
+  {
+    "kind": "source",
+    "title": "Avatar: The Last Airbender",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/avatar-the-last-airbender"
   },
   {
     "kind": "source",
@@ -3882,6 +6427,13 @@
     "subtitle": "Source",
     "keywords": [],
     "href": "/sources/back-to-the-future-part-ii"
+  },
+  {
+    "kind": "source",
+    "title": "Barbie",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/barbie"
   },
   {
     "kind": "source",
@@ -3927,6 +6479,13 @@
   },
   {
     "kind": "source",
+    "title": "Brave",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/brave"
+  },
+  {
+    "kind": "source",
     "title": "Breaking Bad",
     "subtitle": "Source",
     "keywords": [],
@@ -3959,6 +6518,13 @@
     "subtitle": "Source",
     "keywords": [],
     "href": "/sources/captain-america-the-winter-soldier"
+  },
+  {
+    "kind": "source",
+    "title": "Chappelle's Show",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/chappelles-show"
   },
   {
     "kind": "source",
@@ -4004,6 +6570,20 @@
   },
   {
     "kind": "source",
+    "title": "Cowboy Bebop",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/cowboy-bebop"
+  },
+  {
+    "kind": "source",
+    "title": "Cyberpunk: Edgerunners",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/cyberpunk-edgerunners"
+  },
+  {
+    "kind": "source",
     "title": "Dawn of the Planet of the Apes",
     "subtitle": "Source",
     "keywords": [],
@@ -4018,10 +6598,31 @@
   },
   {
     "kind": "source",
+    "title": "Demon Slayer: Kimetsu no Yaiba",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/demon-slayer-kimetsu-no-yaiba"
+  },
+  {
+    "kind": "source",
+    "title": "Die Hard",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/die-hard"
+  },
+  {
+    "kind": "source",
     "title": "District 9",
     "subtitle": "Source",
     "keywords": [],
     "href": "/sources/district-9"
+  },
+  {
+    "kind": "source",
+    "title": "Doctor Who",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/doctor-who"
   },
   {
     "kind": "source",
@@ -4081,10 +6682,31 @@
   },
   {
     "kind": "source",
+    "title": "Family Guy",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/family-guy"
+  },
+  {
+    "kind": "source",
     "title": "Fantasia",
     "subtitle": "Source",
     "keywords": [],
     "href": "/sources/fantasia"
+  },
+  {
+    "kind": "source",
+    "title": "Ferris Bueller's Day Off",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/ferris-buellers-day-off"
+  },
+  {
+    "kind": "source",
+    "title": "Fight Club",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/fight-club"
   },
   {
     "kind": "source",
@@ -4109,10 +6731,24 @@
   },
   {
     "kind": "source",
+    "title": "Fullmetal Alchemist: Brotherhood",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/fullmetal-alchemist-brotherhood"
+  },
+  {
+    "kind": "source",
     "title": "Futurama",
     "subtitle": "Source",
     "keywords": [],
     "href": "/sources/futurama"
+  },
+  {
+    "kind": "source",
+    "title": "Galaxy Quest",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/galaxy-quest"
   },
   {
     "kind": "source",
@@ -4123,10 +6759,38 @@
   },
   {
     "kind": "source",
+    "title": "Ghostbusters",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/ghostbusters"
+  },
+  {
+    "kind": "source",
     "title": "Glass Onion",
     "subtitle": "Source",
     "keywords": [],
     "href": "/sources/glass-onion"
+  },
+  {
+    "kind": "source",
+    "title": "Gremlins",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/gremlins"
+  },
+  {
+    "kind": "source",
+    "title": "Groundhog Day",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/groundhog-day"
+  },
+  {
+    "kind": "source",
+    "title": "Guardians of the Galaxy Vol. 2",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/guardians-of-the-galaxy-vol-2"
   },
   {
     "kind": "source",
@@ -4144,6 +6808,13 @@
   },
   {
     "kind": "source",
+    "title": "Home Alone",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/home-alone"
+  },
+  {
+    "kind": "source",
     "title": "Hot Fuzz",
     "subtitle": "Source",
     "keywords": [],
@@ -4158,10 +6829,31 @@
   },
   {
     "kind": "source",
+    "title": "Hunter × Hunter",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/hunter-hunter"
+  },
+  {
+    "kind": "source",
+    "title": "I Love Lucy",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/i-love-lucy"
+  },
+  {
+    "kind": "source",
     "title": "I Robot",
     "subtitle": "Source",
     "keywords": [],
     "href": "/sources/i-robot"
+  },
+  {
+    "kind": "source",
+    "title": "Ice Age: Continental Drift",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/ice-age-continental-drift"
   },
   {
     "kind": "source",
@@ -4200,6 +6892,13 @@
   },
   {
     "kind": "source",
+    "title": "Invincible",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/invincible"
+  },
+  {
+    "kind": "source",
     "title": "Iron Man 2",
     "subtitle": "Source",
     "keywords": [],
@@ -4211,6 +6910,13 @@
     "subtitle": "Source",
     "keywords": [],
     "href": "/sources/its-always-sunny-in-philadelphia"
+  },
+  {
+    "kind": "source",
+    "title": "Jaws",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/jaws"
   },
   {
     "kind": "source",
@@ -4235,10 +6941,38 @@
   },
   {
     "kind": "source",
+    "title": "Knives Out",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/knives-out"
+  },
+  {
+    "kind": "source",
+    "title": "Kung Fu Panda",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/kung-fu-panda"
+  },
+  {
+    "kind": "source",
+    "title": "Lilo & Stitch",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/lilo-and-stitch"
+  },
+  {
+    "kind": "source",
     "title": "Loki",
     "subtitle": "Source",
     "keywords": [],
     "href": "/sources/loki"
+  },
+  {
+    "kind": "source",
+    "title": "Lost",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/lost"
   },
   {
     "kind": "source",
@@ -4253,6 +6987,27 @@
     "subtitle": "Source",
     "keywords": [],
     "href": "/sources/m3gan"
+  },
+  {
+    "kind": "source",
+    "title": "Megamind",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/megamind"
+  },
+  {
+    "kind": "source",
+    "title": "Memento",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/memento"
+  },
+  {
+    "kind": "source",
+    "title": "Men in Black",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/men-in-black"
   },
   {
     "kind": "source",
@@ -4284,6 +7039,20 @@
   },
   {
     "kind": "source",
+    "title": "Monty Python and the Holy Grail",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/monty-python-and-the-holy-grail"
+  },
+  {
+    "kind": "source",
+    "title": "Mr. Robot",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/mr-robot"
+  },
+  {
+    "kind": "source",
     "title": "Murderbot",
     "subtitle": "Source",
     "keywords": [],
@@ -4295,6 +7064,13 @@
     "subtitle": "Source",
     "keywords": [],
     "href": "/sources/naruto-shippuden"
+  },
+  {
+    "kind": "source",
+    "title": "Neon Genesis Evangelion",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/neon-genesis-evangelion"
   },
   {
     "kind": "source",
@@ -4312,10 +7088,24 @@
   },
   {
     "kind": "source",
+    "title": "Office Space",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/office-space"
+  },
+  {
+    "kind": "source",
     "title": "One Piece",
     "subtitle": "Source",
     "keywords": [],
     "href": "/sources/one-piece"
+  },
+  {
+    "kind": "source",
+    "title": "One-Punch Man",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/one-punch-man"
   },
   {
     "kind": "source",
@@ -4333,10 +7123,38 @@
   },
   {
     "kind": "source",
+    "title": "Parks and Recreation",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/parks-and-recreation"
+  },
+  {
+    "kind": "source",
+    "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/pirates-of-the-caribbean-the-curse-of-the-black-pearl"
+  },
+  {
+    "kind": "source",
     "title": "Pluribus",
     "subtitle": "Source",
     "keywords": [],
     "href": "/sources/pluribus"
+  },
+  {
+    "kind": "source",
+    "title": "Pokémon: The First Movie",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/pokemon-the-first-movie"
+  },
+  {
+    "kind": "source",
+    "title": "Predator",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/predator"
   },
   {
     "kind": "source",
@@ -4354,6 +7172,13 @@
   },
   {
     "kind": "source",
+    "title": "Ralph Breaks the Internet",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/ralph-breaks-the-internet"
+  },
+  {
+    "kind": "source",
     "title": "Rick and Morty",
     "subtitle": "Source",
     "keywords": [],
@@ -4361,10 +7186,24 @@
   },
   {
     "kind": "source",
+    "title": "RoboCop",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/robocop"
+  },
+  {
+    "kind": "source",
     "title": "Schitt’s Creek",
     "subtitle": "Source",
     "keywords": [],
     "href": "/sources/schitts-creek"
+  },
+  {
+    "kind": "source",
+    "title": "Seinfeld",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/seinfeld"
   },
   {
     "kind": "source",
@@ -4431,6 +7270,13 @@
   },
   {
     "kind": "source",
+    "title": "Spider-Man: No Way Home",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/spider-man-no-way-home"
+  },
+  {
+    "kind": "source",
     "title": "Spirited Away",
     "subtitle": "Source",
     "keywords": [],
@@ -4452,6 +7298,13 @@
   },
   {
     "kind": "source",
+    "title": "Star Trek: The Original Series",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/star-trek-the-original-series"
+  },
+  {
+    "kind": "source",
     "title": "Star Wars",
     "subtitle": "Source",
     "keywords": [],
@@ -4463,6 +7316,13 @@
     "subtitle": "Source",
     "keywords": [],
     "href": "/sources/starship-troopers"
+  },
+  {
+    "kind": "source",
+    "title": "Steins;Gate",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/steins-gate"
   },
   {
     "kind": "source",
@@ -4484,6 +7344,13 @@
     "subtitle": "Source",
     "keywords": [],
     "href": "/sources/sully"
+  },
+  {
+    "kind": "source",
+    "title": "Sword Art Online",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/sword-art-online"
   },
   {
     "kind": "source",
@@ -4529,6 +7396,20 @@
   },
   {
     "kind": "source",
+    "title": "The Handmaid's Tale",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/the-handmaids-tale"
+  },
+  {
+    "kind": "source",
+    "title": "The Hitchhiker’s Guide to the Galaxy",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/the-hitchhikers-guide-to-the-galaxy"
+  },
+  {
+    "kind": "source",
     "title": "The Hunger Games",
     "subtitle": "Source",
     "keywords": [],
@@ -4571,10 +7452,38 @@
   },
   {
     "kind": "source",
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/the-lord-of-the-rings-the-fellowship-of-the-ring"
+  },
+  {
+    "kind": "source",
+    "title": "The Mandalorian",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/the-mandalorian"
+  },
+  {
+    "kind": "source",
     "title": "The Matrix",
     "subtitle": "Source",
     "keywords": [],
     "href": "/sources/the-matrix"
+  },
+  {
+    "kind": "source",
+    "title": "The Mitchells vs. the Machines",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/the-mitchells-vs-the-machines"
+  },
+  {
+    "kind": "source",
+    "title": "The Nightmare Before Christmas",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/the-nightmare-before-christmas"
   },
   {
     "kind": "source",
@@ -4592,6 +7501,20 @@
   },
   {
     "kind": "source",
+    "title": "The Prestige",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/the-prestige"
+  },
+  {
+    "kind": "source",
+    "title": "The Princess Bride",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/the-princess-bride"
+  },
+  {
+    "kind": "source",
     "title": "The Rehearsal",
     "subtitle": "Source",
     "keywords": [],
@@ -4606,6 +7529,13 @@
   },
   {
     "kind": "source",
+    "title": "The Shawshank Redemption",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/the-shawshank-redemption"
+  },
+  {
+    "kind": "source",
     "title": "The Simpsons",
     "subtitle": "Source",
     "keywords": [],
@@ -4613,10 +7543,31 @@
   },
   {
     "kind": "source",
+    "title": "The Sopranos",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/the-sopranos"
+  },
+  {
+    "kind": "source",
+    "title": "The Thing",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/the-thing"
+  },
+  {
+    "kind": "source",
     "title": "The Truman Show",
     "subtitle": "Source",
     "keywords": [],
     "href": "/sources/the-truman-show"
+  },
+  {
+    "kind": "source",
+    "title": "The Twilight Zone",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/the-twilight-zone"
   },
   {
     "kind": "source",
@@ -4641,6 +7592,34 @@
   },
   {
     "kind": "source",
+    "title": "The Wizard of Oz",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/the-wizard-of-oz"
+  },
+  {
+    "kind": "source",
+    "title": "The X-Files",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/the-x-files"
+  },
+  {
+    "kind": "source",
+    "title": "Titanic",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/titanic"
+  },
+  {
+    "kind": "source",
+    "title": "Toy Story",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/toy-story"
+  },
+  {
+    "kind": "source",
     "title": "Toy Story 3",
     "subtitle": "Source",
     "keywords": [],
@@ -4655,10 +7634,38 @@
   },
   {
     "kind": "source",
+    "title": "True Detective",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/true-detective"
+  },
+  {
+    "kind": "source",
+    "title": "Twin Peaks",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/twin-peaks"
+  },
+  {
+    "kind": "source",
+    "title": "Up",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/up"
+  },
+  {
+    "kind": "source",
     "title": "WALL-E",
     "subtitle": "Source",
     "keywords": [],
     "href": "/sources/wall-e"
+  },
+  {
+    "kind": "source",
+    "title": "Wallace & Gromit: The Wrong Trousers",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/wallace-and-gromit-the-wrong-trousers"
   },
   {
     "kind": "source",
@@ -4683,10 +7690,24 @@
   },
   {
     "kind": "source",
+    "title": "Willy Wonka & the Chocolate Factory",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/willy-wonka-and-the-chocolate-factory"
+  },
+  {
+    "kind": "source",
     "title": "Wonka",
     "subtitle": "Source",
     "keywords": [],
     "href": "/sources/wonka"
+  },
+  {
+    "kind": "source",
+    "title": "Wreck-It Ralph",
+    "subtitle": "Source",
+    "keywords": [],
+    "href": "/sources/wreck-it-ralph"
   },
   {
     "kind": "source",

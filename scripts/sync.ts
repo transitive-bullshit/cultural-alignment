@@ -628,7 +628,7 @@ function imageCaption(block: BlockObjectResponse) {
 }
 
 async function downloadImage(url: string) {
-  const maximumAttempts = 5
+  const maximumAttempts = 3
   let lastError = new Error('Image download failed')
 
   for (let attempt = 1; attempt <= maximumAttempts; attempt += 1) {
@@ -652,7 +652,8 @@ async function downloadImage(url: string) {
 
     if (attempt < maximumAttempts) {
       console.warn(
-        `Image download failed; retrying (${attempt}/${maximumAttempts})`
+        `Image download failed; retrying (${attempt}/${maximumAttempts})`,
+        url
       )
       await delay(500 * 2 ** (attempt - 1))
     }
@@ -989,7 +990,7 @@ async function main() {
         completedImages += 1
         if (
           completedImages % 20 === 0 ||
-          completedImages === parsedRows.length
+          completedImages >= parsedRows.length
         ) {
           console.log(
             `Processed ${completedImages}/${parsedRows.length} images`
@@ -997,7 +998,7 @@ async function main() {
         }
         return result
       },
-      { concurrency: 3 }
+      { concurrency: 4 }
     )
 
     const entries: Record<string, SyncEntry> = {}
