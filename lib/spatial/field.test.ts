@@ -84,6 +84,36 @@ describe('spatial field invariants', () => {
     }
   )
 
+  it('keeps a large projected surface locally unique throughout its wrap', () => {
+    const viewportWidth = 11.44
+    const itemWidth = 1.4
+    const layout = createProjectedSurfaceLayout(330, {
+      lanes: 5,
+      columnGap: 1.76,
+      rowGap: 1.45,
+      viewportWidth,
+      itemWidth,
+      overscan: 0.75,
+      stagger: 0.28
+    })
+    const slotsByItem = Map.groupBy(layout.slots, ({ itemIndex }) => itemIndex)
+    const nearbyCopies = [...slotsByItem].flatMap(([itemIndex, slots]) =>
+      slots.flatMap((first, firstIndex) =>
+        slots.slice(firstIndex + 1).flatMap((second) => {
+          const distance = Math.abs(
+            wrapCentered(second.x - first.x, layout.span)
+          )
+
+          return distance <= viewportWidth + itemWidth
+            ? [{ distance, first, itemIndex, second }]
+            : []
+        })
+      )
+    )
+
+    expect(nearbyCopies.slice(0, 5)).toEqual([])
+  })
+
   it('keeps deformation planar at rest and symmetric under velocity', () => {
     const center = calculateVelocityDeformation(0, 10, 30, 30)
     const restingEdge = calculateVelocityDeformation(5, 10, 0, 30)

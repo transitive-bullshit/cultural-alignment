@@ -1,6 +1,9 @@
-const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL
+const configuredSiteUrl = normalizeEnvironmentValue(
+  process.env.NEXT_PUBLIC_SITE_URL
+)
 const vercelHostname =
-  process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL
+  normalizeEnvironmentValue(process.env.VERCEL_PROJECT_PRODUCTION_URL) ??
+  normalizeEnvironmentValue(process.env.VERCEL_URL)
 
 export const siteName = 'Cultural Alignment'
 export const siteTagline = 'Familiar stories for unfamiliar intelligence'
@@ -18,3 +21,7 @@ export const repositoryUrl =
 export const notionSourceUrl =
   'https://transitive-bs.notion.site/3c6edb27f12480709d6dca256d247c80?v=3c6edb27f12480a09aaf000c94ab8502'
 export const xProfileUrl = 'https://x.com/transitive_bs'
+
+function normalizeEnvironmentValue(value: string | undefined) {
+  return value?.trim() || undefined
+}

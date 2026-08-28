@@ -73,7 +73,12 @@ export function createProjectedSurfaceLayout(
   const centerColumn = (columns - 1) / 2
   const span = columns * options.columnGap
   const columnStride = findCoprimeStep(itemCount, options.lanes + 2)
-  const laneStride = findCoprimeStep(itemCount, 3)
+  // Offset each lane around the item ring instead of choosing a second
+  // independently coprime stride. Independent searches can converge on the
+  // same value for some item counts, turning every row into a one-column copy
+  // of its neighbor. Expressing the offset in columns preserves full coverage
+  // within every lane while spreading nearby rows across the ring.
+  const laneColumnOffset = Math.max(1, Math.floor(itemCount / options.lanes))
   const slots = Array.from(
     { length: columns * options.lanes },
     (_, slotIndex): ProjectedSurfaceSlot => {
@@ -82,19 +87,19 @@ export function createProjectedSurfaceLayout(
       const lane = slotIndex % options.lanes
       const staggerDirection = lane % 2 === 0 ? -1 : 1
       const laneOffset = lane === Math.floor(options.lanes / 2) ? 0 : stagger
-      // Continue the modular sequence past a colliding seam instead of
-      // mirroring its first item into the final slot.
+      // When the final slot would repeat the first at the seam, place the
+      // unavoidable extra copy halfway around the item ring.
       const modularColumn =
         itemCount > 2 &&
         column === columns - 1 &&
         positiveModulo(column * columnStride, itemCount) === 0
-          ? column + 1
+          ? column + Math.floor(itemCount / 2)
           : column
 
       return {
         column: logicalColumn,
         itemIndex: positiveModulo(
-          modularColumn * columnStride + lane * laneStride,
+          (modularColumn + lane * laneColumnOffset) * columnStride,
           itemCount
         ),
         lane,
