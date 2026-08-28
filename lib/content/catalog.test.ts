@@ -44,8 +44,10 @@ const minimalSnapshot = {
       description: 'The source description.',
       releaseDate: '1999-03-31',
       poster: {
-        gallerySrc: '/media/generated/sources/source1/gallery.webp',
-        detailSrc: '/media/generated/sources/source1/detail.webp',
+        gallerySrc:
+          'https://assets.example.com/media/generated/sources/source1/gallery.webp',
+        detailSrc:
+          'https://assets.example.com/media/generated/sources/source1/detail.webp',
         width: 1200,
         height: 1800,
         alt: 'Poster for Shared Source'
@@ -179,7 +181,7 @@ describe('ContentCatalog', () => {
     expect(sourcePage.kind).toBe('source')
     if (sourcePage.kind !== 'source') throw new Error('Expected source page')
     expect(sourcePage.poster?.detailSrc).toBe(
-      '/media/generated/sources/source1/detail.webp'
+      'https://assets.example.com/media/generated/sources/source1/detail.webp'
     )
     expect(sourcePage.sourceType).toBe('movie')
     expect(sourcePage.externalLinks.map(({ label }) => label)).toEqual([
@@ -300,8 +302,8 @@ function createScenario(
     riskFamilyIds: overrides.riskFamilyIds,
     conceptIds: ['concept-1'],
     image: {
-      gallerySrc: `/media/scenarios/${overrides.id}-gallery.webp`,
-      detailSrc: `/media/scenarios/${overrides.id}-detail.webp`,
+      gallerySrc: `https://assets.example.com/media/generated/scenarios/${overrides.id}/gallery.webp`,
+      detailSrc: `https://assets.example.com/media/generated/scenarios/${overrides.id}/detail.webp`,
       width: 1600,
       height: 900,
       alt: `Still from scenario ${overrides.id}`

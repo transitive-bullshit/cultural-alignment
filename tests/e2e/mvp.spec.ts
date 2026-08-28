@@ -221,8 +221,9 @@ test('scenario detail publishes content-derived social metadata', async ({
   )
 
   expect(new URL(canonical).pathname).toBe(href)
-  expect(new URL(openGraphImage).pathname).toBe(socialScenario.image.detailSrc)
-  expect(new URL(twitterImage).pathname).toBe(socialScenario.image.detailSrc)
+  const expectedImage = new URL(socialScenario.image.detailSrc, page.url()).href
+  expect(new URL(openGraphImage).href).toBe(expectedImage)
+  expect(new URL(twitterImage).href).toBe(expectedImage)
 })
 
 test('resource detail breadcrumbs navigate back to each resource index', async ({

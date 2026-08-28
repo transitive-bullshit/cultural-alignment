@@ -2,17 +2,20 @@
 
 ## Runtime boundary
 
-The application has no runtime CMS or database. Server Components read a validated local snapshot from `content/snapshot`; client islands receive small page-specific view models. A normal build is fully offline and never reads `NOTION_TOKEN`.
+The application has no runtime CMS, database, or object-storage credentials. Server Components read a validated local snapshot from `content/snapshot`; client islands receive small page-specific view models. A normal build is offline with respect to Notion and the S3-compatible control plane and never reads their credentials. Image delivery is a separate public data-plane concern: absolute image URLs and dimensions are already present in the snapshot.
 
 ```text
 Notion scenario data source
         │ relations to media sources, risk families, and safety concepts
         ▼
 four-data-source import via explicit `pnpm content:sync`
-        │ staged normalization + image processing + validation
+        │ staged normalization + image processing
+        ├──────── content-addressed HEAD/PUT ────────► public S3/R2 media
+        │ validation
         │ atomic replace
         ▼
-content/snapshot + public/media/generated + public/content/search-index.json
+content/snapshot + public/content/search-index.json
+        │ image URLs + dimensions point to public media
         │
         ▼
 ContentCatalog page models
@@ -29,7 +32,7 @@ ContentCatalog page models
 
 Media-source records carry an explicit movie/TV source type, optional description, release date, poster, external media links, and direct related-source IDs. Risk-family records carry short and full names, authored descriptions, Wikipedia links, and ordered citations with preprocessed titles and publisher/domain labels. Safety-concept records carry short and long names plus the same authored-description and citation structure. Scenario cards and other compact surfaces use short names; detail routes use full or long names.
 
-`ContentImage` is the shared local-image contract for required scenario stills and optional source posters. Slugs are unique within a resource kind, media paths must remain local, and image dimensions, source-type/episode consistency, required scenario relations, canonical references, and relational integrity are validated before the catalog is created.
+`ContentImage` is the shared remote-image contract for required scenario stills and optional source posters. Each gallery/detail source is an absolute HTTPS URL produced by the synchronizer, and intrinsic dimensions and alt text travel with it. Slugs are unique within a resource kind; image URL shape, dimensions, source-type/episode consistency, required scenario relations, canonical references, and relational integrity are validated before the catalog is created.
 
 `lib/content/catalog.ts` is the domain seam. Routes ask it for gallery cards, scenario pages, resource pivots, static slugs, or search documents. Routes do not join raw IDs, invent fallbacks, or duplicate relationship/filter semantics. `lib/content/scenario-discovery.ts` owns the deterministic same-source and cross-source taxonomy-overlap heuristic used by scenario pages.
 
@@ -56,18 +59,22 @@ Every content detail route exports all known static parameters and disables unkn
 
 Global search reads a generated local index covering all four resource kinds. Canonical metadata is resolved through one deployment-origin module. The catalog-derived sitemap contains the browse/index URLs plus every scenario, source, family, and concept detail URL; search queries are intentionally kept out of crawler discovery. `robots.txt` permits indexing outside the `/api` namespace, while `llms.txt` gives machine readers a compact project description and stable top-level entry points without duplicating every dossier.
 
+Next.js image optimization allowlists the public media origins represented by the checked-in snapshot; it does not read S3 configuration. Before spatial-gallery data crosses the server/client boundary, its mapper uses the stable `getImageProps` API to derive one same-origin `w=640&q=75` optimizer URL for each texture. Three.js, the navigation transition proxy, and the no-WebGL fallback all reuse that URL. On Vercel, compatible ordinary `<Image>` requests and WebGL textures therefore share image-transformation cache keys, while R2 remains the immutable upstream origin. Browser gallery traffic does not access R2 directly or depend on bucket CORS.
+
 ## Synchronization boundary
 
-`scripts/sync.ts` uses the official `@notionhq/client` against Notion API version `2026-03-11`. The configured root is database `3c6edb27-f124-8070-9d6d-ca256d247c80` and scenario data source `3c6edb27-f124-80f0-a929-000b1fb786d5`. The synchronizer verifies that root and the target of each media-source, risk-family, and safety-concept relation before importing all four data sources. `NOTION_TOKEN` is required for an explicit sync even if the sources are publicly viewable.
+`scripts/sync.ts` loads the ignored root `.env` through dotenvx, then uses the official `@notionhq/client` against Notion API version `2026-03-11`. Values already present in the calling process environment take precedence, so the same entry point works in CI without exposing sync configuration to Next.js. The configured root is database `3c6edb27-f124-8070-9d6d-ca256d247c80` and scenario data source `3c6edb27-f124-80f0-a929-000b1fb786d5`. The synchronizer verifies that root and the target of each media-source, risk-family, and safety-concept relation before importing all four data sources. `NOTION_TOKEN` is required for an explicit sync even if the sources are publicly viewable. S3-compatible access key, secret, API endpoint, and bucket variables are also sync-only requirements.
 
 The synchronizer paginates data-source rows and relation property values, retrieves blocks, converts scenario prose to Markdown-compatible strings and resource descriptions to plain text, and joins records by Notion page ID. It resolves canonical-link metadata once per unique URL, stores citation titles and publisher/domain labels in the snapshot, and uses deterministic URL-derived titles when a remote source cannot be read. Build-time requests and redirects are bounded and restricted to an explicit set of reviewed publication hosts; complete PDFs are parsed locally for their XMP or document-info title. Existing metadata is reused for idempotence; `REFRESH_CITATIONS=1 pnpm content:sync` explicitly refreshes it. The synchronizer also downloads required scenario stills or curated YouTube-thumbnail fallbacks and, on a best-effort basis, the first image from each media-source page. Both image kinds use Sharp to create gallery/detail WebP variants; a missing source image leaves the optional poster empty rather than manufacturing one.
 
-Schema v2 deliberately starts with a fresh slug baseline: the first v2 sync ignores v1 slug maps and regenerates every slug. Later syncs preserve the slug belonging to each surviving Notion page ID, allocate deterministic slugs for new IDs, and remove deleted IDs from the map so their former slugs may be reused. The sync manifest tracks scenario and source-image inputs and outputs so unchanged media can be reused and stale owned files can be pruned.
+Each derived WebP is hashed before publication. Its object key combines the resource identity, variant name, and SHA-256 content hash, so the key changes only when those generated bytes change. An authenticated S3 `HEAD` checks that key first. A hit reuses the object without upload; a 404 triggers `PUT` with `image/webp` and `Cache-Control: public, max-age=31536000, immutable`; authentication and transport failures remain fatal. The snapshot stores the separately configured `S3_PUBLIC_URL` plus those object keys, not the authenticated `S3_API_ENDPOINT`. Cloudflare R2 does not implement per-object public-read ACLs, so public access is enabled at the bucket's managed `r2.dev` hostname or custom domain instead.
 
-The sync manifest hashes source and derived media. Strict generated paths limit cleanup scope; failures leave the previous snapshot untouched.
+Schema v2 deliberately starts with a fresh slug baseline: the first v2 sync ignores v1 slug maps and regenerates every slug. Later syncs preserve the slug belonging to each surviving Notion page ID, allocate deterministic slugs for new IDs, and remove deleted IDs from the map so their former slugs may be reused. The sync manifest tracks scenario and source-image inputs, hashes, object keys, URLs, and dimensions so unchanged media can be reused.
 
-`public/media/generated` remains ignored by Git and exists only in a hydrated local workspace. This keeps the runtime independent of Notion once the artifacts exist, but a clean checkout does not contain scenario stills or source posters and therefore cannot pass content validation or produce a complete deployable artifact. Resolving that packaging gap remains a deliberate follow-up; it must not be addressed by adding a runtime Notion dependency.
+Remote writes happen before the staged snapshot is committed. A failed sync can leave an unreferenced content-addressed object, but it leaves the previous snapshot untouched and cannot overwrite a referenced object with different bytes. Normal sync does not delete remote objects because an older deployment or rollback may still reference them; any future garbage collection needs a retention window across deployed snapshots.
+
+`public/media/generated` is removed from the generated-output contract. The versioned snapshot and search index remain in Git, while generated image bytes remain in public object storage. Changing `S3_PUBLIC_URL` from the temporary managed R2 hostname to a custom asset domain does not change object keys or re-upload unchanged bytes; the next explicit sync rewrites the public URLs in the snapshot.
 
 ## Testing seams
 
-Pure Vitest suites are reserved for validation, ranking, normalization, serialization, and the gallery's nontrivial geometry/state algorithms. Generated-artifact coherence is part of `content:validate`, not an editorial snapshot test. A small Playwright suite covers the critical gallery-to-dossier, local-search, persistence, and phone-layout journeys through URLs and stable state hooks. It does not assert rendered prose, synchronized titles, slugs, counts, or complete generated bodies. Exact cross-GPU pixels are deliberately not an automated oracle; fixed-size browser captures remain the visual evidence.
+Pure Vitest suites are reserved for validation, ranking, normalization, serialization, storage-key construction, HEAD/PUT branching, and the gallery's nontrivial geometry/state algorithms. Snapshot/manifest coherence is part of `content:validate`; it checks the baked URL, hash, and ownership contract without requiring S3 credentials or network access. A small Playwright suite covers the critical gallery-to-dossier, local-search, persistence, and phone-layout journeys through URLs and stable state hooks. It does not assert rendered prose, synchronized titles, slugs, counts, or complete generated bodies. Exact cross-GPU pixels are deliberately not an automated oracle; fixed-size browser captures remain the visual evidence.

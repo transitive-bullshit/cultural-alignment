@@ -22,7 +22,7 @@ The project treats popular stories as a shared simulation library for unfamiliar
 
 ## Operating Context
 
-The project is personally curated and published through the creator's public persona and GitHub account. Notion is the editorial source. An explicit one-way synchronization command uses the official Notion API and `NOTION_TOKEN`—regardless of the source's public visibility—to create a normalized, read-only snapshot containing content and local image assets. The application builds and runs exclusively from that snapshot.
+The project is personally curated and published through the creator's public persona and GitHub account. Notion is the editorial source. An explicit one-way synchronization command uses the official Notion API and `NOTION_TOKEN`—regardless of the source's public visibility—to create a normalized, read-only snapshot containing content plus public image URLs and intrinsic dimensions. Generated image bytes live in public object storage rather than Git. The application builds and runs exclusively from that snapshot.
 
 The source code uses the MIT license. The authored structured dataset uses CC0; that dedication does not cover third-party film and television imagery, titles, trademarks, or linked clips.
 

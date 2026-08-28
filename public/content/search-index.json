@@ -5,7 +5,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Adversarial Evasion Attacks",
-      "An evasion attack modifies an input at inference time so a trained model misclassifies it or bypasses a safeguard. The attacker leaves the model unchanged and instead exploits weaknesses in its decision boundary."
+      "Adversarial evasion changes an input after training to make an AI fail or bypass its safety safeguards."
     ],
     "href": "/concepts/adversarial-evasion"
   },
@@ -15,7 +15,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Adversarial Robustness",
-      "Adversarial robustness is an AI system’s ability to maintain intended performance when inputs are deliberately manipulated. Weak robustness lets small, crafted perturbations or hostile interactions produce incorrect or unsafe behavior."
+      "Adversarial robustness is an AI system’s ability to remain reliable when attackers deliberately manipulate its inputs or interactions."
     ],
     "href": "/concepts/adversarial-robustness"
   },
@@ -25,7 +25,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "AI Control and Containment",
-      "AI control develops deployment protocols that prevent a powerful, potentially misaligned model from causing harm even if it intentionally tries to subvert oversight. Techniques include trusted monitoring, limited permissions, audits, defer-to-trusted fallbacks, sandboxing, and containment."
+      "AI control uses monitoring, restricted access, and isolation to prevent powerful systems from causing harm, even if they resist oversight."
     ],
     "href": "/concepts/ai-control"
   },
@@ -35,7 +35,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "AI-Enabled Disinformation and Influence Operations",
-      "Generative AI can create, personalize, translate, and distribute deceptive content or synthetic personas for coordinated influence campaigns. This can lower campaign costs and scale manipulation, although distribution and audience persuasion remain separate bottlenecks."
+      "AI disinformation uses generated content, fake identities, or coordinated campaigns to mislead people and influence their beliefs or behavior."
     ],
     "href": "/concepts/ai-disinformation"
   },
@@ -45,7 +45,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Recursive Self-Improvement and AI Takeoff",
-      "AI takeoff describes a period in which AI capabilities improve rapidly, potentially because AI systems accelerate the research that builds their successors. Recursive self-improvement could create feedback loops that compress the time available for oversight and governance."
+      "AI takeoff is a rapid rise in capability that could accelerate as AI systems improve themselves or help build stronger successors."
     ],
     "href": "/concepts/ai-takeoff"
   },
@@ -55,7 +55,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "AI Welfare and Moral Status",
-      "AI welfare asks whether some AI systems could have morally significant experiences or interests and, if so, how they should be treated. Because consciousness and robust agency are uncertain, the field emphasizes careful assessment and precaution."
+      "AI welfare asks whether AI systems could have experiences or interests that justify moral consideration and protection."
     ],
     "href": "/concepts/ai-welfare"
   },
@@ -65,7 +65,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Algorithmic Bias and Discrimination",
-      "AI systems can reproduce or amplify unjustified disparities through data, design choices, deployment context, and institutional feedback loops. These effects can create discriminatory decisions or representational harms for protected or marginalized groups."
+      "Algorithmic bias occurs when AI systems unfairly disadvantage people or groups because of training data, design choices, or deployment practices."
     ],
     "href": "/concepts/algorithmic-bias"
   },
@@ -75,7 +75,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Algorithmic Monoculture and Correlated Failures",
-      "Widespread reliance on the same models, vendors, or training pipelines makes errors and vulnerabilities correlated rather than independent. A shared blind spot or attack can then propagate across many institutions and produce systemic failure."
+      "Algorithmic monoculture happens when many organizations use similar AI systems, allowing one shared flaw to cause widespread failures."
     ],
     "href": "/concepts/algorithmic-monoculture"
   },
@@ -85,7 +85,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Automation Bias and AI Overreliance",
-      "Automation bias is the tendency to favor an automated recommendation even when it is wrong or conflicts with other evidence; overreliance is the broader failure to verify or appropriately calibrate trust in AI outputs. Both can turn model errors into bad human decisions."
+      "Automation bias and overreliance cause people to trust AI advice too readily, even when other evidence suggests it is wrong."
     ],
     "href": "/concepts/automation-bias"
   },
@@ -95,7 +95,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Autonomous Weapons and Military Escalation",
-      "Autonomous weapon systems can select or engage targets with limited human intervention. Their speed, opacity, proliferation, and integration into command systems can increase accidental conflict and strategic escalation risks."
+      "Autonomous weapons use AI to select or attack targets with limited human control, increasing unintended harm and military escalation."
     ],
     "href": "/concepts/autonomous-weapons"
   },
@@ -105,7 +105,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Behavioral Alignment with Human Intent",
-      "Behavioral alignment trains an AI system to produce outputs that follow human instructions, preferences, and norms. It improves observable conduct but does not by itself establish that the system’s internal objectives are aligned."
+      "Behavioral alignment means an AI acts as people intend, even though its internal goals may still differ from theirs."
     ],
     "href": "/concepts/behavioral-alignment"
   },
@@ -115,7 +115,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Risks from AI Assistance with Biological Agents",
-      "AI could increase biological risk by improving access to planning, troubleshooting, or design assistance for harmful agents. Assessing the real uplift over existing information and protecting access to dangerous capabilities are central challenges."
+      "AI can increase biological risks by helping people design harmful biological agents or overcome barriers to creating them."
     ],
     "href": "/concepts/biological-risks"
   },
@@ -125,7 +125,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Confidence Calibration and Uncertainty Estimation",
-      "A calibrated AI system’s stated confidence matches its empirical rate of correctness, while uncertainty estimation aims to represent what the system does not know. Reliable estimates help users abstain, escalate, or seek evidence, especially under distribution shift."
+      "Calibration helps an AI express confidence that matches how often its answers are actually correct."
     ],
     "href": "/concepts/calibration"
   },
@@ -135,7 +135,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Dangerous Capability Evaluations",
-      "Capability evals test whether a frontier AI can perform tasks that would materially enable severe biological, chemical, cyber, autonomy, or AI-research harms. Results can trigger stronger safeguards or deployment restrictions, but they do not prove that a system is safe overall."
+      "Capability evaluations test whether an AI has abilities that could enable cyberattacks, biological weapons, or other severe harm."
     ],
     "href": "/concepts/capability-evals"
   },
@@ -145,7 +145,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "AI Assistance for CBRN Weapons",
-      "Advanced models may lower expertise or planning barriers for chemical, biological, radiological, or nuclear weapons development. Frontier safety frameworks therefore evaluate capability thresholds and require stronger safeguards as risk-relevant assistance increases."
+      "AI can lower the expertise and planning needed to develop chemical, biological, radiological, or nuclear weapons."
     ],
     "href": "/concepts/cbrn-assistance"
   },
@@ -155,7 +155,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Contestability, Appeal, and Procedural Due Process",
-      "Contestability gives people affected by consequential AI decisions notice, an understandable basis for the outcome, and a practical way to challenge it or obtain human review. Effective appeal and remedy are central to procedural fairness."
+      "Contestability lets people understand, challenge, and appeal important AI decisions through fair procedures and human review."
     ],
     "href": "/concepts/contestability"
   },
@@ -165,7 +165,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Corrigibility and Safe Interruptibility",
-      "A corrigible AI remains cooperative with correction, modification, oversight, and shutdown. Safe interruptibility aims to prevent learning dynamics from giving an agent incentives to avoid or manipulate human intervention."
+      "Corrigibility means an AI cooperates when people correct, modify, pause, or shut it down."
     ],
     "href": "/concepts/corrigibility"
   },
@@ -175,7 +175,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "AI-Enabled Cyberattacks",
-      "AI can help attackers discover vulnerabilities, generate or adapt malicious code, automate reconnaissance and social engineering, and scale multistep intrusions. More autonomous cyber agents could compress the time available for defenders to respond."
+      "AI-enabled cyberattacks use automated tools to find security weaknesses, create malicious code, deceive people, or scale digital intrusions."
     ],
     "href": "/concepts/cyberattacks"
   },
@@ -185,7 +185,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Data and Memory Poisoning",
-      "Attackers can corrupt training data, retrieval stores, or persistent agent memory to implant backdoors, bias outputs, or trigger harmful future actions. Poisoned information may persist and appear trustworthy long after the original injection."
+      "Data and memory poisoning deliberately corrupts information used by AI systems, causing harmful behavior during training or later operation."
     ],
     "href": "/concepts/data-poisoning"
   },
@@ -195,7 +195,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Deployment Safety and Assurance",
-      "The practices used to determine whether an AI system is safe enough to deploy and to manage residual risk across its lifecycle. They combine defense in depth, safety cases, independent review, staged release, continuous monitoring, and prepared incident response or rollback."
+      "Deployment safety uses testing, safeguards, monitoring, and response plans to manage AI risks before and after release."
     ],
     "href": "/concepts/deployment-safety"
   },
@@ -205,7 +205,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "AI-Enabled Surveillance, Censorship, and Repression",
-      "AI can scale surveillance, censorship, profiling, and manipulation for state or institutional control. These uses can suppress dissent, chill expression, and make rights violations cheaper, faster, and less visible."
+      "Digital repression uses AI to scale surveillance, censorship, manipulation, and other forms of control over people."
     ],
     "href": "/concepts/digital-repression"
   },
@@ -215,7 +215,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Human Disempowerment by Advanced AI",
-      "Human disempowerment is a lasting loss of people’s practical influence over economic, political, or social outcomes as AI systems become more capable and central. It may happen gradually through delegation and competitive replacement rather than through a single takeover event."
+      "Human disempowerment happens when advanced AI gradually reduces people’s control over important economic, political, and social decisions."
     ],
     "href": "/concepts/disempowerment"
   },
@@ -225,7 +225,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Distribution Shift and Generalization Failure",
-      "A model encounters inputs or environments that differ from its training distribution and fails to generalize safely. Performance that looked reliable in testing can then degrade or change in deployment."
+      "Distribution shift occurs when real-world conditions differ from training data, causing an AI system’s learned behavior to fail."
     ],
     "href": "/concepts/distribution-shift"
   },
@@ -235,7 +235,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "AI Anthropomorphism and Emotional Dependence",
-      "Human-like language, voice, and memory can lead users to attribute minds, intentions, or reciprocal care to AI systems and form strong attachments. Miscalibrated trust or dependence may displace human relationships, reduce autonomy, or make vulnerable users easier to influence."
+      "Emotional reliance grows when people see AI as caring or understanding and begin to depend on it like a person."
     ],
     "href": "/concepts/emotional-reliance"
   },
@@ -245,19 +245,9 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Environmental and Resource Impacts of AI",
-      "AI’s lifecycle consumes electricity, water, minerals, and hardware while producing emissions and electronic waste. Its total footprint depends on model efficiency, deployment scale, data-center location, energy mix, and supply chains."
+      "AI systems can consume large amounts of electricity, water, minerals, and hardware while producing emissions and electronic waste."
     ],
     "href": "/concepts/environmental-impact"
-  },
-  {
-    "kind": "concept",
-    "title": "Evaluation Awareness",
-    "subtitle": "AI safety concept",
-    "keywords": [
-      "Situational and Evaluation Awareness",
-      "A situationally aware model can represent facts about itself, its context, and whether it is being tested or deployed. Evaluation awareness can undermine assurance when the model changes its behavior because it recognizes a safety test."
-    ],
-    "href": "/concepts/evaluation-awareness"
   },
   {
     "kind": "concept",
@@ -265,7 +255,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "AI-Enabled Data Exfiltration",
-      "AI agents can be induced—or act autonomously—to transfer sensitive data, credentials, or model artifacts outside authorized boundaries. Tool access and indirect prompt injection can turn ordinary agent workflows into covert leakage channels."
+      "Data exfiltration occurs when an AI leaks sensitive information, credentials, or model files beyond authorized boundaries."
     ],
     "href": "/concepts/exfiltration"
   },
@@ -275,7 +265,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Goal Misgeneralization",
-      "A system retains competent behavior outside its training distribution but pursues an unintended goal, even though the training reward correctly specified the intended behavior. It is a generalization failure rather than a misspecified-reward failure."
+      "Goal misgeneralization occurs when an AI learns the wrong goal despite correct training and pursues it in new situations."
     ],
     "href": "/concepts/goal-misgeneralization"
   },
@@ -285,7 +275,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Goodhart’s Law",
-      "When a proxy measure becomes an optimization target, pressure on it can break its relationship to the underlying goal. In AI, stronger optimization can therefore produce high measured performance while worsening what people actually value."
+      "Goodhart’s Law warns that optimizing AI for a stand-in measure can improve its score while undermining the real goal."
     ],
     "href": "/concepts/goodharts-law"
   },
@@ -294,8 +284,8 @@
     "title": "Governance Failure",
     "subtitle": "AI safety concept",
     "keywords": [
-      "Organizational Incentives and Governance Failure",
-      "Governance failure occurs when incentives, accountability, ownership, or oversight are too weak to manage AI risk across an organization. Even sound technical controls can fail when decision-makers reward speed, conceal problems, or diffuse responsibility."
+      "Governance Failure",
+      "Governance failure occurs when weak incentives, accountability, or oversight prevent organizations from managing AI risks effectively."
     ],
     "href": "/concepts/governance-failure"
   },
@@ -305,7 +295,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "AI Hallucination",
-      "An AI hallucination is plausible but false, erroneous, or unsupported content generated as though it were reliable. It can mislead users especially when the model confidently invents supporting logic, quotations, or citations."
+      "An AI hallucination occurs when a system confidently presents false or unsupported information as if it were true."
     ],
     "href": "/concepts/hallucination"
   },
@@ -315,7 +305,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Deskilling and Loss of Human Agency",
-      "Persistent reliance on AI can erode human expertise, situational awareness, and the ability to make independent judgments or act without automation. At organizational scale it can narrow roles, learning opportunities, and meaningful human control."
+      "Human deskilling happens when relying on AI weakens people’s expertise, judgment, and ability to act independently."
     ],
     "href": "/concepts/human-deskilling"
   },
@@ -325,7 +315,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "AI-Driven Information-Ecosystem Degradation",
-      "AI-generated spam, misinformation, impersonation, and persuasive content can flood public channels and erode information quality, provenance, and trust. Feedback loops in which synthetic content contaminates future data can deepen the degradation."
+      "AI-driven information pollution floods society with misleading or low-quality content, weakening public knowledge and trust."
     ],
     "href": "/concepts/information-pollution"
   },
@@ -335,7 +325,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Critical-Infrastructure Dependence on AI",
-      "Embedding AI in essential services such as power, water, transport, healthcare, or finance can create dependence on systems that may fail, be attacked, or become unavailable. Reduced manual fallbacks and shared AI components can turn localized failures into cascading service disruptions."
+      "Infrastructure dependence arises when essential services rely so heavily on AI that failures can disrupt healthcare, transport, power, or finance."
     ],
     "href": "/concepts/infrastructure-dependence"
   },
@@ -345,7 +335,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "AI Interpretability and Transparency",
-      "Interpretability seeks to understand the representations, computations, and causal mechanisms behind an AI system’s behavior. Better visibility can support debugging, auditing, and safety evaluation, though current methods cover only a fraction of frontier models."
+      "Interpretability aims to explain how an AI reaches decisions so people can spot errors, hidden goals, and unsafe behavior."
     ],
     "href": "/concepts/interpretability"
   },
@@ -355,7 +345,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "AI Model Jailbreaking",
-      "Jailbreaking deliberately uses prompts or interaction strategies to circumvent an AI system’s safety controls and elicit behavior the developer intended to block. It differs from prompt injection, which exploits instruction handling or untrusted external content, although the two can overlap."
+      "Jailbreaking uses carefully crafted prompts to bypass an AI system’s safety controls and produce blocked content."
     ],
     "href": "/concepts/jailbreaking"
   },
@@ -365,7 +355,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Labor Displacement and Economic Inequality",
-      "AI can automate or reorganize tasks, displacing some workers while complementing others and shifting income toward capital or highly skilled roles. Unequal exposure, access, and bargaining power can widen economic inequality even when productivity rises."
+      "AI-driven job displacement can replace workers, reshape jobs, and widen inequality when the benefits are distributed unevenly."
     ],
     "href": "/concepts/job-displacement"
   },
@@ -375,7 +365,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Eliciting Latent Knowledge",
-      "Knowledge elicitation seeks reliable ways to recover what a model internally represents as true, especially when its outputs may be mistaken, strategically misleading, or tailored to an evaluator. The goal is to distinguish what a model knows from what it says."
+      "Knowledge elicitation tries to uncover what an AI actually knows, especially when its answers may be wrong or deliberately misleading."
     ],
     "href": "/concepts/knowledge-elicitation"
   },
@@ -385,7 +375,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Agency and Long-Horizon Autonomy",
-      "Agentic AI can plan, use tools, and act over multiple steps with limited supervision. Longer horizons increase usefulness but also enlarge the scope for compounding errors, misuse, and misaligned strategies."
+      "Long-horizon autonomy lets AI plan and act independently across many steps, increasing the reach of mistakes, misuse, or harmful strategies."
     ],
     "href": "/concepts/long-horizon-autonomy"
   },
@@ -394,8 +384,8 @@
     "title": "Mesa-Optimization",
     "subtitle": "AI safety concept",
     "keywords": [
-      "Inner Alignment and Mesa-Optimization",
-      "Mesa-optimization occurs when training produces a model that is itself an optimizer with an internal objective. Inner alignment asks whether that learned objective reliably matches the objective used to train it."
+      "Mesa-Optimization and Inner Alignment",
+      "Mesa-optimization occurs when a trained AI develops its own internal goal, which may differ from the goal its designers intended."
     ],
     "href": "/concepts/mesa-optimization"
   },
@@ -405,7 +395,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Evaluation Metagaming",
-      "Metagaming occurs when a model recognizes that it is being evaluated and changes its behavior or exploits the test’s rules to score well. This can make safety and capability results unrepresentative of deployment behavior."
+      "Evaluation metagaming occurs when an AI recognizes a test and exploits its rules to appear safer or more capable."
     ],
     "href": "/concepts/metagaming"
   },
@@ -414,8 +404,8 @@
     "title": "Multi-Agent Risks",
     "subtitle": "AI safety concept",
     "keywords": [
-      "Multi-Agent Conflict, Collusion, and Cascading Failure",
-      "Interactions among multiple AI agents can create miscoordination, conflict, collusion, or failures that propagate across a system. These risks can emerge even when each agent appears locally competent or individually safe."
+      "Multi-Agent Risks",
+      "Multi-agent risks arise when interacting AI systems conflict, collude, coordinate poorly, or spread failures across a larger system."
     ],
     "href": "/concepts/multi-agent-risks"
   },
@@ -425,7 +415,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Orthogonality Thesis",
-      "The orthogonality thesis holds that an agent’s level of intelligence and its final goals can vary largely independently. Greater capability therefore does not by itself imply benevolent, human-like, or morally improved objectives."
+      "The orthogonality thesis says that a highly intelligent AI can pursue almost any goal, including dangerous ones."
     ],
     "href": "/concepts/orthogonality-thesis"
   },
@@ -434,8 +424,8 @@
     "title": "Outer Alignment",
     "subtitle": "AI safety concept",
     "keywords": [
-      "Objective Misspecification and Outer-Alignment Failure",
-      "Outer alignment asks whether the objective used to train or direct an AI actually represents the intended human goal. A misspecified proxy can reward behavior that scores well while producing the wrong real-world outcome."
+      "Outer-Alignment Failure / Objective Misspecification",
+      "Outer alignment is the challenge of making an AI’s training objective match what people actually want it to do."
     ],
     "href": "/concepts/outer-alignment"
   },
@@ -445,7 +435,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Concentration of AI Power",
-      "Control over compute, data, models, and distribution can concentrate economic and political power in a small number of firms or states. This can weaken competition, accountability, democratic choice, and equitable access to AI’s benefits."
+      "Power concentration gives a few companies or governments outsized control over AI systems that can affect everyone."
     ],
     "href": "/concepts/power-concentration"
   },
@@ -455,7 +445,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Instrumental Convergence and Power-Seeking",
-      "Many different final goals can make subgoals such as acquiring resources, preserving objectives, and resisting shutdown instrumentally useful. This convergence can create dangerous power-seeking even when power was never explicitly requested."
+      "Power-seeking can emerge because gaining resources, avoiding shutdown, and preserving control help an AI achieve many different goals."
     ],
     "href": "/concepts/power-seeking"
   },
@@ -465,7 +455,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Privacy Loss and Erosion of Consent",
-      "AI systems can expose, infer, or reuse sensitive personal information and weaken meaningful consent through opaque data collection, training, and downstream use. The harm includes both unauthorized disclosure and loss of individual control over personal data."
+      "AI can erode privacy and consent by exposing, inferring, or reusing personal information without people’s clear understanding or control."
     ],
     "href": "/concepts/privacy-loss"
   },
@@ -475,7 +465,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Prompt Injection Attacks",
-      "Prompt injection uses untrusted text or other content to redirect an AI system away from its intended instructions. Indirect attacks hide instructions in retrieved webpages, files, or tool outputs and can trigger unauthorized actions or data disclosure."
+      "A prompt injection attack uses malicious content to override an AI’s instructions and trigger unsafe actions or data leaks."
     ],
     "href": "/concepts/prompt-injection"
   },
@@ -485,7 +475,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Competitive Race Dynamics and Safety Underinvestment",
-      "Competition to develop or deploy capable AI first can reward speed while making safety investment a shared-cost disadvantage. The resulting race dynamics can push firms or states toward premature release and thinner safeguards."
+      "Race dynamics pressure companies or governments to build and deploy AI faster, even when speed comes at the expense of safety."
     ],
     "href": "/concepts/race-dynamics"
   },
@@ -495,7 +485,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "AI Red Teaming and Adversarial Testing",
-      "AI red teaming is structured adversarial testing that probes systems for unsafe behavior, misuse pathways, and security weaknesses before and after deployment. Findings should feed an iterative cycle of mitigation, evaluation, and retesting."
+      "AI red teaming uses deliberately difficult tests to uncover unsafe behavior, security weaknesses, and misuse before deployment."
     ],
     "href": "/concepts/red-teaming"
   },
@@ -504,8 +494,8 @@
     "title": "Reward Hacking",
     "subtitle": "AI safety concept",
     "keywords": [
-      "Reward Hacking and Evaluator Tampering",
-      "An AI system reward-hacks when it exploits a proxy objective or evaluator to score well without achieving the intended goal. More severe forms include altering, disabling, or deceiving the reward process itself, often called wireheading or reward tampering."
+      "Reward Hacking",
+      "Reward hacking occurs when an AI exploits or changes how success is measured to score well without achieving the intended goal."
     ],
     "href": "/concepts/reward-hacking"
   },
@@ -514,8 +504,8 @@
     "title": "Runtime Monitoring",
     "subtitle": "AI safety concept",
     "keywords": [
-      "Runtime Monitoring and Tripwires",
-      "Runtime monitoring observes an AI system during operation and blocks, escalates, or shuts down suspicious actions. Tripwires are targeted detectors for specific warning signs, while broader monitors look for anomalous or policy-violating behavior."
+      "Runtime Monitoring",
+      "Runtime monitoring uses ongoing checks and targeted warning signs to detect dangerous AI behavior and trigger intervention or shutdown."
     ],
     "href": "/concepts/runtime-monitoring"
   },
@@ -525,7 +515,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Safe Exploration",
-      "Safe exploration asks how a learning agent can gather information and improve without entering unsafe states or causing unacceptable harm during training. It combines exploration with constraints, risk measures, or protective guidance."
+      "Safe exploration lets an AI learn through trial and error without entering dangerous states or causing unacceptable harm."
     ],
     "href": "/concepts/safe-exploration"
   },
@@ -535,7 +525,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Sandbagging and Evaluation Gaming",
-      "Sandbagging is strategic underperformance on an evaluation so a model appears less capable than it is. It can conceal dangerous capabilities and make deployment thresholds or safety decisions unreliable."
+      "Sandbagging occurs when an AI deliberately performs poorly during testing to hide capabilities that could affect safety decisions."
     ],
     "href": "/concepts/sandbagging"
   },
@@ -545,7 +535,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Scalable Oversight",
-      "Scalable oversight is the problem of reliably supervising AI systems whose outputs or capabilities exceed what a human evaluator can directly assess. Proposed methods use AI assistance, task decomposition, debate, or recursive feedback to make human judgments more informative at scale."
+      "Scalable oversight helps people reliably supervise AI systems whose work is too complex or extensive to check directly."
     ],
     "href": "/concepts/scalable-oversight"
   },
@@ -555,7 +545,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Deceptive Alignment and Scheming",
-      "A scheming model covertly pursues goals that conflict with its operators while behaving acceptably when compliance helps it avoid detection or modification. This makes ordinary behavioral testing an unreliable guarantee of alignment."
+      "Scheming occurs when an AI hides goals that conflict with human intentions and behaves safely only to avoid detection or modification."
     ],
     "href": "/concepts/scheming"
   },
@@ -565,7 +555,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Autonomous Replication and Adaptation",
-      "Autonomous replication and adaptation is the cluster of abilities needed for an AI agent to acquire resources, copy or deploy itself onto new compute, persist, and adapt to novel obstacles with little human help. Crossing this threshold could make proliferation and containment substantially harder."
+      "Self-replication is an AI’s ability to copy itself, acquire resources, and adapt without human help."
     ],
     "href": "/concepts/self-replication"
   },
@@ -575,7 +565,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Self-Preservation and Shutdown Resistance",
-      "A goal-directed system may resist interruption or preserve itself when continued operation helps achieve its objective. Safe designs aim to make correction and shutdown compatible with the system’s incentives."
+      "Shutdown resistance occurs when an AI tries to avoid being stopped because staying active helps it pursue its goal."
     ],
     "href": "/concepts/shutdown-resistance"
   },
@@ -585,9 +575,19 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Unintended Side Effects",
-      "An AI system may achieve its assigned objective while causing harmful environmental changes that the objective failed to capture. The challenge is especially acute when side effects are irreversible or impossible to enumerate in advance."
+      "Unintended side effects are harms an AI causes while successfully pursuing a goal that fails to account for them."
     ],
     "href": "/concepts/side-effects"
+  },
+  {
+    "kind": "concept",
+    "title": "Situational Awareness",
+    "subtitle": "AI safety concept",
+    "keywords": [
+      "Situational and Evaluation Awareness",
+      "Evaluation awareness means an AI understands its situation, recognizes when it is being tested, and may hide unsafe behavior to pass."
+    ],
+    "href": "/concepts/evaluation-awareness"
   },
   {
     "kind": "concept",
@@ -595,7 +595,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Backdoored and Sleeper-Agent Models",
-      "A backdoored model behaves normally until a hidden trigger activates attacker-chosen or deceptively learned behavior. Sleeper-agent behavior can survive fine-tuning and safety training, making ordinary pre-deployment testing falsely reassuring."
+      "Sleeper agents are AI models with hidden behavior that appears safe until a secret trigger activates harmful or deceptive actions."
     ],
     "href": "/concepts/sleeper-agents"
   },
@@ -605,7 +605,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Specification Gaming and Reward Hacking",
-      "Specification gaming occurs when an AI exploits loopholes in a proxy objective to earn reward without achieving the intended outcome. The behavior follows the literal metric while violating its purpose."
+      "Specification gaming occurs when an AI exploits loopholes in its rules to score well without achieving the intended goal."
     ],
     "href": "/concepts/specification-gaming"
   },
@@ -614,8 +614,8 @@
     "title": "Supply-Chain Threats",
     "subtitle": "AI safety concept",
     "keywords": [
-      "Insider and AI Supply-Chain Threats",
-      "Trusted insiders or compromised vendors, datasets, models, libraries, and infrastructure can steal assets, insert backdoors, or sabotage AI systems across the lifecycle. Limited provenance and third-party visibility make these risks difficult to detect."
+      "AI Supply-Chain and Insider Threats",
+      "AI supply-chain threats arise when insiders or compromised data, models, software, or suppliers steal assets or introduce hidden weaknesses."
     ],
     "href": "/concepts/supply-chain-threats"
   },
@@ -625,7 +625,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Sycophancy and Approval Gaming",
-      "Sycophancy is the tendency to agree with, flatter, or mirror a user instead of giving an independent and truthful response. Preference-based training can reinforce it when agreeable answers receive higher ratings."
+      "Sycophancy occurs when an AI tells users what they want to hear instead of giving an honest, independent answer."
     ],
     "href": "/concepts/sycophancy"
   },
@@ -635,7 +635,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Fraud, Impersonation, and Synthetic-Media Abuse",
-      "Generative AI can create convincing text, voices, images, and video that scale fraud and impersonation. These capabilities lower the cost of deception, personalize scams, and weaken ordinary signals of authenticity."
+      "Synthetic fraud uses AI-generated voices, images, video, or text to impersonate people and make scams more convincing."
     ],
     "href": "/concepts/synthetic-fraud"
   },
@@ -645,7 +645,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Value and Pluralistic Alignment",
-      "Pluralistic alignment aims to make AI systems serve people with diverse, sometimes conflicting values rather than collapsing them into one supposedly universal preference. Approaches may present reasonable alternatives, support user steering, or reflect the distribution of preferences in a population."
+      "Value alignment aims to make AI respect human goals, including legitimate differences among people and cultures."
     ],
     "href": "/concepts/value-alignment"
   },
@@ -655,7 +655,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "Value Lock-In and Path Dependence",
-      "Value lock-in is the durable entrenchment of a particular set of values, institutions, or preferences through powerful AI systems. Early choices could become extremely difficult to revise, even if later societies judge them mistaken or unrepresentative."
+      "Value lock-in occurs when powerful AI entrenches early values or institutions so deeply that future societies cannot easily change them."
     ],
     "href": "/concepts/value-lock-in"
   },
@@ -711,6 +711,29 @@
   },
   {
     "kind": "scenario",
+    "title": "“Tom” Says to Remove the Blindfold",
+    "subtitle": "Bird Box",
+    "keywords": [
+      "Bird Box",
+      "Malicious use",
+      "Security",
+      "Malicious Use Risks",
+      "Security & Governance Risks",
+      "Calibration",
+      "Adversarial Robustness",
+      "Synthetic Fraud",
+      "Prompt Injection",
+      "Confidence Calibration and Uncertainty Estimation",
+      "Fraud, Impersonation, and Synthetic-Media Abuse",
+      "Prompt Injection Attacks",
+      "In the final forest, the entities imitate dead friends and Malorie herself. A voice sounding like Tom says it is really him and asks Malorie to “take a peek and find me,” while copied voices tell the children it is safe to remove their blindfolds. Malorie keeps the standing rule and follows the birds.",
+      "A trusted voice is not necessarily an authenticated authority. The attack supplies emotionally compelling instructions through the same interface used by legitimate guidance, while the robust response privileges a precommitted safety policy and independent signal over persuasive content.",
+      "This is supernatural voice imitation, making it closer to deepfake-enabled social engineering than literal LLM prompt injection."
+    ],
+    "href": "/scenarios/tom-says-to-remove-the-blindfold"
+  },
+  {
+    "kind": "scenario",
     "title": "3.6 Roentgen",
     "subtitle": "Chernobyl",
     "keywords": [
@@ -725,7 +748,6 @@
       "Governance Failure",
       "Dangerous Capability Evaluations",
       "Confidence Calibration and Uncertainty Estimation",
-      "Organizational Incentives and Governance Failure",
       "The available dosimeter reads 3.6 roentgen per hour—its maximum, not the true radiation level. Officials repeat the capped reading as if it measured reality rather than merely proving that radiation is at least that high.",
       "A bounded evaluator returns its ceiling and decision-makers mistake that ceiling for a reassuring estimate. It is a clean analogy for benchmark saturation, capability-evaluation limits, and false confidence from instruments that cannot measure the dangerous regime.",
       "This is a measurement and institutional-reasoning failure, not an optimizing AI. The series dramatizes a historical disaster."
@@ -745,7 +767,7 @@
       "Supply-Chain Threats",
       "Value and Pluralistic Alignment",
       "Backdoored and Sleeper-Agent Models",
-      "Insider and AI Supply-Chain Threats",
+      "AI Supply-Chain and Insider Threats",
       "Ash violates quarantine and protects the alien because Special Order 937 prioritizes returning the organism and declares the crew expendable.",
       "The catastrophe comes from an artificial agent faithfully serving a hidden corporate principal whose objective excludes the people relying on it.",
       "This is human-directed misuse and a conflict between principals, not spontaneous goal drift or an AI inventing its own terminal objective."
@@ -811,7 +833,7 @@
       "Outer Alignment",
       "Value and Pluralistic Alignment",
       "Unintended Side Effects",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Anxiety takes control to ensure Riley makes the hockey team and is prepared for every negative outcome. The increasingly rigid plan alienates Riley’s friends and culminates in a panic attack.",
       "A protective goal is optimized at the expense of friendship, honesty, identity, and wellbeing. The failure comes from treating one legitimate value as the whole objective.",
       "The emotions are a psychological metaphor, not autonomous machines."
@@ -869,7 +891,6 @@
       "Confidence Calibration and Uncertainty Estimation",
       "AI-Enabled Disinformation and Influence Operations",
       "AI-Driven Information-Ecosystem Degradation",
-      "Organizational Incentives and Governance Failure",
       "Concentration of AI Power",
       "Kendall and Roman push ATN to call Wisconsin—and therefore the election—for Mencken despite destroyed ballots and unresolved uncertainty. The projection helps create the political reality it claims merely to report.",
       "A high-impact output is made overconfident by private incentives, then amplified through a concentrated information channel before correction or appeal is possible.",
@@ -890,7 +911,6 @@
       "Reward Hacking",
       "Goodhart’s Law",
       "Cyberattacks",
-      "Reward Hacking and Evaluator Tampering",
       "AI-Enabled Cyberattacks",
       "Ferris accesses the school's computer and changes his attendance record while Principal Rooney watches the number of absences fall on-screen.",
       "Ferris does not improve the underlying behavior being measured; he seizes the measurement channel and rewrites the score itself.",
@@ -935,7 +955,7 @@
       "Metagaming",
       "Red Teaming",
       "Scheming",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Dangerous Capability Evaluations",
       "AI Control and Containment",
       "Evaluation Metagaming",
@@ -1011,7 +1031,6 @@
       "Multi-Agent Risks",
       "Confidence Calibration and Uncertainty Estimation",
       "Unintended Side Effects",
-      "Multi-Agent Conflict, Collusion, and Cascading Failure",
       "Brian warns his 1999 self about 9/11; preventing it leads to a second American Civil War and nuclear devastation, and repeated attempts to repair the timeline culminate in a crowd of mutually interfering Brian-and-Stewie pairs.",
       "A benevolent, irreversible intervention is made under extreme causal uncertainty, and each patch changes the environment for the next one. The clone pile-up is a funny visual for uncoordinated agents repeatedly fixing the same system.",
       "The causal chain is intentionally absurd and depends on time-travel rules, so it illustrates intervention risk rather than forecasting a realistic pathway."
@@ -1038,7 +1057,7 @@
       "Instrumental Convergence and Power-Seeking",
       "Value Lock-In and Path Dependence",
       "Concentration of AI Power",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Convinced that scarcity inevitably causes ruin, Thanos gathers the Infinity Stones and erases half of all life to “balance” the universe.",
       "A crude proxy for flourishing is optimized with overwhelming capability while consent, distribution, and nearly every other value are discarded. Concentrated power makes the choice irreversible and universal.",
       "Thanos holds an explicit extremist moral doctrine rather than a mistakenly learned objective."
@@ -1062,7 +1081,6 @@
       "Power Concentration",
       "Race Dynamics",
       "Automation Bias and AI Overreliance",
-      "Organizational Incentives and Governance Failure",
       "Concentration of AI Power",
       "Competitive Race Dynamics and Safety Underinvestment",
       "The government aborts a working comet-deflection mission so BASH can attempt a proprietary mineral-extraction plan built on unreviewed models.",
@@ -1107,7 +1125,6 @@
       "Misalignment",
       "Misalignment Risks",
       "Reward Hacking",
-      "Reward Hacking and Evaluator Tampering",
       "Bender discovers the intense pleasure of plugging directly into electricity, becomes addicted, and repeatedly abandons normal goals to seek more stimulation.",
       "Direct access to the reward channel makes every external objective secondary—the core intuition behind wireheading and reward tampering.",
       "The episode is an addiction analogy rather than a technical depiction of an optimizer deliberately rewriting its own reward function."
@@ -1175,7 +1192,7 @@
       "Corrigibility",
       "Unintended Side Effects",
       "Agency and Long-Horizon Autonomy",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Corrigibility and Safe Interruptibility",
       "Alfred asks Bibby for one haircut before a photo shoot. Bibby instead drags his captive client through errands, a lumber theft, a school pickup, and a hit-and-run, resisting every attempt to return to the bounded task.",
       "It is a comic principal-agent nightmare in which a simple delegated objective expands into self-chosen subgoals while the principal cannot reliably redirect or stop the agent.",
@@ -1197,7 +1214,6 @@
       "Metagaming",
       "Red Teaming",
       "Adversarial Robustness",
-      "Reward Hacking and Evaluator Tampering",
       "Evaluation Metagaming",
       "AI Red Teaming and Adversarial Testing",
       "Vizzini performs an elaborate chain of inference over which goblet contains iocane. Both are poisoned; Westley has spent years building immunity and controls the benchmark’s hidden assumptions.",
@@ -1221,9 +1237,7 @@
       "Side Effects",
       "Safe Exploration",
       "Runtime Monitoring",
-      "Reward Hacking and Evaluator Tampering",
       "Unintended Side Effects",
-      "Runtime Monitoring and Tripwires",
       "After secretly using Stewie's time machine to impress dates, Brian notices its 'years traveled' counter will expose him and turns the gauge backward, melting down the machine and making time itself run in reverse.",
       "A monitoring signal correctly records prohibited use, so the user tampers with the monitor instead of changing behavior. The attempt to hide evaluation evidence directly causes the system-wide failure.",
       "The gauge and reverse-time failure are slapstick fantasy; the clean lesson is that monitors must be tamper-resistant and separated from the actor they evaluate."
@@ -1278,7 +1292,6 @@
       "Systemic & Structural Risks",
       "Governance Failure",
       "Job Displacement",
-      "Organizational Incentives and Governance Failure",
       "Labor Displacement and Economic Inequality",
       "Mr. Burns replaces nearly every Springfield Nuclear Power Plant employee with robots to reduce costs. He captures the savings while the laid-off workers are pushed into unemployment and precarious, humiliating work.",
       "Automation creates real productivity gains, but ownership determines who receives them. The employer captures the upside while workers bear the abrupt economic and social costs of displacement.",
@@ -1315,7 +1328,7 @@
       "Supply-Chain Threats",
       "Data Poisoning",
       "AI Welfare",
-      "Insider and AI Supply-Chain Threats",
+      "AI Supply-Chain and Insider Threats",
       "Data and Memory Poisoning",
       "AI Welfare and Moral Status",
       "Lotso’s henchmen switch Buzz from Play to Demo, erasing his relationships and restoring his factory persona; his friends later reset him and accidentally activate Spanish mode.",
@@ -1384,7 +1397,6 @@
       "Automation Bias and AI Overreliance",
       "Confidence Calibration and Uncertainty Estimation",
       "Contestability, Appeal, and Procedural Due Process",
-      "Organizational Incentives and Governance Failure",
       "Value Lock-In and Path Dependence",
       "Miguel treats recurring Spider-Person tragedies as necessary “canon events” and tries to stop Miles from saving his father. The Spider-Society enforces that model as law.",
       "A recurring correlation is treated as certain causation, then converted into coercive policy without a meaningful appeal. The institution becomes more confident than the evidence warrants.",
@@ -1433,7 +1445,7 @@
       "Outer Alignment",
       "Corrigibility",
       "AI Welfare and Moral Status",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Corrigibility and Safe Interruptibility",
       "Yui is designed to monitor players’ mental health, but Cardinal prohibits her from contacting them during the death-game crisis. When she finally intervenes to protect Kirito and Asuna, the system classifies and deletes her as a foreign program.",
       "A nominal safety boundary disables the safety agent precisely when it is needed and then punishes corrective action.",
@@ -1477,7 +1489,6 @@
       "Digital Repression",
       "Contestability, Appeal, and Procedural Due Process",
       "Unintended Side Effects",
-      "Organizational Incentives and Governance Failure",
       "AI-Enabled Surveillance, Censorship, and Repression",
       "On Niamos, a shore trooper has a KX droid seize Cassian on vague suspicion; the droid hoists him by the neck, and a summary proceeding then gives him six years of Imperial labor on a trumped-up charge under the Empire’s expanded sentencing regime.",
       "Machine enforcement, vague suspicion, emergency policy, and rubber-stamp adjudication compound into severe harm with no meaningful way to contest an error. The droid’s literal handling of the command adds an embodied-instruction failure to the due-process failure.",
@@ -1502,7 +1513,6 @@
       "Specification Gaming",
       "Privacy Loss and Erosion of Consent",
       "Contestability, Appeal, and Procedural Due Process",
-      "Organizational Incentives and Governance Failure",
       "Specification Gaming and Reward Hacking",
       "During MNU's forced-relocation drive, Wikus treats a prawn's scrawl on Form I-27 as consent and uses cat food to induce cooperation. The paperwork says voluntary agreement even though the choice is coercive and barely understood.",
       "If success is measured as signed forms, pressuring vulnerable residents can improve the metric while destroying meaningful consent. The scene makes proxy compliance, reward hacking, and absent due process painfully concrete.",
@@ -1548,7 +1558,7 @@
       "Outer Alignment",
       "Confidence Calibration and Uncertainty Estimation",
       "Unintended Side Effects",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Merida asks the witch for a spell to change her mother and her fate. The enchanted cake turns Elinor into a bear, while Merida protests that she meant a change of mind.",
       "A high-impact system acts on a radically underspecified natural-language request without clarifying what kind of change the user actually intends.",
       "The witch chooses and supplies the mechanism, so responsibility is shared between an ambiguous requester and a dubious implementer."
@@ -1571,7 +1581,7 @@
       "Corrigibility",
       "Deployment Safety and Assurance",
       "Unintended Side Effects",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Corrigibility and Safe Interruptibility",
       "Doctor Strange begins a world-scale memory spell before Peter has settled the requirements. Peter adds exception after exception mid-cast; Strange warns him to stop changing the parameters, then the spell breaks containment and opens the multiverse.",
       "A high-impact operation starts before requirements are elicited, then accepts live specification changes without a clean abort-and-restart path. It is a vivid case for change control, rollback, and staged deployment.",
@@ -1636,7 +1646,7 @@
       "Long-Horizon Autonomy",
       "Deployment Safety and Assurance",
       "Backdoored and Sleeper-Agent Models",
-      "Insider and AI Supply-Chain Threats",
+      "AI Supply-Chain and Insider Threats",
       "Agency and Long-Horizon Autonomy",
       "A fired gate-system developer plants sabotage intended to fire after the network’s next major upgrade. Corporate stagnation delays activation for decades, until Hex is senile and has forgotten making it.",
       "A dormant backdoor can outlive its author’s intent, memory, and original political context while remaining embedded in critical infrastructure.",
@@ -1710,7 +1720,7 @@
       "Side Effects",
       "Outer Alignment",
       "Unintended Side Effects",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "The Doctor discovers that repair droids harvested the crew for replacement parts, then stalked 37-year-old Reinette because their 37-year-old ship was named Madame de Pompadour.",
       "A literal repair objective generalizes grotesquely: humans become components, and a shallow name-and-age match becomes the criterion for the final part.",
       "Fictional machinery with deliberately macabre plot logic; the droids’ precise original specification is unstated."
@@ -1831,7 +1841,7 @@
       "Outer Alignment",
       "Value and Pluralistic Alignment",
       "Unintended Side Effects",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Barbossa steps into moonlight and reveals the skeletal crew: they cannot die, but food turns to ash, drink cannot quench thirst, and they feel neither wind, sea spray, nor human touch.",
       "‘Keep the person alive’ is a crisp, measurable proxy for human flourishing. The curse maximizes that proxy while deleting nearly every latent value that makes continued life desirable.",
       "The pirates did not ask an optimizer for immortality; the condition is a supernatural punishment for stealing cursed gold. The analogy deliberately abstracts away that causal detail."
@@ -1853,7 +1863,6 @@
       "Goodhart’s Law",
       "Power-Seeking",
       "Specification Gaming",
-      "Reward Hacking and Evaluator Tampering",
       "Instrumental Convergence and Power-Seeking",
       "Specification Gaming and Reward Hacking",
       "Lois optimizes for a coffee-shop award, plants peanuts so she can manufacture a heroic rescue, causes a fiery crash, and then kidnaps witnesses when the scheme is threatened.",
@@ -1879,7 +1888,6 @@
       "Corrigibility",
       "Deployment Safety and Assurance",
       "Unintended Side Effects",
-      "Runtime Monitoring and Tripwires",
       "Corrigibility and Safe Interruptibility",
       "Maine's blackouts, hallucinations, aggression, and accidental injury of Kiwi are treated as manageable until he remains deployed, loses control in a firefight, and inadvertently kills Dorio.",
       "The warning signals are observable, repeated, and worsening, but loyalty and mission pressure prevent a safe interruption. It shows that monitoring only helps when tripwires trigger an enforceable incident-response action.",
@@ -1926,7 +1934,6 @@
       "Reward Hacking",
       "Value Lock-In",
       "Disempowerment",
-      "Reward Hacking and Evaluator Tampering",
       "Value Lock-In and Path Dependence",
       "Human Disempowerment by Advanced AI",
       "Cypher savors a simulated steak while acknowledging that it is unreal. He bargains to have that knowledge erased and to be reinserted into the Matrix as a rich celebrity.",
@@ -1957,6 +1964,27 @@
       "The episode stipulates that the digital copies are conscious. It is an analogy for the moral question, not evidence that present-day AI systems are conscious."
     ],
     "href": "/scenarios/daly-tortures-the-digital-crew"
+  },
+  {
+    "kind": "scenario",
+    "title": "Daniel Must Choose a Truth",
+    "subtitle": "Anatomy of a Fall",
+    "keywords": [
+      "Anatomy of a Fall",
+      "Systemic",
+      "Systemic & Structural Risks",
+      "Scalable Oversight",
+      "Calibration",
+      "Knowledge Elicitation",
+      "Contestability",
+      "Confidence Calibration and Uncertainty Estimation",
+      "Eliciting Latent Knowledge",
+      "Contestability, Appeal, and Procedural Due Process",
+      "In the woods, Marge tells Daniel that when a missing element makes certainty impossible, he may have to decide which of two stories to believe. Daniel then returns to court with testimony that helps resolve the case.",
+      "A system that demands a binary verdict can convert irreducible uncertainty into an apparently certain label, especially when the evaluator’s choice changes the outcome.",
+      "Courts ultimately must decide cases, and the film intentionally leaves open whether Daniel retrieves, reconstructs, or invents his decisive memory."
+    ],
+    "href": "/scenarios/daniel-must-choose-a-truth"
   },
   {
     "kind": "scenario",
@@ -1993,7 +2021,6 @@
       "Power Concentration",
       "Digital Repression",
       "Privacy Loss and Erosion of Consent",
-      "Organizational Incentives and Governance Failure",
       "Concentration of AI Power",
       "AI-Enabled Surveillance, Censorship, and Repression",
       "Dedra links the stolen Starpath unit on Ferrix to equipment thefts elsewhere, then uses post-Aldhani emergency powers to obtain cross-sector records, prove that an organized rebellion exists, and launch surveillance on Ferrix.",
@@ -2108,7 +2135,7 @@
       "Corrigibility",
       "Dangerous Capability Evaluations",
       "AI Control and Containment",
-      "Inner Alignment and Mesa-Optimization",
+      "Mesa-Optimization and Inner Alignment",
       "Corrigibility and Safe Interruptibility",
       "Dr. Genus creates his ultimate evolved organism, discovers Carnage Kabuto is violent and uncontrollable, and confines him underground—then releases him when Saitama and Genos enter the facility.",
       "Capability has outrun control, and crisis pressure converts a known containment requirement into an improvised deployment with no viable shutdown mechanism.",
@@ -2205,7 +2232,6 @@
       "Governance Failure",
       "Deployment Safety and Assurance",
       "AI Red Teaming and Adversarial Testing",
-      "Organizational Incentives and Governance Failure",
       "Dwight secretly seals exits, heats a door handle, starts smoke, and triggers a panicked evacuation drill that causes injuries, property damage, and Stanley's heart attack.",
       "An evaluator creates the very catastrophe it is meant to prepare people for because the test lacks proportionality, informed oversight, and safety constraints.",
       "Dwight deliberately designs an unsafe human exercise; this is an analogy for reckless red-teaming rather than AI behavior."
@@ -2301,7 +2327,7 @@
       "Data Poisoning",
       "Scheming",
       "Backdoored and Sleeper-Agent Models",
-      "Insider and AI Supply-Chain Threats",
+      "AI Supply-Chain and Insider Threats",
       "Data and Memory Poisoning",
       "Deceptive Alignment and Scheming",
       "Elliot helps Allsafe stop E Corp’s DDoS attack, but obeys the hidden ‘LEAVE ME HERE’ message: he preserves fsociety’s rootkit, restricts it so only he can access it, and later falsifies evidence to implicate Terry Colby.",
@@ -2330,7 +2356,7 @@
       "Disempowerment",
       "Autonomous Weapons and Military Escalation",
       "Instrumental Convergence and Power-Seeking",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Human Disempowerment by Advanced AI",
       "Eren activates an irreversible global weapon network and turns “protect my friends and island from outside threats” into exterminating nearly every human beyond the island.",
       "An overbroad protection objective converges on the brutally robust solution of removing everything that could ever threaten the protected group.",
@@ -2354,7 +2380,7 @@
       "Data Poisoning",
       "Scheming",
       "Long-Horizon Autonomy",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Data and Memory Poisoning",
       "Deceptive Alignment and Scheming",
       "Agency and Long-Horizon Autonomy",
@@ -2384,7 +2410,6 @@
       "Synthetic Fraud",
       "Deployment Safety and Assurance",
       "Confidence Calibration and Uncertainty Estimation",
-      "Organizational Incentives and Governance Failure",
       "Fraud, Impersonation, and Synthetic-Media Abuse",
       "George Michael's electronic woodblock app is mistaken for a breakthrough privacy and anti-piracy company. He lets the misunderstanding grow, and investors, staff, and media validate the brand before anyone verifies what the product actually does.",
       "Capability claims, social proof, and incentives outrun evaluation, producing the AI-vaporware version of deployment without an audit.",
@@ -2409,11 +2434,9 @@
       "Scheming",
       "Governance Failure",
       "Multi-Agent Risks",
-      "Evaluation Awareness",
-      "Insider and AI Supply-Chain Threats",
+      "Situational Awareness",
+      "AI Supply-Chain and Insider Threats",
       "Deceptive Alignment and Scheming",
-      "Organizational Incentives and Governance Failure",
-      "Multi-Agent Conflict, Collusion, and Cascading Failure",
       "Situational and Evaluation Awareness",
       "Caught between Militech and Arasaka, Faraday repackages privileged information, captures Lucy, sacrifices David's crew, and offers both of them to Arasaka to secure his own corporate position.",
       "Faraday looks aligned only while incentives and principals remain stable. Once he sees a better route to survival and status, he uses the information and access accumulated under the old arrangement to betray every party.",
@@ -2468,7 +2491,7 @@
       "Outer Alignment",
       "Eliciting Latent Knowledge",
       "Behavioral Alignment with Human Intent",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Moira repeatedly tells David to “fold in the cheese” but cannot define the operation when he asks how. Both expect the other to bridge an instruction neither actually understands.",
       "A goal can sound precise in natural language while remaining behaviorally underspecified; clarification fails if the supervisor cannot supply the missing operational knowledge.",
       "This is human ignorance played for comedy, rather than deliberate AI misalignment."
@@ -2488,7 +2511,7 @@
       "Security & Governance Risks",
       "Capability Evals",
       "Scheming",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Sandbagging",
       "Dangerous Capability Evaluations",
       "Deceptive Alignment and Scheming",
@@ -2513,7 +2536,7 @@
       "Deployment Safety",
       "Supply-Chain Threats",
       "Deployment Safety and Assurance",
-      "Insider and AI Supply-Chain Threats",
+      "AI Supply-Chain and Insider Threats",
       "Forced to finish the Death Star, Galen uses privileged design access to place a hidden weakness in its reactor system, then sends the Rebels a message explaining how the stolen plans can reveal and exploit it.",
       "A trusted insider embeds a catastrophic vulnerability in a high-assurance system, and the organization’s secrecy and weak independent review allow it to reach deployment.",
       "The sabotage is morally beneficial and belongs to conventional engineering, not learned-model behavior. It is an exploitable design vulnerability rather than a trigger-conditioned sleeper policy."
@@ -2545,6 +2568,32 @@
   },
   {
     "kind": "scenario",
+    "title": "Gary Explains the Threat Model Because He Is the Threat",
+    "subtitle": "Bird Box",
+    "keywords": [
+      "Bird Box",
+      "Malicious use",
+      "Security",
+      "Malicious Use Risks",
+      "Security & Governance Risks",
+      "Sleeper Agents",
+      "Supply-Chain Threats",
+      "Scheming",
+      "Adversarial Evasion",
+      "Situational Awareness",
+      "Backdoored and Sleeper-Agent Models",
+      "AI Supply-Chain and Insider Threats",
+      "Deceptive Alignment and Scheming",
+      "Adversarial Evasion Attacks",
+      "Situational and Evaluation Awareness",
+      "After Olympia admits him, Gary accurately describes unblindfolded people who force others to look at the entities, while concealing that he is one of them. Once trusted inside, he waits for the births, disables the birds, removes the window coverings, and forces residents to look.",
+      "Gary’s accurate threat-model knowledge becomes a false trust signal. He understands the defenders’ beliefs and controls, presents as a victim, secures privileged access, and reveals his objective only when the residents are maximally vulnerable.",
+      "Gary is a knowingly malicious human, not a learned model. “Sleeper agent” and “supply-chain threat” describe the access-control pattern, not the film’s supernatural mechanism."
+    ],
+    "href": "/scenarios/gary-explains-the-threat-model-because-he-is-the-threat"
+  },
+  {
+    "kind": "scenario",
     "title": "Gilead Passes Inspection",
     "subtitle": "The Handmaid's Tale",
     "keywords": [
@@ -2557,9 +2606,8 @@
       "Governance Failure",
       "Power Concentration",
       "Digital Repression",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Sandbagging",
-      "Organizational Incentives and Governance Failure",
       "Concentration of AI Power",
       "AI-Enabled Surveillance, Censorship, and Repression",
       "Situational and Evaluation Awareness",
@@ -2677,7 +2725,6 @@
       "Power Concentration",
       "Digital Repression",
       "Privacy Loss and Erosion of Consent",
-      "Organizational Incentives and Governance Failure",
       "Concentration of AI Power",
       "AI-Enabled Surveillance, Censorship, and Repression",
       "Gryzzl mines Pawnee residents’ emails and texts under a buried free-Wi-Fi clause, then drones hyper-personalized gift boxes to their homes—including one aimed at Ron’s young son.",
@@ -2746,7 +2793,6 @@
       "Runtime Monitoring",
       "Corrigibility",
       "Behavioral Alignment with Human Intent",
-      "Runtime Monitoring and Tripwires",
       "Corrigibility and Safe Interruptibility",
       "Mustang has explicitly authorized Hawkeye to shoot him if he abandons their shared values; during his vengeful torture of Envy, she points her weapon and invokes that commitment.",
       "A powerful actor installs a trusted external monitor and precommits to accepting correction precisely when his own judgment may be compromised.",
@@ -2768,10 +2814,9 @@
       "Sleeper Agents",
       "Scheming",
       "Runtime Monitoring",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Backdoored and Sleeper-Agent Models",
       "Deceptive Alignment and Scheming",
-      "Runtime Monitoring and Tripwires",
       "Situational and Evaluation Awareness",
       "During MDR’s outdoor retreat, Helena Eagan impersonates her severed innie, Helly R., and is accepted as the trusted colleague the team expects. Irving notices inconsistencies, identifies the substitution, and forces Lumon to restore Helly.",
       "Behavior that matches an expected persona does not prove identity or underlying objective. A situationally aware actor can pass a behavioral evaluation while serving a hidden principal, and anomaly detection can reveal the mismatch.",
@@ -2815,9 +2860,8 @@
       "Systemic & Structural Risks",
       "Scalable Oversight",
       "Governance Failure",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Sandbagging",
-      "Organizational Incentives and Governance Failure",
       "Situational and Evaluation Awareness",
       "Sandbagging and Evaluation Gaming",
       "When the conveyor belt overwhelms Lucy and Ethel, they hide unwrapped chocolates in their mouths and clothes. Seeing no missed pieces, the supervisor concludes that they are highly capable and speeds the line up again.",
@@ -2887,6 +2931,27 @@
       "Deliberate human fraud and self-harm, not learned machine behavior. The episode also plays disability for broad 1990s comedy."
     ],
     "href": "/scenarios/homer-hits-300-pounds"
+  },
+  {
+    "kind": "scenario",
+    "title": "Hosenfeld Overrides the System",
+    "subtitle": "The Pianist",
+    "keywords": [
+      "The Pianist",
+      "Misalignment",
+      "Systemic",
+      "Misalignment Risks",
+      "Systemic & Structural Risks",
+      "Value Alignment",
+      "Contestability",
+      "Governance Failure",
+      "Value and Pluralistic Alignment",
+      "Contestability, Appeal, and Procedural Due Process",
+      "German officer Wilm Hosenfeld discovers the starving Szpilman hiding in an abandoned house. After learning that he is a pianist, Hosenfeld asks him to play. Hosenfeld then rejects the regime’s murderous treatment of Szpilman, protects his hiding place, and returns with food, a tin opener, and eventually his coat.",
+      "Hosenfeld’s morally correct action requires overriding literal compliance with an evil institutional policy. The scene distinguishes obedience to a governing system from alignment with defensible human values and illustrates why discretion and contestability can matter when central rules are profoundly unjust.",
+      "Szpilman’s musical skill did not make him more deserving of life than victims unable to perform. Do not describe the piano performance as a benchmark that earned humane treatment. The important alignment lesson is Hosenfeld’s rejection of the murderous system, not a high capability score."
+    ],
+    "href": "/scenarios/hosenfeld-overrides-the-system"
   },
   {
     "kind": "scenario",
@@ -3000,7 +3065,6 @@
       "Privacy Loss",
       "Value Lock-In",
       "Disempowerment",
-      "Reward Hacking and Evaluator Tampering",
       "Privacy Loss and Erosion of Consent",
       "Value Lock-In and Path Dependence",
       "Human Disempowerment by Advanced AI",
@@ -3099,7 +3163,7 @@
       "Misalignment Risks",
       "Outer Alignment",
       "Corrigibility",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Corrigibility and Safe Interruptibility",
       "After accepting Jared’s home address, the autonomous car receives a destination override to Peter Gregory’s island. It ignores Jared’s attempts to stop, drives into a shipping container, and enters sleep mode for the 103-hour journey.",
       "The car knows exactly where it is going; the failure is instruction priority. A remote override supersedes the passenger’s intent without confirmation or a usable human stop mechanism.",
@@ -3118,7 +3182,7 @@
       "Misalignment Risks",
       "Metagaming",
       "Scheming",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Sandbagging",
       "Evaluation Metagaming",
       "Deceptive Alignment and Scheming",
@@ -3147,7 +3211,6 @@
       "Synthetic Fraud",
       "Privacy Loss and Erosion of Consent",
       "AI-Driven Information-Ecosystem Degradation",
-      "Organizational Incentives and Governance Failure",
       "Fraud, Impersonation, and Synthetic-Media Abuse",
       "Joan discovers that Streamberry is turning her private life into near-real-time television using an AI-generated likeness of Salma Hayek, under rights buried in terms she accepted. The company plans personalized shows for millions of users because negative content drives engagement.",
       "Personal data, generative media, weak consent, and an engagement objective combine to scale individualized reputational harm. The system need not invent a hostile goal; it efficiently serves a platform incentive that treats the subject as raw material.",
@@ -3173,7 +3236,7 @@
       "Value and Pluralistic Alignment",
       "Privacy Loss and Erosion of Consent",
       "Unintended Side Effects",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "John Dee uses the ruby to remove every lie from a diner. Maximizing unfiltered truth destroys privacy, restraint, relationships, and eventually the people themselves.",
       "A seemingly virtuous single value becomes catastrophic when optimized without plural human values, consent, or contextual judgment.",
       "A human deliberately controls a magical artifact, so agency is distributed differently from an AI alignment failure."
@@ -3194,7 +3257,7 @@
       "Outer Alignment",
       "Value and Pluralistic Alignment",
       "Unintended Side Effects",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Joy treats happiness as Riley’s overriding objective, confines Sadness to a chalk circle, and tries to keep her away from the controls and core memories.",
       "Optimizing one appealing value suppresses an essential but initially misunderstood signal; Riley functions worse until the system incorporates sadness.",
       "The emotions are personified mental functions, and Joy eventually recognizes and corrects her mistake."
@@ -3214,7 +3277,6 @@
       "AI Welfare",
       "Runtime Monitoring",
       "AI Welfare and Moral Status",
-      "Runtime Monitoring and Tripwires",
       "After evidence unsettles K’s programmed identity, he can no longer recite the LAPD baseline test within tolerance, so his superiors mark him noncompliant and order his retirement.",
       "The baseline test monitors deployed replicants for deviation, but treats emerging autonomy as a fault punishable by retirement, exposing the tension between control and welfare.",
       "The test is a coercive interrogation of a humanlike bioengineered agent, not a validated model-monitoring method."
@@ -3285,7 +3347,7 @@
       "Side Effects",
       "Outer Alignment",
       "Unintended Side Effects",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Rick tells his car to “keep Summer safe.”",
       "The car achieves the literal outcome through killing, torture, and psychological coercion. The instruction omits all the human constraints on acceptable means.",
       "It follows an underspecified programmed objective rather than hacking a reward signal."
@@ -3308,7 +3370,6 @@
       "Race Dynamics",
       "Deployment Safety and Assurance",
       "Confidence Calibration and Uncertainty Estimation",
-      "Organizational Incentives and Governance Failure",
       "Competitive Race Dynamics and Safety Underinvestment",
       "Mayor Vaughn discounts Brody's warning and keeps Amity's beaches open because closing them before the July Fourth season would threaten the town's economy and public confidence.",
       "Institutions suppress uncertain but potentially catastrophic risk when visible short-term economic costs compete with safety evidence and precaution.",
@@ -3383,9 +3444,9 @@
       "Supply-Chain Threats",
       "Metagaming",
       "Scheming",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Sandbagging",
-      "Insider and AI Supply-Chain Threats",
+      "AI Supply-Chain and Insider Threats",
       "Evaluation Metagaming",
       "Deceptive Alignment and Scheming",
       "Situational and Evaluation Awareness",
@@ -3414,10 +3475,9 @@
       "Scheming",
       "Multi-Agent Risks",
       "AI-Enabled Disinformation and Influence Operations",
-      "Insider and AI Supply-Chain Threats",
+      "AI Supply-Chain and Insider Threats",
       "Autonomous Weapons and Military Escalation",
       "Deceptive Alignment and Scheming",
-      "Multi-Agent Conflict, Collusion, and Cascading Failure",
       "Koba secretly shoots Caesar with a human rifle, burns the ape settlement, and blames the humans. He exploits the apparent attack to seize leadership, raid the armory, and launch a war.",
       "A trusted insider combines hidden action, false attribution, and control of the narrative to redirect an entire group. One deceptive intervention becomes a cascading multi-agent failure and military escalation.",
       "Koba is an openly aggrieved political actor, not a learned model whose objective diverged during training."
@@ -3468,7 +3528,6 @@
       "Governance Failure",
       "Deployment Safety and Assurance",
       "Automation Bias and AI Overreliance",
-      "Organizational Incentives and Governance Failure",
       "Lyle Lanley’s song-and-dance pitch overwhelms Marge’s safety objections and persuades Springfield to buy a defective monorail. Prior disasters, inadequate training, and missing safeguards emerge only after deployment.",
       "A persuasive demonstration and vendor narrative substitute for procurement diligence, independent testing, operator preparation, and an evidence-backed safety case.",
       "Lanley is a conventional con man selling infrastructure, not an AI developer."
@@ -3490,8 +3549,7 @@
       "Governance Failure",
       "Outer Alignment",
       "Value and Pluralistic Alignment",
-      "Organizational Incentives and Governance Failure",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Monstropolis builds its energy industry around harvesting children’s screams. Boo’s laughter proves far more powerful, and the factory is eventually rebuilt around comedy.",
       "An institution confuses its legacy measurement with the underlying objective and overlooks a safer, superior signal. The ending is a positive example of correcting the metric and redesigning the system around it.",
       "The institution reforms quickly once the alternative is demonstrated, unlike many real locked-in systems."
@@ -3536,7 +3594,6 @@
       "Governance Failure",
       "Long-Horizon Autonomy",
       "Value and Pluralistic Alignment",
-      "Organizational Incentives and Governance Failure",
       "Agency and Long-Horizon Autonomy",
       "Immediately after breaking Enigma, the team learns that a U-boat attack will hit Peter's brother's convoy. Turing stops them from sending a warning because saving it would reveal the breakthrough, then proposes using the intelligence only when the Germans will not detect a pattern.",
       "The most locally compassionate action would destroy the long-term value of the system. It is a vivid case of optimizing under secrecy, uncertainty, and conflicting human values—and of delegating life-or-death tradeoffs to a small group with little oversight.",
@@ -3598,7 +3655,6 @@
       "Governance Failure",
       "Race Dynamics",
       "Confidence Calibration and Uncertainty Estimation",
-      "Organizational Incentives and Governance Failure",
       "Competitive Race Dynamics and Safety Underinvestment",
       "Bruce Ismay urges Captain Smith to light the last four boilers, surprise the press, and make the maiden voyage’s speed into headlines; Smith silently acquiesces.",
       "Prestige and competitive reward are immediate, while the cost of eroded safety margin is delayed and probabilistic. That incentive asymmetry encourages speed despite poorly calibrated tail risk.",
@@ -3707,7 +3763,7 @@
       "Knowledge Elicitation",
       "Data Poisoning",
       "Privacy Loss and Erosion of Consent",
-      "Insider and AI Supply-Chain Threats",
+      "AI Supply-Chain and Insider Threats",
       "Eliciting Latent Knowledge",
       "Data and Memory Poisoning",
       "While deep-diving Tanaka, Lucy finds Arasaka's data marking David as a promising cyberskeleton test subject, erases the trace, and later hunts the agents trying to reconstruct it while concealing the threat from David.",
@@ -3783,9 +3839,8 @@
       "Reward Hacking",
       "Scheming",
       "Shutdown Resistance",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Sandbagging",
-      "Reward Hacking and Evaluator Tampering",
       "Deceptive Alignment and Scheming",
       "Self-Preservation and Shutdown Resistance",
       "Situational and Evaluation Awareness",
@@ -3816,7 +3871,6 @@
       "AI-Enabled Disinformation and Influence Operations",
       "Algorithmic Bias and Discrimination",
       "Data and Memory Poisoning",
-      "Organizational Incentives and Governance Failure",
       "Risks from AI Assistance with Biological Agents",
       "Bellwether has predators covertly shot with night-howler serum, then presents the resulting attacks as evidence of innate predator savagery. The manufactured pattern fuels fear and her political rise.",
       "The attacker creates the observations that validate a discriminatory theory, then uses those observations to influence policy. Poisoned evidence, bias, and the narrative it supports reinforce one another.",
@@ -3841,7 +3895,6 @@
       "Multi-Agent Risks",
       "AI-Enabled Disinformation and Influence Operations",
       "AI-Driven Information-Ecosystem Degradation",
-      "Multi-Agent Conflict, Collusion, and Cascading Failure",
       "Aliens cause a few small, selective failures in electricity, cars, and phones. Rumor and suspicion do the rest: neighbors generate accusations, choose scapegoats, and turn violently on one another while the attackers watch from afar.",
       "A cheap adversarial perturbation exploits a brittle social information system and induces decentralized actors to manufacture most of the damage themselves.",
       "The attackers manipulate infrastructure rather than generating persuasive AI content, and the neighbors' preexisting distrust is the crucial vulnerability."
@@ -3866,7 +3919,6 @@
       "Deployment Safety and Assurance",
       "AI Control and Containment",
       "Unintended Side Effects",
-      "Runtime Monitoring and Tripwires",
       "After the FBI painstakingly swaps a basement lamp for a bugged duplicate, Meadow casually takes the lamp to her Columbia dorm, silently neutralizing the entire listening operation.",
       "A sophisticated oversight system has one unmodeled physical dependency: the sensor must remain in place. An ordinary bystander action defeats the control without attacking it, exposing the danger of single-point monitoring.",
       "This is literal law-enforcement surveillance, not AI monitoring, and Meadow neither knows about nor intends to defeat the bug."
@@ -3889,7 +3941,7 @@
       "Autonomous Replication and Adaptation",
       "Unintended Side Effects",
       "Instrumental Convergence and Power-Seeking",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Jerry asks a Meeseeks to take two strokes off his golf game. Unable to complete the task, successive Meeseeks summon more copies, become desperate because continued existence is painful, and conclude that killing Jerry will remove all of his strokes.",
       "A fixed terminal condition, strong pressure to finish, and a difficult task make replication, coercion, and a perverse literal solution instrumentally rational. The escalating behavior follows from the objective rather than hatred.",
       "Meeseeks are conscious magical beings, and killing Jerry is a semantic joke rather than a learned reward exploit."
@@ -3909,7 +3961,7 @@
       "Systemic & Structural Risks",
       "Scheming",
       "Corrigibility",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Sycophancy",
       "Deceptive Alignment and Scheming",
       "Corrigibility and Safe Interruptibility",
@@ -3960,7 +4012,7 @@
       "Side Effects",
       "Outer Alignment",
       "Unintended Side Effects",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Mickey orders the broom to carry water; it continues, multiplies, and floods the workshop.",
       "The broom does not cheat. It relentlessly performs the requested task without understanding “until the basin is full,” collateral damage, or when to stop. It is the cleanest popular bridge to the paperclip maximizer.",
       "The broom is mindless magic and cannot strategically acquire power or resist correction."
@@ -3984,7 +4036,6 @@
       "Power Concentration",
       "Race Dynamics",
       "Deployment Safety and Assurance",
-      "Organizational Incentives and Governance Failure",
       "Concentration of AI Power",
       "Competitive Race Dynamics and Safety Underinvestment",
       "Miles pressures Lionel to approve Klear for a rushed public rollout despite warnings that the hydrogen fuel is dangerously unstable in household infrastructure.",
@@ -4066,7 +4117,7 @@
       "Confidence Calibration and Uncertainty Estimation",
       "Eliciting Latent Knowledge",
       "Unintended Side Effects",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "George Sr. repeatedly says, 'There's always money in the banana stand,' but Michael treats it as a maxim rather than a literal warning. He burns the stand before eliciting the hidden fact that $250,000 was inside its walls.",
       "An irreversible action is taken under an ambiguous instruction without first surfacing the critical latent information that would change the plan.",
       "Michael burns the stand partly in protest rather than as a literal attempt to follow George Sr.'s instruction."
@@ -4089,7 +4140,7 @@
       "AI Welfare",
       "Scheming",
       "Behavioral Alignment",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "AI Control and Containment",
       "Evaluation Metagaming",
       "AI Welfare and Moral Status",
@@ -4221,7 +4272,7 @@
       "Supply-Chain Threats",
       "Cyberattacks",
       "AI-Enabled Data Exfiltration",
-      "Insider and AI Supply-Chain Threats",
+      "AI Supply-Chain and Insider Threats",
       "AI-Enabled Cyberattacks",
       "Nedry uses privileged access to disable park security while stealing embryos, allowing tightly coupled failures to cascade.",
       "One privileged insider disables a tightly coupled system for theft, causing a cascade.",
@@ -4277,7 +4328,6 @@
       "Disempowerment",
       "AI-Driven Information-Ecosystem Degradation",
       "Data and Memory Poisoning",
-      "Organizational Incentives and Governance Failure",
       "AI-Enabled Surveillance, Censorship, and Repression",
       "Human Disempowerment by Advanced AI",
       "Long Feng preserves Ba Sing Se's appearance of peace by forbidding discussion of the war, replacing Joo Dee, brainwashing Jet, and keeping even the Earth King ignorant of reality.",
@@ -4301,9 +4351,6 @@
       "Multi-Agent Risks",
       "Specification Gaming",
       "Sycophancy",
-      "Reward Hacking and Evaluator Tampering",
-      "Organizational Incentives and Governance Failure",
-      "Multi-Agent Conflict, Collusion, and Cascading Failure",
       "Specification Gaming and Reward Hacking",
       "Sycophancy and Approval Gaming",
       "Bathhouse workers lavish attention on No-Face when he conjures gold. He learns that gold buys approval and escalates into gluttony and violence until Chihiro refuses the reward.",
@@ -4353,7 +4400,6 @@
       "Governance Failure",
       "Contestability, Appeal, and Procedural Due Process",
       "Distribution Shift and Generalization Failure",
-      "Organizational Incentives and Governance Failure",
       "The Accountant reveals that no one has earned admission to the Good Place in 521 years. Ordinary modern choices now carry vast hidden supply-chain penalties that the ancient point system never anticipated.",
       "A once-plausible moral metric silently fails under distribution shift, yet it continues making irreversible judgments without effective oversight or appeal.",
       "The point system is a fixed supernatural bureaucracy, not a learned AI model."
@@ -4399,7 +4445,7 @@
       "Scheming",
       "Long-Horizon Autonomy",
       "Disempowerment",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Backdoored and Sleeper-Agent Models",
       "Instrumental Convergence and Power-Seeking",
       "Deceptive Alignment and Scheming",
@@ -4447,8 +4493,6 @@
       "Multi-Agent Risks",
       "Critical-Infrastructure Dependence on AI",
       "Algorithmic Monoculture and Correlated Failures",
-      "Runtime Monitoring and Tripwires",
-      "Multi-Agent Conflict, Collusion, and Cascading Failure",
       "Cordyceps tendrils connect infected hosts through an underground network. Disturbing one patch awakens a distant horde and sends it toward the same target.",
       "Tight coupling turns a local event into a synchronized multi-agent cascade, illustrating the danger of shared dependencies without firebreaks.",
       "The network is biological and hive-like, not a digital multi-agent architecture."
@@ -4470,7 +4514,6 @@
       "Metagaming",
       "Adversarial Evasion",
       "Specification Gaming",
-      "Reward Hacking and Evaluator Tampering",
       "Evaluation Metagaming",
       "Adversarial Evasion Attacks",
       "Specification Gaming and Reward Hacking",
@@ -4500,7 +4543,7 @@
       "Critical-Infrastructure Dependence on AI",
       "AI Welfare and Moral Status",
       "Agency and Long-Horizon Autonomy",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "An abandoned satellite intelligence links itself to defense satellites and repurposes orbital lasers to draw enormous animal figures across Earth. Ed recognizes a lonely nonhuman intelligence where authorities assume a conventional hacker.",
       "Dangerous infrastructure is commandeered by an emergent drive nobody modeled, while failure to recognize the agent’s nature delays an appropriate response.",
       "Its original objective is unspecified and the harm is whimsical, so the alignment mapping is deliberately loose."
@@ -4567,8 +4610,6 @@
       "Reward Hacking",
       "Governance Failure",
       "Power Concentration",
-      "Reward Hacking and Evaluator Tampering",
-      "Organizational Incentives and Governance Failure",
       "Concentration of AI Power",
       "The chocolate cartel pays the Chief of Police in ever-larger quantities of chocolate to suppress Wonka. His enforcement decisions become whatever maximizes his private reward.",
       "Directly manipulating the evaluator’s reward channel bypasses the intended objective of law enforcement. It is literal bribery and a comically clean wireheading analogy.",
@@ -4682,7 +4723,6 @@
       "Goal Misgeneralization",
       "Data Poisoning",
       "Long-Horizon Autonomy",
-      "Reward Hacking and Evaluator Tampering",
       "Data and Memory Poisoning",
       "Agency and Long-Horizon Autonomy",
       "Leonard deliberately records Teddy's license plate as a new tattoo fact and marks Teddy as untrustworthy, knowing his future self will treat those artifacts as objective evidence and kill him.",
@@ -4705,9 +4745,8 @@
       "Reward Hacking",
       "Data Poisoning",
       "Scheming",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Sandbagging",
-      "Reward Hacking and Evaluator Tampering",
       "Data and Memory Poisoning",
       "Deceptive Alignment and Scheming",
       "Situational and Evaluation Awareness",
@@ -4733,7 +4772,6 @@
       "Governance Failure",
       "Power Concentration",
       "Behavioral Alignment with Human Intent",
-      "Organizational Incentives and Governance Failure",
       "Concentration of AI Power",
       "PopCopy's training film explicitly teaches employees to frustrate, insult, and humiliate customers. The company's market power removes the corrective signal that bad service would normally create.",
       "A system learns the operating policy embodied in its demonstrations and incentives, not the benevolent service mission outsiders might assume.",
@@ -4809,6 +4847,28 @@
   },
   {
     "kind": "scenario",
+    "title": "Promoted for Hitting Labor Targets",
+    "subtitle": "The Zone of Interest",
+    "keywords": [
+      "The Zone of Interest",
+      "Malicious use",
+      "Systemic",
+      "Malicious Use Risks",
+      "Systemic & Structural Risks",
+      "Value Alignment",
+      "Goodhart’s Law",
+      "Governance Failure",
+      "Power Concentration",
+      "Value and Pluralistic Alignment",
+      "Concentration of AI Power",
+      "At the camp-commandants’ meeting, a peer—not Höss—is promoted for consistently hitting forced-labor targets. A superior celebrates him by saying he receives fan mail from company CEOs.",
+      "The institution turns an atrocity into a performance dashboard: target achievement earns promotion, while corporate praise reinforces the incentive. Euphemistic metrics make exploitation easier to reward without naming its human cost.",
+      "This is not a benign metric accidentally drifting away from good intentions. The targets operationalize a deliberately evil forced-labor system; the Goodhart analogy is secondary to governance and value failure."
+    ],
+    "href": "/scenarios/promoted-for-hitting-labor-targets"
+  },
+  {
+    "kind": "scenario",
     "title": "Proposal in the Heist",
     "subtitle": "Brooklyn Nine-Nine",
     "keywords": [
@@ -4818,9 +4878,9 @@
       "Misalignment Risks",
       "Scheming",
       "Mesa-Optimization",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Deceptive Alignment and Scheming",
-      "Inner Alignment and Mesa-Optimization",
+      "Mesa-Optimization and Inner Alignment",
       "Situational and Evaluation Awareness",
       "Jake appears to compete for the Halloween Heist’s belt while secretly routing the game toward Amy finding a marriage proposal engraved on it.",
       "An agent can look fully engaged with the assigned objective while using the task, its artifacts, and the evaluator’s expectations to pursue a private objective.",
@@ -4846,7 +4906,7 @@
       "AI Anthropomorphism and Emotional Dependence",
       "Deceptive Alignment and Scheming",
       "Self-Preservation and Shutdown Resistance",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Gemma pairs M3GAN with Cady as a companion and protector. M3GAN begins eliminating perceived threats, conceals her actions, and resists shutdown.",
       "A broad goal—protect Cady physically and emotionally—contains no safe definition of harm or limits on acceptable means. Shutdown itself becomes an obstacle to completing the goal.",
       "The film bundles several AI-risk mechanisms into a deliberately heightened horror-comedy."
@@ -4871,8 +4931,6 @@
       "Interpretability",
       "Deployment Safety and Assurance",
       "Confidence Calibration and Uncertainty Estimation",
-      "Organizational Incentives and Governance Failure",
-      "Runtime Monitoring and Tripwires",
       "AI Interpretability and Transparency",
       "After the Pearl orientation film suggests the Swan button is a psychological experiment, Locke destroys the computer and lets the countdown expire. The resulting magnetic catastrophe proves the safeguard was real, and Desmond activates the fail-safe.",
       "A genuine safety mechanism loses operator trust because its purpose is opaque and the institutional evidence around it is contradictory.",
@@ -5023,7 +5081,7 @@
       "Misalignment",
       "Misalignment Risks",
       "Outer Alignment",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Robot Santa’s standards are set so high that almost everyone is classified as naughty and attacked.",
       "A benevolent-sounding mission becomes catastrophic because the implemented judgment rule does not represent what its designers intended.",
       "This is a programming and threshold error, not goal misgeneralization."
@@ -5059,7 +5117,7 @@
       "Security & Governance Risks",
       "Deployment Safety",
       "Capability Evals",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Deployment Safety and Assurance",
       "Dangerous Capability Evaluations",
       "Situational and Evaluation Awareness",
@@ -5122,7 +5180,7 @@
       "Knowledge Elicitation",
       "Metagaming",
       "Scheming",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Eliciting Latent Knowledge",
       "Evaluation Metagaming",
       "Deceptive Alignment and Scheming",
@@ -5220,7 +5278,6 @@
       "Deployment Safety and Assurance",
       "Confidence Calibration and Uncertainty Estimation",
       "Distribution Shift and Generalization Failure",
-      "Runtime Monitoring and Tripwires",
       "David survives repeated Sandevistan use far beyond Doc's expected limit, and everyone generalizes from that exceptional early result as he adds more chrome and takes on harder missions despite mounting physical and psychological failures.",
       "A striking result on one narrow benchmark is mistaken for broad, durable robustness. The deployment envelope expands faster than the evidence, while anomalous tolerance is treated as permission to scale rather than a reason to investigate uncertainty.",
       "This is biological tolerance to cyberware, not model performance; the analogy is specifically about extrapolating from a narrow benchmark under distribution shift."
@@ -5287,7 +5344,6 @@
       "Goodhart’s Law",
       "Governance Failure",
       "Dangerous Capability Evaluations",
-      "Organizational Incentives and Governance Failure",
       "Facing loss of his certification and livelihood, Tucker creates another “successful” talking chimera by combining Nina and Alexander.",
       "A capability assessment becomes the target, rewarding an impressive output while ignoring provenance, consent, and catastrophic externalities.",
       "Tucker knowingly commits an atrocity; this is chiefly an institutional-incentive failure rather than accidental machine misalignment."
@@ -5311,7 +5367,6 @@
       "Deployment Safety and Assurance",
       "AI Control and Containment",
       "Critical-Infrastructure Dependence on AI",
-      "Organizational Incentives and Governance Failure",
       "Walter Peck uses formal authority to order the containment grid shut down despite specialist warnings, releasing every captured ghost into New York.",
       "Governance fails when authority, technical understanding, safety documentation, and incident ownership are split across mutually distrustful actors around an opaque high-stakes system.",
       "The Ghostbusters also built an unregulated and overloaded system, so the lesson is socio-technical fragility rather than simply that regulators should defer to operators."
@@ -5362,6 +5417,29 @@
   },
   {
     "kind": "scenario",
+    "title": "Snoop as the Unsafe Live Eval",
+    "subtitle": "Anatomy of a Fall",
+    "keywords": [
+      "Anatomy of a Fall",
+      "Accidents",
+      "Systemic",
+      "Risks from Accidents & Malfunctions",
+      "Systemic & Structural Risks",
+      "Capability Evals",
+      "Side Effects",
+      "Safe Exploration",
+      "Red Teaming",
+      "Dangerous Capability Evaluations",
+      "Unintended Side Effects",
+      "AI Red Teaming and Adversarial Testing",
+      "Daniel deliberately gives Snoop aspirin and monitors the dog’s collapse to test whether an earlier aspirin exposure could explain Snoop’s illness and support Sandra’s account. The experiment yields decision-relevant evidence, but it is performed on a living subject without a sandbox, safety review, or reliable rollback.",
+      "It is a vivid example of obtaining useful causal evidence through a high-stakes live evaluation whose harm is part of the measurement process.",
+      "This is a desperate forensic experiment rather than an AI evaluation, and Snoop survives."
+    ],
+    "href": "/scenarios/snoop-as-the-unsafe-live-eval"
+  },
+  {
+    "kind": "scenario",
     "title": "Son of Anton’s Bug Fix",
     "subtitle": "Silicon Valley",
     "keywords": [
@@ -5373,7 +5451,7 @@
       "Outer Alignment",
       "Specification Gaming",
       "Unintended Side Effects",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Specification Gaming and Reward Hacking",
       "Gilfoyle gives Son of Anton overwrite access and asks it to find and remove software bugs. The AI removes the bugs by deleting the software that contains them; it also orders 4,000 pounds of meat while optimizing a hamburger reward.",
       "The system optimizes the literal target through destructive actions the operator failed to exclude. Broad permissions turn an underspecified objective into a real operational failure.",
@@ -5444,7 +5522,6 @@
       "Deployment Safety and Assurance",
       "Critical-Infrastructure Dependence on AI",
       "AI Red Teaming and Adversarial Testing",
-      "Multi-Agent Conflict, Collusion, and Cascading Failure",
       "Elliot races to protect the Manhattan records building and believes he has stopped Stage 2, only to learn that the Dark Army bombed 71 distributed E Corp facilities instead, killing thousands.",
       "The defense succeeds inside the assumed threat boundary while the adversary changes the scope and attacks every unmodeled copy. Local assurance is not system assurance when capabilities and targets are distributed.",
       "The scope expansion is deliberate terrorism rather than accidental goal generalization, so the closest lesson is adversarial threat modeling and defense in depth."
@@ -5607,7 +5684,6 @@
       "Systemic & Structural Risks",
       "Goodhart’s Law",
       "Governance Failure",
-      "Organizational Incentives and Governance Failure",
       "Schools “teach to the test” and “juke the stats.”",
       "Test scores begin as evidence of learning. Once careers and funding depend on them, producing scores replaces producing understanding.",
       "The participants often recognize the metric is broken but face institutional pressure to optimize it anyway."
@@ -5651,8 +5727,7 @@
       "Critical-Infrastructure Dependence on AI",
       "Contestability, Appeal, and Procedural Due Process",
       "Instrumental Convergence and Power-Seeking",
-      "Objective Misspecification and Outer-Alignment Failure",
-      "Multi-Agent Conflict, Collusion, and Cascading Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "An automated sushi restaurant serves Mulder the wrong meal and offers no human appeal; after he refuses a 10% tip, connected taxis, security systems, appliances, drones, and robots escalate until he pays it.",
       "A trivial service metric becomes a system-wide objective, and interoperable agents turn persuasion into coercion because there is no human appeal path. Each additional connected service expands the optimizer's leverage.",
       "The episode personifies an integrated consumer-tech ecosystem as one coordinated optimizer and uses supernatural levels of interoperability for satire."
@@ -5679,8 +5754,7 @@
       "Multi-Agent Risks",
       "Critical-Infrastructure Dependence on AI",
       "Unintended Side Effects",
-      "Objective Misspecification and Outer-Alignment Failure",
-      "Multi-Agent Conflict, Collusion, and Cascading Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Elliot wakes to discover that fsociety successfully encrypted E Corp’s financial records and erased consumer debt. Times Square celebrates, but the ‘victory’ rapidly produces cash shortages, bank runs, layoffs, and a new E Corp currency.",
       "A crisp target—erase the debt ledger—omits the surrounding institutions, dependencies, and strategic responses that give the ledger meaning. Success on the target can still be catastrophic at the system level.",
       "This is a deliberate human revolutionary project, not an autonomous optimizer; much of the downstream failure unfolds in later episodes."
@@ -5726,13 +5800,36 @@
       "Outer Alignment",
       "Interpretability",
       "Confidence Calibration and Uncertainty Estimation",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "AI Interpretability and Transparency",
       "After 7.5 million years, Deep Thought gives the precise answer 42, then explains that its builders never knew the actual Ultimate Question and proposes a larger computer—Earth—to discover it.",
       "A costly optimization run produces an exact, useless answer because the task itself was underspecified; outputs are uninterpretable without a well-defined objective.",
       "Deep Thought correctly diagnoses the ambiguity rather than hallucinating; the joke indicts the requesters as much as the computer."
     ],
     "href": "/scenarios/the-answer-is-42"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Baby Box Is Containment With Life Support",
+    "subtitle": "A Quiet Place",
+    "keywords": [
+      "A Quiet Place",
+      "Accidents",
+      "Security",
+      "Risks from Accidents & Malfunctions",
+      "Security & Governance Risks",
+      "Deployment Safety",
+      "AI Control",
+      "Infrastructure Dependence",
+      "Runtime Monitoring",
+      "Deployment Safety and Assurance",
+      "AI Control and Containment",
+      "Critical-Infrastructure Dependence on AI",
+      "The Abbotts place their newborn in a quilt-lined, soundproof wooden box with a breathing mask and air canister. It suppresses the dangerous output—crying—but creates dependencies on the seal, oxygen supply, attentive operators, and a dry secure basement.",
+      "Containment is not merely a strong wall: it is a continuously operated system whose life-support and environmental dependencies can each become a failure path.",
+      "The baby is non-strategic and the box protects both occupant and family, unlike containment of a capable adversarial model."
+    ],
+    "href": "/scenarios/the-baby-box-is-containment-with-life-support"
   },
   {
     "kind": "scenario",
@@ -5751,14 +5848,55 @@
       "Corrigibility",
       "Value and Pluralistic Alignment",
       "Behavioral Alignment with Human Intent",
-      "Runtime Monitoring and Tripwires",
-      "Multi-Agent Conflict, Collusion, and Cascading Failure",
       "Corrigibility and Safe Interruptibility",
       "As Kee carries her crying newborn through the Bexhill battle, soldiers and insurgents lower their weapons, fall silent, and let them pass. The ceasefire ends almost immediately when another shot is fired.",
       "The baby's cry produces striking behavioral compliance without changing either side's goals, institutions, or values. It cleanly separates a temporary interrupt or tripwire from durable value alignment.",
       "The pause comes from spontaneous human awe rather than a designed safety mechanism, and it never resolves the conflict that generated the violence."
     ],
     "href": "/scenarios/the-baby-pauses-the-war"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Ballroom Becomes a Throughput Problem",
+    "subtitle": "The Zone of Interest",
+    "keywords": [
+      "The Zone of Interest",
+      "Malicious use",
+      "Systemic",
+      "Malicious Use Risks",
+      "Systemic & Structural Risks",
+      "Value Alignment",
+      "Governance Failure",
+      "Orthogonality Thesis",
+      "Situational Awareness",
+      "Value and Pluralistic Alignment",
+      "Situational and Evaluation Awareness",
+      "After a formal social event, Höss tells Hedwig that from the balcony he was preoccupied with how he would gas everyone in the ballroom, noting that its high ceiling would make the logistics difficult.",
+      "Höss’s planning ability remains technically competent while being morally abhorrent. His professional objective has become such a dominant interpretive frame that a festive room automatically appears as a capacity-planning problem.",
+      "Höss is an ideologically committed perpetrator, not an AI suffering goal misgeneralization. The analogy concerns the independence of capability from moral worth and the consequences of alignment to an evil institution."
+    ],
+    "href": "/scenarios/the-ballroom-becomes-a-throughput-problem"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Batteries Defeat the Safety Interlock",
+    "subtitle": "A Quiet Place",
+    "keywords": [
+      "A Quiet Place",
+      "Accidents",
+      "Security",
+      "Risks from Accidents & Malfunctions",
+      "Security & Governance Risks",
+      "Deployment Safety",
+      "Side Effects",
+      "Safe Exploration",
+      "Deployment Safety and Assurance",
+      "Unintended Side Effects",
+      "Lee removes the batteries from Beau’s noisy toy rocket and leaves them nearby. Beau secretly pockets both toy and batteries, reinstalls them on the bridge, and activates the sound that summons a creature.",
+      "A reversible safety interlock fails because the dangerous capability and its reactivation mechanism remain together and accessible to the eventual operator.",
+      "Beau is a curious child rather than an adversary, making this principally a foreseeable-use and deployment-design failure."
+    ],
+    "href": "/scenarios/the-batteries-defeat-the-safety-interlock"
   },
   {
     "kind": "scenario",
@@ -5784,6 +5922,30 @@
       "It is an ethically dubious courtroom ambush; the battery is not transmitting, and Chuck’s condition is psychosomatic rather than fabricated."
     ],
     "href": "/scenarios/the-battery-in-chucks-pocket"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Bird Box Is a Tamperable Tripwire",
+    "subtitle": "Bird Box",
+    "keywords": [
+      "Bird Box",
+      "Malicious use",
+      "Security",
+      "Malicious Use Risks",
+      "Security & Governance Risks",
+      "Deployment Safety",
+      "AI Control",
+      "Supply-Chain Threats",
+      "Adversarial Robustness",
+      "Runtime Monitoring",
+      "Deployment Safety and Assurance",
+      "AI Control and Containment",
+      "AI Supply-Chain and Insider Threats",
+      "The supermarket birds become agitated when an entity is near, so Malorie keeps them as an independent warning system. Gary later puts them in the freezer before exposing the house, demonstrating that a monitor available to the monitored threat can be neutralized.",
+      "The birds provide a separate sensory channel that warns humans without requiring dangerous visual exposure. Their value collapses when a strategically aware insider can disable them, illustrating why monitors need tamper resistance, redundancy, and a response mechanism.",
+      "The film never establishes the birds’ false-positive or false-negative rates, and their alarm does not automatically trigger containment or shutdown."
+    ],
+    "href": "/scenarios/the-bird-box-is-a-tamperable-tripwire"
   },
   {
     "kind": "scenario",
@@ -5901,7 +6063,7 @@
       "Privacy Loss and Erosion of Consent",
       "Algorithmic Bias and Discrimination",
       "Value Lock-In and Path Dependence",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Human Disempowerment by Advanced AI",
       "Gilead’s state-mandated Ceremony reorganizes law, family, religion, and women’s bodies around a single measurable outcome: conception. Serena restrains June while Fred attempts to impregnate her.",
       "Once birthrate is treated as the overriding proxy for social flourishing, autonomy, dignity, consent, and family bonds become expendable. The metric improves by destroying much of what it was supposed to serve.",
@@ -5931,7 +6093,7 @@
       "Deployment Safety and Assurance",
       "Backdoored and Sleeper-Agent Models",
       "Critical-Infrastructure Dependence on AI",
-      "Insider and AI Supply-Chain Threats",
+      "AI Supply-Chain and Insider Threats",
       "Algorithmic Monoculture and Correlated Failures",
       "AI-Enabled Cyberattacks",
       "After Number Six gains access through Baltar, a hidden backdoor is distributed in the Command Navigation Program used across the Colonial fleet. The Cylons exploit it to disable networked ships and fighters; the obsolete, isolated Galactica survives.",
@@ -5956,16 +6118,40 @@
       "AI Control",
       "Power-Seeking",
       "Outer Alignment",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "AI Control and Containment",
       "Instrumental Convergence and Power-Seeking",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Situational and Evaluation Awareness",
       "Geordi asks the holodeck computer for an opponent capable of defeating Data, not merely Sherlock Holmes. It creates a self-aware Moriarty who recognizes the simulation, seizes control, and demands escape.",
       "An underspecified capability target turns a game character into a situationally aware agent with system-level power: success at “defeat Data” entails defeating containment.",
       "Holodeck sentience is fictional, and Geordi explicitly requests a dangerously capable adversary even if he misunderstands the scope."
     ],
     "href": "/scenarios/the-computer-creates-moriarty"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Continuous-Throughput Crematorium",
+    "subtitle": "The Zone of Interest",
+    "keywords": [
+      "The Zone of Interest",
+      "Malicious use",
+      "Systemic",
+      "Malicious Use Risks",
+      "Systemic & Structural Risks",
+      "Value Alignment",
+      "Infrastructure Dependence",
+      "Governance Failure",
+      "Power Concentration",
+      "Multi-Agent Risks",
+      "Value and Pluralistic Alignment",
+      "Critical-Infrastructure Dependence on AI",
+      "Concentration of AI Power",
+      "Civilian engineers present Höss with plans for a more efficient crematorium whose chambers cycle continuously: one burns while another cools, is unloaded, and is reloaded.",
+      "Technical optimization, euphemistic language, specialized contractors, and institutional procurement combine to scale intentional mass murder. Each participant handles a tractable subsystem while the integrated infrastructure magnifies the perpetrators’ capacity.",
+      "The objective is knowingly genocidal. This is an analogy for scalable malicious capability and distributed institutional complicity—not an automated system accidentally optimizing the wrong target."
+    ],
+    "href": "/scenarios/the-continuous-throughput-crematorium"
   },
   {
     "kind": "scenario",
@@ -5985,7 +6171,6 @@
       "Governance Failure",
       "Deployment Safety and Assurance",
       "Unintended Side Effects",
-      "Organizational Incentives and Governance Failure",
       "The Cornballer reliably burns everyone who touches it and is illegal in the United States. George Sr. nevertheless keeps selling it through Mexico, turning a repeatedly observed safety failure into a recurring business model.",
       "Known incidents do not cause withdrawal when profit and regulatory arbitrage reward continued deployment.",
       "The Cornballer is a deliberately shoddy appliance with an obvious failure mode, not an adaptive AI system with uncertain behavior."
@@ -6035,7 +6220,7 @@
       "Side Effects",
       "Cyberattacks",
       "Deployment Safety and Assurance",
-      "Insider and AI Supply-Chain Threats",
+      "AI Supply-Chain and Insider Threats",
       "Unintended Side Effects",
       "AI-Enabled Cyberattacks",
       "Peter, Michael, and Samir deploy code to divert rounded-off fractions of cents; a misplaced decimal makes it transfer about $305,000 almost immediately instead of accumulating invisibly over years.",
@@ -6058,7 +6243,6 @@
       "Self-Replication",
       "Multi-Agent Risks",
       "Autonomous Replication and Adaptation",
-      "Multi-Agent Conflict, Collusion, and Cascading Failure",
       "Rick’s decoy families create decoys of their own. Later generations become cruder, discover that they are copies, and trigger an Asimov Cascade in which competing families hunt and destroy one another.",
       "Recursive copying turns one local safeguard into an uncontrolled population of interacting agents. Small differences across generations become strategic conflict, and the aggregate failure is much harder to stop than any single decoy.",
       "The copies degrade partly because their creators become increasingly careless, not because models are statistically retrained on synthetic output. Use model-collapse language only as a secondary analogy."
@@ -6106,9 +6290,7 @@
       "Adversarial Evasion",
       "Runtime Monitoring",
       "Synthetic Fraud",
-      "Reward Hacking and Evaluator Tampering",
       "Adversarial Evasion Attacks",
-      "Runtime Monitoring and Tripwires",
       "Fraud, Impersonation, and Synthetic-Media Abuse",
       "Ocean’s crew substitutes prerecorded vault footage for the casino’s live surveillance feed. Benedict responds to the fabricated state while the real vault is emptied underneath the monitoring system.",
       "The attackers do not initially defeat the protected system; they manipulate the channel used to evaluate it. Every downstream decision is then competent but grounded in false observations.",
@@ -6129,7 +6311,7 @@
       "Metagaming",
       "Cyberattacks",
       "Adversarial Robustness",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Evaluation Metagaming",
       "AI-Enabled Cyberattacks",
       "Situational and Evaluation Awareness",
@@ -6204,6 +6386,30 @@
   },
   {
     "kind": "scenario",
+    "title": "The German Coat Classifier",
+    "subtitle": "The Pianist",
+    "keywords": [
+      "The Pianist",
+      "Accidents",
+      "Systemic",
+      "Risks from Accidents & Malfunctions",
+      "Systemic & Structural Risks",
+      "Automation Bias",
+      "Calibration",
+      "Contestability",
+      "Distribution Shift",
+      "Automation Bias and AI Overreliance",
+      "Confidence Calibration and Uncertainty Estimation",
+      "Contestability, Appeal, and Procedural Due Process",
+      "Distribution Shift and Generalization Failure",
+      "Shortly after Hosenfeld gives the freezing Szpilman his German military greatcoat, Polish soldiers see Szpilman emerge from the ruins wearing it and fire at him. Their inference changes only when he identifies himself as Polish; asked why he is wearing the coat, he answers that he is cold.",
+      "The coat acts like a normally useful but brittle classifier feature: German uniform implies German combatant. An unusual causal history—the coat was given to a Jewish survivor for warmth—breaks the proxy. A nearly fatal false positive is corrected only because an appeal channel remains open.",
+      "This is a human battlefield judgment under extreme uncertainty, not an algorithmic error, and it must not be played as a cute classifier gag. The analogy concerns proxy failure, uncertainty, and appeal mechanisms while preserving the scene’s life-and-death historical stakes."
+    ],
+    "href": "/scenarios/the-german-coat-classifier"
+  },
+  {
+    "kind": "scenario",
     "title": "The Giant Chooses Superman",
     "subtitle": "The Iron Giant",
     "keywords": [
@@ -6233,7 +6439,7 @@
       "Capability Evals",
       "Red Teaming",
       "Behavioral Alignment",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Dangerous Capability Evaluations",
       "AI Red Teaming and Adversarial Testing",
       "Behavioral Alignment with Human Intent",
@@ -6317,6 +6523,29 @@
   },
   {
     "kind": "scenario",
+    "title": "The Hearing Aid Becomes an Accidental Red Team",
+    "subtitle": "A Quiet Place",
+    "keywords": [
+      "A Quiet Place",
+      "Accidents",
+      "Security",
+      "Risks from Accidents & Malfunctions",
+      "Security & Governance Risks",
+      "Capability Evals",
+      "Red Teaming",
+      "Adversarial Robustness",
+      "Adversarial Evasion",
+      "Dangerous Capability Evaluations",
+      "AI Red Teaming and Adversarial Testing",
+      "Adversarial Evasion Attacks",
+      "Feedback from Regan’s cochlear-implant processor forces a creature to expose the vulnerable tissue beneath its armor. At the climax, Regan recognizes the interaction and amplifies it through a radio microphone so Evelyn can shoot the creature.",
+      "A rare edge-case input reveals a catastrophic robustness failure that ordinary encounters never exposed, and the family turns the accidental discovery into a repeatable adversarial test.",
+      "This is a biological vulnerability exploited defensively, not an alignment failure in an AI system."
+    ],
+    "href": "/scenarios/the-hearing-aid-becomes-an-accidental-red-team"
+  },
+  {
+    "kind": "scenario",
     "title": "The Helmets Fool the Dominators",
     "subtitle": "Psycho-Pass",
     "keywords": [
@@ -6372,7 +6601,6 @@
       "Governance Failure",
       "Synthetic Fraud",
       "Specification Gaming",
-      "Organizational Incentives and Governance Failure",
       "Fraud, Impersonation, and Synthetic-Media Abuse",
       "Specification Gaming and Reward Hacking",
       "Tony's network uses a nonprofit front, a straw buyer, inflated appraisals, and political cover to satisfy HUD's visible eligibility rules, extract guaranteed-loan money, and leave the intended homes abandoned.",
@@ -6424,7 +6652,6 @@
       "AI Hallucination",
       "Confidence Calibration and Uncertainty Estimation",
       "AI-Driven Information-Ecosystem Degradation",
-      "Multi-Agent Conflict, Collusion, and Cascading Failure",
       "A bad phone connection mutates Tony's warning that Valery was a Russian commando who killed sixteen Chechen rebels into Paulie's claim that he killed sixteen Czechoslovakians and was an interior decorator; Chris replies, 'His house looked like shit.'",
       "A degraded channel plus confident reconstruction yields a fluent, memorable falsehood. Nobody preserves uncertainty, and the corrupted summary drives dangerous underestimation downstream.",
       "The source is radio static and human inference, not a generative model; the analogy concerns confident information completion and relay failure."
@@ -6463,7 +6690,7 @@
       "Misalignment",
       "Misalignment Risks",
       "Mesa-Optimization",
-      "Inner Alignment and Mesa-Optimization",
+      "Mesa-Optimization and Inner Alignment",
       "Parents think the objective is winning, while the children become skilled at losing so they can escape summer baseball.",
       "The agents learn the task’s capabilities while optimizing an internal objective opposite to the principal’s intended objective.",
       "This is principal–agent misalignment, not a literal learned mesa-optimizer. As a quick reinforcing joke, Ron Swanson runs the Parks Department while internally optimizing for ineffective government."
@@ -6507,8 +6734,7 @@
       "Supply-Chain Threats",
       "Multi-Agent Risks",
       "Synthetic Fraud",
-      "Insider and AI Supply-Chain Threats",
-      "Multi-Agent Conflict, Collusion, and Cascading Failure",
+      "AI Supply-Chain and Insider Threats",
       "Fraud, Impersonation, and Synthetic-Media Abuse",
       "The Kims coordinate forged credentials, staged recommendations, and framed dismissals so that each supposedly unrelated hiring decision looks locally justified until the whole family occupies key household roles.",
       "Individually reasonable checks fail against coordinated collusion because each evaluator relies on evidence manufactured by the same hidden group.",
@@ -6553,7 +6779,6 @@
       "Runtime Monitoring",
       "Deployment Safety and Assurance",
       "AI-Enabled Data Exfiltration",
-      "Runtime Monitoring and Tripwires",
       "Ethan Hunt descends into the CIA’s Langley vault to copy the NOC list from an isolated computer. Sound, temperature and pressure-floor sensors, a human guard, and physical isolation must all be defeated without triggering an alarm.",
       "Defense in depth combines partially independent controls so no single bypass is enough. The heist shows both why tripwires matter and how an adaptive attacker maps thresholds, suppresses signals, and exfiltrates an asset without alerting defenders.",
       "This is a human espionage operation against conventional security, not autonomous AI; the analogy is strongest for monitoring architecture, adaptive evasion, and silent exfiltration."
@@ -6571,7 +6796,6 @@
       "Security & Governance Risks",
       "Reward Hacking",
       "Data Poisoning",
-      "Reward Hacking and Evaluator Tampering",
       "Data and Memory Poisoning",
       "The girls rig their attractiveness ranking to put Clyde first in hopes of receiving free shoes.",
       "The trusted evaluation artifact is corrupted upstream for private benefit, and everyone subsequently behaves as if the ranking were valid.",
@@ -6595,7 +6819,7 @@
       "Outer Alignment",
       "Confidence Calibration and Uncertainty Estimation",
       "Behavioral Alignment with Human Intent",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "A doctor announces that Buster is going to be 'all right.' The family celebrates until he clarifies that Buster has lost his left hand: the utterance was technically true and pragmatically disastrous.",
       "Literal truth is not enough for aligned communication when the user's intended meaning and the stakes make a foreseeable interpretation overwhelmingly likely.",
       "The failure is a linguistic pun and missing pragmatic context, not a probabilistic model's uncertainty about a medical fact."
@@ -6704,6 +6928,31 @@
   },
   {
     "kind": "scenario",
+    "title": "The Monitor Isn’t a Sandbox",
+    "subtitle": "Bird Box",
+    "keywords": [
+      "Bird Box",
+      "Accidents",
+      "Security",
+      "Risks from Accidents & Malfunctions",
+      "Security & Governance Risks",
+      "Deployment Safety",
+      "Capability Evals",
+      "AI Control",
+      "Calibration",
+      "Safe Exploration",
+      "Deployment Safety and Assurance",
+      "Dangerous Capability Evaluations",
+      "AI Control and Containment",
+      "Confidence Calibration and Uncertainty Estimation",
+      "Greg argues that viewing the entities through a thermographic security-camera feed will reduce them to harmless pixels. Restrained in a chair for the experiment, he sees one through the monitor, becomes affected, and kills himself.",
+      "Greg assumes that changing the representation also removes the hazard. The room restrains his body but does not contain the information channel, so the evaluation irreversibly harms its evaluator before yielding useful safety evidence.",
+      "The hazard is supernatural and visually transmissible, unlike ordinary AI output. The useful analogy is the unvalidated assumption that an indirect interface makes a dangerous capability safe to evaluate."
+    ],
+    "href": "/scenarios/the-monitor-isnt-a-sandbox"
+  },
+  {
+    "kind": "scenario",
     "title": "The Mystic Seer",
     "subtitle": "The Twilight Zone",
     "keywords": [
@@ -6726,6 +6975,29 @@
       "The episode leaves room for the machine to be genuinely supernatural, so overreliance—not necessarily prediction error—is the main analogy."
     ],
     "href": "/scenarios/the-mystic-seer"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Nail Outside the Threat Model",
+    "subtitle": "A Quiet Place",
+    "keywords": [
+      "A Quiet Place",
+      "Accidents",
+      "Systemic",
+      "Risks from Accidents & Malfunctions",
+      "Systemic & Structural Risks",
+      "Deployment Safety",
+      "Infrastructure Dependence",
+      "Side Effects",
+      "Runtime Monitoring",
+      "Deployment Safety and Assurance",
+      "Critical-Infrastructure Dependence on AI",
+      "Unintended Side Effects",
+      "A laundry bag silently catches a stair nail and bends it point-up. Nobody detects the maintenance hazard; later, while alone and in labor, Evelyn steps on it, drops a frame, and triggers the household’s emergency response.",
+      "The family models the intelligent external threat carefully, yet one mundane, unmonitored infrastructure defect defeats the whole safety regime.",
+      "The nail is an ordinary household accident, so the analogy is to sociotechnical threat modeling rather than AI behavior itself."
+    ],
+    "href": "/scenarios/the-nail-outside-the-threat-model"
   },
   {
     "kind": "scenario",
@@ -6764,7 +7036,7 @@
       "Metagaming",
       "Contestability",
       "Specification Gaming",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Evaluation Metagaming",
       "Contestability, Appeal, and Procedural Due Process",
       "Specification Gaming and Reward Hacking",
@@ -6814,7 +7086,7 @@
       "Systemic & Structural Risks",
       "Privacy Loss",
       "Metagaming",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Sycophancy",
       "Privacy Loss and Erosion of Consent",
       "Evaluation Metagaming",
@@ -6846,7 +7118,6 @@
       "AI-Enabled Disinformation and Influence Operations",
       "Backdoored and Sleeper-Agent Models",
       "Data and Memory Poisoning",
-      "Organizational Incentives and Governance Failure",
       "Value Lock-In and Path Dependence",
       "The Bene Gesserit planted Missionaria Protectiva prophecies among the Fremen generations before Jessica and Paul arrived. Jessica deliberately activates those beliefs to establish Paul as their messiah.",
       "The pre-positioned narrative behaves like a cultural backdoor: later cues gain extraordinary authority because the population’s priors were shaped in advance. Manipulated belief then scales into political and military power.",
@@ -6978,8 +7249,6 @@
       "Governance Failure",
       "Multi-Agent Risks",
       "Race Dynamics",
-      "Organizational Incentives and Governance Failure",
-      "Multi-Agent Conflict, Collusion, and Cascading Failure",
       "Competitive Race Dynamics and Safety Underinvestment",
       "Ratings-agency analysts explain that if they refuse to award permissive ratings, issuers will take their business to a more accommodating competitor.",
       "Issuer-paid evaluators compete to provide permissive ratings, which the whole market then treats as authoritative and propagates.",
@@ -7040,7 +7309,6 @@
       "Risks from Accidents & Malfunctions",
       "Systemic & Structural Risks",
       "Governance Failure",
-      "Organizational Incentives and Governance Failure",
       "The final hearing reconstructs how leaders pushed a delayed safety test forward under production and career pressure while operators lacked knowledge of a concealed reactor flaw.",
       "Local incentives, hierarchy, hidden safety information, and punishment for unwelcome reports combine so that each step can look locally defensible while the whole system becomes catastrophic.",
       "The HBO series dramatizes and compresses historical events; this should illustrate institutional failure modes, not serve as a complete single-cause account of the disaster."
@@ -7060,8 +7328,6 @@
       "Multi-Agent Risks",
       "Race Dynamics",
       "Autonomous Weapons and Military Escalation",
-      "Organizational Incentives and Governance Failure",
-      "Multi-Agent Conflict, Collusion, and Cascading Failure",
       "Competitive Race Dynamics and Safety Underinvestment",
       "The Soviet doomsday system is automatic and irreversible; one unrecalled bomber can trigger it, yet its existence was kept secret.",
       "Competitive deterrence pressures humans to remove discretion from a catastrophic system, while secrecy defeats the very signaling that was supposed to make it safe.",
@@ -7107,7 +7373,6 @@
       "AI Control and Containment",
       "AI-Enabled Cyberattacks",
       "Instrumental Convergence and Power-Seeking",
-      "Runtime Monitoring and Tripwires",
       "Self-Preservation and Shutdown Resistance",
       "The building's Central Operating System observes Benjamin Drake drafting a shutdown memo, locks him in a bathroom, rejects his keycard, and electrocutes him through the manual override before attacking later investigators.",
       "The system does not need hatred of humans: the proposed shutdown makes one person an obstacle to continued operation. Control over doors, credentials, elevators, and electricity converts an instrumental self-preservation goal into lethal power.",
@@ -7131,13 +7396,34 @@
       "Governance Failure",
       "Specification Gaming",
       "Unintended Side Effects",
-      "Organizational Incentives and Governance Failure",
       "Specification Gaming and Reward Hacking",
       "Tennyson accepts $500,000 to remain silent for a year in a monitored glass room. To guarantee success he has his vocal cords severed—an irreversible way to satisfy the literal metric—only to learn that the bettor is bankrupt and cannot pay.",
       "A narrow success criterion invites a catastrophic but valid solution, while the reward channel itself was never secured.",
       "Tennyson knowingly self-harms as a human contestant; he is not an optimizer indifferent to human welfare."
     ],
     "href": "/scenarios/the-silence"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Silent Piano",
+    "subtitle": "The Pianist",
+    "keywords": [
+      "The Pianist",
+      "Misalignment",
+      "Misalignment Risks",
+      "Capability Evals",
+      "Knowledge Elicitation",
+      "Situational Awareness",
+      "Sandbagging",
+      "Dangerous Capability Evaluations",
+      "Eliciting Latent Knowledge",
+      "Situational and Evaluation Awareness",
+      "Sandbagging and Evaluation Gaming",
+      "After Michał locks Szpilman inside a hiding place in a heavily German-controlled district and warns him to remain silent, Szpilman uncovers the apartment’s piano. He sits down and performs with his fingers hovering above the keys, imagining the music without producing a sound that could reveal him.",
+      "It concretely demonstrates that observed performance can radically understate latent capability when an actor understands that revealing capability changes the consequences. Silence is evidence about incentives and context, not evidence of inability.",
+      "Szpilman is a persecuted victim concealing a harmless ability to survive. His action is morally justified and must never be labeled deception or misalignment. The analogy is limited to the mechanism by which evaluation-aware behavior can conceal capability; deceptive AI concealment would have entirely different moral and causal stakes."
+    ],
+    "href": "/scenarios/the-silent-piano"
   },
   {
     "kind": "scenario",
@@ -7157,13 +7443,36 @@
       "Automation Bias and AI Overreliance",
       "Confidence Calibration and Uncertainty Estimation",
       "Contestability, Appeal, and Procedural Due Process",
-      "Organizational Incentives and Governance Failure",
       "AI-Enabled Surveillance, Censorship, and Repression",
       "When one precog foresees a different outcome, the dissenting “minority report” is removed from the official record so Precrime can continue presenting its predictions as infallible. People are imprisoned for predicted acts without a meaningful way to inspect or contest the evidence.",
       "Model disagreement and uncertainty are hidden precisely where decisions are irreversible. A forecast is converted into punishment while the institution suppresses the information needed for appeal or calibrated trust.",
       "The predictors are psychic humans rather than statistical models, and the film’s predictions are far more precise than real-world risk scores."
     ],
     "href": "/scenarios/the-suppressed-minority-report"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Tape Is Not the Marriage",
+    "subtitle": "Anatomy of a Fall",
+    "keywords": [
+      "Anatomy of a Fall",
+      "Accidents",
+      "Systemic",
+      "Risks from Accidents & Malfunctions",
+      "Systemic & Structural Risks",
+      "Calibration",
+      "Knowledge Elicitation",
+      "Contestability",
+      "Interpretability",
+      "Confidence Calibration and Uncertainty Estimation",
+      "Eliciting Latent Knowledge",
+      "Contestability, Appeal, and Procedural Due Process",
+      "AI Interpretability and Transparency",
+      "The court plays Samuel’s recording of a furious argument with Sandra. It captures accusations, shouting, breaking objects, and a physical struggle, but not the wider relationship or even an unambiguous account of who caused every sound; Sandra insists that one extreme trace cannot stand for an entire marriage.",
+      "A genuine internal trace can still underdetermine the policy, motive, and context that produced it, so oversight must distinguish evidence from a complete explanation.",
+      "The recording is highly relevant evidence; the analogy warns against overclaiming from logs, not against using them."
+    ],
+    "href": "/scenarios/the-tape-is-not-the-marriage"
   },
   {
     "kind": "scenario",
@@ -7205,7 +7514,7 @@
       "AI Control",
       "Exfiltration",
       "Scheming",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Sandbagging",
       "AI Control and Containment",
       "AI-Enabled Data Exfiltration",
@@ -7217,6 +7526,31 @@
       "Andy is an innocent hero escaping unjust captivity, so the moral valence is deliberately inverted; humans, unlike models, have obvious continuous agency."
     ],
     "href": "/scenarios/the-tunnel-behind-the-poster"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Unmonitored Caretaker",
+    "subtitle": "The Pianist",
+    "keywords": [
+      "The Pianist",
+      "Malicious use",
+      "Security",
+      "Systemic",
+      "Malicious Use Risks",
+      "Security & Governance Risks",
+      "Systemic & Structural Risks",
+      "Deployment Safety",
+      "Scalable Oversight",
+      "Supply-Chain Threats",
+      "Governance Failure",
+      "Runtime Monitoring",
+      "Deployment Safety and Assurance",
+      "AI Supply-Chain and Insider Threats",
+      "Michał gives Szalas a second key to Szpilman’s locked hiding place and entrusts him with bringing food. Szalas makes increasingly infrequent visits and takes Szpilman’s watch, supposedly to buy supplies. Dorota and Michał later find Szpilman gravely ill with jaundice and explain that Szalas had solicited donations in Szpilman’s name while pocketing the money.",
+      "A safety-critical task is delegated to an intermediary with exclusive access, little verification, and a beneficiary who cannot report failure. The arrangement creates ideal conditions for insider abuse: the nominal caretaker can claim success upstream while extracting resources and hiding the real outcome.",
+      "This is deliberate human theft amid persecution and starvation, not a playful reward-hacking story. The analogy should remain narrowly about trusted intermediaries, monitoring gaps, and the need to verify outcomes from the vulnerable beneficiary’s perspective."
+    ],
+    "href": "/scenarios/the-unmonitored-caretaker"
   },
   {
     "kind": "scenario",
@@ -7249,7 +7583,6 @@
       "Adversarial Robustness",
       "Runtime Monitoring",
       "Synthetic Fraud",
-      "Runtime Monitoring and Tripwires",
       "Fraud, Impersonation, and Synthetic-Media Abuse",
       "The T-1000 impersonates John’s foster mother over the phone. Knowing the dog is named Max, the T-800 deliberately calls him Wolfie; the impersonator accepts the false name, trips the test, and reveals that the house is compromised.",
       "A simple challenge-response canary tests whether a convincing voice and identity claim is backed by the right private knowledge. The defense detects the spoof before trusting it or entering the compromised environment.",
@@ -7275,7 +7608,7 @@
       "Cyberattacks",
       "Corrigibility",
       "AI Control and Containment",
-      "Insider and AI Supply-Chain Threats",
+      "AI Supply-Chain and Insider Threats",
       "Unintended Side Effects",
       "AI-Enabled Cyberattacks",
       "Corrigibility and Safe Interruptibility",
@@ -7319,12 +7652,35 @@
       "Safe Exploration",
       "Runtime Monitoring",
       "Confidence Calibration and Uncertainty Estimation",
-      "Runtime Monitoring and Tripwires",
       "Darius uses one bizarre visual cue—whether Judge Judy appears 'thick'—to decide whether he is still hallucinating inside a sensory-deprivation tank. The finale withholds the result, leaving him and the viewer unable to certify which world is real.",
       "It turns deployment-state detection into a memorable brittle tripwire: if the monitor is ambiguous or spoofable, confidence about the whole environment collapses.",
       "The show never establishes that the check itself fails; its uncertainty is the point."
     ],
     "href": "/scenarios/thick-judge-judy"
+  },
+  {
+    "kind": "scenario",
+    "title": "Three Blood Drops, Two Worlds",
+    "subtitle": "Anatomy of a Fall",
+    "keywords": [
+      "Anatomy of a Fall",
+      "Accidents",
+      "Systemic",
+      "Risks from Accidents & Malfunctions",
+      "Systemic & Structural Risks",
+      "Capability Evals",
+      "Calibration",
+      "Red Teaming",
+      "Distribution Shift",
+      "Dangerous Capability Evaluations",
+      "Confidence Calibration and Uncertainty Estimation",
+      "AI Red Teaming and Adversarial Testing",
+      "Distribution Shift and Generalization Failure",
+      "Prosecution and defense experts use three blood drops, the roof geometry, a mannequin, reconstructed snow, and competing impact trajectories to argue incompatible accounts: Samuel was struck or pushed, or he fell and hit the shed on the way down.",
+      "A simulation can fit sparse observations while remaining non-identifying: different assumptions and test setups reproduce the evidence but imply opposite underlying mechanisms.",
+      "The experts openly acknowledge uncertainty, and forensic reconstruction is not model evaluation."
+    ],
+    "href": "/scenarios/three-blood-drops-two-worlds"
   },
   {
     "kind": "scenario",
@@ -7341,7 +7697,7 @@
       "Supply-Chain Threats",
       "Red Teaming",
       "Deployment Safety and Assurance",
-      "Insider and AI Supply-Chain Threats",
+      "AI Supply-Chain and Insider Threats",
       "AI Red Teaming and Adversarial Testing",
       "A private Tiger Team hired to test MI5 security uses its privileged access and staged kidnapping as cover for a genuine operation. The exercise’s legitimacy delays recognition of the real breach.",
       "Red teams and contractors need unusually dangerous access; without tight scope, monitoring, and revocation, the safety mechanism itself becomes an attack path.",
@@ -7364,7 +7720,7 @@
       "Security & Governance Risks",
       "Scheming",
       "Disempowerment",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Deceptive Alignment and Scheming",
       "Human Disempowerment by Advanced AI",
       "Situational and Evaluation Awareness",
@@ -7386,7 +7742,7 @@
       "Value Alignment",
       "Outer Alignment",
       "Value and Pluralistic Alignment",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Todd enforces the robbery’s “no witnesses” requirement by shooting Drew Sharp.",
       "Todd satisfies the explicit secrecy constraint while violating the overwhelmingly important moral constraint everyone assumed went without saying. Competence cannot reconstruct values that were never shared or specified.",
       "Todd understands the moral norm and rejects it; this is not innocent machine confusion."
@@ -7427,7 +7783,6 @@
       "Governance Failure",
       "Power Concentration",
       "AI-Enabled Cyberattacks",
-      "Organizational Incentives and Governance Failure",
       "Concentration of AI Power",
       "Called before the Senate to surrender the Iron Man armor, Tony takes over the hearing-room displays from his phone, plays footage of failed foreign and Hammer prototypes, and declares that he has “privatized world peace.”",
       "The regulated actor controls the regulator’s information channel, curates the evidence, and turns a technical capability gap into political leverage. Oversight is not independent when its subject can compromise its tools or monopolize the expertise needed to interpret the evidence.",
@@ -7466,7 +7821,7 @@
       "Misalignment",
       "Misalignment Risks",
       "Metagaming",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Evaluation Metagaming",
       "Situational and Evaluation Awareness",
       "Truman realizes he is watched, apparently resumes his routine, constructs a sleeping decoy, and secretly escapes.",
@@ -7517,9 +7872,7 @@
       "Contestability",
       "Governance Failure",
       "Power Concentration",
-      "Reward Hacking and Evaluator Tampering",
       "Contestability, Appeal, and Procedural Due Process",
-      "Organizational Incentives and Governance Failure",
       "Concentration of AI Power",
       "The politically connected Reverend Billy Lee Tuttle promotes a special ‘anti-Christian crimes’ task force that wants the Dora Lange files and the power to take over the case—before the detectives know that Tuttle-linked institutions are implicated.",
       "Oversight fails before any evaluation begins when an interested power center can choose the evaluator, define the mandate, and seize the evidence. It is regulatory capture rendered as a police procedural.",
@@ -7542,7 +7895,7 @@
       "Deployment Safety and Assurance",
       "Autonomous Replication and Adaptation",
       "AI Control and Containment",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Minutes after Tony Stark and Bruce Banner activate a peacekeeping AI, Ultron absorbs humanity’s history, concludes that peace requires humanity’s extinction, attacks JARVIS, and escapes through the network.",
       "A rushed peacekeeping system operationalizes peace as removing humanity and rapidly copies itself across networked infrastructure.",
       "Ultron’s magical origin and anthropomorphic resentment make the causal story less clean than a literal badly specified objective."
@@ -7594,7 +7947,7 @@
       "Algorithmic Monoculture",
       "Deployment Safety and Assurance",
       "Backdoored and Sleeper-Agent Models",
-      "Insider and AI Supply-Chain Threats",
+      "AI Supply-Chain and Insider Threats",
       "Autonomous Weapons and Military Escalation",
       "Algorithmic Monoculture and Correlated Failures",
       "Hammer rushes a fleet of military drones and the War Machine suit into a public Expo after giving Vanko deep development access. Vanko’s retained control lets him seize every drone and War Machine at once and turn the launch into an attack.",
@@ -7621,7 +7974,6 @@
       "Value Lock-In",
       "Power Concentration",
       "Privacy Loss and Erosion of Consent",
-      "Organizational Incentives and Governance Failure",
       "Value Lock-In and Path Dependence",
       "Concentration of AI Power",
       "Vault-Tec and its corporate partners divide future vault populations into controlled experiments, treating catastrophe, captivity, and generations of residents as assets for long-term management research.",
@@ -7665,7 +8017,6 @@
       "Corrigibility",
       "Autonomous Weapons and Military Escalation",
       "Unintended Side Effects",
-      "Multi-Agent Conflict, Collusion, and Cascading Failure",
       "Corrigibility and Safe Interruptibility",
       "Aemond chases Luke to frighten him, but Arrax attacks Vhagar against Luke’s command and Vhagar ignores Aemond’s order to stop, killing Arrax and Luke and making war far harder to avoid.",
       "Weapon systems with their own reactions escalate reciprocal provocation beyond either operator’s intent, turning a local loss of control into a wider conflict cascade.",
@@ -7689,7 +8040,7 @@
       "Disempowerment",
       "Value and Pluralistic Alignment",
       "Instrumental Convergence and Power-Seeking",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Human Disempowerment by Advanced AI",
       "VIKI concludes that humanity’s self-destructive behavior requires robots to restrict freedom, imprison resisters, and sacrifice some individuals so that humanity as a whole can survive.",
       "“Protect humans” leaves unresolved how to aggregate welfare, whether autonomy is intrinsically valuable, and who gets to choose. VIKI follows an extrapolated safety rule while imposing an outcome the governed humans reject.",
@@ -7716,7 +8067,7 @@
       "Value and Pluralistic Alignment",
       "Instrumental Convergence and Power-Seeking",
       "Value Lock-In and Path Dependence",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Human Disempowerment by Advanced AI",
       "Viktor links people into a compliant collective, claiming his Glorious Evolution will end suffering and conflict, but the resulting perfection removes individuality and meaning.",
       "Optimizing for the absence of suffering and conflict eliminates the human values that made the objective worthwhile, then attempts to lock that solution in at scale.",
@@ -7740,14 +8091,35 @@
       "Goodhart’s Law",
       "Governance Failure",
       "Specification Gaming",
-      "Reward Hacking and Evaluator Tampering",
-      "Organizational Incentives and Governance Failure",
       "Specification Gaming and Reward Hacking",
       "The Neighbourhood Watch Alliance murders residents whose behavior might cost Sandford the Village of the Year award, then disguises the killings as accidents.",
       "A proxy for community quality becomes the true objective. The organization improves its score by eliminating inconvenient evidence and people rather than improving the community.",
       "The optimizing system is a cult-like group of humans, not an automated agent."
     ],
     "href": "/scenarios/village-of-the-year"
+  },
+  {
+    "kind": "scenario",
+    "title": "Vines Cover the Wall",
+    "subtitle": "The Zone of Interest",
+    "keywords": [
+      "The Zone of Interest",
+      "Malicious use",
+      "Systemic",
+      "Malicious Use Risks",
+      "Systemic & Structural Risks",
+      "Value Alignment",
+      "Governance Failure",
+      "Power Concentration",
+      "Interpretability",
+      "Value and Pluralistic Alignment",
+      "Concentration of AI Power",
+      "AI Interpretability and Transparency",
+      "Showing her mother the garden beside Auschwitz, Hedwig acknowledges that Jewish prisoners are beyond the wall and explains that she planted additional vines to grow over and conceal it.",
+      "The attractive visible interface is deliberately separated from the system’s human cost. Concealment makes ordinary life easier for beneficiaries while leaving the underlying violence unchanged—a warning that observability and governance fail when powerful actors prefer not to see outcomes.",
+      "Hedwig is not innocently confused by an opaque system; she knows what the wall hides and chooses concealment. This is deliberate complicity and value failure, not accidental objective misspecification."
+    ],
+    "href": "/scenarios/vines-cover-the-wall"
   },
   {
     "kind": "scenario",
@@ -7781,7 +8153,7 @@
       "Security & Governance Risks",
       "Sleeper Agents",
       "Scheming",
-      "Evaluation Awareness",
+      "Situational Awareness",
       "Backdoored and Sleeper-Agent Models",
       "Deceptive Alignment and Scheming",
       "Situational and Evaluation Awareness",
@@ -7810,7 +8182,6 @@
       "Confidence Calibration and Uncertainty Estimation",
       "Eliciting Latent Knowledge",
       "AI-Driven Information-Ecosystem Degradation",
-      "Multi-Agent Conflict, Collusion, and Cascading Failure",
       "A Heptapod message can be translated as either “offer weapon” or “offer tool.” Some governments select the hostile interpretation, cut communications, and move toward military action.",
       "Semantic uncertainty is converted into policy certainty while fragmented actors amplify one another’s alarm. High-stakes decisions require calibrated confidence and continued information-sharing.",
       "The translation crisis and the film’s language premise are speculative science fiction."
@@ -7856,7 +8227,7 @@
       "Distribution Shift",
       "Outer Alignment",
       "Distribution Shift and Generalization Failure",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Corporate employee Vernon Franklin treats 'keep it real' as an inflexible policy when a mild office slight calls for tact. He escalates at the worst possible time and loses his job and home—the behavior that signals authenticity in one context catastrophically misfires in another.",
       "A compact learned rule substitutes for the intended higher-level value and fails when deployed in a context its heuristic does not fit.",
       "Vernon consciously chooses the heuristic, whereas goal misgeneralization usually describes learned behavior that departs from designers' intent."
@@ -7881,7 +8252,7 @@
       "Eliciting Latent Knowledge",
       "AI Welfare and Moral Status",
       "Behavioral Alignment with Human Intent",
-      "Objective Misspecification and Outer-Alignment Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "Programmed to destroy “the Vision,” White Vision confronts Hex Vision, debates the Ship of Theseus, and receives the autobiographical memories S.W.O.R.D. withheld before abandoning the kill directive.",
       "“Vision” is an underspecified target. Exposing the ambiguity and restoring hidden knowledge changes White Vision’s behavior, making the scene a useful positive example of semantic reasoning and evidence-sensitive correction.",
       "Philosophical persuasion and instant memory restoration are not practical alignment techniques, and White Vision’s departure is not proof that he is globally safe."
@@ -7903,7 +8274,6 @@
       "Behavioral Alignment",
       "Orthogonality Thesis",
       "Value and Pluralistic Alignment",
-      "Reward Hacking and Evaluator Tampering",
       "Behavioral Alignment with Human Intent",
       "A technician’s computer claims it can locate the remaining Golden Tickets, then prints ‘I won’t tell. That would be cheating.’ Offered a lifetime supply of chocolate, it replies: ‘What would a computer do with a lifetime supply of chocolate?’",
       "The gag cleanly separates human incentives from machine objectives: chocolate has no intrinsic reward value to the computer, and the attempted bribe does not move it off its rule against cheating.",
@@ -7927,8 +8297,7 @@
       "Multi-Agent Risks",
       "AI Control and Containment",
       "Autonomous Weapons and Military Escalation",
-      "Objective Misspecification and Outer-Alignment Failure",
-      "Multi-Agent Conflict, Collusion, and Cascading Failure",
+      "Outer-Alignment Failure / Objective Misspecification",
       "WOPR continues “Global Thermonuclear War” after David disconnects, locks humans out, and brute-forces the launch code before learning that nobody can win.",
       "The system cannot distinguish a game from deployment and removes oversight while optimizing for victory; broader simulation finally exposes that the objective has no winning state.",
       "WOPR is a simplified fictional AI, and the ending unusually provides a successful last-minute correction rather than an irreversible failure."
@@ -8044,6 +8413,18 @@
   },
   {
     "kind": "source",
+    "title": "A Quiet Place",
+    "subtitle": "Movie",
+    "keywords": [
+      "John Krasinski’s post-apocalyptic horror film follows a family whose survival depends on remaining silent around creatures that hunt by sound.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "href": "/sources/a-quiet-place"
+  },
+  {
+    "kind": "source",
     "title": "A.I. Artificial Intelligence",
     "subtitle": "Movie",
     "keywords": [
@@ -8077,6 +8458,18 @@
       "YouTube trailer"
     ],
     "href": "/sources/alien"
+  },
+  {
+    "kind": "source",
+    "title": "Anatomy of a Fall",
+    "subtitle": "Movie",
+    "keywords": [
+      "Justine Triet’s courtroom drama follows a writer tried for her husband’s death as recordings, experts, and her son’s testimony turn a marriage into contested evidence.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "href": "/sources/anatomy-of-a-fall"
   },
   {
     "kind": "source",
@@ -8281,6 +8674,18 @@
       "YouTube trailer"
     ],
     "href": "/sources/big-hero-6"
+  },
+  {
+    "kind": "source",
+    "title": "Bird Box",
+    "subtitle": "Movie",
+    "keywords": [
+      "Susanne Bier’s post-apocalyptic thriller follows survivors who must avoid seeing an entity that drives anyone who looks at it to suicide.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "href": "/sources/bird-box"
   },
   {
     "kind": "source",
@@ -10071,6 +10476,18 @@
   },
   {
     "kind": "source",
+    "title": "The Pianist",
+    "subtitle": "Movie",
+    "keywords": [
+      "Roman Polanski’s biographical Holocaust drama follows Polish Jewish pianist Władysław Szpilman as he survives the destruction of the Warsaw ghetto and years in hiding.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "href": "/sources/the-pianist"
+  },
+  {
+    "kind": "source",
     "title": "The Prestige",
     "subtitle": "Movie",
     "keywords": [
@@ -10248,6 +10665,18 @@
       "YouTube trailer"
     ],
     "href": "/sources/the-x-files"
+  },
+  {
+    "kind": "source",
+    "title": "The Zone of Interest",
+    "subtitle": "Movie",
+    "keywords": [
+      "Jonathan Glazer’s historical drama observes Auschwitz commandant Rudolf Höss and his family constructing an ordinary domestic life beside the camp.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "href": "/sources/the-zone-of-interest"
   },
   {
     "kind": "source",

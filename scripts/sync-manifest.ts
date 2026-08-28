@@ -2,24 +2,38 @@ import { z } from 'zod'
 
 import type { ContentSnapshot } from '../lib/content/schema'
 import {
-  generatedMediaPublicPaths,
+  generatedMediaObjectKey,
   isGeneratedMediaPublicPath
 } from './sync-utils'
 
-export const MEDIA_PIPELINE_VERSION = 1
+export const MEDIA_PIPELINE_VERSION = 2
 
 const sha256Schema = z.string().regex(/^[0-9a-f]{64}$/)
-const generatedMediaPathSchema = z
+const legacyGeneratedMediaPathSchema = z
   .string()
   .refine(isGeneratedMediaPublicPath, 'Invalid generated media path')
+const generatedMediaObjectKeySchema = z
+  .string()
+  .regex(
+    /^media\/generated\/(?:scenarios|sources)\/[0-9a-f]{32}\/(?:gallery|detail)-[0-9a-f]{64}\.webp$/
+  )
+const remoteMediaUrlSchema = z.url().refine((value) => {
+  if (!URL.canParse(value)) return false
+  const url = new URL(value)
+  return (
+    url.protocol === 'https:' &&
+    !url.username &&
+    !url.password &&
+    !url.search &&
+    !url.hash
+  )
+}, 'Generated media URL must use HTTPS without credentials, query parameters, or fragments')
 
 const syncEntryBaseSchema = z.object({
   lastEditedTime: z.string(),
   imageBlockId: z.string(),
   additionalImageCount: z.number().int().nonnegative(),
   sourceHash: sha256Schema,
-  gallerySrc: generatedMediaPathSchema,
-  detailSrc: generatedMediaPathSchema,
   width: z.number().int().positive(),
   height: z.number().int().positive(),
   caption: z.string()
@@ -28,13 +42,21 @@ const syncEntryBaseSchema = z.object({
 export const previousSyncEntrySchema = syncEntryBaseSchema.extend({
   pipelineVersion: z.number().int().positive().optional(),
   galleryHash: sha256Schema.optional(),
-  detailHash: sha256Schema.optional()
+  detailHash: sha256Schema.optional(),
+  galleryKey: generatedMediaObjectKeySchema.optional(),
+  detailKey: generatedMediaObjectKeySchema.optional(),
+  gallerySrc: z.union([legacyGeneratedMediaPathSchema, remoteMediaUrlSchema]),
+  detailSrc: z.union([legacyGeneratedMediaPathSchema, remoteMediaUrlSchema])
 })
 
 export const syncEntrySchema = syncEntryBaseSchema.extend({
   pipelineVersion: z.literal(MEDIA_PIPELINE_VERSION),
   galleryHash: sha256Schema,
-  detailHash: sha256Schema
+  detailHash: sha256Schema,
+  galleryKey: generatedMediaObjectKeySchema,
+  detailKey: generatedMediaObjectKeySchema,
+  gallerySrc: remoteMediaUrlSchema,
+  detailSrc: remoteMediaUrlSchema
 })
 
 const slugMapSchema = z.record(
@@ -226,10 +248,7 @@ function validateMediaOwnership(
 
   for (const { id, image } of records) {
     const entry = entries[id]!
-    const expectedPaths = generatedMediaPublicPaths(collection, id)
     if (
-      entry.gallerySrc !== expectedPaths.gallerySrc ||
-      entry.detailSrc !== expectedPaths.detailSrc ||
       entry.gallerySrc !== image.gallerySrc ||
       entry.detailSrc !== image.detailSrc ||
       entry.width !== image.width ||
@@ -237,6 +256,24 @@ function validateMediaOwnership(
     ) {
       throw new Error(
         `Manifest ${label} image entry ${id} does not match its snapshot image`
+      )
+    }
+
+    const galleryKey = generatedMediaObjectKey(
+      collection,
+      id,
+      'gallery',
+      entry.galleryHash
+    )
+    const detailKey = generatedMediaObjectKey(
+      collection,
+      id,
+      'detail',
+      entry.detailHash
+    )
+    if (entry.galleryKey !== galleryKey || entry.detailKey !== detailKey) {
+      throw new Error(
+        `Manifest ${label} image entry ${id} has invalid content-addressed keys`
       )
     }
   }

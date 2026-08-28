@@ -76,6 +76,23 @@ describe('parseSyncManifest', () => {
     expect(parseSyncManifest(manifest)).toEqual(manifest)
   })
 
+  it('rejects legacy local media in the current manifest contract', () => {
+    const current = currentManifest()
+    const manifest = {
+      ...current,
+      entries: {
+        ...current.entries,
+        scenarios: {
+          [scenarioId]: imageEntry(
+            '/media/generated/scenarios/3c6edb27f12480cc92d5c8f2f2e3a7fa'
+          )
+        }
+      }
+    }
+
+    expect(() => parseSyncManifest(manifest)).toThrow()
+  })
+
   it('requires every source poster to have exactly one owned manifest entry', () => {
     const current = currentManifest()
     const manifest = {
@@ -114,14 +131,10 @@ function currentManifest() {
     },
     entries: {
       scenarios: {
-        [scenarioId]: imageEntry(
-          '/media/generated/scenarios/3c6edb27f12480cc92d5c8f2f2e3a7fa'
-        )
+        [scenarioId]: remoteImageEntry('scenarios', scenarioId)
       },
       sources: {
-        [sourceId]: imageEntry(
-          '/media/generated/sources/3caedb27f12480319026e39581c85c47'
-        )
+        [sourceId]: remoteImageEntry('sources', sourceId)
       }
     }
   }
@@ -141,10 +154,8 @@ function currentSnapshot() {
         riskFamilyIds: ['risk-1'],
         conceptIds: ['concept-1'],
         image: {
-          gallerySrc:
-            '/media/generated/scenarios/3c6edb27f12480cc92d5c8f2f2e3a7fa/gallery.webp',
-          detailSrc:
-            '/media/generated/scenarios/3c6edb27f12480cc92d5c8f2f2e3a7fa/detail.webp',
+          gallerySrc: `https://media.example.com/media/generated/scenarios/3c6edb27f12480cc92d5c8f2f2e3a7fa/gallery-${'b'.repeat(64)}.webp`,
+          detailSrc: `https://media.example.com/media/generated/scenarios/3c6edb27f12480cc92d5c8f2f2e3a7fa/detail-${'c'.repeat(64)}.webp`,
           width: 1920,
           height: 1080,
           alt: 'A still'
@@ -164,10 +175,8 @@ function currentSnapshot() {
         description: null,
         releaseDate: '2001-06-29',
         poster: {
-          gallerySrc:
-            '/media/generated/sources/3caedb27f12480319026e39581c85c47/gallery.webp',
-          detailSrc:
-            '/media/generated/sources/3caedb27f12480319026e39581c85c47/detail.webp',
+          gallerySrc: `https://media.example.com/media/generated/sources/3caedb27f12480319026e39581c85c47/gallery-${'b'.repeat(64)}.webp`,
+          detailSrc: `https://media.example.com/media/generated/sources/3caedb27f12480319026e39581c85c47/detail-${'c'.repeat(64)}.webp`,
           width: 1920,
           height: 1080,
           alt: 'Poster'
@@ -226,6 +235,30 @@ function imageEntry(pathRoot: string) {
     detailHash: 'c'.repeat(64),
     gallerySrc: `${pathRoot}/gallery.webp`,
     detailSrc: `${pathRoot}/detail.webp`,
+    width: 1920,
+    height: 1080,
+    caption: 'A still'
+  }
+}
+
+function remoteImageEntry(collection: 'scenarios' | 'sources', id: string) {
+  const compactId = id.replaceAll('-', '')
+  const galleryHash = 'b'.repeat(64)
+  const detailHash = 'c'.repeat(64)
+  const root = `media/generated/${collection}/${compactId}`
+
+  return {
+    pipelineVersion: 2,
+    lastEditedTime: '2026-08-28T00:00:00.000Z',
+    imageBlockId: 'image-1',
+    additionalImageCount: 0,
+    sourceHash: 'a'.repeat(64),
+    galleryHash,
+    detailHash,
+    galleryKey: `${root}/gallery-${galleryHash}.webp`,
+    detailKey: `${root}/detail-${detailHash}.webp`,
+    gallerySrc: `https://media.example.com/${root}/gallery-${galleryHash}.webp`,
+    detailSrc: `https://media.example.com/${root}/detail-${detailHash}.webp`,
     width: 1920,
     height: 1080,
     caption: 'A still'

@@ -7,22 +7,17 @@ const slugSchema = z
   .min(1)
   .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)
 
-const localMediaPathSchema = z
-  .string()
-  .startsWith('/media/')
-  .refine((value) => {
-    try {
-      const segments = decodeURIComponent(value).split('/')
-      return (
-        !value.includes('\\') &&
-        !value.includes('\0') &&
-        !segments.includes('.') &&
-        !segments.includes('..')
-      )
-    } catch {
-      return false
-    }
-  }, 'Media path must remain under /media')
+const remoteMediaUrlSchema = z.url().refine((value) => {
+  if (!URL.canParse(value)) return false
+  const url = new URL(value)
+  return (
+    url.protocol === 'https:' &&
+    !url.username &&
+    !url.password &&
+    !url.search &&
+    !url.hash
+  )
+}, 'Remote media URL must use HTTPS without credentials, query parameters, or fragments')
 
 const httpUrlSchema = z.url().refine((value) => {
   const protocol = new URL(value).protocol
@@ -45,8 +40,8 @@ export const focalPointSchema = z.object({
 })
 
 export const contentImageSchema = z.object({
-  gallerySrc: localMediaPathSchema,
-  detailSrc: localMediaPathSchema,
+  gallerySrc: remoteMediaUrlSchema,
+  detailSrc: remoteMediaUrlSchema,
   width: z.number().int().positive(),
   height: z.number().int().positive(),
   alt: z.string().trim().min(1),

@@ -5,18 +5,13 @@ import { fileURLToPath } from 'node:url'
 
 import { buildSearchDocuments } from '../lib/content/search-documents'
 import { validateContentSnapshot } from '../lib/content/validate'
-import { validateSyncManifest, type SyncEntry } from './sync-manifest'
-import { generatedMediaFilePath, sha256 } from './sync-utils'
+import { validateSyncManifest } from './sync-manifest'
 
 const projectRoot = fileURLToPath(new URL('..', import.meta.url))
 const snapshotRoot = join(projectRoot, 'content/snapshot')
 
 async function readJson(name: string): Promise<unknown> {
   return JSON.parse(await readFile(join(snapshotRoot, name), 'utf8'))
-}
-
-function assetPath(publicPath: string) {
-  return generatedMediaFilePath(projectRoot, publicPath)
 }
 
 const [
@@ -56,48 +51,30 @@ const mediaEntries = [
   ...Object.values(validatedManifest.entries.scenarios),
   ...Object.values(validatedManifest.entries.sources)
 ]
-await Promise.all(mediaEntries.map(validateAssetHashes))
-await assertNoUnownedGeneratedFiles(mediaEntries)
+await assertGeneratedMediaDirectoryIsEmpty()
 
 console.log(
-  `Validated ${snapshot.scenarios.length} scenarios, ${snapshot.sources.length} sources, ${snapshot.riskFamilies.length} risk families, ${snapshot.concepts.length} concepts, and ${mediaEntries.length * 2} generated media assets.`
+  `Validated ${snapshot.scenarios.length} scenarios, ${snapshot.sources.length} sources, ${snapshot.riskFamilies.length} risk families, ${snapshot.concepts.length} concepts, and ${mediaEntries.length * 2} content-addressed media references.`
 )
 
-async function validateAssetHashes(entry: SyncEntry) {
-  const [gallery, detail] = await Promise.all([
-    readFile(assetPath(entry.gallerySrc)),
-    readFile(assetPath(entry.detailSrc))
-  ])
-  if (sha256(gallery) !== entry.galleryHash) {
-    throw new Error(`Generated asset hash mismatch: ${entry.gallerySrc}`)
-  }
-  if (sha256(detail) !== entry.detailHash) {
-    throw new Error(`Generated asset hash mismatch: ${entry.detailSrc}`)
-  }
-}
-
-async function assertNoUnownedGeneratedFiles(entries: readonly SyncEntry[]) {
+async function assertGeneratedMediaDirectoryIsEmpty() {
   const generatedRoot = join(projectRoot, 'public/media/generated')
-  const expectedPaths = new Set(
-    entries.flatMap((entry) => [
-      assetPath(entry.gallerySrc),
-      assetPath(entry.detailSrc)
-    ])
-  )
   const actualPaths = await listFiles(generatedRoot)
-  const unexpected = actualPaths.filter((path) => !expectedPaths.has(path))
-  if (unexpected.length > 0) {
+  if (actualPaths.length > 0) {
     throw new Error(
-      `Generated media contains unowned files: ${unexpected.join(', ')}`
+      `Generated media must be remote, but local files remain: ${actualPaths.join(', ')}`
     )
-  }
-  if (actualPaths.length !== expectedPaths.size) {
-    throw new Error('Generated media file count does not match the manifest')
   }
 }
 
 async function listFiles(root: string): Promise<string[]> {
-  const entries = await readdir(root, { withFileTypes: true })
+  let entries
+  try {
+    entries = await readdir(root, { withFileTypes: true })
+  } catch (err) {
+    if (isNodeError(err) && err.code === 'ENOENT') return []
+    throw err
+  }
   const nested = await Promise.all(
     entries.map(async (entry) => {
       const path = join(root, entry.name)
@@ -105,4 +82,8 @@ async function listFiles(root: string): Promise<string[]> {
     })
   )
   return nested.flat().toSorted()
+}
+
+function isNodeError(err: unknown): err is NodeJS.ErrnoException {
+  return err instanceof Error && 'code' in err
 }

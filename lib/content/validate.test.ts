@@ -16,8 +16,10 @@ const minimalSnapshot: ContentSnapshot = {
       riskFamilyIds: ['risk-1'],
       conceptIds: ['concept-1'],
       image: {
-        gallerySrc: '/media/scenarios/scenario-1-gallery.webp',
-        detailSrc: '/media/scenarios/scenario-1-detail.webp',
+        gallerySrc:
+          'https://assets.example.com/media/generated/scenarios/scenario-1/gallery-abc.webp',
+        detailSrc:
+          'https://assets.example.com/media/generated/scenarios/scenario-1/detail-def.webp',
         width: 1600,
         height: 900,
         alt: 'Summer stands beside the car'
@@ -95,12 +97,39 @@ describe('validateContentSnapshot', () => {
     ])
   })
 
-  it('rejects media paths that escape the local media root', () => {
+  it('rejects local generated-media paths', () => {
     const input = structuredClone(minimalSnapshot)
-    input.scenarios[0]!.image.gallerySrc = '/media/generated/../../app/page.tsx'
+    input.scenarios[0]!.image.gallerySrc =
+      '/media/generated/scenarios/scenario-1/gallery.webp'
 
     const error = captureValidationError(() => validateContentSnapshot(input))
 
+    expect(error.issues).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          code: 'invalid-schema',
+          path: 'scenarios[0].image.gallerySrc'
+        })
+      ])
+    )
+  })
+
+  it('accepts immutable HTTPS media URLs and rejects unsafe remote URLs', () => {
+    const remote = structuredClone(minimalSnapshot)
+    remote.scenarios[0]!.image.gallerySrc =
+      'https://assets.example.com/media/generated/scenarios/example/gallery-abc.webp'
+    remote.scenarios[0]!.image.detailSrc =
+      'https://assets.example.com/media/generated/scenarios/example/detail-def.webp'
+
+    expect(validateContentSnapshot(remote).scenarios[0]!.image).toEqual(
+      remote.scenarios[0]!.image
+    )
+
+    const unsafe = structuredClone(remote)
+    unsafe.scenarios[0]!.image.gallerySrc =
+      'http://assets.example.com/gallery.webp?mutable=true'
+
+    const error = captureValidationError(() => validateContentSnapshot(unsafe))
     expect(error.issues).toEqual([
       expect.objectContaining({
         code: 'invalid-schema',

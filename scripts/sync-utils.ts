@@ -9,6 +9,7 @@ import type {
 
 const generatedMediaPattern =
   /^\/media\/generated\/(?:scenarios|sources)\/[0-9a-f]{32}\/(?:gallery|detail)\.webp$/
+const sha256Pattern = /^[0-9a-f]{64}$/
 
 export function isGeneratedMediaPublicPath(publicPath: string) {
   return generatedMediaPattern.test(publicPath)
@@ -27,6 +28,20 @@ export function generatedMediaPublicPaths(
     gallerySrc: `/media/generated/${collection}/${compactId}/gallery.webp`,
     detailSrc: `/media/generated/${collection}/${compactId}/detail.webp`
   }
+}
+
+export function generatedMediaObjectKey(
+  collection: 'scenarios' | 'sources',
+  pageId: string,
+  variant: 'gallery' | 'detail',
+  hash: string
+) {
+  const compactId = compactNotionId(pageId)
+  if (!sha256Pattern.test(hash)) {
+    throw new Error(`Invalid generated media SHA-256 hash: ${hash}`)
+  }
+
+  return `media/generated/${collection}/${compactId}/${variant}-${hash}.webp`
 }
 
 export function generatedMediaFilePath(root: string, publicPath: string) {
@@ -52,6 +67,14 @@ export function generatedMediaFilePath(root: string, publicPath: string) {
 
 export function sha256(value: Uint8Array) {
   return createHash('sha256').update(value).digest('hex')
+}
+
+function compactNotionId(pageId: string) {
+  const compactId = pageId.replaceAll('-', '').toLowerCase()
+  if (!/^[0-9a-f]{32}$/.test(compactId)) {
+    throw new Error(`Invalid Notion page ID for generated media: ${pageId}`)
+  }
+  return compactId
 }
 
 export function allocateStableSlugs(

@@ -2,6 +2,7 @@ import type { ResolvingMetadata } from 'next'
 import { describe, expect, it } from 'vitest'
 
 import { contentCatalog } from '@/lib/content/snapshot'
+import { siteUrl } from '@/lib/site'
 
 import { dynamicParams, generateMetadata, generateStaticParams } from './page'
 
@@ -47,6 +48,8 @@ describe('production scenario route', () => {
           ? image?.url
           : image
 
-    expect(new URL(String(imageUrl)).pathname).toBe(scenario.image.detailSrc)
+    expect(new URL(String(imageUrl)).href).toBe(
+      new URL(scenario.image.detailSrc, siteUrl).href
+    )
   })
 })

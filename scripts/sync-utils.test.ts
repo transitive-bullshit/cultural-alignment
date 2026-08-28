@@ -4,6 +4,7 @@ import { describe, expect, it } from 'vitest'
 import {
   allocateStableSlugs,
   generatedMediaFilePath,
+  generatedMediaObjectKey,
   generatedMediaPublicPaths,
   richTextToMarkdown,
   retrieveRelationIds
@@ -56,6 +57,35 @@ describe('generatedMediaPublicPaths', () => {
       detailSrc:
         '/media/generated/sources/3caedb27f12480319026e39581c85c47/detail.webp'
     })
+  })
+})
+
+describe('generatedMediaObjectKey', () => {
+  it('includes the final-byte hash in a stable variant key', () => {
+    expect(
+      generatedMediaObjectKey(
+        'scenarios',
+        '3c6edb27-f124-80cc-92d5-c8f2f2e3a7fa',
+        'detail',
+        'a'.repeat(64)
+      )
+    ).toBe(
+      `media/generated/scenarios/3c6edb27f12480cc92d5c8f2f2e3a7fa/detail-${'a'.repeat(64)}.webp`
+    )
+  })
+
+  it('rejects malformed IDs and hashes', () => {
+    expect(() =>
+      generatedMediaObjectKey('sources', 'not-a-notion-id', 'gallery', 'a')
+    ).toThrow('Invalid Notion page ID')
+    expect(() =>
+      generatedMediaObjectKey(
+        'sources',
+        '3caedb27-f124-8031-9026-e39581c85c47',
+        'gallery',
+        'not-a-hash'
+      )
+    ).toThrow('Invalid generated media SHA-256 hash')
   })
 })
 

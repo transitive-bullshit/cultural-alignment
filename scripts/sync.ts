@@ -1,13 +1,7 @@
+import '@dotenvx/dotenvx/config'
+
 import { randomUUID } from 'node:crypto'
-import {
-  copyFile,
-  mkdir,
-  readFile,
-  rename,
-  rm,
-  stat,
-  writeFile
-} from 'node:fs/promises'
+import { mkdir, readFile, rename, rm, stat, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { setTimeout as delay } from 'node:timers/promises'
 import { fileURLToPath } from 'node:url'
@@ -50,9 +44,11 @@ import {
   type SyncEntry
 } from './sync-manifest'
 import { resolveCitationMetadata } from './citation-metadata'
+import { createMediaStorage } from './media-storage'
 import {
   allocateStableSlugs,
   generatedMediaFilePath,
+  generatedMediaObjectKey,
   generatedMediaPublicPaths,
   richTextToMarkdown,
   retrieveRelationIds,
@@ -244,7 +240,9 @@ type ParsedConcept = Omit<ConceptRecord, 'slug' | 'citations'> & {
 }
 
 type ImageResult = {
+  galleryKey: string
   gallerySrc: string
+  detailKey: string
   detailSrc: string
   width: number
   height: number
@@ -747,31 +745,45 @@ async function reusableImageEntry(
   page: PageObjectResponse,
   collection: 'scenarios' | 'sources'
 ): Promise<SyncEntry | null> {
-  const parsed = syncEntrySchema.safeParse(entry)
-  if (!parsed.success) return null
+  if (!entry || entry.lastEditedTime !== page.last_edited_time) return null
 
-  const current = parsed.data
-  const expectedPaths = generatedMediaPublicPaths(collection, page.id)
-  if (
-    current.lastEditedTime !== page.last_edited_time ||
-    current.gallerySrc !== expectedPaths.gallerySrc ||
-    current.detailSrc !== expectedPaths.detailSrc
-  ) {
-    return null
-  }
-
-  const [galleryMatches, detailMatches] = await Promise.all([
-    fileMatchesHash(
-      publicFilePath(projectRoot, current.gallerySrc),
+  const remote = syncEntrySchema.safeParse(entry)
+  if (remote.success) {
+    const current = remote.data
+    const expectedGalleryKey = generatedMediaObjectKey(
+      collection,
+      page.id,
+      'gallery',
       current.galleryHash
-    ),
-    fileMatchesHash(
-      publicFilePath(projectRoot, current.detailSrc),
+    )
+    const expectedDetailKey = generatedMediaObjectKey(
+      collection,
+      page.id,
+      'detail',
       current.detailHash
     )
-  ])
+    if (
+      current.galleryKey !== expectedGalleryKey ||
+      current.detailKey !== expectedDetailKey
+    ) {
+      return null
+    }
 
-  return galleryMatches && detailMatches ? current : null
+    const [galleryExists, detailExists] = await Promise.all([
+      mediaStorage.hasObject(current.galleryKey),
+      mediaStorage.hasObject(current.detailKey)
+    ])
+    if (!galleryExists || !detailExists) return null
+    reusedMediaObjects += 2
+
+    return {
+      ...current,
+      gallerySrc: mediaStorage.publicUrl(current.galleryKey),
+      detailSrc: mediaStorage.publicUrl(current.detailKey)
+    }
+  }
+
+  return migrateLegacyImageEntry(entry, page, collection)
 }
 
 async function fileMatchesHash(path: string, expectedHash: string) {
@@ -782,27 +794,72 @@ async function fileMatchesHash(path: string, expectedHash: string) {
   }
 }
 
-async function reuseImage(
-  entry: SyncEntry,
-  stageRoot: string
-): Promise<ImageResult> {
-  for (const publicPath of [entry.gallerySrc, entry.detailSrc]) {
-    const source = publicFilePath(projectRoot, publicPath)
-    const target = publicFilePath(stageRoot, publicPath)
-    await mkdir(dirname(target), { recursive: true })
-    await copyFile(source, target)
+async function publishMediaVariant(
+  collection: 'scenarios' | 'sources',
+  notionId: string,
+  variant: 'gallery' | 'detail',
+  bytes: Uint8Array
+) {
+  const result = await mediaStorage.publish({
+    bytes,
+    collection,
+    notionId,
+    variant
+  })
+  if (result.uploaded) uploadedMediaObjects += 1
+  else reusedMediaObjects += 1
+  return result
+}
+
+async function migrateLegacyImageEntry(
+  entry: PreviousSyncEntry,
+  page: PageObjectResponse,
+  collection: 'scenarios' | 'sources'
+): Promise<SyncEntry | null> {
+  if (!entry.galleryHash || !entry.detailHash) return null
+
+  const expectedPaths = generatedMediaPublicPaths(collection, page.id)
+  if (
+    entry.gallerySrc !== expectedPaths.gallerySrc ||
+    entry.detailSrc !== expectedPaths.detailSrc
+  ) {
+    return null
+  }
+
+  const galleryFile = publicFilePath(projectRoot, entry.gallerySrc)
+  const detailFile = publicFilePath(projectRoot, entry.detailSrc)
+  const [galleryMatches, detailMatches] = await Promise.all([
+    fileMatchesHash(galleryFile, entry.galleryHash),
+    fileMatchesHash(detailFile, entry.detailHash)
+  ])
+  if (!galleryMatches || !detailMatches) return null
+
+  const [galleryBytes, detailBytes] = await Promise.all([
+    readFile(galleryFile),
+    readFile(detailFile)
+  ])
+  const [gallery, detail] = await Promise.all([
+    publishMediaVariant(collection, page.id, 'gallery', galleryBytes),
+    publishMediaVariant(collection, page.id, 'detail', detailBytes)
+  ])
+  if (gallery.hash !== entry.galleryHash || detail.hash !== entry.detailHash) {
+    throw new Error(`Legacy generated media hash changed for ${page.id}`)
   }
 
   return {
-    gallerySrc: entry.gallerySrc,
-    detailSrc: entry.detailSrc,
-    width: entry.width,
-    height: entry.height,
-    sourceHash: entry.sourceHash,
-    galleryHash: entry.galleryHash,
-    detailHash: entry.detailHash,
+    pipelineVersion: MEDIA_PIPELINE_VERSION,
+    lastEditedTime: entry.lastEditedTime,
     imageBlockId: entry.imageBlockId,
     additionalImageCount: entry.additionalImageCount,
+    sourceHash: entry.sourceHash,
+    galleryHash: gallery.hash,
+    detailHash: detail.hash,
+    galleryKey: gallery.key,
+    detailKey: detail.key,
+    gallerySrc: gallery.url,
+    detailSrc: detail.url,
+    width: entry.width,
+    height: entry.height,
     caption: entry.caption
   }
 }
@@ -882,7 +939,6 @@ function downloadLabel(value: string) {
 
 async function processImage(
   page: PageObjectResponse,
-  stageRoot: string,
   options: {
     readonly collection: 'scenarios' | 'sources'
     readonly required: boolean
@@ -928,10 +984,6 @@ async function processImage(
     selectedImage ? imageUrl(selectedImage) : options.fallback!.url
   )
   const sourceHash = sha256(input)
-  const { gallerySrc, detailSrc } = generatedMediaPublicPaths(
-    options.collection,
-    page.id
-  )
 
   const [gallery, detail] = await Promise.all([
     sharp(input)
@@ -946,22 +998,21 @@ async function processImage(
       .toBuffer({ resolveWithObject: true })
   ])
 
-  const galleryFile = publicFilePath(stageRoot, gallerySrc)
-  const detailFile = publicFilePath(stageRoot, detailSrc)
-  await mkdir(dirname(galleryFile), { recursive: true })
-  await Promise.all([
-    writeFile(galleryFile, gallery.data),
-    writeFile(detailFile, detail.data)
+  const [publishedGallery, publishedDetail] = await Promise.all([
+    publishMediaVariant(options.collection, page.id, 'gallery', gallery.data),
+    publishMediaVariant(options.collection, page.id, 'detail', detail.data)
   ])
 
   return {
-    gallerySrc,
-    detailSrc,
+    galleryKey: publishedGallery.key,
+    gallerySrc: publishedGallery.url,
+    detailKey: publishedDetail.key,
+    detailSrc: publishedDetail.url,
     width: detail.info.width,
     height: detail.info.height,
     sourceHash,
-    galleryHash: sha256(gallery.data),
-    detailHash: sha256(detail.data),
+    galleryHash: publishedGallery.hash,
+    detailHash: publishedDetail.hash,
     imageBlockId: selectedImage?.id ?? options.fallback!.imageBlockId,
     additionalImageCount: Math.max(0, images.length - 1),
     caption: selectedImage
@@ -992,7 +1043,7 @@ async function writeJson(path: string, value: unknown) {
   await writeFile(path, `${JSON.stringify(value, null, 2)}\n`)
 }
 
-async function assertStageAssets(snapshot: ContentSnapshot, stageRoot: string) {
+function assertPublishedMedia(snapshot: ContentSnapshot) {
   const images = [
     ...snapshot.scenarios.map((scenario) => scenario.image),
     ...snapshot.sources.flatMap((source) =>
@@ -1000,10 +1051,9 @@ async function assertStageAssets(snapshot: ContentSnapshot, stageRoot: string) {
     )
   ]
   for (const image of images) {
-    for (const publicPath of [image.gallerySrc, image.detailSrc]) {
-      const assetPath = publicFilePath(stageRoot, publicPath)
-      if (!(await pathExists(assetPath))) {
-        throw new Error(`Generated asset is missing: ${publicPath}`)
+    for (const source of [image.gallerySrc, image.detailSrc]) {
+      if (!source.startsWith('https://')) {
+        throw new Error(`Generated media URL is not remote: ${source}`)
       }
     }
   }
@@ -1014,10 +1064,6 @@ async function replaceGeneratedOutputs(stageRoot: string) {
     {
       staged: join(stageRoot, 'content/snapshot'),
       target: snapshotTarget
-    },
-    {
-      staged: join(stageRoot, 'public/media/generated'),
-      target: mediaTarget
     },
     {
       staged: join(stageRoot, 'public/content/search-index.json'),
@@ -1036,6 +1082,12 @@ async function replaceGeneratedOutputs(stageRoot: string) {
       const backup = join(backupRoot, String(index))
       await rename(operation.target, backup)
       movedExisting.push({ backup, target: operation.target })
+    }
+
+    if (await pathExists(mediaTarget)) {
+      const backup = join(backupRoot, 'generated-media')
+      await rename(mediaTarget, backup)
+      movedExisting.push({ backup, target: mediaTarget })
     }
 
     for (const operation of operations) {
@@ -1119,6 +1171,8 @@ function toSyncEntry(page: PageObjectResponse, image: ImageResult): SyncEntry {
     sourceHash: image.sourceHash,
     galleryHash: image.galleryHash,
     detailHash: image.detailHash,
+    galleryKey: image.galleryKey,
+    detailKey: image.detailKey,
     gallerySrc: image.gallerySrc,
     detailSrc: image.detailSrc,
     width: image.width,
@@ -1131,6 +1185,10 @@ const notionToken = process.env.NOTION_TOKEN
 if (!notionToken) {
   throw new Error('NOTION_TOKEN is required to run pnpm content:sync')
 }
+
+const mediaStorage = createMediaStorage()
+let uploadedMediaObjects = 0
+let reusedMediaObjects = 0
 
 const notion = new Client({
   auth: notionToken,
@@ -1244,8 +1302,8 @@ async function main() {
           'scenarios'
         )
         const result = reusableEntry
-          ? await reuseImage(reusableEntry, stageRoot)
-          : await processImage(row.page, stageRoot, {
+          ? reusableEntry
+          : await processImage(row.page, {
               collection: 'scenarios',
               required: true,
               fallback: getMissingImageFallback(row, source.title)
@@ -1278,8 +1336,8 @@ async function main() {
           'sources'
         )
         const result = reusableEntry
-          ? await reuseImage(reusableEntry, stageRoot)
-          : await processImage(source.page, stageRoot, {
+          ? reusableEntry
+          : await processImage(source.page, {
               collection: 'sources',
               required: false
             })
@@ -1378,7 +1436,7 @@ async function main() {
       riskFamilies,
       concepts
     })
-    await assertStageAssets(snapshot, stageRoot)
+    assertPublishedMedia(snapshot)
 
     const fixtureScenarioIds = [...FEATURED_SCENARIO_IDS]
 
@@ -1427,6 +1485,9 @@ async function main() {
     await replaceGeneratedOutputs(stageRoot)
     console.log(
       `Synced ${snapshot.scenarios.length} scenarios, ${snapshot.sources.length} sources, ${snapshot.riskFamilies.length} risk families, and ${snapshot.concepts.length} concepts.`
+    )
+    console.log(
+      `Media storage: ${uploadedMediaObjects} uploaded, ${reusedMediaObjects} already present.`
     )
   } finally {
     await rm(stageRoot, { force: true, recursive: true })
