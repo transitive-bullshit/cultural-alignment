@@ -5,6 +5,14 @@
 - no semicolons
 - oxfmt for formatting (`pnpm fix:format`)
 - oxlint for linting (`pnpm fix:lint`)
+- let display text wrap within its grid or box geometry; reserve character-based width measures (`ch`/`em`) for deliberate prose reading lengths
+
+## Testing
+
+- browser-test critical cross-layer journeys through URLs, state, landmarks, and stable data hooks
+- unit-test complex math, ranking, normalization, validation, parsing, and serialization
+- keep editorial copy and synchronized titles, slugs, counts, and full outputs out of test expectations; derive content invariants from current inputs
+- keep rendered HTML prose out of assertions
 
 <!-- BEGIN:nextjs-agent-rules -->
 

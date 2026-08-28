@@ -51,7 +51,6 @@
 }
 
 .introduction h1 {
-  max-width: 10ch;
   margin: 0;
   font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
   font-size: clamp(70px, 10.5vw, 154px);

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+import { SiteWordmark } from '@/components/site-wordmark'
 import contentManifest from '@/content/snapshot/manifest.json'
 import { notionSourceUrl, repositoryUrl, xProfileUrl } from '@/lib/site'
 
@@ -24,9 +25,7 @@ export function SiteFooter() {
   return (
     <footer className={styles.footer} data-site-footer-root>
       <div className={styles.lead}>
-        <Link className={styles.wordmark} href='/'>
-          Cultural Alignment
-        </Link>
+        <SiteWordmark className={styles.wordmark} />
         <p>
           Familiar stories for unfamiliar AI problems. An open-source archive of
           cultural analogies for AI safety and alignment.
@@ -55,7 +54,7 @@ export function SiteFooter() {
             ))}
             <li>
               <a href={notionSourceUrl} target='_blank' rel='noreferrer'>
-                Public source database <span aria-hidden='true'>↗</span>
+                Source notion database <span aria-hidden='true'>↗</span>
               </a>
             </li>
           </ul>
@@ -70,7 +69,7 @@ export function SiteFooter() {
         </a>
         <a href={xProfileUrl} target='_blank' rel='noreferrer'>
           <XIcon />
-          <span>X / @transitive_bs</span>
+          <span>@transitive_bs</span>
           <span aria-hidden='true'>↗</span>
         </a>
       </nav>

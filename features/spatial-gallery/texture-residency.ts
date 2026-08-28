@@ -1,27 +1,5 @@
 import type { ProjectedSurfaceSlot } from '@/lib/spatial/field'
 
-export function collectNearbyItemIndices(
-  slots: readonly ProjectedSurfaceSlot[],
-  xPositions: ArrayLike<number>,
-  visibilityLimit: number,
-  target: Set<number>,
-  velocityX = 0,
-  lookaheadSeconds = 0
-) {
-  target.clear()
-  for (const itemIndex of rankNearbyItemIndices(
-    slots,
-    xPositions,
-    visibilityLimit,
-    velocityX,
-    lookaheadSeconds
-  )) {
-    target.add(itemIndex)
-  }
-
-  return target
-}
-
 export function rankNearbyItemIndices(
   slots: readonly ProjectedSurfaceSlot[],
   xPositions: ArrayLike<number>,
@@ -70,7 +48,7 @@ export function rankNearbyItemIndices(
     .map(([itemIndex]) => itemIndex)
 }
 
-export type TextureAdmissionPlan = Readonly<{
+type TextureAdmissionPlan = Readonly<{
   admit: boolean
   evictItemIndex: number | null
 }>

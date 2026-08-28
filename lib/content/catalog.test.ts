@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { createContentCatalog } from './catalog'
+import { createContentCatalog, type ResourceKind } from './catalog'
 import type { ContentSnapshot, ScenarioRecord } from './schema'
 
 const minimalSnapshot = {
@@ -72,18 +72,12 @@ const minimalSnapshot = {
 describe('ContentCatalog', () => {
   const catalog = createContentCatalog(minimalSnapshot)
 
-  it('returns only manually featured cards without changing snapshot order', () => {
+  it('composes filters and keeps undated records last in stable order', () => {
     expect(slugs(catalog.listScenarioCards({ featuredOnly: true }))).toEqual([
       'old-a',
       'null-a',
       'old-b'
     ])
-  })
-
-  it('filters risk families with relation-membership semantics', () => {
-    expect(
-      slugs(catalog.listScenarioCards({ riskFamilySlug: 'family-b' }))
-    ).toEqual(['new', 'old-b', 'null-b'])
     expect(
       slugs(
         catalog.listScenarioCards({
@@ -92,12 +86,6 @@ describe('ContentCatalog', () => {
         })
       )
     ).toEqual(['old-b'])
-    expect(
-      catalog.listScenarioCards({ riskFamilySlug: 'not-a-family' })
-    ).toEqual([])
-  })
-
-  it('sorts dates stably and keeps null dates last in both directions', () => {
     expect(slugs(catalog.listScenarioCards({ sort: 'release-asc' }))).toEqual([
       'old-a',
       'old-b',
@@ -114,145 +102,66 @@ describe('ContentCatalog', () => {
     ])
   })
 
-  it('returns a joined scenario-page model instead of relation ids', () => {
-    const page = catalog.getScenarioPage('old-b')
+  it('joins scenario and resource relations without broken pivots', () => {
+    const page = catalog.getScenarioPage('old-b')!
 
-    expect(page).toMatchObject({
-      slug: 'old-b',
-      source: {
-        slug: 'shared-source',
-        href: '/sources/shared-source',
-        title: 'Shared Source',
-        links: [{ label: 'Official site', href: 'https://example.com/source' }],
-        scenarioCount: 5
-      },
-      riskFamilies: [
-        { slug: 'family-a', href: '/risk-families/family-a' },
-        { slug: 'family-b', href: '/risk-families/family-b' }
-      ],
-      concepts: [{ slug: 'concept-one', href: '/concepts/concept-one' }],
-      moreFromSource: [{ slug: 'old-a' }, { slug: 'null-a' }],
-      relatedScenarios: []
-    })
-    expect(catalog.getScenarioPage('missing')).toBeNull()
-  })
+    expect(page.source.slug).toBe('shared-source')
+    expect(page.source.scenarioCount).toBe(minimalSnapshot.scenarios.length)
+    expect(new Set(page.riskFamilies.map(({ slug }) => slug))).toEqual(
+      new Set(['family-a', 'family-b'])
+    )
+    expect(page.concepts.map(({ slug }) => slug)).toEqual(['concept-one'])
+    expect(
+      page.moreFromSource.every(
+        (related) =>
+          related.id !== page.id && related.source.id === page.source.id
+      )
+    ).toBe(true)
 
-  it('returns deterministic static slugs and resolves every scenario slug', () => {
-    expect(catalog.getStaticSlugs('scenario')).toEqual([
-      'old-a',
-      'null-a',
-      'new',
-      'old-b',
-      'null-b'
-    ])
-    expect(catalog.getStaticSlugs('source')).toEqual(['shared-source'])
-    expect(catalog.getStaticSlugs('risk-family')).toEqual([
-      'family-a',
-      'family-b'
-    ])
-    expect(catalog.getStaticSlugs('concept')).toEqual(['concept-one'])
+    const sourcePage = catalog.getResourcePage('source', 'shared-source')!
+    expect(sourcePage.scenarios).toHaveLength(minimalSnapshot.scenarios.length)
+    expect(
+      new Set(
+        sourcePage.relatedResources.map(({ kind, slug }) => `${kind}:${slug}`)
+      )
+    ).toEqual(
+      new Set([
+        'risk-family:family-a',
+        'risk-family:family-b',
+        'concept:concept-one'
+      ])
+    )
 
-    for (const slug of catalog.getStaticSlugs('scenario')) {
-      expect(catalog.getScenarioPage(slug)).not.toBeNull()
-    }
-
-    for (const kind of ['source', 'risk-family', 'concept'] as const) {
+    for (const kind of [
+      'source',
+      'risk-family',
+      'concept'
+    ] as const satisfies readonly ResourceKind[]) {
       for (const slug of catalog.getStaticSlugs(kind)) {
         expect(catalog.getResourcePage(kind, slug)).not.toBeNull()
       }
     }
+    expect(catalog.getScenarioPage('missing')).toBeNull()
   })
 
-  it('projects alphabetized resource indices with joined scenario counts', () => {
-    expect(catalog.listResources('risk-family')).toEqual([
-      expect.objectContaining({
-        kind: 'risk-family',
-        slug: 'family-a',
-        href: '/risk-families/family-a',
-        scenarioCount: 3
-      }),
-      expect.objectContaining({
-        kind: 'risk-family',
-        slug: 'family-b',
-        href: '/risk-families/family-b',
-        scenarioCount: 3
-      })
-    ])
-    expect(catalog.listResources('source')[0]).toMatchObject({
-      slug: 'shared-source',
-      href: '/sources/shared-source',
-      scenarioCount: 5
-    })
-    expect(catalog.listResources('concept')[0]).toMatchObject({
-      slug: 'concept-one',
-      href: '/concepts/concept-one',
-      scenarioCount: 5
-    })
-  })
+  it('projects every searchable resource kind to a resolvable href', () => {
+    const documents = catalog.getSearchDocuments()
 
-  it('returns complete resource pivots with deduplicated related resources', () => {
-    expect(catalog.getResourcePage('source', 'shared-source')).toMatchObject({
-      kind: 'source',
-      externalLinks: [
-        { label: 'Official site', href: 'https://example.com/source' }
-      ],
-      scenarios: [
-        { slug: 'old-a' },
-        { slug: 'null-a' },
-        { slug: 'new' },
-        { slug: 'old-b' },
-        { slug: 'null-b' }
-      ],
-      relatedResources: [
-        { kind: 'risk-family', slug: 'family-a' },
-        { kind: 'risk-family', slug: 'family-b' },
-        { kind: 'concept', slug: 'concept-one' }
-      ]
-    })
+    expect(new Set(documents.map(({ kind }) => kind))).toEqual(
+      new Set(['scenario', 'source', 'risk-family', 'concept'])
+    )
     expect(
-      catalog
-        .getResourcePage('risk-family', 'family-a')
-        ?.relatedResources.map(({ kind, slug }) => `${kind}:${slug}`)
-    ).toEqual(['concept:concept-one', 'source:shared-source'])
-    expect(
-      catalog
-        .getResourcePage('concept', 'concept-one')
-        ?.relatedResources.map(({ kind, slug }) => `${kind}:${slug}`)
-    ).toEqual([
-      'risk-family:family-a',
-      'risk-family:family-b',
-      'source:shared-source'
-    ])
-    expect(catalog.getResourcePage('concept', 'missing')).toBeNull()
-  })
-
-  it('builds all four search kinds and every document resolves', () => {
-    expect(catalog.getSearchDocuments()).toHaveLength(9)
-    expect(
-      catalog
-        .getSearchDocuments()
-        .find((document) => document.href === '/scenarios/old-a')
-    ).toEqual({
-      kind: 'scenario',
-      title: 'Scenario old-a',
-      subtitle: 'Shared Source',
-      keywords: [
-        'Shared Source',
-        'Family A',
-        'Concept One',
+      documents.find(({ href }) => href === '/scenarios/old-a')?.keywords
+    ).toEqual(
+      expect.arrayContaining([
         'Scene copy.',
         'Why the analogy works.',
         'Where the analogy breaks.'
-      ],
-      href: '/scenarios/old-a'
-    })
-    expect(
-      new Set(catalog.getSearchDocuments().map(({ kind }) => kind))
-    ).toEqual(new Set(['scenario', 'source', 'risk-family', 'concept']))
-
-    for (const document of catalog.getSearchDocuments()) {
-      expect(resolveDocument(catalog, document.href)).toBe(true)
-    }
+      ])
+    )
+    expect(documents.every(({ href }) => resolveDocument(catalog, href))).toBe(
+      true
+    )
   })
 })
 

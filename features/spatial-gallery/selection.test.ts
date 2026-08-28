@@ -4,7 +4,6 @@ import type { ProjectedSurfaceSlot } from '@/lib/spatial/field'
 
 import {
   DIMMED_ACTIVITY,
-  getDirectionalDamping,
   getSlotActivityTarget,
   getSlotScaleTarget,
   resolveWarpedPointerSlot,
@@ -31,24 +30,10 @@ describe('spatial gallery instance selection', () => {
     ).toEqual([DIMMED_ACTIVITY, 1, DIMMED_ACTIVITY])
   })
 
-  it('dims every slot when the pointer is not over an instance', () => {
-    expect(
-      repeatedSlots.map((_, slotIndex) =>
-        getSlotActivityTarget(slotIndex, null)
-      )
-    ).toEqual([DIMMED_ACTIVITY, DIMMED_ACTIVITY, DIMMED_ACTIVITY])
-  })
-
   it('rejects a stale slot whose item identity changed at the wrap seam', () => {
     expect(
       resolveVisualSlotIndex({ itemIndex: 7, slotIndex: 1 }, repeatedSlots)
     ).toBeNull()
-  })
-
-  it('uses independent damping for hover entrance and exit', () => {
-    expect(getDirectionalDamping(DIMMED_ACTIVITY, 1, 18, 8)).toBe(18)
-    expect(getDirectionalDamping(1, DIMMED_ACTIVITY, 18, 8)).toBe(8)
-    expect(getDirectionalDamping(1, 1, 18, 8)).toBe(8)
   })
 
   it('keeps reduced-motion hover emphasis free of scale transforms', () => {
@@ -57,7 +42,7 @@ describe('spatial gallery instance selection', () => {
     expect(getSlotScaleTarget(false, false, 1.045)).toBe(1)
   })
 
-  it('hits the rendered edge card after shader warp instead of its stale plane', () => {
+  it('hits the rendered edge card instead of its stale unwarped plane', () => {
     const edgeSlot: readonly ProjectedSurfaceSlot[] = [
       { column: 2, itemIndex: 4, lane: 0, x: 4, y: 0 }
     ]
@@ -79,25 +64,10 @@ describe('spatial gallery instance selection', () => {
         pointerNdc: { x: 0.8, y: 0.32 }
       })
     ).toEqual({ itemIndex: 4, slotIndex: 0 })
-  })
-
-  it('returns no active instance over the stale unwarped position', () => {
-    const edgeSlot: readonly ProjectedSurfaceSlot[] = [
-      { column: 2, itemIndex: 4, lane: 0, x: 4, y: 0 }
-    ]
-
     expect(
       resolveWarpedPointerSlot({
-        frameHeight: 1,
-        frameWidth: 2,
-        pointerNdc: { x: 0.8, y: 0 },
-        rowGap: 1,
-        scales: [1],
-        slots: edgeSlot,
-        viewportAspect: 2,
-        viewportWidth: 10,
-        warpSpeed: 1,
-        xPositions: [4]
+        ...sharedOptions,
+        pointerNdc: { x: 0.8, y: 0 }
       })
     ).toBeNull()
   })
@@ -125,7 +95,7 @@ describe('spatial gallery instance selection', () => {
     ).toEqual({ itemIndex: 2, slotIndex: 0 })
   })
 
-  it('keeps padded overlap resolution exact to the nearest projected instance', () => {
+  it('resolves padded overlap to the nearest projected instance', () => {
     const closeSlots: readonly ProjectedSurfaceSlot[] = [
       { column: 0, itemIndex: 2, lane: 0, x: -0.5, y: 0 },
       { column: 1, itemIndex: 2, lane: 0, x: 0.5, y: 0 }

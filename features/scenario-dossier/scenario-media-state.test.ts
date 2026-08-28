@@ -1,16 +1,8 @@
 import { describe, expect, it } from 'vitest'
 
-import {
-  clampMediaTime,
-  formatMediaTime,
-  MEDIA_SEEK_STEP_SECONDS
-} from './scenario-media-state'
+import { clampMediaTime, formatMediaTime } from './scenario-media-state'
 
 describe('scenario media state', () => {
-  it('uses a conventional ten-second keyboard seek step', () => {
-    expect(MEDIA_SEEK_STEP_SECONDS).toBe(10)
-  })
-
   it('clamps seeks to the playable range', () => {
     expect(clampMediaTime(-5, 120)).toBe(0)
     expect(clampMediaTime(35, 120)).toBe(35)

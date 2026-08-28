@@ -43,6 +43,7 @@ export function BrowseToolbar({
     >
       <ToggleGroup
         className={styles.filterList}
+        data-scenario-family-filters
         type='single'
         value={params.family ?? 'all'}
         variant='outline'

@@ -1,9 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import {
-  discoverScenarios,
-  SCENARIO_DISCOVERY_LIMIT
-} from './scenario-discovery'
+import { discoverScenarios } from './scenario-discovery'
 
 type TestScenario = {
   readonly id: string
@@ -14,7 +11,7 @@ type TestScenario = {
 }
 
 describe('scenario discovery', () => {
-  it('takes the first two other scenarios from the current source', () => {
+  it('takes the first three other scenarios from the current source', () => {
     const current = scenario('current', 'source-a', ['risk-a'], ['concept-a'])
     const first = scenario('first', 'source-a', [], [])
     const second = scenario('second', 'source-a', [], [])
@@ -27,10 +24,10 @@ describe('scenario discovery', () => {
       third
     ])
 
-    expect(SCENARIO_DISCOVERY_LIMIT).toBe(2)
     expect(discovery.moreFromSource.map(({ slug }) => slug)).toEqual([
       'first',
-      'second'
+      'second',
+      'third'
     ])
   })
 
@@ -83,7 +80,7 @@ describe('scenario discovery', () => {
 
     expect(
       discovery.relatedScenarios.map(({ scenario }) => scenario.slug)
-    ).toEqual(['both', 'concepts-only'])
+    ).toEqual(['both', 'concepts-only', 'risk-only'])
     expect(discovery.relatedScenarios[0]).toMatchObject({
       sharedRiskFamilyIds: ['risk-a'],
       sharedConceptIds: ['concept-a']

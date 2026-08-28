@@ -6,10 +6,13 @@ import { ScrambleLink } from '@/components/motion/scramble-link'
 import { SiteHeader } from '@/components/site-header'
 import { SpoilerWarning } from '@/features/spoiler/spoiler-warning'
 import type { ScenarioPage, TaxonomyLink } from '@/lib/content/catalog'
+import { siteUrl } from '@/lib/site'
 
+import { CopyScenarioMarkdown } from './copy-scenario-markdown'
 import { ScenarioMedia } from './scenario-media'
 import { ScenarioDiscovery } from './scenario-discovery'
 import styles from './scenario-dossier.module.css'
+import { formatScenarioAsMarkdown } from './scenario-markdown'
 import { hasDistinctEpisodeLabel } from './source-meta'
 
 /**
@@ -18,7 +21,7 @@ import { hasDistinctEpisodeLabel } from './source-meta'
  */
 export function ScenarioDossier({ scenario }: { scenario: ScenarioPage }) {
   return (
-    <main className={`${styles.page} experience-scope`}>
+    <main className={`${styles.page} experience-scope`} data-scenario-dossier>
       <SiteHeader
         context='Familiar stories for unfamiliar AI problems.'
         galleryTransitionTypes={['scenario-back']}
@@ -47,6 +50,11 @@ export function ScenarioDossier({ scenario }: { scenario: ScenarioPage }) {
             <div className={styles.titleBlock}>
               <h1>{scenario.title}</h1>
               <SourceMeta scenario={scenario} />
+              <div className={styles.copyScenarioAction}>
+                <CopyScenarioMarkdown
+                  markdown={formatScenarioAsMarkdown(scenario, siteUrl)}
+                />
+              </div>
             </div>
           </div>
         </section>

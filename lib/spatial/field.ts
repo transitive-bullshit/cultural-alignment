@@ -8,26 +8,6 @@ export type FieldMotion = Readonly<{
   velocity: Point2D
 }>
 
-export type ToroidalGridOptions = Readonly<{
-  columns: number
-  columnGap: number
-  rowGap: number
-  stagger?: number
-}>
-
-export type HorizontalLaneLayoutOptions = Readonly<{
-  lanes: number
-  columnGap: number
-  rowGap: number
-}>
-
-export type RepeatRangeOptions = Readonly<{
-  span: number
-  viewportWidth: number
-  itemWidth: number
-  overscan?: number
-}>
-
 export type ProjectedSurfaceLayoutOptions = Readonly<{
   lanes: number
   columnGap: number
@@ -55,94 +35,6 @@ export function wrapCentered(value: number, span: number) {
 
 export function toroidalDelta(from: number, to: number, span: number) {
   return wrapCentered(to - from, span)
-}
-
-export function wrapPoint(point: Point2D, span: Point2D): Point2D {
-  return {
-    x: wrapCentered(point.x, span.x),
-    y: wrapCentered(point.y, span.y)
-  }
-}
-
-export function createToroidalGrid(
-  count: number,
-  options: ToroidalGridOptions
-) {
-  if (!Number.isInteger(count) || count < 0) {
-    throw new RangeError('count must be a non-negative integer')
-  }
-
-  if (!Number.isInteger(options.columns) || options.columns <= 0) {
-    throw new RangeError('columns must be a positive integer')
-  }
-
-  assertPositive(options.columnGap, 'columnGap')
-  assertPositive(options.rowGap, 'rowGap')
-
-  const rows = Math.max(1, Math.ceil(count / options.columns))
-  const width = options.columns * options.columnGap
-  const height = rows * options.rowGap
-  const stagger = options.stagger ?? 0
-
-  assertFinite(stagger, 'stagger')
-
-  const points = Array.from({ length: count }, (_, index) => {
-    const row = Math.floor(index / options.columns)
-    const column = index % options.columns
-
-    return {
-      x:
-        (column - (options.columns - 1) / 2) * options.columnGap +
-        (row % 2 === 0 ? 0 : stagger),
-      y: (row - (rows - 1) / 2) * options.rowGap
-    }
-  })
-
-  return { points, span: { x: width, y: height } } as const
-}
-
-export function createHorizontalLaneLayout(
-  count: number,
-  options: HorizontalLaneLayoutOptions
-) {
-  if (!Number.isInteger(count) || count < 0) {
-    throw new RangeError('count must be a non-negative integer')
-  }
-
-  if (!Number.isInteger(options.lanes) || options.lanes <= 0) {
-    throw new RangeError('lanes must be a positive integer')
-  }
-
-  assertPositive(options.columnGap, 'columnGap')
-  assertPositive(options.rowGap, 'rowGap')
-
-  const columns = Math.max(1, Math.ceil(count / options.lanes))
-  const span = columns * options.columnGap
-  const points = Array.from({ length: count }, (_, index) => {
-    const column = Math.floor(index / options.lanes)
-    const lane = index % options.lanes
-
-    return {
-      x: (column - (columns - 1) / 2) * options.columnGap,
-      y: ((options.lanes - 1) / 2 - lane) * options.rowGap
-    }
-  })
-
-  return { columns, points, span } as const
-}
-
-export function createRepeatIndices(options: RepeatRangeOptions) {
-  assertPositive(options.span, 'span')
-  assertPositive(options.viewportWidth, 'viewportWidth')
-  assertPositive(options.itemWidth, 'itemWidth')
-  const overscan = options.overscan ?? 0
-  assertNonNegative(overscan, 'overscan')
-
-  const fullExitDistance =
-    options.viewportWidth / 2 + options.itemWidth / 2 + overscan
-  const radius = Math.floor(fullExitDistance / options.span + 0.5) + 1
-
-  return Array.from({ length: radius * 2 + 1 }, (_, index) => index - radius)
 }
 
 export function createProjectedSurfaceLayout(

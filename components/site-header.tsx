@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { ScrambleLink } from '@/components/motion/scramble-link'
+import { SiteWordmark } from '@/components/site-wordmark'
 import { GlobalSearch } from '@/features/search/global-search'
 import { cn } from '@/lib/utils'
 
@@ -11,7 +11,6 @@ export type SiteHeaderProps = {
   readonly context?: string
   readonly galleryTransitionTypes?: string[]
   readonly inset?: boolean
-  readonly scrambleAlignment?: boolean
   readonly tagline?: boolean
 }
 
@@ -20,7 +19,6 @@ export function SiteHeader({
   context,
   galleryTransitionTypes,
   inset = false,
-  scrambleAlignment = false,
   tagline = false
 }: SiteHeaderProps) {
   return (
@@ -28,26 +26,7 @@ export function SiteHeader({
       className={cn(styles.header, className)}
       data-inset={inset || undefined}
     >
-      {scrambleAlignment ? (
-        <ScrambleLink
-          className={styles.wordmark}
-          href='/'
-          label='Cultural Alignment home'
-          prefix='Cultural '
-          duration={260}
-          delay={180}
-        >
-          Alignment
-        </ScrambleLink>
-      ) : (
-        <Link
-          className={styles.wordmark}
-          href='/'
-          aria-label='Cultural Alignment home'
-        >
-          Cultural Alignment
-        </Link>
-      )}
+      <SiteWordmark className={styles.wordmark} />
 
       <div className={styles.center}>
         {tagline ? (

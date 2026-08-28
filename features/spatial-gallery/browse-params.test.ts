@@ -10,23 +10,20 @@ const validFamilies = new Set(['misalignment', 'malicious-use'])
 describe('browse gallery URL state', () => {
   it('parses a valid single family', () => {
     expect(
-      parseBrowseGalleryParams(
-        { family: 'misalignment', sort: 'release-asc' },
-        validFamilies
-      )
+      parseBrowseGalleryParams({ family: 'misalignment' }, validFamilies)
     ).toEqual({ family: 'misalignment' })
   })
 
   it('falls back to all families for invalid input', () => {
     expect(
       parseBrowseGalleryParams(
-        { family: ['missing', 'misalignment'], sort: 'sideways' },
+        { family: ['missing', 'misalignment'] },
         validFamilies
       )
     ).toEqual({ family: null })
   })
 
-  it('builds stable filter URLs without obsolete sort state', () => {
+  it('builds stable filter URLs', () => {
     expect(createBrowseGalleryHref({ family: null })).toBe('/scenarios')
     expect(
       createBrowseGalleryHref({

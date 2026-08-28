@@ -1,13 +1,11 @@
 import type { ReactNode } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 
-import type {
-  GalleryScenario,
-  ScenarioPage,
-  TaxonomyLink
-} from '@/lib/content/catalog'
-import { focalPointToObjectPosition } from '@/lib/media/crop'
+import {
+  ScenarioCollection,
+  type ScenarioCollectionItem
+} from '@/features/scenario-collection/scenario-collection'
+import type { ScenarioPage } from '@/lib/content/catalog'
 
 import styles from './scenario-dossier.module.css'
 
@@ -41,13 +39,12 @@ export function ScenarioDiscovery({ scenario }: { scenario: ScenarioPage }) {
               </Link>
             }
           />
-          <ol className={styles.discoveryGrid}>
-            {scenario.moreFromSource.map((related, index) => (
-              <li key={related.id}>
-                <ScenarioCard scenario={related} index={index} />
-              </li>
-            ))}
-          </ol>
+          <ScenarioCollection
+            items={scenario.moreFromSource.map((related) => ({
+              scenario: related
+            }))}
+            layout='preview'
+          />
         </section>
       ) : null}
 
@@ -62,20 +59,19 @@ export function ScenarioDiscovery({ scenario }: { scenario: ScenarioPage }) {
             id={relatedScenariosHeadingId}
             description='Selected from other sources by shared risk families and AI safety concepts.'
           />
-          <ol className={styles.discoveryGrid}>
-            {scenario.relatedScenarios.map((related, index) => (
-              <li key={related.id}>
-                <ScenarioCard
-                  scenario={related}
-                  index={index}
-                  connections={{
-                    riskFamilies: related.sharedRiskFamilies,
-                    concepts: related.sharedConcepts
-                  }}
-                />
-              </li>
-            ))}
-          </ol>
+          <ScenarioCollection
+            items={scenario.relatedScenarios.map(
+              (related): ScenarioCollectionItem => ({
+                scenario: related,
+                connections: {
+                  riskFamilies: related.sharedRiskFamilies,
+                  concepts: related.sharedConcepts
+                }
+              })
+            )}
+            imageTreatment='muted'
+            layout='preview'
+          />
         </section>
       ) : null}
     </div>
@@ -107,83 +103,4 @@ function DiscoveryHeader({
       {action}
     </header>
   )
-}
-
-type ScenarioConnections = Readonly<{
-  concepts: readonly TaxonomyLink[]
-  riskFamilies: readonly TaxonomyLink[]
-}>
-
-function ScenarioCard({
-  connections,
-  index,
-  scenario
-}: {
-  readonly connections?: ScenarioConnections
-  readonly index: number
-  readonly scenario: GalleryScenario
-}) {
-  const year = scenario.releaseDate?.slice(0, 4) ?? 'Date unknown'
-
-  return (
-    <Link
-      className={styles.discoveryCard}
-      href={scenario.href}
-      aria-label={`View scenario: ${scenario.title}`}
-    >
-      <figure>
-        <Image
-          src={scenario.image.gallerySrc}
-          alt={scenario.image.alt}
-          fill
-          sizes='(max-width: 620px) 100vw, (max-width: 1100px) 45vw, 36vw'
-          style={{
-            objectFit: 'cover',
-            objectPosition: focalPointToObjectPosition(
-              scenario.image.focalPoint
-            )
-          }}
-        />
-      </figure>
-      <div className={styles.discoveryCardBody}>
-        <p className={styles.discoveryCardMeta}>
-          <span>{String(index + 1).padStart(2, '0')}</span>
-          <span>{scenario.source.title}</span>
-          <span>{year}</span>
-        </p>
-        <h3>{scenario.title}</h3>
-        {connections ? <ConnectionSummary connections={connections} /> : null}
-        <span className={styles.discoveryOpen} aria-hidden='true'>
-          View scenario ↗
-        </span>
-      </div>
-    </Link>
-  )
-}
-
-function ConnectionSummary({
-  connections
-}: {
-  readonly connections: ScenarioConnections
-}) {
-  return (
-    <dl className={styles.connectionSummary}>
-      {connections.riskFamilies.length > 0 ? (
-        <div>
-          <dt>Risk</dt>
-          <dd>{formatTaxonomyTitles(connections.riskFamilies)}</dd>
-        </div>
-      ) : null}
-      {connections.concepts.length > 0 ? (
-        <div>
-          <dt>Concept</dt>
-          <dd>{formatTaxonomyTitles(connections.concepts)}</dd>
-        </div>
-      ) : null}
-    </dl>
-  )
-}
-
-function formatTaxonomyTitles(items: readonly TaxonomyLink[]) {
-  return items.map(({ title }) => title).join(' · ')
 }

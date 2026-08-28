@@ -4,8 +4,7 @@ import { describe, expect, it } from 'vitest'
 import {
   allocateStableSlugs,
   generatedMediaFilePath,
-  richTextToMarkdown,
-  sha256
+  richTextToMarkdown
 } from './sync-utils'
 
 describe('generatedMediaFilePath', () => {
@@ -56,14 +55,6 @@ describe('richTextToMarkdown', () => {
 
     expect(richTextToMarkdown(items)).toBe(
       'Literal \\*text\\* **bold**[ docs](<https://example.com/a_(b)%3E>) ``a`b``'
-    )
-  })
-})
-
-describe('sha256', () => {
-  it('hashes generated outputs deterministically', () => {
-    expect(sha256(new TextEncoder().encode('abc'))).toBe(
-      'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad'
     )
   })
 })

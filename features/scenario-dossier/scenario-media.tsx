@@ -8,6 +8,7 @@ import {
   useState,
   type ChangeEvent,
   type CSSProperties,
+  type FocusEvent as ReactFocusEvent,
   type KeyboardEvent,
   type PointerEvent as ReactPointerEvent
 } from 'react'
@@ -24,6 +25,7 @@ import styles from './scenario-dossier.module.css'
 const YOUTUBE_IFRAME_API_ID = 'youtube-iframe-api'
 const YOUTUBE_IFRAME_API_SRC = 'https://www.youtube.com/iframe_api'
 const PROGRESS_POLL_INTERVAL_MS = 250
+const CHROME_IDLE_DELAY_MS = 2_800
 
 type YouTubePlayer = {
   readonly destroy: () => void
@@ -124,18 +126,25 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
   const [hasActivatedVideo, setHasActivatedVideo] = useState(false)
   const [isShowingStill, setIsShowingStill] = useState(true)
   const [isPlaying, setIsPlaying] = useState(false)
+  const [isChromeVisible, setIsChromeVisible] = useState(true)
   const clipStart = video?.startSeconds ?? 0
   const [currentTime, setCurrentTime] = useState(clipStart)
   const [duration, setDuration] = useState(0)
   const frameRef = useRef<HTMLDivElement>(null)
+  const mediaToggleRef = useRef<HTMLButtonElement>(null)
   const iframeRef = useRef<HTMLIFrameElement>(null)
   const playerRef = useRef<YouTubePlayer | null>(null)
   const progressTimerRef = useRef<ReturnType<typeof setInterval> | null>(null)
+  const chromeHideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const currentTimeRef = useRef(clipStart)
   const durationRef = useRef(0)
   const playbackIntentRef = useRef(false)
+  const isPlayingRef = useRef(false)
   const showingStillRef = useRef(true)
   const isScrubbingRef = useRef(false)
+  const fineHoverRef = useRef(false)
+  const pointerHoverPinnedRef = useRef(false)
+  const chromeControlFocusedRef = useRef(false)
   const crosshairRef = useRef<HTMLSpanElement>(null)
   const floatingLabelRef = useRef<HTMLSpanElement>(null)
   const cursorFrameRef = useRef<number | null>(null)
@@ -154,6 +163,52 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
     : isShowingStill
       ? 'Play clip'
       : 'Resume clip'
+
+  const clearChromeHideTimer = useCallback(() => {
+    if (chromeHideTimerRef.current === null) return
+
+    clearTimeout(chromeHideTimerRef.current)
+    chromeHideTimerRef.current = null
+  }, [])
+
+  const showChrome = useCallback(() => {
+    clearChromeHideTimer()
+    setIsChromeVisible(true)
+  }, [clearChromeHideTimer])
+
+  const scheduleChromeHide = useCallback(() => {
+    clearChromeHideTimer()
+
+    if (
+      !isPlayingRef.current ||
+      showingStillRef.current ||
+      pointerHoverPinnedRef.current ||
+      chromeControlFocusedRef.current ||
+      isScrubbingRef.current
+    ) {
+      setIsChromeVisible(true)
+      return
+    }
+
+    chromeHideTimerRef.current = setTimeout(() => {
+      chromeHideTimerRef.current = null
+
+      if (
+        isPlayingRef.current &&
+        !showingStillRef.current &&
+        !pointerHoverPinnedRef.current &&
+        !chromeControlFocusedRef.current &&
+        !isScrubbingRef.current
+      ) {
+        setIsChromeVisible(false)
+      }
+    }, CHROME_IDLE_DELAY_MS)
+  }, [clearChromeHideTimer])
+
+  const setPlaybackState = useCallback((playing: boolean) => {
+    isPlayingRef.current = playing
+    setIsPlaying(playing)
+  }, [])
 
   const syncProgress = useCallback((player: YouTubePlayer) => {
     if (showingStillRef.current || isScrubbingRef.current) return
@@ -192,7 +247,12 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
     showingStillRef.current = false
     if (!hasActivatedVideo) setHasActivatedVideo(true)
     setIsShowingStill(false)
-    setIsPlaying(shouldPlay)
+    setPlaybackState(shouldPlay)
+    showChrome()
+
+    if (shouldPlay) {
+      scheduleChromeHide()
+    }
 
     const player = playerRef.current
     if (!player) return
@@ -214,8 +274,9 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
     showingStillRef.current = true
     currentTimeRef.current = clipStart
     setCurrentTime(clipStart)
-    setIsPlaying(false)
+    setPlaybackState(false)
     setIsShowingStill(true)
+    showChrome()
     pointerOverForegroundControlRef.current = false
     syncCursorVisibility()
   }
@@ -239,12 +300,14 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
 
   const startScrubbing = () => {
     isScrubbingRef.current = true
+    showChrome()
     enterForegroundControl()
   }
 
   const finishScrubbing = () => {
     isScrubbingRef.current = false
     playerRef.current?.seekTo(currentTimeRef.current, true)
+    scheduleChromeHide()
   }
 
   const syncCursorVisibility = () => {
@@ -262,12 +325,14 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
 
   const enterForegroundControl = () => {
     pointerOverForegroundControlRef.current = true
+    showChrome()
     syncCursorVisibility()
   }
 
   const leaveForegroundControl = () => {
     pointerOverForegroundControlRef.current = false
     syncCursorVisibility()
+    scheduleChromeHide()
   }
 
   const paintCursor = () => {
@@ -324,15 +389,75 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
     syncCursorVisibility()
   }
 
+  const enterMediaFrame = (event: ReactPointerEvent<HTMLDivElement>) => {
+    pointerHoverPinnedRef.current =
+      fineHoverRef.current && event.pointerType === 'mouse'
+    showChrome()
+
+    if (!pointerHoverPinnedRef.current) scheduleChromeHide()
+    showCursor(event)
+  }
+
+  const moveWithinMediaFrame = (event: ReactPointerEvent<HTMLDivElement>) => {
+    showChrome()
+
+    if (!pointerHoverPinnedRef.current) scheduleChromeHide()
+    queueCursorPosition(event)
+  }
+
+  const leaveMediaFrame = () => {
+    pointerHoverPinnedRef.current = false
+    hideCursor()
+    scheduleChromeHide()
+  }
+
+  const focusMediaControl = (event: ReactFocusEvent<HTMLDivElement>) => {
+    const focusedTarget = event.target as EventTarget
+
+    chromeControlFocusedRef.current = focusedTarget !== mediaToggleRef.current
+    showChrome()
+
+    if (!chromeControlFocusedRef.current) scheduleChromeHide()
+  }
+
+  const blurMediaControl = (event: ReactFocusEvent<HTMLDivElement>) => {
+    const nextTarget = event.relatedTarget
+    const frame = frameRef.current
+
+    chromeControlFocusedRef.current = Boolean(
+      frame &&
+      nextTarget instanceof Node &&
+      frame.contains(nextTarget) &&
+      nextTarget !== mediaToggleRef.current
+    )
+
+    if (!chromeControlFocusedRef.current) scheduleChromeHide()
+  }
+
+  const handleMediaKeyActivity = () => {
+    showChrome()
+    scheduleChromeHide()
+  }
+
+  const handleMediaPointerActivity = () => {
+    showChrome()
+    scheduleChromeHide()
+  }
+
   useEffect(() => {
     const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)')
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
 
     const syncCustomCursor = () => {
+      fineHoverRef.current = finePointer.matches
       customCursorEnabledRef.current =
         finePointer.matches && !reducedMotion.matches
 
       if (!customCursorEnabledRef.current) hideCursor()
+      if (!finePointer.matches) {
+        pointerHoverPinnedRef.current = false
+        scheduleChromeHide()
+      }
     }
 
     syncCustomCursor()
@@ -346,7 +471,18 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
         cancelAnimationFrame(cursorFrameRef.current)
       }
     }
-  }, [])
+  }, [scheduleChromeHide])
+
+  useEffect(() => {
+    if (!isPlaying || isShowingStill) {
+      showChrome()
+      return
+    }
+
+    scheduleChromeHide()
+  }, [isPlaying, isShowingStill, scheduleChromeHide, showChrome])
+
+  useEffect(() => clearChromeHideTimer, [clearChromeHideTimer])
 
   useEffect(() => {
     if (!hasActivatedVideo || !video) return
@@ -365,15 +501,17 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
               if (disposed) return
 
               playerRef.current = target
-              syncProgress(target)
 
               if (showingStillRef.current) {
                 target.stopVideo()
-              } else if (playbackIntentRef.current) {
-                target.seekTo(clipStart, true)
-                target.playVideo()
               } else {
-                target.pauseVideo()
+                target.seekTo(currentTimeRef.current, true)
+
+                if (playbackIntentRef.current) {
+                  target.playVideo()
+                } else {
+                  target.pauseVideo()
+                }
               }
 
               progressTimerRef.current = setInterval(
@@ -384,9 +522,10 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
             onStateChange: ({ data, target }) => {
               if (disposed || showingStillRef.current) return
 
-              if (data === 1) setIsPlaying(true)
+              if (data === 1) setPlaybackState(true)
               if (data === 0 || data === 2 || data === 5) {
-                setIsPlaying(false)
+                playbackIntentRef.current = false
+                setPlaybackState(false)
               }
               syncProgress(target)
             }
@@ -407,9 +546,9 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
       playerRef.current = null
       player?.destroy()
     }
-  }, [clipStart, hasActivatedVideo, syncProgress, video])
+  }, [hasActivatedVideo, setPlaybackState, syncProgress, video])
 
-  const start = video?.startSeconds ? `&start=${video.startSeconds}` : ''
+  const start = clipStart > 0 ? `&start=${clipStart}` : ''
   const origin =
     typeof window === 'undefined'
       ? ''
@@ -423,16 +562,36 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
   } as CSSProperties
   const formattedCurrentTime = formatMediaTime(currentTime)
   const formattedDuration = duration > 0 ? formatMediaTime(duration) : '--:--'
+  const playControl = (
+    <button
+      className={styles.playButton}
+      type='button'
+      aria-label={explicitActionLabel}
+      aria-pressed={isPlaying}
+      onClick={togglePlayback}
+      onPointerEnter={enterForegroundControl}
+      onPointerLeave={leaveForegroundControl}
+    >
+      <span aria-hidden='true'>{isPlaying ? 'Ⅱ' : '▶'}</span>
+      {explicitActionLabel}
+    </button>
+  )
 
   return (
     <div
       ref={frameRef}
       className={styles.mediaFrame}
+      data-scenario-media
       data-interactive={hasVideo || undefined}
       data-playing={isPlaying || undefined}
-      onPointerEnter={showCursor}
-      onPointerLeave={hideCursor}
-      onPointerMove={queueCursorPosition}
+      data-controls-visible={isChromeVisible}
+      onFocusCapture={focusMediaControl}
+      onBlurCapture={blurMediaControl}
+      onKeyDownCapture={handleMediaKeyActivity}
+      onPointerDownCapture={handleMediaPointerActivity}
+      onPointerEnter={enterMediaFrame}
+      onPointerLeave={leaveMediaFrame}
+      onPointerMove={moveWithinMediaFrame}
     >
       {hasActivatedVideo && video ? (
         <iframe
@@ -463,8 +622,10 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
       {hasVideo ? (
         <>
           <button
+            ref={mediaToggleRef}
             className={styles.mediaToggle}
             type='button'
+            data-scenario-media-toggle
             aria-label={actionLabel}
             aria-pressed={isPlaying}
             aria-keyshortcuts='ArrowLeft ArrowRight'
@@ -487,46 +648,38 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
             {actionLabel}
           </span>
 
-          <button
-            className={styles.playButton}
-            type='button'
-            aria-label={explicitActionLabel}
-            aria-pressed={isPlaying}
-            onClick={togglePlayback}
-            onPointerEnter={enterForegroundControl}
-            onPointerLeave={leaveForegroundControl}
-          >
-            <span aria-hidden='true'>{isPlaying ? 'Ⅱ' : '▶'}</span>
-            {explicitActionLabel}
-          </button>
-
           {hasActivatedVideo && !isShowingStill ? (
             <div
-              className={styles.mediaProgress}
+              className={styles.mediaControlBar}
               onPointerEnter={enterForegroundControl}
               onPointerLeave={leaveForegroundControl}
             >
-              <input
-                className={styles.mediaProgressInput}
-                type='range'
-                min={0}
-                max={progressMax}
-                step={1}
-                value={clampMediaTime(currentTime, progressMax)}
-                aria-label='Clip progress'
-                aria-valuetext={`${formattedCurrentTime} of ${formattedDuration}`}
-                disabled={duration <= 0}
-                style={progressStyle}
-                onChange={scrubProgress}
-                onPointerDown={startScrubbing}
-                onPointerUp={finishScrubbing}
-                onPointerCancel={finishScrubbing}
-              />
-              <span className={styles.mediaProgressTime} aria-hidden='true'>
-                {formattedCurrentTime} / {formattedDuration}
-              </span>
+              <div className={styles.mediaProgress}>
+                <input
+                  className={styles.mediaProgressInput}
+                  type='range'
+                  min={0}
+                  max={progressMax}
+                  step={1}
+                  value={clampMediaTime(currentTime, progressMax)}
+                  aria-label='Clip progress'
+                  aria-valuetext={`${formattedCurrentTime} of ${formattedDuration}`}
+                  disabled={duration <= 0}
+                  style={progressStyle}
+                  onChange={scrubProgress}
+                  onPointerDown={startScrubbing}
+                  onPointerUp={finishScrubbing}
+                  onPointerCancel={finishScrubbing}
+                />
+                <span className={styles.mediaProgressTime} aria-hidden='true'>
+                  {formattedCurrentTime} / {formattedDuration}
+                </span>
+              </div>
+              {playControl}
             </div>
-          ) : null}
+          ) : (
+            playControl
+          )}
 
           {hasActivatedVideo && !isShowingStill ? (
             <button

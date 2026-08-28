@@ -262,7 +262,7 @@ function SpatialField({
   const textureLastSeenRef = useRef(new Map<number, number>())
   const lastTextureSweepRef = useRef(Number.NEGATIVE_INFINITY)
   const { camera, gl, size } = useThree()
-  const mobile = size.width < 680
+  const mobile = size.width <= 680
   const lanes = mobile ? 3 : DESKTOP_LANES
   const frameWidth = mobile ? 2.72 : DESKTOP_FRAME_WIDTH
   const frameHeight = frameWidth / FRAME_ASPECT

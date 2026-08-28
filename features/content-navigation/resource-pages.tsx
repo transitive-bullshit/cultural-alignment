@@ -1,14 +1,13 @@
-import Image from 'next/image'
 import Link from 'next/link'
 
 import { SiteHeader } from '@/components/site-header'
+import { ScenarioCollection } from '@/features/scenario-collection/scenario-collection'
 import type {
   ResourceKind,
   ResourcePage,
   ResourceSummary,
   SearchDocument
 } from '@/lib/content/catalog'
-import { focalPointToObjectPosition } from '@/lib/media/crop'
 
 import styles from './resource-pages.module.css'
 
@@ -137,38 +136,10 @@ export function ResourceDetailPage({
           <span>{String(resource.scenarioCount).padStart(2, '0')}</span>
         </header>
 
-        <ol className={styles.scenarioGrid}>
-          {resource.scenarios.map((scenario, index) => (
-            <li key={scenario.id}>
-              <Link href={scenario.href}>
-                <figure>
-                  <Image
-                    src={scenario.image.gallerySrc}
-                    alt={scenario.image.alt}
-                    fill
-                    sizes='(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 33vw'
-                    style={{
-                      objectFit: 'cover',
-                      objectPosition: focalPointToObjectPosition(
-                        scenario.image.focalPoint
-                      )
-                    }}
-                  />
-                </figure>
-                <span className={styles.indexNumber}>
-                  {String(index + 1).padStart(2, '0')}
-                </span>
-                <h3>{scenario.title}</h3>
-                <span className={styles.scenarioSource}>
-                  {scenario.source.title}
-                  {scenario.releaseDate
-                    ? ` / ${scenario.releaseDate.slice(0, 4)}`
-                    : ''}
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ol>
+        <ScenarioCollection
+          items={resource.scenarios.map((scenario) => ({ scenario }))}
+          layout='continuous'
+        />
       </section>
 
       {resource.relatedResources.length > 0 ? (

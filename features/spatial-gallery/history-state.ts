@@ -1,6 +1,6 @@
-export const GALLERY_HISTORY_STATE_KEY = 'culturalAlignmentGallery'
+const GALLERY_HISTORY_STATE_KEY = 'culturalAlignmentGallery'
 
-export type SpatialGalleryHistoryState = Readonly<{
+type SpatialGalleryHistoryState = Readonly<{
   itemId: string
   offsetX: number
   version: 1

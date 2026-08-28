@@ -34,7 +34,6 @@
 }
 
 .message h1 {
-  max-width: 9em;
   margin: 0;
   font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
   font-size: clamp(72px, 12vw, 176px);

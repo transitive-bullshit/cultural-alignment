@@ -349,6 +349,7 @@ export function SpatialGallery({
   return (
     <section
       className={styles.gallery}
+      data-spatial-gallery={mode}
       aria-label={`${mode === 'featured' ? 'Featured' : 'All'} cultural scenarios. Drag horizontally or scroll to explore.`}
     >
       <div
@@ -424,12 +425,23 @@ export function SpatialGallery({
         total={items.length}
       />
 
+      <MobileSelectedScenario
+        item={selectedItem}
+        onOpen={() => openItem(selectedIndex)}
+      />
+
       {mode === 'featured' ? (
         <SpoilerWarning className={styles.spoilerWarning} />
       ) : null}
 
       <p className={styles.fieldHint}>
-        <span aria-hidden='true'>⊹</span> Drag horizontally · scroll
+        <span className={styles.hintMark} aria-hidden='true'>
+          ⊹
+        </span>
+        <span className={styles.desktopHint}>Drag horizontally · scroll</span>
+        <span className={styles.mobileHint}>
+          Tap once to select · again to open
+        </span>
       </p>
 
       <p className={styles.selectionAnnouncement} aria-live='polite'>
@@ -457,7 +469,11 @@ function SelectedMetadata({
   readonly total: number
 }) {
   return (
-    <section className={styles.metadata} aria-labelledby='selected-scenario'>
+    <section
+      className={styles.metadata}
+      data-selected-scenario-metadata
+      aria-labelledby='selected-scenario'
+    >
       <div className={styles.metadataRail}>
         <span className={styles.metadataCrosshair} aria-hidden='true' />
         <span>Selected frame</span>
@@ -487,12 +503,41 @@ function SelectedMetadata({
 
       <Link
         className={styles.openStudy}
+        data-selected-scenario-link='desktop'
         href={item.href}
         scroll={false}
         transitionTypes={['scenario-forward']}
         onClick={(event) => handleTransitionLink(event, onOpen)}
       >
         Open this scenario <span aria-hidden='true'>↗</span>
+      </Link>
+    </section>
+  )
+}
+
+function MobileSelectedScenario({
+  item,
+  onOpen
+}: {
+  readonly item: SpatialGalleryItem
+  readonly onOpen: () => void
+}) {
+  return (
+    <section
+      className={styles.mobileSelection}
+      data-mobile-selected-scenario
+      aria-labelledby='mobile-selected-scenario'
+    >
+      <h1 id='mobile-selected-scenario'>Selected scenario: {item.title}</h1>
+      <Link
+        className={styles.mobileSelectedLink}
+        data-selected-scenario-link='mobile'
+        href={item.href}
+        scroll={false}
+        transitionTypes={['scenario-forward']}
+        onClick={(event) => handleTransitionLink(event, onOpen)}
+      >
+        Open {item.title} <span aria-hidden='true'>↗</span>
       </Link>
     </section>
   )
@@ -546,16 +591,24 @@ function GalleryFallback({
           className={styles.fallbackFrame}
           data-selected={index === selectedIndex || undefined}
         >
-          {/* This is the no-WebGL fallback; native images avoid loading two image pipelines. */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={item.image.src}
-            alt={item.image.alt}
-            style={{
-              objectPosition: focalPointToObjectPosition(item.image.focalPoint)
-            }}
-          />
-          <span>{item.source}</span>
+          <Link
+            href={item.href}
+            scroll={false}
+            transitionTypes={['scenario-forward']}
+          >
+            {/* This is the no-WebGL fallback; native images avoid loading two image pipelines. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={item.image.src}
+              alt={item.image.alt}
+              style={{
+                objectPosition: focalPointToObjectPosition(
+                  item.image.focalPoint
+                )
+              }}
+            />
+            <span>{item.source}</span>
+          </Link>
         </li>
       ))}
     </ol>

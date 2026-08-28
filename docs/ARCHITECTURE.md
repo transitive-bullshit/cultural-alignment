@@ -16,6 +16,7 @@ content/snapshot + public/media/generated + public/content/search-index.json
         ▼
 ContentCatalog page models
         ├── Server Component routes
+        ├── sitemap, robots, and llms.txt routes
         ├── spatial-gallery client island
         ├── scenario-media client island
         └── global-search client island
@@ -26,6 +27,8 @@ ContentCatalog page models
 `lib/content/schema.ts` defines snapshot schema version 1 with four resources: scenario, source, risk family, and concept. Relationships store stable Notion IDs. Slugs are unique within a resource kind, media paths must remain local, and image dimensions and relational integrity are validated before the catalog is created.
 
 `lib/content/catalog.ts` is the domain seam. Routes ask it for gallery cards, scenario pages, resource pivots, static slugs, or search documents. Routes do not join raw IDs, invent fallbacks, or duplicate relationship/filter semantics. `lib/content/scenario-discovery.ts` owns the deterministic same-source and cross-source taxonomy-overlap heuristic used by scenario pages.
+
+`features/scenario-collection` is the shared server-rendered presentation seam for scenario lists. Resource detail pages use its continuous layout for the full result set, while Dossier discovery uses its bounded preview layout. Layout density and image treatment are independent inputs so future filtering can change the item set without introducing another card implementation.
 
 `lib/content/search-documents.ts` projects the local search corpus once during synchronization. The snapshot and public index copies remain byte-identical. `lib/content/search.ts` owns normalization, ranking, and per-kind grouping shared by the server-rendered `/search` route and lazy Command-K client; every indexed `href` must resolve through the catalog.
 
@@ -42,11 +45,11 @@ Gallery history state is scoped by topology: the homepage has its own key, and `
 ## Server/client split
 
 - Server: route composition, metadata, static parameter generation, catalog projection, filtering, and scenario discovery
-- Client: WebGL, gesture handling, Command-K search, spoiler persistence, YouTube API state, progress/seek controls, and view-transition coordination
+- Client: WebGL, gesture handling, Command-K search, spoiler persistence, clipboard feedback, YouTube API state, custom playback/progress controls, and view-transition coordination
 
 Every content detail route exports all known static parameters and disables unknown dynamic parameters. Missing or malformed slugs resolve through the application's not-found behavior.
 
-Global search reads a generated 378-document local index covering all four resource kinds. Canonical metadata is resolved through one deployment-origin module. The generated sitemap contains the five browse/index URLs plus every scenario, source, family, and concept detail URL; search queries are intentionally kept out of crawler discovery.
+Global search reads a generated local index covering all four resource kinds. Canonical metadata is resolved through one deployment-origin module. The catalog-derived sitemap contains the browse/index URLs plus every scenario, source, family, and concept detail URL; search queries are intentionally kept out of crawler discovery. `robots.txt` permits indexing outside the `/api` namespace, while `llms.txt` gives machine readers a compact project description and stable top-level entry points without duplicating every dossier.
 
 ## Synchronization boundary
 
@@ -58,4 +61,4 @@ The sync manifest hashes source and derived media. Strict generated paths limit 
 
 ## Testing seams
 
-Pure Vitest suites cover schema/catalog invariants, stable sorting, relationship projection, field math, hit testing, media crop behavior, video state, and source metadata. Browser journeys cover URLs, interaction, Back restoration, and persistent dismissal. Exact cross-GPU pixels are deliberately not an automated oracle; fixed-size browser captures remain the visual evidence.
+Pure Vitest suites are reserved for validation, ranking, normalization, serialization, and the gallery's nontrivial geometry/state algorithms. Generated-artifact coherence is part of `content:validate`, not an editorial snapshot test. A small Playwright suite covers the critical gallery-to-dossier, local-search, persistence, and phone-layout journeys through URLs and stable state hooks. It does not assert rendered prose, synchronized titles, slugs, counts, or complete generated bodies. Exact cross-GPU pixels are deliberately not an automated oracle; fixed-size browser captures remain the visual evidence.

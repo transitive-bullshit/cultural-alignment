@@ -1,4 +1,4 @@
-export const SCENARIO_DISCOVERY_LIMIT = 2
+const SCENARIO_DISCOVERY_LIMIT = 3
 
 type DiscoverableScenario = Readonly<{
   conceptIds: readonly string[]

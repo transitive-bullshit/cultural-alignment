@@ -33,6 +33,7 @@ export function SpoilerWarning({ className }: { readonly className?: string }) {
   return (
     <button
       className={[styles.sticker, className].filter(Boolean).join(' ')}
+      data-spoiler-warning
       type='button'
       onClick={dismiss}
       aria-label='Dismiss spoiler warning'
