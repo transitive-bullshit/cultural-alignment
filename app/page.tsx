@@ -4,13 +4,22 @@ import { SiteHeader } from '@/components/site-header'
 import { toSpatialGalleryItems } from '@/features/spatial-gallery/gallery-items'
 import { SpatialGallery } from '@/features/spatial-gallery/spatial-gallery'
 import { contentCatalog } from '@/lib/content/snapshot'
-import { siteSummary } from '@/lib/site'
+import { siteName, siteSummary } from '@/lib/site'
 
 import styles from '@/features/spatial-gallery/gallery-page-shell.module.css'
 
 export const metadata: Metadata = {
-  title: 'Cultural Alignment',
-  description: siteSummary
+  title: siteName,
+  description: siteSummary,
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: siteName,
+    description: siteSummary,
+    url: '/',
+    siteName,
+    locale: 'en_US',
+    type: 'website'
+  }
 }
 
 const featuredItems = toSpatialGalleryItems(

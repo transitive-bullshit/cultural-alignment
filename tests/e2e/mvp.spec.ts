@@ -13,6 +13,16 @@ const searchTarget = searchDocuments.find(
   (document) => document.kind === 'concept'
 )!
 const sourceById = new Map(sources.map((source) => [source.id, source]))
+const socialScenario = requireFixture(
+  scenarios.find(
+    (scenario) => scenario.image.detailSrc && scenario.image.alt.trim()
+  ),
+  'a scenario with a social image'
+)
+const socialScenarioSource = requireFixture(
+  sourceById.get(socialScenario.sourceId),
+  'the social scenario source'
+)
 const connectedRecordsFixture = requireFixture(
   sources.find(
     (source) =>
@@ -167,6 +177,52 @@ test('scenario media can be played and paused', async ({ page }) => {
 
   await mediaToggle.click()
   await expect(mediaToggle).toHaveAttribute('aria-pressed', 'false')
+})
+
+test('scenario detail publishes content-derived social metadata', async ({
+  page
+}) => {
+  const href = `/scenarios/${socialScenario.slug}`
+  const title = `${socialScenarioSource.title} / ${socialScenario.title}`
+
+  await page.goto(href)
+
+  await expect(page.locator('meta[property="og:title"]')).toHaveAttribute(
+    'content',
+    title
+  )
+  await expect(page.locator('meta[property="og:description"]')).toHaveAttribute(
+    'content',
+    socialScenario.scene
+  )
+  await expect(page.locator('meta[name="twitter:title"]')).toHaveAttribute(
+    'content',
+    title
+  )
+  await expect(
+    page.locator('meta[name="twitter:description"]')
+  ).toHaveAttribute('content', socialScenario.scene)
+  await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute(
+    'content',
+    'summary_large_image'
+  )
+
+  const canonical = await requiredAttribute(
+    page.locator('link[rel="canonical"]'),
+    'href'
+  )
+  const openGraphImage = await requiredAttribute(
+    page.locator('meta[property="og:image"]'),
+    'content'
+  )
+  const twitterImage = await requiredAttribute(
+    page.locator('meta[name="twitter:image"]'),
+    'content'
+  )
+
+  expect(new URL(canonical).pathname).toBe(href)
+  expect(new URL(openGraphImage).pathname).toBe(socialScenario.image.detailSrc)
+  expect(new URL(twitterImage).pathname).toBe(socialScenario.image.detailSrc)
 })
 
 test('resource detail breadcrumbs navigate back to each resource index', async ({
@@ -428,6 +484,19 @@ function requireFixture<Value>(
 ): Value {
   if (value === undefined) {
     throw new Error(`Expected the content snapshot to include ${description}`)
+  }
+
+  return value
+}
+
+async function requiredAttribute(
+  locator: import('@playwright/test').Locator,
+  attribute: string
+) {
+  const value = await locator.getAttribute(attribute)
+
+  if (value === null) {
+    throw new Error(`Expected ${attribute} on social metadata element`)
   }
 
   return value

@@ -7,15 +7,29 @@ import '@fontsource/barlow-condensed/800.css'
 import './globals.css'
 
 import { SiteFooter } from '@/components/site-footer'
-import { siteSummary, siteUrl } from '@/lib/site'
+import { siteName, siteSummary, siteUrl, xProfileUrl } from '@/lib/site'
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
   title: {
-    default: 'Cultural Alignment',
+    default: siteName,
     template: '%s — Cultural Alignment'
   },
-  description: siteSummary
+  description: siteSummary,
+  openGraph: {
+    title: siteName,
+    description: siteSummary,
+    siteName,
+    locale: 'en_US',
+    type: 'website'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@transitive_bs',
+    creator: '@transitive_bs'
+  },
+  authors: [{ name: 'Travis Fischer', url: xProfileUrl }],
+  creator: 'Travis Fischer'
 }
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {

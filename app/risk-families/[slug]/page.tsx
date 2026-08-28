@@ -1,7 +1,11 @@
-import type { Metadata } from 'next'
+import type { Metadata, ResolvingMetadata } from 'next'
 import { notFound } from 'next/navigation'
 
 import { ResourceDetailPage } from '@/features/content-navigation/resource-pages'
+import {
+  getResourceSocialMetadata,
+  resolveContentSocialMetadata
+} from '@/lib/content/social-metadata'
 import { contentCatalog } from '@/lib/content/snapshot'
 
 type RiskFamilyPageProps = {
@@ -14,18 +18,15 @@ export function generateStaticParams() {
   return contentCatalog.getStaticSlugs('risk-family').map((slug) => ({ slug }))
 }
 
-export async function generateMetadata({
-  params
-}: RiskFamilyPageProps): Promise<Metadata> {
+export async function generateMetadata(
+  { params }: RiskFamilyPageProps,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
   const { slug } = await params
   const family = contentCatalog.getResourcePage('risk-family', slug)
 
   return family
-    ? {
-        title: family.detailTitle,
-        description: family.description,
-        alternates: { canonical: family.href }
-      }
+    ? resolveContentSocialMetadata(getResourceSocialMetadata(family), parent)
     : {}
 }
 

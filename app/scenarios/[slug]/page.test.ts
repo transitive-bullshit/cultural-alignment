@@ -1,3 +1,4 @@
+import type { ResolvingMetadata } from 'next'
 import { describe, expect, it } from 'vitest'
 
 import { contentCatalog } from '@/lib/content/snapshot'
@@ -20,13 +21,32 @@ describe('production scenario route', () => {
   it('publishes production route metadata', async () => {
     const slug = contentCatalog.getStaticSlugs('scenario')[0]!
     const scenario = contentCatalog.getScenarioPage(slug)!
-    const metadata = await generateMetadata({
-      params: Promise.resolve({ slug }),
-      searchParams: Promise.resolve({})
-    })
+    const metadata = await generateMetadata(
+      {
+        params: Promise.resolve({ slug }),
+        searchParams: Promise.resolve({})
+      },
+      Promise.resolve({
+        openGraph: { images: [{ url: 'https://example.com/global.jpg' }] }
+      }) as ResolvingMetadata
+    )
 
-    expect(metadata.title).toBe(scenario.title)
+    expect(metadata.title).toEqual({
+      absolute: `${scenario.source.title} / ${scenario.title}`
+    })
+    expect(metadata.description).toBe(scenario.scene)
     expect(metadata.alternates?.canonical).toBe(`/scenarios/${slug}`)
     expect(metadata.keywords).toContain(scenario.source.title)
+
+    const images = metadata.openGraph?.images
+    const image = Array.isArray(images) ? images[0] : images
+    const imageUrl =
+      image instanceof URL
+        ? image
+        : typeof image === 'object'
+          ? image?.url
+          : image
+
+    expect(new URL(String(imageUrl)).pathname).toBe(scenario.image.detailSrc)
   })
 })

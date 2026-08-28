@@ -1,7 +1,11 @@
-import type { Metadata } from 'next'
+import type { Metadata, ResolvingMetadata } from 'next'
 import { notFound } from 'next/navigation'
 
 import { ResourceDetailPage } from '@/features/content-navigation/resource-pages'
+import {
+  getResourceSocialMetadata,
+  resolveContentSocialMetadata
+} from '@/lib/content/social-metadata'
 import { contentCatalog } from '@/lib/content/snapshot'
 
 type ConceptPageProps = {
@@ -14,18 +18,15 @@ export function generateStaticParams() {
   return contentCatalog.getStaticSlugs('concept').map((slug) => ({ slug }))
 }
 
-export async function generateMetadata({
-  params
-}: ConceptPageProps): Promise<Metadata> {
+export async function generateMetadata(
+  { params }: ConceptPageProps,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
   const { slug } = await params
   const concept = contentCatalog.getResourcePage('concept', slug)
 
   return concept
-    ? {
-        title: concept.detailTitle,
-        description: concept.description,
-        alternates: { canonical: concept.href }
-      }
+    ? resolveContentSocialMetadata(getResourceSocialMetadata(concept), parent)
     : {}
 }
 
