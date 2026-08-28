@@ -44,8 +44,8 @@ export function CopyScenarioMarkdown({
     state === 'success'
       ? 'Copied'
       : state === 'error'
-        ? "Couldn't copy"
-        : 'Copy scenario as Markdown'
+        ? 'Error copying to clipboard'
+        : 'Copy this scenario as Markdown'
 
   return (
     <div>

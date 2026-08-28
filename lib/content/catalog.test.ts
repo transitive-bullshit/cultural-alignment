@@ -4,7 +4,7 @@ import { createContentCatalog, type ResourceKind } from './catalog'
 import type { ContentSnapshot, ScenarioRecord } from './schema'
 
 const minimalSnapshot = {
-  schemaVersion: 1,
+  schemaVersion: 2,
   scenarios: [
     createScenario({
       id: 'old-a',
@@ -40,31 +40,87 @@ const minimalSnapshot = {
       id: 'source-1',
       slug: 'shared-source',
       title: 'Shared Source',
-      kind: 'film',
+      sourceType: 'movie',
       description: 'The source description.',
-      links: [{ label: 'Official site', href: 'https://example.com/source' }]
+      releaseDate: '1999-03-31',
+      poster: {
+        gallerySrc: '/media/generated/sources/source1/gallery.webp',
+        detailSrc: '/media/generated/sources/source1/detail.webp',
+        width: 1200,
+        height: 1800,
+        alt: 'Poster for Shared Source'
+      },
+      imdbUrl: 'https://www.imdb.com/title/tt0000001/',
+      rottenTomatoesUrl: 'https://www.rottentomatoes.com/m/shared_source',
+      youtubeTrailerUrl: 'https://www.youtube.com/watch?v=abcdefghijk',
+      relatedSourceIds: ['source-2']
+    },
+    {
+      id: 'source-2',
+      slug: 'related-source',
+      title: 'Related Source',
+      sourceType: 'tv-show',
+      description: null,
+      releaseDate: null,
+      poster: null,
+      imdbUrl: null,
+      rottenTomatoesUrl: null,
+      youtubeTrailerUrl: null,
+      relatedSourceIds: []
     }
   ],
   riskFamilies: [
     {
       id: 'risk-a',
       slug: 'family-a',
-      title: 'Family A',
-      description: 'The first family.'
+      shortName: 'Family A',
+      fullName: 'The First Risk Family',
+      description: 'The first family.',
+      wikipediaUrl: 'https://en.wikipedia.org/wiki/Risk',
+      citations: [
+        {
+          href: 'https://example.com/risk-a',
+          title: 'A named risk publication',
+          publisher: 'Example Research'
+        },
+        {
+          href: 'https://example.com/example-research',
+          title: 'Example Research',
+          publisher: 'Example Research'
+        }
+      ]
     },
     {
       id: 'risk-b',
       slug: 'family-b',
-      title: 'Family B',
-      description: 'The second family.'
+      shortName: 'Family B',
+      fullName: 'The Second Risk Family',
+      description: 'The second family.',
+      wikipediaUrl: null,
+      citations: [
+        {
+          href: 'https://example.com/risk-b',
+          title: 'Another risk publication',
+          publisher: null
+        }
+      ]
     }
   ],
   concepts: [
     {
       id: 'concept-1',
       slug: 'concept-one',
-      title: 'Concept One',
-      description: 'A concept description.'
+      shortName: 'Concept One',
+      longName: 'Concept One With a Descriptive Name',
+      description: 'A concept description.',
+      wikipediaUrl: null,
+      citations: [
+        {
+          href: 'https://example.com/concept-one',
+          title: 'A named concept publication',
+          publisher: 'Example Institute'
+        }
+      ]
     }
   ]
 } satisfies ContentSnapshot
@@ -106,6 +162,7 @@ describe('ContentCatalog', () => {
     const page = catalog.getScenarioPage('old-b')!
 
     expect(page.source.slug).toBe('shared-source')
+    expect(page.source.sourceType).toBe('movie')
     expect(page.source.scenarioCount).toBe(minimalSnapshot.scenarios.length)
     expect(new Set(page.riskFamilies.map(({ slug }) => slug))).toEqual(
       new Set(['family-a', 'family-b'])
@@ -119,6 +176,17 @@ describe('ContentCatalog', () => {
     ).toBe(true)
 
     const sourcePage = catalog.getResourcePage('source', 'shared-source')!
+    expect(sourcePage.kind).toBe('source')
+    if (sourcePage.kind !== 'source') throw new Error('Expected source page')
+    expect(sourcePage.poster?.detailSrc).toBe(
+      '/media/generated/sources/source1/detail.webp'
+    )
+    expect(sourcePage.sourceType).toBe('movie')
+    expect(sourcePage.externalLinks.map(({ label }) => label)).toEqual([
+      'IMDb',
+      'Rotten Tomatoes',
+      'YouTube trailer'
+    ])
     expect(sourcePage.scenarios).toHaveLength(minimalSnapshot.scenarios.length)
     expect(
       new Set(
@@ -128,8 +196,37 @@ describe('ContentCatalog', () => {
       new Set([
         'risk-family:family-a',
         'risk-family:family-b',
-        'concept:concept-one'
+        'concept:concept-one',
+        'source:related-source'
       ])
+    )
+
+    expect(
+      catalog.getResourcePage('risk-family', 'family-a')?.detailTitle
+    ).toBe('The First Risk Family')
+    const riskPage = catalog.getResourcePage('risk-family', 'family-a')!
+    expect(riskPage.externalLinks).toEqual([
+      {
+        label: 'Wikipedia',
+        href: 'https://en.wikipedia.org/wiki/Risk'
+      },
+      {
+        label: 'A named risk publication',
+        description: 'Example Research',
+        href: 'https://example.com/risk-a'
+      },
+      {
+        label: 'Example Research',
+        href: 'https://example.com/example-research'
+      }
+    ])
+    expect(
+      riskPage.externalLinks.some(({ label }) =>
+        /^canonical source/i.test(label)
+      )
+    ).toBe(false)
+    expect(catalog.getResourcePage('concept', 'concept-one')?.detailTitle).toBe(
+      'Concept One With a Descriptive Name'
     )
 
     for (const kind of [
@@ -159,6 +256,9 @@ describe('ContentCatalog', () => {
         'Where the analogy breaks.'
       ])
     )
+    expect(
+      documents.find(({ href }) => href === '/concepts/concept-one')?.keywords
+    ).toContain('Concept One With a Descriptive Name')
     expect(documents.every(({ href }) => resolveDocument(catalog, href))).toBe(
       true
     )

@@ -4,7 +4,9 @@ import { describe, expect, it } from 'vitest'
 import {
   allocateStableSlugs,
   generatedMediaFilePath,
-  richTextToMarkdown
+  generatedMediaPublicPaths,
+  richTextToMarkdown,
+  retrieveRelationIds
 } from './sync-utils'
 
 describe('generatedMediaFilePath', () => {
@@ -19,6 +21,17 @@ describe('generatedMediaFilePath', () => {
     )
   })
 
+  it('resolves deterministic source poster variant paths', () => {
+    expect(
+      generatedMediaFilePath(
+        '/workspace',
+        '/media/generated/sources/3caedb27f12480319026e39581c85c47/detail.webp'
+      )
+    ).toBe(
+      '/workspace/public/media/generated/sources/3caedb27f12480319026e39581c85c47/detail.webp'
+    )
+  })
+
   it.each([
     '/media/generated/../../package.json',
     '/media/generated/scenarios/not-a-page/detail.webp',
@@ -30,16 +43,74 @@ describe('generatedMediaFilePath', () => {
   })
 })
 
+describe('generatedMediaPublicPaths', () => {
+  it('builds stable source poster paths from a Notion page ID', () => {
+    expect(
+      generatedMediaPublicPaths(
+        'sources',
+        '3caedb27-f124-8031-9026-e39581c85c47'
+      )
+    ).toEqual({
+      gallerySrc:
+        '/media/generated/sources/3caedb27f12480319026e39581c85c47/gallery.webp',
+      detailSrc:
+        '/media/generated/sources/3caedb27f12480319026e39581c85c47/detail.webp'
+    })
+  })
+})
+
 describe('allocateStableSlugs', () => {
-  it('preserves tombstones and prevents old URLs from being reassigned', () => {
+  it('prunes deleted IDs and releases their slugs for new records', () => {
     expect(
       allocateStableSlugs([{ id: 'new-page-abcdef', title: 'Old title' }], {
         'removed-page': 'old-title'
       })
     ).toEqual({
-      'removed-page': 'old-title',
-      'new-page-abcdef': 'old-title-abcdef'
+      'new-page-abcdef': 'old-title'
     })
+  })
+
+  it('preserves a surviving ID’s slug when its title changes', () => {
+    expect(
+      allocateStableSlugs([{ id: 'page-1', title: 'A new title' }], {
+        'page-1': 'the-original-url'
+      })
+    ).toEqual({ 'page-1': 'the-original-url' })
+  })
+
+  it('resolves new-record collisions deterministically by ID', () => {
+    expect(
+      allocateStableSlugs(
+        [
+          { id: '00000000-0000-0000-0000-000000abcdef', title: 'Same' },
+          { id: '00000000-0000-0000-0000-000000123456', title: 'Same' }
+        ],
+        {}
+      )
+    ).toEqual({
+      '00000000-0000-0000-0000-000000123456': 'same',
+      '00000000-0000-0000-0000-000000abcdef': 'same-abcdef'
+    })
+  })
+})
+
+describe('retrieveRelationIds', () => {
+  it('retrieves every page when the inline relation reaches Notion’s limit', async () => {
+    const inline = Array.from({ length: 25 }, (_, index) => ({
+      id: `inline-${index}`
+    }))
+
+    const ids = await retrieveRelationIds(
+      'scenario-1',
+      'relation-property',
+      inline,
+      async ({ start_cursor: startCursor }) =>
+        startCursor
+          ? relationPage([{ id: 'related-26' }], null)
+          : relationPage([{ id: 'related-1' }], 'next-page')
+    )
+
+    expect(ids).toEqual(['related-1', 'related-26'])
   })
 })
 
@@ -81,5 +152,29 @@ function text(
     },
     plain_text: plainText,
     href: href ?? null
+  }
+}
+
+function relationPage(
+  relations: readonly { id: string }[],
+  nextCursor: string | null
+) {
+  return {
+    type: 'property_item' as const,
+    property_item: {
+      type: 'relation' as const,
+      relation: {},
+      next_url: null,
+      id: 'relation-property'
+    },
+    object: 'list' as const,
+    next_cursor: nextCursor,
+    has_more: nextCursor !== null,
+    results: relations.map(({ id }) => ({
+      type: 'relation' as const,
+      relation: { id },
+      object: 'property_item' as const,
+      id: 'relation-property'
+    }))
   }
 }

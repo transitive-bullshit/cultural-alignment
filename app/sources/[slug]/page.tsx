@@ -22,7 +22,7 @@ export async function generateMetadata({
 
   return source
     ? {
-        title: source.title,
+        title: source.detailTitle,
         description: source.description,
         alternates: { canonical: source.href }
       }

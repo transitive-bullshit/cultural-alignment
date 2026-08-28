@@ -205,6 +205,23 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
     }, CHROME_IDLE_DELAY_MS)
   }, [clearChromeHideTimer])
 
+  const hideChromeImmediately = useCallback(() => {
+    clearChromeHideTimer()
+
+    if (
+      !isPlayingRef.current ||
+      showingStillRef.current ||
+      pointerHoverPinnedRef.current ||
+      chromeControlFocusedRef.current ||
+      isScrubbingRef.current
+    ) {
+      setIsChromeVisible(true)
+      return
+    }
+
+    setIsChromeVisible(false)
+  }, [clearChromeHideTimer])
+
   const setPlaybackState = useCallback((playing: boolean) => {
     isPlayingRef.current = playing
     setIsPlaying(playing)
@@ -307,7 +324,12 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
   const finishScrubbing = () => {
     isScrubbingRef.current = false
     playerRef.current?.seekTo(currentTimeRef.current, true)
-    scheduleChromeHide()
+
+    if (pointerInsideFrameRef.current) {
+      scheduleChromeHide()
+    } else {
+      hideChromeImmediately()
+    }
   }
 
   const syncCursorVisibility = () => {
@@ -375,8 +397,8 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
   }
 
   const showCursor = (event: ReactPointerEvent<HTMLDivElement>) => {
-    if (!hasVideo || !customCursorEnabledRef.current) return
     pointerInsideFrameRef.current = true
+    if (!hasVideo || !customCursorEnabledRef.current) return
     frameBoundsRef.current = event.currentTarget.getBoundingClientRect()
     syncCursorVisibility()
     queueCursorPosition(event)
@@ -408,7 +430,7 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
   const leaveMediaFrame = () => {
     pointerHoverPinnedRef.current = false
     hideCursor()
-    scheduleChromeHide()
+    hideChromeImmediately()
   }
 
   const focusMediaControl = (event: ReactFocusEvent<HTMLDivElement>) => {
@@ -431,7 +453,7 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
       nextTarget !== mediaToggleRef.current
     )
 
-    if (!chromeControlFocusedRef.current) scheduleChromeHide()
+    if (!chromeControlFocusedRef.current) hideChromeImmediately()
   }
 
   const handleMediaKeyActivity = () => {
@@ -483,6 +505,26 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
   }, [isPlaying, isShowingStill, scheduleChromeHide, showChrome])
 
   useEffect(() => clearChromeHideTimer, [clearChromeHideTimer])
+
+  useEffect(() => {
+    const handleOutsidePointerDown = (event: PointerEvent) => {
+      const frame = frameRef.current
+      if (!frame || event.composedPath().includes(frame)) return
+
+      pointerHoverPinnedRef.current = false
+      hideChromeImmediately()
+    }
+
+    document.addEventListener('pointerdown', handleOutsidePointerDown, true)
+
+    return () => {
+      document.removeEventListener(
+        'pointerdown',
+        handleOutsidePointerDown,
+        true
+      )
+    }
+  }, [hideChromeImmediately])
 
   useEffect(() => {
     if (!hasActivatedVideo || !video) return
@@ -566,6 +608,7 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
     <button
       className={styles.playButton}
       type='button'
+      data-scenario-media-playback-control
       aria-label={explicitActionLabel}
       aria-pressed={isPlaying}
       onClick={togglePlayback}

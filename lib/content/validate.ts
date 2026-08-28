@@ -5,6 +5,7 @@ export type ContentValidationIssueCode =
   | 'duplicate-id'
   | 'duplicate-slug'
   | 'missing-relation'
+  | 'invalid-source-episode'
 
 export type ContentValidationIssue = {
   readonly code: ContentValidationIssueCode
@@ -109,18 +110,28 @@ function appendRelationIssues(
   snapshot: ContentSnapshot,
   issues: ContentValidationIssue[]
 ) {
-  const sourceIds = new Set(snapshot.sources.map((source) => source.id))
+  const sourceById = new Map(
+    snapshot.sources.map((source) => [source.id, source])
+  )
   const riskFamilyIds = new Set(
     snapshot.riskFamilies.map((family) => family.id)
   )
   const conceptIds = new Set(snapshot.concepts.map((concept) => concept.id))
 
   snapshot.scenarios.forEach((scenario, scenarioIndex) => {
-    if (!sourceIds.has(scenario.sourceId)) {
+    const source = sourceById.get(scenario.sourceId)
+
+    if (!source) {
       issues.push({
         code: 'missing-relation',
         path: `scenarios[${scenarioIndex}].sourceId`,
         message: `Unknown source id ${JSON.stringify(scenario.sourceId)}`
+      })
+    } else if (scenario.episode && source.sourceType !== 'tv-show') {
+      issues.push({
+        code: 'invalid-source-episode',
+        path: `scenarios[${scenarioIndex}].episode`,
+        message: `Episode metadata requires a TV show source; ${JSON.stringify(source.id)} is ${source.sourceType}`
       })
     }
 
@@ -142,6 +153,18 @@ function appendRelationIssues(
           message: `Unknown concept id ${JSON.stringify(conceptId)}`
         })
       }
+    })
+  })
+
+  snapshot.sources.forEach((source, sourceIndex) => {
+    source.relatedSourceIds.forEach((relatedSourceId, relationIndex) => {
+      if (sourceById.has(relatedSourceId)) return
+
+      issues.push({
+        code: 'missing-relation',
+        path: `sources[${sourceIndex}].relatedSourceIds[${relationIndex}]`,
+        message: `Unknown source id ${JSON.stringify(relatedSourceId)}`
+      })
     })
   })
 }

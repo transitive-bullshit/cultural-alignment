@@ -6,7 +6,7 @@ import { createContentCatalog } from './catalog'
 import { validateContentSnapshot } from './validate'
 
 export const contentSnapshot = validateContentSnapshot({
-  schemaVersion: 1,
+  schemaVersion: 2,
   scenarios,
   sources,
   riskFamilies,

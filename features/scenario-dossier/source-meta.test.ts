@@ -1,17 +1,18 @@
 import { describe, expect, it } from 'vitest'
 
-import { hasDistinctEpisodeLabel } from './source-meta'
+import { shouldShowEpisode } from './source-meta'
 
-describe('hasDistinctEpisodeLabel', () => {
+describe('shouldShowEpisode', () => {
   it.each([
-    ['Black Mirror', 'Nosedive', true],
-    ['Ex Machina', 'Ex Machina', false],
-    ['WALL·E', '  wall·e\n', false],
-    ['Her', undefined, false]
+    ['tv-show', 'Nosedive', true],
+    ['tv-show', '', false],
+    ['tv-show', '  \n', false],
+    ['tv-show', undefined, false],
+    ['movie', 'Ex Machina', false]
   ] as const)(
-    'compares normalized source and episode labels',
-    (source, episode, expected) => {
-      expect(hasDistinctEpisodeLabel(source, episode)).toBe(expected)
+    'shows only non-empty TV episode labels',
+    (sourceType, episode, expected) => {
+      expect(shouldShowEpisode(sourceType, episode)).toBe(expected)
     }
   )
 })

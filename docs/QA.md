@@ -10,28 +10,27 @@ pnpm content:validate
 pnpm build
 ```
 
-Final integration pass on 2026-08-28:
+Citation and source-layout integration pass on 2026-08-29:
 
-- Oxfmt: 111 files
+- Oxfmt: 118 files
 - Oxlint: pass
 - generated-route types and TypeScript: pass
-- Vitest: 15 files, 57 focused tests
-- Playwright: 4/4 critical journeys in 18.5 seconds
-- content validation: 310 scenarios and 620 generated media assets
+- Vitest: 17 files, 85 focused tests
+- Playwright: 9/9 critical journeys in 9.9 seconds
+- content validation: 310 scenarios, 203 sources, 5 risk families, 66 concepts, and 1,024 generated media assets
+- unchanged second sync: byte-identical citation snapshots, manifest, and search index
 - production build: 597 static/SSG pages generated
 
 `pnpm test` combines Oxfmt checking, Oxlint, generated-route type checking, the TypeScript compiler, unit tests, and browser journeys. The production build uses Next.js 16's documented webpack fallback because clean-cache Turbopack builds reproducibly stalled in this local environment.
 
-## Content baseline
+## Schema v2 content contract
 
-- Snapshot schema: version 1
-- Scenarios: 310
-- Sources: 203
-- Risk families: 5
-- Used concepts: 66
-- Local gallery/detail assets: 620
-- Featured scenarios: 25
-- Two established-state syncs: byte-identical JSON and media hashes
+- Snapshot and sync manifest schema: version 2
+- Scenario classifications come from Notion relations to media sources, risk families, and safety concepts; all foreign keys are Notion page IDs.
+- Media sources include a movie/TV type, optional authored metadata and links, direct related-source relations, and an optional locally processed poster.
+- Risk families and safety concepts use their Notion-authored short/full names, descriptions, Wikipedia URLs, and preprocessed citations.
+- The first v2 sync establishes a fresh slug baseline. Established-state syncs preserve slugs for surviving page IDs and release the slugs of deleted records.
+- An unchanged second sync must produce byte-identical snapshot, search-index, manifest, and generated-media hashes.
 
 ## Completed review coverage
 
@@ -39,7 +38,7 @@ Final integration pass on 2026-08-28:
 - 2560×900 Chrome wrap/duplication stress capture
 - Mouse wheel, pointer travel/reversal, hover picking, selection, direct URLs, and browser Back
 - Mobile-width drag/tap, filter controls, Dossier reading, spoiler, and video states
-- Four automated Chromium journeys covering gallery/Dossier state, Markdown copy and media controls, generated search, spoiler persistence, filtering, and mobile containment
+- Nine automated Chromium journeys covering gallery/Dossier state, Markdown copy and media controls, generated search, spoiler persistence, filtering, resource metadata and breadcrumbs, episode rules, and mobile containment
 
 ## Creator follow-up coverage
 
@@ -48,7 +47,7 @@ Final integration pass on 2026-08-28:
 - Chrome desktop at 1920×1080 and Retina density
 - One physical tablet, including touch orientation change
 
-## Manual checks
+## Manual acceptance checks
 
 - No blank edge or visible copy pop during fast travel and reversal
 - Left/right deformation opposes correctly and settles completely flat
@@ -63,6 +62,10 @@ Final integration pass on 2026-08-28:
 - Spoiler dismissal persists across navigation and reload
 - Search results for all four resource types open existing URLs
 - Direct valid URLs refresh; malformed slugs reach not-found
+- Media-source details place source type, available Notion-authored metadata, and links in the left desktop column with the poster in the right column, without inventing missing optional values
+- Risk-family and safety-concept details use their descriptive names and available Notion-authored references
+- Scenario episodes appear only for TV sources with a non-empty episode; movie scenarios omit the episode in both the page and copied Markdown
+- Media Sources, Risk Families, and AI Safety Concepts detail breadcrumbs use plural parent labels
 - No duplicate canvas/frame loop or growing texture count after route cycles
 - No mobile horizontal overflow
 
@@ -85,20 +88,14 @@ The selected prototype evidence is under `docs/outputs/gate-b`, including 1440×
 - Featured page: 25 gallery images observed, 934,914 bytes of generated WebP media.
 - Full gallery initial settled view: 68 gallery requests observed, 2,775,750 bytes of generated WebP media; decoded residency is hard-capped at 64.
 - Estimated raw RGBA residency at that ceiling: about 132 MB before browser/GPU bookkeeping.
-- Complete optional media corpus: 12,618,402 bytes of gallery WebP and 35,605,396 bytes of detail WebP; these are intended to ship as static assets but are neither eagerly requested nor simultaneously GPU-resident.
-- Built client static directory: 2.4 MB. Search index: 350,399 bytes.
+- Complete scenario media corpus: 12,618,402 bytes of gallery WebP and 35,605,396 bytes of detail WebP; these are intended to ship as static assets but are neither eagerly requested nor simultaneously GPU-resident.
+- Optional source posters: 30,994,486 bytes of gallery WebP and 97,268,040 bytes of detail WebP across 202 sources; Zootopia is the one posterless record.
+- Built client static directory: 2.5 MB. Search index: 441,862 bytes.
 - Rapid travel, reversal, hover, filter changes, and gallery/detail/Back cycles remained visually responsive on the primary Chrome review machine; exact frame-time instrumentation was not available through the review browser.
 
 ## Release packaging follow-ups
 
-- `public/media/generated` contains the 620 synchronized files locally but is currently ignored by Git, so a clean GitHub checkout will not contain scenario stills and `pnpm content:validate` will fail. The product decision is to keep builds independent of Notion: remove the ignore and commit the generated assets, or establish an explicit artifact-producing build step before deployment. Do not solve this by adding a runtime Notion dependency.
-- The configured pre-commit hook invokes `npx lint-staged`, but `lint-staged` is not a project dependency. Add the development dependency or update the hook before relying on it in a fresh or offline checkout.
-
-## Known content limitations
-
-- All 203 source records currently have `kind: "unknown"` and no authored descriptions or external links.
-- All 66 concept descriptions use the same functional index copy rather than authored concept definitions.
-- Risk-family and concept artwork remains a separate follow-up; current relational pivots intentionally use no placeholder art.
+- `public/media/generated` remains local and ignored by Git by design. A clean checkout therefore contains neither synchronized scenario stills nor optional media-source posters, and `pnpm content:validate` will fail until the media corpus is hydrated. The clean-checkout/deployment packaging mechanism is intentionally unresolved. Do not solve it by adding a runtime Notion dependency.
 
 ## Known environment limitations
 

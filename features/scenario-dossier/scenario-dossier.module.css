@@ -27,18 +27,19 @@
 .narrativeColumn {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .copyScenarioAction {
   display: flex;
-  justify-content: flex-start;
-  padding-top: 2px;
+  justify-content: flex-end;
+  padding: 48px 0 112px;
 }
 
 .titleBlock {
   display: flex;
   flex-direction: column;
-  gap: clamp(18px, 2vw, 28px);
+  gap: clamp(32px, 3vw, 48px);
   min-width: 0;
 }
 
@@ -65,7 +66,8 @@
 }
 
 .sourceMeta {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 9px;
   margin: 0;
   padding: 0;
@@ -76,13 +78,14 @@
 }
 
 .sourceMeta li {
-  display: grid;
-  grid-template-columns: 12px minmax(0, 1fr);
+  display: flex;
   gap: 8px;
   align-items: baseline;
+  min-width: 0;
 }
 
 .sourceMeta li::before {
+  flex: 0 0 12px;
   color: var(--proto-electric);
   content: '×';
 }
@@ -482,9 +485,19 @@
 
 .taxonomy {
   display: grid;
-  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(36px, 7vw, 100px);
-  padding: 58px 0 112px;
+  padding: 58px 0 0;
+}
+
+.taxonomyHeader {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.taxonomyHeading {
+  font-size: 12px;
 }
 
 .taxonomy ol {
@@ -495,25 +508,25 @@
 }
 
 .taxonomy li {
-  display: grid;
-  grid-template-columns: 34px minmax(0, 1fr);
-  gap: 12px;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--proto-rule);
   font-size: 13px;
   line-height: 1.35;
   animation: taxonomy-enter 300ms var(--proto-ease-out) both;
   animation-delay: var(--taxonomy-delay, 0ms);
 }
 
-.taxonomy li > span {
+.taxonomyIndex {
   color: var(--proto-muted-ink);
   font-family: var(--font-geist-mono), monospace;
   font-size: 9px;
 }
 
 .taxonomyLink {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 12px;
   min-width: 0;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--proto-rule);
   color: inherit;
   overflow-wrap: anywhere;
   text-decoration: none;
@@ -640,20 +653,15 @@
 
   .titleBlock {
     order: 1;
-    gap: 16px;
     margin-bottom: 22px;
   }
 
   .titleBlock h1 {
     font-size: clamp(55px, 17vw, 78px);
     line-height: 0.91;
-    text-align: center;
   }
 
   .sourceMeta {
-    width: fit-content;
-    max-width: 100%;
-    margin-inline: auto;
     font-size: 11px;
   }
 
@@ -662,11 +670,6 @@
     width: calc(100% + 36px);
     margin: 0 0 0 -18px;
     padding-inline: 6px;
-  }
-
-  .copyScenarioAction {
-    justify-content: center;
-    padding-top: 2px;
   }
 
   .mediaFrame {
@@ -700,7 +703,7 @@
   .taxonomy {
     grid-template-columns: 1fr;
     gap: 44px;
-    padding: 48px 0 96px;
+    padding: 48px 0 0;
   }
 
   .page .detailSpoiler {

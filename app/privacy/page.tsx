@@ -15,7 +15,7 @@ export default function PrivacyPage() {
   return (
     <InformationPage
       context='Privacy / policy'
-      eyebrow='Last updated 28 August 2026'
+      eyebrow='Last updated 29 August 2026'
       title='A small site with a small data footprint.'
       introduction={
         <p>
@@ -43,10 +43,10 @@ export default function PrivacyPage() {
 
       <InformationSection index='02' title='Local preferences'>
         <p>
-          The spoiler-warning dismissal is stored in your browser&rsquo;s local
-          storage so the site can remember that choice. It is not used to
-          identify you, and you can remove it by clearing this site&rsquo;s
-          browser data.
+          The spoiler-warning dismissal and your preferred scenario sort order
+          are stored in your browser&rsquo;s local storage so the site can
+          remember those choices. They are not used to identify you, and you can
+          remove them by clearing this site&rsquo;s browser data.
         </p>
       </InformationSection>
 

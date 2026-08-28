@@ -9,9 +9,9 @@ Cultural Alignment is an open-source, exploratory archive that explains AI safet
 ## What is here
 
 - A horizontally infinite, velocity-deformed WebGL gallery
-- 179 curated scenarios from 129 films and television series
+- Curated scenarios from films and television series
 - Scenario dossiers with clips, authored analysis, caveats, and taxonomy
-- Five AI-risk-family pivots and 65 AI-safety-concept pivots
+- AI-risk-family and AI-safety-concept pivots backed by authored Notion records
 - Local, offline-buildable content generated from a one-way Notion sync
 - Cross-resource search across scenarios, sources, risk families, and concepts
 
@@ -24,7 +24,7 @@ pnpm install
 pnpm dev
 ```
 
-The app reads only sync-generated local files under `content/snapshot`, `public/content/search-index.json`, and `public/media/generated`. Normal development and production builds do not need Notion credentials. These three outputs form one generated release artifact and are intended to be committed together. The current generated-media packaging follow-up is recorded in [QA](docs/QA.md#release-packaging-follow-ups).
+The app reads only sync-generated local files under `content/snapshot`, `public/content/search-index.json`, and `public/media/generated`. Normal development and production builds do not need Notion credentials once those artifacts have been hydrated. Snapshot JSON is repository content, while `public/media/generated` is deliberately ignored and local. A clean checkout therefore lacks scenario stills and source posters; the unresolved generated-media packaging limitation is recorded in [QA](docs/QA.md#release-packaging-follow-ups).
 
 Set `NEXT_PUBLIC_SITE_URL` to the canonical deployment origin when it cannot be inferred from Vercel; local builds default to `http://localhost:3000`.
 
@@ -55,7 +55,9 @@ Notion is the editorial source; the repository snapshot is the public runtime so
 NOTION_TOKEN=secret_… pnpm content:sync
 ```
 
-The synchronizer uses the official Notion client, a fixed data-source ID, stable Notion page IDs, preserved slug tombstones, staged validation, and atomic replacement. Repeating a sync with unchanged source data is idempotent. Never put `NOTION_TOKEN` in a committed environment file.
+The synchronizer imports the scenario data source plus the media-source, risk-family, and safety-concept data sources connected by its three relations. Records and foreign keys use stable Notion page IDs. It fetches citation titles and publisher/domain labels ahead of time from reviewed publication hosts, including full PDF metadata when available, stages and validates the complete schema-v2 snapshot, locally processes required scenario images and optional source posters, generates the search index, and replaces outputs atomically.
+
+The first schema-v2 sync intentionally regenerates every slug. After that baseline, title and metadata edits retain the slug associated with each surviving page ID; deleting a record removes its mapping and releases its slug for reuse. Repeating a sync with unchanged source data is idempotent because citation metadata is reused by URL; set `REFRESH_CITATIONS=1` on the sync command to fetch every citation again. Never put `NOTION_TOKEN` in a committed environment file.
 
 ## Route map
 

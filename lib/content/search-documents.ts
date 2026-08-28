@@ -38,10 +38,16 @@ export function buildSearchDocuments(
           source.title,
           scenario.episode?.label,
           ...scenario.riskFamilyIds.map(
-            (id) => getRequired(riskFamilyById, id).title
+            (id) => getRequired(riskFamilyById, id).shortName
+          ),
+          ...scenario.riskFamilyIds.map(
+            (id) => getRequired(riskFamilyById, id).fullName
           ),
           ...scenario.conceptIds.map(
-            (id) => getRequired(conceptById, id).title
+            (id) => getRequired(conceptById, id).shortName
+          ),
+          ...scenario.conceptIds.map(
+            (id) => getRequired(conceptById, id).longName
           ),
           scenario.scene,
           scenario.whyAnalogyWorks,
@@ -53,25 +59,27 @@ export function buildSearchDocuments(
     ...snapshot.sources.map((source) => ({
       kind: 'source' as const,
       title: source.title,
-      subtitle: 'Source',
+      subtitle: source.sourceType === 'movie' ? 'Movie' : 'TV show',
       keywords: uniqueStrings([
         source.description,
-        ...(source.links ?? []).map((link) => link.label)
+        source.imdbUrl ? 'IMDb' : null,
+        source.rottenTomatoesUrl ? 'Rotten Tomatoes' : null,
+        source.youtubeTrailerUrl ? 'YouTube trailer' : null
       ]),
       href: `/sources/${source.slug}`
     })),
     ...snapshot.riskFamilies.map((family) => ({
       kind: 'risk-family' as const,
-      title: family.title,
+      title: family.shortName,
       subtitle: 'AI risk family',
-      keywords: [family.description],
+      keywords: uniqueStrings([family.fullName, family.description]),
       href: `/risk-families/${family.slug}`
     })),
     ...snapshot.concepts.map((concept) => ({
       kind: 'concept' as const,
-      title: concept.title,
+      title: concept.shortName,
       subtitle: 'AI safety concept',
-      keywords: [concept.description],
+      keywords: uniqueStrings([concept.longName, concept.description]),
       href: `/concepts/${concept.slug}`
     }))
   ]
@@ -83,7 +91,7 @@ export function buildSearchDocuments(
   )
 }
 
-function uniqueStrings(values: readonly (string | undefined)[]) {
+function uniqueStrings(values: readonly (string | null | undefined)[]) {
   return [...new Set(values.filter((value): value is string => Boolean(value)))]
 }
 

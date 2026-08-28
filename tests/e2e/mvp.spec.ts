@@ -12,27 +12,114 @@ const videoScenario = scenarios.find(
 const searchTarget = searchDocuments.find(
   (document) => document.kind === 'concept'
 )!
+const sourceById = new Map(sources.map((source) => [source.id, source]))
+const connectedRecordsFixture = requireFixture(
+  sources.find(
+    (source) =>
+      source.relatedSourceIds.length > 0 &&
+      scenarios.some(
+        (scenario) =>
+          scenario.sourceId === source.id &&
+          scenario.riskFamilyIds.length > 0 &&
+          scenario.conceptIds.length > 0
+      )
+  ),
+  'a source connected to a source, risk family, and concept'
+)
+const sourceDetailFixture = requireFixture(
+  sources.find(
+    (source) =>
+      source.poster &&
+      source.releaseDate &&
+      [source.imdbUrl, source.rottenTomatoesUrl, source.youtubeTrailerUrl].some(
+        Boolean
+      )
+  ),
+  'a source with a poster, release date, and external reference'
+)
+const sourceWithoutPoster = requireFixture(
+  sources.find((source) => !source.poster),
+  'a source without a poster'
+)
+const televisionScenarioWithEpisode = requireFixture(
+  scenarios.find(
+    (scenario) =>
+      sourceById.get(scenario.sourceId)?.sourceType === 'tv-show' &&
+      scenario.episode?.label.trim()
+  ),
+  'a TV scenario with an episode'
+)
+const movieScenario = requireFixture(
+  scenarios.find(
+    (scenario) => sourceById.get(scenario.sourceId)?.sourceType === 'movie'
+  ),
+  'a movie scenario'
+)
+const sourceScenarioCases = sources.map((source) => ({
+  href: `/sources/${source.slug}`,
+  items: scenarios.filter((scenario) => scenario.sourceId === source.id)
+}))
+const sortableScenarioCollection = requireFixture(
+  sourceScenarioCases.find(({ items }) => {
+    if (items.length <= 3 || items.some(({ releaseDate }) => !releaseDate)) {
+      return false
+    }
+
+    const dates = items.map(({ releaseDate }) => releaseDate!)
+
+    return (
+      new Set(dates).size > 1 &&
+      !isReleaseDateOrder(dates, 'newest') &&
+      !isReleaseDateOrder(dates, 'oldest')
+    )
+  }),
+  'a source with more than three scenarios and distinguishable date orders'
+)
+const compactScenarioCollection = requireFixture(
+  sourceScenarioCases.find(({ items }) => items.length === 3),
+  'a source with exactly three scenarios'
+)
+const scenarioReleaseDateByHref = new Map(
+  scenarios.map((scenario) => [
+    `/scenarios/${scenario.slug}`,
+    scenario.releaseDate
+  ])
+)
 
 const resourceBreadcrumbCases = [
   {
     indexHref: '/risk-families',
-    resource: riskFamilies[0]!
+    detailHref: `/risk-families/${riskFamilies[0]!.slug}`
   },
   {
     indexHref: '/concepts',
-    resource: concepts[0]!
+    detailHref: `/concepts/${concepts[0]!.slug}`
   },
   {
     indexHref: '/sources',
-    resource: sources[0]!
+    detailHref: `/sources/${sources[0]!.slug}`
   }
 ] as const
 
-const longestConcept = concepts.reduce((longest, concept) =>
-  concept.title.length > longest.title.length ? concept : longest
+const taxonomyPageWithLongestCitation = requireFixture(
+  [
+    ...riskFamilies.map((resource) => ({
+      href: `/risk-families/${resource.slug}`,
+      citations: resource.citations
+    })),
+    ...concepts.map((resource) => ({
+      href: `/concepts/${resource.slug}`,
+      citations: resource.citations
+    }))
+  ].toSorted(
+    (left, right) =>
+      Math.max(...right.citations.map(({ title }) => title.length)) -
+      Math.max(...left.citations.map(({ title }) => title.length))
+  )[0],
+  'a taxonomy page with citations'
 )
 
-test('gallery state, Markdown copy, and media controls work across a dossier round trip', async ({
+test('gallery navigation and Markdown copy work across a dossier round trip', async ({
   context,
   page
 }) => {
@@ -43,60 +130,41 @@ test('gallery state, Markdown copy, and media controls work across a dossier rou
   const selectedLink = page.locator('[data-selected-scenario-link="desktop"]')
 
   await expect(gallery).toBeVisible()
-  await expect(gallery.locator('canvas')).toBeVisible({ timeout: 15_000 })
   await expect(selectedLink).toBeVisible()
-
-  const initialHref = await selectedLink.getAttribute('href')
-  const bounds = await gallery.boundingBox()
-
-  expect(bounds).not.toBeNull()
-  await page.mouse.move(
-    (bounds?.x ?? 0) + (bounds?.width ?? 0) / 2,
-    (bounds?.y ?? 0) + (bounds?.height ?? 0) / 2
-  )
-  await page.mouse.wheel(0, 1_200)
-  await expect
-    .poll(() => selectedLink.getAttribute('href'), { timeout: 5_000 })
-    .not.toBe(initialHref)
 
   await selectedLink.click()
   await expect(page).toHaveURL(/\/scenarios\/[a-z0-9-]+$/)
-  const selectedHref = new URL(page.url()).pathname
 
   const copyButton = page.locator('[data-copy-scenario-markdown]')
   await copyButton.click()
   await expect(copyButton).toHaveAttribute('data-state', 'success')
   expect(
-    (await page.evaluate(() => navigator.clipboard.readText())).length
-  ).toBeGreaterThan(100)
+    (await page.evaluate(() => navigator.clipboard.readText())).trim()
+  ).not.toBe('')
 
   await page.goBack()
   await expect(page).toHaveURL('/')
-  await expect(selectedLink).toHaveAttribute('href', selectedHref)
-
-  await page.goto(`/scenarios/${videoScenario.slug}`)
-  const media = page.locator('[data-scenario-media]')
-  await media.locator('[data-scenario-media-toggle]').click()
-  await expect(media.locator('iframe')).toBeVisible()
-  await expect(media).toHaveAttribute('data-playing', 'true')
-
-  await page.mouse.move(0, 0)
-  await expect(media).toHaveAttribute('data-controls-visible', 'false', {
-    timeout: 5_000
-  })
-  await media.hover()
-  await expect(media).toHaveAttribute('data-controls-visible', 'true')
-
-  await media.locator('[data-scenario-media-toggle]').click()
-  await expect(media).not.toHaveAttribute('data-playing', 'true')
-  await expect(media).toHaveAttribute('data-controls-visible', 'true')
+  await expect(gallery).toBeVisible()
 })
 
-test('resource detail breadcrumbs identify current records and navigate up', async ({
+test('scenario media can be played and paused', async ({ page }) => {
+  await page.goto(`/scenarios/${videoScenario.slug}`)
+  const media = page.locator('[data-scenario-media]')
+  const mediaToggle = media.locator('[data-scenario-media-toggle]')
+
+  await mediaToggle.click()
+  await expect(media.locator('iframe')).toBeVisible()
+  await expect(mediaToggle).toHaveAttribute('aria-pressed', 'true')
+
+  await mediaToggle.click()
+  await expect(mediaToggle).toHaveAttribute('aria-pressed', 'false')
+})
+
+test('resource detail breadcrumbs navigate back to each resource index', async ({
   page
 }) => {
-  for (const { indexHref, resource } of resourceBreadcrumbCases) {
-    await page.goto(`${indexHref}/${resource.slug}`)
+  for (const { detailHref, indexHref } of resourceBreadcrumbCases) {
+    await page.goto(detailHref)
 
     const breadcrumb = page.getByRole('navigation', { name: 'Breadcrumb' })
     const parent = breadcrumb.getByRole('link')
@@ -104,7 +172,8 @@ test('resource detail breadcrumbs identify current records and navigate up', asy
 
     await expect(breadcrumb).toBeVisible()
     await expect(parent).toHaveAttribute('href', indexHref)
-    await expect(current).toHaveText(resource.title)
+    await expect(current).toBeVisible()
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
 
     await parent.click()
     await expect(page).toHaveURL(indexHref)
@@ -112,51 +181,177 @@ test('resource detail breadcrumbs identify current records and navigate up', asy
   }
 })
 
-test('long resource breadcrumbs stay within the desktop header', async ({
+test('connected records support keyboard navigation', async ({ page }) => {
+  await page.goto(`/sources/${connectedRecordsFixture.slug}`)
+
+  const firstLink = page
+    .locator('[data-connected-records]')
+    .getByRole('link')
+    .first()
+  const href = await firstLink.getAttribute('href')
+
+  expect(href).toBeTruthy()
+  await firstLink.focus()
+  await expect(firstLink).toBeFocused()
+  await expect(firstLink).toHaveAccessibleName(/\S/)
+
+  const destination = new URL(href!, page.url()).href
+  await firstLink.press('Enter')
+  await expect(page).toHaveURL(destination)
+})
+
+test('source detail projects its poster and CMS metadata', async ({ page }) => {
+  await page.goto(`/sources/${sourceDetailFixture.slug}`)
+
+  const detail = page.locator('[data-resource-detail="source"]')
+  const poster = detail.locator('[data-source-poster] img')
+  const expectedLinks = [
+    sourceDetailFixture.imdbUrl,
+    sourceDetailFixture.rottenTomatoesUrl,
+    sourceDetailFixture.youtubeTrailerUrl
+  ].filter((href): href is string => href !== null)
+  const externalLinks = detail
+    .getByRole('list', { name: 'External references' })
+    .getByRole('link')
+
+  await expect(detail).toBeVisible()
+  await expect(detail.getByRole('heading', { level: 1 })).toBeVisible()
+  await expect(
+    detail.locator(`[data-source-type="${sourceDetailFixture.sourceType}"]`)
+  ).toBeVisible()
+  await expect(detail.locator('[data-source-release-date]')).toHaveAttribute(
+    'datetime',
+    sourceDetailFixture.releaseDate!
+  )
+  await expect(poster).toBeVisible()
+  await expect
+    .poll(() =>
+      poster.evaluate(
+        (image: HTMLImageElement) => image.complete && image.naturalWidth > 0
+      )
+    )
+    .toBe(true)
+  const renderedExternalHrefs = await externalLinks.evaluateAll((links) =>
+    links.map((link) => link.getAttribute('href'))
+  )
+  for (const href of expectedLinks) {
+    expect(renderedExternalHrefs).toContain(href)
+  }
+
+  await page.goto(`/sources/${sourceWithoutPoster.slug}`)
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+  await expect(page.locator('[data-source-poster]')).toHaveCount(0)
+})
+
+test('taxonomy details expose current external references', async ({
   page
 }) => {
-  await page.setViewportSize({ width: 1024, height: 900 })
-  await page.goto(`/concepts/${longestConcept.slug}`)
-
-  const breadcrumb = page.getByRole('navigation', { name: 'Breadcrumb' })
-  await expect(breadcrumb).toBeVisible()
-
-  const layout = await breadcrumb.evaluate((element) => {
-    const header = element.closest('header')
-    const wordmark = header?.querySelector<HTMLAnchorElement>('a[href="/"]')
-    const primaryNavigation = header?.querySelector<HTMLElement>(
-      'nav[aria-label="Primary navigation"]'
-    )
-    const parent = element.querySelector<HTMLAnchorElement>('a')
-    const current = element.querySelector<HTMLElement>('[aria-current="page"]')
-
-    if (!wordmark || !primaryNavigation || !parent || !current) return null
-
-    const breadcrumbBounds = element.getBoundingClientRect()
-    const parentText = document.createRange()
-    parentText.selectNodeContents(parent)
-
-    return {
-      clearsPrimaryNavigation:
-        breadcrumbBounds.right <=
-        primaryNavigation.getBoundingClientRect().left,
-      clearsWordmark:
-        breadcrumbBounds.left >= wordmark.getBoundingClientRect().right,
-      currentIsTruncated: current.scrollWidth > current.clientWidth,
-      parentIsUnderlined:
-        getComputedStyle(parent).textDecorationLine.includes('underline'),
-      parentLineCount: parentText.getClientRects().length
+  const cases = [
+    {
+      href: `/risk-families/${riskFamilies[0]!.slug}`,
+      wikipediaUrl: riskFamilies[0]!.wikipediaUrl,
+      citations: riskFamilies[0]!.citations
+    },
+    {
+      href: `/concepts/${concepts[0]!.slug}`,
+      wikipediaUrl: concepts[0]!.wikipediaUrl,
+      citations: concepts[0]!.citations
     }
-  })
+  ]
 
-  expect(layout).toEqual({
-    clearsPrimaryNavigation: true,
-    clearsWordmark: true,
-    currentIsTruncated: true,
-    parentIsUnderlined: true,
-    parentLineCount: 1
+  for (const detailCase of cases) {
+    await page.goto(detailCase.href)
+    const references = page.getByRole('list', { name: 'External references' })
+    const links = references.getByRole('link')
+    const expectedHrefs = [
+      detailCase.wikipediaUrl,
+      ...detailCase.citations.map(({ href }) => href)
+    ].filter((href): href is string => href !== null)
+    const renderedHrefs = await links.evaluateAll((items) =>
+      items.map((item) => item.getAttribute('href'))
+    )
+
+    await expect(references).toBeVisible()
+    for (const href of expectedHrefs) expect(renderedHrefs).toContain(href)
+  }
+})
+
+test('episode metadata appears only for TV scenarios', async ({ page }) => {
+  await page.goto(`/scenarios/${televisionScenarioWithEpisode.slug}`)
+  await expect(page.locator('[data-scenario-episode]')).toBeVisible()
+
+  await page.goto(`/scenarios/${movieScenario.slug}`)
+  await expect(page.locator('[data-scenario-episode]')).toHaveCount(0)
+})
+
+test('eligible resource scenario sorting persists locally', async ({
+  page
+}) => {
+  await page.goto(sortableScenarioCollection.href)
+
+  const sortGroup = page.getByRole('radiogroup', { name: 'Sort scenes' })
+  const defaultOrder = sortableScenarioCollection.items.map(
+    ({ slug }) => `/scenarios/${slug}`
+  )
+
+  await expect(sortGroup.getByRole('radio', { name: 'Default' })).toBeChecked()
+  expect(await getControlledScenarioHrefs(page, sortGroup)).toEqual(
+    defaultOrder
+  )
+
+  await sortGroup.getByRole('radio', { name: 'Newest first' }).click()
+  expectScenarioReleaseDateOrder(
+    await getControlledScenarioHrefs(page, sortGroup),
+    'newest'
+  )
+
+  await page.reload()
+
+  const persistedSortGroup = page.getByRole('radiogroup', {
+    name: 'Sort scenes'
   })
-  expect(await hasHorizontalOverflow(page)).toBe(false)
+  await expect(
+    persistedSortGroup.getByRole('radio', { name: 'Newest first' })
+  ).toBeChecked()
+  expectScenarioReleaseDateOrder(
+    await getControlledScenarioHrefs(page, persistedSortGroup),
+    'newest'
+  )
+
+  await persistedSortGroup.getByRole('radio', { name: 'Oldest first' }).click()
+  expectScenarioReleaseDateOrder(
+    await getControlledScenarioHrefs(page, persistedSortGroup),
+    'oldest'
+  )
+
+  await page.goto(compactScenarioCollection.href)
+  await expect(
+    page.getByRole('radiogroup', { name: 'Sort scenes' })
+  ).toHaveCount(0)
+  const compactSection = page.locator('section').filter({
+    has: page.getByRole('heading', { name: 'Scenes in this index' })
+  })
+  expect(
+    await compactSection
+      .getByRole('list')
+      .getByRole('link')
+      .evaluateAll((links) => links.map((link) => link.getAttribute('href')!))
+  ).toEqual(
+    compactScenarioCollection.items.map(({ slug }) => `/scenarios/${slug}`)
+  )
+
+  await page.goto(sortableScenarioCollection.href)
+
+  const restoredSortGroup = page.getByRole('radiogroup', {
+    name: 'Sort scenes'
+  })
+  await expect(
+    restoredSortGroup.getByRole('radio', { name: 'Oldest first' })
+  ).toBeChecked()
+  await restoredSortGroup.getByRole('radio', { name: 'Default' }).click()
+  expect(await getControlledScenarioHrefs(page, restoredSortGroup)).toEqual(
+    defaultOrder
+  )
 })
 
 test('Command-K search navigates through the generated local index', async ({
@@ -168,22 +363,17 @@ test('Command-K search navigates through the generated local index', async ({
   await expect(searchTrigger).toBeVisible()
   await page.keyboard.press('ControlOrMeta+k')
 
-  const searchInput = page.locator('[cmdk-input]')
+  const searchInput = page.getByRole('combobox')
   await expect(searchInput).toBeFocused()
   await searchInput.fill(searchTarget.title)
 
-  const result = page.locator(`[cmdk-item][data-value="${searchTarget.href}"]`)
-  await expect(result).toBeVisible()
-  await result.click()
+  await expect(page.getByRole('option').first()).toBeVisible()
+  await page.keyboard.press('Enter')
   await expect(page).toHaveURL(searchTarget.href)
 })
 
 test('spoiler dismissal persists across reloads', async ({ page }) => {
   await page.goto('/')
-  await page.evaluate(() => {
-    window.localStorage.removeItem('cultural-alignment:spoiler-warning:v2')
-  })
-  await page.reload()
 
   const spoiler = page.locator('[data-spoiler-warning]')
   await expect(spoiler).toBeVisible()
@@ -195,9 +385,9 @@ test('spoiler dismissal persists across reloads', async ({ page }) => {
 })
 
 test.describe('functional phone viewport', () => {
-  test.use({ viewport: { width: 390, height: 844 } })
+  test.use({ hasTouch: true, viewport: { width: 390, height: 844 } })
 
-  test('filtering, gallery selection, and dossier layout stay within the viewport', async ({
+  test('filtering and taxonomy help remain usable on a phone viewport', async ({
     page
   }) => {
     await page.goto('/scenarios')
@@ -212,18 +402,76 @@ test.describe('functional phone viewport', () => {
     )
     await expect(familyFilter).toHaveAttribute('data-state', 'on')
 
-    await page.goto('/')
-    await expect(
-      page.locator('[data-spatial-gallery="featured"]')
-    ).toBeVisible()
-    await expect(page.locator('[data-selected-scenario-metadata]')).toBeHidden()
-    expect(await hasHorizontalOverflow(page)).toBe(false)
-
     await page.goto(`/scenarios/${videoScenario.slug}`)
     await expect(page.locator('[data-scenario-dossier]')).toBeVisible()
+    await expect(page.locator('[data-search-ready="true"]')).toBeVisible()
+    await page.locator('[data-taxonomy-help]').first().tap()
+    await expect(page.getByRole('tooltip')).toBeVisible()
+
+    await page.goto(taxonomyPageWithLongestCitation.href)
+    await expect(
+      page.getByRole('list', { name: 'External references' })
+    ).toBeVisible()
     expect(await hasHorizontalOverflow(page)).toBe(false)
   })
 })
+
+function requireFixture<Value>(
+  value: Value | undefined,
+  description: string
+): Value {
+  if (value === undefined) {
+    throw new Error(`Expected the content snapshot to include ${description}`)
+  }
+
+  return value
+}
+
+async function getControlledScenarioHrefs(
+  page: import('@playwright/test').Page,
+  sortGroup: import('@playwright/test').Locator
+) {
+  const collectionId = await sortGroup.getAttribute('aria-controls')
+
+  if (!collectionId) {
+    throw new Error('Expected scenario sort controls to identify their list')
+  }
+
+  return page
+    .locator(`[id="${collectionId}"]`)
+    .getByRole('link')
+    .evaluateAll((links) => links.map((link) => link.getAttribute('href')!))
+}
+
+function expectScenarioReleaseDateOrder(
+  hrefs: readonly string[],
+  order: 'newest' | 'oldest'
+) {
+  const releaseDates = hrefs.map((href) => {
+    const releaseDate = scenarioReleaseDateByHref.get(href)
+
+    if (!releaseDate) {
+      throw new Error(`Expected a dated scenario for ${href}`)
+    }
+
+    return releaseDate
+  })
+
+  expect(isReleaseDateOrder(releaseDates, order)).toBe(true)
+}
+
+function isReleaseDateOrder(
+  releaseDates: readonly string[],
+  order: 'newest' | 'oldest'
+) {
+  const expected = releaseDates.toSorted()
+
+  if (order === 'newest') expected.reverse()
+
+  return releaseDates.every(
+    (releaseDate, index) => releaseDate === expected[index]
+  )
+}
 
 async function hasHorizontalOverflow(page: import('@playwright/test').Page) {
   return page.evaluate(

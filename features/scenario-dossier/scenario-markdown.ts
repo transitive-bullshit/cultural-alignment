@@ -1,6 +1,6 @@
 import type { ScenarioPage, TaxonomyLink } from '@/lib/content/catalog'
 
-import { hasDistinctEpisodeLabel } from './source-meta'
+import { shouldShowEpisode } from './source-meta'
 
 export function formatScenarioAsMarkdown(scenario: ScenarioPage, siteUrl: URL) {
   const details = [
@@ -17,7 +17,7 @@ export function formatScenarioAsMarkdown(scenario: ScenarioPage, siteUrl: URL) {
     `## Scenario details\n\n${details.join('\n')}`,
     `## Scene still\n\n![${escapeMarkdownAlt(scenario.image.alt)}](${imageUrl})`,
     `## Scene\n\n${scenario.scene}`,
-    `## Why this analogy works\n\n${scenario.whyAnalogyWorks}`,
+    `## AI safety analogy\n\n${scenario.whyAnalogyWorks}`,
     `## Where the analogy breaks\n\n${scenario.caveats}`
   ]
 
@@ -42,7 +42,7 @@ function formatEpisode(scenario: ScenarioPage, siteUrl: URL) {
 
   if (
     !episode ||
-    !hasDistinctEpisodeLabel(scenario.source.title, episode.label)
+    !shouldShowEpisode(scenario.source.sourceType, episode.label)
   ) {
     return null
   }

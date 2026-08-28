@@ -1,13 +1,32 @@
 import { createHash } from 'node:crypto'
 import { isAbsolute, relative, resolve, sep } from 'node:path'
 
-import type { RichTextItemResponse } from '@notionhq/client'
+import type {
+  GetPagePropertyParameters,
+  GetPagePropertyResponse,
+  RichTextItemResponse
+} from '@notionhq/client'
 
-const generatedScenarioMediaPattern =
-  /^\/media\/generated\/scenarios\/[0-9a-f]{32}\/(?:gallery|detail)\.webp$/
+const generatedMediaPattern =
+  /^\/media\/generated\/(?:scenarios|sources)\/[0-9a-f]{32}\/(?:gallery|detail)\.webp$/
 
 export function isGeneratedMediaPublicPath(publicPath: string) {
-  return generatedScenarioMediaPattern.test(publicPath)
+  return generatedMediaPattern.test(publicPath)
+}
+
+export function generatedMediaPublicPaths(
+  collection: 'scenarios' | 'sources',
+  pageId: string
+) {
+  const compactId = pageId.replaceAll('-', '').toLowerCase()
+  if (!/^[0-9a-f]{32}$/.test(compactId)) {
+    throw new Error(`Invalid Notion page ID for generated media: ${pageId}`)
+  }
+
+  return {
+    gallerySrc: `/media/generated/${collection}/${compactId}/gallery.webp`,
+    detailSrc: `/media/generated/${collection}/${compactId}/detail.webp`
+  }
 }
 
 export function generatedMediaFilePath(root: string, publicPath: string) {
@@ -40,17 +59,20 @@ export function allocateStableSlugs(
   previous: Readonly<Record<string, string>>
 ) {
   const sortedItems = items.toSorted((a, b) => a.id.localeCompare(b.id))
-  const slugs = { ...previous }
+  const currentIds = new Set(sortedItems.map((item) => item.id))
+  const slugs: Record<string, string> = {}
   const used = new Set<string>()
 
   for (const [id, priorSlug] of Object.entries(previous).toSorted(([a], [b]) =>
     a.localeCompare(b)
   )) {
+    if (!currentIds.has(id)) continue
     if (used.has(priorSlug)) {
       throw new Error(
         `Previous manifest contains duplicate slug “${priorSlug}” at ${id}`
       )
     }
+    slugs[id] = priorSlug
     used.add(priorSlug)
   }
 
@@ -69,6 +91,53 @@ export function allocateStableSlugs(
   }
 
   return slugs
+}
+
+export async function retrieveRelationIds(
+  pageId: string,
+  propertyId: string,
+  inlineRelations: readonly { id: string }[],
+  retrieve: (
+    args: GetPagePropertyParameters
+  ) => Promise<GetPagePropertyResponse>
+) {
+  if (inlineRelations.length < 25) {
+    return inlineRelations.map((relation) => relation.id)
+  }
+
+  const ids: string[] = []
+  let startCursor: string | undefined
+
+  do {
+    const response = await retrieve({
+      page_id: pageId,
+      property_id: propertyId,
+      page_size: 100,
+      start_cursor: startCursor
+    })
+
+    if (
+      response.object !== 'list' ||
+      response.property_item.type !== 'relation'
+    ) {
+      throw new Error(
+        `Page ${pageId} relation ${propertyId} did not return a paginated relation list`
+      )
+    }
+
+    for (const item of response.results) {
+      if (item.type !== 'relation') {
+        throw new Error(
+          `Page ${pageId} relation ${propertyId} returned ${item.type}; expected relation`
+        )
+      }
+      ids.push(item.relation.id)
+    }
+
+    startCursor = response.next_cursor ?? undefined
+  } while (startCursor)
+
+  return ids
 }
 
 export function richTextToMarkdown(items: readonly RichTextItemResponse[]) {

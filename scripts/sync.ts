@@ -27,30 +27,57 @@ import {
 } from '@notionhq/client'
 import pMap from 'p-map'
 import sharp from 'sharp'
-import { z } from 'zod'
 
-import type {
-  ConceptRecord,
-  ContentSnapshot,
-  RiskFamilyRecord,
-  ScenarioRecord,
-  SourceRecord
+import {
+  citationSchema,
+  type Citation,
+  type ConceptRecord,
+  type ContentSnapshot,
+  type RiskFamilyRecord,
+  type ScenarioRecord,
+  type SourceRecord
 } from '../lib/content/schema'
 import { buildSearchDocuments } from '../lib/content/search-documents'
 import { validateContentSnapshot } from '../lib/content/validate'
 import {
+  emptyPreviousSyncManifest,
+  MEDIA_PIPELINE_VERSION,
+  parsePreviousSyncManifest,
+  syncEntrySchema,
+  validateSyncManifest,
+  type PreviousSyncEntry,
+  type PreviousSyncManifest,
+  type SyncEntry
+} from './sync-manifest'
+import { resolveCitationMetadata } from './citation-metadata'
+import {
   allocateStableSlugs,
   generatedMediaFilePath,
-  isGeneratedMediaPublicPath,
+  generatedMediaPublicPaths,
   richTextToMarkdown,
+  retrieveRelationIds,
   sha256
 } from './sync-utils'
 
 const NOTION_API_VERSION = '2026-03-11'
-const NOTION_DATABASE_ID = '3c6edb27-f124-8070-9d6d-ca256d247c80'
-const NOTION_DATA_SOURCE_ID = '3c6edb27-f124-80f0-a929-000b1fb786d5'
-// Bump this whenever image selection, resize, encoding, or output naming changes.
-const MEDIA_PIPELINE_VERSION = 1
+const NOTION_DATA_SOURCES = {
+  scenarios: {
+    databaseId: '3c6edb27-f124-8070-9d6d-ca256d247c80',
+    dataSourceId: '3c6edb27-f124-80f0-a929-000b1fb786d5'
+  },
+  sources: {
+    databaseId: '3caedb27-f124-804d-9004-c7b1b3057002',
+    dataSourceId: '3caedb27-f124-8036-b319-000ba9fcb815'
+  },
+  riskFamilies: {
+    databaseId: '3caedb27-f124-8096-84c3-ef0a4e694c4c',
+    dataSourceId: '3caedb27-f124-8082-bf07-000b9dffcb31'
+  },
+  concepts: {
+    databaseId: '3caedb27-f124-800a-85ce-e51e4d74c596',
+    dataSourceId: '3caedb27-f124-8005-9b4e-000b68a487d5'
+  }
+} as const
 
 const FEATURED_SCENARIO_IDS = [
   '3c6edb27-f124-80cc-92d5-c8f2f2e3a7fa', // Keep Summer Safe
@@ -81,17 +108,64 @@ const FEATURED_SCENARIO_IDS = [
 ] as const
 const featuredScenarioIds = new Set<string>(FEATURED_SCENARIO_IDS)
 
-const EXPECTED_PROPERTIES = {
+const SCENARIO_PROPERTIES = {
   Example: { id: 'title', type: 'title' },
   Episode: { id: 'A%60ku', type: 'rich_text' },
   Caveats: { id: 'A%7C%5Ey', type: 'rich_text' },
-  'AI risk families': { id: 'Ld%3F%40', type: 'multi_select' },
+  'AI risk families': {
+    id: 'mMh%3F',
+    type: 'relation',
+    relationDataSourceId: NOTION_DATA_SOURCES.riskFamilies.dataSourceId
+  },
   Date: { id: 'LxE%7D', type: 'date' },
-  'AI safety concepts': { id: 'N%5D%5CT', type: 'multi_select' },
+  'AI safety concepts': {
+    id: 'OiQ_',
+    type: 'relation',
+    relationDataSourceId: NOTION_DATA_SOURCES.concepts.dataSourceId
+  },
   'YouTube Clip': { id: 'b%7CGs', type: 'url' },
   'Why the analogy works': { id: 'ocrK', type: 'rich_text' },
-  Media: { id: 'rhiQ', type: 'select' },
+  'Media source': {
+    id: 'V%7Cff',
+    type: 'relation',
+    relationDataSourceId: NOTION_DATA_SOURCES.sources.dataSourceId
+  },
   Scene: { id: 's%5Ceo', type: 'rich_text' }
+} as const
+
+const SOURCE_PROPERTIES = {
+  Name: { id: 'title', type: 'title' },
+  'Source Type': { id: 'vu%3Er', type: 'select' },
+  Description: { id: 'XKl%3D', type: 'rich_text' },
+  'Release Date': { id: 'ZlZe', type: 'date' },
+  IMDB: { id: '%5C%3Al%3E', type: 'url' },
+  'Rotten Tomatoes': { id: 'UN%3DX', type: 'url' },
+  'YouTube Trailer': { id: 'VHah', type: 'url' },
+  'Directly Related Media Sources': {
+    id: 'sW%7Cj',
+    type: 'relation',
+    relationDataSourceId: NOTION_DATA_SOURCES.sources.dataSourceId
+  }
+} as const
+
+const RISK_FAMILY_PROPERTIES = {
+  'Short Name': { id: 'title', type: 'title' },
+  'Full Name': { id: 'fTqr', type: 'rich_text' },
+  Description: { id: 'umNZ', type: 'rich_text' },
+  Wikipedia: { id: 'LCRw', type: 'url' },
+  'Canonical Source 1': { id: '%3CS%3DL', type: 'url' },
+  'Canonical Source 2': { id: 'p%5CEf', type: 'url' },
+  'Canonical Source 3': { id: 'LtNQ', type: 'url' }
+} as const
+
+const CONCEPT_PROPERTIES = {
+  'Short Name': { id: 'title', type: 'title' },
+  'Long Name': { id: 'kreM', type: 'rich_text' },
+  Description: { id: '~%7DY~', type: 'rich_text' },
+  Wikipedia: { id: 'xvY%5B', type: 'url' },
+  'Canonical Source 1': { id: 'Njhs', type: 'url' },
+  'Canonical Source 2': { id: '%3EvdR', type: 'url' },
+  'Canonical Source 3': { id: 'TQK%7D', type: 'url' }
 } as const
 
 const IMAGE_BLOCK_OVERRIDES = new Map<string, string>()
@@ -125,56 +199,48 @@ const MISSING_IMAGE_OVERRIDES = new Map([
   ]
 ])
 
-const RISK_FAMILY_DETAILS = {
-  'malicious use': {
-    title: 'Malicious use',
-    description:
-      'Risks created when people intentionally use capable AI systems to cause harm.'
-  },
-  'accidents/malfunctions': {
-    title: 'Accidents / malfunctions',
-    description:
-      'Risks created by system failures, brittle behavior, and unintended operation.'
-  },
-  misalignment: {
-    title: 'Misalignment',
-    description:
-      'Risks created when a system’s learned objectives or behavior diverge from human intent.'
-  },
-  'systemic/structural': {
-    title: 'Systemic / structural',
-    description:
-      'Risks that emerge through institutions, incentives, concentration, and social systems.'
-  },
-  'security/governance': {
-    title: 'Security / governance',
-    description:
-      'Risks shaped by control, oversight, access, deployment, and institutional coordination.'
-  }
-} satisfies Record<string, { title: string; description: string }>
-
 const projectRoot = fileURLToPath(new URL('..', import.meta.url))
 const snapshotTarget = join(projectRoot, 'content/snapshot')
 const mediaTarget = join(projectRoot, 'public/media/generated')
 const searchTarget = join(projectRoot, 'public/content/search-index.json')
 
 type PageProperty = PageObjectResponse['properties'][string]
-type SelectOption = { id: string; name: string; color: string }
+type PropertyContract = Readonly<
+  Record<
+    string,
+    {
+      readonly id: string
+      readonly type: string
+      readonly relationDataSourceId?: string
+    }
+  >
+>
 
 type ParsedScenario = {
   page: PageObjectResponse
   id: string
   title: string
-  source: SelectOption
+  sourceId: string
   episode?: { label: string; href?: string }
   releaseDate: string | null
   featured: boolean
-  riskFamilies: SelectOption[]
-  concepts: SelectOption[]
+  riskFamilyIds: string[]
+  conceptIds: string[]
   video: ScenarioRecord['video']
   scene: string
   whyAnalogyWorks: string
   caveats: string
+}
+
+type ParsedSource = Omit<SourceRecord, 'slug' | 'poster'> & {
+  readonly page: PageObjectResponse
+}
+
+type ParsedRiskFamily = Omit<RiskFamilyRecord, 'slug' | 'citations'> & {
+  readonly canonicalUrls: readonly string[]
+}
+type ParsedConcept = Omit<ConceptRecord, 'slug' | 'citations'> & {
+  readonly canonicalUrls: readonly string[]
 }
 
 type ImageResult = {
@@ -190,80 +256,12 @@ type ImageResult = {
   caption: string
 }
 
-const sha256Schema = z.string().regex(/^[0-9a-f]{64}$/)
-const generatedMediaPathSchema = z
-  .string()
-  .refine(isGeneratedMediaPublicPath, 'Invalid generated media path')
-
-const syncEntryBaseSchema = z.object({
-  lastEditedTime: z.string(),
-  imageBlockId: z.string(),
-  additionalImageCount: z.number().int().nonnegative(),
-  sourceHash: sha256Schema,
-  gallerySrc: generatedMediaPathSchema,
-  detailSrc: generatedMediaPathSchema,
-  width: z.number().int().positive(),
-  height: z.number().int().positive(),
-  caption: z.string()
-})
-
-const previousSyncEntrySchema = syncEntryBaseSchema.extend({
-  pipelineVersion: z.number().int().positive().optional(),
-  galleryHash: sha256Schema.optional(),
-  detailHash: sha256Schema.optional()
-})
-
-const syncEntrySchema = syncEntryBaseSchema.extend({
-  pipelineVersion: z.literal(MEDIA_PIPELINE_VERSION),
-  galleryHash: sha256Schema,
-  detailHash: sha256Schema
-})
-
-const syncManifestSchema = z.object({
-  schemaVersion: z.literal(1),
-  slugs: z.object({
-    scenarios: z.record(
-      z.string().min(1),
-      z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)
-    ),
-    sources: z.record(
-      z.string().min(1),
-      z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)
-    ),
-    riskFamilies: z.record(
-      z.string().min(1),
-      z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)
-    ),
-    concepts: z.record(
-      z.string().min(1),
-      z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)
-    )
-  }),
-  entries: z.record(z.string(), previousSyncEntrySchema)
-})
-
-type SyncManifest = z.infer<typeof syncManifestSchema>
-type SyncEntry = z.infer<typeof syncEntrySchema>
-type PreviousSyncEntry = z.infer<typeof previousSyncEntrySchema>
-
-const emptyManifest: SyncManifest = {
-  schemaVersion: 1,
-  slugs: {
-    scenarios: {},
-    sources: {},
-    riskFamilies: {},
-    concepts: {}
-  },
-  entries: {}
-}
-
 function getProperty(
   page: PageObjectResponse,
   name: string,
-  expectedType: PageProperty['type']
+  expectedType: PageProperty['type'],
+  expectedId: string
 ): PageProperty {
-  const expectedId =
-    EXPECTED_PROPERTIES[name as keyof typeof EXPECTED_PROPERTIES]?.id
   const property =
     page.properties[name] ??
     Object.values(page.properties).find(
@@ -308,21 +306,28 @@ function requiredMarkdown(
   return value
 }
 
-function title(
+function requiredPlainText(
   page: PageObjectResponse,
+  name: string,
   items: readonly RichTextItemResponse[]
 ) {
   const value = plainText(items)
-  if (!value) throw new Error(`Page ${page.id} has no title`)
+  if (!value) throw new Error(`Page ${page.id} has an empty “${name}” property`)
   return value
 }
 
 async function retrieveRichTextItems(
   page: PageObjectResponse,
   name: string,
-  expectedType: 'rich_text' | 'title'
+  expectedType: 'rich_text' | 'title',
+  contract: PropertyContract
 ) {
-  const property = getProperty(page, name, expectedType)
+  const property = getProperty(
+    page,
+    name,
+    expectedType,
+    expectedProperty(contract, name).id
+  )
   const inlineItems =
     property.type === 'title'
       ? property.title
@@ -373,6 +378,12 @@ async function retrieveRichTextItems(
   return items
 }
 
+function expectedProperty(contract: PropertyContract, name: string) {
+  const property = contract[name]
+  if (!property) throw new Error(`Missing sync contract for “${name}”`)
+  return property
+}
+
 function assertPropertyListType(
   page: PageObjectResponse,
   name: string,
@@ -386,8 +397,17 @@ function assertPropertyListType(
   }
 }
 
-function select(page: PageObjectResponse, name: string) {
-  const property = getProperty(page, name, 'select')
+function select(
+  page: PageObjectResponse,
+  name: string,
+  contract: PropertyContract
+) {
+  const property = getProperty(
+    page,
+    name,
+    'select',
+    expectedProperty(contract, name).id
+  )
   if (property.type !== 'select') throw new Error('Unreachable property type')
   if (!property.select) {
     throw new Error(`Page ${page.id} has no “${name}” selection`)
@@ -395,17 +415,52 @@ function select(page: PageObjectResponse, name: string) {
   return property.select
 }
 
-function multiSelect(page: PageObjectResponse, name: string) {
-  const property = getProperty(page, name, 'multi_select')
-  if (property.type !== 'multi_select')
-    throw new Error('Unreachable property type')
-  return property.multi_select
-}
-
-function releaseDate(page: PageObjectResponse) {
-  const property = getProperty(page, 'Date', 'date')
+function date(
+  page: PageObjectResponse,
+  name: string,
+  contract: PropertyContract
+) {
+  const property = getProperty(
+    page,
+    name,
+    'date',
+    expectedProperty(contract, name).id
+  )
   if (property.type !== 'date') throw new Error('Unreachable property type')
   return property.date?.start.slice(0, 10) ?? null
+}
+
+function url(
+  page: PageObjectResponse,
+  name: string,
+  contract: PropertyContract
+) {
+  const property = getProperty(
+    page,
+    name,
+    'url',
+    expectedProperty(contract, name).id
+  )
+  if (property.type !== 'url') throw new Error('Unreachable property type')
+  return property.url
+}
+
+async function relation(
+  page: PageObjectResponse,
+  name: string,
+  contract: PropertyContract
+) {
+  const property = getProperty(
+    page,
+    name,
+    'relation',
+    expectedProperty(contract, name).id
+  )
+  if (property.type !== 'relation') throw new Error('Unreachable property type')
+
+  return retrieveRelationIds(page.id, property.id, property.relation, (args) =>
+    notion.pages.properties.retrieve(args)
+  )
 }
 
 function episode(items: readonly RichTextItemResponse[]) {
@@ -413,12 +468,6 @@ function episode(items: readonly RichTextItemResponse[]) {
   if (!label) return undefined
   const href = items.find((item) => item.href)?.href ?? undefined
   return href ? { label, href } : { label }
-}
-
-function youtubeUrl(page: PageObjectResponse) {
-  const property = getProperty(page, 'YouTube Clip', 'url')
-  if (property.type !== 'url') throw new Error('Unreachable property type')
-  return property.url
 }
 
 function parseTime(value: string | null) {
@@ -470,27 +519,53 @@ function parseYouTubeVideo(value: string | null): ScenarioRecord['video'] {
 async function parseScenario(
   page: PageObjectResponse
 ): Promise<ParsedScenario> {
-  const titleItems = await retrieveRichTextItems(page, 'Example', 'title')
-  const episodeItems = await retrieveRichTextItems(page, 'Episode', 'rich_text')
-  const caveatItems = await retrieveRichTextItems(page, 'Caveats', 'rich_text')
-  const analogyItems = await retrieveRichTextItems(
-    page,
-    'Why the analogy works',
-    'rich_text'
-  )
-  const sceneItems = await retrieveRichTextItems(page, 'Scene', 'rich_text')
-  const scenarioTitle = title(page, titleItems)
+  const [
+    titleItems,
+    episodeItems,
+    caveatItems,
+    analogyItems,
+    sceneItems,
+    sourceIds,
+    riskFamilyIds,
+    conceptIds
+  ] = await Promise.all([
+    retrieveRichTextItems(page, 'Example', 'title', SCENARIO_PROPERTIES),
+    retrieveRichTextItems(page, 'Episode', 'rich_text', SCENARIO_PROPERTIES),
+    retrieveRichTextItems(page, 'Caveats', 'rich_text', SCENARIO_PROPERTIES),
+    retrieveRichTextItems(
+      page,
+      'Why the analogy works',
+      'rich_text',
+      SCENARIO_PROPERTIES
+    ),
+    retrieveRichTextItems(page, 'Scene', 'rich_text', SCENARIO_PROPERTIES),
+    relation(page, 'Media source', SCENARIO_PROPERTIES),
+    relation(page, 'AI risk families', SCENARIO_PROPERTIES),
+    relation(page, 'AI safety concepts', SCENARIO_PROPERTIES)
+  ])
+  if (sourceIds.length !== 1) {
+    throw new Error(
+      `Page ${page.id} must relate to exactly one media source; received ${sourceIds.length}`
+    )
+  }
+  if (riskFamilyIds.length === 0) {
+    throw new Error(`Page ${page.id} must relate to an AI risk family`)
+  }
+  if (conceptIds.length === 0) {
+    throw new Error(`Page ${page.id} must relate to an AI safety concept`)
+  }
+
   return {
     page,
     id: page.id,
-    title: scenarioTitle,
-    source: select(page, 'Media'),
+    title: requiredPlainText(page, 'Example', titleItems),
+    sourceId: sourceIds[0]!,
     episode: episode(episodeItems),
-    releaseDate: releaseDate(page),
+    releaseDate: date(page, 'Date', SCENARIO_PROPERTIES),
     featured: featuredScenarioIds.has(page.id),
-    riskFamilies: multiSelect(page, 'AI risk families'),
-    concepts: multiSelect(page, 'AI safety concepts'),
-    video: parseYouTubeVideo(youtubeUrl(page)),
+    riskFamilyIds: riskFamilyIds.toSorted(),
+    conceptIds: conceptIds.toSorted(),
+    video: parseYouTubeVideo(url(page, 'YouTube Clip', SCENARIO_PROPERTIES)),
     scene: requiredMarkdown(page, 'Scene', sceneItems),
     whyAnalogyWorks: requiredMarkdown(
       page,
@@ -499,6 +574,100 @@ async function parseScenario(
     ),
     caveats: requiredMarkdown(page, 'Caveats', caveatItems)
   }
+}
+
+async function parseSource(page: PageObjectResponse): Promise<ParsedSource> {
+  const [titleItems, descriptionItems, relatedSourceIds] = await Promise.all([
+    retrieveRichTextItems(page, 'Name', 'title', SOURCE_PROPERTIES),
+    retrieveRichTextItems(page, 'Description', 'rich_text', SOURCE_PROPERTIES),
+    relation(page, 'Directly Related Media Sources', SOURCE_PROPERTIES)
+  ])
+  const sourceTypeOption = select(page, 'Source Type', SOURCE_PROPERTIES).name
+  const sourceType =
+    sourceTypeOption === 'Movie'
+      ? ('movie' as const)
+      : sourceTypeOption === 'TV Show'
+        ? ('tv-show' as const)
+        : null
+  if (!sourceType) {
+    throw new Error(
+      `Page ${page.id} has unsupported source type “${sourceTypeOption}”`
+    )
+  }
+
+  return {
+    page,
+    id: page.id,
+    title: requiredPlainText(page, 'Name', titleItems),
+    sourceType,
+    description: plainText(descriptionItems) || null,
+    releaseDate: date(page, 'Release Date', SOURCE_PROPERTIES),
+    imdbUrl: url(page, 'IMDB', SOURCE_PROPERTIES),
+    rottenTomatoesUrl: url(page, 'Rotten Tomatoes', SOURCE_PROPERTIES),
+    youtubeTrailerUrl: url(page, 'YouTube Trailer', SOURCE_PROPERTIES),
+    relatedSourceIds: relatedSourceIds.toSorted()
+  }
+}
+
+async function parseRiskFamily(
+  page: PageObjectResponse
+): Promise<ParsedRiskFamily> {
+  const [shortNameItems, fullNameItems, descriptionItems] = await Promise.all([
+    retrieveRichTextItems(page, 'Short Name', 'title', RISK_FAMILY_PROPERTIES),
+    retrieveRichTextItems(
+      page,
+      'Full Name',
+      'rich_text',
+      RISK_FAMILY_PROPERTIES
+    ),
+    retrieveRichTextItems(
+      page,
+      'Description',
+      'rich_text',
+      RISK_FAMILY_PROPERTIES
+    )
+  ])
+
+  return {
+    id: page.id,
+    shortName: requiredPlainText(page, 'Short Name', shortNameItems),
+    fullName: requiredPlainText(page, 'Full Name', fullNameItems),
+    description: requiredPlainText(page, 'Description', descriptionItems),
+    wikipediaUrl: url(page, 'Wikipedia', RISK_FAMILY_PROPERTIES),
+    canonicalUrls: canonicalUrls(page, RISK_FAMILY_PROPERTIES)
+  }
+}
+
+async function parseConcept(page: PageObjectResponse): Promise<ParsedConcept> {
+  const [shortNameItems, longNameItems, descriptionItems] = await Promise.all([
+    retrieveRichTextItems(page, 'Short Name', 'title', CONCEPT_PROPERTIES),
+    retrieveRichTextItems(page, 'Long Name', 'rich_text', CONCEPT_PROPERTIES),
+    retrieveRichTextItems(page, 'Description', 'rich_text', CONCEPT_PROPERTIES)
+  ])
+
+  return {
+    id: page.id,
+    shortName: requiredPlainText(page, 'Short Name', shortNameItems),
+    longName: requiredPlainText(page, 'Long Name', longNameItems),
+    description: requiredPlainText(page, 'Description', descriptionItems),
+    wikipediaUrl: url(page, 'Wikipedia', CONCEPT_PROPERTIES),
+    canonicalUrls: canonicalUrls(page, CONCEPT_PROPERTIES)
+  }
+}
+
+function canonicalUrls(page: PageObjectResponse, contract: PropertyContract) {
+  return [1, 2, 3]
+    .map((index) => url(page, `Canonical Source ${index}`, contract))
+    .filter((value): value is string => Boolean(value))
+}
+
+function requiredCitation(
+  citationsByHref: ReadonlyMap<string, Citation>,
+  href: string
+) {
+  const citation = citationsByHref.get(href)
+  if (!citation) throw new Error(`Missing resolved citation for ${href}`)
+  return citation
 }
 
 async function pathExists(path: string) {
@@ -510,19 +679,58 @@ async function pathExists(path: string) {
   }
 }
 
-async function readPreviousManifest(): Promise<SyncManifest> {
+async function readPreviousManifest(): Promise<PreviousSyncManifest> {
   try {
     const value: unknown = JSON.parse(
       await readFile(join(snapshotTarget, 'manifest.json'), 'utf8')
     )
-    return syncManifestSchema.parse(value)
+    return parsePreviousSyncManifest(value)
   } catch (err) {
-    if (isNodeError(err) && err.code === 'ENOENT') return emptyManifest
+    if (isNodeError(err) && err.code === 'ENOENT') {
+      return emptyPreviousSyncManifest
+    }
 
     throw new Error(
       'Existing content/snapshot/manifest.json is invalid; refusing to discard slug and media history',
       { cause: err }
     )
+  }
+}
+
+async function readPreviousCitationCache(): Promise<readonly Citation[]> {
+  try {
+    const collections: unknown[] = await Promise.all([
+      readFile(join(snapshotTarget, 'risk-families.json'), 'utf8').then(
+        JSON.parse
+      ),
+      readFile(join(snapshotTarget, 'concepts.json'), 'utf8').then(JSON.parse)
+    ])
+    const citationsByHref = new Map<string, Citation>()
+
+    for (const collection of collections) {
+      if (!Array.isArray(collection)) {
+        throw new Error('Previous taxonomy snapshot must contain an array')
+      }
+      for (const record of collection) {
+        if (!record || typeof record !== 'object' || !('citations' in record)) {
+          continue
+        }
+        if (!Array.isArray(record.citations)) {
+          throw new Error('Previous taxonomy citations must contain an array')
+        }
+        for (const value of record.citations) {
+          const citation = citationSchema.parse(value)
+          citationsByHref.set(citation.href, citation)
+        }
+      }
+    }
+
+    return [...citationsByHref.values()]
+  } catch (err) {
+    if (isNodeError(err) && err.code === 'ENOENT') return []
+    throw new Error('Existing citation metadata cache is invalid', {
+      cause: err
+    })
   }
 }
 
@@ -536,13 +744,14 @@ function publicFilePath(root: string, publicPath: string) {
 
 async function reusableImageEntry(
   entry: PreviousSyncEntry | undefined,
-  page: PageObjectResponse
+  page: PageObjectResponse,
+  collection: 'scenarios' | 'sources'
 ): Promise<SyncEntry | null> {
   const parsed = syncEntrySchema.safeParse(entry)
   if (!parsed.success) return null
 
   const current = parsed.data
-  const expectedPaths = scenarioMediaPaths(page.id)
+  const expectedPaths = generatedMediaPublicPaths(collection, page.id)
   if (
     current.lastEditedTime !== page.last_edited_time ||
     current.gallerySrc !== expectedPaths.gallerySrc ||
@@ -628,13 +837,13 @@ function imageCaption(block: BlockObjectResponse) {
 }
 
 async function downloadImage(url: string) {
-  const maximumAttempts = 3
+  const maximumAttempts = 5
   let lastError = new Error('Image download failed')
 
   for (let attempt = 1; attempt <= maximumAttempts; attempt += 1) {
     try {
       const response = await fetch(url, {
-        signal: AbortSignal.timeout(60_000)
+        signal: AbortSignal.timeout(120_000)
       })
       if (!response.ok) {
         const err = new Error(
@@ -653,7 +862,7 @@ async function downloadImage(url: string) {
     if (attempt < maximumAttempts) {
       console.warn(
         `Image download failed; retrying (${attempt}/${maximumAttempts})`,
-        url
+        downloadLabel(url)
       )
       await delay(500 * 2 ** (attempt - 1))
     }
@@ -662,25 +871,46 @@ async function downloadImage(url: string) {
   throw lastError
 }
 
+function downloadLabel(value: string) {
+  try {
+    const url = new URL(value)
+    return `${url.origin}${url.pathname}`
+  } catch {
+    return 'configured image URL'
+  }
+}
+
 async function processImage(
   page: PageObjectResponse,
-  stageRoot: string
-): Promise<ImageResult> {
+  stageRoot: string,
+  options: {
+    readonly collection: 'scenarios' | 'sources'
+    readonly required: boolean
+    readonly fallback?: {
+      readonly imageBlockId: string
+      readonly url: string
+      readonly caption: string
+    }
+  }
+): Promise<ImageResult | null> {
   const blocks = await findImageBlocks(page.id)
   const images = blocks.filter((block) => block.type === 'image')
-  const overrideId = IMAGE_BLOCK_OVERRIDES.get(page.id)
+  const overrideId =
+    options.collection === 'scenarios'
+      ? IMAGE_BLOCK_OVERRIDES.get(page.id)
+      : undefined
   const selectedImage = overrideId
     ? images.find((image) => image.id === overrideId)
     : images[0]
-  const missingImageOverride = getMissingImageFallback(page)
   if (overrideId && !selectedImage) {
     throw new Error(
       `Page ${page.id} is missing configured image block ${overrideId}`
     )
   }
-  if (!selectedImage && !missingImageOverride) {
+  if (!selectedImage && !options.fallback && options.required) {
     throw new Error(`Page ${page.id} has no image block`)
   }
+  if (!selectedImage && !options.fallback) return null
 
   if (images.length > 1) {
     console.warn(
@@ -690,15 +920,18 @@ async function processImage(
 
   if (!selectedImage) {
     console.warn(
-      `Page ${page.id} has no image block; using ${missingImageOverride!.imageBlockId}`
+      `Page ${page.id} has no image block; using ${options.fallback!.imageBlockId}`
     )
   }
 
   const input = await downloadImage(
-    selectedImage ? imageUrl(selectedImage) : missingImageOverride!.url
+    selectedImage ? imageUrl(selectedImage) : options.fallback!.url
   )
   const sourceHash = sha256(input)
-  const { gallerySrc, detailSrc } = scenarioMediaPaths(page.id)
+  const { gallerySrc, detailSrc } = generatedMediaPublicPaths(
+    options.collection,
+    page.id
+  )
 
   const [gallery, detail] = await Promise.all([
     sharp(input)
@@ -729,92 +962,29 @@ async function processImage(
     sourceHash,
     galleryHash: sha256(gallery.data),
     detailHash: sha256(detail.data),
-    imageBlockId: selectedImage?.id ?? missingImageOverride!.imageBlockId,
+    imageBlockId: selectedImage?.id ?? options.fallback!.imageBlockId,
     additionalImageCount: Math.max(0, images.length - 1),
     caption: selectedImage
       ? imageCaption(selectedImage)
-      : missingImageOverride!.caption
+      : options.fallback!.caption
   }
 }
 
-function getMissingImageFallback(page: PageObjectResponse) {
-  const configured = MISSING_IMAGE_OVERRIDES.get(page.id)
+function getMissingImageFallback(
+  scenario: ParsedScenario,
+  sourceTitle: string
+) {
+  const configured = MISSING_IMAGE_OVERRIDES.get(scenario.id)
   if (configured) return configured
 
-  const video = parseYouTubeVideo(youtubeUrl(page))
+  const video = scenario.video
   if (!video) return undefined
 
   return {
     imageBlockId: `youtube-thumbnail:${video.id}`,
     url: `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`,
-    caption: `Video thumbnail from ${select(page, 'Media').name}`
+    caption: `Video thumbnail from ${sourceTitle}`
   }
-}
-
-function scenarioMediaPaths(pageId: string) {
-  const compactId = pageId.replaceAll('-', '')
-  return {
-    gallerySrc: `/media/generated/scenarios/${compactId}/gallery.webp`,
-    detailSrc: `/media/generated/scenarios/${compactId}/detail.webp`
-  }
-}
-
-function stableOptions(
-  rows: readonly ParsedScenario[],
-  key: 'riskFamilies' | 'concepts'
-) {
-  const options = new Map<string, SelectOption>()
-  for (const row of rows) {
-    for (const option of row[key]) {
-      const current = options.get(option.id)
-      if (current && current.name !== option.name) {
-        throw new Error(`Notion option ${option.id} has conflicting names`)
-      }
-      options.set(option.id, option)
-    }
-  }
-  return [...options.values()].toSorted((a, b) => a.id.localeCompare(b.id))
-}
-
-function buildSources(rows: readonly ParsedScenario[]) {
-  const sources = new Map<string, { id: string; title: string }>()
-  for (const row of rows) {
-    const current = sources.get(row.source.id)
-    if (current && current.title !== row.source.name) {
-      throw new Error(
-        `Notion media option ${row.source.id} has conflicting names`
-      )
-    }
-    sources.set(row.source.id, {
-      id: row.source.id,
-      title: row.source.name
-    })
-  }
-  return [...sources.values()]
-    .map((source) => ({ ...source, kind: 'unknown' as const }))
-    .toSorted((a, b) => a.id.localeCompare(b.id))
-}
-
-function buildRiskFamilies(options: readonly SelectOption[]) {
-  return options.map((option) => {
-    const key = option.name.toLowerCase()
-    if (!Object.hasOwn(RISK_FAMILY_DETAILS, key)) {
-      throw new Error(
-        `Missing presentation details for risk family “${option.name}”`
-      )
-    }
-    const details = RISK_FAMILY_DETAILS[key as keyof typeof RISK_FAMILY_DETAILS]
-    return { id: option.id, ...details }
-  })
-}
-
-function buildConcepts(options: readonly SelectOption[]) {
-  return options.map((option) => ({
-    id: option.id,
-    title: option.name,
-    description:
-      'A concept used to index the collection’s authored cultural analogies.'
-  }))
 }
 
 async function writeJson(path: string, value: unknown) {
@@ -823,11 +993,14 @@ async function writeJson(path: string, value: unknown) {
 }
 
 async function assertStageAssets(snapshot: ContentSnapshot, stageRoot: string) {
-  for (const scenario of snapshot.scenarios) {
-    for (const publicPath of [
-      scenario.image.gallerySrc,
-      scenario.image.detailSrc
-    ]) {
+  const images = [
+    ...snapshot.scenarios.map((scenario) => scenario.image),
+    ...snapshot.sources.flatMap((source) =>
+      source.poster ? [source.poster] : []
+    )
+  ]
+  for (const image of images) {
+    for (const publicPath of [image.gallerySrc, image.detailSrc]) {
       const assetPath = publicFilePath(stageRoot, publicPath)
       if (!(await pathExists(assetPath))) {
         throw new Error(`Generated asset is missing: ${publicPath}`)
@@ -880,6 +1053,80 @@ async function replaceGeneratedOutputs(stageRoot: string) {
   }
 }
 
+async function verifyDataSource(
+  label: string,
+  ids: { readonly databaseId: string; readonly dataSourceId: string },
+  contract: PropertyContract
+) {
+  const [database, dataSource] = await Promise.all([
+    notion.databases.retrieve({ database_id: ids.databaseId }),
+    notion.dataSources.retrieve({ data_source_id: ids.dataSourceId })
+  ])
+  if (!isFullDatabase(database)) {
+    throw new Error(`Notion returned a partial ${label} database`)
+  }
+  if (!database.data_sources.some((source) => source.id === ids.dataSourceId)) {
+    throw new Error(
+      `Configured ${label} data source is not a child of its database`
+    )
+  }
+  if (!isFullDataSource(dataSource)) {
+    throw new Error(`Notion returned a partial ${label} data source`)
+  }
+
+  for (const [name, expectation] of Object.entries(contract)) {
+    const property =
+      dataSource.properties[name] ??
+      Object.values(dataSource.properties).find((candidate) =>
+        propertyIdsMatch(candidate.id, expectation.id)
+      )
+    const relationTarget =
+      property?.type === 'relation'
+        ? property.relation.data_source_id
+        : undefined
+
+    if (
+      !property ||
+      !propertyIdsMatch(property.id, expectation.id) ||
+      property.type !== expectation.type ||
+      relationTarget !== expectation.relationDataSourceId
+    ) {
+      throw new Error(
+        `Notion ${label} schema mismatch for “${name}”: expected ${expectation.type} at ${expectation.id}${expectation.relationDataSourceId ? ` targeting ${expectation.relationDataSourceId}` : ''}, received ${property?.type ?? 'missing'}${relationTarget ? ` targeting ${relationTarget}` : ''}`
+      )
+    }
+  }
+}
+
+async function readDataSourcePages(dataSourceId: string) {
+  const pages: PageObjectResponse[] = []
+  for await (const row of iterateAllDataSourceRows(notion, {
+    data_source_id: dataSourceId,
+    result_type: 'page',
+    page_size: 100
+  })) {
+    if (isFullPage(row) && !row.in_trash) pages.push(row)
+  }
+  return pages.toSorted((a, b) => a.id.localeCompare(b.id))
+}
+
+function toSyncEntry(page: PageObjectResponse, image: ImageResult): SyncEntry {
+  return {
+    pipelineVersion: MEDIA_PIPELINE_VERSION,
+    lastEditedTime: page.last_edited_time,
+    imageBlockId: image.imageBlockId,
+    additionalImageCount: image.additionalImageCount,
+    sourceHash: image.sourceHash,
+    galleryHash: image.galleryHash,
+    detailHash: image.detailHash,
+    gallerySrc: image.gallerySrc,
+    detailSrc: image.detailSrc,
+    width: image.width,
+    height: image.height,
+    caption: image.caption
+  }
+}
+
 const notionToken = process.env.NOTION_TOKEN
 if (!notionToken) {
   throw new Error('NOTION_TOKEN is required to run pnpm content:sync')
@@ -892,59 +1139,58 @@ const notion = new Client({
 
 async function main() {
   const stageRoot = join(projectRoot, `.content-sync-${randomUUID()}`)
-  const previousManifest = await readPreviousManifest()
+  const [previousManifest, cachedCitations] = await Promise.all([
+    readPreviousManifest(),
+    readPreviousCitationCache()
+  ])
   await mkdir(stageRoot, { recursive: true })
 
   try {
-    console.log('Verifying Notion database and data source…')
-    const database = await notion.databases.retrieve({
-      database_id: NOTION_DATABASE_ID
-    })
-    if (!isFullDatabase(database))
-      throw new Error('Notion returned a partial database')
-    if (
-      !database.data_sources.some(
-        (source) => source.id === NOTION_DATA_SOURCE_ID
-      )
-    ) {
-      throw new Error(
-        'Configured Notion data source is not a child of the database'
-      )
-    }
+    console.log('Verifying four Notion database and data-source contracts…')
+    await pMap(
+      [
+        ['scenario', NOTION_DATA_SOURCES.scenarios, SCENARIO_PROPERTIES],
+        ['media-source', NOTION_DATA_SOURCES.sources, SOURCE_PROPERTIES],
+        [
+          'risk-family',
+          NOTION_DATA_SOURCES.riskFamilies,
+          RISK_FAMILY_PROPERTIES
+        ],
+        ['safety-concept', NOTION_DATA_SOURCES.concepts, CONCEPT_PROPERTIES]
+      ] as const,
+      ([label, ids, contract]) => verifyDataSource(label, ids, contract),
+      { concurrency: 2 }
+    )
 
-    const dataSource = await notion.dataSources.retrieve({
-      data_source_id: NOTION_DATA_SOURCE_ID
-    })
-    if (!isFullDataSource(dataSource))
-      throw new Error('Notion returned a partial data source')
-    for (const [name, expectation] of Object.entries(EXPECTED_PROPERTIES)) {
-      const property =
-        dataSource.properties[name] ??
-        Object.values(dataSource.properties).find((candidate) =>
-          propertyIdsMatch(candidate.id, expectation.id)
-        )
-      if (
-        !property ||
-        !propertyIdsMatch(property.id, expectation.id) ||
-        property.type !== expectation.type
-      ) {
-        throw new Error(
-          `Notion schema mismatch for “${name}”: expected ${expectation.type} at ${expectation.id}, received ${property?.type ?? 'missing'}`
-        )
-      }
-    }
+    console.log('Reading all related Notion rows…')
+    const [scenarioPages, sourcePages, riskFamilyPages, conceptPages] =
+      await Promise.all([
+        readDataSourcePages(NOTION_DATA_SOURCES.scenarios.dataSourceId),
+        readDataSourcePages(NOTION_DATA_SOURCES.sources.dataSourceId),
+        readDataSourcePages(NOTION_DATA_SOURCES.riskFamilies.dataSourceId),
+        readDataSourcePages(NOTION_DATA_SOURCES.concepts.dataSourceId)
+      ])
+    const [parsedRows, sourceSeeds, riskFamilySeeds, conceptSeeds] =
+      await Promise.all([
+        pMap(scenarioPages, parseScenario, { concurrency: 3 }),
+        pMap(sourcePages, parseSource, { concurrency: 3 }),
+        pMap(riskFamilyPages, parseRiskFamily, { concurrency: 3 }),
+        pMap(conceptPages, parseConcept, { concurrency: 3 })
+      ])
 
-    console.log('Reading all scenario rows…')
-    const pages: PageObjectResponse[] = []
-    for await (const row of iterateAllDataSourceRows(notion, {
-      data_source_id: NOTION_DATA_SOURCE_ID,
-      result_type: 'page',
-      page_size: 100
-    })) {
-      if (isFullPage(row) && !row.in_trash) pages.push(row)
-    }
-    pages.sort((a, b) => a.id.localeCompare(b.id))
-    const parsedRows = await pMap(pages, parseScenario, { concurrency: 3 })
+    const citationUrls = [
+      ...riskFamilySeeds.flatMap((family) => family.canonicalUrls),
+      ...conceptSeeds.flatMap((concept) => concept.canonicalUrls)
+    ]
+    console.log(
+      `Resolving metadata for ${new Set(citationUrls).size} unique citations…`
+    )
+    const { citationsByHref, warnings: citationWarnings } =
+      await resolveCitationMetadata(citationUrls, {
+        cachedCitations,
+        refresh: process.env.REFRESH_CITATIONS === '1'
+      })
+    for (const warning of citationWarnings) console.warn(warning)
 
     const missingFeatured = FEATURED_SCENARIO_IDS.filter(
       (expectedId) => !parsedRows.some((row) => row.id === expectedId)
@@ -955,11 +1201,6 @@ async function main() {
       )
     }
 
-    const sourceSeeds = buildSources(parsedRows)
-    const riskFamilySeeds = buildRiskFamilies(
-      stableOptions(parsedRows, 'riskFamilies')
-    )
-    const conceptSeeds = buildConcepts(stableOptions(parsedRows, 'concepts'))
     const slugs = {
       scenarios: allocateStableSlugs(
         parsedRows,
@@ -967,25 +1208,49 @@ async function main() {
       ),
       sources: allocateStableSlugs(sourceSeeds, previousManifest.slugs.sources),
       riskFamilies: allocateStableSlugs(
-        riskFamilySeeds,
+        riskFamilySeeds.map((family) => ({
+          id: family.id,
+          title: family.shortName
+        })),
         previousManifest.slugs.riskFamilies
       ),
       concepts: allocateStableSlugs(
-        conceptSeeds,
+        conceptSeeds.map((concept) => ({
+          id: concept.id,
+          title: concept.shortName
+        })),
         previousManifest.slugs.concepts
       )
     }
 
+    const sourceSeedById = new Map(
+      sourceSeeds.map((source) => [source.id, source])
+    )
     let completedImages = 0
     console.log(`Syncing ${parsedRows.length} scenario images…`)
-    const imageResults = await pMap(
+    const scenarioImageResults = await pMap(
       parsedRows,
       async (row) => {
-        const previousEntry = previousManifest.entries[row.id]
-        const reusableEntry = await reusableImageEntry(previousEntry, row.page)
+        const source = sourceSeedById.get(row.sourceId)
+        if (!source) {
+          throw new Error(
+            `Scenario ${row.id} relates to unknown media source ${row.sourceId}`
+          )
+        }
+        const previousEntry = previousManifest.entries.scenarios[row.id]
+        const reusableEntry = await reusableImageEntry(
+          previousEntry,
+          row.page,
+          'scenarios'
+        )
         const result = reusableEntry
           ? await reuseImage(reusableEntry, stageRoot)
-          : await processImage(row.page, stageRoot)
+          : await processImage(row.page, stageRoot, {
+              collection: 'scenarios',
+              required: true,
+              fallback: getMissingImageFallback(row, source.title)
+            })
+        if (!result) throw new Error(`Scenario ${row.id} has no image`)
 
         completedImages += 1
         if (
@@ -1001,33 +1266,53 @@ async function main() {
       { concurrency: 4 }
     )
 
-    const entries: Record<string, SyncEntry> = {}
+    completedImages = 0
+    console.log(`Syncing ${sourceSeeds.length} optional source posters…`)
+    const sourceImageResults = await pMap(
+      sourceSeeds,
+      async (source) => {
+        const previousEntry = previousManifest.entries.sources[source.id]
+        const reusableEntry = await reusableImageEntry(
+          previousEntry,
+          source.page,
+          'sources'
+        )
+        const result = reusableEntry
+          ? await reuseImage(reusableEntry, stageRoot)
+          : await processImage(source.page, stageRoot, {
+              collection: 'sources',
+              required: false
+            })
+
+        completedImages += 1
+        if (
+          completedImages % 20 === 0 ||
+          completedImages >= sourceSeeds.length
+        ) {
+          console.log(
+            `Processed ${completedImages}/${sourceSeeds.length} source posters`
+          )
+        }
+        return result
+      },
+      { concurrency: 4 }
+    )
+
+    const scenarioEntries: Record<string, SyncEntry> = {}
     const scenarios: ScenarioRecord[] = parsedRows.map((row, index) => {
-      const image = imageResults[index]!
-      entries[row.id] = {
-        pipelineVersion: MEDIA_PIPELINE_VERSION,
-        lastEditedTime: row.page.last_edited_time,
-        imageBlockId: image.imageBlockId,
-        additionalImageCount: image.additionalImageCount,
-        sourceHash: image.sourceHash,
-        galleryHash: image.galleryHash,
-        detailHash: image.detailHash,
-        gallerySrc: image.gallerySrc,
-        detailSrc: image.detailSrc,
-        width: image.width,
-        height: image.height,
-        caption: image.caption
-      }
+      const image = scenarioImageResults[index]!
+      const source = sourceSeedById.get(row.sourceId)!
+      scenarioEntries[row.id] = toSyncEntry(row.page, image)
 
       const scenario: ScenarioRecord = {
         id: row.id,
         slug: slugs.scenarios[row.id]!,
         title: row.title,
-        sourceId: row.source.id,
+        sourceId: row.sourceId,
         releaseDate: row.releaseDate,
         featured: row.featured,
-        riskFamilyIds: row.riskFamilies.map((option) => option.id).toSorted(),
-        conceptIds: row.concepts.map((option) => option.id).toSorted(),
+        riskFamilyIds: row.riskFamilyIds,
+        conceptIds: row.conceptIds,
         image: {
           gallerySrc: image.gallerySrc,
           detailSrc: image.detailSrc,
@@ -1035,7 +1320,7 @@ async function main() {
           height: image.height,
           alt:
             image.caption ||
-            `Still from ${row.source.name} illustrating ${row.title}`
+            `Still from ${source.title} illustrating ${row.title}`
         },
         video: row.video,
         scene: row.scene,
@@ -1046,21 +1331,48 @@ async function main() {
       return scenario
     })
 
-    const sources: SourceRecord[] = sourceSeeds.map((source) => ({
-      ...source,
-      slug: slugs.sources[source.id]!
-    }))
-    const riskFamilies: RiskFamilyRecord[] = riskFamilySeeds.map((family) => ({
-      ...family,
-      slug: slugs.riskFamilies[family.id]!
-    }))
-    const concepts: ConceptRecord[] = conceptSeeds.map((concept) => ({
-      ...concept,
-      slug: slugs.concepts[concept.id]!
-    }))
+    const sourceEntries: Record<string, SyncEntry> = {}
+    const sources: SourceRecord[] = sourceSeeds.map((source, index) => {
+      const image = sourceImageResults[index]
+      if (image) sourceEntries[source.id] = toSyncEntry(source.page, image)
+      const { page: _page, ...record } = source
+      return {
+        ...record,
+        slug: slugs.sources[source.id]!,
+        poster: image
+          ? {
+              gallerySrc: image.gallerySrc,
+              detailSrc: image.detailSrc,
+              width: image.width,
+              height: image.height,
+              alt: image.caption || `Poster for ${source.title}`
+            }
+          : null
+      }
+    })
+    const riskFamilies: RiskFamilyRecord[] = riskFamilySeeds.map((family) => {
+      const { canonicalUrls, ...record } = family
+      return {
+        ...record,
+        slug: slugs.riskFamilies[family.id]!,
+        citations: canonicalUrls.map((href) =>
+          requiredCitation(citationsByHref, href)
+        )
+      }
+    })
+    const concepts: ConceptRecord[] = conceptSeeds.map((concept) => {
+      const { canonicalUrls, ...record } = concept
+      return {
+        ...record,
+        slug: slugs.concepts[concept.id]!,
+        citations: canonicalUrls.map((href) =>
+          requiredCitation(citationsByHref, href)
+        )
+      }
+    })
 
     const snapshot = validateContentSnapshot({
-      schemaVersion: 1,
+      schemaVersion: 2,
       scenarios,
       sources,
       riskFamilies,
@@ -1071,11 +1383,10 @@ async function main() {
     const fixtureScenarioIds = [...FEATURED_SCENARIO_IDS]
 
     const manifest = {
-      schemaVersion: 1 as const,
+      schemaVersion: 2 as const,
       notion: {
         apiVersion: NOTION_API_VERSION,
-        databaseId: NOTION_DATABASE_ID,
-        dataSourceId: NOTION_DATA_SOURCE_ID
+        dataSources: NOTION_DATA_SOURCES
       },
       counts: {
         scenarios: snapshot.scenarios.length,
@@ -1085,12 +1396,16 @@ async function main() {
       },
       fixtureScenarioIds,
       slugs,
-      entries
+      entries: {
+        scenarios: scenarioEntries,
+        sources: sourceEntries
+      }
     }
+    const validatedManifest = validateSyncManifest(manifest, snapshot)
 
     const stageSnapshot = join(stageRoot, 'content/snapshot')
     await Promise.all([
-      writeJson(join(stageSnapshot, 'manifest.json'), manifest),
+      writeJson(join(stageSnapshot, 'manifest.json'), validatedManifest),
       writeJson(join(stageSnapshot, 'scenarios.json'), snapshot.scenarios),
       writeJson(join(stageSnapshot, 'sources.json'), snapshot.sources),
       writeJson(

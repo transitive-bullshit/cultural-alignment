@@ -1,19 +1,25 @@
 'use client'
 
 import Link from 'next/link'
+import type { ReactNode } from 'react'
 import { useCallback, useEffect, useRef } from 'react'
 
 const GLYPHS = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789/+=?'
 
 type ScrambleLinkProps = {
+  readonly animateOnReveal?: boolean
   readonly children: string
   readonly className?: string
+  readonly copyElement?: 'span' | 'strong'
   readonly delay?: number
   readonly duration?: number
   readonly external?: boolean
   readonly href: string
   readonly label?: string
+  readonly leadingContent?: ReactNode
+  readonly prefetch?: boolean | 'auto' | null
   readonly prefix?: string
+  readonly trailingContent?: ReactNode
 }
 
 /**
@@ -21,14 +27,19 @@ type ScrambleLinkProps = {
  * The fixed character count avoids reflow in the ruled taxonomy lists.
  */
 export function ScrambleLink({
+  animateOnReveal = true,
   children,
   className,
+  copyElement = 'span',
   delay = 0,
   duration = 420,
   external = false,
   href,
   label,
-  prefix = ''
+  leadingContent,
+  prefetch = false,
+  prefix = '',
+  trailingContent
 }: ScrambleLinkProps) {
   const copyRef = useRef<HTMLSpanElement>(null)
   const frameRef = useRef<number | null>(null)
@@ -79,6 +90,8 @@ export function ScrambleLink({
   }, [children, duration, stop])
 
   useEffect(() => {
+    if (!animateOnReveal) return stop
+
     const copy = copyRef.current
     if (!copy || !('IntersectionObserver' in window)) {
       entryTimerRef.current = window.setTimeout(scramble, delay)
@@ -100,18 +113,22 @@ export function ScrambleLink({
       observer.disconnect()
       stop()
     }
-  }, [delay, scramble, stop])
+  }, [animateOnReveal, delay, scramble, stop])
+
+  const CopyElement = copyElement
 
   const content = (
     <>
+      {leadingContent}
       <span className='sr-only'>
         {prefix}
         {children}
       </span>
-      <span aria-hidden='true'>
+      <CopyElement aria-hidden='true'>
         {prefix}
         <span ref={copyRef}>{children}</span>
-      </span>
+      </CopyElement>
+      {trailingContent}
     </>
   )
 
@@ -136,7 +153,7 @@ export function ScrambleLink({
   }
 
   return (
-    <Link {...interactionProps} href={href} prefetch={false}>
+    <Link {...interactionProps} href={href} prefetch={prefetch}>
       {content}
     </Link>
   )

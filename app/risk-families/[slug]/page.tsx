@@ -22,7 +22,7 @@ export async function generateMetadata({
 
   return family
     ? {
-        title: family.title,
+        title: family.detailTitle,
         description: family.description,
         alternates: { canonical: family.href }
       }

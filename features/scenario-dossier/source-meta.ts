@@ -1,20 +1,8 @@
-const whitespace = /\s+/gu
+import type { SourceIdentity } from '@/lib/content/catalog'
 
-function normalizeVisibleLabel(label: string) {
-  return label
-    .normalize('NFKC')
-    .trim()
-    .replace(whitespace, ' ')
-    .toLocaleLowerCase('en-US')
-}
-
-export function hasDistinctEpisodeLabel(
-  sourceTitle: string,
+export function shouldShowEpisode(
+  sourceType: SourceIdentity['sourceType'],
   episodeLabel: string | undefined
 ) {
-  if (!episodeLabel) return false
-
-  return (
-    normalizeVisibleLabel(sourceTitle) !== normalizeVisibleLabel(episodeLabel)
-  )
+  return sourceType === 'tv-show' && Boolean(episodeLabel?.trim())
 }

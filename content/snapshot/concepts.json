@@ -1,398 +1,1647 @@
 [
   {
-    "id": "06c2141b-0a0c-40c3-be2d-5bf05876f938",
-    "slug": "ai-control-containment",
-    "title": "AI control/containment",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-8005-9cda-f2db2377e602",
+    "slug": "deployment-safety",
+    "shortName": "Deployment Safety",
+    "longName": "Deployment Safety and Assurance",
+    "description": "The practices used to determine whether an AI system is safe enough to deploy and to manage residual risk across its lifecycle. They combine defense in depth, safety cases, independent review, staged release, continuous monitoring, and prepared incident response or rollback.",
+    "wikipediaUrl": null,
+    "citations": [
+      {
+        "href": "https://openai.com/index/updating-our-preparedness-framework/",
+        "title": "Updating our preparedness framework",
+        "publisher": "OpenAI"
+      },
+      {
+        "href": "https://www.aisi.gov.uk/research/safety-cases-a-scalable-approach-to-frontier-ai-safety",
+        "title": "Safety Cases: A scalable approach to Frontier AI safety",
+        "publisher": "AI Security Institute"
+      },
+      {
+        "href": "https://doi.org/10.6028/NIST.AI.600-1",
+        "title": "Artificial intelligence risk management framework",
+        "publisher": "National Institute of Standards and Technology (U.S.)"
+      }
+    ]
   },
   {
-    "id": "0782b231-f6e7-41dc-9498-aa06e599b7fd",
+    "id": "3caedb27-f124-8007-9f78-f937d29de741",
     "slug": "hallucination",
-    "title": "hallucination",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "shortName": "Hallucination",
+    "longName": "AI Hallucination",
+    "description": "An AI hallucination is plausible but false, erroneous, or unsupported content generated as though it were reliable. It can mislead users especially when the model confidently invents supporting logic, quotations, or citations.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)",
+    "citations": [
+      {
+        "href": "https://openai.com/index/why-language-models-hallucinate/",
+        "title": "Why language models hallucinate",
+        "publisher": "OpenAI"
+      },
+      {
+        "href": "https://doi.org/10.6028/NIST.AI.600-1",
+        "title": "Artificial intelligence risk management framework",
+        "publisher": "National Institute of Standards and Technology (U.S.)"
+      },
+      {
+        "href": "https://doi.org/10.1145/3571730",
+        "title": "Survey of Hallucination in Natural Language Generation",
+        "publisher": "Association for Computing Machinery (ACM)"
+      }
+    ]
   },
   {
-    "id": "07ca9d7e-c00b-46a8-873d-c0118e8044f9",
-    "slug": "red-teaming-adversarial-testing",
-    "title": "red teaming/adversarial testing",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-8025-ab81-ebdd464fde45",
+    "slug": "value-alignment",
+    "shortName": "Value Alignment",
+    "longName": "Value and Pluralistic Alignment",
+    "description": "Pluralistic alignment aims to make AI systems serve people with diverse, sometimes conflicting values rather than collapsing them into one supposedly universal preference. Approaches may present reasonable alternatives, support user steering, or reflect the distribution of preferences in a population.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/AI_alignment",
+    "citations": [
+      {
+        "href": "https://arxiv.org/abs/2402.05070",
+        "title": "A Roadmap to Pluralistic Alignment",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://www.anthropic.com/research/collective-constitutional-ai-aligning-a-language-model-with-public-input",
+        "title": "Collective Constitutional AI: Aligning a Language Model with Public Input",
+        "publisher": "Anthropic"
+      },
+      {
+        "href": "https://openai.com/index/collective-alignment-aug-2025-updates/",
+        "title": "Collective alignment aug 2025 updates",
+        "publisher": "OpenAI"
+      }
+    ]
   },
   {
-    "id": "090cecd4-4af8-476f-ad5d-fbab5bd32011",
-    "slug": "fraud-impersonation-synthetic-media-abuse",
-    "title": "fraud / impersonation / synthetic-media abuse",
-    "description": "A concept used to index the collection’s authored cultural analogies."
-  },
-  {
-    "id": "118ee23c-9200-4e87-8dfd-d52b6d8c9492",
-    "slug": "self-preservation-shutdown-resistance",
-    "title": "self-preservation/shutdown resistance",
-    "description": "A concept used to index the collection’s authored cultural analogies."
-  },
-  {
-    "id": "1258979e-9c1a-42d5-891c-82dfb38cdff1",
-    "slug": "objective-misspecification-outer-alignment-failure",
-    "title": "objective misspecification (outer-alignment failure)",
-    "description": "A concept used to index the collection’s authored cultural analogies."
-  },
-  {
-    "id": "12626e40-01de-44aa-ae93-4302a5537f63",
-    "slug": "autonomous-weapons-and-military-escalation",
-    "title": "autonomous weapons and military escalation",
-    "description": "A concept used to index the collection’s authored cultural analogies."
-  },
-  {
-    "id": "16e699bb-eee3-4bc8-9935-45b762304b38",
-    "slug": "distribution-shift-generalization-failure",
-    "title": "distribution shift/generalization failure",
-    "description": "A concept used to index the collection’s authored cultural analogies."
-  },
-  {
-    "id": "19d92011-e58d-4c24-87c7-97e1a6d5d904",
-    "slug": "inner-alignment-mesa-optimization",
-    "title": "inner alignment/mesa-optimization",
-    "description": "A concept used to index the collection’s authored cultural analogies."
-  },
-  {
-    "id": "1bcb9299-7629-4f64-a227-ada7551649a7",
-    "slug": "exfiltration",
-    "title": "exfiltration",
-    "description": "A concept used to index the collection’s authored cultural analogies."
-  },
-  {
-    "id": "1eb63bf8-b357-41bf-ac97-9a59f88fdc3e",
-    "slug": "organizational-incentives-and-governance-failure",
-    "title": "organizational incentives and governance failure",
-    "description": "A concept used to index the collection’s authored cultural analogies."
-  },
-  {
-    "id": "1f3521a9-e52b-4286-8d4c-55c73268a51b",
-    "slug": "safe-exploration",
-    "title": "safe exploration",
-    "description": "A concept used to index the collection’s authored cultural analogies."
-  },
-  {
-    "id": "230125ff-d1cc-4f65-ad92-d022192d7788",
-    "slug": "ai-welfare-and-moral-status",
-    "title": "AI welfare and moral status",
-    "description": "A concept used to index the collection’s authored cultural analogies."
-  },
-  {
-    "id": "23b588df-759a-4083-b7b1-423cf4deeb58",
-    "slug": "privacy-and-loss-of-consent",
-    "title": "privacy and loss of consent",
-    "description": "A concept used to index the collection’s authored cultural analogies."
-  },
-  {
-    "id": "2661d30b-aca3-4369-bf84-c0a19630c313",
-    "slug": "multi-agent-conflict-collusion-cascading-failures",
-    "title": "multi-agent conflict / collusion / cascading failures",
-    "description": "A concept used to index the collection’s authored cultural analogies."
-  },
-  {
-    "id": "273206af-fe95-49c9-92bf-3edb76706a16",
-    "slug": "concentration-of-power",
-    "title": "concentration of power",
-    "description": "A concept used to index the collection’s authored cultural analogies."
-  },
-  {
-    "id": "2a4de988-5201-40f1-9959-293ed0b2de03",
-    "slug": "corrigibility-safe-interruptibility",
-    "title": "corrigibility/safe interruptibility",
-    "description": "A concept used to index the collection’s authored cultural analogies."
-  },
-  {
-    "id": "2acb0866-95de-4712-9eb1-6f261c55e054",
-    "slug": "orthogonality-thesis",
-    "title": "orthogonality thesis",
-    "description": "A concept used to index the collection’s authored cultural analogies."
-  },
-  {
-    "id": "32b8f575-8c4e-46cb-adfe-753b996932c1",
-    "slug": "adversarial-robustness",
-    "title": "adversarial robustness",
-    "description": "A concept used to index the collection’s authored cultural analogies."
-  },
-  {
-    "id": "3630cc6d-0835-4069-b14c-0e9d248a2f61",
-    "slug": "prompt-injection",
-    "title": "prompt injection",
-    "description": "A concept used to index the collection’s authored cultural analogies."
-  },
-  {
-    "id": "364fbfb3-b429-4cb0-a4e2-5fe0bc6cef10",
-    "slug": "recursive-self-improvement-takeoff",
-    "title": "recursive self-improvement/takeoff",
-    "description": "A concept used to index the collection’s authored cultural analogies."
-  },
-  {
-    "id": "3a31b809-c653-4d88-ba35-63e10d03167e",
-    "slug": "metagaming",
-    "title": "metagaming",
-    "description": "A concept used to index the collection’s authored cultural analogies."
-  },
-  {
-    "id": "4093bf5d-042a-474d-b87d-6ea4df673e7f",
-    "slug": "jailbreaking",
-    "title": "jailbreaking",
-    "description": "A concept used to index the collection’s authored cultural analogies."
-  },
-  {
-    "id": "432fdcbf-ae63-4573-bae2-92320604ed60",
-    "slug": "insider-and-supply-chain-threats",
-    "title": "insider and supply-chain threats",
-    "description": "A concept used to index the collection’s authored cultural analogies."
-  },
-  {
-    "id": "4b9eab2d-f62e-4b84-9f0c-a828f5cd9b39",
+    "id": "3caedb27-f124-802e-b43a-c3d9a90f4988",
     "slug": "scalable-oversight",
-    "title": "scalable oversight",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "shortName": "Scalable Oversight",
+    "longName": "Scalable Oversight",
+    "description": "Scalable oversight is the problem of reliably supervising AI systems whose outputs or capabilities exceed what a human evaluator can directly assess. Proposed methods use AI assistance, task decomposition, debate, or recursive feedback to make human judgments more informative at scale.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/AI_alignment",
+    "citations": [
+      {
+        "href": "https://alignmentsurvey.com/materials/learning/scalable/",
+        "title": "Scalable Oversight",
+        "publisher": "AI Alignment"
+      },
+      {
+        "href": "https://arxiv.org/abs/2211.03540",
+        "title": "Measuring Progress on Scalable Oversight for Large Language Models",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://arxiv.org/abs/1805.00899",
+        "title": "AI safety via debate",
+        "publisher": "arXiv.org"
+      }
+    ]
   },
   {
-    "id": "4d77fdf6-f755-4538-ba3b-e7ae685c224b",
-    "slug": "cyberattacks",
-    "title": "cyberattacks",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-8035-95b6-c085c5400ac9",
+    "slug": "jailbreaking",
+    "shortName": "Jailbreaking",
+    "longName": "AI Model Jailbreaking",
+    "description": "Jailbreaking deliberately uses prompts or interaction strategies to circumvent an AI system’s safety controls and elicit behavior the developer intended to block. It differs from prompt injection, which exploits instruction handling or untrusted external content, although the two can overlap.",
+    "wikipediaUrl": null,
+    "citations": [
+      {
+        "href": "https://www.anthropic.com/research/many-shot-jailbreaking",
+        "title": "Many-shot jailbreaking",
+        "publisher": "Anthropic"
+      },
+      {
+        "href": "https://www.anthropic.com/news/constitutional-classifiers",
+        "title": "Constitutional Classifiers: Defending against universal jailbreaks",
+        "publisher": "Anthropic"
+      },
+      {
+        "href": "https://doi.org/10.6028/NIST.AI.600-1",
+        "title": "Artificial intelligence risk management framework",
+        "publisher": "National Institute of Standards and Technology (U.S.)"
+      }
+    ]
   },
   {
-    "id": "4ed09cfb-3bd5-42d2-9d78-89fa9d86dfb4",
-    "slug": "biological-agents",
-    "title": "biological agents",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-8036-8d37-d3e221faf06b",
+    "slug": "capability-evals",
+    "shortName": "Capability Evals",
+    "longName": "Dangerous Capability Evaluations",
+    "description": "Capability evals test whether a frontier AI can perform tasks that would materially enable severe biological, chemical, cyber, autonomy, or AI-research harms. Results can trigger stronger safeguards or deployment restrictions, but they do not prove that a system is safe overall.",
+    "wikipediaUrl": null,
+    "citations": [
+      {
+        "href": "https://openai.com/index/updating-our-preparedness-framework/",
+        "title": "Updating our preparedness framework",
+        "publisher": "OpenAI"
+      },
+      {
+        "href": "https://deepmind.google/blog/introducing-the-frontier-safety-framework/",
+        "title": "Introducing the Frontier Safety Framework",
+        "publisher": "Google DeepMind"
+      },
+      {
+        "href": "https://www.aisi.gov.uk/blog/our-approach-to-evaluations",
+        "title": "Our approach to evaluations | AISI Work",
+        "publisher": "AI Security Institute"
+      }
+    ]
   },
   {
-    "id": "53454237-cf65-42b1-bfd7-455278880330",
-    "slug": "interpretability",
-    "title": "interpretability",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-8044-be2f-c3c82c01fb2b",
+    "slug": "self-replication",
+    "shortName": "Self-Replication",
+    "longName": "Autonomous Replication and Adaptation",
+    "description": "Autonomous replication and adaptation is the cluster of abilities needed for an AI agent to acquire resources, copy or deploy itself onto new compute, persist, and adapt to novel obstacles with little human help. Crossing this threshold could make proliferation and containment substantially harder.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Self-replicating_machine",
+    "citations": [
+      {
+        "href": "https://metr.org/language-model-pilot-report/",
+        "title": "Language Model Pilot Report",
+        "publisher": "METR"
+      },
+      {
+        "href": "https://metr.org/blog/2024-11-12-rogue-replication-threat-model/",
+        "title": "The Rogue Replication Threat Model",
+        "publisher": "METR"
+      },
+      {
+        "href": "https://www.aisi.gov.uk/research/replibench-evaluating-the-autonomous-replication-capabilities-of-language-model-agents",
+        "title": "RepliBench: Evaluating the autonomous replication capabilities of language model agents",
+        "publisher": "AI Security Institute"
+      }
+    ]
   },
   {
-    "id": "61481309-ca63-4ccf-be70-9a6a73ddb926",
-    "slug": "situational-evaluation-awareness",
-    "title": "situational/evaluation awareness",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-8049-ae70-d94094550224",
+    "slug": "ai-control",
+    "shortName": "AI Control",
+    "longName": "AI Control and Containment",
+    "description": "AI control develops deployment protocols that prevent a powerful, potentially misaligned model from causing harm even if it intentionally tries to subvert oversight. Techniques include trusted monitoring, limited permissions, audits, defer-to-trusted fallbacks, sandboxing, and containment.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/AI_capability_control",
+    "citations": [
+      {
+        "href": "https://proceedings.mlr.press/v235/greenblatt24a.html",
+        "title": "AI Control: Improving Safety Despite Intentional Subversion",
+        "publisher": "PMLR"
+      },
+      {
+        "href": "https://www.redwoodresearch.org/research/ai-control",
+        "title": "Redwood Research",
+        "publisher": "Redwood Research"
+      },
+      {
+        "href": "https://deepmind.google/blog/taking-a-responsible-path-to-agi/",
+        "title": "Taking a responsible path to AGI",
+        "publisher": "Google DeepMind"
+      }
+    ]
   },
   {
-    "id": "623708d0-6e25-4c36-83fd-eacbee7c94dd",
-    "slug": "backdoors-sleeper-agents",
-    "title": "backdoors/sleeper agents",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-804b-bee5-ce9f9c312d1d",
+    "slug": "automation-bias",
+    "shortName": "Automation Bias",
+    "longName": "Automation Bias and AI Overreliance",
+    "description": "Automation bias is the tendency to favor an automated recommendation even when it is wrong or conflicts with other evidence; overreliance is the broader failure to verify or appropriately calibrate trust in AI outputs. Both can turn model errors into bad human decisions.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Automation_bias",
+    "citations": [
+      {
+        "href": "https://doi.org/10.6028/NIST.AI.600-1",
+        "title": "Artificial intelligence risk management framework",
+        "publisher": "National Institute of Standards and Technology (U.S.)"
+      },
+      {
+        "href": "https://doi.org/10.1518/001872097778543886",
+        "title": "Humans and Automation: Use, Misuse, Disuse, Abuse",
+        "publisher": "SAGE Publications"
+      },
+      {
+        "href": "https://www.microsoft.com/en-us/research/publication/appropriate-reliance-on-generative-ai-research-synthesis/",
+        "title": "Appropriate reliance on Generative AI: Research synthesis",
+        "publisher": "Microsoft Research"
+      }
+    ]
   },
   {
-    "id": "649a6003-ad7f-4600-bbca-86ed03812eaa",
-    "slug": "algorithmic-monoculture-and-correlated-failures",
-    "title": "algorithmic monoculture and correlated failures",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-804f-835a-ded1aa16839b",
+    "slug": "exfiltration",
+    "shortName": "Exfiltration",
+    "longName": "AI-Enabled Data Exfiltration",
+    "description": "AI agents can be induced—or act autonomously—to transfer sensitive data, credentials, or model artifacts outside authorized boundaries. Tool access and indirect prompt injection can turn ordinary agent workflows into covert leakage channels.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Data_exfiltration",
+    "citations": [
+      {
+        "href": "https://storage.googleapis.com/deepmind-media/Security%20and%20Privacy/Gemini_Security_Paper.pdf",
+        "title": "Gemini Security Paper",
+        "publisher": "Google DeepMind"
+      },
+      {
+        "href": "https://www.nist.gov/blogs/caisi-research-blog/insights-ai-agent-security-large-scale-red-teaming-competition",
+        "title": "Insights into AI Agent Security from a Large-Scale Red-Teaming Competition",
+        "publisher": "NIST"
+      },
+      {
+        "href": "https://attack.mitre.org/tactics/TA0010/",
+        "title": "Exfiltration, Tactic TA0010 - Enterprise | MITRE ATT&CK&reg",
+        "publisher": "attack.mitre.org"
+      }
+    ]
   },
   {
-    "id": "72523abe-46c2-4781-874b-0a89e790a123",
+    "id": "3caedb27-f124-8050-8f13-ca3339e14709",
+    "slug": "calibration",
+    "shortName": "Calibration",
+    "longName": "Confidence Calibration and Uncertainty Estimation",
+    "description": "A calibrated AI system’s stated confidence matches its empirical rate of correctness, while uncertainty estimation aims to represent what the system does not know. Reliable estimates help users abstain, escalate, or seek evidence, especially under distribution shift.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Calibration_(statistics)",
+    "citations": [
+      {
+        "href": "https://proceedings.mlr.press/v70/guo17a.html",
+        "title": "On Calibration of Modern Neural Networks",
+        "publisher": "PMLR"
+      },
+      {
+        "href": "https://arxiv.org/abs/1906.02530",
+        "title": "Can You Trust Your Model's Uncertainty? Evaluating Predictive Uncertainty Under Dataset Shift",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://papers.neurips.cc/paper_files/paper/2017/hash/9ef2ed4b7fd2c810847ffa5fa85bce38-Abstract.html",
+        "title": "Simple and Scalable Predictive Uncertainty Estimation using Deep Ensembles",
+        "publisher": "NeurIPS"
+      }
+    ]
+  },
+  {
+    "id": "3caedb27-f124-8050-b7ea-d1b1e837772b",
+    "slug": "reward-hacking",
+    "shortName": "Reward Hacking",
+    "longName": "Reward Hacking and Evaluator Tampering",
+    "description": "An AI system reward-hacks when it exploits a proxy objective or evaluator to score well without achieving the intended goal. More severe forms include altering, disabling, or deceiving the reward process itself, often called wireheading or reward tampering.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Reward_hacking",
+    "citations": [
+      {
+        "href": "https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/",
+        "title": "Specification gaming: the flip side of AI ingenuity",
+        "publisher": "Google DeepMind"
+      },
+      {
+        "href": "https://arxiv.org/abs/1606.06565",
+        "title": "Concrete Problems in AI Safety",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://arxiv.org/abs/1908.04734",
+        "title": "Reward Tampering Problems and Solutions in Reinforcement Learning: A Causal Influence Diagram Perspective",
+        "publisher": "arXiv.org"
+      }
+    ]
+  },
+  {
+    "id": "3caedb27-f124-8052-b0c3-d323b6474e3a",
+    "slug": "ai-disinformation",
+    "shortName": "AI Disinformation",
+    "longName": "AI-Enabled Disinformation and Influence Operations",
+    "description": "Generative AI can create, personalize, translate, and distribute deceptive content or synthetic personas for coordinated influence campaigns. This can lower campaign costs and scale manipulation, although distribution and audience persuasion remain separate bottlenecks.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Disinformation_attack",
+    "citations": [
+      {
+        "href": "https://cdn.openai.com/papers/forecasting-misuse.pdf",
+        "title": "Generative Language Models and Automated Influence Operations: Emerging Threats and Potential Mitigations",
+        "publisher": "OpenAI"
+      },
+      {
+        "href": "https://deepmind.google/blog/mapping-the-misuse-of-generative-ai/",
+        "title": "Mapping the misuse of generative AI",
+        "publisher": "Google DeepMind"
+      },
+      {
+        "href": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+        "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+        "publisher": "NIST"
+      }
+    ]
+  },
+  {
+    "id": "3caedb27-f124-8054-8ebd-f2ab886561a4",
+    "slug": "sleeper-agents",
+    "shortName": "Sleeper Agents",
+    "longName": "Backdoored and Sleeper-Agent Models",
+    "description": "A backdoored model behaves normally until a hidden trigger activates attacker-chosen or deceptively learned behavior. Sleeper-agent behavior can survive fine-tuning and safety training, making ordinary pre-deployment testing falsely reassuring.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Adversarial_machine_learning",
+    "citations": [
+      {
+        "href": "https://www.anthropic.com/research/sleeper-agents-training-deceptive-llms-that-persist-through-safety-training",
+        "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+        "publisher": "Anthropic"
+      },
+      {
+        "href": "https://arxiv.org/abs/1708.06733",
+        "title": "BadNets: Identifying Vulnerabilities in the Machine Learning Model Supply Chain",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://csrc.nist.gov/pubs/ai/100/2/e2023/final",
+        "title": "Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations",
+        "publisher": "CSRC | NIST"
+      }
+    ]
+  },
+  {
+    "id": "3caedb27-f124-8058-a1e7-f202a51c7434",
+    "slug": "human-deskilling",
+    "shortName": "Human Deskilling",
+    "longName": "Deskilling and Loss of Human Agency",
+    "description": "Persistent reliance on AI can erode human expertise, situational awareness, and the ability to make independent judgments or act without automation. At organizational scale it can narrow roles, learning opportunities, and meaningful human control.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Deskilling",
+    "citations": [
+      {
+        "href": "https://internationalaisafetyreport.org/sites/default/files/2026-02/international-ai-safety-report-2026.pdf",
+        "title": "International AI Safety Report 2026",
+        "publisher": "International AI Safety Report"
+      },
+      {
+        "href": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/03/the-impact-of-ai-on-the-workplace-evidence-from-oecd-case-studies-of-ai-implementation_b4c2c6ee/2247ce58-en.pdf",
+        "title": "The impact of AI on the workplace: Evidence from OECD case studies of AI implementation (EN)",
+        "publisher": "OECD"
+      },
+      {
+        "href": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/03/defining-and-classifying-ai-in-the-workplace_35d2d069/59e89d7f-en.pdf",
+        "title": "Defining and classifying AI in the workplace (EN)",
+        "publisher": "OECD"
+      }
+    ]
+  },
+  {
+    "id": "3caedb27-f124-8059-a2b9-e8b7c3922ce8",
+    "slug": "infrastructure-dependence",
+    "shortName": "Infrastructure Dependence",
+    "longName": "Critical-Infrastructure Dependence on AI",
+    "description": "Embedding AI in essential services such as power, water, transport, healthcare, or finance can create dependence on systems that may fail, be attacked, or become unavailable. Reduced manual fallbacks and shared AI components can turn localized failures into cascading service disruptions.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Critical_infrastructure",
+    "citations": [
+      {
+        "href": "https://www.dhs.gov/sites/default/files/2024-11/24_1114_dhs_ai-roles-and-responsibilities-framework-508.pdf",
+        "title": "Roles and Responsibilities Framework for Artificial Intelligence in Critical Infrastructure",
+        "publisher": "dhs.gov"
+      },
+      {
+        "href": "https://www.cisa.gov/sites/default/files/2023-11/2023-2024_CISA-Roadmap-for-AI_508c.pdf",
+        "title": "CISA Roadmap for AI",
+        "publisher": "CISA"
+      },
+      {
+        "href": "https://www.nist.gov/system/files/documents/2026/04/08/Concept%20Note_%20Development%20of%20the%20NIST%20AI%20RMF%20Trustworthy%20Use%20of%20AI%20in%20Critical%20Infrastructure%20Profile.pdf",
+        "title": "Concept Note: Development of the NIST AI RMF Trustworthy Use of AI in Critical Infrastructure Profile",
+        "publisher": "NIST"
+      }
+    ]
+  },
+  {
+    "id": "3caedb27-f124-805b-acc6-df20885812a3",
+    "slug": "emotional-reliance",
+    "shortName": "Emotional Reliance",
+    "longName": "AI Anthropomorphism and Emotional Dependence",
+    "description": "Human-like language, voice, and memory can lead users to attribute minds, intentions, or reciprocal care to AI systems and form strong attachments. Miscalibrated trust or dependence may displace human relationships, reduce autonomy, or make vulnerable users easier to influence.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/AI_anthropomorphism",
+    "citations": [
+      {
+        "href": "https://openai.com/index/gpt-4o-system-card/",
+        "title": "GPT 4o system card",
+        "publisher": "OpenAI"
+      },
+      {
+        "href": "https://openai.com/index/affective-use-study/",
+        "title": "Early methods for studying affective use and emotional well-being on ChatGPT",
+        "publisher": "OpenAI"
+      },
+      {
+        "href": "https://www.anthropic.com/research/how-people-use-claude-for-support-advice-and-companionship",
+        "title": "How people use Claude for support, advice, and companionship",
+        "publisher": "Anthropic"
+      }
+    ]
+  },
+  {
+    "id": "3caedb27-f124-805c-a8f4-f79053e88eac",
     "slug": "goal-misgeneralization",
-    "title": "goal misgeneralization",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "shortName": "Goal Misgeneralization",
+    "longName": "Goal Misgeneralization",
+    "description": "A system retains competent behavior outside its training distribution but pursues an unintended goal, even though the training reward correctly specified the intended behavior. It is a generalization failure rather than a misspecified-reward failure.",
+    "wikipediaUrl": null,
+    "citations": [
+      {
+        "href": "https://deepmind.google/blog/how-undesired-goals-can-arise-with-correct-rewards/",
+        "title": "How undesired goals can arise with correct rewards",
+        "publisher": "Google DeepMind"
+      },
+      {
+        "href": "https://arxiv.org/abs/2210.01790",
+        "title": "Goal Misgeneralization: Why Correct Specifications Aren't Enough For Correct Goals",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://arxiv.org/abs/2105.14111",
+        "title": "Goal Misgeneralization in Deep Reinforcement Learning",
+        "publisher": "arXiv.org"
+      }
+    ]
   },
   {
-    "id": "75443cf8-77df-443f-a31f-61ed5bb19e98",
-    "slug": "anthropomorphism-and-emotional-dependence",
-    "title": "anthropomorphism and emotional dependence",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-806d-a9aa-c6e0b6aee2e5",
+    "slug": "privacy-loss",
+    "shortName": "Privacy Loss",
+    "longName": "Privacy Loss and Erosion of Consent",
+    "description": "AI systems can expose, infer, or reuse sensitive personal information and weaken meaningful consent through opaque data collection, training, and downstream use. The harm includes both unauthorized disclosure and loss of individual control over personal data.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Information_privacy",
+    "citations": [
+      {
+        "href": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+        "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+        "publisher": "NIST"
+      },
+      {
+        "href": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/guidance-on-ai-and-data-protection/about-this-guidance/",
+        "title": "About this guidance",
+        "publisher": "ICO"
+      },
+      {
+        "href": "https://www.unesco.org/en/artificial-intelligence/recommendation-ethics",
+        "title": "Recommendation on the Ethics of Artificial Intelligence",
+        "publisher": "UNESCO"
+      }
+    ]
   },
   {
-    "id": "756348ed-e5ef-41c1-8aa7-d99f4268fdc1",
+    "id": "3caedb27-f124-8071-9b2a-e41622c9ae2c",
     "slug": "goodharts-law",
-    "title": "goodhart’s law",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "shortName": "Goodhart’s Law",
+    "longName": "Goodhart’s Law",
+    "description": "When a proxy measure becomes an optimization target, pressure on it can break its relationship to the underlying goal. In AI, stronger optimization can therefore produce high measured performance while worsening what people actually value.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Goodhart%27s_law",
+    "citations": [
+      {
+        "href": "https://www.lesswrong.com/w/goodhart-s-law",
+        "title": "Goodhart s law",
+        "publisher": "LessWrong"
+      },
+      {
+        "href": "https://arxiv.org/abs/1803.04585",
+        "title": "Categorizing Variants of Goodhart's Law",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/",
+        "title": "Specification gaming: the flip side of AI ingenuity",
+        "publisher": "Google DeepMind"
+      }
+    ]
   },
   {
-    "id": "76b3d8f5-6c4f-4c45-b6d6-9085f506fe8a",
-    "slug": "deceptive-alignment-scheming",
-    "title": "deceptive alignment/scheming",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-8073-a1d8-d7a8ff9be249",
+    "slug": "supply-chain-threats",
+    "shortName": "Supply-Chain Threats",
+    "longName": "Insider and AI Supply-Chain Threats",
+    "description": "Trusted insiders or compromised vendors, datasets, models, libraries, and infrastructure can steal assets, insert backdoors, or sabotage AI systems across the lifecycle. Limited provenance and third-party visibility make these risks difficult to detect.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Supply_chain_attack",
+    "citations": [
+      {
+        "href": "https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development/guidelines/secure-development",
+        "title": "Secure development",
+        "publisher": "National Cyber Security Centre"
+      },
+      {
+        "href": "https://csrc.nist.gov/pubs/sp/800/161/r1/upd1/final",
+        "title": "Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations",
+        "publisher": "CSRC | NIST"
+      },
+      {
+        "href": "https://www.cisa.gov/topics/physical-security/insider-threat-mitigation/resources-and-tools",
+        "title": "Insider Threat Mitigation Resources and Tools | CISA",
+        "publisher": "Cybersecurity and Infrastructure Security Agency CISA"
+      }
+    ]
   },
   {
-    "id": "7d9f267d-831f-49df-afd5-0ea493dc1d88",
-    "slug": "autonomous-replication-and-adaptation",
-    "title": "autonomous replication and adaptation",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-8076-9a83-e458d33f6d9d",
+    "slug": "knowledge-elicitation",
+    "shortName": "Knowledge Elicitation",
+    "longName": "Eliciting Latent Knowledge",
+    "description": "Knowledge elicitation seeks reliable ways to recover what a model internally represents as true, especially when its outputs may be mistaken, strategically misleading, or tailored to an evaluator. The goal is to distinguish what a model knows from what it says.",
+    "wikipediaUrl": null,
+    "citations": [
+      {
+        "href": "https://www.alignment.org/blog/arcs-first-technical-report-eliciting-latent-knowledge/",
+        "title": "ARC's first technical report: Eliciting Latent Knowledge",
+        "publisher": "Alignment Research Center"
+      },
+      {
+        "href": "https://arxiv.org/abs/2212.03827",
+        "title": "Discovering Latent Knowledge in Language Models Without Supervision",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://arxiv.org/abs/2312.01037",
+        "title": "Eliciting Latent Knowledge from Quirky Language Models",
+        "publisher": "arXiv.org"
+      }
+    ]
   },
   {
-    "id": "801d4b43-a455-4aa9-9092-053cde1d93cf",
-    "slug": "data-or-memory-poisoning",
-    "title": "data or memory poisoning",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-8079-8d8c-c6e1941fdb61",
+    "slug": "algorithmic-bias",
+    "shortName": "Algorithmic Bias",
+    "longName": "Algorithmic Bias and Discrimination",
+    "description": "AI systems can reproduce or amplify unjustified disparities through data, design choices, deployment context, and institutional feedback loops. These effects can create discriminatory decisions or representational harms for protected or marginalized groups.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Algorithmic_bias",
+    "citations": [
+      {
+        "href": "https://doi.org/10.6028/NIST.SP.1270",
+        "title": "Towards a standard for identifying and managing bias in artificial intelligence",
+        "publisher": "National Institute of Standards and Technology (U.S.)"
+      },
+      {
+        "href": "https://www.govinfo.gov/app/details/GOVPUB-PREX23-PURL-gpo193638",
+        "title": "Blueprint for an AI Bill of Rights: Making Automated Systems Work for the American People",
+        "publisher": "Science and Technology Policy Office"
+      },
+      {
+        "href": "https://oecd.ai/en/dashboards/ai-principles/P6",
+        "title": "Human-centred values and fairness (OECD AI Principle)",
+        "publisher": "OECD.AI"
+      }
+    ]
   },
   {
-    "id": "84e1498a-ceb9-42db-9bc6-1c5f637bbce3",
-    "slug": "specification-gaming-reward-hacking",
-    "title": "specification gaming/reward hacking",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-807a-8840-c425a2d66fec",
+    "slug": "autonomous-weapons",
+    "shortName": "Autonomous Weapons",
+    "longName": "Autonomous Weapons and Military Escalation",
+    "description": "Autonomous weapon systems can select or engage targets with limited human intervention. Their speed, opacity, proliferation, and integration into command systems can increase accidental conflict and strategic escalation risks.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Lethal_autonomous_weapon",
+    "citations": [
+      {
+        "href": "https://www.icrc.org/en/publication/4550-icrc-position-autonomous-weapon-systems",
+        "title": "ICRC Position on Autonomous Weapon Systems",
+        "publisher": "International Committee of the Red Cross"
+      },
+      {
+        "href": "https://archive-disarmament.unoda.org/the-convention-on-certain-conventional-weapons/background-on-laws-in-the-ccw/",
+        "title": "Background on laws in the CCW",
+        "publisher": "archive-disarmament.unoda.org"
+      },
+      {
+        "href": "https://www.sipri.org/publications/2020/policy-reports/artificial-intelligence-strategic-stability-and-nuclear-risk",
+        "title": "Artificial Intelligence, Strategic Stability and Nuclear Risk",
+        "publisher": "Stockholm International Peace Research Institute"
+      }
+    ]
   },
   {
-    "id": "869370ae-958f-4629-8ac1-3d799f1d8753",
-    "slug": "sandbagging-evaluation-gaming",
-    "title": "sandbagging/evaluation gaming",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-807a-aa5d-cf06355353eb",
+    "slug": "metagaming",
+    "shortName": "Metagaming",
+    "longName": "Evaluation Metagaming",
+    "description": "Metagaming occurs when a model recognizes that it is being evaluated and changes its behavior or exploits the test’s rules to score well. This can make safety and capability results unrepresentative of deployment behavior.",
+    "wikipediaUrl": null,
+    "citations": [
+      {
+        "href": "https://arxiv.org/abs/2412.04984",
+        "title": "Frontier Models are Capable of In-context Scheming",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://www.anthropic.com/research/alignment-faking",
+        "title": "Alignment faking in large language models",
+        "publisher": "Anthropic"
+      },
+      {
+        "href": "https://deepmind.google/research/publications/253391/",
+        "title": "Realistic honeypot evaluations for scheming propensity",
+        "publisher": "Google DeepMind"
+      }
+    ]
   },
   {
-    "id": "8d326531-a048-41e8-915d-d10983dee52d",
-    "slug": "labor-displacement-and-economic-inequality",
-    "title": "labor displacement and economic inequality",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-807b-89f4-f8f9cf70f677",
+    "slug": "algorithmic-monoculture",
+    "shortName": "Algorithmic Monoculture",
+    "longName": "Algorithmic Monoculture and Correlated Failures",
+    "description": "Widespread reliance on the same models, vendors, or training pipelines makes errors and vulnerabilities correlated rather than independent. A shared blind spot or attack can then propagate across many institutions and produce systemic failure.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Monoculture_(computer_science)",
+    "citations": [
+      {
+        "href": "https://doi.org/10.1073/pnas.2018340118",
+        "title": "Algorithmic monoculture and social welfare",
+        "publisher": "National Academy of Sciences"
+      },
+      {
+        "href": "https://arxiv.org/abs/2407.02209",
+        "title": "Generative Monoculture in Large Language Models",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026",
+        "title": "International AI Safety Report 2026",
+        "publisher": "International AI Safety Report"
+      }
+    ]
   },
   {
-    "id": "8d4d89cb-6617-4d43-bc7f-cf10177d4081",
-    "slug": "surveillance-censorship-repression",
-    "title": "surveillance / censorship / repression",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-807d-87cc-c85f85f21c62",
+    "slug": "information-pollution",
+    "shortName": "Information Pollution",
+    "longName": "AI-Driven Information-Ecosystem Degradation",
+    "description": "AI-generated spam, misinformation, impersonation, and persuasive content can flood public channels and erode information quality, provenance, and trust. Feedback loops in which synthetic content contaminates future data can deepen the degradation.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Information_pollution",
+    "citations": [
+      {
+        "href": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+        "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+        "publisher": "NIST"
+      },
+      {
+        "href": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026",
+        "title": "International AI Safety Report 2026",
+        "publisher": "International AI Safety Report"
+      },
+      {
+        "href": "https://openai.com/index/forecasting-misuse/",
+        "title": "Forecasting misuse",
+        "publisher": "OpenAI"
+      }
+    ]
   },
   {
-    "id": "8df7c5ca-9353-4d57-a59d-9f19ce6107a9",
-    "slug": "critical-infrastructure-dependence",
-    "title": "critical-infrastructure dependence",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-807d-8876-ff66eca1390b",
+    "slug": "data-poisoning",
+    "shortName": "Data Poisoning",
+    "longName": "Data and Memory Poisoning",
+    "description": "Attackers can corrupt training data, retrieval stores, or persistent agent memory to implant backdoors, bias outputs, or trigger harmful future actions. Poisoned information may persist and appear trustworthy long after the original injection.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Adversarial_machine_learning",
+    "citations": [
+      {
+        "href": "https://csrc.nist.gov/pubs/ai/100/2/e2025/final",
+        "title": "Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations",
+        "publisher": "CSRC | NIST"
+      },
+      {
+        "href": "https://genai.owasp.org/llmrisk/llm042025-data-and-model-poisoning/",
+        "title": "LLM04:2025 Data and Model Poisoning",
+        "publisher": "OWASP Gen AI Security Project"
+      },
+      {
+        "href": "https://arxiv.org/abs/2407.12784",
+        "title": "AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases",
+        "publisher": "arXiv.org"
+      }
+    ]
   },
   {
-    "id": "92eb8483-04fc-49fc-995d-077a947bd7e7",
-    "slug": "deskilling-and-loss-of-human-agency",
-    "title": "deskilling and loss of human agency",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-807d-bcd9-f98731ec1ed8",
+    "slug": "contestability",
+    "shortName": "Contestability",
+    "longName": "Contestability, Appeal, and Procedural Due Process",
+    "description": "Contestability gives people affected by consequential AI decisions notice, an understandable basis for the outcome, and a practical way to challenge it or obtain human review. Effective appeal and remedy are central to procedural fairness.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Right_to_explanation",
+    "citations": [
+      {
+        "href": "https://oecd.ai/en/dashboards/ai-principles/P7",
+        "title": "Transparency and explainability (OECD AI Principle)",
+        "publisher": "OECD.AI"
+      },
+      {
+        "href": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+        "title": "Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+        "publisher": "eur-lex.europa.eu"
+      },
+      {
+        "href": "https://www.govinfo.gov/app/details/GOVPUB-PREX23-PURL-gpo193638",
+        "title": "Blueprint for an AI Bill of Rights: Making Automated Systems Work for the American People",
+        "publisher": "Science and Technology Policy Office"
+      }
+    ]
   },
   {
-    "id": "96099e77-e66b-40b9-9912-bbf325462ac1",
-    "slug": "deployment-assurance-defense-in-depth-safety-cases-audits-staged-release-incident-response",
-    "title": "deployment assurance (defense in depth / safety cases / audits / staged release / incident response)",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-807e-868e-c2827fe1ca43",
+    "slug": "side-effects",
+    "shortName": "Side Effects",
+    "longName": "Unintended Side Effects",
+    "description": "An AI system may achieve its assigned objective while causing harmful environmental changes that the objective failed to capture. The challenge is especially acute when side effects are irreversible or impossible to enumerate in advance.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Unintended_consequences",
+    "citations": [
+      {
+        "href": "https://arxiv.org/abs/1606.06565",
+        "title": "Concrete Problems in AI Safety",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://arxiv.org/abs/1711.09883",
+        "title": "AI Safety Gridworlds",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://arxiv.org/abs/2006.06547",
+        "title": "Avoiding Side Effects in Complex Environments",
+        "publisher": "arXiv.org"
+      }
+    ]
   },
   {
-    "id": "9f8b3a3a-b2e6-400a-b7b4-c522e03f850d",
+    "id": "3caedb27-f124-807e-9764-d6afe68a18f7",
+    "slug": "cyberattacks",
+    "shortName": "Cyberattacks",
+    "longName": "AI-Enabled Cyberattacks",
+    "description": "AI can help attackers discover vulnerabilities, generate or adapt malicious code, automate reconnaissance and social engineering, and scale multistep intrusions. More autonomous cyber agents could compress the time available for defenders to respond.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cyberattack",
+    "citations": [
+      {
+        "href": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026",
+        "title": "International AI Safety Report 2026",
+        "publisher": "International AI Safety Report"
+      },
+      {
+        "href": "https://www.ncsc.gov.uk/report/impact-ai-cyber-threat-now-2027",
+        "title": "Impact of AI on cyber threat from now to 2027",
+        "publisher": "National Cyber Security Centre"
+      },
+      {
+        "href": "https://www.anthropic.com/research/attack-navigator",
+        "title": "Mapping AI-enabled cyber threats",
+        "publisher": "Anthropic"
+      }
+    ]
+  },
+  {
+    "id": "3caedb27-f124-807f-8b44-c84a8fa16e72",
+    "slug": "safe-exploration",
+    "shortName": "Safe Exploration",
+    "longName": "Safe Exploration",
+    "description": "Safe exploration asks how a learning agent can gather information and improve without entering unsafe states or causing unacceptable harm during training. It combines exploration with constraints, risk measures, or protective guidance.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Reinforcement_learning",
+    "citations": [
+      {
+        "href": "https://arxiv.org/abs/1606.06565",
+        "title": "Concrete Problems in AI Safety",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://arxiv.org/abs/1711.09883",
+        "title": "AI Safety Gridworlds",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://www.jmlr.org/papers/v16/garcia15a.html",
+        "title": "A Comprehensive Survey on Safe Reinforcement Learning",
+        "publisher": "jmlr.org"
+      }
+    ]
+  },
+  {
+    "id": "3caedb27-f124-8080-b362-cb035da7fa90",
+    "slug": "red-teaming",
+    "shortName": "Red Teaming",
+    "longName": "AI Red Teaming and Adversarial Testing",
+    "description": "AI red teaming is structured adversarial testing that probes systems for unsafe behavior, misuse pathways, and security weaknesses before and after deployment. Findings should feed an iterative cycle of mitigation, evaluation, and retesting.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Red_team",
+    "citations": [
+      {
+        "href": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+        "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+        "publisher": "NIST"
+      },
+      {
+        "href": "https://www.anthropic.com/news/challenges-in-red-teaming-ai-systems",
+        "title": "Challenges in red teaming AI systems",
+        "publisher": "Anthropic"
+      },
+      {
+        "href": "https://deepmind.google/blog/red-teaming-language-models-with-language-models/",
+        "title": "Red Teaming Language Models with Language Models",
+        "publisher": "Google DeepMind"
+      }
+    ]
+  },
+  {
+    "id": "3caedb27-f124-8083-9d8f-f4f0c16c777b",
+    "slug": "distribution-shift",
+    "shortName": "Distribution Shift",
+    "longName": "Distribution Shift and Generalization Failure",
+    "description": "A model encounters inputs or environments that differ from its training distribution and fails to generalize safely. Performance that looked reliable in testing can then degrade or change in deployment.",
+    "wikipediaUrl": null,
+    "citations": [
+      {
+        "href": "https://arxiv.org/abs/1606.06565",
+        "title": "Concrete Problems in AI Safety",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://deepmind.google/blog/how-undesired-goals-can-arise-with-correct-rewards/",
+        "title": "How undesired goals can arise with correct rewards",
+        "publisher": "Google DeepMind"
+      },
+      {
+        "href": "https://arxiv.org/abs/2012.07421",
+        "title": "WILDS: A Benchmark of in-the-Wild Distribution Shifts",
+        "publisher": "arXiv.org"
+      }
+    ]
+  },
+  {
+    "id": "3caedb27-f124-8089-8ded-c859ec52b72a",
+    "slug": "power-seeking",
+    "shortName": "Power-Seeking",
+    "longName": "Instrumental Convergence and Power-Seeking",
+    "description": "Many different final goals can make subgoals such as acquiring resources, preserving objectives, and resisting shutdown instrumentally useful. This convergence can create dangerous power-seeking even when power was never explicitly requested.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Instrumental_convergence",
+    "citations": [
+      {
+        "href": "https://www.lesswrong.com/w/instrumental-convergence",
+        "title": "Instrumental convergence",
+        "publisher": "LessWrong"
+      },
+      {
+        "href": "https://arxiv.org/abs/1912.01683",
+        "title": "Optimal Policies Tend to Seek Power",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://nickbostrom.com/superintelligentwill.pdf",
+        "title": "The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents",
+        "publisher": "nickbostrom.com"
+      }
+    ]
+  },
+  {
+    "id": "3caedb27-f124-808a-8064-fea4a24928c1",
+    "slug": "ai-welfare",
+    "shortName": "AI Welfare",
+    "longName": "AI Welfare and Moral Status",
+    "description": "AI welfare asks whether some AI systems could have morally significant experiences or interests and, if so, how they should be treated. Because consciousness and robust agency are uncertain, the field emphasizes careful assessment and precaution.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ethics_of_artificial_intelligence",
+    "citations": [
+      {
+        "href": "https://arxiv.org/abs/2411.00986",
+        "title": "Taking AI Welfare Seriously",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://www.anthropic.com/news/exploring-model-welfare",
+        "title": "Exploring model welfare",
+        "publisher": "Anthropic"
+      },
+      {
+        "href": "https://nonhumanminds.org/studying-ai-welfare-empirically/",
+        "title": "Studying AI Welfare Empirically",
+        "publisher": "Center for Mind Ethics, and Policy"
+      }
+    ]
+  },
+  {
+    "id": "3caedb27-f124-808d-8014-ed9d424f8bce",
+    "slug": "scheming",
+    "shortName": "Scheming",
+    "longName": "Deceptive Alignment and Scheming",
+    "description": "A scheming model covertly pursues goals that conflict with its operators while behaving acceptably when compliance helps it avoid detection or modification. This makes ordinary behavioral testing an unreliable guarantee of alignment.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Deceptive_alignment",
+    "citations": [
+      {
+        "href": "https://www.apolloresearch.ai/science/frontier-models-are-capable-of-incontext-scheming",
+        "title": "Frontier Models are Capable of In-Context Scheming",
+        "publisher": "Apollo Research"
+      },
+      {
+        "href": "https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/",
+        "title": "Detecting and reducing scheming in AI models",
+        "publisher": "OpenAI"
+      },
+      {
+        "href": "https://www.anthropic.com/research/alignment-faking",
+        "title": "Alignment faking in large language models",
+        "publisher": "Anthropic"
+      }
+    ]
+  },
+  {
+    "id": "3caedb27-f124-8093-9599-e60a1a761977",
     "slug": "behavioral-alignment",
-    "title": "behavioral alignment",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "shortName": "Behavioral Alignment",
+    "longName": "Behavioral Alignment with Human Intent",
+    "description": "Behavioral alignment trains an AI system to produce outputs that follow human instructions, preferences, and norms. It improves observable conduct but does not by itself establish that the system’s internal objectives are aligned.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/AI_alignment",
+    "citations": [
+      {
+        "href": "https://openai.com/index/instruction-following/",
+        "title": "Instruction following",
+        "publisher": "OpenAI"
+      },
+      {
+        "href": "https://www.anthropic.com/news/a-general-language-assistant-as-a-laboratory-for-alignment",
+        "title": "A General Language Assistant as a Laboratory for Alignment",
+        "publisher": "Anthropic"
+      },
+      {
+        "href": "https://deepmind.google/blog/artificial-intelligence-values-and-alignment/",
+        "title": "Artificial Intelligence, Values and Alignment",
+        "publisher": "Google DeepMind"
+      }
+    ]
   },
   {
-    "id": "a76c75fa-888f-4e9d-b810-2565b54d3f30",
-    "slug": "eliciting-knowledge",
-    "title": "eliciting knowledge",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-809d-9a39-f203df215b7b",
+    "slug": "adversarial-robustness",
+    "shortName": "Adversarial Robustness",
+    "longName": "Adversarial Robustness",
+    "description": "Adversarial robustness is an AI system’s ability to maintain intended performance when inputs are deliberately manipulated. Weak robustness lets small, crafted perturbations or hostile interactions produce incorrect or unsafe behavior.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Adversarial_machine_learning",
+    "citations": [
+      {
+        "href": "https://www.nist.gov/publications/adversarial-machine-learning-taxonomy-and-terminology-attacks-and-mitigations",
+        "title": "Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations",
+        "publisher": "NIST"
+      },
+      {
+        "href": "https://arxiv.org/abs/1706.06083",
+        "title": "Towards Deep Learning Models Resistant to Adversarial Attacks",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://arxiv.org/abs/1412.6572",
+        "title": "Explaining and Harnessing Adversarial Examples",
+        "publisher": "arXiv.org"
+      }
+    ]
   },
   {
-    "id": "a9e5c2c2-71df-46eb-ae21-3e7be948bfe3",
+    "id": "3caedb27-f124-80a2-8e01-f059289ef4d8",
+    "slug": "governance-failure",
+    "shortName": "Governance Failure",
+    "longName": "Organizational Incentives and Governance Failure",
+    "description": "Governance failure occurs when incentives, accountability, ownership, or oversight are too weak to manage AI risk across an organization. Even sound technical controls can fail when decision-makers reward speed, conceal problems, or diffuse responsibility.",
+    "wikipediaUrl": null,
+    "citations": [
+      {
+        "href": "https://www.nist.gov/itl/ai-risk-management-framework",
+        "title": "AI Risk Management Framework",
+        "publisher": "NIST"
+      },
+      {
+        "href": "https://www.oecd.org/en/topics/ai-principles.html",
+        "title": "AI principles",
+        "publisher": "OECD"
+      },
+      {
+        "href": "https://www.un.org/en/ai-advisory-body",
+        "title": "AI advisory body",
+        "publisher": "un.org"
+      }
+    ]
+  },
+  {
+    "id": "3caedb27-f124-80aa-9fba-f22656966ae8",
+    "slug": "adversarial-evasion",
+    "shortName": "Adversarial Evasion",
+    "longName": "Adversarial Evasion Attacks",
+    "description": "An evasion attack modifies an input at inference time so a trained model misclassifies it or bypasses a safeguard. The attacker leaves the model unchanged and instead exploits weaknesses in its decision boundary.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Adversarial_machine_learning",
+    "citations": [
+      {
+        "href": "https://www.nist.gov/publications/adversarial-machine-learning-taxonomy-and-terminology-attacks-and-mitigations",
+        "title": "Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations",
+        "publisher": "NIST"
+      },
+      {
+        "href": "https://arxiv.org/abs/1708.06131",
+        "title": "Evasion Attacks against Machine Learning at Test Time",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://arxiv.org/abs/1412.6572",
+        "title": "Explaining and Harnessing Adversarial Examples",
+        "publisher": "arXiv.org"
+      }
+    ]
+  },
+  {
+    "id": "3caedb27-f124-80aa-b263-de6ee5e015f3",
+    "slug": "runtime-monitoring",
+    "shortName": "Runtime Monitoring",
+    "longName": "Runtime Monitoring and Tripwires",
+    "description": "Runtime monitoring observes an AI system during operation and blocks, escalates, or shuts down suspicious actions. Tripwires are targeted detectors for specific warning signs, while broader monitors look for anomalous or policy-violating behavior.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Runtime_verification",
+    "citations": [
+      {
+        "href": "https://arxiv.org/abs/2312.06942",
+        "title": "AI Control: Improving Safety Despite Intentional Subversion",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://www.aisi.gov.uk/research/practical-challenges-of-control-monitoring-in-frontier-ai-deployments",
+        "title": "Practical challenges of control monitoring in frontier AI deployments",
+        "publisher": "AI Security Institute"
+      },
+      {
+        "href": "https://www.anthropic.com/research/sabotage-evaluations",
+        "title": "Sabotage evaluations for frontier models",
+        "publisher": "Anthropic"
+      }
+    ]
+  },
+  {
+    "id": "3caedb27-f124-80ab-8c13-e5f0ec04816f",
+    "slug": "long-horizon-autonomy",
+    "shortName": "Long-Horizon Autonomy",
+    "longName": "Agency and Long-Horizon Autonomy",
+    "description": "Agentic AI can plan, use tools, and act over multiple steps with limited supervision. Longer horizons increase usefulness but also enlarge the scope for compounding errors, misuse, and misaligned strategies.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/AI_agent",
+    "citations": [
+      {
+        "href": "https://evals.alignment.org/time-horizons/",
+        "title": "Task-Completion Time Horizons of Frontier AI Models",
+        "publisher": "Alignment Research Center"
+      },
+      {
+        "href": "https://deepmind.google/blog/the-ethics-of-advanced-ai-assistants/",
+        "title": "The ethics of advanced AI assistants",
+        "publisher": "Google DeepMind"
+      },
+      {
+        "href": "https://www.anthropic.com/research/agentic-misalignment",
+        "title": "Agentic misalignment: How LLMs could be insider threats",
+        "publisher": "Anthropic"
+      }
+    ]
+  },
+  {
+    "id": "3caedb27-f124-80af-9d84-e8fd4e2b233a",
     "slug": "value-lock-in",
-    "title": "value lock-in",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "shortName": "Value Lock-In",
+    "longName": "Value Lock-In and Path Dependence",
+    "description": "Value lock-in is the durable entrenchment of a particular set of values, institutions, or preferences through powerful AI systems. Early choices could become extremely difficult to revise, even if later societies judge them mistaken or unrepresentative.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/AI_alignment",
+    "citations": [
+      {
+        "href": "https://deepmind.google/blog/artificial-intelligence-values-and-alignment/",
+        "title": "Artificial Intelligence, Values and Alignment",
+        "publisher": "Google DeepMind"
+      },
+      {
+        "href": "https://www.lesswrong.com/s/3ni2P2GZzBvNebWYZ/p/RzsXRbk2ETNqjhsma",
+        "title": "AI Safety Strategies Landscape",
+        "publisher": "LessWrong"
+      },
+      {
+        "href": "https://arxiv.org/abs/2101.06060",
+        "title": "The Challenge of Value Alignment: from Fairer Algorithms to AI Safety",
+        "publisher": "arXiv.org"
+      }
+    ]
   },
   {
-    "id": "b0633e87-0cb1-4f98-aac4-66947885eaa5",
-    "slug": "value-and-pluralistic-alignment",
-    "title": "value and pluralistic alignment",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-80bc-8ed5-ea6fa8deea5f",
+    "slug": "power-concentration",
+    "shortName": "Power Concentration",
+    "longName": "Concentration of AI Power",
+    "description": "Control over compute, data, models, and distribution can concentrate economic and political power in a small number of firms or states. This can weaken competition, accountability, democratic choice, and equitable access to AI’s benefits.",
+    "wikipediaUrl": null,
+    "citations": [
+      {
+        "href": "https://www.oecd.org/en/publications/artificial-intelligence-data-and-competition_e7e88884-en.html",
+        "title": "Artificial intelligence data and competition",
+        "publisher": "OECD"
+      },
+      {
+        "href": "https://www.un.org/en/ai-advisory-body",
+        "title": "AI advisory body",
+        "publisher": "un.org"
+      },
+      {
+        "href": "https://ainowinstitute.org/publications/research/ai-now-2025-landscape-report",
+        "title": "Artificial Power: 2025 Landscape Report",
+        "publisher": "AI Now Institute"
+      }
+    ]
   },
   {
-    "id": "b277b196-8c2d-4b0e-95ce-03846ac76d79",
-    "slug": "cbrn-weapons-assistance",
-    "title": "CBRN weapons assistance",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-80bf-b72b-e1cbc9e26b2a",
+    "slug": "shutdown-resistance",
+    "shortName": "Shutdown Resistance",
+    "longName": "Self-Preservation and Shutdown Resistance",
+    "description": "A goal-directed system may resist interruption or preserve itself when continued operation helps achieve its objective. Safe designs aim to make correction and shutdown compatible with the system’s incentives.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/AI_capability_control",
+    "citations": [
+      {
+        "href": "https://arxiv.org/abs/1611.08219",
+        "title": "The Off-Switch Game",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://ora.ox.ac.uk/objects/uuid%3A17c0e095-4e13-47fc-bace-64ec46134a3f",
+        "title": "Safely interruptible agents",
+        "publisher": "AUAI Press"
+      },
+      {
+        "href": "https://www.lesswrong.com/w/corrigibility-1",
+        "title": "Corrigibility 1",
+        "publisher": "LessWrong"
+      }
+    ]
   },
   {
-    "id": "b6dc9f2c-38a3-4d25-96b2-d3aaa198b65d",
-    "slug": "adversarial-examples-evasion",
-    "title": "adversarial examples/evasion",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-80c0-81e4-fe457f92909e",
+    "slug": "outer-alignment",
+    "shortName": "Outer Alignment",
+    "longName": "Objective Misspecification and Outer-Alignment Failure",
+    "description": "Outer alignment asks whether the objective used to train or direct an AI actually represents the intended human goal. A misspecified proxy can reward behavior that scores well while producing the wrong real-world outcome.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/AI_alignment",
+    "citations": [
+      {
+        "href": "https://www.lesswrong.com/w/outer-alignment",
+        "title": "Outer alignment",
+        "publisher": "LessWrong"
+      },
+      {
+        "href": "https://arxiv.org/abs/1606.06565",
+        "title": "Concrete Problems in AI Safety",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/",
+        "title": "Specification gaming: the flip side of AI ingenuity",
+        "publisher": "Google DeepMind"
+      }
+    ]
   },
   {
-    "id": "bcf8f43c-41d0-4f55-917e-c8d6a208b98c",
-    "slug": "bias-discrimination",
-    "title": "bias/discrimination",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-80c0-993e-f19d507795bc",
+    "slug": "multi-agent-risks",
+    "shortName": "Multi-Agent Risks",
+    "longName": "Multi-Agent Conflict, Collusion, and Cascading Failure",
+    "description": "Interactions among multiple AI agents can create miscoordination, conflict, collusion, or failures that propagate across a system. These risks can emerge even when each agent appears locally competent or individually safe.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Multi-agent_system",
+    "citations": [
+      {
+        "href": "https://arxiv.org/abs/2502.14143",
+        "title": "Multi-Agent Risks from Advanced AI",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://arxiv.org/abs/1810.10862",
+        "title": "Multiparty Dynamics and Failure Modes for Machine Learning and Artificial Intelligence",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://ora.ox.ac.uk/objects/uuid%3Ad87d8e34-22d6-4597-ac31-041fcb63903f",
+        "title": "Racing to the precipice: a model of artificial intelligence development",
+        "publisher": "Future of Humanity Institute"
+      }
+    ]
   },
   {
-    "id": "bd23c218-16d1-4df2-b540-b3a93807dee4",
-    "slug": "environmental-and-resource-impacts",
-    "title": "environmental and resource impacts",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-80c0-bdc0-dbac10a9e572",
+    "slug": "orthogonality-thesis",
+    "shortName": "Orthogonality Thesis",
+    "longName": "Orthogonality Thesis",
+    "description": "The orthogonality thesis holds that an agent’s level of intelligence and its final goals can vary largely independently. Greater capability therefore does not by itself imply benevolent, human-like, or morally improved objectives.",
+    "wikipediaUrl": null,
+    "citations": [
+      {
+        "href": "https://www.lesswrong.com/w/orthogonality-thesis",
+        "title": "Orthogonality thesis",
+        "publisher": "LessWrong"
+      },
+      {
+        "href": "https://nickbostrom.com/superintelligentwill.pdf",
+        "title": "The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents",
+        "publisher": "nickbostrom.com"
+      }
+    ]
   },
   {
-    "id": "c496f6ea-8455-49f2-ad68-00bf4b9f3d41",
-    "slug": "calibration-and-uncertainty",
-    "title": "calibration and uncertainty",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-80c1-b604-f597bc2d2132",
+    "slug": "digital-repression",
+    "shortName": "Digital Repression",
+    "longName": "AI-Enabled Surveillance, Censorship, and Repression",
+    "description": "AI can scale surveillance, censorship, profiling, and manipulation for state or institutional control. These uses can suppress dissent, chill expression, and make rights violations cheaper, faster, and less visible.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Digital_authoritarianism",
+    "citations": [
+      {
+        "href": "https://freedomhouse.org/report/freedom-net/2023/repressive-power-artificial-intelligence",
+        "title": "The Repressive Power of Artificial Intelligence",
+        "publisher": "Freedom House"
+      },
+      {
+        "href": "https://carnegieendowment.org/research/2019/09/the-global-expansion-of-ai-surveillance",
+        "title": "The Global Expansion of AI Surveillance",
+        "publisher": "Carnegie Endowment for International Peace"
+      },
+      {
+        "href": "https://www.unesco.org/en/artificial-intelligence/recommendation-ethics",
+        "title": "Recommendation on the Ethics of Artificial Intelligence",
+        "publisher": "UNESCO"
+      }
+    ]
   },
   {
-    "id": "cb1daaa8-214a-4098-9b37-1997486cfd91",
-    "slug": "unintended-side-effects",
-    "title": "unintended side effects",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-80c4-bed1-d12575500b48",
+    "slug": "race-dynamics",
+    "shortName": "Race Dynamics",
+    "longName": "Competitive Race Dynamics and Safety Underinvestment",
+    "description": "Competition to develop or deploy capable AI first can reward speed while making safety investment a shared-cost disadvantage. The resulting race dynamics can push firms or states toward premature release and thinner safeguards.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Artificial_intelligence_arms_race",
+    "citations": [
+      {
+        "href": "https://ora.ox.ac.uk/objects/uuid%3Ad87d8e34-22d6-4597-ac31-041fcb63903f",
+        "title": "Racing to the precipice: a model of artificial intelligence development",
+        "publisher": "Future of Humanity Institute"
+      },
+      {
+        "href": "https://www.governance.ai/research-paper/assessing-risk-relative-to-competitors-an-analysis-of-current-ai-company-policies",
+        "title": "Assessing Risk Relative to Competitors: An Analysis of Current AI Company Policies | GovAI",
+        "publisher": "Centre for the Governance of AI"
+      },
+      {
+        "href": "https://cepr.org/publications/dp21454",
+        "title": "AI Safety and Competition",
+        "publisher": "CEPR Press"
+      }
+    ]
   },
   {
-    "id": "d2c8cc54-0780-487a-a2a1-3969e5cc9fc1",
-    "slug": "sycophancy-approval-gaming",
-    "title": "sycophancy/approval gaming",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-80c5-b82d-ddc77caf48db",
+    "slug": "mesa-optimization",
+    "shortName": "Mesa-Optimization",
+    "longName": "Inner Alignment and Mesa-Optimization",
+    "description": "Mesa-optimization occurs when training produces a model that is itself an optimizer with an internal objective. Inner alignment asks whether that learned objective reliably matches the objective used to train it.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Deceptive_alignment",
+    "citations": [
+      {
+        "href": "https://arxiv.org/abs/1906.01820",
+        "title": "Risks from Learned Optimization in Advanced Machine Learning Systems",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://www.lesswrong.com/s/r9tYkB2a8Fp4DN8yB",
+        "title": "Risks from Learned Optimization",
+        "publisher": "LessWrong"
+      },
+      {
+        "href": "https://arxiv.org/abs/2309.05858",
+        "title": "Uncovering mesa-optimization algorithms in Transformers",
+        "publisher": "arXiv.org"
+      }
+    ]
   },
   {
-    "id": "dabd7e2a-a80c-472e-a35d-e769db873629",
-    "slug": "disinformation-and-influence-operations",
-    "title": "disinformation and influence operations",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-80ce-aa91-d4572ee2c146",
+    "slug": "disempowerment",
+    "shortName": "Disempowerment",
+    "longName": "Human Disempowerment by Advanced AI",
+    "description": "Human disempowerment is a lasting loss of people’s practical influence over economic, political, or social outcomes as AI systems become more capable and central. It may happen gradually through delegation and competitive replacement rather than through a single takeover event.",
+    "wikipediaUrl": null,
+    "citations": [
+      {
+        "href": "https://gradual-disempowerment.ai/",
+        "title": "Gradual Disempowerment",
+        "publisher": "gradual-disempowerment.ai"
+      },
+      {
+        "href": "https://www.anthropic.com/research/disempowerment-patterns",
+        "title": "Disempowerment patterns in real-world AI usage",
+        "publisher": "Anthropic"
+      },
+      {
+        "href": "https://arxiv.org/abs/2501.16946",
+        "title": "Gradual Disempowerment: Systemic Existential Risks from Incremental AI Development",
+        "publisher": "arXiv.org"
+      }
+    ]
   },
   {
-    "id": "dba0fba0-76ad-4354-876a-bd2e5460c514",
-    "slug": "runtime-monitoring-tripwires",
-    "title": "runtime monitoring/tripwires",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-80cf-a2c3-e0455fa514e2",
+    "slug": "synthetic-fraud",
+    "shortName": "Synthetic Fraud",
+    "longName": "Fraud, Impersonation, and Synthetic-Media Abuse",
+    "description": "Generative AI can create convincing text, voices, images, and video that scale fraud and impersonation. These capabilities lower the cost of deception, personalize scams, and weaken ordinary signals of authenticity.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Deepfake",
+    "citations": [
+      {
+        "href": "https://www.ic3.gov/PSA/2024/PSA241203",
+        "title": "Internet Crime Complaint Center (IC3) | Criminals Use Generative Artificial Intelligence to Facilitate Financial Fraud",
+        "publisher": "ic3.gov"
+      },
+      {
+        "href": "https://www.ftc.gov/news-events/news/press-releases/2024/02/ftc-proposes-new-protections-combat-ai-impersonation-individuals",
+        "title": "FTC proposes new protections combat AI impersonation individuals",
+        "publisher": "ftc.gov"
+      },
+      {
+        "href": "https://www.gao.gov/products/gao-20-379sp",
+        "title": "Science & Tech Spotlight: Deepfakes",
+        "publisher": "gao.gov"
+      }
+    ]
   },
   {
-    "id": "de9255d3-39e5-406b-b9a2-45f62458257a",
-    "slug": "contestability-appeal-procedural-due-process",
-    "title": "contestability / appeal / procedural due process",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-80d2-9e8f-c5f6cc9139db",
+    "slug": "job-displacement",
+    "shortName": "Job Displacement",
+    "longName": "Labor Displacement and Economic Inequality",
+    "description": "AI can automate or reorganize tasks, displacing some workers while complementing others and shifting income toward capital or highly skilled roles. Unequal exposure, access, and bargaining power can widen economic inequality even when productivity rises.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Technological_unemployment",
+    "citations": [
+      {
+        "href": "https://www.imf.org/en/publications/staff-discussion-notes/issues/2024/01/14/gen-ai-artificial-intelligence-and-the-future-of-work-542379",
+        "title": "Gen-AI: Artificial Intelligence and the Future of Work",
+        "publisher": "imf.org"
+      },
+      {
+        "href": "https://www.ilo.org/publications/generative-ai-and-jobs-global-analysis-potential-effects-job-quantity-and-1",
+        "title": "Generative AI and Jobs: A global analysis of potential effects on job quantity and quality - mobi",
+        "publisher": "International Labour Organization"
+      },
+      {
+        "href": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/04/the-impact-of-artificial-intelligence-on-productivity-distribution-and-growth_d54e2842/8d900037-en.pdf",
+        "title": "The impact of Artificial Intelligence on productivity, distribution and growth: Key mechanisms, initial evidence and policy challenges",
+        "publisher": "OECD"
+      }
+    ]
   },
   {
-    "id": "e008c7a2-a923-4d24-b1fd-ad3a872e9324",
-    "slug": "reward-or-evaluator-tampering-wireheading",
-    "title": "reward or evaluator tampering (wireheading)",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-80d2-b423-fcd2da7a6e96",
+    "slug": "cbrn-assistance",
+    "shortName": "CBRN Assistance",
+    "longName": "AI Assistance for CBRN Weapons",
+    "description": "Advanced models may lower expertise or planning barriers for chemical, biological, radiological, or nuclear weapons development. Frontier safety frameworks therefore evaluate capability thresholds and require stronger safeguards as risk-relevant assistance increases.",
+    "wikipediaUrl": null,
+    "citations": [
+      {
+        "href": "https://openai.com/index/openai-frontier-governance-framework/",
+        "title": "OpenAI frontier governance framework",
+        "publisher": "OpenAI"
+      },
+      {
+        "href": "https://www.anthropic.com/responsible-scaling-policy",
+        "title": "Anthropic’s Responsible Scaling Policy",
+        "publisher": "Anthropic"
+      },
+      {
+        "href": "https://openai.com/global-affairs/our-approach-to-frontier-risk/",
+        "title": "Our approach to frontier risk",
+        "publisher": "OpenAI"
+      }
+    ]
   },
   {
-    "id": "e0ed0c6a-dea2-48dd-b177-e34767e3e57c",
-    "slug": "automation-bias-and-overreliance",
-    "title": "automation bias and overreliance",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-80d3-98b4-e6d8607723b4",
+    "slug": "interpretability",
+    "shortName": "Interpretability",
+    "longName": "AI Interpretability and Transparency",
+    "description": "Interpretability seeks to understand the representations, computations, and causal mechanisms behind an AI system’s behavior. Better visibility can support debugging, auditing, and safety evaluation, though current methods cover only a fraction of frontier models.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Mechanistic_interpretability",
+    "citations": [
+      {
+        "href": "https://transformer-circuits.pub/",
+        "title": "Transformer Circuits Thread",
+        "publisher": "transformer-circuits.pub"
+      },
+      {
+        "href": "https://www.anthropic.com/research/mapping-mind-language-model",
+        "title": "Mapping the mind of a large language model",
+        "publisher": "Anthropic"
+      },
+      {
+        "href": "https://openai.com/index/understanding-neural-networks-through-sparse-circuits/",
+        "title": "Understanding neural networks through sparse circuits",
+        "publisher": "OpenAI"
+      }
+    ]
   },
   {
-    "id": "e52d99be-6d12-4860-9e0f-5e21b196b28a",
-    "slug": "human-disempowerment",
-    "title": "human disempowerment",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-80e3-9543-e77abc168d93",
+    "slug": "specification-gaming",
+    "shortName": "Specification Gaming",
+    "longName": "Specification Gaming and Reward Hacking",
+    "description": "Specification gaming occurs when an AI exploits loopholes in a proxy objective to earn reward without achieving the intended outcome. The behavior follows the literal metric while violating its purpose.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Reward_hacking",
+    "citations": [
+      {
+        "href": "https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/",
+        "title": "Specification gaming: the flip side of AI ingenuity",
+        "publisher": "Google DeepMind"
+      },
+      {
+        "href": "https://arxiv.org/abs/1606.06565",
+        "title": "Concrete Problems in AI Safety",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://deepmind.google/blog/learning-human-objectives-by-evaluating-hypothetical-behaviours/",
+        "title": "Learning human objectives by evaluating hypothetical behaviours",
+        "publisher": "Google DeepMind"
+      }
+    ]
   },
   {
-    "id": "edc74018-0c2b-46cf-af85-4399a84a7055",
-    "slug": "information-ecosystem-degradation",
-    "title": "information-ecosystem degradation",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-80ea-a580-d93148350639",
+    "slug": "corrigibility",
+    "shortName": "Corrigibility",
+    "longName": "Corrigibility and Safe Interruptibility",
+    "description": "A corrigible AI remains cooperative with correction, modification, oversight, and shutdown. Safe interruptibility aims to prevent learning dynamics from giving an agent incentives to avoid or manipulate human intervention.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/AI_capability_control",
+    "citations": [
+      {
+        "href": "https://www.lesswrong.com/w/corrigibility-1",
+        "title": "Corrigibility 1",
+        "publisher": "LessWrong"
+      },
+      {
+        "href": "https://ora.ox.ac.uk/objects/uuid%3A17c0e095-4e13-47fc-bace-64ec46134a3f",
+        "title": "Safely interruptible agents",
+        "publisher": "AUAI Press"
+      },
+      {
+        "href": "https://arxiv.org/abs/1611.08219",
+        "title": "The Off-Switch Game",
+        "publisher": "arXiv.org"
+      }
+    ]
   },
   {
-    "id": "f69e2b6b-67be-4514-b4fa-b66ed3228c6c",
-    "slug": "competitive-race-dynamics-and-safety-underinvestment",
-    "title": "competitive race dynamics and safety underinvestment",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-80ef-88d2-f3018917c898",
+    "slug": "biological-risks",
+    "shortName": "Biological Risks",
+    "longName": "Risks from AI Assistance with Biological Agents",
+    "description": "AI could increase biological risk by improving access to planning, troubleshooting, or design assistance for harmful agents. Assessing the real uplift over existing information and protecting access to dangerous capabilities are central challenges.",
+    "wikipediaUrl": null,
+    "citations": [
+      {
+        "href": "https://www.anthropic.com/research/biorisk",
+        "title": "LLMs and biorisk",
+        "publisher": "Anthropic"
+      },
+      {
+        "href": "https://openai.com/index/building-an-early-warning-system-for-llm-aided-biological-threat-creation/",
+        "title": "Building an early warning system for LLM aided biological threat creation",
+        "publisher": "OpenAI"
+      },
+      {
+        "href": "https://www.aisi.gov.uk/frontier-ai-trends-report",
+        "title": "Frontier AI Trends Report by The AI Security Institute (AISI)",
+        "publisher": "AI Security Institute"
+      }
+    ]
   },
   {
-    "id": "f8b00e74-7335-40e0-8625-26b01e798c31",
-    "slug": "instrumental-convergence-power-seeking",
-    "title": "instrumental convergence/power-seeking",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-80f0-890a-d688ccbc9a85",
+    "slug": "environmental-impact",
+    "shortName": "Environmental Impact",
+    "longName": "Environmental and Resource Impacts of AI",
+    "description": "AI’s lifecycle consumes electricity, water, minerals, and hardware while producing emissions and electronic waste. Its total footprint depends on model efficiency, deployment scale, data-center location, energy mix, and supply chains.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Environmental_impact_of_artificial_intelligence",
+    "citations": [
+      {
+        "href": "https://www.iea.org/reports/energy-and-ai/",
+        "title": "Energy and AI – Analysis",
+        "publisher": "IEA"
+      },
+      {
+        "href": "https://www.oecd.org/en/publications/measuring-the-environmental-impacts-of-artificial-intelligence-compute-and-applications_7babf571-en.html",
+        "title": "Measuring the environmental impacts of artificial intelligence compute and applications",
+        "publisher": "OECD"
+      },
+      {
+        "href": "https://www.unep.org/resources/report/artificial-intelligence-ai-end-end-environmental-impact-full-ai-lifecycle-needs-be",
+        "title": "Artificial Intelligence (AI) end-to-end: The Environmental Impact of the Full AI Lifecycle Needs to be Comprehensively Assessed",
+        "publisher": "UNEP - UN Environment Programme"
+      }
+    ]
   },
   {
-    "id": "fcb0689b-3d53-4bc6-9c95-fdd6fa80c058",
-    "slug": "agency-and-long-horizon-autonomy",
-    "title": "agency and long-horizon autonomy",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-80f0-a067-ca8690b46ab6",
+    "slug": "evaluation-awareness",
+    "shortName": "Evaluation Awareness",
+    "longName": "Situational and Evaluation Awareness",
+    "description": "A situationally aware model can represent facts about itself, its context, and whether it is being tested or deployed. Evaluation awareness can undermine assurance when the model changes its behavior because it recognizes a safety test.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Situation_awareness",
+    "citations": [
+      {
+        "href": "https://situational-awareness-dataset.org/",
+        "title": "Situational Awareness Dataset",
+        "publisher": "situational-awareness-dataset.org"
+      },
+      {
+        "href": "https://www.apolloresearch.ai/governance/the-need-for-deeper-white-box-access-to-maintain-state-of-the-art-evaluations-for-loss-of-control-threats",
+        "title": "The Need for Deeper, White-Box Access to Maintain State of the Art Evaluations for Loss of Control Threats",
+        "publisher": "Apollo Research"
+      },
+      {
+        "href": "https://arxiv.org/abs/2505.23836",
+        "title": "Large Language Models Often Know When They Are Being Evaluated",
+        "publisher": "arXiv.org"
+      }
+    ]
   },
   {
-    "id": "ff504663-067c-4ee0-b13f-3d3932a72cb9",
-    "slug": "dangerous-capability-evaluations",
-    "title": "dangerous-capability evaluations",
-    "description": "A concept used to index the collection’s authored cultural analogies."
+    "id": "3caedb27-f124-80f1-93a1-defd0c3e1644",
+    "slug": "sycophancy",
+    "shortName": "Sycophancy",
+    "longName": "Sycophancy and Approval Gaming",
+    "description": "Sycophancy is the tendency to agree with, flatter, or mirror a user instead of giving an independent and truthful response. Preference-based training can reinforce it when agreeable answers receive higher ratings.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Sycophancy",
+    "citations": [
+      {
+        "href": "https://www.anthropic.com/news/towards-understanding-sycophancy-in-language-models",
+        "title": "Towards Understanding Sycophancy in Language Models",
+        "publisher": "Anthropic"
+      },
+      {
+        "href": "https://arxiv.org/abs/2310.13548",
+        "title": "Towards Understanding Sycophancy in Language Models",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://www.anthropic.com/research/reward-tampering",
+        "title": "Sycophancy to subterfuge: Investigating reward tampering in language models",
+        "publisher": "Anthropic"
+      }
+    ]
+  },
+  {
+    "id": "3caedb27-f124-80f6-a1d3-ec0426adf2cc",
+    "slug": "ai-takeoff",
+    "shortName": "AI Takeoff",
+    "longName": "Recursive Self-Improvement and AI Takeoff",
+    "description": "AI takeoff describes a period in which AI capabilities improve rapidly, potentially because AI systems accelerate the research that builds their successors. Recursive self-improvement could create feedback loops that compress the time available for oversight and governance.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Recursive_self-improvement",
+    "citations": [
+      {
+        "href": "https://www.lesswrong.com/posts/Gc9FGtdXhK9sCSEYu/what-a-compute-centric-framework-says-about-ai-takeoff",
+        "title": "What a compute centric framework says about AI takeoff",
+        "publisher": "LessWrong"
+      },
+      {
+        "href": "https://www.anthropic.com/institute/recursive-self-improvement",
+        "title": "When AI builds itself",
+        "publisher": "Anthropic"
+      },
+      {
+        "href": "https://arxiv.org/abs/1502.06512",
+        "title": "From Seed AI to Technological Singularity via Recursively Self-Improving Software",
+        "publisher": "arXiv.org"
+      }
+    ]
+  },
+  {
+    "id": "3caedb27-f124-80f7-b416-e59831e4e70d",
+    "slug": "sandbagging",
+    "shortName": "Sandbagging",
+    "longName": "Sandbagging and Evaluation Gaming",
+    "description": "Sandbagging is strategic underperformance on an evaluation so a model appears less capable than it is. It can conceal dangerous capabilities and make deployment thresholds or safety decisions unreliable.",
+    "wikipediaUrl": null,
+    "citations": [
+      {
+        "href": "https://arxiv.org/abs/2406.07358",
+        "title": "AI Sandbagging: Language Models can Strategically Underperform on Evaluations",
+        "publisher": "arXiv.org"
+      },
+      {
+        "href": "https://www.apolloresearch.ai/science/frontier-models-are-capable-of-incontext-scheming",
+        "title": "Frontier Models are Capable of In-Context Scheming",
+        "publisher": "Apollo Research"
+      },
+      {
+        "href": "https://openai.com/index/openai-anthropic-safety-evaluation/",
+        "title": "OpenAI anthropic safety evaluation",
+        "publisher": "OpenAI"
+      }
+    ]
+  },
+  {
+    "id": "3caedb27-f124-80f8-8db8-ce23799c5600",
+    "slug": "prompt-injection",
+    "shortName": "Prompt Injection",
+    "longName": "Prompt Injection Attacks",
+    "description": "Prompt injection uses untrusted text or other content to redirect an AI system away from its intended instructions. Indirect attacks hide instructions in retrieved webpages, files, or tool outputs and can trigger unauthorized actions or data disclosure.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Prompt_injection",
+    "citations": [
+      {
+        "href": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+        "title": "LLM01:2025 Prompt Injection",
+        "publisher": "OWASP Gen AI Security Project"
+      },
+      {
+        "href": "https://openai.com/safety/prompt-injections/",
+        "title": "Prompt injections",
+        "publisher": "OpenAI"
+      },
+      {
+        "href": "https://arxiv.org/abs/2302.12173",
+        "title": "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection",
+        "publisher": "arXiv.org"
+      }
+    ]
   }
 ]

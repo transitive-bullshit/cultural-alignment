@@ -1,7 +1,7 @@
 import type {
   ConceptRecord,
+  ContentImage as ContentImageRecord,
   RiskFamilyRecord,
-  ScenarioImage,
   ScenarioRecord,
   ScenarioVideo,
   SourceRecord
@@ -26,13 +26,13 @@ export type { SearchDocument } from './search-documents'
 
 export type ResourceKind = Exclude<StaticContentKind, 'scenario'>
 
-export type ContentImage = Readonly<ScenarioImage>
+export type ContentImage = Readonly<ContentImageRecord>
 
 export type SourceIdentity = {
   readonly id: string
   readonly slug: string
   readonly title: string
-  readonly kind: SourceRecord['kind']
+  readonly sourceType: SourceRecord['sourceType']
 }
 
 export type TaxonomyLink = {
@@ -65,7 +65,7 @@ export type ScenarioPage = {
   readonly title: string
   readonly source: SourceIdentity & {
     readonly href: string
-    readonly description?: string
+    readonly description: string | null
     readonly links: readonly {
       readonly label: string
       readonly href: string
@@ -91,19 +91,39 @@ export type ResourceSummary = {
   readonly slug: string
   readonly href: string
   readonly title: string
-  readonly description: string
+  readonly detailTitle: string
+  readonly description: string | null
   readonly scenarioCount: number
 }
 
-export type ResourcePage = ResourceSummary & {
-  readonly artworkSrc: string | null
+type ExternalLink = {
+  readonly label: string
+  readonly href: string
+  readonly description?: string
+}
+
+type ResourcePageBase = ResourceSummary & {
   readonly externalLinks: readonly {
     readonly label: string
     readonly href: string
+    readonly description?: string
   }[]
   readonly relatedResources: readonly ResourceSummary[]
   readonly scenarios: readonly GalleryScenario[]
 }
+
+export type SourceResourcePage = ResourcePageBase & {
+  readonly kind: 'source'
+  readonly sourceType: SourceRecord['sourceType']
+  readonly releaseDate: string | null
+  readonly poster: ContentImage | null
+}
+
+export type TaxonomyResourcePage = ResourcePageBase & {
+  readonly kind: 'risk-family' | 'concept'
+}
+
+export type ResourcePage = SourceResourcePage | TaxonomyResourcePage
 
 export type ContentCatalog = {
   listScenarioCards(query?: ScenarioListQuery): readonly GalleryScenario[]
@@ -158,7 +178,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
         return {
           id: family.id,
           slug: family.slug,
-          title: family.title,
+          title: family.shortName,
           href: `/risk-families/${family.slug}`
         }
       }),
@@ -182,7 +202,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
           ...toSourceIdentity(source),
           href: `/sources/${source.slug}`,
           description: source.description,
-          links: source.links ?? [],
+          links: sourceExternalLinks(source),
           scenarioCount: scenariosBySourceId.get(source.id)?.length ?? 0
         },
         episode: scenario.episode,
@@ -198,7 +218,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
           return {
             id: family.id,
             slug: family.slug,
-            title: family.title,
+            title: family.shortName,
             href: `/risk-families/${family.slug}`
           }
         }),
@@ -208,7 +228,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
           return {
             id: concept.id,
             slug: concept.slug,
-            title: concept.title,
+            title: concept.shortName,
             href: `/concepts/${concept.slug}`
           }
         }),
@@ -224,7 +244,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
               return {
                 id: family.id,
                 slug: family.slug,
-                title: family.title,
+                title: family.shortName,
                 href: `/risk-families/${family.slug}`
               }
             }),
@@ -234,7 +254,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
               return {
                 id: concept.id,
                 slug: concept.slug,
-                title: concept.title,
+                title: concept.shortName,
                 href: `/concepts/${concept.slug}`
               }
             })
@@ -281,17 +301,24 @@ export function createContentCatalog(input: unknown): ContentCatalog {
           source.slug,
           {
             ...summary,
-            artworkSrc: null,
-            externalLinks: source.links ?? [],
-            relatedResources: collectRelatedResources(
-              scenarios,
-              resourceSummaryById,
-              ['risk-family', 'concept']
+            kind: 'source',
+            sourceType: source.sourceType,
+            releaseDate: source.releaseDate,
+            poster: source.poster,
+            externalLinks: sourceExternalLinks(source),
+            relatedResources: mergeRelatedResources(
+              source.relatedSourceIds.map((id) =>
+                getRequired(resourceSummaryById, resourceKey('source', id))
+              ),
+              collectRelatedResources(scenarios, resourceSummaryById, [
+                'risk-family',
+                'concept'
+              ])
             ),
             scenarios: scenarios.map((scenario) =>
               getRequired(scenarioCardById, scenario.id)
             )
-          } satisfies ResourcePage
+          } satisfies SourceResourcePage
         ] as const
       })
     ),
@@ -307,10 +334,11 @@ export function createContentCatalog(input: unknown): ContentCatalog {
           family.slug,
           {
             ...summary,
-            artworkSrc: family.artworkSrc ?? null,
-            externalLinks: family.canonicalUrl
-              ? [{ label: 'Reference', href: family.canonicalUrl }]
-              : [],
+            kind: 'risk-family',
+            externalLinks: taxonomyExternalLinks(
+              family.wikipediaUrl,
+              family.citations
+            ),
             relatedResources: collectRelatedResources(
               scenarios,
               resourceSummaryById,
@@ -319,7 +347,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
             scenarios: scenarios.map((scenario) =>
               getRequired(scenarioCardById, scenario.id)
             )
-          } satisfies ResourcePage
+          } satisfies TaxonomyResourcePage
         ] as const
       })
     ),
@@ -335,11 +363,11 @@ export function createContentCatalog(input: unknown): ContentCatalog {
           concept.slug,
           {
             ...summary,
-            artworkSrc: concept.artworkSrc ?? null,
-            externalLinks: (concept.canonicalUrls ?? []).map((href, index) => ({
-              label: `Reference ${String(index + 1).padStart(2, '0')}`,
-              href
-            })),
+            kind: 'concept',
+            externalLinks: taxonomyExternalLinks(
+              concept.wikipediaUrl,
+              concept.citations
+            ),
             relatedResources: collectRelatedResources(
               scenarios,
               resourceSummaryById,
@@ -348,7 +376,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
             scenarios: scenarios.map((scenario) =>
               getRequired(scenarioCardById, scenario.id)
             )
-          } satisfies ResourcePage
+          } satisfies TaxonomyResourcePage
         ] as const
       })
     )
@@ -442,7 +470,7 @@ function toSourceIdentity(source: SourceRecord): SourceIdentity {
     id: source.id,
     slug: source.slug,
     title: source.title,
-    kind: source.kind
+    sourceType: source.sourceType
   }
 }
 
@@ -456,9 +484,8 @@ function toSourceSummary(
     slug: source.slug,
     href: `/sources/${source.slug}`,
     title: source.title,
-    description:
-      source.description ??
-      `${formatScenarioCount(scenarioCount)} drawn from ${source.title}.`,
+    detailTitle: source.title,
+    description: source.description,
     scenarioCount
   }
 }
@@ -472,7 +499,8 @@ function toRiskFamilySummary(
     id: family.id,
     slug: family.slug,
     href: `/risk-families/${family.slug}`,
-    title: family.title,
+    title: family.shortName,
+    detailTitle: family.fullName,
     description: family.description,
     scenarioCount
   }
@@ -487,14 +515,11 @@ function toConceptSummary(
     id: concept.id,
     slug: concept.slug,
     href: `/concepts/${concept.slug}`,
-    title: concept.title,
+    title: concept.shortName,
+    detailTitle: concept.longName,
     description: concept.description,
     scenarioCount
   }
-}
-
-function formatScenarioCount(count: number) {
-  return `${count} ${count === 1 ? 'scenario' : 'scenarios'}`
 }
 
 function collectRelatedResources(
@@ -520,6 +545,68 @@ function collectRelatedResources(
   }
 
   return sortResources([...related.values()])
+}
+
+function mergeRelatedResources(
+  ...groups: readonly (readonly ResourceSummary[])[]
+) {
+  const resources = new Map<string, ResourceSummary>()
+
+  for (const resource of groups.flat()) {
+    resources.set(resourceKey(resource.kind, resource.id), resource)
+  }
+
+  return sortResources([...resources.values()])
+}
+
+function sourceExternalLinks(source: SourceRecord): readonly ExternalLink[] {
+  return [
+    source.imdbUrl ? { label: 'IMDb', href: source.imdbUrl } : null,
+    source.rottenTomatoesUrl
+      ? { label: 'Rotten Tomatoes', href: source.rottenTomatoesUrl }
+      : null,
+    source.youtubeTrailerUrl
+      ? { label: 'YouTube trailer', href: source.youtubeTrailerUrl }
+      : null
+  ].filter((link): link is ExternalLink => link !== null)
+}
+
+function taxonomyExternalLinks(
+  wikipediaUrl: string | null,
+  citations: RiskFamilyRecord['citations']
+): readonly ExternalLink[] {
+  return [
+    wikipediaUrl ? { label: 'Wikipedia', href: wikipediaUrl } : null,
+    ...citations.map((citation) => {
+      const description = distinctCitationPublisher(
+        citation.title,
+        citation.publisher
+      )
+      return description
+        ? {
+            label: citation.title,
+            href: citation.href,
+            description
+          }
+        : { label: citation.title, href: citation.href }
+    })
+  ].filter((link): link is ExternalLink => link !== null)
+}
+
+function distinctCitationPublisher(title: string, publisher: string | null) {
+  if (!publisher) return null
+  const normalizedTitle = normalizeCitationLabel(title)
+  const normalizedPublisher = normalizeCitationLabel(publisher)
+  if (!normalizedTitle || !normalizedPublisher) return publisher
+
+  return normalizedTitle.includes(normalizedPublisher) ||
+    normalizedPublisher.includes(normalizedTitle)
+    ? null
+    : publisher
+}
+
+function normalizeCitationLabel(value: string) {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, '')
 }
 
 function resourceKey(kind: ResourceKind, id: string) {

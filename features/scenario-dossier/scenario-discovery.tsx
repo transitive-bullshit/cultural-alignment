@@ -69,7 +69,6 @@ export function ScenarioDiscovery({ scenario }: { scenario: ScenarioPage }) {
                 }
               })
             )}
-            imageTreatment='muted'
             layout='preview'
           />
         </section>

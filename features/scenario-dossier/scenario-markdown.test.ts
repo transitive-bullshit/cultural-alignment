@@ -17,6 +17,9 @@ describe('formatScenarioAsMarkdown', () => {
       '[Source \\*One\\*](https://example.com/sources/source-one)'
     )
     expect(markdown).toContain(
+      '- **Episode:** [Episode 1](https://example.org/episode)'
+    )
+    expect(markdown).toContain(
       '![A still with \\[brackets\\]](https://example.com/media/detail%20%28final%29.webp)'
     )
     expect(markdown).toContain('https://www.youtube.com/watch?v=abc123&t=0s')
@@ -30,6 +33,19 @@ describe('formatScenarioAsMarkdown', () => {
       )
     ).not.toContain('## Video')
   })
+
+  it('omits episode metadata for movies even when legacy data includes it', () => {
+    const scenario = createScenario()
+    const markdown = formatScenarioAsMarkdown(
+      {
+        ...scenario,
+        source: { ...scenario.source, sourceType: 'movie' }
+      },
+      new URL('https://example.com/')
+    )
+
+    expect(markdown).not.toContain('**Episode:**')
+  })
 })
 
 function createScenario(): ScenarioPage {
@@ -41,8 +57,9 @@ function createScenario(): ScenarioPage {
       id: 'source-one',
       slug: 'source-one',
       title: 'Source *One*',
-      kind: 'film',
+      sourceType: 'tv-show',
       href: '/sources/source-one',
+      description: null,
       links: [],
       scenarioCount: 1
     },

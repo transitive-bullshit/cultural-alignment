@@ -3,8 +3,8 @@ import { describe, expect, it } from 'vitest'
 import type { ContentSnapshot } from './schema'
 import { ContentValidationError, validateContentSnapshot } from './validate'
 
-const minimalSnapshot = {
-  schemaVersion: 1,
+const minimalSnapshot: ContentSnapshot = {
+  schemaVersion: 2,
   scenarios: [
     {
       id: 'scenario-1',
@@ -34,26 +34,51 @@ const minimalSnapshot = {
       id: 'source-1',
       slug: 'rick-and-morty',
       title: 'Rick and Morty',
-      kind: 'television'
+      sourceType: 'tv-show',
+      description: 'An animated science-fiction comedy.',
+      releaseDate: '2013-12-02',
+      poster: null,
+      imdbUrl: 'https://www.imdb.com/title/tt2861424/',
+      rottenTomatoesUrl: null,
+      youtubeTrailerUrl: null,
+      relatedSourceIds: []
     }
   ],
   riskFamilies: [
     {
       id: 'risk-1',
       slug: 'misalignment',
-      title: 'Misalignment',
-      description: 'Goals that diverge from their operator’s intent.'
+      shortName: 'Misalignment',
+      fullName: 'Misalignment',
+      description: 'Goals that diverge from their operator’s intent.',
+      wikipediaUrl: 'https://en.wikipedia.org/wiki/AI_alignment',
+      citations: [
+        {
+          href: 'https://example.com/misalignment',
+          title: 'A publication about misalignment',
+          publisher: 'Example Research'
+        }
+      ]
     }
   ],
   concepts: [
     {
       id: 'concept-1',
       slug: 'specification-gaming',
-      title: 'Specification gaming',
-      description: 'Meeting the stated objective while missing its purpose.'
+      shortName: 'Specification Gaming',
+      longName: 'Specification Gaming and Reward Hacking',
+      description: 'Meeting the stated objective while missing its purpose.',
+      wikipediaUrl: null,
+      citations: [
+        {
+          href: 'https://example.com/specification-gaming',
+          title: 'A publication about specification gaming',
+          publisher: null
+        }
+      ]
     }
   ]
-} satisfies ContentSnapshot
+}
 
 describe('validateContentSnapshot', () => {
   it('reports schema failures with an exact record path', () => {
@@ -80,6 +105,20 @@ describe('validateContentSnapshot', () => {
       expect.objectContaining({
         code: 'invalid-schema',
         path: 'scenarios[0].image.gallerySrc'
+      })
+    ])
+  })
+
+  it('rejects implementation-only canonical-source labels as citation titles', () => {
+    const input = structuredClone(minimalSnapshot)
+    input.riskFamilies[0]!.citations[0]!.title = 'Canonical source 01'
+
+    const error = captureValidationError(() => validateContentSnapshot(input))
+
+    expect(error.issues).toEqual([
+      expect.objectContaining({
+        code: 'invalid-schema',
+        path: 'riskFamilies[0].citations[0].title'
       })
     ])
   })
@@ -118,6 +157,35 @@ describe('validateContentSnapshot', () => {
         code: 'missing-relation',
         path: 'scenarios[0].conceptIds[0]'
       }
+    ])
+  })
+
+  it('rejects orphaned directly related media sources', () => {
+    const input = structuredClone(minimalSnapshot)
+    input.sources[0]!.relatedSourceIds = ['missing-source']
+
+    const error = captureValidationError(() => validateContentSnapshot(input))
+
+    expect(error.issues.map(({ code, path }) => ({ code, path }))).toEqual([
+      {
+        code: 'missing-relation',
+        path: 'sources[0].relatedSourceIds[0]'
+      }
+    ])
+  })
+
+  it('only permits episode metadata for television sources', () => {
+    const input = structuredClone(minimalSnapshot)
+    input.sources[0]!.sourceType = 'movie'
+    input.scenarios[0]!.episode = { label: 'Pilot' }
+
+    const error = captureValidationError(() => validateContentSnapshot(input))
+
+    expect(error.issues).toEqual([
+      expect.objectContaining({
+        code: 'invalid-source-episode',
+        path: 'scenarios[0].episode'
+      })
     ])
   })
 })

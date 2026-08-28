@@ -7,11 +7,11 @@ import { notionSourceUrl, repositoryUrl, xProfileUrl } from '@/lib/site'
 import styles from './site-footer.module.css'
 
 const primaryLinks = [
-  { href: '/', label: 'Featured stories' },
+  { href: '/', label: 'Featured scenarios' },
   { href: '/scenarios', label: 'All scenarios' },
   { href: '/risk-families', label: 'Risk families' },
   { href: '/concepts', label: 'AI safety concepts' },
-  { href: '/sources', label: 'Cultural sources' }
+  { href: '/sources', label: 'Media sources' }
 ] as const
 
 const projectLinks = [

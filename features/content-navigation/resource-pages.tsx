@@ -1,5 +1,7 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
+import { ScrambleLink } from '@/components/motion/scramble-link'
 import { SiteHeader } from '@/components/site-header'
 import { ScenarioCollection } from '@/features/scenario-collection/scenario-collection'
 import type {
@@ -14,26 +16,29 @@ import styles from './resource-pages.module.css'
 const PRESENTATION = {
   source: {
     eyebrow: 'Cultural source index',
-    indexTitle: 'Sources',
-    singular: 'Source',
+    indexTitle: 'Media Sources',
+    singular: 'Media Source',
+    breadcrumbLabel: 'Media sources',
     description:
-      'Films, television, animation, and other familiar worlds represented in the collection.',
+      'A curated collection of TV shows, movies, and anime from popular culture which contain useful scenes for improving our understanding of AI safety.',
     indexHref: '/sources'
   },
   'risk-family': {
     eyebrow: 'AI risk taxonomy',
-    indexTitle: 'Risk families',
+    indexTitle: 'AI Risk Families',
     singular: 'Risk family',
+    breadcrumbLabel: 'Risk families',
     description:
-      'Five broad ways capable AI systems can create harm, each grounded in recognizable cultural scenes.',
+      'A high-level categorization of ways that capable AI systems can create harm, each grounded in recognizable scenes from pop culture.',
     indexHref: '/risk-families'
   },
   concept: {
     eyebrow: 'AI safety index',
-    indexTitle: 'Concepts',
+    indexTitle: 'AI Safety Concepts',
     singular: 'AI safety concept',
+    breadcrumbLabel: 'AI safety concepts',
     description:
-      'Specific ideas from AI safety, alignment, governance, and human–AI interaction.',
+      'A collection of important concepts from AI safety, alignment, risks, governance, and human–AI interaction.',
     indexHref: '/concepts'
   }
 } as const satisfies Record<
@@ -42,6 +47,7 @@ const PRESENTATION = {
     readonly eyebrow: string
     readonly indexTitle: string
     readonly singular: string
+    readonly breadcrumbLabel: string
     readonly description: string
     readonly indexHref: string
   }
@@ -58,7 +64,7 @@ export function ResourceIndexPage({
 
   return (
     <main className={`experience-scope ${styles.page}`}>
-      <SiteHeader inset context={`${presentation.indexTitle} / index`} />
+      <SiteHeader inset context={`${presentation.indexTitle}`} />
 
       <section className={styles.indexIntro}>
         <p className={styles.eyebrow}>{presentation.eyebrow}</p>
@@ -77,7 +83,9 @@ export function ResourceIndexPage({
                 {String(index + 1).padStart(2, '0')}
               </span>
               <h2>{resource.title}</h2>
-              {kind === 'risk-family' ? <p>{resource.description}</p> : null}
+              {kind === 'risk-family' && resource.description ? (
+                <p>{resource.description}</p>
+              ) : null}
               <span className={styles.itemCount}>
                 {formatScenarioCount(resource.scenarioCount)}
               </span>
@@ -100,23 +108,55 @@ export function ResourceDetailPage({
   const presentation = PRESENTATION[resource.kind]
 
   return (
-    <main className={`experience-scope ${styles.page}`}>
+    <main
+      className={`experience-scope ${styles.page}`}
+      data-resource-detail={resource.kind}
+    >
       <SiteHeader
         breadcrumb={{
-          current: resource.title,
+          current: resource.detailTitle,
           parent: {
             href: presentation.indexHref,
-            label: presentation.singular
+            label: presentation.breadcrumbLabel
           }
         }}
         inset
       />
 
-      <section className={styles.detailIntro}>
+      <section
+        className={styles.detailIntro}
+        data-source-hero={resource.kind === 'source' ? true : undefined}
+        data-has-poster={
+          resource.kind === 'source' && resource.poster ? true : undefined
+        }
+      >
         <p className={styles.eyebrow}>{presentation.singular}</p>
-        <h1>{resource.title}</h1>
+        <h1>{resource.detailTitle}</h1>
         <div className={styles.detailSummary}>
-          <p>{resource.description}</p>
+          {resource.kind === 'source' ? (
+            <dl className={styles.sourceMetadata}>
+              <div>
+                <dt>Media type</dt>
+                <dd data-source-type={resource.sourceType}>
+                  {formatSourceType(resource.sourceType)}
+                </dd>
+              </div>
+              {resource.releaseDate ? (
+                <div>
+                  <dt>Release date</dt>
+                  <dd>
+                    <time
+                      dateTime={resource.releaseDate}
+                      data-source-release-date
+                    >
+                      {formatReleaseDate(resource.releaseDate)}
+                    </time>
+                  </dd>
+                </div>
+              ) : null}
+            </dl>
+          ) : null}
+          {resource.description ? <p>{resource.description}</p> : null}
           {resource.externalLinks.length > 0 ? (
             <ul
               className={styles.externalLinks}
@@ -125,14 +165,40 @@ export function ResourceDetailPage({
               {resource.externalLinks.map((link) => (
                 <li key={link.href}>
                   <a href={link.href} target='_blank' rel='noreferrer'>
-                    <span aria-hidden='true'>×</span>
-                    {link.label}
+                    <span
+                      className={styles.externalLinkMark}
+                      aria-hidden='true'
+                    >
+                      ×
+                    </span>
+                    <span className={styles.externalLinkCopy}>
+                      <span className={styles.externalLinkTitle}>
+                        {link.label}
+                      </span>
+                      {link.description ? (
+                        <small className={styles.externalLinkDescription}>
+                          {link.description}
+                        </small>
+                      ) : null}
+                    </span>
                   </a>
                 </li>
               ))}
             </ul>
           ) : null}
         </div>
+        {resource.kind === 'source' && resource.poster ? (
+          <figure className={styles.sourcePoster} data-source-poster>
+            <Image
+              src={resource.poster.detailSrc}
+              alt={resource.poster.alt}
+              width={resource.poster.width}
+              height={resource.poster.height}
+              sizes='(max-width: 680px) calc(100vw - 36px), (max-width: 860px) 460px, (max-width: 1440px) 32vw, 460px'
+              preload
+            />
+          </figure>
+        ) : null}
       </section>
 
       <section className={styles.scenarioSection}>
@@ -157,16 +223,30 @@ export function ResourceDetailPage({
               {String(resource.relatedResources.length).padStart(2, '0')}
             </span>
           </header>
-          <ul className={styles.relatedList}>
-            {resource.relatedResources.map((related) => (
-              <li key={`${related.kind}:${related.id}`}>
-                <Link href={related.href}>
-                  <span>{PRESENTATION[related.kind].singular}</span>
-                  <strong>{related.title}</strong>
-                  <small>{formatScenarioCount(related.scenarioCount)}</small>
-                </Link>
-              </li>
-            ))}
+          <ul className={styles.relatedList} data-connected-records>
+            {resource.relatedResources.map((related) => {
+              const kindLabel = PRESENTATION[related.kind].singular
+              const scenarioCount = formatScenarioCount(related.scenarioCount)
+
+              return (
+                <li key={`${related.kind}:${related.id}`}>
+                  <ScrambleLink
+                    animateOnReveal={false}
+                    copyElement='strong'
+                    duration={260}
+                    href={related.href}
+                    label={`${kindLabel}, ${related.title}, ${scenarioCount}`}
+                    leadingContent={
+                      <span className={styles.relatedKind}>{kindLabel}</span>
+                    }
+                    prefetch={null}
+                    trailingContent={<small>{scenarioCount}</small>}
+                  >
+                    {related.title}
+                  </ScrambleLink>
+                </li>
+              )
+            })}
           </ul>
         </section>
       ) : null}
@@ -243,7 +323,7 @@ export function SearchResultsPage({
           >
             <Link href='/risk-families'>Risk families</Link>
             <Link href='/concepts'>AI safety concepts</Link>
-            <Link href='/sources'>Cultural sources</Link>
+            <Link href='/sources'>Media sources</Link>
           </nav>
         )}
       </section>
@@ -253,6 +333,17 @@ export function SearchResultsPage({
 
 function formatScenarioCount(count: number) {
   return `${count} ${count === 1 ? 'scenario' : 'scenarios'}`
+}
+
+function formatSourceType(sourceType: 'movie' | 'tv-show') {
+  return sourceType === 'movie' ? 'Movie' : 'TV show'
+}
+
+function formatReleaseDate(releaseDate: string) {
+  return new Intl.DateTimeFormat('en-US', {
+    dateStyle: 'long',
+    timeZone: 'UTC'
+  }).format(new Date(`${releaseDate}T00:00:00Z`))
 }
 
 function searchKindLabel(kind: SearchDocument['kind']) {

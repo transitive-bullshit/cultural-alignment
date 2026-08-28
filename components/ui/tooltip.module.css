@@ -1,0 +1,54 @@
+.content {
+  opacity: 1;
+  transform: scale(1);
+  transform-origin: var(--radix-tooltip-content-transform-origin);
+  transition:
+    opacity 125ms var(--ease-out),
+    transform 125ms var(--ease-out);
+}
+
+.content[data-state='instant-open'] {
+  transition-duration: 0ms;
+}
+
+.content[data-state='closed'] {
+  opacity: 0;
+  transform: scale(0.97);
+  animation: tooltip-presence 125ms;
+  pointer-events: none;
+}
+
+@starting-style {
+  .content[data-state='delayed-open'] {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+}
+
+@keyframes tooltip-presence {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .content {
+    transform: none;
+    transition: opacity 80ms var(--ease-out);
+  }
+
+  .content[data-state='closed'] {
+    transform: none;
+    animation-duration: 80ms;
+  }
+
+  @starting-style {
+    .content[data-state='delayed-open'] {
+      opacity: 0;
+      transform: none;
+    }
+  }
+}
