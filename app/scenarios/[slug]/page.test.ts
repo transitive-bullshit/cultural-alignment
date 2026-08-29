@@ -2,7 +2,6 @@ import type { ResolvingMetadata } from 'next'
 import { describe, expect, it } from 'vitest'
 
 import { contentCatalog } from '@/lib/content/snapshot'
-import { siteUrl } from '@/lib/site'
 
 import { dynamicParams, generateMetadata, generateStaticParams } from './page'
 
@@ -38,18 +37,6 @@ describe('production scenario route', () => {
     expect(metadata.description).toBe(scenario.scene)
     expect(metadata.alternates?.canonical).toBe(`/scenarios/${slug}`)
     expect(metadata.keywords).toContain(scenario.source.title)
-
-    const images = metadata.openGraph?.images
-    const image = Array.isArray(images) ? images[0] : images
-    const imageUrl =
-      image instanceof URL
-        ? image
-        : typeof image === 'object'
-          ? image?.url
-          : image
-
-    expect(new URL(String(imageUrl)).href).toBe(
-      new URL(scenario.image.detailSrc, siteUrl).href
-    )
+    expect(metadata.openGraph?.images).toBeUndefined()
   })
 })

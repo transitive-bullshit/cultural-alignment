@@ -16,6 +16,10 @@ export type ContentSocialMetadata = Readonly<{
   type: 'article' | 'website'
 }>
 
+type ResolveContentSocialMetadataOptions = Readonly<{
+  includeImages?: boolean
+}>
+
 export function getResourceSocialMetadata(
   resource: ResourcePage
 ): ContentSocialMetadata {
@@ -71,20 +75,23 @@ export function getScenarioSocialMetadata(
 
 export async function resolveContentSocialMetadata(
   social: ContentSocialMetadata,
-  parent: ResolvingMetadata
+  parent: ResolvingMetadata,
+  options: ResolveContentSocialMetadataOptions = {}
 ): Promise<Metadata> {
-  const inheritedImages = (await parent).openGraph?.images
-  const images = social.image
-    ? [
-        {
-          url: new URL(social.image.detailSrc, siteUrl),
-          width: social.image.width,
-          height: social.image.height,
-          alt: social.image.alt,
-          type: 'image/webp'
-        }
-      ]
-    : inheritedImages
+  const images =
+    options.includeImages === false
+      ? undefined
+      : social.image
+        ? [
+            {
+              url: new URL(social.image.detailSrc, siteUrl),
+              width: social.image.width,
+              height: social.image.height,
+              alt: social.image.alt,
+              type: 'image/webp'
+            }
+          ]
+        : (await parent).openGraph?.images
 
   const metadata: Metadata = {
     title: { absolute: social.title },
@@ -97,7 +104,7 @@ export async function resolveContentSocialMetadata(
       url: social.canonical,
       siteName,
       locale: 'en_US',
-      images
+      ...(images ? { images } : undefined)
     }
   }
 

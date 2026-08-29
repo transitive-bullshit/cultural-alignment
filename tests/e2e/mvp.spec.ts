@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test'
+import sharp from 'sharp'
 
 import concepts from '../../content/snapshot/concepts.json' with { type: 'json' }
 import riskFamilies from '../../content/snapshot/risk-families.json' with { type: 'json' }
@@ -248,9 +249,28 @@ test('scenario detail publishes content-derived social metadata', async ({
   )
 
   expect(new URL(canonical).pathname).toBe(href)
-  const expectedImage = new URL(socialScenario.image.detailSrc, page.url()).href
-  expect(new URL(openGraphImage).href).toBe(expectedImage)
-  expect(new URL(twitterImage).href).toBe(expectedImage)
+  expect(new URL(openGraphImage).pathname).toBe(`${href}/opengraph-image`)
+  expect(new URL(twitterImage).href).toBe(new URL(openGraphImage).href)
+
+  const imageResponse = await page.request.get(openGraphImage)
+  const imageBody = await imageResponse.body()
+  const imageMetadata = await sharp(imageBody).metadata()
+  const stillCrop = await sharp(imageBody)
+    .extract({ left: 485, top: 223, width: 272, height: 154 })
+    .toBuffer()
+  const frameCrop = await sharp(imageBody)
+    .extract({ left: 485, top: 215, width: 272, height: 8 })
+    .toBuffer()
+  const stillStats = await sharp(stillCrop).stats()
+  const frameStats = await sharp(frameCrop).stats()
+
+  expect(imageResponse.ok()).toBe(true)
+  expect(imageResponse.headers()['content-type']).toContain('image/png')
+  expect(imageMetadata).toMatchObject({ width: 1200, height: 630 })
+  expect(stillStats.entropy).toBeGreaterThan(1)
+  expect(
+    Math.max(...frameStats.channels.slice(0, 3).map(({ stdev }) => stdev))
+  ).toBeLessThan(1)
 })
 
 test('resource detail breadcrumbs navigate back to each resource index', async ({

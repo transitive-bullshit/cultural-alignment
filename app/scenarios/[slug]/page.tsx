@@ -27,7 +27,8 @@ export async function generateMetadata(
 
   return resolveContentSocialMetadata(
     getScenarioSocialMetadata(scenario),
-    parent
+    parent,
+    { includeImages: false }
   )
 }
 
