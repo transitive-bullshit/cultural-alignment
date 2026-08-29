@@ -6,7 +6,7 @@ import styles from './not-found.module.css'
 
 export default function NotFound() {
   return (
-    <main className={`${styles.page} experience-scope`}>
+    <main className={`${styles.page} experience-scope`} data-not-found>
       <SiteHeader inset context='Archive exception / 404' />
 
       <section className={styles.message}>
@@ -17,7 +17,6 @@ export default function NotFound() {
         </p>
         <nav aria-label='Not found recovery'>
           <Link href='/scenarios'>Browse all scenarios</Link>
-          <Link href='/search'>Search the archive</Link>
         </nav>
       </section>
 

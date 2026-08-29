@@ -86,9 +86,8 @@ The sync entry point loads `.env` with dotenvx. Existing process environment val
 - `/risk-families` and `/risk-families/[slug]` — risk-family index and pivots
 - `/concepts` and `/concepts/[slug]` — concept index and pivots
 - `/sources` and `/sources/[slug]` — source index and pivots
-- `/search` — full cross-resource search
 - `/about` and `/privacy` — project background and privacy policy
-- `/sitemap.xml` and `/robots.txt` — generated discovery endpoints for every static index/detail content URL; `/search` is intentionally excluded
+- `/sitemap.xml` and `/robots.txt` — generated discovery endpoints for every static index/detail content URL
 
 The historical design-review artifacts live under `docs/outputs/gate-b`; they are not production navigation.
 

@@ -38,7 +38,7 @@ Media-source records carry an explicit movie/TV source type, optional descriptio
 
 `features/scenario-collection` is the shared server-rendered presentation seam for scenario lists. Resource detail pages use its continuous layout for the full result set, while Dossier discovery uses its bounded preview layout. Layout density and image treatment are independent inputs so future filtering can change the item set without introducing another card implementation.
 
-`lib/content/search-documents.ts` projects the local search corpus once during synchronization. The snapshot and public index copies remain byte-identical. `lib/content/search.ts` owns normalization, ranking, and per-kind grouping shared by the server-rendered `/search` route and lazy Command-K client; every indexed `href` must resolve through the catalog.
+`lib/content/search-documents.ts` projects the local search corpus once during synchronization. The snapshot and public index copies remain byte-identical. `lib/content/search.ts` owns normalization, ranking, and per-kind grouping for the lazy Command-K client; every indexed `href` must resolve through the catalog.
 
 ## Spatial gallery ownership
 
@@ -57,7 +57,7 @@ Gallery history state is scoped by topology: the homepage has its own key, and `
 
 Every content detail route exports all known static parameters and disables unknown dynamic parameters. Missing or malformed slugs resolve through the application's not-found behavior.
 
-Global search reads a generated local index covering all four resource kinds. Canonical metadata is resolved through one deployment-origin module. The catalog-derived sitemap contains the browse/index URLs plus every scenario, source, family, and concept detail URL; search queries are intentionally kept out of crawler discovery. `robots.txt` permits indexing outside the `/api` namespace, while `llms.txt` gives machine readers a compact project description and stable top-level entry points without duplicating every dossier.
+Global search reads a generated local index covering all four resource kinds. It has no dedicated URL: queries and ranking remain inside the client-side command palette. Canonical metadata is resolved through one deployment-origin module. The catalog-derived sitemap contains the browse/index URLs plus every scenario, source, family, and concept detail URL. `robots.txt` permits indexing outside the `/api` namespace, while `llms.txt` gives machine readers a compact project description and stable top-level entry points without duplicating every dossier.
 
 Next.js image optimization allowlists the public media origins represented by the checked-in snapshot; it does not read S3 configuration. Before spatial-gallery data crosses the server/client boundary, its mapper uses the stable `getImageProps` API to derive one same-origin `w=640&q=75` optimizer URL for each texture. Three.js, the navigation transition proxy, and the no-WebGL fallback all reuse that URL. On Vercel, compatible ordinary `<Image>` requests and WebGL textures therefore share image-transformation cache keys, while R2 remains the immutable upstream origin. Browser gallery traffic does not access R2 directly or depend on bucket CORS.
 

@@ -7,8 +7,7 @@ import { ScenarioCollection } from '@/features/scenario-collection/scenario-coll
 import type {
   ResourceKind,
   ResourcePage,
-  ResourceSummary,
-  SearchDocument
+  ResourceSummary
 } from '@/lib/content/catalog'
 
 import styles from './resource-pages.module.css'
@@ -257,83 +256,6 @@ export function ResourceDetailPage({
   )
 }
 
-export function SearchResultsPage({
-  query,
-  documents
-}: {
-  readonly query: string
-  readonly documents: readonly SearchDocument[]
-}) {
-  return (
-    <main className={`experience-scope ${styles.page}`}>
-      <SiteHeader inset context='Search / archive' />
-
-      <section className={styles.searchIntro}>
-        <p className={styles.eyebrow}>Cross-resource search</p>
-        <h1>Search</h1>
-        <form action='/search' className={styles.searchForm}>
-          <label htmlFor='archive-search'>
-            Find a familiar story or AI idea
-          </label>
-          <div>
-            <input
-              id='archive-search'
-              type='search'
-              name='q'
-              defaultValue={query}
-              placeholder='Try “Black Mirror” or “Goodhart”'
-              autoComplete='off'
-            />
-            <button type='submit'>Search archive</button>
-          </div>
-        </form>
-      </section>
-
-      <section className={styles.searchResults} aria-live='polite'>
-        <header className={styles.sectionHeader}>
-          <p>Results</p>
-          <h2>{query ? `Matches for “${query}”` : 'Enter a search above'}</h2>
-          <span>{String(documents.length).padStart(2, '0')}</span>
-        </header>
-        {documents.length > 0 ? (
-          <ol>
-            {documents.map((document, index) => (
-              <li key={`${document.kind}:${document.href}`}>
-                <Link href={document.href}>
-                  <span className={styles.indexNumber}>
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
-                  <span className={styles.searchKind}>
-                    {searchKindLabel(document.kind)}
-                  </span>
-                  <strong>{document.title}</strong>
-                  <small>{document.subtitle}</small>
-                  <span className={styles.openMark} aria-hidden='true'>
-                    ↗
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ol>
-        ) : query ? (
-          <p className={styles.noResults}>
-            No records matched. Try a source title, scenario, risk, or concept.
-          </p>
-        ) : (
-          <nav
-            className={styles.searchPivots}
-            aria-label='Browse archive indices'
-          >
-            <Link href='/risk-families'>Risk families</Link>
-            <Link href='/concepts'>AI safety concepts</Link>
-            <Link href='/sources'>Media sources</Link>
-          </nav>
-        )}
-      </section>
-    </main>
-  )
-}
-
 function formatScenarioCount(count: number) {
   return `${count} ${count === 1 ? 'scenario' : 'scenarios'}`
 }
@@ -347,10 +269,4 @@ function formatReleaseDate(releaseDate: string) {
     dateStyle: 'long',
     timeZone: 'UTC'
   }).format(new Date(`${releaseDate}T00:00:00Z`))
-}
-
-function searchKindLabel(kind: SearchDocument['kind']) {
-  if (kind === 'scenario') return 'Scenario'
-
-  return PRESENTATION[kind].singular
 }

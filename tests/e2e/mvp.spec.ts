@@ -466,13 +466,19 @@ test('eligible resource scenario sorting persists locally', async ({
   ).toBeChecked()
 })
 
-test('Command-K search navigates through the generated local index', async ({
+test('global search opens by button and shortcut, then navigates', async ({
   page
 }) => {
   await page.goto('/')
 
   const searchTrigger = page.locator('[data-search-ready="true"]')
   await expect(searchTrigger).toBeVisible()
+
+  await searchTrigger.click()
+  await expect(page.getByRole('combobox')).toBeFocused()
+  await page.keyboard.press('Escape')
+  await expect(page.getByRole('dialog')).toBeHidden()
+
   await page.keyboard.press('ControlOrMeta+k')
 
   const searchInput = page.getByRole('combobox')
@@ -482,6 +488,15 @@ test('Command-K search navigates through the generated local index', async ({
   await expect(page.getByRole('option').first()).toBeVisible()
   await page.keyboard.press('Enter')
   await expect(page).toHaveURL(searchTarget.href)
+})
+
+test('the removed search route resolves through not-found', async ({
+  page
+}) => {
+  const response = await page.goto('/search')
+
+  expect(response?.status()).toBe(404)
+  await expect(page.locator('[data-not-found]')).toBeVisible()
 })
 
 test('spoiler dismissal persists across reloads', async ({ page }) => {

@@ -33,9 +33,8 @@ export default function PrivacyPage() {
           timestamps—to deliver and secure the site.
         </p>
         <p>
-          Command-palette searches stay in your browser. Searches on the full
-          search page appear in the page URL, so they may also appear in browser
-          history and routine server logs.
+          Command-palette query text and ranking stay in your browser. The site
+          requests a static search index when you first open the palette.
         </p>
       </InformationSection>
 
