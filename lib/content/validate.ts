@@ -131,7 +131,7 @@ function appendRelationIssues(
       issues.push({
         code: 'invalid-source-episode',
         path: `scenarios[${scenarioIndex}].episode`,
-        message: `Episode metadata requires a TV show source; ${JSON.stringify(source.id)} is ${source.sourceType}`
+        message: `Episode metadata requires a TV show source; ${JSON.stringify({ id: source.id, title: source.title })} is ${source.sourceType}`
       })
     }
 

@@ -84,6 +84,7 @@ const ALLOWED_CITATION_HOSTS = new Set([
   'proceedings.mlr.press',
   'redwoodresearch.org',
   'saif.google',
+  'securityandtechnology.org',
   'sipri.org',
   'situational-awareness-dataset.org',
   'storage.googleapis.com',
@@ -201,7 +202,7 @@ export async function resolveCitationMetadata(
     hrefsToFetch,
     async (href) =>
       [href, await fetchCitationMetadata(href, options.fetcher)] as const,
-    { concurrency: options.concurrency ?? 4 }
+    { concurrency: options.concurrency ?? 8 }
   )
   const warnings: string[] = []
 

@@ -1255,7 +1255,7 @@ async function main() {
         ['safety-concept', NOTION_DATA_SOURCES.concepts, CONCEPT_PROPERTIES]
       ] as const,
       ([label, ids, contract]) => verifyDataSource(label, ids, contract),
-      { concurrency: 2 }
+      { concurrency: 4 }
     )
 
     console.log('Reading all related Notion rows…')
@@ -1359,7 +1359,7 @@ async function main() {
         }
         return result
       },
-      { concurrency: 4 }
+      { concurrency: 16 }
     )
 
     completedImages = 0
@@ -1391,7 +1391,7 @@ async function main() {
         }
         return result
       },
-      { concurrency: 4 }
+      { concurrency: 16 }
     )
 
     const scenarioEntries: Record<string, SyncEntry> = {}
