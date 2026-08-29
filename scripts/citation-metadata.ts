@@ -184,29 +184,52 @@ export async function resolveCitationMetadata(
   )
   const citationsByHref = new Map<string, Citation>()
   const hrefsToFetch: string[] = []
+  const warnings: string[] = []
 
   for (const href of uniqueHrefs) {
-    const cached = cachedByHref.get(href)
-    const curatedTitle = curatedCitationTitle(href)
-    if (curatedTitle) {
-      const baseCitation = cached ?? fallbackCitationMetadata(href)
-      citationsByHref.set(href, { ...baseCitation, title: curatedTitle })
-    } else if (!options.refresh && cached) {
-      citationsByHref.set(href, cached)
-    } else {
-      hrefsToFetch.push(href)
+    try {
+      const cached = cachedByHref.get(href)
+      const curatedTitle = curatedCitationTitle(href)
+      if (curatedTitle) {
+        const baseCitation = cached ?? fallbackCitationMetadata(href)
+        citationsByHref.set(href, { ...baseCitation, title: curatedTitle })
+      } else if (!options.refresh && cached) {
+        citationsByHref.set(href, cached)
+      } else {
+        hrefsToFetch.push(href)
+      }
+    } catch (err) {
+      warnings.push(
+        `Citation metadata setup failed for ${displayUrl(href)} (${errorMessage(err)})`
+      )
     }
   }
 
   const results = await pMap(
     hrefsToFetch,
-    async (href) =>
-      [href, await fetchCitationMetadata(href, options.fetcher)] as const,
+    async (href) => {
+      try {
+        return {
+          href,
+          result: await fetchCitationMetadata(href, options.fetcher)
+        } as const
+      } catch (err) {
+        return { href, error: err } as const
+      }
+    },
     { concurrency: options.concurrency ?? 8 }
   )
-  const warnings: string[] = []
 
-  for (const [href, result] of results) {
+  for (const item of results) {
+    const { href } = item
+    if ('error' in item) {
+      warnings.push(
+        `Citation metadata resolution failed for ${displayUrl(href)} (${errorMessage(item.error)})`
+      )
+      continue
+    }
+
+    const { result } = item
     const cached = cachedByHref.get(href)
     if (result.usedFallbackTitle && cached) {
       citationsByHref.set(href, cached)

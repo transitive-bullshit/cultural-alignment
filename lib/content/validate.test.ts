@@ -97,7 +97,10 @@ describe('validateContentSnapshot', () => {
     expect(error.issues).toEqual([
       expect.objectContaining({
         code: 'invalid-schema',
-        path: 'scenarios[0].image.width'
+        path: 'scenarios[0].image.width',
+        message: expect.stringContaining(
+          'scenario "Keep Summer Safe" (ID: scenario-1)'
+        )
       })
     ])
   })
@@ -207,6 +210,11 @@ describe('validateContentSnapshot', () => {
         path: 'scenarios[0].conceptIds[0]'
       }
     ])
+    expect(error.issues.map(({ message }) => message)).toEqual([
+      expect.stringContaining('scenario "Keep Summer Safe" (ID: scenario-1)'),
+      expect.stringContaining('scenario "Keep Summer Safe" (ID: scenario-1)'),
+      expect.stringContaining('scenario "Keep Summer Safe" (ID: scenario-1)')
+    ])
   })
 
   it('rejects orphaned directly related media sources', () => {
@@ -221,6 +229,9 @@ describe('validateContentSnapshot', () => {
         path: 'sources[0].relatedSourceIds[0]'
       }
     ])
+    expect(error.issues[0]!.message).toContain(
+      'source "Rick and Morty" (ID: source-1)'
+    )
   })
 
   it('only permits episode metadata for television sources', () => {
@@ -233,7 +244,10 @@ describe('validateContentSnapshot', () => {
     expect(error.issues).toEqual([
       expect.objectContaining({
         code: 'invalid-source-episode',
-        path: 'scenarios[0].episode'
+        path: 'scenarios[0].episode',
+        message: expect.stringMatching(
+          /scenario "Keep Summer Safe" \(ID: scenario-1\).*source "Rick and Morty" \(ID: source-1\)/
+        )
       })
     ])
   })

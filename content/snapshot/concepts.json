@@ -195,7 +195,7 @@
     "id": "3caedb27-f124-8044-be2f-c3c82c01fb2b",
     "slug": "self-replication",
     "shortName": "Self-Replication",
-    "longName": "Autonomous Replication and Adaptation",
+    "longName": "Autonomous Self-Replication",
     "keywords": [
       "autonomous replication",
       "self-proliferation",
@@ -2103,6 +2103,38 @@
         "href": "https://arxiv.org/abs/2302.12173",
         "title": "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection",
         "publisher": "arXiv.org"
+      }
+    ]
+  },
+  {
+    "id": "3cbedb27-f124-8106-b817-d1116df394c2",
+    "slug": "rsi",
+    "shortName": "RSI",
+    "longName": "Recursive Self-Improvement",
+    "keywords": [
+      "recursive self-improvement",
+      "rsi",
+      "self-modifying ai",
+      "automated ai r&d",
+      "intelligence explosion"
+    ],
+    "description": "Recursive self-improvement occurs when an AI improves its own architecture, training process, code, or successor and then uses the improved system to make further improvements, creating a compounding capability loop.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Recursive_self-improvement",
+    "citations": [
+      {
+        "href": "https://www.anthropic.com/institute/recursive-self-improvement",
+        "title": "When AI builds itself",
+        "publisher": "Anthropic"
+      },
+      {
+        "href": "https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf",
+        "title": "Preparedness framework v2",
+        "publisher": "OpenAI"
+      },
+      {
+        "href": "https://securityandtechnology.org/recursive-self-improvement-initiative/",
+        "title": "Recursive Self Improvement Initiative",
+        "publisher": "Institute for Security and Technology"
       }
     ]
   }

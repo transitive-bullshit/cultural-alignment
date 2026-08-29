@@ -296,6 +296,28 @@ describe('resolveCitationMetadata', () => {
       expect.stringContaining('retained cached title “Verified paper title”')
     ])
   })
+
+  it('reports one invalid citation without rejecting the metadata batch', async () => {
+    const validHref = 'https://example.org/research/valid-paper'
+    const fetcher = vi.fn<CitationFetcher>(async () =>
+      htmlResponse(
+        '<meta name="citation_title" content="A Valid Research Paper">'
+      )
+    )
+
+    const result = await resolveCitationMetadata(
+      ['not-a-valid-url', validHref],
+      { fetcher }
+    )
+
+    expect(result.citationsByHref.get(validHref)?.title).toBe(
+      'A Valid Research Paper'
+    )
+    expect(result.citationsByHref.has('not-a-valid-url')).toBe(false)
+    expect(result.warnings).toEqual([
+      expect.stringContaining('Citation metadata setup failed')
+    ])
+  })
 })
 
 describe('fallbackCitationMetadata', () => {

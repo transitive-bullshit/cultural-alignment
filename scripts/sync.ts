@@ -32,8 +32,19 @@ import {
   type SourceRecord
 } from '../lib/content/schema'
 import { buildSearchDocuments } from '../lib/content/search-documents'
-import { validateContentSnapshot } from '../lib/content/validate'
+import {
+  ContentValidationError,
+  validateContentSnapshot
+} from '../lib/content/validate'
 import { createBlurDataURL } from './image-placeholder'
+import {
+  boldWarning,
+  formatImageBatchSummary,
+  formatNotionRecord,
+  type NotionRecordReference,
+  NotionSyncReport,
+  type NotionSyncCollection
+} from './notion-sync-report'
 import {
   emptyPreviousSyncManifest,
   MEDIA_PIPELINE_VERSION,
@@ -259,6 +270,7 @@ type ImageResult = {
   imageBlockId: string
   additionalImageCount: number
   caption: string
+  uploaded: boolean
 }
 
 function getProperty(
@@ -299,6 +311,42 @@ function plainText(items: readonly RichTextItemResponse[]) {
     .map((item) => item.plain_text)
     .join('')
     .trim()
+}
+
+function notionPageReference(
+  page: PageObjectResponse,
+  title?: string
+): NotionRecordReference {
+  const inlineTitle = Object.values(page.properties).find(
+    (property) => property.type === 'title'
+  )
+
+  return {
+    id: page.id,
+    title:
+      title ??
+      (inlineTitle?.type === 'title' ? plainText(inlineTitle.title) : undefined)
+  }
+}
+
+function successfulResults<T>(results: readonly (T | null)[]) {
+  return results.filter((result): result is T => result !== null)
+}
+
+function parseNotionPages<T>(
+  report: NotionSyncReport,
+  collection: NotionSyncCollection,
+  pages: readonly PageObjectResponse[],
+  parse: (page: PageObjectResponse) => Promise<T>
+) {
+  return pMap(
+    pages,
+    (page) =>
+      report.capture(collection, notionPageReference(page), 'parsing', () =>
+        parse(page)
+      ),
+    { concurrency: 3 }
+  )
 }
 
 function requiredMarkdown(
@@ -769,8 +817,9 @@ function publicFilePath(root: string, publicPath: string) {
 async function reusableImageEntry(
   entry: PreviousSyncEntry | undefined,
   page: PageObjectResponse,
-  collection: 'scenarios' | 'sources'
-): Promise<SyncEntry | null> {
+  collection: 'scenarios' | 'sources',
+  record: NotionRecordReference
+): Promise<ImageResult | null> {
   if (!entry || entry.lastEditedTime !== page.last_edited_time) return null
 
   const remote = reusableSyncEntrySchema.safeParse(entry)
@@ -805,14 +854,19 @@ async function reusableImageEntry(
     const gallerySrc = mediaStorage.publicUrl(current.galleryKey)
     const blurDataURL =
       current.blurDataURL ??
-      (await createBlurDataURL(await downloadImage(gallerySrc)))
+      (await createBlurDataURL(await downloadImage(gallerySrc, record)))
+    const {
+      pipelineVersion: _pipelineVersion,
+      lastEditedTime: _lastEditedTime,
+      ...image
+    } = current
 
     return {
-      ...current,
-      pipelineVersion: MEDIA_PIPELINE_VERSION,
+      ...image,
       gallerySrc,
       detailSrc: mediaStorage.publicUrl(current.detailKey),
-      blurDataURL
+      blurDataURL,
+      uploaded: false
     }
   }
 
@@ -848,7 +902,7 @@ async function migrateLegacyImageEntry(
   entry: PreviousSyncEntry,
   page: PageObjectResponse,
   collection: 'scenarios' | 'sources'
-): Promise<SyncEntry | null> {
+): Promise<ImageResult | null> {
   if (!entry.galleryHash || !entry.detailHash) return null
 
   const expectedPaths = generatedMediaPublicPaths(collection, page.id)
@@ -881,8 +935,6 @@ async function migrateLegacyImageEntry(
   }
 
   return {
-    pipelineVersion: MEDIA_PIPELINE_VERSION,
-    lastEditedTime: entry.lastEditedTime,
     imageBlockId: entry.imageBlockId,
     additionalImageCount: entry.additionalImageCount,
     sourceHash: entry.sourceHash,
@@ -895,7 +947,8 @@ async function migrateLegacyImageEntry(
     width: entry.width,
     height: entry.height,
     blurDataURL,
-    caption: entry.caption
+    caption: entry.caption,
+    uploaded: gallery.uploaded || detail.uploaded
   }
 }
 
@@ -928,7 +981,7 @@ function imageCaption(block: BlockObjectResponse) {
   return plainText(block.image.caption)
 }
 
-async function downloadImage(url: string) {
+async function downloadImage(url: string, record?: NotionRecordReference) {
   const maximumAttempts = 5
   let lastError = new Error('Image download failed')
 
@@ -953,8 +1006,9 @@ async function downloadImage(url: string) {
 
     if (attempt < maximumAttempts) {
       console.warn(
-        `Image download failed; retrying (${attempt}/${maximumAttempts})`,
-        downloadLabel(url)
+        boldWarning(
+          `Image download failed${record ? ` for ${formatNotionRecord(record)}` : ''}; retrying (${attempt}/${maximumAttempts}) ${downloadLabel(url)}`
+        )
       )
       await delay(500 * 2 ** (attempt - 1))
     }
@@ -976,6 +1030,7 @@ async function processImage(
   page: PageObjectResponse,
   options: {
     readonly collection: 'scenarios' | 'sources'
+    readonly record: NotionRecordReference
     readonly required: boolean
     readonly fallback?: {
       readonly imageBlockId: string
@@ -1005,18 +1060,23 @@ async function processImage(
 
   if (images.length > 1) {
     console.warn(
-      `Page ${page.id} has ${images.length} images; using first block ${selectedImage?.id}`
+      boldWarning(
+        `${formatNotionRecord(options.record)} has ${images.length} images; using first block ${selectedImage?.id}`
+      )
     )
   }
 
   if (!selectedImage) {
     console.warn(
-      `Page ${page.id} has no image block; using ${options.fallback!.imageBlockId}`
+      boldWarning(
+        `${formatNotionRecord(options.record)} has no image block; using ${options.fallback!.imageBlockId}`
+      )
     )
   }
 
   const input = await downloadImage(
-    selectedImage ? imageUrl(selectedImage) : options.fallback!.url
+    selectedImage ? imageUrl(selectedImage) : options.fallback!.url,
+    options.record
   )
   const sourceHash = sha256(input)
 
@@ -1054,7 +1114,8 @@ async function processImage(
     additionalImageCount: Math.max(0, images.length - 1),
     caption: selectedImage
       ? imageCaption(selectedImage)
-      : options.fallback!.caption
+      : options.fallback!.caption,
+    uploaded: publishedGallery.uploaded || publishedDetail.uploaded
   }
 }
 
@@ -1219,6 +1280,61 @@ function toSyncEntry(page: PageObjectResponse, image: ImageResult): SyncEntry {
   }
 }
 
+type SnapshotCandidate = {
+  readonly scenarios: readonly ScenarioRecord[]
+  readonly sources: readonly SourceRecord[]
+  readonly riskFamilies: readonly RiskFamilyRecord[]
+  readonly concepts: readonly ConceptRecord[]
+}
+
+function recordContentValidationErrors(
+  report: NotionSyncReport,
+  candidate: SnapshotCandidate,
+  error: ContentValidationError
+) {
+  let hasGlobalError = false
+
+  for (const issue of error.issues) {
+    const match = issue.path.match(
+      /^(scenarios|sources|riskFamilies|concepts)\[(\d+)\]/
+    )
+    if (!match) {
+      hasGlobalError = true
+      console.warn(boldWarning(`${issue.path}: ${issue.message}`))
+      continue
+    }
+
+    const collection = match[1] as NotionSyncCollection
+    const index = Number(match[2])
+    const record = candidate[collection][index]
+    if (!record) {
+      hasGlobalError = true
+      console.warn(boldWarning(`${issue.path}: ${issue.message}`))
+      continue
+    }
+
+    report.recordError(
+      collection,
+      {
+        id: record.id,
+        title: 'title' in record ? record.title : record.shortName
+      },
+      'validating',
+      new Error(`${issue.path}: ${issue.message}`)
+    )
+  }
+
+  return hasGlobalError
+}
+
+function printPreservedSnapshotWarning() {
+  console.warn(
+    boldWarning(
+      'The sync encountered errors. The previous generated snapshot and search index were preserved.'
+    )
+  )
+}
+
 const notionToken = process.env.NOTION_TOKEN
 if (!notionToken) {
   throw new Error('NOTION_TOKEN is required to run pnpm content:sync')
@@ -1266,13 +1382,28 @@ async function main() {
         readDataSourcePages(NOTION_DATA_SOURCES.riskFamilies.dataSourceId),
         readDataSourcePages(NOTION_DATA_SOURCES.concepts.dataSourceId)
       ])
-    const [parsedRows, sourceSeeds, riskFamilySeeds, conceptSeeds] =
+    const report = new NotionSyncReport({
+      scenarios: scenarioPages.length,
+      sources: sourcePages.length,
+      riskFamilies: riskFamilyPages.length,
+      concepts: conceptPages.length
+    })
+    const [scenarioResults, sourceResults, riskFamilyResults, conceptResults] =
       await Promise.all([
-        pMap(scenarioPages, parseScenario, { concurrency: 3 }),
-        pMap(sourcePages, parseSource, { concurrency: 3 }),
-        pMap(riskFamilyPages, parseRiskFamily, { concurrency: 3 }),
-        pMap(conceptPages, parseConcept, { concurrency: 3 })
+        parseNotionPages(report, 'scenarios', scenarioPages, parseScenario),
+        parseNotionPages(report, 'sources', sourcePages, parseSource),
+        parseNotionPages(
+          report,
+          'riskFamilies',
+          riskFamilyPages,
+          parseRiskFamily
+        ),
+        parseNotionPages(report, 'concepts', conceptPages, parseConcept)
       ])
+    const parsedRows = successfulResults(scenarioResults)
+    const sourceSeeds = successfulResults(sourceResults)
+    const riskFamilySeeds = successfulResults(riskFamilyResults)
+    const conceptSeeds = successfulResults(conceptResults)
 
     const citationUrls = [
       ...riskFamilySeeds.flatMap((family) => family.canonicalUrls),
@@ -1286,14 +1417,20 @@ async function main() {
         cachedCitations,
         refresh: process.env.REFRESH_CITATIONS === '1'
       })
-    for (const warning of citationWarnings) console.warn(warning)
+    for (const warning of citationWarnings) {
+      console.warn(boldWarning(warning))
+    }
 
     const missingFeatured = FEATURED_SCENARIO_IDS.filter(
-      (expectedId) => !parsedRows.some((row) => row.id === expectedId)
+      (expectedId) => !scenarioPages.some((page) => page.id === expectedId)
     )
+    let hasGlobalError = false
     if (missingFeatured.length > 0) {
-      throw new Error(
-        `Missing featured scenario IDs: ${missingFeatured.join(', ')}`
+      hasGlobalError = true
+      console.warn(
+        boldWarning(
+          `Notion is missing configured featured scenario IDs: ${missingFeatured.join(', ')}`
+        )
       )
     }
 
@@ -1327,26 +1464,37 @@ async function main() {
     const scenarioImageResults = await pMap(
       parsedRows,
       async (row) => {
-        const source = sourceSeedById.get(row.sourceId)
-        if (!source) {
-          throw new Error(
-            `Scenario ${row.id} relates to unknown media source ${row.sourceId}`
-          )
-        }
-        const previousEntry = previousManifest.entries.scenarios[row.id]
-        const reusableEntry = await reusableImageEntry(
-          previousEntry,
-          row.page,
-          'scenarios'
+        const record = notionPageReference(row.page, row.title)
+        const result = await report!.capture(
+          'scenarios',
+          record,
+          'processing the image for',
+          async () => {
+            const source = sourceSeedById.get(row.sourceId)
+            if (!source) {
+              throw new Error(
+                `Related media source ${row.sourceId} could not be found or parsed`
+              )
+            }
+            const previousEntry = previousManifest.entries.scenarios[row.id]
+            const reusableEntry = await reusableImageEntry(
+              previousEntry,
+              row.page,
+              'scenarios',
+              record
+            )
+            const image = reusableEntry
+              ? reusableEntry
+              : await processImage(row.page, {
+                  collection: 'scenarios',
+                  record,
+                  required: true,
+                  fallback: getMissingImageFallback(row, source.title)
+                })
+            if (!image) throw new Error('No image was produced')
+            return image
+          }
         )
-        const result = reusableEntry
-          ? reusableEntry
-          : await processImage(row.page, {
-              collection: 'scenarios',
-              required: true,
-              fallback: getMissingImageFallback(row, source.title)
-            })
-        if (!result) throw new Error(`Scenario ${row.id} has no image`)
 
         completedImages += 1
         if (
@@ -1361,24 +1509,37 @@ async function main() {
       },
       { concurrency: 16 }
     )
+    console.log(
+      formatImageBatchSummary('Scenario images', scenarioImageResults)
+    )
 
     completedImages = 0
     console.log(`Syncing ${sourceSeeds.length} optional source posters…`)
     const sourceImageResults = await pMap(
       sourceSeeds,
       async (source) => {
-        const previousEntry = previousManifest.entries.sources[source.id]
-        const reusableEntry = await reusableImageEntry(
-          previousEntry,
-          source.page,
-          'sources'
+        const record = notionPageReference(source.page, source.title)
+        const result = await report!.capture(
+          'sources',
+          record,
+          'processing the optional poster for',
+          async () => {
+            const previousEntry = previousManifest.entries.sources[source.id]
+            const reusableEntry = await reusableImageEntry(
+              previousEntry,
+              source.page,
+              'sources',
+              record
+            )
+            return reusableEntry
+              ? reusableEntry
+              : await processImage(source.page, {
+                  collection: 'sources',
+                  record,
+                  required: false
+                })
+          }
         )
-        const result = reusableEntry
-          ? reusableEntry
-          : await processImage(source.page, {
-              collection: 'sources',
-              required: false
-            })
 
         completedImages += 1
         if (
@@ -1393,6 +1554,58 @@ async function main() {
       },
       { concurrency: 16 }
     )
+    console.log(
+      formatImageBatchSummary('Media source images', sourceImageResults)
+    )
+
+    const riskFamilyRecordResults = await pMap(
+      riskFamilySeeds,
+      (family) =>
+        report!.capture(
+          'riskFamilies',
+          { id: family.id, title: family.shortName },
+          'building citation data for',
+          () => {
+            const { canonicalUrls, ...record } = family
+            return {
+              ...record,
+              slug: slugs.riskFamilies[family.id]!,
+              citations: canonicalUrls.map((href) =>
+                requiredCitation(citationsByHref, href)
+              )
+            } satisfies RiskFamilyRecord
+          }
+        ),
+      { concurrency: 16 }
+    )
+    const riskFamilies = successfulResults(riskFamilyRecordResults)
+    const conceptRecordResults = await pMap(
+      conceptSeeds,
+      (concept) =>
+        report!.capture(
+          'concepts',
+          { id: concept.id, title: concept.shortName },
+          'building citation data for',
+          () => {
+            const { canonicalUrls, ...record } = concept
+            return {
+              ...record,
+              slug: slugs.concepts[concept.id]!,
+              citations: canonicalUrls.map((href) =>
+                requiredCitation(citationsByHref, href)
+              )
+            } satisfies ConceptRecord
+          }
+        ),
+      { concurrency: 16 }
+    )
+    const concepts = successfulResults(conceptRecordResults)
+
+    if (report.hasErrors || hasGlobalError) {
+      report.printSummary()
+      printPreservedSnapshotWarning()
+      return false
+    }
 
     const scenarioEntries: Record<string, SyncEntry> = {}
     const scenarios: ScenarioRecord[] = parsedRows.map((row, index) => {
@@ -1449,34 +1662,22 @@ async function main() {
           : null
       }
     })
-    const riskFamilies: RiskFamilyRecord[] = riskFamilySeeds.map((family) => {
-      const { canonicalUrls, ...record } = family
-      return {
-        ...record,
-        slug: slugs.riskFamilies[family.id]!,
-        citations: canonicalUrls.map((href) =>
-          requiredCitation(citationsByHref, href)
-        )
-      }
-    })
-    const concepts: ConceptRecord[] = conceptSeeds.map((concept) => {
-      const { canonicalUrls, ...record } = concept
-      return {
-        ...record,
-        slug: slugs.concepts[concept.id]!,
-        citations: canonicalUrls.map((href) =>
-          requiredCitation(citationsByHref, href)
-        )
-      }
-    })
 
-    const snapshot = validateContentSnapshot({
-      schemaVersion: 2,
-      scenarios,
-      sources,
-      riskFamilies,
-      concepts
-    })
+    const candidate = { scenarios, sources, riskFamilies, concepts }
+    let snapshot: ContentSnapshot
+    try {
+      snapshot = validateContentSnapshot({
+        schemaVersion: 2,
+        ...candidate
+      })
+    } catch (err) {
+      if (!(err instanceof ContentValidationError)) throw err
+
+      recordContentValidationErrors(report, candidate, err)
+      report.printSummary()
+      printPreservedSnapshotWarning()
+      return false
+    }
     assertPublishedMedia(snapshot)
 
     const fixtureScenarioIds = [...FEATURED_SCENARIO_IDS]
@@ -1524,15 +1725,26 @@ async function main() {
     ])
 
     await replaceGeneratedOutputs(stageRoot)
+    report.printSummary()
     console.log(
       `Synced ${snapshot.scenarios.length} scenarios, ${snapshot.sources.length} sources, ${snapshot.riskFamilies.length} risk families, and ${snapshot.concepts.length} concepts.`
     )
     console.log(
       `Media storage: ${uploadedMediaObjects} uploaded, ${reusedMediaObjects} already present.`
     )
+    return true
+  } catch (err) {
+    console.error(
+      boldWarning(
+        `Content sync failed: ${err instanceof Error ? err.message || err.name : String(err)}`
+      )
+    )
+    printPreservedSnapshotWarning()
+    return false
   } finally {
     await rm(stageRoot, { force: true, recursive: true })
   }
 }
 
-await main()
+const syncSucceeded = await main()
+if (!syncSucceeded) process.exitCode = 1

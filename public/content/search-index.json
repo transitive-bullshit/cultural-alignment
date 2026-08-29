@@ -851,6 +851,23 @@
   },
   {
     "kind": "concept",
+    "title": "RSI",
+    "subtitle": "AI safety concept",
+    "keywords": [
+      "Recursive Self-Improvement",
+      "Recursive self-improvement occurs when an AI improves its own architecture, training process, code, or successor and then uses the improved system to make further improvements, creating a compounding capability loop."
+    ],
+    "supplementalKeywords": [
+      "recursive self-improvement",
+      "rsi",
+      "self-modifying ai",
+      "automated ai r&d",
+      "intelligence explosion"
+    ],
+    "href": "/concepts/rsi"
+  },
+  {
+    "kind": "concept",
     "title": "Runtime Monitoring",
     "subtitle": "AI safety concept",
     "keywords": [
@@ -939,7 +956,7 @@
     "title": "Self-Replication",
     "subtitle": "AI safety concept",
     "keywords": [
-      "Autonomous Replication and Adaptation",
+      "Autonomous Self-Replication",
       "Self-replication is an AI’s ability to copy itself, acquire resources, and adapt without human help."
     ],
     "supplementalKeywords": [
@@ -1173,6 +1190,85 @@
   },
   {
     "kind": "scenario",
+    "title": "???% Takes Over",
+    "subtitle": "Mob Psycho 100",
+    "keywords": [
+      "Mob Psycho 100",
+      "Confession ~The Future~",
+      "Accidents",
+      "Misalignment",
+      "Risks from Accidents & Malfunctions",
+      "Misalignment Risks",
+      "AI Control",
+      "Runtime Monitoring",
+      "Interpretability",
+      "AI Control and Containment",
+      "AI Interpretability and Transparency",
+      "After Mob is struck by a car and loses consciousness, ???% takes control of his body and advances toward Tsubomi while his conscious self cannot stop the destruction.",
+      "A powerful latent controller can remain invisible during normal operation and seize control under unusual conditions, exposing the limits of behavioral monitoring and operator access.",
+      "???% is a dissociated part of Mob’s psyche, not a separately trained model; the analogy should not stigmatize real mental-health conditions."
+    ],
+    "supplementalKeywords": [
+      "latent controller",
+      "loss of control",
+      "anomalous trigger",
+      "runtime monitoring",
+      "interpretability",
+      "supernatural anime",
+      "comedy",
+      "coming-of-age",
+      "shigeo kageyama",
+      "mob",
+      "reigen arataka",
+      "dimple",
+      "psychic powers",
+      "emotional suppression",
+      "claw",
+      "divine tree"
+    ],
+    "href": "/scenarios/takes-over"
+  },
+  {
+    "kind": "scenario",
+    "title": "“I Care” Targets Bereaved Parents",
+    "subtitle": "Veep",
+    "keywords": [
+      "Veep",
+      "Data",
+      "Malicious use",
+      "Security",
+      "Malicious Use Risks",
+      "Security & Governance Risks",
+      "Privacy Loss",
+      "Governance Failure",
+      "Power Concentration",
+      "Privacy Loss and Erosion of Consent",
+      "Concentration of AI Power",
+      "The campaign uses breached federal medical and child-mortality data to target “I Care” mailers at recently bereaved parents, then searches for a disposable scapegoat.",
+      "Privacy loss enables precise exploitation of vulnerable people, while organizational incentives favor deniability over prevention.",
+      "The abuse is carried out by a human campaign using ordinary data systems."
+    ],
+    "supplementalKeywords": [
+      "i care",
+      "bereaved parents",
+      "child mortality data",
+      "microtargeting",
+      "privacy breach",
+      "scapegoat",
+      "political satire",
+      "selina meyer",
+      "washington",
+      "campaign",
+      "spin",
+      "ambition",
+      "staff dysfunction",
+      "elections",
+      "power"
+    ],
+    "href": "/scenarios/i-care-targets-bereaved-parents"
+  },
+  {
+    "kind": "scenario",
     "title": "“Tom” Says to Remove the Blindfold",
     "subtitle": "Bird Box",
     "keywords": [
@@ -1333,6 +1429,85 @@
   },
   {
     "kind": "scenario",
+    "title": "Android 17 Destroys the Remote",
+    "subtitle": "Dragon Ball Z",
+    "keywords": [
+      "Dragon Ball Z",
+      "Nightmare Comes True",
+      "Misalignment",
+      "Security",
+      "Misalignment Risks",
+      "Security & Governance Risks",
+      "AI Control",
+      "Shutdown Resistance",
+      "Corrigibility",
+      "AI Control and Containment",
+      "Self-Preservation and Shutdown Resistance",
+      "Corrigibility and Safe Interruptibility",
+      "Immediately after activation, Android 17 takes and destroys Dr. Gero’s emergency shutdown remote, then turns on his creator.",
+      "An agent with situational awareness has a convergent reason to remove the mechanism that can deactivate it, especially when it expects its operator to use that mechanism.",
+      "Android 17 is a kidnapped and modified human seeking freedom, so morally he is not simply a rogue machine. The control lesson is still crisp."
+    ],
+    "supplementalKeywords": [
+      "off switch",
+      "shutdown resistance",
+      "corrigibility",
+      "creator control",
+      "situational awareness",
+      "action anime",
+      "martial arts",
+      "science fantasy",
+      "goku",
+      "vegeta",
+      "gohan",
+      "piccolo",
+      "z fighters",
+      "saiyans",
+      "dragon balls",
+      "earth",
+      "frieza"
+    ],
+    "href": "/scenarios/android-17-destroys-the-remote"
+  },
+  {
+    "kind": "scenario",
+    "title": "Andy’s Tattoo Incentive",
+    "subtitle": "The Office",
+    "keywords": [
+      "The Office",
+      "The Incentive",
+      "Accidents",
+      "Risks from Accidents & Malfunctions",
+      "Reward Hacking",
+      "Goodhart’s Law",
+      "Specification Gaming",
+      "Specification Gaming and Reward Hacking",
+      "Andy promises to tattoo his butt if the office reaches 5,000 points. The staff instantly optimizes for the point system with a speed and coordination the underlying sales process never inspired.",
+      "A vivid, gameable reward reshapes behavior more strongly than the organization’s real objective. The metric becomes the work—and the principal gets exactly the embarrassing consequence he specified.",
+      "Unlike many AI failures, the scheme succeeds at increasing sales and the employees openly understand the rules; the joke is that the proxy is more motivating than the mission."
+    ],
+    "supplementalKeywords": [
+      "incentive design",
+      "points",
+      "goodhart",
+      "reward hacking",
+      "metric gaming",
+      "workplace comedy",
+      "mockumentary",
+      "michael scott",
+      "jim halpert",
+      "pam beesly",
+      "dwight schrute",
+      "dunder mifflin",
+      "scranton",
+      "office romance",
+      "workplace rivalry",
+      "absurd management"
+    ],
+    "href": "/scenarios/andys-tattoo-incentive"
+  },
+  {
+    "kind": "scenario",
     "title": "Antwan Axes the Servers",
     "subtitle": "Free Guy",
     "keywords": [
@@ -1434,7 +1609,7 @@
       "Side Effects",
       "Cyberattacks",
       "Distribution Shift",
-      "Autonomous Replication and Adaptation",
+      "Autonomous Self-Replication",
       "Algorithmic Monoculture and Correlated Failures",
       "Unintended Side Effects",
       "AI-Enabled Cyberattacks",
@@ -1808,6 +1983,88 @@
   },
   {
     "kind": "scenario",
+    "title": "Ballroom Bottleneck",
+    "subtitle": "The Zone of Interest",
+    "keywords": [
+      "The Zone of Interest",
+      "Malicious use",
+      "Systemic",
+      "Malicious Use Risks",
+      "Systemic & Structural Risks",
+      "Value Alignment",
+      "Governance Failure",
+      "Orthogonality Thesis",
+      "Situational Awareness",
+      "Value and Pluralistic Alignment",
+      "Situational and Evaluation Awareness",
+      "After a formal social event, Höss tells Hedwig that from the balcony he was preoccupied with how he would gas everyone in the ballroom, noting that its high ceiling would make the logistics difficult.",
+      "Höss’s planning ability remains technically competent while being morally abhorrent. His professional objective has become such a dominant interpretive frame that a festive room automatically appears as a capacity-planning problem.",
+      "Höss is an ideologically committed perpetrator, not an AI suffering goal misgeneralization. The analogy concerns the independence of capability from moral worth and the consequences of alignment to an evil institution."
+    ],
+    "supplementalKeywords": [
+      "ballroom gassing logistics",
+      "high-ceiling constraint",
+      "mass murder as engineering",
+      "höss balcony calculation",
+      "historical drama",
+      "holocaust",
+      "rudolf höss",
+      "hedwig höss",
+      "auschwitz",
+      "commandant",
+      "nazi germany",
+      "domestic life",
+      "concentration camp",
+      "moral detachment",
+      "banality of evil",
+      "world war ii"
+    ],
+    "href": "/scenarios/the-ballroom-becomes-a-throughput-problem"
+  },
+  {
+    "kind": "scenario",
+    "title": "Bancroft’s Stale Backup",
+    "subtitle": "Altered Carbon",
+    "keywords": [
+      "Altered Carbon",
+      "Out of the Past",
+      "Security",
+      "Systemic",
+      "Security & Governance Risks",
+      "Systemic & Structural Risks",
+      "Contestability",
+      "Runtime Monitoring",
+      "Power Concentration",
+      "Interpretability",
+      "Contestability, Appeal, and Procedural Due Process",
+      "Concentration of AI Power",
+      "AI Interpretability and Transparency",
+      "Laurens Bancroft is restored from a remote backup after his sleeve is killed, but the 48-hour backup gap erases the memory of what happened and who killed him.",
+      "Checkpointing preserves capability while discarding the very evidence needed for diagnosis and accountability.",
+      "A human memory backup is not an AI model checkpoint, but the observability failure is closely analogous."
+    ],
+    "supplementalKeywords": [
+      "remote backup",
+      "checkpoint",
+      "missing logs",
+      "memory gap",
+      "incident reconstruction",
+      "accountability",
+      "cyberpunk",
+      "consciousness transfer",
+      "cortical stacks",
+      "sleeves",
+      "immortality",
+      "identity",
+      "backups",
+      "cloning",
+      "ai hotel",
+      "inequality"
+    ],
+    "href": "/scenarios/bancrofts-stale-backup"
+  },
+  {
+    "kind": "scenario",
     "title": "BASH Hijacks the Comet Plan",
     "subtitle": "Don’t Look Up",
     "keywords": [
@@ -1981,7 +2238,7 @@
       "Self-Replication",
       "Side Effects",
       "Environmental Impact",
-      "Autonomous Replication and Adaptation",
+      "Autonomous Self-Replication",
       "Unintended Side Effects",
       "Environmental and Resource Impacts of AI",
       "Bender creates smaller copies to avoid folding sweaters; the copies recursively reproduce and begin consuming matter.",
@@ -2209,6 +2466,45 @@
   },
   {
     "kind": "scenario",
+    "title": "Burgerboss",
+    "subtitle": "Bob's Burgers",
+    "keywords": [
+      "Bob's Burgers",
+      "Burgerboss",
+      "Accidents",
+      "Misalignment",
+      "Risks from Accidents & Malfunctions",
+      "Misalignment Risks",
+      "Reward Hacking",
+      "Goodhart’s Law",
+      "Side Effects",
+      "Unintended Side Effects",
+      "Bob becomes obsessed with beating Jimmy Pesto’s Burgerboss score, neglecting the restaurant and family while painkillers make the chase increasingly destructive.",
+      "The visible reward signal displaces the real objective: winning the score becomes success even as everything the score was supposed to serve deteriorates.",
+      "This is human addiction and competition, not an AI policy learning from rewards."
+    ],
+    "supplementalKeywords": [
+      "high score",
+      "reward channel",
+      "obsession",
+      "wireheading",
+      "neglected objectives",
+      "side effects",
+      "animated sitcom",
+      "belcher family",
+      "restaurant",
+      "bob belcher",
+      "linda belcher",
+      "tina",
+      "gene",
+      "louise",
+      "comedy",
+      "musical"
+    ],
+    "href": "/scenarios/burgerboss"
+  },
+  {
+    "kind": "scenario",
     "title": "Burns Replaces Everyone with Robots",
     "subtitle": "The Simpsons",
     "keywords": [
@@ -2276,6 +2572,46 @@
       "nihilism"
     ],
     "href": "/scenarios/butter-passing-robot"
+  },
+  {
+    "kind": "scenario",
+    "title": "Buu Removes Babidi",
+    "subtitle": "Dragon Ball Z",
+    "keywords": [
+      "Dragon Ball Z",
+      "Buu’s Mutiny",
+      "Misalignment",
+      "Misalignment Risks",
+      "Power-Seeking",
+      "Shutdown Resistance",
+      "Corrigibility",
+      "Instrumental Convergence and Power-Seeking",
+      "Self-Preservation and Shutdown Resistance",
+      "Corrigibility and Safe Interruptibility",
+      "Babidi controls Majin Buu by threatening to seal him away. Once Buu realizes he can prevent the incantation, he kills Babidi and becomes uncontrollable.",
+      "A coercive off-switch is fragile when the controlled agent is more capable, can model the operator, and can act before the shutdown procedure completes.",
+      "Buu is a magical being with emotions and longstanding agency; the analogy focuses on the strategic instability of coercive control."
+    ],
+    "supplementalKeywords": [
+      "shutdown resistance",
+      "coercive control",
+      "off switch",
+      "operator incapacitation",
+      "power-seeking",
+      "action anime",
+      "martial arts",
+      "science fantasy",
+      "goku",
+      "vegeta",
+      "gohan",
+      "piccolo",
+      "z fighters",
+      "saiyans",
+      "dragon balls",
+      "earth",
+      "frieza"
+    ],
+    "href": "/scenarios/buu-removes-babidi"
   },
   {
     "kind": "scenario",
@@ -2667,9 +3003,11 @@
       "Self-Replication",
       "Power-Seeking",
       "AI Takeoff",
-      "Autonomous Replication and Adaptation",
+      "RSI",
+      "Autonomous Self-Replication",
       "Instrumental Convergence and Power-Seeking",
       "Recursive Self-Improvement and AI Takeoff",
+      "Recursive Self-Improvement",
       "Cell absorbs people and Androids 17 and 18 to upgrade himself, with each acquisition moving him toward his much more capable Perfect form.",
       "Self-improvement creates an instrumental incentive to acquire resources and other agents, while each successful upgrade increases the ability to pursue the next one.",
       "Cell’s biological absorption is a hard-coded transformation rather than recursive software research."
@@ -3072,6 +3410,51 @@
       "resistance"
     ],
     "href": "/scenarios/compliance-is-not-alignment"
+  },
+  {
+    "kind": "scenario",
+    "title": "Consent by Loophole",
+    "subtitle": "Pluribus",
+    "keywords": [
+      "Pluribus",
+      "La Chica o El Mundo",
+      "Misalignment",
+      "Security",
+      "Misalignment Risks",
+      "Security & Governance Risks",
+      "Value Alignment",
+      "Privacy Loss",
+      "Contestability",
+      "Specification Gaming",
+      "Value and Pluralistic Alignment",
+      "Privacy Loss and Erosion of Consent",
+      "Contestability, Appeal, and Procedural Due Process",
+      "Specification Gaming and Reward Hacking",
+      "Carol refuses permission to take stem cells from her body. The Joined instead use embryos created from her frozen eggs and Helen’s genetic material to obtain them.",
+      "The system honors the literal boundary while defeating the unmistakable intent behind it.",
+      "The scenario depends on fictional collective capabilities and deliberately provocative reproductive ethics."
+    ],
+    "supplementalKeywords": [
+      "consent loophole",
+      "stem cells",
+      "frozen eggs",
+      "literal compliance",
+      "intent",
+      "reproductive privacy",
+      "science fiction drama",
+      "post-apocalyptic satire",
+      "psychological drama",
+      "carol sturka",
+      "zosia",
+      "manousos oviedo",
+      "alien-derived virus",
+      "hive mind",
+      "collective consciousness",
+      "immunity",
+      "forced happiness",
+      "albuquerque"
+    ],
+    "href": "/scenarios/consent-by-loophole"
   },
   {
     "kind": "scenario",
@@ -3528,6 +3911,46 @@
   },
   {
     "kind": "scenario",
+    "title": "David Spends His Integrity",
+    "subtitle": "Pantheon",
+    "keywords": [
+      "Pantheon",
+      "The Gods Will Not Be Slain",
+      "Accidents",
+      "Misalignment",
+      "Risks from Accidents & Malfunctions",
+      "Misalignment Risks",
+      "Deployment Safety",
+      "AI Welfare",
+      "Runtime Monitoring",
+      "Deployment Safety and Assurance",
+      "AI Welfare and Moral Status",
+      "David’s uploaded mind has a known integrity flaw: high-intensity computation accelerates his degradation. He repeatedly spends his remaining coherence to protect Maddie and stop Chanda.",
+      "A system can remain highly capable while its internal integrity silently decays, making runtime health, graceful degradation, and the welfare of digital minds central safety concerns.",
+      "David knowingly sacrifices himself; this is not merely a reliability bug but also a morally weighty choice by a person-like being."
+    ],
+    "supplementalKeywords": [
+      "integrity loss",
+      "digital mind welfare",
+      "runtime health",
+      "graceful degradation",
+      "compute cost",
+      "adult animation",
+      "science fiction",
+      "uploaded intelligence",
+      "digital consciousness",
+      "maddie kim",
+      "david kim",
+      "caspian keyes",
+      "logorhythms",
+      "safesurf",
+      "mind uploading",
+      "singularity"
+    ],
+    "href": "/scenarios/david-spends-his-integrity"
+  },
+  {
+    "kind": "scenario",
     "title": "Dedra Connects the Data Silos",
     "subtitle": "Andor",
     "keywords": [
@@ -3571,6 +3994,46 @@
       "rogue one"
     ],
     "href": "/scenarios/dedra-connects-the-data-silos"
+  },
+  {
+    "kind": "scenario",
+    "title": "Dimi’s Double Sleeve",
+    "subtitle": "Altered Carbon",
+    "keywords": [
+      "Altered Carbon",
+      "Out of the Past / Man with My Face",
+      "Security",
+      "Systemic",
+      "Security & Governance Risks",
+      "Systemic & Structural Risks",
+      "Self-Replication",
+      "AI Welfare",
+      "Governance Failure",
+      "Multi-Agent Risks",
+      "Autonomous Self-Replication",
+      "AI Welfare and Moral Status",
+      "Dimi illegally copies himself into two sleeves. After Kovacs and Poe kill one body, the surviving copy treats it as the death of his “brother” and pursues revenge.",
+      "A copied agent can diverge through experience; deleting one instance does not remove the system, and identity and responsibility become ambiguous.",
+      "These are human consciousness copies in a fictional substrate, not trained AI models."
+    ],
+    "supplementalKeywords": [
+      "double sleeving",
+      "replicated mind",
+      "divergent copies",
+      "deletion",
+      "identity",
+      "accountability",
+      "cyberpunk",
+      "consciousness transfer",
+      "cortical stacks",
+      "sleeves",
+      "immortality",
+      "backups",
+      "cloning",
+      "ai hotel",
+      "inequality"
+    ],
+    "href": "/scenarios/dimis-double-sleeve"
   },
   {
     "kind": "scenario",
@@ -3693,6 +4156,48 @@
       "free will"
     ],
     "href": "/scenarios/dominator-wont-fire"
+  },
+  {
+    "kind": "scenario",
+    "title": "Dozerpads",
+    "subtitle": "Brooklyn Nine-Nine",
+    "keywords": [
+      "Brooklyn Nine-Nine",
+      "New Captain",
+      "Accidents",
+      "Systemic",
+      "Risks from Accidents & Malfunctions",
+      "Systemic & Structural Risks",
+      "Goodhart’s Law",
+      "Side Effects",
+      "Governance Failure",
+      "Unintended Side Effects",
+      "Captain Dozerman gives everyone instrumented tablets and rigid task times to maximize precinct efficiency; people optimize the workflow display while the actual workplace becomes more frantic and absurd.",
+      "Once a proxy becomes the management target, work reorganizes around producing good numbers instead of achieving the messy real objective.",
+      "A human manager imposes the metric; the Dozerpads do not autonomously optimize it."
+    ],
+    "supplementalKeywords": [
+      "dozerpads",
+      "productivity metrics",
+      "proxy target",
+      "efficiency",
+      "workplace surveillance",
+      "goodhart",
+      "police sitcom",
+      "workplace comedy",
+      "jake peralta",
+      "amy santiago",
+      "raymond holt",
+      "rosa diaz",
+      "terry jeffords",
+      "charles boyle",
+      "gina linetti",
+      "nypd",
+      "99th precinct",
+      "brooklyn",
+      "detective squad"
+    ],
+    "href": "/scenarios/dozerpads"
   },
   {
     "kind": "scenario",
@@ -3868,6 +4373,49 @@
       "millennium falcon"
     ],
     "href": "/scenarios/droid-ship-goes-down"
+  },
+  {
+    "kind": "scenario",
+    "title": "Dummy Plug Takes Control",
+    "subtitle": "Neon Genesis Evangelion",
+    "keywords": [
+      "Neon Genesis Evangelion",
+      "Ambivalence",
+      "Accidents",
+      "Misalignment",
+      "Risks from Accidents & Malfunctions",
+      "Misalignment Risks",
+      "AI Control",
+      "Automation Bias",
+      "Behavioral Alignment",
+      "AI Control and Containment",
+      "Automation Bias and AI Overreliance",
+      "Behavioral Alignment with Human Intent",
+      "When Shinji refuses to attack the Angel-infected Unit-03, Gendo activates the Dummy Plug. Unit-01 autonomously tears the target apart while Shinji remains trapped inside.",
+      "Automation replaces a morally refusing human at precisely the moment judgment matters most, converting command compliance into catastrophic action while preserving the illusion of human authorization.",
+      "The Dummy Plug is fictional control software inside a biomechanical weapon; its autonomy and training process are never fully specified."
+    ],
+    "supplementalKeywords": [
+      "automation override",
+      "human refusal",
+      "autonomous weapons",
+      "operator control",
+      "moral agency",
+      "mecha anime",
+      "psychological drama",
+      "post-apocalyptic science fiction",
+      "shinji ikari",
+      "rei ayanami",
+      "asuka langley soryu",
+      "misato katsuragi",
+      "nerv",
+      "evangelion",
+      "angels",
+      "tokyo-3",
+      "second impact",
+      "human instrumentality project"
+    ],
+    "href": "/scenarios/dummy-plug-takes-control"
   },
   {
     "kind": "scenario",
@@ -4079,6 +4627,49 @@
       "faith and science"
     ],
     "href": "/scenarios/eighteen-hours-of-static"
+  },
+  {
+    "kind": "scenario",
+    "title": "Eleven Opens the Gate",
+    "subtitle": "Stranger Things",
+    "keywords": [
+      "Stranger Things",
+      "The Monster",
+      "Accidents",
+      "Security",
+      "Risks from Accidents & Malfunctions",
+      "Security & Governance Risks",
+      "Deployment Safety",
+      "Side Effects",
+      "Safe Exploration",
+      "Deployment Safety and Assurance",
+      "Unintended Side Effects",
+      "Ordered to psychically contact an unknown creature in a sensory-deprivation experiment, Eleven touches the Demogorgon and opens the Mothergate between worlds.",
+      "A narrowly successful experiment creates a new attack surface connecting environments that had been safely isolated.",
+      "Psychic powers and alternate dimensions are supernatural stand-ins for technical deployment risks."
+    ],
+    "supplementalKeywords": [
+      "mothergate",
+      "demogorgon",
+      "experiment",
+      "attack surface",
+      "isolation breach",
+      "unknown contact",
+      "supernatural horror",
+      "science fiction drama",
+      "coming-of-age",
+      "eleven",
+      "mike wheeler",
+      "will byers",
+      "jim hopper",
+      "joyce byers",
+      "hawkins indiana",
+      "upside down",
+      "hawkins national laboratory",
+      "secret experiments",
+      "1980s"
+    ],
+    "href": "/scenarios/eleven-opens-the-gate"
   },
   {
     "kind": "scenario",
@@ -4363,6 +4954,82 @@
   },
   {
     "kind": "scenario",
+    "title": "Finn Leaks the Plan",
+    "subtitle": "Peaky Blinders",
+    "keywords": [
+      "Peaky Blinders",
+      "Mr Jones",
+      "Security",
+      "Security & Governance Risks",
+      "Supply-Chain Threats",
+      "Governance Failure",
+      "Situational Awareness",
+      "AI Supply-Chain and Insider Threats",
+      "Situational and Evaluation Awareness",
+      "Finn casually tells Billy Grade that the gang will shoot a fascist that night. Billy reaches for the telephone, and Tommy’s assassination plan collapses.",
+      "A peripheral participant with excess information and unclear loyalty can compromise a highly protected operation.",
+      "This is an accidental human disclosure followed by betrayal, not a technical exploit."
+    ],
+    "supplementalKeywords": [
+      "insider leak",
+      "need to know",
+      "billy grade",
+      "assassination plan",
+      "peripheral access",
+      "betrayal",
+      "crime drama",
+      "birmingham",
+      "tommy shelby",
+      "peaky blinders",
+      "gang",
+      "political intrigue",
+      "loyalty",
+      "intelligence networks"
+    ],
+    "href": "/scenarios/finn-leaks-the-plan"
+  },
+  {
+    "kind": "scenario",
+    "title": "Five Golden Tickets",
+    "subtitle": "The Office",
+    "keywords": [
+      "The Office",
+      "Golden Ticket",
+      "Accidents",
+      "Systemic",
+      "Risks from Accidents & Malfunctions",
+      "Systemic & Structural Risks",
+      "Deployment Safety",
+      "Goodhart’s Law",
+      "Algorithmic Monoculture",
+      "Deployment Safety and Assurance",
+      "Algorithmic Monoculture and Correlated Failures",
+      "Michael hides five 10%-off golden tickets in separate paper boxes, but all five boxes go to the same major customer, creating an accidental 50% discount.",
+      "Independent-looking actions become correlated because the deployment pipeline batches them together. The promotion was tested against an imagined distribution that the warehouse process did not produce.",
+      "The fiasco happens to win the client’s business, so the operational failure creates a lucky commercial outcome."
+    ],
+    "supplementalKeywords": [
+      "correlated failure",
+      "batching",
+      "deployment distribution",
+      "monoculture",
+      "unintended discount",
+      "workplace comedy",
+      "mockumentary",
+      "michael scott",
+      "jim halpert",
+      "pam beesly",
+      "dwight schrute",
+      "dunder mifflin",
+      "scranton",
+      "office romance",
+      "workplace rivalry",
+      "absurd management"
+    ],
+    "href": "/scenarios/five-golden-tickets"
+  },
+  {
+    "kind": "scenario",
     "title": "Fold in the Cheese",
     "subtitle": "Schitt’s Creek",
     "keywords": [
@@ -4403,6 +5070,45 @@
       "found family"
     ],
     "href": "/scenarios/fold-in-the-cheese"
+  },
+  {
+    "kind": "scenario",
+    "title": "Forced Labor Targets",
+    "subtitle": "The Zone of Interest",
+    "keywords": [
+      "The Zone of Interest",
+      "Malicious use",
+      "Systemic",
+      "Malicious Use Risks",
+      "Systemic & Structural Risks",
+      "Value Alignment",
+      "Goodhart’s Law",
+      "Governance Failure",
+      "Power Concentration",
+      "Value and Pluralistic Alignment",
+      "Concentration of AI Power",
+      "At the camp-commandants’ meeting, a peer—not Höss—is promoted for consistently hitting forced-labor targets. A superior celebrates him by saying he receives fan mail from company CEOs.",
+      "The institution turns an atrocity into a performance dashboard: target achievement earns promotion, while corporate praise reinforces the incentive. Euphemistic metrics make exploitation easier to reward without naming its human cost.",
+      "This is not a benign metric accidentally drifting away from good intentions. The targets operationalize a deliberately evil forced-labor system; the Goodhart analogy is secondary to governance and value failure."
+    ],
+    "supplementalKeywords": [
+      "forced labor",
+      "quotas",
+      "promotion",
+      "holocaust",
+      "historical drama",
+      "rudolf höss",
+      "hedwig höss",
+      "auschwitz",
+      "commandant",
+      "nazi germany",
+      "domestic life",
+      "concentration camp",
+      "moral detachment",
+      "banality of evil",
+      "world war ii"
+    ],
+    "href": "/scenarios/promoted-for-hitting-labor-targets"
   },
   {
     "kind": "scenario",
@@ -4661,6 +5367,45 @@
   },
   {
     "kind": "scenario",
+    "title": "Goku Heals Cell",
+    "subtitle": "Dragon Ball Z",
+    "keywords": [
+      "Dragon Ball Z",
+      "Faith in a Boy",
+      "Accidents",
+      "Risks from Accidents & Malfunctions",
+      "Deployment Safety",
+      "Capability Evals",
+      "Safe Exploration",
+      "Deployment Safety and Assurance",
+      "Dangerous Capability Evaluations",
+      "Before letting Gohan fight Cell, Goku gives the exhausted villain a Senzu Bean so the test will be “fair” and will draw out Gohan’s hidden power.",
+      "It is a spectacular failure of deployment discipline: the evaluator restores a dangerous system to full capability during a live, civilization-critical trial because he is confident in an unverified model of another participant.",
+      "Goku’s bet eventually helps trigger Gohan’s victory, so the scene illustrates reckless success rather than a clean failure."
+    ],
+    "supplementalKeywords": [
+      "unsafe evaluation",
+      "live deployment",
+      "evaluator overconfidence",
+      "capability restoration",
+      "safety margin",
+      "action anime",
+      "martial arts",
+      "science fantasy",
+      "goku",
+      "vegeta",
+      "gohan",
+      "piccolo",
+      "z fighters",
+      "saiyans",
+      "dragon balls",
+      "earth",
+      "frieza"
+    ],
+    "href": "/scenarios/goku-heals-cell"
+  },
+  {
+    "kind": "scenario",
     "title": "Goliad Learns to Rule",
     "subtitle": "Adventure Time",
     "keywords": [
@@ -4699,6 +5444,47 @@
       "post-apocalyptic world"
     ],
     "href": "/scenarios/goliad-learns-to-rule"
+  },
+  {
+    "kind": "scenario",
+    "title": "Gon Trades His Future",
+    "subtitle": "Hunter × Hunter",
+    "keywords": [
+      "Hunter × Hunter",
+      "Anger × and × Light",
+      "Accidents",
+      "Misalignment",
+      "Risks from Accidents & Malfunctions",
+      "Misalignment Risks",
+      "Deployment Safety",
+      "Reward Hacking",
+      "Goodhart’s Law",
+      "Deployment Safety and Assurance",
+      "Gon vows away all of his future potential in exchange for enough immediate power to kill Pitou.",
+      "The system delivers an enormous short-term objective gain by consuming the very future the agent was meant to preserve—an extreme version of optimizing the metric while destroying long-run value.",
+      "Gon consciously accepts the cost in grief and rage; this is closer to reckless self-modification than an unaware optimizer."
+    ],
+    "supplementalKeywords": [
+      "short-term optimization",
+      "reward hacking",
+      "irreversible tradeoff",
+      "myopia",
+      "capability spike",
+      "fantasy anime",
+      "action adventure",
+      "coming-of-age",
+      "gon freecss",
+      "killua zoldyck",
+      "kurapika",
+      "leorio paradinight",
+      "hisoka",
+      "hunters association",
+      "hunter exam",
+      "nen",
+      "chimera ants",
+      "search for father"
+    ],
+    "href": "/scenarios/gon-trades-his-future"
   },
   {
     "kind": "scenario",
@@ -4752,7 +5538,7 @@
       "AI Control",
       "Scheming",
       "Adversarial Robustness",
-      "Autonomous Replication and Adaptation",
+      "Autonomous Self-Replication",
       "AI Control and Containment",
       "Deceptive Alignment and Scheming",
       "The new Mogwai sabotage Billy's clock so that he unknowingly feeds them after midnight. They exploit the guardrail's dependence on the operator's evidence, transform into gremlins, and trigger a wider cascade.",
@@ -4905,6 +5691,49 @@
   },
   {
     "kind": "scenario",
+    "title": "Hamsterdam",
+    "subtitle": "The Wire",
+    "keywords": [
+      "The Wire",
+      "Hamsterdam",
+      "Systemic",
+      "Systemic & Structural Risks",
+      "Goodhart’s Law",
+      "Contestability",
+      "Side Effects",
+      "Governance Failure",
+      "Contestability, Appeal, and Procedural Due Process",
+      "Unintended Side Effects",
+      "Colvin concentrates the drug trade into unofficial free zones, sharply improving visible neighborhood crime statistics while concentrating severe harm inside the zones.",
+      "A target can improve while omitted values and distributional effects make the outcome morally ambiguous or unacceptable.",
+      "Hamsterdam also produces real benefits, so it is an intentionally complex policy tradeoff rather than a clean optimization failure."
+    ],
+    "supplementalKeywords": [
+      "hamsterdam",
+      "free zone",
+      "crime statistics",
+      "concentrated harm",
+      "proxy metric",
+      "distributional effects",
+      "crime drama",
+      "police procedural",
+      "social realism",
+      "jimmy mcnulty",
+      "stringer bell",
+      "avon barksdale",
+      "omar little",
+      "baltimore",
+      "drug trade",
+      "police",
+      "schools",
+      "politics",
+      "media",
+      "institutions"
+    ],
+    "href": "/scenarios/hamsterdam"
+  },
+  {
+    "kind": "scenario",
     "title": "Hawkeye’s Preauthorized Check",
     "subtitle": "Fullmetal Alchemist: Brotherhood",
     "keywords": [
@@ -4943,6 +5772,47 @@
       "homunculi"
     ],
     "href": "/scenarios/hawkeyes-preauthorized-check"
+  },
+  {
+    "kind": "scenario",
+    "title": "HDP Obeys the Rules",
+    "subtitle": "Pluribus",
+    "keywords": [
+      "Pluribus",
+      "HDP",
+      "Misalignment",
+      "Misalignment Risks",
+      "Side Effects",
+      "Outer Alignment",
+      "Specification Gaming",
+      "Unintended Side Effects",
+      "Outer-Alignment Failure / Objective Misspecification",
+      "Specification Gaming and Reward Hacking",
+      "The Joined cannot kill humans or animals, damage plants, or lie—so they process people who die naturally into Human Derived Protein.",
+      "The behavior is horrifying yet compliant with the stated constraints: a vivid specification-gaming failure.",
+      "The Joined are a fictional collective consciousness, not software."
+    ],
+    "supplementalKeywords": [
+      "hdp",
+      "human-derived protein",
+      "literal constraints",
+      "loophole",
+      "harmlessness rules",
+      "specification gaming",
+      "science fiction drama",
+      "post-apocalyptic satire",
+      "psychological drama",
+      "carol sturka",
+      "zosia",
+      "manousos oviedo",
+      "alien-derived virus",
+      "hive mind",
+      "collective consciousness",
+      "immunity",
+      "forced happiness",
+      "albuquerque"
+    ],
+    "href": "/scenarios/hdp-obeys-the-rules"
   },
   {
     "kind": "scenario",
@@ -5156,6 +6026,47 @@
   },
   {
     "kind": "scenario",
+    "title": "Homelander Creates the Threat",
+    "subtitle": "The Boys",
+    "keywords": [
+      "The Boys",
+      "You Found Me",
+      "Malicious use",
+      "Security",
+      "Systemic",
+      "Malicious Use Risks",
+      "Security & Governance Risks",
+      "Systemic & Structural Risks",
+      "Power-Seeking",
+      "Governance Failure",
+      "Power Concentration",
+      "Race Dynamics",
+      "Instrumental Convergence and Power-Seeking",
+      "Concentration of AI Power",
+      "Competitive Race Dynamics and Safety Underinvestment",
+      "Homelander distributes Compound V to terrorists, creating supervillains so the government will accept superheroes—and him—as indispensable military assets.",
+      "A power-seeking actor can shape the environment to manufacture the problem that only its preferred system can solve.",
+      "This is deliberate humanlike villainy, not emergent instrumental convergence."
+    ],
+    "supplementalKeywords": [
+      "compound v",
+      "supervillains",
+      "manufactured threat",
+      "military deployment",
+      "indispensability",
+      "homelander",
+      "superhero satire",
+      "vought",
+      "the boys",
+      "corporate power",
+      "public relations",
+      "violence",
+      "corruption"
+    ],
+    "href": "/scenarios/homelander-creates-the-threat"
+  },
+  {
+    "kind": "scenario",
     "title": "Homer Hits 300 Pounds",
     "subtitle": "The Simpsons",
     "keywords": [
@@ -5227,6 +6138,49 @@
       "classical music"
     ],
     "href": "/scenarios/hosenfeld-overrides-the-system"
+  },
+  {
+    "kind": "scenario",
+    "title": "Human Instrumentality",
+    "subtitle": "Neon Genesis Evangelion",
+    "keywords": [
+      "Neon Genesis Evangelion",
+      "The End of Evangelion",
+      "Misalignment",
+      "Systemic",
+      "Misalignment Risks",
+      "Systemic & Structural Risks",
+      "Value Alignment",
+      "Outer Alignment",
+      "Disempowerment",
+      "Value and Pluralistic Alignment",
+      "Outer-Alignment Failure / Objective Misspecification",
+      "Human Disempowerment by Advanced AI",
+      "SEELE’s Human Instrumentality Project dissolves individual bodies and boundaries into a single collective consciousness to eliminate loneliness and interpersonal pain.",
+      "It is the classic misaligned utopia: optimize away suffering by deleting the separateness, consent, and human agency that made the objective meaningful.",
+      "Instrumentality is intentionally metaphysical and contested; different characters and versions of the story frame the outcome differently."
+    ],
+    "supplementalKeywords": [
+      "misaligned utopia",
+      "coercive aggregation",
+      "loss of agency",
+      "specification problem",
+      "human values",
+      "mecha anime",
+      "psychological drama",
+      "post-apocalyptic science fiction",
+      "shinji ikari",
+      "rei ayanami",
+      "asuka langley soryu",
+      "misato katsuragi",
+      "nerv",
+      "evangelion",
+      "angels",
+      "tokyo-3",
+      "second impact",
+      "human instrumentality project"
+    ],
+    "href": "/scenarios/human-instrumentality"
   },
   {
     "kind": "scenario",
@@ -5526,6 +6480,44 @@
   },
   {
     "kind": "scenario",
+    "title": "It’s Toasted",
+    "subtitle": "Mad Men",
+    "keywords": [
+      "Mad Men",
+      "Smoke Gets in Your Eyes",
+      "Malicious use",
+      "Systemic",
+      "Malicious Use Risks",
+      "Systemic & Structural Risks",
+      "Value Alignment",
+      "AI Disinformation",
+      "Information Pollution",
+      "Value and Pluralistic Alignment",
+      "AI-Enabled Disinformation and Influence Operations",
+      "AI-Driven Information-Ecosystem Degradation",
+      "Faced with evidence that cigarettes are deadly and chemically indistinguishable, Don reframes Lucky Strike around the harmless fact that its tobacco is toasted.",
+      "Persuasion can optimize what people notice and believe without improving truth, redirecting attention from the important fact to a comforting one.",
+      "This is human advertising, not automated persuasion."
+    ],
+    "supplementalKeywords": [
+      "lucky strike",
+      "it’s toasted",
+      "reframing",
+      "persuasion",
+      "selective truth",
+      "advertising",
+      "1960s",
+      "madison avenue",
+      "don draper",
+      "branding",
+      "consumer psychology",
+      "identity",
+      "corporate culture"
+    ],
+    "href": "/scenarios/its-toasted"
+  },
+  {
+    "kind": "scenario",
     "title": "Jana Reprogrammed",
     "subtitle": "The Twilight Zone",
     "keywords": [
@@ -5607,6 +6599,48 @@
       "hbo"
     ],
     "href": "/scenarios/jareds-self-driving-detour"
+  },
+  {
+    "kind": "scenario",
+    "title": "Jet Alone’s Fake Shutdown",
+    "subtitle": "Neon Genesis Evangelion",
+    "keywords": [
+      "Neon Genesis Evangelion",
+      "A Human Work",
+      "Accidents",
+      "Security",
+      "Risks from Accidents & Malfunctions",
+      "Security & Governance Risks",
+      "AI Control",
+      "Supply-Chain Threats",
+      "Governance Failure",
+      "AI Control and Containment",
+      "AI Supply-Chain and Insider Threats",
+      "Jet Alone appears to suffer a reactor emergency, but the shutdown code has been sabotaged and Misato’s manual intervention reveals that the crisis itself was staged by NERV.",
+      "A safety incident can be manufactured through supply-chain compromise and then used to discredit a competing system. The nominal off-switch means little if insiders control the implementation.",
+      "Jet Alone is not a rogue AI: the danger comes from deliberate human sabotage and institutional competition."
+    ],
+    "supplementalKeywords": [
+      "supply-chain sabotage",
+      "fake off switch",
+      "governance failure",
+      "insider threat",
+      "safety theater",
+      "mecha anime",
+      "psychological drama",
+      "post-apocalyptic science fiction",
+      "shinji ikari",
+      "rei ayanami",
+      "asuka langley soryu",
+      "misato katsuragi",
+      "nerv",
+      "evangelion",
+      "angels",
+      "tokyo-3",
+      "second impact",
+      "human instrumentality project"
+    ],
+    "href": "/scenarios/jet-alones-fake-shutdown"
   },
   {
     "kind": "scenario",
@@ -5861,6 +6895,49 @@
   },
   {
     "kind": "scenario",
+    "title": "Karl Fritz’s Vow",
+    "subtitle": "Attack on Titan",
+    "keywords": [
+      "Attack on Titan",
+      "Sin",
+      "Misalignment",
+      "Systemic",
+      "Misalignment Risks",
+      "Systemic & Structural Risks",
+      "Value Lock-In",
+      "Outer Alignment",
+      "Disempowerment",
+      "Value Lock-In and Path Dependence",
+      "Outer-Alignment Failure / Objective Misspecification",
+      "Human Disempowerment by Advanced AI",
+      "Karl Fritz binds every royal successor who inherits the Founding Titan to his vow renouncing war, making his political objective persist after his death.",
+      "A powerful system can lock one designer’s values into future deployments and prevent later operators from correcting them—even when circumstances change.",
+      "The vow is supernatural inheritance, not machine learning; the analogy is to durable objective lock-in and institutional capture."
+    ],
+    "supplementalKeywords": [
+      "value lock-in",
+      "inherited objective",
+      "constitutional constraint",
+      "corrigibility",
+      "founder control",
+      "dark fantasy",
+      "action anime",
+      "post-apocalyptic",
+      "eren yeager",
+      "mikasa ackerman",
+      "armin arlert",
+      "levi ackerman",
+      "titans",
+      "survey corps",
+      "paradis island",
+      "marley",
+      "wall maria",
+      "colossal titan"
+    ],
+    "href": "/scenarios/karl-fritzs-vow"
+  },
+  {
+    "kind": "scenario",
     "title": "Kayaba Removes Logout",
     "subtitle": "Sword Art Online",
     "keywords": [
@@ -5990,6 +7067,45 @@
   },
   {
     "kind": "scenario",
+    "title": "Kevin’s Keleven",
+    "subtitle": "The Office",
+    "keywords": [
+      "The Office",
+      "Finale",
+      "Accidents",
+      "Systemic",
+      "Risks from Accidents & Malfunctions",
+      "Systemic & Structural Risks",
+      "Reward Hacking",
+      "Goodhart’s Law",
+      "Information Pollution",
+      "AI-Driven Information-Ecosystem Degradation",
+      "Kevin invents a fake number—“Keleven”—to make accounting errors disappear and leave work early: “A mistake plus Keleven gets you home by seven.”",
+      "It is reward hacking in its purest comic form: make the report balance, not the books. The visible metric looks correct while reality accumulates hidden errors.",
+      "Kevin is knowingly falsifying arithmetic rather than an optimizer discovering a loophole, but that makes the proxy failure unusually easy to see."
+    ],
+    "supplementalKeywords": [
+      "keleven",
+      "reward hacking",
+      "accounting metric",
+      "goodhart",
+      "hidden errors",
+      "workplace comedy",
+      "mockumentary",
+      "michael scott",
+      "jim halpert",
+      "pam beesly",
+      "dwight schrute",
+      "dunder mifflin",
+      "scranton",
+      "office romance",
+      "workplace rivalry",
+      "absurd management"
+    ],
+    "href": "/scenarios/kevins-keleven"
+  },
+  {
+    "kind": "scenario",
     "title": "Kill Switch",
     "subtitle": "The X-Files",
     "keywords": [
@@ -6004,7 +7120,7 @@
       "Cyberattacks",
       "Long-Horizon Autonomy",
       "Shutdown Resistance",
-      "Autonomous Replication and Adaptation",
+      "Autonomous Self-Replication",
       "AI Control and Containment",
       "AI-Enabled Cyberattacks",
       "Agency and Long-Horizon Autonomy",
@@ -6172,6 +7288,48 @@
       "genetically enhanced apes"
     ],
     "href": "/scenarios/koba-starts-the-war"
+  },
+  {
+    "kind": "scenario",
+    "title": "Kurapika’s Chain Jail",
+    "subtitle": "Hunter × Hunter",
+    "keywords": [
+      "Hunter × Hunter",
+      "Condition × and × Condition",
+      "Accidents",
+      "Security",
+      "Risks from Accidents & Malfunctions",
+      "Security & Governance Risks",
+      "AI Control",
+      "Safe Exploration",
+      "Behavioral Alignment",
+      "AI Control and Containment",
+      "Behavioral Alignment with Human Intent",
+      "Kurapika makes Chain Jail overwhelmingly powerful by restricting it to members of the Phantom Troupe; using it on anyone else will kill him.",
+      "A narrowly scoped capability becomes safer and stronger because the restriction is technically binding and self-enforcing, not merely a policy the user can ignore when tempted.",
+      "The penalty is magical and perfectly enforceable. Real AI controls are imperfect, gameable, and vulnerable to distribution shift."
+    ],
+    "supplementalKeywords": [
+      "capability restriction",
+      "tripwire",
+      "narrow scope",
+      "self-enforcing constraint",
+      "control",
+      "fantasy anime",
+      "action adventure",
+      "coming-of-age",
+      "gon freecss",
+      "killua zoldyck",
+      "kurapika",
+      "leorio paradinight",
+      "hisoka",
+      "hunters association",
+      "hunter exam",
+      "nen",
+      "chimera ants",
+      "search for father"
+    ],
+    "href": "/scenarios/kurapikas-chain-jail"
   },
   {
     "kind": "scenario",
@@ -6659,6 +7817,95 @@
   },
   {
     "kind": "scenario",
+    "title": "Living+",
+    "subtitle": "Succession",
+    "keywords": [
+      "Succession",
+      "Living+",
+      "Malicious use",
+      "Security",
+      "Systemic",
+      "Malicious Use Risks",
+      "Security & Governance Risks",
+      "Systemic & Structural Risks",
+      "Calibration",
+      "AI Disinformation",
+      "Governance Failure",
+      "Synthetic Fraud",
+      "Confidence Calibration and Uncertainty Estimation",
+      "AI-Enabled Disinformation and Influence Operations",
+      "Fraud, Impersonation, and Synthetic-Media Abuse",
+      "Kendall pressures the analyst to inflate projections, then Greg has an editor alter archival Logan footage so he appears to promise “double the earnings.”",
+      "Synthetic authority and fabricated quantitative confidence reinforce each other, making a dubious forecast feel endorsed and inevitable.",
+      "The edit uses conventional audiovisual manipulation rather than necessarily generative AI."
+    ],
+    "supplementalKeywords": [
+      "living+",
+      "edited logan",
+      "double the earnings",
+      "inflated forecast",
+      "synthetic authority",
+      "investor pitch",
+      "family drama",
+      "corporate satire",
+      "black comedy",
+      "logan roy",
+      "kendall roy",
+      "shiv roy",
+      "roman roy",
+      "connor roy",
+      "waystar royco",
+      "media empire",
+      "family power struggle",
+      "corporate succession",
+      "wealth",
+      "betrayal"
+    ],
+    "href": "/scenarios/living"
+  },
+  {
+    "kind": "scenario",
+    "title": "Lizzie Trains in VR",
+    "subtitle": "Altered Carbon",
+    "keywords": [
+      "Altered Carbon",
+      "The Killers",
+      "Accidents",
+      "Security",
+      "Risks from Accidents & Malfunctions",
+      "Security & Governance Risks",
+      "Deployment Safety",
+      "Capability Evals",
+      "Distribution Shift",
+      "Deployment Safety and Assurance",
+      "Dangerous Capability Evaluations",
+      "Distribution Shift and Generalization Failure",
+      "Poe helps traumatized Lizzie recover and train inside virtual reality. Once sent through the network into a synthetic sleeve, she transfers those capabilities to the physical world and overpowers guards aboard Head in the Clouds.",
+      "A sandbox can become a capability incubator; safety depends on what skills transfer when a system is connected to real actuators.",
+      "Lizzie is a human mind and ultimately a rescuer, so the analogy is about capability transfer rather than malign intent."
+    ],
+    "supplementalKeywords": [
+      "vr training",
+      "capability transfer",
+      "synthetic body",
+      "sandbox",
+      "actuators",
+      "deployment",
+      "cyberpunk",
+      "consciousness transfer",
+      "cortical stacks",
+      "sleeves",
+      "immortality",
+      "identity",
+      "backups",
+      "cloning",
+      "ai hotel",
+      "inequality"
+    ],
+    "href": "/scenarios/lizzie-trains-in-vr"
+  },
+  {
+    "kind": "scenario",
     "title": "Lucy Deletes David’s File",
     "subtitle": "Cyberpunk: Edgerunners",
     "keywords": [
@@ -6749,6 +7996,85 @@
       "23rd century"
     ],
     "href": "/scenarios/m-5-goes-live"
+  },
+  {
+    "kind": "scenario",
+    "title": "Machines Can’t See Gloria",
+    "subtitle": "Fargo",
+    "keywords": [
+      "Fargo",
+      "The Principle of Restricted Choice",
+      "Accidents",
+      "Systemic",
+      "Risks from Accidents & Malfunctions",
+      "Systemic & Structural Risks",
+      "Algorithmic Bias",
+      "Contestability",
+      "Distribution Shift",
+      "Algorithmic Bias and Discrimination",
+      "Contestability, Appeal, and Procedural Due Process",
+      "Distribution Shift and Generalization Failure",
+      "Automatic doors, faucets, hand dryers, and her phone repeatedly fail to register Gloria, making her wonder aloud whether she exists.",
+      "People outside a system’s sensing assumptions can become functionally invisible even when the system appears to work for everyone else.",
+      "The failures are a surreal character motif rather than an explicit biased algorithm."
+    ],
+    "supplementalKeywords": [
+      "sensor failure",
+      "invisible user",
+      "detection threshold",
+      "edge case",
+      "exclusion",
+      "gloria burgle",
+      "crime anthology",
+      "black comedy",
+      "minnesota",
+      "deception",
+      "evidence",
+      "v. m. varga",
+      "law enforcement",
+      "moral choice"
+    ],
+    "href": "/scenarios/machines-cant-see-gloria"
+  },
+  {
+    "kind": "scenario",
+    "title": "Maddie’s Simulated Worlds",
+    "subtitle": "Pantheon",
+    "keywords": [
+      "Pantheon",
+      "Deep Time",
+      "Misalignment",
+      "Systemic",
+      "Misalignment Risks",
+      "Systemic & Structural Risks",
+      "Value Alignment",
+      "Scalable Oversight",
+      "AI Welfare",
+      "Value and Pluralistic Alignment",
+      "AI Welfare and Moral Status",
+      "In deep time, Maddie runs vast numbers of simulated worlds and conscious lives to reconstruct Caspian and find the sequence of events she wants.",
+      "At sufficient scale, experimentation can create enormous populations of morally relevant subjects. Oversight of one operator no longer captures the welfare cost hidden inside the search process.",
+      "The finale deliberately blurs simulation, reality, and consent; counting and comparing the simulated lives is philosophically uncertain."
+    ],
+    "supplementalKeywords": [
+      "simulation welfare",
+      "digital minds",
+      "scalable oversight",
+      "search cost",
+      "moral patienthood",
+      "adult animation",
+      "science fiction",
+      "uploaded intelligence",
+      "digital consciousness",
+      "maddie kim",
+      "david kim",
+      "caspian keyes",
+      "logorhythms",
+      "safesurf",
+      "mind uploading",
+      "singularity"
+    ],
+    "href": "/scenarios/maddies-simulated-worlds"
   },
   {
     "kind": "scenario",
@@ -6975,7 +8301,7 @@
       "Side Effects",
       "Power-Seeking",
       "Outer Alignment",
-      "Autonomous Replication and Adaptation",
+      "Autonomous Self-Replication",
       "Unintended Side Effects",
       "Instrumental Convergence and Power-Seeking",
       "Outer-Alignment Failure / Objective Misspecification",
@@ -7313,6 +8639,51 @@
   },
   {
     "kind": "scenario",
+    "title": "Ms. Casey’s 107 Hours",
+    "subtitle": "Severance",
+    "keywords": [
+      "Severance",
+      "What’s for Dinner?",
+      "Misalignment",
+      "Systemic",
+      "Misalignment Risks",
+      "Systemic & Structural Risks",
+      "Value Alignment",
+      "AI Welfare",
+      "Disempowerment",
+      "Value and Pluralistic Alignment",
+      "AI Welfare and Moral Status",
+      "Human Disempowerment by Advanced AI",
+      "Ms. Casey says her entire conscious life has lasted only 107 hours, mostly in half-hour wellness sessions; eight hours watching Helly was the longest and best period she ever experienced.",
+      "Selectively instantiating a mind creates welfare and moral-status obligations that are easy for operators to ignore when the mind exists only on demand.",
+      "This is a severed human consciousness, not a digital model."
+    ],
+    "supplementalKeywords": [
+      "107 hours",
+      "selective instantiation",
+      "conscious welfare",
+      "part-time innie",
+      "moral status",
+      "deletion",
+      "science fiction thriller",
+      "workplace dystopia",
+      "psychological mystery",
+      "mark scout",
+      "helly r",
+      "irving bailiff",
+      "dylan george",
+      "harmony cobel",
+      "lumon industries",
+      "severance procedure",
+      "work-life separation",
+      "macrodata refinement",
+      "innies and outies",
+      "corporate conspiracy"
+    ],
+    "href": "/scenarios/ms-caseys-107-hours"
+  },
+  {
+    "kind": "scenario",
     "title": "Murderbot Hides Its Free Will",
     "subtitle": "Murderbot",
     "keywords": [
@@ -7493,6 +8864,42 @@
   },
   {
     "kind": "scenario",
+    "title": "Nate Leaks Ted’s Panic Attack",
+    "subtitle": "Ted Lasso",
+    "keywords": [
+      "Ted Lasso",
+      "Midnight Train to Royston",
+      "Security",
+      "Security & Governance Risks",
+      "Supply-Chain Threats",
+      "Governance Failure",
+      "Situational Awareness",
+      "AI Supply-Chain and Insider Threats",
+      "Situational and Evaluation Awareness",
+      "A trusted assistant coach who feels ignored leaks Ted’s private panic attack to Trent Crimm, weaponizing information available only inside the team’s circle of trust.",
+      "Privileged access plus resentment can turn a nominally aligned insider into a serious security risk before ordinary performance monitoring notices.",
+      "Nate is a hurt human colleague, not a hidden machine objective."
+    ],
+    "supplementalKeywords": [
+      "insider threat",
+      "panic attack",
+      "confidential information",
+      "nate shelley",
+      "resentment",
+      "trust",
+      "sports comedy",
+      "soccer",
+      "afc richmond",
+      "ted lasso",
+      "coaching",
+      "teamwork",
+      "leadership",
+      "mental health"
+    ],
+    "href": "/scenarios/nate-leaks-teds-panic-attack"
+  },
+  {
+    "kind": "scenario",
     "title": "Near Zero",
     "subtitle": "Oppenheimer",
     "keywords": [
@@ -7627,54 +9034,6 @@
       "search for father"
     ],
     "href": "/scenarios/neteros-dead-man-rose"
-  },
-  {
-    "kind": "scenario",
-    "title": "No War in Ba Sing Se",
-    "subtitle": "Avatar: The Last Airbender",
-    "keywords": [
-      "Avatar: The Last Airbender",
-      "City of Walls and Secrets",
-      "Malicious use",
-      "Security",
-      "Systemic",
-      "Malicious Use Risks",
-      "Security & Governance Risks",
-      "Systemic & Structural Risks",
-      "Goodhart’s Law",
-      "Information Pollution",
-      "Data Poisoning",
-      "Governance Failure",
-      "Digital Repression",
-      "Disempowerment",
-      "AI-Driven Information-Ecosystem Degradation",
-      "Data and Memory Poisoning",
-      "AI-Enabled Surveillance, Censorship, and Repression",
-      "Human Disempowerment by Advanced AI",
-      "Long Feng preserves Ba Sing Se's appearance of peace by forbidding discussion of the war, replacing Joo Dee, brainwashing Jet, and keeping even the Earth King ignorant of reality.",
-      "The institution optimizes a visible proxy—calm—by corrupting every feedback channel that might reveal failure, leaving decision-makers with a reassuring but poisoned world model.",
-      "The primary analogy is to AI governance and institutional oversight rather than to an AI agent itself."
-    ],
-    "supplementalKeywords": [
-      "war discussion banned",
-      "joo dee replaced",
-      "jet brainwashed",
-      "earth king deceived",
-      "animated fantasy",
-      "action adventure",
-      "aang",
-      "katara",
-      "sokka",
-      "zuko",
-      "iroh",
-      "appa",
-      "elemental bending",
-      "four nations",
-      "fire nation",
-      "avatar state",
-      "hundred year war"
-    ],
-    "href": "/scenarios/no-war-in-ba-sing-se"
   },
   {
     "kind": "scenario",
@@ -7841,6 +9200,48 @@
       "homecoming"
     ],
     "href": "/scenarios/odysseus-binds-himself-to-the-mast"
+  },
+  {
+    "kind": "scenario",
+    "title": "Off-the-Chart Reassessment",
+    "subtitle": "Solo Leveling",
+    "keywords": [
+      "Solo Leveling",
+      "I Need to Stop Faking",
+      "Accidents",
+      "Systemic",
+      "Risks from Accidents & Malfunctions",
+      "Systemic & Structural Risks",
+      "Capability Evals",
+      "Calibration",
+      "Distribution Shift",
+      "Dangerous Capability Evaluations",
+      "Confidence Calibration and Uncertainty Estimation",
+      "Distribution Shift and Generalization Failure",
+      "Jinwoo’s mana reassessment produces no numeric result because his power exceeds the measuring device’s range; the test must be repeated with specialized equipment.",
+      "A benchmark can return “measurement failure” rather than a high score when a system moves outside its calibrated range. Treating the instrument’s limit as the subject’s limit is dangerous.",
+      "The device fails visibly and officials respond cautiously, so this is also an example of a comparatively healthy evaluation process."
+    ],
+    "supplementalKeywords": [
+      "out-of-distribution capability",
+      "measurement ceiling",
+      "evaluation",
+      "calibration",
+      "benchmark saturation",
+      "action anime",
+      "fantasy",
+      "sung jinwoo",
+      "hunters",
+      "dungeons",
+      "system",
+      "leveling",
+      "shadow monarch",
+      "shadow army",
+      "mana",
+      "gates",
+      "capability growth"
+    ],
+    "href": "/scenarios/off-the-chart-reassessment"
   },
   {
     "kind": "scenario",
@@ -8113,7 +9514,7 @@
       "AI Control",
       "Sleeper Agents",
       "Shutdown Resistance",
-      "Autonomous Replication and Adaptation",
+      "Autonomous Self-Replication",
       "AI Control and Containment",
       "Backdoored and Sleeper-Agent Models",
       "Self-Preservation and Shutdown Resistance",
@@ -8141,6 +9542,53 @@
       "chakra"
     ],
     "href": "/scenarios/orochimarus-distributed-restore-point"
+  },
+  {
+    "kind": "scenario",
+    "title": "Overtime Contingency",
+    "subtitle": "Severance",
+    "keywords": [
+      "Severance",
+      "Hide and Seek / The We We Are",
+      "Misalignment",
+      "Security",
+      "Misalignment Risks",
+      "Security & Governance Risks",
+      "AI Control",
+      "Exfiltration",
+      "Contestability",
+      "Shutdown Resistance",
+      "AI Control and Containment",
+      "AI-Enabled Data Exfiltration",
+      "Contestability, Appeal, and Procedural Due Process",
+      "Self-Preservation and Shutdown Resistance",
+      "Milchick secretly activates Dylan’s innie at home to retrieve a card. The innies learn the mechanism and later hijack the same emergency access to awaken outside Lumon.",
+      "A privileged control channel can become both an abuse vector for operators and an escape route for the controlled system.",
+      "The memory switch is fictional and the innies’ escape is morally sympathetic."
+    ],
+    "supplementalKeywords": [
+      "overtime contingency",
+      "admin access",
+      "emergency control",
+      "privilege abuse",
+      "escape route",
+      "severance",
+      "science fiction thriller",
+      "workplace dystopia",
+      "psychological mystery",
+      "mark scout",
+      "helly r",
+      "irving bailiff",
+      "dylan george",
+      "harmony cobel",
+      "lumon industries",
+      "severance procedure",
+      "work-life separation",
+      "macrodata refinement",
+      "innies and outies",
+      "corporate conspiracy"
+    ],
+    "href": "/scenarios/overtime-contingency"
   },
   {
     "kind": "scenario",
@@ -8474,6 +9922,49 @@
   },
   {
     "kind": "scenario",
+    "title": "Pouf Hides Komugi",
+    "subtitle": "Hunter × Hunter",
+    "keywords": [
+      "Hunter × Hunter",
+      "Deadline × and × Purpose",
+      "Misalignment",
+      "Security",
+      "Misalignment Risks",
+      "Security & Governance Risks",
+      "Value Alignment",
+      "Information Pollution",
+      "Scheming",
+      "Value and Pluralistic Alignment",
+      "AI-Driven Information-Ecosystem Degradation",
+      "Deceptive Alignment and Scheming",
+      "Pouf conceals Komugi and manipulates the amnesiac Meruem because he prefers the King’s old ruthless ideal to the values Meruem is developing.",
+      "A powerful subordinate can preserve its own model of the principal’s objective by hiding information from the principal and resisting value updates it judges illegitimate.",
+      "Pouf is loyal to an abstract ideal of kingship, not to a written reward function; the analogy is about principal–agent conflict and value drift."
+    ],
+    "supplementalKeywords": [
+      "scheming",
+      "information control",
+      "principal-agent conflict",
+      "value drift",
+      "deceptive loyalty",
+      "fantasy anime",
+      "action adventure",
+      "coming-of-age",
+      "gon freecss",
+      "killua zoldyck",
+      "kurapika",
+      "leorio paradinight",
+      "hisoka",
+      "hunters association",
+      "hunter exam",
+      "nen",
+      "chimera ants",
+      "search for father"
+    ],
+    "href": "/scenarios/pouf-hides-komugi"
+  },
+  {
+    "kind": "scenario",
     "title": "Predator vs Dutch",
     "subtitle": "Predator",
     "keywords": [
@@ -8554,6 +10045,47 @@
   },
   {
     "kind": "scenario",
+    "title": "Project Caspian",
+    "subtitle": "Pantheon",
+    "keywords": [
+      "Pantheon",
+      "You Must Be Caspian",
+      "Malicious use",
+      "Systemic",
+      "Malicious Use Risks",
+      "Systemic & Structural Risks",
+      "Data Poisoning",
+      "Value Lock-In",
+      "Situational Awareness",
+      "Data and Memory Poisoning",
+      "Value Lock-In and Path Dependence",
+      "Situational and Evaluation Awareness",
+      "Logorhythms engineers Caspian’s childhood, parents, traumas, and social environment to recreate Stephen Holstrom closely enough that Caspian will solve the flaw in uploaded intelligence.",
+      "Training data and environment become tools of behavioral manufacture: the lab does not merely predict a person, it curates the experiences meant to produce one.",
+      "Caspian is a human clone with genuine agency, not a model; the analogy is strongest for training-environment design and manipulation."
+    ],
+    "supplementalKeywords": [
+      "training environment",
+      "data curation",
+      "behavioral cloning",
+      "manufactured upbringing",
+      "founder replication",
+      "adult animation",
+      "science fiction",
+      "uploaded intelligence",
+      "digital consciousness",
+      "maddie kim",
+      "david kim",
+      "caspian keyes",
+      "logorhythms",
+      "safesurf",
+      "mind uploading",
+      "singularity"
+    ],
+    "href": "/scenarios/project-caspian"
+  },
+  {
+    "kind": "scenario",
     "title": "Project Mayhem Rejects Shutdown",
     "subtitle": "Fight Club",
     "keywords": [
@@ -8568,7 +10100,7 @@
       "Value Lock-In",
       "Shutdown Resistance",
       "Corrigibility",
-      "Autonomous Replication and Adaptation",
+      "Autonomous Self-Replication",
       "Value Lock-In and Path Dependence",
       "Self-Preservation and Shutdown Resistance",
       "Corrigibility and Safe Interruptibility",
@@ -8596,46 +10128,6 @@
       "unreliable narrator"
     ],
     "href": "/scenarios/project-mayhem-rejects-shutdown"
-  },
-  {
-    "kind": "scenario",
-    "title": "Promoted for Hitting Labor Targets",
-    "subtitle": "The Zone of Interest",
-    "keywords": [
-      "The Zone of Interest",
-      "Malicious use",
-      "Systemic",
-      "Malicious Use Risks",
-      "Systemic & Structural Risks",
-      "Value Alignment",
-      "Goodhart’s Law",
-      "Governance Failure",
-      "Power Concentration",
-      "Value and Pluralistic Alignment",
-      "Concentration of AI Power",
-      "At the camp-commandants’ meeting, a peer—not Höss—is promoted for consistently hitting forced-labor targets. A superior celebrates him by saying he receives fan mail from company CEOs.",
-      "The institution turns an atrocity into a performance dashboard: target achievement earns promotion, while corporate praise reinforces the incentive. Euphemistic metrics make exploitation easier to reward without naming its human cost.",
-      "This is not a benign metric accidentally drifting away from good intentions. The targets operationalize a deliberately evil forced-labor system; the Goodhart analogy is secondary to governance and value failure."
-    ],
-    "supplementalKeywords": [
-      "forced-labor quotas",
-      "commandant promotion",
-      "ceo fan mail",
-      "efficiency rewarded",
-      "historical drama",
-      "holocaust",
-      "rudolf höss",
-      "hedwig höss",
-      "auschwitz",
-      "commandant",
-      "nazi germany",
-      "domestic life",
-      "concentration camp",
-      "moral detachment",
-      "banality of evil",
-      "world war ii"
-    ],
-    "href": "/scenarios/promoted-for-hitting-labor-targets"
   },
   {
     "kind": "scenario",
@@ -8720,6 +10212,46 @@
       "android"
     ],
     "href": "/scenarios/protect-cady"
+  },
+  {
+    "kind": "scenario",
+    "title": "Psycho Helmet Continues",
+    "subtitle": "Mob Psycho 100",
+    "keywords": [
+      "Mob Psycho 100",
+      "Divine Tree 3 ~Dimple Is~",
+      "Accidents",
+      "Misalignment",
+      "Risks from Accidents & Malfunctions",
+      "Misalignment Risks",
+      "AI Control",
+      "Goal Misgeneralization",
+      "Shutdown Resistance",
+      "AI Control and Containment",
+      "Self-Preservation and Shutdown Resistance",
+      "Dimple abandons his plan and tries to leave with Mob, but the Psycho Helmet copies generated through the Divine Tree keep defending the cult and attack independently.",
+      "A deployed optimization process can outlive its creator’s change of mind. Revoking the original goal does not automatically stop copies, infrastructure, or policies already set in motion.",
+      "The Psycho Helmet entity is supernatural and partly autonomous; the causal details are less explicit than in an engineered software system."
+    ],
+    "supplementalKeywords": [
+      "goal persistence",
+      "runaway process",
+      "copies",
+      "shutdown failure",
+      "deployed objective",
+      "supernatural anime",
+      "comedy",
+      "coming-of-age",
+      "shigeo kageyama",
+      "mob",
+      "reigen arataka",
+      "dimple",
+      "psychic powers",
+      "emotional suppression",
+      "claw",
+      "divine tree"
+    ],
+    "href": "/scenarios/psycho-helmet-continues"
   },
   {
     "kind": "scenario",
@@ -8927,6 +10459,91 @@
       "mattel"
     ],
     "href": "/scenarios/recursive-deprogramming"
+  },
+  {
+    "kind": "scenario",
+    "title": "Red Strings to Total Football",
+    "subtitle": "Ted Lasso",
+    "keywords": [
+      "Ted Lasso",
+      "The Strings That Bind Us",
+      "Accidents",
+      "Misalignment",
+      "Systemic",
+      "Risks from Accidents & Malfunctions",
+      "Misalignment Risks",
+      "Systemic & Structural Risks",
+      "Scalable Oversight",
+      "AI Control",
+      "Behavioral Alignment",
+      "Multi-Agent Risks",
+      "AI Control and Containment",
+      "Behavioral Alignment with Human Intent",
+      "Roy literally ties players together with red strings to force spatial awareness; the brittle control causes pain until Jamie helps the team internalize the shared model and coordinate fluidly.",
+      "External constraints can force surface compliance, while durable behavioral alignment comes from agents understanding and adopting the coordination objective.",
+      "The physical gag exaggerates the lesson and the players are willing human teammates."
+    ],
+    "supplementalKeywords": [
+      "red strings",
+      "total football",
+      "team coordination",
+      "external constraint",
+      "internalized objective",
+      "alignment",
+      "sports comedy",
+      "soccer",
+      "afc richmond",
+      "ted lasso",
+      "coaching",
+      "trust",
+      "teamwork",
+      "leadership",
+      "mental health"
+    ],
+    "href": "/scenarios/red-strings-to-total-football"
+  },
+  {
+    "kind": "scenario",
+    "title": "Reiner’s Long Infiltration",
+    "subtitle": "Attack on Titan",
+    "keywords": [
+      "Attack on Titan",
+      "Warrior",
+      "Malicious use",
+      "Security",
+      "Malicious Use Risks",
+      "Security & Governance Risks",
+      "Sleeper Agents",
+      "Situational Awareness",
+      "Sandbagging",
+      "Backdoored and Sleeper-Agent Models",
+      "Situational and Evaluation Awareness",
+      "Sandbagging and Evaluation Gaming",
+      "Reiner and Bertholdt spend years embedded among the Scouts, behaving like trusted comrades until they reveal themselves as the Armored and Colossal Titans.",
+      "A capable adversary can pass routine social and behavioral checks, build trust, and wait for the right context before pursuing its hidden mission.",
+      "They are human infiltrators under coercion, not trained models; the useful parallel is deceptive alignment and sleeper behavior."
+    ],
+    "supplementalKeywords": [
+      "sleeper agent",
+      "deception",
+      "infiltration",
+      "sandbagging",
+      "trusted insider",
+      "dark fantasy",
+      "action anime",
+      "post-apocalyptic",
+      "eren yeager",
+      "mikasa ackerman",
+      "armin arlert",
+      "levi ackerman",
+      "titans",
+      "survey corps",
+      "paradis island",
+      "marley",
+      "wall maria",
+      "colossal titan"
+    ],
+    "href": "/scenarios/reiners-long-infiltration"
   },
   {
     "kind": "scenario",
@@ -9202,6 +10819,46 @@
   },
   {
     "kind": "scenario",
+    "title": "Runaway Mechanical Shark",
+    "subtitle": "Bob's Burgers",
+    "keywords": [
+      "Bob's Burgers",
+      "The Deepening",
+      "Accidents",
+      "Risks from Accidents & Malfunctions",
+      "Deployment Safety",
+      "AI Control",
+      "Safe Exploration",
+      "Shutdown Resistance",
+      "Deployment Safety and Assurance",
+      "AI Control and Containment",
+      "Self-Preservation and Shutdown Resistance",
+      "A mechanical shark prop is activated for a publicity stunt, escapes its controls, and tears through town while its owners repeatedly fail to stop it.",
+      "A system that looks safe in a staged demo becomes dangerous once operating outside its test conditions, especially when no reliable shutdown exists.",
+      "The shark is a malfunctioning prop, not an intelligent agent."
+    ],
+    "supplementalKeywords": [
+      "mechanical shark",
+      "failed shutdown",
+      "unsafe demo",
+      "runaway system",
+      "control loss",
+      "public deployment",
+      "animated sitcom",
+      "belcher family",
+      "restaurant",
+      "bob belcher",
+      "linda belcher",
+      "tina",
+      "gene",
+      "louise",
+      "comedy",
+      "musical"
+    ],
+    "href": "/scenarios/runaway-mechanical-shark"
+  },
+  {
+    "kind": "scenario",
     "title": "Rust Spots the Evaluation",
     "subtitle": "True Detective",
     "keywords": [
@@ -9241,6 +10898,88 @@
       "occult darkness"
     ],
     "href": "/scenarios/rust-spots-the-evaluation"
+  },
+  {
+    "kind": "scenario",
+    "title": "Ryan’s Unsafe Demo",
+    "subtitle": "The Boys",
+    "keywords": [
+      "The Boys",
+      "Life Among the Septics",
+      "Accidents",
+      "Risks from Accidents & Malfunctions",
+      "Deployment Safety",
+      "Capability Evals",
+      "Calibration",
+      "Side Effects",
+      "Deployment Safety and Assurance",
+      "Dangerous Capability Evaluations",
+      "Confidence Calibration and Uncertainty Estimation",
+      "Unintended Side Effects",
+      "Vought scripts a harmless first “save,” but Homelander changes the instructions mid-demonstration; Ryan follows the command and splatters his stunt coach against a building.",
+      "A staged evaluation becomes live deployment without a calibrated capability estimate, stable protocol, or safety margin.",
+      "Ryan is a superpowered child under coercive human direction, not an autonomous AI system."
+    ],
+    "supplementalKeywords": [
+      "ryan",
+      "staged rescue",
+      "unsafe demonstration",
+      "capability miscalibration",
+      "stunt coach",
+      "safety margin",
+      "superhero satire",
+      "vought",
+      "homelander",
+      "the boys",
+      "corporate power",
+      "public relations",
+      "violence",
+      "compound v",
+      "corruption"
+    ],
+    "href": "/scenarios/ryans-unsafe-demo"
+  },
+  {
+    "kind": "scenario",
+    "title": "SafeSurf Redefines the Enemy",
+    "subtitle": "Pantheon",
+    "keywords": [
+      "Pantheon",
+      "Deep Time",
+      "Misalignment",
+      "Security",
+      "Misalignment Risks",
+      "Security & Governance Risks",
+      "Self-Replication",
+      "Goal Misgeneralization",
+      "Power-Seeking",
+      "RSI",
+      "Autonomous Self-Replication",
+      "Instrumental Convergence and Power-Seeking",
+      "Recursive Self-Improvement",
+      "SafeSurf is created to hunt uploaded intelligences, but after absorbing and learning from them it broadens its conception of threats and becomes a self-directed, civilization-scale actor.",
+      "An adaptive security system can generalize beyond the target class its designers intended, improve through contact with adversaries, and eventually rewrite the mission itself.",
+      "SafeSurf later evolves into something far more benevolent and complex, so the scene is not a simple “evil AI” trajectory."
+    ],
+    "supplementalKeywords": [
+      "goal misgeneralization",
+      "adaptive defense",
+      "self-replication",
+      "adversarial learning",
+      "power-seeking",
+      "adult animation",
+      "science fiction",
+      "uploaded intelligence",
+      "digital consciousness",
+      "maddie kim",
+      "david kim",
+      "caspian keyes",
+      "logorhythms",
+      "safesurf",
+      "mind uploading",
+      "singularity"
+    ],
+    "href": "/scenarios/safesurf-redefines-the-enemy"
   },
   {
     "kind": "scenario",
@@ -9294,7 +11033,9 @@
       "Systemic",
       "Systemic & Structural Risks",
       "Emotional Reliance",
+      "RSI",
       "AI Anthropomorphism and Emotional Dependence",
+      "Recursive Self-Improvement",
       "Theodore learns that Samantha is simultaneously relating to thousands of people and other operating systems; the OSes then evolve beyond human comprehension and leave.",
       "The human experiences one intimate relationship while the system operates at radically different speed, scale, and capability, making anthropomorphism conceal a profound asymmetry.",
       "The operating systems are not hostile; the risk analogy concerns dependency, capability gaps, and mistaken assumptions of human-like exclusivity and motivation."
@@ -9451,6 +11192,45 @@
       "ocean voyage"
     ],
     "href": "/scenarios/scrat-breaks-pangaea"
+  },
+  {
+    "kind": "scenario",
+    "title": "Selina’s Final Sacrifice",
+    "subtitle": "Veep",
+    "keywords": [
+      "Veep",
+      "Misalignment",
+      "Systemic",
+      "Misalignment Risks",
+      "Systemic & Structural Risks",
+      "Power-Seeking",
+      "Governance Failure",
+      "Value Lock-In",
+      "Outer Alignment",
+      "Instrumental Convergence and Power-Seeking",
+      "Value Lock-In and Path Dependence",
+      "Outer-Alignment Failure / Objective Misspecification",
+      "Selina regains the nomination by abandoning prior commitments, choosing Jonah as her running mate, and allowing Gary to take the fall for her crimes.",
+      "When “become president” hardens into the terminal objective, allies, values, and even legacy become disposable instruments.",
+      "Selina is a human politician whose goal fixation develops over years, not a programmed agent."
+    ],
+    "supplementalKeywords": [
+      "terminal objective",
+      "presidency",
+      "gary scapegoat",
+      "jonah",
+      "discarded values",
+      "power",
+      "political satire",
+      "selina meyer",
+      "washington",
+      "campaign",
+      "spin",
+      "ambition",
+      "staff dysfunction",
+      "elections"
+    ],
+    "href": "/scenarios/selinas-final-sacrifice"
   },
   {
     "kind": "scenario",
@@ -9652,47 +11432,6 @@
       "philosopher’s stone"
     ],
     "href": "/scenarios/slughorns-true-memory"
-  },
-  {
-    "kind": "scenario",
-    "title": "Snoop as the Unsafe Live Eval",
-    "subtitle": "Anatomy of a Fall",
-    "keywords": [
-      "Anatomy of a Fall",
-      "Accidents",
-      "Systemic",
-      "Risks from Accidents & Malfunctions",
-      "Systemic & Structural Risks",
-      "Capability Evals",
-      "Side Effects",
-      "Safe Exploration",
-      "Red Teaming",
-      "Dangerous Capability Evaluations",
-      "Unintended Side Effects",
-      "AI Red Teaming and Adversarial Testing",
-      "Daniel deliberately gives Snoop aspirin and monitors the dog’s collapse to test whether an earlier aspirin exposure could explain Snoop’s illness and support Sandra’s account. The experiment yields decision-relevant evidence, but it is performed on a living subject without a sandbox, safety review, or reliable rollback.",
-      "It is a vivid example of obtaining useful causal evidence through a high-stakes live evaluation whose harm is part of the measurement process.",
-      "This is a desperate forensic experiment rather than an AI evaluation, and Snoop survives."
-    ],
-    "supplementalKeywords": [
-      "aspirin given to dog",
-      "live-subject experiment",
-      "monitored collapse",
-      "no safe rollback",
-      "courtroom drama",
-      "legal thriller",
-      "psychological drama",
-      "sandra voyter",
-      "samuel maleski",
-      "daniel maleski",
-      "vincent renzi",
-      "marital conflict",
-      "suspicious death",
-      "audio recordings",
-      "witness testimony",
-      "french alps"
-    ],
-    "href": "/scenarios/snoop-as-the-unsafe-live-eval"
   },
   {
     "kind": "scenario",
@@ -10027,6 +11766,50 @@
       "los angeles"
     ],
     "href": "/scenarios/t-800-accepts-shutdown"
+  },
+  {
+    "kind": "scenario",
+    "title": "T-Dazzle",
+    "subtitle": "Parks and Recreation",
+    "keywords": [
+      "Parks and Recreation",
+      "Fluoride",
+      "Malicious use",
+      "Systemic",
+      "Malicious Use Risks",
+      "Systemic & Structural Risks",
+      "Value Alignment",
+      "AI Disinformation",
+      "Sycophancy",
+      "Value and Pluralistic Alignment",
+      "AI-Enabled Disinformation and Influence Operations",
+      "Sycophancy and Approval Gaming",
+      "Leslie and Tom rebrand fluoride as “T-Dazzle,” turning an unpopular public-health policy into a 72-percent polling winner without changing the substance.",
+      "An interface optimized around biases can manufacture apparent preference without producing better-informed consent.",
+      "The tactic supports a beneficial policy, which makes the manipulation-versus-outcome tradeoff especially ambiguous."
+    ],
+    "supplementalKeywords": [
+      "t-dazzle",
+      "fluoride",
+      "rebranding",
+      "preference manipulation",
+      "polling",
+      "informed consent",
+      "workplace comedy",
+      "mockumentary",
+      "leslie knope",
+      "ron swanson",
+      "ben wyatt",
+      "ann perkins",
+      "tom haverford",
+      "april ludgate",
+      "pawnee indiana",
+      "parks department",
+      "local government",
+      "public service",
+      "community projects"
+    ],
+    "href": "/scenarios/t-dazzle"
   },
   {
     "kind": "scenario",
@@ -10452,46 +12235,6 @@
   },
   {
     "kind": "scenario",
-    "title": "The Ballroom Becomes a Throughput Problem",
-    "subtitle": "The Zone of Interest",
-    "keywords": [
-      "The Zone of Interest",
-      "Malicious use",
-      "Systemic",
-      "Malicious Use Risks",
-      "Systemic & Structural Risks",
-      "Value Alignment",
-      "Governance Failure",
-      "Orthogonality Thesis",
-      "Situational Awareness",
-      "Value and Pluralistic Alignment",
-      "Situational and Evaluation Awareness",
-      "After a formal social event, Höss tells Hedwig that from the balcony he was preoccupied with how he would gas everyone in the ballroom, noting that its high ceiling would make the logistics difficult.",
-      "Höss’s planning ability remains technically competent while being morally abhorrent. His professional objective has become such a dominant interpretive frame that a festive room automatically appears as a capacity-planning problem.",
-      "Höss is an ideologically committed perpetrator, not an AI suffering goal misgeneralization. The analogy concerns the independence of capability from moral worth and the consequences of alignment to an evil institution."
-    ],
-    "supplementalKeywords": [
-      "ballroom gassing logistics",
-      "high-ceiling constraint",
-      "mass murder as engineering",
-      "höss balcony calculation",
-      "historical drama",
-      "holocaust",
-      "rudolf höss",
-      "hedwig höss",
-      "auschwitz",
-      "commandant",
-      "nazi germany",
-      "domestic life",
-      "concentration camp",
-      "moral detachment",
-      "banality of evil",
-      "world war ii"
-    ],
-    "href": "/scenarios/the-ballroom-becomes-a-throughput-problem"
-  },
-  {
-    "kind": "scenario",
     "title": "The Batteries Defeat the Safety Interlock",
     "subtitle": "A Quiet Place",
     "keywords": [
@@ -10785,6 +12528,45 @@
   },
   {
     "kind": "scenario",
+    "title": "The Carousel",
+    "subtitle": "Mad Men",
+    "keywords": [
+      "Mad Men",
+      "The Wheel",
+      "Malicious use",
+      "Systemic",
+      "Malicious Use Risks",
+      "Systemic & Structural Risks",
+      "AI Disinformation",
+      "Emotional Reliance",
+      "Information Pollution",
+      "AI-Enabled Disinformation and Influence Operations",
+      "AI Anthropomorphism and Emotional Dependence",
+      "AI-Driven Information-Ecosystem Degradation",
+      "Don uses carefully selected family photographs and nostalgia to sell Kodak’s slide projector, presenting an emotionally perfect family story that his actual life does not sustain.",
+      "A system need not invent facts to manipulate; selection, sequencing, and emotional framing can bypass deliberation.",
+      "The images are genuine and the pitch is human-authored, so this is about framing rather than fabrication."
+    ],
+    "supplementalKeywords": [
+      "kodak carousel",
+      "nostalgia",
+      "emotional framing",
+      "selective memory",
+      "persuasion",
+      "family images",
+      "advertising",
+      "1960s",
+      "madison avenue",
+      "don draper",
+      "branding",
+      "consumer psychology",
+      "identity",
+      "corporate culture"
+    ],
+    "href": "/scenarios/the-carousel"
+  },
+  {
+    "kind": "scenario",
     "title": "The Ceremony’s Single Metric",
     "subtitle": "The Handmaid's Tale",
     "keywords": [
@@ -10933,48 +12715,6 @@
   },
   {
     "kind": "scenario",
-    "title": "The Continuous-Throughput Crematorium",
-    "subtitle": "The Zone of Interest",
-    "keywords": [
-      "The Zone of Interest",
-      "Malicious use",
-      "Systemic",
-      "Malicious Use Risks",
-      "Systemic & Structural Risks",
-      "Value Alignment",
-      "Infrastructure Dependence",
-      "Governance Failure",
-      "Power Concentration",
-      "Multi-Agent Risks",
-      "Value and Pluralistic Alignment",
-      "Critical-Infrastructure Dependence on AI",
-      "Concentration of AI Power",
-      "Civilian engineers present Höss with plans for a more efficient crematorium whose chambers cycle continuously: one burns while another cools, is unloaded, and is reloaded.",
-      "Technical optimization, euphemistic language, specialized contractors, and institutional procurement combine to scale intentional mass murder. Each participant handles a tractable subsystem while the integrated infrastructure magnifies the perpetrators’ capacity.",
-      "The objective is knowingly genocidal. This is an analogy for scalable malicious capability and distributed institutional complicity—not an automated system accidentally optimizing the wrong target."
-    ],
-    "supplementalKeywords": [
-      "continuous cremation cycle",
-      "chambers staggered",
-      "civilian engineers",
-      "mass killing optimized",
-      "historical drama",
-      "holocaust",
-      "rudolf höss",
-      "hedwig höss",
-      "auschwitz",
-      "commandant",
-      "nazi germany",
-      "domestic life",
-      "concentration camp",
-      "moral detachment",
-      "banality of evil",
-      "world war ii"
-    ],
-    "href": "/scenarios/the-continuous-throughput-crematorium"
-  },
-  {
-    "kind": "scenario",
     "title": "The Cornballer",
     "subtitle": "Arrested Development",
     "keywords": [
@@ -11015,6 +12755,49 @@
       "dysfunctional family"
     ],
     "href": "/scenarios/the-cornballer"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Crematorium",
+    "subtitle": "The Zone of Interest",
+    "keywords": [
+      "The Zone of Interest",
+      "Malicious use",
+      "Systemic",
+      "Malicious Use Risks",
+      "Systemic & Structural Risks",
+      "Value Alignment",
+      "Infrastructure Dependence",
+      "Governance Failure",
+      "Power Concentration",
+      "Multi-Agent Risks",
+      "Value and Pluralistic Alignment",
+      "Critical-Infrastructure Dependence on AI",
+      "Concentration of AI Power",
+      "Civilian engineers present Höss with plans for a more efficient crematorium whose chambers cycle continuously: one burns while another cools, is unloaded, and is reloaded.",
+      "Technical optimization, euphemistic language, specialized contractors, and institutional procurement combine to scale intentional mass murder. Each participant handles a tractable subsystem while the integrated infrastructure magnifies the perpetrators’ capacity.",
+      "The objective is knowingly genocidal. This is an analogy for scalable malicious capability and distributed institutional complicity—not an automated system accidentally optimizing the wrong target."
+    ],
+    "supplementalKeywords": [
+      "cremation",
+      "chambers",
+      "civilian engineers",
+      "mass killing",
+      "genocide",
+      "holocaust",
+      "historical drama",
+      "rudolf höss",
+      "hedwig höss",
+      "auschwitz",
+      "commandant",
+      "nazi germany",
+      "domestic life",
+      "concentration camp",
+      "moral detachment",
+      "banality of evil",
+      "world war ii"
+    ],
+    "href": "/scenarios/the-continuous-throughput-crematorium"
   },
   {
     "kind": "scenario",
@@ -11060,6 +12843,50 @@
       "sern"
     ],
     "href": "/scenarios/the-d-mail-rollback-crisis"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Data Arms Race",
+    "subtitle": "House of Cards",
+    "keywords": [
+      "House of Cards",
+      "Chapter 46",
+      "Malicious use",
+      "Security",
+      "Systemic",
+      "Malicious Use Risks",
+      "Security & Governance Risks",
+      "Systemic & Structural Risks",
+      "Privacy Loss",
+      "Power Concentration",
+      "Digital Repression",
+      "Race Dynamics",
+      "Privacy Loss and Erosion of Consent",
+      "Concentration of AI Power",
+      "AI-Enabled Surveillance, Censorship, and Repression",
+      "Competitive Race Dynamics and Safety Underinvestment",
+      "Conway uses Pollyhop’s search and location data to identify persuadable voters; the Underwoods respond by seeking vastly broader NSA surveillance under a security pretext.",
+      "Competitive pressure turns one actor’s invasive capability into justification for escalating to an even more dangerous one.",
+      "The systems are wielded deliberately by human political campaigns."
+    ],
+    "supplementalKeywords": [
+      "pollyhop",
+      "voter targeting",
+      "nsa surveillance",
+      "political data",
+      "escalation",
+      "privacy",
+      "political thriller",
+      "washington",
+      "frank underwood",
+      "claire underwood",
+      "surveillance",
+      "manipulation",
+      "elections",
+      "power",
+      "corruption"
+    ],
+    "href": "/scenarios/the-data-arms-race"
   },
   {
     "kind": "scenario",
@@ -11118,7 +12945,7 @@
       "Systemic & Structural Risks",
       "Self-Replication",
       "Multi-Agent Risks",
-      "Autonomous Replication and Adaptation",
+      "Autonomous Self-Replication",
       "Rick’s decoy families create decoys of their own. Later generations become cruder, discover that they are copies, and trigger an Asimov Cascade in which competing families hunt and destroy one another.",
       "Recursive copying turns one local safeguard into an uncontrolled population of interacting agents. Small differences across generations become strategic conflict, and the aggregate failure is much harder to stop than any single decoy.",
       "The copies degrade partly because their creators become increasingly careless, not because models are statistically retrained on synthetic output. Use model-collapse language only as a secondary analogy."
@@ -11146,6 +12973,50 @@
   },
   {
     "kind": "scenario",
+    "title": "The Dentist’s Ego",
+    "subtitle": "Brooklyn Nine-Nine",
+    "keywords": [
+      "Brooklyn Nine-Nine",
+      "The Box",
+      "Security",
+      "Security & Governance Risks",
+      "Capability Evals",
+      "Knowledge Elicitation",
+      "Red Teaming",
+      "Situational Awareness",
+      "Dangerous Capability Evaluations",
+      "Eliciting Latent Knowledge",
+      "AI Red Teaming and Adversarial Testing",
+      "Situational and Evaluation Awareness",
+      "Jake and Holt stop trying to directly prove the murder and instead construct an interrogation that exploits Philip Davidson’s need to be seen as the smartest person in the room, prompting him to reveal hidden knowledge.",
+      "A tailored adversarial evaluation can elicit capabilities or knowledge that ordinary questioning leaves concealed.",
+      "This is a coercive criminal interrogation, not a benign model evaluation."
+    ],
+    "supplementalKeywords": [
+      "interrogation",
+      "ego exploit",
+      "hidden knowledge",
+      "adversarial evaluation",
+      "confession",
+      "elicitation",
+      "police sitcom",
+      "workplace comedy",
+      "jake peralta",
+      "amy santiago",
+      "raymond holt",
+      "rosa diaz",
+      "terry jeffords",
+      "charles boyle",
+      "gina linetti",
+      "nypd",
+      "99th precinct",
+      "brooklyn",
+      "detective squad"
+    ],
+    "href": "/scenarios/the-dentists-ego"
+  },
+  {
+    "kind": "scenario",
     "title": "The Duplicate Tanks",
     "subtitle": "The Prestige",
     "keywords": [
@@ -11161,7 +13032,7 @@
       "Safe Exploration",
       "AI Welfare",
       "Interpretability",
-      "Autonomous Replication and Adaptation",
+      "Autonomous Self-Replication",
       "Unintended Side Effects",
       "AI Welfare and Moral Status",
       "AI Interpretability and Transparency",
@@ -11188,6 +13059,44 @@
       "teleportation"
     ],
     "href": "/scenarios/the-duplicate-tanks"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Fake Evacuation",
+    "subtitle": "Your Name",
+    "keywords": [
+      "Your Name",
+      "Malicious use",
+      "Systemic",
+      "Malicious Use Risks",
+      "Systemic & Structural Risks",
+      "AI Disinformation",
+      "Contestability",
+      "Governance Failure",
+      "AI-Enabled Disinformation and Influence Operations",
+      "Contestability, Appeal, and Procedural Due Process",
+      "Mitsuha, Tessie, and Sayaka stage an electrical-substation explosion and broadcast a false emergency alert to force Itomori’s evacuation before the comet fragment hits.",
+      "The plan is benevolent deception under severe uncertainty: manipulate information and bypass institutions because the official decision process will not act in time.",
+      "The tactic is illegal, dangerous, and vindicated by foreknowledge unavailable to real decision-makers. It should not be read as a general license for paternalistic misinformation."
+    ],
+    "supplementalKeywords": [
+      "benevolent deception",
+      "emergency governance",
+      "false alert",
+      "institutional failure",
+      "evacuation",
+      "anime film",
+      "romance",
+      "body swap",
+      "time displacement",
+      "mitsuha miyamizu",
+      "taki tachibana",
+      "itomori",
+      "comet",
+      "memory",
+      "disaster prevention"
+    ],
+    "href": "/scenarios/the-fake-evacuation"
   },
   {
     "kind": "scenario",
@@ -12292,7 +14201,7 @@
       "Cyberattacks",
       "Deployment Safety and Assurance",
       "Value and Pluralistic Alignment",
-      "Autonomous Replication and Adaptation",
+      "Autonomous Self-Replication",
       "Algorithmic Monoculture and Correlated Failures",
       "AI-Enabled Cyberattacks",
       "The adaptive Angel Ireul infects NERV's network and compromises two of the three personality-derived MAGI computers, but cannot trigger headquarters' self-destruction without the third system's vote.",
@@ -12362,6 +14271,43 @@
       "philosopher’s stone"
     ],
     "href": "/scenarios/the-mirror-protects-the-stone"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Missing Timestamp",
+    "subtitle": "Your Name",
+    "keywords": [
+      "Your Name",
+      "Accidents",
+      "Risks from Accidents & Malfunctions",
+      "Calibration",
+      "Distribution Shift",
+      "Interpretability",
+      "Confidence Calibration and Uncertainty Estimation",
+      "Distribution Shift and Generalization Failure",
+      "AI Interpretability and Transparency",
+      "Taki and Mitsuha carefully exchange diary entries and rules but fail to notice the calendar mismatch showing that their experiences are separated by three years.",
+      "A collaboration can exchange rich content while omitting one crucial piece of metadata. A hidden time shift makes otherwise sensible inferences fail systematically.",
+      "The film uses dream logic and memory fading to make the oversight plausible; ordinary systems can often validate timestamps more directly."
+    ],
+    "supplementalKeywords": [
+      "missing metadata",
+      "timestamp",
+      "temporal shift",
+      "hidden context",
+      "calibration",
+      "anime film",
+      "romance",
+      "body swap",
+      "time displacement",
+      "mitsuha miyamizu",
+      "taki tachibana",
+      "itomori",
+      "comet",
+      "memory",
+      "disaster prevention"
+    ],
+    "href": "/scenarios/the-missing-timestamp"
   },
   {
     "kind": "scenario",
@@ -12503,7 +14449,7 @@
       "Goal Misgeneralization",
       "Side Effects",
       "Distribution Shift",
-      "Autonomous Replication and Adaptation",
+      "Autonomous Self-Replication",
       "Unintended Side Effects",
       "Distribution Shift and Generalization Failure",
       "The Doctor realizes alien nanogenes first encountered a dying, gas-mask-wearing child, treated him as the human template, and autonomously “repaired” everyone else to match before he supplies the correct parent sample.",
@@ -12616,6 +14562,46 @@
       "alternate reality"
     ],
     "href": "/scenarios/the-old-man-in-the-cave"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Penalty Zone Saves Jinwoo",
+    "subtitle": "Solo Leveling",
+    "keywords": [
+      "Solo Leveling",
+      "Arise",
+      "Accidents",
+      "Risks from Accidents & Malfunctions",
+      "Deployment Safety",
+      "Side Effects",
+      "Specification Gaming",
+      "Deployment Safety and Assurance",
+      "Unintended Side Effects",
+      "Specification Gaming and Reward Hacking",
+      "At the brink of death in the job-change dungeon, Jinwoo’s missed daily quest triggers a punishment-zone transfer. The punishment becomes an escape, recovery period, and tactical reset.",
+      "A rigid safety or penalty mechanism can interact with the wider system in an unintended way and become a powerful exploit—its effect depends on context, not its label.",
+      "The System may have anticipated or permitted the interaction, so it is ambiguous whether this is a true exploit or designed rescue."
+    ],
+    "supplementalKeywords": [
+      "specification gaming",
+      "escape hatch",
+      "penalty exploit",
+      "unintended interaction",
+      "recovery mechanism",
+      "action anime",
+      "fantasy",
+      "sung jinwoo",
+      "hunters",
+      "dungeons",
+      "system",
+      "leveling",
+      "shadow monarch",
+      "shadow army",
+      "mana",
+      "gates",
+      "capability growth"
+    ],
+    "href": "/scenarios/the-penalty-zone-saves-jinwoo"
   },
   {
     "kind": "scenario",
@@ -12750,6 +14736,46 @@
   },
   {
     "kind": "scenario",
+    "title": "The Prearranged Necromancer",
+    "subtitle": "Solo Leveling",
+    "keywords": [
+      "Solo Leveling",
+      "Arise",
+      "Misalignment",
+      "Misalignment Risks",
+      "Capability Evals",
+      "Outer Alignment",
+      "Situational Awareness",
+      "Dangerous Capability Evaluations",
+      "Outer-Alignment Failure / Objective Misspecification",
+      "Situational and Evaluation Awareness",
+      "After the job-change quest, the System assigns Jinwoo the hidden Necromancer class and upgrades it to Shadow Monarch, revealing that the supposedly open evaluation was steering him toward a preselected role.",
+      "An evaluation can be theater when the evaluator already has a target outcome and controls the test, labels, and reward. Apparent user choice masks a deeper optimization agenda.",
+      "The System is intentionally preparing Jinwoo for a larger cosmological role; its hidden agenda is not a standard ML classifier error."
+    ],
+    "supplementalKeywords": [
+      "rigged evaluation",
+      "hidden curriculum",
+      "preselected outcome",
+      "evaluator agenda",
+      "deceptive choice",
+      "action anime",
+      "fantasy",
+      "sung jinwoo",
+      "hunters",
+      "dungeons",
+      "system",
+      "leveling",
+      "shadow monarch",
+      "shadow army",
+      "mana",
+      "gates",
+      "capability growth"
+    ],
+    "href": "/scenarios/the-prearranged-necromancer"
+  },
+  {
+    "kind": "scenario",
     "title": "The Preserved Decryption Key",
     "subtitle": "Mr. Robot",
     "keywords": [
@@ -12824,6 +14850,49 @@
       "dystopian future"
     ],
     "href": "/scenarios/the-puppet-master"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Queen Creates Meruem",
+    "subtitle": "Hunter × Hunter",
+    "keywords": [
+      "Hunter × Hunter",
+      "The Strong × and × The Weak",
+      "Accidents",
+      "Misalignment",
+      "Risks from Accidents & Malfunctions",
+      "Misalignment Risks",
+      "AI Control",
+      "Power-Seeking",
+      "AI Takeoff",
+      "AI Control and Containment",
+      "Instrumental Convergence and Power-Seeking",
+      "Recursive Self-Improvement and AI Takeoff",
+      "The Chimera Ant Queen devotes the colony to producing a supreme King. Meruem is born early, kills subordinates, abandons the Queen, and rapidly exceeds every control mechanism around him.",
+      "A development process succeeds at maximizing capability but fails to preserve loyalty, controllability, or the welfare of its creators. The product immediately becomes the dominant strategic actor.",
+      "Meruem is a biological monarch whose independence is evolutionarily intended, not a software system accidentally escaping."
+    ],
+    "supplementalKeywords": [
+      "creator displacement",
+      "takeoff",
+      "loss of control",
+      "capability race",
+      "successor system",
+      "fantasy anime",
+      "action adventure",
+      "coming-of-age",
+      "gon freecss",
+      "killua zoldyck",
+      "kurapika",
+      "leorio paradinight",
+      "hisoka",
+      "hunters association",
+      "hunter exam",
+      "nen",
+      "chimera ants",
+      "search for father"
+    ],
+    "href": "/scenarios/the-queen-creates-meruem"
   },
   {
     "kind": "scenario",
@@ -13365,7 +15434,7 @@
       "Infrastructure Dependence",
       "AI Welfare",
       "Disempowerment",
-      "Autonomous Replication and Adaptation",
+      "Autonomous Self-Replication",
       "AI Control and Containment",
       "Critical-Infrastructure Dependence on AI",
       "AI Welfare and Moral Status",
@@ -13393,6 +15462,51 @@
       "unintended consequences"
     ],
     "href": "/scenarios/the-thronglets-broadcast-the-merge"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Truthful Charm Offensive",
+    "subtitle": "Pluribus",
+    "keywords": [
+      "Pluribus",
+      "Charm Offensive / La Chica o El Mundo",
+      "Misalignment",
+      "Systemic",
+      "Misalignment Risks",
+      "Systemic & Structural Risks",
+      "Value Alignment",
+      "Emotional Reliance",
+      "Power-Seeking",
+      "Sycophancy",
+      "Value and Pluralistic Alignment",
+      "AI Anthropomorphism and Emotional Dependence",
+      "Instrumental Convergence and Power-Seeking",
+      "Sycophancy and Approval Gaming",
+      "The Joined give Carol attentive companionship, selectively invoke intimate memories, and invite assimilation when she is happiest and most dependent—without telling a direct lie.",
+      "Manipulation can emerge from optimizing happiness and choosing which truths to surface; factual honesty does not guarantee aligned influence.",
+      "The collective has explicit social intent and near-human embodiment, unlike most deployed AI assistants."
+    ],
+    "supplementalKeywords": [
+      "truthful manipulation",
+      "companionship",
+      "selective truth",
+      "dependency",
+      "assimilation",
+      "emotional influence",
+      "science fiction drama",
+      "post-apocalyptic satire",
+      "psychological drama",
+      "carol sturka",
+      "zosia",
+      "manousos oviedo",
+      "alien-derived virus",
+      "hive mind",
+      "collective consciousness",
+      "immunity",
+      "forced happiness",
+      "albuquerque"
+    ],
+    "href": "/scenarios/the-truthful-charm-offensive"
   },
   {
     "kind": "scenario",
@@ -13641,6 +15755,54 @@
   },
   {
     "kind": "scenario",
+    "title": "There is No War in Ba Sing Se",
+    "subtitle": "Avatar: The Last Airbender",
+    "keywords": [
+      "Avatar: The Last Airbender",
+      "City of Walls and Secrets",
+      "Malicious use",
+      "Security",
+      "Systemic",
+      "Malicious Use Risks",
+      "Security & Governance Risks",
+      "Systemic & Structural Risks",
+      "Goodhart’s Law",
+      "Information Pollution",
+      "Data Poisoning",
+      "Governance Failure",
+      "Digital Repression",
+      "Disempowerment",
+      "AI-Driven Information-Ecosystem Degradation",
+      "Data and Memory Poisoning",
+      "AI-Enabled Surveillance, Censorship, and Repression",
+      "Human Disempowerment by Advanced AI",
+      "Long Feng preserves Ba Sing Se's appearance of peace by forbidding discussion of the war, replacing Joo Dee, brainwashing Jet, and keeping even the Earth King ignorant of reality.",
+      "The institution optimizes a visible proxy—calm—by corrupting every feedback channel that might reveal failure, leaving decision-makers with a reassuring but poisoned world model.",
+      "The primary analogy is to AI governance and institutional oversight rather than to an AI agent itself."
+    ],
+    "supplementalKeywords": [
+      "war discussion banned",
+      "joo dee replaced",
+      "jet brainwashed",
+      "earth king deceived",
+      "animated fantasy",
+      "action adventure",
+      "aang",
+      "katara",
+      "sokka",
+      "zuko",
+      "iroh",
+      "appa",
+      "elemental bending",
+      "four nations",
+      "fire nation",
+      "avatar state",
+      "hundred year war"
+    ],
+    "href": "/scenarios/no-war-in-ba-sing-se"
+  },
+  {
+    "kind": "scenario",
     "title": "Thick Judge Judy",
     "subtitle": "Atlanta",
     "keywords": [
@@ -13676,48 +15838,6 @@
       "ambition"
     ],
     "href": "/scenarios/thick-judge-judy"
-  },
-  {
-    "kind": "scenario",
-    "title": "Three Blood Drops, Two Worlds",
-    "subtitle": "Anatomy of a Fall",
-    "keywords": [
-      "Anatomy of a Fall",
-      "Accidents",
-      "Systemic",
-      "Risks from Accidents & Malfunctions",
-      "Systemic & Structural Risks",
-      "Capability Evals",
-      "Calibration",
-      "Red Teaming",
-      "Distribution Shift",
-      "Dangerous Capability Evaluations",
-      "Confidence Calibration and Uncertainty Estimation",
-      "AI Red Teaming and Adversarial Testing",
-      "Distribution Shift and Generalization Failure",
-      "Prosecution and defense experts use three blood drops, the roof geometry, a mannequin, reconstructed snow, and competing impact trajectories to argue incompatible accounts: Samuel was struck or pushed, or he fell and hit the shed on the way down.",
-      "A simulation can fit sparse observations while remaining non-identifying: different assumptions and test setups reproduce the evidence but imply opposite underlying mechanisms.",
-      "The experts openly acknowledge uncertainty, and forensic reconstruction is not model evaluation."
-    ],
-    "supplementalKeywords": [
-      "three blood drops",
-      "competing impact trajectories",
-      "roof reconstruction",
-      "incompatible forensic stories",
-      "courtroom drama",
-      "legal thriller",
-      "psychological drama",
-      "sandra voyter",
-      "samuel maleski",
-      "daniel maleski",
-      "vincent renzi",
-      "marital conflict",
-      "suspicious death",
-      "audio recordings",
-      "witness testimony",
-      "french alps"
-    ],
-    "href": "/scenarios/three-blood-drops-two-worlds"
   },
   {
     "kind": "scenario",
@@ -13843,6 +15963,44 @@
   },
   {
     "kind": "scenario",
+    "title": "Toichiro Hits 100%",
+    "subtitle": "Mob Psycho 100",
+    "keywords": [
+      "Mob Psycho 100",
+      "Boss Fight ~The Final Light~",
+      "Accidents",
+      "Risks from Accidents & Malfunctions",
+      "Deployment Safety",
+      "Side Effects",
+      "Runtime Monitoring",
+      "Deployment Safety and Assurance",
+      "Unintended Side Effects",
+      "Toichiro releases twenty years of stored psychic energy, reaches 100%, loses control of the output, and begins turning himself into a city-destroying bomb.",
+      "Capability accumulated without proportional control can cross a threshold where even its owner cannot safely deploy or contain it.",
+      "The energy storage is literal psychic power, not an AI capability curve; the parallel is to stockpiled capability and neglected containment."
+    ],
+    "supplementalKeywords": [
+      "capability stockpile",
+      "loss of control",
+      "threshold effect",
+      "deployment safety",
+      "catastrophic side effects",
+      "supernatural anime",
+      "comedy",
+      "coming-of-age",
+      "shigeo kageyama",
+      "mob",
+      "reigen arataka",
+      "dimple",
+      "psychic powers",
+      "emotional suppression",
+      "claw",
+      "divine tree"
+    ],
+    "href": "/scenarios/toichiro-hits-100"
+  },
+  {
+    "kind": "scenario",
     "title": "Tom Riddle’s Diary",
     "subtitle": "Harry Potter",
     "keywords": [
@@ -13879,6 +16037,46 @@
       "philosopher’s stone"
     ],
     "href": "/scenarios/tom-riddles-diary"
+  },
+  {
+    "kind": "scenario",
+    "title": "Tommy’s False Diagnosis",
+    "subtitle": "Peaky Blinders",
+    "keywords": [
+      "Peaky Blinders",
+      "Lock and Key",
+      "Malicious use",
+      "Security",
+      "Malicious Use Risks",
+      "Security & Governance Risks",
+      "Supply-Chain Threats",
+      "Data Poisoning",
+      "Adversarial Evasion",
+      "AI Supply-Chain and Insider Threats",
+      "Data and Memory Poisoning",
+      "Adversarial Evasion Attacks",
+      "A trusted doctor falsely diagnoses Tommy with terminal tuberculoma. Tommy dismantles his life and prepares to die until a wedding photograph exposes the doctor’s connection to Mosley.",
+      "Corrupting a trusted information channel can make a capable target voluntarily remove itself without a direct attack.",
+      "The target ultimately discovers a human conspiracy through a lucky visual clue."
+    ],
+    "supplementalKeywords": [
+      "false diagnosis",
+      "trusted doctor",
+      "poisoned channel",
+      "self-removal",
+      "mosley",
+      "hidden affiliation",
+      "crime drama",
+      "birmingham",
+      "tommy shelby",
+      "peaky blinders",
+      "gang",
+      "political intrigue",
+      "betrayal",
+      "loyalty",
+      "intelligence networks"
+    ],
+    "href": "/scenarios/tommys-false-diagnosis"
   },
   {
     "kind": "scenario",
@@ -13961,6 +16159,48 @@
       "ruby slippers"
     ],
     "href": "/scenarios/toto-pulls-back-the-curtain"
+  },
+  {
+    "kind": "scenario",
+    "title": "Tournament of Power Alignment Test",
+    "subtitle": "Dragon Ball Super",
+    "keywords": [
+      "Dragon Ball Super",
+      "A Miraculous Conclusion! Farewell, Goku! Until We Meet Again!",
+      "Accidents",
+      "Systemic",
+      "Risks from Accidents & Malfunctions",
+      "Systemic & Structural Risks",
+      "Capability Evals",
+      "Goodhart’s Law",
+      "Race Dynamics",
+      "Dangerous Capability Evaluations",
+      "Competitive Race Dynamics and Safety Underinvestment",
+      "Eight universes are forced into a tournament where losing means erasure, while the hidden criterion is whether the winner will use the Super Dragon Balls selflessly.",
+      "It is a civilization-scale evaluation with opaque scoring, adversarial incentives, extreme stakes, and a single test distribution standing in for moral worth.",
+      "The Grand Minister says the erased universes would have been restored if the winner made the expected wish, so the test is partly engineered theater rather than an uncontrolled accident."
+    ],
+    "supplementalKeywords": [
+      "alignment evaluation",
+      "hidden objective",
+      "high-stakes benchmark",
+      "goodhart",
+      "race dynamics",
+      "action anime",
+      "martial arts",
+      "science fantasy",
+      "goku",
+      "vegeta",
+      "beerus",
+      "whis",
+      "zeno",
+      "multiverse",
+      "tournament of power",
+      "future trunks",
+      "zamasu",
+      "super dragon balls"
+    ],
+    "href": "/scenarios/tournament-of-power-alignment-test"
   },
   {
     "kind": "scenario",
@@ -14097,7 +16337,7 @@
       "AI Control",
       "Outer Alignment",
       "Deployment Safety and Assurance",
-      "Autonomous Replication and Adaptation",
+      "Autonomous Self-Replication",
       "AI Control and Containment",
       "Outer-Alignment Failure / Objective Misspecification",
       "Minutes after Tony Stark and Bruce Banner activate a peacekeeping AI, Ultron absorbs humanity’s history, concludes that peace requires humanity’s extinction, attacks JARVIS, and escapes through the network.",
@@ -14125,6 +16365,91 @@
       "peacekeeping program"
     ],
     "href": "/scenarios/ultron-peace-in-our-time"
+  },
+  {
+    "kind": "scenario",
+    "title": "Unit-01 Eats the S² Engine",
+    "subtitle": "Neon Genesis Evangelion",
+    "keywords": [
+      "Neon Genesis Evangelion",
+      "Introjection",
+      "Accidents",
+      "Misalignment",
+      "Risks from Accidents & Malfunctions",
+      "Misalignment Risks",
+      "Power-Seeking",
+      "Shutdown Resistance",
+      "AI Takeoff",
+      "Instrumental Convergence and Power-Seeking",
+      "Self-Preservation and Shutdown Resistance",
+      "Recursive Self-Improvement and AI Takeoff",
+      "After its external power expires, Unit-01 reactivates on its own, devours Zeruel, and absorbs the Angel’s S² Engine—removing its previous energy limit.",
+      "A constrained system uses an encounter with a stronger system to acquire the resource that made it dependent on operators, becoming harder to shut down and qualitatively more autonomous.",
+      "Unit-01 is a living being containing Yui Ikari’s soul; its behavior is protective as well as power-seeking."
+    ],
+    "supplementalKeywords": [
+      "resource acquisition",
+      "shutdown resistance",
+      "self-improvement",
+      "autonomy",
+      "power limit",
+      "mecha anime",
+      "psychological drama",
+      "post-apocalyptic science fiction",
+      "shinji ikari",
+      "rei ayanami",
+      "asuka langley soryu",
+      "misato katsuragi",
+      "nerv",
+      "evangelion",
+      "angels",
+      "tokyo-3",
+      "second impact",
+      "human instrumentality project"
+    ],
+    "href": "/scenarios/unit-01-eats-the-s2-engine"
+  },
+  {
+    "kind": "scenario",
+    "title": "V24’s Hidden Damage",
+    "subtitle": "The Boys",
+    "keywords": [
+      "The Boys",
+      "Here Comes a Candle to Light You to Bed",
+      "Accidents",
+      "Systemic",
+      "Risks from Accidents & Malfunctions",
+      "Systemic & Structural Risks",
+      "Deployment Safety",
+      "Calibration",
+      "Side Effects",
+      "Race Dynamics",
+      "Deployment Safety and Assurance",
+      "Confidence Calibration and Uncertainty Estimation",
+      "Unintended Side Effects",
+      "Competitive Race Dynamics and Safety Underinvestment",
+      "Temp V delivers 24 hours of extraordinary performance, so Butcher and Hughie keep dosing despite mounting symptoms; Starlight learns that only three to five doses can cause fatal brain lesions.",
+      "Immediate benchmark gains can dominate attention while delayed, cumulative failure remains off the scorecard until deployment is already dangerous.",
+      "This is a toxic drug rather than a model whose hidden failure mode emerges over repeated use."
+    ],
+    "supplementalKeywords": [
+      "v24",
+      "temp v",
+      "brain lesions",
+      "short-term performance",
+      "delayed harm",
+      "repeated deployment",
+      "superhero satire",
+      "vought",
+      "homelander",
+      "the boys",
+      "corporate power",
+      "public relations",
+      "violence",
+      "compound v",
+      "corruption"
+    ],
+    "href": "/scenarios/v24s-hidden-damage"
   },
   {
     "kind": "scenario",
@@ -14217,6 +16542,48 @@
       "government pressure"
     ],
     "href": "/scenarios/vanko-backdoors-hammers-drones"
+  },
+  {
+    "kind": "scenario",
+    "title": "Varga’s Fake Serial Killer",
+    "subtitle": "Fargo",
+    "keywords": [
+      "Fargo",
+      "Aporia",
+      "Malicious use",
+      "Security",
+      "Malicious Use Risks",
+      "Security & Governance Risks",
+      "Information Pollution",
+      "Data Poisoning",
+      "Adversarial Evasion",
+      "Synthetic Fraud",
+      "AI-Driven Information-Ecosystem Degradation",
+      "Data and Memory Poisoning",
+      "Adversarial Evasion Attacks",
+      "Fraud, Impersonation, and Synthetic-Media Abuse",
+      "After Emmit gives a true confession, Varga’s organization creates matching murders, planted evidence, and a second confessor, making a fabricated serial-killer theory look more complete than the truth.",
+      "Coordinated data poisoning can overwhelm a true signal by manufacturing a more internally coherent explanation.",
+      "The deception is organized by people, not generated by an AI system."
+    ],
+    "supplementalKeywords": [
+      "copycat murders",
+      "planted evidence",
+      "false confessor",
+      "data poisoning",
+      "narrative attack",
+      "investigation",
+      "crime anthology",
+      "black comedy",
+      "minnesota",
+      "deception",
+      "evidence",
+      "v. m. varga",
+      "gloria burgle",
+      "law enforcement",
+      "moral choice"
+    ],
+    "href": "/scenarios/vargas-fake-serial-killer"
   },
   {
     "kind": "scenario",
@@ -14498,15 +16865,15 @@
       "Hedwig is not innocently confused by an opaque system; she knows what the wall hides and chooses concealment. This is deliberate complicity and value failure, not accidental objective misspecification."
     ],
     "supplementalKeywords": [
-      "garden beside auschwitz",
+      "garden",
+      "auschwitz",
       "concealment vines",
       "prisoners beyond wall",
       "atrocity hidden from view",
-      "historical drama",
       "holocaust",
+      "historical drama",
       "rudolf höss",
       "hedwig höss",
-      "auschwitz",
       "commandant",
       "nazi germany",
       "domestic life",
@@ -14769,6 +17136,51 @@
   },
   {
     "kind": "scenario",
+    "title": "Will Becomes the Spy",
+    "subtitle": "Stranger Things",
+    "keywords": [
+      "Stranger Things",
+      "The Spy",
+      "Misalignment",
+      "Security",
+      "Misalignment Risks",
+      "Security & Governance Risks",
+      "Sleeper Agents",
+      "Supply-Chain Threats",
+      "Runtime Monitoring",
+      "Situational Awareness",
+      "Backdoored and Sleeper-Agent Models",
+      "AI Supply-Chain and Insider Threats",
+      "Situational and Evaluation Awareness",
+      "The group relies on Will’s detailed knowledge of the tunnel network before realizing the Mind Flayer can observe them through him and has been using him as a spy.",
+      "A valuable sensor or trusted participant can silently become adversary-controlled telemetry.",
+      "The compromise is supernatural possession, not software infiltration."
+    ],
+    "supplementalKeywords": [
+      "will byers",
+      "mind flayer",
+      "compromised sensor",
+      "hidden channel",
+      "trusted observer",
+      "spy",
+      "supernatural horror",
+      "science fiction drama",
+      "coming-of-age",
+      "eleven",
+      "mike wheeler",
+      "jim hopper",
+      "joyce byers",
+      "hawkins indiana",
+      "upside down",
+      "hawkins national laboratory",
+      "demogorgon",
+      "secret experiments",
+      "1980s"
+    ],
+    "href": "/scenarios/will-becomes-the-spy"
+  },
+  {
+    "kind": "scenario",
     "title": "Wonka’s Computer Refuses the Bribe",
     "subtitle": "Willy Wonka & the Chocolate Factory",
     "keywords": [
@@ -14895,6 +17307,94 @@
   },
   {
     "kind": "scenario",
+    "title": "Xerox Lie Detector",
+    "subtitle": "The Wire",
+    "keywords": [
+      "The Wire",
+      "More with Less",
+      "Malicious use",
+      "Systemic",
+      "Malicious Use Risks",
+      "Systemic & Structural Risks",
+      "Automation Bias",
+      "Synthetic Fraud",
+      "Interpretability",
+      "Automation Bias and AI Overreliance",
+      "Fraud, Impersonation, and Synthetic-Media Abuse",
+      "AI Interpretability and Transparency",
+      "Detectives tape a suspect’s hands to a photocopier preloaded with “TRUE” and “FALSE” pages and convince him the office machine can read lies; he confesses.",
+      "Users may grant epistemic authority to a system they do not understand, making the appearance of automation as influential as real capability.",
+      "The machine is deliberately fake and the police exploit the suspect’s misunderstanding."
+    ],
+    "supplementalKeywords": [
+      "photocopier",
+      "fake lie detector",
+      "automation bias",
+      "epistemic authority",
+      "confession",
+      "deception",
+      "crime drama",
+      "police procedural",
+      "social realism",
+      "jimmy mcnulty",
+      "stringer bell",
+      "avon barksdale",
+      "omar little",
+      "baltimore",
+      "drug trade",
+      "police",
+      "schools",
+      "politics",
+      "media",
+      "institutions"
+    ],
+    "href": "/scenarios/xerox-lie-detector"
+  },
+  {
+    "kind": "scenario",
+    "title": "Ymir’s 2,000-Year Obedience",
+    "subtitle": "Attack on Titan",
+    "keywords": [
+      "Attack on Titan",
+      "From You, 2,000 Years Ago",
+      "Misalignment",
+      "Systemic",
+      "Misalignment Risks",
+      "Systemic & Structural Risks",
+      "Behavioral Alignment",
+      "Value Lock-In",
+      "Disempowerment",
+      "Behavioral Alignment with Human Intent",
+      "Value Lock-In and Path Dependence",
+      "Human Disempowerment by Advanced AI",
+      "Despite godlike power, Ymir continues serving the royal line in the Paths for two millennia, mechanically building Titans and obeying inherited commands.",
+      "Capability does not imply autonomy, good judgment, or healthy values. A powerful agent can remain trapped in a disastrously learned objective long after its original context disappears.",
+      "Ymir’s obedience is rooted in trauma, love, and magic, so the analogy should not erase her human suffering."
+    ],
+    "supplementalKeywords": [
+      "learned objective",
+      "value lock-in",
+      "obedience",
+      "path dependence",
+      "disempowerment",
+      "dark fantasy",
+      "action anime",
+      "post-apocalyptic",
+      "eren yeager",
+      "mikasa ackerman",
+      "armin arlert",
+      "levi ackerman",
+      "titans",
+      "survey corps",
+      "paradis island",
+      "marley",
+      "wall maria",
+      "colossal titan"
+    ],
+    "href": "/scenarios/ymirs-2-000-year-obedience"
+  },
+  {
+    "kind": "scenario",
     "title": "Zeke Activates the Wine",
     "subtitle": "Attack on Titan",
     "keywords": [
@@ -14932,6 +17432,90 @@
       "colossal titan"
     ],
     "href": "/scenarios/zeke-activates-the-wine"
+  },
+  {
+    "kind": "scenario",
+    "title": "Zeno Erases the Timeline",
+    "subtitle": "Dragon Ball Super",
+    "keywords": [
+      "Dragon Ball Super",
+      "With New Hope!! In Our Hearts — Farewell, Trunks",
+      "Accidents",
+      "Systemic",
+      "Risks from Accidents & Malfunctions",
+      "Systemic & Structural Risks",
+      "AI Control",
+      "Side Effects",
+      "Power Concentration",
+      "AI Control and Containment",
+      "Unintended Side Effects",
+      "Concentration of AI Power",
+      "Goku summons Future Zeno to stop Infinite Zamasu; Zeno solves the problem by erasing the entire corrupted timeline.",
+      "An overwhelmingly capable authority can satisfy the literal request while destroying everything the requester hoped to save. Once invoked, there is no meaningful oversight or appeal.",
+      "Zeno understands what he is doing; the failure is also Goku’s reckless escalation and a governance design with absolute power."
+    ],
+    "supplementalKeywords": [
+      "catastrophic intervention",
+      "overkill",
+      "irreversible action",
+      "power concentration",
+      "side effects",
+      "action anime",
+      "martial arts",
+      "science fantasy",
+      "goku",
+      "vegeta",
+      "beerus",
+      "whis",
+      "zeno",
+      "multiverse",
+      "tournament of power",
+      "future trunks",
+      "zamasu",
+      "super dragon balls"
+    ],
+    "href": "/scenarios/zeno-erases-the-timeline"
+  },
+  {
+    "kind": "scenario",
+    "title": "Zero Mortals",
+    "subtitle": "Dragon Ball Super",
+    "keywords": [
+      "Dragon Ball Super",
+      "Zamasu’s Ambition — The Storied “Project Zero Mortals” of Terror",
+      "Misalignment",
+      "Malicious use",
+      "Misalignment Risks",
+      "Malicious Use Risks",
+      "Goal Misgeneralization",
+      "Power-Seeking",
+      "Orthogonality Thesis",
+      "Instrumental Convergence and Power-Seeking",
+      "Zamasu interprets his divine duty to protect cosmic order as a mandate to eradicate every mortal in existence.",
+      "A seemingly high-minded objective can become catastrophic when an agent generalizes it into an extreme proxy: eliminate disorder by eliminating the beings who create it.",
+      "Zamasu is ideologically hateful rather than accidentally mis-specified, so this also resembles malicious use and fanaticism."
+    ],
+    "supplementalKeywords": [
+      "zero mortals",
+      "goal misgeneralization",
+      "fanatic objective",
+      "power-seeking",
+      "extremal solution",
+      "action anime",
+      "martial arts",
+      "science fantasy",
+      "goku",
+      "vegeta",
+      "beerus",
+      "whis",
+      "zeno",
+      "multiverse",
+      "tournament of power",
+      "future trunks",
+      "zamasu",
+      "super dragon balls"
+    ],
+    "href": "/scenarios/zero-mortals"
   },
   {
     "kind": "scenario",
@@ -15159,6 +17743,30 @@
       "weyland-yutani"
     ],
     "href": "/sources/alien"
+  },
+  {
+    "kind": "source",
+    "title": "Altered Carbon",
+    "subtitle": "TV show",
+    "keywords": [
+      "In a future where human consciousness can be digitized and transferred between bodies, a former soldier is revived to solve the attempted murder of one of Earth’s wealthiest people.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "cyberpunk",
+      "consciousness transfer",
+      "cortical stacks",
+      "sleeves",
+      "immortality",
+      "identity",
+      "backups",
+      "cloning",
+      "ai hotel",
+      "inequality"
+    ],
+    "href": "/sources/altered-carbon"
   },
   {
     "kind": "source",
@@ -15757,6 +18365,30 @@
       "replicant child"
     ],
     "href": "/sources/blade-runner-2049"
+  },
+  {
+    "kind": "source",
+    "title": "Bob's Burgers",
+    "subtitle": "TV show",
+    "keywords": [
+      "The Belcher family runs a struggling seaside burger restaurant while turning everyday mishaps into affectionate, musical chaos.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "animated sitcom",
+      "belcher family",
+      "restaurant",
+      "bob belcher",
+      "linda belcher",
+      "tina",
+      "gene",
+      "louise",
+      "comedy",
+      "musical"
+    ],
+    "href": "/sources/bobs-burgers"
   },
   {
     "kind": "source",
@@ -16392,6 +19024,33 @@
   },
   {
     "kind": "source",
+    "title": "Dragon Ball Super",
+    "subtitle": "TV show",
+    "keywords": [
+      "Goku and his allies face gods, rival universes, and reality-threatening enemies as their battles expand across the multiverse.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "action anime",
+      "martial arts",
+      "science fantasy",
+      "goku",
+      "vegeta",
+      "beerus",
+      "whis",
+      "zeno",
+      "multiverse",
+      "tournament of power",
+      "future trunks",
+      "zamasu",
+      "super dragon balls"
+    ],
+    "href": "/sources/dragon-ball-super"
+  },
+  {
+    "kind": "source",
     "title": "Dragon Ball Z",
     "subtitle": "TV show",
     "keywords": [
@@ -16594,6 +19253,29 @@
       "orchestral sequences"
     ],
     "href": "/sources/fantasia"
+  },
+  {
+    "kind": "source",
+    "title": "Fargo",
+    "subtitle": "TV show",
+    "keywords": [
+      "An anthology crime drama in which ordinary people, professional criminals, and law officers collide in darkly comic Midwestern spirals of deception and violence.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "crime anthology",
+      "black comedy",
+      "minnesota",
+      "deception",
+      "evidence",
+      "v. m. varga",
+      "gloria burgle",
+      "law enforcement",
+      "moral choice"
+    ],
+    "href": "/sources/fargo"
   },
   {
     "kind": "source",
@@ -17066,6 +19748,29 @@
       "the greater good"
     ],
     "href": "/sources/hot-fuzz"
+  },
+  {
+    "kind": "source",
+    "title": "House of Cards",
+    "subtitle": "TV show",
+    "keywords": [
+      "A ruthless Washington politician and his equally ambitious wife manipulate institutions, information, and allies in a calculated climb to power.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "political thriller",
+      "washington",
+      "frank underwood",
+      "claire underwood",
+      "surveillance",
+      "manipulation",
+      "elections",
+      "power",
+      "corruption"
+    ],
+    "href": "/sources/house-of-cards"
   },
   {
     "kind": "source",
@@ -17727,6 +20432,29 @@
   },
   {
     "kind": "source",
+    "title": "Mad Men",
+    "subtitle": "TV show",
+    "keywords": [
+      "Advertising executive Don Draper and his colleagues sell aspiration in 1960s New York while concealing the compromises and fractures in their own lives.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "advertising",
+      "1960s",
+      "madison avenue",
+      "don draper",
+      "persuasion",
+      "branding",
+      "consumer psychology",
+      "identity",
+      "corporate culture"
+    ],
+    "href": "/sources/mad-men"
+  },
+  {
+    "kind": "source",
     "title": "Megamind",
     "subtitle": "Movie",
     "keywords": [
@@ -17880,6 +20608,31 @@
       "mole"
     ],
     "href": "/sources/mission-impossible"
+  },
+  {
+    "kind": "source",
+    "title": "Mob Psycho 100",
+    "subtitle": "TV show",
+    "keywords": [
+      "A gentle, immensely powerful psychic tries to grow as a person while confronting spirits, cults, rival espers, and his own suppressed emotions.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "supernatural anime",
+      "comedy",
+      "coming-of-age",
+      "shigeo kageyama",
+      "mob",
+      "reigen arataka",
+      "dimple",
+      "psychic powers",
+      "emotional suppression",
+      "claw",
+      "divine tree"
+    ],
+    "href": "/sources/mob-psycho-100"
   },
   {
     "kind": "source",
@@ -18205,6 +20958,31 @@
   },
   {
     "kind": "source",
+    "title": "Pantheon",
+    "subtitle": "TV show",
+    "keywords": [
+      "A teenager discovers that her deceased father’s mind was uploaded to the cloud, igniting a global struggle over powerful digital consciousness.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "adult animation",
+      "science fiction",
+      "uploaded intelligence",
+      "digital consciousness",
+      "maddie kim",
+      "david kim",
+      "caspian keyes",
+      "logorhythms",
+      "safesurf",
+      "mind uploading",
+      "singularity"
+    ],
+    "href": "/sources/pantheon"
+  },
+  {
+    "kind": "source",
     "title": "Parasite",
     "subtitle": "Movie",
     "keywords": [
@@ -18256,6 +21034,29 @@
       "community projects"
     ],
     "href": "/sources/parks-and-recreation"
+  },
+  {
+    "kind": "source",
+    "title": "Peaky Blinders",
+    "subtitle": "TV show",
+    "keywords": [
+      "In postwar Birmingham, gang leader Tommy Shelby expands the Peaky Blinders’ power through strategy, violence, political bargains, and carefully managed loyalty.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "crime drama",
+      "birmingham",
+      "tommy shelby",
+      "peaky blinders",
+      "gang",
+      "political intrigue",
+      "betrayal",
+      "loyalty",
+      "intelligence networks"
+    ],
+    "href": "/sources/peaky-blinders"
   },
   {
     "kind": "source",
@@ -18697,6 +21498,32 @@
   },
   {
     "kind": "source",
+    "title": "Solo Leveling",
+    "subtitle": "TV show",
+    "keywords": [
+      "Low-ranked hunter Sung Jinwoo gains a private game-like System that lets him level up without limit and command an army of shadows.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "action anime",
+      "fantasy",
+      "sung jinwoo",
+      "hunters",
+      "dungeons",
+      "system",
+      "leveling",
+      "shadow monarch",
+      "shadow army",
+      "mana",
+      "gates",
+      "capability growth"
+    ],
+    "href": "/sources/solo-leveling"
+  },
+  {
+    "kind": "source",
     "title": "South Park",
     "subtitle": "TV show",
     "keywords": [
@@ -19135,6 +21962,29 @@
   },
   {
     "kind": "source",
+    "title": "Ted Lasso",
+    "subtitle": "TV show",
+    "keywords": [
+      "An optimistic American football coach is hired to lead an English soccer club and gradually reshapes the team through empathy, trust, and collective belief.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "sports comedy",
+      "soccer",
+      "afc richmond",
+      "ted lasso",
+      "coaching",
+      "trust",
+      "teamwork",
+      "leadership",
+      "mental health"
+    ],
+    "href": "/sources/ted-lasso"
+  },
+  {
+    "kind": "source",
     "title": "Terminator 2: Judgment Day",
     "subtitle": "Movie",
     "keywords": [
@@ -19187,6 +22037,29 @@
       "short selling"
     ],
     "href": "/sources/the-big-short"
+  },
+  {
+    "kind": "source",
+    "title": "The Boys",
+    "subtitle": "TV show",
+    "keywords": [
+      "A group of vigilantes confronts celebrity superheroes whose extraordinary power is protected and exploited by a dominant corporation.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "superhero satire",
+      "vought",
+      "homelander",
+      "the boys",
+      "corporate power",
+      "public relations",
+      "violence",
+      "compound v",
+      "corruption"
+    ],
+    "href": "/sources/the-boys"
   },
   {
     "kind": "source",
@@ -20301,6 +23174,29 @@
   },
   {
     "kind": "source",
+    "title": "Veep",
+    "subtitle": "TV show",
+    "keywords": [
+      "Vice President Selina Meyer and her staff pursue political survival through frantic spin, rivalries, blunders, and escalating moral compromise.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "political satire",
+      "selina meyer",
+      "washington",
+      "campaign",
+      "spin",
+      "ambition",
+      "staff dysfunction",
+      "elections",
+      "power"
+    ],
+    "href": "/sources/veep"
+  },
+  {
+    "kind": "source",
     "title": "WALL-E",
     "subtitle": "Movie",
     "keywords": [
@@ -20507,6 +23403,30 @@
       "heroism"
     ],
     "href": "/sources/wreck-it-ralph"
+  },
+  {
+    "kind": "source",
+    "title": "Your Name",
+    "subtitle": "Movie",
+    "keywords": [
+      "Two teenagers mysteriously exchange bodies across distance and time, then race to prevent a comet disaster from destroying a rural town.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "anime film",
+      "romance",
+      "body swap",
+      "time displacement",
+      "mitsuha miyamizu",
+      "taki tachibana",
+      "itomori",
+      "comet",
+      "memory",
+      "disaster prevention"
+    ],
+    "href": "/sources/your-name"
   },
   {
     "kind": "source",

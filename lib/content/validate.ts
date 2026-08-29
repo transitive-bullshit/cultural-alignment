@@ -34,17 +34,31 @@ type EntityCollectionName =
 type IdentifiedRecord = {
   readonly id: string
   readonly slug: string
+  readonly shortName?: string
+  readonly title?: string
 }
+
+const collectionLabels = {
+  scenarios: 'scenario',
+  sources: 'source',
+  riskFamilies: 'risk family',
+  concepts: 'safety concept'
+} as const satisfies Record<EntityCollectionName, string>
 
 export function validateContentSnapshot(input: unknown): ContentSnapshot {
   const result = contentSnapshotSchema.safeParse(input)
 
   if (!result.success) {
-    const issues = result.error.issues.map<ContentValidationIssue>((issue) => ({
-      code: 'invalid-schema',
-      path: formatPath(issue.path),
-      message: issue.message
-    }))
+    const issues = result.error.issues.map<ContentValidationIssue>((issue) => {
+      const record = unknownRecordAtPath(input, issue.path)
+      return {
+        code: 'invalid-schema',
+        path: formatPath(issue.path),
+        message: record
+          ? `${issue.message}; ${formatRecordReference(record.collection, record)}`
+          : issue.message
+      }
+    })
 
     throw new ContentValidationError(
       'Content snapshot schema validation failed',
@@ -88,7 +102,7 @@ function appendUniquenessIssues(
       issues.push({
         code: 'duplicate-id',
         path: `${collectionName}[${index}].id`,
-        message: `Duplicate id ${JSON.stringify(record.id)}; first declared at ${collectionName}[${firstIdIndex}].id`
+        message: `Duplicate id ${JSON.stringify(record.id)} for ${formatRecordReference(collectionName, record)}; first declared by ${formatRecordReference(collectionName, records[firstIdIndex]!)} at ${collectionName}[${firstIdIndex}].id`
       })
     }
 
@@ -100,7 +114,7 @@ function appendUniquenessIssues(
       issues.push({
         code: 'duplicate-slug',
         path: `${collectionName}[${index}].slug`,
-        message: `Duplicate slug ${JSON.stringify(record.slug)}; first declared at ${collectionName}[${firstSlugIndex}].slug`
+        message: `Duplicate slug ${JSON.stringify(record.slug)} for ${formatRecordReference(collectionName, record)}; first declared by ${formatRecordReference(collectionName, records[firstSlugIndex]!)} at ${collectionName}[${firstSlugIndex}].slug`
       })
     }
   })
@@ -125,13 +139,13 @@ function appendRelationIssues(
       issues.push({
         code: 'missing-relation',
         path: `scenarios[${scenarioIndex}].sourceId`,
-        message: `Unknown source id ${JSON.stringify(scenario.sourceId)}`
+        message: `${formatRecordReference('scenarios', scenario)} references unknown source id ${JSON.stringify(scenario.sourceId)}`
       })
     } else if (scenario.episode && source.sourceType !== 'tv-show') {
       issues.push({
         code: 'invalid-source-episode',
         path: `scenarios[${scenarioIndex}].episode`,
-        message: `Episode metadata requires a TV show source; ${JSON.stringify({ id: source.id, title: source.title })} is ${source.sourceType}`
+        message: `${formatRecordReference('scenarios', scenario)} has episode metadata, but ${formatRecordReference('sources', source)} is ${source.sourceType}`
       })
     }
 
@@ -140,7 +154,7 @@ function appendRelationIssues(
         issues.push({
           code: 'missing-relation',
           path: `scenarios[${scenarioIndex}].riskFamilyIds[${relationIndex}]`,
-          message: `Unknown risk-family id ${JSON.stringify(riskFamilyId)}`
+          message: `${formatRecordReference('scenarios', scenario)} references unknown risk-family id ${JSON.stringify(riskFamilyId)}`
         })
       }
     })
@@ -150,7 +164,7 @@ function appendRelationIssues(
         issues.push({
           code: 'missing-relation',
           path: `scenarios[${scenarioIndex}].conceptIds[${relationIndex}]`,
-          message: `Unknown concept id ${JSON.stringify(conceptId)}`
+          message: `${formatRecordReference('scenarios', scenario)} references unknown safety-concept id ${JSON.stringify(conceptId)}`
         })
       }
     })
@@ -163,10 +177,59 @@ function appendRelationIssues(
       issues.push({
         code: 'missing-relation',
         path: `sources[${sourceIndex}].relatedSourceIds[${relationIndex}]`,
-        message: `Unknown source id ${JSON.stringify(relatedSourceId)}`
+        message: `${formatRecordReference('sources', source)} references unknown source id ${JSON.stringify(relatedSourceId)}`
       })
     })
   })
+}
+
+function formatRecordReference(
+  collection: EntityCollectionName,
+  record: {
+    readonly id?: unknown
+    readonly shortName?: unknown
+    readonly title?: unknown
+  }
+) {
+  const title =
+    typeof record.title === 'string'
+      ? record.title.trim()
+      : typeof record.shortName === 'string'
+        ? record.shortName.trim()
+        : ''
+  const id = typeof record.id === 'string' ? record.id : null
+  const label = title
+    ? `${collectionLabels[collection]} ${JSON.stringify(title)}`
+    : collectionLabels[collection]
+
+  return id ? `${label} (ID: ${id})` : label
+}
+
+function unknownRecordAtPath(input: unknown, path: readonly PropertyKey[]) {
+  const [collection, index] = path
+  if (
+    typeof collection !== 'string' ||
+    !Object.hasOwn(collectionLabels, collection) ||
+    typeof index !== 'number' ||
+    !input ||
+    typeof input !== 'object'
+  ) {
+    return null
+  }
+
+  const records = (input as Record<string, unknown>)[collection]
+  if (!Array.isArray(records)) return null
+  const record: unknown = records[index]
+  if (!record || typeof record !== 'object') return null
+
+  return {
+    ...(record as {
+      readonly id?: unknown
+      readonly shortName?: unknown
+      readonly title?: unknown
+    }),
+    collection: collection as EntityCollectionName
+  }
 }
 
 function formatPath(path: readonly PropertyKey[]) {
