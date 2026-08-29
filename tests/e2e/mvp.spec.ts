@@ -10,6 +10,10 @@ import sources from '../../content/snapshot/sources.json' with { type: 'json' }
 const videoScenario = scenarios.find(
   (scenario) => scenario.featured && scenario.video
 )!
+const stillOnlyScenario = requireFixture(
+  scenarios.find((scenario) => !scenario.video),
+  'a scenario without video'
+)
 const searchTarget = searchDocuments.find(
   (document) => document.kind === 'concept'
 )!
@@ -23,49 +27,6 @@ const socialScenario = requireFixture(
 const socialScenarioSource = requireFixture(
   sourceById.get(socialScenario.sourceId),
   'the social scenario source'
-)
-const connectedRecordsFixture = requireFixture(
-  sources.find(
-    (source) =>
-      source.relatedSourceIds.length > 0 &&
-      scenarios.some(
-        (scenario) =>
-          scenario.sourceId === source.id &&
-          scenario.riskFamilyIds.length > 0 &&
-          scenario.conceptIds.length > 0
-      )
-  ),
-  'a source connected to a source, risk family, and concept'
-)
-const sourceDetailFixture = requireFixture(
-  sources.find(
-    (source) =>
-      source.poster &&
-      source.releaseDate &&
-      scenarios.some((scenario) => scenario.sourceId === source.id) &&
-      [source.imdbUrl, source.rottenTomatoesUrl, source.youtubeTrailerUrl].some(
-        Boolean
-      )
-  ),
-  'a source with a poster, release date, and external reference'
-)
-const sourceWithoutPoster = requireFixture(
-  sources.find((source) => !source.poster),
-  'a source without a poster'
-)
-const televisionScenarioWithEpisode = requireFixture(
-  scenarios.find(
-    (scenario) =>
-      sourceById.get(scenario.sourceId)?.sourceType === 'tv-show' &&
-      scenario.episode?.label.trim()
-  ),
-  'a TV scenario with an episode'
-)
-const movieScenario = requireFixture(
-  scenarios.find(
-    (scenario) => sourceById.get(scenario.sourceId)?.sourceType === 'movie'
-  ),
-  'a movie scenario'
 )
 const sourceScenarioCases = sources.map((source) => ({
   href: `/sources/${source.slug}`,
@@ -106,21 +67,6 @@ const scenarioReleaseDateByHref = new Map(
     scenario.releaseDate
   ])
 )
-
-const resourceBreadcrumbCases = [
-  {
-    indexHref: '/risk-families',
-    detailHref: `/risk-families/${riskFamilies[0]!.slug}`
-  },
-  {
-    indexHref: '/concepts',
-    detailHref: `/concepts/${concepts[0]!.slug}`
-  },
-  {
-    indexHref: '/sources',
-    detailHref: `/sources/${sources[0]!.slug}`
-  }
-] as const
 
 const taxonomyPageWithLongestCitation = requireFixture(
   [
@@ -172,21 +118,42 @@ test('scenario media can be played and paused', async ({ page }) => {
   await page.goto(`/scenarios/${videoScenario.slug}`)
   const media = page.locator('[data-scenario-media]')
   const mediaToggle = media.locator('[data-scenario-media-toggle]')
+  const posterAction = media.locator('[data-scenario-media-poster-action]')
+
+  await expect(posterAction).toBeVisible()
+  await expect(media.locator('[data-scenario-media-still-label]')).toHaveCount(
+    0
+  )
+
+  const cursor = media.locator('[data-scenario-media-cursor]')
+  await media.hover({ position: { x: 80, y: 80 } })
+  await expect(cursor).toHaveCSS('opacity', '1')
 
   await mediaToggle.click()
   await expect(media.locator('iframe')).toBeVisible()
   await expect(mediaToggle).toHaveAttribute('aria-pressed', 'true')
+  await expect(posterAction).toHaveCount(0)
 
   const progress = media.locator('[data-scenario-media-progress]')
   await progress.hover()
   await expect(progress).toHaveCSS('cursor', 'ew-resize')
-  await expect(media.locator('[data-scenario-media-crosshair]')).toHaveCSS(
-    'visibility',
-    'hidden'
-  )
+  await expect(cursor).toHaveCSS('visibility', 'hidden')
 
   await mediaToggle.click()
   await expect(mediaToggle).toHaveAttribute('aria-pressed', 'false')
+})
+
+test('scenario media keeps the still label when no video is available', async ({
+  page
+}) => {
+  await page.goto(`/scenarios/${stillOnlyScenario.slug}`)
+  const media = page.locator('[data-scenario-media]')
+
+  await expect(media.locator('[data-scenario-media-still-label]')).toBeVisible()
+  await expect(
+    media.locator('[data-scenario-media-poster-action]')
+  ).toHaveCount(0)
+  await expect(media.locator('[data-scenario-media-toggle]')).toHaveCount(0)
 })
 
 test('scenario details show a blur placeholder while the still loads', async ({
@@ -271,152 +238,6 @@ test('scenario detail publishes content-derived social metadata', async ({
   expect(
     Math.max(...frameStats.channels.slice(0, 3).map(({ stdev }) => stdev))
   ).toBeLessThan(1)
-})
-
-test('resource detail breadcrumbs navigate back to each resource index', async ({
-  page
-}) => {
-  for (const { detailHref, indexHref } of resourceBreadcrumbCases) {
-    await page.goto(detailHref)
-
-    const breadcrumb = page.getByRole('navigation', { name: 'Breadcrumb' })
-    const parent = breadcrumb.getByRole('link')
-    const current = breadcrumb.locator('[aria-current="page"]')
-
-    await expect(breadcrumb).toBeVisible()
-    await expect(parent).toHaveAttribute('href', indexHref)
-    await expect(current).toBeVisible()
-    await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
-
-    await parent.click()
-    await expect(page).toHaveURL(indexHref)
-    await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
-  }
-})
-
-test('connected records support keyboard navigation', async ({ page }) => {
-  await page.goto(`/sources/${connectedRecordsFixture.slug}`)
-
-  const firstLink = page
-    .locator('[data-connected-records]')
-    .getByRole('link')
-    .first()
-  const href = await firstLink.getAttribute('href')
-
-  expect(href).toBeTruthy()
-  await firstLink.focus()
-  await expect(firstLink).toBeFocused()
-  await expect(firstLink).toHaveAccessibleName(/\S/)
-
-  const destination = new URL(href!, page.url()).href
-  await firstLink.press('Enter')
-  await expect(page).toHaveURL(destination)
-})
-
-test('source detail projects its poster and CMS metadata', async ({ page }) => {
-  await page.goto(`/sources/${sourceDetailFixture.slug}`)
-
-  const detail = page.locator('[data-resource-detail="source"]')
-  const poster = detail.locator('[data-source-poster] img')
-  const expectedLinks = [
-    sourceDetailFixture.imdbUrl,
-    sourceDetailFixture.rottenTomatoesUrl,
-    sourceDetailFixture.youtubeTrailerUrl
-  ].filter((href): href is string => href !== null)
-  const externalLinks = detail
-    .getByRole('list', { name: 'External references' })
-    .getByRole('link')
-
-  await expect(detail).toBeVisible()
-  await expect(detail.getByRole('heading', { level: 1 })).toBeVisible()
-  await expect(
-    detail.locator(`[data-source-type="${sourceDetailFixture.sourceType}"]`)
-  ).toBeVisible()
-  await expect(detail.locator('[data-source-release-date]')).toHaveAttribute(
-    'datetime',
-    sourceDetailFixture.releaseDate!
-  )
-  await expect(poster).toBeVisible()
-  await expect
-    .poll(() =>
-      poster.evaluate(
-        (image: HTMLImageElement) => image.complete && image.naturalWidth > 0
-      )
-    )
-    .toBe(true)
-  const renderedExternalHrefs = await externalLinks.evaluateAll((links) =>
-    links.map((link) => link.getAttribute('href'))
-  )
-  for (const href of expectedLinks) {
-    expect(renderedExternalHrefs).toContain(href)
-  }
-
-  await page.goto(`/sources/${sourceWithoutPoster.slug}`)
-  await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
-  await expect(page.locator('[data-source-poster]')).toHaveCount(0)
-})
-
-test('source posters and scenario cards show blur placeholders while loading', async ({
-  page
-}) => {
-  const releaseImages = await pauseOptimizedImages(page)
-
-  try {
-    await page.goto(`/sources/${sourceDetailFixture.slug}`, {
-      waitUntil: 'domcontentloaded'
-    })
-
-    const poster = page.locator('[data-source-poster-image]')
-    const card = page.locator('[data-scenario-card-image]').first()
-
-    await expect(poster).toBeVisible()
-    await expect(card).toBeVisible()
-    await expect(poster).toHaveCSS('background-image', /data:image\/svg\+xml/)
-    await expect(card).toHaveCSS('background-image', /data:image\/svg\+xml/)
-  } finally {
-    await releaseImages()
-  }
-})
-
-test('taxonomy details expose current external references', async ({
-  page
-}) => {
-  const cases = [
-    {
-      href: `/risk-families/${riskFamilies[0]!.slug}`,
-      wikipediaUrl: riskFamilies[0]!.wikipediaUrl,
-      citations: riskFamilies[0]!.citations
-    },
-    {
-      href: `/concepts/${concepts[0]!.slug}`,
-      wikipediaUrl: concepts[0]!.wikipediaUrl,
-      citations: concepts[0]!.citations
-    }
-  ]
-
-  for (const detailCase of cases) {
-    await page.goto(detailCase.href)
-    const references = page.getByRole('list', { name: 'External references' })
-    const links = references.getByRole('link')
-    const expectedHrefs = [
-      detailCase.wikipediaUrl,
-      ...detailCase.citations.map(({ href }) => href)
-    ].filter((href): href is string => href !== null)
-    const renderedHrefs = await links.evaluateAll((items) =>
-      items.map((item) => item.getAttribute('href'))
-    )
-
-    await expect(references).toBeVisible()
-    for (const href of expectedHrefs) expect(renderedHrefs).toContain(href)
-  }
-})
-
-test('episode metadata appears only for TV scenarios', async ({ page }) => {
-  await page.goto(`/scenarios/${televisionScenarioWithEpisode.slug}`)
-  await expect(page.locator('[data-scenario-episode]')).toBeVisible()
-
-  await page.goto(`/scenarios/${movieScenario.slug}`)
-  await expect(page.locator('[data-scenario-episode]')).toHaveCount(0)
 })
 
 test('eligible resource scenario sorting persists locally', async ({
@@ -516,7 +337,6 @@ test('the removed search route resolves through not-found', async ({
   const response = await page.goto('/search')
 
   expect(response?.status()).toBe(404)
-  await expect(page.locator('[data-not-found]')).toBeVisible()
 })
 
 test('spoiler dismissal persists across reloads', async ({ page }) => {

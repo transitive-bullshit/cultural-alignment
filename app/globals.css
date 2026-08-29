@@ -21,6 +21,7 @@
   --border: #d8cbb8;
   --input: #d8cbb8;
   --ring: #a66f33;
+  --brand-accent: #ff4d1f;
   --radius: 0.5rem;
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -44,6 +45,7 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+  --color-brand-accent: var(--brand-accent);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -88,7 +90,7 @@ body:has([data-site-footer='hidden']) [data-site-footer-root] {
   --proto-muted-ink: #71695f;
   --proto-stage: #171713;
   --proto-stage-ink: #f4ecdd;
-  --proto-electric: #ff4d1f;
+  --proto-electric: var(--brand-accent);
   --proto-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   min-height: 100svh;
   color: var(--proto-ink);

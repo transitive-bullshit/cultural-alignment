@@ -1,0 +1,13 @@
+.copy {
+  position: relative;
+}
+
+.layoutCopy {
+  visibility: hidden;
+}
+
+.visualCopy {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}

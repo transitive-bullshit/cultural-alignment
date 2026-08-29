@@ -1,15 +1,25 @@
 'use client'
 
-import { Fragment, useDeferredValue, useEffect, useMemo, useState } from 'react'
+import {
+  Fragment,
+  useDeferredValue,
+  useEffect,
+  useMemo,
+  useRef,
+  useState
+} from 'react'
 import { useRouter } from 'next/navigation'
+import { XIcon } from 'lucide-react'
 
+import { Button } from '@/components/ui/button'
 import {
   Command,
   CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
-  CommandList
+  CommandList,
+  CommandSeparator
 } from '@/components/ui/command'
 import {
   Dialog,
@@ -24,8 +34,10 @@ import {
   searchDocumentGroups,
   splitSearchTextMatches
 } from '@/lib/content/search'
+import { cn } from '@/lib/utils'
 
 import type { SearchLoadState } from './global-search'
+import styles from './global-search-dialog.module.css'
 
 export type GlobalSearchDialogProps = {
   readonly documents: readonly SearchDocument[]
@@ -41,6 +53,8 @@ export function GlobalSearchDialog({
   open
 }: GlobalSearchDialogProps) {
   const router = useRouter()
+  const inputRef = useRef<HTMLInputElement>(null)
+  const resultsRef = useRef<HTMLDivElement>(null)
   const [query, setQuery] = useState('')
   const deferredQuery = useDeferredValue(query)
   const groups = useMemo(
@@ -63,6 +77,16 @@ export function GlobalSearchDialog({
     router.prefetch(href)
   }
 
+  function handleQueryChange(nextQuery: string) {
+    resultsRef.current?.scrollTo({ top: 0 })
+    setQuery(nextQuery)
+  }
+
+  function handleClear() {
+    handleQueryChange('')
+    inputRef.current?.focus()
+  }
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
@@ -78,59 +102,96 @@ export function GlobalSearchDialog({
         </DialogHeader>
 
         <Command
-          className='**:data-[slot=command-input-wrapper]:h-12 **:data-[slot=command-input-wrapper]:px-4 [&_[cmdk-group]]:px-1 [&_[cmdk-item]]:px-3 [&_[cmdk-item]]:py-2.5'
+          className='relative **:data-[slot=command-input-wrapper]:h-12 **:data-[slot=command-input-wrapper]:px-4 [&_[cmdk-group]]:px-1 [&_[cmdk-item]]:px-3 [&_[cmdk-item]]:py-2.5'
           onValueChange={handleIntent}
           shouldFilter={false}
           loop
         >
           <CommandInput
+            ref={inputRef}
+            className='pr-8'
             value={query}
-            onValueChange={setQuery}
+            onValueChange={handleQueryChange}
             placeholder='Search the cultural archive…'
             autoFocus
           />
-          <CommandList className='max-h-[min(62vh,35rem)] py-1'>
+          {query.length > 0 ? (
+            <Button
+              className='absolute top-3 right-4'
+              variant='ghost'
+              size='icon-xs'
+              type='button'
+              aria-label='Clear search'
+              onClick={handleClear}
+            >
+              <XIcon data-icon='inline-start' />
+            </Button>
+          ) : null}
+          <CommandList
+            ref={resultsRef}
+            className='max-h-[min(62vh,35rem)] py-1'
+            data-search-results
+          >
             <CommandEmpty>
               {emptyMessage(loadState, deferredQuery)}
             </CommandEmpty>
-            {groups.map((group) => (
-              <CommandGroup key={group.kind} heading={group.label}>
-                {group.documents.map((document) => {
-                  const context = supportingKeyword(document, deferredQuery)
+            {groups.map((group, groupIndex) => (
+              <Fragment key={group.kind}>
+                {groupIndex > 0 ? (
+                  <CommandSeparator
+                    className='mx-3 my-3'
+                    variant='accent'
+                    data-search-result-divider
+                    alwaysRender
+                  />
+                ) : null}
+                <CommandGroup heading={group.label}>
+                  {group.documents.map((document) => {
+                    const context = supportingKeyword(document, deferredQuery)
 
-                  return (
-                    <CommandItem
-                      key={`${document.kind}:${document.href}`}
-                      value={document.href}
-                      onSelect={() => handleSelect(document.href)}
-                    >
-                      <span className='flex min-w-0 flex-1 flex-col gap-1'>
-                        <span className='truncate font-medium'>
-                          <HighlightedSearchText
-                            value={document.title}
-                            query={deferredQuery}
-                          />
-                        </span>
-                        <span className='truncate text-xs text-muted-foreground'>
-                          <HighlightedSearchText
-                            value={document.subtitle}
-                            query={deferredQuery}
-                          />
-                        </span>
-                        {context ? (
-                          <span className='truncate text-xs text-muted-foreground'>
-                            <span className='sr-only'>Matching context: </span>
+                    return (
+                      <CommandItem
+                        className={styles.result}
+                        key={`${document.kind}:${document.href}`}
+                        value={document.href}
+                        onSelect={() => handleSelect(document.href)}
+                      >
+                        <span className='flex min-w-0 flex-1 flex-col gap-1'>
+                          <span
+                            className={cn(
+                              'truncate font-medium',
+                              styles.resultTitle
+                            )}
+                            data-search-result-title
+                          >
                             <HighlightedSearchText
-                              value={context}
+                              value={document.title}
                               query={deferredQuery}
                             />
                           </span>
-                        ) : null}
-                      </span>
-                    </CommandItem>
-                  )
-                })}
-              </CommandGroup>
+                          <span className='truncate text-xs text-muted-foreground'>
+                            <HighlightedSearchText
+                              value={document.subtitle}
+                              query={deferredQuery}
+                            />
+                          </span>
+                          {context ? (
+                            <span className='truncate text-xs text-muted-foreground'>
+                              <span className='sr-only'>
+                                Matching context:{' '}
+                              </span>
+                              <HighlightedSearchText
+                                value={context}
+                                query={deferredQuery}
+                              />
+                            </span>
+                          ) : null}
+                        </span>
+                      </CommandItem>
+                    )
+                  })}
+                </CommandGroup>
+              </Fragment>
             ))}
           </CommandList>
         </Command>
@@ -157,7 +218,7 @@ function HighlightedSearchText({
   return splitSearchTextMatches(value, query).map((segment) => (
     <Fragment key={`${segment.start}:${segment.isMatch}`}>
       {segment.isMatch ? (
-        <mark className='rounded-sm bg-ring/20 px-0.5 text-inherit'>
+        <mark className='rounded-sm bg-ring/20 px-1 text-inherit'>
           {segment.text}
         </mark>
       ) : (

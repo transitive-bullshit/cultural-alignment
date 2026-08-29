@@ -175,6 +175,7 @@
   border: 0;
   border-radius: inherit;
   background: transparent;
+  color: inherit;
 }
 
 .mediaToggle:focus-visible {
@@ -184,6 +185,46 @@
 .mediaFrame:has(.mediaToggle:focus-visible) {
   outline: 2px solid var(--proto-electric);
   outline-offset: 4px;
+}
+
+.posterPlayAction {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  justify-items: center;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.posterPlayIcon {
+  display: grid;
+  width: clamp(74px, 7vw, 94px);
+  aspect-ratio: 1.48;
+  place-items: center;
+  border: 1px solid rgb(14 14 11 / 78%);
+  border-radius: 10px;
+  background: var(--proto-electric);
+  box-shadow:
+    0 13px 36px rgb(14 14 11 / 36%),
+    inset 0 0 0 1px rgb(255 255 255 / 18%);
+  color: #fff;
+  transition:
+    background-color 160ms var(--proto-ease-out),
+    transform 160ms var(--proto-ease-out);
+}
+
+.posterPlayIcon .playbackGlyph {
+  width: 42%;
+  height: 42%;
+  filter: drop-shadow(0 1px 0 rgb(14 14 11 / 24%));
+}
+
+.playbackGlyph {
+  display: block;
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
 }
 
 .playButton,
@@ -345,7 +386,7 @@
   white-space: nowrap;
 }
 
-.mediaCrosshair,
+.mediaPointer,
 .floatingMediaLabel {
   display: none;
   position: absolute;
@@ -357,45 +398,36 @@
   will-change: transform;
 }
 
-.mediaCrosshair {
-  width: 28px;
-  height: 28px;
-  border: 1px solid var(--proto-electric);
-  border-radius: 50%;
-  color: var(--proto-electric);
+.mediaPointer {
+  width: 34px;
+  height: 34px;
   transform: translate3d(-200%, -200%, 0);
   transition: opacity 125ms var(--proto-ease-out);
 }
 
-.mediaCrosshair::before,
-.mediaCrosshair::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background: currentColor;
-  content: '';
-  transform: translate(-50%, -50%);
-}
-
-.mediaCrosshair::before {
-  width: 38px;
-  height: 1px;
-}
-
-.mediaCrosshair::after {
-  width: 1px;
-  height: 38px;
-}
-
-.mediaCrosshair > span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 4px;
-  height: 4px;
+.mediaPointerSurface {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  border: 1px solid var(--proto-ink);
   border-radius: 50%;
-  background: currentColor;
-  transform: translate(-50%, -50%);
+  background: var(--proto-electric);
+  box-shadow: 0 5px 15px rgb(14 14 11 / 28%);
+  color: #fff;
+  transition:
+    background-color 120ms var(--proto-ease-out),
+    transform 120ms var(--proto-ease-out);
+}
+
+.mediaPointerSurface .playbackGlyph {
+  width: 15px;
+  height: 15px;
+}
+
+.mediaFrame:has(button:active) .mediaPointerSurface {
+  background: color-mix(in srgb, var(--proto-electric) 78%, var(--proto-ink));
+  transform: scale(0.86);
 }
 
 .floatingMediaLabel {
@@ -419,13 +451,22 @@
     cursor: none;
   }
 
-  .mediaFrame[data-interactive]:has(.mediaProgressInput:hover) .mediaCrosshair {
+  .mediaFrame[data-interactive]:has(.mediaProgressInput:hover) .mediaPointer {
     visibility: hidden;
   }
 
-  .mediaCrosshair,
+  .mediaPointer,
   .floatingMediaLabel {
     display: block;
+  }
+
+  .mediaFrame[data-showing-still]:hover .posterPlayIcon {
+    background: color-mix(in srgb, var(--proto-electric) 88%, white);
+    transform: scale(1.04);
+  }
+
+  .mediaFrame[data-showing-still]:has(.mediaToggle:active) .posterPlayIcon {
+    transform: scale(0.96);
   }
 }
 
@@ -512,6 +553,28 @@
 
 .taxonomyHeading {
   font-size: 12px;
+}
+
+.taxonomyHeadingLink {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  color: inherit;
+  transition: color 160ms var(--proto-ease-out);
+}
+
+.taxonomyHeadingLink span {
+  color: var(--proto-electric);
+}
+
+.taxonomyHeadingLink:hover,
+.taxonomyHeadingLink:focus-visible {
+  color: var(--proto-electric);
+}
+
+.taxonomyHeadingLink:focus-visible {
+  outline: 2px solid var(--proto-electric);
+  outline-offset: 3px;
 }
 
 .taxonomy ol {
@@ -796,8 +859,11 @@
   .sourceMeta a,
   .playButton,
   .stopButton,
-  .mediaCrosshair,
+  .posterPlayIcon,
+  .mediaPointer,
+  .mediaPointerSurface,
   .floatingMediaLabel,
+  .taxonomyHeadingLink,
   .taxonomyLink {
     transition: none;
   }

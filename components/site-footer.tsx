@@ -15,7 +15,7 @@ import styles from './site-footer.module.css'
 const primaryLinks = [
   { href: '/', label: 'Featured scenarios' },
   { href: '/scenarios', label: 'All scenarios' },
-  { href: '/risk-families', label: 'Risk families' },
+  { href: '/risk-families', label: 'AI risk families' },
   { href: '/concepts', label: 'AI safety concepts' },
   { href: '/sources', label: 'Media sources' }
 ] as const
@@ -84,10 +84,17 @@ export function SiteFooter() {
       </nav>
 
       <div className={styles.baseline}>
-        <p>© {copyrightYear} Travis Fischer</p>
+        <p>
+          <a href={xProfileUrl} target='_blank' rel='noreferrer'>
+            © {copyrightYear} Travis Fischer
+          </a>
+        </p>
         <p>
           {contentManifest.counts.scenarios} scenarios ·{' '}
-          {contentManifest.counts.sources} sources · CC0 structured data
+          {contentManifest.counts.sources} sources ·{' '}
+          <a href={notionSourceUrl} target='_blank' rel='noreferrer'>
+            CC0 data
+          </a>
         </p>
       </div>
     </footer>

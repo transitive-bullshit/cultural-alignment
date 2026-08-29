@@ -149,6 +149,7 @@ function Taxonomy({ scenario }: { scenario: ScenarioPage }) {
       <section className={styles.taxonomy} aria-label='Scenario taxonomy'>
         <TaxonomyList
           label='AI Risk families'
+          href='/risk-families'
           description={
             scenario.riskFamilies.length > 1
               ? 'This scenario is an example of the following types of AI risk.'
@@ -158,6 +159,7 @@ function Taxonomy({ scenario }: { scenario: ScenarioPage }) {
         />
         <TaxonomyList
           label='AI safety concepts'
+          href='/concepts'
           description={
             scenario.concepts.length > 1
               ? 'This scenario is related to the following AI safety concepts.'
@@ -172,19 +174,26 @@ function Taxonomy({ scenario }: { scenario: ScenarioPage }) {
 
 function TaxonomyList({
   description,
+  href,
   items,
   label
 }: {
   readonly description: string
+  readonly href: '/concepts' | '/risk-families'
   readonly items: readonly TaxonomyLink[]
   readonly label: string
 }) {
   return (
     <div>
       <div className={styles.taxonomyHeader}>
-        <h2 className={styles.taxonomyHeading}>{label}</h2>
+        <h2 className={styles.taxonomyHeading}>
+          <Link className={styles.taxonomyHeadingLink} href={href}>
+            {label}
+          </Link>
+        </h2>
         <TaxonomyHelp description={description} label={label} />
       </div>
+
       <ol>
         {items.map((item, index) => {
           const delay = 90 + index * 48

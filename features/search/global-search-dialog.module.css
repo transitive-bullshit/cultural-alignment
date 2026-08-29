@@ -1,0 +1,15 @@
+.resultTitle {
+  transition: color 150ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .result:hover .resultTitle {
+    color: var(--brand-accent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resultTitle {
+    transition-duration: 100ms;
+  }
+}

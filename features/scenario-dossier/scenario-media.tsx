@@ -129,6 +129,23 @@ type ScenarioMediaModel = Pick<
   readonly eager?: boolean
 }
 
+function PlaybackGlyph({ isPlaying }: { readonly isPlaying: boolean }) {
+  return (
+    <svg
+      className={styles.playbackGlyph}
+      viewBox='0 0 24 24'
+      aria-hidden='true'
+      focusable='false'
+    >
+      {isPlaying ? (
+        <path d='M7 5.5h3.5v13H7zm6.5 0H17v13h-3.5z' />
+      ) : (
+        <path d='m8 5.25 10.5 6.75L8 18.75z' />
+      )}
+    </svg>
+  )
+}
+
 export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
   const { id, image, sourceTitle, title, video, eager } = media
   const [transitionPreview, setTransitionPreview] = useState(() =>
@@ -156,7 +173,7 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
   const fineHoverRef = useRef(false)
   const pointerHoverPinnedRef = useRef(false)
   const chromeControlFocusedRef = useRef(false)
-  const crosshairRef = useRef<HTMLSpanElement>(null)
+  const pointerRef = useRef<HTMLSpanElement>(null)
   const floatingLabelRef = useRef<HTMLSpanElement>(null)
   const cursorFrameRef = useRef<number | null>(null)
   const cursorPositionRef = useRef<CursorPosition | null>(null)
@@ -347,8 +364,8 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
     const cursorVisible =
       customCursorEnabledRef.current && pointerInsideFrameRef.current
 
-    if (crosshairRef.current) {
-      crosshairRef.current.style.opacity = cursorVisible ? '1' : '0'
+    if (pointerRef.current) {
+      pointerRef.current.style.opacity = cursorVisible ? '1' : '0'
     }
     if (floatingLabelRef.current) {
       floatingLabelRef.current.style.opacity =
@@ -373,8 +390,8 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
     const position = cursorPositionRef.current
     if (!position) return
 
-    if (crosshairRef.current) {
-      crosshairRef.current.style.transform = `translate3d(${position.cursorX}px, ${position.cursorY}px, 0) translate(-50%, -50%)`
+    if (pointerRef.current) {
+      pointerRef.current.style.transform = `translate3d(${position.cursorX}px, ${position.cursorY}px, 0) translate(-50%, -50%)`
     }
     if (floatingLabelRef.current) {
       floatingLabelRef.current.style.transform = `translate3d(${position.labelX}px, ${position.labelY}px, 0)`
@@ -644,6 +661,7 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
       data-scenario-media
       data-interactive={hasVideo || undefined}
       data-playing={isPlaying || undefined}
+      data-showing-still={isShowingStill || undefined}
       data-controls-visible={isChromeVisible}
       onFocusCapture={focusMediaControl}
       onBlurCapture={blurMediaControl}
@@ -695,8 +713,10 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
         </>
       ) : null}
 
-      {isShowingStill ? (
-        <span className={styles.mediaIndex}>Scene still / {sourceTitle}</span>
+      {!hasVideo ? (
+        <span className={styles.mediaIndex} data-scenario-media-still-label>
+          Scene still / {sourceTitle}
+        </span>
       ) : null}
 
       {hasVideo ? (
@@ -711,15 +731,29 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
             aria-keyshortcuts='ArrowLeft ArrowRight'
             onClick={togglePlayback}
             onKeyDown={seekByKeyboard}
-          />
+          >
+            {isShowingStill ? (
+              <span
+                className={styles.posterPlayAction}
+                data-scenario-media-poster-action
+                aria-hidden='true'
+              >
+                <span className={styles.posterPlayIcon}>
+                  <PlaybackGlyph isPlaying={false} />
+                </span>
+              </span>
+            ) : null}
+          </button>
 
           <span
-            ref={crosshairRef}
-            className={styles.mediaCrosshair}
-            data-scenario-media-crosshair
+            ref={pointerRef}
+            className={styles.mediaPointer}
+            data-scenario-media-cursor
             aria-hidden='true'
           >
-            <span />
+            <span className={styles.mediaPointerSurface}>
+              <PlaybackGlyph isPlaying={isPlaying} />
+            </span>
           </span>
           <span
             ref={floatingLabelRef}

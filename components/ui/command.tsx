@@ -128,12 +128,20 @@ function CommandGroup({
 
 function CommandSeparator({
   className,
+  variant = 'default',
   ...props
-}: React.ComponentProps<typeof CommandPrimitive.Separator>) {
+}: React.ComponentProps<typeof CommandPrimitive.Separator> & {
+  variant?: 'default' | 'accent'
+}) {
   return (
     <CommandPrimitive.Separator
       data-slot='command-separator'
-      className={cn('-mx-1 h-px bg-border', className)}
+      data-variant={variant}
+      className={cn(
+        '-mx-1 h-px',
+        variant === 'accent' ? 'bg-brand-accent' : 'bg-border',
+        className
+      )}
       {...props}
     />
   )

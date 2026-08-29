@@ -75,25 +75,50 @@ export function ResourceIndexPage({
       </section>
 
       <ol className={styles.resourceIndex} data-resource-kind={kind}>
-        {resources.map((resource, index) => (
-          <li key={resource.id}>
-            <Link href={resource.href}>
-              <span className={styles.indexNumber}>
-                {String(index + 1).padStart(2, '0')}
-              </span>
-              <h2>{resource.title}</h2>
-              {kind === 'risk-family' && resource.description ? (
-                <p>{resource.description}</p>
-              ) : null}
-              <span className={styles.itemCount}>
-                {formatScenarioCount(resource.scenarioCount)}
-              </span>
-              <span className={styles.openMark} aria-hidden='true'>
-                ↗
-              </span>
-            </Link>
-          </li>
-        ))}
+        {resources.map((resource, index) => {
+          const indexNumber = String(index + 1).padStart(2, '0')
+          const scenarioCount = formatScenarioCount(resource.scenarioCount)
+
+          return (
+            <li key={resource.id}>
+              {kind === 'source' ? (
+                <Link href={resource.href}>
+                  <span className={styles.indexNumber}>{indexNumber}</span>
+                  <h2>{resource.title}</h2>
+                  <span className={styles.itemCount}>{scenarioCount}</span>
+                  <span className={styles.openMark} aria-hidden='true'>
+                    ↗
+                  </span>
+                </Link>
+              ) : (
+                <ScrambleLink
+                  animateOnReveal={false}
+                  copyElement='h2'
+                  duration={260}
+                  href={resource.href}
+                  label={`${resource.title}, ${scenarioCount}`}
+                  leadingContent={
+                    <span className={styles.indexNumber}>{indexNumber}</span>
+                  }
+                  prefetch='auto'
+                  trailingContent={
+                    <>
+                      {kind === 'risk-family' && resource.description ? (
+                        <p>{resource.description}</p>
+                      ) : null}
+                      <span className={styles.itemCount}>{scenarioCount}</span>
+                      <span className={styles.openMark} aria-hidden='true'>
+                        ↗
+                      </span>
+                    </>
+                  }
+                >
+                  {resource.title}
+                </ScrambleLink>
+              )}
+            </li>
+          )
+        })}
       </ol>
     </main>
   )

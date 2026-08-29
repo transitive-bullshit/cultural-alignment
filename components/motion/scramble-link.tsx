@@ -4,13 +4,15 @@ import Link from 'next/link'
 import type { ReactNode } from 'react'
 import { useCallback, useEffect, useRef } from 'react'
 
+import styles from './scramble-link.module.css'
+
 const GLYPHS = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789/+=?'
 
 type ScrambleLinkProps = {
   readonly animateOnReveal?: boolean
   readonly children: string
   readonly className?: string
-  readonly copyElement?: 'span' | 'strong'
+  readonly copyElement?: 'h2' | 'span' | 'strong'
   readonly delay?: number
   readonly duration?: number
   readonly external?: boolean
@@ -23,8 +25,8 @@ type ScrambleLinkProps = {
 }
 
 /**
- * Keeps the accessible label stable while the decorative copy resolves in place.
- * The fixed character count avoids reflow in the ruled taxonomy lists.
+ * Keeps accessible and layout copies stable while the decorative copy resolves
+ * as an overlay that cannot change wrapping or surrounding geometry.
  */
 export function ScrambleLink({
   animateOnReveal = true,
@@ -50,7 +52,12 @@ export function ScrambleLink({
     if (entryTimerRef.current !== null) clearTimeout(entryTimerRef.current)
     frameRef.current = null
     entryTimerRef.current = null
-  }, [])
+
+    const copy = copyRef.current
+    if (copy) {
+      copy.textContent = children
+    }
+  }, [children])
 
   const scramble = useCallback(() => {
     stop()
@@ -120,13 +127,19 @@ export function ScrambleLink({
   const content = (
     <>
       {leadingContent}
-      <span className='sr-only'>
-        {prefix}
-        {children}
-      </span>
-      <CopyElement aria-hidden='true'>
-        {prefix}
-        <span ref={copyRef}>{children}</span>
+      <CopyElement className={styles.copy}>
+        <span className='sr-only'>
+          {prefix}
+          {children}
+        </span>
+        <span className={styles.layoutCopy} aria-hidden='true'>
+          {prefix}
+          {children}
+        </span>
+        <span className={styles.visualCopy} aria-hidden='true'>
+          {prefix}
+          <span ref={copyRef}>{children}</span>
+        </span>
       </CopyElement>
       {trailingContent}
     </>
