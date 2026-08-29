@@ -1,12 +1,14 @@
 import type { Metadata, ResolvingMetadata } from 'next'
 import { notFound } from 'next/navigation'
 
+import { JsonLd } from '@/components/json-ld'
 import { ResourceDetailPage } from '@/features/content-navigation/resource-pages'
 import {
   getResourceSocialMetadata,
   resolveContentSocialMetadata
 } from '@/lib/content/social-metadata'
 import { contentCatalog } from '@/lib/content/snapshot'
+import { getResourceStructuredData } from '@/lib/structured-data'
 
 type ConceptPageProps = {
   readonly params: Promise<{ slug: string }>
@@ -36,5 +38,10 @@ export default async function ConceptPage({ params }: ConceptPageProps) {
 
   if (!concept) notFound()
 
-  return <ResourceDetailPage resource={concept} />
+  return (
+    <>
+      <JsonLd data={getResourceStructuredData(concept)} scope='page' />
+      <ResourceDetailPage resource={concept} />
+    </>
+  )
 }

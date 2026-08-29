@@ -1,12 +1,14 @@
 import type { Metadata, ResolvingMetadata } from 'next'
 import { notFound } from 'next/navigation'
 
+import { JsonLd } from '@/components/json-ld'
 import { ResourceDetailPage } from '@/features/content-navigation/resource-pages'
 import {
   getResourceSocialMetadata,
   resolveContentSocialMetadata
 } from '@/lib/content/social-metadata'
 import { contentCatalog } from '@/lib/content/snapshot'
+import { getResourceStructuredData } from '@/lib/structured-data'
 
 type SourcePageProps = {
   readonly params: Promise<{ slug: string }>
@@ -36,5 +38,10 @@ export default async function SourcePage({ params }: SourcePageProps) {
 
   if (!source) notFound()
 
-  return <ResourceDetailPage resource={source} />
+  return (
+    <>
+      <JsonLd data={getResourceStructuredData(source)} scope='page' />
+      <ResourceDetailPage resource={source} />
+    </>
+  )
 }

@@ -7,8 +7,10 @@ import '@fontsource/barlow-condensed/700.css'
 import '@fontsource/barlow-condensed/800.css'
 import './globals.css'
 
+import { JsonLd } from '@/components/json-ld'
 import { SiteFooter } from '@/components/site-footer'
 import { siteName, siteSummary, siteUrl, xProfileUrl } from '@/lib/site'
+import { siteStructuredData } from '@/lib/structured-data'
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
@@ -37,6 +39,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html lang='en' className='h-full antialiased'>
       <body className='min-h-full'>
+        <JsonLd data={siteStructuredData} scope='site' />
         {children}
         <SiteFooter />
         <Analytics />

@@ -1,12 +1,14 @@
 import type { Metadata, ResolvingMetadata } from 'next'
 import { notFound } from 'next/navigation'
 
+import { JsonLd } from '@/components/json-ld'
 import { ScenarioDossier } from '@/features/scenario-dossier/scenario-dossier'
 import {
   getScenarioSocialMetadata,
   resolveContentSocialMetadata
 } from '@/lib/content/social-metadata'
 import { contentCatalog } from '@/lib/content/snapshot'
+import { getScenarioStructuredData } from '@/lib/structured-data'
 
 export const dynamicParams = false
 
@@ -37,5 +39,10 @@ export default async function ScenarioPage({
 
   if (!scenario) notFound()
 
-  return <ScenarioDossier scenario={scenario} />
+  return (
+    <>
+      <JsonLd data={getScenarioStructuredData(scenario)} scope='page' />
+      <ScenarioDossier scenario={scenario} />
+    </>
+  )
 }
