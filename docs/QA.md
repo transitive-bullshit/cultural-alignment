@@ -23,6 +23,10 @@ Citation and source-layout integration pass on 2026-08-29:
 
 `pnpm test` combines Oxfmt checking, Oxlint, generated-route type checking, the TypeScript compiler, unit tests, and browser journeys. The production build uses Next.js 16's documented webpack fallback because clean-cache Turbopack builds reproducibly stalled in this local environment.
 
+## Production deployment
+
+The canonical production deployment is [cultural-alignment.com](https://cultural-alignment.com).
+
 ## Schema v2 content contract
 
 - Snapshot and sync manifest schema: version 2
@@ -116,4 +120,3 @@ The selected prototype evidence is under `docs/outputs/gate-b`, including 1440×
 - Automated wheel events cannot reproduce browser-owned macOS trackpad history swipes faithfully; final native Back/Forward feel requires one physical trackpad check.
 - Exact WebGL screenshots vary by GPU and are reviewed manually rather than used as pixel-diff test oracles.
 - React Three Fiber currently emits a non-blocking upstream `THREE.Clock` deprecation warning; application code does not construct `THREE.Clock`.
-- Deployment and a Vercel preview are intentionally owned by the creator after the remote-media snapshot migration above is completed.

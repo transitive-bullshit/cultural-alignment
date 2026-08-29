@@ -1,8 +1,10 @@
 # Cultural Alignment <!-- omit from toc -->
 
-![Cultural Alignment social image](app/opengraph-image.jpg)
+[![Cultural Alignment social image](app/opengraph-image.jpg)](https://cultural-alignment.com)
 
 > An exploration of cultural analogies for AI safety and alignment.
+
+**Live site:** [cultural-alignment.com](https://cultural-alignment.com)
 
 This project explores AI safety and alignment concepts via popular scenes from movies and TV. The homepage begins with recognition: find a scene you know, open its dossier, and then follow the analogy into the technical ideas it illuminates—and the places where it breaks.
 
@@ -19,11 +21,11 @@ This project explores AI safety and alignment concepts via popular scenes from m
 
 ### Gallery
 
-![The desktop WebGL gallery showing the complete scenario archive](docs/screenshots/gallery.jpg)
+[![The desktop WebGL gallery showing the complete scenario archive](docs/screenshots/gallery.jpg)](https://cultural-alignment.com)
 
 ### Scenario dossier
 
-![A desktop scenario detail page for Lacie Games Her Rating](docs/screenshots/scenario-detail.jpg)
+[![A desktop scenario detail page for Lacie Games Her Rating](docs/screenshots/scenario-detail.jpg)](https://cultural-alignment.com)
 
 ## Local development
 
@@ -36,7 +38,7 @@ pnpm dev
 
 The app reads its content records from `content/snapshot` and its search corpus from `public/content/search-index.json`. Image URLs, intrinsic dimensions, and alt text are baked into that versioned snapshot; generated image bytes belong in public object storage rather than the Git repository. Normal development, builds, and application runtime do not read Notion or S3 credentials.
 
-Set `NEXT_PUBLIC_SITE_URL` to the canonical deployment origin when it cannot be inferred from Vercel; local builds default to `http://localhost:3000`.
+The canonical production origin is [cultural-alignment.com](https://cultural-alignment.com). Set `NEXT_PUBLIC_SITE_URL=https://cultural-alignment.com` when it cannot be inferred from Vercel; local builds default to `http://localhost:3000`.
 
 ### Local production preview
 

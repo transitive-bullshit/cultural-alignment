@@ -26,7 +26,7 @@ export default function PrivacyPage() {
       introduction={
         <p>
           Cultural Alignment is a free, independent, open-source resource with
-          no accounts, advertising, or usage tracking.
+          no user accounts, advertising, or monetization.
         </p>
       }
     >
@@ -69,9 +69,20 @@ export default function PrivacyPage() {
 
       <InformationSection index='02' title='Analytics'>
         <p>
-          Cultural Alignment does not collect any usage analytics. Hosting
-          providers may process basic request data to deliver and protect the
-          site.
+          This website collects basic page analytics in order to track general
+          usage over time using
+          <a
+            href='https://vercel.com/analytics'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Vercel Web Analytics
+          </a>
+          . This data is anonymous and does not identify you.
+        </p>
+        <p>
+          You can opt out of analytics by disabling third-party cookies in your
+          browser or using a browser extension that blocks Vercel Web Analytics.
         </p>
       </InformationSection>
 

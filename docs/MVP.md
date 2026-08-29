@@ -20,7 +20,7 @@ The MVP proves that a recognition-first, elastic gallery can invite a broad audi
 
 ## Explicitly excluded
 
-- Deployment and domain configuration
+- Deployment and domain configuration within the original MVP implementation run
 - Analytics, popularity ranking, ratings, or personalization
 - Community submissions and editorial moderation
 - Dark mode and a final naming/wordmark system
@@ -37,8 +37,8 @@ The MVP proves that a recognition-first, elastic gallery can invite a broad audi
 - **Media and spoilers:** The whole media plate toggles play/pause, custom controls use consistent “clip” language, the player instance stays mounted when returning to the still while playback resets to the configured clip start, and the floating action label yields to foreground controls. The circular spoiler warning has no separate close icon; its whole surface dismisses and persistence is versioned.
 - **Motion and text:** A finite, interruptible entrance coast demonstrates the gallery material and is disabled by reduced motion. Taxonomy links scramble on entry and hover/focus. The spoiler warning is the only spinning-text element. The selected gallery frame alone receives the emphasized transition into the Dossier.
 
-The creator pulled the Notion synchronizer and full-content expansion into the same implementation run. References to ten or 25 scenarios in the historical plan describe prototype stages; the implemented local MVP contains all 179 records, with 25 featured. Repository packaging and deployment follow-ups are recorded in [`QA.md`](QA.md#release-packaging-follow-ups).
+The creator pulled the Notion synchronizer and full-content expansion into the same implementation run. References to ten or 25 scenarios in the historical plan describe prototype stages; the implemented local MVP contains all 179 records, with 25 featured. Repository packaging history is recorded in [`QA.md`](QA.md#remote-media-migration-status).
 
-The creator explicitly authorized implementation to continue past the former feedback gates on 2026-08-28. Deployment remains a creator-owned manual follow-up.
+The creator explicitly authorized implementation to continue past the former feedback gates on 2026-08-28. Deployment remained outside that implementation run and was completed afterward at [cultural-alignment.com](https://cultural-alignment.com).
 
 The detailed execution history and acceptance checklist remain in [`docs/outputs/cultural-alignment-mvp-implementation-plan.md`](outputs/cultural-alignment-mvp-implementation-plan.md).

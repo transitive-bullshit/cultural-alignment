@@ -454,7 +454,7 @@ export function SpatialGallery({
         <span className={styles.hintMark} aria-hidden='true'>
           ⊹
         </span>
-        <span className={styles.desktopHint}>Drag horizontally · scroll</span>
+        <span className={styles.desktopHint}>Drag · scroll</span>
         <span className={styles.mobileHint}>
           Tap once to select · again to open
         </span>

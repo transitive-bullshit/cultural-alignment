@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 
+import { Analytics } from '@vercel/analytics/next'
 import '@fontsource-variable/geist'
 import '@fontsource-variable/geist-mono'
 import '@fontsource/barlow-condensed/700.css'
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
       <body className='min-h-full'>
         {children}
         <SiteFooter />
+        <Analytics />
       </body>
     </html>
   )
