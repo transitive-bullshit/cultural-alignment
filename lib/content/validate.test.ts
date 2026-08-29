@@ -22,6 +22,8 @@ const minimalSnapshot: ContentSnapshot = {
           'https://assets.example.com/media/generated/scenarios/scenario-1/detail-def.webp',
         width: 1600,
         height: 900,
+        blurDataURL:
+          'data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAABwAQCdASoIAAUAA8BgJYwCdAF1AAD+73a5N2G+4IAAAA==',
         alt: 'Summer stands beside the car'
       },
       video: null,
@@ -134,6 +136,21 @@ describe('validateContentSnapshot', () => {
       expect.objectContaining({
         code: 'invalid-schema',
         path: 'scenarios[0].image.gallerySrc'
+      })
+    ])
+  })
+
+  it('requires a succinct WebP blur placeholder', () => {
+    const input = structuredClone(minimalSnapshot)
+    input.scenarios[0]!.image.blurDataURL =
+      'data:image/png;base64,i-am-not-a-webp'
+
+    const error = captureValidationError(() => validateContentSnapshot(input))
+
+    expect(error.issues).toEqual([
+      expect.objectContaining({
+        code: 'invalid-schema',
+        path: 'scenarios[0].image.blurDataURL'
       })
     ])
   })

@@ -39,12 +39,18 @@ export const focalPointSchema = z.object({
   y: z.number().min(0).max(1)
 })
 
+export const blurDataUrlSchema = z
+  .string()
+  .max(512)
+  .regex(/^data:image\/webp;base64,[A-Za-z0-9+/]+={0,2}$/)
+
 export const contentImageSchema = z.object({
   gallerySrc: remoteMediaUrlSchema,
   detailSrc: remoteMediaUrlSchema,
   width: z.number().int().positive(),
   height: z.number().int().positive(),
   alt: z.string().trim().min(1),
+  blurDataURL: blurDataUrlSchema,
   focalPoint: focalPointSchema.optional()
 })
 

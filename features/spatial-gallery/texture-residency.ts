@@ -53,6 +53,67 @@ type TextureAdmissionPlan = Readonly<{
   evictItemIndex: number | null
 }>
 
+type ItemMembership = Readonly<{
+  has(itemIndex: number): boolean
+}>
+
+type TextureLoadPlanOptions = Readonly<{
+  failedFull: ItemMembership
+  failedPlaceholder: ItemMembership
+  full: ItemMembership
+  fullLoadCapacity: number
+  maximumResidentTextures: number
+  pendingFull: ItemMembership
+  pendingPlaceholder: ItemMembership
+  placeholderLoadCapacity: number
+  prioritizedItemIndices: readonly number[]
+  resident: ItemMembership
+}>
+
+type TextureLoadPlan = Readonly<{
+  fullItemIndices: readonly number[]
+  placeholderItemIndices: readonly number[]
+}>
+
+export function planTextureLoads({
+  failedFull,
+  failedPlaceholder,
+  full,
+  fullLoadCapacity,
+  maximumResidentTextures,
+  pendingFull,
+  pendingPlaceholder,
+  placeholderLoadCapacity,
+  prioritizedItemIndices,
+  resident
+}: TextureLoadPlanOptions): TextureLoadPlan {
+  const fullItemIndices: number[] = []
+  const placeholderItemIndices: number[] = []
+  const candidates = prioritizedItemIndices.slice(0, maximumResidentTextures)
+
+  for (const itemIndex of candidates) {
+    if (
+      fullItemIndices.length < fullLoadCapacity &&
+      !full.has(itemIndex) &&
+      !pendingFull.has(itemIndex) &&
+      !failedFull.has(itemIndex)
+    ) {
+      fullItemIndices.push(itemIndex)
+    }
+
+    if (
+      placeholderItemIndices.length < placeholderLoadCapacity &&
+      !resident.has(itemIndex) &&
+      !pendingPlaceholder.has(itemIndex) &&
+      !failedPlaceholder.has(itemIndex)
+    ) {
+      placeholderItemIndices.push(itemIndex)
+    }
+  }
+
+  return { fullItemIndices, placeholderItemIndices }
+}
+
 export function planTextureAdmission(
   residentItemIndices: Iterable<number>,
   incomingItemIndex: number,
@@ -98,4 +159,72 @@ export function planTextureAdmission(
         ? evictionCandidate
         : null
   }
+}
+
+export type TextureLoadStage = 'full' | 'placeholder'
+
+type SettleTextureLoadOptions<TextureResource> = Readonly<{
+  activeItemIndices: ItemMembership
+  current: boolean
+  dispose(texture: TextureResource): void
+  fullItemIndices: Set<number>
+  itemIndex: number
+  lastSeen: ReadonlyMap<number, number>
+  maximumResidentTextures: number
+  onBind(texture: TextureResource): void
+  onEvict(itemIndex: number): void
+  prioritizedItemIndices: readonly number[]
+  residentTextures: Map<number, TextureResource>
+  stage: TextureLoadStage
+  texture: TextureResource
+}>
+
+export function settleTextureLoad<TextureResource>({
+  activeItemIndices,
+  current,
+  dispose,
+  fullItemIndices,
+  itemIndex,
+  lastSeen,
+  maximumResidentTextures,
+  onBind,
+  onEvict,
+  prioritizedItemIndices,
+  residentTextures,
+  stage,
+  texture
+}: SettleTextureLoadOptions<TextureResource>) {
+  if (
+    !current ||
+    !activeItemIndices.has(itemIndex) ||
+    (stage === 'placeholder' && fullItemIndices.has(itemIndex))
+  ) {
+    dispose(texture)
+    return false
+  }
+
+  const admission = planTextureAdmission(
+    residentTextures.keys(),
+    itemIndex,
+    maximumResidentTextures,
+    prioritizedItemIndices,
+    lastSeen
+  )
+  if (!admission.admit) {
+    dispose(texture)
+    return false
+  }
+  if (admission.evictItemIndex !== null) {
+    onEvict(admission.evictItemIndex)
+  }
+
+  const previousTexture = residentTextures.get(itemIndex)
+  residentTextures.set(itemIndex, texture)
+  if (stage === 'full') fullItemIndices.add(itemIndex)
+  onBind(texture)
+  if (previousTexture && previousTexture !== texture) {
+    dispose(previousTexture)
+  }
+
+  return true
 }

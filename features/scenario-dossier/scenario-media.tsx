@@ -14,6 +14,10 @@ import {
 } from 'react'
 
 import type { ScenarioPage } from '@/lib/content/catalog'
+import {
+  clearScenarioTransitionPreview,
+  readScenarioTransitionPreview
+} from '@/lib/media/scenario-transition-preview'
 
 import {
   clampMediaTime,
@@ -117,13 +121,19 @@ type CursorPosition = {
   readonly labelY: number
 }
 
-type ScenarioMediaModel = Pick<ScenarioPage, 'image' | 'title' | 'video'> & {
+type ScenarioMediaModel = Pick<
+  ScenarioPage,
+  'id' | 'image' | 'title' | 'video'
+> & {
   readonly sourceTitle: string
   readonly eager?: boolean
 }
 
 export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
-  const { image, sourceTitle, title, video, eager } = media
+  const { id, image, sourceTitle, title, video, eager } = media
+  const [transitionPreview, setTransitionPreview] = useState(() =>
+    typeof window === 'undefined' ? null : readScenarioTransitionPreview(id)
+  )
   const [hasActivatedVideo, setHasActivatedVideo] = useState(false)
   const [isShowingStill, setIsShowingStill] = useState(true)
   const [isPlaying, setIsPlaying] = useState(false)
@@ -508,6 +518,12 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
   useEffect(() => clearChromeHideTimer, [clearChromeHideTimer])
 
   useEffect(() => {
+    if (transitionPreview) {
+      clearScenarioTransitionPreview(transitionPreview.token)
+    }
+  }, [transitionPreview])
+
+  useEffect(() => {
     const handleOutsidePointerDown = (event: PointerEvent) => {
       const frame = frameRef.current
       if (!frame || event.composedPath().includes(frame)) return
@@ -649,15 +665,34 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
       ) : null}
 
       {isShowingStill ? (
-        <Image
-          src={image.detailSrc}
-          alt={image.alt}
-          fill
-          preload
-          sizes='(max-width: 820px) 100vw, 57vw'
-          style={{ objectPosition }}
-          loading={eager ? 'eager' : undefined}
-        />
+        <>
+          {transitionPreview ? (
+            // This exact optimizer URL is already decoded by the WebGL proxy.
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              className={styles.transitionPreview}
+              src={transitionPreview.src}
+              alt=''
+              aria-hidden='true'
+              data-scenario-transition-preview
+              style={{ objectPosition }}
+            />
+          ) : null}
+
+          <Image
+            src={image.detailSrc}
+            alt={image.alt}
+            fill
+            preload
+            placeholder='blur'
+            blurDataURL={image.blurDataURL}
+            sizes='(max-width: 820px) 100vw, 57vw'
+            style={{ objectPosition }}
+            loading={eager ? 'eager' : undefined}
+            onLoad={() => setTransitionPreview(null)}
+            data-scenario-still
+          />
+        </>
       ) : null}
 
       {isShowingStill ? (
@@ -681,6 +716,7 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
           <span
             ref={crosshairRef}
             className={styles.mediaCrosshair}
+            data-scenario-media-crosshair
             aria-hidden='true'
           >
             <span />
@@ -702,6 +738,7 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
               <div className={styles.mediaProgress}>
                 <input
                   className={styles.mediaProgressInput}
+                  data-scenario-media-progress
                   type='range'
                   min={0}
                   max={progressMax}

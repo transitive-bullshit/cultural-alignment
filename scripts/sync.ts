@@ -33,11 +33,12 @@ import {
 } from '../lib/content/schema'
 import { buildSearchDocuments } from '../lib/content/search-documents'
 import { validateContentSnapshot } from '../lib/content/validate'
+import { createBlurDataURL } from './image-placeholder'
 import {
   emptyPreviousSyncManifest,
   MEDIA_PIPELINE_VERSION,
   parsePreviousSyncManifest,
-  syncEntrySchema,
+  reusableSyncEntrySchema,
   validateSyncManifest,
   type PreviousSyncEntry,
   type PreviousSyncManifest,
@@ -246,6 +247,7 @@ type ImageResult = {
   detailSrc: string
   width: number
   height: number
+  blurDataURL: string
   sourceHash: string
   galleryHash: string
   detailHash: string
@@ -747,7 +749,7 @@ async function reusableImageEntry(
 ): Promise<SyncEntry | null> {
   if (!entry || entry.lastEditedTime !== page.last_edited_time) return null
 
-  const remote = syncEntrySchema.safeParse(entry)
+  const remote = reusableSyncEntrySchema.safeParse(entry)
   if (remote.success) {
     const current = remote.data
     const expectedGalleryKey = generatedMediaObjectKey(
@@ -776,10 +778,17 @@ async function reusableImageEntry(
     if (!galleryExists || !detailExists) return null
     reusedMediaObjects += 2
 
+    const gallerySrc = mediaStorage.publicUrl(current.galleryKey)
+    const blurDataURL =
+      current.blurDataURL ??
+      (await createBlurDataURL(await downloadImage(gallerySrc)))
+
     return {
       ...current,
-      gallerySrc: mediaStorage.publicUrl(current.galleryKey),
-      detailSrc: mediaStorage.publicUrl(current.detailKey)
+      pipelineVersion: MEDIA_PIPELINE_VERSION,
+      gallerySrc,
+      detailSrc: mediaStorage.publicUrl(current.detailKey),
+      blurDataURL
     }
   }
 
@@ -838,9 +847,10 @@ async function migrateLegacyImageEntry(
     readFile(galleryFile),
     readFile(detailFile)
   ])
-  const [gallery, detail] = await Promise.all([
+  const [gallery, detail, blurDataURL] = await Promise.all([
     publishMediaVariant(collection, page.id, 'gallery', galleryBytes),
-    publishMediaVariant(collection, page.id, 'detail', detailBytes)
+    publishMediaVariant(collection, page.id, 'detail', detailBytes),
+    createBlurDataURL(galleryBytes)
   ])
   if (gallery.hash !== entry.galleryHash || detail.hash !== entry.detailHash) {
     throw new Error(`Legacy generated media hash changed for ${page.id}`)
@@ -860,6 +870,7 @@ async function migrateLegacyImageEntry(
     detailSrc: detail.url,
     width: entry.width,
     height: entry.height,
+    blurDataURL,
     caption: entry.caption
   }
 }
@@ -985,7 +996,7 @@ async function processImage(
   )
   const sourceHash = sha256(input)
 
-  const [gallery, detail] = await Promise.all([
+  const [gallery, detail, blurDataURL] = await Promise.all([
     sharp(input)
       .rotate()
       .resize({ width: 960, withoutEnlargement: true })
@@ -995,7 +1006,8 @@ async function processImage(
       .rotate()
       .resize({ width: 1920, withoutEnlargement: true })
       .webp({ quality: 90, effort: 5 })
-      .toBuffer({ resolveWithObject: true })
+      .toBuffer({ resolveWithObject: true }),
+    createBlurDataURL(input)
   ])
 
   const [publishedGallery, publishedDetail] = await Promise.all([
@@ -1010,6 +1022,7 @@ async function processImage(
     detailSrc: publishedDetail.url,
     width: detail.info.width,
     height: detail.info.height,
+    blurDataURL,
     sourceHash,
     galleryHash: publishedGallery.hash,
     detailHash: publishedDetail.hash,
@@ -1177,6 +1190,7 @@ function toSyncEntry(page: PageObjectResponse, image: ImageResult): SyncEntry {
     detailSrc: image.detailSrc,
     width: image.width,
     height: image.height,
+    blurDataURL: image.blurDataURL,
     caption: image.caption
   }
 }
@@ -1376,6 +1390,7 @@ async function main() {
           detailSrc: image.detailSrc,
           width: image.width,
           height: image.height,
+          blurDataURL: image.blurDataURL,
           alt:
             image.caption ||
             `Still from ${source.title} illustrating ${row.title}`
@@ -1403,6 +1418,7 @@ async function main() {
               detailSrc: image.detailSrc,
               width: image.width,
               height: image.height,
+              blurDataURL: image.blurDataURL,
               alt: image.caption || `Poster for ${source.title}`
             }
           : null

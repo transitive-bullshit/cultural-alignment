@@ -194,8 +194,11 @@ export function ResourceDetailPage({
               alt={resource.poster.alt}
               width={resource.poster.width}
               height={resource.poster.height}
+              placeholder='blur'
+              blurDataURL={resource.poster.blurDataURL}
               sizes='(max-width: 680px) calc(100vw - 36px), (max-width: 860px) 460px, (max-width: 1440px) 32vw, 460px'
               preload
+              data-source-poster-image
             />
           </figure>
         ) : null}

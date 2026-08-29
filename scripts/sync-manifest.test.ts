@@ -93,6 +93,15 @@ describe('parseSyncManifest', () => {
     expect(() => parseSyncManifest(manifest)).toThrow()
   })
 
+  it('requires a blur placeholder on every current media entry', () => {
+    const manifest = structuredClone(currentManifest())
+    const entry: { blurDataURL?: string } =
+      manifest.entries.scenarios[scenarioId]!
+    delete entry.blurDataURL
+
+    expect(() => parseSyncManifest(manifest)).toThrow()
+  })
+
   it('requires every source poster to have exactly one owned manifest entry', () => {
     const current = currentManifest()
     const manifest = {
@@ -102,6 +111,16 @@ describe('parseSyncManifest', () => {
 
     expect(() => validateSyncManifest(manifest, currentSnapshot())).toThrow(
       'Manifest source image ownership does not match snapshot posters'
+    )
+  })
+
+  it('keeps manifest and snapshot blur placeholders in sync', () => {
+    const snapshot = currentSnapshot()
+    snapshot.scenarios[0]!.image.blurDataURL =
+      'data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAABwAQCdASoBAAEABUB8JYwCdAF1AAD+7r0fmVgA'
+
+    expect(() => validateSyncManifest(currentManifest(), snapshot)).toThrow(
+      `Manifest scenario image entry ${scenarioId} does not match its snapshot image`
     )
   })
 })
@@ -158,6 +177,8 @@ function currentSnapshot() {
           detailSrc: `https://media.example.com/media/generated/scenarios/3c6edb27f12480cc92d5c8f2f2e3a7fa/detail-${'c'.repeat(64)}.webp`,
           width: 1920,
           height: 1080,
+          blurDataURL:
+            'data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAABwAQCdASoIAAUAA8BgJYwCdAF1AAD+73a5N2G+4IAAAA==',
           alt: 'A still'
         },
         video: null,
@@ -179,6 +200,8 @@ function currentSnapshot() {
           detailSrc: `https://media.example.com/media/generated/sources/3caedb27f12480319026e39581c85c47/detail-${'c'.repeat(64)}.webp`,
           width: 1920,
           height: 1080,
+          blurDataURL:
+            'data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAABwAQCdASoIAAUAA8BgJYwCdAF1AAD+73a5N2G+4IAAAA==',
           alt: 'Poster'
         },
         imdbUrl: null,
@@ -248,7 +271,7 @@ function remoteImageEntry(collection: 'scenarios' | 'sources', id: string) {
   const root = `media/generated/${collection}/${compactId}`
 
   return {
-    pipelineVersion: 2,
+    pipelineVersion: 3,
     lastEditedTime: '2026-08-28T00:00:00.000Z',
     imageBlockId: 'image-1',
     additionalImageCount: 0,
@@ -261,6 +284,8 @@ function remoteImageEntry(collection: 'scenarios' | 'sources', id: string) {
     detailSrc: `https://media.example.com/${root}/detail-${detailHash}.webp`,
     width: 1920,
     height: 1080,
+    blurDataURL:
+      'data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAABwAQCdASoIAAUAA8BgJYwCdAF1AAD+73a5N2G+4IAAAA==',
     caption: 'A still'
   }
 }

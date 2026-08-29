@@ -16,6 +16,7 @@ import { flushSync } from 'react-dom'
 
 import { SpoilerWarning } from '@/features/spoiler/spoiler-warning'
 import { focalPointToObjectPosition } from '@/lib/media/crop'
+import { stageScenarioTransitionPreview } from '@/lib/media/scenario-transition-preview'
 import { classifyGesture, shouldCaptureGalleryWheel } from '@/lib/spatial/field'
 
 import styles from './spatial-gallery.module.css'
@@ -78,6 +79,7 @@ export function SpatialGallery({
   const [renderMode, setRenderMode] = useState<RenderMode>('checking')
   const [reducedMotion, setReducedMotion] = useState(false)
   const [selectedIndex, setSelectedIndex] = useState(initialIndex)
+  const [transitionReady, setTransitionReady] = useState(false)
   const [transitionProxy, setTransitionProxy] =
     useState<TransitionProxy | null>(null)
   const selectedItem = items[selectedIndex] ?? items[0]!
@@ -243,6 +245,10 @@ export function SpatialGallery({
 
       const rect = controllerRef.current?.getFrameRect(index)
       if (rect) {
+        stageScenarioTransitionPreview({
+          scenarioId: item.id,
+          src: item.image.src
+        })
         flushSync(() => setTransitionProxy({ item, rect }))
       }
 
@@ -258,6 +264,8 @@ export function SpatialGallery({
   const selectItem = useCallback((index: number) => {
     setSelectedIndex((current) => (current === index ? current : index))
   }, [])
+
+  const markTransitionReady = useCallback(() => setTransitionReady(true), [])
 
   const beginPointer = (event: PointerEvent<HTMLDivElement>) => {
     if (event.button !== 0) return
@@ -350,6 +358,7 @@ export function SpatialGallery({
     <section
       className={styles.gallery}
       data-spatial-gallery={mode}
+      data-gallery-transition-ready={transitionReady || undefined}
       aria-label={`${mode === 'featured' ? 'Featured' : 'All'} cultural scenarios. Drag horizontally or scroll to explore.`}
     >
       <div
@@ -372,6 +381,7 @@ export function SpatialGallery({
             initialIndex={sceneInitialIndex}
             initialOffsetX={initialOffsetX}
             items={items}
+            onControllerReady={markTransitionReady}
             onPressItem={(index) => {
               pressedIndexRef.current = index
             }}
@@ -409,6 +419,11 @@ export function SpatialGallery({
               src={transitionProxy.item.image.src}
               alt=''
               style={{
+                backgroundImage: `url(${transitionProxy.item.image.blurDataURL})`,
+                backgroundPosition: focalPointToObjectPosition(
+                  transitionProxy.item.image.focalPoint
+                ),
+                backgroundSize: 'cover',
                 objectPosition: focalPointToObjectPosition(
                   transitionProxy.item.image.focalPoint
                 )
@@ -602,6 +617,11 @@ function GalleryFallback({
               src={item.image.src}
               alt={item.image.alt}
               style={{
+                backgroundImage: `url(${item.image.blurDataURL})`,
+                backgroundPosition: focalPointToObjectPosition(
+                  item.image.focalPoint
+                ),
+                backgroundSize: 'cover',
                 objectPosition: focalPointToObjectPosition(
                   item.image.focalPoint
                 )

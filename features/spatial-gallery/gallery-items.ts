@@ -42,6 +42,7 @@ export function toSpatialGalleryItems(
         // cache keys as ordinary Next images without hard-coding /_next/image.
         src: props.src,
         alt: scenario.image.alt,
+        blurDataURL: scenario.image.blurDataURL,
         width: scenario.image.width,
         height: scenario.image.height,
         focalPoint: scenario.image.focalPoint

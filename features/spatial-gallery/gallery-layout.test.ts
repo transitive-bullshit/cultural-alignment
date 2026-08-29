@@ -56,3 +56,15 @@ test('the all-scenarios WebGL projection has no adjacent repeated images', () =>
     `found ${adjacentRepeats.length} adjacent projected copies in the initial /scenarios viewport`
   ).toEqual([])
 })
+
+test('the WebGL projection carries each scenario blur placeholder', () => {
+  const scenarios = contentCatalog.listScenarioCards()
+  const items = toSpatialGalleryItems(scenarios)
+
+  expect(
+    items.every(
+      (item, index) =>
+        item.image.blurDataURL === scenarios[index]?.image.blurDataURL
+    )
+  ).toBe(true)
+})

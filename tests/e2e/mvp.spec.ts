@@ -41,6 +41,7 @@ const sourceDetailFixture = requireFixture(
     (source) =>
       source.poster &&
       source.releaseDate &&
+      scenarios.some((scenario) => scenario.sourceId === source.id) &&
       [source.imdbUrl, source.rottenTomatoesUrl, source.youtubeTrailerUrl].some(
         Boolean
       )
@@ -175,8 +176,34 @@ test('scenario media can be played and paused', async ({ page }) => {
   await expect(media.locator('iframe')).toBeVisible()
   await expect(mediaToggle).toHaveAttribute('aria-pressed', 'true')
 
+  const progress = media.locator('[data-scenario-media-progress]')
+  await progress.hover()
+  await expect(progress).toHaveCSS('cursor', 'ew-resize')
+  await expect(media.locator('[data-scenario-media-crosshair]')).toHaveCSS(
+    'visibility',
+    'hidden'
+  )
+
   await mediaToggle.click()
   await expect(mediaToggle).toHaveAttribute('aria-pressed', 'false')
+})
+
+test('scenario details show a blur placeholder while the still loads', async ({
+  page
+}) => {
+  const releaseImages = await pauseOptimizedImages(page)
+
+  try {
+    await page.goto(`/scenarios/${videoScenario.slug}`, {
+      waitUntil: 'domcontentloaded'
+    })
+
+    const still = page.locator('[data-scenario-still]')
+    await expect(still).toBeVisible()
+    await expect(still).toHaveCSS('background-image', /data:image\/svg\+xml/)
+  } finally {
+    await releaseImages()
+  }
 })
 
 test('scenario detail publishes content-derived social metadata', async ({
@@ -307,6 +334,28 @@ test('source detail projects its poster and CMS metadata', async ({ page }) => {
   await page.goto(`/sources/${sourceWithoutPoster.slug}`)
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
   await expect(page.locator('[data-source-poster]')).toHaveCount(0)
+})
+
+test('source posters and scenario cards show blur placeholders while loading', async ({
+  page
+}) => {
+  const releaseImages = await pauseOptimizedImages(page)
+
+  try {
+    await page.goto(`/sources/${sourceDetailFixture.slug}`, {
+      waitUntil: 'domcontentloaded'
+    })
+
+    const poster = page.locator('[data-source-poster-image]')
+    const card = page.locator('[data-scenario-card-image]').first()
+
+    await expect(poster).toBeVisible()
+    await expect(card).toBeVisible()
+    await expect(poster).toHaveCSS('background-image', /data:image\/svg\+xml/)
+    await expect(card).toHaveCSS('background-image', /data:image\/svg\+xml/)
+  } finally {
+    await releaseImages()
+  }
 })
 
 test('taxonomy details expose current external references', async ({
@@ -501,6 +550,23 @@ async function requiredAttribute(
   }
 
   return value
+}
+
+async function pauseOptimizedImages(page: import('@playwright/test').Page) {
+  const pendingRoutes = new Set<import('@playwright/test').Route>()
+  const imageRoute = /\/_next\/image(?:\?|$)/
+  const holdImage = (route: import('@playwright/test').Route) => {
+    pendingRoutes.add(route)
+  }
+
+  await page.route(imageRoute, holdImage)
+
+  return async () => {
+    await Promise.allSettled(
+      [...pendingRoutes].map((route) => route.abort('blockedbyclient'))
+    )
+    await page.unroute(imageRoute, holdImage)
+  }
 }
 
 async function getControlledScenarioHrefs(

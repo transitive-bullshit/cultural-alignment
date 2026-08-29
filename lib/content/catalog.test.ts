@@ -50,6 +50,8 @@ const minimalSnapshot = {
           'https://assets.example.com/media/generated/sources/source1/detail.webp',
         width: 1200,
         height: 1800,
+        blurDataURL:
+          'data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAABwAQCdASoIAAUAA8BgJYwCdAF1AAD+73a5N2G+4IAAAA==',
         alt: 'Poster for Shared Source'
       },
       imdbUrl: 'https://www.imdb.com/title/tt0000001/',
@@ -306,6 +308,8 @@ function createScenario(
       detailSrc: `https://assets.example.com/media/generated/scenarios/${overrides.id}/detail.webp`,
       width: 1600,
       height: 900,
+      blurDataURL:
+        'data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAABwAQCdASoIAAUAA8BgJYwCdAF1AAD+73a5N2G+4IAAAA==',
       alt: `Still from scenario ${overrides.id}`
     },
     video: null,

@@ -1,12 +1,10 @@
 # Cultural Alignment <!-- omit from toc -->
 
-![Cultural Alignment — AI safety, with spoilers and popcorn](app/opengraph-image.jpg)
+![Cultural Alignment social image](app/opengraph-image.jpg)
 
-> _Familiar stories for unfamiliar intelligence._
->
 > An open-source archive of cultural analogies for AI safety and alignment.
 
-This project explains AI safety and alignment concepts through scenes from film and television. The homepage begins with recognition: find a scene you know, open its dossier, and then follow the analogy into the technical ideas it illuminates—and the places where it breaks.
+This project explores AI safety and alignment concepts via scenes from film and television. The homepage begins with recognition: find a scene you know, open its dossier, and then follow the analogy into the technical ideas it illuminates—and the places where it breaks.
 
 [![Build Status](https://github.com/transitive-bullshit/cultural-alignment/actions/workflows/build.yml/badge.svg)](https://github.com/transitive-bullshit/cultural-alignment/actions/workflows/build.yml) [![Code style enforced by Oxc](https://img.shields.io/badge/code_style-oxc-brightgreen.svg)](https://oxc.rs)
 

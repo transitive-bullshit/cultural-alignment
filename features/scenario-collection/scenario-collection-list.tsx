@@ -96,7 +96,10 @@ function ScenarioCollectionCard({
           src={scenario.image.gallerySrc}
           alt={scenario.image.alt}
           fill
+          placeholder='blur'
+          blurDataURL={scenario.image.blurDataURL}
           sizes={imageSizes}
+          data-scenario-card-image
           style={{
             objectFit: 'cover',
             objectPosition: focalPointToObjectPosition(

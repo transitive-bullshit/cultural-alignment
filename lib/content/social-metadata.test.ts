@@ -112,6 +112,8 @@ describe('social metadata derivation', () => {
           detailSrc: '/media/detail.webp',
           width: 1920,
           height: 1080,
+          blurDataURL:
+            'data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAABwAQCdASoIAAUAA8BgJYwCdAF1AAD+73a5N2G+4IAAAA==',
           alt: 'Scenario still'
         }
       },

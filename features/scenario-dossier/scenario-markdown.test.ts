@@ -70,6 +70,8 @@ function createScenario(): ScenarioPage {
       detailSrc: '/media/detail (final).webp',
       width: 1600,
       height: 900,
+      blurDataURL:
+        'data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAABwAQCdASoIAAUAA8BgJYwCdAF1AAD+73a5N2G+4IAAAA==',
       alt: 'A still with [brackets]'
     },
     video: { provider: 'youtube', id: 'abc123', startSeconds: 0 },

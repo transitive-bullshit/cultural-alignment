@@ -1,12 +1,12 @@
 import { z } from 'zod'
 
-import type { ContentSnapshot } from '../lib/content/schema'
+import { blurDataUrlSchema, type ContentSnapshot } from '../lib/content/schema'
 import {
   generatedMediaObjectKey,
   isGeneratedMediaPublicPath
 } from './sync-utils'
 
-export const MEDIA_PIPELINE_VERSION = 2
+export const MEDIA_PIPELINE_VERSION = 3
 
 const sha256Schema = z.string().regex(/^[0-9a-f]{64}$/)
 const legacyGeneratedMediaPathSchema = z
@@ -46,17 +46,24 @@ export const previousSyncEntrySchema = syncEntryBaseSchema.extend({
   galleryKey: generatedMediaObjectKeySchema.optional(),
   detailKey: generatedMediaObjectKeySchema.optional(),
   gallerySrc: z.union([legacyGeneratedMediaPathSchema, remoteMediaUrlSchema]),
-  detailSrc: z.union([legacyGeneratedMediaPathSchema, remoteMediaUrlSchema])
+  detailSrc: z.union([legacyGeneratedMediaPathSchema, remoteMediaUrlSchema]),
+  blurDataURL: blurDataUrlSchema.optional()
 })
 
-export const syncEntrySchema = syncEntryBaseSchema.extend({
-  pipelineVersion: z.literal(MEDIA_PIPELINE_VERSION),
+export const reusableSyncEntrySchema = syncEntryBaseSchema.extend({
+  pipelineVersion: z.union([z.literal(2), z.literal(MEDIA_PIPELINE_VERSION)]),
   galleryHash: sha256Schema,
   detailHash: sha256Schema,
   galleryKey: generatedMediaObjectKeySchema,
   detailKey: generatedMediaObjectKeySchema,
   gallerySrc: remoteMediaUrlSchema,
-  detailSrc: remoteMediaUrlSchema
+  detailSrc: remoteMediaUrlSchema,
+  blurDataURL: blurDataUrlSchema.optional()
+})
+
+export const syncEntrySchema = reusableSyncEntrySchema.extend({
+  pipelineVersion: z.literal(MEDIA_PIPELINE_VERSION),
+  blurDataURL: blurDataUrlSchema
 })
 
 const slugMapSchema = z.record(
@@ -235,6 +242,7 @@ function validateMediaOwnership(
       readonly detailSrc: string
       readonly width: number
       readonly height: number
+      readonly blurDataURL: string
     }
   }[]
 ) {
@@ -252,7 +260,8 @@ function validateMediaOwnership(
       entry.gallerySrc !== image.gallerySrc ||
       entry.detailSrc !== image.detailSrc ||
       entry.width !== image.width ||
-      entry.height !== image.height
+      entry.height !== image.height ||
+      entry.blurDataURL !== image.blurDataURL
     ) {
       throw new Error(
         `Manifest ${label} image entry ${id} does not match its snapshot image`

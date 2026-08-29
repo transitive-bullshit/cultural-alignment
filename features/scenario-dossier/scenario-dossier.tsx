@@ -39,6 +39,7 @@ export function ScenarioDossier({ scenario }: { scenario: ScenarioPage }) {
             >
               <ScenarioMedia
                 media={{
+                  id: scenario.id,
                   title: scenario.title,
                   sourceTitle: scenario.source.title,
                   image: scenario.image,

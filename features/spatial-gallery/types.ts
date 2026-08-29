@@ -11,6 +11,7 @@ export type SpatialGalleryItem = Readonly<{
   image: Readonly<{
     src: string
     alt: string
+    blurDataURL: string
     width: number
     height: number
     focalPoint?: FocalPoint
