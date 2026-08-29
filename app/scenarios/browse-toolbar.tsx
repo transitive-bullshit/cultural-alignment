@@ -1,8 +1,8 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import Link from 'next/link'
 
+import { IntentPrefetchLink } from '@/components/intent-prefetch-link'
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
 import {
   createBrowseGalleryHref,
@@ -51,13 +51,13 @@ export function BrowseToolbar({
         aria-label='Filter by risk family'
       >
         <ToggleGroupItem className={styles.filterLink} value='all' asChild>
-          <Link
+          <IntentPrefetchLink
             ref={params.family === null ? activeFilterRef : undefined}
             href={createBrowseGalleryHref({ ...params, family: null })}
             scroll={false}
           >
             All
-          </Link>
+          </IntentPrefetchLink>
         </ToggleGroupItem>
         {families.map((family) => (
           <ToggleGroupItem
@@ -66,7 +66,7 @@ export function BrowseToolbar({
             value={family.slug}
             asChild
           >
-            <Link
+            <IntentPrefetchLink
               ref={params.family === family.slug ? activeFilterRef : undefined}
               href={createBrowseGalleryHref({
                 ...params,
@@ -75,7 +75,7 @@ export function BrowseToolbar({
               scroll={false}
             >
               {family.title}
-            </Link>
+            </IntentPrefetchLink>
           </ToggleGroupItem>
         ))}
       </ToggleGroup>

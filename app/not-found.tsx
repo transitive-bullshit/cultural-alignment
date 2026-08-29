@@ -1,5 +1,4 @@
-import Link from 'next/link'
-
+import { IntentPrefetchLink } from '@/components/intent-prefetch-link'
 import { SiteHeader } from '@/components/site-header'
 
 import styles from './not-found.module.css'
@@ -16,7 +15,9 @@ export default function NotFound() {
           The address may have changed, or the record may never have existed.
         </p>
         <nav aria-label='Not found recovery'>
-          <Link href='/scenarios'>Browse all scenarios</Link>
+          <IntentPrefetchLink href='/scenarios'>
+            Browse all scenarios
+          </IntentPrefetchLink>
         </nav>
       </section>
 

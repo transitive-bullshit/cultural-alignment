@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+import { IntentPrefetchLink } from '@/components/intent-prefetch-link'
 import {
   InformationLinks,
   InformationPage,
@@ -77,7 +78,9 @@ export default function AboutPage() {
           those links to related entries. Search covers the same index.
         </p>
         <InformationLinks label='Ways to explore the archive'>
-          <Link href='/scenarios'>Browse scenarios</Link>
+          <IntentPrefetchLink href='/scenarios'>
+            Browse scenarios
+          </IntentPrefetchLink>
           <Link href='/risk-families'>Explore AI risk families</Link>
           <Link href='/concepts'>Explore AI safety concepts</Link>
         </InformationLinks>

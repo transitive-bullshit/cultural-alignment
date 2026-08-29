@@ -37,7 +37,7 @@ export function ScrambleLink({
   href,
   label,
   leadingContent,
-  prefetch = false,
+  prefetch = null,
   prefix = '',
   trailingContent
 }: ScrambleLinkProps) {

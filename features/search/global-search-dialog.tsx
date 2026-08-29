@@ -1,6 +1,6 @@
 'use client'
 
-import { Fragment, useDeferredValue, useMemo, useState } from 'react'
+import { Fragment, useDeferredValue, useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 
 import {
@@ -48,9 +48,19 @@ export function GlobalSearchDialog({
     [documents, deferredQuery]
   )
 
+  useEffect(() => {
+    const firstResultHref = groups[0]?.documents[0]?.href
+
+    if (firstResultHref) router.prefetch(firstResultHref)
+  }, [groups, router])
+
   function handleSelect(href: string) {
     onOpenChange(false)
     router.push(href)
+  }
+
+  function handleIntent(href: string) {
+    router.prefetch(href)
   }
 
   return (
@@ -69,6 +79,7 @@ export function GlobalSearchDialog({
 
         <Command
           className='**:data-[slot=command-input-wrapper]:h-12 **:data-[slot=command-input-wrapper]:px-4 [&_[cmdk-group]]:px-1 [&_[cmdk-item]]:px-3 [&_[cmdk-item]]:py-2.5'
+          onValueChange={handleIntent}
           shouldFilter={false}
           loop
         >

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+import { IntentPrefetchLink } from '@/components/intent-prefetch-link'
 import { SiteWordmark } from '@/components/site-wordmark'
 import contentManifest from '@/content/snapshot/manifest.json'
 import {
@@ -40,7 +41,13 @@ export function SiteFooter() {
           <ul>
             {primaryLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href}>{link.label}</Link>
+                {link.href === '/scenarios' ? (
+                  <IntentPrefetchLink href={link.href}>
+                    {link.label}
+                  </IntentPrefetchLink>
+                ) : (
+                  <Link href={link.href}>{link.label}</Link>
+                )}
               </li>
             ))}
           </ul>

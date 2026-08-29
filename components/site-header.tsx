@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+import { IntentPrefetchLink } from '@/components/intent-prefetch-link'
 import { SiteWordmark } from '@/components/site-wordmark'
 import { GlobalSearch } from '@/features/search/global-search'
 import { siteTagline } from '@/lib/site'
@@ -66,13 +67,13 @@ export function SiteHeader({
 
       <nav className={styles.actions} aria-label='Primary navigation'>
         <GlobalSearch className={styles.searchTrigger} />
-        <Link
+        <IntentPrefetchLink
           className={styles.galleryLink}
           href='/scenarios'
           transitionTypes={galleryTransitionTypes}
         >
           Gallery <span aria-hidden='true'>↗</span>
-        </Link>
+        </IntentPrefetchLink>
       </nav>
     </header>
   )
