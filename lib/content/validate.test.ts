@@ -10,6 +10,7 @@ const minimalSnapshot: ContentSnapshot = {
       id: 'scenario-1',
       slug: 'keep-summer-safe',
       title: 'Keep Summer Safe',
+      keywords: [],
       sourceId: 'source-1',
       releaseDate: '2015-08-02',
       featured: true,
@@ -38,6 +39,7 @@ const minimalSnapshot: ContentSnapshot = {
       id: 'source-1',
       slug: 'rick-and-morty',
       title: 'Rick and Morty',
+      keywords: [],
       sourceType: 'tv-show',
       description: 'An animated science-fiction comedy.',
       releaseDate: '2013-12-02',
@@ -71,6 +73,7 @@ const minimalSnapshot: ContentSnapshot = {
       slug: 'specification-gaming',
       shortName: 'Specification Gaming',
       longName: 'Specification Gaming and Reward Hacking',
+      keywords: [],
       description: 'Meeting the stated objective while missing its purpose.',
       wikipediaUrl: null,
       citations: [

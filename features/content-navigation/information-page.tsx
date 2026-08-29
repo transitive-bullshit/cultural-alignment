@@ -9,13 +9,15 @@ export function InformationPage({
   context,
   eyebrow,
   introduction,
-  title
+  title,
+  titleSize = 'default'
 }: {
   readonly children: ReactNode
   readonly context: string
-  readonly eyebrow: string
+  readonly eyebrow: ReactNode
   readonly introduction: ReactNode
-  readonly title: string
+  readonly title: ReactNode
+  readonly titleSize?: 'compact' | 'default'
 }) {
   return (
     <main className={`experience-scope ${styles.page}`}>
@@ -24,7 +26,7 @@ export function InformationPage({
       <article className={styles.article}>
         <header className={styles.introduction}>
           <p className={styles.eyebrow}>{eyebrow}</p>
-          <h1>{title}</h1>
+          <h1 data-size={titleSize}>{title}</h1>
           <div className={styles.introductionCopy}>{introduction}</div>
         </header>
 

@@ -60,6 +60,12 @@
   text-wrap: balance;
 }
 
+@media (min-width: 761px) {
+  .introduction h1[data-size='compact'] {
+    font-size: clamp(64px, 7.5vw, 108px);
+  }
+}
+
 .introductionCopy {
   color: var(--proto-muted-ink);
   font-size: 16px;
@@ -105,6 +111,14 @@
   color: var(--proto-muted-ink);
   font-size: 15px;
   line-height: 1.65;
+}
+
+.sectionCopy > p {
+  margin: 0;
+}
+
+.sectionCopy > p + p {
+  margin-top: clamp(22px, 2.2vw, 30px);
 }
 
 .sectionCopy > :first-child {

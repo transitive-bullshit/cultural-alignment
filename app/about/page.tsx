@@ -10,7 +10,7 @@ import {
   notionSourceUrl,
   repositoryUrl,
   siteSummary,
-  siteTagline,
+  siteDescriptionLong,
   xProfileUrl
 } from '@/lib/site'
 
@@ -25,16 +25,40 @@ export default function AboutPage() {
     <InformationPage
       context='About / project'
       eyebrow='Purpose and scope'
-      title={siteTagline}
+      title={siteDescriptionLong}
+      titleSize='compact'
       introduction={
         <p>
-          Cultural Alignment pairs scenes from film and television with AI risk
-          families and safety concepts. Each entry explains the connection and
-          its limits.
+          Cultural Alignment uses familiar scenes from film and television to
+          make abstract AI risks easier to picture, discuss, and remember.
         </p>
       }
     >
-      <InformationSection index='01' title='How to read a scenario'>
+      <InformationSection index='01' title='Why this exists'>
+        <p>
+          AI systems are becoming more capable, and understanding what can go
+          wrong matters. Yet popular culture often reduces AI risk to Skynet or
+          Ultron: an evil machine with an extinction plot. Real concerns are
+          broader and messier. A system can optimize for the wrong goal, people
+          can misuse it, and competitive pressure can push safety aside.
+        </p>
+        <p>
+          I built this as an experiment to explore whether shared cultural
+          references can make those concerns easier to understand and bring more
+          people into the conversation.
+        </p>
+        <p>
+          Note that these examples are analogies, not predictions or proof;
+          where they break down matters as much as where they fit, but I hope
+          they still prove useful regardless.
+        </p>
+        <p>
+          Oh and it also exists for a simpler reason: curating these scenarios
+          has been a lot of fun! 😄
+        </p>
+      </InformationSection>
+
+      <InformationSection index='02' title='How to read a scenario'>
         <p>
           A scenario is an analogy: a way to make an abstract mechanism
           concrete. It is not evidence, a complete account of an AI safety
@@ -46,7 +70,7 @@ export default function AboutPage() {
         </p>
       </InformationSection>
 
-      <InformationSection index='02' title='How the archive is organized'>
+      <InformationSection index='03' title='How the archive is organized'>
         <p>
           Every scenario links to its source, AI risk families, and safety
           concepts. Start with any film, series, risk, or concept, then follow
@@ -54,17 +78,31 @@ export default function AboutPage() {
         </p>
         <InformationLinks label='Ways to explore the archive'>
           <Link href='/scenarios'>Browse scenarios</Link>
-          <Link href='/risk-families'>Explore risk families</Link>
-          <Link href='/concepts'>Browse concepts</Link>
+          <Link href='/risk-families'>Explore AI risk families</Link>
+          <Link href='/concepts'>Explore AI safety concepts</Link>
         </InformationLinks>
       </InformationSection>
 
-      <InformationSection index='03' title='Code, data, and rights'>
+      <InformationSection index='04' title='Code, data, and rights'>
         <p>
-          The site&rsquo;s code is MIT-licensed. Its authored structured
-          snapshot and derived search index are released under CC0 1.0. Those
-          licenses do not cover third-party film or television imagery, clips,
-          titles, or trademarks.
+          The site&rsquo;s code is{' '}
+          <a
+            href='https://choosealicense.com/licenses/mit/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            MIT-licensed
+          </a>
+          . The underlying data uses Notion as a CMS which is released under{' '}
+          <a
+            href='https://choosealicense.com/licenses/cc0-1.0/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            CC0 1.0
+          </a>
+          . Those licenses do not cover third-party film or television imagery,
+          clips, titles, or trademarks.
         </p>
         <InformationLinks label='Project sources'>
           <a href={repositoryUrl} target='_blank' rel='noreferrer'>
@@ -76,9 +114,9 @@ export default function AboutPage() {
         </InformationLinks>
       </InformationSection>
 
-      <InformationSection index='04' title='Editor and corrections'>
+      <InformationSection index='05' title='Contributing'>
         <p>
-          Cultural Alignment is an independent project created and edited by{' '}
+          Cultural Alignment is an independent project made by{' '}
           <a href={xProfileUrl} target='_blank' rel='noreferrer'>
             Travis Fischer
           </a>
@@ -86,8 +124,10 @@ export default function AboutPage() {
           change as entries are reviewed or added.
         </p>
         <p>
-          Corrections and contributions are welcome through the GitHub
-          repository.
+          Corrections and contributions are welcome through the{' '}
+          <a href={repositoryUrl} target='_blank' rel='noreferrer'>
+            GitHub repository
+          </a>
         </p>
       </InformationSection>
     </InformationPage>

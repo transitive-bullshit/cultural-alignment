@@ -6,9 +6,20 @@ import {
   generatedMediaFilePath,
   generatedMediaObjectKey,
   generatedMediaPublicPaths,
+  parseSearchKeywords,
   richTextToMarkdown,
   retrieveRelationIds
 } from './sync-utils'
+
+describe('parseSearchKeywords', () => {
+  it('normalizes and deduplicates comma-delimited keywords', () => {
+    expect(
+      parseSearchKeywords(
+        '  AI Safety, Anime, ai   safety, Café, , ＲＯＢＯＴ  '
+      )
+    ).toEqual(['ai safety', 'anime', 'café', 'robot'])
+  })
+})
 
 describe('generatedMediaFilePath', () => {
   it('resolves only deterministic scenario variant paths', () => {

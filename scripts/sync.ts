@@ -51,6 +51,7 @@ import {
   generatedMediaFilePath,
   generatedMediaObjectKey,
   generatedMediaPublicPaths,
+  parseSearchKeywords,
   richTextToMarkdown,
   retrieveRelationIds,
   sha256
@@ -107,6 +108,7 @@ const featuredScenarioIds = new Set<string>(FEATURED_SCENARIO_IDS)
 
 const SCENARIO_PROPERTIES = {
   Example: { id: 'title', type: 'title' },
+  Keywords: { id: '%3EYtb', type: 'rich_text' },
   Episode: { id: 'A%60ku', type: 'rich_text' },
   Caveats: { id: 'A%7C%5Ey', type: 'rich_text' },
   'AI risk families': {
@@ -132,6 +134,7 @@ const SCENARIO_PROPERTIES = {
 
 const SOURCE_PROPERTIES = {
   Name: { id: 'title', type: 'title' },
+  Keywords: { id: 'kNsg', type: 'rich_text' },
   'Source Type': { id: 'vu%3Er', type: 'select' },
   Description: { id: 'XKl%3D', type: 'rich_text' },
   'Release Date': { id: 'ZlZe', type: 'date' },
@@ -158,6 +161,7 @@ const RISK_FAMILY_PROPERTIES = {
 const CONCEPT_PROPERTIES = {
   'Short Name': { id: 'title', type: 'title' },
   'Long Name': { id: 'kreM', type: 'rich_text' },
+  Keywords: { id: 'WrzI', type: 'rich_text' },
   Description: { id: '~%7DY~', type: 'rich_text' },
   Wikipedia: { id: 'xvY%5B', type: 'url' },
   'Canonical Source 1': { id: 'Njhs', type: 'url' },
@@ -217,6 +221,7 @@ type ParsedScenario = {
   page: PageObjectResponse
   id: string
   title: string
+  keywords: string[]
   sourceId: string
   episode?: { label: string; href?: string }
   releaseDate: string | null
@@ -522,6 +527,7 @@ async function parseScenario(
   const [
     titleItems,
     episodeItems,
+    keywordItems,
     caveatItems,
     analogyItems,
     sceneItems,
@@ -531,6 +537,7 @@ async function parseScenario(
   ] = await Promise.all([
     retrieveRichTextItems(page, 'Example', 'title', SCENARIO_PROPERTIES),
     retrieveRichTextItems(page, 'Episode', 'rich_text', SCENARIO_PROPERTIES),
+    retrieveRichTextItems(page, 'Keywords', 'rich_text', SCENARIO_PROPERTIES),
     retrieveRichTextItems(page, 'Caveats', 'rich_text', SCENARIO_PROPERTIES),
     retrieveRichTextItems(
       page,
@@ -559,6 +566,7 @@ async function parseScenario(
     page,
     id: page.id,
     title: requiredPlainText(page, 'Example', titleItems),
+    keywords: parseSearchKeywords(plainText(keywordItems)),
     sourceId: sourceIds[0]!,
     episode: episode(episodeItems),
     releaseDate: date(page, 'Date', SCENARIO_PROPERTIES),
@@ -577,11 +585,18 @@ async function parseScenario(
 }
 
 async function parseSource(page: PageObjectResponse): Promise<ParsedSource> {
-  const [titleItems, descriptionItems, relatedSourceIds] = await Promise.all([
-    retrieveRichTextItems(page, 'Name', 'title', SOURCE_PROPERTIES),
-    retrieveRichTextItems(page, 'Description', 'rich_text', SOURCE_PROPERTIES),
-    relation(page, 'Directly Related Media Sources', SOURCE_PROPERTIES)
-  ])
+  const [titleItems, descriptionItems, keywordItems, relatedSourceIds] =
+    await Promise.all([
+      retrieveRichTextItems(page, 'Name', 'title', SOURCE_PROPERTIES),
+      retrieveRichTextItems(
+        page,
+        'Description',
+        'rich_text',
+        SOURCE_PROPERTIES
+      ),
+      retrieveRichTextItems(page, 'Keywords', 'rich_text', SOURCE_PROPERTIES),
+      relation(page, 'Directly Related Media Sources', SOURCE_PROPERTIES)
+    ])
   const sourceTypeOption = select(page, 'Source Type', SOURCE_PROPERTIES).name
   const sourceType =
     sourceTypeOption === 'Movie'
@@ -599,6 +614,7 @@ async function parseSource(page: PageObjectResponse): Promise<ParsedSource> {
     page,
     id: page.id,
     title: requiredPlainText(page, 'Name', titleItems),
+    keywords: parseSearchKeywords(plainText(keywordItems)),
     sourceType,
     description: plainText(descriptionItems) || null,
     releaseDate: date(page, 'Release Date', SOURCE_PROPERTIES),
@@ -639,16 +655,24 @@ async function parseRiskFamily(
 }
 
 async function parseConcept(page: PageObjectResponse): Promise<ParsedConcept> {
-  const [shortNameItems, longNameItems, descriptionItems] = await Promise.all([
-    retrieveRichTextItems(page, 'Short Name', 'title', CONCEPT_PROPERTIES),
-    retrieveRichTextItems(page, 'Long Name', 'rich_text', CONCEPT_PROPERTIES),
-    retrieveRichTextItems(page, 'Description', 'rich_text', CONCEPT_PROPERTIES)
-  ])
+  const [shortNameItems, longNameItems, keywordItems, descriptionItems] =
+    await Promise.all([
+      retrieveRichTextItems(page, 'Short Name', 'title', CONCEPT_PROPERTIES),
+      retrieveRichTextItems(page, 'Long Name', 'rich_text', CONCEPT_PROPERTIES),
+      retrieveRichTextItems(page, 'Keywords', 'rich_text', CONCEPT_PROPERTIES),
+      retrieveRichTextItems(
+        page,
+        'Description',
+        'rich_text',
+        CONCEPT_PROPERTIES
+      )
+    ])
 
   return {
     id: page.id,
     shortName: requiredPlainText(page, 'Short Name', shortNameItems),
     longName: requiredPlainText(page, 'Long Name', longNameItems),
+    keywords: parseSearchKeywords(plainText(keywordItems)),
     description: requiredPlainText(page, 'Description', descriptionItems),
     wikipediaUrl: url(page, 'Wikipedia', CONCEPT_PROPERTIES),
     canonicalUrls: canonicalUrls(page, CONCEPT_PROPERTIES)
@@ -1380,6 +1404,7 @@ async function main() {
         id: row.id,
         slug: slugs.scenarios[row.id]!,
         title: row.title,
+        keywords: row.keywords,
         sourceId: row.sourceId,
         releaseDate: row.releaseDate,
         featured: row.featured,

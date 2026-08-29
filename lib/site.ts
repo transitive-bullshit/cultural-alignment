@@ -8,6 +8,8 @@ const vercelHostname =
 export const siteName = 'Cultural Alignment'
 export const siteDescription =
   'Exploring real AI risks through the lens of pop culture'
+export const siteDescriptionLong =
+  'Exploring real AI risks through the lens of popular culture'
 export const siteTagline = siteDescription
 export const siteSummary = siteDescription
 

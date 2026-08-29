@@ -40,6 +40,7 @@ const minimalSnapshot = {
       id: 'source-1',
       slug: 'shared-source',
       title: 'Shared Source',
+      keywords: ['source-only', 'shared keyword'],
       sourceType: 'movie',
       description: 'The source description.',
       releaseDate: '1999-03-31',
@@ -63,6 +64,7 @@ const minimalSnapshot = {
       id: 'source-2',
       slug: 'related-source',
       title: 'Related Source',
+      keywords: [],
       sourceType: 'tv-show',
       description: null,
       releaseDate: null,
@@ -116,6 +118,7 @@ const minimalSnapshot = {
       slug: 'concept-one',
       shortName: 'Concept One',
       longName: 'Concept One With a Descriptive Name',
+      keywords: ['concept-only'],
       description: 'A concept description.',
       wikipediaUrl: null,
       citations: [
@@ -247,22 +250,40 @@ describe('ContentCatalog', () => {
 
   it('projects every searchable resource kind to a resolvable href', () => {
     const documents = catalog.getSearchDocuments()
+    const scenarioDocument = documents.find(
+      ({ href }) => href === '/scenarios/old-a'
+    )
 
     expect(new Set(documents.map(({ kind }) => kind))).toEqual(
       new Set(['scenario', 'source', 'risk-family', 'concept'])
     )
-    expect(
-      documents.find(({ href }) => href === '/scenarios/old-a')?.keywords
-    ).toEqual(
+    expect(scenarioDocument?.keywords).toEqual(
       expect.arrayContaining([
         'Scene copy.',
         'Why the analogy works.',
         'Where the analogy breaks.'
       ])
     )
+    expect(scenarioDocument?.supplementalKeywords).toEqual(
+      expect.arrayContaining(['scenario-only', 'source-only'])
+    )
+    expect(scenarioDocument?.supplementalKeywords).not.toContain('concept-only')
+    expect(
+      (scenarioDocument?.supplementalKeywords ?? []).filter(
+        (keyword) => keyword === 'shared keyword'
+      )
+    ).toHaveLength(1)
+    expect(
+      documents.find(({ href }) => href === '/sources/shared-source')
+        ?.supplementalKeywords
+    ).toContain('source-only')
     expect(
       documents.find(({ href }) => href === '/concepts/concept-one')?.keywords
     ).toContain('Concept One With a Descriptive Name')
+    expect(
+      documents.find(({ href }) => href === '/concepts/concept-one')
+        ?.supplementalKeywords
+    ).toContain('concept-only')
     expect(documents.every(({ href }) => resolveDocument(catalog, href))).toBe(
       true
     )
@@ -298,6 +319,7 @@ function createScenario(
     id: overrides.id,
     slug: overrides.id,
     title: `Scenario ${overrides.id}`,
+    keywords: ['scenario-only', 'shared keyword'],
     sourceId: 'source-1',
     releaseDate: overrides.releaseDate,
     featured: overrides.featured ?? false,

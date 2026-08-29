@@ -11,6 +11,20 @@ const generatedMediaPattern =
   /^\/media\/generated\/(?:scenarios|sources)\/[0-9a-f]{32}\/(?:gallery|detail)\.webp$/
 const sha256Pattern = /^[0-9a-f]{64}$/
 
+export function parseSearchKeywords(value: string) {
+  return [
+    ...new Set(
+      value
+        .normalize('NFKC')
+        .split(',')
+        .map((keyword) =>
+          keyword.trim().toLocaleLowerCase('en').replace(/\s+/gu, ' ')
+        )
+        .filter(Boolean)
+    )
+  ]
+}
+
 export function isGeneratedMediaPublicPath(publicPath: string) {
   return generatedMediaPattern.test(publicPath)
 }

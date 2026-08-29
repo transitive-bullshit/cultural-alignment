@@ -68,10 +68,13 @@ export const citationSchema = z.object({
   publisher: z.string().trim().min(1).max(100).nullable()
 })
 
+const searchKeywordsSchema = z.array(z.string().trim().min(1)).default([])
+
 export const scenarioRecordSchema = z.object({
   id: idSchema,
   slug: slugSchema,
   title: z.string().trim().min(1),
+  keywords: searchKeywordsSchema,
   sourceId: idSchema,
   episode: z
     .object({
@@ -94,6 +97,7 @@ export const sourceRecordSchema = z.object({
   id: idSchema,
   slug: slugSchema,
   title: z.string().trim().min(1),
+  keywords: searchKeywordsSchema,
   sourceType: z.enum(['movie', 'tv-show']),
   description: z.string().trim().min(1).nullable(),
   releaseDate: z.iso.date().nullable(),
@@ -119,6 +123,7 @@ export const conceptRecordSchema = z.object({
   slug: slugSchema,
   shortName: z.string().trim().min(1),
   longName: z.string().trim().min(1),
+  keywords: searchKeywordsSchema,
   description: z.string().trim().min(1),
   wikipediaUrl: z.url().nullable(),
   citations: z.array(citationSchema).min(1).max(3)

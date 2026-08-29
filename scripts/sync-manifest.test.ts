@@ -167,6 +167,7 @@ function currentSnapshot() {
         id: scenarioId,
         slug: 'stable-scenario',
         title: 'Keep Summer Safe',
+        keywords: [],
         sourceId,
         releaseDate: '2015-08-02',
         featured: true,
@@ -192,6 +193,7 @@ function currentSnapshot() {
         id: sourceId,
         slug: 'stable-source',
         title: 'A.I. Artificial Intelligence',
+        keywords: [],
         sourceType: 'movie' as const,
         description: null,
         releaseDate: '2001-06-29',
@@ -233,6 +235,7 @@ function currentSnapshot() {
         slug: 'stable-concept',
         shortName: 'Concept',
         longName: 'Concept',
+        keywords: [],
         description: 'Concept description',
         wikipediaUrl: null,
         citations: [

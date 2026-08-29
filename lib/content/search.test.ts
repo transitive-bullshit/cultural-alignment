@@ -56,6 +56,51 @@ describe('searchDocuments', () => {
     ])
   })
 
+  it('ranks supplemental keywords below every existing lexical tier', () => {
+    const tieredDocuments = [
+      createDocument({
+        kind: 'scenario',
+        title: 'Shared signal',
+        subtitle: 'Title match'
+      }),
+      createDocument({
+        kind: 'source',
+        title: 'Subtitle result',
+        subtitle: 'Shared signal'
+      }),
+      createDocument({
+        kind: 'concept',
+        title: 'Keyword result',
+        subtitle: 'Concept',
+        keywords: ['Shared signal']
+      }),
+      createDocument({
+        kind: 'risk-family',
+        title: 'Combined result',
+        subtitle: 'Shared',
+        keywords: ['Signal']
+      }),
+      createDocument({
+        kind: 'scenario',
+        title: 'Supplemental result',
+        subtitle: 'Scenario',
+        supplementalKeywords: ['Shared signal']
+      })
+    ]
+
+    expect(
+      searchDocuments(tieredDocuments, 'shared signal').map(
+        ({ title }) => title
+      )
+    ).toEqual([
+      'Shared signal',
+      'Subtitle result',
+      'Keyword result',
+      'Combined result',
+      'Supplemental result'
+    ])
+  })
+
   it('reserves capped results for every matching resource kind', () => {
     const crowdedDocuments = [
       ...Array.from({ length: 60 }, (_, index) =>
@@ -119,14 +164,16 @@ describe('splitSearchTextMatches', () => {
 })
 
 function createDocument(
-  input: Omit<SearchDocument, 'href' | 'keywords'> & {
+  input: Omit<SearchDocument, 'href' | 'keywords' | 'supplementalKeywords'> & {
     readonly href?: string
     readonly keywords?: readonly string[]
+    readonly supplementalKeywords?: readonly string[]
   }
 ): SearchDocument {
   return {
     ...input,
     keywords: input.keywords ?? [],
+    supplementalKeywords: input.supplementalKeywords ?? [],
     href: input.href ?? `/${input.kind}/${input.title}`
   }
 }

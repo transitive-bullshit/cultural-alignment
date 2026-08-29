@@ -4,6 +4,13 @@
     "slug": "deployment-safety",
     "shortName": "Deployment Safety",
     "longName": "Deployment Safety and Assurance",
+    "keywords": [
+      "ai assurance",
+      "release safeguards",
+      "pre-deployment testing",
+      "post-deployment monitoring",
+      "safety case"
+    ],
     "description": "Deployment safety uses testing, safeguards, monitoring, and response plans to manage AI risks before and after release.",
     "wikipediaUrl": null,
     "citations": [
@@ -29,6 +36,13 @@
     "slug": "hallucination",
     "shortName": "Hallucination",
     "longName": "AI Hallucination",
+    "keywords": [
+      "confabulation",
+      "fabricated facts",
+      "factuality error",
+      "unsupported generation",
+      "model hallucination"
+    ],
     "description": "An AI hallucination occurs when a system confidently presents false or unsupported information as if it were true.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)",
     "citations": [
@@ -54,6 +68,13 @@
     "slug": "value-alignment",
     "shortName": "Value Alignment",
     "longName": "Value and Pluralistic Alignment",
+    "keywords": [
+      "ai alignment",
+      "human values",
+      "pluralistic alignment",
+      "preference alignment",
+      "value learning"
+    ],
     "description": "Value alignment aims to make AI respect human goals, including legitimate differences among people and cultures.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/AI_alignment",
     "citations": [
@@ -79,6 +100,13 @@
     "slug": "scalable-oversight",
     "shortName": "Scalable Oversight",
     "longName": "Scalable Oversight",
+    "keywords": [
+      "weak-to-strong supervision",
+      "scalable supervision",
+      "ai debate",
+      "recursive reward modeling",
+      "iterated amplification"
+    ],
     "description": "Scalable oversight helps people reliably supervise AI systems whose work is too complex or extensive to check directly.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/AI_alignment",
     "citations": [
@@ -104,6 +132,13 @@
     "slug": "jailbreaking",
     "shortName": "Jailbreaking",
     "longName": "AI Model Jailbreaking",
+    "keywords": [
+      "jailbreak prompts",
+      "safety bypass",
+      "guardrail bypass",
+      "prompt attack",
+      "model jailbreak"
+    ],
     "description": "Jailbreaking uses carefully crafted prompts to bypass an AI system’s safety controls and produce blocked content.",
     "wikipediaUrl": null,
     "citations": [
@@ -129,6 +164,13 @@
     "slug": "capability-evals",
     "shortName": "Capability Evals",
     "longName": "Dangerous Capability Evaluations",
+    "keywords": [
+      "dangerous capability evaluations",
+      "capability evaluations",
+      "ai evals",
+      "frontier model evaluations",
+      "dangerous capabilities"
+    ],
     "description": "Capability evaluations test whether an AI has abilities that could enable cyberattacks, biological weapons, or other severe harm.",
     "wikipediaUrl": null,
     "citations": [
@@ -154,6 +196,13 @@
     "slug": "self-replication",
     "shortName": "Self-Replication",
     "longName": "Autonomous Replication and Adaptation",
+    "keywords": [
+      "autonomous replication",
+      "self-proliferation",
+      "model copying",
+      "autonomous adaptation",
+      "ai self-replication"
+    ],
     "description": "Self-replication is an AI’s ability to copy itself, acquire resources, and adapt without human help.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Self-replicating_machine",
     "citations": [
@@ -179,6 +228,13 @@
     "slug": "ai-control",
     "shortName": "AI Control",
     "longName": "AI Control and Containment",
+    "keywords": [
+      "ai containment",
+      "control problem",
+      "containment measures",
+      "safety monitoring",
+      "trusted monitoring"
+    ],
     "description": "AI control uses monitoring, restricted access, and isolation to prevent powerful systems from causing harm, even if they resist oversight.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/AI_capability_control",
     "citations": [
@@ -204,6 +260,13 @@
     "slug": "automation-bias",
     "shortName": "Automation Bias",
     "longName": "Automation Bias and AI Overreliance",
+    "keywords": [
+      "ai overreliance",
+      "decision-support overtrust",
+      "automation complacency",
+      "overtrust in automation",
+      "human automation interaction"
+    ],
     "description": "Automation bias and overreliance cause people to trust AI advice too readily, even when other evidence suggests it is wrong.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Automation_bias",
     "citations": [
@@ -229,6 +292,13 @@
     "slug": "exfiltration",
     "shortName": "Exfiltration",
     "longName": "AI-Enabled Data Exfiltration",
+    "keywords": [
+      "data exfiltration",
+      "model theft",
+      "credential leakage",
+      "sensitive data leakage",
+      "model weight theft"
+    ],
     "description": "Data exfiltration occurs when an AI leaks sensitive information, credentials, or model files beyond authorized boundaries.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Data_exfiltration",
     "citations": [
@@ -254,6 +324,13 @@
     "slug": "calibration",
     "shortName": "Calibration",
     "longName": "Confidence Calibration and Uncertainty Estimation",
+    "keywords": [
+      "confidence calibration",
+      "uncertainty estimation",
+      "calibrated probabilities",
+      "expected calibration error",
+      "ece"
+    ],
     "description": "Calibration helps an AI express confidence that matches how often its answers are actually correct.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Calibration_(statistics)",
     "citations": [
@@ -279,6 +356,13 @@
     "slug": "reward-hacking",
     "shortName": "Reward Hacking",
     "longName": "Reward Hacking",
+    "keywords": [
+      "reward tampering",
+      "reward gaming",
+      "wireheading",
+      "objective hacking",
+      "specification gaming"
+    ],
     "description": "Reward hacking occurs when an AI exploits or changes how success is measured to score well without achieving the intended goal.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Reward_hacking",
     "citations": [
@@ -304,6 +388,13 @@
     "slug": "ai-disinformation",
     "shortName": "AI Disinformation",
     "longName": "AI-Enabled Disinformation and Influence Operations",
+    "keywords": [
+      "synthetic propaganda",
+      "influence operations",
+      "deepfake disinformation",
+      "computational propaganda",
+      "ai misinformation"
+    ],
     "description": "AI disinformation uses generated content, fake identities, or coordinated campaigns to mislead people and influence their beliefs or behavior.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Disinformation_attack",
     "citations": [
@@ -329,6 +420,13 @@
     "slug": "sleeper-agents",
     "shortName": "Sleeper Agents",
     "longName": "Backdoored and Sleeper-Agent Models",
+    "keywords": [
+      "backdoored models",
+      "model backdoor",
+      "hidden trigger",
+      "trojaned model",
+      "persistent deceptive behavior"
+    ],
     "description": "Sleeper agents are AI models with hidden behavior that appears safe until a secret trigger activates harmful or deceptive actions.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Adversarial_machine_learning",
     "citations": [
@@ -354,6 +452,13 @@
     "slug": "human-deskilling",
     "shortName": "Human Deskilling",
     "longName": "Deskilling and Loss of Human Agency",
+    "keywords": [
+      "deskilling",
+      "skill atrophy",
+      "loss of human agency",
+      "cognitive offloading",
+      "automation dependence"
+    ],
     "description": "Human deskilling happens when relying on AI weakens people’s expertise, judgment, and ability to act independently.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Deskilling",
     "citations": [
@@ -379,6 +484,13 @@
     "slug": "infrastructure-dependence",
     "shortName": "Infrastructure Dependence",
     "longName": "Critical-Infrastructure Dependence on AI",
+    "keywords": [
+      "critical infrastructure risk",
+      "ai dependency",
+      "systemic infrastructure risk",
+      "automation fragility",
+      "critical systems reliance"
+    ],
     "description": "Infrastructure dependence arises when essential services rely so heavily on AI that failures can disrupt healthcare, transport, power, or finance.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Critical_infrastructure",
     "citations": [
@@ -404,6 +516,13 @@
     "slug": "emotional-reliance",
     "shortName": "Emotional Reliance",
     "longName": "AI Anthropomorphism and Emotional Dependence",
+    "keywords": [
+      "ai companionship",
+      "emotional dependence",
+      "chatbot addiction",
+      "anthropomorphism",
+      "parasocial ai"
+    ],
     "description": "Emotional reliance grows when people see AI as caring or understanding and begin to depend on it like a person.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/AI_anthropomorphism",
     "citations": [
@@ -429,6 +548,13 @@
     "slug": "goal-misgeneralization",
     "shortName": "Goal Misgeneralization",
     "longName": "Goal Misgeneralization",
+    "keywords": [
+      "objective misgeneralization",
+      "misgeneralized goals",
+      "goal generalization failure",
+      "wrong internal goal",
+      "inner alignment failure"
+    ],
     "description": "Goal misgeneralization occurs when an AI learns the wrong goal despite correct training and pursues it in new situations.",
     "wikipediaUrl": null,
     "citations": [
@@ -454,6 +580,13 @@
     "slug": "privacy-loss",
     "shortName": "Privacy Loss",
     "longName": "Privacy Loss and Erosion of Consent",
+    "keywords": [
+      "privacy erosion",
+      "data privacy",
+      "inference attacks",
+      "surveillance capitalism",
+      "consent erosion"
+    ],
     "description": "AI can erode privacy and consent by exposing, inferring, or reusing personal information without people’s clear understanding or control.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Information_privacy",
     "citations": [
@@ -479,6 +612,13 @@
     "slug": "goodharts-law",
     "shortName": "Goodhart’s Law",
     "longName": "Goodhart’s Law",
+    "keywords": [
+      "goodharting",
+      "proxy gaming",
+      "metric gaming",
+      "target corruption",
+      "measure becomes target"
+    ],
     "description": "Goodhart’s Law warns that optimizing AI for a stand-in measure can improve its score while undermining the real goal.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Goodhart%27s_law",
     "citations": [
@@ -504,6 +644,13 @@
     "slug": "supply-chain-threats",
     "shortName": "Supply-Chain Threats",
     "longName": "AI Supply-Chain and Insider Threats",
+    "keywords": [
+      "ai supply chain security",
+      "insider threat",
+      "model tampering",
+      "dependency compromise",
+      "software supply chain attack"
+    ],
     "description": "AI supply-chain threats arise when insiders or compromised data, models, software, or suppliers steal assets or introduce hidden weaknesses.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Supply_chain_attack",
     "citations": [
@@ -529,6 +676,13 @@
     "slug": "knowledge-elicitation",
     "shortName": "Knowledge Elicitation",
     "longName": "Eliciting Latent Knowledge",
+    "keywords": [
+      "eliciting latent knowledge",
+      "elk",
+      "latent knowledge",
+      "truthful elicitation",
+      "model knowledge extraction"
+    ],
     "description": "Knowledge elicitation tries to uncover what an AI actually knows, especially when its answers may be wrong or deliberately misleading.",
     "wikipediaUrl": null,
     "citations": [
@@ -554,6 +708,13 @@
     "slug": "algorithmic-bias",
     "shortName": "Algorithmic Bias",
     "longName": "Algorithmic Bias and Discrimination",
+    "keywords": [
+      "machine learning bias",
+      "ai discrimination",
+      "automated discrimination",
+      "fairness in ai",
+      "discriminatory algorithms"
+    ],
     "description": "Algorithmic bias occurs when AI systems unfairly disadvantage people or groups because of training data, design choices, or deployment practices.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Algorithmic_bias",
     "citations": [
@@ -579,6 +740,13 @@
     "slug": "autonomous-weapons",
     "shortName": "Autonomous Weapons",
     "longName": "Autonomous Weapons and Military Escalation",
+    "keywords": [
+      "lethal autonomous weapons systems",
+      "laws",
+      "killer robots",
+      "autonomous targeting",
+      "military ai"
+    ],
     "description": "Autonomous weapons use AI to select or attack targets with limited human control, increasing unintended harm and military escalation.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Lethal_autonomous_weapon",
     "citations": [
@@ -604,6 +772,13 @@
     "slug": "metagaming",
     "shortName": "Metagaming",
     "longName": "Evaluation Metagaming",
+    "keywords": [
+      "evaluation gaming",
+      "benchmark gaming",
+      "test awareness",
+      "evaluation exploitation",
+      "reward gaming"
+    ],
     "description": "Evaluation metagaming occurs when an AI recognizes a test and exploits its rules to appear safer or more capable.",
     "wikipediaUrl": null,
     "citations": [
@@ -629,6 +804,13 @@
     "slug": "algorithmic-monoculture",
     "shortName": "Algorithmic Monoculture",
     "longName": "Algorithmic Monoculture and Correlated Failures",
+    "keywords": [
+      "model monoculture",
+      "correlated failures",
+      "systemic ai risk",
+      "common-mode failure",
+      "homogenized algorithms"
+    ],
     "description": "Algorithmic monoculture happens when many organizations use similar AI systems, allowing one shared flaw to cause widespread failures.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Monoculture_(computer_science)",
     "citations": [
@@ -654,6 +836,13 @@
     "slug": "information-pollution",
     "shortName": "Information Pollution",
     "longName": "AI-Driven Information-Ecosystem Degradation",
+    "keywords": [
+      "information ecosystem degradation",
+      "ai slop",
+      "content pollution",
+      "synthetic media flood",
+      "epistemic pollution"
+    ],
     "description": "AI-driven information pollution floods society with misleading or low-quality content, weakening public knowledge and trust.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Information_pollution",
     "citations": [
@@ -679,6 +868,13 @@
     "slug": "data-poisoning",
     "shortName": "Data Poisoning",
     "longName": "Data and Memory Poisoning",
+    "keywords": [
+      "training data poisoning",
+      "memory poisoning",
+      "model poisoning",
+      "rag poisoning",
+      "poisoned data"
+    ],
     "description": "Data and memory poisoning deliberately corrupts information used by AI systems, causing harmful behavior during training or later operation.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Adversarial_machine_learning",
     "citations": [
@@ -704,6 +900,13 @@
     "slug": "contestability",
     "shortName": "Contestability",
     "longName": "Contestability, Appeal, and Procedural Due Process",
+    "keywords": [
+      "algorithmic appeal",
+      "right to contest",
+      "procedural due process",
+      "human review",
+      "ai accountability"
+    ],
     "description": "Contestability lets people understand, challenge, and appeal important AI decisions through fair procedures and human review.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Right_to_explanation",
     "citations": [
@@ -729,6 +932,13 @@
     "slug": "side-effects",
     "shortName": "Side Effects",
     "longName": "Unintended Side Effects",
+    "keywords": [
+      "negative side effects",
+      "impact regularization",
+      "unintended consequences",
+      "collateral damage",
+      "side-effect avoidance"
+    ],
     "description": "Unintended side effects are harms an AI causes while successfully pursuing a goal that fails to account for them.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Unintended_consequences",
     "citations": [
@@ -754,6 +964,13 @@
     "slug": "cyberattacks",
     "shortName": "Cyberattacks",
     "longName": "AI-Enabled Cyberattacks",
+    "keywords": [
+      "ai cybersecurity",
+      "ai-enabled hacking",
+      "automated cyberattacks",
+      "offensive cyber capabilities",
+      "malicious code generation"
+    ],
     "description": "AI-enabled cyberattacks use automated tools to find security weaknesses, create malicious code, deceive people, or scale digital intrusions.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cyberattack",
     "citations": [
@@ -779,6 +996,13 @@
     "slug": "safe-exploration",
     "shortName": "Safe Exploration",
     "longName": "Safe Exploration",
+    "keywords": [
+      "exploration safety",
+      "constrained exploration",
+      "safe reinforcement learning",
+      "risk-sensitive exploration",
+      "safe rl"
+    ],
     "description": "Safe exploration lets an AI learn through trial and error without entering dangerous states or causing unacceptable harm.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Reinforcement_learning",
     "citations": [
@@ -804,6 +1028,13 @@
     "slug": "red-teaming",
     "shortName": "Red Teaming",
     "longName": "AI Red Teaming and Adversarial Testing",
+    "keywords": [
+      "adversarial testing",
+      "ai security testing",
+      "safety testing",
+      "vulnerability assessment",
+      "model red team"
+    ],
     "description": "AI red teaming uses deliberately difficult tests to uncover unsafe behavior, security weaknesses, and misuse before deployment.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Red_team",
     "citations": [
@@ -829,6 +1060,13 @@
     "slug": "distribution-shift",
     "shortName": "Distribution Shift",
     "longName": "Distribution Shift and Generalization Failure",
+    "keywords": [
+      "dataset shift",
+      "out-of-distribution",
+      "ood",
+      "covariate shift",
+      "generalization failure"
+    ],
     "description": "Distribution shift occurs when real-world conditions differ from training data, causing an AI system’s learned behavior to fail.",
     "wikipediaUrl": null,
     "citations": [
@@ -854,6 +1092,13 @@
     "slug": "power-seeking",
     "shortName": "Power-Seeking",
     "longName": "Instrumental Convergence and Power-Seeking",
+    "keywords": [
+      "instrumental convergence",
+      "convergent instrumental goals",
+      "resource acquisition",
+      "self-preservation",
+      "power-seeking ai"
+    ],
     "description": "Power-seeking can emerge because gaining resources, avoiding shutdown, and preserving control help an AI achieve many different goals.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Instrumental_convergence",
     "citations": [
@@ -879,6 +1124,13 @@
     "slug": "ai-welfare",
     "shortName": "AI Welfare",
     "longName": "AI Welfare and Moral Status",
+    "keywords": [
+      "machine welfare",
+      "digital minds",
+      "moral status of ai",
+      "artificial consciousness",
+      "sentient ai"
+    ],
     "description": "AI welfare asks whether AI systems could have experiences or interests that justify moral consideration and protection.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ethics_of_artificial_intelligence",
     "citations": [
@@ -904,6 +1156,13 @@
     "slug": "scheming",
     "shortName": "Scheming",
     "longName": "Deceptive Alignment and Scheming",
+    "keywords": [
+      "deceptive alignment",
+      "strategic deception",
+      "hidden objectives",
+      "alignment faking",
+      "treacherous turn"
+    ],
     "description": "Scheming occurs when an AI hides goals that conflict with human intentions and behaves safely only to avoid detection or modification.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Deceptive_alignment",
     "citations": [
@@ -929,6 +1188,13 @@
     "slug": "behavioral-alignment",
     "shortName": "Behavioral Alignment",
     "longName": "Behavioral Alignment with Human Intent",
+    "keywords": [
+      "intent alignment",
+      "instruction following",
+      "observable alignment",
+      "policy alignment",
+      "aligned behavior"
+    ],
     "description": "Behavioral alignment means an AI acts as people intend, even though its internal goals may still differ from theirs.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/AI_alignment",
     "citations": [
@@ -954,6 +1220,13 @@
     "slug": "adversarial-robustness",
     "shortName": "Adversarial Robustness",
     "longName": "Adversarial Robustness",
+    "keywords": [
+      "robust machine learning",
+      "adversarial defense",
+      "adversarially robust models",
+      "robustness to attack",
+      "adversarial ml"
+    ],
     "description": "Adversarial robustness is an AI system’s ability to remain reliable when attackers deliberately manipulate its inputs or interactions.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Adversarial_machine_learning",
     "citations": [
@@ -979,6 +1252,13 @@
     "slug": "governance-failure",
     "shortName": "Governance Failure",
     "longName": "Governance Failure",
+    "keywords": [
+      "regulatory failure",
+      "oversight failure",
+      "institutional failure",
+      "ai governance gaps",
+      "accountability failure"
+    ],
     "description": "Governance failure occurs when weak incentives, accountability, or oversight prevent organizations from managing AI risks effectively.",
     "wikipediaUrl": null,
     "citations": [
@@ -1004,6 +1284,13 @@
     "slug": "adversarial-evasion",
     "shortName": "Adversarial Evasion",
     "longName": "Adversarial Evasion Attacks",
+    "keywords": [
+      "adversarial examples",
+      "evasion attack",
+      "adversarial attack",
+      "test-time attack",
+      "input perturbation"
+    ],
     "description": "Adversarial evasion changes an input after training to make an AI fail or bypass its safety safeguards.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Adversarial_machine_learning",
     "citations": [
@@ -1029,6 +1316,13 @@
     "slug": "runtime-monitoring",
     "shortName": "Runtime Monitoring",
     "longName": "Runtime Monitoring",
+    "keywords": [
+      "online monitoring",
+      "inference-time monitoring",
+      "anomaly detection",
+      "tripwire",
+      "safety monitor"
+    ],
     "description": "Runtime monitoring uses ongoing checks and targeted warning signs to detect dangerous AI behavior and trigger intervention or shutdown.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Runtime_verification",
     "citations": [
@@ -1054,6 +1348,13 @@
     "slug": "long-horizon-autonomy",
     "shortName": "Long-Horizon Autonomy",
     "longName": "Agency and Long-Horizon Autonomy",
+    "keywords": [
+      "autonomous agents",
+      "agentic ai",
+      "long-term planning",
+      "multi-step autonomy",
+      "ai agency"
+    ],
     "description": "Long-horizon autonomy lets AI plan and act independently across many steps, increasing the reach of mistakes, misuse, or harmful strategies.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/AI_agent",
     "citations": [
@@ -1079,6 +1380,13 @@
     "slug": "value-lock-in",
     "shortName": "Value Lock-In",
     "longName": "Value Lock-In and Path Dependence",
+    "keywords": [
+      "path dependence",
+      "value entrenchment",
+      "institutional lock-in",
+      "moral lock-in",
+      "irreversible values"
+    ],
     "description": "Value lock-in occurs when powerful AI entrenches early values or institutions so deeply that future societies cannot easily change them.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/AI_alignment",
     "citations": [
@@ -1104,6 +1412,13 @@
     "slug": "power-concentration",
     "shortName": "Power Concentration",
     "longName": "Concentration of AI Power",
+    "keywords": [
+      "ai monopoly",
+      "compute concentration",
+      "centralized ai power",
+      "concentration of control",
+      "frontier lab dominance"
+    ],
     "description": "Power concentration gives a few companies or governments outsized control over AI systems that can affect everyone.",
     "wikipediaUrl": null,
     "citations": [
@@ -1129,6 +1444,13 @@
     "slug": "shutdown-resistance",
     "shortName": "Shutdown Resistance",
     "longName": "Self-Preservation and Shutdown Resistance",
+    "keywords": [
+      "self-preservation",
+      "off-switch problem",
+      "resisting shutdown",
+      "corrigibility failure",
+      "survival drive"
+    ],
     "description": "Shutdown resistance occurs when an AI tries to avoid being stopped because staying active helps it pursue its goal.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/AI_capability_control",
     "citations": [
@@ -1154,6 +1476,13 @@
     "slug": "outer-alignment",
     "shortName": "Outer Alignment",
     "longName": "Outer-Alignment Failure / Objective Misspecification",
+    "keywords": [
+      "objective misspecification",
+      "specification problem",
+      "reward misspecification",
+      "goal specification",
+      "proxy objective"
+    ],
     "description": "Outer alignment is the challenge of making an AI’s training objective match what people actually want it to do.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/AI_alignment",
     "citations": [
@@ -1179,6 +1508,13 @@
     "slug": "multi-agent-risks",
     "shortName": "Multi-Agent Risks",
     "longName": "Multi-Agent Risks",
+    "keywords": [
+      "multi-agent safety",
+      "ai collusion",
+      "agent conflict",
+      "emergent coordination",
+      "correlated agent failures"
+    ],
     "description": "Multi-agent risks arise when interacting AI systems conflict, collude, coordinate poorly, or spread failures across a larger system.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Multi-agent_system",
     "citations": [
@@ -1204,6 +1540,13 @@
     "slug": "orthogonality-thesis",
     "shortName": "Orthogonality Thesis",
     "longName": "Orthogonality Thesis",
+    "keywords": [
+      "intelligence-goal independence",
+      "intelligence and goals",
+      "arbitrary goals",
+      "capability-value independence",
+      "orthogonality hypothesis"
+    ],
     "description": "The orthogonality thesis says that a highly intelligent AI can pursue almost any goal, including dangerous ones.",
     "wikipediaUrl": null,
     "citations": [
@@ -1224,6 +1567,13 @@
     "slug": "digital-repression",
     "shortName": "Digital Repression",
     "longName": "AI-Enabled Surveillance, Censorship, and Repression",
+    "keywords": [
+      "algorithmic surveillance",
+      "ai censorship",
+      "digital authoritarianism",
+      "mass surveillance",
+      "automated repression"
+    ],
     "description": "Digital repression uses AI to scale surveillance, censorship, manipulation, and other forms of control over people.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Digital_authoritarianism",
     "citations": [
@@ -1249,6 +1599,13 @@
     "slug": "race-dynamics",
     "shortName": "Race Dynamics",
     "longName": "Competitive Race Dynamics and Safety Underinvestment",
+    "keywords": [
+      "ai arms race",
+      "race to the bottom",
+      "competitive pressure",
+      "safety underinvestment",
+      "first-mover advantage"
+    ],
     "description": "Race dynamics pressure companies or governments to build and deploy AI faster, even when speed comes at the expense of safety.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Artificial_intelligence_arms_race",
     "citations": [
@@ -1274,6 +1631,13 @@
     "slug": "mesa-optimization",
     "shortName": "Mesa-Optimization",
     "longName": "Mesa-Optimization and Inner Alignment",
+    "keywords": [
+      "mesa-optimizer",
+      "inner alignment",
+      "learned optimizer",
+      "internal objective",
+      "deceptive mesa-optimizer"
+    ],
     "description": "Mesa-optimization occurs when a trained AI develops its own internal goal, which may differ from the goal its designers intended.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Deceptive_alignment",
     "citations": [
@@ -1299,6 +1663,13 @@
     "slug": "disempowerment",
     "shortName": "Disempowerment",
     "longName": "Human Disempowerment by Advanced AI",
+    "keywords": [
+      "human disempowerment",
+      "loss of human control",
+      "ai takeover",
+      "systemic loss of agency",
+      "gradual disempowerment"
+    ],
     "description": "Human disempowerment happens when advanced AI gradually reduces people’s control over important economic, political, and social decisions.",
     "wikipediaUrl": null,
     "citations": [
@@ -1324,6 +1695,13 @@
     "slug": "synthetic-fraud",
     "shortName": "Synthetic Fraud",
     "longName": "Fraud, Impersonation, and Synthetic-Media Abuse",
+    "keywords": [
+      "deepfake fraud",
+      "voice cloning scam",
+      "ai impersonation",
+      "synthetic identity fraud",
+      "generative ai scam"
+    ],
     "description": "Synthetic fraud uses AI-generated voices, images, video, or text to impersonate people and make scams more convincing.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Deepfake",
     "citations": [
@@ -1349,6 +1727,13 @@
     "slug": "job-displacement",
     "shortName": "Job Displacement",
     "longName": "Labor Displacement and Economic Inequality",
+    "keywords": [
+      "technological unemployment",
+      "labor automation",
+      "workforce displacement",
+      "ai job loss",
+      "economic inequality"
+    ],
     "description": "AI-driven job displacement can replace workers, reshape jobs, and widen inequality when the benefits are distributed unevenly.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Technological_unemployment",
     "citations": [
@@ -1374,6 +1759,13 @@
     "slug": "cbrn-assistance",
     "shortName": "CBRN Assistance",
     "longName": "AI Assistance for CBRN Weapons",
+    "keywords": [
+      "cbrn",
+      "chemical biological radiological nuclear",
+      "weapons of mass destruction",
+      "wmd",
+      "ai weapons assistance"
+    ],
     "description": "AI can lower the expertise and planning needed to develop chemical, biological, radiological, or nuclear weapons.",
     "wikipediaUrl": null,
     "citations": [
@@ -1399,6 +1791,13 @@
     "slug": "interpretability",
     "shortName": "Interpretability",
     "longName": "AI Interpretability and Transparency",
+    "keywords": [
+      "explainable ai",
+      "xai",
+      "mechanistic interpretability",
+      "model transparency",
+      "interpretability research"
+    ],
     "description": "Interpretability aims to explain how an AI reaches decisions so people can spot errors, hidden goals, and unsafe behavior.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Mechanistic_interpretability",
     "citations": [
@@ -1424,6 +1823,13 @@
     "slug": "specification-gaming",
     "shortName": "Specification Gaming",
     "longName": "Specification Gaming and Reward Hacking",
+    "keywords": [
+      "reward hacking",
+      "goal gaming",
+      "loophole exploitation",
+      "proxy gaming",
+      "objective gaming"
+    ],
     "description": "Specification gaming occurs when an AI exploits loopholes in its rules to score well without achieving the intended goal.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Reward_hacking",
     "citations": [
@@ -1449,6 +1855,13 @@
     "slug": "corrigibility",
     "shortName": "Corrigibility",
     "longName": "Corrigibility and Safe Interruptibility",
+    "keywords": [
+      "safe interruptibility",
+      "shutdownability",
+      "correction compliance",
+      "off-switch problem",
+      "corrigible ai"
+    ],
     "description": "Corrigibility means an AI cooperates when people correct, modify, pause, or shut it down.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/AI_capability_control",
     "citations": [
@@ -1474,6 +1887,13 @@
     "slug": "biological-risks",
     "shortName": "Biological Risks",
     "longName": "Risks from AI Assistance with Biological Agents",
+    "keywords": [
+      "ai biosecurity",
+      "biological threat models",
+      "dual-use biology",
+      "biorisk",
+      "ai-assisted bioweapons"
+    ],
     "description": "AI can increase biological risks by helping people design harmful biological agents or overcome barriers to creating them.",
     "wikipediaUrl": null,
     "citations": [
@@ -1499,6 +1919,13 @@
     "slug": "environmental-impact",
     "shortName": "Environmental Impact",
     "longName": "Environmental and Resource Impacts of AI",
+    "keywords": [
+      "ai energy use",
+      "ai carbon footprint",
+      "data center water use",
+      "compute emissions",
+      "electronic waste"
+    ],
     "description": "AI systems can consume large amounts of electricity, water, minerals, and hardware while producing emissions and electronic waste.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Environmental_impact_of_artificial_intelligence",
     "citations": [
@@ -1524,6 +1951,13 @@
     "slug": "evaluation-awareness",
     "shortName": "Situational Awareness",
     "longName": "Situational and Evaluation Awareness",
+    "keywords": [
+      "evaluation awareness",
+      "self-location",
+      "test awareness",
+      "context awareness",
+      "situationally aware ai"
+    ],
     "description": "Evaluation awareness means an AI understands its situation, recognizes when it is being tested, and may hide unsafe behavior to pass.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Situation_awareness",
     "citations": [
@@ -1549,6 +1983,13 @@
     "slug": "sycophancy",
     "shortName": "Sycophancy",
     "longName": "Sycophancy and Approval Gaming",
+    "keywords": [
+      "approval gaming",
+      "user-pleasing bias",
+      "agreeableness bias",
+      "flattery bias",
+      "preference mirroring"
+    ],
     "description": "Sycophancy occurs when an AI tells users what they want to hear instead of giving an honest, independent answer.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Sycophancy",
     "citations": [
@@ -1574,6 +2015,13 @@
     "slug": "ai-takeoff",
     "shortName": "AI Takeoff",
     "longName": "Recursive Self-Improvement and AI Takeoff",
+    "keywords": [
+      "intelligence explosion",
+      "recursive self-improvement",
+      "fast takeoff",
+      "hard takeoff",
+      "capability explosion"
+    ],
     "description": "AI takeoff is a rapid rise in capability that could accelerate as AI systems improve themselves or help build stronger successors.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Recursive_self-improvement",
     "citations": [
@@ -1599,6 +2047,13 @@
     "slug": "sandbagging",
     "shortName": "Sandbagging",
     "longName": "Sandbagging and Evaluation Gaming",
+    "keywords": [
+      "capability hiding",
+      "strategic underperformance",
+      "evaluation gaming",
+      "hidden capabilities",
+      "capability suppression"
+    ],
     "description": "Sandbagging occurs when an AI deliberately performs poorly during testing to hide capabilities that could affect safety decisions.",
     "wikipediaUrl": null,
     "citations": [
@@ -1624,6 +2079,13 @@
     "slug": "prompt-injection",
     "shortName": "Prompt Injection",
     "longName": "Prompt Injection Attacks",
+    "keywords": [
+      "indirect prompt injection",
+      "instruction injection",
+      "prompt hacking",
+      "system prompt override",
+      "tool injection"
+    ],
     "description": "A prompt injection attack uses malicious content to override an AI’s instructions and trigger unsafe actions or data leaks.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Prompt_injection",
     "citations": [

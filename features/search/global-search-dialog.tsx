@@ -167,7 +167,10 @@ function supportingKeyword(document: SearchDocument, query: string) {
 
   if (missingTokens.length === 0) return null
 
-  const keywordMatch = document.keywords
+  const keywordMatch = [
+    ...document.keywords,
+    ...(document.supplementalKeywords ?? [])
+  ]
     .map((keyword, index) => {
       const normalizedKeyword = normalizeSearchText(keyword)
 

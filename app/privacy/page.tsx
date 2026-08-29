@@ -4,6 +4,7 @@ import {
   InformationPage,
   InformationSection
 } from '@/features/content-navigation/information-page'
+import { notionSourceUrl, repositoryUrl, xProfileUrl } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Privacy',
@@ -14,56 +15,95 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <InformationPage
-      context='Privacy / policy'
-      eyebrow='Last updated 29 August 2026'
-      title='What this site stores—and what it does not.'
+      context='Privacy Policy'
+      eyebrow={
+        <p className='flex flex-col gap-0.5'>
+          <span>Last updated</span> <span>August 29th 2026</span>
+        </p>
+      }
+      title='Privacy Policy'
+      titleSize='compact'
       introduction={
         <p>
-          Cultural Alignment has no accounts, comments, advertising, or
-          first-party tracking. The remaining data flows are routine web
-          requests, searches, local preferences, and media you choose to load.
+          Cultural Alignment is a free, independent, open-source resource with
+          no accounts, advertising, or usage tracking.
         </p>
       }
     >
-      <InformationSection index='01' title='Requests and search'>
+      <InformationSection index='01' title='Open source and open data'>
         <p>
-          The site does not ask for personal information or run its own
-          analytics. Hosting and network providers may process routine request
-          data—such as an IP address, browser details, requested URL, and
-          timestamps—to deliver and secure the site.
+          The source code is available on{' '}
+          <a href={repositoryUrl} target='_blank' rel='noreferrer'>
+            GitHub
+          </a>{' '}
+          under an{' '}
+          <a
+            href='https://choosealicense.com/licenses/mit/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            MIT license
+          </a>
+          .
         </p>
         <p>
-          Command-palette query text and ranking stay in your browser. The site
-          requests a static search index when you first open the palette.
+          The underlying data curated by{' '}
+          <a href={xProfileUrl} target='_blank' rel='noreferrer'>
+            Travis Fischer
+          </a>{' '}
+          is publicly available in a{' '}
+          <a href={notionSourceUrl} target='_blank' rel='noreferrer'>
+            Notion database
+          </a>{' '}
+          under the{' '}
+          <a
+            href='https://choosealicense.com/licenses/cc0-1.0/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            CC0 1.0 license
+          </a>
+          .
         </p>
       </InformationSection>
 
-      <InformationSection index='02' title='Preferences on this device'>
+      <InformationSection index='02' title='Analytics'>
         <p>
-          This site stores two choices in your browser&rsquo;s local storage:
-          whether you dismissed the spoiler warning, and your preferred scenario
-          sort order. They are not used to identify you. Clear this site&rsquo;s
-          browser data to remove them.
+          Cultural Alignment does not collect any usage analytics. Hosting
+          providers may process basic request data to deliver and protect the
+          site.
         </p>
       </InformationSection>
 
-      <InformationSection index='03' title='YouTube and outbound links'>
+      <InformationSection index='03' title='User preferences'>
         <p>
-          Scenario pages can include YouTube clips. The player and YouTube API
-          load only after you choose to play one. From that point, YouTube may
-          receive information under its own privacy policy. Following a link to
-          Notion, GitHub, X, or another referenced site takes you to that
-          service, where its privacy policy applies.
+          The site saves some minor UX settings like spoiler warning choice and
+          preferred sorting order in your browser's local storage. These
+          preferences stay on your device and do not identify you. Clear the
+          site&rsquo;s browser data to remove them.
         </p>
       </InformationSection>
 
-      <InformationSection index='04' title='Updates and contact'>
+      <InformationSection index='04' title='YouTube and external links'>
         <p>
-          If accounts, analytics, submissions, or another feature materially
-          changes the site&rsquo;s data use, this policy and its date will be
-          updated. For privacy questions, email{' '}
-          <a href='mailto:travis@transitivebullsh.it'>
-            travis@transitivebullsh.it
+          YouTube loads only when you choose to play a clip. YouTube and any
+          external sites you visit may collect data under their own privacy
+          policies.
+        </p>
+      </InformationSection>
+
+      <InformationSection index='05' title='Updates'>
+        <p>
+          Cultural Alignment will update this policy and the date above if these
+          data practices or privacy policy change.
+        </p>
+      </InformationSection>
+
+      <InformationSection index='06' title='Contact'>
+        <p>
+          For further info, please reach out to me on X{' '}
+          <a href={xProfileUrl} target='_blank' rel='noreferrer'>
+            @transitive_bs
           </a>
           .
         </p>

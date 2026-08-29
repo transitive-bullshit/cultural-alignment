@@ -11,6 +11,7 @@ export type SearchDocument = {
   readonly title: string
   readonly subtitle: string
   readonly keywords: readonly string[]
+  readonly supplementalKeywords?: readonly string[]
   readonly href: string
 }
 
@@ -53,6 +54,10 @@ export function buildSearchDocuments(
           scenario.whyAnalogyWorks,
           scenario.caveats
         ]),
+        ...optionalSupplementalKeywords([
+          ...scenario.keywords,
+          ...source.keywords
+        ]),
         href: `/scenarios/${scenario.slug}`
       }
     }),
@@ -66,6 +71,7 @@ export function buildSearchDocuments(
         source.rottenTomatoesUrl ? 'Rotten Tomatoes' : null,
         source.youtubeTrailerUrl ? 'YouTube trailer' : null
       ]),
+      ...optionalSupplementalKeywords(source.keywords),
       href: `/sources/${source.slug}`
     })),
     ...snapshot.riskFamilies.map((family) => ({
@@ -80,6 +86,7 @@ export function buildSearchDocuments(
       title: concept.shortName,
       subtitle: 'AI safety concept',
       keywords: uniqueStrings([concept.longName, concept.description]),
+      ...optionalSupplementalKeywords(concept.keywords),
       href: `/concepts/${concept.slug}`
     }))
   ]
@@ -93,6 +100,14 @@ export function buildSearchDocuments(
 
 function uniqueStrings(values: readonly (string | null | undefined)[]) {
   return [...new Set(values.filter((value): value is string => Boolean(value)))]
+}
+
+function optionalSupplementalKeywords(
+  values: readonly (string | null | undefined)[]
+) {
+  const supplementalKeywords = uniqueStrings(values)
+
+  return supplementalKeywords.length > 0 ? { supplementalKeywords } : {}
 }
 
 function getRequired<Key, Value>(values: ReadonlyMap<Key, Value>, key: Key) {

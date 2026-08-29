@@ -166,6 +166,9 @@ function scoreDocument(
   const title = normalizeSearchText(document.title)
   const subtitle = normalizeSearchText(document.subtitle)
   const keywords = document.keywords.map(normalizeSearchText)
+  const supplementalKeywords = (document.supplementalKeywords ?? []).map(
+    normalizeSearchText
+  )
   const titleScore = scoreField(title, query, tokens, 0)
 
   if (titleScore !== null) return titleScore
@@ -188,7 +191,26 @@ function scoreDocument(
 
   const combined = [title, subtitle, ...keywords].join(' ')
 
-  return tokens.every((token) => combined.includes(token)) ? 120 : null
+  if (tokens.every((token) => combined.includes(token))) return 120
+
+  let supplementalKeywordScore: number | null = null
+
+  for (const keyword of supplementalKeywords) {
+    const score = scoreField(keyword, query, tokens, 160)
+
+    if (
+      score !== null &&
+      (supplementalKeywordScore === null || score < supplementalKeywordScore)
+    ) {
+      supplementalKeywordScore = score
+    }
+  }
+
+  if (supplementalKeywordScore !== null) return supplementalKeywordScore
+
+  const expanded = [combined, ...supplementalKeywords].join(' ')
+
+  return tokens.every((token) => expanded.includes(token)) ? 200 : null
 }
 
 function scoreField(

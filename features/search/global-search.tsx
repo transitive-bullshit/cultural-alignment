@@ -137,6 +137,11 @@ function isSearchDocument(input: unknown): input is SearchDocument {
     typeof document.subtitle === 'string' &&
     Array.isArray(document.keywords) &&
     document.keywords.every((keyword) => typeof keyword === 'string') &&
+    (document.supplementalKeywords === undefined ||
+      (Array.isArray(document.supplementalKeywords) &&
+        document.supplementalKeywords.every(
+          (keyword) => typeof keyword === 'string'
+        ))) &&
     typeof document.href === 'string' &&
     document.href.startsWith('/')
   )
