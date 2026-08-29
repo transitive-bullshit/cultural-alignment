@@ -359,6 +359,7 @@ export function SpatialGallery({
       className={styles.gallery}
       data-spatial-gallery={mode}
       data-gallery-transition-ready={transitionReady || undefined}
+      data-selected-scenario-id={selectedItem.id}
       aria-label={`${mode === 'featured' ? 'Featured' : 'All'} cultural scenarios. Drag horizontally or scroll to explore.`}
     >
       <div
@@ -381,11 +382,11 @@ export function SpatialGallery({
             initialIndex={sceneInitialIndex}
             initialOffsetX={initialOffsetX}
             items={items}
-            onControllerReady={markTransitionReady}
             onPressItem={(index) => {
               pressedIndexRef.current = index
             }}
             onSelectItem={selectItem}
+            onTransitionReady={markTransitionReady}
             reducedMotion={reducedMotion}
           />
         ) : (

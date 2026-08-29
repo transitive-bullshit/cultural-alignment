@@ -5,7 +5,6 @@ import contentManifest from '@/content/snapshot/manifest.json'
 import {
   notionSourceUrl,
   repositoryUrl,
-  siteDescription,
   siteTagline,
   xProfileUrl
 } from '@/lib/site'
@@ -32,9 +31,7 @@ export function SiteFooter() {
     <footer className={styles.footer} data-site-footer-root>
       <div className={styles.lead}>
         <SiteWordmark className={styles.wordmark} />
-        <p>
-          {siteTagline}. {siteDescription}
-        </p>
+        <p>{siteTagline}</p>
       </div>
 
       <div className={styles.navigation}>

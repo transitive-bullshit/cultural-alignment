@@ -9,7 +9,6 @@ import {
 import {
   notionSourceUrl,
   repositoryUrl,
-  siteDescription,
   siteSummary,
   siteTagline,
   xProfileUrl
@@ -29,9 +28,9 @@ export default function AboutPage() {
       title={siteTagline}
       introduction={
         <p>
-          {siteDescription} Cultural Alignment pairs scenes from film and
-          television with AI risk families and safety concepts. Each entry
-          explains the connection and its limits.
+          Cultural Alignment pairs scenes from film and television with AI risk
+          families and safety concepts. Each entry explains the connection and
+          its limits.
         </p>
       }
     >

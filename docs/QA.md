@@ -98,8 +98,8 @@ The selected prototype evidence is under `docs/outputs/gate-b`, including 1440×
 ## Performance baseline
 
 - Featured page: 25 gallery images observed, 934,914 bytes of generated WebP media.
-- Full gallery initial settled view: 68 gallery requests observed, 2,775,750 bytes of generated WebP media; decoded residency is hard-capped at 64.
-- Estimated raw RGBA residency at that ceiling: about 132 MB before browser/GPU bookkeeping.
+- Full gallery idle settling eventually requests and retains every optimized gallery image source, while foreground and scroll-direction candidates preempt background work.
+- GPU uploads and material bindings are capped separately at 128 full textures on mobile and 256 on desktop. Evicted uploads retain their loaded image source and can return to the foreground without another request or blurred placeholder.
 - Complete scenario media corpus: 12,618,402 bytes of gallery WebP and 35,605,396 bytes of detail WebP in the pre-migration baseline; the public object-storage variants are neither eagerly requested nor simultaneously GPU-resident.
 - Optional source posters: 30,994,486 bytes of gallery WebP and 97,268,040 bytes of detail WebP across 202 sources; Zootopia is the one posterless record.
 - Built client static directory: 2.5 MB. Search index: 441,862 bytes.

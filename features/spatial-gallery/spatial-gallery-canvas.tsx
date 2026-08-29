@@ -21,12 +21,11 @@ import {
   RGBAFormat,
   ShaderMaterial,
   SRGBColorSpace,
-  TextureLoader,
+  Texture,
   UnsignedByteType,
   Vector2,
   Vector3,
   type Camera,
-  type Texture,
   type WebGLRenderer
 } from 'three'
 
@@ -55,8 +54,11 @@ import {
 } from './selection'
 import styles from './spatial-gallery.module.css'
 import {
+  getTextureBindingLimit,
+  isMobileGalleryViewport,
+  planTextureBindings,
   planTextureLoads,
-  rankNearbyItemIndices,
+  prioritizeTextureItemIndices,
   settleTextureLoad,
   type TextureLoadStage
 } from './texture-residency'
@@ -87,11 +89,12 @@ const WHEEL_IMPULSE_GAIN = 12
 const INTRO_TRAVEL_COLUMNS = 3.6
 const INTRO_REST_FRACTION = 0.025
 const INTRO_VISIBILITY_THRESHOLD = 0.2
-const TEXTURE_EVICTION_DELAY_SECONDS = 0.5
-const FULL_TEXTURE_LOAD_CONCURRENCY = 12
+const FULL_TEXTURE_LOAD_CONCURRENCY = 32
+const IDLE_TEXTURE_LOAD_CONCURRENCY = 16
 const PLACEHOLDER_TEXTURE_LOAD_CONCURRENCY = 4
 const TEXTURE_LOOKAHEAD_SECONDS = 0.2
-const TEXTURE_MAX_RESIDENT = 64
+const TEXTURE_IDLE_TIMEOUT_MILLISECONDS = 1_000
+const TEXTURE_IDLE_VELOCITY_THRESHOLD = 0.1
 const TEXTURE_SWEEP_INTERVAL_SECONDS = 0.12
 
 const warpVertexShader = /* glsl */ `
@@ -195,9 +198,9 @@ type CanvasProps = Readonly<{
   initialIndex: number
   initialOffsetX: number | null
   items: readonly SpatialGalleryItem[]
-  onControllerReady(): void
   onPressItem(index: number): void
   onSelectItem(index: number): void
+  onTransitionReady(): void
   reducedMotion: boolean
 }>
 
@@ -207,6 +210,13 @@ type ScenarioSlot = Readonly<{
 }>
 
 type IntroState = 'waiting' | 'running' | 'finished'
+
+type PendingTextureRequest = Readonly<{
+  cancel(): void
+  promote(): void
+}>
+
+type TextureFetchPriority = 'high' | 'low'
 
 export function SpatialGalleryCanvas(props: CanvasProps) {
   return (
@@ -233,9 +243,9 @@ function SpatialField({
   initialIndex,
   initialOffsetX,
   items,
-  onControllerReady,
   onPressItem,
   onSelectItem,
+  onTransitionReady,
   reducedMotion
 }: CanvasProps) {
   const draggingRef = useRef(false)
@@ -262,17 +272,25 @@ function SpatialField({
   const disposedRef = useRef(false)
   const failedFullTextureItemsRef = useRef(new Set<number>())
   const failedPlaceholderTextureItemsRef = useRef(new Set<number>())
+  const boundFullTextureItemsRef = useRef(new Set<number>())
   const fullTextureItemsRef = useRef(new Set<number>())
+  const idleTextureItemsRef = useRef<readonly number[]>([])
   const nearbyTextureItemsRef = useRef(new Set<number>())
-  const pendingFullTextureItemsRef = useRef(new Set<number>())
-  const pendingPlaceholderTextureItemsRef = useRef(new Set<number>())
+  const pendingFullTextureRequestsRef = useRef(
+    new Map<number, PendingTextureRequest>()
+  )
+  const pendingPlaceholderTextureRequestsRef = useRef(
+    new Map<number, PendingTextureRequest>()
+  )
   const prioritizedTextureItemsRef = useRef<readonly number[]>([])
   const residentTexturesRef = useRef(new Map<number, Texture>())
+  const textureIdleCancelRef = useRef<(() => void) | null>(null)
   const textureGenerationRef = useRef(1)
-  const textureLastSeenRef = useRef(new Map<number, number>())
+  const transitionReadyRef = useRef(false)
   const lastTextureSweepRef = useRef(Number.NEGATIVE_INFINITY)
   const { camera, gl, size } = useThree()
-  const mobile = size.width <= 680
+  const mobile = isMobileGalleryViewport(size.width)
+  const maximumBoundFullTextures = getTextureBindingLimit(size.width)
   const lanes = mobile ? 3 : DESKTOP_LANES
   const frameWidth = mobile ? 2.72 : DESKTOP_FRAME_WIDTH
   const frameHeight = frameWidth / FRAME_ASPECT
@@ -305,7 +323,6 @@ function SpatialField({
   )
   const geometry = useMemo(() => new PlaneGeometry(1, 1, 20, 12), [])
   const placeholderTexture = useMemo(() => createPlaceholderTexture(), [])
-  const textureLoader = useMemo(() => new TextureLoader(), [])
   const backingMaterial = useMemo(
     () => createFlatMaterial(PAPER_LIGHT, false),
     []
@@ -451,37 +468,56 @@ function SpatialField({
   }, [gl])
 
   useEffect(() => {
+    const boundFullTextureItems = boundFullTextureItemsRef.current
     const disposed = disposedRef
     const failedFullTextureItems = failedFullTextureItemsRef.current
     const failedPlaceholderTextureItems =
       failedPlaceholderTextureItemsRef.current
     const fullTextureItems = fullTextureItemsRef.current
+    const idleTextureItems = idleTextureItemsRef
     const nearbyTextureItems = nearbyTextureItemsRef.current
-    const pendingFullTextureItems = pendingFullTextureItemsRef.current
-    const pendingPlaceholderTextureItems =
-      pendingPlaceholderTextureItemsRef.current
+    const pendingFullTextureRequests = pendingFullTextureRequestsRef.current
+    const pendingPlaceholderTextureRequests =
+      pendingPlaceholderTextureRequestsRef.current
     const prioritizedTextureItems = prioritizedTextureItemsRef
     const residentTextures = residentTexturesRef.current
-    const textureLastSeen = textureLastSeenRef.current
+    const textureIdleCancel = textureIdleCancelRef
 
     disposedRef.current = false
-    syncTextureDiagnostics(gl, residentTextures, fullTextureItems)
+    syncTextureDiagnostics(
+      gl,
+      residentTextures,
+      fullTextureItems,
+      boundFullTextureItems,
+      getTextureBindingLimit(gl.domElement.clientWidth)
+    )
 
     return () => {
       disposed.current = true
+      textureIdleCancel.current?.()
+      textureIdleCancel.current = null
       textureGenerationRef.current += 1
       for (const texture of residentTextures.values()) {
         texture.dispose()
       }
       failedFullTextureItems.clear()
       failedPlaceholderTextureItems.clear()
+      boundFullTextureItems.clear()
       fullTextureItems.clear()
+      idleTextureItems.current = []
       nearbyTextureItems.clear()
-      pendingFullTextureItems.clear()
-      pendingPlaceholderTextureItems.clear()
       prioritizedTextureItems.current = []
+      for (const request of pendingFullTextureRequests.values()) {
+        request.cancel()
+      }
+      for (const request of pendingPlaceholderTextureRequests.values()) {
+        request.cancel()
+      }
+      pendingFullTextureRequests.clear()
+      pendingPlaceholderTextureRequests.clear()
       residentTextures.clear()
-      textureLastSeen.clear()
+      delete gl.domElement.dataset.galleryBoundTextures
+      delete gl.domElement.dataset.galleryBindingLimit
       delete gl.domElement.dataset.galleryFullTextures
       delete gl.domElement.dataset.galleryPlaceholderTextures
     }
@@ -741,8 +777,6 @@ function SpatialField({
         }
       }
     }
-    onControllerReady()
-
     return () => {
       controllerRef.current = null
     }
@@ -755,7 +789,6 @@ function SpatialField({
     frameWidth,
     gl,
     layout,
-    onControllerReady,
     onPressItem,
     reducedMotion,
     resolvePointerSlotAt,
@@ -849,39 +882,110 @@ function SpatialField({
       clock.elapsedTime - lastTextureSweepRef.current >=
       TEXTURE_SWEEP_INTERVAL_SECONDS
     if (textureSweepDue) {
-      const prioritizedItemIndices = rankNearbyItemIndices(
-        layout.slots,
-        slotXPositions,
-        textureVisibilityLimit,
-        motionRef.current.velocity.x,
-        TEXTURE_LOOKAHEAD_SECONDS
-      )
+      lastTextureSweepRef.current = clock.elapsedTime
+      const { foregroundItemIndices, idleItemIndices } =
+        prioritizeTextureItemIndices(
+          layout.slots,
+          slotXPositions,
+          textureVisibilityLimit,
+          motionRef.current.velocity.x,
+          TEXTURE_LOOKAHEAD_SECONDS
+        )
+      const prioritizedItemIndices = [
+        ...foregroundItemIndices,
+        ...idleItemIndices
+      ]
+      idleTextureItemsRef.current = idleItemIndices
       prioritizedTextureItemsRef.current = prioritizedItemIndices
+      for (const itemIndex of foregroundItemIndices) {
+        pendingFullTextureRequestsRef.current.get(itemIndex)?.promote()
+        if (nearbyTextureItemsRef.current.has(itemIndex)) continue
+
+        failedFullTextureItemsRef.current.delete(itemIndex)
+        failedPlaceholderTextureItemsRef.current.delete(itemIndex)
+      }
       nearbyTextureItemsRef.current.clear()
-      for (const itemIndex of prioritizedItemIndices) {
+      for (const itemIndex of foregroundItemIndices) {
         nearbyTextureItemsRef.current.add(itemIndex)
       }
-      updateTextureResidency({
+
+      syncFullTextureBindings({
+        bound: boundFullTextureItemsRef.current,
+        full: fullTextureItemsRef.current,
+        gl,
+        imageMaterials,
+        maximumBoundTextures: maximumBoundFullTextures,
+        placeholderTexture,
+        prioritizedItemIndices,
+        resident: residentTexturesRef.current
+      })
+
+      const textureLoadOptions = {
+        boundFull: boundFullTextureItemsRef.current,
         disposed: disposedRef,
-        elapsedSeconds: clock.elapsedTime,
         gl,
         imageMaterials,
         items,
         failedFull: failedFullTextureItemsRef.current,
         failedPlaceholder: failedPlaceholderTextureItemsRef.current,
         full: fullTextureItemsRef.current,
-        lastSeen: textureLastSeenRef.current,
-        lastSweep: lastTextureSweepRef,
-        nearbyItemIndices: nearbyTextureItemsRef.current,
         nearbyItems: nearbyTextureItemsRef,
-        pendingFull: pendingFullTextureItemsRef.current,
-        pendingPlaceholder: pendingPlaceholderTextureItemsRef.current,
+        pendingFull: pendingFullTextureRequestsRef.current,
+        pendingPlaceholder: pendingPlaceholderTextureRequestsRef.current,
         placeholderTexture,
         prioritizedItems: prioritizedTextureItemsRef,
         resident: residentTexturesRef.current,
-        textureGeneration: textureGenerationRef,
-        textureLoader
+        textureGeneration: textureGenerationRef
+      } satisfies TextureLoadOptions
+
+      updateTextureLoads({
+        ...textureLoadOptions,
+        fullFetchPriority: 'high',
+        fullLoadConcurrency: FULL_TEXTURE_LOAD_CONCURRENCY,
+        loadItemIndices: foregroundItemIndices,
+        placeholderLoadConcurrency: PLACEHOLDER_TEXTURE_LOAD_CONCURRENCY
       })
+
+      if (
+        textureIdleCancelRef.current === null &&
+        hasFullTextureLoadCandidate(
+          idleItemIndices,
+          fullTextureItemsRef.current,
+          pendingFullTextureRequestsRef.current,
+          failedFullTextureItemsRef.current
+        )
+      ) {
+        const requestGeneration = textureGenerationRef.current
+        textureIdleCancelRef.current = scheduleIdleWork(() => {
+          textureIdleCancelRef.current = null
+          if (
+            disposedRef.current ||
+            textureGenerationRef.current !== requestGeneration ||
+            draggingRef.current ||
+            Math.abs(motionRef.current.velocity.x) >
+              TEXTURE_IDLE_VELOCITY_THRESHOLD
+          ) {
+            return
+          }
+
+          updateTextureLoads({
+            ...textureLoadOptions,
+            fullFetchPriority: 'low',
+            fullLoadConcurrency: IDLE_TEXTURE_LOAD_CONCURRENCY,
+            loadItemIndices: idleTextureItemsRef.current,
+            placeholderLoadConcurrency: 0
+          })
+        })
+      }
+    }
+
+    if (
+      !transitionReadyRef.current &&
+      (fullTextureItemsRef.current.has(initialIndex) ||
+        failedFullTextureItemsRef.current.has(initialIndex))
+    ) {
+      transitionReadyRef.current = true
+      onTransitionReady()
     }
     const nearbyItemIndices = nearbyTextureItemsRef.current
 
@@ -1064,96 +1168,65 @@ function createImageInstancedMesh(
   return mesh
 }
 
-type TextureResidencyOptions = Readonly<{
+type TextureLoadOptions = Readonly<{
+  boundFull: Set<number>
   disposed: MutableRefObject<boolean>
-  elapsedSeconds: number
   failedFull: Set<number>
   failedPlaceholder: Set<number>
   full: Set<number>
   gl: WebGLRenderer
   imageMaterials: readonly ShaderMaterial[]
   items: readonly SpatialGalleryItem[]
-  lastSeen: Map<number, number>
-  lastSweep: MutableRefObject<number>
-  nearbyItemIndices: ReadonlySet<number>
   nearbyItems: MutableRefObject<ReadonlySet<number>>
-  pendingFull: Set<number>
-  pendingPlaceholder: Set<number>
+  pendingFull: Map<number, PendingTextureRequest>
+  pendingPlaceholder: Map<number, PendingTextureRequest>
   placeholderTexture: Texture
   prioritizedItems: MutableRefObject<readonly number[]>
   resident: Map<number, Texture>
   textureGeneration: MutableRefObject<number>
-  textureLoader: TextureLoader
 }>
 
-function updateTextureResidency({
+type TextureLoadSweepOptions = TextureLoadOptions &
+  Readonly<{
+    fullFetchPriority: TextureFetchPriority
+    fullLoadConcurrency: number
+    loadItemIndices: readonly number[]
+    placeholderLoadConcurrency: number
+  }>
+
+function updateTextureLoads({
+  boundFull,
   disposed,
-  elapsedSeconds,
   failedFull,
   failedPlaceholder,
+  fullFetchPriority,
+  fullLoadConcurrency,
   full,
   gl,
   imageMaterials,
   items,
-  lastSeen,
-  lastSweep,
-  nearbyItemIndices,
+  loadItemIndices,
   nearbyItems,
   pendingFull,
   pendingPlaceholder,
   placeholderTexture,
+  placeholderLoadConcurrency,
   prioritizedItems,
   resident,
-  textureGeneration,
-  textureLoader
-}: TextureResidencyOptions) {
-  if (elapsedSeconds - lastSweep.current < TEXTURE_SWEEP_INTERVAL_SECONDS) {
-    return
-  }
-  lastSweep.current = elapsedSeconds
-
-  for (const itemIndex of prioritizedItems.current) {
-    lastSeen.set(itemIndex, elapsedSeconds)
-  }
-
-  clearFailuresOutsideRange(failedFull, nearbyItemIndices)
-  clearFailuresOutsideRange(failedPlaceholder, nearbyItemIndices)
-
-  let residencyChanged = false
-  for (const [itemIndex] of resident) {
-    if (nearbyItemIndices.has(itemIndex)) continue
-    const secondsSinceVisible =
-      elapsedSeconds - (lastSeen.get(itemIndex) ?? elapsedSeconds)
-    if (secondsSinceVisible < TEXTURE_EVICTION_DELAY_SECONDS) continue
-
-    residencyChanged =
-      evictResidentTexture(
-        itemIndex,
-        full,
-        imageMaterials,
-        lastSeen,
-        placeholderTexture,
-        resident
-      ) || residencyChanged
-  }
-  if (residencyChanged) syncTextureDiagnostics(gl, resident, full)
-
+  textureGeneration
+}: TextureLoadSweepOptions) {
   const loadPlan = planTextureLoads({
     failedFull,
     failedPlaceholder,
     full,
-    fullLoadCapacity: Math.max(
-      0,
-      FULL_TEXTURE_LOAD_CONCURRENCY - pendingFull.size
-    ),
-    maximumResidentTextures: TEXTURE_MAX_RESIDENT,
+    fullLoadCapacity: Math.max(0, fullLoadConcurrency - pendingFull.size),
     pendingFull,
     pendingPlaceholder,
     placeholderLoadCapacity: Math.max(
       0,
-      PLACEHOLDER_TEXTURE_LOAD_CONCURRENCY - pendingPlaceholder.size
+      placeholderLoadConcurrency - pendingPlaceholder.size
     ),
-    prioritizedItemIndices: prioritizedItems.current,
+    prioritizedItemIndices: loadItemIndices,
     resident
   })
 
@@ -1167,50 +1240,65 @@ function updateTextureResidency({
     const requestGeneration = textureGeneration.current
     const source = stage === 'full' ? item.image.src : item.image.blurDataURL
 
-    pending.add(itemIndex)
-    const requestedTexture = textureLoader.load(
+    const request = loadBrowserTexture(
       source,
+      stage === 'full' ? fullFetchPriority : 'high',
       (texture) => {
         const current =
           !disposed.current && textureGeneration.current === requestGeneration
+        pending.delete(itemIndex)
         if (!current) {
           texture.dispose()
           return
         }
-        pending.delete(itemIndex)
         const committed = settleTextureLoad({
           activeItemIndices: nearbyItems.current,
           current,
           dispose: (loadedTexture) => loadedTexture.dispose(),
           fullItemIndices: full,
           itemIndex,
-          lastSeen,
-          maximumResidentTextures: TEXTURE_MAX_RESIDENT,
           onBind: (loadedTexture) => {
             configureTexture(loadedTexture, gl, stage)
-            // oxlint-disable-next-line react/immutability -- Shader uniforms are mutable GPU resources.
-            material.uniforms.uTexture!.value = loadedTexture
+            if (stage === 'placeholder') {
+              // oxlint-disable-next-line react/immutability -- Shader uniforms are mutable GPU resources.
+              material.uniforms.uTexture!.value = loadedTexture
+            }
           },
-          onEvict: (evictedItemIndex) => {
-            evictResidentTexture(
-              evictedItemIndex,
-              full,
-              imageMaterials,
-              lastSeen,
-              placeholderTexture,
-              resident
-            )
-          },
-          prioritizedItemIndices: prioritizedItems.current,
           residentTextures: resident,
           stage,
           texture
         })
-        if (committed) syncTextureDiagnostics(gl, resident, full)
+        if (!committed) return
+
+        if (stage === 'full') {
+          // Keep the decoded image resident even when its GPU upload is not in
+          // the current binding window. Foreground rebinding is synchronous.
+          // oxlint-disable-next-line react/immutability -- Shader uniforms are mutable GPU resources.
+          material.uniforms.uTexture!.value = placeholderTexture
+          syncFullTextureBindings({
+            bound: boundFull,
+            full,
+            gl,
+            imageMaterials,
+            maximumBoundTextures: getTextureBindingLimit(
+              gl.domElement.clientWidth
+            ),
+            placeholderTexture,
+            prioritizedItemIndices: prioritizedItems.current,
+            resident
+          })
+          return
+        }
+
+        syncTextureDiagnostics(
+          gl,
+          resident,
+          full,
+          boundFull,
+          getTextureBindingLimit(gl.domElement.clientWidth)
+        )
       },
-      undefined,
       () => {
-        requestedTexture.dispose()
         if (
           disposed.current ||
           textureGeneration.current !== requestGeneration
@@ -1218,9 +1306,10 @@ function updateTextureResidency({
           return
         }
         pending.delete(itemIndex)
-        if (nearbyItems.current.has(itemIndex)) failed.add(itemIndex)
+        failed.add(itemIndex)
       }
     )
+    pending.set(itemIndex, request)
   }
 
   for (const itemIndex of loadPlan.placeholderItemIndices) {
@@ -1231,36 +1320,101 @@ function updateTextureResidency({
   }
 }
 
-function evictResidentTexture(
-  itemIndex: number,
-  full: Set<number>,
-  imageMaterials: readonly ShaderMaterial[],
-  lastSeen: Map<number, number>,
-  placeholderTexture: Texture,
-  resident: Map<number, Texture>
-) {
-  const texture = resident.get(itemIndex)
-  if (!texture) return false
+function loadBrowserTexture(
+  source: string,
+  fetchPriority: TextureFetchPriority,
+  onLoad: (texture: Texture) => void,
+  onError: () => void
+): PendingTextureRequest {
+  const texture = new Texture()
+  let settled = false
+  let image: HTMLImageElement
 
-  const material = imageMaterials[itemIndex]
-  if (material) {
-    // oxlint-disable-next-line react/immutability -- Shader uniforms are mutable GPU resources.
-    material.uniforms.uTexture!.value = placeholderTexture
+  const removeListeners = (target: HTMLImageElement) => {
+    target.removeEventListener('load', handleLoad)
+    target.removeEventListener('error', handleError)
   }
-  texture.dispose()
-  full.delete(itemIndex)
-  resident.delete(itemIndex)
-  lastSeen.delete(itemIndex)
-  return true
+  const handleLoad = (event: Event) => {
+    if (settled) return
+
+    settled = true
+    const loadedImage = event.currentTarget as HTMLImageElement
+    removeListeners(loadedImage)
+    // oxlint-disable react/immutability -- Three.js textures receive their browser image after the request settles.
+    texture.image = loadedImage
+    texture.needsUpdate = true
+    // oxlint-enable react/immutability
+    onLoad(texture)
+  }
+  const handleError = (event: Event) => {
+    if (settled) return
+
+    settled = true
+    removeListeners(event.currentTarget as HTMLImageElement)
+    texture.dispose()
+    onError()
+  }
+  const start = (priority: TextureFetchPriority) => {
+    image = createTextureImage(source, priority)
+    image.addEventListener('load', handleLoad)
+    image.addEventListener('error', handleError)
+    image.src = source
+  }
+
+  start(fetchPriority)
+
+  return {
+    cancel() {
+      if (settled) return
+
+      settled = true
+      removeListeners(image)
+      image.src = ''
+      texture.dispose()
+    },
+    promote() {
+      if (settled || image.fetchPriority === 'high') return
+
+      removeListeners(image)
+      image.src = ''
+      start('high')
+    }
+  }
 }
 
-function clearFailuresOutsideRange(
-  failed: Set<number>,
-  nearbyItemIndices: ReadonlySet<number>
+function createTextureImage(
+  source: string,
+  fetchPriority: TextureFetchPriority
 ) {
-  for (const itemIndex of failed) {
-    if (!nearbyItemIndices.has(itemIndex)) failed.delete(itemIndex)
+  const image = new Image()
+  image.decoding = 'async'
+  image.fetchPriority = fetchPriority
+  if (!source.startsWith('data:')) image.crossOrigin = 'anonymous'
+  return image
+}
+
+function hasFullTextureLoadCandidate(
+  itemIndices: readonly number[],
+  full: ReadonlySet<number>,
+  pending: ReadonlyMap<number, PendingTextureRequest>,
+  failed: ReadonlySet<number>
+) {
+  return itemIndices.some(
+    (itemIndex) =>
+      !full.has(itemIndex) && !pending.has(itemIndex) && !failed.has(itemIndex)
+  )
+}
+
+function scheduleIdleWork(callback: () => void) {
+  if (typeof window.requestIdleCallback === 'function') {
+    const handle = window.requestIdleCallback(callback, {
+      timeout: TEXTURE_IDLE_TIMEOUT_MILLISECONDS
+    })
+    return () => window.cancelIdleCallback(handle)
   }
+
+  const handle = window.setTimeout(callback, 16)
+  return () => window.clearTimeout(handle)
 }
 
 function configureTexture(
@@ -1279,11 +1433,72 @@ function configureTexture(
   // oxlint-enable react/immutability
 }
 
+type FullTextureBindingOptions = Readonly<{
+  bound: Set<number>
+  full: ReadonlySet<number>
+  gl: WebGLRenderer
+  imageMaterials: readonly ShaderMaterial[]
+  maximumBoundTextures: number
+  placeholderTexture: Texture
+  prioritizedItemIndices: readonly number[]
+  resident: ReadonlyMap<number, Texture>
+}>
+
+function syncFullTextureBindings({
+  bound,
+  full,
+  gl,
+  imageMaterials,
+  maximumBoundTextures,
+  placeholderTexture,
+  prioritizedItemIndices,
+  resident
+}: FullTextureBindingOptions) {
+  const plan = planTextureBindings({
+    boundItemIndices: bound,
+    fullItemIndices: full,
+    maximumBoundTextures,
+    prioritizedItemIndices,
+    residentItemIndices: resident
+  })
+
+  for (const itemIndex of plan.evictItemIndices) {
+    const material = imageMaterials[itemIndex]
+    const texture = resident.get(itemIndex)
+    if (material) {
+      // oxlint-disable-next-line react/immutability -- Shader uniforms are mutable GPU resources.
+      material.uniforms.uTexture!.value = placeholderTexture
+    }
+    texture?.dispose()
+    bound.delete(itemIndex)
+  }
+
+  for (const itemIndex of plan.bindItemIndices) {
+    const material = imageMaterials[itemIndex]
+    const texture = resident.get(itemIndex)
+    if (!material || !texture) continue
+
+    // A disposed Three.js texture retains its loaded HTML image. Marking it
+    // dirty recreates only the GPU upload, without a network request or blur.
+    // oxlint-disable react/immutability -- Shader uniforms and textures are mutable GPU resources.
+    texture.needsUpdate = true
+    material.uniforms.uTexture!.value = texture
+    // oxlint-enable react/immutability
+    bound.add(itemIndex)
+  }
+
+  syncTextureDiagnostics(gl, resident, full, bound, maximumBoundTextures)
+}
+
 function syncTextureDiagnostics(
   gl: WebGLRenderer,
   resident: ReadonlyMap<number, Texture>,
-  full: ReadonlySet<number>
+  full: ReadonlySet<number>,
+  bound: ReadonlySet<number>,
+  maximumBoundTextures: number
 ) {
+  gl.domElement.dataset.galleryBoundTextures = String(bound.size)
+  gl.domElement.dataset.galleryBindingLimit = String(maximumBoundTextures)
   gl.domElement.dataset.galleryFullTextures = String(full.size)
   gl.domElement.dataset.galleryPlaceholderTextures = String(
     resident.size - full.size

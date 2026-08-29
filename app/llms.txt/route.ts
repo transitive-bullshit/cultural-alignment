@@ -1,10 +1,5 @@
 import { contentCatalog } from '@/lib/content/snapshot'
-import {
-  repositoryUrl,
-  siteDescription,
-  siteTagline,
-  siteUrl
-} from '@/lib/site'
+import { repositoryUrl, siteTagline, siteUrl } from '@/lib/site'
 
 export const dynamic = 'force-static'
 
@@ -18,8 +13,6 @@ export function GET() {
   const markdown = `# Cultural Alignment
 
 > ${siteTagline}.
-
-${siteDescription}
 
 Each scenario is an analogy rather than a substitute for research. Scenario dossiers explain both why an analogy works and where it breaks. The structured scenario data is released under CC0; third-party imagery, clips, titles, and trademarks remain the property of their respective owners.
 

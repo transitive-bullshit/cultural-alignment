@@ -2,18 +2,18 @@
 
 ![Cultural Alignment social image](app/opengraph-image.jpg)
 
-> An open-source archive of cultural analogies for AI safety and alignment.
+> An exploration of cultural analogies for AI safety and alignment.
 
-This project explores AI safety and alignment concepts via scenes from film and television. The homepage begins with recognition: find a scene you know, open its dossier, and then follow the analogy into the technical ideas it illuminates—and the places where it breaks.
+This project explores AI safety and alignment concepts via popular scenes from movies and TV. The homepage begins with recognition: find a scene you know, open its dossier, and then follow the analogy into the technical ideas it illuminates—and the places where it breaks.
 
 [![Build Status](https://github.com/transitive-bullshit/cultural-alignment/actions/workflows/build.yml/badge.svg)](https://github.com/transitive-bullshit/cultural-alignment/actions/workflows/build.yml) [![Code style enforced by Oxc](https://img.shields.io/badge/code_style-oxc-brightgreen.svg)](https://oxc.rs)
 
 ## What is here
 
-- A horizontally infinite, velocity-deformed WebGL gallery
-- Curated scenarios from films and television series
+- A sexy infinite WebGL gallery of scenarios
+- A manually curated set of over 300 scenarios from films and television series
 - Scenario dossiers with clips, authored analysis, caveats, and taxonomy
-- AI-risk-family and AI-safety-concept pivots backed by authored Notion records
+- AI risk family and safety concept analogies for each scenario
 - One-way sync from Notion as the underlying CMS
 - Search across scenarios, media sources, AI risk families, and AI safety concepts
 
