@@ -611,7 +611,7 @@ function GalleryFallback({
             scroll={false}
             transitionTypes={['scenario-forward']}
           >
-            {/* This is the no-WebGL fallback; native images avoid loading two image pipelines. */}
+            {/* The no-WebGL fallback paints the same tiny placeholder behind its native image. */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={item.image.src}

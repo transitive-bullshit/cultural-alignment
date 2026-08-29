@@ -1168,7 +1168,7 @@ function updateTextureResidency({
     const source = stage === 'full' ? item.image.src : item.image.blurDataURL
 
     pending.add(itemIndex)
-    textureLoader.load(
+    const requestedTexture = textureLoader.load(
       source,
       (texture) => {
         const current =
@@ -1210,6 +1210,7 @@ function updateTextureResidency({
       },
       undefined,
       () => {
+        requestedTexture.dispose()
         if (
           disposed.current ||
           textureGeneration.current !== requestGeneration
