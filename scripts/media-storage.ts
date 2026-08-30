@@ -1,20 +1,26 @@
 import {
+  GetObjectCommand,
   HeadObjectCommand,
   PutObjectCommand,
   S3Client,
+  type GetObjectCommandOutput,
   type S3ClientConfig
 } from '@aws-sdk/client-s3'
 
+import { mediaDescriptorObjectKey } from './media-descriptor'
 import { generatedMediaObjectKey, sha256 } from './sync-utils'
 
 const CACHE_CONTROL = 'public,max-age=31536000,immutable'
+const DESCRIPTOR_CACHE_CONTROL = 'private,no-store'
 const DEFAULT_REGION = 'auto'
 
 export type MediaCollection = 'scenarios' | 'sources'
 export type MediaVariant = 'gallery' | 'detail'
 
 export type MediaStorageClient = {
-  send(command: HeadObjectCommand | PutObjectCommand): Promise<unknown>
+  send(
+    command: GetObjectCommand | HeadObjectCommand | PutObjectCommand
+  ): Promise<unknown>
 }
 
 export type PublishMediaInput = {
@@ -29,6 +35,18 @@ export type PublishedMedia = {
   readonly key: string
   readonly uploaded: boolean
   readonly url: string
+}
+
+export type StoredMediaDescriptor = {
+  readonly body: string
+  readonly etag: string
+}
+
+export type PutMediaDescriptorInput = {
+  readonly collection: MediaCollection
+  readonly notionId: string
+  readonly previousEtag: string | null
+  readonly value: unknown
 }
 
 type Environment = Readonly<Record<string, string | undefined>>
@@ -54,13 +72,57 @@ export function createMediaStorage(options: CreateMediaStorageOptions = {}) {
   async function hasObject(key: string) {
     try {
       await client.send(
-        new HeadObjectCommand({ Bucket: config.bucketName, Key: key })
+        new HeadObjectCommand({ Bucket: config.mediaBucketName, Key: key })
       )
       return true
     } catch (err) {
       if (isNotFound(err)) return false
       throw err
     }
+  }
+
+  async function getDescriptor(
+    collection: MediaCollection,
+    notionId: string
+  ): Promise<StoredMediaDescriptor | null> {
+    const key = mediaDescriptorObjectKey(collection, notionId)
+    let response: GetObjectCommandOutput
+    try {
+      response = (await client.send(
+        new GetObjectCommand({ Bucket: config.stateBucketName, Key: key })
+      )) as GetObjectCommandOutput
+    } catch (err) {
+      if (isNotFound(err)) return null
+      throw err
+    }
+
+    if (!response.Body) {
+      throw new Error(`Media descriptor ${key} has no body`)
+    }
+    if (!response.ETag) {
+      throw new Error(`Media descriptor ${key} has no ETag`)
+    }
+
+    const body = await response.Body.transformToString('utf-8')
+    return { body, etag: response.ETag }
+  }
+
+  async function putDescriptor(input: PutMediaDescriptorInput) {
+    const key = mediaDescriptorObjectKey(input.collection, input.notionId)
+    const body = Buffer.from(`${JSON.stringify(input.value)}\n`)
+
+    await client.send(
+      new PutObjectCommand({
+        Body: body,
+        Bucket: config.stateBucketName,
+        CacheControl: DESCRIPTOR_CACHE_CONTROL,
+        ContentType: 'application/json',
+        ...(input.previousEtag
+          ? { IfMatch: input.previousEtag }
+          : { IfNoneMatch: '*' }),
+        Key: key
+      })
+    )
   }
 
   async function publish(input: PublishMediaInput): Promise<PublishedMedia> {
@@ -82,7 +144,7 @@ export function createMediaStorage(options: CreateMediaStorageOptions = {}) {
       await client.send(
         new PutObjectCommand({
           Body: bytes,
-          Bucket: config.bucketName,
+          Bucket: config.mediaBucketName,
           CacheControl: CACHE_CONTROL,
           ContentType: 'image/webp',
           IfNoneMatch: '*',
@@ -98,7 +160,7 @@ export function createMediaStorage(options: CreateMediaStorageOptions = {}) {
     }
   }
 
-  return { hasObject, publicUrl, publish }
+  return { getDescriptor, hasObject, publicUrl, publish, putDescriptor }
 }
 
 function mediaStorageConfig(env: Environment) {
@@ -107,7 +169,8 @@ function mediaStorageConfig(env: Environment) {
   const endpoint = normalizeApiEndpoint(
     requiredEnvironmentValue(env, 'S3_API_ENDPOINT')
   )
-  const bucketName = requiredEnvironmentValue(env, 'S3_BUCKET_NAME')
+  const mediaBucketName = requiredEnvironmentValue(env, 'S3_BUCKET_NAME')
+  const stateBucketName = env.S3_STATE_BUCKET_NAME?.trim() || mediaBucketName
   const publicBaseUrl = normalizePublicBaseUrl(
     requiredEnvironmentValue(env, 'S3_PUBLIC_URL')
   )
@@ -124,13 +187,14 @@ function mediaStorageConfig(env: Environment) {
   }
 
   return {
-    bucketName,
     clientConfig: {
       credentials: { accessKeyId, secretAccessKey },
       endpoint: endpoint.href,
       region
     } satisfies S3ClientConfig,
-    publicBaseUrl
+    mediaBucketName,
+    publicBaseUrl,
+    stateBucketName
   }
 }
 
@@ -159,7 +223,7 @@ function normalizeApiEndpoint(value: string) {
 function requiredEnvironmentValue(env: Environment, name: string) {
   const value = env[name]?.trim()
   if (!value) {
-    throw new Error(`${name} is required to publish generated media`)
+    throw new Error(`${name} is required to sync generated media`)
   }
   return value
 }

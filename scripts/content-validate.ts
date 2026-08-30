@@ -3,9 +3,11 @@ import { readdir, readFile } from 'node:fs/promises'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import type { ContentImage } from '../lib/content/schema'
 import { buildSearchDocuments } from '../lib/content/search-documents'
 import { validateContentSnapshot } from '../lib/content/validate'
-import { validateSyncManifest } from './sync-manifest'
+import { validateCheckedSyncManifest } from './sync-manifest'
+import { isGeneratedMediaUrlFor } from './sync-utils'
 
 const projectRoot = fileURLToPath(new URL('..', import.meta.url))
 const snapshotRoot = join(projectRoot, 'content/snapshot')
@@ -41,21 +43,47 @@ const snapshot = validateContentSnapshot({
   riskFamilies,
   concepts
 })
-const validatedManifest = validateSyncManifest(manifest, snapshot)
+validateCheckedSyncManifest(manifest, snapshot)
 const projectedSearchDocuments = buildSearchDocuments(snapshot)
 
 deepStrictEqual(snapshotSearchDocuments, projectedSearchDocuments)
 deepStrictEqual(publicSearchDocuments, projectedSearchDocuments)
 
-const mediaEntries = [
-  ...Object.values(validatedManifest.entries.scenarios),
-  ...Object.values(validatedManifest.entries.sources)
+const mediaReferences = [
+  ...snapshot.scenarios.flatMap(({ id, image }) =>
+    contentAddressedMediaReferences('scenarios', id, image)
+  ),
+  ...snapshot.sources.flatMap(({ id, poster }) =>
+    poster ? contentAddressedMediaReferences('sources', id, poster) : []
+  )
 ]
 await assertGeneratedMediaDirectoryIsEmpty()
 
 console.log(
-  `Validated ${snapshot.scenarios.length} scenarios, ${snapshot.sources.length} sources, ${snapshot.riskFamilies.length} risk families, ${snapshot.concepts.length} concepts, and ${mediaEntries.length * 2} content-addressed media references.`
+  `Validated ${snapshot.scenarios.length} scenarios, ${snapshot.sources.length} sources, ${snapshot.riskFamilies.length} risk families, ${snapshot.concepts.length} concepts, and ${mediaReferences.length} content-addressed media references.`
 )
+
+function contentAddressedMediaReferences(
+  collection: 'scenarios' | 'sources',
+  recordId: string,
+  image: Pick<ContentImage, 'gallerySrc' | 'detailSrc'>
+) {
+  const compactId = recordId.replaceAll('-', '').toLowerCase()
+  if (!/^[0-9a-f]{32}$/.test(compactId)) {
+    throw new Error(`Invalid Notion record ID for snapshot media: ${recordId}`)
+  }
+
+  return (['gallery', 'detail'] as const).map((variant) => {
+    const src = image[`${variant}Src`]
+    const pathname = new URL(src).pathname
+    if (!isGeneratedMediaUrlFor(src, collection, compactId, variant)) {
+      throw new Error(
+        `Snapshot ${collection} media ${recordId} has an unowned ${variant} URL path: ${pathname}`
+      )
+    }
+    return src
+  })
+}
 
 async function assertGeneratedMediaDirectoryIsEmpty() {
   const generatedRoot = join(projectRoot, 'public/media/generated')

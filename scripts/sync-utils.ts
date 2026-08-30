@@ -58,6 +58,43 @@ export function generatedMediaObjectKey(
   return `media/generated/${collection}/${compactId}/${variant}-${hash}.webp`
 }
 
+export function isGeneratedMediaUrlFor(
+  value: string,
+  collection: 'scenarios' | 'sources',
+  pageId: string,
+  variant: 'gallery' | 'detail'
+) {
+  let url: URL
+  try {
+    url = new URL(value)
+  } catch {
+    return false
+  }
+  if (
+    url.protocol !== 'https:' ||
+    url.username ||
+    url.password ||
+    url.search ||
+    url.hash
+  ) {
+    return false
+  }
+
+  const hash = url.pathname.match(/-([0-9a-f]{64})\.webp$/)?.[1]
+  if (!hash) return false
+  try {
+    const expectedSuffix = `/${generatedMediaObjectKey(
+      collection,
+      pageId,
+      variant,
+      hash
+    )}`
+    return url.pathname.endsWith(expectedSuffix)
+  } catch {
+    return false
+  }
+}
+
 export function generatedMediaFilePath(root: string, publicPath: string) {
   if (!isGeneratedMediaPublicPath(publicPath)) {
     throw new Error(`Refusing unexpected generated media path: ${publicPath}`)

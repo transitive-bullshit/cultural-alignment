@@ -6,6 +6,7 @@ import {
   generatedMediaFilePath,
   generatedMediaObjectKey,
   generatedMediaPublicPaths,
+  isGeneratedMediaUrlFor,
   parseSearchKeywords,
   richTextToMarkdown,
   retrieveRelationIds
@@ -97,6 +98,60 @@ describe('generatedMediaObjectKey', () => {
         'not-a-hash'
       )
     ).toThrow('Invalid generated media SHA-256 hash')
+  })
+})
+
+describe('isGeneratedMediaUrlFor', () => {
+  const pageId = '3c6edb27-f124-80cc-92d5-c8f2f2e3a7fa'
+  const key = `media/generated/scenarios/${pageId.replaceAll('-', '')}/gallery-${'a'.repeat(64)}.webp`
+
+  it('accepts an owned key with or without a public URL path prefix', () => {
+    expect(
+      isGeneratedMediaUrlFor(
+        `https://media.example.com/${key}`,
+        'scenarios',
+        pageId,
+        'gallery'
+      )
+    ).toBe(true)
+    expect(
+      isGeneratedMediaUrlFor(
+        `https://media.example.com/assets/${key}`,
+        'scenarios',
+        pageId,
+        'gallery'
+      )
+    ).toBe(true)
+  })
+
+  it('rejects the wrong owner, variant, hash, or URL contract', () => {
+    expect(
+      isGeneratedMediaUrlFor(
+        `https://media.example.com/${key}`,
+        'sources',
+        pageId,
+        'gallery'
+      )
+    ).toBe(false)
+    expect(
+      isGeneratedMediaUrlFor(
+        `https://media.example.com/${key}`,
+        'scenarios',
+        pageId,
+        'detail'
+      )
+    ).toBe(false)
+    expect(
+      isGeneratedMediaUrlFor(
+        `https://media.example.com/${key}?download=1`,
+        'scenarios',
+        pageId,
+        'gallery'
+      )
+    ).toBe(false)
+    expect(
+      isGeneratedMediaUrlFor('not-a-url', 'scenarios', pageId, 'gallery')
+    ).toBe(false)
   })
 })
 

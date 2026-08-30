@@ -7,6 +7,7 @@ import {
 } from './sync-utils'
 
 export const MEDIA_PIPELINE_VERSION = 3
+export const SYNC_MANIFEST_VERSION = 3
 
 const sha256Schema = z.string().regex(/^[0-9a-f]{64}$/)
 const legacyGeneratedMediaPathSchema = z
@@ -93,13 +94,17 @@ const previousCurrentSyncManifestSchema = z.object({
   })
 })
 
+const currentSyncManifestHistorySchema = z.object({
+  schemaVersion: z.literal(SYNC_MANIFEST_VERSION),
+  slugs: slugMapsSchema
+})
+
 const notionCollectionSchema = z.object({
   databaseId: z.string().min(1),
   dataSourceId: z.string().min(1)
 })
 
-export const syncManifestSchema = z.object({
-  schemaVersion: z.literal(2),
+const syncManifestContract = {
   notion: z.object({
     apiVersion: z.string().min(1),
     dataSources: z.object({
@@ -116,7 +121,17 @@ export const syncManifestSchema = z.object({
     concepts: z.number().int().nonnegative()
   }),
   fixtureScenarioIds: z.array(z.string().min(1)),
-  slugs: slugMapsSchema,
+  slugs: slugMapsSchema
+}
+
+export const syncManifestSchema = z.strictObject({
+  schemaVersion: z.literal(SYNC_MANIFEST_VERSION),
+  ...syncManifestContract
+})
+
+const transitionalSyncManifestSchema = z.strictObject({
+  schemaVersion: z.literal(2),
+  ...syncManifestContract,
   entries: z.object({
     scenarios: z.record(z.string(), syncEntrySchema),
     sources: z.record(z.string(), syncEntrySchema)
@@ -152,11 +167,19 @@ export const emptyPreviousSyncManifest: PreviousSyncManifest = {
 export function parsePreviousSyncManifest(
   input: unknown
 ): PreviousSyncManifest {
-  const current = previousCurrentSyncManifestSchema.safeParse(input)
+  const current = currentSyncManifestHistorySchema.safeParse(input)
   if (current.success) {
     return {
       slugs: current.data.slugs,
-      entries: current.data.entries
+      entries: emptyPreviousSyncManifest.entries
+    }
+  }
+
+  const previous = previousCurrentSyncManifestSchema.safeParse(input)
+  if (previous.success) {
+    return {
+      slugs: previous.data.slugs,
+      entries: previous.data.entries
     }
   }
 
@@ -180,6 +203,48 @@ export function validateSyncManifest(
   snapshot: ContentSnapshot
 ): SyncManifest {
   const manifest = parseSyncManifest(input)
+  validateSnapshotContract(manifest, snapshot)
+
+  return manifest
+}
+
+export function validateCheckedSyncManifest(
+  input: unknown,
+  snapshot: ContentSnapshot
+) {
+  const current = syncManifestSchema.safeParse(input)
+  if (current.success) {
+    validateSnapshotContract(current.data, snapshot)
+    return current.data
+  }
+
+  const manifest = transitionalSyncManifestSchema.parse(input)
+  validateSnapshotContract(manifest, snapshot)
+  validateMediaOwnership(
+    'scenario',
+    'scenarios',
+    manifest.entries.scenarios,
+    snapshot.scenarios.map((scenario) => ({
+      id: scenario.id,
+      image: scenario.image
+    }))
+  )
+  validateMediaOwnership(
+    'source',
+    'sources',
+    manifest.entries.sources,
+    snapshot.sources.flatMap((source) =>
+      source.poster ? [{ id: source.id, image: source.poster }] : []
+    )
+  )
+
+  return manifest
+}
+
+function validateSnapshotContract(
+  manifest: Pick<SyncManifest, 'counts' | 'fixtureScenarioIds' | 'slugs'>,
+  snapshot: ContentSnapshot
+) {
   const collections = [
     ['scenarios', snapshot.scenarios],
     ['sources', snapshot.sources],
@@ -209,26 +274,6 @@ export function validateSyncManifest(
       )
     }
   }
-
-  validateMediaOwnership(
-    'scenario',
-    'scenarios',
-    manifest.entries.scenarios,
-    snapshot.scenarios.map((scenario) => ({
-      id: scenario.id,
-      image: scenario.image
-    }))
-  )
-  validateMediaOwnership(
-    'source',
-    'sources',
-    manifest.entries.sources,
-    snapshot.sources.flatMap((source) =>
-      source.poster ? [{ id: source.id, image: source.poster }] : []
-    )
-  )
-
-  return manifest
 }
 
 function validateMediaOwnership(

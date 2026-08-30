@@ -1,9 +1,14 @@
 import { createHash } from 'node:crypto'
 
-import { HeadObjectCommand } from '@aws-sdk/client-s3'
+import {
+  GetObjectCommand,
+  HeadObjectCommand,
+  PutObjectCommand
+} from '@aws-sdk/client-s3'
 import { describe, expect, it, vi } from 'vitest'
 
 import { createMediaStorage, type MediaStorageClient } from './media-storage'
+import { mediaDescriptorObjectKey } from './media-descriptor'
 
 const environment = {
   S3_ACCESS_KEY_ID: 'a'.repeat(32),
@@ -61,6 +66,22 @@ describe('createMediaStorage', () => {
         client: fakeClient()
       })
     ).toThrow('generated S3 Access Key ID and Secret Access Key')
+  })
+
+  it('allows an optional descriptor bucket override', async () => {
+    const client = fakeClient(async () => ({
+      Body: { transformToString: async () => '{}' },
+      ETag: '"etag"'
+    }))
+    const storage = createMediaStorage({
+      env: { ...environment, S3_STATE_BUCKET_NAME: 'media-state-bucket' },
+      client
+    })
+
+    await storage.getDescriptor('scenarios', notionId)
+    expect(commandInput(client, 0)).toMatchObject({
+      Bucket: 'media-state-bucket'
+    })
   })
 
   it('returns a content-addressed URL without uploading an existing object', async () => {
@@ -183,6 +204,116 @@ describe('createMediaStorage', () => {
       })
     ).rejects.toBe(error)
     expect(client.send).toHaveBeenCalledTimes(1)
+  })
+
+  it('reads a JSON descriptor from the media bucket by default and preserves its ETag', async () => {
+    const transformToString = vi.fn<() => Promise<string>>(async () =>
+      JSON.stringify({ schemaVersion: 1 })
+    )
+    const client = fakeClient(async (command) => {
+      expect(command).toBeInstanceOf(GetObjectCommand)
+      return { Body: { transformToString }, ETag: '"descriptor-etag"' }
+    })
+    const storage = createMediaStorage({ env: environment, client })
+
+    await expect(storage.getDescriptor('scenarios', notionId)).resolves.toEqual(
+      {
+        body: '{"schemaVersion":1}',
+        etag: '"descriptor-etag"'
+      }
+    )
+    expect(transformToString).toHaveBeenCalledWith('utf-8')
+    expect(commandInput(client, 0)).toEqual({
+      Bucket: 'media-bucket',
+      Key: mediaDescriptorObjectKey('scenarios', notionId)
+    })
+  })
+
+  it('returns null only when a descriptor is missing', async () => {
+    const missing = fakeClient(async () => {
+      throw awsError('NoSuchKey', 404)
+    })
+    const unavailableError = awsError('ServiceUnavailable', 503)
+    const unavailable = fakeClient(async () => {
+      throw unavailableError
+    })
+
+    await expect(
+      createMediaStorage({ env: environment, client: missing }).getDescriptor(
+        'sources',
+        notionId
+      )
+    ).resolves.toBeNull()
+    await expect(
+      createMediaStorage({
+        env: environment,
+        client: unavailable
+      }).getDescriptor('sources', notionId)
+    ).rejects.toBe(unavailableError)
+  })
+
+  it('leaves JSON validation to the descriptor schema', async () => {
+    const malformed = fakeClient(async () => ({
+      Body: { transformToString: async () => 'not-json' },
+      ETag: '"etag"'
+    }))
+
+    await expect(
+      createMediaStorage({
+        env: environment,
+        client: malformed
+      }).getDescriptor('scenarios', notionId)
+    ).resolves.toEqual({ body: 'not-json', etag: '"etag"' })
+  })
+
+  it('rejects incomplete descriptor responses', async () => {
+    const missingEtag = fakeClient(async () => ({
+      Body: { transformToString: async () => '{}' }
+    }))
+
+    await expect(
+      createMediaStorage({
+        env: environment,
+        client: missingEtag
+      }).getDescriptor('scenarios', notionId)
+    ).rejects.toThrow('has no ETag')
+  })
+
+  it('creates and conditionally replaces state descriptors', async () => {
+    const client = fakeClient()
+    const storage = createMediaStorage({ env: environment, client })
+    const value = { schemaVersion: 1, notionId }
+
+    await storage.putDescriptor({
+      collection: 'scenarios',
+      notionId,
+      previousEtag: null,
+      value
+    })
+    await storage.putDescriptor({
+      collection: 'scenarios',
+      notionId,
+      previousEtag: '"previous"',
+      value
+    })
+
+    expect(client.send.mock.calls[0]?.[0]).toBeInstanceOf(PutObjectCommand)
+    expect(commandInput(client, 0)).toEqual({
+      Body: Buffer.from(`${JSON.stringify(value)}\n`),
+      Bucket: 'media-bucket',
+      CacheControl: 'private,no-store',
+      ContentType: 'application/json',
+      IfNoneMatch: '*',
+      Key: mediaDescriptorObjectKey('scenarios', notionId)
+    })
+    expect(commandInput(client, 1)).toEqual({
+      Body: Buffer.from(`${JSON.stringify(value)}\n`),
+      Bucket: 'media-bucket',
+      CacheControl: 'private,no-store',
+      ContentType: 'application/json',
+      IfMatch: '"previous"',
+      Key: mediaDescriptorObjectKey('scenarios', notionId)
+    })
   })
 })
 

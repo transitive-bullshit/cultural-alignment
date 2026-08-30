@@ -27,22 +27,30 @@ Citation and source-layout integration pass on 2026-08-29:
 
 The canonical production deployment is [cultural-alignment.com](https://cultural-alignment.com).
 
-## Schema v2 content contract
+## Content contract
 
-- Snapshot and sync manifest schema: version 2
+- Snapshot schema: version 2. The checked sync manifest remains version 2 until the first authenticated descriptor migration; that sync emits version 3 after descriptor seeding.
 - Scenario classifications come from Notion relations to media sources, risk families, and safety concepts; all foreign keys are Notion page IDs.
 - Media sources include a movie/TV type, optional authored metadata and links, direct related-source relations, and an optional generated poster whose public URLs and dimensions are baked into the snapshot.
 - Risk families and safety concepts use their Notion-authored short/full names, descriptions, Wikipedia URLs, and preprocessed citations.
 - The first v2 sync establishes a fresh slug baseline. Established-state syncs preserve slugs for surviving page IDs and release the slugs of deleted records.
-- An unchanged second sync must produce byte-identical snapshot, search-index, manifest, and generated-media hashes, with every storage upload short-circuited by a successful `HEAD`.
+- An unchanged second sync must produce byte-identical snapshot, search index, and manifest. Each media record should resolve from its authenticated R2 descriptor `GET` without Notion block traversal, source download, Sharp, or variant upload.
 
 ## Remote-media acceptance checks
 
 - Notion and S3-compatible credentials are required only by `pnpm content:sync`; its Node entry point loads the ignored root `.env` with dotenvx, while development, validation, builds, and application runtime do not read it.
-- `S3_API_ENDPOINT` is used only for authenticated storage operations. Snapshot URLs begin with the separately configured `S3_PUBLIC_URL`.
+- `pnpm content:sync --help` (also `-h` or `-help`) prints usage without requiring credentials. `--force` re-downloads and reprocesses every selected image while retaining content-addressed variant deduplication.
+- `S3_API_ENDPOINT` is used only for authenticated storage operations. Snapshot URLs begin with the separately configured `S3_PUBLIC_URL` for `S3_BUCKET_NAME`.
+- When `S3_STATE_BUCKET_NAME` is unset, descriptors use `S3_BUCKET_NAME`; setting it to a different bucket remains supported.
+- Each record's `media/state/{collection}/{compact-page-id}.json` descriptor is read with an authenticated `GET`; its JSON body, rather than `HEAD` metadata, contains the reusable media state.
+- If descriptors share a publicly delivered media bucket, the delivery layer denies `media/state/` when public descriptor access is unacceptable. `Cache-Control: private, no-store` is verified as a cache directive, not treated as access control.
+- Optional sources without posters store an `absent` descriptor, preventing a descriptor miss and recursive block scan on every unchanged sync.
+- A matching page marker and pipeline skips Notion block traversal, source download, and Sharp. A changed page scans the current selection and reuses media when its block ID/edit time or fallback identity matches.
 - Generated object names include the SHA-256 hash of their bytes. Existing keys receive `HEAD` but no `PUT`; only a 404 permits upload.
 - Uploaded variants use `image/webp` and `Cache-Control: public, max-age=31536000, immutable`.
+- Generated variants are committed before a descriptor is conditionally created or replaced. The first v2 migration run seeds descriptors before emitting v3, which retains contracts, counts, fixture IDs, and slugs without media entries.
 - Snapshot image records retain absolute gallery/detail URLs, intrinsic width and height, and alt text.
+- Content validation accepts any HTTPS media host but requires every URL path to contain the owning collection, compact Notion record ID, variant, and 64-character generated-content hash.
 - Next.js image optimization accepts the snapshot's public origin without a storage environment variable.
 - The homepage gallery requests one bounded `w=640&q=75` texture variant through the same-origin Next Image Optimization endpoint. Browser network inspection shows optimizer requests and no direct R2 requests.
 - Changing `S3_PUBLIC_URL` to a custom domain rewrites snapshot URLs without changing keys or uploading unchanged objects.
@@ -113,7 +121,7 @@ The selected prototype evidence is under `docs/outputs/gate-b`, including 1440×
 
 - The authenticated migration completed on 2026-08-29: 330 scenarios and 207 source posters produced 537 image records and 1,074 content-addressed WebP objects. Every snapshot URL is remote HTTPS, and `public/media/generated` is absent.
 - Public R2 delivery returns `image/webp` with immutable caching, and its optional read-only CORS policy responds with `Access-Control-Allow-Origin: *`. The application gallery itself uses same-origin Next Image Optimization and does not depend on CORS.
-- Generated image bytes are not part of the Git-tracked release artifact. The checked-in snapshot retains their public URLs, intrinsic dimensions, and content-addressed manifest entries.
+- Generated image bytes are not part of the Git-tracked release artifact. The checked-in snapshot retains their public URLs and intrinsic dimensions; R2 descriptors retain the reusable content-addressed media state.
 
 ## Known environment limitations
 

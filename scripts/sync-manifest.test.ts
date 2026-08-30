@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest'
 import {
   parsePreviousSyncManifest,
   parseSyncManifest,
+  validateCheckedSyncManifest,
   validateSyncManifest
 } from './sync-manifest'
 
@@ -36,98 +37,126 @@ describe('parsePreviousSyncManifest', () => {
     expect(result.entries.sources).toEqual({})
   })
 
-  it('preserves v2 slugs and image history for both media collections', () => {
+  it('preserves v2 slugs and image history for descriptor migration', () => {
     const scenarioEntry = imageEntry(
       '/media/generated/scenarios/3c6edb27f12480cc92d5c8f2f2e3a7fa'
     )
     const sourceEntry = imageEntry(
       '/media/generated/sources/3caedb27f12480319026e39581c85c47'
     )
-    const slugs = {
-      scenarios: { 'scenario-1': 'stable-scenario' },
-      sources: { 'source-1': 'stable-source' },
-      riskFamilies: { 'risk-1': 'stable-risk' },
-      concepts: { 'concept-1': 'stable-concept' }
-    }
+    const slugs = stableSlugs()
 
     expect(
       parsePreviousSyncManifest({
         schemaVersion: 2,
         slugs,
         entries: {
-          scenarios: { 'scenario-1': scenarioEntry },
-          sources: { 'source-1': sourceEntry }
+          scenarios: { [scenarioId]: scenarioEntry },
+          sources: { [sourceId]: sourceEntry }
         }
       })
     ).toEqual({
       slugs,
       entries: {
-        scenarios: { 'scenario-1': scenarioEntry },
-        sources: { 'source-1': sourceEntry }
+        scenarios: { [scenarioId]: scenarioEntry },
+        sources: { [sourceId]: sourceEntry }
       }
+    })
+  })
+
+  it('preserves v3 slugs without inventing checked-in media history', () => {
+    const manifest = currentManifest()
+
+    expect(parsePreviousSyncManifest(manifest)).toEqual({
+      slugs: manifest.slugs,
+      entries: { scenarios: {}, sources: {} }
     })
   })
 })
 
 describe('parseSyncManifest', () => {
-  it('accepts the complete v2 manifest contract', () => {
+  it('accepts the media-free v3 manifest contract', () => {
     const manifest = currentManifest()
 
     expect(parseSyncManifest(manifest)).toEqual(manifest)
   })
 
-  it('rejects legacy local media in the current manifest contract', () => {
-    const current = currentManifest()
-    const manifest = {
-      ...current,
-      entries: {
-        ...current.entries,
-        scenarios: {
-          [scenarioId]: imageEntry(
-            '/media/generated/scenarios/3c6edb27f12480cc92d5c8f2f2e3a7fa'
-          )
-        }
-      }
-    }
-
-    expect(() => parseSyncManifest(manifest)).toThrow()
+  it('rejects the previous v2 manifest contract', () => {
+    expect(() =>
+      parseSyncManifest({ ...currentManifest(), schemaVersion: 2 })
+    ).toThrow()
   })
 
-  it('requires a blur placeholder on every current media entry', () => {
-    const manifest = structuredClone(currentManifest())
-    const entry: { blurDataURL?: string } =
-      manifest.entries.scenarios[scenarioId]!
-    delete entry.blurDataURL
+  it('rejects media entries in the v3 manifest', () => {
+    expect(() =>
+      parseSyncManifest({
+        ...currentManifest(),
+        entries: { scenarios: {}, sources: {} }
+      })
+    ).toThrow()
+  })
+})
 
-    expect(() => parseSyncManifest(manifest)).toThrow()
+describe('validateSyncManifest', () => {
+  it('validates counts, slugs, and fixture ownership against the snapshot', () => {
+    const manifest = currentManifest()
+
+    expect(validateSyncManifest(manifest, currentSnapshot())).toEqual(manifest)
   })
 
-  it('requires every source poster to have exactly one owned manifest entry', () => {
-    const current = currentManifest()
+  it('rejects a collection count that diverges from the snapshot', () => {
+    const manifest = currentManifest()
+    manifest.counts.sources = 2
+
+    expect(() => validateSyncManifest(manifest, currentSnapshot())).toThrow(
+      'Manifest sources count 2 does not match snapshot count 1'
+    )
+  })
+
+  it('rejects slugs that diverge from the snapshot', () => {
+    const manifest = currentManifest()
+    manifest.slugs.scenarios[scenarioId] = 'changed-scenario'
+
+    expect(() => validateSyncManifest(manifest, currentSnapshot())).toThrow(
+      'Manifest scenarios slugs do not match the snapshot'
+    )
+  })
+
+  it('rejects fixtures that do not belong to a snapshot scenario', () => {
+    const manifest = currentManifest()
+    manifest.fixtureScenarioIds = ['missing-scenario']
+
+    expect(() => validateSyncManifest(manifest, currentSnapshot())).toThrow(
+      'Manifest fixture references unknown scenario missing-scenario'
+    )
+  })
+})
+
+describe('validateCheckedSyncManifest', () => {
+  it('accepts the transitional checked v2 manifest with media entries', () => {
+    const manifest = transitionalManifest()
+
+    expect(validateCheckedSyncManifest(manifest, currentSnapshot())).toEqual(
+      manifest
+    )
+  })
+
+  it('retains v2 media ownership validation during descriptor migration', () => {
+    const current = transitionalManifest()
     const manifest = {
       ...current,
       entries: { ...current.entries, sources: {} }
     }
 
-    expect(() => validateSyncManifest(manifest, currentSnapshot())).toThrow(
-      'Manifest source image ownership does not match snapshot posters'
-    )
-  })
-
-  it('keeps manifest and snapshot blur placeholders in sync', () => {
-    const snapshot = currentSnapshot()
-    snapshot.scenarios[0]!.image.blurDataURL =
-      'data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAABwAQCdASoBAAEABUB8JYwCdAF1AAD+7r0fmVgA'
-
-    expect(() => validateSyncManifest(currentManifest(), snapshot)).toThrow(
-      `Manifest scenario image entry ${scenarioId} does not match its snapshot image`
-    )
+    expect(() =>
+      validateCheckedSyncManifest(manifest, currentSnapshot())
+    ).toThrow('Manifest source image ownership does not match snapshot posters')
   })
 })
 
 function currentManifest() {
   return {
-    schemaVersion: 2 as const,
+    schemaVersion: 3 as const,
     notion: {
       apiVersion: '2026-03-11',
       dataSources: {
@@ -142,12 +171,23 @@ function currentManifest() {
     },
     counts: { scenarios: 1, sources: 1, riskFamilies: 1, concepts: 1 },
     fixtureScenarioIds: [scenarioId],
-    slugs: {
-      scenarios: { [scenarioId]: 'stable-scenario' },
-      sources: { [sourceId]: 'stable-source' },
-      riskFamilies: { 'risk-1': 'stable-risk' },
-      concepts: { 'concept-1': 'stable-concept' }
-    },
+    slugs: stableSlugs()
+  }
+}
+
+function stableSlugs() {
+  return {
+    scenarios: { [scenarioId]: 'stable-scenario' },
+    sources: { [sourceId]: 'stable-source' },
+    riskFamilies: { 'risk-1': 'stable-risk' },
+    concepts: { 'concept-1': 'stable-concept' }
+  }
+}
+
+function transitionalManifest() {
+  return {
+    ...currentManifest(),
+    schemaVersion: 2 as const,
     entries: {
       scenarios: {
         [scenarioId]: remoteImageEntry('scenarios', scenarioId)
@@ -274,7 +314,7 @@ function remoteImageEntry(collection: 'scenarios' | 'sources', id: string) {
   const root = `media/generated/${collection}/${compactId}`
 
   return {
-    pipelineVersion: 3,
+    pipelineVersion: 3 as const,
     lastEditedTime: '2026-08-28T00:00:00.000Z',
     imageBlockId: 'image-1',
     additionalImageCount: 0,

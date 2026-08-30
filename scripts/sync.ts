@@ -38,6 +38,16 @@ import {
 } from '../lib/content/validate'
 import { createBlurDataURL } from './image-placeholder'
 import {
+  mediaSourceImageBlockId,
+  parseMediaDescriptorJson,
+  type AbsentMediaDescriptor,
+  type ImageMediaDescriptor,
+  type MediaDescriptor,
+  type MediaSourceIdentity,
+  type ReusableMediaPayload
+} from './media-descriptor'
+import { descriptorMatchesSource, mediaDescriptorFastPath } from './media-reuse'
+import {
   boldWarning,
   formatImageBatchSummary,
   formatNotionRecord,
@@ -52,11 +62,15 @@ import {
   reusableSyncEntrySchema,
   validateSyncManifest,
   type PreviousSyncEntry,
-  type PreviousSyncManifest,
-  type SyncEntry
+  type PreviousSyncManifest
 } from './sync-manifest'
 import { resolveCitationMetadata } from './citation-metadata'
 import { createMediaStorage } from './media-storage'
+import {
+  parseSyncCliArgs,
+  SYNC_CLI_HELP,
+  type SyncCliOptions
+} from './sync-cli'
 import {
   allocateStableSlugs,
   generatedMediaFilePath,
@@ -271,6 +285,26 @@ type ImageResult = {
   additionalImageCount: number
   caption: string
   uploaded: boolean
+}
+
+type ImageFallback = {
+  readonly imageBlockId: string
+  readonly url: string
+  readonly caption: string
+}
+
+type ImageOptions = {
+  readonly collection: 'scenarios' | 'sources'
+  readonly record: NotionRecordReference
+  readonly required: boolean
+  readonly fallback?: ImageFallback
+}
+
+type ImageSelection = {
+  readonly source: MediaSourceIdentity
+  readonly url: string
+  readonly additionalImageCount: number
+  readonly caption: string
 }
 
 function getProperty(
@@ -763,7 +797,7 @@ async function readPreviousManifest(): Promise<PreviousSyncManifest> {
     }
 
     throw new Error(
-      'Existing content/snapshot/manifest.json is invalid; refusing to discard slug and media history',
+      'Existing content/snapshot/manifest.json is invalid; refusing to discard slug and legacy media history',
       { cause: err }
     )
   }
@@ -814,7 +848,7 @@ function publicFilePath(root: string, publicPath: string) {
   return generatedMediaFilePath(root, publicPath)
 }
 
-async function reusableImageEntry(
+async function reusableLegacyImageEntry(
   entry: PreviousSyncEntry | undefined,
   page: PageObjectResponse,
   collection: 'scenarios' | 'sources',
@@ -1026,19 +1060,10 @@ function downloadLabel(value: string) {
   }
 }
 
-async function processImage(
+async function selectImage(
   page: PageObjectResponse,
-  options: {
-    readonly collection: 'scenarios' | 'sources'
-    readonly record: NotionRecordReference
-    readonly required: boolean
-    readonly fallback?: {
-      readonly imageBlockId: string
-      readonly url: string
-      readonly caption: string
-    }
-  }
-): Promise<ImageResult | null> {
+  options: ImageOptions
+): Promise<ImageSelection | null> {
   const blocks = await findImageBlocks(page.id)
   const images = blocks.filter((block) => block.type === 'image')
   const overrideId =
@@ -1074,10 +1099,47 @@ async function processImage(
     )
   }
 
-  const input = await downloadImage(
-    selectedImage ? imageUrl(selectedImage) : options.fallback!.url,
-    options.record
-  )
+  if (selectedImage) {
+    return {
+      source: imageSourceIdentity(selectedImage),
+      url: imageUrl(selectedImage),
+      additionalImageCount: Math.max(0, images.length - 1),
+      caption: imageCaption(selectedImage)
+    }
+  }
+
+  const fallback = options.fallback!
+  return {
+    source: {
+      type: 'fallback',
+      imageBlockId: fallback.imageBlockId,
+      url: fallback.url
+    },
+    url: fallback.url,
+    additionalImageCount: 0,
+    caption: fallback.caption
+  }
+}
+
+function imageSourceIdentity(block: BlockObjectResponse): MediaSourceIdentity {
+  if (block.type !== 'image') throw new Error('Expected an image block')
+
+  const identity = {
+    type: 'notion' as const,
+    blockId: block.id,
+    blockLastEditedTime: block.last_edited_time
+  }
+  return block.image.type === 'file'
+    ? { ...identity, kind: 'file' }
+    : { ...identity, kind: 'external', url: block.image.external.url }
+}
+
+async function processSelectedImage(
+  page: PageObjectResponse,
+  options: ImageOptions,
+  selection: ImageSelection
+): Promise<ImageResult> {
+  const input = await downloadImage(selection.url, options.record)
   const sourceHash = sha256(input)
 
   const [gallery, detail, blurDataURL] = await Promise.all([
@@ -1110,13 +1172,193 @@ async function processImage(
     sourceHash,
     galleryHash: publishedGallery.hash,
     detailHash: publishedDetail.hash,
-    imageBlockId: selectedImage?.id ?? options.fallback!.imageBlockId,
-    additionalImageCount: Math.max(0, images.length - 1),
-    caption: selectedImage
-      ? imageCaption(selectedImage)
-      : options.fallback!.caption,
+    imageBlockId: mediaSourceImageBlockId(selection.source),
+    additionalImageCount: selection.additionalImageCount,
+    caption: selection.caption,
     uploaded: publishedGallery.uploaded || publishedDetail.uploaded
   }
+}
+
+function imageFromDescriptor(descriptor: ImageMediaDescriptor): ImageResult {
+  const { media, source } = descriptor
+  return {
+    ...media,
+    gallerySrc: mediaStorage.publicUrl(media.galleryKey),
+    detailSrc: mediaStorage.publicUrl(media.detailKey),
+    imageBlockId: mediaSourceImageBlockId(source),
+    uploaded: false
+  }
+}
+
+function reusableMediaPayload(image: ImageResult): ReusableMediaPayload {
+  return {
+    sourceHash: image.sourceHash,
+    galleryHash: image.galleryHash,
+    detailHash: image.detailHash,
+    galleryKey: image.galleryKey,
+    detailKey: image.detailKey,
+    width: image.width,
+    height: image.height,
+    blurDataURL: image.blurDataURL,
+    additionalImageCount: image.additionalImageCount,
+    caption: image.caption
+  }
+}
+
+async function putImageDescriptor(
+  page: PageObjectResponse,
+  collection: 'scenarios' | 'sources',
+  source: MediaSourceIdentity,
+  image: ImageResult,
+  previousEtag: string | null
+) {
+  const descriptor = {
+    schemaVersion: 1,
+    collection,
+    notionId: page.id,
+    pageLastEditedTime: page.last_edited_time,
+    pipelineVersion: MEDIA_PIPELINE_VERSION,
+    state: 'image',
+    source,
+    media: reusableMediaPayload(image)
+  } satisfies MediaDescriptor
+
+  await mediaStorage.putDescriptor({
+    collection,
+    notionId: page.id,
+    previousEtag,
+    value: descriptor
+  })
+}
+
+async function putAbsentImageDescriptor(
+  page: PageObjectResponse,
+  previousEtag: string | null
+) {
+  const descriptor = {
+    schemaVersion: 1,
+    collection: 'sources',
+    notionId: page.id,
+    pageLastEditedTime: page.last_edited_time,
+    pipelineVersion: MEDIA_PIPELINE_VERSION,
+    state: 'absent'
+  } satisfies AbsentMediaDescriptor
+
+  await mediaStorage.putDescriptor({
+    collection: 'sources',
+    notionId: page.id,
+    previousEtag,
+    value: descriptor
+  })
+}
+
+async function syncImage(
+  page: PageObjectResponse,
+  options: ImageOptions,
+  previousEntry: PreviousSyncEntry | undefined,
+  force: boolean
+): Promise<ImageResult | null> {
+  const stored = await mediaStorage.getDescriptor(options.collection, page.id)
+  const descriptor =
+    stored && !force
+      ? parseMediaDescriptorJson(stored.body, {
+          collection: options.collection,
+          notionId: page.id
+        })
+      : null
+
+  const fastPath = mediaDescriptorFastPath({
+    descriptor,
+    pageLastEditedTime: page.last_edited_time,
+    pipelineVersion: MEDIA_PIPELINE_VERSION,
+    force,
+    fallback: options.fallback
+  })
+  if (fastPath.kind === 'absent') return null
+  if (fastPath.kind === 'image') {
+    const image = imageFromDescriptor(fastPath.descriptor)
+    if (fastPath.needsDescriptorWrite) {
+      await putImageDescriptor(
+        page,
+        options.collection,
+        fastPath.descriptor.source,
+        image,
+        stored?.etag ?? null
+      )
+    }
+    reusedMediaObjects += 2
+    return image
+  }
+
+  const selection = await selectImage(page, options)
+  if (!selection) {
+    if (options.collection !== 'sources') {
+      throw new Error(`Required scenario ${page.id} has no image selection`)
+    }
+    await putAbsentImageDescriptor(page, stored?.etag ?? null)
+    return null
+  }
+
+  if (
+    descriptorMatchesSource(
+      descriptor,
+      selection.source,
+      MEDIA_PIPELINE_VERSION
+    )
+  ) {
+    const image = imageFromDescriptor({
+      ...descriptor,
+      pageLastEditedTime: page.last_edited_time,
+      source: selection.source,
+      media: {
+        ...descriptor.media,
+        additionalImageCount: selection.additionalImageCount,
+        caption: selection.caption
+      }
+    })
+    await putImageDescriptor(
+      page,
+      options.collection,
+      selection.source,
+      image,
+      stored?.etag ?? null
+    )
+    reusedMediaObjects += 2
+    return image
+  }
+
+  if (
+    !force &&
+    !descriptor &&
+    previousEntry?.imageBlockId === mediaSourceImageBlockId(selection.source)
+  ) {
+    const legacyImage = await reusableLegacyImageEntry(
+      previousEntry,
+      page,
+      options.collection,
+      options.record
+    )
+    if (legacyImage) {
+      await putImageDescriptor(
+        page,
+        options.collection,
+        selection.source,
+        legacyImage,
+        stored?.etag ?? null
+      )
+      return legacyImage
+    }
+  }
+
+  const image = await processSelectedImage(page, options, selection)
+  await putImageDescriptor(
+    page,
+    options.collection,
+    selection.source,
+    image,
+    stored?.etag ?? null
+  )
+  return image
 }
 
 function getMissingImageFallback(
@@ -1260,26 +1502,6 @@ async function readDataSourcePages(dataSourceId: string) {
   return pages.toSorted((a, b) => a.id.localeCompare(b.id))
 }
 
-function toSyncEntry(page: PageObjectResponse, image: ImageResult): SyncEntry {
-  return {
-    pipelineVersion: MEDIA_PIPELINE_VERSION,
-    lastEditedTime: page.last_edited_time,
-    imageBlockId: image.imageBlockId,
-    additionalImageCount: image.additionalImageCount,
-    sourceHash: image.sourceHash,
-    galleryHash: image.galleryHash,
-    detailHash: image.detailHash,
-    galleryKey: image.galleryKey,
-    detailKey: image.detailKey,
-    gallerySrc: image.gallerySrc,
-    detailSrc: image.detailSrc,
-    width: image.width,
-    height: image.height,
-    blurDataURL: image.blurDataURL,
-    caption: image.caption
-  }
-}
-
 type SnapshotCandidate = {
   readonly scenarios: readonly ScenarioRecord[]
   readonly sources: readonly SourceRecord[]
@@ -1335,21 +1557,12 @@ function printPreservedSnapshotWarning() {
   )
 }
 
-const notionToken = process.env.NOTION_TOKEN
-if (!notionToken) {
-  throw new Error('NOTION_TOKEN is required to run pnpm content:sync')
-}
-
-const mediaStorage = createMediaStorage()
+let notion: Client
+let mediaStorage: ReturnType<typeof createMediaStorage>
 let uploadedMediaObjects = 0
 let reusedMediaObjects = 0
 
-const notion = new Client({
-  auth: notionToken,
-  notionVersion: NOTION_API_VERSION
-})
-
-async function main() {
+async function main(options: SyncCliOptions) {
   const stageRoot = join(projectRoot, `.content-sync-${randomUUID()}`)
   const [previousManifest, cachedCitations] = await Promise.all([
     readPreviousManifest(),
@@ -1477,20 +1690,17 @@ async function main() {
               )
             }
             const previousEntry = previousManifest.entries.scenarios[row.id]
-            const reusableEntry = await reusableImageEntry(
-              previousEntry,
+            const image = await syncImage(
               row.page,
-              'scenarios',
-              record
+              {
+                collection: 'scenarios',
+                record,
+                required: true,
+                fallback: getMissingImageFallback(row, source.title)
+              },
+              previousEntry,
+              options.force
             )
-            const image = reusableEntry
-              ? reusableEntry
-              : await processImage(row.page, {
-                  collection: 'scenarios',
-                  record,
-                  required: true,
-                  fallback: getMissingImageFallback(row, source.title)
-                })
             if (!image) throw new Error('No image was produced')
             return image
           }
@@ -1523,22 +1733,17 @@ async function main() {
           'sources',
           record,
           'processing the optional poster for',
-          async () => {
-            const previousEntry = previousManifest.entries.sources[source.id]
-            const reusableEntry = await reusableImageEntry(
-              previousEntry,
+          () =>
+            syncImage(
               source.page,
-              'sources',
-              record
+              {
+                collection: 'sources',
+                record,
+                required: false
+              },
+              previousManifest.entries.sources[source.id],
+              options.force
             )
-            return reusableEntry
-              ? reusableEntry
-              : await processImage(source.page, {
-                  collection: 'sources',
-                  record,
-                  required: false
-                })
-          }
         )
 
         completedImages += 1
@@ -1607,11 +1812,9 @@ async function main() {
       return false
     }
 
-    const scenarioEntries: Record<string, SyncEntry> = {}
     const scenarios: ScenarioRecord[] = parsedRows.map((row, index) => {
       const image = scenarioImageResults[index]!
       const source = sourceSeedById.get(row.sourceId)!
-      scenarioEntries[row.id] = toSyncEntry(row.page, image)
 
       const scenario: ScenarioRecord = {
         id: row.id,
@@ -1642,10 +1845,8 @@ async function main() {
       return scenario
     })
 
-    const sourceEntries: Record<string, SyncEntry> = {}
     const sources: SourceRecord[] = sourceSeeds.map((source, index) => {
       const image = sourceImageResults[index]
-      if (image) sourceEntries[source.id] = toSyncEntry(source.page, image)
       const { page: _page, ...record } = source
       return {
         ...record,
@@ -1683,7 +1884,7 @@ async function main() {
     const fixtureScenarioIds = [...FEATURED_SCENARIO_IDS]
 
     const manifest = {
-      schemaVersion: 2 as const,
+      schemaVersion: 3 as const,
       notion: {
         apiVersion: NOTION_API_VERSION,
         dataSources: NOTION_DATA_SOURCES
@@ -1695,11 +1896,7 @@ async function main() {
         concepts: snapshot.concepts.length
       },
       fixtureScenarioIds,
-      slugs,
-      entries: {
-        scenarios: scenarioEntries,
-        sources: sourceEntries
-      }
+      slugs
     }
     const validatedManifest = validateSyncManifest(manifest, snapshot)
 
@@ -1746,5 +1943,49 @@ async function main() {
   }
 }
 
-const syncSucceeded = await main()
+async function runCli() {
+  let options: SyncCliOptions
+  try {
+    options = parseSyncCliArgs(process.argv.slice(2))
+  } catch (err) {
+    console.error(err instanceof Error ? err.message : String(err))
+    return false
+  }
+
+  if (options.help) {
+    console.log(SYNC_CLI_HELP)
+    return true
+  }
+
+  const notionToken = process.env.NOTION_TOKEN
+  if (!notionToken) {
+    console.error('NOTION_TOKEN is required to run pnpm content:sync')
+    return false
+  }
+
+  notion = new Client({
+    auth: notionToken,
+    notionVersion: NOTION_API_VERSION
+  })
+
+  try {
+    mediaStorage = createMediaStorage()
+  } catch (err) {
+    console.error(err instanceof Error ? err.message : String(err))
+    return false
+  }
+
+  uploadedMediaObjects = 0
+  reusedMediaObjects = 0
+  try {
+    return await main(options)
+  } catch (err) {
+    console.error(
+      `Content sync failed: ${err instanceof Error ? err.message || err.name : String(err)}`
+    )
+    return false
+  }
+}
+
+const syncSucceeded = await runCli()
 if (!syncSucceeded) process.exitCode = 1
