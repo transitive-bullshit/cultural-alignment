@@ -22,6 +22,7 @@ test('keeps gallery media visible while detail media loads', async ({
   await expect(
     page.locator('[data-gallery-transition-ready="true"]')
   ).toBeVisible()
+  await page.locator('[data-spatial-gallery="browse"] canvas').hover()
   await page.evaluate(() => {
     const observer = new MutationObserver(() => {
       const preview = document.querySelector<HTMLImageElement>(
@@ -124,6 +125,7 @@ test('direct detail loads do not mount the gallery preview', async ({
   page
 }) => {
   await page.goto('/scenarios')
+  await page.locator('[data-spatial-gallery="browse"] canvas').hover()
   const href = await page
     .getByRole('link', { name: 'Open this scenario' })
     .getAttribute('href')

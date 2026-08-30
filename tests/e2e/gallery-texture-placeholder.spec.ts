@@ -88,6 +88,14 @@ test('loaded gallery textures remain available across a scroll round trip', asyn
     String(desktopTextureBindingLimit)
   )
 
+  await expect(gallery).not.toHaveAttribute('data-selected-scenario-id')
+  await expect(
+    gallery.locator('[data-selected-scenario-metadata]')
+  ).toHaveCount(0)
+
+  await canvas.hover()
+  await expect(gallery).toHaveAttribute('data-selected-scenario-id', /.+/)
+
   const initialSelectedId = await gallery.getAttribute(
     'data-selected-scenario-id'
   )

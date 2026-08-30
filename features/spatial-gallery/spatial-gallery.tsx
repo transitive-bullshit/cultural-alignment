@@ -78,11 +78,12 @@ export function SpatialGallery({
   const [dragging, setDragging] = useState(false)
   const [renderMode, setRenderMode] = useState<RenderMode>('checking')
   const [reducedMotion, setReducedMotion] = useState(false)
-  const [selectedIndex, setSelectedIndex] = useState(initialIndex)
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
   const [transitionReady, setTransitionReady] = useState(false)
   const [transitionProxy, setTransitionProxy] =
     useState<TransitionProxy | null>(null)
-  const selectedItem = items[selectedIndex] ?? items[0]!
+  const selectedItem =
+    selectedIndex === null ? null : (items[selectedIndex] ?? null)
 
   useEffect(() => {
     const itemIds = new Set(items.map(({ id }) => id))
@@ -121,8 +122,11 @@ export function SpatialGallery({
   }, [])
 
   const persistGalleryState = useCallback(
-    (itemIndex = selectedIndex) => {
-      const item = items[itemIndex]
+    (itemIndex?: number) => {
+      const resolvedIndex = itemIndex ?? selectedIndex
+      if (resolvedIndex === null) return
+
+      const item = items[resolvedIndex]
       const sceneState = controllerRef.current?.getHistoryState()
       if (!item || !sceneState) return
 
@@ -359,7 +363,7 @@ export function SpatialGallery({
       className={styles.gallery}
       data-spatial-gallery={mode}
       data-gallery-transition-ready={transitionReady || undefined}
-      data-selected-scenario-id={selectedItem.id}
+      data-selected-scenario-id={selectedItem?.id}
       aria-label={`${mode === 'featured' ? 'Featured' : 'All'} cultural scenarios. Drag horizontally or scroll to explore.`}
     >
       <div
@@ -434,17 +438,21 @@ export function SpatialGallery({
         </ViewTransition>
       ) : null}
 
-      <SelectedMetadata
-        item={selectedItem}
-        onOpen={() => openItem(selectedIndex)}
-        position={selectedIndex + 1}
-        total={items.length}
-      />
+      {selectedItem === null || selectedIndex === null ? null : (
+        <>
+          <SelectedMetadata
+            item={selectedItem}
+            onOpen={() => openItem(selectedIndex)}
+            position={selectedIndex + 1}
+            total={items.length}
+          />
 
-      <MobileSelectedScenario
-        item={selectedItem}
-        onOpen={() => openItem(selectedIndex)}
-      />
+          <MobileSelectedScenario
+            item={selectedItem}
+            onOpen={() => openItem(selectedIndex)}
+          />
+        </>
+      )}
 
       {mode === 'featured' ? (
         <SpoilerWarning className={styles.spoilerWarning} />
@@ -461,7 +469,7 @@ export function SpatialGallery({
       </p>
 
       <p className={styles.selectionAnnouncement} aria-live='polite'>
-        Selected: {selectedItem.title}
+        {selectedItem ? `Selected: ${selectedItem.title}` : ''}
       </p>
 
       <span
@@ -594,7 +602,7 @@ function GalleryFallback({
 }: {
   readonly items: readonly SpatialGalleryItem[]
   readonly mode: SpatialGalleryMode
-  readonly selectedIndex: number
+  readonly selectedIndex: number | null
 }) {
   return (
     <ol

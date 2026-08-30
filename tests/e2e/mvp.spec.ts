@@ -97,6 +97,8 @@ test('gallery navigation and Markdown copy work across a dossier round trip', as
   const selectedLink = page.locator('[data-selected-scenario-link="desktop"]')
 
   await expect(gallery).toBeVisible()
+  await expect(selectedLink).toHaveCount(0)
+  await gallery.locator('canvas').hover()
   await expect(selectedLink).toBeVisible()
 
   await selectedLink.click()
@@ -112,6 +114,7 @@ test('gallery navigation and Markdown copy work across a dossier round trip', as
   await page.goBack()
   await expect(page).toHaveURL('/')
   await expect(gallery).toBeVisible()
+  await expect(selectedLink).toBeVisible()
 })
 
 test('scenario media can be played and paused', async ({ page }) => {
