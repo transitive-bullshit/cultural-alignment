@@ -38,6 +38,7 @@
   letter-spacing: -0.045em;
   line-height: 0.86;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .lead > p {

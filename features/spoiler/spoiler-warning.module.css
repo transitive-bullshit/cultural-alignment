@@ -1,59 +1,178 @@
-.sticker {
+.note {
   position: relative;
-  width: 104px;
-  height: 104px;
+  display: block;
+  width: 420px;
+  height: 118px;
   padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--proto-ink);
+  font: inherit;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition:
+    opacity 180ms var(--proto-ease-out),
+    transform 180ms var(--proto-ease-out);
+}
+
+.note[data-spoiler-warning] {
+  cursor: pointer !important;
+}
+
+@starting-style {
+  .note {
+    opacity: 0;
+    transform: translateY(8px) scale(0.985);
+  }
+}
+
+.note:focus-visible {
+  outline: 2px solid var(--proto-ink);
+  outline-offset: 5px;
+}
+
+.note:active {
+  transform: scale(0.985);
+}
+
+.panel {
+  position: absolute;
+  top: 7px;
+  right: 48px;
+  bottom: 7px;
+  left: 0;
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--proto-ink);
+  background: color-mix(in srgb, var(--proto-paper) 96%, transparent);
+  box-shadow: 0 12px 36px rgb(45 42 38 / 14%);
+  transform: scaleX(1);
+  transform-origin: right center;
+  backdrop-filter: blur(12px);
+  transition:
+    background-color 180ms var(--proto-ease-out),
+    border-color 180ms var(--proto-ease-out),
+    color 180ms var(--proto-ease-out),
+    opacity 180ms var(--proto-ease-out),
+    transform 240ms var(--proto-ease-out);
+}
+
+.warningCopy,
+.confirmation {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 14px 90px 14px 18px;
+  text-align: left;
+  transition:
+    opacity 160ms var(--proto-ease-out),
+    transform 180ms var(--proto-ease-out);
+}
+
+.eyebrow,
+.action,
+.confirmation small {
+  font-family: var(--font-geist-mono), monospace;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  margin-bottom: 7px;
+  color: var(--proto-electric);
+  font-size: 8px;
+  transition: color 180ms var(--proto-ease-out);
+}
+
+.warningCopy strong {
+  max-width: 250px;
+  font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 0.96;
+  text-transform: uppercase;
+}
+
+.action {
+  margin-top: 10px;
+  color: var(--proto-electric);
+  font-size: 8px;
+  transition: color 180ms var(--proto-ease-out);
+}
+
+.confirmation {
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(4px);
+}
+
+.confirmationMark {
+  display: grid;
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgb(255 255 255 / 60%);
+  border-radius: 50%;
+  font-size: 16px;
+  place-items: center;
+}
+
+.confirmation > span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.confirmation strong {
+  font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.confirmation small {
+  font-size: 7px;
+}
+
+.seal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 118px;
+  height: 118px;
   overflow: hidden;
   border: 1px solid var(--proto-electric);
   border-radius: 50%;
-  background: color-mix(in srgb, var(--proto-paper) 92%, transparent);
+  background: var(--proto-paper);
   color: var(--proto-electric);
-  box-shadow: 0 10px 32px rgb(45 42 38 / 10%);
-  font: inherit;
+  box-shadow: 0 12px 36px rgb(45 42 38 / 14%);
   isolation: isolate;
-  backdrop-filter: blur(10px);
   transition:
+    background-color 180ms var(--proto-ease-out),
     color 180ms var(--proto-ease-out),
-    transform 120ms var(--proto-ease-out);
-}
-
-.sticker::before {
-  position: absolute;
-  z-index: -1;
-  inset: -1px;
-  border-radius: 50%;
-  background: var(--proto-electric);
-  content: '';
-  opacity: 0;
-  transform: scale(0.08);
-  transition:
-    opacity 160ms var(--proto-ease-out),
-    transform 220ms var(--proto-ease-out);
-}
-
-.sticker:focus-visible {
-  color: #fff;
-  outline: 2px solid var(--proto-ink);
-  outline-offset: 4px;
-}
-
-.sticker:focus-visible::before {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.sticker:active {
-  transform: scale(0.97);
+    opacity 140ms var(--proto-ease-out) 100ms,
+    transform 180ms var(--proto-ease-out);
 }
 
 .orbit {
   position: absolute;
-  z-index: 1;
-  inset: 7px;
-  width: calc(100% - 14px);
-  height: calc(100% - 14px);
-  overflow: visible;
+  inset: 6px;
+  display: block;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
   animation: spoiler-orbit 14s linear infinite;
+  transition: opacity 180ms var(--proto-ease-out);
 }
 
 .orbit svg {
@@ -66,62 +185,83 @@
 .orbit text {
   fill: currentColor;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 7.35px;
-  font-weight: 600;
-  letter-spacing: 0.075em;
-  text-transform: uppercase;
-}
-
-.sticker strong {
-  position: absolute;
-  z-index: 1;
-  inset: 0;
-  display: grid;
-  color: var(--proto-ink);
-  font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
-  font-size: 21px;
-  font-weight: 800;
-  letter-spacing: -0.025em;
-  text-transform: uppercase;
-  transition: color 180ms var(--proto-ease-out);
-  place-items: center;
-}
-
-.dismissCue {
-  position: absolute;
-  z-index: 1;
-  right: 0;
-  bottom: 23px;
-  left: 0;
-  color: var(--proto-muted-ink);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 6px;
+  font-size: 7.4px;
   font-weight: 700;
-  letter-spacing: 0.1em;
-  line-height: 1;
-  text-align: center;
+  letter-spacing: 0.055em;
   text-transform: uppercase;
-  transition: color 180ms var(--proto-ease-out);
 }
 
-.sticker:focus-visible strong,
-.sticker:focus-visible .dismissCue {
+.note[data-state='noted'] .panel,
+.note[data-state='leaving'] .panel {
+  border-color: var(--proto-electric);
+  background: var(--proto-electric);
   color: #fff;
 }
 
+.note[data-state='noted'] .seal,
+.note[data-state='leaving'] .seal {
+  background: var(--proto-electric);
+  color: #fff;
+}
+
+.note[data-state='noted'] .orbit,
+.note[data-state='leaving'] .orbit {
+  opacity: 0.38;
+  animation-play-state: paused;
+}
+
+.note[data-state='noted'] .warningCopy,
+.note[data-state='leaving'] .warningCopy {
+  opacity: 0;
+  transform: translateY(-4px);
+}
+
+.note[data-state='noted'] .confirmation {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.note[data-state='leaving'] .confirmation {
+  opacity: 0;
+  transform: translateX(8px);
+}
+
+.note[data-state='leaving'] .panel {
+  opacity: 0;
+  transform: scaleX(0.08);
+}
+
+.note[data-state='leaving'] .seal {
+  opacity: 0;
+  transform: scale(0.94);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
 @media (hover: hover) and (pointer: fine) {
-  .sticker:hover {
-    color: #fff;
+  .note:hover .panel {
+    border-color: var(--proto-electric);
   }
 
-  .sticker:hover::before {
-    opacity: 1;
-    transform: scale(1);
+  .note:hover .seal {
+    background: var(--proto-electric);
+    color: #fff;
+    transform: rotate(3deg);
   }
 
-  .sticker:hover strong,
-  .sticker:hover .dismissCue {
-    color: #fff;
+  .note:hover .action {
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 }
 
@@ -132,51 +272,70 @@
 }
 
 @media (max-width: 640px) {
-  .sticker {
-    width: 76px;
-    height: 76px;
+  .note {
+    width: calc(100vw - 32px);
+    height: 108px;
   }
 
-  .orbit {
-    inset: 5px;
-    width: calc(100% - 10px);
-    height: calc(100% - 10px);
+  .panel {
+    top: 6px;
+    right: 43px;
+    bottom: 6px;
   }
 
-  .orbit text {
-    font-size: 7.05px;
+  .warningCopy,
+  .confirmation {
+    padding: 12px 68px 12px 14px;
   }
 
-  .sticker strong {
-    font-size: 16px;
+  .warningCopy strong {
+    max-width: none;
+    font-size: 18px;
   }
 
-  .dismissCue {
-    bottom: 16px;
-    font-size: 5px;
+  .seal {
+    width: 108px;
+    height: 108px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .sticker {
-    transition: color 160ms var(--proto-ease-out);
-  }
-
-  .sticker::before {
+  .note {
     transform: none;
     transition: opacity 160ms var(--proto-ease-out);
   }
 
-  .sticker:focus-visible::before {
+  .note:active {
     transform: none;
+  }
+
+  .panel,
+  .warningCopy,
+  .confirmation,
+  .seal {
+    transform: none;
+    transition:
+      background-color 160ms var(--proto-ease-out),
+      border-color 160ms var(--proto-ease-out),
+      color 160ms var(--proto-ease-out),
+      opacity 160ms var(--proto-ease-out);
   }
 
   .orbit {
     animation: none;
   }
 
+  .note[data-state='noted'] .warningCopy,
+  .note[data-state='noted'] .confirmation,
+  .note[data-state='leaving'] .warningCopy,
+  .note[data-state='leaving'] .confirmation,
+  .note[data-state='leaving'] .panel,
+  .note[data-state='leaving'] .seal {
+    transform: none;
+  }
+
   @media (hover: hover) and (pointer: fine) {
-    .sticker:hover::before {
+    .note:hover .seal {
       transform: none;
     }
   }

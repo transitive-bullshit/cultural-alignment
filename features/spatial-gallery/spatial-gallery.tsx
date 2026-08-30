@@ -208,8 +208,12 @@ export function SpatialGallery({
             '[data-slot="dialog-overlay"], [data-slot="dialog-content"]'
           )
         )
+      const overSpoilerWarning =
+        target instanceof Element &&
+        Boolean(target.closest('[data-spoiler-warning]'))
       const insideGallery =
         !overDialog &&
+        !overSpoilerWarning &&
         event.clientX >= bounds.left &&
         event.clientX <= bounds.right &&
         event.clientY >= bounds.top &&
