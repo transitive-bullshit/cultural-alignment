@@ -5,6 +5,7 @@
 @media (hover: hover) and (pointer: fine) {
   .result:hover .resultTitle {
     color: var(--brand-accent);
+    transition-duration: 0ms;
   }
 }
 
