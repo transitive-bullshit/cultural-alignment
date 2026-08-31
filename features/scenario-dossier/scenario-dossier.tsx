@@ -140,7 +140,12 @@ function SourceMeta({ scenario }: { scenario: ScenarioPage }) {
               </span>
               <span className='sr-only'>, </span>
               {scenario.episode.href ? (
-                <a href={scenario.episode.href} data-scenario-episode>
+                <a
+                  href={scenario.episode.href}
+                  data-scenario-episode
+                  rel='noreferrer'
+                  target='_blank'
+                >
                   {scenario.episode.label}
                 </a>
               ) : (
