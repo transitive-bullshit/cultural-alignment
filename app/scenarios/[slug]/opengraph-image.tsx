@@ -235,7 +235,7 @@ export default async function Image({
               <div
                 key={concept.id}
                 style={{
-                  alignItems: 'baseline',
+                  alignItems: 'center',
                   display: 'flex',
                   fontSize: 18,
                   fontWeight: 600,
@@ -262,6 +262,7 @@ export default async function Image({
     </div>,
     {
       ...size,
+      // debug: true,
       fonts: [
         {
           data: barlowExtraBold,
@@ -290,7 +291,7 @@ function SourceDetail({
   return (
     <div
       style={{
-        alignItems: 'baseline',
+        alignItems: 'center',
         color: prominent ? colors.ink : colors.mutedInk,
         display: 'flex',
         fontWeight: prominent ? 600 : 400,
