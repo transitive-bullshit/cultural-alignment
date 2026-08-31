@@ -153,19 +153,13 @@ describe('ContentCatalog', () => {
   })
 
   it('composes filters and keeps undated records last in stable order', () => {
-    expect(slugs(catalog.listScenarioCards({ featuredOnly: true }))).toEqual([
-      'old-a',
-      'null-a',
-      'old-b'
-    ])
     expect(
       slugs(
         catalog.listScenarioCards({
-          featuredOnly: true,
           riskFamilySlug: 'family-b'
         })
       )
-    ).toEqual(['old-b'])
+    ).toEqual(['new', 'old-b', 'null-b'])
     expect(slugs(catalog.listScenarioCards({ sort: 'release-asc' }))).toEqual([
       'old-a',
       'old-b',

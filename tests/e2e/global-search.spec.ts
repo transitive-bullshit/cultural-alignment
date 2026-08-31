@@ -3,6 +3,7 @@ import { expect, test } from '@playwright/test'
 import searchDocuments from '../../content/snapshot/search-documents.json' with { type: 'json' }
 import type { SearchDocument } from '../../lib/content/catalog'
 import { searchDocumentGroups } from '../../lib/content/search'
+import { enterHomepageArchive } from './homepage-helpers'
 
 const documents = searchDocuments as readonly SearchDocument[]
 const searchTarget = documents.find((document) => document.kind === 'concept')!
@@ -12,6 +13,7 @@ const sectionedSearchTarget = documents.find(
 
 test.beforeEach(async ({ page }) => {
   await page.goto(process.env.PLAYWRIGHT_EXISTING_SERVER_URL ?? '/')
+  await enterHomepageArchive(page)
   await page.getByRole('button', { name: /Search site/ }).click()
   await expect(page.getByRole('combobox')).toBeFocused()
 })

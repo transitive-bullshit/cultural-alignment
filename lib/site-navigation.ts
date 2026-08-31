@@ -9,7 +9,7 @@ export const exploreNavigationLinks = [
   {
     href: '/scenarios',
     label: 'Scenarios',
-    footerLabel: 'All scenarios',
+    footerLabel: 'Browse and filter',
     description: 'Browse cultural analogies for real AI risks.'
   },
   {

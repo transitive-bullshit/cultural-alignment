@@ -5,7 +5,10 @@ import {
   parseBrowseGalleryParams,
   type BrowseSearchParams
 } from '@/features/spatial-gallery/browse-params'
-import { toSpatialGalleryItems } from '@/features/spatial-gallery/gallery-items'
+import {
+  findInitialSpatialGalleryItem,
+  toSpatialGalleryItems
+} from '@/features/spatial-gallery/gallery-items'
 import { SpatialGallery } from '@/features/spatial-gallery/spatial-gallery'
 import { contentCatalog } from '@/lib/content/snapshot'
 
@@ -32,11 +35,11 @@ export default async function ScenariosPage({
     riskFamilySlug: params.family ?? undefined
   })
   const items = toSpatialGalleryItems(scenarios)
-  const galleryIdentity = `browse:${params.family ?? 'all'}`
-  const initialItem = items[0]
+  const galleryIdentity = `archive:${params.family ?? 'all'}`
+  const initialItem = findInitialSpatialGalleryItem(items)
 
   if (!initialItem) {
-    throw new Error('The all-scenarios gallery requires at least one scenario')
+    throw new Error('The scenario archive requires at least one scenario')
   }
 
   return (
@@ -55,7 +58,6 @@ export default async function ScenariosPage({
         historyKey={galleryIdentity}
         items={items}
         initialItemId={initialItem.id}
-        mode='browse'
       />
     </main>
   )

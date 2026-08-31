@@ -6,10 +6,12 @@ import riskFamilies from '../../content/snapshot/risk-families.json' with { type
 import scenarios from '../../content/snapshot/scenarios.json' with { type: 'json' }
 import searchDocuments from '../../content/snapshot/search-documents.json' with { type: 'json' }
 import sources from '../../content/snapshot/sources.json' with { type: 'json' }
+import { enterHomepageArchive } from './homepage-helpers'
 
-const videoScenario = scenarios.find(
-  (scenario) => scenario.featured && scenario.video
-)!
+const videoScenario = requireFixture(
+  scenarios.find((scenario) => scenario.featured && scenario.video),
+  'a manually verified scenario with video'
+)
 const stillOnlyScenario = requireFixture(
   scenarios.find((scenario) => !scenario.video),
   'a scenario without video'
@@ -92,12 +94,19 @@ test('gallery navigation and Markdown copy work across a dossier round trip', as
 }) => {
   await context.grantPermissions(['clipboard-read', 'clipboard-write'])
   await page.goto('/')
+  await enterHomepageArchive(page)
 
-  const gallery = page.locator('[data-spatial-gallery="featured"]')
+  const gallery = page.locator('[data-spatial-gallery="browse"]')
   const selectedLink = page.locator('[data-selected-scenario-link="desktop"]')
 
   await expect(gallery).toBeVisible()
+  await expect(gallery).toHaveAttribute(
+    'data-gallery-item-count',
+    String(scenarios.length)
+  )
+  await expect(page.locator('[data-scenario-family-filters]')).toHaveCount(0)
   await expect(selectedLink).toHaveCount(0)
+  await expect(gallery).toHaveAttribute('data-gallery-transition-ready', 'true')
   await gallery.locator('canvas').hover()
   await expect(selectedLink).toBeVisible()
 
@@ -113,8 +122,21 @@ test('gallery navigation and Markdown copy work across a dossier round trip', as
 
   await page.goBack()
   await expect(page).toHaveURL('/')
+  await enterHomepageArchive(page)
   await expect(gallery).toBeVisible()
   await expect(selectedLink).toBeVisible()
+})
+
+test('the scenarios route adds filters to the same complete archive', async ({
+  page
+}) => {
+  await page.goto('/scenarios')
+
+  await expect(page.locator('[data-spatial-gallery="browse"]')).toHaveAttribute(
+    'data-gallery-item-count',
+    String(scenarios.length)
+  )
+  await expect(page.locator('[data-scenario-family-filters]')).toBeVisible()
 })
 
 test('scenario media can be played and paused', async ({ page }) => {
@@ -318,6 +340,7 @@ test('global search opens by button and shortcut, then navigates', async ({
   page
 }) => {
   await page.goto('/')
+  await enterHomepageArchive(page)
 
   const searchTrigger = page.locator('[data-search-ready="true"]')
   await expect(searchTrigger).toBeVisible()
@@ -347,7 +370,7 @@ test('the removed search route resolves through not-found', async ({
 })
 
 test('spoiler dismissal persists across reloads', async ({ page }) => {
-  await page.goto('/')
+  await page.goto(`/scenarios/${videoScenario.slug}`)
 
   const spoiler = page.locator('[data-spoiler-warning]')
   await expect(spoiler).toBeVisible()

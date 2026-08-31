@@ -4,6 +4,7 @@ import {
   exploreNavigationLinks,
   projectNavigationLinks
 } from '../../lib/site-navigation'
+import { enterHomepageArchive } from './homepage-helpers'
 
 const exploreHrefs = exploreNavigationLinks.map((link) => link.href).toSorted()
 const projectHrefs = projectNavigationLinks.map((link) => link.href).toSorted()
@@ -16,6 +17,7 @@ test.describe('desktop site navigation', () => {
     page
   }) => {
     await page.goto('/')
+    await enterHomepageArchive(page)
 
     const header = page.locator('[data-site-header]')
     const navigation = header.locator('[data-site-navigation="desktop"]')
@@ -70,6 +72,7 @@ test.describe('desktop site navigation', () => {
     const target = exploreNavigationLinks[1]
 
     await page.goto('/')
+    await enterHomepageArchive(page)
     await page
       .locator('[data-site-navigation="desktop"]')
       .locator(`[href="${target.href}"]`)
@@ -137,6 +140,7 @@ test.describe('desktop site navigation', () => {
   }) => {
     for (const href of ['/', '/scenarios']) {
       await page.goto(href)
+      if (href === '/') await enterHomepageArchive(page)
 
       const header = page.locator('[data-site-header]')
       const navigationLinks = header.locator(
@@ -206,6 +210,7 @@ test.describe('compact fine-pointer site navigation', () => {
     page
   }) => {
     await page.goto('/')
+    await enterHomepageArchive(page)
 
     const crosshair = page.locator('[data-gallery-cursor]')
     await expect

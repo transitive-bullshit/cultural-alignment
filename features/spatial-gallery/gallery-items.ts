@@ -7,6 +7,15 @@ import type { SpatialGalleryItem } from './types'
 // A single logical size keeps WebGL on one reusable density-aware cache variant.
 const GALLERY_TEXTURE_RENDER_WIDTH = 320
 const GALLERY_TEXTURE_QUALITY = 75
+const INITIAL_ARCHIVE_SCENARIO_SLUG = 'lacie-games-her-rating'
+
+export function findInitialSpatialGalleryItem(
+  items: readonly SpatialGalleryItem[]
+) {
+  return (
+    items.find(({ slug }) => slug === INITIAL_ARCHIVE_SCENARIO_SLUG) ?? items[0]
+  )
+}
 
 export function toSpatialGalleryItems(
   scenarios: readonly GalleryScenario[]

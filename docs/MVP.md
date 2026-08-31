@@ -6,8 +6,8 @@ The MVP proves that a recognition-first, elastic gallery can invite a broad audi
 
 ## Included
 
-- A full-viewport featured gallery and a shared all-scenarios gallery
-- The complete synchronized snapshot: 179 scenarios, 129 sources, five risk families, and 65 used concepts, with 25 stable page-ID scenarios featured
+- A Signal Loader introduction and full-viewport scenario gallery, shared with the filterable `/scenarios` route
+- The complete synchronized snapshot: 179 scenarios, 129 sources, five risk families, and 65 used concepts
 - The selected Dossier scenario-detail direction
 - Risk-family filtering reflected in the URL
 - Gallery-state restoration after navigating into a scenario and pressing Back
@@ -37,7 +37,7 @@ The MVP proves that a recognition-first, elastic gallery can invite a broad audi
 - **Media and spoilers:** The whole media plate toggles play/pause, custom controls use consistent “clip” language, the player instance stays mounted when returning to the still while playback resets to the configured clip start, and the floating action label yields to foreground controls. The spoiler warning pairs an explanatory archive note with an empty-center circular seal; the whole surface acknowledges, briefly confirms, and dismisses without a separate close icon, and persistence is versioned.
 - **Motion and text:** A finite, interruptible entrance coast demonstrates the gallery material and is disabled by reduced motion. Taxonomy links scramble on entry and hover/focus. The spoiler warning is the only spinning-text element. The selected gallery frame alone receives the emphasized transition into the Dossier.
 
-The creator pulled the Notion synchronizer and full-content expansion into the same implementation run. References to ten or 25 scenarios in the historical plan describe prototype stages; the implemented local MVP contains all 179 records, with 25 featured. Repository packaging history is recorded in [`QA.md`](QA.md#remote-media-migration-status).
+The creator pulled the Notion synchronizer and full-content expansion into the same implementation run. References to ten or 25 scenarios in the historical plan describe prototype stages; the implemented local MVP exposes the complete synchronized archive. Repository packaging history is recorded in [`QA.md`](QA.md#remote-media-migration-status).
 
 The creator explicitly authorized implementation to continue past the former feedback gates on 2026-08-28. Deployment remained outside that implementation run and was completed afterward at [cultural-alignment.com](https://cultural-alignment.com).
 

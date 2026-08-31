@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
 
-import { SiteHeader } from '@/components/site-header'
-import { toSpatialGalleryItems } from '@/features/spatial-gallery/gallery-items'
-import { SpatialGallery } from '@/features/spatial-gallery/spatial-gallery'
+import { HomepageSignalLoader } from '@/features/homepage/homepage-signal-loader'
+import { GalleryHeader } from '@/features/spatial-gallery/gallery-header'
+import {
+  findInitialSpatialGalleryItem,
+  toSpatialGalleryItems
+} from '@/features/spatial-gallery/gallery-items'
 import { contentCatalog } from '@/lib/content/snapshot'
 import { siteName, siteSummary } from '@/lib/site'
-
-import styles from '@/features/spatial-gallery/gallery-page-shell.module.css'
 
 export const metadata: Metadata = {
   title: siteName,
@@ -22,30 +23,20 @@ export const metadata: Metadata = {
   }
 }
 
-const featuredItems = toSpatialGalleryItems(
-  contentCatalog.listScenarioCards({ featuredOnly: true })
-)
-const initialItem =
-  featuredItems.find(({ slug }) => slug.startsWith('lacie-games')) ??
-  featuredItems[0]
+const archiveItems = toSpatialGalleryItems(contentCatalog.listScenarioCards())
+const initialItem = findInitialSpatialGalleryItem(archiveItems)
 
 export default function HomePage() {
   if (!initialItem) {
-    throw new Error('The featured gallery requires at least one scenario')
+    throw new Error('The scenario archive requires at least one scenario')
   }
 
   return (
-    <main
-      className={`experience-scope ${styles.page}`}
-      data-site-footer='hidden'
-    >
-      <SiteHeader className={styles.galleryHeader} />
-      <SpatialGallery
-        historyKey='featured'
-        items={featuredItems}
-        initialItemId={initialItem.id}
-        mode='featured'
-      />
-    </main>
+    <HomepageSignalLoader
+      header={<GalleryHeader />}
+      historyKey='archive:all'
+      initialItemId={initialItem.id}
+      items={archiveItems}
+    />
   )
 }

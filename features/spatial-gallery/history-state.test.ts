@@ -13,7 +13,7 @@ const galleryState = {
 
 describe('spatial gallery history state', () => {
   it('preserves Next history fields and other gallery entries', () => {
-    const existing = mergeGalleryHistoryState({ __NA: true }, 'featured', {
+    const existing = mergeGalleryHistoryState({ __NA: true }, 'archive:home', {
       itemId: 'scenario-1',
       offsetX: 2,
       version: 1
@@ -28,7 +28,7 @@ describe('spatial gallery history state', () => {
     expect(
       readGalleryHistoryState(
         merged,
-        'featured',
+        'archive:home',
         new Set(['scenario-1', 'scenario-2'])
       )
     ).toEqual({ itemId: 'scenario-1', offsetX: 2, version: 1 })
@@ -42,17 +42,17 @@ describe('spatial gallery history state', () => {
   })
 
   it('restores only finite positions for items in the current result set', () => {
-    const merged = mergeGalleryHistoryState(null, 'featured', galleryState)
+    const merged = mergeGalleryHistoryState(null, 'archive:all', galleryState)
 
     expect(
       readGalleryHistoryState(
         merged,
-        'featured',
+        'archive:all',
         new Set(['scenario-1', 'scenario-2'])
       )
     ).toEqual(galleryState)
     expect(
-      readGalleryHistoryState(merged, 'featured', new Set(['scenario-1']))
+      readGalleryHistoryState(merged, 'archive:all', new Set(['scenario-1']))
     ).toBeNull()
   })
 
@@ -76,26 +76,26 @@ describe('spatial gallery history state', () => {
   })
 
   it('rejects malformed or version-mismatched browser state', () => {
-    const malformed = mergeGalleryHistoryState(null, 'featured', {
+    const malformed = mergeGalleryHistoryState(null, 'archive:all', {
       ...galleryState,
       offsetX: Number.NaN
     })
     const versionMismatched = structuredClone(
-      mergeGalleryHistoryState(null, 'featured', galleryState)
+      mergeGalleryHistoryState(null, 'archive:all', galleryState)
     )
     const envelope = versionMismatched as Record<string, unknown>
     const galleryStates = Object.values(envelope).find(
       (value) => typeof value === 'object' && value !== null
     ) as Record<string, Record<string, unknown>>
-    galleryStates.featured!.version = 2
+    galleryStates['archive:all']!.version = 2
 
     expect(
-      readGalleryHistoryState(malformed, 'featured', new Set(['scenario-2']))
+      readGalleryHistoryState(malformed, 'archive:all', new Set(['scenario-2']))
     ).toBeNull()
     expect(
       readGalleryHistoryState(
         versionMismatched,
-        'featured',
+        'archive:all',
         new Set(['scenario-2'])
       )
     ).toBeNull()

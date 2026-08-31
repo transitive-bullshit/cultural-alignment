@@ -84,7 +84,7 @@ The sync entry point loads `.env` with dotenvx. Existing process environment val
 
 ## Route map
 
-- `/` — featured scenario gallery
+- `/` — Signal Loader introduction and complete scenario gallery
 - `/scenarios` — complete gallery with risk-family filtering
 - `/scenarios/[slug]` — scenario dossier
 - `/risk-families` and `/risk-families/[slug]` — risk-family index and pivots

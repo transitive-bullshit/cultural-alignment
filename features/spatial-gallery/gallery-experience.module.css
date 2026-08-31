@@ -1,0 +1,23 @@
+.experience {
+  width: 100%;
+  height: 100svh;
+  min-height: 0;
+}
+
+.headerSlot {
+  display: grid;
+  min-width: 0;
+}
+
+.main,
+.content {
+  display: grid;
+  min-width: 0;
+  min-height: 0;
+  grid-template-rows: minmax(0, 1fr);
+}
+
+.main {
+  position: relative;
+  outline: none;
+}

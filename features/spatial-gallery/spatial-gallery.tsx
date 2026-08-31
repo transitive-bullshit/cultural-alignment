@@ -14,7 +14,6 @@ import {
 } from 'react'
 import { flushSync } from 'react-dom'
 
-import { SpoilerWarning } from '@/features/spoiler/spoiler-warning'
 import { focalPointToObjectPosition } from '@/lib/media/crop'
 import { stageScenarioTransitionPreview } from '@/lib/media/scenario-transition-preview'
 import { classifyGesture, shouldCaptureGalleryWheel } from '@/lib/spatial/field'
@@ -42,7 +41,6 @@ const SpatialGalleryCanvas = dynamic(
 )
 
 type RenderMode = 'checking' | 'webgl' | 'fallback'
-export type SpatialGalleryMode = 'featured' | 'browse'
 type TransitionProxy = Readonly<{
   item: SpatialGalleryItem
   rect: SpatialFrameRect
@@ -51,13 +49,11 @@ type TransitionProxy = Readonly<{
 export function SpatialGallery({
   historyKey,
   initialItemId,
-  items,
-  mode
+  items
 }: {
   readonly historyKey: string
   readonly initialItemId?: string
   readonly items: readonly SpatialGalleryItem[]
-  readonly mode: SpatialGalleryMode
 }) {
   const initialIndex = Math.max(
     0,
@@ -208,9 +204,6 @@ export function SpatialGallery({
             '[data-slot="dialog-overlay"], [data-slot="dialog-content"]'
           )
         )
-      const overSpoilerWarning =
-        target instanceof Element &&
-        Boolean(target.closest('[data-spoiler-warning]'))
       const overSiteNavigation =
         target instanceof Element &&
         Boolean(
@@ -220,7 +213,6 @@ export function SpatialGallery({
         )
       const insideGallery =
         !overDialog &&
-        !overSpoilerWarning &&
         !overSiteNavigation &&
         event.clientX >= bounds.left &&
         event.clientX <= bounds.right &&
@@ -373,10 +365,11 @@ export function SpatialGallery({
   return (
     <section
       className={styles.gallery}
-      data-spatial-gallery={mode}
+      data-spatial-gallery='browse'
+      data-gallery-item-count={items.length}
       data-gallery-transition-ready={transitionReady || undefined}
       data-selected-scenario-id={selectedItem?.id}
-      aria-label={`${mode === 'featured' ? 'Featured' : 'All'} cultural scenarios. Drag horizontally or scroll to explore.`}
+      aria-label='All cultural scenarios. Drag horizontally or scroll to explore.'
     >
       <div
         ref={surfaceRef}
@@ -406,11 +399,7 @@ export function SpatialGallery({
             reducedMotion={reducedMotion}
           />
         ) : (
-          <GalleryFallback
-            items={items}
-            mode={mode}
-            selectedIndex={selectedIndex}
-          />
+          <GalleryFallback items={items} selectedIndex={selectedIndex} />
         )}
       </div>
 
@@ -465,10 +454,6 @@ export function SpatialGallery({
           />
         </>
       )}
-
-      {mode === 'featured' ? (
-        <SpoilerWarning className={styles.spoilerWarning} />
-      ) : null}
 
       <p className={styles.fieldHint}>
         <span className={styles.hintMark} aria-hidden='true'>
@@ -610,18 +595,13 @@ function CanvasLoading() {
 
 function GalleryFallback({
   items,
-  mode,
   selectedIndex
 }: {
   readonly items: readonly SpatialGalleryItem[]
-  readonly mode: SpatialGalleryMode
   readonly selectedIndex: number | null
 }) {
   return (
-    <ol
-      className={styles.fallbackField}
-      aria-label={mode === 'featured' ? 'Featured scenarios' : 'All scenarios'}
-    >
+    <ol className={styles.fallbackField} aria-label='All scenarios'>
       {items.slice(0, 10).map((item, index) => (
         <li
           key={item.id}

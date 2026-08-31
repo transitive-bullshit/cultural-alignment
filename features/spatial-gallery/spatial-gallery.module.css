@@ -265,13 +265,6 @@
   object-fit: cover;
 }
 
-.spoilerWarning {
-  position: absolute !important;
-  z-index: 38;
-  right: 34px;
-  bottom: 34px;
-}
-
 .fieldHint {
   position: absolute;
   z-index: 30;
@@ -593,11 +586,6 @@
     text-decoration: none;
     text-transform: uppercase;
     text-wrap: balance;
-  }
-
-  .spoilerWarning {
-    right: 18px;
-    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
   }
 
   .fieldHint {

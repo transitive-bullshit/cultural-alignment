@@ -16,7 +16,6 @@ import { discoverScenarios } from './scenario-discovery'
 import { validateContentSnapshot } from './validate'
 
 export type ScenarioListQuery = {
-  readonly featuredOnly?: boolean
   readonly riskFamilySlug?: string
   readonly sort?: 'release-desc' | 'release-asc'
 }
@@ -542,7 +541,6 @@ export function createContentCatalog(input: unknown): ContentCatalog {
           scenario,
           index
         }))
-        .filter(({ scenario }) => !query.featuredOnly || scenario.featured)
         .filter(
           ({ scenario }) =>
             riskFamilyId === undefined ||

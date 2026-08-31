@@ -20,6 +20,10 @@ Every route uses the same header component: a larger Barlow Condensed wordmark o
 
 A shared footer closes every non-gallery page with archive navigation, project and policy links, the public Notion source, and GitHub/X profiles. Footer links use the same electric-orange interaction treatment as the rest of the archive.
 
+## Homepage entry
+
+The homepage opens with the Signal Loader: a dark explanatory layer that introduces the scene-to-pattern-to-risk loop while the complete scenario gallery prepares underneath it. Readiness changes the status rail but never dismisses the layer. The visitor enters deliberately through the high-contrast “Explore the archive” action; its short upward exit reveals the already-loaded gallery and transfers focus into that surface. While the introduction is present, the underlying header and gallery remain inert. `/scenarios` presents the same complete gallery and initial framing with risk-family filters added above it; there is no featured subset or alternate gallery mode.
+
 ## Gallery
 
 The desktop gallery is a dense five-row projected surface on one horizontal axis. Vertical wheel movement advances the surface; horizontal-dominant trackpad gestures remain browser-owned. At rest, rows are level. Speed reveals the material: left-edge cards shear upward and right-edge cards shear downward, with deformation increasing toward the edges.
@@ -44,7 +48,7 @@ Risk families and concepts close the dossier reading section. Each taxonomy head
 
 The full media plate is a play/pause target. Its initial poster state uses a large central play mark, and its keyboard focus ring sits outside the media bounds instead of covering the image. A branded play/pause pointer and contextual label replace the gallery-style crosshair and disappear over the progress control. Explicit controls use Play clip, Pause clip, and Resume clip consistently. The “Scene still” label is reserved for scenarios without video. The player instance stays mounted when returning to the still, while playback resets to the configured clip start. The custom timeline supports scrubbing and focused keyboard seeking. While a clip plays, custom chrome fades after 2.8 seconds without interaction when the plate is not hovered; hover, pointer or keyboard activity, scrubbing, and control focus restore it immediately, and paused or still states keep it visible. YouTube does not expose a supported top-chrome-only configuration, so its native controls remain disabled rather than mixing two incomplete control surfaces. Missing video is an intentional composed state.
 
-The spoiler warning is the sole spinning-text element and is shared by the featured gallery and Dossier. A compact archive note carries the explanatory copy and overlaps an empty-center circular seal whose orbit repeats “Spoiler warning.” The full note-and-seal surface acknowledges the warning—there is no separate close icon—then turns orange, briefly confirms “Spoilers noted,” retracts, and fades. A versioned local-storage value prevents a dismissed-state hydration flash.
+The spoiler warning is the sole spinning-text element and appears on each Dossier. A compact archive note carries the explanatory copy and overlaps an empty-center circular seal whose orbit repeats “Spoiler warning.” The full note-and-seal surface acknowledges the warning—there is no separate close icon—then turns orange, briefly confirms “Spoilers noted,” retracts, and fades. A versioned local-storage value prevents a dismissed-state hydration flash.
 
 ## Motion grammar
 
