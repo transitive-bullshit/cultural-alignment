@@ -225,22 +225,26 @@ test('scenario detail publishes content-derived social metadata', async ({
   const imageResponse = await page.request.get(openGraphImage)
   const imageBody = await imageResponse.body()
   const imageMetadata = await sharp(imageBody).metadata()
-  const stillCrop = await sharp(imageBody)
-    .extract({ left: 485, top: 223, width: 272, height: 154 })
+  const mediaCrop = await sharp(imageBody)
+    .extract({ left: 0, top: 0, width: 700, height: 630 })
     .toBuffer()
-  const frameCrop = await sharp(imageBody)
-    .extract({ left: 485, top: 215, width: 272, height: 8 })
+  const dossierCrop = await sharp(imageBody)
+    .extract({ left: 780, top: 0, width: 380, height: 630 })
     .toBuffer()
-  const stillStats = await sharp(stillCrop).stats()
-  const frameStats = await sharp(frameCrop).stats()
+  const mediaStats = await sharp(mediaCrop).stats()
+  const dossierStats = await sharp(dossierCrop).stats()
+  const dossierChannels = dossierStats.channels.slice(0, 3)
 
   expect(imageResponse.ok()).toBe(true)
   expect(imageResponse.headers()['content-type']).toContain('image/png')
   expect(imageMetadata).toMatchObject({ width: 1200, height: 630 })
-  expect(stillStats.entropy).toBeGreaterThan(1)
-  expect(
-    Math.max(...frameStats.channels.slice(0, 3).map(({ stdev }) => stdev))
-  ).toBeLessThan(1)
+  expect(mediaStats.entropy).toBeGreaterThan(1)
+  expect(dossierStats.entropy).toBeGreaterThan(0.5)
+  expect(Math.min(...dossierChannels.map(({ mean }) => mean))).toBeGreaterThan(
+    160
+  )
+  expect(dossierChannels[0]!.mean).toBeGreaterThan(dossierChannels[1]!.mean)
+  expect(dossierChannels[1]!.mean).toBeGreaterThan(dossierChannels[2]!.mean)
 })
 
 test('eligible resource scenario sorting persists locally', async ({
