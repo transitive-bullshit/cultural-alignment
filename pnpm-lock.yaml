@@ -59,9 +59,6 @@ importers:
       radix-ui:
         specifier: ^1.6.7
         version: 1.6.7(@types/react-dom@19.2.5(@types/react@19.2.18))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
-      random:
-        specifier: ^5.5.1
-        version: 5.5.1
       react:
         specifier: ^19.2.8
         version: 19.2.8
@@ -2654,10 +2651,6 @@ packages:
       '@types/react-dom':
         optional: true
 
-  random@5.5.1:
-    resolution: {integrity: sha512-2TIJKf/BGjy0FGeZaan2+a/vq37afbSyscquADMFC13KBjFmg+10T/TkACpP9GMHfbEruKYbHqq0rjCA9x8gNA==}
-    engines: {node: '>=20'}
-
   react-dom@19.2.8:
     resolution: {integrity: sha512-rVprimfGBG3DR+Tq0IQG2DT5PxKth1WIGDmj5yPmlzr4YBe7uyE+Du4oVqTDXZSHGGGXRtTJEGSSePyQCMBglQ==}
     peerDependencies:
@@ -5191,8 +5184,6 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.2.18
       '@types/react-dom': 19.2.5(@types/react@19.2.18)
-
-  random@5.5.1: {}
 
   react-dom@19.2.8(react@19.2.8):
     dependencies:
