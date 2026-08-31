@@ -104,10 +104,7 @@ export function HomepageSignalLoader({
               <div className={styles.grid} aria-hidden='true' />
 
               <div className={styles.introBody}>
-                <p className={styles.eyebrow}>
-                  <span>CA—001</span>
-                  A field guide to AI risk
-                </p>
+                <p className={styles.eyebrow}>A field guide to AI risk</p>
 
                 <h1 id='signal-loader-title'>
                   Familiar stories.
@@ -115,16 +112,16 @@ export function HomepageSignalLoader({
                 </h1>
 
                 <p className={styles.summary}>
-                  Film and television give us a shared language for abstract AI
-                  safety problems. Start with a scene you remember, then follow
-                  the pattern into the real world.
+                  Film and TV give us a shared language for abstract AI safety
+                  problems. Start with a scene you recognize, then follow the
+                  pattern into the real world.
                 </p>
 
                 <ol className={styles.sequence} aria-label='How the site works'>
                   <li>
                     <span>01</span>
                     <strong>Recognize a scene</strong>
-                    <small>Film · television · shared memory</small>
+                    <small>Film · television · anime</small>
                   </li>
                   <li>
                     <span>02</span>
@@ -133,8 +130,8 @@ export function HomepageSignalLoader({
                   </li>
                   <li>
                     <span>03</span>
-                    <strong>Name the risk</strong>
-                    <small>Concepts · research · further paths</small>
+                    <strong>Name the AI risk</strong>
+                    <small>Concepts · research · alignment</small>
                   </li>
                 </ol>
               </div>
