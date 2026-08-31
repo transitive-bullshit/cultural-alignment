@@ -26,10 +26,7 @@ const colors = {
 const mediaWidth = 744
 const [barlowExtraBold, geistRegular] = await Promise.all([
   readFile(
-    join(
-      process.cwd(),
-      'node_modules/@fontsource/barlow-condensed/files/barlow-condensed-latin-800-normal.woff'
-    )
+    join(process.cwd(), 'assets/fonts/barlow-condensed-latin-800-normal.woff')
   ),
   readFile(
     join(
