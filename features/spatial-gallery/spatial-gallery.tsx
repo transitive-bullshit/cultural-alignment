@@ -48,10 +48,12 @@ type TransitionProxy = Readonly<{
 
 export function SpatialGallery({
   historyKey,
+  inertiaBurst = false,
   initialItemId,
   items
 }: {
   readonly historyKey: string
+  readonly inertiaBurst?: boolean
   readonly initialItemId?: string
   readonly items: readonly SpatialGalleryItem[]
 }) {
@@ -388,6 +390,7 @@ export function SpatialGallery({
         ) : renderMode === 'webgl' ? (
           <SpatialGalleryCanvas
             controllerRef={controllerRef}
+            inertiaBurst={inertiaBurst}
             initialIndex={sceneInitialIndex}
             initialOffsetX={initialOffsetX}
             items={items}

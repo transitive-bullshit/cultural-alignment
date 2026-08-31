@@ -87,6 +87,8 @@ const MAX_FRAME_DELTA = 0.1
 const WHEEL_DIRECT_GAIN = 0.18
 const WHEEL_IMPULSE_GAIN = 12
 const INTRO_TRAVEL_COLUMNS = 3.6
+const DESKTOP_DISMISSAL_BURST_TRAVEL_COLUMNS = INTRO_TRAVEL_COLUMNS * 1.5
+const MOBILE_DISMISSAL_BURST_TRAVEL_COLUMNS = INTRO_TRAVEL_COLUMNS / 4
 const INTRO_REST_FRACTION = 0.025
 const INTRO_VISIBILITY_THRESHOLD = 0.2
 const FULL_TEXTURE_LOAD_CONCURRENCY = 32
@@ -195,6 +197,7 @@ const flatFragmentShader = /* glsl */ `
 
 type CanvasProps = Readonly<{
   controllerRef: MutableRefObject<SpatialGalleryController | null>
+  inertiaBurst: boolean
   initialIndex: number
   initialOffsetX: number | null
   items: readonly SpatialGalleryItem[]
@@ -210,6 +213,17 @@ type ScenarioSlot = Readonly<{
 }>
 
 type IntroState = 'waiting' | 'running' | 'finished'
+type AutoMotionInterruption = 'interrupted' | 'skipped'
+type IntroMotionDiagnostic =
+  | AutoMotionInterruption
+  | 'running'
+  | 'settled'
+  | 'waiting'
+type InertiaBurstDiagnostic =
+  | AutoMotionInterruption
+  | 'launched'
+  | 'pending'
+  | 'settled'
 
 type PendingTextureRequest = Readonly<{
   cancel(): void
@@ -240,6 +254,7 @@ export function SpatialGalleryCanvas(props: CanvasProps) {
 
 function SpatialField({
   controllerRef,
+  inertiaBurst,
   initialIndex,
   initialOffsetX,
   items,
@@ -252,6 +267,9 @@ function SpatialField({
   const canvasBoundsRef = useRef<DOMRect | null>(null)
   const hoveredSlotRef = useRef<ActiveSlot | null>(null)
   const initializedStateRef = useRef<string | null>(null)
+  const inertiaBurstActiveRef = useRef(false)
+  const inertiaBurstHandledRef = useRef(false)
+  const inertiaBurstVelocityRef = useRef(0)
   const introStateRef = useRef<IntroState>('waiting')
   const introVelocityRef = useRef(0)
   const pointerPositionRef = useRef<{
@@ -368,18 +386,30 @@ function SpatialField({
   }, [layout.slots.length])
   const activityColor = useMemo(() => new Color(), [])
   const transform = useMemo(() => new Object3D(), [])
-  const cancelIntro = useCallback(() => {
-    if (introStateRef.current === 'finished') return
+  const cancelIntro = useCallback(
+    (motionState: AutoMotionInterruption = 'interrupted') => {
+      const introActive = introStateRef.current !== 'finished'
+      const burstActive = inertiaBurstActiveRef.current
+      if (!introActive && !burstActive) return
 
-    if (introStateRef.current === 'running') {
-      motionRef.current = {
-        offset: motionRef.current.offset,
-        velocity: { x: 0, y: 0 }
+      if (introStateRef.current === 'running' || burstActive) {
+        motionRef.current = {
+          offset: motionRef.current.offset,
+          velocity: { x: 0, y: 0 }
+        }
       }
-    }
 
-    introStateRef.current = 'finished'
-  }, [])
+      if (introActive) {
+        introStateRef.current = 'finished'
+        setIntroMotionDiagnostic(gl, motionState)
+      }
+      if (burstActive) {
+        inertiaBurstActiveRef.current = false
+        setInertiaBurstDiagnostic(gl, motionState)
+      }
+    },
+    [gl]
+  )
 
   const resolvePointerSlotAt = useCallback(
     (clientX: number, clientY: number) => {
@@ -550,6 +580,16 @@ function SpatialField({
   )
 
   useEffect(() => {
+    setIntroMotionDiagnostic(
+      gl,
+      initialOffsetX === null ? 'waiting' : 'skipped'
+    )
+    setInertiaBurstDiagnostic(gl, 'pending')
+
+    return () => clearMotionDiagnostics(gl)
+  }, [gl, initialOffsetX])
+
+  useEffect(() => {
     // Viewport changes may recreate the slot topology; only a new initial item
     // is allowed to reset the user's live selection and motion.
     const initializationKey = `${initialIndex}:${initialOffsetX ?? 'default'}`
@@ -578,12 +618,15 @@ function SpatialField({
     lastCenterIndexRef.current = initialIndex
     warpSpeedRef.current = 0
     initializedStateRef.current = initializationKey
-    if (initialOffsetX !== null) introStateRef.current = 'finished'
-  }, [initialIndex, initialOffsetX, layout])
+    if (initialOffsetX !== null) {
+      introStateRef.current = 'finished'
+      setIntroMotionDiagnostic(gl, 'skipped')
+    }
+  }, [gl, initialIndex, initialOffsetX, layout])
 
   useEffect(() => {
     if (reducedMotion) {
-      cancelIntro()
+      cancelIntro('skipped')
       warpSpeedRef.current = 0
       return
     }
@@ -604,9 +647,13 @@ function SpatialField({
         )
         introVelocityRef.current = introVelocity
         introStateRef.current = 'running'
+        setIntroMotionDiagnostic(gl, 'running')
         motionRef.current = {
           offset: motionRef.current.offset,
-          velocity: { x: introVelocity, y: 0 }
+          velocity: {
+            x: motionRef.current.velocity.x + introVelocity,
+            y: 0
+          }
         }
         observer.disconnect()
       },
@@ -616,6 +663,39 @@ function SpatialField({
     observer.observe(gl.domElement)
     return () => observer.disconnect()
   }, [cancelIntro, columnGap, gl, reducedMotion])
+
+  useEffect(() => {
+    if (!inertiaBurst || inertiaBurstHandledRef.current) return
+
+    inertiaBurstHandledRef.current = true
+    if (reducedMotion) {
+      setInertiaBurstDiagnostic(gl, 'skipped')
+      return
+    }
+
+    if (introStateRef.current === 'waiting') {
+      introStateRef.current = 'finished'
+      setIntroMotionDiagnostic(gl, 'skipped')
+    }
+
+    const travelColumns = mobile
+      ? MOBILE_DISMISSAL_BURST_TRAVEL_COLUMNS
+      : DESKTOP_DISMISSAL_BURST_TRAVEL_COLUMNS
+    const burstVelocity = calculateInertialLaunchVelocity(
+      -columnGap * travelColumns,
+      INERTIA_DAMPING
+    )
+    inertiaBurstActiveRef.current = true
+    inertiaBurstVelocityRef.current = burstVelocity
+    motionRef.current = {
+      offset: motionRef.current.offset,
+      velocity: {
+        x: motionRef.current.velocity.x + burstVelocity,
+        y: 0
+      }
+    }
+    setInertiaBurstDiagnostic(gl, 'launched')
+  }, [columnGap, gl, inertiaBurst, mobile, reducedMotion])
 
   useEffect(() => {
     controllerRef.current = {
@@ -850,6 +930,20 @@ function SpatialField({
         Math.abs(introVelocityRef.current) * INTRO_REST_FRACTION
     ) {
       introStateRef.current = 'finished'
+      setIntroMotionDiagnostic(gl, 'settled')
+      motionRef.current = {
+        offset: motionRef.current.offset,
+        velocity: { x: 0, y: 0 }
+      }
+    }
+
+    if (
+      inertiaBurstActiveRef.current &&
+      Math.abs(motionRef.current.velocity.x) <=
+        Math.abs(inertiaBurstVelocityRef.current) * INTRO_REST_FRACTION
+    ) {
+      inertiaBurstActiveRef.current = false
+      setInertiaBurstDiagnostic(gl, 'settled')
       motionRef.current = {
         offset: motionRef.current.offset,
         velocity: { x: 0, y: 0 }
@@ -1789,6 +1883,25 @@ function combineImpulse(current: number, impulse: number) {
   if (impulse === 0) return current
   if (current !== 0 && Math.sign(current) !== Math.sign(impulse)) return impulse
   return MathUtils.clamp(current + impulse, -MAX_VELOCITY, MAX_VELOCITY)
+}
+
+function setIntroMotionDiagnostic(
+  gl: WebGLRenderer,
+  state: IntroMotionDiagnostic
+) {
+  gl.domElement.dataset.galleryIntroMotion = state
+}
+
+function setInertiaBurstDiagnostic(
+  gl: WebGLRenderer,
+  state: InertiaBurstDiagnostic
+) {
+  gl.domElement.dataset.galleryInertiaBurst = state
+}
+
+function clearMotionDiagnostics(gl: WebGLRenderer) {
+  delete gl.domElement.dataset.galleryInertiaBurst
+  delete gl.domElement.dataset.galleryIntroMotion
 }
 
 function CanvasUnavailable() {

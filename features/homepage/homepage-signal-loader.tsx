@@ -33,12 +33,13 @@ export function HomepageSignalLoader({
     setPhase((current) => (current === 'intro' ? 'exiting' : current))
   }, [])
 
-  const finishExit = useCallback(() => {
+  const finishExit = useCallback((focusGallery = false) => {
     const root = rootRef.current
     const intro = root?.querySelector('[data-signal-loader-intro]')
-    const restoreFocus = Boolean(intro?.contains(document.activeElement))
+    const restoreFocus =
+      focusGallery || Boolean(intro?.contains(document.activeElement))
 
-    setPhase((current) => (current === 'exiting' ? 'gallery' : current))
+    setPhase('gallery')
     if (restoreFocus) {
       window.requestAnimationFrame(() => {
         root?.querySelector<HTMLElement>('[data-gallery-main]')?.focus()
@@ -69,8 +70,31 @@ export function HomepageSignalLoader({
   useEffect(() => {
     if (phase !== 'exiting') return
 
-    const timer = window.setTimeout(finishExit, 360)
+    const timer = window.setTimeout(() => finishExit(), 360)
     return () => window.clearTimeout(timer)
+  }, [finishExit, phase])
+
+  useEffect(() => {
+    if (phase === 'gallery') return
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (
+        event.key !== 'Escape' ||
+        event.defaultPrevented ||
+        event.isComposing ||
+        document.querySelector(
+          '[data-slot="dialog-content"][data-state="open"]'
+        )
+      ) {
+        return
+      }
+
+      event.preventDefault()
+      finishExit(true)
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
   }, [finishExit, phase])
 
   return (
@@ -87,6 +111,7 @@ export function HomepageSignalLoader({
         header={header}
         headerInert={phase !== 'gallery'}
         historyKey={historyKey}
+        inertiaBurst={phase !== 'intro'}
         initialItemId={initialItemId}
         items={items}
         mainId={mainId}

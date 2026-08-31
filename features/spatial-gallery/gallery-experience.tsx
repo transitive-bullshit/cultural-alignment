@@ -13,6 +13,7 @@ export function GalleryExperience({
   header,
   headerInert = false,
   historyKey,
+  inertiaBurst = false,
   initialItemId,
   items,
   mainId = 'gallery-main',
@@ -23,6 +24,7 @@ export function GalleryExperience({
   readonly header: ReactNode
   readonly headerInert?: boolean
   readonly historyKey: string
+  readonly inertiaBurst?: boolean
   readonly initialItemId: string
   readonly items: readonly SpatialGalleryItem[]
   readonly mainId?: string
@@ -48,6 +50,7 @@ export function GalleryExperience({
         >
           <SpatialGallery
             historyKey={historyKey}
+            inertiaBurst={inertiaBurst}
             items={items}
             initialItemId={initialItemId}
           />
