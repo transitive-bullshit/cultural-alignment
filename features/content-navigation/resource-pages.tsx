@@ -266,7 +266,7 @@ export function ResourceDetailPage({
         <section className={styles.resourceSection} data-franchise-sources>
           <header className={styles.sectionHeader}>
             <p>Franchise index</p>
-            <h2>Media sources in this franchise</h2>
+            <h2>Media in this franchise</h2>
             <span>{String(resource.sources.length).padStart(2, '0')}</span>
           </header>
 
