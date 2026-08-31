@@ -9,13 +9,13 @@ export const exploreNavigationLinks = [
   {
     href: '/scenarios',
     label: 'Scenarios',
-    footerLabel: 'Browse and filter',
+    footerLabel: 'All scenarios',
     description: 'Browse cultural analogies for real AI risks.'
   },
   {
     href: '/risk-families',
     label: 'AI risk families',
-    description: 'See the major families of AI risk.'
+    description: 'See the major categories of AI risk.'
   },
   {
     href: '/concepts',
@@ -25,7 +25,7 @@ export const exploreNavigationLinks = [
   {
     href: '/sources',
     label: 'Media sources',
-    description: 'Find the stories behind each scenario.'
+    description: 'Explore the movies and shows behind the scenarios.'
   }
 ] as const satisfies readonly SiteNavigationLink[]
 
