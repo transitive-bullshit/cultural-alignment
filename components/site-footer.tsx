@@ -89,8 +89,14 @@ export function SiteFooter() {
           </a>
         </p>
         <p>
-          {contentManifest.counts.scenarios} scenarios ·{' '}
-          {contentManifest.counts.sources} sources ·{' '}
+          <IntentPrefetchLink href='/scenarios'>
+            {contentManifest.counts.scenarios} scenarios
+          </IntentPrefetchLink>{' '}
+          ·{' '}
+          <IntentPrefetchLink href='/sources'>
+            {contentManifest.counts.sources} sources
+          </IntentPrefetchLink>{' '}
+          ·{' '}
           <a href={notionSourceUrl} target='_blank' rel='noreferrer'>
             CC0 data
           </a>

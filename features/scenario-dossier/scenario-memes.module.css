@@ -119,16 +119,19 @@
   transform-origin: center;
 }
 
+.dialog[data-scenario-meme-lightbox]:has(.imageStage[data-opening-motion]),
+.dialog[data-scenario-meme-lightbox][data-state='closed']:has(
+    .imageStage[data-spatial-origin]
+  ) {
+  overflow: visible;
+}
+
 .dialogOverlay[data-state='open'] {
   animation: meme-overlay-in 200ms var(--ease-out) both;
 }
 
 .dialogOverlay[data-state='closed'] {
   animation: meme-overlay-out 200ms var(--ease-out) both;
-}
-
-.dialog[data-state='open'] {
-  animation: meme-dialog-in 200ms var(--ease-out) both;
 }
 
 .dialog[data-state='closed'] {
@@ -170,25 +173,64 @@
 }
 
 .figure {
+  display: grid;
+  width: 100%;
   min-width: 0;
   margin: 0;
+  justify-items: center;
 }
 
 .imageStage {
+  position: relative;
   display: grid;
   width: 100%;
+  max-width: min(100%, var(--meme-stage-max-width));
   place-items: center;
   overflow: hidden;
   background: var(--foreground);
 }
 
+.blurPreviewImage,
+.previewImage,
 .focusedImage {
+  position: absolute;
+  inset: 0;
   display: block;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: calc(100svh - 9rem);
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+.blurPreviewImage {
+  object-fit: cover;
+  filter: blur(14px);
+  transform: scale(1.06);
+}
+
+.previewImage[data-blurred] {
+  filter: blur(14px);
+  transform: scale(1.06);
+}
+
+.focusedImage {
+  opacity: 0;
+  transition: opacity 160ms var(--ease-out);
+}
+
+.focusedImage[data-loaded] {
+  opacity: 1;
+}
+
+.dialog[data-state='open'] .imageStage[data-opening-motion] {
+  animation: meme-stage-in 240ms var(--ease-out) both;
+  will-change: transform, opacity;
+}
+
+.dialog[data-state='closed'] .imageStage[data-spatial-origin] {
+  animation: meme-stage-out 200ms var(--ease-out) both;
+  will-change: transform, opacity;
 }
 
 .caption {
@@ -218,24 +260,35 @@
   }
 }
 
-@keyframes meme-dialog-in {
+@keyframes meme-stage-in {
   from {
-    transform: scale(0.95);
-    opacity: 0;
+    transform: translate(var(--meme-origin-x), var(--meme-origin-y))
+      scale(var(--meme-origin-scale));
+    opacity: 0.82;
   }
   to {
-    transform: scale(1);
+    transform: translate(0, 0) scale(1);
     opacity: 1;
+  }
+}
+
+@keyframes meme-stage-out {
+  from {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translate(var(--meme-origin-x), var(--meme-origin-y))
+      scale(var(--meme-origin-scale));
+    opacity: 0.82;
   }
 }
 
 @keyframes meme-dialog-out {
   from {
-    transform: scale(1);
     opacity: 1;
   }
   to {
-    transform: scale(0.95);
     opacity: 0;
   }
 }
@@ -302,8 +355,8 @@
     grid-column: 1 / -1;
   }
 
-  .focusedImage {
-    max-height: calc(100svh - 11rem);
+  .imageStage {
+    max-width: min(100%, var(--meme-stage-mobile-max-width));
   }
 }
 
@@ -313,11 +366,20 @@
   }
 
   .dialog[data-state='open'] {
-    animation-name: meme-dialog-fade-in;
+    animation: meme-dialog-fade-in 160ms var(--ease-out) both;
   }
 
   .dialog[data-state='closed'] {
-    animation-name: meme-dialog-fade-out;
+    animation: meme-dialog-fade-out 160ms var(--ease-out) both;
+  }
+
+  .dialog .imageStage[data-opening-motion],
+  .dialog .imageStage[data-spatial-origin] {
+    animation: none;
+  }
+
+  .focusedImage {
+    transition-duration: 80ms;
   }
 }
 

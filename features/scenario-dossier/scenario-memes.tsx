@@ -1,8 +1,17 @@
 'use client'
 
-import Image from 'next/image'
+import Image, { getImageProps } from 'next/image'
 import { ChevronLeftIcon, ChevronRightIcon, XIcon } from 'lucide-react'
-import { useEffect, useId, useRef, useState, type KeyboardEvent } from 'react'
+import {
+  useEffect,
+  useId,
+  useLayoutEffect,
+  useCallback,
+  useRef,
+  useState,
+  type CSSProperties,
+  type KeyboardEvent
+} from 'react'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -18,6 +27,27 @@ import type { ContentImage } from '@/lib/content/catalog'
 import { getNextVisibleMemeCount, MEME_BATCH_SIZE } from './meme-gallery-state'
 import styles from './scenario-memes.module.css'
 
+const MEME_DETAIL_SIZES =
+  '(max-width: 620px) calc(100vw - 36px), (max-width: 1100px) calc(100vw - 9rem), 960px'
+const MEME_PRELOAD_IDLE_TIMEOUT_MILLISECONDS = 500
+
+type MemePreview = Readonly<{
+  isBlurred: boolean
+  src: string
+}>
+
+type MediaRect = Readonly<{
+  height: number
+  left: number
+  top: number
+  width: number
+}>
+
+type MemeStageStyle = CSSProperties & {
+  '--meme-stage-max-width': string
+  '--meme-stage-mobile-max-width': string
+}
+
 export function ScenarioMemes({
   memes,
   scenarioTitle
@@ -27,14 +57,25 @@ export function ScenarioMemes({
 }) {
   const headingId = useId()
   const gridId = useId()
+  const dialogRef = useRef<HTMLDivElement | null>(null)
+  const imageStageRef = useRef<HTMLDivElement | null>(null)
   const originatingButtonRef = useRef<HTMLButtonElement | null>(null)
   const memeButtonRefs = useRef<Array<HTMLButtonElement | null>>([])
+  const spatialOriginRectRef = useRef<MediaRect | null>(null)
+  const spatialMotionEnabledRef = useRef(false)
+  const openingMotionPendingRef = useRef(false)
+  const preloadedDetailImagesRef = useRef(new Map<string, HTMLImageElement>())
   const pendingFocusIndexRef = useRef<number | null>(null)
   const [visibleCount, setVisibleCount] = useState(() =>
     getNextVisibleMemeCount(0, memes.length)
   )
   const [activeIndex, setActiveIndex] = useState(0)
   const [open, setOpen] = useState(false)
+  const [loadedDetailSrc, setLoadedDetailSrc] = useState<string | null>(null)
+  const [preview, setPreview] = useState<MemePreview>(() => ({
+    isBlurred: true,
+    src: memes[0]?.blurDataURL ?? ''
+  }))
   const [gridAnnouncement, setGridAnnouncement] = useState('')
   const [dialogAnnouncement, setDialogAnnouncement] = useState('')
 
@@ -46,6 +87,56 @@ export function ScenarioMemes({
     pendingFocusIndexRef.current = null
   }, [visibleCount])
 
+  useEffect(() => {
+    if (!open || memes.length < 2) return
+
+    return scheduleIdleWork(() => {
+      for (const index of getMemePreloadOrder(activeIndex, memes.length)) {
+        const meme = memes[index]!
+        if (preloadedDetailImagesRef.current.has(meme.detailSrc)) continue
+
+        const { props } = getImageProps({
+          src: meme.detailSrc,
+          alt: '',
+          width: meme.width,
+          height: meme.height,
+          sizes: MEME_DETAIL_SIZES
+        })
+        const image = new window.Image()
+
+        image.decoding = 'async'
+        image.fetchPriority = 'low'
+        image.sizes = props.sizes ?? MEME_DETAIL_SIZES
+        image.srcset = props.srcSet ?? ''
+        image.src = props.src
+        image.addEventListener(
+          'error',
+          () => preloadedDetailImagesRef.current.delete(meme.detailSrc),
+          { once: true }
+        )
+        preloadedDetailImagesRef.current.set(meme.detailSrc, image)
+      }
+    })
+  }, [activeIndex, memes, open])
+
+  const configureMemeStage = useCallback(() => {
+    const result = configureMemeStageMotion(
+      imageStageRef.current,
+      spatialOriginRectRef.current,
+      openingMotionPendingRef.current
+    )
+
+    if (result.configured) openingMotionPendingRef.current = false
+
+    return result.cleanup
+  }, [])
+
+  useLayoutEffect(() => {
+    if (!open) return
+
+    return configureMemeStage()
+  }, [activeIndex, configureMemeStage, open])
+
   if (memes.length === 0) return null
 
   const activeMeme = memes[activeIndex]!
@@ -53,9 +144,50 @@ export function ScenarioMemes({
   const remainingCount = Math.max(0, memes.length - visibleCount)
   const nextBatchCount = Math.min(MEME_BATCH_SIZE, remainingCount)
 
-  const openMeme = (index: number, button: HTMLButtonElement) => {
+  const getPreview = (
+    index: number,
+    button = memeButtonRefs.current[index]
+  ): MemePreview => {
+    const image = button?.querySelector('img')
+    const source = image?.currentSrc || image?.src
+
+    return source
+      ? { isBlurred: false, src: source }
+      : { isBlurred: true, src: memes[index]!.blurDataURL }
+  }
+
+  const setSpatialOrigin = (
+    index: number,
+    button = memeButtonRefs.current[index]
+  ) => {
+    if (!button) {
+      spatialOriginRectRef.current = null
+      return
+    }
+
+    const meme = memes[index]!
+    spatialOriginRectRef.current = getContainedMediaRect(
+      button.getBoundingClientRect(),
+      meme.width / meme.height
+    )
+  }
+
+  const openMeme = (
+    index: number,
+    button: HTMLButtonElement,
+    animateFromThumbnail: boolean
+  ) => {
     originatingButtonRef.current = button
+    spatialMotionEnabledRef.current = animateFromThumbnail
+    if (animateFromThumbnail) {
+      setSpatialOrigin(index, button)
+    } else {
+      spatialOriginRectRef.current = null
+    }
+    openingMotionPendingRef.current = animateFromThumbnail
     setActiveIndex(index)
+    setLoadedDetailSrc(null)
+    setPreview(getPreview(index, button))
     setDialogAnnouncement('')
     setOpen(true)
   }
@@ -65,7 +197,18 @@ export function ScenarioMemes({
 
     const nextIndex = (activeIndex + direction + memes.length) % memes.length
 
+    if (imageStageRef.current) {
+      delete imageStageRef.current.dataset.openingMotion
+    }
+    openingMotionPendingRef.current = false
+    if (spatialMotionEnabledRef.current) {
+      setSpatialOrigin(nextIndex)
+    } else {
+      spatialOriginRectRef.current = null
+    }
     setActiveIndex(nextIndex)
+    setLoadedDetailSrc(null)
+    setPreview(getPreview(nextIndex))
     setDialogAnnouncement(`Meme ${nextIndex + 1} of ${memes.length}`)
   }
 
@@ -122,7 +265,9 @@ export function ScenarioMemes({
                 type='button'
                 aria-label={`Open meme ${index + 1} of ${memes.length}`}
                 data-scenario-meme-trigger
-                onClick={(event) => openMeme(index, event.currentTarget)}
+                onClick={(event) =>
+                  openMeme(index, event.currentTarget, event.detail > 0)
+                }
               >
                 <span className={styles.thumbnailFrame}>
                   <Image
@@ -161,6 +306,7 @@ export function ScenarioMemes({
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent
+          ref={dialogRef}
           className={styles.dialog}
           motion='custom'
           overlayClassName={styles.dialogOverlay}
@@ -168,7 +314,13 @@ export function ScenarioMemes({
           aria-keyshortcuts='ArrowLeft ArrowRight'
           data-scenario-meme-lightbox
           data-scenario-meme-index={activeIndex}
+          tabIndex={-1}
           onKeyDown={handleDialogKeyDown}
+          onOpenAutoFocus={(event) => {
+            event.preventDefault()
+            configureMemeStage()
+            dialogRef.current?.focus({ preventScroll: true })
+          }}
           onCloseAutoFocus={(event) => {
             event.preventDefault()
             originatingButtonRef.current?.focus()
@@ -214,7 +366,26 @@ export function ScenarioMemes({
             ) : null}
 
             <figure className={styles.figure}>
-              <div className={styles.imageStage}>
+              <div
+                ref={imageStageRef}
+                className={styles.imageStage}
+                style={getMemeStageStyle(activeMeme)}
+                data-scenario-meme-stage
+              >
+                <img
+                  className={styles.blurPreviewImage}
+                  src={activeMeme.blurDataURL}
+                  alt=''
+                  aria-hidden='true'
+                />
+                <img
+                  className={styles.previewImage}
+                  src={preview.src}
+                  alt=''
+                  aria-hidden='true'
+                  data-blurred={preview.isBlurred || undefined}
+                  data-scenario-meme-preview
+                />
                 <Image
                   key={activeMeme.detailSrc}
                   className={styles.focusedImage}
@@ -224,7 +395,13 @@ export function ScenarioMemes({
                   height={activeMeme.height}
                   placeholder='blur'
                   blurDataURL={activeMeme.blurDataURL}
-                  sizes='(max-width: 620px) calc(100vw - 36px), (max-width: 1100px) calc(100vw - 9rem), 960px'
+                  sizes={MEME_DETAIL_SIZES}
+                  loading='eager'
+                  data-loaded={
+                    loadedDetailSrc === activeMeme.detailSrc || undefined
+                  }
+                  data-scenario-meme-image
+                  onLoad={() => setLoadedDetailSrc(activeMeme.detailSrc)}
                 />
               </div>
               <figcaption className={styles.caption}>
@@ -253,4 +430,143 @@ export function ScenarioMemes({
       </Dialog>
     </section>
   )
+}
+
+function configureMemeStageMotion(
+  imageStage: HTMLDivElement | null,
+  originRect: MediaRect | null,
+  animateOpening: boolean
+) {
+  if (!imageStage) return { configured: false }
+
+  if (!originRect) {
+    delete imageStage.dataset.openingMotion
+    delete imageStage.dataset.spatialOrigin
+    imageStage.style.removeProperty('--meme-origin-x')
+    imageStage.style.removeProperty('--meme-origin-y')
+    imageStage.style.removeProperty('--meme-origin-scale')
+    return { configured: true }
+  }
+
+  const targetRect = imageStage.getBoundingClientRect()
+  if (targetRect.width === 0 || targetRect.height === 0) {
+    return { configured: false }
+  }
+
+  const translateX =
+    originRect.left +
+    originRect.width / 2 -
+    (targetRect.left + targetRect.width / 2)
+  const translateY =
+    originRect.top +
+    originRect.height / 2 -
+    (targetRect.top + targetRect.height / 2)
+  const scale = originRect.width / targetRect.width
+
+  imageStage.style.setProperty('--meme-origin-x', `${translateX}px`)
+  imageStage.style.setProperty('--meme-origin-y', `${translateY}px`)
+  imageStage.style.setProperty('--meme-origin-scale', String(scale))
+  imageStage.dataset.spatialOrigin = 'true'
+
+  const shouldAnimateOpening =
+    animateOpening || imageStage.dataset.openingMotion === 'true'
+
+  if (
+    !shouldAnimateOpening ||
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  ) {
+    delete imageStage.dataset.openingMotion
+    return { configured: true }
+  }
+
+  imageStage.dataset.openingMotion = 'true'
+
+  const clearOpeningMotion = () => {
+    delete imageStage.dataset.openingMotion
+  }
+
+  imageStage.addEventListener('animationend', clearOpeningMotion, {
+    once: true
+  })
+
+  return {
+    configured: true,
+    cleanup: () => {
+      imageStage.removeEventListener('animationend', clearOpeningMotion)
+    }
+  }
+}
+
+function getContainedMediaRect(container: DOMRect, aspectRatio: number) {
+  const containerAspectRatio = container.width / container.height
+
+  if (containerAspectRatio > aspectRatio) {
+    const width = container.height * aspectRatio
+
+    return {
+      left: container.left + (container.width - width) / 2,
+      top: container.top,
+      width,
+      height: container.height
+    }
+  }
+
+  const height = container.width / aspectRatio
+
+  return {
+    left: container.left,
+    top: container.top + (container.height - height) / 2,
+    width: container.width,
+    height
+  }
+}
+
+function getMemeStageStyle(meme: ContentImage): MemeStageStyle {
+  const aspectRatio = meme.width / meme.height
+
+  return {
+    aspectRatio: `${meme.width} / ${meme.height}`,
+    '--meme-stage-max-width': getViewportConstrainedWidth(aspectRatio, 9),
+    '--meme-stage-mobile-max-width': getViewportConstrainedWidth(
+      aspectRatio,
+      11
+    )
+  }
+}
+
+function getViewportConstrainedWidth(aspectRatio: number, reservedRem: number) {
+  return `calc(${aspectRatio * 100}svh - ${aspectRatio * reservedRem}rem)`
+}
+
+function getMemePreloadOrder(activeIndex: number, memeCount: number) {
+  const indices: number[] = []
+  const included = new Set([activeIndex])
+
+  for (let distance = 1; indices.length < memeCount - 1; distance += 1) {
+    for (const index of [
+      (activeIndex + distance) % memeCount,
+      (activeIndex - distance + memeCount) % memeCount
+    ]) {
+      if (included.has(index)) continue
+
+      included.add(index)
+      indices.push(index)
+    }
+  }
+
+  return indices
+}
+
+function scheduleIdleWork(callback: () => void) {
+  if (typeof window.requestIdleCallback === 'function') {
+    const handle = window.requestIdleCallback(callback, {
+      timeout: MEME_PRELOAD_IDLE_TIMEOUT_MILLISECONDS
+    })
+
+    return () => window.cancelIdleCallback(handle)
+  }
+
+  const handle = window.setTimeout(callback, 16)
+
+  return () => window.clearTimeout(handle)
 }
