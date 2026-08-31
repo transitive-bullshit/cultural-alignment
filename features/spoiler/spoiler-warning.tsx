@@ -5,6 +5,7 @@ import { useEffect, useId, useState } from 'react'
 import styles from './spoiler-warning.module.css'
 
 const STORAGE_KEY = 'cultural-alignment:spoiler-warning:v2'
+const WARNING_ORBIT_OFFSETS = ['16.667%', '50%', '83.333%'] as const
 
 type WarningPhase = 'warning' | 'noted' | 'leaving'
 
@@ -88,30 +89,20 @@ export function SpoilerWarning({ className }: { readonly className?: string }) {
                 />
               </defs>
               <text>
-                <textPath
-                  href={`#${pathId}`}
-                  startOffset='16.667%'
-                  textAnchor='middle'
-                >
-                  Spoiler warning
-                </textPath>
-                <textPath
-                  href={`#${pathId}`}
-                  startOffset='50%'
-                  textAnchor='middle'
-                >
-                  Spoiler warning
-                </textPath>
-                <textPath
-                  href={`#${pathId}`}
-                  startOffset='83.333%'
-                  textAnchor='middle'
-                >
-                  Spoiler warning
-                </textPath>
+                {WARNING_ORBIT_OFFSETS.map((startOffset) => (
+                  <textPath
+                    href={`#${pathId}`}
+                    key={startOffset}
+                    startOffset={startOffset}
+                    textAnchor='middle'
+                  >
+                    Spoiler warning ·
+                  </textPath>
+                ))}
               </text>
             </svg>
           </span>
+          <span className={styles.sealAction}>I’m okay with spoilers</span>
         </span>
       </button>
 

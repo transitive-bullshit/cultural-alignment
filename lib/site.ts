@@ -21,7 +21,7 @@ export const siteUrl = new URL(
 export const repositoryUrl =
   'https://github.com/transitive-bullshit/cultural-alignment'
 export const notionSourceUrl =
-  'https://transitive-bs.notion.site/3c6edb27f12480709d6dca256d247c80?v=3c6edb27f12480a09aaf000c94ab8502'
+  'https://transitive-bs.notion.site/Cultural-Alignment-Data-3c6edb27f124801f8c10edc3c80b4e10'
 export const xProfileUrl = 'https://x.com/transitive_bs'
 
 function normalizeEnvironmentValue(value: string | undefined) {

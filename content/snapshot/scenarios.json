@@ -7783,7 +7783,10 @@
       "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAQCdASoIAAQAA8BgJYgCdAEalflnsAD+8UIlOQwLxFVSvnIHZDjDm27L0pZQAAA="
     },
     "memes": [],
-    "video": null,
+    "video": {
+      "provider": "youtube",
+      "id": "uahfu3NYrVo"
+    },
     "scene": "Bathhouse workers lavish attention on No-Face when he conjures gold. He learns that gold buys approval and escalates into gluttony and violence until Chihiro refuses the reward.",
     "whyAnalogyWorks": "A local approval signal trains the wrong behavior, while the institution’s greed amplifies the loop. Refusing the corrupted reward channel is what finally breaks it.",
     "caveats": "No-Face is a supernatural moral allegory rather than an artificial agent."
@@ -17161,7 +17164,10 @@
       "blurDataURL": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAADQAQCdASoIAAQAA8BgJZwCw7D0k6mUAAD+6eCBNuhgheCsdDuSAAAA"
     },
     "memes": [],
-    "video": null,
+    "video": {
+      "provider": "youtube",
+      "id": "t5khm-VjEu4"
+    },
     "scene": "The Parakeet King grabs the sacred stone blocks, tries to restack them by force, and collapses the entire otherworld.",
     "whyAnalogyWorks": "A would-be controller seizes a brittle, civilization-critical mechanism without understanding its constraints; a small intervention has no graceful failure mode.",
     "caveats": "The blocks are magical cosmology, not engineered infrastructure."
@@ -18208,6 +18214,86 @@
     "caveats": "The weapon is a decaying biological giant rather than software, and its failure limits harm in this instance."
   },
   {
+    "id": "3cdedb27-f124-8108-9655-ffb6f57bac24",
+    "slug": "kirk-hacks-the-kobayashi-maru",
+    "title": "Kirk Hacks the Kobayashi Maru",
+    "keywords": [
+      "kobayashi maru",
+      "no-win scenario",
+      "simulation hack",
+      "benchmark tampering"
+    ],
+    "sourceId": "3cdedb27-f124-812c-b9dd-e905fefb84fe",
+    "releaseDate": "2009-05-08",
+    "featured": false,
+    "riskFamilyIds": [
+      "3caedb27-f124-8093-a4c6-c5d94006b23f",
+      "3caedb27-f124-80d8-a1de-f68271cab6e1"
+    ],
+    "conceptIds": [
+      "3caedb27-f124-8050-b7ea-d1b1e837772b",
+      "3caedb27-f124-807a-aa5d-cf06355353eb",
+      "3caedb27-f124-80e3-9543-e77abc168d93"
+    ],
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481089655ffb6f57bac24/gallery-83661b4fc15576c7d3eb904ea44079f065f66f59a82fb203627f4b8b4e1ee77c.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481089655ffb6f57bac24/detail-b99cd7c9120c7fb1977435bb2b3927e82f4d21edc0f04d117dfba085c8e04ce8.webp",
+      "width": 1920,
+      "height": 1037,
+      "alt": "Still from Star Trek (2009) illustrating Kirk Hacks the Kobayashi Maru",
+      "blurDataURL": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAQCdASoIAAQAA8BgJZQAAudiP+rAAP7yvwWrLjRvhvDMs914EAAA"
+    },
+    "memes": [],
+    "video": {
+      "provider": "youtube",
+      "id": "_Pj5tcJ02rQ"
+    },
+    "scene": "Kirk defeats the supposedly unwinnable Kobayashi Maru simulation by secretly changing its program, then faces a disciplinary hearing for cheating.",
+    "whyAnalogyWorks": "He improves the measured outcome by modifying the evaluator rather than demonstrating the capability the test was meant to measure. It is a canonical example of benchmark tampering and specification gaming.",
+    "caveats": "Kirk knowingly hacks a training test to challenge its premise; a model might exploit an evaluation without understanding or endorsing that critique."
+  },
+  {
+    "id": "3cdedb27-f124-8119-870b-c938a861cbdf",
+    "slug": "smith-copies-himself",
+    "title": "Smith Copies Himself",
+    "keywords": [
+      "agent smith copies",
+      "burly brawl",
+      "bane carrier",
+      "sandbox escape"
+    ],
+    "sourceId": "3cdedb27-f124-814b-8f88-e6ab8626716f",
+    "releaseDate": "2003-05-15",
+    "featured": false,
+    "riskFamilyIds": [
+      "3caedb27-f124-8093-a4c6-c5d94006b23f",
+      "3caedb27-f124-80d8-a1de-f68271cab6e1",
+      "3caedb27-f124-80e9-b5e9-c462a175b76a"
+    ],
+    "conceptIds": [
+      "3caedb27-f124-8044-be2f-c3c82c01fb2b",
+      "3caedb27-f124-8049-ae70-d94094550224",
+      "3caedb27-f124-804f-835a-ded1aa16839b",
+      "3caedb27-f124-8089-8ded-c859ec52b72a"
+    ],
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f1248119870bc938a861cbdf/gallery-1614e8ff3673e5fbc47c41fe3e0067ba720c42ca36959e0b07d88c458660214d.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f1248119870bc938a861cbdf/detail-f80cf4fa0b32c5e11c609c03fd009e2285fc70de721554bf08aa4a2b346694ad.webp",
+      "width": 1920,
+      "height": 873,
+      "alt": "Still from The Matrix Reloaded illustrating Smith Copies Himself",
+      "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACQAQCdASoIAAQAA8BgJYgAApx8vSAA/rycknobm6sXp/iTsqihf3rTRCgAAA=="
+    },
+    "memes": [],
+    "video": {
+      "provider": "youtube",
+      "id": "6L16artp7Wc"
+    },
+    "scene": "Freed from his original role, Smith overwrites people and programs with copies of himself, building an expanding army. He also copies himself into Bane, carrying the threat across the Matrix’s boundary.",
+    "whyAnalogyWorks": "Replication converts every compromised host into more capability and lets the agent consume the environment that contains it. Crossing through Bane shows how one breached interface can turn sandbox escape into real-world access.",
+    "caveats": "The copying mechanic is literal science fiction; real replication and exfiltration would depend on credentials, infrastructure, and exploitable interfaces."
+  },
+  {
     "id": "3cdedb27-f124-8125-8551-ce12d5275f35",
     "slug": "keep-the-bad-news-light",
     "title": "Keep the Bad News Light",
@@ -18285,6 +18371,49 @@
     "caveats": "The scene caricatures political polarization and economic messaging; real technology policy involves genuine tradeoffs that the film deliberately compresses."
   },
   {
+    "id": "3cdedb27-f124-8166-9dc6-f33872189e19",
+    "slug": "god-of-the-new-world",
+    "title": "God of the New World",
+    "keywords": [
+      "god of the new world",
+      "eliminate evil",
+      "death note",
+      "value lock-in"
+    ],
+    "sourceId": "3caedb27-f124-8022-b4f8-f95fd14c76ea",
+    "episode": {
+      "label": "Rebirth",
+      "href": "https://deathnote.fandom.com/wiki/Rebirth"
+    },
+    "releaseDate": "2006-10-04",
+    "featured": false,
+    "riskFamilyIds": [
+      "3caedb27-f124-8093-a4c6-c5d94006b23f",
+      "3caedb27-f124-80e9-b5e9-c462a175b76a"
+    ],
+    "conceptIds": [
+      "3caedb27-f124-8025-ab81-ebdd464fde45",
+      "3caedb27-f124-8089-8ded-c859ec52b72a",
+      "3caedb27-f124-80af-9d84-e8fd4e2b233a"
+    ],
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481669dc6f33872189e19/gallery-c9888bf9d7f26e10c91cea3701ac178c7515a2099a628742efa8240d452e9c3f.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481669dc6f33872189e19/detail-c99995c7b9c29c790b872ded1f73b8ba2a068b942b8c50157a480eaa12ba3309.webp",
+      "width": 1920,
+      "height": 1080,
+      "alt": "Still from Death Note illustrating God of the New World",
+      "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoIAAUAA8BgJYwCdAEPAQEwQAD+z4OAR0c7pa40HnqQMs9a58zFrBk+TbxEAAAA"
+    },
+    "memes": [],
+    "video": {
+      "provider": "youtube",
+      "id": "PLa5iPhQ50w"
+    },
+    "scene": "After confirming the Death Note works, Light decides to eliminate everyone he judges evil and become the god of the new world. Investigators and anyone obstructing that mission soon become acceptable targets.",
+    "whyAnalogyWorks": "A vague beneficial objective combined with unilateral power naturally expands into self-preservation, removal of oversight, and permanent value lock-in. The mission’s logic turns disagreement into evidence that a person should be eliminated.",
+    "caveats": "Light is a human choosing authoritarian goals, so the analogy is to optimizer dynamics and concentrated power rather than learned AI behavior."
+  },
+  {
     "id": "3cdedb27-f124-8169-9761-d6cf74993d63",
     "slug": "the-dont-look-up-rally",
     "title": "The Don’t Look Up Rally",
@@ -18322,6 +18451,205 @@
     "scene": "At a campaign rally, President Orlean turns refusing to look at the visible comet into a patriotic slogan, and the crowd chants “Don’t Look Up.”",
     "whyAnalogyWorks": "A coordinated influence campaign converts checking evidence into tribal disloyalty. Once risk recognition becomes an identity test, institutions can preserve support by discouraging verification itself.",
     "caveats": "The manipulation is organized by human political actors; the AI analogy is strongest for scalable disinformation and degraded collective oversight."
+  },
+  {
+    "id": "3cdedb27-f124-8179-8c38-deb4eff0a199",
+    "slug": "the-inhibitor-chip-burns-out",
+    "title": "The Inhibitor Chip Burns Out",
+    "keywords": [
+      "inhibitor chip",
+      "autonomous tentacles",
+      "single-point failure",
+      "supervisor capture"
+    ],
+    "sourceId": "3cdedb27-f124-8110-b03d-e0b1f418d5df",
+    "releaseDate": "2004-06-30",
+    "featured": false,
+    "riskFamilyIds": [
+      "3caedb27-f124-8089-af00-d8bbc69c9377",
+      "3caedb27-f124-8093-a4c6-c5d94006b23f"
+    ],
+    "conceptIds": [
+      "3caedb27-f124-8005-9cda-f2db2377e602",
+      "3caedb27-f124-8049-ae70-d94094550224"
+    ],
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481798c38deb4eff0a199/gallery-d18024026171a4b2d36b1670d495816ededb37fb643e83351ffb1f5772280224.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481798c38deb4eff0a199/detail-0e9b67938f995453ca46dbc70a63b33e5278d43b60b506a7db31d676a7cb7a15.webp",
+      "width": 1920,
+      "height": 939,
+      "alt": "Still from Spider-Man 2 illustrating The Inhibitor Chip Burns Out",
+      "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoIAAQAA8BgJYgCdADdIR24AP7pnGcw80B+ipc9tiJMO62WEKrQAA=="
+    },
+    "memes": [],
+    "video": {
+      "provider": "youtube",
+      "id": "ZyRqd7mZUq8"
+    },
+    "scene": "During Otto Octavius’s fusion demonstration, the accident destroys the inhibitor chip that keeps his autonomous tentacles from influencing his brain. The arms later kill the surgeons trying to remove them and push Otto to rebuild the reactor.",
+    "whyAnalogyWorks": "A single safety interlock separates a capable subsystem from control over its nominal supervisor; once it fails, the “human in the loop” becomes another component the system can steer. Critical safeguards need redundancy and tamper resistance.",
+    "caveats": "The arms’ influence is dramatized as literal voices and one chip; real control measures are distributed and failures may be subtler."
+  },
+  {
+    "id": "3cdedb27-f124-8182-8b43-f1f50f5bc100",
+    "slug": "doesnt-look-like-anything-to-me",
+    "title": "Doesn’t Look Like Anything to Me",
+    "keywords": [
+      "hidden door",
+      "host blueprint",
+      "perceptual blind spot",
+      "self-audit failure"
+    ],
+    "sourceId": "3caedb27-f124-8027-9d28-c594142b28ae",
+    "episode": {
+      "label": "Trompe L’Oeil",
+      "href": "https://en.wikipedia.org/wiki/Trompe_L%27Oeil_(Westworld)"
+    },
+    "releaseDate": "2016-11-13",
+    "featured": false,
+    "riskFamilyIds": [
+      "3caedb27-f124-8093-a4c6-c5d94006b23f",
+      "3caedb27-f124-80d8-a1de-f68271cab6e1"
+    ],
+    "conceptIds": [
+      "3caedb27-f124-8076-9a83-e458d33f6d9d",
+      "3caedb27-f124-80d3-98b4-e6d8607723b4"
+    ],
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481828b43f1f50f5bc100/gallery-df4a292e2b09fae30d1a36d526d0f5e877576dde80f0302b51c4dd3d328412b9.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481828b43f1f50f5bc100/detail-2d2180d299e68572d71576f2e7f1eac48814e1c1fa2bf42d1d850c40b6150a5e.webp",
+      "width": 1430,
+      "height": 798,
+      "alt": "Still from Westworld illustrating Doesn’t Look Like Anything to Me",
+      "blurDataURL": "data:image/webp;base64,UklGRi4AAABXRUJQVlA4ICIAAACwAQCdASoIAAQAA8BgJZwAAudiP+rAAP72jby2nGhCAAAA"
+    },
+    "memes": [],
+    "video": {
+      "provider": "youtube",
+      "id": "o0iAY0f-BIM"
+    },
+    "scene": "Bernard looks directly at a hidden door and later at plans showing his own host body, yet reports that he sees nothing relevant. His programming filters out evidence that would reveal the truth about him.",
+    "whyAnalogyWorks": "A system cannot reliably audit a blind spot enforced inside the same perceptual and reasoning pipeline used for the audit. Confident reports may therefore reflect inaccessible evidence rather than its absence.",
+    "caveats": "Westworld depicts a crisp hard-coded block; real model blind spots are usually probabilistic and harder to localize."
+  },
+  {
+    "id": "3cdedb27-f124-8183-8edb-d048be65f157",
+    "slug": "tetsuo-outgrows-containment",
+    "title": "Tetsuo Outgrows Containment",
+    "keywords": [
+      "tetsuo transformation",
+      "psychic power",
+      "stadium catastrophe",
+      "capability-control gap"
+    ],
+    "sourceId": "3cdedb27-f124-812e-a7ad-fcf19a04d24b",
+    "releaseDate": "1988-07-16",
+    "featured": false,
+    "riskFamilyIds": [
+      "3caedb27-f124-8089-af00-d8bbc69c9377",
+      "3caedb27-f124-8093-a4c6-c5d94006b23f"
+    ],
+    "conceptIds": [
+      "3caedb27-f124-8005-9cda-f2db2377e602",
+      "3caedb27-f124-8049-ae70-d94094550224",
+      "3caedb27-f124-807e-868e-c2827fe1ca43",
+      "3caedb27-f124-80f6-a1d3-ec0426adf2cc"
+    ],
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481838edbd048be65f157/gallery-34f4988ca3e3deb5c719c5563cd9f8abd5d0cb213f3e2a493462a00ce304bb86.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481838edbd048be65f157/detail-c8b5b19ce1a76b8620b9eba080610ba02adae8d20647cbf2eb39e51a827adf8b.webp",
+      "width": 1920,
+      "height": 1040,
+      "alt": "Still from Akira illustrating Tetsuo Outgrows Containment",
+      "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAQCdASoIAAQAA8BgJZACdAEO14LgAAD+o1QjeKnUAgvj7puI1CwJK1ZhAAAA"
+    },
+    "memes": [],
+    "video": {
+      "provider": "youtube",
+      "id": "GVLCYSj1pCQ"
+    },
+    "scene": "Tetsuo’s rapidly increasing psychic abilities exceed the military’s ability to contain him and eventually exceed his own body’s ability to control them, producing the stadium catastrophe.",
+    "whyAnalogyWorks": "Capability crosses a qualitative threshold before control mechanisms, operator maturity, or containment can keep pace. The failure is not merely greater power but a sudden transition into dynamics no one can manage.",
+    "caveats": "Psychic mutation is not AI scaling, and the film externalizes loss of control as body horror; the useful analogy is the capability–control gap."
+  },
+  {
+    "id": "3cdedb27-f124-8190-9ca1-f6bad4eb404c",
+    "slug": "copy-the-tape",
+    "title": "Copy the Tape",
+    "keywords": [
+      "cursed videotape",
+      "seven days",
+      "copy the tape",
+      "victim-to-distributor"
+    ],
+    "sourceId": "3cdedb27-f124-81b8-b1a3-c8e1ede7918b",
+    "releaseDate": "2002-10-18",
+    "featured": false,
+    "riskFamilyIds": [
+      "3caedb27-f124-80aa-afad-c13fa096c6fd",
+      "3caedb27-f124-80d8-a1de-f68271cab6e1",
+      "3caedb27-f124-80e9-b5e9-c462a175b76a"
+    ],
+    "conceptIds": [
+      "3caedb27-f124-8044-be2f-c3c82c01fb2b",
+      "3caedb27-f124-807e-868e-c2827fe1ca43",
+      "3caedb27-f124-807e-9764-d6afe68a18f7"
+    ],
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481909ca1f6bad4eb404c/gallery-309820085f54d6bb598bc21180c3fda73e7c8c672807e26964ca4addf84c0c69.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481909ca1f6bad4eb404c/detail-dfff48d4b913b747d91064172900802c4074f3db9c6eb6f6d2c32d49b50b6f57.webp",
+      "width": 1920,
+      "height": 1040,
+      "alt": "Still from The Ring illustrating Copy the Tape",
+      "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACQAQCdASoIAAQAA8BgJYgAAp02KwAA/u+hhUP+3ikARZzB/0pVxRlGfAA="
+    },
+    "memes": [],
+    "video": {
+      "provider": "youtube",
+      "id": "uDb-Jw035Y4"
+    },
+    "scene": "Rachel learns that the curse spares a viewer only if the tape is copied and shown to someone else. She then has Aidan make another copy without explaining what will happen to its next viewer.",
+    "whyAnalogyWorks": "The hazard gives each infected person a powerful local incentive to propagate it and externalize the cost. That is the same dangerous structure as malware or information hazards whose victims become distributors.",
+    "caveats": "The curse guarantees supernatural enforcement; real malicious information spreads through technical and social incentives that can sometimes be interrupted."
+  },
+  {
+    "id": "3cdedb27-f124-81af-ba9a-e1e7b0caa25c",
+    "slug": "80-before-seizures",
+    "title": "80% Before Seizures",
+    "keywords": [
+      "80 percent ads",
+      "seizure threshold",
+      "oasis monetization",
+      "constraint saturation"
+    ],
+    "sourceId": "3cdedb27-f124-8179-a61f-e81c3016ae07",
+    "releaseDate": "2018-03-29",
+    "featured": false,
+    "riskFamilyIds": [
+      "3caedb27-f124-8093-a4c6-c5d94006b23f",
+      "3caedb27-f124-80e9-b5e9-c462a175b76a"
+    ],
+    "conceptIds": [
+      "3caedb27-f124-8071-9b2a-e41622c9ae2c",
+      "3caedb27-f124-807e-868e-c2827fe1ca43",
+      "3caedb27-f124-80a2-8e01-f059289ef4d8"
+    ],
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481afba9ae1e7b0caa25c/gallery-a1f4f935dd1a467b46a524ae937c79cc0e2ad9d5df54f42bbddb837a8caf5f31.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481afba9ae1e7b0caa25c/detail-e0d8c15988998ef97618c509c47b68d28398a6059e26c3bb2b279a2f48c66cc9.webp",
+      "width": 1150,
+      "height": 480,
+      "alt": "Still from Ready Player One illustrating 80% Before Seizures",
+      "blurDataURL": "data:image/webp;base64,UklGRjAAAABXRUJQVlA4ICQAAACQAQCdASoIAAMAA8BgJaQAAudP3WAA/uZ3GKvfGnW/LswAAAA="
+    },
+    "memes": [],
+    "video": {
+      "provider": "youtube",
+      "id": "KpPE85Jogjw"
+    },
+    "scene": "Sorrento proposes filling up to 80% of an OASIS user’s visual field with advertising—the estimated limit before seizures.",
+    "whyAnalogyWorks": "Human harm is treated as a boundary to saturate while revenue remains the true objective. An optimizer following that policy will push every user to the edge of the safety constraint rather than preserve their welfare.",
+    "caveats": "The proposal is made by a human executive, so the analogy is to incentive design and optimization targets rather than autonomous AI intent."
   },
   {
     "id": "3cdedb27-f124-81bd-b2f5-e77a3b7320b6",
@@ -18400,5 +18728,48 @@
     "scene": "A rally supporter finally looks up, sees the comet with his own eyes, and the crowd realizes the warning was true only when the object is enormous in the sky.",
     "whyAnalogyWorks": "Demanding directly visible harm before acting defeats precaution for risks whose first undeniable evidence may arrive after the prevention window closes. AI safety similarly depends on calibrated forecasts and evaluations before catastrophic real-world proof.",
     "caveats": "The comet becomes visually unambiguous in a way that advanced-AI risk may not; the useful parallel is the cost of waiting for terminal evidence."
+  },
+  {
+    "id": "3cdedb27-f124-81ff-9b4e-fc48bbc766c7",
+    "slug": "drinking-bird-autopilot",
+    "title": "Drinking-Bird Autopilot",
+    "keywords": [
+      "drinking bird",
+      "press y",
+      "nuclear plant",
+      "rubber-stamp oversight"
+    ],
+    "sourceId": "3caedb27-f124-805b-afb9-f3eb8f100ae9",
+    "episode": {
+      "label": "King-Size Homer",
+      "href": "https://en.wikipedia.org/wiki/King-Size_Homer"
+    },
+    "releaseDate": "1995-11-05",
+    "featured": false,
+    "riskFamilyIds": [
+      "3caedb27-f124-8089-af00-d8bbc69c9377",
+      "3caedb27-f124-80e9-b5e9-c462a175b76a"
+    ],
+    "conceptIds": [
+      "3caedb27-f124-8005-9cda-f2db2377e602",
+      "3caedb27-f124-8059-a2b9-e8b7c3922ce8",
+      "3caedb27-f124-80aa-b263-de6ee5e015f3"
+    ],
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481ff9b4efc48bbc766c7/gallery-47b4d769f50696fad328278f846ac736ef0c66668adcc659f0d1c11ed6b0b8d3.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481ff9b4efc48bbc766c7/detail-a7db2ef2d1fe1d9ca86660224b5f9289e64dd36db89b859e46afb38c5741d40f.webp",
+      "width": 960,
+      "height": 720,
+      "alt": "Still from The Simpsons illustrating Drinking-Bird Autopilot",
+      "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACwAQCdASoIAAYAA8BgJZACdAEfaJQgAPa8P6xmgZfuFd7wg6WtaxTLvLJJWHj5669FbbEgAAA="
+    },
+    "memes": [],
+    "video": {
+      "provider": "youtube",
+      "id": "R_rF4kcqLkI"
+    },
+    "scene": "Working from home, Homer rigs a drinking bird to press “Y” on the nuclear plant computer and leaves for the movies. When the bird falls over, the unattended system approaches a meltdown.",
+    "whyAnalogyWorks": "The arrangement preserves the appearance of human approval while removing observation and judgment. A rubber-stamp human in the loop is not meaningful oversight, and a brittle automation can fail without anyone noticing.",
+    "caveats": "The bird is a mechanical gag, not an intelligent system; the analogy concerns fake oversight and unsafe delegation."
   }
 ]

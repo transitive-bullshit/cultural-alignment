@@ -172,7 +172,7 @@
   width: calc(100% - 12px);
   height: calc(100% - 12px);
   animation: spoiler-orbit 14s linear infinite;
-  transition: opacity 180ms var(--proto-ease-out);
+  transition: opacity 140ms var(--proto-ease-out);
 }
 
 .orbit svg {
@@ -185,10 +185,29 @@
 .orbit text {
   fill: currentColor;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 7.4px;
+  font-size: 6.4px;
   font-weight: 700;
-  letter-spacing: 0.055em;
+  letter-spacing: 0.045em;
   text-transform: uppercase;
+}
+
+.sealAction {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  padding: 20px;
+  color: #fff;
+  font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 0.88;
+  opacity: 0;
+  place-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  text-wrap: balance;
+  transition: opacity 140ms var(--proto-ease-out);
 }
 
 .note[data-state='noted'] .panel,
@@ -248,20 +267,49 @@
   white-space: nowrap;
 }
 
+.note[data-state='warning']:focus-visible .panel {
+  border-color: var(--proto-electric);
+}
+
+.note[data-state='warning']:focus-visible .seal {
+  background: var(--proto-electric);
+  color: #fff;
+}
+
+.note[data-state='warning']:focus-visible .action {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.note[data-state='warning']:focus-visible .orbit {
+  opacity: 0;
+}
+
+.note[data-state='warning']:focus-visible .sealAction {
+  opacity: 1;
+}
+
 @media (hover: hover) and (pointer: fine) {
-  .note:hover .panel {
+  .note[data-state='warning']:hover .panel {
     border-color: var(--proto-electric);
   }
 
-  .note:hover .seal {
+  .note[data-state='warning']:hover .seal {
     background: var(--proto-electric);
     color: #fff;
-    transform: rotate(3deg);
   }
 
-  .note:hover .action {
+  .note[data-state='warning']:hover .action {
     text-decoration: underline;
     text-underline-offset: 3px;
+  }
+
+  .note[data-state='warning']:hover .orbit {
+    opacity: 0;
+  }
+
+  .note[data-state='warning']:hover .sealAction {
+    opacity: 1;
   }
 }
 
@@ -271,31 +319,9 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 820px), (hover: none) and (pointer: coarse) {
   .note {
-    width: calc(100vw - 32px);
-    height: 108px;
-  }
-
-  .panel {
-    top: 6px;
-    right: 43px;
-    bottom: 6px;
-  }
-
-  .warningCopy,
-  .confirmation {
-    padding: 12px 68px 12px 14px;
-  }
-
-  .warningCopy strong {
-    max-width: none;
-    font-size: 18px;
-  }
-
-  .seal {
-    width: 108px;
-    height: 108px;
+    display: none;
   }
 }
 
@@ -332,11 +358,5 @@
   .note[data-state='leaving'] .panel,
   .note[data-state='leaving'] .seal {
     transform: none;
-  }
-
-  @media (hover: hover) and (pointer: fine) {
-    .note:hover .seal {
-      transform: none;
-    }
   }
 }

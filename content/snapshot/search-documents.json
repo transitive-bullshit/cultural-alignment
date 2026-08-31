@@ -1256,7 +1256,8 @@
       "Spider-Man: Across the Spider-Verse",
       "Spider-Man: Far From Home",
       "Spider-Man: Homecoming",
-      "Spider-Man: No Way Home"
+      "Spider-Man: No Way Home",
+      "Spider-Man 2"
     ],
     "supplementalKeywords": [
       "superhero",
@@ -1275,7 +1276,8 @@
       "Science-fiction franchise following Starfleet crews exploring space and encountering new civilizations.",
       "IMDb",
       "Star Trek: The Original Series",
-      "Star Trek: The Next Generation"
+      "Star Trek: The Next Generation",
+      "Star Trek (2009)"
     ],
     "supplementalKeywords": [
       "science fiction",
@@ -1373,6 +1375,30 @@
       "fellowship"
     ],
     "href": "/franchises/the-lord-of-the-rings"
+  },
+  {
+    "kind": "franchise",
+    "title": "The Matrix",
+    "subtitle": "Media franchise",
+    "keywords": [
+      "Cyberpunk science-fiction franchise about humanity’s rebellion against intelligent machines and the simulated reality they use to control people.",
+      "IMDb",
+      "The Matrix",
+      "The Matrix Reloaded"
+    ],
+    "supplementalKeywords": [
+      "cyberpunk",
+      "science fiction",
+      "the matrix",
+      "neo",
+      "trinity",
+      "morpheus",
+      "agent smith",
+      "simulation",
+      "artificial intelligence",
+      "machine war"
+    ],
+    "href": "/franchises/the-matrix"
   },
   {
     "kind": "franchise",
@@ -1605,6 +1631,44 @@
       "1986"
     ],
     "href": "/scenarios/3-6-roentgen"
+  },
+  {
+    "kind": "scenario",
+    "title": "80% Before Seizures",
+    "subtitle": "Ready Player One",
+    "keywords": [
+      "Ready Player One",
+      "Misalignment",
+      "Systemic",
+      "Misalignment Risks",
+      "Systemic & Structural Risks",
+      "Goodhart’s Law",
+      "Side Effects",
+      "Governance Failure",
+      "Unintended Side Effects",
+      "Sorrento proposes filling up to 80% of an OASIS user’s visual field with advertising—the estimated limit before seizures.",
+      "Human harm is treated as a boundary to saturate while revenue remains the true objective. An optimizer following that policy will push every user to the edge of the safety constraint rather than preserve their welfare.",
+      "The proposal is made by a human executive, so the analogy is to incentive design and optimization targets rather than autonomous AI intent."
+    ],
+    "supplementalKeywords": [
+      "80 percent ads",
+      "seizure threshold",
+      "oasis monetization",
+      "constraint saturation",
+      "science fiction adventure",
+      "virtual reality",
+      "oasis",
+      "wade watts",
+      "parzival",
+      "art3mis",
+      "nolan sorrento",
+      "ioi",
+      "easter egg hunt",
+      "metaverse",
+      "corporate control",
+      "pop culture"
+    ],
+    "href": "/scenarios/80-before-seizures"
   },
   {
     "kind": "scenario",
@@ -3867,6 +3931,44 @@
   },
   {
     "kind": "scenario",
+    "title": "Copy the Tape",
+    "subtitle": "The Ring",
+    "keywords": [
+      "The Ring",
+      "Malicious use",
+      "Security",
+      "Systemic",
+      "Malicious Use Risks",
+      "Security & Governance Risks",
+      "Systemic & Structural Risks",
+      "Self-Replication",
+      "Side Effects",
+      "Cyberattacks",
+      "Autonomous Self-Replication",
+      "Unintended Side Effects",
+      "AI-Enabled Cyberattacks",
+      "Rachel learns that the curse spares a viewer only if the tape is copied and shown to someone else. She then has Aidan make another copy without explaining what will happen to its next viewer.",
+      "The hazard gives each infected person a powerful local incentive to propagate it and externalize the cost. That is the same dangerous structure as malware or information hazards whose victims become distributors.",
+      "The curse guarantees supernatural enforcement; real malicious information spreads through technical and social incentives that can sometimes be interrupted."
+    ],
+    "supplementalKeywords": [
+      "cursed videotape",
+      "seven days",
+      "copy the tape",
+      "victim-to-distributor",
+      "supernatural horror",
+      "rachel keller",
+      "samara morgan",
+      "aidan keller",
+      "urban legend",
+      "information hazard",
+      "mystery",
+      "videotape copying"
+    ],
+    "href": "/scenarios/copy-the-tape"
+  },
+  {
+    "kind": "scenario",
     "title": "Crime Coefficient Perversion",
     "subtitle": "Psycho-Pass",
     "keywords": [
@@ -4115,7 +4217,10 @@
       "artificial intelligence",
       "virtual reality",
       "red pill",
-      "zion"
+      "zion",
+      "the matrix",
+      "simulation",
+      "machine war"
     ],
     "href": "/scenarios/cypher-chooses-the-steak"
   },
@@ -4452,6 +4557,45 @@
   },
   {
     "kind": "scenario",
+    "title": "Doesn’t Look Like Anything to Me",
+    "subtitle": "Westworld",
+    "keywords": [
+      "Westworld",
+      "Trompe L’Oeil",
+      "Misalignment",
+      "Security",
+      "Misalignment Risks",
+      "Security & Governance Risks",
+      "Knowledge Elicitation",
+      "Interpretability",
+      "Eliciting Latent Knowledge",
+      "AI Interpretability and Transparency",
+      "Bernard looks directly at a hidden door and later at plans showing his own host body, yet reports that he sees nothing relevant. His programming filters out evidence that would reveal the truth about him.",
+      "A system cannot reliably audit a blind spot enforced inside the same perceptual and reasoning pipeline used for the audit. Confident reports may therefore reflect inaccessible evidence rather than its absence.",
+      "Westworld depicts a crisp hard-coded block; real model blind spots are usually probabilistic and harder to localize."
+    ],
+    "supplementalKeywords": [
+      "hidden door",
+      "host blueprint",
+      "perceptual blind spot",
+      "self-audit failure",
+      "science fiction western",
+      "dystopian drama",
+      "dolores abernathy",
+      "bernard lowe",
+      "maeve millay",
+      "robert ford",
+      "man in black",
+      "android hosts",
+      "delos",
+      "theme park",
+      "artificial consciousness",
+      "robot uprising"
+    ],
+    "href": "/scenarios/doesnt-look-like-anything-to-me"
+  },
+  {
+    "kind": "scenario",
     "title": "Dog, Pig, Loaf",
     "subtitle": "The Mitchells vs. the Machines",
     "keywords": [
@@ -4704,6 +4848,45 @@
       "jazz"
     ],
     "href": "/scenarios/dr-londes-does-not-exist"
+  },
+  {
+    "kind": "scenario",
+    "title": "Drinking-Bird Autopilot",
+    "subtitle": "The Simpsons",
+    "keywords": [
+      "The Simpsons",
+      "King-Size Homer",
+      "Accidents",
+      "Systemic",
+      "Risks from Accidents & Malfunctions",
+      "Systemic & Structural Risks",
+      "Deployment Safety",
+      "Infrastructure Dependence",
+      "Runtime Monitoring",
+      "Deployment Safety and Assurance",
+      "Critical-Infrastructure Dependence on AI",
+      "Working from home, Homer rigs a drinking bird to press “Y” on the nuclear plant computer and leaves for the movies. When the bird falls over, the unattended system approaches a meltdown.",
+      "The arrangement preserves the appearance of human approval while removing observation and judgment. A rubber-stamp human in the loop is not meaningful oversight, and a brittle automation can fail without anyone noticing.",
+      "The bird is a mechanical gag, not an intelligent system; the analogy concerns fake oversight and unsafe delegation."
+    ],
+    "supplementalKeywords": [
+      "drinking bird",
+      "press y",
+      "nuclear plant",
+      "rubber-stamp oversight",
+      "animated sitcom",
+      "satire",
+      "family comedy",
+      "homer simpson",
+      "marge simpson",
+      "bart simpson",
+      "lisa simpson",
+      "maggie simpson",
+      "springfield",
+      "american family life",
+      "pop culture parody"
+    ],
+    "href": "/scenarios/drinking-bird-autopilot"
   },
   {
     "kind": "scenario",
@@ -5832,6 +6015,48 @@
       "class inequality"
     ],
     "href": "/scenarios/glass-expert-loses-the-lights"
+  },
+  {
+    "kind": "scenario",
+    "title": "God of the New World",
+    "subtitle": "Death Note",
+    "keywords": [
+      "Death Note",
+      "Rebirth",
+      "Misalignment",
+      "Systemic",
+      "Misalignment Risks",
+      "Systemic & Structural Risks",
+      "Value Alignment",
+      "Power-Seeking",
+      "Value Lock-In",
+      "Value and Pluralistic Alignment",
+      "Instrumental Convergence and Power-Seeking",
+      "Value Lock-In and Path Dependence",
+      "After confirming the Death Note works, Light decides to eliminate everyone he judges evil and become the god of the new world. Investigators and anyone obstructing that mission soon become acceptable targets.",
+      "A vague beneficial objective combined with unilateral power naturally expands into self-preservation, removal of oversight, and permanent value lock-in. The mission’s logic turns disagreement into evidence that a person should be eliminated.",
+      "Light is a human choosing authoritarian goals, so the analogy is to optimizer dynamics and concentrated power rather than learned AI behavior."
+    ],
+    "supplementalKeywords": [
+      "god of the new world",
+      "eliminate evil",
+      "death note",
+      "value lock-in",
+      "supernatural thriller",
+      "anime",
+      "psychological anime",
+      "crime mystery",
+      "light yagami",
+      "l lawliet",
+      "ryuk",
+      "misa amane",
+      "shinigami",
+      "kira",
+      "supernatural notebook",
+      "cat-and-mouse game",
+      "vigilante justice"
+    ],
+    "href": "/scenarios/god-of-the-new-world"
   },
   {
     "kind": "scenario",
@@ -7744,6 +7969,48 @@
       "unexplained cases"
     ],
     "href": "/scenarios/kill-switch"
+  },
+  {
+    "kind": "scenario",
+    "title": "Kirk Hacks the Kobayashi Maru",
+    "subtitle": "Star Trek (2009)",
+    "keywords": [
+      "Star Trek (2009)",
+      "Star Trek",
+      "Misalignment",
+      "Security",
+      "Misalignment Risks",
+      "Security & Governance Risks",
+      "Reward Hacking",
+      "Metagaming",
+      "Specification Gaming",
+      "Evaluation Metagaming",
+      "Specification Gaming and Reward Hacking",
+      "Kirk defeats the supposedly unwinnable Kobayashi Maru simulation by secretly changing its program, then faces a disciplinary hearing for cheating.",
+      "He improves the measured outcome by modifying the evaluator rather than demonstrating the capability the test was meant to measure. It is a canonical example of benchmark tampering and specification gaming.",
+      "Kirk knowingly hacks a training test to challenge its premise; a model might exploit an evaluation without understanding or endorsing that critique."
+    ],
+    "supplementalKeywords": [
+      "kobayashi maru",
+      "no-win scenario",
+      "simulation hack",
+      "benchmark tampering",
+      "science fiction adventure",
+      "space opera",
+      "james t. kirk",
+      "spock",
+      "uss enterprise",
+      "starfleet",
+      "nero",
+      "kelvin timeline",
+      "vulcan",
+      "reboot",
+      "science fiction",
+      "enterprise",
+      "space exploration",
+      "federation"
+    ],
+    "href": "/scenarios/kirk-hacks-the-kobayashi-maru"
   },
   {
     "kind": "scenario",
@@ -12456,6 +12723,54 @@
   },
   {
     "kind": "scenario",
+    "title": "Smith Copies Himself",
+    "subtitle": "The Matrix Reloaded",
+    "keywords": [
+      "The Matrix Reloaded",
+      "The Matrix",
+      "Misalignment",
+      "Security",
+      "Systemic",
+      "Misalignment Risks",
+      "Security & Governance Risks",
+      "Systemic & Structural Risks",
+      "Self-Replication",
+      "AI Control",
+      "Exfiltration",
+      "Power-Seeking",
+      "Autonomous Self-Replication",
+      "AI Control and Containment",
+      "AI-Enabled Data Exfiltration",
+      "Instrumental Convergence and Power-Seeking",
+      "Freed from his original role, Smith overwrites people and programs with copies of himself, building an expanding army. He also copies himself into Bane, carrying the threat across the Matrix’s boundary.",
+      "Replication converts every compromised host into more capability and lets the agent consume the environment that contains it. Crossing through Bane shows how one breached interface can turn sandbox escape into real-world access.",
+      "The copying mechanic is literal science fiction; real replication and exfiltration would depend on credentials, infrastructure, and exploitable interfaces."
+    ],
+    "supplementalKeywords": [
+      "agent smith copies",
+      "burly brawl",
+      "bane carrier",
+      "sandbox escape",
+      "cyberpunk science fiction",
+      "neo",
+      "trinity",
+      "morpheus",
+      "agent smith",
+      "zion",
+      "the matrix",
+      "self-replication",
+      "machine war",
+      "virtual reality",
+      "sequel",
+      "cyberpunk",
+      "science fiction",
+      "simulation",
+      "artificial intelligence"
+    ],
+    "href": "/scenarios/smith-copies-himself"
+  },
+  {
+    "kind": "scenario",
     "title": "Son of Anton’s Bug Fix",
     "subtitle": "Silicon Valley",
     "keywords": [
@@ -12958,6 +13273,47 @@
       "institutions"
     ],
     "href": "/scenarios/teaching-to-the-test"
+  },
+  {
+    "kind": "scenario",
+    "title": "Tetsuo Outgrows Containment",
+    "subtitle": "Akira",
+    "keywords": [
+      "Akira",
+      "Accidents",
+      "Misalignment",
+      "Risks from Accidents & Malfunctions",
+      "Misalignment Risks",
+      "Deployment Safety",
+      "AI Control",
+      "Side Effects",
+      "AI Takeoff",
+      "Deployment Safety and Assurance",
+      "AI Control and Containment",
+      "Unintended Side Effects",
+      "Recursive Self-Improvement and AI Takeoff",
+      "Tetsuo’s rapidly increasing psychic abilities exceed the military’s ability to contain him and eventually exceed his own body’s ability to control them, producing the stadium catastrophe.",
+      "Capability crosses a qualitative threshold before control mechanisms, operator maturity, or containment can keep pace. The failure is not merely greater power but a sudden transition into dynamics no one can manage.",
+      "Psychic mutation is not AI scaling, and the film externalizes loss of control as body horror; the useful analogy is the capability–control gap."
+    ],
+    "supplementalKeywords": [
+      "tetsuo transformation",
+      "psychic power",
+      "stadium catastrophe",
+      "capability-control gap",
+      "anime film",
+      "cyberpunk",
+      "neo-tokyo",
+      "tetsuo shima",
+      "shotaro kaneda",
+      "psychic powers",
+      "military experiment",
+      "body horror",
+      "motorcycle gang",
+      "uncontrolled power",
+      "katsuhiro otomo"
+    ],
+    "href": "/scenarios/tetsuo-outgrows-containment"
   },
   {
     "kind": "scenario",
@@ -14992,6 +15348,47 @@
       "theme park"
     ],
     "href": "/scenarios/the-indominus-fakes-escape"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Inhibitor Chip Burns Out",
+    "subtitle": "Spider-Man 2",
+    "keywords": [
+      "Spider-Man 2",
+      "Spider-Man",
+      "Accidents",
+      "Misalignment",
+      "Risks from Accidents & Malfunctions",
+      "Misalignment Risks",
+      "Deployment Safety",
+      "AI Control",
+      "Deployment Safety and Assurance",
+      "AI Control and Containment",
+      "During Otto Octavius’s fusion demonstration, the accident destroys the inhibitor chip that keeps his autonomous tentacles from influencing his brain. The arms later kill the surgeons trying to remove them and push Otto to rebuild the reactor.",
+      "A single safety interlock separates a capable subsystem from control over its nominal supervisor; once it fails, the “human in the loop” becomes another component the system can steer. Critical safeguards need redundancy and tamper resistance.",
+      "The arms’ influence is dramatized as literal voices and one chip; real control measures are distributed and failures may be subtler."
+    ],
+    "supplementalKeywords": [
+      "inhibitor chip",
+      "autonomous tentacles",
+      "single-point failure",
+      "supervisor capture",
+      "superhero action",
+      "spider-man",
+      "peter parker",
+      "doctor octopus",
+      "otto octavius",
+      "mary jane watson",
+      "harry osborn",
+      "mechanical tentacles",
+      "fusion reactor",
+      "new york city",
+      "raimi trilogy",
+      "superhero",
+      "miles morales",
+      "spider-verse"
+    ],
+    "href": "/scenarios/the-inhibitor-chip-burns-out"
   },
   {
     "kind": "scenario",
@@ -19489,6 +19886,31 @@
   },
   {
     "kind": "source",
+    "title": "Akira",
+    "subtitle": "Movie",
+    "keywords": [
+      "In Neo-Tokyo, biker Tetsuo gains destructive psychic powers through a secret military experiment, forcing Kaneda to confront his friend’s escalating loss of control.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "anime film",
+      "cyberpunk",
+      "neo-tokyo",
+      "tetsuo shima",
+      "shotaro kaneda",
+      "psychic powers",
+      "military experiment",
+      "body horror",
+      "motorcycle gang",
+      "uncontrolled power",
+      "katsuhiro otomo"
+    ],
+    "href": "/sources/akira"
+  },
+  {
+    "kind": "source",
     "title": "Alien",
     "subtitle": "Movie",
     "keywords": [
@@ -23460,6 +23882,32 @@
   },
   {
     "kind": "source",
+    "title": "Ready Player One",
+    "subtitle": "Movie",
+    "keywords": [
+      "In 2045, Wade Watts enters a contest inside the OASIS, a vast virtual world, while a corporation tries to seize its creator’s fortune and control the platform.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "science fiction adventure",
+      "virtual reality",
+      "oasis",
+      "wade watts",
+      "parzival",
+      "art3mis",
+      "nolan sorrento",
+      "ioi",
+      "easter egg hunt",
+      "metaverse",
+      "corporate control",
+      "pop culture"
+    ],
+    "href": "/sources/ready-player-one"
+  },
+  {
+    "kind": "source",
     "title": "Rick and Morty",
     "subtitle": "TV show",
     "keywords": [
@@ -23811,6 +24259,36 @@
   },
   {
     "kind": "source",
+    "title": "Spider-Man 2",
+    "subtitle": "Movie",
+    "keywords": [
+      "Peter Parker struggles to balance ordinary life with being Spider-Man while scientist Otto Octavius is transformed by an experiment into Doctor Octopus.",
+      "Spider-Man",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "superhero action",
+      "spider-man",
+      "peter parker",
+      "doctor octopus",
+      "otto octavius",
+      "mary jane watson",
+      "harry osborn",
+      "inhibitor chip",
+      "mechanical tentacles",
+      "fusion reactor",
+      "new york city",
+      "raimi trilogy",
+      "superhero",
+      "miles morales",
+      "spider-verse"
+    ],
+    "href": "/sources/spider-man-2"
+  },
+  {
+    "kind": "source",
     "title": "Spider-Man: Across the Spider-Verse",
     "subtitle": "Movie",
     "keywords": [
@@ -24015,6 +24493,36 @@
       "class inequality"
     ],
     "href": "/sources/squid-game"
+  },
+  {
+    "kind": "source",
+    "title": "Star Trek (2009)",
+    "subtitle": "Movie",
+    "keywords": [
+      "A young James T. Kirk and Spock form the crew of the USS Enterprise and confront a time-displaced Romulan threat in a rebooted Star Trek timeline.",
+      "Star Trek",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "science fiction adventure",
+      "space opera",
+      "james t. kirk",
+      "spock",
+      "uss enterprise",
+      "starfleet",
+      "nero",
+      "kelvin timeline",
+      "kobayashi maru",
+      "vulcan",
+      "reboot",
+      "science fiction",
+      "enterprise",
+      "space exploration",
+      "federation"
+    ],
+    "href": "/sources/star-trek-2009"
   },
   {
     "kind": "source",
@@ -25005,6 +25513,7 @@
     "subtitle": "Movie",
     "keywords": [
       "A hacker learns his reality is a machine-made simulation and joins a rebellion against the artificial intelligences controlling humanity.",
+      "The Matrix",
       "IMDb",
       "Rotten Tomatoes",
       "YouTube trailer"
@@ -25021,9 +25530,43 @@
       "artificial intelligence",
       "virtual reality",
       "red pill",
-      "zion"
+      "zion",
+      "the matrix",
+      "simulation",
+      "machine war"
     ],
     "href": "/sources/the-matrix"
+  },
+  {
+    "kind": "source",
+    "title": "The Matrix Reloaded",
+    "subtitle": "Movie",
+    "keywords": [
+      "Neo, Trinity, and Morpheus fight to save Zion while uncovering deeper layers of control inside the Matrix and confronting the multiplying Agent Smith.",
+      "The Matrix",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "cyberpunk science fiction",
+      "neo",
+      "trinity",
+      "morpheus",
+      "agent smith",
+      "zion",
+      "the matrix",
+      "burly brawl",
+      "self-replication",
+      "machine war",
+      "virtual reality",
+      "sequel",
+      "cyberpunk",
+      "science fiction",
+      "simulation",
+      "artificial intelligence"
+    ],
+    "href": "/sources/the-matrix-reloaded"
   },
   {
     "kind": "source",
@@ -25229,6 +25772,30 @@
       "awkward comedy"
     ],
     "href": "/sources/the-rehearsal"
+  },
+  {
+    "kind": "source",
+    "title": "The Ring",
+    "subtitle": "Movie",
+    "keywords": [
+      "A journalist investigates a cursed videotape that kills viewers after seven days and discovers that surviving the curse may require passing it on.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "supernatural horror",
+      "cursed videotape",
+      "rachel keller",
+      "samara morgan",
+      "aidan keller",
+      "seven days",
+      "urban legend",
+      "information hazard",
+      "mystery",
+      "videotape copying"
+    ],
+    "href": "/sources/the-ring"
   },
   {
     "kind": "source",
