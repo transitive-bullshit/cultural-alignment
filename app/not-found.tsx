@@ -6,7 +6,7 @@ import styles from './not-found.module.css'
 export default function NotFound() {
   return (
     <main className={`${styles.page} experience-scope`} data-not-found>
-      <SiteHeader inset context='Archive exception / 404' />
+      <SiteHeader inset />
 
       <section className={styles.message}>
         <p className={styles.code}>404 / RECORD NOT FOUND</p>

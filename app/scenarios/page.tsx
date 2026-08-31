@@ -44,7 +44,7 @@ export default async function ScenariosPage({
       className={`experience-scope ${styles.page} ${styles.browsePage}`}
       data-site-footer='hidden'
     >
-      <SiteHeader className={styles.galleryHeader} tagline />
+      <SiteHeader className={styles.galleryHeader} />
       <BrowseToolbar
         families={families}
         params={params}

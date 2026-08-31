@@ -17,28 +17,22 @@ const PRESENTATION = {
     eyebrow: 'Cultural source index',
     indexTitle: 'Media Sources',
     singular: 'Media Source',
-    breadcrumbLabel: 'Media sources',
     description:
-      'A curated collection of TV shows, movies, and anime from popular culture which contain useful scenes for improving our understanding of AI safety.',
-    indexHref: '/sources'
+      'A curated collection of TV shows, movies, and anime from popular culture which contain useful scenes for improving our understanding of AI safety.'
   },
   'risk-family': {
     eyebrow: 'AI risk taxonomy',
     indexTitle: 'AI Risk Families',
     singular: 'Risk family',
-    breadcrumbLabel: 'Risk families',
     description:
-      'A high-level categorization of ways that capable AI systems can create harm, each grounded in recognizable scenes from pop culture.',
-    indexHref: '/risk-families'
+      'A high-level categorization of ways that capable AI systems can create harm, each grounded in recognizable scenes from pop culture.'
   },
   concept: {
     eyebrow: 'AI safety index',
     indexTitle: 'AI Safety Concepts',
     singular: 'AI safety concept',
-    breadcrumbLabel: 'AI safety concepts',
     description:
-      'A collection of important concepts from AI safety, alignment, risks, governance, and human–AI interaction.',
-    indexHref: '/concepts'
+      'A collection of important concepts from AI safety, alignment, risks, governance, and human–AI interaction.'
   }
 } as const satisfies Record<
   ResourceKind,
@@ -46,9 +40,7 @@ const PRESENTATION = {
     readonly eyebrow: string
     readonly indexTitle: string
     readonly singular: string
-    readonly breadcrumbLabel: string
     readonly description: string
-    readonly indexHref: string
   }
 >
 
@@ -63,7 +55,7 @@ export function ResourceIndexPage({
 
   return (
     <main className={`experience-scope ${styles.page}`}>
-      <SiteHeader inset context={`${presentation.indexTitle}`} />
+      <SiteHeader inset />
 
       <section className={styles.indexIntro}>
         <p className={styles.eyebrow}>{presentation.eyebrow}</p>
@@ -136,16 +128,7 @@ export function ResourceDetailPage({
       className={`experience-scope ${styles.page}`}
       data-resource-detail={resource.kind}
     >
-      <SiteHeader
-        breadcrumb={{
-          current: resource.detailTitle,
-          parent: {
-            href: presentation.indexHref,
-            label: presentation.breadcrumbLabel
-          }
-        }}
-        inset
-      />
+      <SiteHeader inset />
 
       <section
         className={styles.detailIntro}

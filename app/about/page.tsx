@@ -24,7 +24,6 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <InformationPage
-      context='About / project'
       eyebrow='Purpose and scope'
       title={siteDescriptionLong}
       titleSize='compact'

@@ -211,9 +211,17 @@ export function SpatialGallery({
       const overSpoilerWarning =
         target instanceof Element &&
         Boolean(target.closest('[data-spoiler-warning]'))
+      const overSiteNavigation =
+        target instanceof Element &&
+        Boolean(
+          target.closest(
+            '[data-site-header], [data-site-navigation-popup], [data-site-navigation-panel="mobile"]'
+          )
+        )
       const insideGallery =
         !overDialog &&
         !overSpoilerWarning &&
+        !overSiteNavigation &&
         event.clientX >= bounds.left &&
         event.clientX <= bounds.right &&
         event.clientY >= bounds.top &&
@@ -479,6 +487,7 @@ export function SpatialGallery({
       <span
         ref={cursorRef}
         className={`${styles.crosshairCursor} ${dragging ? styles.cursorDragging : ''}`}
+        data-gallery-cursor
         aria-hidden='true'
       />
     </section>

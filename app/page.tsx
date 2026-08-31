@@ -39,7 +39,7 @@ export default function HomePage() {
       className={`experience-scope ${styles.page}`}
       data-site-footer='hidden'
     >
-      <SiteHeader className={styles.galleryHeader} tagline />
+      <SiteHeader className={styles.galleryHeader} />
       <SpatialGallery
         historyKey='featured'
         items={featuredItems}

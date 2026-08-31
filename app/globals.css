@@ -22,6 +22,7 @@
   --input: #d8cbb8;
   --ring: #a66f33;
   --brand-accent: #ff4d1f;
+  --brand-interactive: #a83216;
   --radius: 0.5rem;
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -46,6 +47,7 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-brand-accent: var(--brand-accent);
+  --color-brand-interactive: var(--brand-interactive);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);

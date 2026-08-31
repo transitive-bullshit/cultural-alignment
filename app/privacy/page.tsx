@@ -15,7 +15,6 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <InformationPage
-      context='Privacy Policy'
       eyebrow={
         <p className='flex flex-col gap-0.5'>
           <span>Last updated</span> <span>August 29th 2026</span>

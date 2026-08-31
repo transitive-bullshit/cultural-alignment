@@ -6,14 +6,12 @@ import styles from './information-page.module.css'
 
 export function InformationPage({
   children,
-  context,
   eyebrow,
   introduction,
   title,
   titleSize = 'default'
 }: {
   readonly children: ReactNode
-  readonly context: string
   readonly eyebrow: ReactNode
   readonly introduction: ReactNode
   readonly title: ReactNode
@@ -21,7 +19,7 @@ export function InformationPage({
 }) {
   return (
     <main className={`experience-scope ${styles.page}`}>
-      <SiteHeader className={styles.siteHeader} context={context} inset />
+      <SiteHeader className={styles.siteHeader} inset />
 
       <article className={styles.article}>
         <header className={styles.introduction}>

@@ -7,7 +7,7 @@ import { SiteHeader } from '@/components/site-header'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import { SpoilerWarning } from '@/features/spoiler/spoiler-warning'
 import type { ScenarioPage, TaxonomyLink } from '@/lib/content/catalog'
-import { siteTagline, siteUrl } from '@/lib/site'
+import { siteUrl } from '@/lib/site'
 
 import { CopyScenarioMarkdown } from './copy-scenario-markdown'
 import { ScenarioMedia } from './scenario-media'
@@ -24,10 +24,7 @@ import { TaxonomyHelp } from './taxonomy-help'
 export function ScenarioDossier({ scenario }: { scenario: ScenarioPage }) {
   return (
     <main className={`${styles.page} experience-scope`} data-scenario-dossier>
-      <SiteHeader
-        context={siteTagline}
-        galleryTransitionTypes={['scenario-back']}
-      />
+      <SiteHeader />
 
       <article>
         <section className={styles.opening}>

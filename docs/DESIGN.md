@@ -16,7 +16,7 @@ Primary roles:
 
 ## Site shell
 
-Every route uses the same header component: a larger Barlow Condensed wordmark on the left, optional context or tagline in the center, and Search plus Gallery on the right. Header and footer share one wordmark component; only “Alignment” scrambles once on viewport entry and again on deliberate fine-pointer hover. Reduced-motion visitors receive stable copy, and keyboard focus does not trigger decorative motion. The Command-K palette opens without motion and uses highlighted text matches.
+Every route uses the same header component: a larger Barlow Condensed wordmark on the left, persistent global navigation in the center, and Search on the right. The four archive indexes remain directly visible on desktop, while Project discloses About and Privacy. Desktop destinations use a muted-paper background hover, and the gallery crosshair yields to the browser’s native pointer throughout the navigation surface. At `900px` and below, Search remains visible and a labeled Menu toggle opens the same six destinations in a right-side sheet. Header and footer share one navigation source and one wordmark component; only “Alignment” scrambles once on viewport entry and again on deliberate fine-pointer hover. Reduced-motion visitors receive stable copy, and keyboard focus does not trigger decorative motion. The Command-K palette opens without motion and uses highlighted text matches.
 
 A shared footer closes every non-gallery page with archive navigation, project and policy links, the public Notion source, and GitHub/X profiles. Footer links use the same electric-orange interaction treatment as the rest of the archive.
 

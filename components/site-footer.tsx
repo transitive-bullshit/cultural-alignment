@@ -9,21 +9,20 @@ import {
   siteTagline,
   xProfileUrl
 } from '@/lib/site'
+import {
+  exploreNavigationLinks,
+  projectNavigationLinks
+} from '@/lib/site-navigation'
 
 import styles from './site-footer.module.css'
 
 const primaryLinks = [
   { href: '/', label: 'Featured scenarios' },
-  { href: '/scenarios', label: 'All scenarios' },
-  { href: '/risk-families', label: 'AI risk families' },
-  { href: '/concepts', label: 'AI safety concepts' },
-  { href: '/sources', label: 'Media sources' }
-] as const
-
-const projectLinks = [
-  { href: '/about', label: 'About' },
-  { href: '/privacy', label: 'Privacy' }
-] as const
+  ...exploreNavigationLinks.map((link) => ({
+    href: link.href,
+    label: 'footerLabel' in link ? link.footerLabel : link.label
+  }))
+]
 
 const copyrightYear = new Date().getUTCFullYear()
 
@@ -56,7 +55,7 @@ export function SiteFooter() {
         <nav aria-label='Project information'>
           <p>Project</p>
           <ul>
-            {projectLinks.map((link) => (
+            {projectNavigationLinks.map((link) => (
               <li key={link.href}>
                 <Link href={link.href}>{link.label}</Link>
               </li>
