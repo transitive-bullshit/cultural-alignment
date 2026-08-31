@@ -1697,6 +1697,7 @@ function assertPublishedMedia(snapshot: ContentSnapshot) {
     ),
     ...snapshot.franchises.map((franchise) => franchise.image)
   ]
+
   for (const image of images) {
     for (const source of [image.gallerySrc, image.detailSrc]) {
       if (!source.startsWith('https://')) {
@@ -1761,14 +1762,17 @@ async function verifyDataSource(
     notion.databases.retrieve({ database_id: ids.databaseId }),
     notion.dataSources.retrieve({ data_source_id: ids.dataSourceId })
   ])
+
   if (!isFullDatabase(database)) {
     throw new Error(`Notion returned a partial ${label} database`)
   }
+
   if (!database.data_sources.some((source) => source.id === ids.dataSourceId)) {
     throw new Error(
       `Configured ${label} data source is not a child of its database`
     )
   }
+
   if (!isFullDataSource(dataSource)) {
     throw new Error(`Notion returned a partial ${label} data source`)
   }
