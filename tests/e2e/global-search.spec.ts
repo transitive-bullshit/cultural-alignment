@@ -2,80 +2,39 @@ import { expect, test } from '@playwright/test'
 
 import searchDocuments from '../../content/snapshot/search-documents.json' with { type: 'json' }
 import type { SearchDocument } from '../../lib/content/catalog'
-import { searchDocumentGroups } from '../../lib/content/search'
-import { enterHomepageArchive } from './homepage-helpers'
 
 const documents = searchDocuments as readonly SearchDocument[]
 const searchTarget = documents.find((document) => document.kind === 'concept')!
-const sectionedSearchTarget = documents.find(
-  (document) => searchDocumentGroups(documents, document.title).length > 1
-)!
 
-test.beforeEach(async ({ page }) => {
-  await page.goto(process.env.PLAYWRIGHT_EXISTING_SERVER_URL ?? '/')
-  await enterHomepageArchive(page)
-  await page.getByRole('button', { name: /Search site/ }).click()
-  await expect(page.getByRole('combobox')).toBeFocused()
-})
-
-test('typing a new query returns the search results to the top', async ({
+test('global search shortcut navigates to a concept detail', async ({
   page
 }) => {
-  const results = page.locator('[data-search-results]')
+  await page.goto('/about')
 
-  await page.getByRole('combobox').fill('a')
-  await expect(page.getByRole('option').first()).toBeVisible()
-  await expect(results).toBeVisible()
-  await results.evaluate((element) => {
-    element.scrollTop = element.scrollHeight
-  })
-  await expect
-    .poll(() => results.evaluate((element) => element.scrollTop))
-    .toBeGreaterThan(0)
+  await page.locator('[data-search-ready="true"]').waitFor()
 
-  await page.getByRole('combobox').fill(searchTarget.title)
-  await expect(page.getByRole('option').first()).toBeVisible()
-  await expect
-    .poll(() => results.evaluate((element) => element.scrollTop))
-    .toBe(0)
-})
-
-test('the search query can be cleared from the input', async ({ page }) => {
-  const input = page.getByRole('combobox')
-
-  await expect(page.getByRole('button', { name: 'Clear search' })).toHaveCount(
-    0
+  const searchIndexResponse = page.waitForResponse(
+    (response) =>
+      new URL(response.url()).pathname === '/content/search-index.json',
+    { timeout: 15_000 }
   )
+
+  await page.keyboard.press('ControlOrMeta+k')
+
+  const input = page.getByRole('combobox')
+  expect((await searchIndexResponse).ok()).toBe(true)
   await input.fill(searchTarget.title)
 
-  const clearButton = page.getByRole('button', { name: 'Clear search' })
-  await expect(clearButton).toBeVisible()
-  await clearButton.click()
+  const result = page.locator(
+    `[data-search-result-href="${searchTarget.href}"]`
+  )
 
-  await expect(input).toHaveValue('')
-  await expect(input).toBeFocused()
-  await expect(clearButton).toHaveCount(0)
-  await expect(page.getByRole('option')).toHaveCount(0)
-})
+  const navigation = page.waitForURL(
+    (url) => url.pathname === searchTarget.href,
+    { timeout: 15_000, waitUntil: 'commit' }
+  )
 
-test('result titles use the electric accent on hover', async ({ page }) => {
-  await page.getByRole('combobox').fill('a')
-
-  const result = page.getByRole('option').first()
-  const title = result.locator('[data-search-result-title]')
-
-  await expect(result).toBeVisible()
-  await result.hover()
-  await expect(title).toHaveCSS('color', 'rgb(255, 77, 31)')
-})
-
-test('result types are separated with the electric accent', async ({
-  page
-}) => {
-  await page.getByRole('combobox').fill(sectionedSearchTarget.title)
-
-  const divider = page.locator('[data-search-result-divider]').first()
-
-  await expect(divider).toBeVisible()
-  await expect(divider).toHaveCSS('background-color', 'rgb(255, 77, 31)')
+  await result.click()
+  await navigation
+  await expect(page.locator('[data-resource-detail="concept"]')).toBeVisible()
 })

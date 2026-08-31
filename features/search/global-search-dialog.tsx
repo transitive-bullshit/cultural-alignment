@@ -153,6 +153,7 @@ export function GlobalSearchDialog({
                     return (
                       <CommandItem
                         className={styles.result}
+                        data-search-result-href={document.href}
                         key={`${document.kind}:${document.href}`}
                         value={document.href}
                         onSelect={() => handleSelect(document.href)}

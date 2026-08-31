@@ -57,7 +57,7 @@ pnpm build
 
 Use `pnpm fix:format` and `pnpm fix:lint` to apply the repository's Oxc rules.
 
-Local Playwright journeys use an installed Google Chrome. CI installs its own Chromium before running `pnpm test`.
+Local Playwright journeys use an installed Google Chrome and the development server. CI installs its own Chromium, runs `pnpm test:checks`, builds once, and runs `pnpm test:e2e` against the production server.
 
 ## Content synchronization
 

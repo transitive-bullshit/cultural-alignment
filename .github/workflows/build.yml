@@ -24,5 +24,22 @@ jobs:
       - run: pnpm install --frozen-lockfile --strict-peer-dependencies
       - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm content:validate
-      - run: pnpm test
+      - run: pnpm test:checks
       - run: pnpm build
+        env:
+          NEXT_PUBLIC_SITE_URL: http://127.0.0.1:3100
+      - run: pnpm test:e2e
+        env:
+          NEXT_PUBLIC_SITE_URL: http://127.0.0.1:3100
+          PLAYWRIGHT_SERVER: production
+
+      - name: Upload Playwright failure artifacts
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: playwright-failures-node-${{ matrix.node-version }}
+          path: |
+            playwright-report
+            test-results
+          if-no-files-found: ignore
+          retention-days: 7
