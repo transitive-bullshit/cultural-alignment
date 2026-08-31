@@ -51,7 +51,7 @@ export default async function Image({
     scenario.source.sourceType,
     scenario.episode?.label
   )
-  const concepts = scenario.concepts.slice(0, 2)
+  const concepts = scenario.concepts.slice(0, 3)
   const titleFontSize = getTitleFontSize(scenario.title)
 
   return new ImageResponse(
