@@ -10,37 +10,44 @@ import type { ScenarioPage } from '@/lib/content/catalog'
 import styles from './scenario-dossier.module.css'
 
 export function ScenarioDiscovery({ scenario }: { scenario: ScenarioPage }) {
-  const hasMoreFromSource = scenario.moreFromSource.length > 0
+  const continuation = scenario.continuation
+  const hasMoreFromCollection = scenario.moreFromCollection.length > 0
   const hasRelatedScenarios = scenario.relatedScenarios.length > 0
-  const moreFromSourceHeadingId = `more-from-source-${scenario.slug}`
+  const moreFromCollectionHeadingId = `more-from-${continuation.kind}-${scenario.slug}`
   const relatedScenariosHeadingId = `related-scenarios-${scenario.slug}`
 
-  if (!hasMoreFromSource && !hasRelatedScenarios) return null
+  if (!hasMoreFromCollection && !hasRelatedScenarios) return null
 
   return (
     <div className={styles.discovery} data-scenario-discovery>
-      {hasMoreFromSource ? (
+      {hasMoreFromCollection ? (
         <section
           className={styles.discoverySection}
-          aria-labelledby={moreFromSourceHeadingId}
+          aria-labelledby={moreFromCollectionHeadingId}
+          data-scenario-continuation={continuation.kind}
         >
           <DiscoveryHeader
-            eyebrow='Source continuation'
-            title={`More from ${scenario.source.title}`}
-            id={moreFromSourceHeadingId}
+            eyebrow={
+              continuation.kind === 'franchise'
+                ? 'Franchise continuation'
+                : 'Source continuation'
+            }
+            title={`More from ${continuation.title}`}
+            id={moreFromCollectionHeadingId}
             action={
               <Link
                 className={styles.discoveryAction}
-                href={scenario.source.href}
+                href={continuation.href}
+                data-scenario-continuation-action
               >
-                View all {scenario.source.scenarioCount}{' '}
-                {scenario.source.scenarioCount === 1 ? 'scenario' : 'scenarios'}
+                View all {continuation.scenarioCount}{' '}
+                {continuation.scenarioCount === 1 ? 'scenario' : 'scenarios'}
                 <span aria-hidden='true'>↗</span>
               </Link>
             }
           />
           <ScenarioCollection
-            items={scenario.moreFromSource.map((related) => ({
+            items={scenario.moreFromCollection.map((related) => ({
               scenario: related
             }))}
             layout='preview'

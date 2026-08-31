@@ -4,7 +4,7 @@ import { createContentCatalog, type ResourceKind } from './catalog'
 import type { ContentSnapshot, ScenarioRecord } from './schema'
 
 const minimalSnapshot = {
-  schemaVersion: 2,
+  schemaVersion: 3,
   scenarios: [
     createScenario({
       id: 'old-a',
@@ -22,7 +22,8 @@ const minimalSnapshot = {
     createScenario({
       id: 'new',
       releaseDate: '2022-01-01',
-      riskFamilyIds: ['risk-b']
+      riskFamilyIds: ['risk-b'],
+      sourceId: 'source-2'
     }),
     createScenario({
       id: 'old-b',
@@ -59,6 +60,7 @@ const minimalSnapshot = {
       imdbUrl: 'https://www.imdb.com/title/tt0000001/',
       rottenTomatoesUrl: 'https://www.rottentomatoes.com/m/shared_source',
       youtubeTrailerUrl: 'https://www.youtube.com/watch?v=abcdefghijk',
+      franchiseIds: ['franchise-b', 'franchise-a'],
       relatedSourceIds: ['source-2']
     },
     {
@@ -73,8 +75,13 @@ const minimalSnapshot = {
       imdbUrl: null,
       rottenTomatoesUrl: null,
       youtubeTrailerUrl: null,
+      franchiseIds: ['franchise-b'],
       relatedSourceIds: []
     }
+  ],
+  franchises: [
+    createFranchise('franchise-a', 'Franchise A'),
+    createFranchise('franchise-b', 'Franchise B')
   ],
   riskFamilies: [
     {
@@ -175,21 +182,52 @@ describe('ContentCatalog', () => {
     ])
   })
 
+  it('falls back to the current source when no franchise is assigned', () => {
+    const snapshot = structuredClone(minimalSnapshot)
+    snapshot.sources.find(({ id }) => id === 'source-1')!.franchiseIds = []
+    const fallbackCatalog = createContentCatalog(snapshot)
+    const page = fallbackCatalog.getScenarioPage('old-b')!
+
+    expect(page.franchises).toEqual([])
+    expect(page.continuation).toMatchObject({
+      kind: 'source',
+      id: page.source.id,
+      href: page.source.href
+    })
+    expect(
+      page.moreFromCollection.every(
+        ({ source }) => source.id === page.source.id
+      )
+    ).toBe(true)
+  })
+
   it('joins scenario and resource relations without broken pivots', () => {
     const page = catalog.getScenarioPage('old-b')!
 
     expect(page.source.slug).toBe('shared-source')
     expect(page.source.sourceType).toBe('movie')
-    expect(page.source.scenarioCount).toBe(minimalSnapshot.scenarios.length)
+    expect(page.source.scenarioCount).toBe(
+      minimalSnapshot.scenarios.filter(
+        ({ sourceId }) => sourceId === page.source.id
+      ).length
+    )
+    expect(page.franchises.map(({ slug }) => slug)).toEqual([
+      'franchise-b',
+      'franchise-a'
+    ])
+    expect(page.continuation).toMatchObject({
+      kind: 'franchise',
+      slug: 'franchise-b'
+    })
     expect(new Set(page.riskFamilies.map(({ slug }) => slug))).toEqual(
       new Set(['family-a', 'family-b'])
     )
     expect(page.concepts.map(({ slug }) => slug)).toEqual(['concept-one'])
     expect(
-      page.moreFromSource.every(
-        (related) =>
-          related.id !== page.id && related.source.id === page.source.id
-      )
+      page.moreFromCollection.every((related) => related.id !== page.id)
+    ).toBe(true)
+    expect(
+      page.moreFromCollection.some(({ source }) => source.id === 'source-2')
     ).toBe(true)
 
     const sourcePage = catalog.getResourcePage('source', 'shared-source')!
@@ -204,7 +242,11 @@ describe('ContentCatalog', () => {
       'Rotten Tomatoes',
       'YouTube trailer'
     ])
-    expect(sourcePage.scenarios).toHaveLength(minimalSnapshot.scenarios.length)
+    expect(sourcePage.scenarios).toHaveLength(
+      minimalSnapshot.scenarios.filter(
+        ({ sourceId }) => sourceId === sourcePage.id
+      ).length
+    )
     expect(
       new Set(
         sourcePage.relatedResources.map(({ kind, slug }) => `${kind}:${slug}`)
@@ -214,6 +256,8 @@ describe('ContentCatalog', () => {
         'risk-family:family-a',
         'risk-family:family-b',
         'concept:concept-one',
+        'franchise:franchise-a',
+        'franchise:franchise-b',
         'source:related-source'
       ])
     )
@@ -245,9 +289,25 @@ describe('ContentCatalog', () => {
     expect(catalog.getResourcePage('concept', 'concept-one')?.detailTitle).toBe(
       'Concept One With a Descriptive Name'
     )
+    const franchisePage = catalog.getResourcePage('franchise', 'franchise-b')!
+    expect(franchisePage.kind).toBe('franchise')
+    if (franchisePage.kind !== 'franchise') {
+      throw new Error('Expected franchise page')
+    }
+    expect(franchisePage.sources.map(({ slug }) => slug)).toEqual([
+      'related-source',
+      'shared-source'
+    ])
+    expect(franchisePage.scenarios).toHaveLength(
+      minimalSnapshot.scenarios.length
+    )
+    expect(franchisePage.externalLinks.map(({ label }) => label)).toEqual([
+      'IMDb'
+    ])
 
     for (const kind of [
       'source',
+      'franchise',
       'risk-family',
       'concept'
     ] as const satisfies readonly ResourceKind[]) {
@@ -265,7 +325,7 @@ describe('ContentCatalog', () => {
     )
 
     expect(new Set(documents.map(({ kind }) => kind))).toEqual(
-      new Set(['scenario', 'source', 'risk-family', 'concept'])
+      new Set(['scenario', 'source', 'franchise', 'risk-family', 'concept'])
     )
     expect(scenarioDocument?.keywords).toEqual(
       expect.arrayContaining([
@@ -311,6 +371,9 @@ function resolveDocument(
   if (segment === 'sources') {
     return catalog.getResourcePage('source', slug) !== null
   }
+  if (segment === 'franchises') {
+    return catalog.getResourcePage('franchise', slug) !== null
+  }
   if (segment === 'risk-families') {
     return catalog.getResourcePage('risk-family', slug) !== null
   }
@@ -323,14 +386,14 @@ function resolveDocument(
 
 function createScenario(
   overrides: Pick<ScenarioRecord, 'id' | 'releaseDate' | 'riskFamilyIds'> &
-    Partial<Pick<ScenarioRecord, 'featured' | 'memes'>>
+    Partial<Pick<ScenarioRecord, 'featured' | 'memes' | 'sourceId'>>
 ): ScenarioRecord {
   return {
     id: overrides.id,
     slug: overrides.id,
     title: `Scenario ${overrides.id}`,
     keywords: ['scenario-only', 'shared keyword'],
-    sourceId: 'source-1',
+    sourceId: overrides.sourceId ?? 'source-1',
     releaseDate: overrides.releaseDate,
     featured: overrides.featured ?? false,
     riskFamilyIds: overrides.riskFamilyIds,
@@ -349,6 +412,26 @@ function createScenario(
     scene: 'Scene copy.',
     whyAnalogyWorks: 'Why the analogy works.',
     caveats: 'Where the analogy breaks.'
+  }
+}
+
+function createFranchise(id: string, title: string) {
+  return {
+    id,
+    slug: id,
+    title,
+    keywords: [],
+    description: `${title} description.`,
+    image: {
+      gallerySrc: `https://assets.example.com/media/generated/franchises/${id}/gallery.webp`,
+      detailSrc: `https://assets.example.com/media/generated/franchises/${id}/detail.webp`,
+      width: 1920,
+      height: 1080,
+      blurDataURL:
+        'data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAABwAQCdASoIAAUAA8BgJYwCdAF1AAD+73a5N2G+4IAAAA==',
+      alt: `Representative image for ${title}`
+    },
+    imdbUrl: `https://www.imdb.com/interest/${id}/`
   }
 }
 

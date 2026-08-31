@@ -10,6 +10,7 @@ import {
 const totals = {
   scenarios: 3,
   sources: 2,
+  franchises: 1,
   riskFamilies: 1,
   concepts: 1
 }
@@ -96,6 +97,7 @@ describe('NotionSyncReport', () => {
       'Notion record sync summary:',
       '- Scenarios: 3 succeeded, 0 encountered errors',
       '- Sources: 2 succeeded, 0 encountered errors',
+      '- Franchises: 1 succeeded, 0 encountered errors',
       '- Risk families: 1 succeeded, 0 encountered errors',
       '- Safety concepts: 0 succeeded, 1 encountered an error'
     ])

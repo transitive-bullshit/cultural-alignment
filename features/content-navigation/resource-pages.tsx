@@ -20,6 +20,13 @@ const PRESENTATION = {
     description:
       'A curated collection of TV shows, movies, and anime from popular culture which contain useful scenes for improving our understanding of AI safety.'
   },
+  franchise: {
+    eyebrow: 'Cultural franchise index',
+    indexTitle: 'Media Franchises',
+    singular: 'Media Franchise',
+    description:
+      'A collection of the shared story worlds and media franchises represented across these cultural sources.'
+  },
   'risk-family': {
     eyebrow: 'AI risk taxonomy',
     indexTitle: 'AI Risk Families',
@@ -66,53 +73,77 @@ export function ResourceIndexPage({
         </p>
       </section>
 
-      <ol className={styles.resourceIndex} data-resource-kind={kind}>
-        {resources.map((resource, index) => {
-          const indexNumber = String(index + 1).padStart(2, '0')
-          const scenarioCount = formatScenarioCount(resource.scenarioCount)
-
-          return (
-            <li key={resource.id}>
-              {kind === 'source' ? (
-                <Link href={resource.href}>
-                  <span className={styles.indexNumber}>{indexNumber}</span>
-                  <h2>{resource.title}</h2>
-                  <span className={styles.itemCount}>{scenarioCount}</span>
-                  <span className={styles.openMark} aria-hidden='true'>
-                    ↗
-                  </span>
-                </Link>
-              ) : (
-                <ScrambleLink
-                  animateOnReveal={false}
-                  copyElement='h2'
-                  duration={260}
-                  href={resource.href}
-                  label={`${resource.title}, ${scenarioCount}`}
-                  leadingContent={
-                    <span className={styles.indexNumber}>{indexNumber}</span>
-                  }
-                  prefetch='auto'
-                  trailingContent={
-                    <>
-                      {kind === 'risk-family' && resource.description ? (
-                        <p>{resource.description}</p>
-                      ) : null}
-                      <span className={styles.itemCount}>{scenarioCount}</span>
-                      <span className={styles.openMark} aria-hidden='true'>
-                        ↗
-                      </span>
-                    </>
-                  }
-                >
-                  {resource.title}
-                </ScrambleLink>
-              )}
-            </li>
-          )
-        })}
-      </ol>
+      <ResourceList kind={kind} resources={resources} />
     </main>
+  )
+}
+
+function ResourceList({
+  headingLevel = 2,
+  kind,
+  label,
+  resources
+}: {
+  readonly headingLevel?: 2 | 3
+  readonly kind: ResourceKind
+  readonly label?: string
+  readonly resources: readonly ResourceSummary[]
+}) {
+  const ResourceTitle = headingLevel === 2 ? 'h2' : 'h3'
+  const usesDirectLink = kind === 'source' || kind === 'franchise'
+
+  return (
+    <ol
+      className={styles.resourceIndex}
+      aria-label={label}
+      data-resource-kind={kind}
+      data-resource-list
+    >
+      {resources.map((resource, index) => {
+        const indexNumber = String(index + 1).padStart(2, '0')
+        const scenarioCount = formatScenarioCount(resource.scenarioCount)
+
+        return (
+          <li key={resource.id}>
+            {usesDirectLink ? (
+              <Link href={resource.href}>
+                <span className={styles.indexNumber}>{indexNumber}</span>
+                <ResourceTitle>{resource.title}</ResourceTitle>
+                <span className={styles.itemCount}>{scenarioCount}</span>
+                <span className={styles.openMark} aria-hidden='true'>
+                  ↗
+                </span>
+              </Link>
+            ) : (
+              <ScrambleLink
+                animateOnReveal={false}
+                copyElement='h2'
+                duration={260}
+                href={resource.href}
+                label={`${resource.title}, ${scenarioCount}`}
+                leadingContent={
+                  <span className={styles.indexNumber}>{indexNumber}</span>
+                }
+                prefetch='auto'
+                trailingContent={
+                  <>
+                    {kind === 'risk-family' && resource.description ? (
+                      <p>{resource.description}</p>
+                    ) : null}
+                    <span className={styles.itemCount}>{scenarioCount}</span>
+                    <span className={styles.openMark} aria-hidden='true'>
+                      ↗
+                    </span>
+                  </>
+                }
+              >
+                {resource.title}
+              </ScrambleLink>
+            )}
+          </li>
+        )
+      })}
+    </ol>
   )
 }
 
@@ -122,6 +153,14 @@ export function ResourceDetailPage({
   readonly resource: ResourcePage
 }) {
   const presentation = PRESENTATION[resource.kind]
+  const isMediaResource =
+    resource.kind === 'source' || resource.kind === 'franchise'
+  const heroImage =
+    resource.kind === 'source'
+      ? resource.poster
+      : resource.kind === 'franchise'
+        ? resource.image
+        : null
 
   return (
     <main
@@ -132,6 +171,8 @@ export function ResourceDetailPage({
 
       <section
         className={styles.detailIntro}
+        data-resource-hero={isMediaResource ? resource.kind : undefined}
+        data-has-resource-image={heroImage ? true : undefined}
         data-source-hero={resource.kind === 'source' ? true : undefined}
         data-has-poster={
           resource.kind === 'source' && resource.poster ? true : undefined
@@ -194,27 +235,58 @@ export function ResourceDetailPage({
             </ul>
           ) : null}
         </div>
-        {resource.kind === 'source' && resource.poster ? (
-          <figure className={styles.sourcePoster} data-source-poster>
+        {heroImage ? (
+          <figure
+            className={styles.resourceImage}
+            data-resource-image={resource.kind}
+            data-source-poster={resource.kind === 'source' ? true : undefined}
+            data-franchise-image={
+              resource.kind === 'franchise' ? true : undefined
+            }
+          >
             <Image
-              src={resource.poster.detailSrc}
-              alt={resource.poster.alt}
-              width={resource.poster.width}
-              height={resource.poster.height}
+              src={heroImage.detailSrc}
+              alt={heroImage.alt}
+              width={heroImage.width}
+              height={heroImage.height}
               placeholder='blur'
-              blurDataURL={resource.poster.blurDataURL}
+              blurDataURL={heroImage.blurDataURL}
               sizes='(max-width: 680px) calc(100vw - 36px), (max-width: 860px) 460px, (max-width: 1440px) 32vw, 460px'
               preload
-              data-source-poster-image
+              data-resource-image-element={resource.kind}
+              data-source-poster-image={
+                resource.kind === 'source' ? true : undefined
+              }
             />
           </figure>
         ) : null}
       </section>
 
+      {resource.kind === 'franchise' ? (
+        <section className={styles.resourceSection} data-franchise-sources>
+          <header className={styles.sectionHeader}>
+            <p>Franchise index</p>
+            <h2>Media sources in this franchise</h2>
+            <span>{String(resource.sources.length).padStart(2, '0')}</span>
+          </header>
+
+          <ResourceList
+            headingLevel={3}
+            kind='source'
+            label={`Media sources in ${resource.title}`}
+            resources={resource.sources}
+          />
+        </section>
+      ) : null}
+
       <section className={styles.scenarioSection}>
         <header className={styles.sectionHeader}>
           <p>Scenario file</p>
-          <h2>Scenes in this index</h2>
+          <h2>
+            {resource.kind === 'franchise'
+              ? 'Scenes across this franchise'
+              : 'Scenes in this index'}
+          </h2>
           <span>{String(resource.scenarioCount).padStart(2, '0')}</span>
         </header>
 

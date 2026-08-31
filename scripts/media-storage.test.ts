@@ -156,7 +156,7 @@ describe('createMediaStorage', () => {
     ).rejects.toThrow('must belong to the scenarios collection')
   })
 
-  it('uploads a missing object with immutable WebP metadata', async () => {
+  it('uploads a missing franchise image with immutable WebP metadata', async () => {
     const bytes = Buffer.from('new final bytes')
     const client = fakeClient(async (command) => {
       if (command instanceof HeadObjectCommand) {
@@ -168,14 +168,14 @@ describe('createMediaStorage', () => {
 
     const result = await storage.publish({
       bytes,
-      collection: 'sources',
+      collection: 'franchises',
       notionId,
       variant: 'gallery'
     })
 
     expect(result.uploaded).toBe(true)
     expect(result.key).toMatch(
-      /^media\/generated\/sources\/[0-9a-f]{32}\/gallery-[0-9a-f]{64}\.webp$/
+      /^media\/generated\/franchises\/[0-9a-f]{32}\/gallery-[0-9a-f]{64}\.webp$/
     )
     expect(client.send).toHaveBeenCalledTimes(2)
     expect(commandInput(client, 1)).toEqual({

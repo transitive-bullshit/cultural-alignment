@@ -20,6 +20,27 @@ describe('mediaDescriptorSchema', () => {
     expect(parseMediaDescriptor(descriptor)).toEqual(descriptor)
   })
 
+  it('accepts a franchise image in its separately owned collection', () => {
+    const descriptor = hostedFileDescriptor()
+    const franchise = {
+      ...descriptor,
+      collection: 'franchises' as const,
+      media: {
+        ...descriptor.media,
+        galleryKey: descriptor.media.galleryKey.replace(
+          '/scenarios/',
+          '/franchises/'
+        ),
+        detailKey: descriptor.media.detailKey.replace(
+          '/scenarios/',
+          '/franchises/'
+        )
+      }
+    }
+
+    expect(parseMediaDescriptor(franchise)).toEqual(franchise)
+  })
+
   it('accepts a strict absent-media descriptor', () => {
     const descriptor = {
       schemaVersion: 1 as const,
@@ -41,6 +62,12 @@ describe('mediaDescriptorSchema', () => {
       mediaDescriptorSchema.safeParse({
         ...descriptor,
         collection: 'scenarios'
+      }).success
+    ).toBe(false)
+    expect(
+      mediaDescriptorSchema.safeParse({
+        ...descriptor,
+        collection: 'franchises'
       }).success
     ).toBe(false)
   })

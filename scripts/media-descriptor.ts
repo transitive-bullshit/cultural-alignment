@@ -7,7 +7,7 @@ const notionIdPattern =
   /^(?:[0-9a-f]{32}|[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$/i
 const sha256Pattern = /^[0-9a-f]{64}$/
 const generatedMediaObjectKeyPattern =
-  /^media\/generated\/(?:scenarios|sources)\/[0-9a-f]{32}\/(?:gallery|detail)-[0-9a-f]{64}\.webp$/
+  /^media\/generated\/(?:franchises|scenarios|sources)\/[0-9a-f]{32}\/(?:gallery|detail)-[0-9a-f]{64}\.webp$/
 
 const notionIdSchema = z.string().regex(notionIdPattern)
 const sha256Schema = z.string().regex(sha256Pattern)
@@ -23,7 +23,11 @@ const sourceUrlSchema = z.url().refine((value) => {
   )
 }, 'Image source URL must use HTTP or HTTPS without credentials')
 
-export const mediaCollectionSchema = z.enum(['scenarios', 'sources'])
+export const mediaCollectionSchema = z.enum([
+  'franchises',
+  'scenarios',
+  'sources'
+])
 
 const notionFileSourceSchema = z.strictObject({
   type: z.literal('notion'),

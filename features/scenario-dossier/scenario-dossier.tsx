@@ -102,17 +102,54 @@ function SourceMeta({ scenario }: { scenario: ScenarioPage }) {
   )
 
   return (
-    <ul className={styles.sourceMeta} aria-label='Source details'>
-      <li>
-        <Link href={`/sources/${scenario.source.slug}`}>
-          {scenario.source.title}
-        </Link>
-      </li>
-      {showEpisode && scenario.episode ? (
-        <li data-scenario-episode>
-          <span>{scenario.episode.label}</span>
+    <ul className={styles.sourceMeta} aria-label='Media details'>
+      {scenario.franchises.length > 0 ? (
+        <li data-scenario-franchises>
+          <span className={styles.sourceMetaLinks}>
+            {scenario.franchises.map((franchise, index) => (
+              <span className={styles.sourceMetaLinkGroup} key={franchise.id}>
+                {index > 0 ? (
+                  <>
+                    <span
+                      className={styles.sourceMetaSeparator}
+                      aria-hidden='true'
+                    >
+                      ·
+                    </span>
+                    <span className='sr-only'>, </span>
+                  </>
+                ) : null}
+                <Link
+                  href={franchise.href}
+                  data-scenario-franchise={franchise.slug}
+                >
+                  {franchise.title}
+                </Link>
+              </span>
+            ))}
+          </span>
         </li>
       ) : null}
+      <li data-scenario-source>
+        <span className={styles.sourceMetaLinks}>
+          <Link href={scenario.source.href}>{scenario.source.title}</Link>
+          {showEpisode && scenario.episode ? (
+            <span className={styles.sourceMetaLinkGroup}>
+              <span className={styles.sourceMetaSeparator} aria-hidden='true'>
+                ·
+              </span>
+              <span className='sr-only'>, </span>
+              {scenario.episode.href ? (
+                <a href={scenario.episode.href} data-scenario-episode>
+                  {scenario.episode.label}
+                </a>
+              ) : (
+                <span data-scenario-episode>{scenario.episode.label}</span>
+              )}
+            </span>
+          ) : null}
+        </span>
+      </li>
       <li>
         {scenario.releaseDate ? (
           <time dateTime={scenario.releaseDate}>{year}</time>

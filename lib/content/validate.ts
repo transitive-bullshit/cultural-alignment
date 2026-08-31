@@ -28,6 +28,7 @@ export class ContentValidationError extends Error {
 type EntityCollectionName =
   | 'scenarios'
   | 'sources'
+  | 'franchises'
   | 'riskFamilies'
   | 'concepts'
 
@@ -41,6 +42,7 @@ type IdentifiedRecord = {
 const collectionLabels = {
   scenarios: 'scenario',
   sources: 'source',
+  franchises: 'franchise',
   riskFamilies: 'risk family',
   concepts: 'safety concept'
 } as const satisfies Record<EntityCollectionName, string>
@@ -71,6 +73,7 @@ export function validateContentSnapshot(input: unknown): ContentSnapshot {
 
   appendUniquenessIssues('scenarios', snapshot.scenarios, issues)
   appendUniquenessIssues('sources', snapshot.sources, issues)
+  appendUniquenessIssues('franchises', snapshot.franchises, issues)
   appendUniquenessIssues('riskFamilies', snapshot.riskFamilies, issues)
   appendUniquenessIssues('concepts', snapshot.concepts, issues)
   appendRelationIssues(snapshot, issues)
@@ -127,6 +130,9 @@ function appendRelationIssues(
   const sourceById = new Map(
     snapshot.sources.map((source) => [source.id, source])
   )
+  const franchiseIds = new Set(
+    snapshot.franchises.map((franchise) => franchise.id)
+  )
   const riskFamilyIds = new Set(
     snapshot.riskFamilies.map((family) => family.id)
   )
@@ -171,6 +177,16 @@ function appendRelationIssues(
   })
 
   snapshot.sources.forEach((source, sourceIndex) => {
+    source.franchiseIds.forEach((franchiseId, relationIndex) => {
+      if (franchiseIds.has(franchiseId)) return
+
+      issues.push({
+        code: 'missing-relation',
+        path: `sources[${sourceIndex}].franchiseIds[${relationIndex}]`,
+        message: `${formatRecordReference('sources', source)} references unknown franchise id ${JSON.stringify(franchiseId)}`
+      })
+    })
+
     source.relatedSourceIds.forEach((relatedSourceId, relationIndex) => {
       if (sourceById.has(relatedSourceId)) return
 

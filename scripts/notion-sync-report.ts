@@ -1,6 +1,7 @@
 export const notionSyncCollections = [
   'scenarios',
   'sources',
+  'franchises',
   'riskFamilies',
   'concepts'
 ] as const
@@ -22,6 +23,7 @@ type NotionSyncOutput = {
 const collectionLabels = {
   scenarios: { singular: 'scenario', plural: 'Scenarios' },
   sources: { singular: 'source', plural: 'Sources' },
+  franchises: { singular: 'franchise', plural: 'Franchises' },
   riskFamilies: { singular: 'risk family', plural: 'Risk families' },
   concepts: { singular: 'safety concept', plural: 'Safety concepts' }
 } as const satisfies Record<

@@ -24,11 +24,38 @@ describe('scenario discovery', () => {
       third
     ])
 
-    expect(discovery.moreFromSource.map(({ slug }) => slug)).toEqual([
+    expect(discovery.moreFromCollection.map(({ slug }) => slug)).toEqual([
       'first',
       'second',
       'third'
     ])
+  })
+
+  it('uses every source in a franchise continuation without duplicating taxonomy neighbors', () => {
+    const current = scenario('current', 'source-a', ['risk-a'], ['concept-a'])
+    const sameFranchise = scenario(
+      'same-franchise',
+      'source-b',
+      ['risk-a'],
+      ['concept-a']
+    )
+    const taxonomyNeighbor = scenario(
+      'taxonomy-neighbor',
+      'source-c',
+      ['risk-a'],
+      ['concept-a']
+    )
+
+    const discovery = discoverScenarios(
+      current,
+      [current, sameFranchise, taxonomyNeighbor],
+      ['source-a', 'source-b']
+    )
+
+    expect(discovery.moreFromCollection).toEqual([sameFranchise])
+    expect(
+      discovery.relatedScenarios.map(({ scenario: related }) => related)
+    ).toEqual([taxonomyNeighbor])
   })
 
   it('excludes the current source and candidates with no taxonomy overlap', () => {

@@ -40,6 +40,14 @@ export function getResourceSocialMetadata(
         title: `AI safety concepts / ${resource.title}`,
         type: 'website'
       }
+    case 'franchise':
+      return {
+        canonical: resource.href,
+        description: resource.description,
+        image: resource.image,
+        title: `Media franchises / ${resource.title}`,
+        type: 'website'
+      }
     case 'source': {
       const credit = getLeadingSourceCredit(resource.description)
       const sourceDescriptor = credit
@@ -64,6 +72,7 @@ export function getScenarioSocialMetadata(
     description: scenario.scene,
     image: scenario.image,
     keywords: [
+      ...scenario.franchises.map(({ title }) => title),
       scenario.source.title,
       ...scenario.riskFamilies.map(({ title }) => title),
       ...scenario.concepts.map(({ title }) => title)

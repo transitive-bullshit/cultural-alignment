@@ -11,6 +11,7 @@ describe('sitemap', () => {
       '/',
       '/scenarios',
       '/sources',
+      '/franchises',
       '/risk-families',
       '/concepts',
       '/about',
@@ -23,6 +24,9 @@ describe('sitemap', () => {
       ...contentCatalog
         .getStaticSlugs('source')
         .map((slug) => `/sources/${slug}`),
+      ...contentCatalog
+        .getStaticSlugs('franchise')
+        .map((slug) => `/franchises/${slug}`),
       ...contentCatalog
         .getStaticSlugs('risk-family')
         .map((slug) => `/risk-families/${slug}`),

@@ -6,6 +6,7 @@ import { siteUrl } from '@/lib/site'
 
 const resourceSegments = [
   ['source', 'sources'],
+  ['franchise', 'franchises'],
   ['risk-family', 'risk-families'],
   ['concept', 'concepts']
 ] as const satisfies readonly (readonly [ResourceKind, string])[]
@@ -15,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/',
     '/scenarios',
     '/sources',
+    '/franchises',
     '/risk-families',
     '/concepts',
     '/about',

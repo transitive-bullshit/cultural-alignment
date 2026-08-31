@@ -28,6 +28,7 @@ import {
   type ConceptRecord,
   type ContentImage,
   type ContentSnapshot,
+  type FranchiseRecord,
   type RiskFamilyRecord,
   type ScenarioRecord,
   type SourceRecord
@@ -51,6 +52,7 @@ import {
   parseMediaDescriptorJson,
   type AbsentMediaDescriptor,
   type ImageMediaDescriptor,
+  type MediaCollection,
   type MediaDescriptor,
   type MediaSourceIdentity,
   type ReusableMediaPayload
@@ -100,6 +102,10 @@ const NOTION_DATA_SOURCES = {
   sources: {
     databaseId: '3caedb27-f124-804d-9004-c7b1b3057002',
     dataSourceId: '3caedb27-f124-8036-b319-000ba9fcb815'
+  },
+  franchises: {
+    databaseId: '3cdedb27-f124-80c3-850f-dadca165c684',
+    dataSourceId: 'b1aedb27-f124-8361-901b-07b5f7fa6f5f'
   },
   riskFamilies: {
     databaseId: '3caedb27-f124-8096-84c3-ef0a4e694c4c',
@@ -170,12 +176,24 @@ const SCENARIO_PROPERTIES = {
 const SOURCE_PROPERTIES = {
   Name: { id: 'title', type: 'title' },
   Keywords: { id: 'kNsg', type: 'rich_text' },
+  'Media Franchises': {
+    id: '%3DI%40N',
+    type: 'relation',
+    relationDataSourceId: NOTION_DATA_SOURCES.franchises.dataSourceId
+  },
   'Source Type': { id: 'vu%3Er', type: 'select' },
   Description: { id: 'XKl%3D', type: 'rich_text' },
   'Release Date': { id: 'ZlZe', type: 'date' },
   IMDB: { id: '%5C%3Al%3E', type: 'url' },
   'Rotten Tomatoes': { id: 'UN%3DX', type: 'url' },
   'YouTube Trailer': { id: 'VHah', type: 'url' }
+} as const
+
+const FRANCHISE_PROPERTIES = {
+  Name: { id: 'title', type: 'title' },
+  Description: { id: 'XKl%3D', type: 'rich_text' },
+  Keywords: { id: 'kNsg', type: 'rich_text' },
+  IMDB: { id: '%5C%3Al%3E', type: 'url' }
 } as const
 
 const RISK_FAMILY_PROPERTIES = {
@@ -273,6 +291,10 @@ type ParsedSource = Omit<SourceRecord, 'slug' | 'poster'> & {
   readonly page: PageObjectResponse
 }
 
+type ParsedFranchise = Omit<FranchiseRecord, 'slug' | 'image'> & {
+  readonly page: PageObjectResponse
+}
+
 type ParsedRiskFamily = Omit<RiskFamilyRecord, 'slug' | 'citations'> & {
   readonly canonicalUrls: readonly string[]
 }
@@ -310,7 +332,7 @@ type ImageFallback = {
 }
 
 type ImageOptions = {
-  readonly collection: 'scenarios' | 'sources'
+  readonly collection: MediaCollection
   readonly record: NotionRecordReference
   readonly required: boolean
   readonly fallback?: ImageFallback
@@ -723,11 +745,18 @@ async function parseScenario(
 }
 
 async function parseSource(page: PageObjectResponse): Promise<ParsedSource> {
-  const [titleItems, descriptionItems, keywordItems] = await Promise.all([
-    retrieveRichTextItems(page, 'Name', 'title', SOURCE_PROPERTIES),
-    retrieveRichTextItems(page, 'Description', 'rich_text', SOURCE_PROPERTIES),
-    retrieveRichTextItems(page, 'Keywords', 'rich_text', SOURCE_PROPERTIES)
-  ])
+  const [titleItems, descriptionItems, keywordItems, franchiseIds] =
+    await Promise.all([
+      retrieveRichTextItems(page, 'Name', 'title', SOURCE_PROPERTIES),
+      retrieveRichTextItems(
+        page,
+        'Description',
+        'rich_text',
+        SOURCE_PROPERTIES
+      ),
+      retrieveRichTextItems(page, 'Keywords', 'rich_text', SOURCE_PROPERTIES),
+      relation(page, 'Media Franchises', SOURCE_PROPERTIES)
+    ])
   const sourceTypeOption = select(page, 'Source Type', SOURCE_PROPERTIES).name
   const sourceType =
     sourceTypeOption === 'Movie'
@@ -752,7 +781,32 @@ async function parseSource(page: PageObjectResponse): Promise<ParsedSource> {
     imdbUrl: url(page, 'IMDB', SOURCE_PROPERTIES),
     rottenTomatoesUrl: url(page, 'Rotten Tomatoes', SOURCE_PROPERTIES),
     youtubeTrailerUrl: url(page, 'YouTube Trailer', SOURCE_PROPERTIES),
+    franchiseIds,
     relatedSourceIds: []
+  }
+}
+
+async function parseFranchise(
+  page: PageObjectResponse
+): Promise<ParsedFranchise> {
+  const [titleItems, descriptionItems, keywordItems] = await Promise.all([
+    retrieveRichTextItems(page, 'Name', 'title', FRANCHISE_PROPERTIES),
+    retrieveRichTextItems(
+      page,
+      'Description',
+      'rich_text',
+      FRANCHISE_PROPERTIES
+    ),
+    retrieveRichTextItems(page, 'Keywords', 'rich_text', FRANCHISE_PROPERTIES)
+  ])
+
+  return {
+    page,
+    id: page.id,
+    title: requiredPlainText(page, 'Name', titleItems),
+    keywords: parseSearchKeywords(plainText(keywordItems)),
+    description: requiredPlainText(page, 'Description', descriptionItems),
+    imdbUrl: url(page, 'IMDB', FRANCHISE_PROPERTIES)
   }
 }
 
@@ -900,7 +954,7 @@ function publicFilePath(root: string, publicPath: string) {
 async function reusableLegacyImageEntry(
   entry: PreviousSyncEntry | undefined,
   page: PageObjectResponse,
-  collection: 'scenarios' | 'sources',
+  collection: MediaCollection,
   record: NotionRecordReference
 ): Promise<ImageResult | null> {
   if (!entry || entry.lastEditedTime !== page.last_edited_time) return null
@@ -965,7 +1019,7 @@ async function fileMatchesHash(path: string, expectedHash: string) {
 }
 
 async function publishMediaVariant(
-  collection: 'scenarios' | 'sources',
+  collection: MediaCollection,
   notionId: string,
   variant: 'gallery' | 'detail',
   bytes: Uint8Array
@@ -1001,7 +1055,7 @@ async function publishMemeMediaVariant(
 async function migrateLegacyImageEntry(
   entry: PreviousSyncEntry,
   page: PageObjectResponse,
-  collection: 'scenarios' | 'sources'
+  collection: MediaCollection
 ): Promise<ImageResult | null> {
   if (!entry.galleryHash || !entry.detailHash) return null
 
@@ -1436,7 +1490,7 @@ function reusableMediaPayload(image: ImageResult): ReusableMediaPayload {
 
 async function putImageDescriptor(
   page: PageObjectResponse,
-  collection: 'scenarios' | 'sources',
+  collection: MediaCollection,
   source: MediaSourceIdentity,
   image: ImageResult,
   previousEtag: string | null
@@ -1522,7 +1576,9 @@ async function syncImage(
   const selection = await selectImage(page, options)
   if (!selection) {
     if (options.collection !== 'sources') {
-      throw new Error(`Required scenario ${page.id} has no image selection`)
+      throw new Error(
+        `Required ${options.collection} record ${page.id} has no image selection`
+      )
     }
     await putAbsentImageDescriptor(page, stored?.etag ?? null)
     return null
@@ -1638,7 +1694,8 @@ function assertPublishedMedia(snapshot: ContentSnapshot) {
     ]),
     ...snapshot.sources.flatMap((source) =>
       source.poster ? [source.poster] : []
-    )
+    ),
+    ...snapshot.franchises.map((franchise) => franchise.image)
   ]
   for (const image of images) {
     for (const source of [image.gallerySrc, image.detailSrc]) {
@@ -1755,6 +1812,7 @@ async function readDataSourcePages(dataSourceId: string) {
 type SnapshotCandidate = {
   readonly scenarios: readonly ScenarioRecord[]
   readonly sources: readonly SourceRecord[]
+  readonly franchises: readonly FranchiseRecord[]
   readonly riskFamilies: readonly RiskFamilyRecord[]
   readonly concepts: readonly ConceptRecord[]
 }
@@ -1768,7 +1826,7 @@ function recordContentValidationErrors(
 
   for (const issue of error.issues) {
     const match = issue.path.match(
-      /^(scenarios|sources|riskFamilies|concepts)\[(\d+)\]/
+      /^(scenarios|sources|franchises|riskFamilies|concepts)\[(\d+)\]/
     )
     if (!match) {
       hasGlobalError = true
@@ -1821,11 +1879,12 @@ async function main(options: SyncCliOptions) {
   await mkdir(stageRoot, { recursive: true })
 
   try {
-    console.log('Verifying four Notion database and data-source contracts…')
+    console.log('Verifying five Notion database and data-source contracts…')
     await pMap(
       [
         ['scenario', NOTION_DATA_SOURCES.scenarios, SCENARIO_PROPERTIES],
         ['media-source', NOTION_DATA_SOURCES.sources, SOURCE_PROPERTIES],
+        ['franchise', NOTION_DATA_SOURCES.franchises, FRANCHISE_PROPERTIES],
         [
           'risk-family',
           NOTION_DATA_SOURCES.riskFamilies,
@@ -1834,37 +1893,51 @@ async function main(options: SyncCliOptions) {
         ['safety-concept', NOTION_DATA_SOURCES.concepts, CONCEPT_PROPERTIES]
       ] as const,
       ([label, ids, contract]) => verifyDataSource(label, ids, contract),
-      { concurrency: 4 }
+      { concurrency: 5 }
     )
 
     console.log('Reading all related Notion rows…')
-    const [scenarioPages, sourcePages, riskFamilyPages, conceptPages] =
-      await Promise.all([
-        readDataSourcePages(NOTION_DATA_SOURCES.scenarios.dataSourceId),
-        readDataSourcePages(NOTION_DATA_SOURCES.sources.dataSourceId),
-        readDataSourcePages(NOTION_DATA_SOURCES.riskFamilies.dataSourceId),
-        readDataSourcePages(NOTION_DATA_SOURCES.concepts.dataSourceId)
-      ])
+    const [
+      scenarioPages,
+      sourcePages,
+      franchisePages,
+      riskFamilyPages,
+      conceptPages
+    ] = await Promise.all([
+      readDataSourcePages(NOTION_DATA_SOURCES.scenarios.dataSourceId),
+      readDataSourcePages(NOTION_DATA_SOURCES.sources.dataSourceId),
+      readDataSourcePages(NOTION_DATA_SOURCES.franchises.dataSourceId),
+      readDataSourcePages(NOTION_DATA_SOURCES.riskFamilies.dataSourceId),
+      readDataSourcePages(NOTION_DATA_SOURCES.concepts.dataSourceId)
+    ])
     const report = new NotionSyncReport({
       scenarios: scenarioPages.length,
       sources: sourcePages.length,
+      franchises: franchisePages.length,
       riskFamilies: riskFamilyPages.length,
       concepts: conceptPages.length
     })
-    const [scenarioResults, sourceResults, riskFamilyResults, conceptResults] =
-      await Promise.all([
-        parseNotionPages(report, 'scenarios', scenarioPages, parseScenario),
-        parseNotionPages(report, 'sources', sourcePages, parseSource),
-        parseNotionPages(
-          report,
-          'riskFamilies',
-          riskFamilyPages,
-          parseRiskFamily
-        ),
-        parseNotionPages(report, 'concepts', conceptPages, parseConcept)
-      ])
+    const [
+      scenarioResults,
+      sourceResults,
+      franchiseResults,
+      riskFamilyResults,
+      conceptResults
+    ] = await Promise.all([
+      parseNotionPages(report, 'scenarios', scenarioPages, parseScenario),
+      parseNotionPages(report, 'sources', sourcePages, parseSource),
+      parseNotionPages(report, 'franchises', franchisePages, parseFranchise),
+      parseNotionPages(
+        report,
+        'riskFamilies',
+        riskFamilyPages,
+        parseRiskFamily
+      ),
+      parseNotionPages(report, 'concepts', conceptPages, parseConcept)
+    ])
     const parsedRows = successfulResults(scenarioResults)
     const sourceSeeds = successfulResults(sourceResults)
+    const franchiseSeeds = successfulResults(franchiseResults)
     const riskFamilySeeds = successfulResults(riskFamilyResults)
     const conceptSeeds = successfulResults(conceptResults)
 
@@ -1903,6 +1976,10 @@ async function main(options: SyncCliOptions) {
         previousManifest.slugs.scenarios
       ),
       sources: allocateStableSlugs(sourceSeeds, previousManifest.slugs.sources),
+      franchises: allocateStableSlugs(
+        franchiseSeeds,
+        previousManifest.slugs.franchises
+      ),
       riskFamilies: allocateStableSlugs(
         riskFamilySeeds.map((family) => ({
           id: family.id,
@@ -2014,7 +2091,7 @@ async function main(options: SyncCliOptions) {
         }
         return result
       },
-      { concurrency: 8 }
+      { concurrency: 16 }
     )
 
     completedImages = 0
@@ -2055,6 +2132,49 @@ async function main(options: SyncCliOptions) {
     )
     console.log(
       formatImageBatchSummary('Media source images', sourceImageResults)
+    )
+
+    completedImages = 0
+    console.log(`Syncing ${franchiseSeeds.length} required franchise images…`)
+    const franchiseImageResults = await pMap(
+      franchiseSeeds,
+      async (franchise) => {
+        const record = notionPageReference(franchise.page, franchise.title)
+        const result = await report!.capture(
+          'franchises',
+          record,
+          'processing the image for',
+          async () => {
+            const image = await syncImage(
+              franchise.page,
+              {
+                collection: 'franchises',
+                record,
+                required: true
+              },
+              previousManifest.entries.franchises[franchise.id],
+              options.force
+            )
+            if (!image) throw new Error('No image was produced')
+            return image
+          }
+        )
+
+        completedImages += 1
+        if (
+          completedImages % 20 === 0 ||
+          completedImages >= franchiseSeeds.length
+        ) {
+          console.log(
+            `Processed ${completedImages}/${franchiseSeeds.length} franchise images`
+          )
+        }
+        return result
+      },
+      { concurrency: 16 }
+    )
+    console.log(
+      formatImageBatchSummary('Franchise images', franchiseImageResults)
     )
 
     const riskFamilyRecordResults = await pMap(
@@ -2161,11 +2281,36 @@ async function main(options: SyncCliOptions) {
       }
     })
 
-    const candidate = { scenarios, sources, riskFamilies, concepts }
+    const franchises: FranchiseRecord[] = franchiseSeeds.map(
+      (franchise, index) => {
+        const image = franchiseImageResults[index]!
+        const { page: _page, ...record } = franchise
+        return {
+          ...record,
+          slug: slugs.franchises[franchise.id]!,
+          image: {
+            gallerySrc: image.gallerySrc,
+            detailSrc: image.detailSrc,
+            width: image.width,
+            height: image.height,
+            blurDataURL: image.blurDataURL,
+            alt: image.caption || `Representative image for ${franchise.title}`
+          }
+        }
+      }
+    )
+
+    const candidate = {
+      scenarios,
+      sources,
+      franchises,
+      riskFamilies,
+      concepts
+    }
     let snapshot: ContentSnapshot
     try {
       snapshot = validateContentSnapshot({
-        schemaVersion: 2,
+        schemaVersion: 3,
         ...candidate
       })
     } catch (err) {
@@ -2181,7 +2326,7 @@ async function main(options: SyncCliOptions) {
     const fixtureScenarioIds = [...FEATURED_SCENARIO_IDS]
 
     const manifest = {
-      schemaVersion: 3 as const,
+      schemaVersion: 4 as const,
       notion: {
         apiVersion: NOTION_API_VERSION,
         dataSources: NOTION_DATA_SOURCES
@@ -2189,6 +2334,7 @@ async function main(options: SyncCliOptions) {
       counts: {
         scenarios: snapshot.scenarios.length,
         sources: snapshot.sources.length,
+        franchises: snapshot.franchises.length,
         riskFamilies: snapshot.riskFamilies.length,
         concepts: snapshot.concepts.length
       },
@@ -2202,6 +2348,7 @@ async function main(options: SyncCliOptions) {
       writeJson(join(stageSnapshot, 'manifest.json'), validatedManifest),
       writeJson(join(stageSnapshot, 'scenarios.json'), snapshot.scenarios),
       writeJson(join(stageSnapshot, 'sources.json'), snapshot.sources),
+      writeJson(join(stageSnapshot, 'franchises.json'), snapshot.franchises),
       writeJson(
         join(stageSnapshot, 'risk-families.json'),
         snapshot.riskFamilies
@@ -2221,7 +2368,7 @@ async function main(options: SyncCliOptions) {
     await replaceGeneratedOutputs(stageRoot)
     report.printSummary()
     console.log(
-      `Synced ${snapshot.scenarios.length} scenarios, ${snapshot.sources.length} sources, ${snapshot.riskFamilies.length} risk families, and ${snapshot.concepts.length} concepts.`
+      `Synced ${snapshot.scenarios.length} scenarios, ${snapshot.sources.length} sources, ${snapshot.franchises.length} franchises, ${snapshot.riskFamilies.length} risk families, and ${snapshot.concepts.length} concepts.`
     )
     console.log(
       `Media storage: ${uploadedMediaObjects} uploaded, ${reusedMediaObjects} already present.`

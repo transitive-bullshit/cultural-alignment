@@ -19,7 +19,7 @@ const CACHE_CONTROL = 'public,max-age=31536000,immutable'
 const DESCRIPTOR_CACHE_CONTROL = 'private,no-store'
 const DEFAULT_REGION = 'auto'
 
-export type MediaCollection = 'scenarios' | 'sources'
+export type MediaCollection = 'franchises' | 'scenarios' | 'sources'
 export type MediaVariant = 'gallery' | 'detail'
 export type MediaPurpose = 'record-image' | 'scenario-meme'
 

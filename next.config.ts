@@ -1,5 +1,6 @@
 import type { NextConfig } from 'next'
 
+import franchises from './content/snapshot/franchises.json'
 import scenarios from './content/snapshot/scenarios.json'
 import sources from './content/snapshot/sources.json'
 
@@ -20,7 +21,8 @@ const imageSources = [
   ]),
   ...sources.flatMap(({ poster }) =>
     poster ? [poster.gallerySrc, poster.detailSrc] : []
-  )
+  ),
+  ...franchises.flatMap(({ image }) => [image.gallerySrc, image.detailSrc])
 ]
 
 const remotePatterns = [

@@ -94,6 +94,16 @@ export const scenarioRecordSchema = z.object({
   caveats: z.string().trim().min(1)
 })
 
+export const franchiseRecordSchema = z.object({
+  id: idSchema,
+  slug: slugSchema,
+  title: z.string().trim().min(1),
+  keywords: searchKeywordsSchema,
+  description: z.string().trim().min(1),
+  image: contentImageSchema,
+  imdbUrl: z.url().nullable()
+})
+
 export const sourceRecordSchema = z.object({
   id: idSchema,
   slug: slugSchema,
@@ -106,6 +116,7 @@ export const sourceRecordSchema = z.object({
   imdbUrl: z.url().nullable(),
   rottenTomatoesUrl: z.url().nullable(),
   youtubeTrailerUrl: z.url().nullable(),
+  franchiseIds: z.array(idSchema),
   relatedSourceIds: z.array(idSchema)
 })
 
@@ -131,9 +142,10 @@ export const conceptRecordSchema = z.object({
 })
 
 export const contentSnapshotSchema = z.object({
-  schemaVersion: z.literal(2),
+  schemaVersion: z.literal(3),
   scenarios: z.array(scenarioRecordSchema),
   sources: z.array(sourceRecordSchema),
+  franchises: z.array(franchiseRecordSchema),
   riskFamilies: z.array(riskFamilyRecordSchema),
   concepts: z.array(conceptRecordSchema)
 })
@@ -144,6 +156,7 @@ export type ScenarioImage = ContentImage
 export type ScenarioVideo = z.infer<typeof scenarioVideoSchema>
 export type Citation = z.infer<typeof citationSchema>
 export type ScenarioRecord = z.infer<typeof scenarioRecordSchema>
+export type FranchiseRecord = z.infer<typeof franchiseRecordSchema>
 export type SourceRecord = z.infer<typeof sourceRecordSchema>
 export type RiskFamilyRecord = z.infer<typeof riskFamilyRecordSchema>
 export type ConceptRecord = z.infer<typeof conceptRecordSchema>

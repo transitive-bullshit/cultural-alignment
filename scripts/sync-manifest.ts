@@ -7,7 +7,7 @@ import {
 } from './sync-utils'
 
 export const MEDIA_PIPELINE_VERSION = 3
-export const SYNC_MANIFEST_VERSION = 3
+export const SYNC_MANIFEST_VERSION = 4
 
 const sha256Schema = z.string().regex(/^[0-9a-f]{64}$/)
 const legacyGeneratedMediaPathSchema = z
@@ -16,7 +16,7 @@ const legacyGeneratedMediaPathSchema = z
 const generatedMediaObjectKeySchema = z
   .string()
   .regex(
-    /^media\/generated\/(?:scenarios|sources)\/[0-9a-f]{32}\/(?:gallery|detail)-[0-9a-f]{64}\.webp$/
+    /^media\/generated\/(?:franchises|scenarios|sources)\/[0-9a-f]{32}\/(?:gallery|detail)-[0-9a-f]{64}\.webp$/
   )
 const remoteMediaUrlSchema = z.url().refine((value) => {
   if (!URL.canParse(value)) return false
@@ -72,30 +72,39 @@ const slugMapSchema = z.record(
   z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)
 )
 
-const slugMapsSchema = z.object({
+const historicalSlugMapsSchema = z.object({
   scenarios: slugMapSchema,
   sources: slugMapSchema,
   riskFamilies: slugMapSchema,
   concepts: slugMapSchema
 })
 
+const slugMapsSchema = historicalSlugMapsSchema.extend({
+  franchises: slugMapSchema
+})
+
 const legacySyncManifestSchema = z.object({
   schemaVersion: z.literal(1),
-  slugs: slugMapsSchema,
+  slugs: historicalSlugMapsSchema,
   entries: z.record(z.string(), previousSyncEntrySchema)
 })
 
 const previousCurrentSyncManifestSchema = z.object({
   schemaVersion: z.literal(2),
-  slugs: slugMapsSchema,
+  slugs: historicalSlugMapsSchema,
   entries: z.object({
     scenarios: z.record(z.string(), previousSyncEntrySchema),
     sources: z.record(z.string(), previousSyncEntrySchema)
   })
 })
 
+const previousSyncManifestHistorySchema = z.object({
+  schemaVersion: z.literal(3),
+  slugs: historicalSlugMapsSchema
+})
+
 const currentSyncManifestHistorySchema = z.object({
-  schemaVersion: z.literal(SYNC_MANIFEST_VERSION),
+  schemaVersion: z.literal(4),
   slugs: slugMapsSchema
 })
 
@@ -105,6 +114,34 @@ const notionCollectionSchema = z.object({
 })
 
 const syncManifestContract = {
+  notion: z.object({
+    apiVersion: z.string().min(1),
+    dataSources: z.object({
+      scenarios: notionCollectionSchema,
+      sources: notionCollectionSchema,
+      franchises: notionCollectionSchema,
+      riskFamilies: notionCollectionSchema,
+      concepts: notionCollectionSchema
+    })
+  }),
+  counts: z.object({
+    scenarios: z.number().int().nonnegative(),
+    sources: z.number().int().nonnegative(),
+    franchises: z.number().int().nonnegative(),
+    riskFamilies: z.number().int().nonnegative(),
+    concepts: z.number().int().nonnegative()
+  }),
+  fixtureScenarioIds: z.array(z.string().min(1)),
+  slugs: slugMapsSchema
+}
+
+export const syncManifestSchema = z.strictObject({
+  schemaVersion: z.literal(SYNC_MANIFEST_VERSION),
+  ...syncManifestContract
+})
+
+const transitionalSyncManifestSchema = z.strictObject({
+  schemaVersion: z.literal(2),
   notion: z.object({
     apiVersion: z.string().min(1),
     dataSources: z.object({
@@ -121,17 +158,7 @@ const syncManifestContract = {
     concepts: z.number().int().nonnegative()
   }),
   fixtureScenarioIds: z.array(z.string().min(1)),
-  slugs: slugMapsSchema
-}
-
-export const syncManifestSchema = z.strictObject({
-  schemaVersion: z.literal(SYNC_MANIFEST_VERSION),
-  ...syncManifestContract
-})
-
-const transitionalSyncManifestSchema = z.strictObject({
-  schemaVersion: z.literal(2),
-  ...syncManifestContract,
+  slugs: historicalSlugMapsSchema,
   entries: z.object({
     scenarios: z.record(z.string(), syncEntrySchema),
     sources: z.record(z.string(), syncEntrySchema)
@@ -148,6 +175,7 @@ export type PreviousSyncManifest = {
   readonly entries: {
     readonly scenarios: Record<string, PreviousSyncEntry>
     readonly sources: Record<string, PreviousSyncEntry>
+    readonly franchises: Record<string, PreviousSyncEntry>
   }
 }
 
@@ -155,12 +183,14 @@ export const emptyPreviousSyncManifest: PreviousSyncManifest = {
   slugs: {
     scenarios: {},
     sources: {},
+    franchises: {},
     riskFamilies: {},
     concepts: {}
   },
   entries: {
     scenarios: {},
-    sources: {}
+    sources: {},
+    franchises: {}
   }
 }
 
@@ -175,11 +205,28 @@ export function parsePreviousSyncManifest(
     }
   }
 
+  const previousCurrent = previousSyncManifestHistorySchema.safeParse(input)
+  if (previousCurrent.success) {
+    return {
+      slugs: {
+        ...previousCurrent.data.slugs,
+        franchises: {}
+      },
+      entries: emptyPreviousSyncManifest.entries
+    }
+  }
+
   const previous = previousCurrentSyncManifestSchema.safeParse(input)
   if (previous.success) {
     return {
-      slugs: previous.data.slugs,
-      entries: previous.data.entries
+      slugs: {
+        ...previous.data.slugs,
+        franchises: {}
+      },
+      entries: {
+        ...previous.data.entries,
+        franchises: {}
+      }
     }
   }
 
@@ -189,7 +236,8 @@ export function parsePreviousSyncManifest(
     slugs: emptyPreviousSyncManifest.slugs,
     entries: {
       scenarios: legacy.entries,
-      sources: {}
+      sources: {},
+      franchises: {}
     }
   }
 }
@@ -219,7 +267,7 @@ export function validateCheckedSyncManifest(
   }
 
   const manifest = transitionalSyncManifestSchema.parse(input)
-  validateSnapshotContract(manifest, snapshot)
+  validateHistoricalSnapshotContract(manifest, snapshot)
   validateMediaOwnership(
     'scenario',
     'scenarios',
@@ -248,6 +296,7 @@ function validateSnapshotContract(
   const collections = [
     ['scenarios', snapshot.scenarios],
     ['sources', snapshot.sources],
+    ['franchises', snapshot.franchises],
     ['riskFamilies', snapshot.riskFamilies],
     ['concepts', snapshot.concepts]
   ] as const
@@ -266,8 +315,43 @@ function validateSnapshotContract(
     }
   }
 
+  validateFixtureScenarioIds(manifest.fixtureScenarioIds, snapshot)
+}
+
+function validateHistoricalSnapshotContract(
+  manifest: z.infer<typeof transitionalSyncManifestSchema>,
+  snapshot: ContentSnapshot
+) {
+  const collections = [
+    ['scenarios', snapshot.scenarios],
+    ['sources', snapshot.sources],
+    ['riskFamilies', snapshot.riskFamilies],
+    ['concepts', snapshot.concepts]
+  ] as const
+
+  for (const [name, records] of collections) {
+    if (manifest.counts[name] !== records.length) {
+      throw new Error(
+        `Manifest ${name} count ${manifest.counts[name]} does not match snapshot count ${records.length}`
+      )
+    }
+    const expectedSlugs = Object.fromEntries(
+      records.map((record) => [record.id, record.slug])
+    )
+    if (!recordsMatch(manifest.slugs[name], expectedSlugs)) {
+      throw new Error(`Manifest ${name} slugs do not match the snapshot`)
+    }
+  }
+
+  validateFixtureScenarioIds(manifest.fixtureScenarioIds, snapshot)
+}
+
+function validateFixtureScenarioIds(
+  fixtureScenarioIds: readonly string[],
+  snapshot: ContentSnapshot
+) {
   const scenarioIds = new Set(snapshot.scenarios.map((scenario) => scenario.id))
-  for (const fixtureId of manifest.fixtureScenarioIds) {
+  for (const fixtureId of fixtureScenarioIds) {
     if (!scenarioIds.has(fixtureId)) {
       throw new Error(
         `Manifest fixture references unknown scenario ${fixtureId}`
@@ -277,8 +361,8 @@ function validateSnapshotContract(
 }
 
 function validateMediaOwnership(
-  label: 'scenario' | 'source',
-  collection: 'scenarios' | 'sources',
+  label: 'franchise' | 'scenario' | 'source',
+  collection: 'franchises' | 'scenarios' | 'sources',
   entries: Readonly<Record<string, SyncEntry>>,
   records: readonly {
     readonly id: string

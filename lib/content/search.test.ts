@@ -21,6 +21,11 @@ const documents = [
     subtitle: 'Source'
   }),
   createDocument({
+    kind: 'franchise',
+    title: 'Marvel Cinematic Universe',
+    subtitle: 'Media franchise'
+  }),
+  createDocument({
     kind: 'concept',
     title: "Goodhart's law",
     subtitle: 'AI safety concept',
@@ -121,6 +126,11 @@ describe('searchDocuments', () => {
         subtitle: 'AI safety concept'
       }),
       createDocument({
+        kind: 'franchise',
+        title: 'Shared match franchise',
+        subtitle: 'Media franchise'
+      }),
+      createDocument({
         kind: 'source',
         title: 'Shared match source',
         subtitle: 'Source'
@@ -130,12 +140,13 @@ describe('searchDocuments', () => {
 
     expect(groups.map(({ kind }) => kind)).toEqual([
       'concept',
+      'franchise',
       'risk-family',
       'scenario',
       'source'
     ])
     expect(groups.map(({ documents }) => documents.length)).toEqual([
-      1, 1, 3, 1
+      1, 1, 1, 3, 1
     ])
     expect(searchDocumentGroups(documents, 'source', 0)).toEqual([])
     expect(searchDocuments(documents, '   ')).toEqual([])

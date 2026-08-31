@@ -9,6 +9,7 @@ import {
 
 const scenarioId = '3c6edb27-f124-80cc-92d5-c8f2f2e3a7fa'
 const sourceId = '3caedb27-f124-8031-9026-e39581c85c47'
+const franchiseId = '3cdedb27-f124-80c3-850f-dadca165c684'
 
 describe('parsePreviousSyncManifest', () => {
   it('ignores v1 slugs while retaining reusable scenario image history', () => {
@@ -30,11 +31,13 @@ describe('parsePreviousSyncManifest', () => {
     expect(result.slugs).toEqual({
       scenarios: {},
       sources: {},
+      franchises: {},
       riskFamilies: {},
       concepts: {}
     })
     expect(Object.keys(result.entries.scenarios)).toEqual(['scenario-1'])
     expect(result.entries.sources).toEqual({})
+    expect(result.entries.franchises).toEqual({})
   })
 
   it('preserves v2 slugs and image history for descriptor migration', () => {
@@ -44,7 +47,7 @@ describe('parsePreviousSyncManifest', () => {
     const sourceEntry = imageEntry(
       '/media/generated/sources/3caedb27f12480319026e39581c85c47'
     )
-    const slugs = stableSlugs()
+    const slugs = historicalSlugs()
 
     expect(
       parsePreviousSyncManifest({
@@ -56,38 +59,46 @@ describe('parsePreviousSyncManifest', () => {
         }
       })
     ).toEqual({
-      slugs,
+      slugs: { ...slugs, franchises: {} },
       entries: {
         scenarios: { [scenarioId]: scenarioEntry },
-        sources: { [sourceId]: sourceEntry }
+        sources: { [sourceId]: sourceEntry },
+        franchises: {}
       }
     })
   })
 
-  it('preserves v3 slugs without inventing checked-in media history', () => {
+  it('migrates v3 slug history with an empty franchise map', () => {
+    const manifest = previousManifest()
+
+    expect(parsePreviousSyncManifest(manifest)).toEqual({
+      slugs: { ...manifest.slugs, franchises: {} },
+      entries: { scenarios: {}, sources: {}, franchises: {} }
+    })
+  })
+
+  it('preserves v4 franchise slugs without inventing media history', () => {
     const manifest = currentManifest()
 
     expect(parsePreviousSyncManifest(manifest)).toEqual({
       slugs: manifest.slugs,
-      entries: { scenarios: {}, sources: {} }
+      entries: { scenarios: {}, sources: {}, franchises: {} }
     })
   })
 })
 
 describe('parseSyncManifest', () => {
-  it('accepts the media-free v3 manifest contract', () => {
+  it('accepts the media-free v4 manifest contract', () => {
     const manifest = currentManifest()
 
     expect(parseSyncManifest(manifest)).toEqual(manifest)
   })
 
-  it('rejects the previous v2 manifest contract', () => {
-    expect(() =>
-      parseSyncManifest({ ...currentManifest(), schemaVersion: 2 })
-    ).toThrow()
+  it('rejects the previous v3 manifest contract', () => {
+    expect(() => parseSyncManifest(previousManifest())).toThrow()
   })
 
-  it('rejects media entries in the v3 manifest', () => {
+  it('rejects media entries in the v4 manifest', () => {
     expect(() =>
       parseSyncManifest({
         ...currentManifest(),
@@ -106,10 +117,10 @@ describe('validateSyncManifest', () => {
 
   it('rejects a collection count that diverges from the snapshot', () => {
     const manifest = currentManifest()
-    manifest.counts.sources = 2
+    manifest.counts.franchises = 2
 
     expect(() => validateSyncManifest(manifest, currentSnapshot())).toThrow(
-      'Manifest sources count 2 does not match snapshot count 1'
+      'Manifest franchises count 2 does not match snapshot count 1'
     )
   })
 
@@ -156,12 +167,16 @@ describe('validateCheckedSyncManifest', () => {
 
 function currentManifest() {
   return {
-    schemaVersion: 3 as const,
+    schemaVersion: 4 as const,
     notion: {
       apiVersion: '2026-03-11',
       dataSources: {
         scenarios: { databaseId: 'database-1', dataSourceId: 'data-source-1' },
         sources: { databaseId: 'database-2', dataSourceId: 'data-source-2' },
+        franchises: {
+          databaseId: 'database-5',
+          dataSourceId: 'data-source-5'
+        },
         riskFamilies: {
           databaseId: 'database-3',
           dataSourceId: 'data-source-3'
@@ -169,9 +184,31 @@ function currentManifest() {
         concepts: { databaseId: 'database-4', dataSourceId: 'data-source-4' }
       }
     },
-    counts: { scenarios: 1, sources: 1, riskFamilies: 1, concepts: 1 },
+    counts: {
+      scenarios: 1,
+      sources: 1,
+      franchises: 1,
+      riskFamilies: 1,
+      concepts: 1
+    },
     fixtureScenarioIds: [scenarioId],
     slugs: stableSlugs()
+  }
+}
+
+function previousManifest() {
+  const current = currentManifest()
+  const { franchises: _franchiseDataSource, ...dataSources } =
+    current.notion.dataSources
+  const { franchises: _franchiseCount, ...counts } = current.counts
+  const { franchises: _franchiseSlugs, ...slugs } = current.slugs
+
+  return {
+    ...current,
+    schemaVersion: 3 as const,
+    notion: { ...current.notion, dataSources },
+    counts,
+    slugs
   }
 }
 
@@ -179,14 +216,21 @@ function stableSlugs() {
   return {
     scenarios: { [scenarioId]: 'stable-scenario' },
     sources: { [sourceId]: 'stable-source' },
+    franchises: { [franchiseId]: 'stable-franchise' },
     riskFamilies: { 'risk-1': 'stable-risk' },
     concepts: { 'concept-1': 'stable-concept' }
   }
 }
 
+function historicalSlugs() {
+  const { franchises: _franchises, ...slugs } = stableSlugs()
+  return slugs
+}
+
 function transitionalManifest() {
+  const current = previousManifest()
   return {
-    ...currentManifest(),
+    ...current,
     schemaVersion: 2 as const,
     entries: {
       scenarios: {
@@ -201,7 +245,7 @@ function transitionalManifest() {
 
 function currentSnapshot() {
   return {
-    schemaVersion: 2 as const,
+    schemaVersion: 3 as const,
     scenarios: [
       {
         id: scenarioId,
@@ -250,7 +294,27 @@ function currentSnapshot() {
         imdbUrl: null,
         rottenTomatoesUrl: null,
         youtubeTrailerUrl: null,
+        franchiseIds: [franchiseId],
         relatedSourceIds: []
+      }
+    ],
+    franchises: [
+      {
+        id: franchiseId,
+        slug: 'stable-franchise',
+        title: 'Stable Franchise',
+        keywords: [],
+        description: 'A stable media franchise.',
+        image: {
+          gallerySrc: `https://media.example.com/media/generated/franchises/3cdedb27f12480c3850fdadca165c684/gallery-${'b'.repeat(64)}.webp`,
+          detailSrc: `https://media.example.com/media/generated/franchises/3cdedb27f12480c3850fdadca165c684/detail-${'c'.repeat(64)}.webp`,
+          width: 1920,
+          height: 1080,
+          blurDataURL:
+            'data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAABwAQCdASoIAAUAA8BgJYwCdAF1AAD+73a5N2G+4IAAAA==',
+          alt: 'Representative image for Stable Franchise'
+        },
+        imdbUrl: 'https://www.imdb.com/list/ls000000000/'
       }
     ],
     riskFamilies: [
@@ -308,7 +372,10 @@ function imageEntry(pathRoot: string) {
   }
 }
 
-function remoteImageEntry(collection: 'scenarios' | 'sources', id: string) {
+function remoteImageEntry(
+  collection: 'franchises' | 'scenarios' | 'sources',
+  id: string
+) {
   const compactId = id.replaceAll('-', '')
   const galleryHash = 'b'.repeat(64)
   const detailHash = 'c'.repeat(64)

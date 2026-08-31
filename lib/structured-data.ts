@@ -61,6 +61,12 @@ export function getScenarioStructuredData(scenario: ScenarioPage) {
     image: toImageObject(scenario.image),
     keywords: social.keywords,
     about: [
+      ...scenario.franchises.map((franchise) => ({
+        '@type': 'CreativeWorkSeries' as const,
+        '@id': `${absoluteUrl(franchise.href)}#franchise`,
+        name: franchise.title,
+        url: absoluteUrl(franchise.href)
+      })),
       {
         '@type': scenario.source.sourceType === 'movie' ? 'Movie' : 'TVSeries',
         '@id': `${absoluteUrl(scenario.source.href)}#source`,
@@ -99,6 +105,17 @@ export function getResourceStructuredData(resource: ResourcePage) {
 }
 
 function getResourceEntity(resource: ResourcePage, pageUrl: string) {
+  if (resource.kind === 'franchise') {
+    return {
+      '@type': 'CreativeWorkSeries',
+      '@id': `${pageUrl}#franchise`,
+      name: resource.title,
+      url: pageUrl,
+      description: resource.description,
+      image: toImageObject(resource.image)
+    } as const
+  }
+
   if (resource.kind === 'source') {
     return {
       '@type': resource.sourceType === 'movie' ? 'Movie' : 'TVSeries',

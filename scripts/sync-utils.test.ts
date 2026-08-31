@@ -72,6 +72,20 @@ describe('generatedMediaPublicPaths', () => {
         '/media/generated/sources/3caedb27f12480319026e39581c85c47/detail.webp'
     })
   })
+
+  it('builds stable franchise image paths from a Notion page ID', () => {
+    expect(
+      generatedMediaPublicPaths(
+        'franchises',
+        '3cdedb27-f124-80c3-850f-dadca165c684'
+      )
+    ).toEqual({
+      gallerySrc:
+        '/media/generated/franchises/3cdedb27f12480c3850fdadca165c684/gallery.webp',
+      detailSrc:
+        '/media/generated/franchises/3cdedb27f12480c3850fdadca165c684/detail.webp'
+    })
+  })
 })
 
 describe('generatedMediaObjectKey', () => {
@@ -85,6 +99,19 @@ describe('generatedMediaObjectKey', () => {
       )
     ).toBe(
       `media/generated/scenarios/3c6edb27f12480cc92d5c8f2f2e3a7fa/detail-${'a'.repeat(64)}.webp`
+    )
+  })
+
+  it('owns franchise variants in their own collection', () => {
+    expect(
+      generatedMediaObjectKey(
+        'franchises',
+        '3cdedb27-f124-80c3-850f-dadca165c684',
+        'gallery',
+        'd'.repeat(64)
+      )
+    ).toBe(
+      `media/generated/franchises/3cdedb27f12480c3850fdadca165c684/gallery-${'d'.repeat(64)}.webp`
     )
   })
 
@@ -182,6 +209,19 @@ describe('isGeneratedMediaUrlFor', () => {
       isGeneratedMediaUrlFor('not-a-url', 'scenarios', pageId, 'gallery')
     ).toBe(false)
   })
+
+  it('accepts only the matching franchise image owner', () => {
+    const franchiseId = '3cdedb27-f124-80c3-850f-dadca165c684'
+    const franchiseKey = `media/generated/franchises/${franchiseId.replaceAll('-', '')}/detail-${'d'.repeat(64)}.webp`
+    const url = `https://media.example.com/${franchiseKey}`
+
+    expect(
+      isGeneratedMediaUrlFor(url, 'franchises', franchiseId, 'detail')
+    ).toBe(true)
+    expect(isGeneratedMediaUrlFor(url, 'sources', franchiseId, 'detail')).toBe(
+      false
+    )
+  })
 })
 
 describe('isGeneratedMemeMediaUrlFor', () => {
@@ -256,6 +296,21 @@ describe('allocateStableSlugs', () => {
 })
 
 describe('retrieveRelationIds', () => {
+  it('preserves the authored order of inline franchise relations', async () => {
+    const retrieve = async () => {
+      throw new Error('Inline relations should not require retrieval')
+    }
+
+    await expect(
+      retrieveRelationIds(
+        'source-1',
+        'media-franchises',
+        [{ id: 'spider-man' }, { id: 'marvel' }],
+        retrieve
+      )
+    ).resolves.toEqual(['spider-man', 'marvel'])
+  })
+
   it('retrieves every page when the inline relation reaches Notion’s limit', async () => {
     const inline = Array.from({ length: 25 }, (_, index) => ({
       id: `inline-${index}`

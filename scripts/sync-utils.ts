@@ -8,7 +8,7 @@ import type {
 } from '@notionhq/client'
 
 const generatedMediaPattern =
-  /^\/media\/generated\/(?:scenarios|sources)\/[0-9a-f]{32}\/(?:gallery|detail)\.webp$/
+  /^\/media\/generated\/(?:franchises|scenarios|sources)\/[0-9a-f]{32}\/(?:gallery|detail)\.webp$/
 const sha256Pattern = /^[0-9a-f]{64}$/
 
 export function parseSearchKeywords(value: string) {
@@ -30,7 +30,7 @@ export function isGeneratedMediaPublicPath(publicPath: string) {
 }
 
 export function generatedMediaPublicPaths(
-  collection: 'scenarios' | 'sources',
+  collection: 'franchises' | 'scenarios' | 'sources',
   pageId: string
 ) {
   const compactId = pageId.replaceAll('-', '').toLowerCase()
@@ -45,7 +45,7 @@ export function generatedMediaPublicPaths(
 }
 
 export function generatedMediaObjectKey(
-  collection: 'scenarios' | 'sources',
+  collection: 'franchises' | 'scenarios' | 'sources',
   pageId: string,
   variant: 'gallery' | 'detail',
   hash: string
@@ -69,7 +69,7 @@ export function generatedMemeMediaObjectKey(
 
 export function isGeneratedMediaUrlFor(
   value: string,
-  collection: 'scenarios' | 'sources',
+  collection: 'franchises' | 'scenarios' | 'sources',
   pageId: string,
   variant: 'gallery' | 'detail'
 ) {

@@ -14,6 +14,7 @@ export type SearchTextSegment = {
 
 const GROUP_LABELS = {
   scenario: 'Scenarios',
+  franchise: 'Media franchises',
   'risk-family': 'Risk families',
   concept: 'AI safety concepts',
   source: 'Sources'

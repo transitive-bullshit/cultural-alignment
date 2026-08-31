@@ -1,6 +1,7 @@
 import type {
   ConceptRecord,
   ContentImage as ContentImageRecord,
+  FranchiseRecord,
   RiskFamilyRecord,
   ScenarioRecord,
   ScenarioVideo,
@@ -59,6 +60,15 @@ export type RelatedScenario = GalleryScenario & {
   readonly sharedConcepts: readonly TaxonomyLink[]
 }
 
+export type ScenarioContinuation = {
+  readonly kind: 'franchise' | 'source'
+  readonly id: string
+  readonly slug: string
+  readonly href: string
+  readonly title: string
+  readonly scenarioCount: number
+}
+
 export type ScenarioPage = {
   readonly id: string
   readonly slug: string
@@ -80,9 +90,11 @@ export type ScenarioPage = {
   readonly scene: string
   readonly whyAnalogyWorks: string
   readonly caveats: string
+  readonly franchises: readonly TaxonomyLink[]
   readonly riskFamilies: readonly TaxonomyLink[]
   readonly concepts: readonly TaxonomyLink[]
-  readonly moreFromSource: readonly GalleryScenario[]
+  readonly continuation: ScenarioContinuation
+  readonly moreFromCollection: readonly GalleryScenario[]
   readonly relatedScenarios: readonly RelatedScenario[]
 }
 
@@ -120,11 +132,21 @@ export type SourceResourcePage = ResourcePageBase & {
   readonly poster: ContentImage | null
 }
 
+export type FranchiseResourcePage = ResourcePageBase & {
+  readonly kind: 'franchise'
+  readonly description: string
+  readonly image: ContentImage
+  readonly sources: readonly ResourceSummary[]
+}
+
 export type TaxonomyResourcePage = ResourcePageBase & {
   readonly kind: 'risk-family' | 'concept'
 }
 
-export type ResourcePage = SourceResourcePage | TaxonomyResourcePage
+export type ResourcePage =
+  | SourceResourcePage
+  | FranchiseResourcePage
+  | TaxonomyResourcePage
 
 export type ContentCatalog = {
   listScenarioCards(query?: ScenarioListQuery): readonly GalleryScenario[]
@@ -140,6 +162,9 @@ export function createContentCatalog(input: unknown): ContentCatalog {
   const sourceById = new Map(
     snapshot.sources.map((source) => [source.id, source])
   )
+  const franchiseById = new Map(
+    snapshot.franchises.map((franchise) => [franchise.id, franchise])
+  )
   const riskFamilyById = new Map(
     snapshot.riskFamilies.map((family) => [family.id, family])
   )
@@ -152,6 +177,26 @@ export function createContentCatalog(input: unknown): ContentCatalog {
   const scenariosBySourceId = groupBy(
     snapshot.scenarios,
     (scenario) => scenario.sourceId
+  )
+  const sourcesByFranchiseId = groupRelations(
+    snapshot.sources,
+    (source) => source.franchiseIds
+  )
+  const scenariosByFranchiseId = new Map(
+    snapshot.franchises.map((franchise) => {
+      const sourceIds = new Set(
+        (sourcesByFranchiseId.get(franchise.id) ?? []).map(
+          (source) => source.id
+        )
+      )
+
+      return [
+        franchise.id,
+        snapshot.scenarios.filter((scenario) =>
+          sourceIds.has(scenario.sourceId)
+        )
+      ] as const
+    })
   )
   const scenariosByRiskFamilyId = groupRelations(
     snapshot.scenarios,
@@ -193,7 +238,42 @@ export function createContentCatalog(input: unknown): ContentCatalog {
   const scenarioPageBySlug = new Map(
     snapshot.scenarios.map((scenario) => {
       const source = getRequired(sourceById, scenario.sourceId)
-      const discovery = discoverScenarios(scenario, snapshot.scenarios)
+      const franchises = source.franchiseIds.map((id) => {
+        const franchise = getRequired(franchiseById, id)
+
+        return {
+          id: franchise.id,
+          slug: franchise.slug,
+          title: franchise.title,
+          href: `/franchises/${franchise.slug}`
+        }
+      })
+      const primaryFranchise = franchises[0]
+      const continuationSources = primaryFranchise
+        ? (sourcesByFranchiseId.get(primaryFranchise.id) ?? []).map(
+            (relatedSource) => relatedSource.id
+          )
+        : [source.id]
+      const discovery = discoverScenarios(
+        scenario,
+        snapshot.scenarios,
+        continuationSources
+      )
+      const continuation = primaryFranchise
+        ? {
+            kind: 'franchise' as const,
+            ...primaryFranchise,
+            scenarioCount:
+              scenariosByFranchiseId.get(primaryFranchise.id)?.length ?? 0
+          }
+        : {
+            kind: 'source' as const,
+            id: source.id,
+            slug: source.slug,
+            href: `/sources/${source.slug}`,
+            title: source.title,
+            scenarioCount: scenariosBySourceId.get(source.id)?.length ?? 0
+          }
 
       const page = {
         id: scenario.id,
@@ -214,6 +294,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
         scene: scenario.scene,
         whyAnalogyWorks: scenario.whyAnalogyWorks,
         caveats: scenario.caveats,
+        franchises,
         riskFamilies: scenario.riskFamilyIds.map((id) => {
           const family = getRequired(riskFamilyById, id)
 
@@ -234,7 +315,8 @@ export function createContentCatalog(input: unknown): ContentCatalog {
             href: `/concepts/${concept.slug}`
           }
         }),
-        moreFromSource: discovery.moreFromSource.map((related) =>
+        continuation,
+        moreFromCollection: discovery.moreFromCollection.map((related) =>
           getRequired(scenarioCardById, related.id)
         ),
         relatedScenarios: discovery.relatedScenarios.map(
@@ -271,6 +353,12 @@ export function createContentCatalog(input: unknown): ContentCatalog {
   const sourceSummaries = snapshot.sources.map((source) =>
     toSourceSummary(source, scenariosBySourceId.get(source.id)?.length ?? 0)
   )
+  const franchiseSummaries = snapshot.franchises.map((franchise) =>
+    toFranchiseSummary(
+      franchise,
+      scenariosByFranchiseId.get(franchise.id)?.length ?? 0
+    )
+  )
   const riskFamilySummaries = snapshot.riskFamilies.map((family) =>
     toRiskFamilySummary(
       family,
@@ -282,6 +370,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
   )
   const resourceSummaries = {
     source: sortResources(sourceSummaries),
+    franchise: sortResources(franchiseSummaries),
     'risk-family': sortResources(riskFamilySummaries),
     concept: sortResources(conceptSummaries)
   } satisfies Record<ResourceKind, readonly ResourceSummary[]>
@@ -309,18 +398,61 @@ export function createContentCatalog(input: unknown): ContentCatalog {
             poster: source.poster,
             externalLinks: sourceExternalLinks(source),
             relatedResources: mergeRelatedResources(
+              source.franchiseIds.map((id) =>
+                getRequired(resourceSummaryById, resourceKey('franchise', id))
+              ),
               source.relatedSourceIds.map((id) =>
                 getRequired(resourceSummaryById, resourceKey('source', id))
               ),
-              collectRelatedResources(scenarios, resourceSummaryById, [
-                'risk-family',
-                'concept'
-              ])
+              collectRelatedResources(
+                scenarios,
+                resourceSummaryById,
+                sourceById,
+                ['risk-family', 'concept']
+              )
             ),
             scenarios: scenarios.map((scenario) =>
               getRequired(scenarioCardById, scenario.id)
             )
           } satisfies SourceResourcePage
+        ] as const
+      })
+    ),
+    franchise: new Map(
+      snapshot.franchises.map((franchise) => {
+        const summary = getRequired(
+          resourceSummaryById,
+          resourceKey('franchise', franchise.id)
+        )
+        const sources = sourcesByFranchiseId.get(franchise.id) ?? []
+        const scenarios = scenariosByFranchiseId.get(franchise.id) ?? []
+
+        return [
+          franchise.slug,
+          {
+            ...summary,
+            kind: 'franchise',
+            description: franchise.description,
+            image: franchise.image,
+            sources: sortResources(
+              sources.map((source) =>
+                getRequired(
+                  resourceSummaryById,
+                  resourceKey('source', source.id)
+                )
+              )
+            ),
+            externalLinks: franchiseExternalLinks(franchise),
+            relatedResources: collectRelatedResources(
+              scenarios,
+              resourceSummaryById,
+              sourceById,
+              ['risk-family', 'concept']
+            ),
+            scenarios: scenarios.map((scenario) =>
+              getRequired(scenarioCardById, scenario.id)
+            )
+          } satisfies FranchiseResourcePage
         ] as const
       })
     ),
@@ -344,7 +476,8 @@ export function createContentCatalog(input: unknown): ContentCatalog {
             relatedResources: collectRelatedResources(
               scenarios,
               resourceSummaryById,
-              ['concept', 'source']
+              sourceById,
+              ['concept', 'franchise', 'source']
             ),
             scenarios: scenarios.map((scenario) =>
               getRequired(scenarioCardById, scenario.id)
@@ -373,7 +506,8 @@ export function createContentCatalog(input: unknown): ContentCatalog {
             relatedResources: collectRelatedResources(
               scenarios,
               resourceSummaryById,
-              ['risk-family', 'source']
+              sourceById,
+              ['risk-family', 'franchise', 'source']
             ),
             scenarios: scenarios.map((scenario) =>
               getRequired(scenarioCardById, scenario.id)
@@ -389,6 +523,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
   const staticSlugs = {
     scenario: snapshot.scenarios.map((scenario) => scenario.slug),
     source: snapshot.sources.map((source) => source.slug),
+    franchise: snapshot.franchises.map((franchise) => franchise.slug),
     'risk-family': snapshot.riskFamilies.map((family) => family.slug),
     concept: snapshot.concepts.map((concept) => concept.slug)
   } satisfies Record<StaticContentKind, readonly string[]>
@@ -492,6 +627,22 @@ function toSourceSummary(
   }
 }
 
+function toFranchiseSummary(
+  franchise: FranchiseRecord,
+  scenarioCount: number
+): ResourceSummary {
+  return {
+    kind: 'franchise',
+    id: franchise.id,
+    slug: franchise.slug,
+    href: `/franchises/${franchise.slug}`,
+    title: franchise.title,
+    detailTitle: franchise.title,
+    description: franchise.description,
+    scenarioCount
+  }
+}
+
 function toRiskFamilySummary(
   family: RiskFamilyRecord,
   scenarioCount: number
@@ -527,13 +678,16 @@ function toConceptSummary(
 function collectRelatedResources(
   scenarios: readonly ScenarioRecord[],
   resources: ReadonlyMap<string, ResourceSummary>,
+  sources: ReadonlyMap<string, SourceRecord>,
   kinds: readonly ResourceKind[]
 ) {
   const related = new Map<string, ResourceSummary>()
 
   for (const scenario of scenarios) {
+    const source = getRequired(sources, scenario.sourceId)
     const idsByKind = {
       source: [scenario.sourceId],
+      franchise: source.franchiseIds,
       'risk-family': scenario.riskFamilyIds,
       concept: scenario.conceptIds
     } satisfies Record<ResourceKind, readonly string[]>
@@ -571,6 +725,12 @@ function sourceExternalLinks(source: SourceRecord): readonly ExternalLink[] {
       ? { label: 'YouTube trailer', href: source.youtubeTrailerUrl }
       : null
   ].filter((link): link is ExternalLink => link !== null)
+}
+
+function franchiseExternalLinks(
+  franchise: FranchiseRecord
+): readonly ExternalLink[] {
+  return franchise.imdbUrl ? [{ label: 'IMDb', href: franchise.imdbUrl }] : []
 }
 
 function taxonomyExternalLinks(
@@ -629,8 +789,10 @@ function resourceKindOrder(kind: ResourceKind) {
       return 0
     case 'concept':
       return 1
-    case 'source':
+    case 'franchise':
       return 2
+    case 'source':
+      return 3
   }
 }
 

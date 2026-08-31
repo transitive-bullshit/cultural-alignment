@@ -4,7 +4,7 @@ import type { ContentSnapshot } from './schema'
 import { ContentValidationError, validateContentSnapshot } from './validate'
 
 const minimalSnapshot: ContentSnapshot = {
-  schemaVersion: 2,
+  schemaVersion: 3,
   scenarios: [
     {
       id: 'scenario-1',
@@ -48,7 +48,29 @@ const minimalSnapshot: ContentSnapshot = {
       imdbUrl: 'https://www.imdb.com/title/tt2861424/',
       rottenTomatoesUrl: null,
       youtubeTrailerUrl: null,
+      franchiseIds: ['franchise-1'],
       relatedSourceIds: []
+    }
+  ],
+  franchises: [
+    {
+      id: 'franchise-1',
+      slug: 'rick-and-morty-franchise',
+      title: 'Rick and Morty',
+      keywords: [],
+      description: 'An animated science-fiction franchise.',
+      image: {
+        gallerySrc:
+          'https://assets.example.com/media/generated/franchises/franchise-1/gallery-abc.webp',
+        detailSrc:
+          'https://assets.example.com/media/generated/franchises/franchise-1/detail-def.webp',
+        width: 1600,
+        height: 900,
+        blurDataURL:
+          'data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAABwAQCdASoIAAUAA8BgJYwCdAF1AAD+73a5N2G+4IAAAA==',
+        alt: 'Representative image for Rick and Morty'
+      },
+      imdbUrl: 'https://www.imdb.com/title/tt2861424/'
     }
   ],
   riskFamilies: [
@@ -241,6 +263,40 @@ describe('validateContentSnapshot', () => {
     expect(error.issues[0]!.message).toContain(
       'source "Rick and Morty" (ID: source-1)'
     )
+  })
+
+  it('rejects orphaned media franchise relations', () => {
+    const input = structuredClone(minimalSnapshot)
+    input.sources[0]!.franchiseIds = ['missing-franchise']
+
+    const error = captureValidationError(() => validateContentSnapshot(input))
+
+    expect(error.issues.map(({ code, path }) => ({ code, path }))).toEqual([
+      {
+        code: 'missing-relation',
+        path: 'sources[0].franchiseIds[0]'
+      }
+    ])
+    expect(error.issues[0]!.message).toContain(
+      'source "Rick and Morty" (ID: source-1)'
+    )
+  })
+
+  it('validates required franchise representative images', () => {
+    const input = structuredClone(minimalSnapshot)
+    input.franchises[0]!.image.width = 0
+
+    const error = captureValidationError(() => validateContentSnapshot(input))
+
+    expect(error.issues).toEqual([
+      expect.objectContaining({
+        code: 'invalid-schema',
+        path: 'franchises[0].image.width',
+        message: expect.stringContaining(
+          'franchise "Rick and Morty" (ID: franchise-1)'
+        )
+      })
+    ])
   })
 
   it('only permits episode metadata for television sources', () => {

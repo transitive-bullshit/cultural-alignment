@@ -79,6 +79,7 @@ function createScenario(): ScenarioPage {
     scene: 'The **authored** scene.',
     whyAnalogyWorks: 'The authored analogy.',
     caveats: 'The authored caveat.',
+    franchises: [],
     riskFamilies: [
       {
         id: 'risk-one',
@@ -88,7 +89,15 @@ function createScenario(): ScenarioPage {
       }
     ],
     concepts: [],
-    moreFromSource: [],
+    continuation: {
+      kind: 'source',
+      id: 'source-one',
+      slug: 'source-one',
+      href: '/sources/source-one',
+      title: 'Source *One*',
+      scenarioCount: 1
+    },
+    moreFromCollection: [],
     relatedScenarios: []
   }
 }

@@ -17,7 +17,7 @@ export type RelatedScenarioMatch<Scenario extends DiscoverableScenario> =
 
 export type ScenarioDiscovery<Scenario extends DiscoverableScenario> =
   Readonly<{
-    moreFromSource: readonly Scenario[]
+    moreFromCollection: readonly Scenario[]
     relatedScenarios: readonly RelatedScenarioMatch<Scenario>[]
   }>
 
@@ -29,17 +29,19 @@ export type ScenarioDiscovery<Scenario extends DiscoverableScenario> =
  */
 export function discoverScenarios<Scenario extends DiscoverableScenario>(
   current: Scenario,
-  scenarios: readonly Scenario[]
+  scenarios: readonly Scenario[],
+  continuationSourceIds: readonly string[] = [current.sourceId]
 ): ScenarioDiscovery<Scenario> {
-  const moreFromSource: Scenario[] = []
+  const continuationSources = new Set(continuationSourceIds)
+  const moreFromCollection: Scenario[] = []
   const relatedCandidates: RankedRelatedScenario<Scenario>[] = []
 
   for (const candidate of scenarios) {
     if (candidate.id === current.id) continue
 
-    if (candidate.sourceId === current.sourceId) {
-      if (moreFromSource.length < SCENARIO_DISCOVERY_LIMIT) {
-        moreFromSource.push(candidate)
+    if (continuationSources.has(candidate.sourceId)) {
+      if (moreFromCollection.length < SCENARIO_DISCOVERY_LIMIT) {
+        moreFromCollection.push(candidate)
       }
 
       continue
@@ -78,7 +80,7 @@ export function discoverScenarios<Scenario extends DiscoverableScenario>(
       sharedRiskFamilyIds
     }))
 
-  return { moreFromSource, relatedScenarios }
+  return { moreFromCollection, relatedScenarios }
 }
 
 type RankedRelatedScenario<Scenario extends DiscoverableScenario> =

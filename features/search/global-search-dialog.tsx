@@ -97,7 +97,8 @@ export function GlobalSearchDialog({
         <DialogHeader className='sr-only'>
           <DialogTitle>Search Cultural Alignment</DialogTitle>
           <DialogDescription>
-            Search scenarios, risk families, AI safety concepts, and sources.
+            Search scenarios, franchises, risk families, AI safety concepts, and
+            sources.
           </DialogDescription>
         </DialogHeader>
 
@@ -203,7 +204,7 @@ export function GlobalSearchDialog({
 function emptyMessage(loadState: SearchLoadState, query: string) {
   if (loadState === 'loading') return 'Loading the archive…'
   if (loadState === 'error') return 'Search is unavailable. Close and retry.'
-  if (!query.trim()) return 'Type a title, source, risk, or concept.'
+  if (!query.trim()) return 'Type a title, franchise, source, risk, or concept.'
 
   return 'No matching records.'
 }

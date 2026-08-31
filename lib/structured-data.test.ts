@@ -39,11 +39,14 @@ describe('structured data', () => {
       new URL(scenario.image.detailSrc, siteUrl).href
     )
     expect(structuredData.about).toHaveLength(
-      1 + scenario.riskFamilies.length + scenario.concepts.length
+      scenario.franchises.length +
+        1 +
+        scenario.riskFamilies.length +
+        scenario.concepts.length
     )
   })
 
-  it.each(['risk-family', 'concept', 'source'] as const)(
+  it.each(['risk-family', 'concept', 'source', 'franchise'] as const)(
     'aligns %s collection pages with their dynamic social metadata',
     (kind) => {
       const resource = contentCatalog.getResourcePage(

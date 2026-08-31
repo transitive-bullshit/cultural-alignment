@@ -3,6 +3,7 @@ import type { ContentSnapshot } from './schema'
 export type SearchDocumentKind =
   | 'scenario'
   | 'source'
+  | 'franchise'
   | 'risk-family'
   | 'concept'
 
@@ -21,6 +22,9 @@ export function buildSearchDocuments(
   const sourceById = new Map(
     snapshot.sources.map((source) => [source.id, source])
   )
+  const franchiseById = new Map(
+    snapshot.franchises.map((franchise) => [franchise.id, franchise])
+  )
   const riskFamilyById = new Map(
     snapshot.riskFamilies.map((family) => [family.id, family])
   )
@@ -30,6 +34,9 @@ export function buildSearchDocuments(
   const documents: SearchDocument[] = [
     ...snapshot.scenarios.map((scenario) => {
       const source = getRequired(sourceById, scenario.sourceId)
+      const franchises = source.franchiseIds.map((id) =>
+        getRequired(franchiseById, id)
+      )
 
       return {
         kind: 'scenario' as const,
@@ -37,6 +44,7 @@ export function buildSearchDocuments(
         subtitle: source.title,
         keywords: uniqueStrings([
           source.title,
+          ...franchises.map((franchise) => franchise.title),
           scenario.episode?.label,
           ...scenario.riskFamilyIds.map(
             (id) => getRequired(riskFamilyById, id).shortName
@@ -56,23 +64,48 @@ export function buildSearchDocuments(
         ]),
         ...optionalSupplementalKeywords([
           ...scenario.keywords,
-          ...source.keywords
+          ...source.keywords,
+          ...franchises.flatMap((franchise) => franchise.keywords)
         ]),
         href: `/scenarios/${scenario.slug}`
       }
     }),
-    ...snapshot.sources.map((source) => ({
-      kind: 'source' as const,
-      title: source.title,
-      subtitle: source.sourceType === 'movie' ? 'Movie' : 'TV show',
+    ...snapshot.sources.map((source) => {
+      const franchises = source.franchiseIds.map((id) =>
+        getRequired(franchiseById, id)
+      )
+
+      return {
+        kind: 'source' as const,
+        title: source.title,
+        subtitle: source.sourceType === 'movie' ? 'Movie' : 'TV show',
+        keywords: uniqueStrings([
+          source.description,
+          ...franchises.map((franchise) => franchise.title),
+          source.imdbUrl ? 'IMDb' : null,
+          source.rottenTomatoesUrl ? 'Rotten Tomatoes' : null,
+          source.youtubeTrailerUrl ? 'YouTube trailer' : null
+        ]),
+        ...optionalSupplementalKeywords([
+          ...source.keywords,
+          ...franchises.flatMap((franchise) => franchise.keywords)
+        ]),
+        href: `/sources/${source.slug}`
+      }
+    }),
+    ...snapshot.franchises.map((franchise) => ({
+      kind: 'franchise' as const,
+      title: franchise.title,
+      subtitle: 'Media franchise',
       keywords: uniqueStrings([
-        source.description,
-        source.imdbUrl ? 'IMDb' : null,
-        source.rottenTomatoesUrl ? 'Rotten Tomatoes' : null,
-        source.youtubeTrailerUrl ? 'YouTube trailer' : null
+        franchise.description,
+        franchise.imdbUrl ? 'IMDb' : null,
+        ...snapshot.sources
+          .filter((source) => source.franchiseIds.includes(franchise.id))
+          .map((source) => source.title)
       ]),
-      ...optionalSupplementalKeywords(source.keywords),
-      href: `/sources/${source.slug}`
+      ...optionalSupplementalKeywords(franchise.keywords),
+      href: `/franchises/${franchise.slug}`
     })),
     ...snapshot.riskFamilies.map((family) => ({
       kind: 'risk-family' as const,

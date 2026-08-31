@@ -151,6 +151,7 @@ function isContentKind(input: unknown): input is StaticContentKind {
   return (
     input === 'scenario' ||
     input === 'source' ||
+    input === 'franchise' ||
     input === 'risk-family' ||
     input === 'concept'
   )

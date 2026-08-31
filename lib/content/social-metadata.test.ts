@@ -46,6 +46,10 @@ describe('social metadata derivation', () => {
       'concept',
       contentCatalog.getStaticSlugs('concept')[0]!
     )!
+    const franchise = contentCatalog.getResourcePage(
+      'franchise',
+      contentCatalog.getStaticSlugs('franchise')[0]!
+    )!
     const creditedSource = contentCatalog
       .getStaticSlugs('source')
       .map((slug) => contentCatalog.getResourcePage('source', slug)!)
@@ -54,6 +58,7 @@ describe('social metadata derivation', () => {
     const riskSocial = getResourceSocialMetadata(risk)
     const conceptSocial = getResourceSocialMetadata(concept)
     const sourceSocial = getResourceSocialMetadata(creditedSource)
+    const franchiseSocial = getResourceSocialMetadata(franchise)
     const sourceCredit = getLeadingSourceCredit(creditedSource.description)!
 
     expect(riskSocial.title).toBe(`Risk families / ${risk.title}`)
@@ -69,6 +74,10 @@ describe('social metadata derivation', () => {
     )
     expect(sourceSocial.description).toContain(
       `${sourceCredit} ${creditedSource.title}`
+    )
+    expect(franchiseSocial.title).toBe(`Media franchises / ${franchise.title}`)
+    expect(franchiseSocial.image).toBe(
+      franchise.kind === 'franchise' ? franchise.image : null
     )
   })
 

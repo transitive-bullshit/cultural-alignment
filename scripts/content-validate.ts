@@ -22,6 +22,7 @@ async function readJson(name: string): Promise<unknown> {
 const [
   scenarios,
   sources,
+  franchises,
   riskFamilies,
   concepts,
   manifest,
@@ -30,6 +31,7 @@ const [
 ] = await Promise.all([
   readJson('scenarios.json'),
   readJson('sources.json'),
+  readJson('franchises.json'),
   readJson('risk-families.json'),
   readJson('concepts.json'),
   readJson('manifest.json'),
@@ -40,9 +42,10 @@ const [
 ])
 
 const snapshot = validateContentSnapshot({
-  schemaVersion: 2,
+  schemaVersion: 3,
   scenarios,
   sources,
+  franchises,
   riskFamilies,
   concepts
 })
@@ -61,16 +64,19 @@ const mediaReferences = [
   ),
   ...snapshot.sources.flatMap(({ id, poster }) =>
     poster ? contentAddressedMediaReferences('sources', id, poster) : []
+  ),
+  ...snapshot.franchises.flatMap(({ id, image }) =>
+    contentAddressedMediaReferences('franchises', id, image)
   )
 ]
 await assertGeneratedMediaDirectoryIsEmpty()
 
 console.log(
-  `Validated ${snapshot.scenarios.length} scenarios, ${snapshot.sources.length} sources, ${snapshot.riskFamilies.length} risk families, ${snapshot.concepts.length} concepts, and ${mediaReferences.length} content-addressed media references.`
+  `Validated ${snapshot.scenarios.length} scenarios, ${snapshot.sources.length} sources, ${snapshot.franchises.length} franchises, ${snapshot.riskFamilies.length} risk families, ${snapshot.concepts.length} concepts, and ${mediaReferences.length} content-addressed media references.`
 )
 
 function contentAddressedMediaReferences(
-  collection: 'scenarios' | 'sources',
+  collection: 'franchises' | 'scenarios' | 'sources',
   recordId: string,
   image: Pick<ContentImage, 'gallerySrc' | 'detailSrc'>
 ) {
