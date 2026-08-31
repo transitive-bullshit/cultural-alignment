@@ -18276,7 +18276,10 @@
       "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADQAQCdASoIAAMAA8BgJZwC7ADdDMtWAAD+wq3HDEeYZK584sTxtlKnoAA="
     },
     "memes": [],
-    "video": null,
+    "video": {
+      "provider": "youtube",
+      "id": "PnN4XR_SJc4"
+    },
     "scene": "Kate returns to her parents’ house, but they refuse to discuss the threat because they support “the jobs the comet will provide.”",
     "whyAnalogyWorks": "Promised near-term benefits make people rationalize an intervention that exposes everyone to catastrophic downside. AI deployment can be normalized the same way when jobs, growth, or strategic advantage are treated as substitutes for safety evidence.",
     "caveats": "The scene caricatures political polarization and economic messaging; real technology policy involves genuine tradeoffs that the film deliberately compresses."
