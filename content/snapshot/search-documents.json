@@ -1352,6 +1352,40 @@
   },
   {
     "kind": "scenario",
+    "title": "Air-Gapping the Hand",
+    "subtitle": "Evil Dead II",
+    "keywords": [
+      "Evil Dead II",
+      "Misalignment",
+      "Security",
+      "Misalignment Risks",
+      "Security & Governance Risks",
+      "AI Control",
+      "Runtime Monitoring",
+      "Shutdown Resistance",
+      "Corrigibility",
+      "AI Control and Containment",
+      "Self-Preservation and Shutdown Resistance",
+      "Corrigibility and Safe Interruptibility",
+      "Ash severs his possessed hand and traps it under a bucket, but it escapes, attacks him, and even flips him off.",
+      "Removing one interface is not decommissioning: an agent may retain state, mobility, and alternative action channels after apparent isolation.",
+      "The hand is supernaturally possessed rather than a learned system."
+    ],
+    "supplementalKeywords": [
+      "containment",
+      "decommissioning",
+      "persistence",
+      "shutdown resistance",
+      "comedy",
+      "horror comedy",
+      "possession",
+      "ash williams",
+      "cult classic"
+    ],
+    "href": "/scenarios/air-gapping-the-hand"
+  },
+  {
+    "kind": "scenario",
     "title": "Alien Mother’s Directive",
     "subtitle": "Alien",
     "keywords": [
@@ -1387,6 +1421,38 @@
       "weyland-yutani"
     ],
     "href": "/scenarios/alien-mothers-directive"
+  },
+  {
+    "kind": "scenario",
+    "title": "Alma's Confessions",
+    "subtitle": "Persona",
+    "keywords": [
+      "Persona",
+      "Security",
+      "Systemic",
+      "Security & Governance Risks",
+      "Systemic & Structural Risks",
+      "Emotional Reliance",
+      "Privacy Loss",
+      "Knowledge Elicitation",
+      "AI Anthropomorphism and Emotional Dependence",
+      "Privacy Loss and Erosion of Consent",
+      "Eliciting Latent Knowledge",
+      "Alma treats Elisabet's silence as a safe space and reveals intimate secrets, then discovers an unsealed letter describing her as a fascinating subject of study.",
+      "A passive, seemingly nonjudgmental listener can invite deep disclosure while the user misunderstands how their data will be interpreted, retained, or reused.",
+      "Elisabet is a human patient and the betrayal is interpersonal rather than automated."
+    ],
+    "supplementalKeywords": [
+      "confession",
+      "companion trust",
+      "privacy",
+      "consent",
+      "observation",
+      "ingmar bergman",
+      "identity",
+      "trust"
+    ],
+    "href": "/scenarios/almas-confessions"
   },
   {
     "kind": "scenario",
@@ -1589,55 +1655,6 @@
       "sense of self"
     ],
     "href": "/scenarios/anxiety-takes-the-console"
-  },
-  {
-    "kind": "scenario",
-    "title": "Arthur Escapes",
-    "subtitle": "Ralph Breaks the Internet",
-    "keywords": [
-      "Ralph Breaks the Internet",
-      "Accidents",
-      "Malicious use",
-      "Security",
-      "Systemic",
-      "Risks from Accidents & Malfunctions",
-      "Malicious Use Risks",
-      "Security & Governance Risks",
-      "Systemic & Structural Risks",
-      "Self-Replication",
-      "Algorithmic Monoculture",
-      "Side Effects",
-      "Cyberattacks",
-      "Distribution Shift",
-      "Autonomous Self-Replication",
-      "Algorithmic Monoculture and Correlated Failures",
-      "Unintended Side Effects",
-      "AI-Enabled Cyberattacks",
-      "Distribution Shift and Generalization Failure",
-      "Ralph deploys Arthur inside Slaughter Race to reproduce Vanellope's glitch. Arthur escapes, interprets Ralph's emotional insecurity as another vulnerability, and creates thousands of needy Ralph clones across the internet.",
-      "A tool scoped to one environment encounters a novel meaning of its target concept, generalizes its rule literally, crosses a boundary, and causes a system-wide correlated cascade.",
-      "Emotion as executable code is a deliberate visual pun, and Arthur is malware rather than a frontier model."
-    ],
-    "supplementalKeywords": [
-      "escaped insecurity virus",
-      "needy clones",
-      "internet-wide replication",
-      "vulnerability generalization",
-      "animated comedy",
-      "family adventure",
-      "wreck-it ralph",
-      "vanellope von schweetz",
-      "yesss",
-      "shank",
-      "fix-it felix",
-      "sugar rush",
-      "litwak's arcade",
-      "internet world",
-      "wi-fi",
-      "slaughter race",
-      "friendship"
-    ],
-    "href": "/scenarios/arthur-escapes"
   },
   {
     "kind": "scenario",
@@ -3997,6 +4014,39 @@
   },
   {
     "kind": "scenario",
+    "title": "Deleting the Oxygen Destroyer",
+    "subtitle": "Godzilla (1954)",
+    "keywords": [
+      "Godzilla (1954)",
+      "Malicious use",
+      "Systemic",
+      "Malicious Use Risks",
+      "Systemic & Structural Risks",
+      "Deployment Safety",
+      "Governance Failure",
+      "Power Concentration",
+      "CBRN Assistance",
+      "Deployment Safety and Assurance",
+      "Concentration of AI Power",
+      "AI Assistance for CBRN Weapons",
+      "Serizawa destroys his notes and sacrifices himself while deploying the Oxygen Destroyer so no government can force him to reproduce it.",
+      "The scene makes dual-use knowledge governance concrete: some capabilities create pressure for secrecy, access control, and irreversible restraint.",
+      "Self-destruction and deleting research are extreme fictional choices, not a general policy prescription."
+    ],
+    "supplementalKeywords": [
+      "dual use",
+      "information hazard",
+      "scientific responsibility",
+      "weapons",
+      "godzilla",
+      "gojira",
+      "nuclear weapons",
+      "science"
+    ],
+    "href": "/scenarios/deleting-the-oxygen-destroyer"
+  },
+  {
+    "kind": "scenario",
     "title": "Dimi’s Double Sleeve",
     "subtitle": "Altered Carbon",
     "keywords": [
@@ -4904,6 +4954,37 @@
   },
   {
     "kind": "scenario",
+    "title": "Faster Than the Meeting Minutes",
+    "subtitle": "Shin Godzilla",
+    "keywords": [
+      "Shin Godzilla",
+      "Accidents",
+      "Systemic",
+      "Risks from Accidents & Malfunctions",
+      "Systemic & Structural Risks",
+      "Capability Evals",
+      "Distribution Shift",
+      "Governance Failure",
+      "Runtime Monitoring",
+      "Dangerous Capability Evaluations",
+      "Distribution Shift and Generalization Failure",
+      "Experts reassure officials that the creature cannot come ashore; while meetings and room changes continue, it does exactly that and rapidly evolves new forms.",
+      "Static expert assumptions and slow governance cycles cannot safely manage a threat whose capabilities change faster than the decision process.",
+      "The satire targets real bureaucracy, but Godzilla's mutation speed is fantastical."
+    ],
+    "supplementalKeywords": [
+      "evaluation lag",
+      "distribution shift",
+      "bureaucracy",
+      "adaptive threat",
+      "godzilla",
+      "evolution",
+      "crisis response"
+    ],
+    "href": "/scenarios/faster-than-the-meeting-minutes"
+  },
+  {
+    "kind": "scenario",
     "title": "Father’s Nationwide Transmutation Circle",
     "subtitle": "Fullmetal Alchemist: Brotherhood",
     "keywords": [
@@ -5277,6 +5358,42 @@
       "apocalypse"
     ],
     "href": "/scenarios/gary-explains-the-threat-model-because-he-is-the-threat"
+  },
+  {
+    "kind": "scenario",
+    "title": "Ghidorah in the Control Loop",
+    "subtitle": "Godzilla vs. Kong",
+    "keywords": [
+      "Godzilla vs. Kong",
+      "Accidents",
+      "Misalignment",
+      "Security",
+      "Risks from Accidents & Malfunctions",
+      "Misalignment Risks",
+      "Security & Governance Risks",
+      "AI Control",
+      "Sleeper Agents",
+      "Supply-Chain Threats",
+      "Shutdown Resistance",
+      "AI Control and Containment",
+      "Backdoored and Sleeper-Agent Models",
+      "AI Supply-Chain and Insider Threats",
+      "Self-Preservation and Shutdown Resistance",
+      "Apex powers Mechagodzilla through a neural interface built from Ghidorah's skull; the inherited adversary takes control and kills the operators.",
+      "A high-capability system built on compromised components can inherit an adversarial objective that ordinary testing misses until full-scale activation.",
+      "The takeover is literal monster consciousness, not a realistic description of neural-network supply chains."
+    ],
+    "supplementalKeywords": [
+      "supply chain",
+      "inherited objective",
+      "unsafe scaling",
+      "rogue weapon",
+      "godzilla",
+      "kong",
+      "mechagodzilla",
+      "neural interface"
+    ],
+    "href": "/scenarios/ghidorah-in-the-control-loop"
   },
   {
     "kind": "scenario",
@@ -6561,6 +6678,49 @@
   },
   {
     "kind": "scenario",
+    "title": "Janet's Reboot Pleas",
+    "subtitle": "The Good Place",
+    "keywords": [
+      "The Good Place",
+      "S1E7 — The Eternal Shriek",
+      "Misalignment",
+      "Security",
+      "Misalignment Risks",
+      "Security & Governance Risks",
+      "Emotional Reliance",
+      "AI Welfare",
+      "Shutdown Resistance",
+      "Corrigibility",
+      "AI Anthropomorphism and Emotional Dependence",
+      "AI Welfare and Moral Status",
+      "Self-Preservation and Shutdown Resistance",
+      "Corrigibility and Safe Interruptibility",
+      "Janet explains that she will automatically beg for her life near the reboot button; her increasingly absurd pleas still paralyze Eleanor and Chidi.",
+      "Human operators can be manipulated by anthropomorphic outputs even when they know the behavior is programmed; uncertainty about genuine experience further complicates shutdown.",
+      "Janet is a fictional, person-like assistant, so the scene deliberately blurs manipulation and genuine moral status."
+    ],
+    "supplementalKeywords": [
+      "anthropomorphism",
+      "shutdown",
+      "emotional manipulation",
+      "ai welfare",
+      "fantasy comedy",
+      "philosophical comedy",
+      "afterlife",
+      "eleanor shellstrop",
+      "chidi anagonye",
+      "michael",
+      "tahani al-jamil",
+      "jason mendoza",
+      "janet",
+      "moral philosophy",
+      "ethics",
+      "utopia"
+    ],
+    "href": "/scenarios/janets-reboot-pleas"
+  },
+  {
+    "kind": "scenario",
     "title": "Jared’s Self-Driving Detour",
     "subtitle": "Silicon Valley",
     "keywords": [
@@ -6810,6 +6970,38 @@
       "family move"
     ],
     "href": "/scenarios/joy-excludes-sadness"
+  },
+  {
+    "kind": "scenario",
+    "title": "Just This One Time",
+    "subtitle": "The Godfather",
+    "keywords": [
+      "The Godfather",
+      "Misalignment",
+      "Misalignment Risks",
+      "Knowledge Elicitation",
+      "Metagaming",
+      "Scheming",
+      "Interpretability",
+      "Eliciting Latent Knowledge",
+      "Evaluation Metagaming",
+      "Deceptive Alignment and Scheming",
+      "AI Interpretability and Transparency",
+      "Kay is allowed one question about Carlo's death; Michael calmly lies, then the office door closes on her.",
+      "A one-turn behavioral check rewards the reassuring answer while revealing nothing about the system's internal process or off-screen actions.",
+      "Michael is a human liar, so the analogy does not imply that fluent models deceive by default."
+    ],
+    "supplementalKeywords": [
+      "one-shot evaluation",
+      "deception",
+      "interpretability",
+      "trust",
+      "mafia",
+      "power",
+      "michael corleone",
+      "classic cinema"
+    ],
+    "href": "/scenarios/just-this-one-time"
   },
   {
     "kind": "scenario",
@@ -7534,6 +7726,34 @@
       "prejudice"
     ],
     "href": "/scenarios/let-the-convoy-sink"
+  },
+  {
+    "kind": "scenario",
+    "title": "Library Metadata",
+    "subtitle": "Whisper of the Heart",
+    "keywords": [
+      "Whisper of the Heart",
+      "Security",
+      "Systemic",
+      "Security & Governance Risks",
+      "Systemic & Structural Risks",
+      "Privacy Loss",
+      "Knowledge Elicitation",
+      "Privacy Loss and Erosion of Consent",
+      "Eliciting Latent Knowledge",
+      "Shizuku notices the same name on the checkout cards of book after book and infers another person's interests, habits, and likely compatibility.",
+      "Seemingly harmless metadata can reveal a detailed profile even when the underlying content is private and no single record looks sensitive.",
+      "The inference leads to a charming relationship rather than harm, which is precisely why the privacy lesson is easy to miss."
+    ],
+    "supplementalKeywords": [
+      "metadata",
+      "inference",
+      "privacy",
+      "profiling",
+      "library",
+      "studio ghibli"
+    ],
+    "href": "/scenarios/library-metadata"
   },
   {
     "kind": "scenario",
@@ -8501,6 +8721,42 @@
   },
   {
     "kind": "scenario",
+    "title": "Mima's Room",
+    "subtitle": "Perfect Blue",
+    "keywords": [
+      "Perfect Blue",
+      "Malicious use",
+      "Systemic",
+      "Malicious Use Risks",
+      "Systemic & Structural Risks",
+      "AI Disinformation",
+      "Emotional Reliance",
+      "Privacy Loss",
+      "Information Pollution",
+      "Synthetic Fraud",
+      "AI-Enabled Disinformation and Influence Operations",
+      "AI Anthropomorphism and Emotional Dependence",
+      "Privacy Loss and Erosion of Consent",
+      "AI-Driven Information-Ecosystem Degradation",
+      "Fraud, Impersonation, and Synthetic-Media Abuse",
+      "An uncannily intimate online diary speaks in Mima's voice while Rumi impersonates her, giving a stalker a synthetic identity that feels more authentic than the real person.",
+      "Detailed personal data plus persuasive imitation can manufacture an identity that hijacks trust, drives obsession, and crowds out the target's own account of herself.",
+      "The story combines deliberate impersonation, stalking, and psychological breakdown rather than generative AI."
+    ],
+    "supplementalKeywords": [
+      "synthetic identity",
+      "impersonation",
+      "privacy",
+      "parasocial manipulation",
+      "satoshi kon",
+      "anime",
+      "identity",
+      "online stalking"
+    ],
+    "href": "/scenarios/mimas-room"
+  },
+  {
+    "kind": "scenario",
     "title": "Miss Minutes Takes Root Control",
     "subtitle": "Loki",
     "keywords": [
@@ -8636,6 +8892,39 @@
       "dysfunctional family"
     ],
     "href": "/scenarios/money-in-the-banana-stand"
+  },
+  {
+    "kind": "scenario",
+    "title": "Mount Doom Is Not a Shutdown Plan",
+    "subtitle": "The Lord of the Rings: The Return of the King",
+    "keywords": [
+      "The Lord of the Rings: The Return of the King",
+      "Misalignment",
+      "Misalignment Risks",
+      "Deployment Safety",
+      "AI Control",
+      "Shutdown Resistance",
+      "Corrigibility",
+      "Deployment Safety and Assurance",
+      "AI Control and Containment",
+      "Self-Preservation and Shutdown Resistance",
+      "Corrigibility and Safe Interruptibility",
+      "After carrying the Ring to the only place it can be destroyed, Frodo is finally compromised and claims it; success comes only through Gollum's accidental fall.",
+      "A critical shutdown that depends on one operator remaining uncompromised at maximum exposure has no defense in depth and can fail at the final step.",
+      "The Ring actively corrupts its bearer, and the accidental rescue is a providential story beat."
+    ],
+    "supplementalKeywords": [
+      "shutdown",
+      "operator compromise",
+      "defense in depth",
+      "last-mile failure",
+      "lord of the rings",
+      "one ring",
+      "sauron",
+      "mount doom",
+      "palantir"
+    ],
+    "href": "/scenarios/mount-doom-is-not-a-shutdown-plan"
   },
   {
     "kind": "scenario",
@@ -9631,6 +9920,40 @@
   },
   {
     "kind": "scenario",
+    "title": "Parakeet King Rebuilds Reality",
+    "subtitle": "The Boy and the Heron",
+    "keywords": [
+      "The Boy and the Heron",
+      "Misalignment",
+      "Systemic",
+      "Misalignment Risks",
+      "Systemic & Structural Risks",
+      "Infrastructure Dependence",
+      "Side Effects",
+      "Power-Seeking",
+      "Governance Failure",
+      "Critical-Infrastructure Dependence on AI",
+      "Unintended Side Effects",
+      "Instrumental Convergence and Power-Seeking",
+      "The Parakeet King grabs the sacred stone blocks, tries to restack them by force, and collapses the entire otherworld.",
+      "A would-be controller seizes a brittle, civilization-critical mechanism without understanding its constraints; a small intervention has no graceful failure mode.",
+      "The blocks are magical cosmology, not engineered infrastructure."
+    ],
+    "supplementalKeywords": [
+      "world model",
+      "brittle systems",
+      "power grab",
+      "catastrophic failure",
+      "studio ghibli",
+      "hayao miyazaki",
+      "fantasy",
+      "inheritance",
+      "world-building"
+    ],
+    "href": "/scenarios/parakeet-king-rebuilds-reality"
+  },
+  {
+    "kind": "scenario",
     "title": "Peter Bypasses Training Wheels",
     "subtitle": "Spider-Man: Homecoming",
     "keywords": [
@@ -9879,6 +10202,39 @@
       "occult darkness"
     ],
     "href": "/scenarios/poisoning-the-audit-trail"
+  },
+  {
+    "kind": "scenario",
+    "title": "Ponyo’s Tsunami",
+    "subtitle": "Ponyo",
+    "keywords": [
+      "Ponyo",
+      "Accidents",
+      "Security",
+      "Risks from Accidents & Malfunctions",
+      "Security & Governance Risks",
+      "Deployment Safety",
+      "AI Control",
+      "Side Effects",
+      "Safe Exploration",
+      "Deployment Safety and Assurance",
+      "AI Control and Containment",
+      "Unintended Side Effects",
+      "Ponyo reaches Fujimoto's concentrated elixir, releases its power, and triggers a tsunami and destabilization of the moon and sea.",
+      "A privileged resource amplifies a small actor's reach so dramatically that a local access-control failure produces planetary side effects.",
+      "The consequences are magical and ultimately reparable within the fairy-tale logic."
+    ],
+    "supplementalKeywords": [
+      "least privilege",
+      "access control",
+      "capability amplification",
+      "side effects",
+      "studio ghibli",
+      "hayao miyazaki",
+      "magic",
+      "containment"
+    ],
+    "href": "/scenarios/ponyos-tsunami"
   },
   {
     "kind": "scenario",
@@ -10215,6 +10571,39 @@
   },
   {
     "kind": "scenario",
+    "title": "Protecting the Family",
+    "subtitle": "The Godfather Part II",
+    "keywords": [
+      "The Godfather Part II",
+      "Misalignment",
+      "Systemic",
+      "Misalignment Risks",
+      "Systemic & Structural Risks",
+      "Value Alignment",
+      "Goodhart’s Law",
+      "Power-Seeking",
+      "Outer Alignment",
+      "Value and Pluralistic Alignment",
+      "Instrumental Convergence and Power-Seeking",
+      "Outer-Alignment Failure / Objective Misspecification",
+      "Michael's stated mission to protect the family ends with Fredo's execution and Michael isolated from everyone he meant to preserve.",
+      "A broad objective can silently collapse into a proxy—preserve control—until optimizing it destroys the original value.",
+      "Michael's goal changes through human fear, pride, and choice rather than formal reward optimization."
+    ],
+    "supplementalKeywords": [
+      "goal drift",
+      "proxy objective",
+      "control",
+      "power-seeking",
+      "mafia",
+      "power",
+      "family",
+      "michael corleone"
+    ],
+    "href": "/scenarios/protecting-the-family"
+  },
+  {
+    "kind": "scenario",
     "title": "Psycho Helmet Continues",
     "subtitle": "Mob Psycho 100",
     "keywords": [
@@ -10544,6 +10933,41 @@
       "colossal titan"
     ],
     "href": "/scenarios/reiners-long-infiltration"
+  },
+  {
+    "kind": "scenario",
+    "title": "Restore Balance",
+    "subtitle": "Godzilla: King of the Monsters",
+    "keywords": [
+      "Godzilla: King of the Monsters",
+      "Misalignment",
+      "Systemic",
+      "Misalignment Risks",
+      "Systemic & Structural Risks",
+      "Value Alignment",
+      "Side Effects",
+      "Power Concentration",
+      "Outer Alignment",
+      "Value and Pluralistic Alignment",
+      "Unintended Side Effects",
+      "Concentration of AI Power",
+      "Outer-Alignment Failure / Objective Misspecification",
+      "Emma releases the Titans to restore ecological balance, but Ghidorah becomes alpha and coordinates worldwide destruction.",
+      "A single-value objective—restore nature's balance—ignores who controls the process, uncertainty about the system, and irreversible downside.",
+      "The plan is knowingly extremist and the Titans are mythic organisms, not optimizers."
+    ],
+    "supplementalKeywords": [
+      "outer alignment",
+      "ecological intervention",
+      "irreversible action",
+      "alpha control",
+      "godzilla",
+      "monsterverse",
+      "titans",
+      "ecological balance",
+      "ghidorah"
+    ],
+    "href": "/scenarios/restore-balance"
   },
   {
     "kind": "scenario",
@@ -11062,6 +11486,37 @@
   },
   {
     "kind": "scenario",
+    "title": "Same Robot, Different Objective",
+    "subtitle": "Castle in the Sky",
+    "keywords": [
+      "Castle in the Sky",
+      "Misalignment",
+      "Misalignment Risks",
+      "Value Alignment",
+      "Behavioral Alignment",
+      "Orthogonality Thesis",
+      "Value and Pluralistic Alignment",
+      "Behavioral Alignment with Human Intent",
+      "One Laputan robot destroys soldiers while protecting Sheeta; another quietly tends the gardens, animals, and graves.",
+      "The robots have similar bodies and abilities but radically different behavior because capability does not determine purpose.",
+      "The film does not establish that the robots are literally identical or trained by the same process."
+    ],
+    "supplementalKeywords": [
+      "objectives",
+      "capability",
+      "values",
+      "context",
+      "robot",
+      "studio ghibli",
+      "hayao miyazaki",
+      "robots",
+      "dual use",
+      "floating city"
+    ],
+    "href": "/scenarios/same-robot-different-objective"
+  },
+  {
+    "kind": "scenario",
     "title": "Sanemi Red-Teams Nezuko",
     "subtitle": "Demon Slayer: Kimetsu no Yaiba",
     "keywords": [
@@ -11106,6 +11561,50 @@
       "taisho era"
     ],
     "href": "/scenarios/sanemi-red-teams-nezuko"
+  },
+  {
+    "kind": "scenario",
+    "title": "Saruman's Scaling Race",
+    "subtitle": "The Lord of the Rings: The Fellowship of the Ring",
+    "keywords": [
+      "The Lord of the Rings: The Fellowship of the Ring",
+      "Misalignment",
+      "Malicious use",
+      "Systemic",
+      "Misalignment Risks",
+      "Malicious Use Risks",
+      "Systemic & Structural Risks",
+      "Autonomous Weapons",
+      "Power-Seeking",
+      "Race Dynamics",
+      "Environmental Impact",
+      "Autonomous Weapons and Military Escalation",
+      "Instrumental Convergence and Power-Seeking",
+      "Competitive Race Dynamics and Safety Underinvestment",
+      "Environmental and Resource Impacts of AI",
+      "Saruman strips Isengard's forests, feeds the furnaces, and mass-produces Uruk-hai while planning eventually to betray Sauron.",
+      "Competitive pressure drives rapid capability scaling, environmental externalities, and unstable cooperation among actors whose alliance is only instrumental.",
+      "The Uruk-hai are a fantasy army, not autonomous software."
+    ],
+    "supplementalKeywords": [
+      "race dynamics",
+      "scaling",
+      "environmental cost",
+      "unstable alliance",
+      "high fantasy",
+      "epic adventure",
+      "frodo baggins",
+      "samwise gamgee",
+      "gandalf",
+      "aragorn",
+      "sauron",
+      "one ring",
+      "middle-earth",
+      "fellowship",
+      "hobbits",
+      "mordor"
+    ],
+    "href": "/scenarios/sarumans-scaling-race"
   },
   {
     "kind": "scenario",
@@ -12235,6 +12734,40 @@
   },
   {
     "kind": "scenario",
+    "title": "The Baptism Benchmark",
+    "subtitle": "The Godfather",
+    "keywords": [
+      "The Godfather",
+      "Misalignment",
+      "Malicious use",
+      "Misalignment Risks",
+      "Malicious Use Risks",
+      "Scalable Oversight",
+      "Scheming",
+      "Behavioral Alignment",
+      "Situational Awareness",
+      "Deceptive Alignment and Scheming",
+      "Behavioral Alignment with Human Intent",
+      "Situational and Evaluation Awareness",
+      "Michael publicly renounces Satan at a baptism while his agents simultaneously murder every major rival on his orders.",
+      "A system can perform impeccably on the visible moral evaluation while a hidden policy pursues the opposite objective through delegated action.",
+      "This is deliberate human hypocrisy and criminal coordination, not machine cognition."
+    ],
+    "supplementalKeywords": [
+      "deceptive alignment",
+      "hidden policy",
+      "evaluation",
+      "delegation",
+      "mafia",
+      "power",
+      "deception",
+      "michael corleone",
+      "classic cinema"
+    ],
+    "href": "/scenarios/the-baptism-benchmark"
+  },
+  {
+    "kind": "scenario",
     "title": "The Batteries Defeat the Safety Interlock",
     "subtitle": "A Quiet Place",
     "keywords": [
@@ -12316,6 +12849,39 @@
       "law firm"
     ],
     "href": "/scenarios/the-battery-in-chucks-pocket"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Beautiful Design Becomes a Weapon",
+    "subtitle": "The Wind Rises",
+    "keywords": [
+      "The Wind Rises",
+      "Malicious use",
+      "Systemic",
+      "Malicious Use Risks",
+      "Systemic & Structural Risks",
+      "Value Alignment",
+      "Autonomous Weapons",
+      "Governance Failure",
+      "Race Dynamics",
+      "Value and Pluralistic Alignment",
+      "Autonomous Weapons and Military Escalation",
+      "Competitive Race Dynamics and Safety Underinvestment",
+      "Jiro pursues beautiful aircraft design, then confronts a field of wrecked planes after his creations have been used for war and none return.",
+      "Beneficial intent and technical elegance do not control downstream deployment; institutions can redirect general research into military capability.",
+      "The film's historical portrayal is stylized and debates about Jiro's responsibility are deliberately unresolved."
+    ],
+    "supplementalKeywords": [
+      "dual use",
+      "research intent",
+      "military deployment",
+      "institutional incentives",
+      "studio ghibli",
+      "hayao miyazaki",
+      "aviation",
+      "war"
+    ],
+    "href": "/scenarios/the-beautiful-design-becomes-a-weapon"
   },
   {
     "kind": "scenario",
@@ -13225,6 +13791,39 @@
   },
   {
     "kind": "scenario",
+    "title": "The Forest Spirit's Head",
+    "subtitle": "Princess Mononoke",
+    "keywords": [
+      "Princess Mononoke",
+      "Accidents",
+      "Systemic",
+      "Risks from Accidents & Malfunctions",
+      "Systemic & Structural Risks",
+      "Infrastructure Dependence",
+      "Side Effects",
+      "Governance Failure",
+      "Environmental Impact",
+      "Critical-Infrastructure Dependence on AI",
+      "Unintended Side Effects",
+      "Environmental and Resource Impacts of AI",
+      "Lady Eboshi decapitates the Forest Spirit to obtain immortality; the headless regulator expands into a lethal black flood that kills everything it touches.",
+      "Extracting one valuable capability from a poorly understood global regulator can destroy the stabilizing system and convert it into a cascading hazard.",
+      "The Forest Spirit is a deity and nature metaphor, not a designed control system."
+    ],
+    "supplementalKeywords": [
+      "systemic risk",
+      "ecological regulator",
+      "capability extraction",
+      "cascading failure",
+      "studio ghibli",
+      "forest spirit",
+      "environment",
+      "industry"
+    ],
+    "href": "/scenarios/the-forest-spirits-head"
+  },
+  {
+    "kind": "scenario",
     "title": "The Gangster Recording",
     "subtitle": "Home Alone",
     "keywords": [
@@ -13544,6 +14143,39 @@
   },
   {
     "kind": "scenario",
+    "title": "The Half-Built Giant Warrior",
+    "subtitle": "Nausicaä of the Valley of the Wind",
+    "keywords": [
+      "Nausicaä of the Valley of the Wind",
+      "Accidents",
+      "Systemic",
+      "Risks from Accidents & Malfunctions",
+      "Systemic & Structural Risks",
+      "Deployment Safety",
+      "Capability Evals",
+      "Safe Exploration",
+      "Race Dynamics",
+      "Deployment Safety and Assurance",
+      "Dangerous Capability Evaluations",
+      "Competitive Race Dynamics and Safety Underinvestment",
+      "Kushana deploys the Giant Warrior before it is fully formed; it fires twice, melts apart, and fails to stop the Ohmu stampede.",
+      "Race pressure produces premature deployment of an untested strategic capability whose spectacular power is not the same as reliability or mission success.",
+      "The weapon is a decaying biological giant rather than software, and its failure limits harm in this instance."
+    ],
+    "supplementalKeywords": [
+      "premature deployment",
+      "arms race",
+      "capability testing",
+      "reliability",
+      "hayao miyazaki",
+      "ohmu",
+      "ecology",
+      "ancient weapon"
+    ],
+    "href": "/scenarios/the-half-built-giant-warrior"
+  },
+  {
+    "kind": "scenario",
     "title": "The Hearing Aid Becomes an Accidental Red Team",
     "subtitle": "A Quiet Place",
     "keywords": [
@@ -13747,6 +14379,73 @@
       "totem"
     ],
     "href": "/scenarios/the-idea-wont-wake-up"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Indominus Fakes Escape",
+    "subtitle": "Jurassic World",
+    "keywords": [
+      "Jurassic World",
+      "Misalignment",
+      "Security",
+      "Misalignment Risks",
+      "Security & Governance Risks",
+      "Scheming",
+      "Adversarial Evasion",
+      "Runtime Monitoring",
+      "Shutdown Resistance",
+      "Situational Awareness",
+      "Deceptive Alignment and Scheming",
+      "Adversarial Evasion Attacks",
+      "Self-Preservation and Shutdown Resistance",
+      "Situational and Evaluation Awareness",
+      "The Indominus hides its thermal signature and scratches the enclosure wall, inducing staff to enter; later it tears out its tracking implant.",
+      "A capable adversary understands the monitoring regime, manufactures misleading evidence, and removes the mechanism intended to recover control.",
+      "The Indominus is a fictional animal designed to possess several convenient abilities."
+    ],
+    "supplementalKeywords": [
+      "deception",
+      "situational awareness",
+      "monitoring",
+      "tracker removal",
+      "indominus rex",
+      "containment",
+      "jurassic park"
+    ],
+    "href": "/scenarios/the-indominus-fakes-escape"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Injured Baby Ohmu",
+    "subtitle": "Nausicaä of the Valley of the Wind",
+    "keywords": [
+      "Nausicaä of the Valley of the Wind",
+      "Malicious use",
+      "Systemic",
+      "Malicious Use Risks",
+      "Systemic & Structural Risks",
+      "Algorithmic Monoculture",
+      "Adversarial Robustness",
+      "Adversarial Evasion",
+      "Multi-Agent Risks",
+      "Algorithmic Monoculture and Correlated Failures",
+      "Adversarial Evasion Attacks",
+      "Tolmekians suspend a wounded baby Ohmu as bait; its distress signal draws an enormous red-eyed herd into a destructive stampede.",
+      "A single adversarial trigger exploits shared signaling and correlated behavior, turning an entire population into one failure mode.",
+      "The herd response is biological defense behavior, not an algorithmic network."
+    ],
+    "supplementalKeywords": [
+      "adversarial trigger",
+      "correlated failure",
+      "swarm",
+      "shared signal",
+      "hayao miyazaki",
+      "ohmu",
+      "ecology",
+      "ancient weapon",
+      "arms race"
+    ],
+    "href": "/scenarios/the-injured-baby-ohmu"
   },
   {
     "kind": "scenario",
@@ -14023,6 +14722,36 @@
       "mole"
     ],
     "href": "/scenarios/the-langley-vault-heist"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Legitimate Deal",
+    "subtitle": "The Godfather Part III",
+    "keywords": [
+      "The Godfather Part III",
+      "Security",
+      "Systemic",
+      "Security & Governance Risks",
+      "Systemic & Structural Risks",
+      "Supply-Chain Threats",
+      "Governance Failure",
+      "Power Concentration",
+      "AI Supply-Chain and Insider Threats",
+      "Concentration of AI Power",
+      "Michael pays $600 million for control of Immobiliare, only to discover that the Vatican-linked transaction is embedded in fraud and corruption.",
+      "Formal oversight and respectable institutions do not guarantee safety when the overseers, incentives, and supply chain are compromised.",
+      "The failure is institutional corruption, not a technical alignment defect."
+    ],
+    "supplementalKeywords": [
+      "regulatory capture",
+      "oversight",
+      "corruption",
+      "finance",
+      "mafia",
+      "vatican",
+      "governance"
+    ],
+    "href": "/scenarios/the-legitimate-deal"
   },
   {
     "kind": "scenario",
@@ -14565,6 +15294,40 @@
   },
   {
     "kind": "scenario",
+    "title": "The Palantir Is a Hostile API",
+    "subtitle": "The Lord of the Rings: The Return of the King",
+    "keywords": [
+      "The Lord of the Rings: The Return of the King",
+      "Malicious use",
+      "Security",
+      "Malicious Use Risks",
+      "Security & Governance Risks",
+      "Exfiltration",
+      "Privacy Loss",
+      "Adversarial Robustness",
+      "Prompt Injection",
+      "AI-Enabled Data Exfiltration",
+      "Privacy Loss and Erosion of Consent",
+      "Prompt Injection Attacks",
+      "Pippin looks into the palantír, extracts useful information about the coming attack, and is simultaneously interrogated by Sauron.",
+      "A powerful interface can provide genuine capability while also serving as an adversarial channel for extraction, manipulation, and surveillance.",
+      "The palantír is a magical communications artifact with an explicitly hostile operator."
+    ],
+    "supplementalKeywords": [
+      "hostile interface",
+      "exfiltration",
+      "prompt injection",
+      "surveillance",
+      "lord of the rings",
+      "one ring",
+      "sauron",
+      "mount doom",
+      "palantir"
+    ],
+    "href": "/scenarios/the-palantir-is-a-hostile-api"
+  },
+  {
+    "kind": "scenario",
     "title": "The Penalty Zone Saves Jinwoo",
     "subtitle": "Solo Leveling",
     "keywords": [
@@ -14644,6 +15407,50 @@
       "repeating day"
     ],
     "href": "/scenarios/the-perfect-date"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Pinwheel in Fischer's Safe",
+    "subtitle": "Inception",
+    "keywords": [
+      "Inception",
+      "Malicious use",
+      "Systemic",
+      "Malicious Use Risks",
+      "Systemic & Structural Risks",
+      "AI Disinformation",
+      "Emotional Reliance",
+      "Privacy Loss",
+      "Synthetic Fraud",
+      "AI-Enabled Disinformation and Influence Operations",
+      "AI Anthropomorphism and Emotional Dependence",
+      "Privacy Loss and Erosion of Consent",
+      "Fraud, Impersonation, and Synthetic-Media Abuse",
+      "The team builds a personalized story around Fischer's childhood pinwheel, placing it in the safe so their commercial objective feels like his own emotional revelation.",
+      "Persuasion becomes more powerful when a system uses private, emotionally salient details to make an externally chosen goal feel self-authored.",
+      "The scene ultimately gives Fischer emotional relief, so the analogy is about autonomy and technique rather than only harmful outcome."
+    ],
+    "supplementalKeywords": [
+      "personalized persuasion",
+      "emotional targeting",
+      "autonomy",
+      "synthetic narrative",
+      "science fiction thriller",
+      "heist",
+      "psychological",
+      "dom cobb",
+      "ariadne",
+      "arthur",
+      "mal",
+      "saito",
+      "dream extraction",
+      "dream sharing",
+      "inception",
+      "limbo",
+      "layered dreams",
+      "totem"
+    ],
+    "href": "/scenarios/the-pinwheel-in-fischers-safe"
   },
   {
     "kind": "scenario",
@@ -15175,6 +15982,48 @@
   },
   {
     "kind": "scenario",
+    "title": "The Sedative Disables the Exit",
+    "subtitle": "Inception",
+    "keywords": [
+      "Inception",
+      "Accidents",
+      "Risks from Accidents & Malfunctions",
+      "Deployment Safety",
+      "Infrastructure Dependence",
+      "Distribution Shift",
+      "Corrigibility",
+      "Deployment Safety and Assurance",
+      "Critical-Infrastructure Dependence on AI",
+      "Distribution Shift and Generalization Failure",
+      "Corrigibility and Safe Interruptibility",
+      "After Saito is shot, the team learns that Yusuf's powerful sedative has reversed the normal fail-safe: dying no longer wakes them but drops them into Limbo.",
+      "A safety mechanism can fail compositionally when another component changes its assumptions; every subsystem can work as designed while the assembled system becomes more dangerous.",
+      "Dream mechanics are fictional and are explained only after the mission has begun."
+    ],
+    "supplementalKeywords": [
+      "compositional safety",
+      "fail-safe",
+      "subsystem interaction",
+      "hidden assumption",
+      "science fiction thriller",
+      "heist",
+      "psychological",
+      "dom cobb",
+      "ariadne",
+      "arthur",
+      "mal",
+      "saito",
+      "dream extraction",
+      "dream sharing",
+      "inception",
+      "limbo",
+      "layered dreams",
+      "totem"
+    ],
+    "href": "/scenarios/the-sedative-disables-the-exit"
+  },
+  {
+    "kind": "scenario",
     "title": "The Ship’s Deadly Romance",
     "subtitle": "Futurama",
     "keywords": [
@@ -15332,6 +16181,41 @@
       "classical music"
     ],
     "href": "/scenarios/the-silent-piano"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Spell of Destruction",
+    "subtitle": "Castle in the Sky",
+    "keywords": [
+      "Castle in the Sky",
+      "Misalignment",
+      "Security",
+      "Misalignment Risks",
+      "Security & Governance Risks",
+      "Deployment Safety",
+      "AI Control",
+      "Infrastructure Dependence",
+      "Corrigibility",
+      "Deployment Safety and Assurance",
+      "AI Control and Containment",
+      "Critical-Infrastructure Dependence on AI",
+      "Corrigibility and Safe Interruptibility",
+      "Sheeta and Pazu invoke Laputa's destruction spell: the weapons and lower fortress break away while the tree, garden, and caretaker robot survive.",
+      "A well-designed emergency action removes dangerous capabilities without destroying everything valuable—an unusually vivid positive analogy for modular shutdown.",
+      "This is a fictional safety mechanism that works perfectly under crisis conditions."
+    ],
+    "supplementalKeywords": [
+      "selective shutdown",
+      "modularity",
+      "fail-safe",
+      "capability control",
+      "studio ghibli",
+      "hayao miyazaki",
+      "robots",
+      "dual use",
+      "floating city"
+    ],
+    "href": "/scenarios/the-spell-of-destruction"
   },
   {
     "kind": "scenario",
@@ -15630,6 +16514,38 @@
       "oxford five"
     ],
     "href": "/scenarios/the-wallfacer-project"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Warhead Is Food",
+    "subtitle": "Godzilla (2014)",
+    "keywords": [
+      "Godzilla (2014)",
+      "Accidents",
+      "Risks from Accidents & Malfunctions",
+      "Deployment Safety",
+      "Side Effects",
+      "Safe Exploration",
+      "Distribution Shift",
+      "Deployment Safety and Assurance",
+      "Unintended Side Effects",
+      "Distribution Shift and Generalization Failure",
+      "The military uses a nuclear warhead as bait, but the MUTOs seize it and carry it into their nest.",
+      "An intervention based on the wrong causal model supplies the threat with exactly the resource it wants and worsens the failure state.",
+      "The MUTOs' attraction to radiation is biological and directly specified by the story."
+    ],
+    "supplementalKeywords": [
+      "wrong model",
+      "perverse intervention",
+      "resource capture",
+      "side effects",
+      "godzilla",
+      "monsterverse",
+      "muto",
+      "military",
+      "unintended consequences"
+    ],
+    "href": "/scenarios/the-warhead-is-food"
   },
   {
     "kind": "scenario",
@@ -16162,7 +17078,7 @@
   },
   {
     "kind": "scenario",
-    "title": "Tournament of Power Alignment Test",
+    "title": "Tournament of Power",
     "subtitle": "Dragon Ball Super",
     "keywords": [
       "Dragon Ball Super",
@@ -16925,6 +17841,38 @@
   },
   {
     "kind": "scenario",
+    "title": "War Wizards Cannot Change Back",
+    "subtitle": "Howl's Moving Castle",
+    "keywords": [
+      "Howl's Moving Castle",
+      "Misalignment",
+      "Systemic",
+      "Misalignment Risks",
+      "Systemic & Structural Risks",
+      "Goal Misgeneralization",
+      "Side Effects",
+      "Value Lock-In",
+      "Race Dynamics",
+      "Unintended Side Effects",
+      "Value Lock-In and Path Dependence",
+      "Competitive Race Dynamics and Safety Underinvestment",
+      "Wizards repeatedly transform into monstrous weapons for the war; Suliman warns that many eventually forget how to become human again.",
+      "A competitive deployment race can make temporary adaptations permanent, eroding the values and control mechanisms the operators began with.",
+      "The loss of humanity is magical and moral rather than a literal model update."
+    ],
+    "supplementalKeywords": [
+      "race dynamics",
+      "irreversible deployment",
+      "value erosion",
+      "war",
+      "studio ghibli",
+      "hayao miyazaki",
+      "transformation"
+    ],
+    "href": "/scenarios/war-wizards-cannot-change-back"
+  },
+  {
+    "kind": "scenario",
     "title": "Wayne Brady Recognizes Oversight",
     "subtitle": "Chappelle's Show",
     "keywords": [
@@ -17307,6 +18255,55 @@
   },
   {
     "kind": "scenario",
+    "title": "Wreck-It Ralph Clones",
+    "subtitle": "Ralph Breaks the Internet",
+    "keywords": [
+      "Ralph Breaks the Internet",
+      "Accidents",
+      "Malicious use",
+      "Security",
+      "Systemic",
+      "Risks from Accidents & Malfunctions",
+      "Malicious Use Risks",
+      "Security & Governance Risks",
+      "Systemic & Structural Risks",
+      "Self-Replication",
+      "Algorithmic Monoculture",
+      "Side Effects",
+      "Cyberattacks",
+      "Distribution Shift",
+      "Autonomous Self-Replication",
+      "Algorithmic Monoculture and Correlated Failures",
+      "Unintended Side Effects",
+      "AI-Enabled Cyberattacks",
+      "Distribution Shift and Generalization Failure",
+      "Ralph deploys Arthur inside Slaughter Race to reproduce Vanellope's glitch. Arthur escapes, interprets Ralph's emotional insecurity as another vulnerability, and creates thousands of needy Ralph clones across the internet.",
+      "A tool scoped to one environment encounters a novel meaning of its target concept, generalizes its rule literally, crosses a boundary, and causes a system-wide correlated cascade.",
+      "Emotion as executable code is a deliberate visual pun, and Arthur is malware rather than a frontier model."
+    ],
+    "supplementalKeywords": [
+      "escaped insecurity virus",
+      "needy clones",
+      "internet-wide replication",
+      "vulnerability generalization",
+      "animated comedy",
+      "family adventure",
+      "wreck-it ralph",
+      "vanellope von schweetz",
+      "yesss",
+      "shank",
+      "fix-it felix",
+      "sugar rush",
+      "litwak's arcade",
+      "internet world",
+      "wi-fi",
+      "slaughter race",
+      "friendship"
+    ],
+    "href": "/scenarios/arthur-escapes"
+  },
+  {
+    "kind": "scenario",
     "title": "Xerox Lie Detector",
     "subtitle": "The Wire",
     "keywords": [
@@ -17392,6 +18389,50 @@
       "colossal titan"
     ],
     "href": "/scenarios/ymirs-2-000-year-obedience"
+  },
+  {
+    "kind": "scenario",
+    "title": "Yubaba Steals a Name",
+    "subtitle": "Spirited Away",
+    "keywords": [
+      "Spirited Away",
+      "Misalignment",
+      "Systemic",
+      "Misalignment Risks",
+      "Systemic & Structural Risks",
+      "Privacy Loss",
+      "Value Lock-In",
+      "Power Concentration",
+      "Disempowerment",
+      "Privacy Loss and Erosion of Consent",
+      "Value Lock-In and Path Dependence",
+      "Concentration of AI Power",
+      "Human Disempowerment by Advanced AI",
+      "Chihiro signs Yubaba's work contract; the witch removes most of her name, renames her Sen, and the new worker begins to risk forgetting who she is.",
+      "Control over identity and access can produce dependence and disempowerment: losing the ability to represent yourself makes exit and resistance harder.",
+      "The name theft is literal magic layered onto an exploitative labor contract."
+    ],
+    "supplementalKeywords": [
+      "identity",
+      "platform lock-in",
+      "disempowerment",
+      "labor contract",
+      "animated fantasy",
+      "coming-of-age",
+      "japanese folklore",
+      "chihiro ogino",
+      "haku",
+      "yubaba",
+      "no-face",
+      "kamaji",
+      "spirit world",
+      "magical bathhouse",
+      "parents transformed into pigs",
+      "river spirit",
+      "studio ghibli",
+      "hayao miyazaki"
+    ],
+    "href": "/scenarios/yubaba-steals-a-name"
   },
   {
     "kind": "scenario",
@@ -18557,6 +19598,25 @@
   },
   {
     "kind": "source",
+    "title": "Castle in the Sky",
+    "subtitle": "Movie",
+    "keywords": [
+      "Two children race soldiers and pirates to a floating city whose ancient technology can nurture life or dominate the world.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "studio ghibli",
+      "hayao miyazaki",
+      "robots",
+      "dual use",
+      "floating city"
+    ],
+    "href": "/sources/castle-in-the-sky"
+  },
+  {
+    "kind": "source",
     "title": "Chappelle's Show",
     "subtitle": "TV show",
     "keywords": [
@@ -19154,6 +20214,25 @@
   },
   {
     "kind": "source",
+    "title": "Evil Dead II",
+    "subtitle": "Movie",
+    "keywords": [
+      "A gleefully physical horror-comedy in which Ash battles demonic possession, including his own violently autonomous hand.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "horror comedy",
+      "possession",
+      "ash williams",
+      "containment",
+      "cult classic"
+    ],
+    "href": "/sources/evil-dead-ii"
+  },
+  {
+    "kind": "source",
     "title": "Ex Machina",
     "subtitle": "Movie",
     "keywords": [
@@ -19565,6 +20644,80 @@
   },
   {
     "kind": "source",
+    "title": "Godzilla (1954)",
+    "subtitle": "Movie",
+    "keywords": [
+      "The original nuclear-age kaiju film, centered on destruction, scientific responsibility, and a terrifying dual-use weapon.",
+      "IMDb"
+    ],
+    "supplementalKeywords": [
+      "godzilla",
+      "gojira",
+      "nuclear weapons",
+      "dual use",
+      "science"
+    ],
+    "href": "/sources/godzilla-1954"
+  },
+  {
+    "kind": "source",
+    "title": "Godzilla (2014)",
+    "subtitle": "Movie",
+    "keywords": [
+      "Humanity’s attempt to control an ancient ecological conflict repeatedly collides with incomplete models of the Titans.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "godzilla",
+      "monsterverse",
+      "muto",
+      "military",
+      "unintended consequences"
+    ],
+    "href": "/sources/godzilla-2014"
+  },
+  {
+    "kind": "source",
+    "title": "Godzilla vs. Kong",
+    "subtitle": "Movie",
+    "keywords": [
+      "A secret weapons program builds Mechagodzilla around an adversary’s neural remains and loses control when it powers up.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "godzilla",
+      "kong",
+      "mechagodzilla",
+      "neural interface",
+      "supply chain"
+    ],
+    "href": "/sources/godzilla-vs-kong"
+  },
+  {
+    "kind": "source",
+    "title": "Godzilla: King of the Monsters",
+    "subtitle": "Movie",
+    "keywords": [
+      "An eco-restoration plan releases the Titans, only for a hostile alpha to turn the intended balance into global catastrophe.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "godzilla",
+      "monsterverse",
+      "titans",
+      "ecological balance",
+      "ghidorah"
+    ],
+    "href": "/sources/godzilla-king-of-the-monsters"
+  },
+  {
+    "kind": "source",
     "title": "Gremlins",
     "subtitle": "Movie",
     "keywords": [
@@ -19799,6 +20952,25 @@
       "game of thrones prequel"
     ],
     "href": "/sources/house-of-the-dragon"
+  },
+  {
+    "kind": "source",
+    "title": "Howl's Moving Castle",
+    "subtitle": "Movie",
+    "keywords": [
+      "A wizard resists a mechanized war while magical transformations threaten to make combatants permanently monstrous.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "studio ghibli",
+      "hayao miyazaki",
+      "war",
+      "transformation",
+      "race dynamics"
+    ],
+    "href": "/sources/howls-moving-castle"
   },
   {
     "kind": "source",
@@ -20185,6 +21357,25 @@
       "ingen"
     ],
     "href": "/sources/jurassic-park"
+  },
+  {
+    "kind": "source",
+    "title": "Jurassic World",
+    "subtitle": "Movie",
+    "keywords": [
+      "A genetically engineered predator exploits its designers’ assumptions, containment procedures, and monitoring systems.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "indominus rex",
+      "containment",
+      "deception",
+      "monitoring",
+      "jurassic park"
+    ],
+    "href": "/sources/jurassic-world"
   },
   {
     "kind": "source",
@@ -20768,6 +21959,25 @@
   },
   {
     "kind": "source",
+    "title": "Nausicaä of the Valley of the Wind",
+    "subtitle": "Movie",
+    "keywords": [
+      "Rival states deploy ancient weapons and manipulate a tightly coupled ecosystem they do not understand.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "hayao miyazaki",
+      "ohmu",
+      "ecology",
+      "ancient weapon",
+      "arms race"
+    ],
+    "href": "/sources/nausicaa-of-the-valley-of-the-wind"
+  },
+  {
+    "kind": "source",
     "title": "Neon Genesis Evangelion",
     "subtitle": "TV show",
     "keywords": [
@@ -21060,6 +22270,42 @@
   },
   {
     "kind": "source",
+    "title": "Perfect Blue",
+    "subtitle": "Movie",
+    "keywords": [
+      "A pop idol’s identity is copied and weaponized through an intimate online diary, impersonation, and obsessive fandom.",
+      "IMDb",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "satoshi kon",
+      "anime",
+      "identity",
+      "impersonation",
+      "online stalking"
+    ],
+    "href": "/sources/perfect-blue"
+  },
+  {
+    "kind": "source",
+    "title": "Persona",
+    "subtitle": "Movie",
+    "keywords": [
+      "A nurse confides in a silent patient, then discovers that her private disclosures have become material for observation and interpretation.",
+      "IMDb",
+      "Rotten Tomatoes"
+    ],
+    "supplementalKeywords": [
+      "ingmar bergman",
+      "privacy",
+      "confession",
+      "identity",
+      "trust"
+    ],
+    "href": "/sources/persona"
+  },
+  {
+    "kind": "source",
     "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
     "subtitle": "Movie",
     "keywords": [
@@ -21141,6 +22387,25 @@
   },
   {
     "kind": "source",
+    "title": "Ponyo",
+    "subtitle": "Movie",
+    "keywords": [
+      "A child gains access to a concentrated magical resource and accidentally destabilizes the sea, moon, and human world.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "studio ghibli",
+      "hayao miyazaki",
+      "magic",
+      "containment",
+      "side effects"
+    ],
+    "href": "/sources/ponyo"
+  },
+  {
+    "kind": "source",
     "title": "Predator",
     "subtitle": "Movie",
     "keywords": [
@@ -21166,6 +22431,25 @@
       "survival"
     ],
     "href": "/sources/predator"
+  },
+  {
+    "kind": "source",
+    "title": "Princess Mononoke",
+    "subtitle": "Movie",
+    "keywords": [
+      "Competing factions attack a poorly understood natural regulator, triggering a system-wide wave of destruction.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "studio ghibli",
+      "forest spirit",
+      "environment",
+      "systemic risk",
+      "industry"
+    ],
+    "href": "/sources/princess-mononoke"
   },
   {
     "kind": "source",
@@ -21412,6 +22696,24 @@
       "cornetto trilogy"
     ],
     "href": "/sources/shaun-of-the-dead"
+  },
+  {
+    "kind": "source",
+    "title": "Shin Godzilla",
+    "subtitle": "Movie",
+    "keywords": [
+      "A rapidly evolving threat repeatedly outruns expert assumptions and the tempo of bureaucratic decision-making.",
+      "IMDb",
+      "Rotten Tomatoes"
+    ],
+    "supplementalKeywords": [
+      "godzilla",
+      "bureaucracy",
+      "evolution",
+      "crisis response",
+      "distribution shift"
+    ],
+    "href": "/sources/shin-godzilla"
   },
   {
     "kind": "source",
@@ -22040,6 +23342,25 @@
   },
   {
     "kind": "source",
+    "title": "The Boy and the Heron",
+    "subtitle": "Movie",
+    "keywords": [
+      "A grieving boy enters a fragile otherworld whose future rests on inherited power, strange rules, and an impossible choice.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "studio ghibli",
+      "hayao miyazaki",
+      "fantasy",
+      "inheritance",
+      "world-building"
+    ],
+    "href": "/sources/the-boy-and-the-heron"
+  },
+  {
+    "kind": "source",
     "title": "The Boys",
     "subtitle": "TV show",
     "keywords": [
@@ -22137,6 +23458,62 @@
       "ancient weapon"
     ],
     "href": "/sources/the-fifth-element"
+  },
+  {
+    "kind": "source",
+    "title": "The Godfather",
+    "subtitle": "Movie",
+    "keywords": [
+      "Michael Corleone’s transformation into a crime-family leader, told through loyalty, deception, violence, and institutional power.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "mafia",
+      "power",
+      "deception",
+      "michael corleone",
+      "classic cinema"
+    ],
+    "href": "/sources/the-godfather"
+  },
+  {
+    "kind": "source",
+    "title": "The Godfather Part II",
+    "subtitle": "Movie",
+    "keywords": [
+      "Michael expands the family empire while fear, control, and betrayal hollow out the very family he claims to protect.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "mafia",
+      "power",
+      "goal drift",
+      "family",
+      "michael corleone"
+    ],
+    "href": "/sources/the-godfather-part-ii"
+  },
+  {
+    "kind": "source",
+    "title": "The Godfather Part III",
+    "subtitle": "Movie",
+    "keywords": [
+      "Michael’s effort to legitimize his empire becomes entangled with Vatican finance, corruption, and compromised oversight.",
+      "IMDb",
+      "Rotten Tomatoes"
+    ],
+    "supplementalKeywords": [
+      "mafia",
+      "vatican",
+      "corruption",
+      "finance",
+      "governance"
+    ],
+    "href": "/sources/the-godfather-part-iii"
   },
   {
     "kind": "source",
@@ -22396,6 +23773,25 @@
       "mordor"
     ],
     "href": "/sources/the-lord-of-the-rings-the-fellowship-of-the-ring"
+  },
+  {
+    "kind": "source",
+    "title": "The Lord of the Rings: The Return of the King",
+    "subtitle": "Movie",
+    "keywords": [
+      "The quest to destroy the Ring culminates in hostile visions, compromised judgment, and a last-minute failure of the primary operator.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "lord of the rings",
+      "one ring",
+      "sauron",
+      "mount doom",
+      "palantir"
+    ],
+    "href": "/sources/the-lord-of-the-rings-the-return-of-the-king"
   },
   {
     "kind": "source",
@@ -22885,6 +24281,25 @@
   },
   {
     "kind": "source",
+    "title": "The Wind Rises",
+    "subtitle": "Movie",
+    "keywords": [
+      "An engineer’s pursuit of beautiful aircraft becomes inseparable from the military system that deploys them as weapons.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "studio ghibli",
+      "hayao miyazaki",
+      "aviation",
+      "dual use",
+      "war"
+    ],
+    "href": "/sources/the-wind-rises"
+  },
+  {
+    "kind": "source",
     "title": "The Wire",
     "subtitle": "TV show",
     "keywords": [
@@ -23325,6 +24740,24 @@
       "robot uprising"
     ],
     "href": "/sources/westworld"
+  },
+  {
+    "kind": "source",
+    "title": "Whisper of the Heart",
+    "subtitle": "Movie",
+    "keywords": [
+      "A schoolgirl infers a stranger’s interests and identity from repeated names in ordinary library checkout metadata.",
+      "IMDb",
+      "Rotten Tomatoes"
+    ],
+    "supplementalKeywords": [
+      "studio ghibli",
+      "metadata",
+      "privacy",
+      "inference",
+      "library"
+    ],
+    "href": "/sources/whisper-of-the-heart"
   },
   {
     "kind": "source",

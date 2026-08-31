@@ -9,6 +9,7 @@ import { describe, expect, it, vi } from 'vitest'
 
 import { createMediaStorage, type MediaStorageClient } from './media-storage'
 import { mediaDescriptorObjectKey } from './media-descriptor'
+import { memeMediaDescriptorObjectKey } from './meme-media-descriptor'
 
 const environment = {
   S3_ACCESS_KEY_ID: 'a'.repeat(32),
@@ -109,6 +110,50 @@ describe('createMediaStorage', () => {
       Bucket: 'media-bucket',
       Key: key
     })
+  })
+
+  it('publishes scenario memes beneath their separate asset path', async () => {
+    const bytes = Buffer.from('final meme webp bytes')
+    const client = fakeClient(async () => ({}))
+    const storage = createMediaStorage({ env: environment, client })
+
+    const result = await storage.publish({
+      bytes,
+      collection: 'scenarios',
+      notionId,
+      purpose: 'scenario-meme',
+      variant: 'detail'
+    })
+
+    const hash = createHash('sha256').update(bytes).digest('hex')
+    const key = `media/generated/scenarios/3c6edb27f12480cc92d5c8f2f2e3a7fa/memes/detail-${hash}.webp`
+    expect(result).toEqual({
+      hash,
+      key,
+      uploaded: false,
+      url: `https://media.example.com/assets/${key}`
+    })
+    expect(commandInput(client, 0)).toEqual({
+      Bucket: 'media-bucket',
+      Key: key
+    })
+  })
+
+  it('rejects meme publication outside the scenarios collection', async () => {
+    const storage = createMediaStorage({
+      env: environment,
+      client: fakeClient()
+    })
+
+    await expect(
+      storage.publish({
+        bytes: Buffer.from('meme bytes'),
+        collection: 'sources',
+        notionId,
+        purpose: 'scenario-meme',
+        variant: 'gallery'
+      })
+    ).rejects.toThrow('must belong to the scenarios collection')
   })
 
   it('uploads a missing object with immutable WebP metadata', async () => {
@@ -229,6 +274,23 @@ describe('createMediaStorage', () => {
     })
   })
 
+  it('reads a separately keyed meme descriptor with the same ETag contract', async () => {
+    const client = fakeClient(async () => ({
+      Body: { transformToString: async () => '{"state":"bundle"}' },
+      ETag: '"meme-etag"'
+    }))
+    const storage = createMediaStorage({ env: environment, client })
+
+    await expect(storage.getMemeDescriptor(notionId)).resolves.toEqual({
+      body: '{"state":"bundle"}',
+      etag: '"meme-etag"'
+    })
+    expect(commandInput(client, 0)).toEqual({
+      Bucket: 'media-bucket',
+      Key: memeMediaDescriptorObjectKey(notionId)
+    })
+  })
+
   it('returns null only when a descriptor is missing', async () => {
     const missing = fakeClient(async () => {
       throw awsError('NoSuchKey', 404)
@@ -313,6 +375,45 @@ describe('createMediaStorage', () => {
       ContentType: 'application/json',
       IfMatch: '"previous"',
       Key: mediaDescriptorObjectKey('scenarios', notionId)
+    })
+  })
+
+  it('creates and conditionally replaces separately keyed meme descriptors', async () => {
+    const client = fakeClient()
+    const storage = createMediaStorage({ env: environment, client })
+    const value = {
+      schemaVersion: 1,
+      collection: 'scenario-memes',
+      notionId,
+      state: 'bundle'
+    }
+
+    await storage.putMemeDescriptor({
+      notionId,
+      previousEtag: null,
+      value
+    })
+    await storage.putMemeDescriptor({
+      notionId,
+      previousEtag: '"previous"',
+      value
+    })
+
+    expect(commandInput(client, 0)).toEqual({
+      Body: Buffer.from(`${JSON.stringify(value)}\n`),
+      Bucket: 'media-bucket',
+      CacheControl: 'private,no-store',
+      ContentType: 'application/json',
+      IfNoneMatch: '*',
+      Key: memeMediaDescriptorObjectKey(notionId)
+    })
+    expect(commandInput(client, 1)).toEqual({
+      Body: Buffer.from(`${JSON.stringify(value)}\n`),
+      Bucket: 'media-bucket',
+      CacheControl: 'private,no-store',
+      ContentType: 'application/json',
+      IfMatch: '"previous"',
+      Key: memeMediaDescriptorObjectKey(notionId)
     })
   })
 })

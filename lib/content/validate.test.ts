@@ -27,6 +27,7 @@ const minimalSnapshot: ContentSnapshot = {
           'data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAABwAQCdASoIAAUAA8BgJYwCdAF1AAD+73a5N2G+4IAAAA==',
         alt: 'Summer stands beside the car'
       },
+      memes: [],
       video: null,
       scene: 'The car follows a literal command.',
       whyAnalogyWorks:
@@ -88,6 +89,14 @@ const minimalSnapshot: ContentSnapshot = {
 }
 
 describe('validateContentSnapshot', () => {
+  it('normalizes scenarios without meme attachments to an empty collection', () => {
+    const input = structuredClone(minimalSnapshot)
+    delete (input.scenarios[0] as { memes?: unknown }).memes
+    const snapshot = validateContentSnapshot(input)
+
+    expect(snapshot.scenarios[0]!.memes).toEqual([])
+  })
+
   it('reports schema failures with an exact record path', () => {
     const input = structuredClone(minimalSnapshot)
     input.scenarios[0]!.image.width = -1

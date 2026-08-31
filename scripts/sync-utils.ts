@@ -51,11 +51,20 @@ export function generatedMediaObjectKey(
   hash: string
 ) {
   const compactId = compactNotionId(pageId)
-  if (!sha256Pattern.test(hash)) {
-    throw new Error(`Invalid generated media SHA-256 hash: ${hash}`)
-  }
+  assertGeneratedMediaHash(hash)
 
   return `media/generated/${collection}/${compactId}/${variant}-${hash}.webp`
+}
+
+export function generatedMemeMediaObjectKey(
+  pageId: string,
+  variant: 'gallery' | 'detail',
+  hash: string
+) {
+  const compactId = compactNotionId(pageId)
+  assertGeneratedMediaHash(hash)
+
+  return `media/generated/scenarios/${compactId}/memes/${variant}-${hash}.webp`
 }
 
 export function isGeneratedMediaUrlFor(
@@ -95,6 +104,16 @@ export function isGeneratedMediaUrlFor(
   }
 }
 
+export function isGeneratedMemeMediaUrlFor(
+  value: string,
+  pageId: string,
+  variant: 'gallery' | 'detail'
+) {
+  return isGeneratedMediaUrlForKey(value, (hash) =>
+    generatedMemeMediaObjectKey(pageId, variant, hash)
+  )
+}
+
 export function generatedMediaFilePath(root: string, publicPath: string) {
   if (!isGeneratedMediaPublicPath(publicPath)) {
     throw new Error(`Refusing unexpected generated media path: ${publicPath}`)
@@ -126,6 +145,41 @@ function compactNotionId(pageId: string) {
     throw new Error(`Invalid Notion page ID for generated media: ${pageId}`)
   }
   return compactId
+}
+
+function assertGeneratedMediaHash(hash: string) {
+  if (!sha256Pattern.test(hash)) {
+    throw new Error(`Invalid generated media SHA-256 hash: ${hash}`)
+  }
+}
+
+function isGeneratedMediaUrlForKey(
+  value: string,
+  objectKey: (hash: string) => string
+) {
+  let url: URL
+  try {
+    url = new URL(value)
+  } catch {
+    return false
+  }
+  if (
+    url.protocol !== 'https:' ||
+    url.username ||
+    url.password ||
+    url.search ||
+    url.hash
+  ) {
+    return false
+  }
+
+  const hash = url.pathname.match(/-([0-9a-f]{64})\.webp$/)?.[1]
+  if (!hash) return false
+  try {
+    return url.pathname.endsWith(`/${objectKey(hash)}`)
+  } catch {
+    return false
+  }
 }
 
 export function allocateStableSlugs(

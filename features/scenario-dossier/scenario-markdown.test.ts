@@ -74,6 +74,7 @@ function createScenario(): ScenarioPage {
         'data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAABwAQCdASoIAAUAA8BgJYwCdAF1AAD+73a5N2G+4IAAAA==',
       alt: 'A still with [brackets]'
     },
+    memes: [],
     video: { provider: 'youtube', id: 'abc123', startSeconds: 0 },
     scene: 'The **authored** scene.',
     whyAnalogyWorks: 'The authored analogy.',

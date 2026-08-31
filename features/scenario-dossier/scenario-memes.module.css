@@ -1,0 +1,340 @@
+.section {
+  padding: clamp(58px, 7vw, 96px) clamp(22px, 3vw, 48px) clamp(72px, 8vw, 112px);
+  border-top: 1px solid var(--proto-ink);
+  background: var(--proto-paper);
+}
+
+.inner {
+  width: min(1320px, 100%);
+  margin-inline: auto;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: end;
+  margin-bottom: clamp(24px, 3.4vw, 42px);
+}
+
+.eyebrow,
+.count,
+.caption {
+  font-family: var(--font-geist-mono), monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--proto-electric);
+  font-size: 10px;
+}
+
+.header h2 {
+  margin: 0;
+  font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
+  font-size: clamp(48px, 5.6vw, 78px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.94;
+  text-wrap: balance;
+}
+
+.count {
+  margin: 0;
+  color: var(--proto-muted-ink);
+  font-size: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(12px, 1.5vw, 20px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.grid > li {
+  min-width: 0;
+}
+
+.trigger {
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--proto-muted-ink);
+  border-radius: 2px;
+  background: var(--proto-stage);
+  color: inherit;
+  transition: border-color 160ms var(--proto-ease-out);
+}
+
+.trigger:hover,
+.trigger:focus-visible {
+  border-color: var(--proto-electric);
+}
+
+.trigger:focus-visible {
+  outline: 2px solid var(--proto-electric);
+  outline-offset: 3px;
+}
+
+.thumbnailFrame {
+  position: relative;
+  display: block;
+  aspect-ratio: 3 / 2;
+}
+
+.thumbnailImage {
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+.moreAction {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(28px, 3vw, 42px);
+}
+
+.dialogOverlay {
+  background: color-mix(in srgb, var(--foreground) 82%, transparent);
+}
+
+.dialog[data-scenario-meme-lightbox] {
+  width: min(1100px, calc(100vw - 32px));
+  max-width: calc(100vw - 32px);
+  max-height: calc(100svh - 32px);
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+  border-color: var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--background);
+  box-shadow: 0 24px 80px color-mix(in srgb, var(--foreground) 36%, transparent);
+  color: var(--foreground);
+  transform-origin: center;
+}
+
+.dialogOverlay[data-state='open'] {
+  animation: meme-overlay-in 200ms var(--ease-out) both;
+}
+
+.dialogOverlay[data-state='closed'] {
+  animation: meme-overlay-out 200ms var(--ease-out) both;
+}
+
+.dialog[data-state='open'] {
+  animation: meme-dialog-in 200ms var(--ease-out) both;
+}
+
+.dialog[data-state='closed'] {
+  animation: meme-dialog-out 200ms var(--ease-out) both;
+}
+
+.dialogBody {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  min-width: 0;
+  padding: 54px 16px 16px;
+}
+
+.dialogBody[data-single] {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.closeButton,
+.previousButton,
+.nextButton {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.previousButton {
+  grid-column: 1;
+}
+
+.nextButton {
+  grid-column: 3;
+}
+
+.figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.imageStage {
+  display: grid;
+  width: 100%;
+  place-items: center;
+  overflow: hidden;
+  background: var(--foreground);
+}
+
+.focusedImage {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(100svh - 9rem);
+  object-fit: contain;
+}
+
+.caption {
+  margin: 0;
+  padding: 10px 12px;
+  background: var(--background);
+  color: var(--muted-foreground);
+  font-size: 9px;
+  text-align: center;
+}
+
+@keyframes meme-overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes meme-overlay-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes meme-dialog-in {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes meme-dialog-out {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .section {
+    padding: 58px 18px 84px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .header {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dialog[data-scenario-meme-lightbox] {
+    width: calc(100vw - 16px);
+    max-width: calc(100vw - 16px);
+    max-height: calc(100svh - 16px);
+  }
+
+  .dialogBody {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 52px 10px 10px;
+  }
+
+  .figure {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .previousButton,
+  .nextButton {
+    width: 100%;
+  }
+
+  .previousButton {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .nextButton {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .dialogBody[data-single] .figure {
+    grid-column: 1 / -1;
+  }
+
+  .focusedImage {
+    max-height: calc(100svh - 11rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trigger {
+    transition: none;
+  }
+
+  .dialog[data-state='open'] {
+    animation-name: meme-dialog-fade-in;
+  }
+
+  .dialog[data-state='closed'] {
+    animation-name: meme-dialog-fade-out;
+  }
+}
+
+@keyframes meme-dialog-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes meme-dialog-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

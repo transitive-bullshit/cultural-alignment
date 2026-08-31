@@ -7,7 +7,10 @@ import type { ContentImage } from '../lib/content/schema'
 import { buildSearchDocuments } from '../lib/content/search-documents'
 import { validateContentSnapshot } from '../lib/content/validate'
 import { validateCheckedSyncManifest } from './sync-manifest'
-import { isGeneratedMediaUrlFor } from './sync-utils'
+import {
+  isGeneratedMediaUrlFor,
+  isGeneratedMemeMediaUrlFor
+} from './sync-utils'
 
 const projectRoot = fileURLToPath(new URL('..', import.meta.url))
 const snapshotRoot = join(projectRoot, 'content/snapshot')
@@ -53,6 +56,9 @@ const mediaReferences = [
   ...snapshot.scenarios.flatMap(({ id, image }) =>
     contentAddressedMediaReferences('scenarios', id, image)
   ),
+  ...snapshot.scenarios.flatMap(({ id, memes }) =>
+    memes.flatMap((meme) => memeMediaReferences(id, meme))
+  ),
   ...snapshot.sources.flatMap(({ id, poster }) =>
     poster ? contentAddressedMediaReferences('sources', id, poster) : []
   )
@@ -79,6 +85,22 @@ function contentAddressedMediaReferences(
     if (!isGeneratedMediaUrlFor(src, collection, compactId, variant)) {
       throw new Error(
         `Snapshot ${collection} media ${recordId} has an unowned ${variant} URL path: ${pathname}`
+      )
+    }
+    return src
+  })
+}
+
+function memeMediaReferences(
+  scenarioId: string,
+  image: Pick<ContentImage, 'gallerySrc' | 'detailSrc'>
+) {
+  return (['gallery', 'detail'] as const).map((variant) => {
+    const src = image[`${variant}Src`]
+    const pathname = new URL(src).pathname
+    if (!isGeneratedMemeMediaUrlFor(src, scenarioId, variant)) {
+      throw new Error(
+        `Snapshot scenario meme ${scenarioId} has an unowned ${variant} URL path: ${pathname}`
       )
     }
     return src

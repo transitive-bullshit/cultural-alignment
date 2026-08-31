@@ -18,7 +18,7 @@ export function ScenarioDiscovery({ scenario }: { scenario: ScenarioPage }) {
   if (!hasMoreFromSource && !hasRelatedScenarios) return null
 
   return (
-    <div className={styles.discovery}>
+    <div className={styles.discovery} data-scenario-discovery>
       {hasMoreFromSource ? (
         <section
           className={styles.discoverySection}

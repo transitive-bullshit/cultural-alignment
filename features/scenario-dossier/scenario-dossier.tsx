@@ -10,8 +10,9 @@ import type { ScenarioPage, TaxonomyLink } from '@/lib/content/catalog'
 import { siteUrl } from '@/lib/site'
 
 import { CopyScenarioMarkdown } from './copy-scenario-markdown'
-import { ScenarioMedia } from './scenario-media'
 import { ScenarioDiscovery } from './scenario-discovery'
+import { ScenarioMedia } from './scenario-media'
+import { ScenarioMemes } from './scenario-memes'
 import styles from './scenario-dossier.module.css'
 import { formatScenarioAsMarkdown } from './scenario-markdown'
 import { shouldShowEpisode } from './source-meta'
@@ -76,6 +77,14 @@ export function ScenarioDossier({ scenario }: { scenario: ScenarioPage }) {
             />
           </div>
         </section>
+
+        {scenario.memes.length > 0 ? (
+          <ScenarioMemes
+            key={scenario.id}
+            memes={scenario.memes}
+            scenarioTitle={scenario.title}
+          />
+        ) : null}
 
         <ScenarioDiscovery scenario={scenario} />
       </article>

@@ -87,6 +87,7 @@ export const scenarioRecordSchema = z.object({
   riskFamilyIds: z.array(idSchema).min(1),
   conceptIds: z.array(idSchema).min(1),
   image: scenarioImageSchema,
+  memes: z.array(contentImageSchema).default([]),
   video: scenarioVideoSchema.nullable(),
   scene: z.string().trim().min(1),
   whyAnalogyWorks: z.string().trim().min(1),

@@ -26,6 +26,7 @@ import {
   citationSchema,
   type Citation,
   type ConceptRecord,
+  type ContentImage,
   type ContentSnapshot,
   type RiskFamilyRecord,
   type ScenarioRecord,
@@ -37,6 +38,14 @@ import {
   validateContentSnapshot
 } from '../lib/content/validate'
 import { createBlurDataURL } from './image-placeholder'
+import {
+  MEME_MEDIA_PIPELINE_VERSION,
+  memeMediaDescriptorFastPath,
+  parseMemeMediaDescriptorJson,
+  type MemeMediaDescriptor,
+  type MemeMediaPayload,
+  type MemeMediaSourceIdentity
+} from './meme-media-descriptor'
 import {
   mediaSourceImageBlockId,
   parseMediaDescriptorJson,
@@ -154,6 +163,7 @@ const SCENARIO_PROPERTIES = {
     type: 'relation',
     relationDataSourceId: NOTION_DATA_SOURCES.sources.dataSourceId
   },
+  Memes: { id: 'a%5EWT', type: 'files' },
   Scene: { id: 's%5Ceo', type: 'rich_text' }
 } as const
 
@@ -165,12 +175,7 @@ const SOURCE_PROPERTIES = {
   'Release Date': { id: 'ZlZe', type: 'date' },
   IMDB: { id: '%5C%3Al%3E', type: 'url' },
   'Rotten Tomatoes': { id: 'UN%3DX', type: 'url' },
-  'YouTube Trailer': { id: 'VHah', type: 'url' },
-  'Directly Related Media Sources': {
-    id: 'sW%7Cj',
-    type: 'relation',
-    relationDataSourceId: NOTION_DATA_SOURCES.sources.dataSourceId
-  }
+  'YouTube Trailer': { id: 'VHah', type: 'url' }
 } as const
 
 const RISK_FAMILY_PROPERTIES = {
@@ -231,6 +236,10 @@ const mediaTarget = join(projectRoot, 'public/media/generated')
 const searchTarget = join(projectRoot, 'public/content/search-index.json')
 
 type PageProperty = PageObjectResponse['properties'][string]
+type NotionFileAttachment = Extract<
+  PageProperty,
+  { readonly type: 'files' }
+>['files'][number]
 type PropertyContract = Readonly<
   Record<
     string,
@@ -253,6 +262,7 @@ type ParsedScenario = {
   featured: boolean
   riskFamilyIds: string[]
   conceptIds: string[]
+  memeAttachments: NotionFileAttachment[]
   video: ScenarioRecord['video']
   scene: string
   whyAnalogyWorks: string
@@ -285,6 +295,12 @@ type ImageResult = {
   additionalImageCount: number
   caption: string
   uploaded: boolean
+}
+
+type MemeImageResult = {
+  readonly source: MemeMediaSourceIdentity
+  readonly media: MemeMediaPayload
+  readonly uploaded: boolean
 }
 
 type ImageFallback = {
@@ -532,6 +548,44 @@ function url(
   return property.url
 }
 
+function files(
+  page: PageObjectResponse,
+  name: string,
+  contract: PropertyContract
+) {
+  const property = getProperty(
+    page,
+    name,
+    'files',
+    expectedProperty(contract, name).id
+  )
+  if (property.type !== 'files') throw new Error('Unreachable property type')
+  return property.files
+}
+
+async function retrieveFiles(
+  page: PageObjectResponse,
+  name: string,
+  contract: PropertyContract
+) {
+  const property = getProperty(
+    page,
+    name,
+    'files',
+    expectedProperty(contract, name).id
+  )
+  const response = await notion.pages.properties.retrieve({
+    page_id: page.id,
+    property_id: property.id
+  })
+  if (response.object !== 'property_item' || response.type !== 'files') {
+    throw new Error(
+      `Page ${page.id} property “${name}” did not return a files property`
+    )
+  }
+  return response.files
+}
+
 async function relation(
   page: PageObjectResponse,
   name: string,
@@ -606,6 +660,7 @@ function parseYouTubeVideo(value: string | null): ScenarioRecord['video'] {
 async function parseScenario(
   page: PageObjectResponse
 ): Promise<ParsedScenario> {
+  const memeAttachments = files(page, 'Memes', SCENARIO_PROPERTIES)
   const [
     titleItems,
     episodeItems,
@@ -655,6 +710,7 @@ async function parseScenario(
     featured: featuredScenarioIds.has(page.id),
     riskFamilyIds: riskFamilyIds.toSorted(),
     conceptIds: conceptIds.toSorted(),
+    memeAttachments,
     video: parseYouTubeVideo(url(page, 'YouTube Clip', SCENARIO_PROPERTIES)),
     scene: requiredMarkdown(page, 'Scene', sceneItems),
     whyAnalogyWorks: requiredMarkdown(
@@ -667,18 +723,11 @@ async function parseScenario(
 }
 
 async function parseSource(page: PageObjectResponse): Promise<ParsedSource> {
-  const [titleItems, descriptionItems, keywordItems, relatedSourceIds] =
-    await Promise.all([
-      retrieveRichTextItems(page, 'Name', 'title', SOURCE_PROPERTIES),
-      retrieveRichTextItems(
-        page,
-        'Description',
-        'rich_text',
-        SOURCE_PROPERTIES
-      ),
-      retrieveRichTextItems(page, 'Keywords', 'rich_text', SOURCE_PROPERTIES),
-      relation(page, 'Directly Related Media Sources', SOURCE_PROPERTIES)
-    ])
+  const [titleItems, descriptionItems, keywordItems] = await Promise.all([
+    retrieveRichTextItems(page, 'Name', 'title', SOURCE_PROPERTIES),
+    retrieveRichTextItems(page, 'Description', 'rich_text', SOURCE_PROPERTIES),
+    retrieveRichTextItems(page, 'Keywords', 'rich_text', SOURCE_PROPERTIES)
+  ])
   const sourceTypeOption = select(page, 'Source Type', SOURCE_PROPERTIES).name
   const sourceType =
     sourceTypeOption === 'Movie'
@@ -703,7 +752,7 @@ async function parseSource(page: PageObjectResponse): Promise<ParsedSource> {
     imdbUrl: url(page, 'IMDB', SOURCE_PROPERTIES),
     rottenTomatoesUrl: url(page, 'Rotten Tomatoes', SOURCE_PROPERTIES),
     youtubeTrailerUrl: url(page, 'YouTube Trailer', SOURCE_PROPERTIES),
-    relatedSourceIds: relatedSourceIds.toSorted()
+    relatedSourceIds: []
   }
 }
 
@@ -932,6 +981,23 @@ async function publishMediaVariant(
   return result
 }
 
+async function publishMemeMediaVariant(
+  notionId: string,
+  variant: 'gallery' | 'detail',
+  bytes: Uint8Array
+) {
+  const result = await mediaStorage.publish({
+    bytes,
+    collection: 'scenarios',
+    notionId,
+    purpose: 'scenario-meme',
+    variant
+  })
+  if (result.uploaded) uploadedMediaObjects += 1
+  else reusedMediaObjects += 1
+  return result
+}
+
 async function migrateLegacyImageEntry(
   entry: PreviousSyncEntry,
   page: PageObjectResponse,
@@ -1058,6 +1124,169 @@ function downloadLabel(value: string) {
   } catch {
     return 'configured image URL'
   }
+}
+
+function memeMediaSourceIdentity(
+  attachment: NotionFileAttachment
+): MemeMediaSourceIdentity {
+  return attachment.type === 'external'
+    ? {
+        kind: 'external',
+        name: attachment.name,
+        url: attachment.external.url
+      }
+    : { kind: 'file', name: attachment.name }
+}
+
+function memeAttachmentUrl(attachment: NotionFileAttachment) {
+  return attachment.type === 'external'
+    ? attachment.external.url
+    : attachment.file.url
+}
+
+function memeImageFromDescriptor(
+  item: MemeMediaDescriptor['memes'][number]
+): MemeImageResult {
+  return {
+    ...item,
+    uploaded: false
+  }
+}
+
+function findReusableExternalMeme(
+  descriptor: MemeMediaDescriptor | null,
+  source: MemeMediaSourceIdentity,
+  usedIndexes: Set<number>
+) {
+  if (
+    source.kind !== 'external' ||
+    descriptor?.pipelineVersion !== MEME_MEDIA_PIPELINE_VERSION
+  ) {
+    return null
+  }
+
+  const index = descriptor.memes.findIndex(
+    (item, candidateIndex) =>
+      !usedIndexes.has(candidateIndex) &&
+      item.source.kind === 'external' &&
+      item.source.name === source.name &&
+      item.source.url === source.url
+  )
+  if (index < 0) return null
+
+  usedIndexes.add(index)
+  return descriptor.memes[index]!
+}
+
+async function processMemeAttachment(
+  page: PageObjectResponse,
+  attachment: NotionFileAttachment,
+  record: NotionRecordReference
+): Promise<MemeImageResult> {
+  const source = memeMediaSourceIdentity(attachment)
+
+  try {
+    const input = await downloadImage(memeAttachmentUrl(attachment), record)
+    const sourceHash = sha256(input)
+    const [gallery, detail, blurDataURL] = await Promise.all([
+      sharp(input)
+        .rotate()
+        .resize({ width: 960, withoutEnlargement: true })
+        .webp({ quality: 82, effort: 5 })
+        .toBuffer({ resolveWithObject: true }),
+      sharp(input)
+        .rotate()
+        .resize({ width: 1920, withoutEnlargement: true })
+        .webp({ quality: 90, effort: 5 })
+        .toBuffer({ resolveWithObject: true }),
+      createBlurDataURL(input)
+    ])
+    const [publishedGallery, publishedDetail] = await Promise.all([
+      publishMemeMediaVariant(page.id, 'gallery', gallery.data),
+      publishMemeMediaVariant(page.id, 'detail', detail.data)
+    ])
+
+    return {
+      source,
+      media: {
+        sourceHash,
+        galleryHash: publishedGallery.hash,
+        detailHash: publishedDetail.hash,
+        galleryKey: publishedGallery.key,
+        detailKey: publishedDetail.key,
+        width: detail.info.width,
+        height: detail.info.height,
+        blurDataURL
+      },
+      uploaded: publishedGallery.uploaded || publishedDetail.uploaded
+    }
+  } catch (err) {
+    throw new Error(
+      `Could not process meme attachment ${JSON.stringify(attachment.name)} for ${formatNotionRecord(record)}`,
+      { cause: err }
+    )
+  }
+}
+
+async function syncMemeImages(
+  page: PageObjectResponse,
+  attachments: readonly NotionFileAttachment[],
+  record: NotionRecordReference,
+  force: boolean
+) {
+  const stored = await mediaStorage.getMemeDescriptor(page.id)
+  const descriptor = stored
+    ? parseMemeMediaDescriptorJson(stored.body, { notionId: page.id })
+    : null
+  if (!stored && attachments.length === 0) return []
+
+  const sources = attachments.map(memeMediaSourceIdentity)
+  const fastPath = memeMediaDescriptorFastPath({
+    descriptor,
+    pageLastEditedTime: page.last_edited_time,
+    force,
+    sources
+  })
+
+  if (fastPath) {
+    reusedMediaObjects += fastPath.memes.length * 2
+    return fastPath.memes.map(memeImageFromDescriptor)
+  }
+
+  const reusedExternalIndexes = new Set<number>()
+  const memes = await pMap(
+    attachments,
+    async (attachment) => {
+      const source = memeMediaSourceIdentity(attachment)
+      const reusable = force
+        ? null
+        : findReusableExternalMeme(descriptor, source, reusedExternalIndexes)
+      if (reusable) {
+        reusedMediaObjects += 2
+        return memeImageFromDescriptor({ ...reusable, source })
+      }
+
+      return processMemeAttachment(page, attachment, record)
+    },
+    { concurrency: 4 }
+  )
+
+  const value = {
+    schemaVersion: 1,
+    collection: 'scenario-memes',
+    notionId: page.id,
+    pageLastEditedTime: page.last_edited_time,
+    pipelineVersion: MEME_MEDIA_PIPELINE_VERSION,
+    state: 'bundle',
+    memes: memes.map(({ source, media }) => ({ source, media }))
+  } satisfies MemeMediaDescriptor
+  await mediaStorage.putMemeDescriptor({
+    notionId: page.id,
+    previousEtag: stored?.etag ?? null,
+    value
+  })
+
+  return memes
 }
 
 async function selectImage(
@@ -1378,6 +1607,24 @@ function getMissingImageFallback(
   }
 }
 
+function memeContentImage(
+  result: MemeImageResult,
+  scenarioTitle: string,
+  index: number,
+  total: number
+): ContentImage {
+  const position = total > 1 ? ` ${index + 1} of ${total}` : ''
+
+  return {
+    gallerySrc: mediaStorage.publicUrl(result.media.galleryKey),
+    detailSrc: mediaStorage.publicUrl(result.media.detailKey),
+    width: result.media.width,
+    height: result.media.height,
+    blurDataURL: result.media.blurDataURL,
+    alt: `Generated meme${position} related to ${scenarioTitle}`
+  }
+}
+
 async function writeJson(path: string, value: unknown) {
   await mkdir(dirname(path), { recursive: true })
   await writeFile(path, `${JSON.stringify(value, null, 2)}\n`)
@@ -1385,7 +1632,10 @@ async function writeJson(path: string, value: unknown) {
 
 function assertPublishedMedia(snapshot: ContentSnapshot) {
   const images = [
-    ...snapshot.scenarios.map((scenario) => scenario.image),
+    ...snapshot.scenarios.flatMap((scenario) => [
+      scenario.image,
+      ...scenario.memes
+    ]),
     ...snapshot.sources.flatMap((source) =>
       source.poster ? [source.poster] : []
     )
@@ -1723,6 +1973,50 @@ async function main(options: SyncCliOptions) {
       formatImageBatchSummary('Scenario images', scenarioImageResults)
     )
 
+    const memeScenarioCount = parsedRows.filter(
+      (row) => row.memeAttachments.length > 0
+    ).length
+    const memeAttachmentCount = parsedRows.reduce(
+      (total, row) => total + row.memeAttachments.length,
+      0
+    )
+    let completedMemeScenarios = 0
+    console.log(
+      `Syncing ${memeAttachmentCount} meme attachments across ${memeScenarioCount} scenarios…`
+    )
+    const scenarioMemeResults = await pMap(
+      parsedRows,
+      async (row) => {
+        const hasMemeAttachments = row.memeAttachments.length > 0
+        const record = notionPageReference(row.page, row.title)
+        const result = await report!.capture(
+          'scenarios',
+          record,
+          'processing the meme attachments for',
+          async () => {
+            const attachments = hasMemeAttachments
+              ? await retrieveFiles(row.page, 'Memes', SCENARIO_PROPERTIES)
+              : []
+            return syncMemeImages(row.page, attachments, record, options.force)
+          }
+        )
+
+        if (!hasMemeAttachments) return result
+
+        completedMemeScenarios += 1
+        if (
+          completedMemeScenarios % 10 === 0 ||
+          completedMemeScenarios >= memeScenarioCount
+        ) {
+          console.log(
+            `Processed meme attachments for ${completedMemeScenarios}/${memeScenarioCount} scenarios`
+          )
+        }
+        return result
+      },
+      { concurrency: 8 }
+    )
+
     completedImages = 0
     console.log(`Syncing ${sourceSeeds.length} optional source posters…`)
     const sourceImageResults = await pMap(
@@ -1836,6 +2130,9 @@ async function main(options: SyncCliOptions) {
             image.caption ||
             `Still from ${source.title} illustrating ${row.title}`
         },
+        memes: scenarioMemeResults[index]!.map((meme, memeIndex, memes) =>
+          memeContentImage(meme, row.title, memeIndex, memes.length)
+        ),
         video: row.video,
         scene: row.scene,
         whyAnalogyWorks: row.whyAnalogyWorks,

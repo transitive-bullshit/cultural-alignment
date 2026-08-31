@@ -7,6 +7,8 @@ import { Dialog as DialogPrimitive } from 'radix-ui'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 
+type DialogMotion = 'custom' | 'default' | 'none'
+
 function Dialog({
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Root>) {
@@ -34,16 +36,22 @@ function DialogClose({
 function DialogOverlay({
   className,
   disableMotion = false,
+  motion = 'default',
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Overlay> & {
   disableMotion?: boolean
+  motion?: DialogMotion
 }) {
+  const resolvedMotion = disableMotion ? 'none' : motion
+
   return (
     <DialogPrimitive.Overlay
       data-slot='dialog-overlay'
-      data-motion={disableMotion ? 'none' : undefined}
+      data-motion={resolvedMotion === 'default' ? undefined : resolvedMotion}
       className={cn(
-        'fixed inset-0 z-50 bg-black/50 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:animate-in data-[state=open]:fade-in-0',
+        'fixed inset-0 z-50 bg-black/50',
+        resolvedMotion === 'default' &&
+          'data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:animate-in data-[state=open]:fade-in-0',
         className
       )}
       {...props}
@@ -55,20 +63,28 @@ function DialogContent({
   className,
   children,
   disableMotion = false,
+  motion = 'default',
+  overlayClassName,
   showCloseButton = true,
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Content> & {
   disableMotion?: boolean
+  motion?: DialogMotion
+  overlayClassName?: string
   showCloseButton?: boolean
 }) {
+  const resolvedMotion = disableMotion ? 'none' : motion
+
   return (
     <DialogPortal data-slot='dialog-portal'>
-      <DialogOverlay disableMotion={disableMotion} />
+      <DialogOverlay className={overlayClassName} motion={resolvedMotion} />
       <DialogPrimitive.Content
         data-slot='dialog-content'
-        data-motion={disableMotion ? 'none' : undefined}
+        data-motion={resolvedMotion === 'default' ? undefined : resolvedMotion}
         className={cn(
-          'fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-lg border bg-background p-6 shadow-lg duration-200 outline-none data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 sm:max-w-lg',
+          'fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-lg border bg-background p-6 shadow-lg outline-none sm:max-w-lg',
+          resolvedMotion === 'default' &&
+            'duration-200 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95',
           className
         )}
         {...props}

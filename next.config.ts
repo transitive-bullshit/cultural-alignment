@@ -4,8 +4,20 @@ import scenarios from './content/snapshot/scenarios.json'
 import sources from './content/snapshot/sources.json'
 
 const generatedMediaPathSegment = '/media/generated/'
+type ImageSource = Readonly<{ gallerySrc: string; detailSrc: string }>
+type SnapshotScenario = (typeof scenarios)[number] & {
+  readonly memes?: readonly ImageSource[]
+}
+
 const imageSources = [
-  ...scenarios.flatMap(({ image }) => [image.gallerySrc, image.detailSrc]),
+  ...(scenarios as readonly SnapshotScenario[]).flatMap(({ image, memes }) => [
+    image.gallerySrc,
+    image.detailSrc,
+    ...(memes ?? []).flatMap(({ gallerySrc, detailSrc }) => [
+      gallerySrc,
+      detailSrc
+    ])
+  ]),
   ...sources.flatMap(({ poster }) =>
     poster ? [poster.gallerySrc, poster.detailSrc] : []
   )

@@ -75,6 +75,7 @@ export type ScenarioPage = {
   readonly episode: ScenarioRecord['episode']
   readonly releaseDate: string | null
   readonly image: ContentImage
+  readonly memes: readonly ContentImage[]
   readonly video: Readonly<ScenarioVideo> | null
   readonly scene: string
   readonly whyAnalogyWorks: string
@@ -208,6 +209,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
         episode: scenario.episode,
         releaseDate: scenario.releaseDate,
         image: scenario.image,
+        memes: scenario.memes,
         video: scenario.video,
         scene: scenario.scene,
         whyAnalogyWorks: scenario.whyAnalogyWorks,

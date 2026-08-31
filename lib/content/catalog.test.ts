@@ -10,7 +10,8 @@ const minimalSnapshot = {
       id: 'old-a',
       releaseDate: '2020-01-01',
       featured: true,
-      riskFamilyIds: ['risk-a']
+      riskFamilyIds: ['risk-a'],
+      memes: [createMeme('first'), createMeme('second')]
     }),
     createScenario({
       id: 'null-a',
@@ -134,6 +135,15 @@ const minimalSnapshot = {
 
 describe('ContentCatalog', () => {
   const catalog = createContentCatalog(minimalSnapshot)
+
+  it('projects scenario memes in their authored order', () => {
+    const page = catalog.getScenarioPage('old-a')!
+
+    expect(page.memes.map(({ detailSrc }) => detailSrc)).toEqual([
+      'https://assets.example.com/media/generated/scenarios/old-a/first-detail.webp',
+      'https://assets.example.com/media/generated/scenarios/old-a/second-detail.webp'
+    ])
+  })
 
   it('composes filters and keeps undated records last in stable order', () => {
     expect(slugs(catalog.listScenarioCards({ featuredOnly: true }))).toEqual([
@@ -313,7 +323,7 @@ function resolveDocument(
 
 function createScenario(
   overrides: Pick<ScenarioRecord, 'id' | 'releaseDate' | 'riskFamilyIds'> &
-    Partial<Pick<ScenarioRecord, 'featured'>>
+    Partial<Pick<ScenarioRecord, 'featured' | 'memes'>>
 ): ScenarioRecord {
   return {
     id: overrides.id,
@@ -334,10 +344,23 @@ function createScenario(
         'data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAABwAQCdASoIAAUAA8BgJYwCdAF1AAD+73a5N2G+4IAAAA==',
       alt: `Still from scenario ${overrides.id}`
     },
+    memes: overrides.memes ?? [],
     video: null,
     scene: 'Scene copy.',
     whyAnalogyWorks: 'Why the analogy works.',
     caveats: 'Where the analogy breaks.'
+  }
+}
+
+function createMeme(name: string): ScenarioRecord['memes'][number] {
+  return {
+    gallerySrc: `https://assets.example.com/media/generated/scenarios/old-a/${name}-gallery.webp`,
+    detailSrc: `https://assets.example.com/media/generated/scenarios/old-a/${name}-detail.webp`,
+    width: 1200,
+    height: 1200,
+    blurDataURL:
+      'data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAABwAQCdASoIAAUAA8BgJYwCdAF1AAD+73a5N2G+4IAAAA==',
+    alt: `Scenario meme ${name}`
   }
 }
 

@@ -8,7 +8,12 @@ import {
 } from '@aws-sdk/client-s3'
 
 import { mediaDescriptorObjectKey } from './media-descriptor'
-import { generatedMediaObjectKey, sha256 } from './sync-utils'
+import { memeMediaDescriptorObjectKey } from './meme-media-descriptor'
+import {
+  generatedMediaObjectKey,
+  generatedMemeMediaObjectKey,
+  sha256
+} from './sync-utils'
 
 const CACHE_CONTROL = 'public,max-age=31536000,immutable'
 const DESCRIPTOR_CACHE_CONTROL = 'private,no-store'
@@ -16,6 +21,7 @@ const DEFAULT_REGION = 'auto'
 
 export type MediaCollection = 'scenarios' | 'sources'
 export type MediaVariant = 'gallery' | 'detail'
+export type MediaPurpose = 'record-image' | 'scenario-meme'
 
 export type MediaStorageClient = {
   send(
@@ -27,6 +33,7 @@ export type PublishMediaInput = {
   readonly bytes: Uint8Array
   readonly collection: MediaCollection
   readonly notionId: string
+  readonly purpose?: MediaPurpose
   readonly variant: MediaVariant
 }
 
@@ -44,6 +51,12 @@ export type StoredMediaDescriptor = {
 
 export type PutMediaDescriptorInput = {
   readonly collection: MediaCollection
+  readonly notionId: string
+  readonly previousEtag: string | null
+  readonly value: unknown
+}
+
+export type PutMemeMediaDescriptorInput = {
   readonly notionId: string
   readonly previousEtag: string | null
   readonly value: unknown
@@ -86,6 +99,18 @@ export function createMediaStorage(options: CreateMediaStorageOptions = {}) {
     notionId: string
   ): Promise<StoredMediaDescriptor | null> {
     const key = mediaDescriptorObjectKey(collection, notionId)
+    return getStoredDescriptor(key)
+  }
+
+  async function getMemeDescriptor(
+    notionId: string
+  ): Promise<StoredMediaDescriptor | null> {
+    return getStoredDescriptor(memeMediaDescriptorObjectKey(notionId))
+  }
+
+  async function getStoredDescriptor(
+    key: string
+  ): Promise<StoredMediaDescriptor | null> {
     let response: GetObjectCommandOutput
     try {
       response = (await client.send(
@@ -109,7 +134,20 @@ export function createMediaStorage(options: CreateMediaStorageOptions = {}) {
 
   async function putDescriptor(input: PutMediaDescriptorInput) {
     const key = mediaDescriptorObjectKey(input.collection, input.notionId)
-    const body = Buffer.from(`${JSON.stringify(input.value)}\n`)
+    await putStoredDescriptor(key, input.previousEtag, input.value)
+  }
+
+  async function putMemeDescriptor(input: PutMemeMediaDescriptorInput) {
+    const key = memeMediaDescriptorObjectKey(input.notionId)
+    await putStoredDescriptor(key, input.previousEtag, input.value)
+  }
+
+  async function putStoredDescriptor(
+    key: string,
+    previousEtag: string | null,
+    value: unknown
+  ) {
+    const body = Buffer.from(`${JSON.stringify(value)}\n`)
 
     await client.send(
       new PutObjectCommand({
@@ -117,9 +155,7 @@ export function createMediaStorage(options: CreateMediaStorageOptions = {}) {
         Bucket: config.stateBucketName,
         CacheControl: DESCRIPTOR_CACHE_CONTROL,
         ContentType: 'application/json',
-        ...(input.previousEtag
-          ? { IfMatch: input.previousEtag }
-          : { IfNoneMatch: '*' }),
+        ...(previousEtag ? { IfMatch: previousEtag } : { IfNoneMatch: '*' }),
         Key: key
       })
     )
@@ -128,12 +164,7 @@ export function createMediaStorage(options: CreateMediaStorageOptions = {}) {
   async function publish(input: PublishMediaInput): Promise<PublishedMedia> {
     const bytes = Buffer.from(input.bytes)
     const hash = sha256(bytes)
-    const key = generatedMediaObjectKey(
-      input.collection,
-      input.notionId,
-      input.variant,
-      hash
-    )
+    const key = mediaObjectKey(input, hash)
     const url = publicUrl(key)
 
     if (await hasObject(key)) {
@@ -160,7 +191,33 @@ export function createMediaStorage(options: CreateMediaStorageOptions = {}) {
     }
   }
 
-  return { getDescriptor, hasObject, publicUrl, publish, putDescriptor }
+  return {
+    getDescriptor,
+    getMemeDescriptor,
+    hasObject,
+    publicUrl,
+    publish,
+    putDescriptor,
+    putMemeDescriptor
+  }
+}
+
+function mediaObjectKey(input: PublishMediaInput, hash: string) {
+  if (input.purpose === 'scenario-meme') {
+    if (input.collection !== 'scenarios') {
+      throw new Error(
+        'Scenario meme media must belong to the scenarios collection'
+      )
+    }
+    return generatedMemeMediaObjectKey(input.notionId, input.variant, hash)
+  }
+
+  return generatedMediaObjectKey(
+    input.collection,
+    input.notionId,
+    input.variant,
+    hash
+  )
 }
 
 function mediaStorageConfig(env: Environment) {

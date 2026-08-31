@@ -222,6 +222,7 @@ function currentSnapshot() {
             'data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAABwAQCdASoIAAUAA8BgJYwCdAF1AAD+73a5N2G+4IAAAA==',
           alt: 'A still'
         },
+        memes: [],
         video: null,
         scene: 'Scene',
         whyAnalogyWorks: 'Why',

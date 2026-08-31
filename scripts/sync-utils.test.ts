@@ -5,8 +5,10 @@ import {
   allocateStableSlugs,
   generatedMediaFilePath,
   generatedMediaObjectKey,
+  generatedMemeMediaObjectKey,
   generatedMediaPublicPaths,
   isGeneratedMediaUrlFor,
+  isGeneratedMemeMediaUrlFor,
   parseSearchKeywords,
   richTextToMarkdown,
   retrieveRelationIds
@@ -101,6 +103,33 @@ describe('generatedMediaObjectKey', () => {
   })
 })
 
+describe('generatedMemeMediaObjectKey', () => {
+  it('nests content-addressed meme variants beneath their scenario owner', () => {
+    expect(
+      generatedMemeMediaObjectKey(
+        '3c6edb27-f124-80cc-92d5-c8f2f2e3a7fa',
+        'detail',
+        'a'.repeat(64)
+      )
+    ).toBe(
+      `media/generated/scenarios/3c6edb27f12480cc92d5c8f2f2e3a7fa/memes/detail-${'a'.repeat(64)}.webp`
+    )
+  })
+
+  it('rejects malformed owner IDs and hashes', () => {
+    expect(() =>
+      generatedMemeMediaObjectKey('not-a-notion-id', 'gallery', 'a'.repeat(64))
+    ).toThrow('Invalid Notion page ID')
+    expect(() =>
+      generatedMemeMediaObjectKey(
+        '3c6edb27-f124-80cc-92d5-c8f2f2e3a7fa',
+        'gallery',
+        'not-a-hash'
+      )
+    ).toThrow('Invalid generated media SHA-256 hash')
+  })
+})
+
 describe('isGeneratedMediaUrlFor', () => {
   const pageId = '3c6edb27-f124-80cc-92d5-c8f2f2e3a7fa'
   const key = `media/generated/scenarios/${pageId.replaceAll('-', '')}/gallery-${'a'.repeat(64)}.webp`
@@ -151,6 +180,42 @@ describe('isGeneratedMediaUrlFor', () => {
     ).toBe(false)
     expect(
       isGeneratedMediaUrlFor('not-a-url', 'scenarios', pageId, 'gallery')
+    ).toBe(false)
+  })
+})
+
+describe('isGeneratedMemeMediaUrlFor', () => {
+  const pageId = '3c6edb27-f124-80cc-92d5-c8f2f2e3a7fa'
+  const key = `media/generated/scenarios/${pageId.replaceAll('-', '')}/memes/gallery-${'a'.repeat(64)}.webp`
+
+  it('accepts only a safe URL with the expected scenario, variant, and hash', () => {
+    expect(
+      isGeneratedMemeMediaUrlFor(
+        `https://media.example.com/assets/${key}`,
+        pageId,
+        'gallery'
+      )
+    ).toBe(true)
+    expect(
+      isGeneratedMemeMediaUrlFor(
+        `https://media.example.com/assets/${key}`,
+        pageId,
+        'detail'
+      )
+    ).toBe(false)
+    expect(
+      isGeneratedMemeMediaUrlFor(
+        `https://media.example.com/assets/${key}`,
+        'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+        'gallery'
+      )
+    ).toBe(false)
+    expect(
+      isGeneratedMemeMediaUrlFor(
+        `https://media.example.com/assets/${key}?download=1`,
+        pageId,
+        'gallery'
+      )
     ).toBe(false)
   })
 })
