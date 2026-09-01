@@ -76,6 +76,13 @@ import {
   type PreviousSyncManifest
 } from './sync-manifest'
 import { resolveCitationMetadata } from './citation-metadata'
+import {
+  franchiseImageAlt,
+  reuseSnapshotMedia,
+  scenarioImageAlt,
+  scenarioMemeAlt,
+  sourcePosterAlt
+} from './sync-fast-media'
 import { createMediaStorage } from './media-storage'
 import {
   parseSyncCliArgs,
@@ -173,6 +180,10 @@ const SCENARIO_PROPERTIES = {
   Scene: { id: 's%5Ceo', type: 'rich_text' },
   Tags: { id: 'es%5B%40', type: 'multi_select' }
 } as const
+
+const FAST_SCENARIO_PROPERTY_NAMES = Object.keys(SCENARIO_PROPERTIES).filter(
+  (name) => name !== 'Memes'
+)
 
 const SOURCE_PROPERTIES = {
   Name: { id: 'title', type: 'title' },
@@ -326,6 +337,9 @@ type MemeImageResult = {
   readonly media: MemeMediaPayload
   readonly uploaded: boolean
 }
+
+type RecordImageResult = ImageResult | ContentImage
+type ScenarioMemeResult = MemeImageResult | ContentImage
 
 type ImageFallback = {
   readonly imageBlockId: string
@@ -699,9 +713,12 @@ function parseYouTubeVideo(value: string | null): ScenarioRecord['video'] {
 }
 
 async function parseScenario(
-  page: PageObjectResponse
+  page: PageObjectResponse,
+  includeMemeAttachments: boolean
 ): Promise<ParsedScenario> {
-  const memeAttachments = files(page, 'Memes', SCENARIO_PROPERTIES)
+  const memeAttachments = includeMemeAttachments
+    ? files(page, 'Memes', SCENARIO_PROPERTIES)
+    : []
   const [
     titleItems,
     episodeItems,
@@ -923,6 +940,37 @@ async function readPreviousManifest(): Promise<PreviousSyncManifest> {
 
     throw new Error(
       'Existing content/snapshot/manifest.json is invalid; refusing to discard slug and legacy media history',
+      { cause: err }
+    )
+  }
+}
+
+async function readPreviousSnapshotForFastSync(): Promise<ContentSnapshot> {
+  try {
+    const [scenarios, sources, franchises, riskFamilies, concepts] =
+      await Promise.all(
+        [
+          'scenarios.json',
+          'sources.json',
+          'franchises.json',
+          'risk-families.json',
+          'concepts.json'
+        ].map((name) =>
+          readFile(join(snapshotTarget, name), 'utf8').then(JSON.parse)
+        )
+      )
+
+    return validateContentSnapshot({
+      schemaVersion: 3,
+      scenarios,
+      sources,
+      franchises,
+      riskFamilies,
+      concepts
+    })
+  } catch (err) {
+    throw new Error(
+      '--fast requires a valid existing content snapshot. Run "pnpm content:sync" without --fast to rebuild it.',
       { cause: err }
     )
   }
@@ -1691,16 +1739,41 @@ function memeContentImage(
   index: number,
   total: number
 ): ContentImage {
-  const position = total > 1 ? ` ${index + 1} of ${total}` : ''
-
   return {
     gallerySrc: mediaStorage.publicUrl(result.media.galleryKey),
     detailSrc: mediaStorage.publicUrl(result.media.detailKey),
     width: result.media.width,
     height: result.media.height,
     blurDataURL: result.media.blurDataURL,
-    alt: `Generated meme${position} related to ${scenarioTitle}`
+    alt: scenarioMemeAlt(scenarioTitle, index, total)
   }
+}
+
+function resolvedContentImage(
+  result: RecordImageResult,
+  defaultAlt: string
+): ContentImage {
+  if ('alt' in result) return result
+
+  return {
+    gallerySrc: result.gallerySrc,
+    detailSrc: result.detailSrc,
+    width: result.width,
+    height: result.height,
+    blurDataURL: result.blurDataURL,
+    alt: result.caption || defaultAlt
+  }
+}
+
+function resolvedMemeContentImage(
+  result: ScenarioMemeResult,
+  scenarioTitle: string,
+  index: number,
+  total: number
+) {
+  return 'alt' in result
+    ? result
+    : memeContentImage(result, scenarioTitle, index, total)
 }
 
 async function writeJson(path: string, value: unknown) {
@@ -1823,10 +1896,16 @@ async function verifyDataSource(
   }
 }
 
-async function readDataSourcePages(dataSourceId: string) {
+async function readDataSourcePages(
+  dataSourceId: string,
+  filterProperties?: readonly string[]
+) {
   const pages: PageObjectResponse[] = []
   for await (const row of iterateAllDataSourceRows(notion, {
     data_source_id: dataSourceId,
+    ...(filterProperties
+      ? { filter_properties: [...filterProperties] }
+      : undefined),
     result_type: 'page',
     page_size: 100
   })) {
@@ -1898,10 +1977,14 @@ let reusedMediaObjects = 0
 
 async function main(options: SyncCliOptions) {
   const stageRoot = join(projectRoot, `.content-sync-${randomUUID()}`)
-  const [previousManifest, cachedCitations] = await Promise.all([
-    readPreviousManifest(),
-    readPreviousCitationCache()
-  ])
+  const [previousManifest, cachedCitations, previousSnapshot] =
+    await Promise.all([
+      readPreviousManifest(),
+      readPreviousCitationCache(),
+      options.fast
+        ? readPreviousSnapshotForFastSync()
+        : Promise.resolve<ContentSnapshot | null>(null)
+    ])
   await mkdir(stageRoot, { recursive: true })
 
   try {
@@ -1930,7 +2013,10 @@ async function main(options: SyncCliOptions) {
       riskFamilyPages,
       conceptPages
     ] = await Promise.all([
-      readDataSourcePages(NOTION_DATA_SOURCES.scenarios.dataSourceId),
+      readDataSourcePages(
+        NOTION_DATA_SOURCES.scenarios.dataSourceId,
+        options.fast ? FAST_SCENARIO_PROPERTY_NAMES : undefined
+      ),
       readDataSourcePages(NOTION_DATA_SOURCES.sources.dataSourceId),
       readDataSourcePages(NOTION_DATA_SOURCES.franchises.dataSourceId),
       readDataSourcePages(NOTION_DATA_SOURCES.riskFamilies.dataSourceId),
@@ -1950,7 +2036,9 @@ async function main(options: SyncCliOptions) {
       riskFamilyResults,
       conceptResults
     ] = await Promise.all([
-      parseNotionPages(report, 'scenarios', scenarioPages, parseScenario),
+      parseNotionPages(report, 'scenarios', scenarioPages, (page) =>
+        parseScenario(page, !options.fast)
+      ),
       parseNotionPages(report, 'sources', sourcePages, parseSource),
       parseNotionPages(report, 'franchises', franchisePages, parseFranchise),
       parseNotionPages(
@@ -2025,183 +2113,213 @@ async function main(options: SyncCliOptions) {
     const sourceSeedById = new Map(
       sourceSeeds.map((source) => [source.id, source])
     )
-    let completedImages = 0
-    console.log(`Syncing ${parsedRows.length} scenario images…`)
-    const scenarioImageResults = await pMap(
-      parsedRows,
-      async (row) => {
-        const record = notionPageReference(row.page, row.title)
-        const result = await report!.capture(
-          'scenarios',
-          record,
-          'processing the image for',
-          async () => {
-            const source = sourceSeedById.get(row.sourceId)
-            if (!source) {
-              throw new Error(
-                `Related media source ${row.sourceId} could not be found or parsed`
+    const fastMedia = previousSnapshot
+      ? reuseSnapshotMedia(previousSnapshot, {
+          scenarios: parsedRows,
+          sources: sourceSeeds,
+          franchises: franchiseSeeds
+        })
+      : null
+    let scenarioImageResults: readonly (RecordImageResult | null)[]
+    let scenarioMemeResults: readonly (readonly ScenarioMemeResult[] | null)[]
+    let sourceImageResults: readonly (RecordImageResult | null)[]
+    let franchiseImageResults: readonly (RecordImageResult | null)[]
+
+    if (fastMedia) {
+      console.log(
+        'Fast mode: reusing all image data from the existing snapshot.'
+      )
+      scenarioImageResults = fastMedia.scenarioImages
+      scenarioMemeResults = fastMedia.scenarioMemes
+      sourceImageResults = fastMedia.sourcePosters
+      franchiseImageResults = fastMedia.franchiseImages
+    } else {
+      let completedImages = 0
+      console.log(`Syncing ${parsedRows.length} scenario images…`)
+      const syncedScenarioImages = await pMap(
+        parsedRows,
+        async (row) => {
+          const record = notionPageReference(row.page, row.title)
+          const result = await report!.capture(
+            'scenarios',
+            record,
+            'processing the image for',
+            async () => {
+              const source = sourceSeedById.get(row.sourceId)
+              if (!source) {
+                throw new Error(
+                  `Related media source ${row.sourceId} could not be found or parsed`
+                )
+              }
+              const previousEntry = previousManifest.entries.scenarios[row.id]
+              const image = await syncImage(
+                row.page,
+                {
+                  collection: 'scenarios',
+                  record,
+                  required: true,
+                  fallback: getMissingImageFallback(row, source.title)
+                },
+                previousEntry,
+                options.force
+              )
+              if (!image) throw new Error('No image was produced')
+              return image
+            }
+          )
+
+          completedImages += 1
+          if (
+            completedImages % 20 === 0 ||
+            completedImages >= parsedRows.length
+          ) {
+            console.log(
+              `Processed ${completedImages}/${parsedRows.length} images`
+            )
+          }
+          return result
+        },
+        { concurrency: 16 }
+      )
+      scenarioImageResults = syncedScenarioImages
+      console.log(
+        formatImageBatchSummary('Scenario images', syncedScenarioImages)
+      )
+
+      const memeScenarioCount = parsedRows.filter(
+        (row) => row.memeAttachments.length > 0
+      ).length
+      const memeAttachmentCount = parsedRows.reduce(
+        (total, row) => total + row.memeAttachments.length,
+        0
+      )
+      let completedMemeScenarios = 0
+      console.log(
+        `Syncing ${memeAttachmentCount} meme attachments across ${memeScenarioCount} scenarios…`
+      )
+      scenarioMemeResults = await pMap(
+        parsedRows,
+        async (row) => {
+          const hasMemeAttachments = row.memeAttachments.length > 0
+          const record = notionPageReference(row.page, row.title)
+          const result = await report!.capture(
+            'scenarios',
+            record,
+            'processing the meme attachments for',
+            async () => {
+              const attachments = hasMemeAttachments
+                ? await retrieveFiles(row.page, 'Memes', SCENARIO_PROPERTIES)
+                : []
+              return syncMemeImages(
+                row.page,
+                attachments,
+                record,
+                options.force
               )
             }
-            const previousEntry = previousManifest.entries.scenarios[row.id]
-            const image = await syncImage(
-              row.page,
-              {
-                collection: 'scenarios',
-                record,
-                required: true,
-                fallback: getMissingImageFallback(row, source.title)
-              },
-              previousEntry,
-              options.force
+          )
+
+          if (!hasMemeAttachments) return result
+
+          completedMemeScenarios += 1
+          if (
+            completedMemeScenarios % 10 === 0 ||
+            completedMemeScenarios >= memeScenarioCount
+          ) {
+            console.log(
+              `Processed meme attachments for ${completedMemeScenarios}/${memeScenarioCount} scenarios`
             )
-            if (!image) throw new Error('No image was produced')
-            return image
           }
-        )
+          return result
+        },
+        { concurrency: 16 }
+      )
 
-        completedImages += 1
-        if (
-          completedImages % 20 === 0 ||
-          completedImages >= parsedRows.length
-        ) {
-          console.log(
-            `Processed ${completedImages}/${parsedRows.length} images`
+      completedImages = 0
+      console.log(`Syncing ${sourceSeeds.length} optional source posters…`)
+      const syncedSourceImages = await pMap(
+        sourceSeeds,
+        async (source) => {
+          const record = notionPageReference(source.page, source.title)
+          const result = await report!.capture(
+            'sources',
+            record,
+            'processing the optional poster for',
+            () =>
+              syncImage(
+                source.page,
+                {
+                  collection: 'sources',
+                  record,
+                  required: false
+                },
+                previousManifest.entries.sources[source.id],
+                options.force
+              )
           )
-        }
-        return result
-      },
-      { concurrency: 16 }
-    )
-    console.log(
-      formatImageBatchSummary('Scenario images', scenarioImageResults)
-    )
 
-    const memeScenarioCount = parsedRows.filter(
-      (row) => row.memeAttachments.length > 0
-    ).length
-    const memeAttachmentCount = parsedRows.reduce(
-      (total, row) => total + row.memeAttachments.length,
-      0
-    )
-    let completedMemeScenarios = 0
-    console.log(
-      `Syncing ${memeAttachmentCount} meme attachments across ${memeScenarioCount} scenarios…`
-    )
-    const scenarioMemeResults = await pMap(
-      parsedRows,
-      async (row) => {
-        const hasMemeAttachments = row.memeAttachments.length > 0
-        const record = notionPageReference(row.page, row.title)
-        const result = await report!.capture(
-          'scenarios',
-          record,
-          'processing the meme attachments for',
-          async () => {
-            const attachments = hasMemeAttachments
-              ? await retrieveFiles(row.page, 'Memes', SCENARIO_PROPERTIES)
-              : []
-            return syncMemeImages(row.page, attachments, record, options.force)
-          }
-        )
-
-        if (!hasMemeAttachments) return result
-
-        completedMemeScenarios += 1
-        if (
-          completedMemeScenarios % 10 === 0 ||
-          completedMemeScenarios >= memeScenarioCount
-        ) {
-          console.log(
-            `Processed meme attachments for ${completedMemeScenarios}/${memeScenarioCount} scenarios`
-          )
-        }
-        return result
-      },
-      { concurrency: 16 }
-    )
-
-    completedImages = 0
-    console.log(`Syncing ${sourceSeeds.length} optional source posters…`)
-    const sourceImageResults = await pMap(
-      sourceSeeds,
-      async (source) => {
-        const record = notionPageReference(source.page, source.title)
-        const result = await report!.capture(
-          'sources',
-          record,
-          'processing the optional poster for',
-          () =>
-            syncImage(
-              source.page,
-              {
-                collection: 'sources',
-                record,
-                required: false
-              },
-              previousManifest.entries.sources[source.id],
-              options.force
+          completedImages += 1
+          if (
+            completedImages % 20 === 0 ||
+            completedImages >= sourceSeeds.length
+          ) {
+            console.log(
+              `Processed ${completedImages}/${sourceSeeds.length} source posters`
             )
-        )
-
-        completedImages += 1
-        if (
-          completedImages % 20 === 0 ||
-          completedImages >= sourceSeeds.length
-        ) {
-          console.log(
-            `Processed ${completedImages}/${sourceSeeds.length} source posters`
-          )
-        }
-        return result
-      },
-      { concurrency: 16 }
-    )
-    console.log(
-      formatImageBatchSummary('Media source images', sourceImageResults)
-    )
-
-    completedImages = 0
-    console.log(`Syncing ${franchiseSeeds.length} required franchise images…`)
-    const franchiseImageResults = await pMap(
-      franchiseSeeds,
-      async (franchise) => {
-        const record = notionPageReference(franchise.page, franchise.title)
-        const result = await report!.capture(
-          'franchises',
-          record,
-          'processing the image for',
-          async () => {
-            const image = await syncImage(
-              franchise.page,
-              {
-                collection: 'franchises',
-                record,
-                required: true
-              },
-              previousManifest.entries.franchises[franchise.id],
-              options.force
-            )
-            if (!image) throw new Error('No image was produced')
-            return image
           }
-        )
+          return result
+        },
+        { concurrency: 16 }
+      )
+      sourceImageResults = syncedSourceImages
+      console.log(
+        formatImageBatchSummary('Media source images', syncedSourceImages)
+      )
 
-        completedImages += 1
-        if (
-          completedImages % 20 === 0 ||
-          completedImages >= franchiseSeeds.length
-        ) {
-          console.log(
-            `Processed ${completedImages}/${franchiseSeeds.length} franchise images`
+      completedImages = 0
+      console.log(`Syncing ${franchiseSeeds.length} required franchise images…`)
+      const syncedFranchiseImages = await pMap(
+        franchiseSeeds,
+        async (franchise) => {
+          const record = notionPageReference(franchise.page, franchise.title)
+          const result = await report!.capture(
+            'franchises',
+            record,
+            'processing the image for',
+            async () => {
+              const image = await syncImage(
+                franchise.page,
+                {
+                  collection: 'franchises',
+                  record,
+                  required: true
+                },
+                previousManifest.entries.franchises[franchise.id],
+                options.force
+              )
+              if (!image) throw new Error('No image was produced')
+              return image
+            }
           )
-        }
-        return result
-      },
-      { concurrency: 16 }
-    )
-    console.log(
-      formatImageBatchSummary('Franchise images', franchiseImageResults)
-    )
+
+          completedImages += 1
+          if (
+            completedImages % 20 === 0 ||
+            completedImages >= franchiseSeeds.length
+          ) {
+            console.log(
+              `Processed ${completedImages}/${franchiseSeeds.length} franchise images`
+            )
+          }
+          return result
+        },
+        { concurrency: 16 }
+      )
+      franchiseImageResults = syncedFranchiseImages
+      console.log(
+        formatImageBatchSummary('Franchise images', syncedFranchiseImages)
+      )
+    }
 
     const riskFamilyRecordResults = await pMap(
       riskFamilySeeds,
@@ -2267,18 +2385,12 @@ async function main(options: SyncCliOptions) {
         tags: row.tags,
         riskFamilyIds: row.riskFamilyIds,
         conceptIds: row.conceptIds,
-        image: {
-          gallerySrc: image.gallerySrc,
-          detailSrc: image.detailSrc,
-          width: image.width,
-          height: image.height,
-          blurDataURL: image.blurDataURL,
-          alt:
-            image.caption ||
-            `Still from ${source.title} illustrating ${row.title}`
-        },
+        image: resolvedContentImage(
+          image,
+          scenarioImageAlt(source.title, row.title)
+        ),
         memes: scenarioMemeResults[index]!.map((meme, memeIndex, memes) =>
-          memeContentImage(meme, row.title, memeIndex, memes.length)
+          resolvedMemeContentImage(meme, row.title, memeIndex, memes.length)
         ),
         video: row.video,
         scene: row.scene,
@@ -2296,14 +2408,7 @@ async function main(options: SyncCliOptions) {
         ...record,
         slug: slugs.sources[source.id]!,
         poster: image
-          ? {
-              gallerySrc: image.gallerySrc,
-              detailSrc: image.detailSrc,
-              width: image.width,
-              height: image.height,
-              blurDataURL: image.blurDataURL,
-              alt: image.caption || `Poster for ${source.title}`
-            }
+          ? resolvedContentImage(image, sourcePosterAlt(source.title))
           : null
       }
     })
@@ -2315,14 +2420,7 @@ async function main(options: SyncCliOptions) {
         return {
           ...record,
           slug: slugs.franchises[franchise.id]!,
-          image: {
-            gallerySrc: image.gallerySrc,
-            detailSrc: image.detailSrc,
-            width: image.width,
-            height: image.height,
-            blurDataURL: image.blurDataURL,
-            alt: image.caption || `Representative image for ${franchise.title}`
-          }
+          image: resolvedContentImage(image, franchiseImageAlt(franchise.title))
         }
       }
     )
@@ -2397,9 +2495,13 @@ async function main(options: SyncCliOptions) {
     console.log(
       `Synced ${snapshot.scenarios.length} scenarios, ${snapshot.sources.length} sources, ${snapshot.franchises.length} franchises, ${snapshot.riskFamilies.length} risk families, and ${snapshot.concepts.length} concepts.`
     )
-    console.log(
-      `Media storage: ${uploadedMediaObjects} uploaded, ${reusedMediaObjects} already present.`
-    )
+    if (options.fast) {
+      console.log('Media processing skipped (--fast).')
+    } else {
+      console.log(
+        `Media storage: ${uploadedMediaObjects} uploaded, ${reusedMediaObjects} already present.`
+      )
+    }
     return true
   } catch (err) {
     console.error(
@@ -2439,11 +2541,13 @@ async function runCli() {
     notionVersion: NOTION_API_VERSION
   })
 
-  try {
-    mediaStorage = createMediaStorage()
-  } catch (err) {
-    console.error(err instanceof Error ? err.message : String(err))
-    return false
+  if (!options.fast) {
+    try {
+      mediaStorage = createMediaStorage()
+    } catch (err) {
+      console.error(err instanceof Error ? err.message : String(err))
+      return false
+    }
   }
 
   uploadedMediaObjects = 0

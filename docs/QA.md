@@ -38,8 +38,8 @@ The canonical production deployment is [cultural-alignment.com](https://cultural
 
 ## Remote-media acceptance checks
 
-- Notion and S3-compatible credentials are required only by `pnpm content:sync`; its Node entry point loads the ignored root `.env` with dotenvx, while development, validation, builds, and application runtime do not read it.
-- `pnpm content:sync --help` (also `-h` or `-help`) prints usage without requiring credentials. `--force` re-downloads and reprocesses every selected image while retaining content-addressed variant deduplication.
+- Notion credentials are required only by `pnpm content:sync`; normal and forced syncs also require S3-compatible credentials. Its Node entry point loads the ignored root `.env` with dotenvx, while development, validation, builds, and application runtime do not read it.
+- `pnpm content:sync --help` (also `-h` or `-help`) prints usage without requiring credentials. `--fast` reuses checked-in snapshot media by stable record ID without image inspection, processing, S3 credentials, or media-storage traffic; it fails if a current record has no previous snapshot baseline. `--force` re-downloads and reprocesses every selected image while retaining content-addressed variant deduplication, and cannot be combined with `--fast`.
 - `S3_API_ENDPOINT` is used only for authenticated storage operations. Snapshot URLs begin with the separately configured `S3_PUBLIC_URL` for `S3_BUCKET_NAME`.
 - When `S3_STATE_BUCKET_NAME` is unset, descriptors use `S3_BUCKET_NAME`; setting it to a different bucket remains supported.
 - Each record's `media/state/{collection}/{compact-page-id}.json` descriptor is read with an authenticated `GET`; its JSON body, rather than `HEAD` metadata, contains the reusable media state.
