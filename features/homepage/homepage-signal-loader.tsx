@@ -10,6 +10,8 @@ import styles from './homepage-signal-loader.module.css'
 
 type IntroPhase = 'intro' | 'exiting' | 'gallery'
 
+const headlineFont = '800 1em "Barlow Condensed"'
+
 export function HomepageSignalLoader({
   className,
   header,
@@ -29,6 +31,7 @@ export function HomepageSignalLoader({
 }) {
   const rootRef = useRef<HTMLDivElement>(null)
   const [galleryReady, setGalleryReady] = useState(false)
+  const [headlineFontReady, setHeadlineFontReady] = useState(false)
   const [phase, setPhase] = useState<IntroPhase>('intro')
 
   const beginExit = useCallback(() => {
@@ -67,6 +70,26 @@ export function HomepageSignalLoader({
     readReadyState()
 
     return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
+    const headline = rootRef.current?.querySelector<HTMLElement>(
+      '#signal-loader-title'
+    )
+    if (!headline) return
+
+    let active = true
+    const markReady = () => {
+      if (active) setHeadlineFontReady(true)
+    }
+
+    void document.fonts
+      .load(headlineFont, headline.textContent ?? '')
+      .then(markReady, markReady)
+
+    return () => {
+      active = false
+    }
   }, [])
 
   useEffect(() => {
@@ -130,7 +153,10 @@ export function HomepageSignalLoader({
             >
               <div className={styles.grid} aria-hidden='true' />
 
-              <div className={styles.introBody}>
+              <div
+                className={styles.introBody}
+                data-signal-loader-font-ready={headlineFontReady || undefined}
+              >
                 <p className={styles.eyebrow}>A field guide to AI risk</p>
 
                 <h1 id='signal-loader-title'>

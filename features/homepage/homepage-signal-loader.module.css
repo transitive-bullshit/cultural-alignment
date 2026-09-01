@@ -61,6 +61,18 @@
   align-content: center;
   max-width: 1120px;
   padding-bottom: 3vh;
+  visibility: hidden;
+}
+
+.introBody[data-signal-loader-font-ready] {
+  visibility: visible;
+}
+
+.introBody:not([data-signal-loader-font-ready]) .eyebrow,
+.introBody:not([data-signal-loader-font-ready]) h1,
+.introBody:not([data-signal-loader-font-ready]) .summary,
+.introBody:not([data-signal-loader-font-ready]) .sequence li {
+  animation-play-state: paused;
 }
 
 .eyebrow,
