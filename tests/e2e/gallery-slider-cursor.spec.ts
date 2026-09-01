@@ -2,6 +2,51 @@ import { expect, test } from '@playwright/test'
 
 import { mockOptimizedImages } from './image-fixtures'
 
+test('reserves the slider accent for interaction states', async ({ page }) => {
+  await mockOptimizedImages(page)
+  await page.goto('/scenarios')
+
+  const slider = page.getByRole('slider', { name: 'Scenario item size' })
+  const sliderRoot = page.locator('[data-slot="slider"]')
+  const sliderRange = page.locator('[data-slot="slider-range"]')
+  const sliderThumb = page.locator('[data-slot="slider-thumb"]')
+  const sizeControl = page.locator('[data-gallery-size-control]')
+  const accentColor = 'rgb(255, 77, 31)'
+
+  await expect(sliderRange).not.toHaveCSS('background-color', accentColor)
+  await expect(sliderThumb).not.toHaveCSS('background-color', accentColor)
+
+  await sliderRoot.hover()
+  await expect(sliderRange).toHaveCSS('background-color', accentColor)
+  await expect(sliderThumb).toHaveCSS('background-color', accentColor)
+
+  await page.mouse.move(0, 0)
+  await expect(sliderRange).not.toHaveCSS('background-color', accentColor)
+  await expect(sliderThumb).not.toHaveCSS('background-color', accentColor)
+
+  await slider.focus()
+  await expect(sliderRange).toHaveCSS('background-color', accentColor)
+  await expect(sliderThumb).toHaveCSS('background-color', accentColor)
+  await slider.blur()
+
+  const sliderBounds = await sliderRoot.boundingBox()
+  expect(sliderBounds).not.toBeNull()
+  await page.mouse.move(
+    sliderBounds!.x + sliderBounds!.width / 2,
+    sliderBounds!.y + sliderBounds!.height / 2
+  )
+  await page.mouse.down()
+  await page.mouse.move(0, 0)
+  await expect(sizeControl).toHaveAttribute('data-size-dragging', '')
+  await expect(sliderRange).toHaveCSS('background-color', accentColor)
+  await expect(sliderThumb).toHaveCSS('background-color', accentColor)
+  await page.mouse.up()
+  await slider.blur()
+
+  await expect(sliderRange).not.toHaveCSS('background-color', accentColor)
+  await expect(sliderThumb).not.toHaveCSS('background-color', accentColor)
+})
+
 test('uses native slider feedback without replacing the gallery cursor', async ({
   page
 }) => {

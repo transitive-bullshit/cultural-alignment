@@ -93,17 +93,31 @@
 }
 
 .sizeSlider :global([data-slot='slider-range']) {
-  background: var(--proto-electric, #ff4d1f);
+  background: rgb(45 42 38 / 38%);
+  transition: background-color 140ms
+    var(--proto-ease-out, cubic-bezier(0.23, 1, 0.32, 1));
 }
 
 .sizeSlider :global([data-slot='slider-thumb']) {
   width: 12px;
   height: 12px;
   border: 1px solid var(--proto-ink, #2d2a26);
-  background: var(--proto-electric, #ff4d1f);
+  background: var(--proto-muted-ink, #756d63);
   box-shadow: 0 0 0 2px var(--proto-raised-paper, #f8f0df);
-  transition: box-shadow 140ms
-    var(--proto-ease-out, cubic-bezier(0.23, 1, 0.32, 1));
+  transition:
+    background-color 140ms var(--proto-ease-out, cubic-bezier(0.23, 1, 0.32, 1)),
+    box-shadow 140ms var(--proto-ease-out, cubic-bezier(0.23, 1, 0.32, 1));
+}
+
+.sizeSlider:focus-within :global([data-slot='slider-range']),
+.sizeControl[data-size-dragging]
+  .sizeSlider
+  :global([data-slot='slider-range']),
+.sizeSlider:focus-within :global([data-slot='slider-thumb']),
+.sizeControl[data-size-dragging]
+  .sizeSlider
+  :global([data-slot='slider-thumb']) {
+  background: var(--proto-electric, #ff4d1f);
 }
 
 .sizeSlider :global([data-slot='slider-thumb']):focus-visible {
@@ -113,6 +127,11 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
+  .sizeSlider:hover :global([data-slot='slider-range']),
+  .sizeSlider:hover :global([data-slot='slider-thumb']) {
+    background: var(--proto-electric, #ff4d1f);
+  }
+
   .sizeSlider :global([data-slot='slider-thumb']):hover {
     box-shadow:
       0 0 0 2px var(--proto-raised-paper, #f8f0df),

@@ -1475,7 +1475,7 @@
     "id": "3caedb27-f124-80c0-81e4-fe457f92909e",
     "slug": "outer-alignment",
     "shortName": "Outer Alignment",
-    "longName": "Outer-Alignment Failure / Objective Misspecification",
+    "longName": "Outer Alignment",
     "keywords": [
       "objective misspecification",
       "specification problem",
@@ -1483,7 +1483,7 @@
       "goal specification",
       "proxy objective"
     ],
-    "description": "Outer alignment is the challenge of making an AI’s training objective match what people actually want it to do.",
+    "description": "Outer alignment is the challenge of making an AI’s training objective match what people actually want it to do. Also known as Objective Misspecification.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/AI_alignment",
     "citations": [
       {

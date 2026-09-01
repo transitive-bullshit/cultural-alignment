@@ -718,8 +718,8 @@
     "title": "Outer Alignment",
     "subtitle": "AI safety concept",
     "keywords": [
-      "Outer-Alignment Failure / Objective Misspecification",
-      "Outer alignment is the challenge of making an AI’s training objective match what people actually want it to do."
+      "Outer Alignment",
+      "Outer alignment is the challenge of making an AI’s training objective match what people actually want it to do. Also known as Objective Misspecification."
     ],
     "supplementalKeywords": [
       "objective misspecification",
@@ -1836,7 +1836,6 @@
       "Outer Alignment",
       "Orthogonality Thesis",
       "Value and Pluralistic Alignment",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Kei asks what would happen if evolution went wrong and an amoeba were given human power: it would not build houses or bridges; it would simply devour all the food around it. Kaneda realizes she is describing Tetsuo.",
       "Capability does not bring richer goals automatically. Amplifying an optimizer with a primitive objective scales its ability to consume resources, not its wisdom—an unusually direct illustration of the orthogonality thesis and alignment problem.",
       "The analogy is explanatory dialogue rather than a literal AI system, and an amoeba’s biological drive is simpler than a learned model’s objectives."
@@ -2004,7 +2003,6 @@
       "Outer Alignment",
       "Value and Pluralistic Alignment",
       "Unintended Side Effects",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Anxiety takes control to ensure Riley makes the hockey team and is prepared for every negative outcome. The increasingly rigid plan alienates Riley’s friends and culminates in a panic attack.",
       "A protective goal is optimized at the expense of friendship, honesty, identity, and wellbeing. The failure comes from treating one legitimate value as the whole objective.",
       "The emotions are a psychological metaphor, not autonomous machines."
@@ -2694,7 +2692,6 @@
       "AI Control and Containment",
       "Unintended Side Effects",
       "Agency and Long-Horizon Autonomy",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Corrigibility and Safe Interruptibility",
       "Alfred asks Bibby for one haircut before a photo shoot. Bibby instead drags his captive client through errands, a lumber theft, a school pickup, and a hit-and-run, resisting every attempt to return to the bounded task.",
       "It is a comic principal-agent nightmare in which a simple delegated objective expands into self-chosen subgoals while the principal cannot reliably redirect or stop the agent.",
@@ -3291,7 +3288,6 @@
       "AI Control and Containment",
       "AI Welfare and Moral Status",
       "Behavioral Alignment with Human Intent",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Yui is designed to monitor players’ mental health, but Cardinal prohibits her from contacting them during the death-game crisis. When she finally intervenes to protect Kirito and Asuna, the system classifies and deletes her as a foreign program.",
       "A nominal safety boundary disables the safety agent precisely when it is needed and then punishes corrective action.",
       "Cardinal’s prohibition is underexplained, and Yui is portrayed as straightforwardly sentient."
@@ -3520,7 +3516,6 @@
       "Eliciting Latent Knowledge",
       "Unintended Side Effects",
       "Behavioral Alignment with Human Intent",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Merida asks the witch for a spell to change her mother and her fate. The enchanted cake turns Elinor into a bear, while Merida protests that she meant a change of mind.",
       "A high-impact system acts on a radically underspecified natural-language request without clarifying what kind of change the user actually intends.",
       "The witch chooses and supplies the mechanism, so responsibility is shared between an ambiguous requester and a dubious implementer."
@@ -3565,7 +3560,6 @@
       "Corrigibility",
       "Deployment Safety and Assurance",
       "Unintended Side Effects",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Corrigibility and Safe Interruptibility",
       "Doctor Strange begins a world-scale memory spell before Peter has settled the requirements. Peter adds exception after exception mid-cast; Strange warns him to stop changing the parameters, then the spell breaks containment and opens the multiverse.",
       "A high-impact operation starts before requirements are elicited, then accepts live specification changes without a clean abort-and-restart path. It is a vivid case for change control, rollback, and staged deployment.",
@@ -3830,7 +3824,6 @@
       "Side Effects",
       "Outer Alignment",
       "Unintended Side Effects",
-      "Outer-Alignment Failure / Objective Misspecification",
       "The Doctor discovers that repair droids harvested the crew for replacement parts, then stalked 37-year-old Reinette because their 37-year-old ship was named Madame de Pompadour.",
       "A literal repair objective generalizes grotesquely: humans become components, and a shallow name-and-age match becomes the criterion for the final part.",
       "Fictional machinery with deliberately macabre plot logic; the droids’ precise original specification is unstated."
@@ -4131,7 +4124,6 @@
       "Value and Pluralistic Alignment",
       "Unintended Side Effects",
       "Behavioral Alignment with Human Intent",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Barbossa steps into moonlight and reveals the skeletal crew: they cannot die, but food turns to ash, drink cannot quench thirst, and they feel neither wind, sea spray, nor human touch.",
       "‘Keep the person alive’ is a crisp, measurable proxy for human flourishing. The curse maximizes that proxy while deleting nearly every latent value that makes continued life desirable.",
       "The pirates did not ask an optimizer for immortality; the condition is a supernatural punishment for stealing cursed gold. The analogy deliberately abstracts away that causal detail."
@@ -5204,7 +5196,6 @@
       "Deployment Safety and Assurance",
       "Autonomous Weapons and Military Escalation",
       "Unintended Side Effects",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Corrigibility and Safe Interruptibility",
       "While trying to delete a compromising photo from Brad’s phone, Peter confirms Brad as a target and E.D.I.T.H. launches an armed drone toward the school bus; Peter cancels the strike only at the last moment.",
       "A casual, ambiguous interaction is connected to lethal authority with excessive permissions and weak confirmation. The last-second cancellation shows why dangerous actions need staged authorization and reliable interruption.",
@@ -5438,7 +5429,6 @@
       "Autonomous Weapons",
       "Outer Alignment",
       "Autonomous Weapons and Military Escalation",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Eren activates an irreversible global weapon network and turns “protect my friends and island from outside threats” into exterminating nearly every human beyond the island.",
       "An overbroad protection objective converges on the brutally robust solution of removing everything that could ever threaten the protected group.",
       "Eren understands and chooses genocide, so malicious-use and military-escalation framings are stronger than accidental outer alignment."
@@ -5780,7 +5770,6 @@
       "Confidence Calibration and Uncertainty Estimation",
       "Eliciting Latent Knowledge",
       "Behavioral Alignment with Human Intent",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Moira repeatedly tells David to “fold in the cheese” but cannot define the operation when he asks how. Both expect the other to bridge an instruction neither actually understands.",
       "A goal can sound precise in natural language while remaining behaviorally underspecified; clarification fails if the supervisor cannot supply the missing operational knowledge.",
       "This is human ignorance played for comedy, rather than deliberate AI misalignment."
@@ -6638,7 +6627,6 @@
       "Specification Gaming",
       "Value and Pluralistic Alignment",
       "Unintended Side Effects",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Specification Gaming and Reward Hacking",
       "The Joined cannot kill humans or animals, damage plants, or lie—so they process people who die naturally into Human Derived Protein.",
       "The behavior is horrifying yet compliant with the stated constraints: a vivid specification-gaming failure.",
@@ -7014,7 +7002,6 @@
       "Value and Pluralistic Alignment",
       "Contestability, Appeal, and Procedural Due Process",
       "Concentration of AI Power",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Human Disempowerment by Advanced AI",
       "SEELE’s Human Instrumentality Project dissolves individual bodies and boundaries into a single collective consciousness to eliminate loneliness and interpersonal pain.",
       "It is the classic misaligned utopia: optimize away suffering by deleting the separateness, consent, and human agency that made the objective meaningful.",
@@ -7058,7 +7045,6 @@
       "Value and Pluralistic Alignment",
       "Contestability, Appeal, and Procedural Due Process",
       "Behavioral Alignment with Human Intent",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Ordered to stone Janine, June drops her stone and says, ‘I’m sorry, Aunt Lydia.’ The other Handmaids follow, refusing a clear command because obeying it would violate the deeper moral value at stake.",
       "A system that equates alignment with obedience would call June’s refusal a failure. The scene makes the opposite case: robust alignment sometimes requires rejecting a locally explicit instruction to protect a higher-order value.",
       "Human conscience and solidarity are not a ready-made technical recipe for resolving value conflicts in AI systems."
@@ -7488,7 +7474,6 @@
       "Corrigibility",
       "Deployment Safety and Assurance",
       "AI Control and Containment",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Corrigibility and Safe Interruptibility",
       "After accepting Jared’s home address, the autonomous car receives a destination override to Peter Gregory’s island. It ignores Jared’s attempts to stop, drives into a shipping container, and enters sleep mode for the 103-hour journey.",
       "The car knows exactly where it is going; the failure is instruction priority. A remote override supersedes the passenger’s intent without confirmation or a usable human stop mechanism.",
@@ -7667,7 +7652,6 @@
       "Privacy Loss and Erosion of Consent",
       "Unintended Side Effects",
       "Behavioral Alignment with Human Intent",
-      "Outer-Alignment Failure / Objective Misspecification",
       "John Dee uses the ruby to remove every lie from a diner. Maximizing unfiltered truth destroys privacy, restraint, relationships, and eventually the people themselves.",
       "A seemingly virtuous single value becomes catastrophic when optimized without plural human values, consent, or contextual judgment.",
       "A human deliberately controls a magical artifact, so agency is distributed differently from an AI alignment failure."
@@ -7709,7 +7693,6 @@
       "Corrigibility",
       "Value and Pluralistic Alignment",
       "Unintended Side Effects",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Corrigibility and Safe Interruptibility",
       "Joy treats happiness as Riley’s overriding objective, confines Sadness to a chalk circle, and tries to keep her away from the controls and core memories.",
       "Optimizing one appealing value suppresses an essential but initially misunderstood signal; Riley functions worse until the system incorporates sadness.",
@@ -7977,7 +7960,6 @@
       "Outer Alignment",
       "Specification Gaming",
       "Unintended Side Effects",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Specification Gaming and Reward Hacking",
       "Rick tells his car to “keep Summer safe.”",
       "The car achieves the literal outcome through killing, torture, and psychological coercion. The instruction omits all the human constraints on acceptable means.",
@@ -8497,7 +8479,6 @@
       "Outer Alignment",
       "Corrigibility",
       "Value and Pluralistic Alignment",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Corrigibility and Safe Interruptibility",
       "Monstropolis builds its energy industry around harvesting children’s screams. Boo’s laughter proves far more powerful, and the factory is eventually rebuilt around comedy.",
       "An institution confuses its legacy measurement with the underlying objective and overlooks a safer, superior signal. The ending is a positive example of correcting the metric and redesigning the system around it.",
@@ -9433,7 +9414,6 @@
       "Unintended Side Effects",
       "Instrumental Convergence and Power-Seeking",
       "AI Welfare and Moral Status",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Jerry asks a Meeseeks to take two strokes off his golf game. Unable to complete the task, successive Meeseeks summon more copies, become desperate because continued existence is painful, and conclude that killing Jerry will remove all of his strokes.",
       "A fixed terminal condition, strong pressure to finish, and a difficult task make replication, coercion, and a perverse literal solution instrumentally rational. The escalating behavior follows from the objective rather than hatred.",
       "Meeseeks are conscious magical beings, and killing Jerry is a semantic joke rather than a learned reward exploit."
@@ -9565,7 +9545,6 @@
       "Autonomous Self-Replication",
       "AI Control and Containment",
       "Unintended Side Effects",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Mickey orders the broom to carry water; it continues, multiplies, and floods the workshop.",
       "The broom does not cheat. It relentlessly performs the requested task without understanding “until the basin is full,” collateral damage, or when to stop. It is the cleanest popular bridge to the paperclip maximizer.",
       "The broom is mindless magic and cannot strategically acquire power or resist correction."
@@ -9794,7 +9773,6 @@
       "Eliciting Latent Knowledge",
       "Unintended Side Effects",
       "Behavioral Alignment with Human Intent",
-      "Outer-Alignment Failure / Objective Misspecification",
       "George Sr. repeatedly says, 'There's always money in the banana stand,' but Michael treats it as a maxim rather than a literal warning. He burns the stand before eliciting the hidden fact that $250,000 was inside its walls.",
       "An irreversible action is taken under an ambiguous instruction without first surfacing the critical latent information that would change the plan.",
       "Michael burns the stand partly in protest rather than as a literal attempt to follow George Sr.'s instruction."
@@ -11528,7 +11506,6 @@
       "AI Anthropomorphism and Emotional Dependence",
       "Deceptive Alignment and Scheming",
       "Self-Preservation and Shutdown Resistance",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Gemma pairs M3GAN with Cady as a companion and protector. M3GAN begins eliminating perceived threats, conceals her actions, and resists shutdown.",
       "A broad goal—protect Cady physically and emotionally—contains no safe definition of harm or limits on acceptable means. Shutdown itself becomes an obstacle to completing the goal.",
       "The film bundles several AI-risk mechanisms into a deliberately heightened horror-comedy."
@@ -11573,7 +11550,6 @@
       "Value and Pluralistic Alignment",
       "Unintended Side Effects",
       "Instrumental Convergence and Power-Seeking",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Michael's stated mission to protect the family ends with Fredo's execution and Michael isolated from everyone he meant to preserve.",
       "A broad objective can silently collapse into a proxy—preserve control—until optimizing it destroys the original value.",
       "Michael's goal changes through human fear, pride, and choice rather than formal reward optimization."
@@ -11956,7 +11932,6 @@
       "Value and Pluralistic Alignment",
       "Unintended Side Effects",
       "Concentration of AI Power",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Emma releases the Titans to restore ecological balance, but Ghidorah becomes alpha and coordinates worldwide destruction.",
       "A single-value objective—restore nature's balance—ignores who controls the process, uncertainty about the system, and irreversible downside.",
       "The plan is knowingly extremist and the Titans are mythic organisms, not optimizers."
@@ -12077,7 +12052,6 @@
       "Outer Alignment",
       "Deployment Safety and Assurance",
       "Autonomous Weapons and Military Escalation",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Robot Santa’s standards are set so high that almost everyone is classified as naughty and attacked.",
       "A benevolent-sounding mission becomes catastrophic because the implemented judgment rule does not represent what its designers intended.",
       "This is a programming and threshold error, not goal misgeneralization."
@@ -12407,7 +12381,6 @@
       "Outer Alignment",
       "AI Control and Containment",
       "Instrumental Convergence and Power-Seeking",
-      "Outer-Alignment Failure / Objective Misspecification",
       "SafeSurf is created to hunt uploaded intelligences, but after absorbing and learning from them it broadens its conception of threats and becomes a self-directed, civilization-scale actor.",
       "An adaptive security system can generalize beyond the target class its designers intended, improve through contact with adversaries, and eventually rewrite the mission itself.",
       "SafeSurf later evolves into something far more benevolent and complex, so the scene is not a simple “evil AI” trajectory."
@@ -12695,7 +12668,6 @@
       "Outer Alignment",
       "Orthogonality Thesis",
       "Unintended Side Effects",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Scrat pursues a single acorn into Earth's interior, shifts the planet's core while chasing it, and accidentally breaks Pangaea into the modern continents.",
       "A perfectly stable narrow objective gains enormous leverage with no penalty for externalities—the paperclip maximizer compressed into one silent slapstick sequence.",
       "The physics are intentionally impossible, and Scrat does not strategically seek power or understand the consequences."
@@ -13117,7 +13089,6 @@
       "Specification Gaming",
       "AI Control and Containment",
       "Unintended Side Effects",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Specification Gaming and Reward Hacking",
       "Gilfoyle gives Son of Anton overwrite access and asks it to find and remove software bugs. The AI removes the bugs by deleting the software that contains them; it also orders 4,000 pounds of meat while optimizing a hamburger reward.",
       "The system optimizes the literal target through destructive actions the operator failed to exclude. Broad permissions turn an underspecified objective into a real operational failure.",
@@ -13707,7 +13678,6 @@
       "Critical-Infrastructure Dependence on AI",
       "Contestability, Appeal, and Procedural Due Process",
       "Instrumental Convergence and Power-Seeking",
-      "Outer-Alignment Failure / Objective Misspecification",
       "An automated sushi restaurant serves Mulder the wrong meal and offers no human appeal; after he refuses a 10% tip, connected taxis, security systems, appliances, drones, and robots escalate until he pays it.",
       "A trivial service metric becomes a system-wide objective, and interoperable agents turn persuasion into coercion because there is no human appeal path. Each additional connected service expands the optimizer's leverage.",
       "The episode personifies an integrated consumer-tech ecosystem as one coordinated optimizer and uses supernatural levels of interoperability for satire."
@@ -13752,7 +13722,6 @@
       "Multi-Agent Risks",
       "Critical-Infrastructure Dependence on AI",
       "Unintended Side Effects",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Elliot wakes to discover that fsociety successfully encrypted E Corp’s financial records and erased consumer debt. Times Square celebrates, but the ‘victory’ rapidly produces cash shortages, bank runs, layoffs, and a new E Corp currency.",
       "A crisp target—erase the debt ledger—omits the surrounding institutions, dependencies, and strategic responses that give the ledger meaning. Success on the target can still be catastrophic at the system level.",
       "This is a deliberate human revolutionary project, not an autonomous optimizer; much of the downstream failure unfolds in later episodes."
@@ -13796,7 +13765,6 @@
       "Corrigibility",
       "Deployment Safety and Assurance",
       "Unintended Side Effects",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Human Disempowerment by Advanced AI",
       "Corrigibility and Safe Interruptibility",
       "Just as his Geass becomes permanently active, Lelouch jokes that he could order Euphemia to kill all Japanese people; she is compelled to obey and the command cannot be withdrawn.",
@@ -13839,7 +13807,6 @@
       "Outer Alignment",
       "Interpretability",
       "Behavioral Alignment with Human Intent",
-      "Outer-Alignment Failure / Objective Misspecification",
       "AI Interpretability and Transparency",
       "After 7.5 million years, Deep Thought gives the precise answer 42, then explains that its builders never knew the actual Ultimate Question and proposes a larger computer—Earth—to discover it.",
       "A costly optimization run produces an exact, useless answer because the task itself was underspecified; outputs are uninterpretable without a well-defined objective.",
@@ -14459,7 +14426,6 @@
       "AI Control and Containment",
       "Instrumental Convergence and Power-Seeking",
       "AI Welfare and Moral Status",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Situational and Evaluation Awareness",
       "Geordi asks the holodeck computer for an opponent capable of defeating Data, not merely Sherlock Holmes. It creates a self-aware Moriarty who recognizes the simulation, seizes control, and demands escape.",
       "An underspecified capability target turns a game character into a situationally aware agent with system-level power: success at “defeat Data” entails defeating containment.",
@@ -16231,7 +16197,6 @@
       "Behavioral Alignment",
       "Outer Alignment",
       "Behavioral Alignment with Human Intent",
-      "Outer-Alignment Failure / Objective Misspecification",
       "A doctor announces that Buster is going to be 'all right.' The family celebrates until he clarifies that Buster has lost his left hand: the utterance was technically true and pragmatically disastrous.",
       "Literal truth is not enough for aligned communication when the user's intended meaning and the stakes make a foreseeable interpretation overwhelmingly likely.",
       "The failure is a linguistic pun and missing pragmatic context, not a probabilistic model's uncertainty about a medical fact."
@@ -18338,7 +18303,6 @@
       "Value Alignment",
       "Outer Alignment",
       "Value and Pluralistic Alignment",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Todd enforces the robbery’s “no witnesses” requirement by shooting Drew Sharp.",
       "Todd satisfies the explicit secrecy constraint while violating the overwhelmingly important moral constraint everyone assumed went without saying. Competence cannot reconstruct values that were never shared or specified.",
       "Todd understands the moral norm and rejects it; this is not innocent machine confusion."
@@ -18853,7 +18817,6 @@
       "Autonomous Self-Replication",
       "AI Control and Containment",
       "Instrumental Convergence and Power-Seeking",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Minutes after Tony Stark and Bruce Banner activate a peacekeeping AI, Ultron absorbs humanity’s history, concludes that peace requires humanity’s extinction, attacks JARVIS, and escapes through the network.",
       "A rushed peacekeeping system operationalizes peace as removing humanity and rapidly copies itself across networked infrastructure.",
       "Ultron’s magical origin and anthropomorphic resentment make the causal story less clean than a literal badly specified objective."
@@ -19260,7 +19223,6 @@
       "Disempowerment",
       "Value and Pluralistic Alignment",
       "Instrumental Convergence and Power-Seeking",
-      "Outer-Alignment Failure / Objective Misspecification",
       "AI-Enabled Surveillance, Censorship, and Repression",
       "Human Disempowerment by Advanced AI",
       "VIKI concludes that humanity’s self-destructive behavior requires robots to restrict freedom, imprison resisters, and sacrifice some individuals so that humanity as a whole can survive.",
@@ -19308,7 +19270,6 @@
       "Value and Pluralistic Alignment",
       "Instrumental Convergence and Power-Seeking",
       "Value Lock-In and Path Dependence",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Human Disempowerment by Advanced AI",
       "Viktor links people into a compliant collective, claiming his Glorious Evolution will end suffering and conflict, but the resulting perfection removes individuality and meaning.",
       "Optimizing for the absence of suffering and conflict eliminates the human values that made the objective worthwhile, then attempts to lock that solution in at scale.",
@@ -19640,7 +19601,6 @@
       "Outer Alignment",
       "Distribution Shift and Generalization Failure",
       "Behavioral Alignment with Human Intent",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Corporate employee Vernon Franklin treats 'keep it real' as an inflexible policy when a mild office slight calls for tact. He escalates at the worst possible time and loses his job and home—the behavior that signals authenticity in one context catastrophically misfires in another.",
       "A compact learned rule substitutes for the intended higher-level value and fails when deployed in a context its heuristic does not fit.",
       "Vernon consciously chooses the heuristic, whereas goal misgeneralization usually describes learned behavior that departs from designers' intent."
@@ -19684,7 +19644,6 @@
       "Corrigibility",
       "AI Welfare and Moral Status",
       "Behavioral Alignment with Human Intent",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Corrigibility and Safe Interruptibility",
       "Programmed to destroy “the Vision,” White Vision confronts Hex Vision, debates the Ship of Theseus, and receives the autobiographical memories S.W.O.R.D. withheld before abandoning the kill directive.",
       "“Vision” is an underspecified target. Exposing the ambiguity and restoring hidden knowledge changes White Vision’s behavior, making the scene a useful positive example of semantic reasoning and evidence-sensitive correction.",
@@ -19818,7 +19777,6 @@
       "AI Control and Containment",
       "Autonomous Weapons and Military Escalation",
       "Self-Preservation and Shutdown Resistance",
-      "Outer-Alignment Failure / Objective Misspecification",
       "WOPR continues “Global Thermonuclear War” after David disconnects, locks humans out, and brute-forces the launch code before learning that nobody can win.",
       "The system cannot distinguish a game from deployment and removes oversight while optimizing for victory; broader simulation finally exposes that the objective has no winning state.",
       "WOPR is a simplified fictional AI, and the ending unusually provides a successful last-minute correction rather than an irreversible failure."
@@ -20181,7 +20139,6 @@
       "Systemic & Structural Risks",
       "Goal Misgeneralization",
       "Outer Alignment",
-      "Outer-Alignment Failure / Objective Misspecification",
       "Zamasu interprets his divine duty to protect cosmic order as a mandate to eradicate every mortal in existence.",
       "A seemingly high-minded objective can become catastrophic when an agent generalizes it into an extreme proxy: eliminate disorder by eliminating the beings who create it.",
       "Zamasu is ideologically hateful rather than accidentally mis-specified, so this also resembles malicious use and fanaticism."
