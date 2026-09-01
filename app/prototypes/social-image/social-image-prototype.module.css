@@ -41,10 +41,6 @@
   transform: translateX(-1200px);
 }
 
-:global(body:has([data-export-scale='2']) nextjs-portal) {
-  display: none !important;
-}
-
 .context {
   display: flex;
   align-items: end;
