@@ -1388,13 +1388,13 @@ async function selectImage(
   }
   if (!selectedImage && !options.fallback) return null
 
-  if (images.length > 1) {
-    console.warn(
-      boldWarning(
-        `${formatNotionRecord(options.record)} has ${images.length} images; using first block ${selectedImage?.id}`
-      )
-    )
-  }
+  // if (images.length > 1) {
+  //   console.warn(
+  //     boldWarning(
+  //       `${formatNotionRecord(options.record)} has ${images.length} images; using first block ${selectedImage?.id}`
+  //     )
+  //   )
+  // }
 
   if (!selectedImage) {
     console.warn(

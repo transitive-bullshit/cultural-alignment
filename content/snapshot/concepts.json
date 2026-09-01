@@ -1629,8 +1629,8 @@
   {
     "id": "3caedb27-f124-80c5-b82d-ddc77caf48db",
     "slug": "mesa-optimization",
-    "shortName": "Mesa-Optimization",
-    "longName": "Mesa-Optimization and Inner Alignment",
+    "shortName": "Inner Alignment",
+    "longName": "Inner Alignment",
     "keywords": [
       "mesa-optimizer",
       "inner alignment",
@@ -1638,7 +1638,7 @@
       "internal objective",
       "deceptive mesa-optimizer"
     ],
-    "description": "Mesa-optimization occurs when a trained AI develops its own internal goal, which may differ from the goal its designers intended.",
+    "description": "Inner alignment and mesa-optimization occurs when a trained AI develops its own internal goal, which may differ from the goal its designers intended.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Deceptive_alignment",
     "citations": [
       {
