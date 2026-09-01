@@ -380,7 +380,7 @@ function resolveDocument(
 
 function createScenario(
   overrides: Pick<ScenarioRecord, 'id' | 'releaseDate' | 'riskFamilyIds'> &
-    Partial<Pick<ScenarioRecord, 'featured' | 'memes' | 'sourceId'>>
+    Partial<Pick<ScenarioRecord, 'featured' | 'memes' | 'sourceId' | 'tags'>>
 ): ScenarioRecord {
   return {
     id: overrides.id,
@@ -390,6 +390,7 @@ function createScenario(
     sourceId: overrides.sourceId ?? 'source-1',
     releaseDate: overrides.releaseDate,
     featured: overrides.featured ?? false,
+    tags: overrides.tags ?? [],
     riskFamilyIds: overrides.riskFamilyIds,
     conceptIds: ['concept-1'],
     image: {

@@ -14,6 +14,7 @@ const minimalSnapshot: ContentSnapshot = {
       sourceId: 'source-1',
       releaseDate: '2015-08-02',
       featured: true,
+      tags: ['featured'],
       riskFamilyIds: ['risk-1'],
       conceptIds: ['concept-1'],
       image: {
@@ -111,6 +112,22 @@ const minimalSnapshot: ContentSnapshot = {
 }
 
 describe('validateContentSnapshot', () => {
+  it('preserves scenario tags and defaults missing tags to an empty collection', () => {
+    const taggedInput = structuredClone(minimalSnapshot)
+    const expectedTags = taggedInput.scenarios[0]!.tags
+
+    expect(validateContentSnapshot(taggedInput).scenarios[0]!.tags).toEqual(
+      expectedTags
+    )
+
+    const untaggedInput = structuredClone(minimalSnapshot)
+    delete (untaggedInput.scenarios[0] as { tags?: unknown }).tags
+
+    expect(validateContentSnapshot(untaggedInput).scenarios[0]!.tags).toEqual(
+      []
+    )
+  })
+
   it('normalizes scenarios without meme attachments to an empty collection', () => {
     const input = structuredClone(minimalSnapshot)
     delete (input.scenarios[0] as { memes?: unknown }).memes

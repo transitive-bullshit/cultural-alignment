@@ -170,7 +170,8 @@ const SCENARIO_PROPERTIES = {
     relationDataSourceId: NOTION_DATA_SOURCES.sources.dataSourceId
   },
   Memes: { id: 'a%5EWT', type: 'files' },
-  Scene: { id: 's%5Ceo', type: 'rich_text' }
+  Scene: { id: 's%5Ceo', type: 'rich_text' },
+  Tags: { id: 'es%5B%40', type: 'multi_select' }
 } as const
 
 const SOURCE_PROPERTIES = {
@@ -278,6 +279,7 @@ type ParsedScenario = {
   episode?: { label: string; href?: string }
   releaseDate: string | null
   featured: boolean
+  tags: string[]
   riskFamilyIds: string[]
   conceptIds: string[]
   memeAttachments: NotionFileAttachment[]
@@ -540,6 +542,23 @@ function select(
   return property.select
 }
 
+function multiSelect(
+  page: PageObjectResponse,
+  name: string,
+  contract: PropertyContract
+) {
+  const property = getProperty(
+    page,
+    name,
+    'multi_select',
+    expectedProperty(contract, name).id
+  )
+  if (property.type !== 'multi_select') {
+    throw new Error('Unreachable property type')
+  }
+  return property.multi_select
+}
+
 function date(
   page: PageObjectResponse,
   name: string,
@@ -730,6 +749,9 @@ async function parseScenario(
     episode: episode(episodeItems),
     releaseDate: date(page, 'Date', SCENARIO_PROPERTIES),
     featured: featuredScenarioIds.has(page.id),
+    tags: multiSelect(page, 'Tags', SCENARIO_PROPERTIES)
+      .map((tag) => tag.name)
+      .toSorted(),
     riskFamilyIds: riskFamilyIds.toSorted(),
     conceptIds: conceptIds.toSorted(),
     memeAttachments,
@@ -2242,6 +2264,7 @@ async function main(options: SyncCliOptions) {
         sourceId: row.sourceId,
         releaseDate: row.releaseDate,
         featured: row.featured,
+        tags: row.tags,
         riskFamilyIds: row.riskFamilyIds,
         conceptIds: row.conceptIds,
         image: {

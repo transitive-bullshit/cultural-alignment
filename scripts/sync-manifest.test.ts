@@ -255,6 +255,7 @@ function currentSnapshot() {
         sourceId,
         releaseDate: '2015-08-02',
         featured: true,
+        tags: ['featured'],
         riskFamilyIds: ['risk-1'],
         conceptIds: ['concept-1'],
         image: {

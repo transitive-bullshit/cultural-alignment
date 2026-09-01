@@ -84,6 +84,7 @@ export const scenarioRecordSchema = z.object({
     .optional(),
   releaseDate: z.iso.date().nullable(),
   featured: z.boolean(),
+  tags: z.array(z.string().trim().min(1)).default([]),
   riskFamilyIds: z.array(idSchema).min(1),
   conceptIds: z.array(idSchema).min(1),
   image: scenarioImageSchema,
