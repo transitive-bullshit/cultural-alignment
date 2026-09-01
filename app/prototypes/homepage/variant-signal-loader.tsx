@@ -7,7 +7,8 @@ import styles from './homepage-prototype.module.css'
 
 export function SignalLoaderVariant({
   galleryItems,
-  initialItemId
+  initialItemId,
+  scenarioCount
 }: HomepageVariantProps) {
   return (
     <div data-prototype-variant='signal-loader'>
@@ -18,6 +19,7 @@ export function SignalLoaderVariant({
         initialItemId={initialItemId}
         items={galleryItems}
         mainId='prototype-main'
+        totalSceneCount={scenarioCount}
       />
     </div>
   )

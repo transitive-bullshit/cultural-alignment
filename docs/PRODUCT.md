@@ -29,8 +29,8 @@ The source code uses the MIT license. The authored structured dataset uses CC0; 
 ## Capabilities and Constraints
 
 - Core resource models: scenario, source, AI risk family, and AI safety concept.
-- Recognition-first homepage introduction leading into the complete scenario archive.
-- A `/scenarios` view of the same gallery with additional risk-family filtering.
+- Recognition-first homepage introduction leading into scenarios carrying the Notion `featured` tag.
+- A `/scenarios` view of the complete gallery with additional risk-family filtering.
 - Global Command-K/header search across all four resource types.
 - Scenario pages present scene media, source identity, explanation, caveats, taxonomy, spoiler handling, more from the same source, and best-effort related scenarios through the Dossier layout. Clips use a YouTube iframe inside branded play/pause, progress, seeking, and return-to-still controls.
 - Source, risk-family, and concept pages act as functional relational pivots. Risk families are the first candidates for richer editorial treatment later.

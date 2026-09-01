@@ -16,7 +16,8 @@ export function HomepageSignalLoader({
   historyKey,
   initialItemId,
   items,
-  mainId = 'home-gallery-main'
+  mainId = 'home-gallery-main',
+  totalSceneCount
 }: {
   readonly className?: string
   readonly header: ReactNode
@@ -24,6 +25,7 @@ export function HomepageSignalLoader({
   readonly initialItemId: string
   readonly items: readonly SpatialGalleryItem[]
   readonly mainId?: string
+  readonly totalSceneCount: number
 }) {
   const rootRef = useRef<HTMLDivElement>(null)
   const [galleryReady, setGalleryReady] = useState(false)
@@ -172,7 +174,10 @@ export function HomepageSignalLoader({
                       ? 'First frame ready'
                       : 'Preparing scenario field'}
                   </span>
-                  <span>{items.length} scenes</span>
+                  <span data-signal-loader-scene-count={totalSceneCount}>
+                    {totalSceneCount}{' '}
+                    {totalSceneCount === 1 ? 'scene' : 'scenes'}
+                  </span>
                 </div>
                 <div
                   className={styles.progress}

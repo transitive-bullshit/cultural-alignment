@@ -61,6 +61,7 @@ export function createSortableScenarioEntries(
     '(max-width: 680px) calc(100vw - 36px), (max-width: 860px) 46vw, 31vw'
 
   return items.map(({ connections, scenario }) => ({
+    featured: scenario.featured,
     releaseDate: scenario.releaseDate,
     content: (
       <li key={scenario.id}>

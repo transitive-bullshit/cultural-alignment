@@ -5,7 +5,10 @@ import {
   type ScenarioCollectionItem,
   type ScenarioCollectionLayout
 } from './scenario-collection-list'
-import { shouldEnableScenarioSorting } from './scenario-sort'
+import {
+  shouldEnableScenarioSorting,
+  sortFeaturedItemsFirst
+} from './scenario-sort'
 import { SortableScenarioCollection } from './sortable-scenario-collection'
 
 export type {
@@ -33,10 +36,15 @@ export function ScenarioCollection({
     )
   }
 
+  const listedItems =
+    layout === 'continuous'
+      ? sortFeaturedItemsFirst(items, ({ scenario }) => scenario.featured)
+      : items
+
   return (
     <ScenarioCollectionList
       imageTreatment={imageTreatment}
-      items={items}
+      items={listedItems}
       layout={layout}
     />
   )

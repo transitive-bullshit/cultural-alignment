@@ -72,13 +72,25 @@ export function SortableScenarioCollection({
           aria-labelledby={sortLabelId}
           onValueChange={handleSortChange}
         >
-          <ToggleGroupItem className={styles.sortOption} value='default'>
+          <ToggleGroupItem
+            className={styles.sortOption}
+            data-scenario-sort='default'
+            value='default'
+          >
             Default
           </ToggleGroupItem>
-          <ToggleGroupItem className={styles.sortOption} value='newest'>
+          <ToggleGroupItem
+            className={styles.sortOption}
+            data-scenario-sort='newest'
+            value='newest'
+          >
             Newest first
           </ToggleGroupItem>
-          <ToggleGroupItem className={styles.sortOption} value='oldest'>
+          <ToggleGroupItem
+            className={styles.sortOption}
+            data-scenario-sort='oldest'
+            value='oldest'
+          >
             Oldest first
           </ToggleGroupItem>
         </ToggleGroup>
@@ -128,5 +140,5 @@ function getSortAnnouncement(value: ScenarioSort) {
   if (value === 'newest') return 'Scenes sorted newest first'
   if (value === 'oldest') return 'Scenes sorted oldest first'
 
-  return 'Scenes restored to their listed order'
+  return 'Scenes sorted with featured scenes first'
 }

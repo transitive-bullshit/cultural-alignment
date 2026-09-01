@@ -6,6 +6,7 @@ export type ScenarioSort = 'default' | 'newest' | 'oldest'
 
 export type SortableScenarioEntry = Readonly<{
   content: ReactNode
+  featured: boolean
   releaseDate: string | null
 }>
 
@@ -21,9 +22,11 @@ export function shouldEnableScenarioSorting(
 }
 
 export function sortScenarioCollectionItems<
-  Item extends Pick<SortableScenarioEntry, 'releaseDate'>
+  Item extends Pick<SortableScenarioEntry, 'featured' | 'releaseDate'>
 >(items: readonly Item[], sort: ScenarioSort): readonly Item[] {
-  if (sort === 'default') return items
+  if (sort === 'default') {
+    return sortFeaturedItemsFirst(items, ({ featured }) => featured)
+  }
 
   return items
     .map((item, index) => ({ index, item }))
@@ -40,4 +43,26 @@ export function sortScenarioCollectionItems<
       return sort === 'oldest' ? dateOrder : -dateOrder
     })
     .map(({ item }) => item)
+}
+
+export function sortFeaturedItemsFirst<Item>(
+  items: readonly Item[],
+  isFeatured: (item: Item) => boolean
+): readonly Item[] {
+  const featuredItems: Item[] = []
+  const otherItems: Item[] = []
+  let foundOtherItem = false
+  let requiresReordering = false
+
+  for (const item of items) {
+    if (isFeatured(item)) {
+      featuredItems.push(item)
+      if (foundOtherItem) requiresReordering = true
+    } else {
+      otherItems.push(item)
+      foundOtherItem = true
+    }
+  }
+
+  return requiresReordering ? [...featuredItems, ...otherItems] : items
 }

@@ -21,7 +21,7 @@ This project explores AI safety and alignment concepts via popular scenes from m
 
 ### Gallery
 
-[![The desktop WebGL gallery showing the complete scenario archive](docs/screenshots/gallery.jpg)](https://cultural-alignment.com)
+[![The desktop WebGL gallery showing featured scenarios](docs/screenshots/gallery.jpg)](https://cultural-alignment.com)
 
 ### Scenario dossier
 
@@ -83,7 +83,7 @@ The sync entry point loads `.env` with dotenvx. Existing process environment val
 
 ## Route map
 
-- `/` — Signal Loader introduction and complete scenario gallery
+- `/` — Signal Loader introduction and Notion-tagged featured scenario gallery
 - `/scenarios` — complete gallery with risk-family filtering
 - `/scenarios/[slug]` — scenario dossier
 - `/risk-families` and `/risk-families/[slug]` — risk-family index and pivots

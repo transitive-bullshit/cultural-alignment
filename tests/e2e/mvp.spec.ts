@@ -1,10 +1,49 @@
 import { expect, test, type Locator, type Page } from '@playwright/test'
 
+import scenarios from '../../content/snapshot/scenarios.json' with { type: 'json' }
 import { GALLERY_ITEM_SIZE_STORAGE_KEY } from '../../features/spatial-gallery/gallery-item-size-preference'
+import { FEATURED_SCENARIO_TAG } from '../../lib/content/catalog'
 import { getGalleryViewportMetrics } from '../../features/spatial-gallery/gallery-sizing'
 import { isMobileGalleryViewport } from '../../features/spatial-gallery/texture-residency'
 import { enterHomepageArchive } from './homepage-helpers'
 import { mockOptimizedImages } from './image-fixtures'
+import { disableWebGl2 } from './webgl-fixtures'
+
+test('homepage shows Notion-featured scenarios while the archive keeps all scenarios', async ({
+  page
+}) => {
+  const featuredScenarioCount = scenarios.filter(({ tags }) =>
+    tags.some((tag) => tag === FEATURED_SCENARIO_TAG)
+  ).length
+
+  expect(featuredScenarioCount).toBeGreaterThan(0)
+  expect(featuredScenarioCount).toBeLessThan(scenarios.length)
+
+  await disableWebGl2(page)
+  await mockOptimizedImages(page)
+  await page.goto('/')
+
+  const gallery = page.locator('[data-spatial-gallery="browse"]')
+
+  await expect(page).toHaveURL('/')
+  await expect(page.locator('[data-homepage-signal-loader]')).toBeVisible()
+  await expect(
+    page.locator('[data-signal-loader-scene-count]')
+  ).toHaveAttribute('data-signal-loader-scene-count', String(scenarios.length))
+  await expect(gallery).toHaveAttribute(
+    'data-gallery-item-count',
+    String(featuredScenarioCount)
+  )
+
+  await page.goto('/scenarios')
+
+  await expect(page).toHaveURL('/scenarios')
+  await expect(page.locator('[data-scenario-family-filters]')).toBeVisible()
+  await expect(gallery).toHaveAttribute(
+    'data-gallery-item-count',
+    String(scenarios.length)
+  )
+})
 
 test('gallery navigation restores the selected scenario after a dossier round trip', async ({
   page

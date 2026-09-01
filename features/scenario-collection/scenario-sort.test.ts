@@ -7,18 +7,18 @@ import {
 } from './scenario-sort'
 
 const listedItems = [
-  { id: 'middle-a', releaseDate: '2005-02-03' },
-  { id: 'newest', releaseDate: '2024-08-19' },
-  { id: 'unknown', releaseDate: null },
-  { id: 'oldest', releaseDate: '1997-11-07' },
-  { id: 'middle-b', releaseDate: '2005-02-03' }
+  { id: 'middle-a', featured: false, releaseDate: '2005-02-03' },
+  { id: 'newest', featured: false, releaseDate: '2024-08-19' },
+  { id: 'unknown', featured: true, releaseDate: null },
+  { id: 'oldest', featured: true, releaseDate: '1997-11-07' },
+  { id: 'middle-b', featured: true, releaseDate: '2005-02-03' }
 ] as const
 
 describe('scenario collection sorting', () => {
-  it('preserves listed order for the default option', () => {
-    expect(sortScenarioCollectionItems(listedItems, 'default')).toBe(
-      listedItems
-    )
+  it('puts featured scenes first by default and preserves both group orders', () => {
+    expect(
+      sortScenarioCollectionItems(listedItems, 'default').map(({ id }) => id)
+    ).toEqual(['unknown', 'oldest', 'middle-b', 'middle-a', 'newest'])
   })
 
   it('sorts newest and oldest while keeping unknown dates last and ties stable', () => {

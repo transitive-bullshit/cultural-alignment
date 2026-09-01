@@ -10,12 +10,12 @@ export const exploreNavigationLinks = [
     href: '/scenarios',
     label: 'Scenarios',
     footerLabel: 'All scenarios',
-    description: 'Browse cultural analogies for real AI risks.'
+    description: 'Browse the full collection of cultural analogies.'
   },
   {
     href: '/risk-families',
     label: 'AI risk families',
-    description: 'See the major categories of AI risk.'
+    description: 'Explore the high-level categories of AI risk.'
   },
   {
     href: '/concepts',

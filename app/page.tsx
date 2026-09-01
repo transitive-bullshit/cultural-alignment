@@ -23,20 +23,24 @@ export const metadata: Metadata = {
   }
 }
 
-const archiveItems = toSpatialGalleryItems(contentCatalog.listScenarioCards())
-const initialItem = findInitialSpatialGalleryItem(archiveItems)
+const featuredItems = toSpatialGalleryItems(
+  contentCatalog.listScenarioCards({ featuredOnly: true })
+)
+const initialItem = findInitialSpatialGalleryItem(featuredItems)
+const totalSceneCount = contentCatalog.listScenarioCards().length
 
 export default function HomePage() {
   if (!initialItem) {
-    throw new Error('The scenario archive requires at least one scenario')
+    throw new Error('The homepage requires at least one featured scenario')
   }
 
   return (
     <HomepageSignalLoader
       header={<GalleryHeader />}
-      historyKey='archive:all'
+      historyKey='archive:featured'
       initialItemId={initialItem.id}
-      items={archiveItems}
+      items={featuredItems}
+      totalSceneCount={totalSceneCount}
     />
   )
 }

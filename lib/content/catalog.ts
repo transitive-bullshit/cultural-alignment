@@ -16,9 +16,12 @@ import { discoverScenarios } from './scenario-discovery'
 import { validateContentSnapshot } from './validate'
 
 export type ScenarioListQuery = {
+  readonly featuredOnly?: boolean
   readonly riskFamilySlug?: string
   readonly sort?: 'release-desc' | 'release-asc'
 }
+
+export const FEATURED_SCENARIO_TAG = 'featured'
 
 export type StaticContentKind = SearchDocumentKind
 
@@ -47,6 +50,7 @@ export type GalleryScenario = {
   readonly slug: string
   readonly href: string
   readonly title: string
+  readonly featured: boolean
   readonly source: SourceIdentity
   readonly episode: ScenarioRecord['episode']
   readonly releaseDate: string | null
@@ -214,6 +218,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
       slug: scenario.slug,
       href: `/scenarios/${scenario.slug}`,
       title: scenario.title,
+      featured: scenario.tags.includes(FEATURED_SCENARIO_TAG),
       source: toSourceIdentity(source),
       episode: scenario.episode,
       releaseDate: scenario.releaseDate,
@@ -543,8 +548,10 @@ export function createContentCatalog(input: unknown): ContentCatalog {
         }))
         .filter(
           ({ scenario }) =>
-            riskFamilyId === undefined ||
-            scenario.riskFamilyIds.includes(riskFamilyId)
+            (!query.featuredOnly ||
+              scenario.tags.includes(FEATURED_SCENARIO_TAG)) &&
+            (riskFamilyId === undefined ||
+              scenario.riskFamilyIds.includes(riskFamilyId))
         )
 
       if (!query.sort) return matchingScenarios.map(({ card }) => card)

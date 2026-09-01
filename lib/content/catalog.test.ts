@@ -176,6 +176,35 @@ describe('ContentCatalog', () => {
     ])
   })
 
+  it('filters featured scenarios by their Notion tag, not the legacy flag', () => {
+    const snapshot = structuredClone(minimalSnapshot)
+    const taggedScenario = snapshot.scenarios.find(({ id }) => id === 'new')!
+
+    taggedScenario.tags = ['featured']
+    const featuredCatalog = createContentCatalog(snapshot)
+
+    expect(
+      slugs(featuredCatalog.listScenarioCards({ featuredOnly: true }))
+    ).toEqual(['new'])
+    expect(
+      featuredCatalog
+        .getResourcePage('risk-family', 'family-b')!
+        .scenarios.map(({ featured, slug }) => ({ featured, slug }))
+    ).toEqual([
+      { featured: true, slug: 'new' },
+      { featured: false, slug: 'old-b' },
+      { featured: false, slug: 'null-b' }
+    ])
+    expect(
+      slugs(
+        featuredCatalog.listScenarioCards({
+          featuredOnly: true,
+          riskFamilySlug: 'family-a'
+        })
+      )
+    ).toEqual([])
+  })
+
   it('falls back to the current source when no franchise is assigned', () => {
     const snapshot = structuredClone(minimalSnapshot)
     snapshot.sources.find(({ id }) => id === 'source-1')!.franchiseIds = []

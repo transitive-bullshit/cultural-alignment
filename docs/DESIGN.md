@@ -22,7 +22,7 @@ A shared footer closes every non-gallery page with archive navigation, project a
 
 ## Homepage entry
 
-The homepage opens with the Signal Loader: a dark explanatory layer that introduces the scene-to-pattern-to-risk loop while the complete scenario gallery prepares underneath it. Readiness changes the status rail but never dismisses the layer. The visitor enters deliberately through the high-contrast “Explore the archive” action; its short upward exit reveals the already-loaded gallery and transfers focus into that surface. While the introduction is present, the underlying header and gallery remain inert. `/scenarios` presents the same complete gallery and initial framing with risk-family filters added above it; there is no featured subset or alternate gallery mode.
+The homepage opens with the Signal Loader: a dark explanatory layer that introduces the scene-to-pattern-to-risk loop while the Notion-tagged featured scenario gallery prepares underneath it. Readiness changes the status rail but never dismisses the layer. The visitor enters deliberately through the high-contrast “Explore the archive” action; its short upward exit reveals the already-loaded gallery and transfers focus into that surface. While the introduction is present, the underlying header and gallery remain inert. `/scenarios` presents the complete gallery and initial framing with risk-family filters added above it.
 
 ## Gallery
 
