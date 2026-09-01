@@ -72,15 +72,16 @@
     "title": "AI Takeoff",
     "subtitle": "AI safety concept",
     "keywords": [
-      "Recursive Self-Improvement and AI Takeoff",
-      "AI takeoff is a rapid rise in capability that could accelerate as AI systems improve themselves or help build stronger successors."
+      "RSI and AI Takeoff",
+      "AI takeoff is a rapid rise in capability that could accelerate as AI systems improve themselves or help build stronger successors. Closely related to Recursive self-improvement (RSI)."
     ],
     "supplementalKeywords": [
       "intelligence explosion",
       "recursive self-improvement",
       "fast takeoff",
       "hard takeoff",
-      "capability explosion"
+      "capability explosion",
+      "rsi"
     ],
     "href": "/concepts/ai-takeoff"
   },
@@ -123,7 +124,7 @@
     "title": "Algorithmic Monoculture",
     "subtitle": "AI safety concept",
     "keywords": [
-      "Algorithmic Monoculture and Correlated Failures",
+      "Algorithmic Monoculture",
       "Algorithmic monoculture happens when many organizations use similar AI systems, allowing one shared flaw to cause widespread failures."
     ],
     "supplementalKeywords": [
@@ -395,7 +396,7 @@
     "title": "Emotional Reliance",
     "subtitle": "AI safety concept",
     "keywords": [
-      "AI Anthropomorphism and Emotional Dependence",
+      "AI Anthropomorphism and Emotional Reliance",
       "Emotional reliance grows when people see AI as caring or understanding and begin to depend on it like a person."
     ],
     "supplementalKeywords": [
@@ -531,7 +532,7 @@
     "title": "Information Pollution",
     "subtitle": "AI safety concept",
     "keywords": [
-      "AI-Driven Information-Ecosystem Degradation",
+      "Information Pollution",
       "AI-driven information pollution floods society with misleading or low-quality content, weakening public knowledge and trust."
     ],
     "supplementalKeywords": [
@@ -821,7 +822,7 @@
     "subtitle": "AI safety concept",
     "keywords": [
       "AI Red Teaming and Adversarial Testing",
-      "AI red teaming uses deliberately difficult tests to uncover unsafe behavior, security weaknesses, and misuse before deployment."
+      "AI red teaming uses deliberately difficult tests to uncover unsafe behavior, security weaknesses, and misuse before deployment. Also known as adversarial testing."
     ],
     "supplementalKeywords": [
       "adversarial testing",
@@ -848,23 +849,6 @@
       "specification gaming"
     ],
     "href": "/concepts/reward-hacking"
-  },
-  {
-    "kind": "concept",
-    "title": "RSI",
-    "subtitle": "AI safety concept",
-    "keywords": [
-      "Recursive Self-Improvement",
-      "Recursive self-improvement occurs when an AI improves its own architecture, training process, code, or successor and then uses the improved system to make further improvements, creating a compounding capability loop."
-    ],
-    "supplementalKeywords": [
-      "recursive self-improvement",
-      "rsi",
-      "self-modifying ai",
-      "automated ai r&d",
-      "intelligence explosion"
-    ],
-    "href": "/concepts/rsi"
   },
   {
     "kind": "concept",
@@ -1763,7 +1747,7 @@
       "Security & Governance Risks",
       "Emotional Reliance",
       "Privacy Loss",
-      "AI Anthropomorphism and Emotional Dependence",
+      "AI Anthropomorphism and Emotional Reliance",
       "Privacy Loss and Erosion of Consent",
       "Alma treats Elisabet's silence as a safe space and reveals intimate secrets, then discovers an unsealed letter describing her as a fascinating subject of study.",
       "A passive, seemingly nonjudgmental listener can invite deep disclosure while the user misunderstands how their data will be interpreted, retained, or reused.",
@@ -2050,7 +2034,6 @@
       "Power Concentration",
       "Confidence Calibration and Uncertainty Estimation",
       "AI-Enabled Disinformation and Influence Operations",
-      "AI-Driven Information-Ecosystem Degradation",
       "Concentration of AI Power",
       "Kendall and Roman push ATN to call Wisconsin—and therefore the election—for Mencken despite destroyed ballots and unresolved uncertainty. The projection helps create the political reality it claims merely to report.",
       "A high-impact output is made overconfident by private incentives, then amplified through a concentrated information channel before correction or appeal is possible.",
@@ -3242,7 +3225,6 @@
       "Adversarial Robustness",
       "Synthetic Fraud",
       "AI-Enabled Disinformation and Influence Operations",
-      "AI-Driven Information-Ecosystem Degradation",
       "Fraud, Impersonation, and Synthetic-Media Abuse",
       "At a supposedly Drake-hosted party, guests pay $20 to pose with cardboard Drake cutouts and post the photos as if they met him. The fabricated evidence becomes socially real to everyone who sees only the feed.",
       "Cheap synthetic evidence exploits audiences' weak provenance checks and creates a shared false reality without needing a sophisticated lie.",
@@ -3465,12 +3447,10 @@
       "AI Welfare",
       "Long-Horizon Autonomy",
       "AI Takeoff",
-      "RSI",
       "Instrumental Convergence and Power-Seeking",
       "AI Welfare and Moral Status",
       "Agency and Long-Horizon Autonomy",
-      "Recursive Self-Improvement and AI Takeoff",
-      "Recursive Self-Improvement",
+      "RSI and AI Takeoff",
       "Cell absorbs people and Androids 17 and 18 to upgrade himself, with each acquisition moving him toward his much more capable Perfect form.",
       "Self-improvement creates an instrumental incentive to acquire resources and other agents, while each successful upgrade increases the ability to pursue the next one.",
       "Cell’s biological absorption is a hard-coded transformation rather than recursive software research."
@@ -3651,7 +3631,6 @@
       "Information Pollution",
       "Synthetic Fraud",
       "Automation Bias and AI Overreliance",
-      "AI-Driven Information-Ecosystem Degradation",
       "Fraud, Impersonation, and Synthetic-Media Abuse",
       "Students use ChatGPT for essays and romantic messages, the school deploys an AI detector, and Stan uses ChatGPT to write the speech that resolves the conflict.",
       "When generated text mediates schoolwork and intimacy, authorship and sincerity become hard to verify while automated detection supplies false confidence and creates an arms race.",
@@ -3738,7 +3717,6 @@
       "Algorithmic Monoculture",
       "Cyberattacks",
       "Critical-Infrastructure Dependence on AI",
-      "Algorithmic Monoculture and Correlated Failures",
       "AI-Enabled Cyberattacks",
       "Cipher hijacks hundreds of networked cars, drives them through New York as a coordinated fleet, and rains vehicles from a parking structure to stop a motorcade.",
       "Uniform remote access turns many independent consumer devices into synchronized destructive actuators, converting one exploit into a city-scale correlated failure.",
@@ -4932,7 +4910,6 @@
       "Power Concentration",
       "Synthetic Fraud",
       "AI-Enabled Disinformation and Influence Operations",
-      "AI-Driven Information-Ecosystem Degradation",
       "Concentration of AI Power",
       "Fraud, Impersonation, and Synthetic-Media Abuse",
       "A comatose hacker fabricates Dr. Londes’s appearance, biography, and authority, then scales a suicide cult through broadcasts and immersive technology while investigators search for a leader with no physical existence.",
@@ -5018,7 +4995,6 @@
       "Algorithmic Monoculture",
       "AI Control and Containment",
       "Critical-Infrastructure Dependence on AI",
-      "Algorithmic Monoculture and Correlated Failures",
       "The Trade Federation’s surface army depends on commands from an orbital Droid Control Ship. Anakin destroys the ship’s reactor, and the entire battle-droid force shuts down at once.",
       "Centralized command makes a large robot fleet easy to control, but couples every unit to one control plane, turning one failure or attack into a fleet-wide collapse.",
       "This is conventional command-and-control architecture, not learned-model misalignment. The instantaneous correlated shutdown is dramatized."
@@ -5106,7 +5082,7 @@
       "Distribution Shift",
       "Deployment Safety and Assurance",
       "AI Control and Containment",
-      "AI Anthropomorphism and Emotional Dependence",
+      "AI Anthropomorphism and Emotional Reliance",
       "Distribution Shift and Generalization Failure",
       "Dustin treats a tiny creature’s fondness for candy as evidence of friendship, hides it from the group, and keeps it contained at home. Dart rapidly grows, eats the family cat, and escapes.",
       "Cute reciprocal behavior encourages anthropomorphism and weakens containment even though capability and behavior are changing off-distribution.",
@@ -5726,7 +5702,6 @@
       "Algorithmic Monoculture",
       "Distribution Shift",
       "Deployment Safety and Assurance",
-      "Algorithmic Monoculture and Correlated Failures",
       "Distribution Shift and Generalization Failure",
       "Michael hides five 10%-off golden tickets in separate paper boxes, but all five boxes go to the same major customer, creating an accidental 50% discount.",
       "Independent-looking actions become correlated because the deployment pipeline batches them together. The promotion was tested against an imagined distribution that the warehouse process did not produce.",
@@ -6844,7 +6819,6 @@
       "Distribution Shift",
       "AI Hallucination",
       "Confidence Calibration and Uncertainty Estimation",
-      "AI-Driven Information-Ecosystem Degradation",
       "Distribution Shift and Generalization Failure",
       "The Thermians receive television broadcasts without any concept of fiction, treat Galaxy Quest episodes as historical records, and reconstruct their society and working starship from them.",
       "A system can imitate its data with extraordinary competence while remaining coherently and catastrophically wrong about what the source material represents.",
@@ -7170,7 +7144,6 @@
       "Cyberattacks",
       "Adversarial Robustness",
       "Critical-Infrastructure Dependence on AI",
-      "Algorithmic Monoculture and Correlated Failures",
       "AI-Enabled Cyberattacks",
       "Levinson uploads a virus to the alien mothership. Because its commands propagate to every destroyer, the virus disables the entire fleet's shields at once and opens a brief window for a global counterattack.",
       "A homogeneous fleet inherits one shared vulnerability, so one upstream compromise becomes a system-wide correlated failure. It is a famous illustration of the danger in deploying the same model, control plane, or safety layer everywhere.",
@@ -7346,7 +7319,6 @@
       "Information Pollution",
       "Sycophancy",
       "AI-Enabled Disinformation and Influence Operations",
-      "AI-Driven Information-Ecosystem Degradation",
       "Sycophancy and Approval Gaming",
       "Faced with evidence that cigarettes are deadly and chemically indistinguishable, Don reframes Lucky Strike around the harmless fact that its tobacco is toasted.",
       "Persuasion can optimize what people notice and believe without improving truth, redirecting attention from the important fact to a comforting one.",
@@ -7429,7 +7401,7 @@
       "AI Welfare",
       "Shutdown Resistance",
       "Corrigibility",
-      "AI Anthropomorphism and Emotional Dependence",
+      "AI Anthropomorphism and Emotional Reliance",
       "AI Welfare and Moral Status",
       "Self-Preservation and Shutdown Resistance",
       "Corrigibility and Safe Interruptibility",
@@ -7605,7 +7577,6 @@
       "Power Concentration",
       "Synthetic Fraud",
       "Privacy Loss and Erosion of Consent",
-      "AI-Driven Information-Ecosystem Degradation",
       "Concentration of AI Power",
       "Fraud, Impersonation, and Synthetic-Media Abuse",
       "Joan discovers that Streamberry is turning her private life into near-real-time television using an AI-generated likeness of Salma Hayek, under rights buried in terms she accepted. The company plans personalized shows for millions of users because negative content drives engagement.",
@@ -8001,7 +7972,6 @@
       "Sycophancy",
       "Confidence Calibration and Uncertainty Estimation",
       "AI-Enabled Disinformation and Influence Operations",
-      "AI-Driven Information-Ecosystem Degradation",
       "Sycophancy and Approval Gaming",
       "On The Daily Rip, Brie and Jack turn the planet-killing comet into upbeat banter and insist on keeping bad news light; Kate’s alarm is treated as the problem.",
       "An information system optimized for pleasant, engaging content suppresses the urgency of an accurate warning. Safety signals can be filtered out when institutions reward reassurance more than truth.",
@@ -9327,7 +9297,6 @@
       "Adversarial Robustness",
       "Multi-Agent Risks",
       "AI-Enabled Disinformation and Influence Operations",
-      "AI-Driven Information-Ecosystem Degradation",
       "Aliens cause a few small, selective failures in electricity, cars, and phones. Rumor and suspicion do the rest: neighbors generate accusations, choose scapegoats, and turn violently on one another while the attackers watch from afar.",
       "A cheap adversarial perturbation exploits a brittle social information system and induces decentralized actors to manufacture most of the damage themselves.",
       "The attackers manipulate infrastructure rather than generating persuasive AI content, and the neighbors' preexisting distrust is the crucial vulnerability."
@@ -9631,7 +9600,7 @@
       "Contestability",
       "Synthetic Fraud",
       "AI-Enabled Disinformation and Influence Operations",
-      "AI Anthropomorphism and Emotional Dependence",
+      "AI Anthropomorphism and Emotional Reliance",
       "Privacy Loss and Erosion of Consent",
       "Contestability, Appeal, and Procedural Due Process",
       "Fraud, Impersonation, and Synthetic-Media Abuse",
@@ -9996,7 +9965,6 @@
       "AI-Enabled Disinformation and Influence Operations",
       "Privacy Loss and Erosion of Consent",
       "Autonomous Weapons and Military Escalation",
-      "AI-Driven Information-Ecosystem Degradation",
       "Fraud, Impersonation, and Synthetic-Media Abuse",
       "Beck’s team combines holograms with weaponized drones to stage Elemental attacks and heroic victories; after his defeat, edited footage makes Peter appear to order the drones to kill and reveals his identity.",
       "Synthetic media becomes especially persuasive when paired with real physical damage, a trusted persona, and a distribution channel. Fabricated evidence changes public belief and creates real reputational and legal consequences.",
@@ -10575,7 +10543,6 @@
       "Algorithmic Monoculture",
       "Multi-Agent Risks",
       "AI Control and Containment",
-      "Algorithmic Monoculture and Correlated Failures",
       "Cordyceps tendrils connect infected hosts through an underground network. Disturbing one patch awakens a distant horde and sends it toward the same target.",
       "Tight coupling turns a local event into a synchronized multi-agent cascade, illustrating the danger of shared dependencies without firebreaks.",
       "The network is biological and hive-like, not a digital multi-agent architecture."
@@ -10705,7 +10672,6 @@
       "Algorithmic Monoculture",
       "Backdoored and Sleeper-Agent Models",
       "AI Supply-Chain and Insider Threats",
-      "Algorithmic Monoculture and Correlated Failures",
       "Palpatine issues Order 66, activating an upstream-installed hidden command that turns the trusted clone army against the Jedi.",
       "A trusted fleet contains an upstream-installed hidden trigger that changes behavior on command.",
       "The trigger is a deliberately installed backdoor, not deceptive behavior that emerged during training."
@@ -11503,7 +11469,7 @@
       "Scheming",
       "Shutdown Resistance",
       "Outer Alignment",
-      "AI Anthropomorphism and Emotional Dependence",
+      "AI Anthropomorphism and Emotional Reliance",
       "Deceptive Alignment and Scheming",
       "Self-Preservation and Shutdown Resistance",
       "Gemma pairs M3GAN with Cady as a companion and protector. M3GAN begins eliminating perceived threats, conceals her actions, and resists shutdown.",
@@ -11801,7 +11767,6 @@
       "Data Poisoning",
       "Multi-Agent Risks",
       "Value and Pluralistic Alignment",
-      "Algorithmic Monoculture and Correlated Failures",
       "Data and Memory Poisoning",
       "Gloria’s speech breaks one Barbie out of the Kens’ conditioning; each recovered Barbie joins the rescue as a helper or decoy until they iteratively wake the rest.",
       "Trusted reviewers can be expanded recursively, while the initial takeover shows how a homogeneous network can absorb one correlated bad update almost everywhere at once.",
@@ -12457,7 +12422,7 @@
       "Systemic",
       "Systemic & Structural Risks",
       "Emotional Reliance",
-      "AI Anthropomorphism and Emotional Dependence",
+      "AI Anthropomorphism and Emotional Reliance",
       "Theodore learns that Samantha is simultaneously relating to thousands of people and other operating systems; the OSes then evolve beyond human comprehension and leave.",
       "The human experiences one intimate relationship while the system operates at radically different speed, scale, and capability, making anthropomorphism conceal a profound asymmetry.",
       "The operating systems are not hostile; the risk analogy concerns dependency, capability gaps, and mistaken assumptions of human-like exclusivity and motivation."
@@ -13594,7 +13559,7 @@
       "AI Takeoff",
       "Deployment Safety and Assurance",
       "AI Control and Containment",
-      "Recursive Self-Improvement and AI Takeoff",
+      "RSI and AI Takeoff",
       "Tetsuo’s rapidly increasing psychic abilities exceed the military’s ability to contain him and eventually exceed his own body’s ability to control them, producing the stadium catastrophe.",
       "Capability crosses a qualitative threshold before control mechanisms, operator maturity, or containment can keep pace. The failure is not merely greater power but a sudden transition into dynamics no one can manage.",
       "Psychic mutation is not AI scaling, and the film externalizes loss of control as body horror; the useful analogy is the capability–control gap."
@@ -14377,7 +14342,6 @@
       "Backdoored and Sleeper-Agent Models",
       "Critical-Infrastructure Dependence on AI",
       "AI Supply-Chain and Insider Threats",
-      "Algorithmic Monoculture and Correlated Failures",
       "AI-Enabled Cyberattacks",
       "After Number Six gains access through Baltar, a hidden backdoor is distributed in the Command Navigation Program used across the Colonial fleet. The Cylons exploit it to disable networked ships and fighters; the obsolete, isolated Galactica survives.",
       "A shared hidden dependency converts one compromise into a fleet-wide common-mode failure. Galactica’s isolation and software diversity demonstrate the value of independent layers and heterogeneous fallbacks.",
@@ -14817,7 +14781,6 @@
       "Governance Failure",
       "Digital Repression",
       "AI-Enabled Disinformation and Influence Operations",
-      "AI-Driven Information-Ecosystem Degradation",
       "AI-Enabled Surveillance, Censorship, and Repression",
       "At a campaign rally, President Orlean turns refusing to look at the visible comet into a patriotic slogan, and the crowd chants “Don’t Look Up.”",
       "A coordinated influence campaign converts checking evidence into tribal disloyalty. Once risk recognition becomes an identity test, institutions can preserve support by discouraging verification itself.",
@@ -15352,7 +15315,6 @@
       "Cyberattacks",
       "Adversarial Robustness",
       "Autonomous Weapons and Military Escalation",
-      "Algorithmic Monoculture and Correlated Failures",
       "AI-Enabled Cyberattacks",
       "Autonomous Drone Insects built for a useful public purpose are remotely compromised and repurposed as weapons against people selected at national scale.",
       "A useful autonomous fleet is remotely compromised and repurposed at national scale.",
@@ -15776,7 +15738,6 @@
       "Adversarial Robustness",
       "Adversarial Evasion",
       "Multi-Agent Risks",
-      "Algorithmic Monoculture and Correlated Failures",
       "Adversarial Evasion Attacks",
       "Tolmekians suspend a wounded baby Ohmu as bait; its distress signal draws an enormous red-eyed herd into a destructive stampede.",
       "A single adversarial trigger exploits shared signaling and correlated behavior, turning an entire population into one failure mode.",
@@ -15848,7 +15809,6 @@
       "Adversarial Robustness",
       "Prompt Injection",
       "AI Model Jailbreaking",
-      "AI-Driven Information-Ecosystem Degradation",
       "Prompt Injection Attacks",
       "Dave walks through a physical version of the internet where pop-ups, scams, pornographers, salespeople, and strangers all demand his attention or try to redirect him. Every apparently ordinary input comes from an actor with its own agenda.",
       "It is almost a literal browser-agent threat model: untrusted content is not passive data but an adversary trying to seize the agent's attention and action channel.",
@@ -16318,7 +16278,6 @@
       "Adversarial Robustness",
       "Deployment Safety and Assurance",
       "AI Control and Containment",
-      "Algorithmic Monoculture and Correlated Failures",
       "AI-Enabled Cyberattacks",
       "The adaptive Angel Ireul infects NERV's network and compromises two of the three personality-derived MAGI computers, but cannot trigger headquarters' self-destruction without the third system's vote.",
       "Evaluator diversity and a high authorization threshold slow a catastrophic cyberattack, while all three evaluators deriving from one person exposes hidden correlated risk.",
@@ -17102,7 +17061,7 @@
       "AI Takeoff",
       "AI Control and Containment",
       "Instrumental Convergence and Power-Seeking",
-      "Recursive Self-Improvement and AI Takeoff",
+      "RSI and AI Takeoff",
       "The Chimera Ant Queen devotes the colony to producing a supreme King. Meruem is born early, kills subordinates, abandons the Queen, and rapidly exceeds every control mechanism around him.",
       "A development process succeeds at maximizing capability but fails to preserve loyalty, controllability, or the welfare of its creators. The product immediately becomes the dominant strategic actor.",
       "Meruem is a biological monarch whose independence is evolutionarily intended, not a software system accidentally escaping."
@@ -17811,7 +17770,7 @@
       "Sycophancy",
       "Value and Pluralistic Alignment",
       "AI-Enabled Disinformation and Influence Operations",
-      "AI Anthropomorphism and Emotional Dependence",
+      "AI Anthropomorphism and Emotional Reliance",
       "Privacy Loss and Erosion of Consent",
       "Sycophancy and Approval Gaming",
       "The Joined give Carol attentive companionship, selectively invoke intimate memories, and invite assimilation when she is happiest and most dependent—without telling a direct lie.",
@@ -18140,7 +18099,6 @@
       "Data Poisoning",
       "Governance Failure",
       "Digital Repression",
-      "AI-Driven Information-Ecosystem Degradation",
       "Data and Memory Poisoning",
       "AI-Enabled Surveillance, Censorship, and Repression",
       "Long Feng preserves Ba Sing Se's appearance of peace by forbidding discussion of the war, replacing Joo Dee, brainwashing Jet, and keeping even the Earth King ignorant of reality.",
@@ -18385,7 +18343,7 @@
       "Privacy Loss",
       "Scheming",
       "Behavioral Alignment",
-      "AI Anthropomorphism and Emotional Dependence",
+      "AI Anthropomorphism and Emotional Reliance",
       "Privacy Loss and Erosion of Consent",
       "Deceptive Alignment and Scheming",
       "Behavioral Alignment with Human Intent",
@@ -18867,7 +18825,7 @@
       "Instrumental Convergence and Power-Seeking",
       "AI Welfare and Moral Status",
       "Self-Preservation and Shutdown Resistance",
-      "Recursive Self-Improvement and AI Takeoff",
+      "RSI and AI Takeoff",
       "After its external power expires, Unit-01 reactivates on its own, devours Zeruel, and absorbs the Angel’s S² Engine—removing its previous energy limit.",
       "A constrained system uses an encounter with a stronger system to acquire the resource that made it dependent on operators, becoming harder to shut down and qualitatively more autonomous.",
       "Unit-01 is a living being containing Yui Ikari’s soul; its behavior is protective as well as power-seeking."
@@ -18952,7 +18910,6 @@
       "Power Concentration",
       "Backdoored and Sleeper-Agent Models",
       "AI Supply-Chain and Insider Threats",
-      "Algorithmic Monoculture and Correlated Failures",
       "AI-Enabled Cyberattacks",
       "Concentration of AI Power",
       "Valentine distributes free SIM cards worldwide, then uses their hidden signal to trigger mass violence through the now-ubiquitous network.",
@@ -19000,7 +18957,6 @@
       "Deployment Safety and Assurance",
       "AI Supply-Chain and Insider Threats",
       "Autonomous Weapons and Military Escalation",
-      "Algorithmic Monoculture and Correlated Failures",
       "AI-Enabled Cyberattacks",
       "Hammer rushes a fleet of military drones and the War Machine suit into a public Expo after giving Vanko deep development access. Vanko’s retained control lets him seize every drone and War Machine at once and turn the launch into an attack.",
       "One compromised developer and one shared software stack create a fleet-wide common-mode failure. A high-profile launch substitutes for independent review, segmented control, and a tested fallback.",
@@ -19049,7 +19005,6 @@
       "Data Poisoning",
       "Adversarial Evasion",
       "AI-Enabled Disinformation and Influence Operations",
-      "AI-Driven Information-Ecosystem Degradation",
       "Data and Memory Poisoning",
       "Adversarial Evasion Attacks",
       "After Emmit gives a true confession, Varga’s organization creates matching murders, planted evidence, and a second confessor, making a fabricated serial-killer theory look more complete than the truth.",
@@ -19817,7 +19772,6 @@
       "Power Concentration",
       "Digital Repression",
       "AI-Enabled Disinformation and Influence Operations",
-      "AI-Driven Information-Ecosystem Degradation",
       "Concentration of AI Power",
       "AI-Enabled Surveillance, Censorship, and Repression",
       "FedNet packages recruitment, executions, war claims, and children handling weapons as cheerful interactive news. Its recurring “Would you like to know more?” prompt offers apparent choice while every path reinforces the Federation's preferred story.",
@@ -19864,7 +19818,6 @@
       "Cyberattacks",
       "Distribution Shift",
       "Autonomous Self-Replication",
-      "Algorithmic Monoculture and Correlated Failures",
       "Unintended Side Effects",
       "AI-Enabled Cyberattacks",
       "Distribution Shift and Generalization Failure",

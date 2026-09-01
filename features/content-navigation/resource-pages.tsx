@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { ExternalLinkIcon } from 'lucide-react'
 
 import { ScrambleLink } from '@/components/motion/scramble-link'
 import { SiteHeader } from '@/components/site-header'
@@ -213,12 +214,10 @@ export function ResourceDetailPage({
               {resource.externalLinks.map((link) => (
                 <li key={link.href}>
                   <a href={link.href} target='_blank' rel='noreferrer'>
-                    <span
+                    <ExternalLinkIcon
                       className={styles.externalLinkMark}
                       aria-hidden='true'
-                    >
-                      ×
-                    </span>
+                    />
                     <span className={styles.externalLinkCopy}>
                       <span className={styles.externalLinkTitle}>
                         {link.label}

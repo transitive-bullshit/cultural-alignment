@@ -515,7 +515,7 @@
     "id": "3caedb27-f124-805b-acc6-df20885812a3",
     "slug": "emotional-reliance",
     "shortName": "Emotional Reliance",
-    "longName": "AI Anthropomorphism and Emotional Dependence",
+    "longName": "AI Anthropomorphism and Emotional Reliance",
     "keywords": [
       "ai companionship",
       "emotional dependence",
@@ -803,7 +803,7 @@
     "id": "3caedb27-f124-807b-89f4-f8f9cf70f677",
     "slug": "algorithmic-monoculture",
     "shortName": "Algorithmic Monoculture",
-    "longName": "Algorithmic Monoculture and Correlated Failures",
+    "longName": "Algorithmic Monoculture",
     "keywords": [
       "model monoculture",
       "correlated failures",
@@ -835,7 +835,7 @@
     "id": "3caedb27-f124-807d-87cc-c85f85f21c62",
     "slug": "information-pollution",
     "shortName": "Information Pollution",
-    "longName": "AI-Driven Information-Ecosystem Degradation",
+    "longName": "Information Pollution",
     "keywords": [
       "information ecosystem degradation",
       "ai slop",
@@ -1035,7 +1035,7 @@
       "vulnerability assessment",
       "model red team"
     ],
-    "description": "AI red teaming uses deliberately difficult tests to uncover unsafe behavior, security weaknesses, and misuse before deployment.",
+    "description": "AI red teaming uses deliberately difficult tests to uncover unsafe behavior, security weaknesses, and misuse before deployment. Also known as adversarial testing.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Red_team",
     "citations": [
       {
@@ -2014,15 +2014,16 @@
     "id": "3caedb27-f124-80f6-a1d3-ec0426adf2cc",
     "slug": "ai-takeoff",
     "shortName": "AI Takeoff",
-    "longName": "Recursive Self-Improvement and AI Takeoff",
+    "longName": "RSI and AI Takeoff",
     "keywords": [
       "intelligence explosion",
       "recursive self-improvement",
       "fast takeoff",
       "hard takeoff",
-      "capability explosion"
+      "capability explosion",
+      "rsi"
     ],
-    "description": "AI takeoff is a rapid rise in capability that could accelerate as AI systems improve themselves or help build stronger successors.",
+    "description": "AI takeoff is a rapid rise in capability that could accelerate as AI systems improve themselves or help build stronger successors. Closely related to Recursive self-improvement (RSI).",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Recursive_self-improvement",
     "citations": [
       {
@@ -2103,38 +2104,6 @@
         "href": "https://arxiv.org/abs/2302.12173",
         "title": "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection",
         "publisher": "arXiv.org"
-      }
-    ]
-  },
-  {
-    "id": "3cbedb27-f124-8106-b817-d1116df394c2",
-    "slug": "rsi",
-    "shortName": "RSI",
-    "longName": "Recursive Self-Improvement",
-    "keywords": [
-      "recursive self-improvement",
-      "rsi",
-      "self-modifying ai",
-      "automated ai r&d",
-      "intelligence explosion"
-    ],
-    "description": "Recursive self-improvement occurs when an AI improves its own architecture, training process, code, or successor and then uses the improved system to make further improvements, creating a compounding capability loop.",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Recursive_self-improvement",
-    "citations": [
-      {
-        "href": "https://www.anthropic.com/institute/recursive-self-improvement",
-        "title": "When AI builds itself",
-        "publisher": "Anthropic"
-      },
-      {
-        "href": "https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf",
-        "title": "Preparedness framework v2",
-        "publisher": "OpenAI"
-      },
-      {
-        "href": "https://securityandtechnology.org/recursive-self-improvement-initiative/",
-        "title": "Recursive Self Improvement Initiative",
-        "publisher": "Institute for Security and Technology"
       }
     ]
   }

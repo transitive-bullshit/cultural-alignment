@@ -271,10 +271,10 @@
 }
 
 .externalLinkMark {
+  width: 11px;
+  height: 11px;
+  margin-top: 3px;
   color: var(--proto-electric);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 10px;
-  line-height: 1.6;
 }
 
 .externalLinkCopy {
