@@ -6,6 +6,7 @@ import {
   DIMMED_ACTIVITY,
   getSlotActivityTarget,
   getSlotScaleTarget,
+  resolveVisibleRestoredOffset,
   resolveWarpedPointerSlot,
   resolveVisualSlotIndex
 } from './selection'
@@ -40,6 +41,27 @@ describe('spatial gallery instance selection', () => {
     expect(getSlotScaleTarget(true, false, 1.045)).toBe(1.045)
     expect(getSlotScaleTarget(true, true, 1.045)).toBe(1)
     expect(getSlotScaleTarget(false, false, 1.045)).toBe(1)
+  })
+
+  it('keeps a visible history position and recenters an offscreen copy', () => {
+    expect(
+      resolveVisibleRestoredOffset({
+        frameWidth: 2,
+        offsetX: 1,
+        slotX: 3,
+        span: 100,
+        viewportWidth: 10
+      })
+    ).toBe(1)
+    expect(
+      resolveVisibleRestoredOffset({
+        frameWidth: 2,
+        offsetX: 10,
+        slotX: 49,
+        span: 100,
+        viewportWidth: 10
+      })
+    ).toBe(51)
   })
 
   it('hits the rendered edge card instead of its stale unwarped plane', () => {
@@ -116,5 +138,38 @@ describe('spatial gallery instance selection', () => {
         xPositions: [-0.5, 0.5]
       })
     ).toEqual({ itemIndex: 2, slotIndex: 1 })
+  })
+
+  it('hits animated row positions and ignores rows outside the active window', () => {
+    const slots: readonly ProjectedSurfaceSlot[] = [
+      { column: 0, itemIndex: 2, lane: 0, x: 0, y: 1 },
+      { column: 0, itemIndex: 4, lane: 1, x: 0, y: 0 }
+    ]
+    const sharedOptions = {
+      activeLanes: [0, 1],
+      frameHeight: 1,
+      frameWidth: 2,
+      pointerNdc: { x: 0, y: 0.2 },
+      rowGap: 1,
+      scales: [1, 1],
+      slots,
+      viewportAspect: 2,
+      viewportWidth: 10,
+      warpSpeed: 0,
+      xPositions: [0, 0],
+      yPositions: [1, 0.5]
+    } as const
+
+    expect(resolveWarpedPointerSlot(sharedOptions)).toEqual({
+      itemIndex: 4,
+      slotIndex: 1
+    })
+    expect(
+      resolveWarpedPointerSlot({
+        ...sharedOptions,
+        activeLanes: [1, 0],
+        pointerNdc: { x: 0, y: 0.4 }
+      })
+    ).toEqual({ itemIndex: 2, slotIndex: 0 })
   })
 })

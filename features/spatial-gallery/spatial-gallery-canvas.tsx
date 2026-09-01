@@ -43,11 +43,33 @@ import {
 } from '@/lib/spatial/field'
 
 import {
+  GALLERY_BRACKET_INSET_RATIO as BRACKET_INSET_RATIO,
+  GALLERY_BRACKET_THICKNESS_RATIO as BRACKET_THICKNESS_RATIO,
+  GALLERY_FRAME_ASPECT as FRAME_ASPECT,
+  GALLERY_SELECTED_SCALE as SELECTED_SCALE,
+  getGalleryDecoratedFrameHalfHeight,
+  getGalleryGeometry,
+  getGalleryLaneCount,
+  getGalleryLaneCountForZoom,
+  getGalleryLayoutViewportWidth,
+  getGalleryTargetZoom
+} from './gallery-sizing'
+import {
+  getGalleryLaneTargetXOffset,
+  getGalleryLaneTargetY,
+  getGalleryLaneWindowStart,
+  isGalleryLaneActive,
+  shouldRenderGalleryLane,
+  stepGalleryLaneCount,
+  syncGalleryTextureLaneMask
+} from './gallery-lane-motion'
+import {
   calculateGalleryWarpOffset,
   DIMMED_ACTIVITY,
   getDirectionalDamping,
   getSlotActivityTarget,
   getSlotScaleTarget,
+  resolveVisibleRestoredOffset,
   resolveWarpedPointerSlot,
   resolveVisualSlotIndex,
   type ActiveSlot
@@ -62,19 +84,16 @@ import {
   settleTextureLoad,
   type TextureLoadStage
 } from './texture-residency'
-import type { SpatialGalleryController, SpatialGalleryItem } from './types'
+import type {
+  SpatialGalleryController,
+  SpatialGalleryItem,
+  SpatialGalleryTopology
+} from './types'
 
 const PAPER = new Color('#e8dece')
 const PAPER_LIGHT = '#f8f0df'
 const ELECTRIC = '#ff4d1f'
-const FRAME_ASPECT = 1.72
-const DESKTOP_LANES = 5
-const DESKTOP_FRAME_WIDTH = 1.4
-const DESKTOP_ROW_GAP = 1.45
 const BRACKET_ARM_RATIO = 0.14
-const BRACKET_INSET_RATIO = 0.045
-const BRACKET_THICKNESS_RATIO = 0.011
-const SELECTED_SCALE = 1.045
 const HOVER_ENTER_DAMPING = 18
 const HOVER_SCALE_EXIT_DAMPING = 9
 const HOVER_ACTIVITY_EXIT_DAMPING = 8
@@ -98,6 +117,9 @@ const TEXTURE_LOOKAHEAD_SECONDS = 0.2
 const TEXTURE_IDLE_TIMEOUT_MILLISECONDS = 1_000
 const TEXTURE_IDLE_VELOCITY_THRESHOLD = 0.1
 const TEXTURE_SWEEP_INTERVAL_SECONDS = 0.12
+const SIZING_DAMPING = 18
+const SIZING_ZOOM_EPSILON = 0.01
+const SIZING_POSITION_EPSILON = 0.001
 
 const warpVertexShader = /* glsl */ `
   varying vec2 vUv;
@@ -200,6 +222,9 @@ type CanvasProps = Readonly<{
   inertiaBurst: boolean
   initialIndex: number
   initialOffsetX: number | null
+  initialTopology: SpatialGalleryTopology | null
+  animateItemSize: boolean
+  itemSize: number
   items: readonly SpatialGalleryItem[]
   onPressItem(index: number): void
   onSelectItem(index: number): void
@@ -224,6 +249,7 @@ type InertiaBurstDiagnostic =
   | 'launched'
   | 'pending'
   | 'settled'
+type GallerySizingMotionDiagnostic = 'running' | 'settled'
 
 type PendingTextureRequest = Readonly<{
   cancel(): void
@@ -231,6 +257,24 @@ type PendingTextureRequest = Readonly<{
 }>
 
 type TextureFetchPriority = 'high' | 'low'
+
+type GalleryLaneMotionState = {
+  active: Uint8Array
+  key: string
+  rendered: Uint8Array
+  texturePriority: Uint8Array
+  visibleLanes: number
+  windowStart: number
+  x: Float32Array
+  y: Float32Array
+}
+
+type GallerySizingMotionState = {
+  configurationKey: string
+  itemSize: number
+  smooth: boolean
+  zoom: number
+}
 
 export function SpatialGalleryCanvas(props: CanvasProps) {
   return (
@@ -253,10 +297,13 @@ export function SpatialGalleryCanvas(props: CanvasProps) {
 }
 
 function SpatialField({
+  animateItemSize,
   controllerRef,
   inertiaBurst,
   initialIndex,
   initialOffsetX,
+  initialTopology,
+  itemSize,
   items,
   onPressItem,
   onSelectItem,
@@ -278,11 +325,15 @@ function SpatialField({
   } | null>(null)
   const pressedSlotRef = useRef<ActiveSlot | null>(null)
   const lastCenterIndexRef = useRef(initialIndex)
+  const selectedItemIndexRef = useRef(initialIndex)
+  const selectedLaneRef = useRef(0)
   const selectionOverrideRef = useRef<number | null>(initialIndex)
   const snapTargetRef = useRef<number | null>(null)
   const warpSpeedRef = useRef(0)
   const zoomRef = useRef(100)
   const viewportWidthRef = useRef(10)
+  const laneMotionRef = useRef<GalleryLaneMotionState | null>(null)
+  const sizingMotionRef = useRef<GallerySizingMotionState | null>(null)
   const motionRef = useRef<FieldMotion>({
     offset: { x: 0, y: 0 },
     velocity: { x: 0, y: 0 }
@@ -309,27 +360,82 @@ function SpatialField({
   const { camera, gl, size } = useThree()
   const mobile = isMobileGalleryViewport(size.width)
   const maximumBoundFullTextures = getTextureBindingLimit(size.width)
-  const lanes = mobile ? 3 : DESKTOP_LANES
-  const frameWidth = mobile ? 2.72 : DESKTOP_FRAME_WIDTH
+  const galleryGeometry = getGalleryGeometry(mobile)
+  const {
+    columnGap,
+    defaultLanes,
+    frameWidth,
+    maximumLanes,
+    overscan,
+    rowGap,
+    stagger
+  } = galleryGeometry
+  const targetLanes = getGalleryLaneCount(
+    mobile,
+    size.width,
+    size.height,
+    itemSize
+  )
   const frameHeight = frameWidth / FRAME_ASPECT
-  const columnGap = mobile ? 2.8 : 1.76
-  const rowGap = mobile ? 2.35 : DESKTOP_ROW_GAP
-  const stagger = mobile ? 0 : 0.28
-  const targetZoom = getTargetZoom(mobile, size.width, size.height)
-  const viewportWidth = size.width / targetZoom
+  const targetZoom = getGalleryTargetZoom(
+    mobile,
+    size.width,
+    size.height,
+    itemSize
+  )
+  const layoutViewportWidth = getGalleryLayoutViewportWidth(
+    mobile,
+    size.width,
+    size.height
+  )
+  // oxlint-disable react/preserve-manual-memoization -- The fixed-capacity field intentionally keys its topology to primitive geometry values.
   const layout = useMemo(
     () =>
       createProjectedSurfaceLayout(items.length, {
-        lanes,
+        assignmentLanes: defaultLanes,
+        lanes: maximumLanes,
         columnGap,
         rowGap,
-        viewportWidth,
+        viewportWidth: layoutViewportWidth,
         itemWidth: frameWidth,
-        overscan: 0.75,
-        stagger
+        overscan,
+        stagger: 0
       }),
-    [columnGap, frameWidth, items.length, lanes, rowGap, stagger, viewportWidth]
+    [
+      columnGap,
+      defaultLanes,
+      frameWidth,
+      items.length,
+      layoutViewportWidth,
+      maximumLanes,
+      overscan,
+      rowGap
+    ]
   )
+  // oxlint-enable react/preserve-manual-memoization
+  const laneMotionKey = `${mobile}:${maximumLanes}:${rowGap}:${stagger}`
+  let laneMotion = laneMotionRef.current
+  if (
+    !laneMotion ||
+    laneMotion.key !== laneMotionKey ||
+    !laneMotion.rendered ||
+    !laneMotion.texturePriority
+  ) {
+    laneMotion = createGalleryLaneMotionState({
+      hiddenLaneCenter: getHiddenGalleryLaneCenter(
+        size.height,
+        targetZoom,
+        frameWidth
+      ),
+      key: laneMotionKey,
+      maximumLanes,
+      rowGap,
+      stagger,
+      visibleLanes: targetLanes
+    })
+    laneMotionRef.current = laneMotion
+  }
+  const previousLayoutRef = useRef(layout)
   const scenarioSlots = useMemo(
     () =>
       items.map((_, itemIndex) =>
@@ -371,8 +477,17 @@ function SpatialField({
     [geometry, imageMaterials, scenarioSlots]
   )
   const slotXPositions = useMemo(
-    () => Float32Array.from(layout.slots, ({ x }) => x),
-    [layout.slots]
+    () =>
+      Float32Array.from(
+        layout.slots,
+        ({ lane, x }) => x + (laneMotion.x[lane] ?? 0)
+      ),
+    [laneMotion, layout.slots]
+  )
+  const slotYPositions = useMemo(
+    () =>
+      Float32Array.from(layout.slots, ({ lane, y }) => laneMotion.y[lane] ?? y),
+    [laneMotion, layout.slots]
   )
   const slotScales = useMemo(() => {
     const scales = new Float32Array(layout.slots.length)
@@ -427,6 +542,7 @@ function SpatialField({
       }
 
       return resolveWarpedPointerSlot({
+        activeLanes: laneMotion.active,
         frameHeight,
         frameWidth,
         hitPadding: POINTER_HIT_PADDING,
@@ -438,22 +554,24 @@ function SpatialField({
         scales: slotScales,
         slots: layout.slots,
         viewportAspect: size.width / size.height,
-        viewportWidth,
+        viewportWidth: viewportWidthRef.current,
         warpSpeed: warpSpeedRef.current,
-        xPositions: slotXPositions
+        xPositions: slotXPositions,
+        yPositions: slotYPositions
       })
     },
     [
       frameHeight,
       frameWidth,
       gl,
+      laneMotion,
       layout.slots,
       rowGap,
       size.height,
       size.width,
       slotScales,
       slotXPositions,
-      viewportWidth
+      slotYPositions
     ]
   )
 
@@ -471,9 +589,12 @@ function SpatialField({
         return
       }
 
+      selectedItemIndexRef.current = activeSlot.itemIndex
+      selectedLaneRef.current =
+        layout.slots[activeSlot.slotIndex]?.lane ?? selectedLaneRef.current
       onSelectItem(activeSlot.itemIndex)
     },
-    [onSelectItem]
+    [layout.slots, onSelectItem]
   )
 
   useEffect(() => {
@@ -553,13 +674,15 @@ function SpatialField({
     }
   }, [gl, imageMaterials])
 
+  useEffect(() => () => backingMesh.dispose(), [backingMesh])
+
+  useEffect(() => () => bracketMesh.dispose(), [bracketMesh])
+
   useEffect(
     () => () => {
-      backingMesh.dispose()
-      bracketMesh.dispose()
       for (const mesh of imageMeshes) mesh.dispose()
     },
-    [backingMesh, bracketMesh, imageMeshes]
+    [imageMeshes]
   )
 
   useEffect(
@@ -590,16 +713,80 @@ function SpatialField({
   }, [gl, initialOffsetX])
 
   useEffect(() => {
+    syncGallerySizingDiagnostics({
+      capacityLanes: maximumLanes,
+      gl,
+      itemSize,
+      renderedLanes: laneMotion.visibleLanes,
+      targetLanes,
+      targetZoom
+    })
+  }, [gl, itemSize, laneMotion, maximumLanes, targetLanes, targetZoom])
+
+  useEffect(() => () => clearGallerySizingDiagnostics(gl), [gl])
+
+  useEffect(() => {
+    const previousLayout = previousLayoutRef.current
+    previousLayoutRef.current = layout
+    if (previousLayout === layout || initializedStateRef.current === null)
+      return
+
+    const selectedItemIndex = selectedItemIndexRef.current
+    const selectedSlotIndex = findClosestSlotForItem(
+      layout.slots,
+      selectedItemIndex,
+      motionRef.current.offset.x,
+      layout.span,
+      laneMotion.active,
+      slotYPositions,
+      laneMotion.x
+    )
+    if (selectedSlotIndex === null) return
+    const selectedSlot = layout.slots[selectedSlotIndex]
+    if (!selectedSlot) return
+    const currentX = wrapCentered(
+      selectedSlot.x +
+        (laneMotion.x[selectedSlot.lane] ?? 0) +
+        motionRef.current.offset.x,
+      layout.span
+    )
+    const offsetX =
+      motionRef.current.offset.x + toroidalDelta(currentX, 0, layout.span)
+
+    draggingRef.current = false
+    hoveredSlotRef.current = null
+    pointerPositionRef.current = null
+    pressedSlotRef.current = null
+    snapTargetRef.current = null
+    selectionOverrideRef.current = selectedItemIndex
+    selectedLaneRef.current = selectedSlot.lane
+    lastCenterIndexRef.current = selectedItemIndex
+    motionRef.current = {
+      offset: { x: offsetX, y: 0 },
+      velocity: { x: 0, y: 0 }
+    }
+  }, [laneMotion, layout, slotYPositions])
+
+  useEffect(() => {
     // Viewport changes may recreate the slot topology; only a new initial item
     // is allowed to reset the user's live selection and motion.
-    const initializationKey = `${initialIndex}:${initialOffsetX ?? 'default'}`
+    const initializationKey = `${initialIndex}:${initialOffsetX ?? 'default'}:${initialTopology ?? 'legacy'}`
     if (initializedStateRef.current === initializationKey) return
+
+    const currentTopology: SpatialGalleryTopology = mobile
+      ? 'mobile'
+      : 'desktop'
+    const restoredOffsetX =
+      initialTopology === currentTopology ? initialOffsetX : null
 
     const initialSlotIndex = findClosestSlotForItem(
       layout.slots,
       initialIndex,
-      0,
-      layout.span
+      restoredOffsetX ?? 0,
+      layout.span,
+      laneMotion.active,
+      slotYPositions,
+      laneMotion.x
     )
     if (initialSlotIndex === null) {
       throw new Error(`Projected surface has no slot for item ${initialIndex}`)
@@ -609,20 +796,49 @@ function SpatialField({
       throw new Error(`Projected surface slot ${initialSlotIndex} is missing`)
     }
 
+    const initialSlotX = initialSlot.x + (laneMotion.x[initialSlot.lane] ?? 0)
+    const initialOffset =
+      restoredOffsetX === null
+        ? -initialSlotX
+        : resolveVisibleRestoredOffset({
+            frameWidth,
+            offsetX: restoredOffsetX,
+            slotX: initialSlotX,
+            span: layout.span,
+            viewportWidth: size.width / targetZoom
+          })
+
     motionRef.current = {
-      offset: { x: initialOffsetX ?? -initialSlot.x, y: 0 },
+      offset: {
+        x: initialOffset,
+        y: 0
+      },
       velocity: { x: 0, y: 0 }
     }
     snapTargetRef.current = null
     selectionOverrideRef.current = initialIndex
     lastCenterIndexRef.current = initialIndex
+    selectedItemIndexRef.current = initialIndex
+    selectedLaneRef.current = initialSlot.lane
     warpSpeedRef.current = 0
     initializedStateRef.current = initializationKey
     if (initialOffsetX !== null) {
       introStateRef.current = 'finished'
       setIntroMotionDiagnostic(gl, 'skipped')
     }
-  }, [gl, initialIndex, initialOffsetX, layout])
+  }, [
+    frameWidth,
+    gl,
+    initialIndex,
+    initialOffsetX,
+    initialTopology,
+    laneMotion,
+    layout,
+    mobile,
+    size.width,
+    slotYPositions,
+    targetZoom
+  ])
 
   useEffect(() => {
     if (reducedMotion) {
@@ -732,7 +948,10 @@ function SpatialField({
         draggingRef.current = false
       },
       getHistoryState() {
-        return { offsetX: motionRef.current.offset.x }
+        return {
+          offsetX: motionRef.current.offset.x,
+          topology: mobile ? 'mobile' : 'desktop'
+        }
       },
       clearHover() {
         pointerPositionRef.current = null
@@ -744,23 +963,26 @@ function SpatialField({
           pressedSlotRef.current,
           hoveredSlotRef.current,
           layout.slots,
-          slotXPositions
+          slotXPositions,
+          slotYPositions,
+          laneMotion.active
         )
         if (slotIndex === null) return null
         const slot = layout.slots[slotIndex]
         if (!slot) return null
+        const y = slotYPositions[slotIndex] ?? slot.y
 
         return getSlotScreenRect({
           camera,
           canvasRect: gl.domElement.getBoundingClientRect(),
           frameHeight,
           frameWidth,
-          rowCoefficient: slot.y / rowGap,
+          rowCoefficient: y / rowGap,
           scale: slotScales[slotIndex] ?? 1,
           viewportAspect: size.width / size.height,
           warpSpeed: warpSpeedRef.current,
           x: slotXPositions[slotIndex] ?? slot.x,
-          y: slot.y
+          y
         })
       },
       hoverAt(clientX, clientY) {
@@ -784,7 +1006,10 @@ function SpatialField({
         const pressedSlot = pressedSlotRef.current
         const pressedSlotIndex =
           pressedSlot?.itemIndex === index &&
-          layout.slots[pressedSlot.slotIndex]?.itemIndex === index
+          layout.slots[pressedSlot.slotIndex]?.itemIndex === index &&
+          laneMotion.active[
+            layout.slots[pressedSlot.slotIndex]?.lane ?? maximumLanes
+          ] === 1
             ? pressedSlot.slotIndex
             : null
         const slotIndex =
@@ -793,7 +1018,10 @@ function SpatialField({
             layout.slots,
             index,
             motionRef.current.offset.x,
-            layout.span
+            layout.span,
+            laneMotion.active,
+            slotYPositions,
+            laneMotion.x
           )
         if (slotIndex === null) return
         const slot = layout.slots[slotIndex]
@@ -802,12 +1030,14 @@ function SpatialField({
         pointerPositionRef.current = null
         hoveredSlotRef.current = null
         const currentX = wrapCentered(
-          slot.x + motionRef.current.offset.x,
+          slot.x + (laneMotion.x[slot.lane] ?? 0) + motionRef.current.offset.x,
           layout.span
         )
         snapTargetRef.current =
           motionRef.current.offset.x + toroidalDelta(currentX, 0, layout.span)
         selectionOverrideRef.current = index
+        selectedItemIndexRef.current = index
+        selectedLaneRef.current = slot.lane
         motionRef.current = {
           offset: { x: motionRef.current.offset.x, y: 0 },
           velocity: { x: 0, y: 0 }
@@ -868,7 +1098,10 @@ function SpatialField({
     frameHeight,
     frameWidth,
     gl,
+    laneMotion,
     layout,
+    maximumLanes,
+    mobile,
     onPressItem,
     reducedMotion,
     resolvePointerSlotAt,
@@ -876,13 +1109,178 @@ function SpatialField({
     size.height,
     size.width,
     slotScales,
-    slotXPositions
+    slotXPositions,
+    slotYPositions
   ])
 
   useFrame(({ clock }, delta) => {
+    // oxlint-disable react/immutability -- R3F cameras, transient lane buffers, and DOM diagnostics are intentionally updated inside the render loop.
     const frameDelta = Math.min(delta, MAX_FRAME_DELTA)
     const orthographicCamera = camera as OrthographicCamera
-    const nextZoom = getTargetZoom(mobile, size.width, size.height)
+    const configurationKey = `${mobile}:${size.width}:${size.height}:${maximumLanes}`
+    let sizingMotion = sizingMotionRef.current
+    if (!sizingMotion) {
+      sizingMotion = {
+        configurationKey,
+        itemSize,
+        smooth: false,
+        zoom: targetZoom
+      }
+      sizingMotionRef.current = sizingMotion
+    }
+
+    const itemSizeChanged = sizingMotion.itemSize !== itemSize
+    const configurationChanged =
+      sizingMotion.configurationKey !== configurationKey
+    if (itemSizeChanged || configurationChanged) {
+      sizingMotion.smooth =
+        itemSizeChanged &&
+        !configurationChanged &&
+        animateItemSize &&
+        !reducedMotion
+      sizingMotion.configurationKey = configurationKey
+      sizingMotion.itemSize = itemSize
+      if (!sizingMotion.smooth) sizingMotion.zoom = targetZoom
+      setGallerySizingMotionDiagnostic(
+        gl,
+        sizingMotion.smooth ? 'running' : 'settled'
+      )
+      if (sizingMotion.smooth) {
+        cancelIntro()
+        snapTargetRef.current = null
+        motionRef.current = {
+          offset: motionRef.current.offset,
+          velocity: { x: 0, y: 0 }
+        }
+        warpSpeedRef.current = 0
+      }
+      if (itemSizeChanged) {
+        lastTextureSweepRef.current = Number.NEGATIVE_INFINITY
+      }
+    } else if (sizingMotion.smooth && (reducedMotion || !animateItemSize)) {
+      sizingMotion.smooth = false
+      sizingMotion.zoom = targetZoom
+      setGallerySizingMotionDiagnostic(gl, 'settled')
+    }
+
+    const smoothSizing = sizingMotion.smooth
+    sizingMotion.zoom = smoothSizing
+      ? damp(sizingMotion.zoom, targetZoom, SIZING_DAMPING, frameDelta)
+      : targetZoom
+    if (
+      smoothSizing &&
+      Math.abs(sizingMotion.zoom - targetZoom) <= SIZING_ZOOM_EPSILON
+    ) {
+      sizingMotion.zoom = targetZoom
+    }
+
+    const nextZoom = sizingMotion.zoom
+    const fittingVisibleLanes = getGalleryLaneCountForZoom(
+      mobile,
+      size.height,
+      nextZoom
+    )
+    const nextVisibleLanes =
+      smoothSizing && mobile
+        ? stepGalleryLaneCount(laneMotion.visibleLanes, fittingVisibleLanes)
+        : fittingVisibleLanes
+    const hiddenLaneCenter = getHiddenGalleryLaneCenter(
+      size.height,
+      nextZoom,
+      frameWidth
+    )
+    if (nextVisibleLanes !== laneMotion.visibleLanes) {
+      selectedLaneRef.current = Math.min(
+        maximumLanes - 1,
+        Math.max(0, selectedLaneRef.current)
+      )
+      laneMotion.windowStart = getGalleryLaneWindowStart(
+        maximumLanes,
+        nextVisibleLanes,
+        selectedLaneRef.current,
+        laneMotion.windowStart
+      )
+      laneMotion.visibleLanes = nextVisibleLanes
+      for (let lane = 0; lane < maximumLanes; lane += 1) {
+        const wasActive = laneMotion.active[lane] === 1
+        const active = isGalleryLaneActive(
+          lane,
+          laneMotion.windowStart,
+          laneMotion.visibleLanes
+        )
+        laneMotion.active[lane] = active ? 1 : 0
+        if (active) {
+          if (!wasActive && laneMotion.rendered[lane] !== 1) {
+            laneMotion.y[lane] =
+              (laneMotion.y[lane] ?? hiddenLaneCenter) < 0
+                ? -hiddenLaneCenter
+                : hiddenLaneCenter
+          }
+          laneMotion.rendered[lane] = 1
+        }
+      }
+      lastTextureSweepRef.current = Number.NEGATIVE_INFINITY
+      hoveredSlotRef.current = null
+      pointerPositionRef.current = null
+      pressedSlotRef.current = null
+      selectionOverrideRef.current = selectedItemIndexRef.current
+      lastCenterIndexRef.current = selectedItemIndexRef.current
+      gl.domElement.dataset.galleryLanes = String(nextVisibleLanes)
+    }
+
+    let lanePositionsSettled = true
+    for (let lane = 0; lane < maximumLanes; lane += 1) {
+      const targetX = getGalleryLaneTargetXOffset(
+        lane,
+        laneMotion.windowStart,
+        laneMotion.visibleLanes,
+        stagger
+      )
+      const targetY = getGalleryLaneTargetY(
+        lane,
+        laneMotion.windowStart,
+        laneMotion.visibleLanes,
+        rowGap,
+        hiddenLaneCenter
+      )
+      const nextX = smoothSizing
+        ? damp(
+            laneMotion.x[lane] ?? targetX,
+            targetX,
+            SIZING_DAMPING,
+            frameDelta
+          )
+        : targetX
+      const nextY = smoothSizing
+        ? damp(
+            laneMotion.y[lane] ?? targetY,
+            targetY,
+            SIZING_DAMPING,
+            frameDelta
+          )
+        : targetY
+      const xSettled = Math.abs(nextX - targetX) <= SIZING_POSITION_EPSILON
+      const ySettled = Math.abs(nextY - targetY) <= SIZING_POSITION_EPSILON
+      lanePositionsSettled &&= xSettled && ySettled
+      laneMotion.x[lane] = xSettled ? targetX : nextX
+      laneMotion.y[lane] = ySettled ? targetY : nextY
+      laneMotion.rendered[lane] = shouldRenderGalleryLane(
+        laneMotion.active[lane] === 1,
+        ySettled,
+        laneMotion.rendered[lane] === 1
+      )
+        ? 1
+        : 0
+    }
+
+    if (
+      smoothSizing &&
+      sizingMotion.zoom === targetZoom &&
+      lanePositionsSettled
+    ) {
+      sizingMotion.smooth = false
+      setGallerySizingMotionDiagnostic(gl, 'settled')
+    }
 
     if (Math.abs(orthographicCamera.zoom - nextZoom) > 0.01) {
       // oxlint-disable-next-line react/immutability -- R3F cameras are intentionally updated inside the render loop.
@@ -950,28 +1348,48 @@ function SpatialField({
       }
     }
 
-    const targetWarpSpeed = reducedMotion
-      ? 0
-      : calculateVelocityDeformation(
-          viewportWidthRef.current / 2,
-          viewportWidthRef.current,
-          motionRef.current.velocity.x,
-          WARP_REFERENCE_VELOCITY
-        ).speed
-    warpSpeedRef.current = reducedMotion
-      ? 0
-      : damp(warpSpeedRef.current, targetWarpSpeed, WARP_DAMPING, frameDelta)
+    if (smoothSizing) {
+      motionRef.current = {
+        offset: motionRef.current.offset,
+        velocity: { x: 0, y: 0 }
+      }
+    }
+    const targetWarpSpeed =
+      reducedMotion || smoothSizing
+        ? 0
+        : calculateVelocityDeformation(
+            viewportWidthRef.current / 2,
+            viewportWidthRef.current,
+            motionRef.current.velocity.x,
+            WARP_REFERENCE_VELOCITY
+          ).speed
+    warpSpeedRef.current =
+      reducedMotion || smoothSizing
+        ? 0
+        : damp(warpSpeedRef.current, targetWarpSpeed, WARP_DAMPING, frameDelta)
 
-    // oxlint-disable react/immutability -- Instanced buffers and shader uniforms are GPU resources updated inside the render loop.
     for (const [slotIndex, slot] of layout.slots.entries()) {
       slotXPositions[slotIndex] = wrapCentered(
-        slot.x + motionRef.current.offset.x,
+        slot.x + (laneMotion.x[slot.lane] ?? 0) + motionRef.current.offset.x,
         layout.span
       )
+      slotYPositions[slotIndex] = laneMotion.y[slot.lane] ?? slot.y
     }
 
     const textureVisibilityLimit =
       viewportWidthRef.current / 2 + frameWidth * 1.75
+    const textureTargetWindowStart = getGalleryLaneWindowStart(
+      maximumLanes,
+      targetLanes,
+      selectedLaneRef.current,
+      laneMotion.windowStart
+    )
+    syncGalleryTextureLaneMask(
+      laneMotion.texturePriority,
+      laneMotion.rendered,
+      textureTargetWindowStart,
+      targetLanes
+    )
     const textureSweepDue =
       clock.elapsedTime - lastTextureSweepRef.current >=
       TEXTURE_SWEEP_INTERVAL_SECONDS
@@ -983,7 +1401,8 @@ function SpatialField({
           slotXPositions,
           textureVisibilityLimit,
           motionRef.current.velocity.x,
-          TEXTURE_LOOKAHEAD_SECONDS
+          TEXTURE_LOOKAHEAD_SECONDS,
+          laneMotion.texturePriority
         )
       const prioritizedItemIndices = [
         ...foregroundItemIndices,
@@ -1097,6 +1516,8 @@ function SpatialField({
 
     for (const [slotIndex, slot] of layout.slots.entries()) {
       const x = slotXPositions[slotIndex] ?? slot.x
+      const y = slotYPositions[slotIndex] ?? slot.y
+      const renderScale = laneMotion.rendered[slot.lane] === 1 ? 1 : 0
       const active = slotIndex === activeSlotIndex
       const scaleTarget = getSlotScaleTarget(
         active,
@@ -1139,10 +1560,10 @@ function SpatialField({
         slotIndex,
         transform,
         x,
-        slot.y,
+        y,
         -0.025,
-        (frameWidth + 0.15) * scale,
-        (frameHeight + 0.15) * scale
+        (frameWidth + 0.15) * scale * renderScale,
+        (frameHeight + 0.15) * scale * renderScale
       )
     }
     backingMesh.instanceMatrix.needsUpdate = true
@@ -1156,16 +1577,17 @@ function SpatialField({
 
       for (const [instanceIndex, { slot, slotIndex }] of slots.entries()) {
         const scale = slotScales[slotIndex] ?? 1
+        const renderScale = laneMotion.rendered[slot.lane] === 1 ? 1 : 0
         const activity = slotActivities[slotIndex] ?? DIMMED_ACTIVITY
         setInstanceTransform(
           mesh,
           instanceIndex,
           transform,
           slotXPositions[slotIndex] ?? slot.x,
-          slot.y,
+          slotYPositions[slotIndex] ?? slot.y,
           0,
-          frameWidth * scale,
-          frameHeight * scale
+          frameWidth * scale * renderScale,
+          frameHeight * scale * renderScale
         )
         activityColor.setRGB(activity, activity, activity)
         mesh.setColorAt(instanceIndex, activityColor)
@@ -1178,6 +1600,7 @@ function SpatialField({
     if (activeSlotIndex !== null) {
       const activeSlot = layout.slots[activeSlotIndex]
       if (activeSlot) {
+        const activeSlotY = slotYPositions[activeSlotIndex] ?? activeSlot.y
         updateSelectionBrackets({
           frameHeight,
           frameWidth,
@@ -1185,9 +1608,9 @@ function SpatialField({
           scale: slotScales[activeSlotIndex] ?? 1,
           transform,
           x: slotXPositions[activeSlotIndex] ?? activeSlot.x,
-          y: activeSlot.y
+          y: activeSlotY
         })
-        bracketMaterial.uniforms.uRowOverride!.value = activeSlot.y / rowGap
+        bracketMaterial.uniforms.uRowOverride!.value = activeSlotY / rowGap
       }
     }
 
@@ -1209,16 +1632,21 @@ function SpatialField({
     let nearestItemIndex = 0
     let nearestDistance = Number.POSITIVE_INFINITY
     for (const [slotIndex, slot] of layout.slots.entries()) {
+      if (laneMotion.active[slot.lane] !== 1) continue
+
       const x = slotXPositions[slotIndex] ?? slot.x
-      const distance = x * x + slot.y * slot.y
+      const y = slotYPositions[slotIndex] ?? slot.y
+      const distance = x * x + y * y
       if (distance < nearestDistance) {
         nearestDistance = distance
         nearestItemIndex = slot.itemIndex
+        selectedLaneRef.current = slot.lane
       }
     }
 
     if (nearestItemIndex !== lastCenterIndexRef.current) {
       lastCenterIndexRef.current = nearestItemIndex
+      selectedItemIndexRef.current = nearestItemIndex
       onSelectItem(nearestItemIndex)
     }
   })
@@ -1749,14 +2177,24 @@ function findClosestSlotForItem(
   slots: readonly ProjectedSurfaceSlot[],
   itemIndex: number,
   offset: number,
-  span: number
+  span: number,
+  activeLanes?: ArrayLike<number>,
+  yPositions?: ArrayLike<number>,
+  laneXOffsets?: ArrayLike<number>
 ) {
   let closestSlotIndex: number | null = null
   let closestDistance = Number.POSITIVE_INFINITY
 
   for (const [slotIndex, slot] of slots.entries()) {
     if (slot.itemIndex !== itemIndex) continue
-    const distance = Math.abs(wrapCentered(slot.x + offset, span))
+    if (activeLanes && activeLanes[slot.lane] !== 1) continue
+
+    const x = wrapCentered(
+      slot.x + (laneXOffsets?.[slot.lane] ?? 0) + offset,
+      span
+    )
+    const y = yPositions?.[slotIndex] ?? slot.y
+    const distance = x * x + y * y
     if (distance < closestDistance) {
       closestDistance = distance
       closestSlotIndex = slotIndex
@@ -1771,17 +2209,21 @@ function getDisplaySlotIndex(
   pressedSlot: ActiveSlot | null,
   hoveredSlot: ActiveSlot | null,
   slots: readonly ProjectedSurfaceSlot[],
-  xPositions: Float32Array
+  xPositions: Float32Array,
+  yPositions: Float32Array,
+  activeLanes: ArrayLike<number>
 ) {
   if (
     pressedSlot?.itemIndex === itemIndex &&
-    slots[pressedSlot.slotIndex]?.itemIndex === itemIndex
+    slots[pressedSlot.slotIndex]?.itemIndex === itemIndex &&
+    activeLanes[slots[pressedSlot.slotIndex]?.lane ?? activeLanes.length] === 1
   ) {
     return pressedSlot.slotIndex
   }
   if (
     hoveredSlot?.itemIndex === itemIndex &&
-    slots[hoveredSlot.slotIndex]?.itemIndex === itemIndex
+    slots[hoveredSlot.slotIndex]?.itemIndex === itemIndex &&
+    activeLanes[slots[hoveredSlot.slotIndex]?.lane ?? activeLanes.length] === 1
   ) {
     return hoveredSlot.slotIndex
   }
@@ -1790,8 +2232,11 @@ function getDisplaySlotIndex(
   let closestDistance = Number.POSITIVE_INFINITY
   for (const [slotIndex, slot] of slots.entries()) {
     if (slot.itemIndex !== itemIndex) continue
+    if (activeLanes[slot.lane] !== 1) continue
+
     const x = xPositions[slotIndex] ?? slot.x
-    const distance = x * x + slot.y * slot.y
+    const y = yPositions[slotIndex] ?? slot.y
+    const distance = x * x + y * y
     if (distance < closestDistance) {
       closestDistance = distance
       closestSlotIndex = slotIndex
@@ -1862,21 +2307,74 @@ function getSlotScreenRect({
   }
 }
 
-function getTargetZoom(mobile: boolean, width: number, height: number) {
-  if (mobile) return Math.max(76, width / 5.2, height / 10.4)
+function createGalleryLaneMotionState({
+  hiddenLaneCenter,
+  key,
+  maximumLanes,
+  rowGap,
+  stagger,
+  visibleLanes
+}: {
+  readonly hiddenLaneCenter: number
+  readonly key: string
+  readonly maximumLanes: number
+  readonly rowGap: number
+  readonly stagger: number
+  readonly visibleLanes: number
+}): GalleryLaneMotionState {
+  const active = new Uint8Array(maximumLanes)
+  const rendered = new Uint8Array(maximumLanes)
+  const texturePriority = new Uint8Array(maximumLanes)
+  const x = new Float32Array(maximumLanes)
+  const y = new Float32Array(maximumLanes)
+  const windowStart = getGalleryLaneWindowStart(
+    maximumLanes,
+    visibleLanes,
+    0,
+    0
+  )
 
-  const densityZoom = Math.max(90, width / 20.5, height / 7.15)
-  const outerLaneCenter = ((DESKTOP_LANES - 1) / 2) * DESKTOP_ROW_GAP
-  const selectedFrameHalfHeight =
-    ((DESKTOP_FRAME_WIDTH / FRAME_ASPECT) * SELECTED_SCALE) / 2
-  const requiredHalfHeight =
-    outerLaneCenter +
-    selectedFrameHalfHeight +
-    DESKTOP_FRAME_WIDTH * SELECTED_SCALE * BRACKET_INSET_RATIO +
-    (DESKTOP_FRAME_WIDTH * SELECTED_SCALE * BRACKET_THICKNESS_RATIO) / 2
-  const verticalFitZoom = height / (requiredHalfHeight * 2)
+  for (let lane = 0; lane < maximumLanes; lane += 1) {
+    active[lane] = isGalleryLaneActive(lane, windowStart, visibleLanes) ? 1 : 0
+    rendered[lane] = active[lane] ?? 0
+    texturePriority[lane] = rendered[lane] ?? 0
+    x[lane] = getGalleryLaneTargetXOffset(
+      lane,
+      windowStart,
+      visibleLanes,
+      stagger
+    )
+    y[lane] = getGalleryLaneTargetY(
+      lane,
+      windowStart,
+      visibleLanes,
+      rowGap,
+      hiddenLaneCenter
+    )
+  }
 
-  return Math.min(densityZoom, verticalFitZoom)
+  return {
+    active,
+    key,
+    rendered,
+    texturePriority,
+    visibleLanes,
+    windowStart,
+    x,
+    y
+  }
+}
+
+function getHiddenGalleryLaneCenter(
+  viewportHeightPixels: number,
+  zoom: number,
+  frameWidth: number
+) {
+  return (
+    viewportHeightPixels / (zoom * 2) +
+    getGalleryDecoratedFrameHalfHeight(frameWidth) +
+    SIZING_POSITION_EPSILON
+  )
 }
 
 function combineImpulse(current: number, impulse: number) {
@@ -1890,6 +2388,47 @@ function setIntroMotionDiagnostic(
   state: IntroMotionDiagnostic
 ) {
   gl.domElement.dataset.galleryIntroMotion = state
+}
+
+function syncGallerySizingDiagnostics({
+  capacityLanes,
+  gl,
+  itemSize,
+  renderedLanes,
+  targetLanes,
+  targetZoom
+}: {
+  readonly capacityLanes: number
+  readonly gl: WebGLRenderer
+  readonly itemSize: number
+  readonly renderedLanes: number
+  readonly targetLanes: number
+  readonly targetZoom: number
+}) {
+  gl.domElement.dataset.galleryCapacityLanes = String(capacityLanes)
+  gl.domElement.dataset.galleryItemSize = String(itemSize)
+  gl.domElement.dataset.galleryLanes = String(renderedLanes)
+  gl.domElement.dataset.galleryTargetLanes = String(targetLanes)
+  gl.domElement.dataset.galleryTargetZoom = targetZoom.toFixed(3)
+  gl.domElement.dataset.gallerySizingMotion ??= 'settled'
+}
+
+function setGallerySizingMotionDiagnostic(
+  gl: WebGLRenderer,
+  state: GallerySizingMotionDiagnostic
+) {
+  if (gl.domElement.dataset.gallerySizingMotion === state) return
+
+  gl.domElement.dataset.gallerySizingMotion = state
+}
+
+function clearGallerySizingDiagnostics(gl: WebGLRenderer) {
+  delete gl.domElement.dataset.galleryCapacityLanes
+  delete gl.domElement.dataset.galleryItemSize
+  delete gl.domElement.dataset.galleryLanes
+  delete gl.domElement.dataset.gallerySizingMotion
+  delete gl.domElement.dataset.galleryTargetLanes
+  delete gl.domElement.dataset.galleryTargetZoom
 }
 
 function setInertiaBurstDiagnostic(

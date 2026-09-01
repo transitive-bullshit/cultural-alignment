@@ -30,7 +30,8 @@ export function prioritizeTextureItemIndices(
   xPositions: ArrayLike<number>,
   visibilityLimit: number,
   velocityX = 0,
-  lookaheadSeconds = 0
+  lookaheadSeconds = 0,
+  includedLanes?: ArrayLike<number>
 ): TextureItemPriority {
   const velocityLead = velocityX * lookaheadSeconds
   const minimumX = -visibilityLimit - Math.max(0, velocityLead)
@@ -38,6 +39,8 @@ export function prioritizeTextureItemIndices(
   const bestCandidateByItem = new Map<number, RankedTextureItem>()
 
   for (const [slotIndex, slot] of slots.entries()) {
+    if (includedLanes && includedLanes[slot.lane] !== 1) continue
+
     const x = xPositions[slotIndex] ?? slot.x
     const insideCurrentRange = Math.abs(x) <= visibilityLimit
     const insideDirectionalLookahead = x >= minimumX && x <= maximumX

@@ -9,6 +9,7 @@ import {
   useEffect,
   useRef,
   useState,
+  type CSSProperties,
   type MouseEvent,
   type PointerEvent
 } from 'react'
@@ -18,15 +19,22 @@ import { focalPointToObjectPosition } from '@/lib/media/crop'
 import { stageScenarioTransitionPreview } from '@/lib/media/scenario-transition-preview'
 import { classifyGesture, shouldCaptureGalleryWheel } from '@/lib/spatial/field'
 
+import { useGalleryItemSizePreference } from './gallery-item-size-preference'
+import {
+  GALLERY_FRAME_ASPECT,
+  getGalleryViewportMetrics
+} from './gallery-sizing'
 import styles from './spatial-gallery.module.css'
 import {
   mergeGalleryHistoryState,
   readGalleryHistoryState
 } from './history-state'
+import { isMobileGalleryViewport } from './texture-residency'
 import type {
   SpatialFrameRect,
   SpatialGalleryController,
-  SpatialGalleryItem
+  SpatialGalleryItem,
+  SpatialGalleryTopology
 } from './types'
 
 const SpatialGalleryCanvas = dynamic(
@@ -73,6 +81,8 @@ export function SpatialGallery({
   const [historyReady, setHistoryReady] = useState(false)
   const [sceneInitialIndex, setSceneInitialIndex] = useState(initialIndex)
   const [initialOffsetX, setInitialOffsetX] = useState<number | null>(null)
+  const [initialTopology, setInitialTopology] =
+    useState<SpatialGalleryTopology | null>(null)
   const [dragging, setDragging] = useState(false)
   const [renderMode, setRenderMode] = useState<RenderMode>('checking')
   const [reducedMotion, setReducedMotion] = useState(false)
@@ -80,6 +90,11 @@ export function SpatialGallery({
   const [transitionReady, setTransitionReady] = useState(false)
   const [transitionProxy, setTransitionProxy] =
     useState<TransitionProxy | null>(null)
+  const {
+    hydrated: itemSizeHydrated,
+    itemSize,
+    itemSizeTransition
+  } = useGalleryItemSizePreference()
   const selectedItem =
     selectedIndex === null ? null : (items[selectedIndex] ?? null)
 
@@ -100,6 +115,7 @@ export function SpatialGallery({
         setSceneInitialIndex(restoredIndex)
       }
       setInitialOffsetX(restoredState.offsetX)
+      setInitialTopology(restoredState.topology)
     }
 
     setHistoryReady(true)
@@ -134,7 +150,8 @@ export function SpatialGallery({
         {
           itemId: item.id,
           offsetX: sceneState.offsetX,
-          version: 1
+          topology: sceneState.topology,
+          version: 2
         }
       )
       window.history.replaceState(nextHistoryState, '', window.location.href)
@@ -366,9 +383,12 @@ export function SpatialGallery({
 
   return (
     <section
+      id='scenario-gallery'
       className={styles.gallery}
       data-spatial-gallery='browse'
       data-gallery-item-count={items.length}
+      data-gallery-item-size={itemSize}
+      data-gallery-item-size-transition={itemSizeTransition}
       data-gallery-transition-ready={transitionReady || undefined}
       data-selected-scenario-id={selectedItem?.id}
       aria-label='All cultural scenarios. Drag horizontally or scroll to explore.'
@@ -385,14 +405,17 @@ export function SpatialGallery({
       >
         <div className={styles.rules} aria-hidden='true' />
 
-        {!historyReady || renderMode === 'checking' ? (
+        {!itemSizeHydrated || !historyReady || renderMode === 'checking' ? (
           <CanvasLoading />
         ) : renderMode === 'webgl' ? (
           <SpatialGalleryCanvas
+            animateItemSize={itemSizeTransition === 'smooth'}
             controllerRef={controllerRef}
             inertiaBurst={inertiaBurst}
             initialIndex={sceneInitialIndex}
             initialOffsetX={initialOffsetX}
+            initialTopology={initialTopology}
+            itemSize={itemSize}
             items={items}
             onPressItem={(index) => {
               pressedIndexRef.current = index
@@ -402,7 +425,12 @@ export function SpatialGallery({
             reducedMotion={reducedMotion}
           />
         ) : (
-          <GalleryFallback items={items} selectedIndex={selectedIndex} />
+          <GalleryFallback
+            animateItemSize={itemSizeTransition === 'smooth' && !reducedMotion}
+            itemSize={itemSize}
+            items={items}
+            selectedIndex={selectedIndex}
+          />
         )}
       </div>
 
@@ -597,19 +625,112 @@ function CanvasLoading() {
 }
 
 function GalleryFallback({
+  animateItemSize,
+  itemSize,
   items,
   selectedIndex
 }: {
+  readonly animateItemSize: boolean
+  readonly itemSize: number
   readonly items: readonly SpatialGalleryItem[]
   readonly selectedIndex: number | null
 }) {
+  const fieldRef = useRef<HTMLOListElement>(null)
+  const previousItemSizeRef = useRef(itemSize)
+  const [layoutState, setLayoutState] =
+    useState<GalleryFallbackLayoutState | null>(null)
+
+  useEffect(() => {
+    const field = fieldRef.current
+    const surface = field?.parentElement
+    if (!field || !surface) return
+    const itemSizeChanged = previousItemSizeRef.current !== itemSize
+    previousItemSizeRef.current = itemSize
+
+    const updateLayout = (
+      { height, width }: Readonly<{ height: number; width: number }>,
+      motion: GalleryFallbackLayoutMotion
+    ) => {
+      if (width <= 0 || height <= 0) return
+
+      const metrics = getGalleryViewportMetrics(
+        isMobileGalleryViewport(width),
+        width,
+        height,
+        itemSize
+      )
+      const frameHeightPixels = metrics.frameWidthPixels / GALLERY_FRAME_ASPECT
+      const nextLayout = {
+        columnGapPixels: Math.max(
+          0,
+          metrics.columnPitchPixels - metrics.frameWidthPixels
+        ),
+        frameHeightPixels,
+        frameWidthPixels: metrics.frameWidthPixels,
+        lanes: metrics.lanes,
+        rowGapPixels: Math.max(0, metrics.rowPitchPixels - frameHeightPixels)
+      }
+
+      setLayoutState((currentState) => {
+        if (
+          currentState &&
+          areFallbackLayoutsEqual(currentState.layout, nextLayout)
+        ) {
+          return currentState
+        }
+
+        return { layout: nextLayout, motion }
+      })
+    }
+    const resizeObserver = new ResizeObserver(([entry]) => {
+      if (entry) updateLayout(entry.contentRect, 'instant')
+    })
+
+    resizeObserver.observe(surface)
+    updateLayout(
+      surface.getBoundingClientRect(),
+      itemSizeChanged && animateItemSize ? 'smooth' : 'instant'
+    )
+
+    return () => resizeObserver.disconnect()
+  }, [animateItemSize, itemSize])
+
+  const layout = layoutState?.layout ?? null
+
   return (
-    <ol className={styles.fallbackField} aria-label='All scenarios'>
+    <ol
+      ref={fieldRef}
+      className={styles.fallbackField}
+      data-checking={layout ? undefined : true}
+      data-gallery-fallback
+      data-gallery-layout-motion={layoutState?.motion ?? 'instant'}
+      data-gallery-lanes={layout?.lanes}
+      aria-label='All scenarios'
+      onTransitionEnd={(event) => {
+        if (
+          event.propertyName !== 'transform' ||
+          event.target !== event.currentTarget.firstElementChild
+        ) {
+          return
+        }
+
+        setLayoutState((currentState) =>
+          currentState?.motion === 'smooth'
+            ? { ...currentState, motion: 'instant' }
+            : currentState
+        )
+      }}
+    >
       {items.slice(0, 10).map((item, index) => (
         <li
           key={item.id}
           className={styles.fallbackFrame}
           data-selected={index === selectedIndex || undefined}
+          style={
+            layout
+              ? getFallbackFrameStyle(layout, index, Math.min(items.length, 10))
+              : undefined
+          }
         >
           <Link
             href={item.href}
@@ -638,4 +759,52 @@ function GalleryFallback({
       ))}
     </ol>
   )
+}
+
+type GalleryFallbackLayout = Readonly<{
+  columnGapPixels: number
+  frameHeightPixels: number
+  frameWidthPixels: number
+  lanes: number
+  rowGapPixels: number
+}>
+
+type GalleryFallbackLayoutMotion = 'instant' | 'smooth'
+type GalleryFallbackLayoutState = Readonly<{
+  layout: GalleryFallbackLayout
+  motion: GalleryFallbackLayoutMotion
+}>
+
+function areFallbackLayoutsEqual(
+  first: GalleryFallbackLayout,
+  second: GalleryFallbackLayout
+) {
+  return (
+    first.columnGapPixels === second.columnGapPixels &&
+    first.frameHeightPixels === second.frameHeightPixels &&
+    first.frameWidthPixels === second.frameWidthPixels &&
+    first.lanes === second.lanes &&
+    first.rowGapPixels === second.rowGapPixels
+  )
+}
+
+function getFallbackFrameStyle(
+  layout: GalleryFallbackLayout,
+  index: number,
+  itemCount: number
+) {
+  const columns = Math.ceil(itemCount / layout.lanes)
+  const column = Math.floor(index / layout.lanes)
+  const lane = index % layout.lanes
+  const columnPitch = layout.frameWidthPixels + layout.columnGapPixels
+  const rowPitch = layout.frameHeightPixels + layout.rowGapPixels
+  const x = (column - (columns - 1) / 2) * columnPitch
+  const y = (lane - (layout.lanes - 1) / 2) * rowPitch
+
+  return {
+    '--gallery-fallback-frame-height': `${layout.frameHeightPixels}px`,
+    '--gallery-fallback-frame-width': `${layout.frameWidthPixels}px`,
+    '--gallery-fallback-x': `${x}px`,
+    '--gallery-fallback-y': `${y}px`
+  } as CSSProperties
 }

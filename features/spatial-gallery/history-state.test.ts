@@ -8,7 +8,8 @@ import {
 const galleryState = {
   itemId: 'scenario-2',
   offsetX: -12.75,
-  version: 1
+  topology: 'desktop',
+  version: 2
 } as const
 
 describe('spatial gallery history state', () => {
@@ -16,7 +17,8 @@ describe('spatial gallery history state', () => {
     const existing = mergeGalleryHistoryState({ __NA: true }, 'archive:home', {
       itemId: 'scenario-1',
       offsetX: 2,
-      version: 1
+      topology: 'mobile',
+      version: 2
     })
     const merged = mergeGalleryHistoryState(
       existing,
@@ -31,7 +33,12 @@ describe('spatial gallery history state', () => {
         'archive:home',
         new Set(['scenario-1', 'scenario-2'])
       )
-    ).toEqual({ itemId: 'scenario-1', offsetX: 2, version: 1 })
+    ).toEqual({
+      itemId: 'scenario-1',
+      offsetX: 2,
+      topology: 'mobile',
+      version: 2
+    })
     expect(
       readGalleryHistoryState(
         merged,
@@ -87,7 +94,7 @@ describe('spatial gallery history state', () => {
     const galleryStates = Object.values(envelope).find(
       (value) => typeof value === 'object' && value !== null
     ) as Record<string, Record<string, unknown>>
-    galleryStates['archive:all']!.version = 2
+    galleryStates['archive:all']!.version = 3
 
     expect(
       readGalleryHistoryState(malformed, 'archive:all', new Set(['scenario-2']))
@@ -99,5 +106,26 @@ describe('spatial gallery history state', () => {
         new Set(['scenario-2'])
       )
     ).toBeNull()
+  })
+
+  it('keeps legacy selection history but discards its topology assumption', () => {
+    const legacy = {
+      culturalAlignmentGallery: {
+        'archive:all': {
+          itemId: 'scenario-2',
+          offsetX: -12.75,
+          version: 1
+        }
+      }
+    }
+
+    expect(
+      readGalleryHistoryState(legacy, 'archive:all', new Set(['scenario-2']))
+    ).toEqual({
+      itemId: 'scenario-2',
+      offsetX: -12.75,
+      topology: null,
+      version: 2
+    })
   })
 })

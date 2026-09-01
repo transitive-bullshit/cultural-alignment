@@ -9,6 +9,7 @@ export type FieldMotion = Readonly<{
 }>
 
 export type ProjectedSurfaceLayoutOptions = Readonly<{
+  assignmentLanes?: number
   lanes: number
   columnGap: number
   rowGap: number
@@ -37,6 +38,26 @@ export function toroidalDelta(from: number, to: number, span: number) {
   return wrapCentered(to - from, span)
 }
 
+export function centerProjectedSurfaceItem(
+  slots: readonly ProjectedSurfaceSlot[],
+  itemIndex: number,
+  offset: number,
+  span: number
+) {
+  assertFinite(offset, 'offset')
+  assertPositive(span, 'span')
+
+  let closestX: number | null = null
+  for (const slot of slots) {
+    if (slot.itemIndex !== itemIndex) continue
+
+    const x = wrapCentered(slot.x + offset, span)
+    if (closestX === null || Math.abs(x) < Math.abs(closestX)) closestX = x
+  }
+
+  return closestX === null ? null : offset + toroidalDelta(closestX, 0, span)
+}
+
 export function createProjectedSurfaceLayout(
   itemCount: number,
   options: ProjectedSurfaceLayoutOptions
@@ -47,6 +68,11 @@ export function createProjectedSurfaceLayout(
 
   if (!Number.isInteger(options.lanes) || options.lanes <= 0) {
     throw new RangeError('lanes must be a positive integer')
+  }
+
+  const assignmentLanes = options.assignmentLanes ?? options.lanes
+  if (!Number.isInteger(assignmentLanes) || assignmentLanes <= 0) {
+    throw new RangeError('assignmentLanes must be a positive integer')
   }
 
   assertPositive(options.columnGap, 'columnGap')
@@ -72,13 +98,13 @@ export function createProjectedSurfaceLayout(
     itemCount === 2 ? minimumColumns + (minimumColumns % 2) : centeredColumns
   const centerColumn = (columns - 1) / 2
   const span = columns * options.columnGap
-  const columnStride = findCoprimeStep(itemCount, options.lanes + 2)
+  const columnStride = findCoprimeStep(itemCount, assignmentLanes + 2)
   // Offset each lane around the item ring instead of choosing a second
   // independently coprime stride. Independent searches can converge on the
   // same value for some item counts, turning every row into a one-column copy
   // of its neighbor. Expressing the offset in columns preserves full coverage
   // within every lane while spreading nearby rows across the ring.
-  const laneColumnOffset = Math.max(1, Math.floor(itemCount / options.lanes))
+  const laneColumnOffset = Math.max(1, Math.floor(itemCount / assignmentLanes))
   const slots = Array.from(
     { length: columns * options.lanes },
     (_, slotIndex): ProjectedSurfaceSlot => {

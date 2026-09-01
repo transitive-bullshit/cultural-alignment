@@ -67,6 +67,17 @@ describe('spatial gallery texture residency', () => {
     )
   })
 
+  it('excludes fixed-capacity lanes once they finish leaving the viewport', () => {
+    const positions = [-4, -1.8, 0.2, 1.9, 4]
+
+    expect(
+      prioritizeTextureItemIndices(slots, positions, 2, 0, 0, [1, 0])
+    ).toEqual({
+      foregroundItemIndices: [2, 1],
+      idleItemIndices: [0, 3]
+    })
+  })
+
   it('loads embedded placeholders and full textures in parallel without duplicating resident work', () => {
     expect(
       planTextureLoads({

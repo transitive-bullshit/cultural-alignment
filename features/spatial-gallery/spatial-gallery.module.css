@@ -355,6 +355,7 @@
 .fallbackField {
   position: absolute;
   inset: 0;
+  display: block;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -366,62 +367,22 @@
 
 .fallbackFrame {
   position: absolute;
-  width: clamp(210px, 21vw, 350px);
-  aspect-ratio: 1.72;
+  top: 50%;
+  left: 50%;
+  width: var(--gallery-fallback-frame-width, 210px);
+  height: var(--gallery-fallback-frame-height, 122px);
   padding: 6px;
   background: var(--proto-muted-paper);
   filter: grayscale(1) sepia(0.16) saturate(0.45) contrast(0.78);
-  transform: rotate(-0.5deg);
-}
-
-.fallbackFrame:nth-child(1) {
-  top: 7%;
-  left: -6%;
-}
-
-.fallbackFrame:nth-child(2) {
-  top: 32%;
-  left: 37%;
-}
-
-.fallbackFrame:nth-child(3) {
-  top: 2%;
-  left: 20%;
-}
-
-.fallbackFrame:nth-child(4) {
-  top: 29%;
-  left: 73%;
-}
-
-.fallbackFrame:nth-child(5) {
-  top: 70%;
-  left: 22%;
-}
-
-.fallbackFrame:nth-child(6) {
-  top: 3%;
-  left: 47%;
-}
-
-.fallbackFrame:nth-child(7) {
-  top: 43%;
-  left: -8%;
-}
-
-.fallbackFrame:nth-child(8) {
-  top: 72%;
-  left: 73%;
-}
-
-.fallbackFrame:nth-child(9) {
-  top: 73%;
-  left: 49%;
-}
-
-.fallbackFrame:nth-child(10) {
-  top: 4%;
-  left: 102%;
+  transform: translate(
+      calc(-50% + var(--gallery-fallback-x, 0px)),
+      calc(-50% + var(--gallery-fallback-y, 0px))
+    )
+    rotate(-0.5deg);
+  transition:
+    width 140ms var(--proto-ease-out, cubic-bezier(0.23, 1, 0.32, 1)),
+    height 140ms var(--proto-ease-out, cubic-bezier(0.23, 1, 0.32, 1)),
+    transform 140ms var(--proto-ease-out, cubic-bezier(0.23, 1, 0.32, 1));
 }
 
 .fallbackFrame[data-selected] {
@@ -429,6 +390,10 @@
   padding: 7px;
   background: var(--proto-ink);
   filter: none;
+}
+
+.fallbackField[data-gallery-layout-motion='instant'] .fallbackFrame {
+  transition: none;
 }
 
 .fallbackFrame > a {
@@ -602,16 +567,16 @@
   .mobileHint {
     display: inline;
   }
-
-  .fallbackFrame {
-    width: 54vw;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .metadata h1,
   .canvasLoading span {
     animation: none;
+  }
+
+  .fallbackFrame {
+    transition: none;
   }
 
   .crosshairCursor {

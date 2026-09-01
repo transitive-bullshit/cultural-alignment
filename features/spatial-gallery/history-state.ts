@@ -1,9 +1,12 @@
+import type { SpatialGalleryTopology } from './types'
+
 const GALLERY_HISTORY_STATE_KEY = 'culturalAlignmentGallery'
 
 type SpatialGalleryHistoryState = Readonly<{
   itemId: string
   offsetX: number
-  version: 1
+  topology: SpatialGalleryTopology | null
+  version: 2
 }>
 
 type GalleryHistoryEnvelope = Readonly<{
@@ -23,16 +26,24 @@ export function readGalleryHistoryState(
 
   const candidate = galleryStates[galleryKey]
   if (!isRecord(candidate)) return null
-  if (candidate.version !== 1) return null
+  if (candidate.version !== 1 && candidate.version !== 2) return null
   if (typeof candidate.itemId !== 'string') return null
   if (!itemIds.has(candidate.itemId)) return null
   if (typeof candidate.offsetX !== 'number') return null
   if (!Number.isFinite(candidate.offsetX)) return null
+  let topology: SpatialGalleryTopology | null = null
+  if (candidate.version === 2) {
+    if (candidate.topology !== 'desktop' && candidate.topology !== 'mobile') {
+      return null
+    }
+    topology = candidate.topology
+  }
 
   return {
     itemId: candidate.itemId,
     offsetX: candidate.offsetX,
-    version: 1
+    topology,
+    version: 2
   }
 }
 

@@ -1,4 +1,8 @@
-import type { ProjectedSurfaceSlot } from '@/lib/spatial/field'
+import {
+  toroidalDelta,
+  wrapCentered,
+  type ProjectedSurfaceSlot
+} from '@/lib/spatial/field'
 
 export const DIMMED_ACTIVITY = 0.16
 
@@ -13,6 +17,7 @@ type NdcPoint = Readonly<{
 }>
 
 type WarpedPointerOptions = Readonly<{
+  activeLanes?: ArrayLike<number>
   frameHeight: number
   frameWidth: number
   hitPadding?: number
@@ -24,6 +29,7 @@ type WarpedPointerOptions = Readonly<{
   viewportWidth: number
   warpSpeed: number
   xPositions: ArrayLike<number>
+  yPositions?: ArrayLike<number>
 }>
 
 export function resolveVisualSlotIndex(
@@ -61,6 +67,27 @@ export function getDirectionalDamping(
   return target > current ? enterDamping : exitDamping
 }
 
+export function resolveVisibleRestoredOffset({
+  frameWidth,
+  offsetX,
+  slotX,
+  span,
+  viewportWidth
+}: Readonly<{
+  frameWidth: number
+  offsetX: number
+  slotX: number
+  span: number
+  viewportWidth: number
+}>) {
+  const visibleX = wrapCentered(slotX + offsetX, span)
+  const visibilityLimit = viewportWidth / 2 + frameWidth / 2
+
+  return Math.abs(visibleX) <= visibilityLimit
+    ? offsetX
+    : offsetX + toroidalDelta(visibleX, 0, span)
+}
+
 export function calculateGalleryWarpOffset(
   ndcX: number,
   rowCoefficient: number,
@@ -75,6 +102,7 @@ export function calculateGalleryWarpOffset(
 }
 
 export function resolveWarpedPointerSlot({
+  activeLanes,
   frameHeight,
   frameWidth,
   hitPadding = 0,
@@ -85,14 +113,18 @@ export function resolveWarpedPointerSlot({
   viewportAspect,
   viewportWidth,
   warpSpeed,
-  xPositions
+  xPositions,
+  yPositions
 }: WarpedPointerOptions): ActiveSlot | null {
   const viewportHeight = viewportWidth / viewportAspect
   let activeSlot: ActiveSlot | null = null
   let nearestDistance = Number.POSITIVE_INFINITY
 
   for (const [slotIndex, slot] of slots.entries()) {
+    if (activeLanes && activeLanes[slot.lane] !== 1) continue
+
     const scale = scales[slotIndex] ?? 1
+    const y = yPositions?.[slotIndex] ?? slot.y
     const centerX = ((xPositions[slotIndex] ?? slot.x) * 2) / viewportWidth
     const halfWidth = (frameWidth * scale + hitPadding * 2) / viewportWidth
     const localX = (pointerNdc.x - centerX) / halfWidth
@@ -100,12 +132,12 @@ export function resolveWarpedPointerSlot({
 
     const warpOffset = calculateGalleryWarpOffset(
       pointerNdc.x,
-      slot.y / rowGap,
+      y / rowGap,
       warpSpeed,
       viewportAspect
     )
     const unwarpedPointerY = pointerNdc.y - warpOffset
-    const centerY = (slot.y * 2) / viewportHeight
+    const centerY = (y * 2) / viewportHeight
     const halfHeight = (frameHeight * scale + hitPadding * 2) / viewportHeight
     const localY = (unwarpedPointerY - centerY) / halfHeight
     if (Math.abs(localY) > 1) continue

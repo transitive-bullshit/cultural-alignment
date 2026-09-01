@@ -31,8 +31,11 @@ export type SpatialGalleryController = Readonly<{
   wheelBy(deltaX: number, deltaY: number): void
 }>
 
+export type SpatialGalleryTopology = 'desktop' | 'mobile'
+
 export type SpatialGallerySceneState = Readonly<{
   offsetX: number
+  topology: SpatialGalleryTopology
 }>
 
 export type SpatialFrameRect = Readonly<{

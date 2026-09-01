@@ -26,7 +26,7 @@ The homepage opens with the Signal Loader: a dark explanatory layer that introdu
 
 ## Gallery
 
-The desktop gallery is a dense five-row projected surface on one horizontal axis. Vertical wheel movement advances the surface; horizontal-dominant trackpad gestures remain browser-owned. At rest, rows are level. Speed reveals the material: left-edge cards shear upward and right-edge cards shear downward, with deformation increasing toward the edges.
+The desktop gallery is a density-adjustable projected surface on one horizontal axis. Its 100% default preserves the original five-row composition; the `/scenarios` toolbar offers a restrained 70–200% frame-size control that steps through every fully fitting row count between seven and two while scaling the horizontal and vertical spacing in lockstep. Pointer dragging uses short, interruptible interpolation, including row entrances and exits at density thresholds; keyboard and reduced-motion changes remain immediate. The preference is versioned in local storage and applies to the homepage gallery without exposing the archive-only control there. Vertical wheel movement advances the surface; horizontal-dominant trackpad gestures remain browser-owned. At rest, rows are level. Speed reveals the material: left-edge cards shear upward and right-edge cards shear downward, with deformation increasing toward the edges.
 
 Wrapping is cyclic, not mirrored. The deterministic pattern avoids matching horizontal neighbors, including across its seam. Offscreen copies overlap beyond the viewport so partially visible cards never pop. A scenario may appear twice on a wide screen, but only the exact hovered projection becomes vivid and receives orange brackets; moving into a gap clears emphasis instead of selecting another copy.
 
@@ -61,4 +61,4 @@ Avoid scanlines, ambient glitches, fake diagnostics, card collisions, independen
 
 ## Responsive behavior
 
-Desktop is the craft target. Mobile uses fewer rows, direct touch drag, first-tap selection/second-tap opening, no persistent selected-frame panel, centered balanced titles, and the same content hierarchy. Functional clarity outranks reproducing desktop density.
+Desktop is the craft target. Mobile uses fewer rows—including one fully framed row on short landscape surfaces—direct touch drag, first-tap selection/second-tap opening, no persistent selected-frame panel, centered balanced titles, and the same content hierarchy. Functional clarity outranks reproducing desktop density.

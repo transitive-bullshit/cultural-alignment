@@ -114,6 +114,39 @@ describe('spatial field invariants', () => {
     expect(nearbyCopies.slice(0, 5)).toEqual([])
   })
 
+  it('preserves the five-lane assignment inside a seven-lane capacity', () => {
+    const sharedGeometry = {
+      columnGap: 1.76,
+      rowGap: 1.45,
+      viewportWidth: 11.44,
+      itemWidth: 1.4,
+      overscan: 0.75,
+      stagger: 0
+    } as const
+    const establishedLayout = createProjectedSurfaceLayout(25, {
+      ...sharedGeometry,
+      lanes: 5
+    })
+    const fixedCapacityLayout = createProjectedSurfaceLayout(25, {
+      ...sharedGeometry,
+      assignmentLanes: 5,
+      lanes: 7
+    })
+
+    expect(fixedCapacityLayout.columns).toBe(establishedLayout.columns)
+
+    for (let lane = 0; lane < 5; lane += 1) {
+      const establishedAssignment = establishedLayout.slots
+        .filter((slot) => slot.lane === lane)
+        .map(({ column, itemIndex, x }) => ({ column, itemIndex, x }))
+      const fixedCapacityAssignment = fixedCapacityLayout.slots
+        .filter((slot) => slot.lane === lane)
+        .map(({ column, itemIndex, x }) => ({ column, itemIndex, x }))
+
+      expect(fixedCapacityAssignment).toEqual(establishedAssignment)
+    }
+  })
+
   it('keeps deformation planar at rest and symmetric under velocity', () => {
     const center = calculateVelocityDeformation(0, 10, 30, 30)
     const restingEdge = calculateVelocityDeformation(5, 10, 0, 30)
