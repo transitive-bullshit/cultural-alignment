@@ -87,10 +87,11 @@ export default function PrivacyPage() {
 
       <InformationSection index='03' title='User preferences'>
         <p>
-          The site saves some minor UX settings like spoiler warning choice and
-          preferred sorting order in your browser's local storage. These
-          preferences stay on your device and do not identify you. Clear the
-          site&rsquo;s browser data to remove them.
+          The site saves some minor UX settings like the gallery introduction
+          acknowledgement, spoiler warning choice, and preferred gallery
+          settings in your browser's local storage. These preferences stay on
+          your device and do not identify you. Clear the site&rsquo;s browser
+          data to remove them.
         </p>
       </InformationSection>
 

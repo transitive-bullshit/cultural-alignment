@@ -4,42 +4,19 @@ import { useState } from 'react'
 
 import { IntentPrefetchLink } from '@/components/intent-prefetch-link'
 import { SiteHeader } from '@/components/site-header'
-import { GalleryExperience } from '@/features/spatial-gallery/gallery-experience'
-import { GalleryHeader } from '@/features/spatial-gallery/gallery-header'
 
 import type { HomepageVariantProps } from './prototype-types'
 import styles from './variant-split-lens.module.css'
 
 const MAXIMUM_EXAMPLES = 4
 
-export function SplitLensVariant({
-  examples,
-  galleryItems,
-  initialItemId,
-  scenarioCount
-}: HomepageVariantProps) {
+export function SplitLensVariant({ examples }: HomepageVariantProps) {
   const [selectedIndex, setSelectedIndex] = useState(0)
-  const [galleryOpen, setGalleryOpen] = useState(false)
   const visibleExamples = examples.slice(0, MAXIMUM_EXAMPLES)
   const selectedExample =
     visibleExamples[selectedIndex] ?? visibleExamples[0] ?? null
 
-  if (galleryOpen || selectedExample === null) {
-    return (
-      <div
-        className={`experience-scope ${styles.galleryMode}`}
-        data-site-footer='hidden'
-      >
-        <GalleryExperience
-          header={<GalleryHeader />}
-          historyKey='prototype-split-lens'
-          initialItemId={initialItemId}
-          items={galleryItems}
-          mainId='prototype-main'
-        />
-      </div>
-    )
-  }
+  if (selectedExample === null) return null
 
   return (
     <div
@@ -56,28 +33,34 @@ export function SplitLensVariant({
         aria-labelledby='split-lens-title'
         tabIndex={-1}
       >
-        <div className={styles.introduction}>
-          <div>
+        <header className={styles.hero}>
+          <div className={styles.heroCopy}>
             <p className={styles.eyebrow}>Pop culture × AI safety</p>
             <h1 id='split-lens-title'>
               AI safety, explained through scenes you already know.
             </h1>
           </div>
 
-          <p className={styles.lede}>
-            Choose a familiar moment from film or television. See the real risk
-            or alignment concept it helps make concrete—then open the full
-            dossier.
-          </p>
-        </div>
+          <IntentPrefetchLink
+            className={styles.archiveLink}
+            data-homepage-primary-cta
+            data-split-lens-gallery
+            href='/scenarios'
+          >
+            <span>Explore the gallery</span>
+            <strong aria-hidden='true'>→</strong>
+          </IntentPrefetchLink>
+        </header>
 
-        <div className={styles.translator}>
-          <aside className={styles.exampleRail}>
-            <div className={styles.railHeading}>
-              <span>Four ways in</span>
-              <span aria-hidden='true'>01—04</span>
-            </div>
+        <section
+          className={styles.explainer}
+          aria-labelledby='split-lens-examples-title'
+        >
+          <div className={styles.selectorHeading}>
+            <h2 id='split-lens-examples-title'>Four scenes. Four patterns.</h2>
+          </div>
 
+          <div className={styles.workbench}>
             <div
               className={styles.exampleList}
               role='group'
@@ -92,14 +75,16 @@ export function SplitLensVariant({
                     id={`split-lens-example-${index}`}
                     className={styles.exampleTab}
                     type='button'
+                    data-homepage-example
+                    data-homepage-example-concept={example.splitLens.concept}
+                    data-homepage-example-scene={example.splitLens.sceneCue}
+                    data-scenario-id={example.id}
                     data-split-lens-example
                     aria-controls='split-lens-example-panel'
+                    aria-label={`${example.source}: ${example.splitLens.sceneCue}`}
                     aria-pressed={selected}
                     onClick={() => setSelectedIndex(index)}
                   >
-                    <span className={styles.exampleIndex} aria-hidden='true'>
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
                     <span
                       className={styles.exampleThumbnail}
                       aria-hidden='true'
@@ -113,109 +98,64 @@ export function SplitLensVariant({
                         height={example.image.height}
                       />
                     </span>
-                    <span className={styles.exampleCopy}>
-                      <small>
-                        {example.source} · {example.releaseYear}
-                      </small>
-                      <strong>{example.title}</strong>
-                    </span>
+                    <strong>{example.source}</strong>
                   </button>
                 )
               })}
             </div>
-          </aside>
 
-          <article
-            id='split-lens-example-panel'
-            className={styles.scenePanel}
-            aria-labelledby={`split-lens-example-${selectedIndex}`}
-            aria-live='polite'
-          >
-            <div className={styles.panelHeading}>
-              <span>01 / The familiar scene</span>
-              <span>{selectedExample.source}</span>
-            </div>
+            <p className='sr-only' role='status' aria-live='polite'>
+              {selectedExample.splitLens.sceneCue}{' '}
+              {selectedExample.splitLens.concept}.{' '}
+              {selectedExample.splitLens.connection}
+            </p>
 
-            <figure className={styles.sceneFigure}>
-              <div className={styles.imageFrame}>
-                {/* Content-addressed CDN imagery keeps this prototype self-contained. */}
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={selectedExample.image.src}
-                  alt={selectedExample.image.alt}
-                  width={selectedExample.image.width}
-                  height={selectedExample.image.height}
-                  style={{
-                    backgroundImage: `url(${selectedExample.image.blurDataURL})`
-                  }}
-                />
-                <span className={styles.frameMarker} aria-hidden='true'>
-                  Scene
-                </span>
+            <article
+              key={selectedExample.id}
+              id='split-lens-example-panel'
+              className={styles.selection}
+              aria-labelledby={`split-lens-example-${selectedIndex}`}
+              data-split-lens-panel
+            >
+              <figure className={styles.sceneFigure}>
+                <div className={styles.imageFrame}>
+                  {/* Content-addressed CDN imagery keeps this prototype self-contained. */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={selectedExample.image.src}
+                    alt={selectedExample.image.alt}
+                    width={selectedExample.image.width}
+                    height={selectedExample.image.height}
+                    style={{
+                      backgroundImage: `url(${selectedExample.image.blurDataURL})`
+                    }}
+                  />
+                </div>
+
+                <figcaption>
+                  <span className={styles.sceneMeta}>
+                    {selectedExample.source}
+                  </span>
+                  <p>{selectedExample.splitLens.sceneCue}</p>
+                </figcaption>
+              </figure>
+
+              <div className={styles.bridge} aria-hidden='true'>
+                <span />
+                <strong>→</strong>
+                <span />
               </div>
 
-              <figcaption>
-                <span className={styles.captionLabel}>What happens</span>
-                <p>{selectedExample.scene}</p>
-              </figcaption>
-            </figure>
-          </article>
-
-          <article className={styles.lensPanel}>
-            <div className={styles.panelHeading}>
-              <span>02 / The AI safety lens</span>
-              <span>Translated</span>
-            </div>
-
-            <div className={styles.translationMark} aria-hidden='true'>
-              <span />
-              <strong>→</strong>
-            </div>
-
-            <div className={styles.lensBody}>
-              <p className={styles.lensEyebrow}>The same behavior, reframed</p>
-              <p className={styles.analogy}>{selectedExample.analogy}</p>
-
-              <dl className={styles.taxonomy}>
-                <div>
-                  <dt>Risk family</dt>
-                  <dd>
-                    {selectedExample.riskFamilies.join(' · ') || 'Unclassified'}
-                  </dd>
-                </div>
-                <div>
-                  <dt>Concepts</dt>
-                  <dd>
-                    {selectedExample.concepts.join(' · ') || 'Unclassified'}
-                  </dd>
-                </div>
-              </dl>
-
-              <p className={styles.caveat}>
-                A cultural analogy—not a prediction or proof.
-              </p>
-            </div>
-
-            <div className={styles.actions}>
-              <IntentPrefetchLink
-                className={styles.dossierLink}
-                href={selectedExample.href}
-                scroll={false}
-              >
-                Open this dossier <span aria-hidden='true'>↗</span>
-              </IntentPrefetchLink>
-              <button
-                className={styles.galleryButton}
-                data-split-lens-gallery
-                type='button'
-                onClick={() => setGalleryOpen(true)}
-              >
-                Explore all {scenarioCount} scenarios
-                <span aria-hidden='true'>→</span>
-              </button>
-            </div>
-          </article>
-        </div>
+              <div className={styles.lensBody}>
+                <p className={styles.lensLabel}>The AI safety pattern</p>
+                <h3>{selectedExample.splitLens.concept}</h3>
+                <p className={styles.connection}>
+                  {selectedExample.splitLens.connection}
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
       </main>
     </div>
   )

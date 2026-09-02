@@ -11,7 +11,8 @@ import {
   useState,
   type CSSProperties,
   type MouseEvent,
-  type PointerEvent
+  type PointerEvent,
+  type ReactNode
 } from 'react'
 import { flushSync } from 'react-dom'
 
@@ -20,6 +21,7 @@ import { stageScenarioTransitionPreview } from '@/lib/media/scenario-transition-
 import { classifyGesture, shouldCaptureGalleryWheel } from '@/lib/spatial/field'
 
 import { useGalleryItemSizePreference } from './gallery-item-size-preference'
+import { useGalleryIntroMotion } from './gallery-intro-motion'
 import {
   GALLERY_FRAME_ASPECT,
   getGalleryViewportMetrics
@@ -54,21 +56,40 @@ type TransitionProxy = Readonly<{
   rect: SpatialFrameRect
 }>
 
-export function SpatialGallery({
+export type SpatialGalleryDesktopSelection<
+  TItem extends SpatialGalleryItem = SpatialGalleryItem
+> = Readonly<{
+  item: TItem
+  onOpen(): void
+  position: number
+  total: number
+}>
+
+export type SpatialGalleryDesktopSelectionRenderer<
+  TItem extends SpatialGalleryItem = SpatialGalleryItem
+> = (selection: SpatialGalleryDesktopSelection<TItem>) => ReactNode
+
+export function SpatialGallery<
+  TItem extends SpatialGalleryItem = SpatialGalleryItem
+>({
   historyKey,
   inertiaBurst = false,
   initialItemId,
-  items
+  items,
+  renderDesktopSelection
 }: {
   readonly historyKey: string
   readonly inertiaBurst?: boolean
   readonly initialItemId?: string
-  readonly items: readonly SpatialGalleryItem[]
+  readonly items: readonly TItem[]
+  readonly renderDesktopSelection?: SpatialGalleryDesktopSelectionRenderer<TItem>
 }) {
   const initialIndex = Math.max(
     0,
     items.findIndex(({ id }) => id === initialItemId)
   )
+  const { consumeInertiaBurst, inertiaBurst: contextInertiaBurst } =
+    useGalleryIntroMotion()
   const router = useRouter()
   const surfaceRef = useRef<HTMLDivElement>(null)
   const cursorRef = useRef<HTMLSpanElement>(null)
@@ -87,6 +108,7 @@ export function SpatialGallery({
   const [renderMode, setRenderMode] = useState<RenderMode>('checking')
   const [reducedMotion, setReducedMotion] = useState(false)
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
+  const [introInertiaBurst, setIntroInertiaBurst] = useState(false)
   const [transitionReady, setTransitionReady] = useState(false)
   const [transitionProxy, setTransitionProxy] =
     useState<TransitionProxy | null>(null)
@@ -97,6 +119,15 @@ export function SpatialGallery({
   } = useGalleryItemSizePreference()
   const selectedItem =
     selectedIndex === null ? null : (items[selectedIndex] ?? null)
+  const requestedInertiaBurst =
+    inertiaBurst || contextInertiaBurst || introInertiaBurst
+
+  useEffect(() => {
+    if (!contextInertiaBurst) return
+
+    setIntroInertiaBurst(true)
+    consumeInertiaBurst()
+  }, [consumeInertiaBurst, contextInertiaBurst])
 
   useEffect(() => {
     const itemIds = new Set(items.map(({ id }) => id))
@@ -389,6 +420,7 @@ export function SpatialGallery({
       data-gallery-item-count={items.length}
       data-gallery-item-size={itemSize}
       data-gallery-item-size-transition={itemSizeTransition}
+      data-gallery-inertia-burst-requested={requestedInertiaBurst || undefined}
       data-gallery-transition-ready={transitionReady || undefined}
       data-selected-scenario-id={selectedItem?.id}
       aria-label='All cultural scenarios. Drag horizontally or scroll to explore.'
@@ -411,7 +443,7 @@ export function SpatialGallery({
           <SpatialGalleryCanvas
             animateItemSize={itemSizeTransition === 'smooth'}
             controllerRef={controllerRef}
-            inertiaBurst={inertiaBurst}
+            inertiaBurst={requestedInertiaBurst}
             initialIndex={sceneInitialIndex}
             initialOffsetX={initialOffsetX}
             initialTopology={initialTopology}
@@ -472,12 +504,21 @@ export function SpatialGallery({
 
       {selectedItem === null || selectedIndex === null ? null : (
         <>
-          <SelectedMetadata
-            item={selectedItem}
-            onOpen={() => openItem(selectedIndex)}
-            position={selectedIndex + 1}
-            total={items.length}
-          />
+          {renderDesktopSelection ? (
+            renderDesktopSelection({
+              item: selectedItem,
+              onOpen: () => openItem(selectedIndex),
+              position: selectedIndex + 1,
+              total: items.length
+            })
+          ) : (
+            <SelectedMetadata
+              item={selectedItem}
+              onOpen={() => openItem(selectedIndex)}
+              position={selectedIndex + 1}
+              total={items.length}
+            />
+          )}
 
           <MobileSelectedScenario
             item={selectedItem}

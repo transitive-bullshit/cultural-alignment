@@ -9,6 +9,9 @@ import {
   findInitialSpatialGalleryItem,
   toSpatialGalleryItems
 } from '@/features/spatial-gallery/gallery-items'
+import { GalleryIntroDialog } from '@/features/spatial-gallery/gallery-intro-dialog'
+import { galleryIntroExample } from '@/features/spatial-gallery/gallery-intro-example'
+import { GalleryIntroMotionProvider } from '@/features/spatial-gallery/gallery-intro-motion'
 import { SpatialGallery } from '@/features/spatial-gallery/spatial-gallery'
 import { contentCatalog } from '@/lib/content/snapshot'
 
@@ -43,22 +46,27 @@ export default async function ScenariosPage({
   }
 
   return (
-    <main
-      className={`experience-scope ${styles.page} ${styles.browsePage}`}
-      data-site-footer='hidden'
-    >
-      <SiteHeader className={styles.galleryHeader} />
-      <BrowseToolbar
-        families={families}
-        params={params}
-        resultCount={items.length}
-      />
-      <SpatialGallery
-        key={galleryIdentity}
-        historyKey={galleryIdentity}
-        items={items}
-        initialItemId={initialItem.id}
-      />
-    </main>
+    <GalleryIntroMotionProvider>
+      <main
+        className={`experience-scope ${styles.page} ${styles.browsePage}`}
+        data-gallery-main
+        data-site-footer='hidden'
+        tabIndex={-1}
+      >
+        <SiteHeader className={styles.galleryHeader} />
+        <BrowseToolbar
+          families={families}
+          params={params}
+          resultCount={items.length}
+        />
+        <SpatialGallery
+          key={galleryIdentity}
+          historyKey={galleryIdentity}
+          items={items}
+          initialItemId={initialItem.id}
+        />
+        <GalleryIntroDialog example={galleryIntroExample} mode='once' />
+      </main>
+    </GalleryIntroMotionProvider>
   )
 }

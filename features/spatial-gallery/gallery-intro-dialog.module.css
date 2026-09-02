@@ -1,0 +1,442 @@
+.stateMarker {
+  display: none;
+}
+
+:global(body):has(
+    .stateMarker:is([data-state='checking'], [data-state='visible'])
+  )
+  :global([data-words-context-card]),
+:global(body):has(
+    .stateMarker:is([data-state='checking'], [data-state='visible'])
+  )
+  :global([data-homepage-selected-scenario-open]),
+:global(body):has(
+    .stateMarker:is([data-state='checking'], [data-state='visible'])
+  )
+  :global([data-selected-scenario-metadata]),
+:global(body):has(
+    .stateMarker:is([data-state='checking'], [data-state='visible'])
+  )
+  :global([data-mobile-selected-scenario]) {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay[data-slot='dialog-overlay'] {
+  z-index: 190;
+  background: color-mix(in srgb, var(--foreground) 54%, transparent);
+  backdrop-filter: blur(7px) saturate(0.72);
+}
+
+.overlay[data-state='open'] {
+  animation: intro-overlay-in 180ms var(--ease-out) both;
+}
+
+.overlay[data-state='closed'] {
+  animation: intro-overlay-out 140ms ease-in both;
+}
+
+.dialog[data-gallery-intro-dialog] {
+  z-index: 200;
+  display: block;
+  width: min(780px, calc(100vw - 40px));
+  max-width: min(780px, calc(100vw - 40px));
+  max-height: calc(100svh - 40px);
+  gap: 0;
+  padding: 0;
+  overflow: auto;
+  border: 0;
+  border-top: 1px solid var(--foreground);
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--foreground) 28%, transparent);
+  border-radius: 0;
+  background: color-mix(in srgb, var(--background) 96%, transparent);
+  box-shadow:
+    10px 0 0 -7px var(--brand-accent) inset,
+    0 30px 90px color-mix(in srgb, var(--foreground) 27%, transparent);
+  color: var(--foreground);
+  transform: none;
+  backdrop-filter: blur(18px);
+}
+
+.dialog[data-gallery-intro-dialog]::before,
+.dialog[data-gallery-intro-dialog]::after {
+  position: absolute;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-left: 1px solid var(--foreground);
+  content: '';
+}
+
+.dialog[data-gallery-intro-dialog]::before {
+  top: 0;
+  border-top: 1px solid var(--foreground);
+}
+
+.dialog[data-gallery-intro-dialog]::after {
+  bottom: 0;
+  border-bottom: 1px solid var(--foreground);
+}
+
+.dialog[data-state='open'] {
+  animation: intro-dialog-in 200ms var(--ease-out) both;
+}
+
+.dialog[data-state='closed'] {
+  animation: intro-dialog-out 140ms ease-in both;
+}
+
+.body {
+  padding: 38px 40px 32px 44px;
+}
+
+.title {
+  margin: 0;
+  padding-right: 42px;
+  font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
+  font-size: clamp(3.35rem, 6vw, 4.8rem);
+  font-weight: 800;
+  letter-spacing: -0.046em;
+  line-height: 0.86;
+  text-wrap: balance;
+}
+
+.title span {
+  display: block;
+}
+
+.exampleLabel {
+  margin: 40px 0 9px;
+  color: var(--muted-foreground);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.69rem;
+  font-weight: 650;
+  letter-spacing: 0.045em;
+  line-height: 1;
+}
+
+.example {
+  padding: 20px 22px 23px;
+  border: 1px solid color-mix(in srgb, var(--foreground) 22%, transparent);
+  background: color-mix(in srgb, var(--card) 74%, transparent);
+  box-shadow: 5px 0 0 -3px var(--brand-accent) inset;
+}
+
+.example h3,
+.example p {
+  margin: 0;
+}
+
+.exampleHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(190px, 230px);
+  gap: 24px;
+  align-items: center;
+}
+
+.reference {
+  min-width: 0;
+}
+
+.reference h3 {
+  overflow-wrap: break-word;
+  font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
+  font-size: clamp(2.7rem, 4.6vw, 3.35rem);
+  font-weight: 800;
+  letter-spacing: -0.044em;
+  line-height: 0.9;
+  text-wrap: balance;
+}
+
+.reference p {
+  margin-top: 8px;
+  overflow-wrap: break-word;
+  color: var(--muted-foreground);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  line-height: 1.3;
+  text-wrap: pretty;
+}
+
+.exampleMedia {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border: 1px solid color-mix(in srgb, var(--foreground) 24%, transparent);
+  background: var(--muted);
+  box-shadow: 4px 4px 0 color-mix(in srgb, var(--brand-accent) 32%, transparent);
+}
+
+.exampleMedia::after {
+  position: absolute;
+  inset: 0;
+  border: 1px solid color-mix(in srgb, var(--background) 20%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--foreground) 8%, transparent)
+    inset;
+  content: '';
+  pointer-events: none;
+}
+
+.exampleImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.analogy {
+  margin-top: 20px;
+  padding-top: 17px;
+  border-top: 1px solid var(--border);
+}
+
+.relation {
+  margin-bottom: 7px !important;
+  color: var(--brand-accent);
+  font-size: 0.76rem;
+  font-weight: 660;
+  letter-spacing: -0.008em;
+  line-height: 1.3;
+}
+
+.concept {
+  overflow-wrap: break-word;
+  font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
+  font-size: clamp(3.2rem, 5.6vw, 4.25rem);
+  font-weight: 800;
+  letter-spacing: -0.046em;
+  line-height: 0.87;
+  text-wrap: balance;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.enterButton[data-size='lg'] {
+  min-height: 52px;
+  gap: 15px;
+  padding-inline: 27px;
+  overflow: hidden;
+  border: 1px solid var(--foreground);
+  border-radius: 0;
+  background-color: var(--primary);
+  background-image: linear-gradient(
+    105deg,
+    var(--brand-accent) 0%,
+    var(--brand-accent) 50%,
+    transparent 50.5%,
+    transparent 100%
+  );
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  background-size: 205% 100%;
+  box-shadow: 4px 4px 0 color-mix(in srgb, var(--brand-accent) 38%, transparent);
+  color: var(--primary-foreground);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.068em;
+  text-transform: uppercase;
+  transition:
+    background-position 260ms var(--ease-out),
+    box-shadow 160ms var(--ease-out),
+    color 120ms var(--ease-out),
+    transform 150ms var(--ease-out);
+}
+
+.enterButton svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  transition: transform 150ms var(--ease-out);
+}
+
+.enterButton[data-size='lg']:focus-visible,
+.closeButton:focus-visible {
+  outline: 2px solid var(--brand-accent);
+  outline-offset: 4px;
+}
+
+.enterButton[data-size='lg']:active {
+  transform: translateY(1px) scale(0.985);
+}
+
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 13px;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  background: color-mix(in srgb, var(--card) 78%, transparent);
+  color: var(--foreground);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 1.05rem;
+  line-height: 1;
+  place-items: center;
+  transition:
+    background-color 150ms var(--ease-out),
+    color 150ms var(--ease-out),
+    transform 150ms var(--ease-out);
+}
+
+.closeButton:active {
+  transform: translateY(1px);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .enterButton[data-size='lg']:hover:not(:active) {
+    background-color: var(--primary);
+    background-position: 0 0;
+    box-shadow: 2px 2px 0
+      color-mix(in srgb, var(--brand-accent) 54%, transparent);
+    color: var(--proto-stage, #171713);
+    transform: translateY(-1px);
+  }
+
+  .enterButton[data-size='lg']:hover:not(:active) svg {
+    transform: translateX(4px);
+  }
+
+  .closeButton:hover:not(:active) {
+    background: var(--muted);
+    color: var(--brand-interactive);
+    transform: translateY(-1px);
+  }
+}
+
+@media (max-width: 680px) {
+  .dialog[data-gallery-intro-dialog] {
+    width: calc(100vw - 28px);
+    max-width: calc(100vw - 28px);
+    max-height: calc(100svh - 28px);
+  }
+
+  .body {
+    padding: 29px 22px 23px 26px;
+  }
+
+  .title {
+    padding-right: 38px;
+    font-size: clamp(2.75rem, 13vw, 3.5rem);
+  }
+
+  .example {
+    padding: 18px 18px 20px;
+  }
+
+  .exampleLabel {
+    margin-top: 28px;
+  }
+
+  .exampleHeader {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .exampleMedia {
+    width: 100%;
+  }
+
+  .reference h3 {
+    font-size: 2.7rem;
+  }
+
+  .concept {
+    font-size: clamp(2.9rem, 13vw, 3.7rem);
+  }
+
+  .enterButton[data-size='lg'] {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay[data-state],
+  .dialog[data-state] {
+    animation: none;
+  }
+
+  .enterButton[data-size='lg'],
+  .enterButton svg,
+  .closeButton {
+    transition: none;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .overlay[data-slot='dialog-overlay'] {
+    background: color-mix(in srgb, var(--foreground) 72%, transparent);
+    backdrop-filter: none;
+  }
+
+  .dialog[data-gallery-intro-dialog] {
+    background: var(--background);
+    backdrop-filter: none;
+  }
+}
+
+@keyframes intro-overlay-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes intro-overlay-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes intro-dialog-in {
+  from {
+    opacity: 0;
+    scale: 0.99;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes intro-dialog-out {
+  from {
+    opacity: 1;
+    scale: 1;
+  }
+
+  to {
+    opacity: 0;
+    scale: 0.995;
+  }
+}

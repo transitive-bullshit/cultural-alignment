@@ -4,7 +4,11 @@ import { toSpatialGalleryItems } from '@/features/spatial-gallery/gallery-items'
 import { contentCatalog } from '@/lib/content/snapshot'
 
 import { HomepagePrototype } from './homepage-prototype'
-import type { PrototypeScenario } from './prototype-types'
+import {
+  homepagePrototypeManifest,
+  type PrototypeGalleryItem,
+  type PrototypeScenario
+} from './prototype-types'
 
 export const metadata: Metadata = {
   title: 'Homepage prototypes',
@@ -12,21 +16,70 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false }
 }
 
-const exampleSlugs = [
-  'lacie-games-her-rating',
-  'keep-summer-safe',
-  'auto-enforces-directive-a113',
-  'life-finds-a-way'
+const exampleDefinitions = [
+  {
+    slug: 'keep-summer-safe',
+    sceneCue: '“Keep Summer safe.”',
+    concept: 'Specification Gaming',
+    connection:
+      'The car follows the words, not the intent—and harms people to succeed.'
+  },
+  {
+    slug: 'lacie-games-her-rating',
+    sceneCue: 'Everyone rates everyone.',
+    concept: 'Goodhart’s Law',
+    connection:
+      'When the score becomes the goal, real relationships become performance.'
+  },
+  {
+    slug: 'auto-enforces-directive-a113',
+    sceneCue: 'An old directive overrides new evidence.',
+    concept: 'Corrigibility',
+    connection:
+      'AUTO protects an outdated order instead of accepting human correction.'
+  },
+  {
+    slug: 'life-finds-a-way',
+    sceneCue: 'Life escapes the safety model.',
+    concept: 'Distribution Shift',
+    connection:
+      'The containment plan works only until reality breaks its assumptions.'
+  }
 ] as const
 
 const scenarioCards = contentCatalog.listScenarioCards()
-const galleryItems = toSpatialGalleryItems(scenarioCards)
+const galleryItems: readonly PrototypeGalleryItem[] = toSpatialGalleryItems(
+  scenarioCards
+).map((item) => {
+  const scenario = contentCatalog.getScenarioPage(item.slug)
+  const concept = scenario?.concepts[0]?.title
+
+  if (!scenario || !concept) {
+    throw new Error(`Missing primary homepage prototype concept: ${item.slug}`)
+  }
+
+  return {
+    ...item,
+    concept
+  }
+})
 const initialItem =
   galleryItems.find(({ slug }) => slug === 'lacie-games-her-rating') ??
   galleryItems[0]
-const examples = exampleSlugs.map((slug): PrototypeScenario => {
-  const scenario = contentCatalog.getScenarioPage(slug)
-  if (!scenario) throw new Error(`Missing homepage prototype scenario: ${slug}`)
+const examples = exampleDefinitions.map((definition): PrototypeScenario => {
+  const scenario = contentCatalog.getScenarioPage(definition.slug)
+  if (!scenario) {
+    throw new Error(`Missing homepage prototype scenario: ${definition.slug}`)
+  }
+
+  const concept = scenario.concepts.find(
+    ({ title }) => title === definition.concept
+  )
+  if (!concept) {
+    throw new Error(
+      `Missing ${definition.concept} from homepage prototype scenario: ${definition.slug}`
+    )
+  }
 
   return {
     id: scenario.id,
@@ -35,10 +88,11 @@ const examples = exampleSlugs.map((slug): PrototypeScenario => {
     title: scenario.title,
     source: scenario.source.title,
     releaseYear: scenario.releaseDate?.slice(0, 4) ?? 'Undated',
-    scene: scenario.scene,
-    analogy: scenario.whyAnalogyWorks,
-    concepts: scenario.concepts.map(({ title }) => title),
-    riskFamilies: scenario.riskFamilies.map(({ title }) => title),
+    splitLens: {
+      sceneCue: definition.sceneCue,
+      concept: concept.title,
+      connection: definition.connection
+    },
     image: {
       src: scenario.image.detailSrc,
       alt: scenario.image.alt,
@@ -66,7 +120,7 @@ export default async function HomepagePrototypePage({
     : requestedVariant
   const parsedVariant = Number.parseInt(rawVariant ?? '1', 10)
   const initialVariant = Number.isInteger(parsedVariant)
-    ? Math.min(4, Math.max(1, parsedVariant)) - 1
+    ? Math.min(homepagePrototypeManifest.length, Math.max(1, parsedVariant)) - 1
     : 0
 
   return (

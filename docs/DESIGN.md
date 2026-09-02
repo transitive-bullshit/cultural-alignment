@@ -22,7 +22,7 @@ A shared footer closes every non-gallery page with archive navigation, project a
 
 ## Homepage entry
 
-The homepage opens with the Signal Loader: a dark explanatory layer that introduces the scene-to-pattern-to-risk loop while the Notion-tagged featured scenario gallery prepares underneath it. Readiness changes the status rail but never dismisses the layer. The visitor enters deliberately through the high-contrast “Explore the archive” action; its short upward exit reveals the already-loaded gallery and transfers focus into that surface. While the introduction is present, the underlying header and gallery remain inert. `/scenarios` presents the complete gallery and initial framing with risk-family filters added above it.
+The homepage opens directly into the Notion-tagged featured scenario gallery. On a visitor’s first gallery route, a lightweight paper dialog explains the core idea with one concrete mapping: _Minions_, “Serving the Most Evil Master,” and Value Alignment. The gallery loads behind it. Dismissing by its action, close button, Escape, or backdrop stores one versioned site-wide acknowledgement, so the dialog stays gone whether the next entry is `/` or `/scenarios`. After dismissal, hovering a homepage frame reveals the plainspoken lower-left analogy—media source, scenario name, and one primary AI safety concept—without a persistent instructional overlay. `/scenarios` presents the complete gallery with risk-family filters and shares the same first-visit check.
 
 ## Gallery
 

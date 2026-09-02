@@ -769,8 +769,9 @@ async function parseScenario(
     tags: multiSelect(page, 'Tags', SCENARIO_PROPERTIES)
       .map((tag) => tag.name)
       .toSorted(),
-    riskFamilyIds: riskFamilyIds.toSorted(),
-    conceptIds: conceptIds.toSorted(),
+    // NOTE: The order of these arrays is important, so preserve order from Notion.
+    riskFamilyIds: riskFamilyIds,
+    conceptIds: conceptIds,
     memeAttachments,
     video: parseYouTubeVideo(url(page, 'YouTube Clip', SCENARIO_PROPERTIES)),
     scene: requiredMarkdown(page, 'Scene', sceneItems),

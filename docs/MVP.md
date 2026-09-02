@@ -6,7 +6,7 @@ The MVP proves that a recognition-first, elastic gallery can invite a broad audi
 
 ## Included
 
-- A Signal Loader introduction and full-viewport scenario gallery, shared with the filterable `/scenarios` route
+- A versioned, one-time scene-to-concept dialog shared by the full-viewport featured gallery and filterable `/scenarios` route
 - The complete synchronized snapshot: 179 scenarios, 129 sources, five risk families, and 65 used concepts
 - The selected Dossier scenario-detail direction
 - Risk-family filtering reflected in the URL

@@ -1,6 +1,12 @@
 import type { Metadata } from 'next'
 
-import { HomepageSignalLoader } from '@/features/homepage/homepage-signal-loader'
+import {
+  HomepageWords,
+  type HomepageWordsItem
+} from '@/features/homepage/homepage-words'
+import { GalleryIntroDialog } from '@/features/spatial-gallery/gallery-intro-dialog'
+import { galleryIntroExample } from '@/features/spatial-gallery/gallery-intro-example'
+import { GalleryIntroMotionProvider } from '@/features/spatial-gallery/gallery-intro-motion'
 import { GalleryHeader } from '@/features/spatial-gallery/gallery-header'
 import {
   findInitialSpatialGalleryItem,
@@ -23,11 +29,18 @@ export const metadata: Metadata = {
   }
 }
 
-const featuredItems = toSpatialGalleryItems(
+const featuredItems: readonly HomepageWordsItem[] = toSpatialGalleryItems(
   contentCatalog.listScenarioCards({ featuredOnly: true })
-)
+).map((item) => {
+  const concept = contentCatalog.getScenarioPage(item.slug)?.concepts[0]?.title
+
+  if (!concept) {
+    throw new Error(`Missing primary homepage concept: ${item.slug}`)
+  }
+
+  return { ...item, concept }
+})
 const initialItem = findInitialSpatialGalleryItem(featuredItems)
-const totalSceneCount = contentCatalog.listScenarioCards().length
 
 export default function HomePage() {
   if (!initialItem) {
@@ -35,12 +48,14 @@ export default function HomePage() {
   }
 
   return (
-    <HomepageSignalLoader
-      header={<GalleryHeader />}
-      historyKey='archive:featured'
-      initialItemId={initialItem.id}
-      items={featuredItems}
-      totalSceneCount={totalSceneCount}
-    />
+    <GalleryIntroMotionProvider>
+      <HomepageWords
+        header={<GalleryHeader />}
+        historyKey='archive:featured'
+        initialItemId={initialItem.id}
+        items={featuredItems}
+      />
+      <GalleryIntroDialog example={galleryIntroExample} mode='landing' />
+    </GalleryIntroMotionProvider>
   )
 }

@@ -83,8 +83,8 @@ The sync entry point loads `.env` with dotenvx. Existing process environment val
 
 ## Route map
 
-- `/` — Signal Loader introduction and Notion-tagged featured scenario gallery
-- `/scenarios` — complete gallery with risk-family filtering
+- `/` — Notion-tagged featured gallery with a one-time scene-to-concept explainer
+- `/scenarios` — complete gallery with risk-family filtering and the same first-visit explainer
 - `/scenarios/[slug]` — scenario dossier
 - `/risk-families` and `/risk-families/[slug]` — risk-family index and pivots
 - `/concepts` and `/concepts/[slug]` — concept index and pivots

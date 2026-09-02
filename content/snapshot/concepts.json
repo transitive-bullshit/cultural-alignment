@@ -267,7 +267,7 @@
       "overtrust in automation",
       "human automation interaction"
     ],
-    "description": "Automation bias and overreliance cause people to trust AI advice too readily, even when other evidence suggests it is wrong.",
+    "description": "Automation bias and overreliance is when people people trust AI advice too readily, even when other evidence suggests it is wrong.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Automation_bias",
     "citations": [
       {
@@ -930,7 +930,7 @@
   {
     "id": "3caedb27-f124-807e-868e-c2827fe1ca43",
     "slug": "side-effects",
-    "shortName": "Side Effects",
+    "shortName": "Unintended Side Effects",
     "longName": "Unintended Side Effects",
     "keywords": [
       "negative side effects",
@@ -1283,7 +1283,7 @@
     "id": "3caedb27-f124-80aa-9fba-f22656966ae8",
     "slug": "adversarial-evasion",
     "shortName": "Adversarial Evasion",
-    "longName": "Adversarial Evasion Attacks",
+    "longName": "Adversarial Evasion",
     "keywords": [
       "adversarial examples",
       "evasion attack",
@@ -1538,8 +1538,8 @@
   {
     "id": "3caedb27-f124-80c0-bdc0-dbac10a9e572",
     "slug": "orthogonality-thesis",
-    "shortName": "Orthogonality Thesis",
-    "longName": "Orthogonality Thesis",
+    "shortName": "Orthogonality",
+    "longName": "The Orthogonality Thesis",
     "keywords": [
       "intelligence-goal independence",
       "intelligence and goals",
@@ -2104,6 +2104,103 @@
         "href": "https://arxiv.org/abs/2302.12173",
         "title": "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection",
         "publisher": "arXiv.org"
+      }
+    ]
+  },
+  {
+    "id": "3cfedb27-f124-811e-847c-f2f68e89aa1c",
+    "slug": "reversibility",
+    "shortName": "Reversibility",
+    "longName": "Reversibility and Safe Rollback",
+    "keywords": [
+      "safe rollback",
+      "reversible deployment",
+      "system recovery",
+      "decommissioning",
+      "change control"
+    ],
+    "description": "Reversibility makes consequential AI deployments and actions pauseable, recoverable, or safely withdrawable when new evidence reveals unacceptable risk.",
+    "wikipediaUrl": null,
+    "citations": [
+      {
+        "href": "https://openai.com/index/safety-alignment-long-horizon-models/",
+        "title": "Safety alignment long horizon models",
+        "publisher": "OpenAI"
+      },
+      {
+        "href": "https://www.gov.uk/government/publications/emerging-processes-for-frontier-ai-safety/emerging-processes-for-frontier-ai-safety",
+        "title": "Emerging processes for frontier AI safety",
+        "publisher": "GOV.UK"
+      },
+      {
+        "href": "https://airc.nist.gov/airmf-resources/playbook/manage/",
+        "title": "Manage - AIRC",
+        "publisher": "NIST AI Resource Center"
+      }
+    ]
+  },
+  {
+    "id": "3cfedb27-f124-8129-a79e-f06c13c01d1e",
+    "slug": "iterative-deployment",
+    "shortName": "Iterative Deployment",
+    "longName": "Iterative Deployment",
+    "keywords": [
+      "staged release",
+      "gradual rollout",
+      "phased deployment",
+      "limited access",
+      "real-world feedback"
+    ],
+    "description": "Iterative deployment releases AI in controlled stages, using evidence from limited real-world use to improve safeguards before access expands.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Iterative_and_incremental_development",
+    "citations": [
+      {
+        "href": "https://openai.com/safety/how-we-think-about-safety-alignment/",
+        "title": "How we think about safety alignment",
+        "publisher": "OpenAI"
+      },
+      {
+        "href": "https://openai.com/index/language-model-safety-and-misuse/",
+        "title": "Language model safety and misuse",
+        "publisher": "OpenAI"
+      },
+      {
+        "href": "https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems",
+        "title": "Managing risks from increasingly capable open-weight AI systems | AISI Work",
+        "publisher": "AI Security Institute"
+      }
+    ]
+  },
+  {
+    "id": "3cfedb27-f124-815d-bf59-de9be42a76bc",
+    "slug": "defense-in-depth",
+    "shortName": "Defense in Depth",
+    "longName": "Defense in Depth",
+    "keywords": [
+      "layered safeguards",
+      "defense in depth",
+      "redundant controls",
+      "independent safety layers",
+      "fail-safe design",
+      "defense-in-depth"
+    ],
+    "description": "Defense in depth layers independent safeguards so that if one fails, others can still prevent, detect, or limit harmful AI behavior.",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Defense_in_depth_(computing)",
+    "citations": [
+      {
+        "href": "https://openai.com/safety/how-we-think-about-safety-alignment/",
+        "title": "How we think about safety alignment",
+        "publisher": "OpenAI"
+      },
+      {
+        "href": "https://internationalaisafetyreport.org/publication/second-key-update-technical-safeguards-and-risk-management",
+        "title": "Second Key Update: Technical Safeguards and Risk Management",
+        "publisher": "International AI Safety Report"
+      },
+      {
+        "href": "https://www.anthropic.com/responsible-scaling-policy",
+        "title": "Anthropic’s Responsible Scaling Policy",
+        "publisher": "Anthropic"
       }
     ]
   }

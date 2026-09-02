@@ -9,25 +9,42 @@ import {
   type ComponentType
 } from 'react'
 
-import { ColdOpenVariant } from './variant-cold-open'
-import { FieldGuideVariant } from './variant-field-guide'
-import type { HomepageVariantProps } from './prototype-types'
+import { MatchCutsVariant } from './variant-match-cuts'
+import {
+  homepagePrototypeManifest,
+  type HomepagePrototypeId,
+  type HomepagePrototypeRuntimeProps,
+  type HomepageVariantProps
+} from './prototype-types'
 import { SignalLoaderVariant } from './variant-signal-loader'
 import { SplitLensVariant } from './variant-split-lens'
+import { WordsVariant } from './variant-words'
 
 import styles from './homepage-prototype.module.css'
 
 type PrototypeDefinition = Readonly<{
+  id: HomepagePrototypeId
   name: string
-  Component: ComponentType<HomepageVariantProps>
+  pickerLabel: string
+  Component: ComponentType<HomepagePrototypeRuntimeProps>
 }>
 
-const variants: readonly PrototypeDefinition[] = [
-  { name: 'Signal Loader', Component: SignalLoaderVariant },
-  { name: 'Split Lens', Component: SplitLensVariant },
-  { name: 'Cold Open', Component: ColdOpenVariant },
-  { name: 'Field Guide', Component: FieldGuideVariant }
-]
+const variantComponents = {
+  'signal-loader': SignalLoaderVariant,
+  'split-lens': SplitLensVariant,
+  'match-cuts': MatchCutsVariant,
+  words: WordsVariant
+} satisfies Record<
+  HomepagePrototypeId,
+  ComponentType<HomepagePrototypeRuntimeProps>
+>
+
+const variants: readonly PrototypeDefinition[] = homepagePrototypeManifest.map(
+  (definition) => ({
+    ...definition,
+    Component: variantComponents[definition.id]
+  })
+)
 
 export function HomepagePrototype({
   examples,
@@ -44,6 +61,7 @@ export function HomepagePrototype({
   const itemRefs = useRef<Array<HTMLButtonElement | null>>([])
   const [activeVariant, setActiveVariant] = useState(safeInitialVariant)
   const [revision, setRevision] = useState(0)
+  const [introDismissed, setIntroDismissed] = useState(false)
   const [highlight, setHighlight] = useState({ width: 0, x: 0 })
   const definition = variants[activeVariant]!
 
@@ -70,6 +88,7 @@ export function HomepagePrototype({
   )
 
   const replay = useCallback(() => setRevision((current) => current + 1), [])
+  const dismissIntro = useCallback(() => setIntroDismissed(true), [])
 
   useLayoutEffect(moveHighlight, [moveHighlight])
 
@@ -122,10 +141,12 @@ export function HomepagePrototype({
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [activeVariant, replay, selectVariant])
 
-  const variantProps: HomepageVariantProps = {
+  const variantProps: HomepagePrototypeRuntimeProps = {
     examples,
     galleryItems,
     initialItemId,
+    introDismissed,
+    onDismissIntro: dismissIntro,
     scenarioCount
   }
 
@@ -141,7 +162,8 @@ export function HomepagePrototype({
       <div
         key={`${activeVariant}-${revision}`}
         className={styles.stage}
-        data-prototype-stage={definition.name}
+        data-prototype-name={definition.name}
+        data-prototype-stage={definition.id}
       >
         <definition.Component {...variantProps} />
       </div>
@@ -150,6 +172,7 @@ export function HomepagePrototype({
         ref={pickerRef}
         className='proto-picker'
         aria-label='Prototype variants'
+        data-prototype-count={variants.length}
       >
         <span
           className='proto-picker-highlight'
@@ -159,20 +182,22 @@ export function HomepagePrototype({
           }}
           aria-hidden='true'
         />
-        {variants.map(({ name }, index) => (
+        {variants.map(({ id, name, pickerLabel }, index) => (
           <button
-            key={name}
+            key={id}
             ref={(item) => {
               itemRefs.current[index] = item
             }}
             className='proto-picker-item'
             type='button'
             data-prototype-index={index + 1}
+            data-prototype-id={id}
             data-active={activeVariant === index || undefined}
+            aria-label={name}
             aria-current={activeVariant === index ? 'true' : undefined}
             onClick={() => selectVariant(index)}
           >
-            {name}
+            {pickerLabel}
           </button>
         ))}
         <span className='proto-picker-divider' aria-hidden='true' />

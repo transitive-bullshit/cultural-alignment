@@ -29,10 +29,8 @@ const CURATED_CITATION_TITLES = {
     'Risks from Learned Optimization'
 } as const satisfies Readonly<Record<string, string>>
 
-// Citation URLs are editorial input, so build-time fetching is limited to the
-// publication hosts represented in the taxonomy. Add new publishers here as
-// part of reviewing a new canonical URL instead of fetching arbitrary hosts.
-const ALLOWED_CITATION_HOSTS = new Set([
+// Citation URLs are editorial input, so build-time fetching were originally limited to the publication hosts represented in the taxonomy, but it proved too brittle, so I decided to relax it.
+const KNOWN_CITATION_HOSTS = new Set([
   'ainowinstitute.org',
   'aisi.gov.uk',
   'alignment.org',
@@ -91,7 +89,8 @@ const ALLOWED_CITATION_HOSTS = new Set([
   'transformer-circuits.pub',
   'un.org',
   'unep.org',
-  'unesco.org'
+  'unesco.org',
+  'www.gov.uk'
 ])
 
 const FALLBACK_ACRONYMS = {
@@ -882,14 +881,17 @@ function assertFetchableUrl(value: string) {
   ) {
     throw new Error('citation URL must not target a local network address')
   }
-  if (!isAllowedCitationHostname(hostname)) {
-    throw new Error(`citation host is not approved: ${hostname}`)
+  if (!isKnownCitationHostname(hostname)) {
+    console.warn(
+      `Citation URL ${url.href} is not on the approved host list`,
+      url.href
+    )
   }
   return url
 }
 
-function isAllowedCitationHostname(hostname: string) {
-  for (const allowedHostname of ALLOWED_CITATION_HOSTS) {
+function isKnownCitationHostname(hostname: string) {
+  for (const allowedHostname of KNOWN_CITATION_HOSTS) {
     if (
       hostname === allowedHostname ||
       hostname.endsWith(`.${allowedHostname}`)

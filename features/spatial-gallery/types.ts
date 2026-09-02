@@ -18,6 +18,13 @@ export type SpatialGalleryItem = Readonly<{
   }>
 }>
 
+export type GalleryIntroExample = Readonly<{
+  source: string
+  title: string
+  concept: string
+  image: SpatialGalleryItem['image']
+}>
+
 export type SpatialGalleryController = Readonly<{
   cancelIntro(): void
   clearHover(): void

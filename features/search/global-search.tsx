@@ -78,6 +78,15 @@ export function GlobalSearch({
         return
       }
 
+      if (
+        !openRef.current &&
+        document.querySelector(
+          '[data-slot="dialog-content"][data-state="open"]'
+        )
+      ) {
+        return
+      }
+
       event.preventDefault()
       handleOpenChange(!openRef.current)
     }

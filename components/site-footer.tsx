@@ -17,7 +17,7 @@ import {
 import styles from './site-footer.module.css'
 
 const primaryLinks = [
-  { href: '/', label: 'Featured scenarios' },
+  { href: '/', label: 'Home' },
   ...exploreNavigationLinks.map((link) => ({
     href: link.href,
     label: 'footerLabel' in link ? link.footerLabel : link.label

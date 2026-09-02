@@ -4,10 +4,15 @@ import { cn } from '@/lib/utils'
 
 import galleryShellStyles from './gallery-page-shell.module.css'
 import styles from './gallery-experience.module.css'
-import { SpatialGallery } from './spatial-gallery'
+import {
+  SpatialGallery,
+  type SpatialGalleryDesktopSelectionRenderer
+} from './spatial-gallery'
 import type { SpatialGalleryItem } from './types'
 
-export function GalleryExperience({
+export function GalleryExperience<
+  TItem extends SpatialGalleryItem = SpatialGalleryItem
+>({
   className,
   contentInert = false,
   header,
@@ -17,7 +22,8 @@ export function GalleryExperience({
   initialItemId,
   items,
   mainId = 'gallery-main',
-  overlay
+  overlay,
+  renderDesktopSelection
 }: {
   readonly className?: string
   readonly contentInert?: boolean
@@ -26,9 +32,10 @@ export function GalleryExperience({
   readonly historyKey: string
   readonly inertiaBurst?: boolean
   readonly initialItemId: string
-  readonly items: readonly SpatialGalleryItem[]
+  readonly items: readonly TItem[]
   readonly mainId?: string
   readonly overlay?: ReactNode
+  readonly renderDesktopSelection?: SpatialGalleryDesktopSelectionRenderer<TItem>
 }) {
   return (
     <div
@@ -53,6 +60,7 @@ export function GalleryExperience({
             inertiaBurst={inertiaBurst}
             items={items}
             initialItemId={initialItemId}
+            renderDesktopSelection={renderDesktopSelection}
           />
         </div>
         {overlay}
