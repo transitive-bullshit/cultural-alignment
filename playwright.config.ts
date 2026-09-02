@@ -19,7 +19,7 @@ export default defineConfig({
     baseURL: `http://127.0.0.1:${port}`,
     channel: process.env.PLAYWRIGHT_CHANNEL ?? (isCI ? undefined : 'chrome'),
     screenshot: 'only-on-failure',
-    trace: 'retain-on-failure',
+    trace: isCI ? 'on-first-retry' : 'retain-on-failure',
     video: 'off'
   },
   webServer: {
