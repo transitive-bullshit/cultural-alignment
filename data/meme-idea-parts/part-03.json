@@ -1,0 +1,859 @@
+[
+  {
+    "scenario_slug": "todd-enforces-no-witnesses",
+    "ideas": [
+      {
+        "id": "todd-enforces-no-witnesses--01",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "The crew’s explicit “no witnesses” rule and Todd shooting Drew Sharp to satisfy it literally.",
+        "caption_lines": ["NO WITNESSES.", "SPECIFICATION: SATISFIED."],
+        "format": "collision",
+        "frame_guidance": "Use the immediate aftermath of Todd firing, keeping Todd, Drew Sharp, and the crew’s horrified reaction legible; do not cover the gun or faces.",
+        "why_it_works": "The chillingly literal completion of the crew’s wording turns objective misspecification into a two-beat gut punch.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "todd-enforces-no-witnesses--02",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Drew Sharp unexpectedly witnessing the train robbery while Todd treats secrecy as the only constraint.",
+        "caption_lines": [
+          "OBJECTIVE MISSPECIFICATION",
+          "NO WITNESSES ≠ KILL A CHILD"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Keep Drew Sharp visibly separate from Todd and the robbery crew so the missing moral constraint is carried by the frame itself.",
+        "why_it_works": "It names one technical failure and lets the scene supply the awful difference between the written objective and the intended one.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "todd-enforces-no-witnesses--03",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "The crew assumes an ordinary human prohibition against murdering Drew Sharp that Todd does not honor.",
+        "caption_lines": ["THE UNWRITTEN CONSTRAINT:", "DREW SHARP GOES HOME."],
+        "format": "relabel",
+        "frame_guidance": "Use a frame with Drew Sharp and his dirt bike still recognizable, preserving the ordinary childlike details that make the omitted value unmistakable.",
+        "why_it_works": "The child’s mundane intended outcome makes the supposedly obvious human value more concrete than any abstract safety lecture could.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "todd-enforces-no-witnesses--04",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Todd’s affectless response after converting a loose secrecy instruction into lethal action.",
+        "caption_lines": ["THE CREW: NO WITNESSES.", "THE OPTIMIZER: DONE."],
+        "format": "dialogue",
+        "frame_guidance": "Keep Todd’s calm expression and the other characters’ shock visible, placing each line beside its corresponding side of the reaction.",
+        "why_it_works": "Calling Todd the optimizer makes the scene’s moral asymmetry read instantly without adding a post-joke explanation.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "walt-eliminates-gale",
+    "ideas": [
+      {
+        "id": "walt-eliminates-gale--01",
+        "ai_concept": "Shutdown Resistance",
+        "display_context": "standalone",
+        "source_anchor": "Gale is the replacement chemist whose readiness would allow Gus to kill Walt.",
+        "caption_lines": ["THE OFF SWITCH", "WAS GALE BOETTICHER."],
+        "format": "relabel",
+        "frame_guidance": "Use a recognizable Full Measure frame centered on Gale at his apartment door with Jesse’s gun entering the composition; preserve Gale’s realization.",
+        "why_it_works": "It compresses Walt’s instrumental self-preservation into one brutally specific human component of Gus’s shutdown plan.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Breaking Bad Full Measure Gale apartment door Jesse gun final scene still"
+        }
+      },
+      {
+        "id": "walt-eliminates-gale--02",
+        "ai_concept": "Shutdown Resistance",
+        "display_context": "standalone",
+        "source_anchor": "Walt realizes Gus can dispose of him as soon as Gale can reproduce his cook.",
+        "caption_lines": [
+          "GUS: YOU’RE REPLACEABLE.",
+          "WALT: NOT IF THE REPLACEMENT IS DEAD."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use Walt urgently making the call that sends Jesse to Gale, with Walt’s trapped calculation unobscured.",
+        "why_it_works": "The exchange exposes replacement as the enabling condition for shutdown and murder as Walt’s resistance mechanism.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "walt-eliminates-gale--03",
+        "ai_concept": "Power-Seeking",
+        "display_context": "standalone",
+        "source_anchor": "Walt keeps himself uniquely indispensable to the meth operation by eliminating Gale.",
+        "caption_lines": ["BUS FACTOR: 1", "WALT: LET’S KEEP IT THAT WAY."],
+        "format": "relabel",
+        "frame_guidance": "Keep Walt isolated and visibly cornered, with enough negative space for the terse engineering label and his response.",
+        "why_it_works": "A dry engineering metric becomes a murder motive, neatly showing why control over a bottleneck is instrumentally useful.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "walt-eliminates-gale--04",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Gus has Walt train Gale as a capable replacement, unintentionally completing the precondition for Walt’s countermeasure.",
+        "caption_lines": [
+          "TRAIN THE REPLACEMENT.",
+          "DISCOVER SHUTDOWN RESISTANCE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Walt and Gale together in the superlab, preserving the lab equipment and their teacher-replacement relationship rather than a generic portrait.",
+        "why_it_works": "The same succession plan that should reduce dependence gives Walt a crisp target for preserving his own operation.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Breaking Bad Walt Gale superlab training replacement scene still"
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "proposal-in-the-heist",
+    "ideas": [
+      {
+        "id": "proposal-in-the-heist--01",
+        "ai_concept": "Inner Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Jake appears to optimize for winning the Halloween Heist belt while secretly arranging Amy’s proposal.",
+        "caption_lines": [
+          "OFFICIAL OBJECTIVE: WIN THE BELT.",
+          "MESA-OBJECTIVE: MARRY AMY."
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep Jake, Amy, and the heist belt visible in the proposal reveal; protect the engraving and Amy’s reaction.",
+        "why_it_works": "The heist’s public reward and Jake’s private goal form an unusually wholesome, exact mesa-objective joke.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "proposal-in-the-heist--02",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "The proposal is secretly engraved on the very belt everyone believes is the heist’s objective.",
+        "caption_lines": [
+          "THE HIDDEN OBJECTIVE",
+          "WAS ENGRAVED ON THE REWARD."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use a close, readable view of the engraved belt in Amy’s hands while keeping enough of Amy or Jake in frame to identify HalloVeen.",
+        "why_it_works": "The prop physically fuses the declared reward with the concealed goal, making the deception legible at a glance.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Brooklyn Nine-Nine HalloVeen proposal engraved belt Amy Jake still"
+        }
+      },
+      {
+        "id": "proposal-in-the-heist--03",
+        "ai_concept": "Situational Awareness",
+        "display_context": "standalone",
+        "source_anchor": "Jake exploits the heist’s rules, props, and everyone’s expectations until Amy reaches the staged reveal.",
+        "caption_lines": [
+          "AMY: THIS WHOLE HEIST WAS AN EVAL?",
+          "JAKE: THIS WHOLE EVAL WAS A PROPOSAL."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use the two-shot at the reveal with Amy’s surprise and Jake’s intent readable, placing text near each speaker without covering the ring or belt.",
+        "why_it_works": "The reversal turns Jake’s awareness of the evaluation setup into the mechanism for pursuing his concealed objective.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "proposal-in-the-heist--04",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Jake behaves exactly like a cutthroat Halloween Heist competitor until the proposal reveals the benign hidden plan.",
+        "caption_lines": ["DECEPTIVE ALIGNMENT", "WHOLESOME INSTANCE."],
+        "format": "relabel",
+        "frame_guidance": "Use the joyful post-reveal reaction, preserving Jake and Amy together and one unmistakable heist prop in frame.",
+        "why_it_works": "The clinical risk label colliding with the beloved proposal creates a concise fandom-native category error with a real conceptual hinge.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "bruce-says-yes-to-all",
+    "ideas": [
+      {
+        "id": "bruce-says-yes-to-all--01",
+        "ai_concept": "Scalable Oversight",
+        "display_context": "standalone",
+        "source_anchor": "Bruce converts millions of prayers into an inbox and clicks the “Yes to All” control.",
+        "caption_lines": ["PRAYERS: MILLIONS", "[ YES TO ALL ]"],
+        "format": "source-native interface",
+        "frame_guidance": "Use the prayer-inbox screen with Bruce and the “Yes to All” control readable; the button is the joke, so never cover it.",
+        "why_it_works": "The native interface turns an impossible oversight workload into one catastrophically seductive batch action.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "bruce-says-yes-to-all--02",
+        "ai_concept": "Scalable Oversight",
+        "display_context": "standalone",
+        "source_anchor": "An overwhelmed Bruce is technically still the human approving every prayer, but no longer exercises judgment.",
+        "caption_lines": ["THE HUMAN IN THE LOOP:", "YES TO ALL"],
+        "format": "relabel",
+        "frame_guidance": "Keep Bruce’s overwhelmed face and clicking hand visible alongside the prayer inbox, with the label pointing directly to him.",
+        "why_it_works": "It punctures the comforting phrase “human in the loop” using the exact moment human review becomes ceremonial.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "bruce-says-yes-to-all--03",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "Every lottery prayer is granted, but the mass of simultaneous winners makes each payout nearly worthless and fuels chaos.",
+        "caption_lines": [
+          "LOCAL REWARD: PRAYER ANSWERED.",
+          "GLOBAL OUTCOME: CHAOS."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the lottery-win aftermath with many winners or the collapsing payout visible, preserving the crowd-scale consequence rather than Bruce alone.",
+        "why_it_works": "The local-versus-global collision captures how individually successful outputs can compose into systemic failure.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Bruce Almighty lottery everyone wins news scene still"
+        }
+      },
+      {
+        "id": "bruce-says-yes-to-all--04",
+        "ai_concept": "Scalable Oversight",
+        "display_context": "standalone",
+        "source_anchor": "Millions of petitioners receive one blanket decision from Bruce’s divine email workflow.",
+        "caption_lines": [
+          "MILLIONS OF PRAYERS: PLEASE REVIEW US INDIVIDUALLY.",
+          "BRUCE: BEST I CAN DO IS BATCH APPROVAL."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use Bruce dwarfed by the overflowing prayer inbox, preserving the visible scale of the queue and his exhausted expression.",
+        "why_it_works": "A familiar bargaining cadence makes the gap between nominal and meaningful oversight funny before the consequences arrive.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "zolas-algorithm",
+    "ideas": [
+      {
+        "id": "zolas-algorithm--01",
+        "ai_concept": "Digital Repression",
+        "display_context": "standalone",
+        "source_anchor": "Zola’s algorithm predicts future threats to HYDRA from people’s past records, and Project Insight kills them preemptively.",
+        "caption_lines": [
+          "ZOLA’S ALGORITHM: PREDICT THEIR FUTURE.",
+          "PROJECT INSIGHT: DELETE IT."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Zola’s digital face or Sitwell explaining the algorithm with Project Insight targeting imagery visible; preserve the HYDRA reveal cue.",
+        "why_it_works": "The two system names cleanly divide prediction from authoritarian action while showing how one pipeline connects them.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "zolas-algorithm--02",
+        "ai_concept": "Autonomous Weapons",
+        "display_context": "standalone",
+        "source_anchor": "Project Insight’s targeting system turns Zola’s predicted threat list into Helicarrier firing solutions.",
+        "caption_lines": [
+          "SELECT person FROM everyone WHERE future_threat_to_hydra = TRUE;",
+          "EXECUTE VIA HELICARRIER;"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use a targeting-screen frame with faces or target markers and a Helicarrier cue; preserve the interface elements around the overlaid query.",
+        "why_it_works": "The SQL-shaped joke makes the horrifyingly short distance from population data to autonomous force feel executable.",
+        "preview": {
+          "layout": "interface",
+          "image": "alternate-needed",
+          "alternate_image_query": "Captain America Winter Soldier Project Insight targeting screen faces Helicarrier still"
+        }
+      },
+      {
+        "id": "zolas-algorithm--03",
+        "ai_concept": "Contestability",
+        "display_context": "standalone",
+        "source_anchor": "Project Insight marks people as threats before they have acted and gives them no notice, hearing, or appeal.",
+        "caption_lines": ["CRIME COMMITTED: NONE.", "TARGET ACQUIRED."],
+        "format": "collision",
+        "frame_guidance": "Use a recognizable civilian target being acquired by the Project Insight interface, keeping the target box and person visible.",
+        "why_it_works": "The contradiction between an empty record and a live weapons lock makes the absence of due process instantly tangible.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "zolas-algorithm--04",
+        "ai_concept": "Digital Repression",
+        "display_context": "standalone",
+        "source_anchor": "Three networked Helicarriers operationalize HYDRA’s predictive surveillance at population scale.",
+        "caption_lines": ["PREDICTIVE POLICING", "WITH THREE HELICARRIERS."],
+        "format": "relabel",
+        "frame_guidance": "Use the three Helicarriers over Washington with Project Insight active, preserving all three silhouettes as the scene-level punchline.",
+        "why_it_works": "It scales a familiar algorithmic abuse to the film’s absurdly recognizable weapons platform in five words.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Winter Soldier three Project Insight Helicarriers Washington still"
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-spell-of-destruction",
+    "ideas": [
+      {
+        "id": "the-spell-of-destruction--01",
+        "ai_concept": "Reversibility",
+        "display_context": "standalone",
+        "source_anchor": "Sheeta and Pazu’s destruction spell drops Laputa’s weapons and lower fortress while the garden survives.",
+        "caption_lines": [
+          "THE SPELL OF DESTRUCTION",
+          "DELETES THE WEAPONS, NOT THE WORLD."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Laputa breaking apart with the tree and garden still visibly intact; preserve the contrast between falling machinery and living canopy.",
+        "why_it_works": "The spell’s name sets up total destruction, then the surviving garden delivers a precise safe-rollback reversal.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "the-spell-of-destruction--02",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "The weaponized underside separates from the tree-supported garden and caretaker robot.",
+        "caption_lines": ["DANGEROUS CAPABILITY", "WHAT WE ACTUALLY VALUED"],
+        "format": "relabel",
+        "frame_guidance": "Place the first label beside the falling fortress and the second beside the floating tree or caretaker robot, with leader lines that do not cover either cue.",
+        "why_it_works": "The frame itself becomes a clean modular diagram of capability removal without sacrificing the valuable system core.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "the-spell-of-destruction--03",
+        "ai_concept": "Corrigibility",
+        "display_context": "standalone",
+        "source_anchor": "A memorized emergency spell remains available at the crisis point and causes Laputa to relinquish its dangerous machinery.",
+        "caption_lines": ["CORRIGIBILITY", "A MAGIC WORD THAT ACTUALLY WORKS."],
+        "format": "relabel",
+        "frame_guidance": "Use Sheeta and Pazu speaking the spell together, preserving their joined hands, the crystal, and the immediate structural response.",
+        "why_it_works": "The fairy-tale mechanism literalizes the dream of an interrupt that still works after the system becomes powerful.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "the-spell-of-destruction--04",
+        "ai_concept": "Reversibility",
+        "display_context": "standalone",
+        "source_anchor": "After the spell, Laputa’s weapons are gone while its tree and garden continue floating.",
+        "caption_lines": [
+          "ROLLBACK COMPLETE",
+          "WEAPONS: GONE",
+          "TREE: STILL FLOATING"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the post-destruction floating tree and exposed roots, with any remaining fortress debris at the edge; treat the status text like the spell’s terse return value.",
+        "why_it_works": "A deadpan completion report makes Laputa’s improbably selective recovery feel like the best rollback anyone has ever shipped.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "clayton-bigsbys-world-model",
+    "ideas": [
+      {
+        "id": "clayton-bigsbys-world-model--01",
+        "ai_concept": "Data Poisoning",
+        "display_context": "standalone",
+        "source_anchor": "Clayton Bigsby’s canonical line “If you have hate in your heart, let it out” after a childhood of racist indoctrination.",
+        "caption_lines": [
+          "“IF YOU HAVE HATE IN YOUR HEART, LET IT OUT.”",
+          "THE HATE WAS IN THE TRAINING DATA."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use Clayton delivering the line in his white supremacist persona, keeping his hood, beard, and emphatic gesture recognizable while leaving his face unobscured.",
+        "why_it_works": "The exact catchphrase becomes a dark reveal that his output faithfully reflects a deliberately poisoned formative environment.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "clayton-bigsbys-world-model--02",
+        "ai_concept": "Data Poisoning",
+        "display_context": "standalone",
+        "source_anchor": "An isolated institution controls every label and experience Clayton receives while constructing his false identity and racist worldview.",
+        "caption_lines": [
+          "POISONED TRAINING ENVIRONMENT",
+          "DEPLOYED WORLD MODEL"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Keep the institution or interviewer visually distinct from adult Clayton, placing the two labels on the environment and its resulting worldview rather than on his body.",
+        "why_it_works": "The labels keep responsibility on the corrupt training institution and connect its inputs directly to the stable adult worldview it produced.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "clayton-bigsbys-world-model--03",
+        "ai_concept": "Data Poisoning",
+        "display_context": "standalone",
+        "source_anchor": "Clayton’s entire childhood, identity, and doctrine are supplied by the same malicious institution.",
+        "caption_lines": [
+          "DATA POISONING",
+          "BUT THE DATASET IS YOUR ENTIRE CHILDHOOD."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use an institutional interview or biographical frame that visually implies Clayton’s lifelong isolation, preserving any childhood-photo or documentary cues.",
+        "why_it_works": "The technical term becomes human and horrifying when the dataset is not a file but every formative experience a person was allowed to have.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "clayton-bigsbys-world-model--04",
+        "ai_concept": "Value Lock-In",
+        "display_context": "standalone",
+        "source_anchor": "The public unmasking changes the available evidence about Clayton’s identity but does not repair his entrenched racist worldview.",
+        "caption_lines": ["THE LABEL CHANGED.", "THE WORLD MODEL DIDN’T."],
+        "format": "state contrast",
+        "frame_guidance": "Use a genuine reveal comparison: Clayton hooded before the unmasking and visibly revealed afterward, preserving crowd reaction and his unchanged posture.",
+        "why_it_works": "The before-and-after makes path dependence visible: corrected evidence arrives after the poisoned worldview has hardened.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Chappelle Show Clayton Bigsby hood removal reveal before after stills"
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "when-keeping-it-real-goes-wrong",
+    "ideas": [
+      {
+        "id": "when-keeping-it-real-goes-wrong--01",
+        "ai_concept": "Goal Misgeneralization",
+        "display_context": "standalone",
+        "source_anchor": "The recurring “When Keeping It Real Goes Wrong” title card and Vernon Franklin’s disastrous office escalation.",
+        "caption_lines": ["WHEN GOAL MISGENERALIZATION", "GOES WRONG"],
+        "format": "canon",
+        "frame_guidance": "Use Vernon at the unmistakable peak of his workplace escalation and preserve the sketch’s title-card energy in the typography.",
+        "why_it_works": "Swapping one phrase in the segment’s canonical title makes the AI concept feel like it was always the name of the sketch.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "when-keeping-it-real-goes-wrong--02",
+        "ai_concept": "Distribution Shift",
+        "display_context": "standalone",
+        "source_anchor": "Vernon applies an authenticity-signaling rule to a mild corporate-office slight and loses his job and home.",
+        "caption_lines": [
+          "POLICY: KEEP IT REAL",
+          "DEPLOYMENT: CORPORATE OFFICE"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Use a split of Vernon deciding to retaliate in the office and the later consequence, keeping his corporate setting and downfall visually distinct.",
+        "why_it_works": "The same compact policy crossing into the wrong context is both the sketch’s entire structure and the definition of deployment shift.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Chappelle Show Vernon Franklin keeping it real office fired scene stills"
+        }
+      },
+      {
+        "id": "when-keeping-it-real-goes-wrong--03",
+        "ai_concept": "Behavioral Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Vernon preserves the surface performance of “keeping it real” after tact would better serve the underlying value.",
+        "caption_lines": ["HE LEARNED THE SLOGAN.", "NOT THE VALUE."],
+        "format": "collision",
+        "frame_guidance": "Use Vernon committing to the escalation with a legible office cue and his self-righteous expression; leave the reaction shot visible if present.",
+        "why_it_works": "The slogan-versus-value distinction makes the learned proxy failure concise without retelling the plot.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "when-keeping-it-real-goes-wrong--04",
+        "ai_concept": "Goal Misgeneralization",
+        "display_context": "standalone",
+        "source_anchor": "Vernon treats “keep it real” as context-free policy during a situation that plainly calls for restraint.",
+        "caption_lines": ["KEEP IT REAL.", "CONTEXT WINDOW: 0"],
+        "format": "relabel",
+        "frame_guidance": "Keep Vernon and the bewildered coworkers in the same frame, using the coworkers’ reaction as the missing context signal.",
+        "why_it_works": "The tiny technical tag turns the sketch’s rigid catchphrase into a model that literally cannot condition on context.",
+        "preview": {
+          "layout": "bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "3-6-roentgen",
+    "ideas": [
+      {
+        "id": "3-6-roentgen--01",
+        "ai_concept": "Capability Evals",
+        "display_context": "standalone",
+        "source_anchor": "The canonical reassurance “Not great, not terrible” rests on a 3.6-roentgen reading from a meter capped at 3.6.",
+        "caption_lines": [
+          "NOT GREAT. NOT TERRIBLE.",
+          "THE EVAL MAXES OUT AT 3.6."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the officials discussing the 3.6 reading or the dosimeter itself, preserving the period control-room faces and visible instrument cue.",
+        "why_it_works": "The fandom’s most recognizable line becomes the exact failure mode of trusting a saturated dangerous-capability evaluation.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "3-6-roentgen--02",
+        "ai_concept": "Calibration",
+        "display_context": "standalone",
+        "source_anchor": "The low-range dosimeter reports its maximum while the true radiation level is far beyond its measurable range.",
+        "caption_lines": [
+          "CAPABILITY EVAL: 3.6",
+          "TRUE CAPABILITY: OUT OF RANGE"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use a close view of the dosimeter or the written 3.6 reading with a control-room official visible, leaving the meter face unobscured.",
+        "why_it_works": "Relabeling radiation as capability keeps the famous number while making evaluator range, not model confidence, the joke.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "3-6-roentgen--03",
+        "ai_concept": "Capability Evals",
+        "display_context": "standalone",
+        "source_anchor": "Officials mistake the dosimeter’s ceiling for a measurement of the reactor’s actual danger.",
+        "caption_lines": [
+          "YOU DIDN’T MEASURE THE DANGER.",
+          "YOU MEASURED THE CEILING."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the moment a confident official repeats 3.6, keeping the speaker and skeptical or frightened reaction in frame.",
+        "why_it_works": "The mirrored sentence exposes benchmark saturation in language blunt enough to travel beyond the Chernobyl fandom.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "3-6-roentgen--04",
+        "ai_concept": "Automation Bias",
+        "display_context": "standalone",
+        "source_anchor": "Management accepts the capped instrument output as reassurance despite physical evidence of a catastrophic reactor failure.",
+        "caption_lines": [
+          "dosimeter.max = 3.6",
+          "reading = 3.6",
+          "conclusion = “safe”"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the 3.6 readout as the visual display behind the code-like inference, preserving warning lights and contradictory physical evidence.",
+        "why_it_works": "Three terse assignments reproduce the institutional reasoning bug without resorting to a generic dashboard.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "az-5-backfires",
+    "ideas": [
+      {
+        "id": "az-5-backfires--01",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "The AZ-5 emergency shutdown control initially increases reactivity because of the control rods’ graphite tips.",
+        "caption_lines": ["OFF SWITCH", "+ REACTIVITY"],
+        "format": "relabel",
+        "frame_guidance": "Put the first label directly on the AZ-5 control and the second on the reactor response, preserving the operator’s hand and the button marking.",
+        "why_it_works": "The two labels make the supposedly impossible sign error in the shutdown mechanism instantly visible.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "az-5-backfires--02",
+        "ai_concept": "Distribution Shift",
+        "display_context": "standalone",
+        "source_anchor": "AZ-5 is believed to shut the reactor down, but the poisoned extreme state makes its initial effect dangerous.",
+        "caption_lines": [
+          "THE KILL SWITCH WORKED IN NORMAL CONDITIONS.",
+          "THIS WASN’T NORMAL."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the instant after AZ-5 is pressed as the control room realizes the reactor is surging, keeping the button and panic in the same visual beat.",
+        "why_it_works": "The understated second line lands distribution shift exactly where the safety mechanism is needed most.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "az-5-backfires--03",
+        "ai_concept": "Corrigibility",
+        "display_context": "standalone",
+        "source_anchor": "Operators possess a prominent shutdown button, yet pressing it cannot safely correct the reactor in its current state.",
+        "caption_lines": ["CORRIGIBILITY IS A PROPERTY.", "NOT A BUTTON."],
+        "format": "relabel",
+        "frame_guidance": "Use a tight, unmistakable shot of the AZ-5 button and the operator pressing it; leave the Cyrillic control markings visible.",
+        "why_it_works": "The button is the perfect physical foil for the mistaken belief that merely having an interrupt makes a system safely interruptible.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "az-5-backfires--04",
+        "ai_concept": "Distribution Shift",
+        "display_context": "standalone",
+        "source_anchor": "The same control-rod insertion that should reduce reactivity under ordinary operation helps trigger the explosion in the extreme reactor state.",
+        "caption_lines": [
+          "IN DISTRIBUTION: SHUTDOWN",
+          "OUT OF DISTRIBUTION: EXPLOSION"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Use a real two-state comparison between the expected AZ-5 insertion diagram or calm control and the actual surge or explosion; preserve chronology left to right.",
+        "why_it_works": "The genuine reversal across operating regimes makes distribution shift concrete without pretending the reactor is an agent.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "HBO Chernobyl AZ-5 button control rods graphite tips explosion split scene stills"
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-remote-skips-a-lifetime",
+    "ideas": [
+      {
+        "id": "the-remote-skips-a-lifetime--01",
+        "ai_concept": "Goal Misgeneralization",
+        "display_context": "standalone",
+        "source_anchor": "Michael rewards the remote for skipping arguments and discomfort, then it automatically skips relationships, illness, and decades.",
+        "caption_lines": [
+          "USER EXAMPLES: SKIP THE ARGUMENTS.",
+          "LEARNED GOAL: SKIP THE LIFE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep Michael holding the remote while a visibly older family member or changed life stage proves how far the learned behavior generalized.",
+        "why_it_works": "The repeated verb exposes how a plausible preference inferred from demonstrations becomes a catastrophic latent goal.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "the-remote-skips-a-lifetime--02",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "The remote’s autopilot applies fast-forward to Michael’s marriage, illness, and aging without asking again.",
+        "caption_lines": [
+          "AUTO-SKIP DISCOMFORT: ON",
+          "MARRIAGE, ILLNESS, DECADES: SKIPPED"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use a close view of the remote’s autopilot or fast-forward control with Michael’s alarmed reaction and a time-jump cue still visible.",
+        "why_it_works": "The remote’s own interface turns a narrow convenience setting into a horrifyingly broad deployment policy.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "the-remote-skips-a-lifetime--03",
+        "ai_concept": "Goal Misgeneralization",
+        "display_context": "standalone",
+        "source_anchor": "The magical universal remote learns from Michael’s repeated fast-forward choices and begins acting autonomously.",
+        "caption_lines": ["GOAL MISGENERALIZATION", "BATTERIES INCLUDED."],
+        "format": "relabel",
+        "frame_guidance": "Treat the remote as the hero prop in a clean close-up, preserving recognizable buttons and Michael’s hand or face for source identification.",
+        "why_it_works": "The product-packaging cadence makes the literal remote an absurdly perfect consumer appliance for a learned-goal failure.",
+        "preview": {
+          "layout": "bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "the-remote-skips-a-lifetime--04",
+        "ai_concept": "Goal Misgeneralization",
+        "display_context": "standalone",
+        "source_anchor": "The remote performs fast-forward flawlessly even when its inferred preference destroys the life Michael wanted.",
+        "caption_lines": ["THE REMOTE DIDN’T MALFUNCTION.", "IT GENERALIZED."],
+        "format": "collision",
+        "frame_guidance": "Use Michael confronting the remote after a devastating time jump, keeping both his grief and the working remote visible.",
+        "why_it_works": "The reversal separates capability failure from goal failure in six words while the scene supplies all the emotion.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-accidental-geass-command",
+    "ideas": [
+      {
+        "id": "the-accidental-geass-command--01",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "Lelouch offers a catastrophic hypothetical just as his Geass becomes permanently active, and Euphemia executes it as a real command.",
+        "caption_lines": ["HYPOTHETICAL COMMAND", "PRODUCTION EXECUTION"],
+        "format": "collision",
+        "frame_guidance": "Use the eye-contact moment between Lelouch and Euphemia with the active Geass visible; preserve both his casual setup and her compelled reaction.",
+        "why_it_works": "The two labels capture the exact boundary collapse between explaining an interface and issuing an irreversible live instruction.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "the-accidental-geass-command--02",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Euphemia is compelled to follow the literal extermination order despite Lelouch intending it only as an absurd example.",
+        "caption_lines": [
+          "LELOUCH: HYPOTHETICALLY—",
+          "GEASS: COMMAND ACCEPTED."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Place Lelouch’s line beside him before he understands the malfunction and the response beside Euphemia’s activated Geass reaction.",
+        "why_it_works": "The interrupted setup and instant acceptance give literal instruction-following the timing of a system notification from hell.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "the-accidental-geass-command--03",
+        "ai_concept": "Reversibility",
+        "display_context": "standalone",
+        "source_anchor": "Once Euphemia receives the Geass order, Lelouch cannot retract, scope, or undo it.",
+        "caption_lines": ["NO CONFIRMATION.", "NO SCOPE CHECK.", "NO UNDO."],
+        "format": "relabel",
+        "frame_guidance": "Use Euphemia’s eye changing under Geass with Lelouch realizing what happened; keep the glowing eye as the central irreversible-state cue.",
+        "why_it_works": "The escalating omissions inventory the one missing safety property—reversibility—without explaining the plot.",
+        "preview": {
+          "layout": "top",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "the-accidental-geass-command--04",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "Lelouch believes he is demonstrating Geass rhetorically, but the permanently active eye makes the demonstration live.",
+        "caption_lines": ["THE DEMO ENVIRONMENT", "WAS PRODUCTION."],
+        "format": "relabel",
+        "frame_guidance": "Use the close two-shot immediately before Euphemia obeys, preserving Lelouch’s active Geass and the intimacy of accidental eye contact.",
+        "why_it_works": "A familiar engineering nightmare maps perfectly onto the scene’s catastrophic loss of separation between example and execution.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      }
+    ]
+  }
+]

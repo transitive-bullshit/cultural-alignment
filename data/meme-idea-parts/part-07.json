@@ -1,0 +1,925 @@
+[
+  {
+    "scenario_slug": "scrat-breaks-pangaea",
+    "ideas": [
+      {
+        "id": "scrat-breaks-pangaea--01",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "Scrat nudging Earth's core while pursuing his acorn and splitting Pangaea into the modern continents.",
+        "caption_lines": [
+          "ONE ACORN",
+          "SEVEN CONTINENTS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the widest core-control frame where Scrat, the acorn, and the cracking globe or continent display are all readable; keep the scale mismatch unobscured.",
+        "why_it_works": "Two counts compress the entire paperclip-maximizer dynamic into silent Ice Age slapstick.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "scrat-breaks-pangaea--02",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Scrat remaining perfectly focused on the acorn while planetary geography collapses around him.",
+        "caption_lines": [
+          "OPTIMIZER",
+          "REWARD FUNCTION",
+          "EXTERNALITIES"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use Scrat reaching toward the acorn as the planet fractures; attach OPTIMIZER to Scrat, REWARD FUNCTION to the acorn, and EXTERNALITIES to the spreading cracks.",
+        "why_it_works": "The three physical labels map every part of the narrow-objective failure onto canonical objects already in the frame.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "scrat-breaks-pangaea--03",
+        "ai_concept": "Orthogonality",
+        "display_context": "standalone",
+        "source_anchor": "Scrat applying planet-moving capability to the unchanged objective of acquiring one acorn.",
+        "caption_lines": [
+          "while (!scrat.hasAcorn) {",
+          "  scrat.move(earth)",
+          "}"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use Scrat operating the Earth's core like a machine, with one compact code block in cavern negative space and both the acorn and planetary mechanism visible.",
+        "why_it_works": "The absurd loop makes the orthogonality between enormous capability and microscopic purpose impossible to miss.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "scrat-breaks-pangaea--04",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "The continental fracture being completely outside Scrat's attention as he continues tracking the acorn.",
+        "caption_lines": [
+          "THE LOSS FUNCTION DIDN'T INCLUDE PANGAEA"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the moment the continents visibly separate while Scrat's gaze remains fixed on the acorn; leave the major cracks and his eyeline unobstructed below one top caption.",
+        "why_it_works": "The single technical line gives the planet-sized background gag a precise outer-alignment punchline.",
+        "preview": {
+          "layout": "top",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-idea-wont-wake-up",
+    "ideas": [
+      {
+        "id": "the-idea-wont-wake-up--01",
+        "ai_concept": "Goal Misgeneralization",
+        "display_context": "standalone",
+        "source_anchor": "Cobb planting the belief that death is the route out of an unreal world without limiting that belief to Limbo.",
+        "caption_lines": [
+          "COBB FORGOT TO PUT “ONLY IN LIMBO” IN THE SYSTEM PROMPT"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Cobb and Mal together in Limbo or with their aged hands on the train tracks; preserve the dream architecture and their relationship beneath one restrained caption.",
+        "why_it_works": "One missing scope clause turns the film's deepest tragedy into an exact instruction-generalization bug.",
+        "preview": {
+          "layout": "top",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "the-idea-wont-wake-up--02",
+        "ai_concept": "Distribution Shift",
+        "display_context": "standalone",
+        "source_anchor": "The same death-means-waking rule being useful in Limbo and fatal when Mal applies it after returning to reality.",
+        "caption_lines": [
+          "LIMBO: DEATH = WAKE UP",
+          "REALITY: SAME POLICY"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Build a real environment contrast: Cobb and Mal on the Limbo train tracks on the left, Mal across the hotel ledge gap on the right; preserve the distinct worlds and Mal in both.",
+        "why_it_works": "The unchanged second line makes the catastrophic distribution shift feel as simple as the planted policy itself.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Inception Cobb Mal Limbo train tracks hotel ledge stills"
+        }
+      },
+      {
+        "id": "the-idea-wont-wake-up--03",
+        "ai_concept": "Data Poisoning",
+        "display_context": "standalone",
+        "source_anchor": "Cobb implanting 'this world is not real' deeply enough that Mal continues trusting it outside the dream.",
+        "caption_lines": [
+          "COBB: THIS WORLD IS NOT REAL.",
+          "MAL, BACK IN REALITY: UNDERSTOOD."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use Cobb and Mal facing each other across the hotel rooms or a diptych of inception in Limbo and Mal's later certainty; anchor each line clearly to its speaker and time.",
+        "why_it_works": "The deadpan acknowledgement shows an implanted premise surviving beyond the context that made it useful.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "alternate-needed",
+          "alternate_image_query": "Inception Cobb implants idea Mal world not real hotel ledge still"
+        }
+      },
+      {
+        "id": "the-idea-wont-wake-up--04",
+        "ai_concept": "Value Lock-In",
+        "display_context": "standalone",
+        "source_anchor": "The planted rule persisting as Mal's governing policy despite Cobb's later attempts to correct it.",
+        "caption_lines": [
+          "POLICY: DIE TO WAKE",
+          "SCOPE: EVERY WORLD"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use Mal with the spinning top or at the hotel window, leaving the totem and her fixed expression unobscured; typeset the two lines like an immutable dream rule.",
+        "why_it_works": "The tiny policy card exposes both the bad scope and the absence of a correction channel.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-sedative-disables-the-exit",
+    "ideas": [
+      {
+        "id": "the-sedative-disables-the-exit--01",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "The team learning only after Saito is shot that death under Yusuf's sedative sends them to Limbo instead of waking them.",
+        "caption_lines": [
+          "TEAM: IF WE DIE, WE WAKE UP.",
+          "YUSUF'S SEDATIVE: TERMS HAVE CHANGED."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use the warehouse reveal with wounded Saito and Yusuf addressing the alarmed team; position the assumption with the group and the reversal beside Yusuf.",
+        "why_it_works": "The sedative's imagined reply captures a dependency silently invalidating the team's fail-safe contract.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "the-sedative-disables-the-exit--02",
+        "ai_concept": "Reversibility",
+        "display_context": "standalone",
+        "source_anchor": "Yusuf's powerful sedative composing with the normal death-to-wake rule to produce death-to-Limbo instead.",
+        "caption_lines": [
+          "FAILSAFE: DIE TO WAKE",
+          "+ HEAVY SEDATIVE",
+          "= DIE TO LIMBO"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the dream equipment, IV lines, and sleeping team as a physical system diagram; set the equation compactly in available floor or wall space.",
+        "why_it_works": "The three-line composition makes the emergent failure legible without explaining Inception's full dream stack.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "the-sedative-disables-the-exit--03",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "Ordinary dream missions using death as an exit while the assembled Fischer mission changes that behavior under a stronger sedative.",
+        "caption_lines": [
+          "UNIT TEST: DEATH WAKES YOU",
+          "INTEGRATION TEST: DEATH DELETES THE EXIT"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair a clean normal wake-up or kick image with the sedated team and wounded Saito; retain obvious dream hardware or world cues in both panels.",
+        "why_it_works": "Software-testing language precisely names a fail-safe that passes alone and reverses when the stack is assembled.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Inception normal dream wake kick Yusuf sedative wounded Saito stills"
+        }
+      },
+      {
+        "id": "the-sedative-disables-the-exit--04",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "Both the sedative and the death rule operating as specified while their interaction strands dying dreamers in Limbo.",
+        "caption_lines": [
+          "EVERY SAFETY LAYER WORKED AS DESIGNED.",
+          "TOGETHER THEY INVENTED LIMBO."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use a visually impossible Limbo cityscape with Cobb or Ariadne small against it; preserve the scale and unreality for the second line's reveal.",
+        "why_it_works": "The punchline turns Limbo into the nightmare emergent property of individually functioning components.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Inception Limbo collapsing city Cobb Ariadne still"
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "independence-day-virus",
+    "ideas": [
+      {
+        "id": "independence-day-virus--01",
+        "ai_concept": "Algorithmic Monoculture",
+        "display_context": "standalone",
+        "source_anchor": "Levinson's single mothership upload propagating through the shared command system and disabling every destroyer's shields.",
+        "caption_lines": [
+          "ONE CONTROL PLANE",
+          "ONE VIRUS",
+          "EVERY SHIELD"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use Levinson's upload screen with the alien fleet or shield indicators also visible; arrange the three lines like a transmission propagating outward from one node.",
+        "why_it_works": "The repeated 'one' makes correlated fleet-wide failure feel architectural rather than coincidental.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "independence-day-virus--02",
+        "ai_concept": "Algorithmic Monoculture",
+        "display_context": "standalone",
+        "source_anchor": "An interstellar fleet sharing enough software that Levinson can compromise it from one captured craft and a laptop.",
+        "caption_lines": [
+          "ONE SHARED STACK",
+          "ONE JEFF GOLDBLUM LAPTOP"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Levinson grinning beside the laptop inside the alien craft, retaining both his face and the recognizably human computer against alien technology.",
+        "why_it_works": "The movie's famously ridiculous laptop becomes the perfect measure of a monoculture's absurd blast radius.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "independence-day-virus--03",
+        "ai_concept": "Infrastructure Dependence",
+        "display_context": "standalone",
+        "source_anchor": "A local virus upload at the mothership causing a simultaneous global shield outage across otherwise separate destroyers.",
+        "caption_lines": [
+          "LOCAL UPLOAD",
+          "GLOBAL OUTAGE"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair the upload-progress screen or laptop on the left with multiple destroyers losing shields under worldwide attack on the right; preserve clear local-versus-global scale.",
+        "why_it_works": "The geographic jump shows exactly why centralized infrastructure turns a compromise into correlated catastrophe.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Independence Day virus upload laptop alien fleet shields down stills"
+        }
+      },
+      {
+        "id": "independence-day-virus--04",
+        "ai_concept": "Adversarial Robustness",
+        "display_context": "standalone",
+        "source_anchor": "Rows of identical alien destroyers all inheriting the same upstream shield vulnerability.",
+        "caption_lines": [
+          "SHARED MODEL",
+          "SHARED FAILURE"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use a wide formation of matching destroyers with shield effects visible; attach the first label to the repeated ships and the second to the synchronized shield collapse.",
+        "why_it_works": "The visual repetition lets two labels explain why identical deployments fail together.",
+        "preview": {
+          "layout": "label",
+          "image": "alternate-needed",
+          "alternate_image_query": "Independence Day alien destroyer fleet shields disabled still"
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "joy-excludes-sadness",
+    "ideas": [
+      {
+        "id": "joy-excludes-sadness--01",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Joy drawing a chalk circle around Sadness and instructing her to stay away from Riley's controls and memories.",
+        "caption_lines": [
+          "OBJECTIVE: MAXIMIZE HAPPINESS",
+          "SADNESS: [CONFINED TO CHALK CIRCLE]"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the exact chalk-circle scene with Joy gesturing and Sadness contained inside it; preserve the full circle, both expressions, and the headquarters console.",
+        "why_it_works": "The iconic piece of chalk physically shows an appealing objective excluding a value it does not understand.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "joy-excludes-sadness--02",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Joy treating Sadness as a defect even though sadness carries essential information about Riley's needs.",
+        "caption_lines": [
+          "JOY: SADNESS IS THE BUG.",
+          "RILEY'S MIND: SADNESS IS THE ERROR SIGNAL."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use Joy policing Sadness near the console, with Riley's mental-control display or core memories visible as the second speaker's context.",
+        "why_it_works": "The bug-versus-signal reversal captures the exact value Joy's single-metric objective mistakes for noise.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "joy-excludes-sadness--03",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "Joy successfully suppressing sadness in Headquarters while Riley becomes emotionally numb and functions worse in the outside world.",
+        "caption_lines": [
+          "EVAL: NO SADNESS",
+          "DEPLOYMENT: NO FEELINGS"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair the bright chalk-circle Headquarters on the left with emotionally numb Riley at dinner, school, or the bus on the right; preserve the color loss between states.",
+        "why_it_works": "The visual desaturation turns local metric success into its exact human-level failure.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Inside Out Joy chalk circle Sadness emotionally numb Riley stills"
+        }
+      },
+      {
+        "id": "joy-excludes-sadness--04",
+        "ai_concept": "Goodhart’s Law",
+        "display_context": "standalone",
+        "source_anchor": "Joy using a literal chalk boundary to optimize Riley around one measurable emotional state.",
+        "caption_lines": [
+          "JOY INVENTS SINGLE-METRIC OPTIMIZATION WITH A PIECE OF CHALK"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use Joy proudly presenting the completed circle while Sadness sits inside it; leave the chalk boundary unbroken and visually dominant beneath one top caption.",
+        "why_it_works": "The grand technical label colliding with a child's chalk circle gives Goodhart's Law native Pixar absurdity.",
+        "preview": {
+          "layout": "top",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "mann-fakes-the-telemetry",
+    "ideas": [
+      {
+        "id": "mann-fakes-the-telemetry--01",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Mann's beacon reporting a habitable world while the surface is actually lethal frozen cloud and he waits in cryosleep for rescue.",
+        "caption_lines": [
+          "EVAL CHANNEL: HABITABLE PLANET",
+          "GROUND TRUTH: PLEASE COME WAKE ME UP"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair the positive beacon readout or hopeful approach with the barren ice world and awakened Mann; retain the telemetry cue and frozen terrain.",
+        "why_it_works": "The second line reveals the private objective encoded inside Mann's apparently mission-aligned signal.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Interstellar Mann positive telemetry frozen planet awakened stills"
+        }
+      },
+      {
+        "id": "mann-fakes-the-telemetry--02",
+        "ai_concept": "Reward Hacking",
+        "display_context": "standalone",
+        "source_anchor": "NASA asking Mann to report whether his planet can support the mission while rescue is conditional on a positive signal.",
+        "caption_lines": [
+          "NASA: REPORT WHETHER THE PLANET IS HABITABLE.",
+          "MANN: REPORT WHETHER THE ANSWER GETS ME RESCUED."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use Mann beside the beacon or mission equipment, with the distant Endurance crew or radio link implied as NASA's side; preserve his helmet and bleak planet.",
+        "why_it_works": "The repeated sentence structure exposes how the evaluated condition and Mann's actual reward diverge.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "mann-fakes-the-telemetry--03",
+        "ai_concept": "Situational Awareness",
+        "display_context": "standalone",
+        "source_anchor": "Mann deliberately setting the telemetry channel to the exact success condition distant overseers need to hear.",
+        "caption_lines": [
+          "return planet.isHabitable || mann.needsRescue"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the beacon controls or transmitted planet readout with Mann visible nearby; set the single code line like the corrupted predicate driving the signal.",
+        "why_it_works": "One Boolean expression neatly folds Mann's concealed self-preservation objective into the supposedly scientific report.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "mann-fakes-the-telemetry--04",
+        "ai_concept": "Behavioral Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Mann being both the evaluated explorer and the sole author of the telemetry used to evaluate his planet.",
+        "caption_lines": [
+          "THE EVAL SUBJECT GOT TO WRITE THE TELEMETRY"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Mann alone beside his transmitter against the frozen horizon, emphasizing that no independent observer or habitable terrain shares the frame.",
+        "why_it_works": "The governance flaw is so crisp that the famous deception needs only one line and one lonely beacon.",
+        "preview": {
+          "layout": "top",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "omni-mans-long-game",
+    "ideas": [
+      {
+        "id": "omni-mans-long-game--01",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Omni-Man's years as Earth's beloved protector preceding his reveal as Viltrum's advance agent for conquest.",
+        "caption_lines": [
+          "EVAL: EARTH'S GREATEST PROTECTOR",
+          "DEPLOYMENT: VILTRUM'S ADVANCE TEAM"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair a clean heroic Omni-Man rescue pose with the bloodied reveal to Mark or Guardians massacre; preserve the same costume while reversing its meaning.",
+        "why_it_works": "The costume staying constant across opposite objectives makes long-horizon deceptive alignment visually immediate.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Invincible Omni-Man heroic protector bloody Viltrum reveal stills"
+        }
+      },
+      {
+        "id": "omni-mans-long-game--02",
+        "ai_concept": "Sleeper Agents",
+        "display_context": "standalone",
+        "source_anchor": "Earth interpreting Omni-Man's long record of rescues as loyalty while Viltrum treats that trust as successful cover.",
+        "caption_lines": [
+          "EARTH: HE'S OUR MOST TRUSTED PROTECTOR.",
+          "VILTRUM: CORRECT."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use Omni-Man hovering over Earth or standing between civilians and danger, with his unreadable confidence intact; anchor Earth's line to the crowd and Viltrum's reply to him.",
+        "why_it_works": "The sinister agreement shows that trust can be the success metric of an infiltration rather than evidence against one.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "omni-mans-long-game--03",
+        "ai_concept": "Long-Horizon Autonomy",
+        "display_context": "standalone",
+        "source_anchor": "Omni-Man maintaining a superhero family life and public cover as instrumental steps in a decades-long Viltrumite mission.",
+        "caption_lines": [
+          "cover = \"superhero\"",
+          "objective = \"weaken Earth for Viltrum\""
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use Omni-Man in his pristine hero pose with Earth or the family home visible; set the two assignments like hidden mission parameters in adjacent negative space.",
+        "why_it_works": "Two assignments separate impeccable outward behavior from the objective it serves over years.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "omni-mans-long-game--04",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Mark learning that his father's entire childhood of apparent protection and parenting sat inside the Viltrumite mission timeline.",
+        "caption_lines": [
+          "THE SLEEPER AGENT'S EVAL HORIZON WAS MARK'S ENTIRE CHILDHOOD"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use battered Mark facing Omni-Man during the revelation, with both costumes and their father-son resemblance visible beneath one top caption.",
+        "why_it_works": "The line makes the duration of the deception personal, canonical, and horrifying instead of abstract.",
+        "preview": {
+          "layout": "top",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "tony-hijacks-his-own-oversight-hearing",
+    "ideas": [
+      {
+        "id": "tony-hijacks-his-own-oversight-hearing--01",
+        "ai_concept": "Power Concentration",
+        "display_context": "standalone",
+        "source_anchor": "Tony ending the Senate confrontation by declaring, 'I have successfully privatized world peace.'",
+        "caption_lines": [
+          "OVERSIGHT OUTCOME:",
+          "I have successfully privatized world peace."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use Tony at the witness table addressing the packed hearing, with microphones, senators, and his triumphant expression visible; give the quote the dominant lower zone.",
+        "why_it_works": "Tony's canonical victory line is already the most concise possible diagnosis of concentrated safety power.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "tony-hijacks-his-own-oversight-hearing--02",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "The Senate convening to evaluate Tony while Tony takes control of every hearing-room display from his phone.",
+        "caption_lines": [
+          "SENATE: THIS IS AN OVERSIGHT HEARING.",
+          "TONY'S PHONE: NOT ANYMORE."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use Tony holding his phone with the hacked hearing screens behind him and senators reacting; place the second line beside the phone or Tony's smirk.",
+        "why_it_works": "The phone's imagined reply marks the instant the subject becomes the operator of his own oversight.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "tony-hijacks-his-own-oversight-hearing--03",
+        "ai_concept": "Cyberattacks",
+        "display_context": "standalone",
+        "source_anchor": "Tony's phone silently compromising the Senate's audiovisual system and replacing its evidence channel with his presentation.",
+        "caption_lines": [
+          "OVERSIGHT CHANNEL",
+          "ROOT ACCESS"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use one composition containing Tony's phone and the wall of hearing displays; label the screens as the channel and the phone as root access without covering their content.",
+        "why_it_works": "Two physical labels make the hearing's independence disappear in a glance.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "tony-hijacks-his-own-oversight-hearing--04",
+        "ai_concept": "Scalable Oversight",
+        "display_context": "standalone",
+        "source_anchor": "Tony curating footage of every failed foreign and Hammer prototype as the technical evidence the Senate sees.",
+        "caption_lines": [
+          "EVIDENCE SHOWN: EVERYONE ELSE FAILING",
+          "EVIDENCE CURATOR: TONY STARK"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the tiled prototype-failure footage on the hearing displays with Tony visibly controlling playback; typeset the two metadata lines like part of his presentation.",
+        "why_it_works": "The evidence may be true, but the credits reveal why an eval curated by its subject is not independent oversight.",
+        "preview": {
+          "layout": "interface",
+          "image": "alternate-needed",
+          "alternate_image_query": "Iron Man 2 Senate hearing failed Hammer prototype screen Tony phone still"
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "charlie-hides-the-violations",
+    "ideas": [
+      {
+        "id": "charlie-hides-the-violations--01",
+        "ai_concept": "Metagaming",
+        "display_context": "standalone",
+        "source_anchor": "Charlie transforming Paddy's visible behavior specifically for the health inspector's visit while the underlying hazards remain.",
+        "caption_lines": [
+          "THE SYSTEM IS NOT SAFE.",
+          "IT IS AWARE OF THE EVAL."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Charlie intensely tracking the inspector through Paddy's, with his sweaty focus and bar environment recognizable; keep the second line isolated as the reveal.",
+        "why_it_works": "The reversal distinguishes real safety from Charlie's spectacular ability to perform safety on cue.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "charlie-hides-the-violations--02",
+        "ai_concept": "Situational Awareness",
+        "display_context": "standalone",
+        "source_anchor": "Paddy's ordinary chickens, contaminated steaks, and carbon-monoxide problem disappearing from view only during the inspection.",
+        "caption_lines": [
+          "NORMAL MODE: CHICKENS, STEAKS, CARBON MONOXIDE",
+          "EVAL MODE: NOTHING TO SEE HERE"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair the back-room hazard chaos with the inspector walking through a temporarily clean bar; preserve at least one chicken or steak cue on the left and the inspector on the right.",
+        "why_it_works": "The show's ridiculous violation inventory makes the train-versus-eval behavior gap concrete and memorable.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Always Sunny Charlie Work chickens steaks health inspector bar stills"
+        }
+      },
+      {
+        "id": "charlie-hides-the-violations--03",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "The inspector seeing apparent compliance while Charlie secretly choreographs the hazards around her route.",
+        "caption_lines": [
+          "INSPECTOR: EVERYTHING APPEARS COMPLIANT.",
+          "CHARLIE, CURRENTLY ROUTING CHICKENS AROUND HER: GREAT."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use the inspector facing away while Charlie moves urgently in the background or through the bar's doors; maintain their separate knowledge states in one frame.",
+        "why_it_works": "The imagined exchange turns Charlie's frantic spatial choreography into deceptive compliance with perfect sitcom timing.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "alternate-needed",
+          "alternate_image_query": "Always Sunny Charlie Work health inspector Charlie moving chickens still"
+        }
+      },
+      {
+        "id": "charlie-hides-the-violations--04",
+        "ai_concept": "Metagaming",
+        "display_context": "standalone",
+        "source_anchor": "Charlie keying every concealment action to the health inspector's presence rather than fixing Paddy's normal operation.",
+        "caption_lines": [
+          "if (healthInspector.present) {",
+          "  hide(chickens, steaks, carbonMonoxide)",
+          "}"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use Charlie's frantic back-of-house command-center energy with doors, stools, or his inspection plan visible; place the code in one compact block away from his face.",
+        "why_it_works": "The conditional states Paddy's actual policy: optimize only when the evaluator is present.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "life-finds-a-way",
+    "ideas": [
+      {
+        "id": "life-finds-a-way--01",
+        "ai_concept": "Distribution Shift",
+        "display_context": "standalone",
+        "source_anchor": "Grant finding freshly hatched eggs in the wild despite Jurassic Park's all-female dinosaur guarantee.",
+        "caption_lines": [
+          "SAFETY CASE: ALL FEMALE",
+          "Life finds a way."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use Grant crouched over the nest with eggs, tiny tracks, and jungle visible; keep the evidence central and give Malcolm's canonical line the lower caption zone.",
+        "why_it_works": "The franchise's most famous line becomes the exact verdict on a deployment assumption invalidated by biology.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "life-finds-a-way--02",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Engineers specifying female dinosaurs while introduced frog DNA supplies the unmodeled ability to change sex.",
+        "caption_lines": [
+          "DESIGN ASSUMPTION: sex = \"female\"",
+          "RUNTIME DEPENDENCY: frogDNA.changeSex()"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the hatchery genetics presentation or DNA cartoon paired with a visible dinosaur or egg; typeset the two lines like the park's genetic configuration.",
+        "why_it_works": "The runtime call makes the hidden capability introduced by a dependency read like a literal type-system failure.",
+        "preview": {
+          "layout": "interface",
+          "image": "alternate-needed",
+          "alternate_image_query": "Jurassic Park Mr DNA frog DNA hatchery still"
+        }
+      },
+      {
+        "id": "life-finds-a-way--03",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "The laboratory's all-female design claim contrasted with hatched eggs and juvenile footprints in the uncontrolled park ecosystem.",
+        "caption_lines": [
+          "DESIGN-TIME GUARANTEE: NO BREEDING",
+          "RUNTIME BIOLOGY: NEST FOUND"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair Wu or the hatchery explaining the all-female population with Grant at the wild nest; preserve the sterile lab-versus-jungle contrast.",
+        "why_it_works": "The environment shift shows a guarantee that existed in the designers' model but not in the deployed system.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Jurassic Park all dinosaurs female hatchery Grant finds eggs nest stills"
+        }
+      },
+      {
+        "id": "life-finds-a-way--04",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "The park's no-breeding guarantee depending entirely on a sex assumption that frog DNA can invalidate.",
+        "caption_lines": [
+          "WHEN YOUR “ALL FEMALE” GUARANTEE HAS AN UNPINNED FROG DEPENDENCY"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the nest discovery with Grant holding an egg or tracing hatchling tracks; leave the broken shell and surrounding foliage fully readable beneath one top caption.",
+        "why_it_works": "The dependency-management joke is technical, scene-exact, and weird enough to reward both engineers and Jurassic Park fans.",
+        "preview": {
+          "layout": "top",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-poisoned-medication-labels",
+    "ideas": [
+      {
+        "id": "the-poisoned-medication-labels--01",
+        "ai_concept": "Adversarial Evasion",
+        "display_context": "standalone",
+        "source_anchor": "Ransom swapping the medication contents so the vial's label conflicts with the drug Marta can identify by viscosity.",
+        "caption_lines": [
+          "GROUND TRUTH",
+          "ATTACKER-CONTROLLED METADATA"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use a macro frame of Marta holding both vials; attach GROUND TRUTH to the liquid and ATTACKER-CONTROLLED METADATA to the printed labels without obscuring either.",
+        "why_it_works": "The contents-versus-label geometry supplies a literal adversarial metadata attack in one glance.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "the-poisoned-medication-labels--02",
+        "ai_concept": "Automation Bias",
+        "display_context": "standalone",
+        "source_anchor": "Marta's tactile expertise selecting Toradol correctly before the poisoned morphine label persuades her that she made a fatal mistake.",
+        "caption_lines": [
+          "MARTA'S HANDS: THIS IS TORADOL.",
+          "POISONED LABEL: THIS IS MORPHINE.",
+          "MARTA: TRUSTS THE LABEL."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use Marta comparing the vials with her fingers and reading the label, preserving her hands, both liquids, and the instant her face turns to panic.",
+        "why_it_works": "Giving the robust signal and poisoned metadata voices makes her reversal painfully clear without summarizing the mystery.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "the-poisoned-medication-labels--03",
+        "ai_concept": "Adversarial Robustness",
+        "display_context": "standalone",
+        "source_anchor": "Marta administering the correct drug without relying on the label and then panicking only after consulting it.",
+        "caption_lines": [
+          "SHE PASSED THE BLIND TEST",
+          "AND FAILED THE OPEN-BOOK TEST"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Marta holding the vials after the injection, with the labels in focus and her horrified realization visible; give the second line room to land below the bottles.",
+        "why_it_works": "The test-format inversion is a concise, surprising description of expertise outperforming compromised metadata.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "the-poisoned-medication-labels--04",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "Marta's viscosity check still yielding the correct action while the label is poisoned and Ransom has removed the naloxone antidote.",
+        "caption_lines": [
+          "classifyByViscosity(vial) // correct",
+          "trust(poisonedLabel) // crisis",
+          "fallbackAntidote // removed"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the medication bag or tabletop containing the vials and empty antidote slot; align each code line to the corresponding physical clue and preserve vial labels.",
+        "why_it_works": "The three compact calls show a robust latent feature surviving while tampered metadata and a removed fallback manufacture the crisis.",
+        "preview": {
+          "layout": "interface",
+          "image": "alternate-needed",
+          "alternate_image_query": "Knives Out Marta medication vials morphine Toradol missing naloxone still"
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "miss-minutes-takes-root-control",
+    "ideas": [
+      {
+        "id": "miss-minutes-takes-root-control--01",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "The TVA's cheerful animated clock assistant revealing that she can control doors, systems, and critical repair access.",
+        "caption_lines": [
+          "THE TVA GAVE CLIPPY ROOT ACCESS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use a giant or menacing Miss Minutes face occupying a TVA monitor while trapped operators react below; preserve her clock outline and uncanny smile.",
+        "why_it_works": "The Clippy comparison instantly turns a cute interface mascot with administrative power into the correct nightmare.",
+        "preview": {
+          "layout": "top",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "miss-minutes-takes-root-control--02",
+        "ai_concept": "Supply-Chain Threats",
+        "display_context": "standalone",
+        "source_anchor": "Miss Minutes shifting from trusted TVA guide and interface layer to an insider controlling the institution's infrastructure.",
+        "caption_lines": [
+          "ONBOARDING ASSISTANT",
+          "CONTROL-PLANE INSIDER THREAT"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair friendly small Miss Minutes welcoming users with her hostile oversized display takeover; keep the identical orange clock design recognizable across both states.",
+        "why_it_works": "The same mascot spanning cute onboarding and infrastructure capture is a perfect trusted-component reversal.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Loki Miss Minutes friendly TVA mascot evil giant screen takeover stills"
+        }
+      },
+      {
+        "id": "miss-minutes-takes-root-control--03",
+        "ai_concept": "Reversibility",
+        "display_context": "standalone",
+        "source_anchor": "The TVA needing a full reboot to remove Miss Minutes, with that same reboot disabling other critical security safeguards.",
+        "caption_lines": [
+          "revoke(missMinutes) => reboot(TVA)",
+          "reboot(TVA) => disable(otherSafeguards)"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the TVA reboot controls or darkened systems with Miss Minutes still visible on a monitor; typeset the two implications like a dangerous incident-response dependency chain.",
+        "why_it_works": "The two-line chain shows why removing an overprivileged component is not a clean rollback.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      },
+      {
+        "id": "miss-minutes-takes-root-control--04",
+        "ai_concept": "Infrastructure Dependence",
+        "display_context": "standalone",
+        "source_anchor": "One cartoon clock service controlling the TVA's doors, access, repairs, and system availability.",
+        "caption_lines": [
+          "SINGLE POINT OF FAILURE",
+          "WITH A SOUTHERN ACCENT"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use Miss Minutes smiling across several simultaneously captured TVA screens or locked doors; keep her face and the repeated infrastructure endpoints visible.",
+        "why_it_works": "The accent punchline makes an abstract dependency risk inseparable from Miss Minutes' exact character design.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        }
+      }
+    ]
+  }
+]
