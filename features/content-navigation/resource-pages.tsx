@@ -261,6 +261,23 @@ export function ResourceDetailPage({
         ) : null}
       </section>
 
+      <section className={styles.scenarioSection} data-resource-scenarios>
+        <header className={styles.sectionHeader}>
+          <p>Scenario file</p>
+          <h2>
+            {resource.kind === 'franchise'
+              ? 'Scenes across this franchise'
+              : 'Scenes in this index'}
+          </h2>
+          <span>{String(resource.scenarioCount).padStart(2, '0')}</span>
+        </header>
+
+        <ScenarioCollection
+          items={resource.scenarios.map((scenario) => ({ scenario }))}
+          layout='continuous'
+        />
+      </section>
+
       {resource.kind === 'franchise' ? (
         <section className={styles.resourceSection} data-franchise-sources>
           <header className={styles.sectionHeader}>
@@ -278,24 +295,7 @@ export function ResourceDetailPage({
         </section>
       ) : null}
 
-      <section className={styles.scenarioSection}>
-        <header className={styles.sectionHeader}>
-          <p>Scenario file</p>
-          <h2>
-            {resource.kind === 'franchise'
-              ? 'Scenes across this franchise'
-              : 'Scenes in this index'}
-          </h2>
-          <span>{String(resource.scenarioCount).padStart(2, '0')}</span>
-        </header>
-
-        <ScenarioCollection
-          items={resource.scenarios.map((scenario) => ({ scenario }))}
-          layout='continuous'
-        />
-      </section>
-
-      {resource.relatedResources.length > 0 ? (
+      {resource.kind !== 'franchise' && resource.relatedResources.length > 0 ? (
         <section className={styles.relatedSection}>
           <header className={styles.sectionHeader}>
             <p>Relational index</p>
