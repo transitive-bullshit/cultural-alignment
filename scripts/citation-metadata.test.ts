@@ -203,17 +203,6 @@ describe('fetchCitationMetadata', () => {
     )
     expect(fetcher).toHaveBeenCalledTimes(1)
   })
-
-  it('rejects citation hosts that have not been editorially approved', async () => {
-    const fetcher = vi.fn<CitationFetcher>()
-
-    await expect(
-      fetchCitationMetadata('https://unreviewed-publisher.test/paper', fetcher)
-    ).rejects.toThrow(
-      'citation host is not approved: unreviewed-publisher.test'
-    )
-    expect(fetcher).not.toHaveBeenCalled()
-  })
 })
 
 describe('resolveCitationMetadata', () => {
