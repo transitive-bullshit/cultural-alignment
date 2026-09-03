@@ -45,6 +45,10 @@ export type TaxonomyLink = {
   readonly href: string
 }
 
+export type DescribedTaxonomyLink = TaxonomyLink & {
+  readonly description: string
+}
+
 export type GalleryScenario = {
   readonly id: string
   readonly slug: string
@@ -94,8 +98,8 @@ export type ScenarioPage = {
   readonly whyAnalogyWorks: string
   readonly caveats: string
   readonly franchises: readonly TaxonomyLink[]
-  readonly riskFamilies: readonly TaxonomyLink[]
-  readonly concepts: readonly TaxonomyLink[]
+  readonly riskFamilies: readonly DescribedTaxonomyLink[]
+  readonly concepts: readonly DescribedTaxonomyLink[]
   readonly continuation: ScenarioContinuation
   readonly moreFromCollection: readonly GalleryScenario[]
   readonly relatedScenarios: readonly RelatedScenario[]
@@ -306,7 +310,8 @@ export function createContentCatalog(input: unknown): ContentCatalog {
             id: family.id,
             slug: family.slug,
             title: family.shortName,
-            href: `/risk-families/${family.slug}`
+            href: `/risk-families/${family.slug}`,
+            description: family.description
           }
         }),
         concepts: scenario.conceptIds.map((id) => {
@@ -316,7 +321,8 @@ export function createContentCatalog(input: unknown): ContentCatalog {
             id: concept.id,
             slug: concept.slug,
             title: concept.shortName,
-            href: `/concepts/${concept.slug}`
+            href: `/concepts/${concept.slug}`,
+            description: concept.description
           }
         }),
         continuation,

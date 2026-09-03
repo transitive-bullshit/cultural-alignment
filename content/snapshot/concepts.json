@@ -131,7 +131,7 @@
     "id": "3caedb27-f124-8035-95b6-c085c5400ac9",
     "slug": "jailbreaking",
     "shortName": "Jailbreaking",
-    "longName": "AI Model Jailbreaking",
+    "longName": "Jailbreaking",
     "keywords": [
       "jailbreak prompts",
       "safety bypass",
@@ -139,7 +139,7 @@
       "prompt attack",
       "model jailbreak"
     ],
-    "description": "Jailbreaking uses carefully crafted prompts to bypass an AI system’s safety controls and produce blocked content.",
+    "description": "Jailbreaking uses carefully crafted prompts to bypass an AI system’s safety controls.",
     "wikipediaUrl": null,
     "citations": [
       {
@@ -387,7 +387,7 @@
     "id": "3caedb27-f124-8052-b0c3-d323b6474e3a",
     "slug": "ai-disinformation",
     "shortName": "AI Disinformation",
-    "longName": "AI-Enabled Disinformation and Influence Operations",
+    "longName": "AI Disinformation and Influence Operations",
     "keywords": [
       "synthetic propaganda",
       "influence operations",
@@ -619,7 +619,7 @@
       "target corruption",
       "measure becomes target"
     ],
-    "description": "Goodhart’s Law warns that optimizing AI for a stand-in measure can improve its score while undermining the real goal.",
+    "description": "Goodhart’s Law states that “when a measure becomes a target, it ceases to be a good measure”. From an AI lens, optimizing AI systems for a stand-in measure can improve its score while undermining the real goal.",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Goodhart%27s_law",
     "citations": [
       {

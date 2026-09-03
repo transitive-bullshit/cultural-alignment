@@ -1,7 +1,14 @@
 'use client'
 
 import Image, { getImageProps } from 'next/image'
-import { ChevronLeftIcon, ChevronRightIcon, XIcon } from 'lucide-react'
+import {
+  CheckIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  CircleAlertIcon,
+  DownloadIcon,
+  XIcon
+} from 'lucide-react'
 import {
   useEffect,
   useId,
@@ -19,6 +26,7 @@ import {
   DialogClose,
   DialogContent,
   DialogDescription,
+  DialogFooter,
   DialogHeader,
   DialogTitle
 } from '@/components/ui/dialog'
@@ -29,12 +37,15 @@ import styles from './scenario-memes.module.css'
 
 const MEME_DETAIL_SIZES =
   '(max-width: 620px) calc(100vw - 36px), (max-width: 1100px) calc(100vw - 9rem), 960px'
+const MEME_DOWNLOAD_FEEDBACK_MILLISECONDS = 1_800
 const MEME_PRELOAD_IDLE_TIMEOUT_MILLISECONDS = 500
 
 type MemePreview = Readonly<{
   isBlurred: boolean
   src: string
 }>
+
+type MemeDownloadState = 'error' | 'idle' | 'loading' | 'success'
 
 type MediaRect = Readonly<{
   height: number
@@ -50,9 +61,11 @@ type MemeStageStyle = CSSProperties & {
 
 export function ScenarioMemes({
   memes,
+  scenarioSlug,
   scenarioTitle
 }: {
   readonly memes: readonly ContentImage[]
+  readonly scenarioSlug: string
   readonly scenarioTitle: string
 }) {
   const headingId = useId()
@@ -72,6 +85,7 @@ export function ScenarioMemes({
   const [activeIndex, setActiveIndex] = useState(0)
   const [open, setOpen] = useState(false)
   const [loadedDetailSrc, setLoadedDetailSrc] = useState<string | null>(null)
+  const [downloadState, setDownloadState] = useState<MemeDownloadState>('idle')
   const [preview, setPreview] = useState<MemePreview>(() => ({
     isBlurred: true,
     src: memes[0]?.blurDataURL ?? ''
@@ -100,7 +114,8 @@ export function ScenarioMemes({
           alt: '',
           width: meme.width,
           height: meme.height,
-          sizes: MEME_DETAIL_SIZES
+          sizes: MEME_DETAIL_SIZES,
+          unoptimized: true
         })
         const image = new window.Image()
 
@@ -118,6 +133,17 @@ export function ScenarioMemes({
       }
     })
   }, [activeIndex, memes, open])
+
+  useEffect(() => {
+    if (downloadState !== 'success' && downloadState !== 'error') return
+
+    const resetHandle = window.setTimeout(
+      () => setDownloadState('idle'),
+      MEME_DOWNLOAD_FEEDBACK_MILLISECONDS
+    )
+
+    return () => window.clearTimeout(resetHandle)
+  }, [downloadState])
 
   const configureMemeStage = useCallback(() => {
     const result = configureMemeStageMotion(
@@ -187,6 +213,7 @@ export function ScenarioMemes({
     openingMotionPendingRef.current = animateFromThumbnail
     setActiveIndex(index)
     setLoadedDetailSrc(null)
+    setDownloadState('idle')
     setPreview(getPreview(index, button))
     setDialogAnnouncement('')
     setOpen(true)
@@ -208,6 +235,7 @@ export function ScenarioMemes({
     }
     setActiveIndex(nextIndex)
     setLoadedDetailSrc(null)
+    setDownloadState('idle')
     setPreview(getPreview(nextIndex))
     setDialogAnnouncement(`Meme ${nextIndex + 1} of ${memes.length}`)
   }
@@ -235,6 +263,47 @@ export function ScenarioMemes({
     }
     setVisibleCount(nextVisibleCount)
     setGridAnnouncement(`Showing ${nextVisibleCount} of ${memes.length} memes`)
+  }
+
+  const downloadActiveMeme = async () => {
+    const meme = activeMeme
+    const memeIndex = activeIndex
+
+    setDownloadState('loading')
+    setDialogAnnouncement(
+      `Preparing meme ${memeIndex + 1} of ${memes.length} for download`
+    )
+
+    try {
+      // The visible image may have populated a non-CORS cache entry. Reload so
+      // this blob request receives the asset host's CORS response headers.
+      const response = await fetch(meme.detailSrc, { cache: 'reload' })
+      if (!response.ok) throw new Error(`Download failed: ${response.status}`)
+
+      const objectUrl = URL.createObjectURL(await response.blob())
+      const link = document.createElement('a')
+
+      link.href = objectUrl
+      link.download = getMemeDownloadFilename(
+        scenarioSlug,
+        memeIndex,
+        meme.detailSrc
+      )
+      link.hidden = true
+      document.body.append(link)
+      link.click()
+      link.remove()
+      window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1_000)
+      setDownloadState('success')
+      setDialogAnnouncement(
+        `Meme ${memeIndex + 1} of ${memes.length} download started`
+      )
+    } catch {
+      setDownloadState('error')
+      setDialogAnnouncement(
+        `Could not download meme ${memeIndex + 1}. Open the image in a new tab to save it instead.`
+      )
+    }
   }
 
   return (
@@ -397,6 +466,7 @@ export function ScenarioMemes({
                   blurDataURL={activeMeme.blurDataURL}
                   sizes={MEME_DETAIL_SIZES}
                   loading='eager'
+                  unoptimized
                   data-loaded={
                     loadedDetailSrc === activeMeme.detailSrc || undefined
                   }
@@ -404,9 +474,6 @@ export function ScenarioMemes({
                   onLoad={() => setLoadedDetailSrc(activeMeme.detailSrc)}
                 />
               </div>
-              <figcaption className={styles.caption}>
-                Meme {activeIndex + 1} / {memes.length}
-              </figcaption>
             </figure>
 
             {memes.length > 1 ? (
@@ -422,6 +489,39 @@ export function ScenarioMemes({
               </Button>
             ) : null}
           </div>
+
+          <DialogFooter className={styles.dialogFooter}>
+            <p className={styles.counter} data-scenario-meme-counter>
+              Meme {activeIndex + 1} of {memes.length}
+            </p>
+            <Button
+              className={styles.downloadButton}
+              type='button'
+              variant={getDownloadButtonVariant(downloadState)}
+              size='icon'
+              aria-label={getDownloadButtonLabel(
+                downloadState,
+                activeIndex,
+                memes.length
+              )}
+              aria-busy={downloadState === 'loading'}
+              data-download-state={downloadState}
+              data-scenario-meme-download
+              disabled={downloadState === 'loading'}
+              onClick={downloadActiveMeme}
+            >
+              {downloadState === 'success' ? (
+                <CheckIcon
+                  data-icon='inline-start'
+                  data-scenario-meme-download-confirmation
+                />
+              ) : downloadState === 'error' ? (
+                <CircleAlertIcon data-icon='inline-start' />
+              ) : (
+                <DownloadIcon data-icon='inline-start' />
+              )}
+            </Button>
+          </DialogFooter>
 
           <span className='sr-only' role='status' aria-live='polite'>
             {dialogAnnouncement}
@@ -555,6 +655,35 @@ function getMemePreloadOrder(activeIndex: number, memeCount: number) {
   }
 
   return indices
+}
+
+function getMemeDownloadFilename(
+  scenarioSlug: string,
+  memeIndex: number,
+  source: string
+) {
+  const extension = new URL(source).pathname.match(/\.([a-z0-9]+)$/i)?.[1]
+
+  return `${scenarioSlug}-meme-${memeIndex + 1}.${extension ?? 'webp'}`
+}
+
+function getDownloadButtonLabel(
+  state: MemeDownloadState,
+  memeIndex: number,
+  memeCount: number
+) {
+  const position = `meme ${memeIndex + 1} of ${memeCount}`
+
+  if (state === 'loading') return `Preparing ${position} for download`
+  if (state === 'success') return `${position} download started`
+  if (state === 'error') return `Retry downloading ${position}`
+  return `Download ${position}`
+}
+
+function getDownloadButtonVariant(state: MemeDownloadState) {
+  if (state === 'success') return 'secondary' as const
+  if (state === 'error') return 'destructive' as const
+  return 'ghost' as const
 }
 
 function scheduleIdleWork(callback: () => void) {

@@ -619,6 +619,10 @@
   font-size: 9px;
 }
 
+.taxonomyCursorCard {
+  display: block;
+}
+
 .taxonomyLink {
   display: grid;
   grid-template-columns: 34px minmax(0, 1fr);

@@ -9,6 +9,7 @@ import styles from './scramble-link.module.css'
 const GLYPHS = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789/+=?'
 
 type ScrambleLinkProps = {
+  readonly 'aria-describedby'?: string
   readonly animateOnReveal?: boolean
   readonly children: string
   readonly className?: string
@@ -29,6 +30,7 @@ type ScrambleLinkProps = {
  * as an overlay that cannot change wrapping or surrounding geometry.
  */
 export function ScrambleLink({
+  'aria-describedby': ariaDescribedBy,
   animateOnReveal = true,
   children,
   className,
@@ -152,6 +154,7 @@ export function ScrambleLink({
   }
 
   const interactionProps = {
+    'aria-describedby': ariaDescribedBy,
     'aria-label': label ?? `${prefix}${children}`,
     className,
     onPointerEnter: scrambleOnHover

@@ -4,9 +4,10 @@ import Link from 'next/link'
 
 import { ScrambleLink } from '@/components/motion/scramble-link'
 import { SiteHeader } from '@/components/site-header'
+import { CursorCard } from '@/components/ui/cursor-card'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import { SpoilerWarning } from '@/features/spoiler/spoiler-warning'
-import type { ScenarioPage, TaxonomyLink } from '@/lib/content/catalog'
+import type { DescribedTaxonomyLink, ScenarioPage } from '@/lib/content/catalog'
 import { siteUrl } from '@/lib/site'
 
 import { CopyScenarioMarkdown } from './copy-scenario-markdown'
@@ -82,6 +83,7 @@ export function ScenarioDossier({ scenario }: { scenario: ScenarioPage }) {
           <ScenarioMemes
             key={scenario.id}
             memes={scenario.memes}
+            scenarioSlug={scenario.slug}
             scenarioTitle={scenario.title}
           />
         ) : null}
@@ -196,6 +198,7 @@ function Taxonomy({ scenario }: { scenario: ScenarioPage }) {
     <TooltipProvider delayDuration={200}>
       <section className={styles.taxonomy} aria-label='Scenario taxonomy'>
         <TaxonomyList
+          kind='risk-family'
           label='AI Risk families'
           href='/risk-families'
           description={
@@ -206,6 +209,7 @@ function Taxonomy({ scenario }: { scenario: ScenarioPage }) {
           items={scenario.riskFamilies}
         />
         <TaxonomyList
+          kind='concept'
           label='AI safety concepts'
           href='/concepts'
           description={
@@ -224,11 +228,13 @@ function TaxonomyList({
   description,
   href,
   items,
+  kind,
   label
 }: {
   readonly description: string
   readonly href: '/concepts' | '/risk-families'
-  readonly items: readonly TaxonomyLink[]
+  readonly items: readonly DescribedTaxonomyLink[]
+  readonly kind: 'concept' | 'risk-family'
   readonly label: string
 }) {
   return (
@@ -245,24 +251,36 @@ function TaxonomyList({
       <ol>
         {items.map((item, index) => {
           const delay = 90 + index * 48
+          const descriptionId = `taxonomy-description-${kind}-${item.slug}`
           const animationStyle = {
             '--taxonomy-delay': `${delay}ms`
           } as CSSProperties
 
           return (
-            <li key={item.id} style={animationStyle}>
-              <ScrambleLink
-                className={styles.taxonomyLink}
-                href={item.href}
-                delay={delay}
-                leadingContent={
-                  <span className={styles.taxonomyIndex} aria-hidden='true'>
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
-                }
+            <li
+              key={item.id}
+              style={animationStyle}
+              data-scenario-taxonomy-item={`${kind}:${item.slug}`}
+            >
+              <CursorCard
+                className={styles.taxonomyCursorCard}
+                contentId={descriptionId}
+                description={item.description}
               >
-                {item.title}
-              </ScrambleLink>
+                <ScrambleLink
+                  aria-describedby={descriptionId}
+                  className={styles.taxonomyLink}
+                  href={item.href}
+                  delay={delay}
+                  leadingContent={
+                    <span className={styles.taxonomyIndex} aria-hidden='true'>
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                  }
+                >
+                  {item.title}
+                </ScrambleLink>
+              </CursorCard>
             </li>
           )
         })}

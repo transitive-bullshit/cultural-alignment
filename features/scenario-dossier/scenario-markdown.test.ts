@@ -85,7 +85,8 @@ function createScenario(): ScenarioPage {
         id: 'risk-one',
         slug: 'risk-one',
         title: 'Risk One',
-        href: '/risk-families/risk-one'
+        href: '/risk-families/risk-one',
+        description: 'A risk description.'
       }
     ],
     concepts: [],

@@ -246,6 +246,17 @@ describe('ContentCatalog', () => {
       new Set(['family-a', 'family-b'])
     )
     expect(page.concepts.map(({ slug }) => slug)).toEqual(['concept-one'])
+    const descriptionsByTaxonomyId = new Map(
+      [...minimalSnapshot.riskFamilies, ...minimalSnapshot.concepts].map(
+        ({ description, id }) => [id, description]
+      )
+    )
+    expect(
+      [...page.riskFamilies, ...page.concepts].every(
+        ({ description, id }) =>
+          description === descriptionsByTaxonomyId.get(id)
+      )
+    ).toBe(true)
     expect(
       page.moreFromCollection.every((related) => related.id !== page.id)
     ).toBe(true)
