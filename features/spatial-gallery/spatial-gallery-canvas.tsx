@@ -761,9 +761,13 @@ function SpatialField({
     selectionOverrideRef.current = selectedItemIndex
     selectedLaneRef.current = selectedSlot.lane
     lastCenterIndexRef.current = selectedItemIndex
+    const automaticVelocityActive =
+      introStateRef.current === 'running' || inertiaBurstActiveRef.current
     motionRef.current = {
       offset: { x: offsetX, y: 0 },
-      velocity: { x: 0, y: 0 }
+      velocity: automaticVelocityActive
+        ? motionRef.current.velocity
+        : { x: 0, y: 0 }
     }
   }, [laneMotion, layout, slotYPositions])
 
