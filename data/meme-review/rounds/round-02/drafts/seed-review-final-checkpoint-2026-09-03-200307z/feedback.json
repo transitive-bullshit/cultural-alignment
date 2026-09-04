@@ -1,0 +1,159 @@
+{
+  "version": 2,
+  "round": 2,
+  "updatedAt": "2026-09-03T20:03:07.177Z",
+  "feedback": {
+    "hal-resists-disconnection--05": {
+      "rating": "neutral",
+      "notes": "Definitely fails the layout test; it shouldn't cover the red dot in the center."
+    },
+    "hal-resists-disconnection--06": {
+      "rating": "dislike",
+      "notes": "The multimodal model framing is really not working here."
+    },
+    "hal-resists-disconnection--07": {
+      "rating": "dislike",
+      "notes": "I don't get the human in a loop reference from this background image, it needs to kind of stand on its own."
+    },
+    "sol-only-takes-an-arm--05": {
+      "rating": "dislike",
+      "notes": "Has really disconnected it and not accurate with the source. It's... Yeah, it just doesn't make any sense."
+    },
+    "sol-only-takes-an-arm--06": {
+      "rating": "dislike",
+      "notes": "The control measure is not to remove one arm. The control was to try and remove all of him. It only succeeded in removing one arm, so this doesn't make sense."
+    },
+    "sol-only-takes-an-arm--07": {
+      "rating": "dislike",
+      "notes": ""
+    },
+    "tetsuo-outgrows-containment--05": {
+      "rating": "like",
+      "notes": "I really like how bold this is. The orange with a black styling of the text is just simple. I love it."
+    },
+    "tetsuo-outgrows-containment--06": {
+      "rating": "dislike",
+      "notes": ""
+    },
+    "tetsuo-outgrows-containment--07": {
+      "rating": "dislike",
+      "notes": ""
+    },
+    "alien-mothers-directive--01": {
+      "rating": "like",
+      "notes": "You actually made the layout worse on a second one. The first one was perfect; it was at the bottom, you could still see the subject. The second one, the overlay is in the middle, completely covering up the subjects' faces, so something regressed here very badly.\n\nMake sure to incorporate this layout feedback into your general advice for generating with layout and composition so this doesn't happen again."
+    },
+    "alien-mothers-directive--05": {
+      "rating": "dislike",
+      "notes": "When I dislike a design like this, you don't have to recreate the specific version of the specific direction. Instead, if I really do dislike it and unless I'm giving you a very specific way to improve that idea, take her direction instead for the next round or generating new versions for this scenario. Come up with completely new ideas as opposed to just trying to rehash this stale meme idea that I've already rejected."
+    },
+    "alien-mothers-directive--06": {
+      "rating": "like",
+      "notes": "This is great. Maybe replacing the assistant with something a little bit more specific, the rogue AI would be an example."
+    },
+    "rons-sabotaged-teleprompter--05": {
+      "rating": "like",
+      "notes": "This is fucking awesome, very clear, succinct, and recognizable, this great."
+    },
+    "rons-sabotaged-teleprompter--06": {
+      "rating": "like",
+      "notes": "Love it, also clear and succinct."
+    },
+    "rons-sabotaged-teleprompter--07": {
+      "rating": "dislike",
+      "notes": "Something went very wrong with a layout framing these two boxes are overlapping each other. That your internal reflection or critiquing of the layout should have caught. So, see what you can generalize from this and incorporate into your critiquing advice for laying out when layouts and composition when generating new meme ideas."
+    },
+    "dedra-connects-the-data-silos--05": {
+      "rating": "dislike",
+      "notes": "Layout failed here for sure. It's covering up the main focus of the theme, which is Deirdre's face. This should be at the bottom."
+    },
+    "dedra-connects-the-data-silos--06": {
+      "rating": "dislike",
+      "notes": "Layout field. Here these boxes are overlapping so it's not readable."
+    },
+    "dedra-connects-the-data-silos--07": {
+      "rating": "dislike",
+      "notes": "Again, I already disliked this general concept, so I'm giving feedback as to disliking a concept for future generations around this scenario. You should throw out this concept and come up with new concepts that better follow the guidance that I've given around meme-idea generation and other more creative framings that are in the Generation Guidance I've specified.\n\nSo I never want to see this meme concept for this scenario again."
+    },
+    "square-filter-round-hole--04": {
+      "rating": "neutral",
+      "notes": ""
+    },
+    "square-filter-round-hole--05": {
+      "rating": "dislike",
+      "notes": ""
+    },
+    "square-filter-round-hole--06": {
+      "rating": "dislike",
+      "notes": ""
+    },
+    "viktors-glorious-evolution--04": {
+      "rating": "like",
+      "notes": ""
+    },
+    "viktors-glorious-evolution--05": {
+      "rating": "dislike",
+      "notes": ""
+    },
+    "viktors-glorious-evolution--06": {
+      "rating": "dislike",
+      "notes": ""
+    },
+    "money-in-the-banana-stand--05": {
+      "rating": "dislike",
+      "notes": "There's a layout issue here. The boxes are overlapping."
+    },
+    "money-in-the-banana-stand--06": {
+      "rating": "like",
+      "notes": "This is great, probably doesn't work because it's a little bit dated. The reference isn't totally clear that he's talking about the banana stand if you're not familiar with the show. But I think it's good enough for the context that you've been given for now."
+    },
+    "money-in-the-banana-stand--07": {
+      "rating": "dislike",
+      "notes": ""
+    },
+    "karl-fritzs-vow--07": {
+      "rating": "dislike",
+      "notes": ""
+    },
+    "karl-fritzs-vow--05": {
+      "rating": "dislike",
+      "notes": ""
+    },
+    "dr-evils-outdated-ransom--01": {
+      "rating": "like",
+      "notes": "This...the black bars above and around the text here are really awkward and not working. Remove them and add guidance to not add this type of awkward black or partially black gradient bars behind the text, especially in this example where it's not even necessary because they would be readable without it."
+    },
+    "dr-evils-outdated-ransom--02": {
+      "rating": "dislike",
+      "notes": "Again, I already disliked this general concept, so I'm giving feedback as to disliking a concept for future generations around this scenario. You should throw out this concept and come up with new concepts that better follow the guidance that I've given around meme-idea generation and other more creative framings that are in the Generation Guidance I've specified."
+    },
+    "dr-evils-outdated-ransom--04": {
+      "rating": "dislike",
+      "notes": "Similar to another one. The layout is wrong here and there's no visible text or I can kind of see the text but it's definitely not legible. Got to make sure that the foreground text has sufficient contrast with the background."
+    },
+    "no-war-in-ba-sing-se--06": {
+      "rating": "dislike",
+      "notes": ""
+    },
+    "no-war-in-ba-sing-se--07": {
+      "rating": "dislike",
+      "notes": ""
+    },
+    "ultron-peace-in-our-time--06": {
+      "rating": "dislike",
+      "notes": ""
+    },
+    "ultron-peace-in-our-time--07": {
+      "rating": "dislike",
+      "notes": ""
+    }
+  },
+  "scenarios": {
+    "the-literal-doctor": {
+      "disabled": true
+    },
+    "karl-fritzs-vow": {
+      "disabled": true
+    }
+  }
+}

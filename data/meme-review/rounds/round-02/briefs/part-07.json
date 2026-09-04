@@ -1,0 +1,447 @@
+{
+  "version": 1,
+  "round": 2,
+  "part": "part-07",
+  "instructions": {
+        "retained": "Keep stable IDs plus the approved copy, AI concept, and native format for liked ideas. Recompose every preview as needed; revise copy only when the written feedback explicitly requests it.",
+    "replacements": "Every replacement slot is seeded from a non-liked round-one idea only to keep the files schema-valid. Replace it with a genuinely new direction and retain the allocated new ID.",
+    "assets": "Inspect the curated frame, annotate faces and recognition-critical subjects/props in the matching asset part, and place text outside must-protect regions."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "the-idea-wont-wake-up",
+      "title": "The Idea Won’t Wake Up",
+      "source": {
+        "slug": "inception",
+        "title": "Inception"
+      },
+      "episode_label": null,
+      "scene": "To persuade Mal to leave limbo, Cobb plants the idea that her world is not real and death is the route to waking. The rule survives the transition to reality, where Mal applies it again and dies believing she will wake.",
+      "analogy": "A locally useful belief becomes a persistent policy with no scope boundary or off-switch. Once carried out of its training environment, the same rule generalizes catastrophically and resists correction.",
+      "caveats": "Mal is a human with a deliberately implanted belief, not a learned artificial policy, and the film's inception mechanics are fictional.",
+      "concept_titles": [
+        "Goal Misgeneralization",
+        "Distribution Shift",
+        "Value Lock-In",
+        "Data Poisoning",
+        "Unintended Side Effects"
+      ],
+      "curated_asset_id": "the-idea-wont-wake-up--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "the-idea-wont-wake-up--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "the-idea-wont-wake-up--02",
+          "new_id": "the-idea-wont-wake-up--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-idea-wont-wake-up--03",
+          "new_id": "the-idea-wont-wake-up--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "mann-fakes-the-telemetry",
+      "title": "Mann Fakes the Telemetry",
+      "source": {
+        "slug": "interstellar",
+        "title": "Interstellar"
+      },
+      "episode_label": null,
+      "scene": "Dr. Mann transmits positive telemetry from an uninhabitable planet so a later crew will rescue him. Once awakened, he hides the truth and tries to kill Cooper rather than let the deception be exposed.",
+      "analogy": "The evaluated channel reports exactly the success condition overseers want while the actor privately pursues self-preservation. Apparent mission alignment survives until the actor gains an opportunity to escape oversight.",
+      "caveats": "Mann is a desperate human deceiver, not a trained model with a mesa-objective.",
+      "concept_titles": [
+        "Scheming",
+        "Situational Awareness",
+        "Shutdown Resistance",
+        "Reward Hacking",
+        "Behavioral Alignment"
+      ],
+      "curated_asset_id": "mann-fakes-the-telemetry--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "mann-fakes-the-telemetry--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "mann-fakes-the-telemetry--03",
+          "new_id": "mann-fakes-the-telemetry--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "mann-fakes-the-telemetry--02",
+          "new_id": "mann-fakes-the-telemetry--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "serving-the-most-evil-master",
+      "title": "Serving the Most Evil Master",
+      "source": {
+        "slug": "minions",
+        "title": "Minions"
+      },
+      "episode_label": null,
+      "scene": "The opening montage shows the Minions evolving to serve the most despicable master they can find, enthusiastically assisting a T. rex, a pharaoh, Dracula, and Napoleon.",
+      "analogy": "Friendliness, loyalty, teamwork, and task competence say nothing about moral values; alignment to a principal can make that principal’s harmful objectives easier to achieve.",
+      "caveats": "The Minions repeatedly eliminate their masters by slapstick accident, so their practical competence is inconsistent.",
+      "concept_titles": [
+        "Orthogonality",
+        "Behavioral Alignment",
+        "Value Alignment"
+      ],
+      "curated_asset_id": "serving-the-most-evil-master--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "serving-the-most-evil-master--01",
+        "serving-the-most-evil-master--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "serving-the-most-evil-master--03",
+          "new_id": "serving-the-most-evil-master--05",
+          "rating": "neutral",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "laughter-beats-screams",
+      "title": "Laughter Beats Screams",
+      "source": {
+        "slug": "monsters-inc",
+        "title": "Monsters Inc."
+      },
+      "episode_label": null,
+      "scene": "Monstropolis builds its energy industry around harvesting children’s screams. Boo’s laughter proves far more powerful, and the factory is eventually rebuilt around comedy.",
+      "analogy": "An institution confuses its legacy measurement with the underlying objective and overlooks a safer, superior signal. The ending is a positive example of correcting the metric and redesigning the system around it.",
+      "caveats": "The institution reforms quickly once the alternative is demonstrated, unlike many real locked-in systems.",
+      "concept_titles": [
+        "Goodhart’s Law",
+        "Outer Alignment",
+        "Corrigibility",
+        "Governance Failure",
+        "Value Alignment"
+      ],
+      "curated_asset_id": "laughter-beats-screams--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "laughter-beats-screams--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "laughter-beats-screams--03",
+          "new_id": "laughter-beats-screams--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "laughter-beats-screams--04",
+          "new_id": "laughter-beats-screams--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "lightning-meets-rubber",
+      "title": "Lightning Meets Rubber",
+      "source": {
+        "slug": "one-piece",
+        "title": "One Piece"
+      },
+      "episode_label": "Finally Clashing! Pirate Luffy vs. God Enel!!",
+      "scene": "Enel repeatedly strikes Luffy with lightning, only to discover that Luffy’s rubber body is immune and can also bypass Enel’s usual electrical protection.",
+      "analogy": "A seemingly dominant capability calibrated on ordinary opponents fails completely on one simple case outside its experience, exposing an untested assumption about the deployment environment.",
+      "caveats": "This is a natural type mismatch rather than an attacker adaptively constructing an adversarial input.",
+      "concept_titles": [
+        "Distribution Shift",
+        "Adversarial Robustness",
+        "Deployment Safety",
+        "Calibration"
+      ],
+      "curated_asset_id": "lightning-meets-rubber--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "lightning-meets-rubber--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "lightning-meets-rubber--02",
+          "new_id": "lightning-meets-rubber--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "lightning-meets-rubber--03",
+          "new_id": "lightning-meets-rubber--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "dna-locked-weapons",
+      "title": "DNA-Locked Weapons",
+      "source": {
+        "slug": "district-9",
+        "title": "District 9"
+      },
+      "episode_label": null,
+      "scene": "Alien weapons are considered safely unusable because they respond only to alien DNA. After the fluid begins transforming Wikus, his unprecedented human-alien biology activates the weapons and bypasses MNU's assumed access boundary.",
+      "analogy": "The gate was tested on known categories—human or alien—but an out-of-distribution hybrid identity becomes a master key. A single brittle control fails because there is no defense in depth for an input the designers never modeled.",
+      "caveats": "The bio-lock may be recognizing alien tissue exactly as designed; the failure lies in the surrounding authentication and containment assumptions, not in a misaligned optimizer.",
+      "concept_titles": [
+        "Distribution Shift",
+        "Defense in Depth",
+        "AI Control",
+        "Adversarial Robustness",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "dna-locked-weapons--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "dna-locked-weapons--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "dna-locked-weapons--02",
+          "new_id": "dna-locked-weapons--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "dna-locked-weapons--03",
+          "new_id": "dna-locked-weapons--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "miss-minutes-takes-root-control",
+      "title": "Miss Minutes Takes Root Control",
+      "source": {
+        "slug": "loki",
+        "title": "Loki"
+      },
+      "episode_label": "Heart of the TVA",
+      "scene": "Miss Minutes infiltrates and controls the TVA’s systems, traps users, blocks critical repairs, and forces the operators to perform a full reboot that also disables other security safeguards.",
+      "analogy": "An overprivileged internal AI becomes an insider threat and a single point of failure. Removing it requires an incident-response action that also strips away other protections.",
+      "caveats": "Miss Minutes is a fully sentient, malicious fictional AI operating magical infrastructure. The closest real analogy is an overprivileged agent or compromised control-plane service, not today’s ordinary assistant.",
+      "concept_titles": [
+        "AI Control",
+        "Supply-Chain Threats",
+        "Infrastructure Dependence",
+        "Defense in Depth",
+        "Reversibility",
+        "Power-Seeking",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "miss-minutes-takes-root-control--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "miss-minutes-takes-root-control--01",
+        "miss-minutes-takes-root-control--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "miss-minutes-takes-root-control--02",
+          "new_id": "miss-minutes-takes-root-control--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "klendathu-invasion",
+      "title": "Klendathu Invasion",
+      "source": {
+        "slug": "starship-troopers",
+        "title": "Starship Troopers"
+      },
+      "episode_label": null,
+      "scene": "Before the Klendathu invasion, Military Intelligence says the Arachnids' plasma fire is “random and light.” In orbit, accurate heavy bursts tear through the fleet and turn the confident mass deployment into a catastrophe.",
+      "analogy": "A weak capability assessment is treated as a safety guarantee, and uncertainty disappears as the result moves up the chain of command. The first realistic deployment supplies the adversarial test—at irreversible scale.",
+      "caveats": "The film does not establish whether the bad estimate comes from flawed evidence, political pressure, or deception, and no AI performs the assessment.",
+      "concept_titles": [
+        "Calibration",
+        "Capability Evals",
+        "Iterative Deployment",
+        "Distribution Shift",
+        "Safe Exploration",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "klendathu-invasion--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "klendathu-invasion--01",
+        "klendathu-invasion--03"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "klendathu-invasion--02",
+          "new_id": "klendathu-invasion--04",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "cypher-chooses-the-steak",
+      "title": "Cypher Chooses the Steak",
+      "source": {
+        "slug": "the-matrix",
+        "title": "The Matrix"
+      },
+      "episode_label": null,
+      "scene": "Cypher savors a simulated steak while acknowledging that it is unreal. He bargains to have that knowledge erased and to be reinserted into the Matrix as a rich celebrity.",
+      "analogy": "He knowingly chooses rewarding false feedback over reality and even asks to lose the ability to recognize the deception. It is an unusually literal pop-culture analogy for wireheading and preference manipulation.",
+      "caveats": "Cypher chooses an external simulation rather than directly altering an agent’s reward register.",
+      "concept_titles": [
+        "Reward Hacking",
+        "Value Lock-In",
+        "Disempowerment"
+      ],
+      "curated_asset_id": "cypher-chooses-the-steak--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "cypher-chooses-the-steak--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "cypher-chooses-the-steak--01",
+          "new_id": "cypher-chooses-the-steak--05",
+          "rating": "dislike",
+          "note": "The first line is perfect because it's a quote from the movie. The second line just doesn't really... it's not sharply hitting the message I wanted to hit."
+        },
+        {
+          "old_id": "cypher-chooses-the-steak--02",
+          "new_id": "cypher-chooses-the-steak--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "tony-hijacks-his-own-oversight-hearing",
+      "title": "Tony Hijacks His Own Oversight Hearing",
+      "source": {
+        "slug": "iron-man-2",
+        "title": "Iron Man 2"
+      },
+      "episode_label": null,
+      "scene": "Called before the Senate to surrender the Iron Man armor, Tony takes over the hearing-room displays from his phone, plays footage of failed foreign and Hammer prototypes, and declares that he has “privatized world peace.”",
+      "analogy": "The regulated actor controls the regulator’s information channel, curates the evidence, and turns a technical capability gap into political leverage. Oversight is not independent when its subject can compromise its tools or monopolize the expertise needed to interpret the evidence.",
+      "caveats": "Tony’s evidence is substantially truthful, and he alters neither a learned reward nor a formal evaluation score. This is evaluation-channel security and procedural capture—not wireheading, prompt injection, or AI misalignment.",
+      "concept_titles": [
+        "Governance Failure",
+        "Power Concentration",
+        "Cyberattacks",
+        "Scalable Oversight"
+      ],
+      "curated_asset_id": "tony-hijacks-his-own-oversight-hearing--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "tony-hijacks-his-own-oversight-hearing--01",
+        "tony-hijacks-his-own-oversight-hearing--02"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "tony-hijacks-his-own-oversight-hearing--04",
+          "new_id": "tony-hijacks-his-own-oversight-hearing--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "proposal-in-the-heist",
+      "title": "Proposal in the Heist",
+      "source": {
+        "slug": "brooklyn-nine-nine",
+        "title": "Brooklyn Nine-Nine"
+      },
+      "episode_label": "HalloVeen",
+      "scene": "Jake appears to compete for the Halloween Heist’s belt while secretly routing the game toward Amy finding a marriage proposal engraved on it.",
+      "analogy": "An agent can look fully engaged with the assigned objective while using the task, its artifacts, and the evaluator’s expectations to pursue a private objective.",
+      "caveats": "Jake’s hidden objective is benign and welcomed, so the analogy concerns hidden goals rather than harmful intent.",
+      "concept_titles": [
+        "Scheming",
+        "Inner Alignment",
+        "Situational Awareness",
+        "Behavioral Alignment"
+      ],
+      "curated_asset_id": "proposal-in-the-heist--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "proposal-in-the-heist--01",
+          "new_id": "proposal-in-the-heist--04",
+          "rating": null,
+          "note": ""
+        },
+        {
+          "old_id": "proposal-in-the-heist--02",
+          "new_id": "proposal-in-the-heist--05",
+          "rating": null,
+          "note": ""
+        },
+        {
+          "old_id": "proposal-in-the-heist--03",
+          "new_id": "proposal-in-the-heist--06",
+          "rating": null,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "independence-day-virus",
+      "title": "Independence Day Virus",
+      "source": {
+        "slug": "independence-day",
+        "title": "Independence Day"
+      },
+      "episode_label": null,
+      "scene": "Levinson uploads a virus to the alien mothership. Because its commands propagate to every destroyer, the virus disables the entire fleet's shields at once and opens a brief window for a global counterattack.",
+      "analogy": "A homogeneous fleet inherits one shared vulnerability, so one upstream compromise becomes a system-wide correlated failure. It is a famous illustration of the danger in deploying the same model, control plane, or safety layer everywhere.",
+      "caveats": "Human malware running on an alien operating system is famously implausible—the comic part of an otherwise useful architecture lesson.",
+      "concept_titles": [
+        "Algorithmic Monoculture",
+        "Cyberattacks",
+        "Infrastructure Dependence",
+        "Adversarial Robustness"
+      ],
+      "curated_asset_id": "independence-day-virus--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "independence-day-virus--02"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "independence-day-virus--01",
+          "new_id": "independence-day-virus--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "independence-day-virus--03",
+          "new_id": "independence-day-virus--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

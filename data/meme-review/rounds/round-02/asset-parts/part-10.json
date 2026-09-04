@@ -1,0 +1,529 @@
+[
+  {
+    "id": "push-the-button--curated",
+    "scenario_slug": "push-the-button",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c9edb27f12481faa571f3da822501f3/gallery-e573e297f4602c9049ffb23dc1600cd87f82ceed314a9f919faaa553ad0666fd.webp",
+    "width": 1600,
+    "height": 1067,
+    "alt": "Still from Lost illustrating Push the Button",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAQCdASoIAAUAA8BgJYgCdAD5iwh7QAD+7QHASKh/LMJ/xSJg72mNKpB8Q6fgoAA=",
+    "content_hash": "e573e297f4602c9049ffb23dc1600cd87f82ceed314a9f919faaa553ad0666fd",
+    "protected_regions": [
+      {
+        "id": "locke-face",
+        "label": "Locke's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [47, 12, 22, 45]
+      },
+      {
+        "id": "locke-body",
+        "label": "Locke's body and hands",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [35, 14, 51, 77]
+      },
+      {
+        "id": "swan-computer",
+        "label": "Swan computer terminal",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [0, 28, 41, 59]
+      },
+      {
+        "id": "countdown-hardware",
+        "label": "Foreground reel and countdown hardware",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [36, 77, 39, 23]
+      },
+      {
+        "id": "tape-reels",
+        "label": "Dharma tape reels",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [9, 0, 72, 31]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "square-filter-round-hole--curated",
+    "scenario_slug": "square-filter-round-hole",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f1248104924acd539080116f/gallery-2aa845a9f98539c45254e3d4ea69d8a7251540e839cd8cda8910cf678587fcb7.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Apollo 13 illustrating Square Filter, Round Hole",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoIAAUAA8BgJQBOgB5vdqIAAP5DhYRt+HlrJgXKHUSSLtZJWM5m6sAAAAA=",
+    "content_hash": "2aa845a9f98539c45254e3d4ea69d8a7251540e839cd8cda8910cf678587fcb7",
+    "protected_regions": [
+      {
+        "id": "engineer-face",
+        "label": "Engineer's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [50, 7, 20, 37]
+      },
+      {
+        "id": "square-canister",
+        "label": "Square lithium-hydroxide canister",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [32, 23, 21, 32]
+      },
+      {
+        "id": "round-receptacle",
+        "label": "Round-receptacle assembly",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [65, 7, 18, 50]
+      },
+      {
+        "id": "engineering-team",
+        "label": "Surrounding Mission Control engineers",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 0, 100, 95]
+      },
+      {
+        "id": "source-watermark",
+        "label": "Embedded source watermark",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [0, 73, 34, 26]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "money-in-the-banana-stand--curated",
+    "scenario_slug": "money-in-the-banana-stand",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f1248105990aec091ef035e0/gallery-0ce0cb398ddbe90cd9ac75de859a3effcfccd1099229686fce9686834458345d.webp",
+    "width": 1440,
+    "height": 810,
+    "alt": "Still from Arrested Development illustrating Money in the Banana Stand",
+    "blur_data_url": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAQCdASoIAAUAA8BgJaACdAD0Ma5VgAD89YkkcIbwl40xzMODH4sMNM8UUZnYlGJBO6pvI2PgX5gAAAA=",
+    "content_hash": "0ce0cb398ddbe90cd9ac75de859a3effcfccd1099229686fce9686834458345d",
+    "protected_regions": [
+      {
+        "id": "george-face",
+        "label": "George Sr.'s face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [32, 7, 25, 50]
+      },
+      {
+        "id": "george-gesture",
+        "label": "George Sr.'s urgent gesture",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [16, 38, 43, 40]
+      },
+      {
+        "id": "michael-head",
+        "label": "Michael's head and reaction",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [57, 35, 35, 63]
+      },
+      {
+        "id": "prison-setting",
+        "label": "Prison visiting setting",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 0, 100, 100]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "scaling-past-one-benchmark--curated",
+    "scenario_slug": "scaling-past-one-benchmark",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f1248117b673f49a065c4aa2/gallery-a4950e12c34371085afd625c234161af616dc4225e3a7e01d59f37d7cd5097d4.webp",
+    "width": 1400,
+    "height": 787,
+    "alt": "Still from Cyberpunk: Edgerunners illustrating Scaling Past One Benchmark",
+    "blur_data_url": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoIAAQAA8BgJbACdAD0gbVuAPqbkyYpX0xgSXQqqJwmVkDCdvyPzsQC5et0pEJ/Jp7RgAAA",
+    "content_hash": "a4950e12c34371085afd625c234161af616dc4225e3a7e01d59f37d7cd5097d4",
+    "protected_regions": [
+      {
+        "id": "david-body",
+        "label": "David's chromed back",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [14, 0, 82, 100]
+      },
+      {
+        "id": "spinal-implant",
+        "label": "Sandevistan spinal implant",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [41, 17, 21, 83]
+      },
+      {
+        "id": "blood-pattern",
+        "label": "Blood around the implants",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [27, 33, 50, 57]
+      },
+      {
+        "id": "night-city-window",
+        "label": "Night City window background",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 0, 100, 59]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "neteros-dead-man-rose--curated",
+    "scenario_slug": "neteros-dead-man-rose",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124811c8891fcb11753dbc8/gallery-6996850af9124191bd46964088c1347beb668ea63c62ab428eb58e3b845b025c.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Hunter × Hunter illustrating Netero’s Dead-Man Rose",
+    "blur_data_url": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAQCdASoIAAUAA8BgJaQAAxU/iHLAAP7oX71XqCqUKrS0AejMAAAA",
+    "content_hash": "6996850af9124191bd46964088c1347beb668ea63c62ab428eb58e3b845b025c",
+    "protected_regions": [
+      {
+        "id": "netero-face",
+        "label": "Netero's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [34, 12, 25, 43]
+      },
+      {
+        "id": "netero-body",
+        "label": "Netero's damaged body",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [25, 0, 56, 100]
+      },
+      {
+        "id": "netero-hands",
+        "label": "Netero's clasped hands",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [28, 44, 38, 28]
+      },
+      {
+        "id": "topknot",
+        "label": "Netero's topknot",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [43, 0, 10, 18]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "kayaba-removes-logout--curated",
+    "scenario_slug": "kayaba-removes-logout",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124811eaf0bf4de2e74d52d/gallery-db6eb5f3e11968f3bcb59879c9307a13c864aef56d8ab720e2bf0c734b19e2f6.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Sword Art Online illustrating Kayaba Removes Logout",
+    "blur_data_url": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADQAQCdASoIAAUAA8BgJbACdAEWToLsIAD+MWbcGPVHDy1J19vOrZYK5AL+6fR/azHxaafAAAA=",
+    "content_hash": "db6eb5f3e11968f3bcb59879c9307a13c864aef56d8ab720e2bf0c734b19e2f6",
+    "protected_regions": [
+      {
+        "id": "kayaba-avatar",
+        "label": "Kayaba's red hooded avatar",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [27, 0, 66, 100]
+      },
+      {
+        "id": "kayaba-visor",
+        "label": "Blank black visor",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [33, 17, 27, 38]
+      },
+      {
+        "id": "red-grid",
+        "label": "Red system grid",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [0, 0, 100, 100]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-d-mail-rollback-crisis--curated",
+    "scenario_slug": "the-d-mail-rollback-crisis",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481228dadea4b92809fb4/gallery-b4b42372d62040fc600e3cd99dcfb159692d01f9f082ccc49b9d77cad2bb0a4f.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Steins;Gate illustrating The D-Mail Rollback Crisis",
+    "blur_data_url": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACQAQCdASoIAAUAA8BgJZwAApexH0AA/kig6J92ZLDAM3a1SdplLMFXPfOEAA==",
+    "content_hash": "b4b42372d62040fc600e3cd99dcfb159692d01f9f082ccc49b9d77cad2bb0a4f",
+    "protected_regions": [
+      {
+        "id": "kurisu-face",
+        "label": "Kurisu's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [0, 10, 25, 45]
+      },
+      {
+        "id": "okabe-face",
+        "label": "Okabe's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [37, 0, 29, 58]
+      },
+      {
+        "id": "daru-face",
+        "label": "Daru's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [67, 0, 33, 50]
+      },
+      {
+        "id": "mayuri-face",
+        "label": "Mayuri's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [62, 41, 23, 48]
+      },
+      {
+        "id": "phonewave",
+        "label": "PhoneWave handset",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [40, 44, 21, 56]
+      },
+      {
+        "id": "okabe-hand",
+        "label": "Okabe's hand",
+        "kind": "gesture",
+        "priority": "soft",
+        "source_rect": [32, 54, 34, 46]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "melfi-ends-tonys-therapy--curated",
+    "scenario_slug": "melfi-ends-tonys-therapy",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f1248123a419e5c8da052733/gallery-e3eca5ae2f4136c83c5c387c1ffb14ac504a1981bd815ca69c909bc348789a14.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from The Sopranos illustrating Melfi Ends Tony’s Therapy",
+    "blur_data_url": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADQAQCdASoIAAUAA8BgJQBOgCKUZqUqAAD9sP/tYNBaocUNtJagXmyO6NsIW+Ww21VaBRxeqCFK/Y+KEbeAAA==",
+    "content_hash": "e3eca5ae2f4136c83c5c387c1ffb14ac504a1981bd815ca69c909bc348789a14",
+    "protected_regions": [
+      {
+        "id": "melfi-face",
+        "label": "Melfi's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [7, 7, 23, 44]
+      },
+      {
+        "id": "tony-face",
+        "label": "Tony's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [48, 2, 19, 36]
+      },
+      {
+        "id": "tony-hand",
+        "label": "Tony's outstretched hand",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [25, 32, 24, 31]
+      },
+      {
+        "id": "therapy-confrontation",
+        "label": "Melfi and Tony facing each other",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [5, 0, 87, 100]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "cyberpsychosis-tripwires-ignored--curated",
+    "scenario_slug": "cyberpsychosis-tripwires-ignored",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124812985e4f4bd01b38f00/gallery-7d9921cf1e08b2d50d6ddbaf9d761cd6e4f236d8e47b859ce2a6f8643514c37f.webp",
+    "width": 1044,
+    "height": 587,
+    "alt": "Still from Cyberpunk: Edgerunners illustrating Cyberpsychosis Tripwires Ignored",
+    "blur_data_url": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoIAAQAA8BgJbACdAD0h/pcAN+J3JCEzH5cW9lBnH9DNtb+IPRVHNCyMOMV9LKZRtAAAA==",
+    "content_hash": "7d9921cf1e08b2d50d6ddbaf9d761cd6e4f236d8e47b859ce2a6f8643514c37f",
+    "protected_regions": [
+      {
+        "id": "crew-figure",
+        "label": "Smaller crew figure",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [20, 19, 26, 73]
+      },
+      {
+        "id": "maine",
+        "label": "Maine walking away",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [58, 0, 33, 96]
+      },
+      {
+        "id": "wooden-throne",
+        "label": "Destroyed wooden throne",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [16, 0, 39, 67]
+      },
+      {
+        "id": "long-shadows",
+        "label": "Long aftermath shadows",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 76, 83, 24]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "sanemi-red-teams-nezuko--curated",
+    "scenario_slug": "sanemi-red-teams-nezuko",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124812db516d80e1ab68c1f/gallery-3efc0b88d71e8b06a4fec386d9e6768dc01451d9c39d628518e6d9e132e5ef3f.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Demon Slayer: Kimetsu no Yaiba illustrating Sanemi Red-Teams Nezuko",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoIAAUAA8BgJZQAAxPDOiSAAP7zKy8pIp+n4y+1WME/KlgALakKgAAA",
+    "content_hash": "3efc0b88d71e8b06a4fec386d9e6768dc01451d9c39d628518e6d9e132e5ef3f",
+    "protected_regions": [
+      {
+        "id": "nezuko-face",
+        "label": "Nezuko's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [24, 0, 52, 88]
+      },
+      {
+        "id": "nezuko-eyes",
+        "label": "Nezuko's eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [29, 25, 38, 28]
+      },
+      {
+        "id": "bamboo-muzzle",
+        "label": "Bamboo muzzle",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [35, 53, 32, 21]
+      },
+      {
+        "id": "blood-mark",
+        "label": "Blood on Nezuko",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [67, 59, 12, 24]
+      },
+      {
+        "id": "hair-bow",
+        "label": "Nezuko's bow",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [67, 0, 17, 16]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "hal-gets-the-powers--curated",
+    "scenario_slug": "hal-gets-the-powers",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124813893ddc2748a266b75/gallery-d7c696567f5eb75aa89fd71759d13b2a3a33a0d33f8f64435366b6d8710280cf.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Megamind illustrating Hal Gets the Powers",
+    "blur_data_url": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAACwAQCdASoIAAUAA8BgJQBOgCLvXP2UAN0Hwl/v0P7Iq6faD7eb/pApIEEA02HKd01dgAAA",
+    "content_hash": "d7c696567f5eb75aa89fd71759d13b2a3a33a0d33f8f64435366b6d8710280cf",
+    "protected_regions": [
+      {
+        "id": "hal-face",
+        "label": "Hal's hostile face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [40, 11, 35, 67]
+      },
+      {
+        "id": "hal-eyes",
+        "label": "Hal's eyes and glare",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [51, 29, 22, 18]
+      },
+      {
+        "id": "red-hair",
+        "label": "Hal's red hair",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [39, 0, 42, 35]
+      },
+      {
+        "id": "tighten-suit",
+        "label": "Tighten suit and shoulder",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [0, 47, 66, 53]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-duplicate-tanks--curated",
+    "scenario_slug": "the-duplicate-tanks",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124814ba469fbfb36ceaa67/gallery-a46aed87c6e0478010741da0dd4c69df54bfbf3070df8c694697c62964739511.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from The Prestige illustrating The Duplicate Tanks",
+    "blur_data_url": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAACwAQCdASoIAAUAA8BgJQBOgB5P4BYAAP4/4+eGk1buTKJQKCS+Pn2UqfZbefKjdRrRAAAA",
+    "content_hash": "a46aed87c6e0478010741da0dd4c69df54bfbf3070df8c694697c62964739511",
+    "protected_regions": [
+      {
+        "id": "angier-face",
+        "label": "Drowned Angier face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [20, 4, 35, 74]
+      },
+      {
+        "id": "angier-hand",
+        "label": "Angier hand against glass",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [14, 34, 24, 55]
+      },
+      {
+        "id": "observer",
+        "label": "Observer silhouette",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [73, 0, 27, 100]
+      },
+      {
+        "id": "observer-hand",
+        "label": "Raised hand at tank",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [56, 40, 20, 45]
+      },
+      {
+        "id": "tank-glass",
+        "label": "Water tank glass and bubbles",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [0, 0, 77, 100]
+      }
+    ],
+    "annotation_status": "complete"
+  }
+]

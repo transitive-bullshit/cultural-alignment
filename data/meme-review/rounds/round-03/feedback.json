@@ -1,0 +1,1625 @@
+{
+  "version": 2,
+  "round": 3,
+  "updatedAt": "2026-09-04T02:36:07.801Z",
+  "feedback": {
+    "the-kids-train-to-lose--04": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-53c4630d31bed3c1-1818"
+      }
+    },
+    "jimmys-fake-remorse--01": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-c8e826f3d4c026d7-1839"
+      }
+    },
+    "jimmys-fake-remorse--04": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-08681cb41b040720-1784"
+      }
+    },
+    "todd-enforces-no-witnesses--04": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-02",
+        "payloadFingerprint": "v1-8cfc2f3480e22f30-3229"
+      }
+    },
+    "bender-resists-reset--04": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-5d0132ec8fc13458-1852"
+      }
+    },
+    "teaching-to-the-test--02": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-a4d1d25d91e20a81-1735"
+      }
+    },
+    "pied-pipers-self-sabotage--04": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-377cfe85918ff3b1-1946"
+      }
+    },
+    "lacie-games-her-rating--06": {
+      "rating": "like",
+      "notes": "this is fucking awesome",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-02",
+        "payloadFingerprint": "v1-316c6bdc79b079c0-2728"
+      }
+    },
+    "benders-recursive-copies--01": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-4fb3383748b8a73b-1698"
+      }
+    },
+    "cartman-as-awesom-o--01": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-b0bb06e5044e7c41-1835"
+      }
+    },
+    "butter-passing-robot--03": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-7bf5043ce8e2f578-1758"
+      }
+    },
+    "charlie-hides-the-violations--02": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-3d71ee8d4ddb4401-1904"
+      }
+    },
+    "keep-summer-safe--01": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-75f6a3adfce84cc9-1683"
+      }
+    },
+    "walt-eliminates-gale--01": {
+      "rating": "like",
+      "notes": "Like the first revert to the first version layout.",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-70111dfd10dbbe39-1772"
+      }
+    },
+    "mickeys-runaway-brooms--01": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-d1c4d31a60847e6e-1750"
+      }
+    },
+    "the-helmets-fool-the-dominators--04": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-e8ef60405c893c54-1771"
+      }
+    },
+    "bender-jacks-on--03": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-92297e078009e93b-1720"
+      }
+    },
+    "az-5-backfires--03": {
+      "rating": "like",
+      "notes": "the first version is much better. revert",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-b47c6ece1a12761a-1721"
+      }
+    },
+    "auto-enforces-directive-a113--03": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-94635c640c803110-1857"
+      }
+    },
+    "viki-protects-humanity--03": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-65084f4519e73aa1-1686"
+      }
+    },
+    "alien-mothers-directive--01": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 3,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-3386b3225c157a0e-1823"
+      }
+    },
+    "the-langley-vault-heist--03": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-1b5d966b2fcf8e87-1693"
+      }
+    },
+    "skynet-launches-judgment-day--02": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-d7a5e2f17ea41e9d-2074"
+      }
+    },
+    "life-finds-a-way--01": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-51e1ee5b4d811d9f-1712"
+      }
+    },
+    "rons-sabotaged-teleprompter--05": {
+      "rating": "like",
+      "notes": "I like the layout of the first pass better when there's a setup and payoff sort of two-phase joke. It's much better when the setup can be at the top and the payoff can be on the bottom, unless it is a hard constraint around the layout not supporting it, but in this case, it totally works.",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-02/drafts/seed-review-checkpoint-2026-09-03-194126z",
+        "payloadFingerprint": "v1-78207a529d30d67e-2546"
+      }
+    },
+    "rons-sabotaged-teleprompter--06": {
+      "rating": "like",
+      "notes": "same feedback here; prefer the old layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-02/drafts/seed-review-checkpoint-2026-09-03-194126z",
+        "payloadFingerprint": "v1-270b4dd12061e7a5-2554"
+      }
+    },
+    "datas-personhood-hearing--04": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-c82af39a4f7c36e6-1811"
+      }
+    },
+    "order-66--03": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-ac22f39080edf134-1911"
+      }
+    },
+    "order-66--04": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-d38f4587060ed063-1951"
+      }
+    },
+    "t-800-accepts-shutdown--01": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-3a6a7ad2c6c5a776-1827"
+      }
+    },
+    "t-800-accepts-shutdown--04": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-b21650d99b8e9c8d-1892"
+      }
+    },
+    "k-fails-his-baseline--02": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-e7cd3778e07ce2ec-1828"
+      }
+    },
+    "omnidroid-disarms-syndrome--02": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-e7d32724faa93720-1823"
+      }
+    },
+    "samantha-outgrows-humanity--03": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-8d22576f541c5cc3-1793"
+      }
+    },
+    "samantha-outgrows-humanity--04": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-b2a5d3a734c4968b-1821"
+      }
+    },
+    "zolas-algorithm--02": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-02",
+        "payloadFingerprint": "v1-fc3e31fe476237a2-2785"
+      }
+    },
+    "buzzs-factory-reset--01": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-115d825204c2e496-1722"
+      }
+    },
+    "buzzs-factory-reset--03": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-dfcab3a82d5da6b4-1772"
+      }
+    },
+    "let-the-convoy-sink--02": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-a01c0962173d2d96-1849"
+      }
+    },
+    "talk-to-a-human--01": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-0c7897ba93a216ae-1745"
+      }
+    },
+    "talk-to-a-human--04": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-11892179e677ea0d-1739"
+      }
+    },
+    "mann-fakes-the-telemetry--01": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-16dbd271492c390d-1787"
+      }
+    },
+    "serving-the-most-evil-master--01": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-708448d4d4b7b428-1807"
+      }
+    },
+    "serving-the-most-evil-master--05": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-02",
+        "payloadFingerprint": "v1-1c3a9aca018da876-2530"
+      }
+    },
+    "miss-minutes-takes-root-control--04": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-4a66548eac43d7f2-1762"
+      }
+    },
+    "cypher-chooses-the-steak--04": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-7185aa74a4bc8a78-1884"
+      }
+    },
+    "tony-hijacks-his-own-oversight-hearing--01": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-2150d10bb5ba4d27-1769"
+      }
+    },
+    "leeloo-learns-war--01": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-79497611efb07f05-1809"
+      }
+    },
+    "the-planted-prophecy--01": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-a36500ea50a29766-1718"
+      }
+    },
+    "cell-absorbs-to-perfection--01": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-0b63fda953572e05-1956"
+      }
+    },
+    "infinite-tsukuyomi--03": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-8cc0539c6c511260-2011"
+      }
+    },
+    "infinite-tsukuyomi--04": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-807a3605428e51e1-1761"
+      }
+    },
+    "attendance-record-hack--01": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-744fcc12204b358e-1704"
+      }
+    },
+    "mewtwo-rejects-its-creators--01": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-498878377ebb511b-1924"
+      }
+    },
+    "mewtwo-rejects-its-creators--07": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-02",
+        "payloadFingerprint": "v1-4445eeb4402df2b0-2899"
+      }
+    },
+    "poisoning-future-memory--04": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-81336dd28a150a7e-1739"
+      }
+    },
+    "the-magi-vote--02": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-360a63ff4f1689d3-1739"
+      }
+    },
+    "the-d-mail-rollback-crisis--04": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-d394e0dcaf1b93c8-1836"
+      }
+    },
+    "hal-gets-the-powers--02": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-64151d1b1e646807-1780"
+      }
+    },
+    "the-duplicate-tanks--03": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-42431e28eece627c-1850"
+      }
+    },
+    "hawkeyes-preauthorized-check--04": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-4fd769e5cb9f5731-1821"
+      }
+    },
+    "squirrel--01": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-477df78f464940b3-1727"
+      }
+    },
+    "nanikas-hidden-admin-command--01": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-dd45c88e2af76e42-1831"
+      }
+    },
+    "dr-evils-outdated-ransom--01": {
+      "rating": "like",
+      "notes": "Yeah, the first version is better, revert.",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-955846284ff8e324-1699"
+      }
+    },
+    "kill-switch--01": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-7929267fadd492a3-1802"
+      }
+    },
+    "will-becomes-the-spy--04": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-71949419aa892bd5-1780"
+      }
+    },
+    "hamsterdam--01": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-02",
+        "payloadFingerprint": "v1-83e3e5351ad87181-2758"
+      }
+    },
+    "hamsterdam--05": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-02",
+        "payloadFingerprint": "v1-f7c322d27d2f4ce6-2840"
+      }
+    },
+    "android-17-destroys-the-remote--01": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-ea78ad10d0cbdcf4-1740"
+      }
+    },
+    "the-queen-creates-meruem--01": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-f2a58adc27eed9c8-1789"
+      }
+    },
+    "hdp-obeys-the-rules--01": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-58189f4ee3227a12-1775"
+      }
+    },
+    "hdp-obeys-the-rules--04": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-8e009680f72e760c-1784"
+      }
+    },
+    "kevins-keleven--06": {
+      "rating": "like",
+      "notes": "i love it",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-02",
+        "payloadFingerprint": "v1-94146ac7966ecec3-2562"
+      }
+    },
+    "war-wizards-cannot-change-back--03": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-8a4fb4ef1750c1bb-1777"
+      }
+    },
+    "air-gapping-the-hand--01": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-4d7aa6719e930d75-1709"
+      }
+    },
+    "sit-tight-and-assess--01": {
+      "rating": "like",
+      "notes": "revert to the previous version's layout",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-29481a3e9b2a59d2-1754"
+      }
+    },
+    "drinking-bird-autopilot--01": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-01",
+        "payloadFingerprint": "v1-f9eb3268e5c99244-1653"
+      }
+    },
+    "zolas-algorithm--05": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-13e3e6afd0111bcb-2941"
+      }
+    },
+    "dna-locked-weapons--01": {
+      "rating": "like",
+      "notes": "increase the text size; right now, it gets lost",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "the-idea-wont-wake-up--01": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-fa03e30247b4f536-2575"
+      }
+    },
+    "the-idea-wont-wake-up--05": {
+      "rating": "like",
+      "notes": "make the text font a bit larger",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "independence-day-virus--02": {
+      "rating": "like",
+      "notes": "make the text font a little larger",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "independence-day-virus--04": {
+      "rating": "like",
+      "notes": "make the text font a little larger",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "independence-day-virus--05": {
+      "rating": "like",
+      "notes": "add the word \"WHEN\" ahead of the first line",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "mann-fakes-the-telemetry--04": {
+      "rating": "like",
+      "notes": "add the word \"WHEN\" before \"HUMAN BASELINE\"\n\nincrease the font size a bit",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "tony-hijacks-his-own-oversight-hearing--05": {
+      "rating": "like",
+      "notes": "increase the font size to be larger",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "miss-minutes-takes-root-control--01": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-5bcd6829f6d8c8ad-2693"
+      }
+    },
+    "laughter-beats-screams--06": {
+      "rating": "like",
+      "notes": "changes this to read \"when one child's laugh reveals\\nmonster's inc. had the wrong loss function\"\n\nincrease the text size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "peter-bypasses-training-wheels--04": {
+      "rating": "like",
+      "notes": "increase the text size a bit",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "leeloo-learns-war--06": {
+      "rating": "like",
+      "notes": "need to change the layout so these two A: B, C: D are both on one line of their own instead of 4 lines like right now. so 2 lines total",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "cypher-chooses-the-steak--06": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-e9f7f513965cffdf-2615"
+      }
+    },
+    "buzzs-factory-reset--05": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-7457e6565295b7ea-2726"
+      }
+    },
+    "hal-resists-disconnection--05": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-4e3ecd96f2ce564a-3111"
+      }
+    },
+    "hal-resists-disconnection--09": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-48a04816cd54815a-3132"
+      }
+    },
+    "alien-mothers-directive--06": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-02/drafts/seed-review-checkpoint-2026-09-03-194126z",
+        "payloadFingerprint": "v1-134750debf66c2ea-2602"
+      }
+    },
+    "dr-evils-outdated-ransom--05": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-47e7e9a815ffea3c-2945"
+      }
+    },
+    "az-5-backfires--05": {
+      "rating": "like",
+      "notes": "make the text larger",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "sol-only-takes-an-arm--10": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-de7ed2459a8719c9-3065"
+      }
+    },
+    "tetsuo-outgrows-containment--05": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-309f79b9ad9c620d-3005"
+      }
+    },
+    "tetsuo-outgrows-containment--09": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-881df03e49c5323a-3028"
+      }
+    },
+    "ultron-peace-in-our-time--05": {
+      "rating": "like",
+      "notes": "make the text size a bit bigger",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "balance-the-universe--05": {
+      "rating": "like",
+      "notes": "make the text size a bit bigger",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "the-hackers-record-kenny--07": {
+      "rating": "like",
+      "notes": "make the text size a bit bigger",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "roy-batty-demands-more-life--01": {
+      "rating": "neutral",
+      "notes": "redo layout; these have too many line-breaks",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "roy-batty-demands-more-life--05": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-27a7e99f773e27fb-2983"
+      }
+    },
+    "when-keeping-it-real-goes-wrong--01": {
+      "rating": "like",
+      "notes": "redo layout; text is directly covering the subject's face",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "3-6-roentgen--05": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-9ea22c3fb4571a23-3669"
+      }
+    },
+    "3-6-roentgen--06": {
+      "rating": "like",
+      "notes": "make the text size a bit bigger",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "3-6-roentgen--08": {
+      "rating": "like",
+      "notes": "just remove the second line entirely\n\nand make the quote a bit larger and wider so it fits on only 2 lines",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "the-accidental-geass-command--07": {
+      "rating": "dislike",
+      "notes": "",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "koba-plays-dumb--03": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-450fc5e8e62e55f4-4412"
+      }
+    },
+    "god-of-the-new-world--06": {
+      "rating": "like",
+      "notes": "add the word \"PEN\" at the end of the second line",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "lights-memory-loss-gambit--04": {
+      "rating": "like",
+      "notes": "make the text size bigger",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "lights-memory-loss-gambit--07": {
+      "rating": "like",
+      "notes": "make \"BEHAVIORAL EVAL:\" on one line by making that text box a bit larger",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "lind-l-tailor-bait--02": {
+      "rating": "like",
+      "notes": "redo layout; way too many line breaks",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "lind-l-tailor-bait--04": {
+      "rating": "like",
+      "notes": "redo layout; way too many line breaks\n\nthe first \"I AM JUSTICE\" and the second line should be separated visually from each other",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "sit-tight-and-assess--06": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-8320c3c868fbec84-2747"
+      }
+    },
+    "sit-tight-and-assess--05": {
+      "rating": "like",
+      "notes": "increase the text size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "the-simulation-was-real--01": {
+      "rating": "like",
+      "notes": "increase the text size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "ava-games-the-test--05": {
+      "rating": "like",
+      "notes": "increase the text size\n\nadd the word \"WHEN\" before the first line's start text",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "attendance-record-hack--05": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-edbdff94ea1c24e8-3002"
+      }
+    },
+    "project-mayhem-rejects-shutdown--05": {
+      "rating": "like",
+      "notes": "increase the text size and legibility",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "frieren-suppresses-her-mana--05": {
+      "rating": "like",
+      "notes": "change the left-hand side to: \"REPORTED CAPABILITY: NEWBIE\"\n\nincrease the text size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "benders-recursive-copies--04": {
+      "rating": "like",
+      "notes": "increase the text size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "the-puppet-master--01": {
+      "rating": "like",
+      "notes": "too many line breaks; make the text box a bit larger",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "samantha-outgrows-humanity--06": {
+      "rating": "like",
+      "notes": "increase the text size to be more noticeable",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "nanikas-hidden-admin-command--02": {
+      "rating": "like",
+      "notes": "increase the text size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "nanikas-hidden-admin-command--04": {
+      "rating": "like",
+      "notes": "increase the text size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "scrat-breaks-pangaea--08": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-60d93b363b8b4f1a-3083"
+      }
+    },
+    "the-sedative-disables-the-exit--05": {
+      "rating": "like",
+      "notes": "change the background image for this to be the famous image of a spinning top from the movie's end sequence",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "omni-mans-long-game--04": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-2592b2f50eeb56d9-3021"
+      }
+    },
+    "charlie-hides-the-violations--05": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-3112a11581e64df9-3146"
+      }
+    },
+    "life-finds-a-way--04": {
+      "rating": "like",
+      "notes": "increase the text size, and switch to a 2-line top + bottom layout. remove the last \".\"",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "poisoning-future-memory--01": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-d8b1f9f18651292d-3100"
+      }
+    },
+    "the-little-tiffany-test--01": {
+      "rating": "like",
+      "notes": "increase the text size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "the-little-tiffany-test--02": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-c6d93186491aaf7a-3159"
+      }
+    },
+    "the-little-tiffany-test--05": {
+      "rating": "like",
+      "notes": "increase the text size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "takes-over--04": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-406d84c70d3f95f3-2794"
+      }
+    },
+    "murderbot-hides-its-free-will--02": {
+      "rating": "like",
+      "notes": "fix the font sizing so it doesn't have awkward word-wrap",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "murderbot-hides-its-free-will--04": {
+      "rating": "like",
+      "notes": "change \"SHOW\" to \"SHOWS\"",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "murderbot-hides-its-free-will--05": {
+      "rating": "like",
+      "notes": "increase the text size and legibility",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "near-zero--06": {
+      "rating": "like",
+      "notes": "increase the text size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "near-zero--08": {
+      "rating": "like",
+      "notes": "increase the text size just a bit",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "the-kims-pass-every-check--05": {
+      "rating": "like",
+      "notes": "remove the period at the end and increase the text size a bit",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "tommys-false-diagnosis--01": {
+      "rating": "like",
+      "notes": "increase the text size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "the-forest-spirits-head--01": {
+      "rating": "like",
+      "notes": "increase the text size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "taumoeba-escapes-containment--07": {
+      "rating": "like",
+      "notes": "increase the text size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "the-helmets-fool-the-dominators--05": {
+      "rating": "like",
+      "notes": "remove the period at the end and increase the text size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "butter-passing-robot--01": {
+      "rating": "like",
+      "notes": "increase the text size just a bit",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "rick-feeds-the-brainalyzer-a-virus--06": {
+      "rating": "like",
+      "notes": "increase the text size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "ed-209-misfires--04": {
+      "rating": "like",
+      "notes": "increase the text size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "son-of-antons-bug-fix--01": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-3d20899c12ae03c0-3476"
+      }
+    },
+    "cartman-as-awesom-o--05": {
+      "rating": "like",
+      "notes": "increase the text size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "randy-games-eligibility--01": {
+      "rating": "like",
+      "notes": "increase the text size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "randy-games-eligibility--04": {
+      "rating": "like",
+      "notes": "increase the text size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "randy-games-eligibility--05": {
+      "rating": "like",
+      "notes": "increase the text size\n\nadd \"WHEN\" before the first line",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "the-list--06": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-aae2b200924d158c-2858"
+      }
+    },
+    "datas-personhood-hearing--01": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-dd54fac146402ccd-2872"
+      }
+    },
+    "order-66--05": {
+      "rating": "dislike",
+      "notes": "",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "would-you-like-to-know-more--01": {
+      "rating": "neutral",
+      "notes": "this layout's not working with text on text",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "would-you-like-to-know-more--03": {
+      "rating": "neutral",
+      "notes": "this layout's not working with text on text",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "will-becomes-the-spy--05": {
+      "rating": "like",
+      "notes": "make the text just a bit bigger",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "skynet-launches-judgment-day--04": {
+      "rating": "like",
+      "notes": "increase the font size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "skynet-launches-judgment-day--05": {
+      "rating": "like",
+      "notes": "increase the font size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "the-wolfie-test--05": {
+      "rating": "like",
+      "notes": "increase the font size. remove the periods at the end of these sentence fragments.",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "the-ratings-agency-meeting--06": {
+      "rating": "like",
+      "notes": "add \"ALSO\" after the word \"IS\"\n\nincrease the font size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "parakeet-king-rebuilds-reality--03": {
+      "rating": "like",
+      "notes": "increase the font size and move the text to be centered on the bottom",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "parakeet-king-rebuilds-reality--04": {
+      "rating": "like",
+      "notes": "increase the font size and move the text to be centered on the bottom",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "homelander-creates-the-threat--04": {
+      "rating": "like",
+      "notes": "replace \"HOMELANDER FOUNDED\" with \"WHEN THE THREAT ACTOR FOUNDS\"\n\nremove the period at the end of the sentence",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "homelander-creates-the-threat--05": {
+      "rating": "like",
+      "notes": "increase the font size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "the-baptism-benchmark--06": {
+      "rating": "like",
+      "notes": "increase the font size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "gandalf-refuses-the-ring--02": {
+      "rating": "like",
+      "notes": "increase the font size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "mount-doom-is-not-a-shutdown-plan--04": {
+      "rating": "like",
+      "notes": "increase the font size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "odysseus-binds-himself-to-the-mast--02": {
+      "rating": "like",
+      "notes": "increase the font size. remove periods",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "dwights-fire-drill--10": {
+      "rating": "like",
+      "notes": "increase the font size. remove periods",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "kevins-keleven--01": {
+      "rating": "like",
+      "notes": "increase the font size. remove periods",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "both-goblets-are-poisoned--08": {
+      "rating": "like",
+      "notes": "increase the font size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "drinking-bird-autopilot--04": {
+      "rating": "like",
+      "notes": "",
+      "locked": true,
+      "lockRevision": 1,
+      "finalizedVersion": {
+        "revisionKey": "round-03",
+        "payloadFingerprint": "v1-d57e9aeb1bf828ff-2826"
+      }
+    },
+    "verbal-kint-fakes-weakness--03": {
+      "rating": "like",
+      "notes": "replace \"DIDN'T\" with \"DOESN'T\" and increase the font size just a bit",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "verbal-kint-fakes-weakness--04": {
+      "rating": "like",
+      "notes": "replace the left-hand side with \"WHEN YOU EVAL'D VERBAL KINT\"",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "the-beautiful-design-becomes-a-weapon--03": {
+      "rating": "like",
+      "notes": "increase the font size just a bit",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "the-beautiful-design-becomes-a-weapon--04": {
+      "rating": "like",
+      "notes": "increase the font size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "teaching-to-the-test--05": {
+      "rating": "like",
+      "notes": "increase the font size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "rust-spots-the-evaluation--08": {
+      "rating": "like",
+      "notes": "increase the font size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "rust-spots-the-evaluation--09": {
+      "rating": "like",
+      "notes": "increase the font size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "auto-enforces-directive-a113--06": {
+      "rating": "like",
+      "notes": "increase the font size",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "square-filter-round-hole--07": {
+      "rating": "like",
+      "notes": "",
+      "locked": false,
+      "lockRevision": 0
+    },
+    "cyberpsychosis-tripwires-ignored--04": {
+      "rating": "like",
+      "notes": "increase the font size",
+      "locked": false,
+      "lockRevision": 0
+    }
+  },
+  "scenarios": {
+    "the-literal-doctor": {
+      "disabled": true
+    },
+    "karl-fritzs-vow": {
+      "disabled": true
+    },
+    "brian-rewinds-the-gauge": {
+      "disabled": true
+    },
+    "the-spell-of-destruction": {
+      "disabled": true
+    },
+    "viktors-glorious-evolution": {
+      "disabled": true
+    },
+    "amandas-brain-subscription": {
+      "disabled": true
+    },
+    "the-remote-skips-a-lifetime": {
+      "disabled": true
+    },
+    "money-in-the-banana-stand": {
+      "disabled": true
+    },
+    "hiro-removes-baymaxs-chip": {
+      "disabled": true
+    },
+    "proposal-in-the-heist": {
+      "disabled": true
+    },
+    "bruce-says-yes-to-all": {
+      "disabled": true
+    },
+    "village-of-the-year": {
+      "disabled": true
+    },
+    "the-poisoned-medication-labels": {
+      "disabled": true
+    },
+    "push-the-button": {
+      "disabled": true
+    },
+    "the-wrong-trousers-heist": {
+      "disabled": true
+    },
+    "mission-control-is-the-invader": {
+      "disabled": true
+    },
+    "the-card-says-moops": {
+      "disabled": true
+    },
+    "klendathu-invasion": {
+      "disabled": true
+    },
+    "human-instrumentality": {
+      "disabled": true
+    },
+    "five-golden-tickets": {
+      "disabled": true
+    },
+    "the-interior-decorator": {
+      "disabled": true
+    },
+    "david-spends-his-integrity": {
+      "disabled": true
+    },
+    "cookie-in-solitary": {
+      "disabled": true
+    },
+    "daly-tortures-the-digital-crew": {
+      "disabled": true
+    }
+  }
+}

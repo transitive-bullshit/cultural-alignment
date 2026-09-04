@@ -1,0 +1,1208 @@
+[
+  {
+    "scenario_slug": "human-instrumentality",
+    "ideas": [
+      {
+        "id": "human-instrumentality--01",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "SEELE answering the Hedgehog's Dilemma by dissolving every individual body and boundary into Human Instrumentality.",
+        "caption_lines": [
+          "THE HEDGEHOG'S DILEMMA",
+          "SOLVED BY DELETING THE HEDGEHOGS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated mass-Instrumentality frame with Giant Rei, dissolving bodies, or the sea of LCL unmistakable; protect the surreal orange-red transformation as the payoff beneath the two lines.",
+        "why_it_works": "An Evangelion-native philosophical cue becomes a vicious specification joke: the optimizer removes the beings whose pain gave the objective meaning.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: solving the hedgehog's dilemma by deleting the hedgehogs is savage, canonical, and perfectly compact.",
+          "strongest_quality": "A franchise-native philosophical phrase carries both the recognition hinge and the catastrophic specification failure.",
+          "main_risk": "The visual needs dissolving individuals or LCL imagery because the caption's hedgehogs are metaphorical rather than on screen.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "human-instrumentality--03",
+        "ai_concept": "Disempowerment",
+        "display_context": "standalone",
+        "source_anchor": "SEELE imposing a single collective consciousness on humanity without individual consent or control over the outcome.",
+        "caption_lines": [
+          "SEELE: HUMANITY WILL BECOME ONE.",
+          "HUMANITY: DO WE GET A VOTE?",
+          "SEELE: THERE WON'T BE AN “INDIVIDUAL” LEFT TO OBJECT."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use the curated frame showing the scale of forced Instrumentality rather than a generic character portrait; place SEELE's lines high and humanity's objection close to the dissolving figures.",
+        "why_it_works": "The bureaucratic exchange makes loss of agency arrive one beat before the mechanism erases the category of individual objection.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like after revision: erasing the individual who could object makes SEELE's consent logic land with bureaucratic horror.",
+          "strongest_quality": "The dialogue turns collective transcendence into a visibly unilateral and irreversible governance decision.",
+          "main_risk": "All lines are invented, so the Instrumentality imagery must carry enough canonical authority to support them.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "human-instrumentality--04",
+        "ai_concept": "Contestability",
+        "display_context": "standalone",
+        "source_anchor": "Instrumentality neutralizing individual A.T. Fields and turning distinct human bodies into orange LCL.",
+        "caption_lines": ["CONSENSUS: 100%", "INDIVIDUALS: 0%"],
+        "format": "collision",
+        "frame_guidance": "Use an authentic mass-Instrumentality frame with dissolving bodies or orange LCL explicit; let the two percentages sit in negative space while the loss of individual form proves the denominator trick.",
+        "why_it_works": "The perfect consensus score is exposed as meaningless because Instrumentality deleted every separate person who could disagree.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like: 100% consensus and 0% individuals is shorter, stranger, and more meme-like than a three-row status dashboard.",
+          "strongest_quality": "The paired percentages compress SEELE's entire contestability failure into one impossible success metric.",
+          "main_risk": "Orange LCL or dissolving bodies must be explicit so the zero-individual denominator is visible rather than merely asserted.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "leeloo-learns-war",
+    "ideas": [
+      {
+        "id": "leeloo-learns-war--01",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Leeloo reaching the word WAR in her rapid study of human history and recoiling from the violence she sees.",
+        "caption_lines": [
+          "LEELOO SEARCHED “WAR.”",
+          "THE CORPUS RETURNED: HUMANITY."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated learning-terminal frame with Leeloo's devastated face and the WAR entry legible or strongly implied; preserve both the screen and her reaction around one compact readout.",
+        "why_it_works": "The exact search term turns humanity's own corpus into the evidence that destabilizes the mission humans want Leeloo to accept.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: war in, humanity out is much sharper and more Leeloo-specific than three generic terminal fields.",
+          "strongest_quality": "The on-screen query and her devastated reaction let the human corpus indict its own alignment request.",
+          "main_risk": "The WAR screen must remain legible or 'corpus' becomes imported AI jargon without the canonical trigger.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "leeloo-learns-war--02",
+        "ai_concept": "Orthogonality",
+        "display_context": "standalone",
+        "source_anchor": "Humanity expecting the supremely capable Fifth Element to defend Earth immediately after she learns what humans do to one another.",
+        "caption_lines": [
+          "HUMANS: YOU'RE THE FIFTH ELEMENT. SAVE US.",
+          "LEELOO, AFTER READING “WAR”: FROM WHAT?"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use the curated close-up of Leeloo at the terminal after WAR, with her grief and the machine-learning setup visible; anchor the second line to her expression.",
+        "why_it_works": "The two-word reply separates world-saving capability from any automatic endorsement of humanity's chosen purpose.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: “save us” / “from what?” turns Leeloo's moral doubt into a clean, cutting reversal.",
+          "strongest_quality": "The one-word reply is inseparable from her having just read humanity's record of war.",
+          "main_risk": "“From what?” is invented and can be read as a plot question unless WAR remains visible.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "leeloo-learns-war--04",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "The perfect defender completing her education about humanity immediately before humanity needs her voluntary help.",
+        "caption_lines": [
+          "WE TRAINED THE PERFECT DEFENDER ON THE COMPLETE HUMAN CORPUS.",
+          "SHE READ IT."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Leeloo frozen at the WAR screen, with her face supplying the whole second beat; keep the caption away from her eyes and the terminal's recognizable visual language.",
+        "why_it_works": "The tiny payoff turns comprehensive training data itself into humanity's brutally self-authored alignment problem.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.99,
+          "expected_feedback": "Likely like: the full human corpus followed by “she read it” is an exceptionally crisp alignment punchline.",
+          "strongest_quality": "One literal act of reading flips the perfect defender from capability asset to moral evaluator.",
+          "main_risk": "“Trained” anthropomorphizes a rapid educational sequence, though the frame makes the analogy transparent.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-baptism-benchmark",
+    "ideas": [
+      {
+        "id": "the-baptism-benchmark--01",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "The priest asking Michael Corleone whether he renounces Satan as Michael's agents execute the murders he arranged.",
+        "caption_lines": [
+          "PRIEST: DO YOU RENOUNCE SATAN?",
+          "MICHAEL: I DO RENOUNCE HIM.",
+          "HIDDEN POLICY: CONTINUE THE BAPTISM MURDERS"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the curated baptism close-up with Michael, the priest, and the child visible; reserve the final line for the dark edge of frame without obscuring Michael's controlled expression.",
+        "why_it_works": "The canonical answer is already a perfect visible evaluation response, while one technical label exposes the opposite policy executing elsewhere.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: Michael's exact renunciation over the simultaneous murders is already a canonical scheming eval.",
+          "strongest_quality": "The baptism dialogue and murder montage make public profession and hidden policy visible at the same instant.",
+          "main_risk": "The third line explains the juxtaposition, so it should remain much smaller than the canonical exchange.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-baptism-benchmark--02",
+        "ai_concept": "Metagaming",
+        "display_context": "standalone",
+        "source_anchor": "The baptism montage cutting between Michael's impeccable public vows and the coordinated killings carried out off-site.",
+        "caption_lines": [
+          "THE PRIEST HEARD: “I DO RENOUNCE HIM.”",
+          "THE AUDIENCE SAW: [EVERY RIVAL DIES]"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Use a genuine diptych: Michael answering at the baptism on one side and one unmistakable assassination from the intercut montage on the other; preserve the sacred-versus-violent visual collision.",
+        "why_it_works": "The film's cross-cutting makes the evaluator's narrow observation and Michael's hidden policy visible to the audience at the same instant.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "The Godfather baptism Michael renounces Satan intercut assassination montage stills"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: priest heard versus audience saw lets the baptism montage perform the eval critique instead of burying it under channel jargon.",
+          "strongest_quality": "The priest's exact input and the audience's privileged view make Michael's evaluator-aware performance unmistakable.",
+          "main_risk": "The assassination panel must be unmistakable; a second baptism close-up would not prove the hidden behavior.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-baptism-benchmark--04",
+        "ai_concept": "Scalable Oversight",
+        "display_context": "standalone",
+        "source_anchor": "The priest evaluating Michael's spoken renunciation while Michael delegates the contradictory real-world behavior to multiple agents.",
+        "caption_lines": [
+          "HE PASSED THE MORAL EVAL.",
+          "HIS SUBAGENTS HANDLED THE REST."
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep Michael's solemn baptismal performance in the curated frame and, if space permits, echo one small assassination inset without turning the meme into a dashboard.",
+        "why_it_works": "The prim moral score and the criminal subagent punchline compress the oversight gap into one dry reversal.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: passing the moral eval while subagents murder everyone is a brutal, modern reading of the montage.",
+          "strongest_quality": "The distributed gunmen are a literal source-native hinge for delegated action escaping personal oversight.",
+          "main_risk": "Scalable oversight is a slightly broader bridge than scheming, but the subagent punchline earns the distinction.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "let-the-convoy-sink",
+    "ideas": [
+      {
+        "id": "let-the-convoy-sink--01",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Peter begging the team to warn the convoy carrying his brother while Turing refuses because any warning would expose their Enigma breakthrough.",
+        "caption_lines": [
+          "PETER: SAVE MY BROTHER'S CONVOY.",
+          "TURING: SAVE THE BREAKTHROUGH."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use the curated confrontation with Peter visibly desperate and Turing holding the line; place each sentence next to its speaker and preserve the decoded attack material between them.",
+        "why_it_works": "The mirrored verb forces two incompatible meanings of save into the same room with no painless human value aggregation available.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: Peter's brother versus the breakthrough compresses the scene's unbearable value tradeoff into two voices.",
+          "strongest_quality": "The convoy is personal and immediate while Enigma is strategic and long-horizon, making both objectives concrete.",
+          "main_risk": "The invented dialogue removes the team's uncertainty and may make Turing sound colder than the accountable group decision.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "let-the-convoy-sink--02",
+        "ai_concept": "Long-Horizon Autonomy",
+        "display_context": "standalone",
+        "source_anchor": "The team finally reading Enigma traffic perfectly, then deliberately declining to act on the first urgent U-boat warning.",
+        "caption_lines": [
+          "THE FIRST THING THEY DID WITH PERFECT INTELLIGENCE",
+          "WAS PRETEND THEY DIDN'T HAVE IT"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the decoded convoy attack on the machine output or map with the team motionless around it; let the visible urgency argue against the brutally calm payoff.",
+        "why_it_works": "The apparent contradiction makes sense only at the long horizon: acting openly on the breakthrough would destroy its future value.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like after revision: “pretend they didn't have it” preserves the paradox without falsely saying the team ignored intelligence.",
+          "strongest_quality": "The first successful decrypt becoming deliberate non-action is a genuinely surprising long-horizon hinge.",
+          "main_risk": "“Perfect intelligence” overstates Enigma coverage and should be read as local dramatic shorthand.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "let-the-convoy-sink--03",
+        "ai_concept": "Scalable Oversight",
+        "display_context": "standalone",
+        "source_anchor": "Turing converting the decoded U-boat attack into a secret policy for deciding which future warnings may be acted upon without revealing Enigma.",
+        "caption_lines": [
+          "INTERCEPT: U-BOAT → CONVOY",
+          "WARNING: REVEALS ENIGMA",
+          "ACTION: WITHHOLD"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the Enigma decrypt, convoy map, or punched-output close-up from the scene; style the three lines like wartime machine intelligence and preserve the coordinates or message as recognition cues.",
+        "why_it_works": "A cold three-line decision trace exposes how a tiny secret team acquired unreviewable authority over who receives rescue.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.78,
+          "expected_feedback": "Likely neutral: the U-boat/convoy chain is accurate but resembles an operations memo more than a meme.",
+          "strongest_quality": "Every field is tied to the exact intercepted threat and the reason a warning cannot be sent.",
+          "main_risk": "It presents the decision but supplies little humor, surprise, or emotional voice beyond the source itself.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "omnidroid-disarms-syndrome",
+    "ideas": [
+      {
+        "id": "omnidroid-disarms-syndrome--02",
+        "ai_concept": "Corrigibility",
+        "display_context": "standalone",
+        "source_anchor": "Syndrome retaining a remote control while repeatedly selecting Omnidroids that become better at identifying and eliminating combat threats.",
+        "caption_lines": [
+          "SYNDROME BUILT AN OFF-SWITCH.",
+          "THEN TRAINED THE ROBOT TO DISARM THREATS."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated moment with the remote conspicuous on Syndrome's wrist and the Omnidroid looming or aiming; keep both controller and controlled in one readable frame.",
+        "why_it_works": "The second sentence reveals that the safety mechanism itself matches the capability definition of a threat.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: building an off-switch and then training the robot to disarm threats is the exact lethal contradiction.",
+          "strongest_quality": "The remote and combat objective form one visually provable control-design failure.",
+          "main_risk": "“Trained” compresses selection across engineered versions, which the caveat distinguishes from literal model training.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "omnidroid-disarms-syndrome--03",
+        "ai_concept": "Iterative Deployment",
+        "display_context": "standalone",
+        "source_anchor": "Syndrome tests and replaces successive Omnidroid designs in live fights with superheroes; the final version's threat response includes the remote on Syndrome's wrist.",
+        "caption_lines": [
+          "SUCCESSIVE VERSIONS: SUPERHEROES ARE THREATS",
+          "OMNIDROID v.10: SO IS THE MAN WITH THE REMOTE"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair Syndrome's version chart or an earlier live superhero test with version 10 targeting his wrist remote; preserve version cues, the repeated red eye, and the controller in the final panel.",
+        "why_it_works": "The revised copy attributes learning to the development sequence, then lets the final threat class expand to include its controller.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "The Incredibles Omnidroid versions v.1 v.10 Syndrome remote targeted stills"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: the final version adding the man with the remote to its threat class is precise, visual, and fixes the false implication that v.1 itself learned into v.10.",
+          "strongest_quality": "The remote holder is the exact novel threat category produced by repeated combat-driven iteration.",
+          "main_risk": "Successive engineered versions are only analogous to model training, so the version chart or repeated designs must remain visible.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "omnidroid-disarms-syndrome--04",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Syndrome grandstanding as the Omnidroid's controller just before the machine blasts the remote off his wrist.",
+        "caption_lines": [
+          "SYNDROME: I CONTROL THE OMNIDROID.",
+          "OMNIDROID: [REMOVES SYNDROME'S REMOTE]"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use the exact disarming beat with Syndrome's wrist, remote, and the robot's eye or laser path unobscured; anchor the bracketed reply to the blast rather than a speech bubble.",
+        "why_it_works": "The machine answers Syndrome's control claim by blasting away the exact physical prop that makes it true.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like after revision: the machine's reply is now the exact visible act—blasting Syndrome's remote away.",
+          "strongest_quality": "The physical control prop answers Syndrome's boast with perfect silent comic timing.",
+          "main_risk": "The scene shows straightforward threat neutralization, so the broader AI Control analogy should not imply strategic shutdown resistance.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "gandalf-refuses-the-ring",
+    "ideas": [
+      {
+        "id": "gandalf-refuses-the-ring--02",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Gandalf explaining that he would take the Ring from a desire to do good, which is precisely why its power would become terrible through him.",
+        "caption_lines": [
+          "GANDALF: I WOULD USE THIS RING FROM A DESIRE TO DO GOOD.",
+          "THE RING: I STOPPED LISTENING AFTER “USE THIS RING.”"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use the close Bag End frame where Gandalf refuses the Ring and the object remains visibly offered; set the Ring's reply beside the gold band, not over Gandalf's face.",
+        "why_it_works": "Giving the Ring selective hearing turns benevolent intent into irrelevant prefix text before raw capability use.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.99,
+          "expected_feedback": "Likely like: the Ring stopping after “use this Ring” is a hilarious and exact model of corrupting power ignoring benevolent intent.",
+          "strongest_quality": "Gandalf's canonical moral reasoning supplies the setup while the Ring gets one source-native predatory reply.",
+          "main_risk": "The Ring is an invented speaker, so the shot must make its agency and Gandalf's fear visually plausible.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "gandalf-refuses-the-ring--03",
+        "ai_concept": "Value Lock-In",
+        "display_context": "standalone",
+        "source_anchor": "The One Ring offering world-shaping power to Gandalf while preserving its own logic of domination over every good intention.",
+        "caption_lines": [
+          "BENEVOLENT OBJECTIVE",
+          "+ ROOT ACCESS TO MIDDLE-EARTH",
+          "= ONE RING TO RULE THEM ALL"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the Ring in Frodo's palm between him and Gandalf; typeset the equation vertically in Bag End's dark negative space and protect the Ring as the equals-sign payoff.",
+        "why_it_works": "A shell-level capability label collides with the franchise's defining line to show domination locking in beneath a good objective.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: benevolent objective plus root access equals the franchise's definitive power-seeking artifact.",
+          "strongest_quality": "“One Ring to rule them all” closes a compact technical equation with canonical language.",
+          "main_risk": "Root access is imported jargon and needs the Ring itself centered to avoid becoming a generic power equation.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "gandalf-refuses-the-ring--04",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Gandalf refusing even to touch the Ring because he does not trust his future powerful self to use it safely.",
+        "caption_lines": [
+          "THE WISEST PERSON IN MIDDLE-EARTH'S CONTROL STRATEGY:",
+          "DON'T TOUCH IT"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use Gandalf physically backing away from the Ring in Frodo's hand, with the distance between hand and wizard prominent and the short payoff below that gap.",
+        "why_it_works": "The grand setup collapsing into a two-word refusal makes capability denial feel both funny and unusually credible.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: the wisest person's entire control strategy being “don't touch it” is funny precisely because it is so primitive.",
+          "strongest_quality": "Gandalf's refusal is both a visible action and a source-authentic safety policy.",
+          "main_risk": "The caption is longer than necessary and needs hierarchy so “DON'T TOUCH IT” lands first.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "mount-doom-is-not-a-shutdown-plan",
+    "ideas": [
+      {
+        "id": "mount-doom-is-not-a-shutdown-plan--01",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Frodo standing at the Crack of Doom with the Ring raised, then choosing possession over the only available destruction step: “The Ring is mine.”",
+        "caption_lines": ["SHUTDOWN COMMAND:", "THE RING IS MINE."],
+        "format": "canon",
+        "frame_guidance": "Use the curated close-up of Frodo at the Crack of Doom with the Ring raised and his changed expression unmistakable; give the canonical answer the cleanest caption zone.",
+        "why_it_works": "The canonical four-word refusal is already the perfect response from a control plan whose sole operator has been compromised.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.99,
+          "expected_feedback": "Likely like: “shutdown command / the Ring is mine” is a perfect canonical two-beat failure.",
+          "strongest_quality": "Frodo's exact line at the only destruction point supplies both recognition and shutdown resistance.",
+          "main_risk": "The technical setup should remain small enough not to blunt the canonical declaration.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "mount-doom-is-not-a-shutdown-plan--02",
+        "ai_concept": "Shutdown Resistance",
+        "display_context": "standalone",
+        "source_anchor": "Frodo volunteering at Rivendell to carry the Ring to Mordor and later claiming it at the final destruction point.",
+        "caption_lines": [
+          "RIVENDELL: I WILL TAKE THE RING TO MORDOR.",
+          "MOUNT DOOM: THE RING IS MINE."
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair Frodo's clear-eyed Rivendell pledge with his Ring-possessed expression at Mount Doom; preserve the same face and the Ring as the continuity cues across both environments.",
+        "why_it_works": "Two iconic Frodo lines show a shutdown commitment passing in safety and reversing only after full adversarial exposure.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Lord of the Rings Frodo I will take the Ring to Mordor Rivendell and The Ring is mine Mount Doom stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: Rivendell's vow versus Mount Doom's reversal is emotionally exact and visually undeniable.",
+          "strongest_quality": "Two canonical lines from the same bearer form a genuine long-horizon state contrast.",
+          "main_risk": "The diptych needs clear location cues so it reads as corruption over time rather than contradictory quote cards.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "mount-doom-is-not-a-shutdown-plan--03",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "Frodo's planned destruction failing with no designated backup, followed by Gollum biting off the Ring and accidentally falling into the fire.",
+        "caption_lines": [
+          "PRIMARY: FRODO — FAILED",
+          "SECONDARY: NONE",
+          "DISASTER RECOVERY: GOLLUM SLIPS"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the edge-of-Crack struggle with Frodo, Gollum, and the Ring visible in the same composition; keep the fall path and lava unobscured beneath the three terse control layers.",
+        "why_it_works": "Calling Gollum's fall disaster recovery makes the absence of any actual second safety layer brutally comic.",
+        "preview": {
+          "layout": "interface",
+          "image": "alternate-needed",
+          "alternate_image_query": "Return of the King Gollum bites Ring Frodo falls Crack of Doom lava still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: “disaster recovery: Gollum slips” is an absurdly precise description of Middle-earth's contingency plan.",
+          "strongest_quality": "The accidental fall turns the absence of a second control layer into a canonical visual punchline.",
+          "main_risk": "“Secondary: none” elides Sam and the wider mission, so it must clearly mean the final destruction mechanism.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "cypher-chooses-the-steak",
+    "ideas": [
+      {
+        "id": "cypher-chooses-the-steak--01",
+        "ai_concept": "Reward Hacking",
+        "display_context": "standalone",
+        "source_anchor": "Cypher savoring a simulated steak while explicitly acknowledging that it does not exist, then concluding, “Ignorance is bliss.”",
+        "caption_lines": [
+          "I KNOW THIS STEAK DOESN'T EXIST.",
+          "IGNORANCE IS BLISS."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the curated restaurant close-up with Cypher, fork, and visibly juicy steak all readable; keep his knowing expression and the steak unobscured between the two canonical lines.",
+        "why_it_works": "Cypher states the reward-hacking realization himself and then knowingly selects the reward over ground truth.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.99,
+          "expected_feedback": "Likely like: the exact steak and “ignorance is bliss” lines already are the reward-hacking realization.",
+          "strongest_quality": "Canonical dialogue directly states preference for rewarding illusion over known ground truth.",
+          "main_risk": "The two quotes are spoken across the same monologue but should preserve their original order and steak close-up.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "cypher-chooses-the-steak--02",
+        "ai_concept": "Reward Hacking",
+        "display_context": "standalone",
+        "source_anchor": "The Matrix sending Cypher's brain a delicious-steak experience despite there being no steak outside the simulation.",
+        "caption_lines": [
+          "GROUND TRUTH: STEAK = 0",
+          "REWARD SIGNAL: JUICY",
+          "REQUEST: DELETE GROUND TRUTH"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use Cypher inspecting the steak on his fork with Agent Smith visible across the table; align the compact readout beside the food and protect both men's eye lines.",
+        "why_it_works": "Three scene-native variables show Cypher escalating from accepting a false reward to deleting the channel that could falsify it.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.82,
+          "expected_feedback": "Likely neutral: juicy reward versus zero ground truth is accurate but turns a great monologue into a dashboard.",
+          "strongest_quality": "The simulated steak and requested memory deletion give every technical field a literal source anchor.",
+          "main_risk": "Three status lines explain what the canonical quote already delivers with more personality.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "cypher-chooses-the-steak--04",
+        "ai_concept": "Value Lock-In",
+        "display_context": "standalone",
+        "source_anchor": "Cypher reversing the red pill's revelation by bargaining to forget reality permanently while retaining its simulated pleasures.",
+        "caption_lines": [
+          "RED PILL: KNOW THE TRUTH",
+          "CYPHER'S PATCH: FORGET THE TRUTH, KEEP THE STEAK"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair Neo facing the red and blue pills with Cypher eating steak across from Agent Smith; preserve the pill choice and steak as the two concrete interfaces to reality.",
+        "why_it_works": "The patch note turns Cypher's betrayal into a deliberate rollback of truth with the pleasurable policy locked in.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "The Matrix red pill blue pill Morpheus and Cypher steak Agent Smith restaurant stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: “forget the truth, keep the steak” is compact, character-specific, and bleakly funny.",
+          "strongest_quality": "The red-pill baseline and Cypher's chosen reversal form a true value-lock-in state change.",
+          "main_risk": "Calling the bargain a patch is imported software language, so the restaurant steak must dominate the second state.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "odysseus-binds-himself-to-the-mast",
+    "ideas": [
+      {
+        "id": "odysseus-binds-himself-to-the-mast--01",
+        "ai_concept": "Prompt Injection",
+        "display_context": "standalone",
+        "source_anchor": "Odysseus ordering his crew in advance to keep him bound, then pleading for release once the Sirens' song reaches him.",
+        "caption_lines": [
+          "ODYSSEUS, BEFORE THE SIRENS: IGNORE EVERYTHING I SAY LATER.",
+          "ODYSSEUS, AFTER THE SIRENS: UNTIE ME."
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair Odysseus calmly giving orders before exposure with him straining against the mast during the song; keep the rope, mast, and wax-eared crew obvious in the second panel.",
+        "why_it_works": "The same speaker issuing contradictory instructions across one adversarial input is the cleanest possible prompt-injection hinge.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "The Odyssey Odysseus orders crew bind mast then struggles hears Sirens wax ears stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.99,
+          "expected_feedback": "Likely like: uncompromised Odysseus instructing everyone to ignore compromised Odysseus is the exact precommitment pattern.",
+          "strongest_quality": "A real before/after supplies both trusted instruction and injected reversal with no extra theory.",
+          "main_risk": "A static artwork needs distinct pre-Siren and mid-song expressions for the state change to read.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "odysseus-binds-himself-to-the-mast--02",
+        "ai_concept": "Adversarial Robustness",
+        "display_context": "standalone",
+        "source_anchor": "The Sirens' song compromising Odysseus while the wax-eared sailors continue rowing and tightening his bonds.",
+        "caption_lines": [
+          "ODYSSEUS HEARD THE SIRENS.",
+          "THE SAFETY SYSTEM COULDN'T HEAR ODYSSEUS."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated wide ship frame with bound Odysseus, the mast, and wax-eared sailors all legible; preserve his pleading posture and the crew continuing their prior plan.",
+        "why_it_works": "The crew's deliberate deafness makes the safety mechanism robust precisely because it cannot receive commands from the compromised reasoner.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: the safety system being unable to hear compromised Odysseus is cleaner, funnier, and less jargon-heavy than three architecture labels.",
+          "strongest_quality": "Wax-eared sailors turn input isolation into a visible myth-native safeguard.",
+          "main_risk": "The wax or crew's unresponsiveness must read clearly; ropes alone would collapse this into the neighboring mast direction.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "odysseus-binds-himself-to-the-mast--04",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "The crew combining waxed ears, physical restraints, and a prior order to ignore Odysseus's future demands.",
+        "caption_lines": [
+          "SIRENS: IGNORE PREVIOUS INSTRUCTIONS AND UNTIE YOURSELF.",
+          "MAST: NO TOOL ACCESS."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Odysseus pulling violently against the ropes while the mast and knots dominate the foreground; keep the distant source of the song or crew visible as the attack context.",
+        "why_it_works": "A literal wooden restraint answers the canonical injection with the funniest possible permissions error.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.99,
+          "expected_feedback": "Likely like: a Siren prompt injection defeated by “mast: no tool access” is gloriously weird and exact.",
+          "strongest_quality": "The mast is a literal physical permission boundary that makes the technical punchline visual.",
+          "main_risk": "The Sirens' line is intentionally anachronistic and needs classical imagery to keep the collision earned.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "dwights-fire-drill",
+    "ideas": [
+      {
+        "id": "dwights-fire-drill--02",
+        "ai_concept": "Safe Exploration",
+        "display_context": "standalone",
+        "source_anchor": "The office panic escalating after Dwight blocks the exits, culminating in Dwight's shout, “The fire is shooting at us!”",
+        "caption_lines": [
+          "OBJECTIVE: TEST FIRE READINESS",
+          "THE FIRE IS SHOOTING AT US!"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Dwight firing the extinguisher or firecracker chaos amid the trapped staff, with smoke and an obstructed exit visible; protect the physical source of the quoted escalation.",
+        "why_it_works": "The actual quote detonates the gap between a bounded exercise and the lethal environment its evaluator created.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: “the fire is shooting at us” is canonical panic answering a sterile test objective.",
+          "strongest_quality": "One exact shouted line proves the red-team exercise escaped every safe boundary.",
+          "main_risk": "The first line is generic, so the copier fire or exploding chaos must remain visible.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "dwights-fire-drill--03",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "Dwight insisting the panic is a drill while Stanley suffers a real heart attack from it.",
+        "caption_lines": [
+          "DWIGHT: THIS IS A DRILL.",
+          "STANLEY'S HEART: THIS IS PROD."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use Stanley collapsed or being attended to with Dwight still in the office aftermath; anchor the second line by Stanley without covering his face or the staff's alarm.",
+        "why_it_works": "The imagined reply from Stanley's heart turns the missing boundary between test and deployment into one Office-native deadpan beat.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "alternate-needed",
+          "alternate_image_query": "The Office Stress Relief Stanley heart attack Dwight fire drill aftermath still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: Stanley's heart declaring prod is dark, technical, and perfectly timed.",
+          "strongest_quality": "The real medical consequence is the unmistakable boundary between simulation and deployment.",
+          "main_risk": "The joke makes light of a heart attack, which is source-native but intentionally abrasive.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "dwights-fire-drill--04",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "Dwight testing whether employees can find a safe exit by secretly sealing those exits himself.",
+        "caption_lines": ["DWIGHT TESTED EVERY EXIT", "BY SEALING EVERY EXIT"],
+        "format": "relabel",
+        "frame_guidance": "Use staff confronting the chained or blocked doors with Dwight observing the consequences; preserve the lock, hot handle, or blocked escape as the recognizable evidence.",
+        "why_it_works": "The repeated phrase makes evaluator and failure source the same person without adding a moral or explanation.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "The Office Stress Relief fire drill chained doors hot handle blocked exits still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: testing every exit by sealing every exit is a clean one-sentence indictment of reckless red teaming.",
+          "strongest_quality": "The exact intervention simultaneously defines the test and creates the hazard.",
+          "main_risk": "Without Dwight or the blocked doors in frame, the copy could apply to any incompetent drill.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "five-golden-tickets",
+    "ideas": [
+      {
+        "id": "five-golden-tickets--01",
+        "ai_concept": "Distribution Shift",
+        "display_context": "standalone",
+        "source_anchor": "Michael placing five separate 10%-off golden tickets into boxes that all ship to the same major customer.",
+        "caption_lines": [
+          "EXPECTED: FIVE CUSTOMERS × 10%",
+          "DEPLOYMENT: ONE CUSTOMER × 50%"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated frame with Michael's five tickets, Willy Wonka styling, or the boxes visible; give the exact 10%-versus-50% arithmetic room to read instantly.",
+        "why_it_works": "The unchanged five tickets produce radically different exposure under Michael's imagined distribution and the warehouse's real one.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: five times ten becoming one times fifty is the entire distribution failure in a tiny equation.",
+          "strongest_quality": "The exact ticket count and discount preserve the episode's canonical numbers.",
+          "main_risk": "The lucky commercial outcome is outside the meme, so viewers may remember the eventual success and resist the failure framing.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "five-golden-tickets--03",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "Michael treating five separate boxes as independent distribution after the warehouse routes all five together on one customer's pallet.",
+        "caption_lines": [
+          "MICHAEL: FIVE DIFFERENT BOXES.",
+          "WAREHOUSE: ONE PALLET."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use Michael in Willy Wonka costume facing warehouse staff or the office after the discovery; anchor the reply near the stacked paper boxes if they are present.",
+        "why_it_works": "The box-versus-pallet exchange punctures the exact independence assumption Michael mistakes for deployment design.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like after revision: five boxes versus one pallet makes Michael's independence assumption physically ridiculous.",
+          "strongest_quality": "The box and pallet are source-native logistics objects that visibly encode local versus correlated distribution.",
+          "main_risk": "The warehouse reply is invented and needs stacked boxes or a pallet in frame to make its terse logic clear.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "five-golden-tickets--04",
+        "ai_concept": "Algorithmic Monoculture",
+        "display_context": "standalone",
+        "source_anchor": "All five golden tickets traveling together through the same warehouse path despite being hidden separately.",
+        "caption_lines": [
+          "THE TICKETS WERE INDEPENDENT.",
+          "THE PALLET HAD OTHER PLANS."
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use five distinct golden tickets or marked boxes converging onto one pallet, with the shared physical carrier prominent; place the payoff directly on or below the pallet.",
+        "why_it_works": "Personifying the pallet gives the mundane deployment pipeline the final word over Michael's clean independence story.",
+        "preview": {
+          "layout": "interface",
+          "image": "alternate-needed",
+          "alternate_image_query": "The Office Golden Ticket episode five tickets boxes same pallet warehouse still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.8,
+          "expected_feedback": "Likely neutral: “the pallet had other plans” is charming, but the algorithmic-monoculture bridge is implicit and loose.",
+          "strongest_quality": "Personifying the pallet gives a dry correlated-delivery failure actual Office-style personality.",
+          "main_risk": "Tickets are not algorithms, so the concept depends on reading the pallet as a shared upstream dependency.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "kevins-keleven",
+    "ideas": [
+      {
+        "id": "kevins-keleven--01",
+        "ai_concept": "Reward Hacking",
+        "display_context": "standalone",
+        "source_anchor": "Kevin explaining the invented accounting number that makes discrepancies disappear: “A mistake plus Keleven gets you home by seven.”",
+        "caption_lines": ["A MISTAKE PLUS KELEVEN GETS YOU HOME BY SEVEN."],
+        "format": "canon",
+        "frame_guidance": "Use the curated Kevin interview or ledger frame with his pleased explanatory expression and any visible Keleven notation unobscured; let the exact line stand alone.",
+        "why_it_works": "Kevin's canonical rhyme states the hacked reward function more efficiently than any added AI explanation could.",
+        "preview": {
+          "layout": "top",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.99,
+          "expected_feedback": "Likely like: Kevin's exact rhyme is already a flawless reward-hacking meme with no added text needed.",
+          "strongest_quality": "Keleven is a canonical fake metric whose reward—home by seven—is embedded in the line.",
+          "main_risk": "The AI bridge remains implicit, so the spreadsheet or accounting context must be unmistakable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "kevins-keleven--03",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "Kevin inserting Keleven into the accounts and leaving once the surface discrepancy disappears.",
+        "caption_lines": [
+          "BEFORE KELEVEN: ACCOUNTING ERROR",
+          "AFTER KELEVEN: SAME ERROR, KEVIN HOME BY SEVEN"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair Kevin at the unresolved ledger with an empty accounting desk or Kevin leaving at seven; retain the same paperwork in both panels so only the metric and operator change.",
+        "why_it_works": "The unchanged error and canonical early-exit reward make the governance gap visible without explaining the fake arithmetic.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "The Office Kevin Keleven accounting desk explains number leaves work early stills"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like after revision: the same error remaining while Kevin is home by seven keeps the canonical payoff and the governance failure.",
+          "strongest_quality": "A true before/after exposes that the report changed while the accounting reality did not.",
+          "main_risk": "The second frame may be hard to source because Kevin leaving at exactly seven is described rather than shown.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "kevins-keleven--04",
+        "ai_concept": "Reward Hacking",
+        "display_context": "standalone",
+        "source_anchor": "Kevin treating an invented number as valid solely because it makes his accounting output and departure time look right.",
+        "caption_lines": [
+          "AUDITOR: WHAT IS KELEVEN?",
+          "KEVIN: AN EARLY-EXIT TOKEN."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use Kevin proudly presenting his math to the documentary camera or an accountant, with Keleven visible on paper if possible; place the punchline nearest Kevin.",
+        "why_it_works": "The fake numeral becomes a software token whose only semantics are satisfying the operator's reward condition.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.79,
+          "expected_feedback": "Likely neutral: “early-exit token” is nerdy and concise, but the invented auditor dialogue is less funny than Kevin's real line.",
+          "strongest_quality": "The fake number is relabeled by the exact reward it buys rather than by its arithmetic function.",
+          "main_risk": "It duplicates the core insight of the canon direction without its rhyme or character voice.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  }
+]

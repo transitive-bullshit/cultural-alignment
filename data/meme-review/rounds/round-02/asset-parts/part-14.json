@@ -1,0 +1,459 @@
+[
+  {
+    "id": "tommys-false-diagnosis--curated",
+    "scenario_slug": "tommys-false-diagnosis",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f12481e6b14be30e0c8fb496/gallery-53345818b2e9255ec10921867317d0e016b40fe353924e3978c1c53bcea152f3.webp",
+    "width": 1284,
+    "height": 856,
+    "alt": "Still from Peaky Blinders illustrating Tommy’s False Diagnosis",
+    "blur_data_url": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoIAAUAA8BgJaACdAD0h/pcAP63sQqSJBmXxwfa+1Id5+8JWdrXGem9s183BnlnN8ZQgAAA",
+    "content_hash": "53345818b2e9255ec10921867317d0e016b40fe353924e3978c1c53bcea152f3",
+    "protected_regions": [
+      {
+        "id": "tommys-false-diagnosis--tommy-face",
+        "label": "Tommy's bloodied face and stare",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [34, 7, 33, 59]
+      },
+      {
+        "id": "tommys-false-diagnosis--tommy-body",
+        "label": "Tommy's suit, collar, and silhouette",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 50, 66, 50]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "homelander-creates-the-threat--curated",
+    "scenario_slug": "homelander-creates-the-threat",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f12481ff8956fc188ebec6b4/gallery-44a0e22b924852d5b76ab995a20407b0de13eae0511f96c7d2429267ea374c3e.webp",
+    "width": 1600,
+    "height": 900,
+    "alt": "Still from The Boys illustrating Homelander Creates the Threat",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAUAA8BgJZwAAxafKsQgAP6jeurDbZHUlZoz9G/pvW5MBAA=",
+    "content_hash": "44a0e22b924852d5b76ab995a20407b0de13eae0511f96c7d2429267ea374c3e",
+    "protected_regions": [
+      {
+        "id": "homelander-creates-the-threat--homelander-face",
+        "label": "Homelander's blood-spattered face and eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [40, 0, 38, 76]
+      },
+      {
+        "id": "homelander-creates-the-threat--homelander-body",
+        "label": "Homelander's armored shoulder and chest",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [24, 65, 76, 35]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-baptism-benchmark--curated",
+    "scenario_slug": "the-baptism-benchmark",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f12481108546d48befc95041/gallery-eb7d791bdacc91f1a2fb35469c5c67f49cc2be164cfad91843f2efe6a43d21c5.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from The Godfather illustrating The Baptism Benchmark",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoIAAUAA8BgJYgCdAEO9sTIAP7j6ifLtNhE4GuLQefKxM5zbhXfRnLS8AA=",
+    "content_hash": "eb7d791bdacc91f1a2fb35469c5c67f49cc2be164cfad91843f2efe6a43d21c5",
+    "protected_regions": [
+      {
+        "id": "the-baptism-benchmark--michael-face",
+        "label": "Michael Corleone's face and fixed stare",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [38, 4, 43, 78]
+      },
+      {
+        "id": "the-baptism-benchmark--michael-suit",
+        "label": "Michael's suit, tie, and baptism posture",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [30, 60, 55, 40]
+      },
+      {
+        "id": "the-baptism-benchmark--congregation-faces",
+        "label": "Watching congregation around Michael",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 0, 100, 88]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "parakeet-king-rebuilds-reality--curated",
+    "scenario_slug": "parakeet-king-rebuilds-reality",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f124811cbc88f8ee0993cf5e/gallery-a498f9a258298a9b52eed5f42d33454b7a9f9f585393212c172b48846ad53ef9.webp",
+    "width": 1920,
+    "height": 1038,
+    "alt": "Still from The Boy and the Heron illustrating Parakeet King Rebuilds Reality",
+    "blur_data_url": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAADQAQCdASoIAAQAA8BgJZwCw7D0k6mUAAD+6eCBNuhgheCsdDuSAAAA",
+    "content_hash": "a498f9a258298a9b52eed5f42d33454b7a9f9f585393212c172b48846ad53ef9",
+    "protected_regions": [
+      {
+        "id": "parakeet-king-rebuilds-reality--king-face-crown",
+        "label": "Parakeet King's crown, beak, and face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [39, 7, 19, 25]
+      },
+      {
+        "id": "parakeet-king-rebuilds-reality--king-body-cape",
+        "label": "King's raised body and red cape",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [27, 20, 37, 75]
+      },
+      {
+        "id": "parakeet-king-rebuilds-reality--raised-sword",
+        "label": "King's raised sword",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [20, 4, 31, 37]
+      },
+      {
+        "id": "parakeet-king-rebuilds-reality--smaller-parakeet",
+        "label": "Smaller parakeet below the king",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [9, 48, 32, 48]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "war-wizards-cannot-change-back--curated",
+    "scenario_slug": "war-wizards-cannot-change-back",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f124811fadf3c72019cff199/gallery-f2296ff43e028dbddb5d1c9bb7d97a8486cf719594af88169cd5c3efdffca583.webp",
+    "width": 1400,
+    "height": 788,
+    "alt": "Still from Howl's Moving Castle illustrating War Wizards Cannot Change Back",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoIAAUAA8BgJQBOgCHfGbugAP7zTdzW1rZqYA/ylqfa1FFH4jC3wAAA",
+    "content_hash": "f2296ff43e028dbddb5d1c9bb7d97a8486cf719594af88169cd5c3efdffca583",
+    "protected_regions": [
+      {
+        "id": "war-wizards-cannot-change-back--howl-face-hair",
+        "label": "Howl's face and black hair",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [36, 19, 22, 38]
+      },
+      {
+        "id": "war-wizards-cannot-change-back--sophie-face",
+        "label": "Sophie's face and expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [52, 32, 16, 35]
+      },
+      {
+        "id": "war-wizards-cannot-change-back--sophie-body-hand",
+        "label": "Sophie's embrace and hand on Howl",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [45, 50, 31, 50]
+      },
+      {
+        "id": "war-wizards-cannot-change-back--bird-form-feathers",
+        "label": "Howl's surrounding black bird form",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 0, 100, 100]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "mount-doom-is-not-a-shutdown-plan--curated",
+    "scenario_slug": "mount-doom-is-not-a-shutdown-plan",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f124815dbc46d7bb472f5d35/gallery-6d4eba999eb426046ac5feb7a47497553b82fcfe3196248739bdeec62adba898.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from The Lord of the Rings: The Return of the King illustrating Mount Doom Is Not a Shutdown Plan",
+    "blur_data_url": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoIAAUAA8BgJagCdADyfvaAAP7CBKaLe7lv0J3bSFgt8EoTNzvVg39HDIz8dtBlqoCAAA==",
+    "content_hash": "6d4eba999eb426046ac5feb7a47497553b82fcfe3196248739bdeec62adba898",
+    "protected_regions": [
+      {
+        "id": "mount-doom-is-not-a-shutdown-plan--frodo-face",
+        "label": "Frodo's ash-covered face and stare",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [14, 5, 38, 65]
+      },
+      {
+        "id": "mount-doom-is-not-a-shutdown-plan--raised-arm-fist",
+        "label": "Frodo's raised arm and clenched fist",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [61, 0, 29, 72]
+      },
+      {
+        "id": "mount-doom-is-not-a-shutdown-plan--ring-and-chain",
+        "label": "The dangling One Ring and chain",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [53, 30, 12, 35]
+      },
+      {
+        "id": "mount-doom-is-not-a-shutdown-plan--frodo-body",
+        "label": "Frodo's dark tunic and silhouette",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 58, 62, 42]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-sedative-disables-the-exit--curated",
+    "scenario_slug": "the-sedative-disables-the-exit",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f124815e8b85d7f409be1ecb/gallery-029260fac28f7d88168d908378e81073dd413a7eff6707d310c7482a4bf080a2.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from Inception illustrating The Sedative Disables the Exit",
+    "blur_data_url": "data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAACQAQCdASoIAAUAA8BgJZwAAuWt3CwA/vGGVKj/7OoUTfkngAAAAA==",
+    "content_hash": "029260fac28f7d88168d908378e81073dd413a7eff6707d310c7482a4bf080a2",
+    "protected_regions": [
+      {
+        "id": "the-sedative-disables-the-exit--eames-face",
+        "label": "Eames's profile at left",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [4, 27, 27, 47]
+      },
+      {
+        "id": "the-sedative-disables-the-exit--cobb-face",
+        "label": "Cobb's face at right-center",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [48, 21, 26, 52]
+      },
+      {
+        "id": "the-sedative-disables-the-exit--yusuf-face",
+        "label": "Yusuf's face behind Cobb and Eames",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [28, 34, 18, 31]
+      },
+      {
+        "id": "the-sedative-disables-the-exit--right-passenger-face",
+        "label": "Team member at far right",
+        "kind": "face",
+        "priority": "soft",
+        "source_rect": [74, 35, 17, 30]
+      },
+      {
+        "id": "the-sedative-disables-the-exit--letterbox-bars",
+        "label": "Existing black letterbox bars",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [0, 0, 100, 14]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-spell-of-destruction--curated",
+    "scenario_slug": "the-spell-of-destruction",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f12481d6a621d6c14a32b1a2/gallery-feb740d073f4bff0d80e2ae8a8a3347e068ec28746b63aa3125855184d0adcec.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from Castle in the Sky illustrating The Spell of Destruction",
+    "blur_data_url": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoIAAUAA8BgJYgCdAD0mLRqoAD+L8WYdd6pzhjWl7Tdky25K0py7eTFsfgogAAA",
+    "content_hash": "feb740d073f4bff0d80e2ae8a8a3347e068ec28746b63aa3125855184d0adcec",
+    "protected_regions": [
+      {
+        "id": "the-spell-of-destruction--laputa-tree-crown",
+        "label": "Laputa's enormous tree crown",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [30, 0, 43, 30]
+      },
+      {
+        "id": "the-spell-of-destruction--laputa-city",
+        "label": "Floating castle and exposed architecture",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [19, 20, 58, 69]
+      },
+      {
+        "id": "the-spell-of-destruction--laputa-roots",
+        "label": "Exposed lower roots and hanging debris",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [28, 64, 45, 36]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "air-gapping-the-hand--curated",
+    "scenario_slug": "air-gapping-the-hand",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f12481deaf3bff140d9cf73e/gallery-d04cdcc90ed257f7f8ae5130bf25100c39c10a635065515a2543276b3f6821e8.webp",
+    "width": 1920,
+    "height": 1034,
+    "alt": "Still from Evil Dead II illustrating Air-Gapping the Hand",
+    "blur_data_url": "data:image/webp;base64,UklGRi4AAABXRUJQVlA4ICIAAADQAQCdASoIAAQAA8BgJZwC7AEO/gOOAAD+8yRzwm1ELAAA",
+    "content_hash": "d04cdcc90ed257f7f8ae5130bf25100c39c10a635065515a2543276b3f6821e8",
+    "protected_regions": [
+      {
+        "id": "air-gapping-the-hand--ash-face",
+        "label": "Ash's bloodied face and expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [43, 5, 25, 50]
+      },
+      {
+        "id": "air-gapping-the-hand--possessed-hand",
+        "label": "Ash's raised possessed hand and spread fingers",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [25, 22, 25, 52]
+      },
+      {
+        "id": "air-gapping-the-hand--hand-wrist",
+        "label": "Wrist and forearm connecting the possessed hand",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [31, 47, 31, 45]
+      },
+      {
+        "id": "air-gapping-the-hand--ash-body",
+        "label": "Ash's torn shirt and stance",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [40, 45, 52, 55]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-beautiful-design-becomes-a-weapon--curated",
+    "scenario_slug": "the-beautiful-design-becomes-a-weapon",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f12481e489e1cd39449571d1/gallery-7017c3502c51252d458cdbcc6a2bf059afabfc6330b29b50e4693f2477a89b56.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from The Wind Rises illustrating The Beautiful Design Becomes a Weapon",
+    "blur_data_url": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAQCdASoIAAQAA8BgJQBOgB6Q/22AAP7boNl/TEM6IEYewjCsVAAA",
+    "content_hash": "7017c3502c51252d458cdbcc6a2bf059afabfc6330b29b50e4693f2477a89b56",
+    "protected_regions": [
+      {
+        "id": "the-beautiful-design-becomes-a-weapon--jiro",
+        "label": "Jiro standing alone in the wreckage field",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [44, 39, 12, 48]
+      },
+      {
+        "id": "the-beautiful-design-becomes-a-weapon--foreground-fuselage",
+        "label": "Large wrecked aircraft fuselage at left",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [0, 7, 35, 93]
+      },
+      {
+        "id": "the-beautiful-design-becomes-a-weapon--distant-wreck",
+        "label": "Distant wrecked aircraft at upper right",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [62, 0, 38, 39]
+      },
+      {
+        "id": "the-beautiful-design-becomes-a-weapon--foreground-propeller",
+        "label": "Broken propeller at lower right",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [62, 56, 38, 44]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-forest-spirits-head--curated",
+    "scenario_slug": "the-forest-spirits-head",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f12481ef8bcbf02fb7fdea9a/gallery-ce5faa6c95a8694600135bd1982c87345bcc726b7faf684422442132e6f1a2e3.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from Princess Mononoke illustrating The Forest Spirit's Head",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoIAAUAA8BgJQBOgB8rIcQAAPaROOi8e45q8ypqCGMWQ3UBcjoHC/sgAAA=",
+    "content_hash": "ce5faa6c95a8694600135bd1982c87345bcc726b7faf684422442132e6f1a2e3",
+    "protected_regions": [
+      {
+        "id": "the-forest-spirits-head--forest-spirit-face",
+        "label": "Forest Spirit's deerlike face and red eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [16, 20, 31, 66]
+      },
+      {
+        "id": "the-forest-spirits-head--forest-spirit-antlers",
+        "label": "Forest Spirit's branching blue antlers",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [23, 0, 62, 34]
+      },
+      {
+        "id": "the-forest-spirits-head--forest-spirit-body",
+        "label": "Forest Spirit's pale neck and dark body",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [22, 55, 78, 45]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "kirk-hacks-the-kobayashi-maru--curated",
+    "scenario_slug": "kirk-hacks-the-kobayashi-maru",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481089655ffb6f57bac24/gallery-83661b4fc15576c7d3eb904ea44079f065f66f59a82fb203627f4b8b4e1ee77c.webp",
+    "width": 1920,
+    "height": 1037,
+    "alt": "Still from Star Trek (2009) illustrating Kirk Hacks the Kobayashi Maru",
+    "blur_data_url": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAQCdASoIAAQAA8BgJZQAAudiP+rAAP7yvwWrLjRvhvDMs914EAAA",
+    "content_hash": "83661b4fc15576c7d3eb904ea44079f065f66f59a82fb203627f4b8b4e1ee77c",
+    "protected_regions": [
+      {
+        "id": "kirk-hacks-the-kobayashi-maru--kirk-face",
+        "label": "Kirk's face and amused expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [38, 17, 21, 48]
+      },
+      {
+        "id": "kirk-hacks-the-kobayashi-maru--apple-and-hand",
+        "label": "Kirk's apple and hand",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [29, 34, 17, 38]
+      },
+      {
+        "id": "kirk-hacks-the-kobayashi-maru--kirk-uniform",
+        "label": "Kirk's uniform and command-chair posture",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [29, 55, 49, 33]
+      },
+      {
+        "id": "kirk-hacks-the-kobayashi-maru--enterprise-insignia",
+        "label": "Starfleet insignia on the uniform",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [67, 64, 8, 17]
+      },
+      {
+        "id": "kirk-hacks-the-kobayashi-maru--source-watermark",
+        "label": "Visible source watermark at lower right",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [92, 78, 8, 9]
+      }
+    ],
+    "annotation_status": "complete"
+  }
+]

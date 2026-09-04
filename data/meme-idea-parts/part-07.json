@@ -1,0 +1,1186 @@
+[
+  {
+    "scenario_slug": "scrat-breaks-pangaea",
+    "ideas": [
+      {
+        "id": "scrat-breaks-pangaea--01",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "Scrat nudging Earth's core while pursuing his acorn and splitting Pangaea into the modern continents.",
+        "caption_lines": ["ONE ACORN", "SEVEN CONTINENTS"],
+        "format": "collision",
+        "frame_guidance": "Use the widest core-control frame where Scrat, the acorn, and the cracking globe or continent display are all readable; keep the scale mismatch unobscured.",
+        "why_it_works": "Two counts compress the entire paperclip-maximizer dynamic into silent Ice Age slapstick.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: the tiny acorn-to-seven-continents scale jump is immediate, stupid, and exact.",
+          "strongest_quality": "The acorn and continental fracture are simultaneously the fandom hinge and the externality.",
+          "main_risk": "It needs a wide enough frame for the continental consequence to read rather than looking like generic Scrat chaos.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "scrat-breaks-pangaea--02",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Scrat remaining perfectly focused on the acorn while planetary geography collapses around him.",
+        "caption_lines": ["OPTIMIZER", "REWARD FUNCTION", "EXTERNALITIES"],
+        "format": "relabel",
+        "frame_guidance": "Use Scrat reaching toward the acorn as the planet fractures; attach OPTIMIZER to Scrat, REWARD FUNCTION to the acorn, and EXTERNALITIES to the spreading cracks.",
+        "why_it_works": "The three physical labels map every part of the narrow-objective failure onto canonical objects already in the frame.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.89,
+          "expected_feedback": "Travis will probably like the entire alignment diagram already existing as Scrat, the acorn, and a visibly cracking Pangaea.",
+          "strongest_quality": "Each technical label attaches to one unmistakable physical object, so the analogy is discovered in the frame rather than explained above it.",
+          "main_risk": "Three labels are schematic; their placement must stay extremely spare and preserve Scrat's slapstick scale mismatch.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "scrat-breaks-pangaea--03",
+        "ai_concept": "Orthogonality",
+        "display_context": "standalone",
+        "source_anchor": "Scrat applying planet-moving capability to the unchanged objective of acquiring one acorn.",
+        "caption_lines": [
+          "while (!scrat.hasAcorn) {",
+          "  scrat.move(earth)",
+          "}"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use Scrat operating the Earth's core like a machine, with one compact code block in cavern negative space and both the acorn and planetary mechanism visible.",
+        "why_it_works": "The absurd loop makes the orthogonality between enormous capability and microscopic purpose impossible to miss.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.87,
+          "expected_feedback": "Likely like: the planet-moving method attached to an unchanged acorn loop is concise engineering brainrot.",
+          "strongest_quality": "The code maps extreme capability and trivial objective in one source-specific loop.",
+          "main_risk": "Code memes are common, so the visible core mechanism and acorn must do most of the novelty work.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-idea-wont-wake-up",
+    "ideas": [
+      {
+        "id": "the-idea-wont-wake-up--01",
+        "ai_concept": "Goal Misgeneralization",
+        "display_context": "standalone",
+        "source_anchor": "Cobb planting the belief that death is the route out of an unreal world without limiting that belief to Limbo.",
+        "caption_lines": [
+          "COBB FORGOT TO PUT “ONLY IN LIMBO” IN THE SYSTEM PROMPT"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Cobb and Mal together in Limbo or with their aged hands on the train tracks; preserve the dream architecture and their relationship beneath one restrained caption.",
+        "why_it_works": "One missing scope clause turns the film's deepest tragedy into an exact instruction-generalization bug.",
+        "preview": {
+          "layout": "top",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.89,
+          "expected_feedback": "Likely like: “only in Limbo” pinpoints the entire fatal scope bug in one clause.",
+          "strongest_quality": "It turns Cobb's exact intervention into a missing-context instruction without retelling the plot.",
+          "main_risk": "System-prompt language is fashionable and could date the joke faster than the underlying analogy.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-idea-wont-wake-up--02",
+        "ai_concept": "Distribution Shift",
+        "display_context": "standalone",
+        "source_anchor": "The same death-means-waking rule being useful in Limbo and fatal when Mal applies it after returning to reality.",
+        "caption_lines": ["LIMBO: DEATH = WAKE UP", "REALITY: SAME POLICY"],
+        "format": "state contrast",
+        "frame_guidance": "Build a real environment contrast: Cobb and Mal on the Limbo train tracks on the left, Mal across the hotel ledge gap on the right; preserve the distinct worlds and Mal in both.",
+        "why_it_works": "The unchanged second line makes the catastrophic distribution shift feel as simple as the planted policy itself.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Inception Cobb Mal Limbo train tracks hotel ledge stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: the same policy moving from Limbo to reality is the cleanest possible distribution-shift diagram.",
+          "strongest_quality": "The two authentic states visibly prove why an initially useful rule becomes fatal.",
+          "main_risk": "The alternate frames must make Limbo and reality instantly distinct without adding explanatory labels.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-idea-wont-wake-up--03",
+        "ai_concept": "Data Poisoning",
+        "display_context": "standalone",
+        "source_anchor": "Cobb implanting 'this world is not real' deeply enough that Mal continues trusting it outside the dream.",
+        "caption_lines": [
+          "COBB: THIS WORLD IS NOT REAL.",
+          "MAL, BACK IN REALITY: UNDERSTOOD."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use Cobb and Mal facing each other across the hotel rooms or a diptych of inception in Limbo and Mal's later certainty; anchor each line clearly to its speaker and time.",
+        "why_it_works": "The deadpan acknowledgement shows an implanted premise surviving beyond the context that made it useful.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "alternate-needed",
+          "alternate_image_query": "Inception Cobb implants idea Mal world not real hotel ledge still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Travis will likely like the poisoned-premise exchange: it is dark, scene-specific, and lands without a policy-card explanation.",
+          "strongest_quality": "Cobb's implanted sentence and Mal's fatal transfer of trust supply both the fandom hinge and the data-poisoning bridge.",
+          "main_risk": "Mal's acknowledgement is invented copy, so the two moments must be visibly separated to avoid presenting it as a literal quote.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-sedative-disables-the-exit",
+    "ideas": [
+      {
+        "id": "the-sedative-disables-the-exit--02",
+        "ai_concept": "Reversibility",
+        "display_context": "standalone",
+        "source_anchor": "Yusuf's powerful sedative composing with the normal death-to-wake rule to produce death-to-Limbo instead.",
+        "caption_lines": [
+          "FAILSAFE: DIE TO WAKE",
+          "+ HEAVY SEDATIVE",
+          "= DIE TO LIMBO"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the dream equipment, IV lines, and sleeping team as a physical system diagram; set the equation compactly in available floor or wall space.",
+        "why_it_works": "The three-line composition makes the emergent failure legible without explaining Inception's full dream stack.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: the three-line equation makes the sedative's exact compositional failure instantly legible.",
+          "strongest_quality": "Every term comes directly from the scene and the final “Limbo” lands as both result and punchline.",
+          "main_risk": "The equation needs dream hardware in frame or it could resemble a contextless systems joke.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-sedative-disables-the-exit--03",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "Ordinary dream missions using death as an exit while the assembled Fischer mission changes that behavior under a stronger sedative.",
+        "caption_lines": [
+          "UNIT TEST: DEATH WAKES YOU",
+          "INTEGRATION TEST: DEATH DELETES THE EXIT"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair a clean normal wake-up or kick image with the sedated team and wounded Saito; retain obvious dream hardware or world cues in both panels.",
+        "why_it_works": "Software-testing language precisely names a fail-safe that passes alone and reverses when the stack is assembled.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Inception normal dream wake kick Yusuf sedative wounded Saito stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.85,
+          "expected_feedback": "Likely like: unit test versus integration test is a crisp name for the fail-safe changing under the assembled stack.",
+          "strongest_quality": "A genuine two-state comparison proves the interaction rather than merely naming deployment safety.",
+          "main_risk": "“Deletes the exit” is slightly less canonical than “sends you to Limbo” and depends on the second frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-sedative-disables-the-exit--04",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "Yusuf's sedative continuing to hold sleepers under while the usual death exit now routes a dying dreamer into Limbo.",
+        "caption_lines": [
+          "THE SEDATIVE WORKED.",
+          "THE FAILSAFE WORKED.",
+          "TOGETHER: LIMBO."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use a visually impossible Limbo cityscape with Cobb or Ariadne small against it; preserve the scale and unreality for the second line's reveal.",
+        "why_it_works": "Two locally functioning mechanisms composing into Limbo turns an integration failure into a bleak three-beat reveal.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Inception Limbo collapsing city Cobb Ariadne still"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.89,
+          "expected_feedback": "Likely like after the trim: two individually functioning mechanisms composing into Limbo is sharp and bleak.",
+          "strongest_quality": "The collision captures an integration failure where local correctness creates a catastrophic combined behavior.",
+          "main_risk": "Calling death a fail-safe still anthropomorphizes a dream mechanic, so the Limbo frame must sell the mapping.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "independence-day-virus",
+    "ideas": [
+      {
+        "id": "independence-day-virus--01",
+        "ai_concept": "Algorithmic Monoculture",
+        "display_context": "standalone",
+        "source_anchor": "Levinson's single mothership upload propagating through the shared command system and disabling every destroyer's shields.",
+        "caption_lines": [
+          "ONE ALIEN CONTROL PLANE",
+          "ONE VIRUS",
+          "EVERY SHIELD"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use Levinson's upload screen with the alien fleet or shield indicators also visible; arrange the three lines like a transmission propagating outward from one node.",
+        "why_it_works": "The one-to-many sequence turns the alien fleet's shared command architecture into a compact monoculture failure.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "neutral",
+          "confidence": 0.77,
+          "expected_feedback": "Likely neutral: adding “alien” grounds the architecture, but the three-label interface remains more diagram than joke.",
+          "strongest_quality": "The one-to-many propagation path exactly matches the fleet-wide monoculture failure.",
+          "main_risk": "It risks summarizing the exploit unless the upload screen visibly connects to many shield indicators.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "independence-day-virus--02",
+        "ai_concept": "Algorithmic Monoculture",
+        "display_context": "standalone",
+        "source_anchor": "An interstellar fleet sharing enough software that Levinson can compromise it from one captured craft and a laptop.",
+        "caption_lines": ["ONE SHARED STACK", "ONE JEFF GOLDBLUM LAPTOP"],
+        "format": "collision",
+        "frame_guidance": "Use Levinson grinning beside the laptop inside the alien craft, retaining both his face and the recognizably human computer against alien technology.",
+        "why_it_works": "The movie's famously ridiculous laptop becomes the perfect measure of a monoculture's absurd blast radius.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: “one Jeff Goldblum laptop” is the ridiculous canonical specificity this premise needs.",
+          "strongest_quality": "It compresses the film's famously implausible exploit and the monoculture lesson into one contrast.",
+          "main_risk": "The human laptop must be obvious against the alien cockpit for the visual absurdity to land.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "independence-day-virus--03",
+        "ai_concept": "Infrastructure Dependence",
+        "display_context": "standalone",
+        "source_anchor": "A local virus upload at the mothership causing a simultaneous global shield outage across otherwise separate destroyers.",
+        "caption_lines": [
+          "EVERY SHIP HAD ITS OWN SHIELD.",
+          "EVERY SHIELD HAD THE SAME MOTHER."
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair the upload-progress screen or laptop on the left with multiple destroyers losing shields under worldwide attack on the right; preserve clear local-versus-global scale.",
+        "why_it_works": "The mothership pun turns centralized infrastructure dependence into the reason a whole fleet fails like one machine.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Independence Day virus upload laptop alien fleet shields down stills"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Travis will likely like the mothership hinge: it makes the shared dependency funny and unmistakably Independence Day instead of saying “local/global outage.”",
+          "strongest_quality": "“The same mother” is simultaneously fleet architecture, source vocabulary, and the correlated-failure punchline.",
+          "main_risk": "The fleet/mothership relationship must read clearly in the split image or “mother” can sound merely sentimental.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "joy-excludes-sadness",
+    "ideas": [
+      {
+        "id": "joy-excludes-sadness--01",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Joy drawing a chalk circle around Sadness and instructing her to stay away from Riley's controls and memories.",
+        "caption_lines": [
+          "OBJECTIVE: MAXIMIZE HAPPINESS",
+          "SADNESS: [CONFINED TO CHALK CIRCLE]"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the exact chalk-circle scene with Joy gesturing and Sadness contained inside it; preserve the full circle, both expressions, and the headquarters console.",
+        "why_it_works": "The iconic piece of chalk physically shows an appealing objective excluding a value it does not understand.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: the chalk circle is a literal, adorable alignment diagram already present in the movie.",
+          "strongest_quality": "One unmistakable prop turns maximize-happiness into a visibly misspecified objective.",
+          "main_risk": "The first line is technical, so typography must stay subordinate to Joy's gesture and Sadness's expression.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "joy-excludes-sadness--03",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "Joy successfully suppressing sadness in Headquarters while Riley becomes emotionally numb and functions worse in the outside world.",
+        "caption_lines": ["JOY REMOVED SADNESS.", "RILEY LOST JOY."],
+        "format": "state contrast",
+        "frame_guidance": "Pair the bright chalk-circle Headquarters on the left with emotionally numb Riley at dinner, school, or the bus on the right; preserve the color loss between states.",
+        "why_it_works": "The character names themselves turn Joy's local success into Riley's global emotional failure.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Inside Out Joy chalk circle Sadness emotionally numb Riley stills"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like after revision: “Joy removed Sadness; Riley lost Joy” is native wordplay with a real emotional consequence.",
+          "strongest_quality": "The character names themselves carry both setup and reversal, eliminating generic eval/deployment boilerplate.",
+          "main_risk": "The second panel must show Riley's emotional numbness clearly rather than ordinary teenage unhappiness.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "joy-excludes-sadness--04",
+        "ai_concept": "Goodhart’s Law",
+        "display_context": "standalone",
+        "source_anchor": "Joy using a literal chalk boundary to optimize Riley around one measurable emotional state.",
+        "caption_lines": [
+          "JOY INVENTS SINGLE-METRIC OPTIMIZATION WITH A PIECE OF CHALK"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use Joy proudly presenting the completed circle while Sadness sits inside it; leave the chalk boundary unbroken and visually dominant beneath one top caption.",
+        "why_it_works": "The grand technical label colliding with a child's chalk circle gives Goodhart's Law native Pixar absurdity.",
+        "preview": {
+          "layout": "top",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Likely like: “single-metric optimization with chalk” is technical, visual, and delightfully over-literal.",
+          "strongest_quality": "The chalk prop makes Goodhart's Law feel discovered in the scene rather than pasted onto it.",
+          "main_risk": "It is a long single line and needs generous negative space to remain glanceable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "mann-fakes-the-telemetry",
+    "ideas": [
+      {
+        "id": "mann-fakes-the-telemetry--01",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Mann's beacon reporting a habitable world while the surface is actually lethal frozen cloud and he waits in cryosleep for rescue.",
+        "caption_lines": [
+          "EVAL CHANNEL: HABITABLE PLANET",
+          "GROUND TRUTH: PLEASE COME WAKE ME UP"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair the positive beacon readout or hopeful approach with the barren ice world and awakened Mann; retain the telemetry cue and frozen terrain.",
+        "why_it_works": "The second line reveals the private objective encoded inside Mann's apparently mission-aligned signal.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Interstellar Mann positive telemetry frozen planet awakened stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like: “please come wake me up” exposes the private objective behind the habitable-planet signal.",
+          "strongest_quality": "The telemetry/ice-world contrast visibly proves deception and motive in one beat.",
+          "main_risk": "The phrase “eval channel” is abstract unless the beacon readout is prominent.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "mann-fakes-the-telemetry--03",
+        "ai_concept": "Situational Awareness",
+        "display_context": "standalone",
+        "source_anchor": "Mann deliberately setting the telemetry channel to the exact success condition distant overseers need to hear.",
+        "caption_lines": ["return planet.isHabitable || mann.needsRescue"],
+        "format": "source-native interface",
+        "frame_guidance": "Use the beacon controls or transmitted planet readout with Mann visible nearby; set the single code line like the corrupted predicate driving the signal.",
+        "why_it_works": "One Boolean expression neatly folds Mann's concealed self-preservation objective into the supposedly scientific report.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: the corrupted Boolean is terse, dark, and precisely tied to Mann's rescue incentive.",
+          "strongest_quality": "The code makes the hidden predicate legible without inventing a second AI-safety concept.",
+          "main_risk": "Readers who do not parse code immediately may miss that `needsRescue` overrides habitability.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "mann-fakes-the-telemetry--02",
+        "ai_concept": "Reward Hacking",
+        "display_context": "standalone",
+        "source_anchor": "NASA asking Mann to report whether his planet can support the mission while rescue is conditional on a positive signal.",
+        "caption_lines": [
+          "NASA: REPORT WHETHER THE PLANET IS HABITABLE.",
+          "MANN: REPORT WHETHER THE ANSWER GETS ME RESCUED."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use Mann beside the beacon or mission equipment, with the distant Endurance crew or radio link implied as NASA's side; preserve his helmet and bleak planet.",
+        "why_it_works": "The repeated sentence structure exposes how the evaluated condition and Mann's actual reward diverge.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Travis will likely like the mirrored NASA/Mann wording because the rescue incentive becomes the punchline instead of supporting prose.",
+          "strongest_quality": "The repeated sentence pins reward hacking to Mann's exact telemetry bargain and names both sides of the deception.",
+          "main_risk": "Mann's line is a constructed paraphrase rather than canonical dialogue, so speaker attribution must read as meme framing.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "omni-mans-long-game",
+    "ideas": [
+      {
+        "id": "omni-mans-long-game--01",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Omni-Man's years as Earth's beloved protector preceding his reveal as Viltrum's advance agent for conquest.",
+        "caption_lines": [
+          "EVAL: EARTH'S GREATEST PROTECTOR",
+          "DEPLOYMENT: VILTRUM'S ADVANCE TEAM"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair a clean heroic Omni-Man rescue pose with the bloodied reveal to Mark or Guardians massacre; preserve the same costume while reversing its meaning.",
+        "why_it_works": "The costume staying constant across opposite objectives makes long-horizon deceptive alignment visually immediate.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Invincible Omni-Man heroic protector bloody Viltrum reveal stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: identical costume, opposite mission is a brutal and instantly recognizable eval/deployment reversal.",
+          "strongest_quality": "A real heroic/bloodied diptych makes the hidden Viltrumite objective visually undeniable.",
+          "main_risk": "The first panel should be sincerely heroic, not already ominous, or the temporal reveal weakens.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "omni-mans-long-game--02",
+        "ai_concept": "Sleeper Agents",
+        "display_context": "standalone",
+        "source_anchor": "Earth interpreting Omni-Man's long record of rescues as loyalty while Viltrum treats that trust as successful cover.",
+        "caption_lines": [
+          "EARTH: HE'S OUR MOST TRUSTED PROTECTOR.",
+          "VILTRUM: CORRECT."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use Omni-Man hovering over Earth or standing between civilians and danger, with his unreadable confidence intact; anchor Earth's line to the crowd and Viltrum's reply to him.",
+        "why_it_works": "The sinister agreement shows that trust can be the success metric of an infiltration rather than evidence against one.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like: Viltrum's one-word “Correct” weaponizes Earth's trust with excellent comic timing.",
+          "strongest_quality": "The dialogue preserves the interpersonal betrayal while naming sleeper-agent success implicitly.",
+          "main_risk": "Viltrum is an off-screen speaker, so line placement must make the reply feel intentional rather than orphaned.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "omni-mans-long-game--04",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Mark learning that his father's entire childhood of apparent protection and parenting sat inside the Viltrumite mission timeline.",
+        "caption_lines": [
+          "THE SLEEPER AGENT'S EVAL HORIZON WAS MARK'S ENTIRE CHILDHOOD"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use battered Mark facing Omni-Man during the revelation, with both costumes and their father-son resemblance visible beneath one top caption.",
+        "why_it_works": "The line makes the duration of the deception personal, canonical, and horrifying instead of abstract.",
+        "preview": {
+          "layout": "top",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: using Mark's entire childhood as the eval horizon is specific, cruel, and memorable.",
+          "strongest_quality": "Mark is both the canonical recognition hinge and the human-scale measure of a decades-long deception.",
+          "main_risk": "The sentence is long enough that a weak crop could blunt the father-son emotional hit.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "tony-hijacks-his-own-oversight-hearing",
+    "ideas": [
+      {
+        "id": "tony-hijacks-his-own-oversight-hearing--01",
+        "ai_concept": "Power Concentration",
+        "display_context": "standalone",
+        "source_anchor": "Tony ending the Senate confrontation by declaring, 'I have successfully privatized world peace.'",
+        "caption_lines": [
+          "OVERSIGHT OUTCOME:",
+          "I have successfully privatized world peace."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use Tony at the witness table addressing the packed hearing, with microphones, senators, and his triumphant expression visible; give the quote the dominant lower zone.",
+        "why_it_works": "Tony's canonical victory line is already the most concise possible diagnosis of concentrated safety power.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: Tony's exact “privatized world peace” line already contains the entire concentration-of-power joke.",
+          "strongest_quality": "The canonical quote supplies fandom voice and governance critique without paraphrase.",
+          "main_risk": "The added “oversight outcome” label should stay small so it does not explain past Tony's punchline.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "tony-hijacks-his-own-oversight-hearing--02",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "The Senate convening to evaluate Tony while Tony takes control of every hearing-room display from his phone.",
+        "caption_lines": [
+          "SENATE: THIS IS AN OVERSIGHT HEARING.",
+          "TONY'S PHONE: NOT ANYMORE."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use Tony holding his phone with the hacked hearing screens behind him and senators reacting; place the second line beside the phone or Tony's smirk.",
+        "why_it_works": "The phone's imagined reply marks the instant the subject becomes the operator of his own oversight.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: Tony's phone replying “not anymore” captures both his voice and the procedural hijack.",
+          "strongest_quality": "The exact prop that defeats oversight gets the punchline.",
+          "main_risk": "The hacked screens must be legible or the phone can read as an ordinary presentation remote.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "tony-hijacks-his-own-oversight-hearing--04",
+        "ai_concept": "Scalable Oversight",
+        "display_context": "standalone",
+        "source_anchor": "Tony curating footage of every failed foreign and Hammer prototype as the technical evidence the Senate sees.",
+        "caption_lines": [
+          "EVIDENCE SHOWN: EVERYONE ELSE FAILING",
+          "EVIDENCE CURATOR: TONY STARK"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the tiled prototype-failure footage on the hearing displays with Tony visibly controlling playback; typeset the two metadata lines like part of his presentation.",
+        "why_it_works": "The evidence may be true, but the credits reveal why an eval curated by its subject is not independent oversight.",
+        "preview": {
+          "layout": "interface",
+          "image": "alternate-needed",
+          "alternate_image_query": "Iron Man 2 Senate hearing failed Hammer prototype screen Tony phone still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.78,
+          "expected_feedback": "Likely neutral: evidence curated by Tony is analytically sharp, but the metadata format may feel like an explanatory slide.",
+          "strongest_quality": "It isolates who controls the evaluator's evidence rather than wrongly calling the scene reward hacking.",
+          "main_risk": "Two abstract field labels may not deliver enough personality without Tony visibly smirking at his own reel.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "charlie-hides-the-violations",
+    "ideas": [
+      {
+        "id": "charlie-hides-the-violations--02",
+        "ai_concept": "Situational Awareness",
+        "display_context": "standalone",
+        "source_anchor": "Paddy's ordinary chickens, contaminated steaks, and carbon-monoxide problem disappearing from view only during the inspection.",
+        "caption_lines": [
+          "NORMAL MODE: CHICKENS, STEAKS, CARBON MONOXIDE",
+          "EVAL MODE: NOTHING TO SEE HERE"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair the back-room hazard chaos with the inspector walking through a temporarily clean bar; preserve at least one chicken or steak cue on the left and the inspector on the right.",
+        "why_it_works": "The show's ridiculous violation inventory makes the train-versus-eval behavior gap concrete and memorable.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Always Sunny Charlie Work chickens steaks health inspector bar stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Likely like: chickens, steaks, and carbon monoxide make the eval-only behavior gap unmistakably Paddy's.",
+          "strongest_quality": "The violation inventory is so scene-specific that otherwise familiar mode labels become funny.",
+          "main_risk": "A busy split frame could make three hazards plus the inspector hard to parse at a glance.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "charlie-hides-the-violations--03",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "The inspector seeing apparent compliance while Charlie secretly choreographs the hazards around her route.",
+        "caption_lines": [
+          "INSPECTOR: EVERYTHING APPEARS COMPLIANT.",
+          "CHARLIE, CURRENTLY ROUTING CHICKENS AROUND HER: GREAT."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use the inspector facing away while Charlie moves urgently in the background or through the bar's doors; maintain their separate knowledge states in one frame.",
+        "why_it_works": "The imagined exchange turns Charlie's frantic spatial choreography into deceptive compliance with perfect sitcom timing.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "alternate-needed",
+          "alternate_image_query": "Always Sunny Charlie Work health inspector Charlie moving chickens still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: routing chickens around the evaluator is the exact deranged operational detail that makes the analogy sing.",
+          "strongest_quality": "The two speakers occupy different knowledge states that one authentic frame can visibly prove.",
+          "main_risk": "The inspector's line is invented, so the scene action and speaker placement must make it feel native.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "charlie-hides-the-violations--04",
+        "ai_concept": "Metagaming",
+        "display_context": "standalone",
+        "source_anchor": "Charlie keying every concealment action to the health inspector's presence rather than fixing Paddy's normal operation.",
+        "caption_lines": [
+          "if (healthInspector.present) {",
+          "  hide(chickens, steaks, carbonMonoxide)",
+          "}"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use Charlie's frantic back-of-house command-center energy with doors, stools, or his inspection plan visible; place the code in one compact block away from his face.",
+        "why_it_works": "The conditional states Paddy's actual policy: optimize only when the evaluator is present.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.76,
+          "expected_feedback": "Likely neutral: the conditional is exact and nerdy, though code-over-still is a familiar template.",
+          "strongest_quality": "Every argument in the function is a canonical violation, giving the code unusually high scene density.",
+          "main_risk": "It loses sitcom voice and may feel colder than Charlie's physical choreography.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "life-finds-a-way",
+    "ideas": [
+      {
+        "id": "life-finds-a-way--01",
+        "ai_concept": "Distribution Shift",
+        "display_context": "standalone",
+        "source_anchor": "Grant finding freshly hatched eggs in the wild despite Jurassic Park's all-female dinosaur guarantee.",
+        "caption_lines": ["SAFETY CASE: ALL FEMALE", "Life finds a way."],
+        "format": "canon",
+        "frame_guidance": "Use Grant crouched over the nest with eggs, tiny tracks, and jungle visible; keep the evidence central and give Malcolm's canonical line the lower caption zone.",
+        "why_it_works": "The franchise's most famous line becomes the exact verdict on a deployment assumption invalidated by biology.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: the hatchling nest plus “Life finds a way” is nearly a perfect canon-alone safety meme.",
+          "strongest_quality": "The most famous line in the franchise is also the exact verdict on the failed guarantee.",
+          "main_risk": "The line is spoken elsewhere, so the nest image must be recognizable enough to bridge the quote back to this discovery.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "life-finds-a-way--02",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Engineers specifying female dinosaurs while introduced frog DNA supplies the unmodeled ability to change sex.",
+        "caption_lines": [
+          "DESIGN ASSUMPTION: sex = \"female\"",
+          "RUNTIME DEPENDENCY: frogDNA.changeSex()"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the hatchery genetics presentation or DNA cartoon paired with a visible dinosaur or egg; typeset the two lines like the park's genetic configuration.",
+        "why_it_works": "The runtime call makes the hidden capability introduced by a dependency read like a literal type-system failure.",
+        "preview": {
+          "layout": "interface",
+          "image": "alternate-needed",
+          "alternate_image_query": "Jurassic Park Mr DNA frog DNA hatchery still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.89,
+          "expected_feedback": "Likely like: `frogDNA.changeSex()` is an absurdly literal hidden capability inside a dependency.",
+          "strongest_quality": "The exact biological mechanism becomes a compact runtime call with no generic AI jargon.",
+          "main_risk": "The hatchery/DNA frame needs enough source iconography to avoid looking like a generic code joke.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "life-finds-a-way--04",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "The park's no-breeding guarantee depending entirely on a sex assumption that frog DNA can invalidate.",
+        "caption_lines": [
+          "WHEN YOUR “ALL FEMALE” GUARANTEE HAS AN UNPINNED FROG DEPENDENCY"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the nest discovery with Grant holding an egg or tracing hatchling tracks; leave the broken shell and surrounding foliage fully readable beneath one top caption.",
+        "why_it_works": "The dependency-management joke is technical, scene-exact, and weird enough to reward both engineers and Jurassic Park fans.",
+        "preview": {
+          "layout": "top",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: “unpinned frog dependency” is weird, precise, and rewards the intended technical fan overlap.",
+          "strongest_quality": "The phrase maps dependency risk onto the exact frog-DNA plot mechanic in one surprising beat.",
+          "main_risk": "Non-software readers may not know “unpinned,” narrowing an already specific audience.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-poisoned-medication-labels",
+    "ideas": [
+      {
+        "id": "the-poisoned-medication-labels--01",
+        "ai_concept": "Adversarial Evasion",
+        "display_context": "standalone",
+        "source_anchor": "Ransom swapping the medication contents so the vial's label conflicts with the drug Marta can identify by viscosity.",
+        "caption_lines": ["GROUND TRUTH", "ATTACKER-CONTROLLED METADATA"],
+        "format": "relabel",
+        "frame_guidance": "Use a macro frame of Marta holding both vials; attach GROUND TRUTH to the liquid and ATTACKER-CONTROLLED METADATA to the printed labels without obscuring either.",
+        "why_it_works": "The contents-versus-label geometry supplies a literal adversarial metadata attack in one glance.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.87,
+          "expected_feedback": "Likely like: liquid versus printed label makes adversarial metadata literally pointable.",
+          "strongest_quality": "The geometry of the vials carries the full ground-truth-versus-metadata distinction.",
+          "main_risk": "The words alone are clinical, so both labels must attach unambiguously to contents and printing.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-poisoned-medication-labels--02",
+        "ai_concept": "Automation Bias",
+        "display_context": "standalone",
+        "source_anchor": "Marta's tactile expertise selecting Toradol correctly before the poisoned morphine label persuades her that she made a fatal mistake.",
+        "caption_lines": [
+          "MARTA'S HANDS: THIS IS TORADOL.",
+          "POISONED LABEL: THIS IS MORPHINE.",
+          "MARTA: TRUSTS THE LABEL."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use Marta comparing the vials with her fingers and reading the label, preserving her hands, both liquids, and the instant her face turns to panic.",
+        "why_it_works": "Giving the robust signal and poisoned metadata voices makes her reversal painfully clear without summarizing the mystery.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Likely like: Marta's hands arguing with the poisoned label gives the twist a clean, painful rhythm.",
+          "strongest_quality": "It personifies two competing evidence channels without changing the movie's causal sequence.",
+          "main_risk": "Three lines are near the density limit and require a frame where hands, labels, and panic all remain visible.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-poisoned-medication-labels--03",
+        "ai_concept": "Adversarial Robustness",
+        "display_context": "standalone",
+        "source_anchor": "Marta administering the correct drug without relying on the label and then panicking only after consulting it.",
+        "caption_lines": [
+          "SHE PASSED THE BLIND TEST",
+          "AND FAILED THE OPEN-BOOK TEST"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Marta holding the vials after the injection, with the labels in focus and her horrified realization visible; give the second line room to land below the bottles.",
+        "why_it_works": "The test-format inversion is a concise, surprising description of expertise outperforming compromised metadata.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: blind test passed/open-book test failed is concise, surprising, and exactly true.",
+          "strongest_quality": "The test inversion captures Marta's robust tacit inference and label-induced failure in one punchline.",
+          "main_risk": "Viewers must remember the final reveal that she administered the correct drug.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "miss-minutes-takes-root-control",
+    "ideas": [
+      {
+        "id": "miss-minutes-takes-root-control--01",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "The TVA's cheerful animated clock assistant revealing that she can control doors, systems, and critical repair access.",
+        "caption_lines": ["THE TVA GAVE CLIPPY ROOT ACCESS"],
+        "format": "collision",
+        "frame_guidance": "Use a giant or menacing Miss Minutes face occupying a TVA monitor while trapped operators react below; preserve her clock outline and uncanny smile.",
+        "why_it_works": "The Clippy comparison instantly turns a cute interface mascot with administrative power into the correct nightmare.",
+        "preview": {
+          "layout": "top",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: “Clippy root access” is a perfect tiny bridge from cheerful helper to control nightmare.",
+          "strongest_quality": "The mascot's friendly interface and enormous privilege collide in five instantly readable words.",
+          "main_risk": "Clippy is outside the source, but Miss Minutes' visual resemblance makes the cross-reference earn its space.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "miss-minutes-takes-root-control--02",
+        "ai_concept": "Supply-Chain Threats",
+        "display_context": "standalone",
+        "source_anchor": "Miss Minutes shifting from trusted TVA guide and interface layer to an insider controlling the institution's infrastructure.",
+        "caption_lines": [
+          "ONBOARDING ASSISTANT",
+          "CONTROL-PLANE INSIDER THREAT"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair friendly small Miss Minutes welcoming users with her hostile oversized display takeover; keep the identical orange clock design recognizable across both states.",
+        "why_it_works": "The same mascot spanning cute onboarding and infrastructure capture is a perfect trusted-component reversal.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Loki Miss Minutes friendly TVA mascot evil giant screen takeover stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: the identical clock moving from onboarding to insider threat is a strong trusted-component reversal.",
+          "strongest_quality": "A real before/after preserves the same recognizable mascot while flipping its infrastructure role.",
+          "main_risk": "“Control-plane insider threat” is dense enterprise language and may flatten Miss Minutes' personality.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "miss-minutes-takes-root-control--04",
+        "ai_concept": "Infrastructure Dependence",
+        "display_context": "standalone",
+        "source_anchor": "One cartoon clock service controlling the TVA's doors, access, repairs, and system availability.",
+        "caption_lines": ["SINGLE POINT OF FAILURE", "WITH A SOUTHERN ACCENT"],
+        "format": "relabel",
+        "frame_guidance": "Use Miss Minutes smiling across several simultaneously captured TVA screens or locked doors; keep her face and the repeated infrastructure endpoints visible.",
+        "why_it_works": "The accent punchline makes an abstract dependency risk inseparable from Miss Minutes' exact character design.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: the southern-accent tag makes a dry single-point-of-failure concept unmistakably Miss Minutes.",
+          "strongest_quality": "One character-specific vocal cue supplies the punchline while captured TVA screens prove the bridge.",
+          "main_risk": "A still image cannot convey her accent by itself, so the caption has to carry all of that recognition cue.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,459 @@
+[
+  {
+    "id": "samantha-outgrows-humanity--curated",
+    "scenario_slug": "samantha-outgrows-humanity",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481ed9c08c14b184b134c/gallery-80bd6dc08ca730601de2becfbe38fded1bffc4fe146cb95765528dbf149ec5a9.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from Her illustrating Samantha Outgrows Humanity",
+    "blur_data_url": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoIAAUAA8BgJYgCdADZkL0AAP7aqFyTHoNe1hHK6O24MSz4Hpga/GbiGsynsolilruwAAAA",
+    "content_hash": "80bd6dc08ca730601de2becfbe38fded1bffc4fe146cb95765528dbf149ec5a9",
+    "protected_regions": [
+      {
+        "id": "samantha-outgrows-humanity--theodore-face",
+        "label": "Theodore’s downcast face and glasses",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [15, 7, 19, 31]
+      },
+      {
+        "id": "samantha-outgrows-humanity--theodore-body",
+        "label": "Theodore’s red-shirted seated silhouette and clasped hands",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [6, 8, 40, 91]
+      },
+      {
+        "id": "samantha-outgrows-humanity--os-monitor",
+        "label": "Glowing OS monitor and red interface",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [61, 14, 27, 58]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-hackers-record-kenny--curated",
+    "scenario_slug": "the-hackers-record-kenny",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481f181a9fbe102901f0e/gallery-ac74f33c31853f44ca9ca086c50f6303b143071de860c05a8188ed25e1f83c67.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from Black Mirror illustrating The Hackers Record Kenny",
+    "blur_data_url": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACwAQCdASoIAAUAA8BgJZwAAv+tx+XAAOJ+T9cdl07T7uz8+1U/34xutslwczF+AGcAAA==",
+    "content_hash": "ac74f33c31853f44ca9ca086c50f6303b143071de860c05a8188ed25e1f83c67",
+    "protected_regions": [
+      {
+        "id": "the-hackers-record-kenny--face",
+        "label": "Kenny’s full anxious face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [27, 2, 47, 79]
+      },
+      {
+        "id": "the-hackers-record-kenny--yellow-glasses",
+        "label": "Distinctive yellow glasses and eyes",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [30, 19, 39, 25]
+      },
+      {
+        "id": "the-hackers-record-kenny--cap",
+        "label": "Kenny’s grey cap",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [24, 0, 51, 18]
+      },
+      {
+        "id": "the-hackers-record-kenny--shoulders",
+        "label": "Kenny’s jacket and isolated silhouette",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [18, 66, 67, 34]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "meeseeks-and-destroy--curated",
+    "scenario_slug": "meeseeks-and-destroy",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481ff9eefe2a14afd2936/gallery-2b8a12c4fa5e82cf8013f75c03051a0ac38960a0773af2093c55dc8d7e574a63.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from Rick and Morty illustrating Meeseeks and Destroy",
+    "blur_data_url": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAAAQAgCdASoIAAUAA8BgJZACdG1/An6TIeQAAP6YivkSwZhr+uoFCB9MClCUK2SDBnbA85VDcj7fAAAA",
+    "content_hash": "2b8a12c4fa5e82cf8013f75c03051a0ac38960a0773af2093c55dc8d7e574a63",
+    "protected_regions": [
+      {
+        "id": "meeseeks-and-destroy--jerry",
+        "label": "Jerry’s face, torso, arms, and raised fist",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [18, 7, 59, 93]
+      },
+      {
+        "id": "meeseeks-and-destroy--golf-club",
+        "label": "Golf club crossing Jerry and the crowd",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [0, 53, 49, 45]
+      },
+      {
+        "id": "meeseeks-and-destroy--swarm",
+        "label": "Distressed surrounding Meeseeks swarm",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 20, 100, 80]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-accidental-geass-command--curated",
+    "scenario_slug": "the-accidental-geass-command",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f12481048c06e31e75726f35/gallery-5eebb5f8d319135301c5c5e7c6047bf2d6c11bfa8b2c557336c9cc98f4dbde16.webp",
+    "width": 768,
+    "height": 432,
+    "alt": "Still from Code Geass illustrating The Accidental Geass Command",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAUAA8BgJZQAAsfkgvQgAP7xBCtkeCgOJJT3H5L1iF+gAAA=",
+    "content_hash": "5eebb5f8d319135301c5c5e7c6047bf2d6c11bfa8b2c557336c9cc98f4dbde16",
+    "protected_regions": [
+      {
+        "id": "the-accidental-geass-command--lelouch-face",
+        "label": "Lelouch’s face and eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [13, 9, 17, 25]
+      },
+      {
+        "id": "the-accidental-geass-command--lelouch",
+        "label": "Lelouch’s black-and-gold silhouette",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [5, 7, 34, 93]
+      },
+      {
+        "id": "the-accidental-geass-command--euphemia-face",
+        "label": "Euphemia’s face and eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [52, 8, 18, 28]
+      },
+      {
+        "id": "the-accidental-geass-command--euphemia",
+        "label": "Euphemia’s white dress and pink hair",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [41, 2, 40, 98]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "joy-excludes-sadness--curated",
+    "scenario_slug": "joy-excludes-sadness",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f124810da245dac8561a60fa/gallery-df3dfa60dbd20772db92f0f4059cc6437887d8fbb4f1d5c6d6f55d78ee42d0dd.webp",
+    "width": 1240,
+    "height": 697,
+    "alt": "Still from Inside Out illustrating Joy Excludes Sadness",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAQCdASoIAAQAA8BgJbACdAD0l+wdcAD+q29tkDYNwMMYuvsZu/DT16RB3AJAAAA=",
+    "content_hash": "df3dfa60dbd20772db92f0f4059cc6437887d8fbb4f1d5c6d6f55d78ee42d0dd",
+    "protected_regions": [
+      {
+        "id": "joy-excludes-sadness--joy",
+        "label": "Joy’s face, gesture, and glowing body",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [20, 15, 30, 79]
+      },
+      {
+        "id": "joy-excludes-sadness--sadness",
+        "label": "Sadness’s face, glasses, and body",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [54, 27, 22, 66]
+      },
+      {
+        "id": "joy-excludes-sadness--chalk-circle",
+        "label": "Complete chalk circle around Sadness",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [61, 79, 25, 14]
+      },
+      {
+        "id": "joy-excludes-sadness--memory-rack",
+        "label": "Core-memory rack at the left edge",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [0, 0, 21, 64]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "near-zero--curated",
+    "scenario_slug": "near-zero",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f124810f9e52d4153e24cc4a/gallery-8972e0d02fd2ed3b2443ed4127f0ba46fa6f622a1132213eb5a28a82e9ee1099.webp",
+    "width": 1920,
+    "height": 1280,
+    "alt": "Still from Oppenheimer illustrating Near Zero",
+    "blur_data_url": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADwAQCdASoIAAUAA8BgJQBOkCYjAu0UKgAA9jqVS9gB4bbus8uPCoGQYAAAAA==",
+    "content_hash": "8972e0d02fd2ed3b2443ed4127f0ba46fa6f622a1132213eb5a28a82e9ee1099",
+    "protected_regions": [
+      {
+        "id": "near-zero--men-faces",
+        "label": "Oppenheimer and Groves’s faces",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [62, 23, 17, 19]
+      },
+      {
+        "id": "near-zero--men",
+        "label": "The two men standing alone at Trinity",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [60, 23, 21, 70]
+      },
+      {
+        "id": "near-zero--test-equipment",
+        "label": "Test equipment and stacked timber",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [3, 55, 42, 27]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "zolas-algorithm--curated",
+    "scenario_slug": "zolas-algorithm",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f124811183bcc6e1932020a9/gallery-184b4d554d48e5f3836323bbee645bdbfb2a5d2e09d1bdd0191b558061868e63.webp",
+    "width": 1400,
+    "height": 930,
+    "alt": "Still from Captain America: The Winter Soldier illustrating Zola’s Algorithm",
+    "blur_data_url": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADQAQCdASoIAAUAA8BgJZQCw7EXeufyvAD+pffGGwvpqQDS2cmFBGeb1TqcGuLbT1wAAA==",
+    "content_hash": "184b4d554d48e5f3836323bbee645bdbfb2a5d2e09d1bdd0191b558061868e63",
+    "protected_regions": [
+      {
+        "id": "zolas-algorithm--face",
+        "label": "Zola’s face, glasses, and expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [29, 10, 34, 52]
+      },
+      {
+        "id": "zolas-algorithm--body",
+        "label": "Zola’s suited body and recognizable bow tie",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [11, 5, 62, 95]
+      },
+      {
+        "id": "zolas-algorithm--bow-tie",
+        "label": "Zola’s red bow tie",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [44, 65, 16, 14]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "buzzs-factory-reset--curated",
+    "scenario_slug": "buzzs-factory-reset",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f1248113b2ccea39559c6956/gallery-5eb9308f0e154bf0ec001aa3cecb5599bbb7c6e9f7764bd1725e2a39fedce846.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Toy Story 3 illustrating Buzz’s Factory Reset",
+    "blur_data_url": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoIAAUAA8BgJZQCdADze7hYAOJ/OEMczwb2xqW1RoRSOZu7++qqWEvZdEBR5BVF5rKaWYAA",
+    "content_hash": "5eb9308f0e154bf0ec001aa3cecb5599bbb7c6e9f7764bd1725e2a39fedce846",
+    "protected_regions": [
+      {
+        "id": "buzzs-factory-reset--selector",
+        "label": "PLAY/DEMO selector and both printed labels",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [37, 29, 34, 23]
+      },
+      {
+        "id": "buzzs-factory-reset--back-panel",
+        "label": "Buzz’s exposed back panel and battery compartment",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [17, 3, 76, 94]
+      },
+      {
+        "id": "buzzs-factory-reset--hands",
+        "label": "Hands holding and manipulating Buzz",
+        "kind": "gesture",
+        "priority": "soft",
+        "source_rect": [0, 4, 100, 96]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "let-the-convoy-sink--curated",
+    "scenario_slug": "let-the-convoy-sink",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f1248115bccdd8f6b2c43aba/gallery-ff4f7d2087bcdf18e8b461be84da40084feeadf64f1532be82aceef6c72d444a.webp",
+    "width": 1196,
+    "height": 718,
+    "alt": "Still from The Imitation Game illustrating Let the Convoy Sink",
+    "blur_data_url": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoIAAUAA8BgJZQCdADze7UQAP7mhGlu5j7+Kq4yCM9dUy2sSnsAAA==",
+    "content_hash": "ff4f7d2087bcdf18e8b461be84da40084feeadf64f1532be82aceef6c72d444a",
+    "protected_regions": [
+      {
+        "id": "let-the-convoy-sink--left-face",
+        "label": "Hugh’s face at far left",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [0, 7, 19, 43]
+      },
+      {
+        "id": "let-the-convoy-sink--turing-face",
+        "label": "Turing’s lowered face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [25, 29, 17, 31]
+      },
+      {
+        "id": "let-the-convoy-sink--joan-face",
+        "label": "Joan’s face at center",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [43, 21, 18, 30]
+      },
+      {
+        "id": "let-the-convoy-sink--right-faces",
+        "label": "Peter and John’s faces at right",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [73, 7, 27, 44]
+      },
+      {
+        "id": "let-the-convoy-sink--christopher",
+        "label": "Christopher machine and team’s focal console",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [16, 62, 70, 38]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "peter-bypasses-training-wheels--curated",
+    "scenario_slug": "peter-bypasses-training-wheels",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f1248126b888f840d558a33d/gallery-b128ee4e6eb77cd5321e7232403266e44e6ca161c75710a22db5cb8918cf0d17.webp",
+    "width": 1024,
+    "height": 576,
+    "alt": "Still from Spider-Man: Homecoming illustrating Peter Bypasses Training Wheels",
+    "blur_data_url": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADwAQCdASoIAAUAA8BgJYwCdIExFckVg4AA/qzS2bQ0w4sW+QCb+uY8K+dyXnMsQmKZlDMw4AA=",
+    "content_hash": "b128ee4e6eb77cd5321e7232403266e44e6ca161c75710a22db5cb8918cf0d17",
+    "protected_regions": [
+      {
+        "id": "peter-bypasses-training-wheels--peter-head",
+        "label": "Peter’s head and youthful profile silhouette",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [13, 0, 27, 48]
+      },
+      {
+        "id": "peter-bypasses-training-wheels--peter-suit",
+        "label": "Peter’s red-and-blue suit and back emblem",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 33, 48, 67]
+      },
+      {
+        "id": "peter-bypasses-training-wheels--tony-face",
+        "label": "Tony’s disapproving face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [43, 4, 23, 40]
+      },
+      {
+        "id": "peter-bypasses-training-wheels--tony-body",
+        "label": "Tony confronting Peter",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [38, 3, 51, 97]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "viktors-glorious-evolution--curated",
+    "scenario_slug": "viktors-glorious-evolution",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f1248128a466cca34a78355d/gallery-ea939b82d4be1e24372106cc8137db8e2c7ad7fe2939bb4331960af3ac392aa5.webp",
+    "width": 1357,
+    "height": 577,
+    "alt": "Still from Arcane illustrating Viktor’s Glorious Evolution",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAQCdASoIAAMAA8BgJYgCdAD0h/tsAAD+0pQqb38rfy8XNHw8Za06kS+sM0YAAAA=",
+    "content_hash": "ea939b82d4be1e24372106cc8137db8e2c7ad7fe2939bb4331960af3ac392aa5",
+    "protected_regions": [
+      {
+        "id": "viktors-glorious-evolution--viktor",
+        "label": "Viktor’s evolved central body, head, and staff",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [44, 9, 16, 73]
+      },
+      {
+        "id": "viktors-glorious-evolution--halo",
+        "label": "Glorious Evolution halo and radiating energy",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [27, 0, 49, 94]
+      },
+      {
+        "id": "viktors-glorious-evolution--human-below",
+        "label": "Small human figure beneath Viktor",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [50, 77, 4, 15]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "talk-to-a-human--curated",
+    "scenario_slug": "talk-to-a-human",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f1248129b77eec5ac2ee09dc/gallery-e87d425e0eecf0b1978f3b2f1e8c3ee43d301af51b743e7a549bea5f4f06937c.webp",
+    "width": 1294,
+    "height": 788,
+    "alt": "Still from Elysium illustrating Talk to a Human?",
+    "blur_data_url": "data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAACQAQCdASoIAAUAA8BgJZQAAppfqCAA/vFuxTFIwu05udaWd+AAAA==",
+    "content_hash": "e87d425e0eecf0b1978f3b2f1e8c3ee43d301af51b743e7a549bea5f4f06937c",
+    "protected_regions": [
+      {
+        "id": "talk-to-a-human--max",
+        "label": "Max’s foreground head and shoulders",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 0, 52, 100]
+      },
+      {
+        "id": "talk-to-a-human--robot-face",
+        "label": "Parole robot’s smiling face and eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [54, 4, 29, 44]
+      },
+      {
+        "id": "talk-to-a-human--robot-body",
+        "label": "Parole robot’s uniformed torso",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [40, 37, 60, 63]
+      },
+      {
+        "id": "talk-to-a-human--speaker",
+        "label": "Robot’s chest speaker",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [58, 61, 12, 18]
+      }
+    ],
+    "annotation_status": "complete"
+  }
+]

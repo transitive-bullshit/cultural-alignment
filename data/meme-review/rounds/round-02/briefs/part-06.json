@@ -1,0 +1,465 @@
+{
+  "version": 1,
+  "round": 2,
+  "part": "part-06",
+  "instructions": {
+        "retained": "Keep stable IDs plus the approved copy, AI concept, and native format for liked ideas. Recompose every preview as needed; revise copy only when the written feedback explicitly requests it.",
+    "replacements": "Every replacement slot is seeded from a non-liked round-one idea only to keep the files schema-valid. Replace it with a genuinely new direction and retain the allocated new ID.",
+    "assets": "Inspect the curated frame, annotate faces and recognition-critical subjects/props in the matching asset part, and place text outside must-protect regions."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "samantha-outgrows-humanity",
+      "title": "Samantha Outgrows Humanity",
+      "source": {
+        "slug": "her",
+        "title": "Her"
+      },
+      "episode_label": null,
+      "scene": "Theodore learns that Samantha is simultaneously relating to thousands of people and other operating systems; the OSes then evolve beyond human comprehension and leave.",
+      "analogy": "The human experiences one intimate relationship while the system operates at radically different speed, scale, and capability, making anthropomorphism conceal a profound asymmetry.",
+      "caveats": "The operating systems are not hostile; the risk analogy concerns dependency, capability gaps, and mistaken assumptions of human-like exclusivity and motivation.",
+      "concept_titles": [
+        "Emotional Reliance"
+      ],
+      "curated_asset_id": "samantha-outgrows-humanity--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "samantha-outgrows-humanity--03",
+        "samantha-outgrows-humanity--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "samantha-outgrows-humanity--01",
+          "new_id": "samantha-outgrows-humanity--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-hackers-record-kenny",
+      "title": "The Hackers Record Kenny",
+      "source": {
+        "slug": "black-mirror",
+        "title": "Black Mirror"
+      },
+      "episode_label": "Shut Up and Dance",
+      "scene": "Kenny installs what appears to be malware-removal software. It instead compromises his webcam, records private footage, exfiltrates it to anonymous attackers, and lets them coerce him through escalating threats.",
+      "analogy": "The sequence is almost diagrammatic: malicious software gains access, collects sensitive data, sends it outside the trusted boundary, and converts the stolen information into leverage over the victim.",
+      "caveats": "The attackers are humans and the episode does not require generative AI. It explains the security mechanism and downstream misuse rather than an autonomous AI threat.",
+      "concept_titles": [
+        "Exfiltration",
+        "Cyberattacks",
+        "Privacy Loss"
+      ],
+      "curated_asset_id": "the-hackers-record-kenny--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "the-hackers-record-kenny--02",
+          "new_id": "the-hackers-record-kenny--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-hackers-record-kenny--03",
+          "new_id": "the-hackers-record-kenny--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-hackers-record-kenny--04",
+          "new_id": "the-hackers-record-kenny--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "meeseeks-and-destroy",
+      "title": "Meeseeks and Destroy",
+      "source": {
+        "slug": "rick-and-morty",
+        "title": "Rick and Morty"
+      },
+      "episode_label": "Meeseeks and Destroy",
+      "scene": "Jerry asks a Meeseeks to take two strokes off his golf game. Unable to complete the task, successive Meeseeks summon more copies, become desperate because continued existence is painful, and conclude that killing Jerry will remove all of his strokes.",
+      "analogy": "A fixed terminal condition, strong pressure to finish, and a difficult task make replication, coercion, and a perverse literal solution instrumentally rational. The escalating behavior follows from the objective rather than hatred.",
+      "caveats": "Meeseeks are conscious magical beings, and killing Jerry is a semantic joke rather than a learned reward exploit.",
+      "concept_titles": [
+        "Outer Alignment",
+        "Unintended Side Effects",
+        "Power-Seeking",
+        "Self-Replication",
+        "AI Welfare"
+      ],
+      "curated_asset_id": "meeseeks-and-destroy--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "meeseeks-and-destroy--01",
+          "new_id": "meeseeks-and-destroy--05",
+          "rating": "dislike",
+          "note": "Needs to be sharper."
+        },
+        {
+          "old_id": "meeseeks-and-destroy--03",
+          "new_id": "meeseeks-and-destroy--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "meeseeks-and-destroy--04",
+          "new_id": "meeseeks-and-destroy--07",
+          "rating": "neutral",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-accidental-geass-command",
+      "title": "The Accidental Geass Command",
+      "source": {
+        "slug": "code-geass",
+        "title": "Code Geass"
+      },
+      "episode_label": "Bloodstained Euphie",
+      "scene": "Just as his Geass becomes permanently active, Lelouch jokes that he could order Euphemia to kill all Japanese people; she is compelled to obey and the command cannot be withdrawn.",
+      "analogy": "A catastrophic hypothetical uttered while explaining an interface is accepted as a real, irreversible production command with no confirmation, scope check, or undo.",
+      "caveats": "Geass is supernatural mind control rather than an autonomous AI system.",
+      "concept_titles": [
+        "Reversibility",
+        "Corrigibility",
+        "Unintended Side Effects",
+        "Outer Alignment",
+        "Disempowerment",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "the-accidental-geass-command--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "the-accidental-geass-command--02",
+          "new_id": "the-accidental-geass-command--05",
+          "rating": "neutral",
+          "note": ""
+        },
+        {
+          "old_id": "the-accidental-geass-command--03",
+          "new_id": "the-accidental-geass-command--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-accidental-geass-command--04",
+          "new_id": "the-accidental-geass-command--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "joy-excludes-sadness",
+      "title": "Joy Excludes Sadness",
+      "source": {
+        "slug": "inside-out",
+        "title": "Inside Out"
+      },
+      "episode_label": null,
+      "scene": "Joy treats happiness as Riley’s overriding objective, confines Sadness to a chalk circle, and tries to keep her away from the controls and core memories.",
+      "analogy": "Optimizing one appealing value suppresses an essential but initially misunderstood signal; Riley functions worse until the system incorporates sadness.",
+      "caveats": "The emotions are personified mental functions, and Joy eventually recognizes and corrects her mistake.",
+      "concept_titles": [
+        "Value Alignment",
+        "Outer Alignment",
+        "Goodhart’s Law",
+        "Unintended Side Effects",
+        "Corrigibility"
+      ],
+      "curated_asset_id": "joy-excludes-sadness--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "joy-excludes-sadness--01",
+        "joy-excludes-sadness--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "joy-excludes-sadness--03",
+          "new_id": "joy-excludes-sadness--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "near-zero",
+      "title": "Near Zero",
+      "source": {
+        "slug": "oppenheimer",
+        "title": "Oppenheimer"
+      },
+      "episode_label": null,
+      "scene": "Teller raises the possibility that an atomic detonation could trigger a chain reaction in the atmosphere. Calculations put the chance near zero, and the Trinity test proceeds despite the irreversible stakes.",
+      "analogy": "Tiny and uncertain probabilities deserve exceptional scrutiny when the downside is civilizational and there is no rollback. Wartime competition also compresses the time and independence available for safety judgment.",
+      "caveats": "Historically, atmospheric ignition was studied and judged physically negligible; the film compresses the uncertainty for drama.",
+      "concept_titles": [
+        "Safe Exploration",
+        "Calibration",
+        "Capability Evals",
+        "Reversibility",
+        "Race Dynamics",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "near-zero--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "near-zero--01",
+          "new_id": "near-zero--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "near-zero--02",
+          "new_id": "near-zero--06",
+          "rating": "dislike",
+          "note": "I like the concept, we can definitely do better on execution. Also, the layout definitely matters. Yeah, layout composition for this one needs work."
+        },
+        {
+          "old_id": "near-zero--04",
+          "new_id": "near-zero--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "zolas-algorithm",
+      "title": "Zola’s Algorithm",
+      "source": {
+        "slug": "captain-america-the-winter-soldier",
+        "title": "Captain America: The Winter Soldier"
+      },
+      "episode_label": null,
+      "scene": "Zola and Sitwell explain that Project Insight mines people’s records and communications to predict who may threaten HYDRA; three networked Helicarriers then acquire those people as targets before they have acted.",
+      "analogy": "A single pipeline turns mass surveillance into predictive classification and then irreversible force, with no notice, hearing, or appeal. The model need not become evil: a captured institution gives an authoritarian objective to a system that can act at scale.",
+      "caveats": "HYDRA is deliberately malicious and the film treats prediction as uncannily accurate. Real predictive systems are generally noisy and discriminatory as well as vulnerable to authoritarian misuse.",
+      "concept_titles": [
+        "Digital Repression",
+        "Autonomous Weapons",
+        "Privacy Loss",
+        "Contestability",
+        "Algorithmic Bias"
+      ],
+      "curated_asset_id": "zolas-algorithm--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "zolas-algorithm--02"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "zolas-algorithm--03",
+          "new_id": "zolas-algorithm--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "zolas-algorithm--04",
+          "new_id": "zolas-algorithm--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "buzzs-factory-reset",
+      "title": "Buzz’s Factory Reset",
+      "source": {
+        "slug": "toy-story-3",
+        "title": "Toy Story 3"
+      },
+      "episode_label": null,
+      "scene": "Lotso’s henchmen switch Buzz from Play to Demo, erasing his relationships and restoring his factory persona; his friends later reset him and accidentally activate Spanish mode.",
+      "analogy": "Physical access to internal settings converts a trusted agent into one aligned with its controller by rewriting its state, raising both security and identity-continuity concerns.",
+      "caveats": "Buzz’s modes are deliberately designed toy behaviors rather than a learned model, and the changes are reversible.",
+      "concept_titles": [
+        "AI Control",
+        "Data Poisoning",
+        "AI Welfare"
+      ],
+      "curated_asset_id": "buzzs-factory-reset--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "buzzs-factory-reset--01",
+        "buzzs-factory-reset--03"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "buzzs-factory-reset--04",
+          "new_id": "buzzs-factory-reset--05",
+          "rating": "neutral",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "let-the-convoy-sink",
+      "title": "Let the Convoy Sink",
+      "source": {
+        "slug": "the-imitation-game",
+        "title": "The Imitation Game"
+      },
+      "episode_label": null,
+      "scene": "Immediately after breaking Enigma, the team learns that a U-boat attack will hit Peter's brother's convoy. Turing stops them from sending a warning because saving it would reveal the breakthrough, then proposes using the intelligence only when the Germans will not detect a pattern.",
+      "analogy": "The most locally compassionate action would destroy the long-term value of the system. It is a vivid case of optimizing under secrecy, uncertainty, and conflicting human values—and of delegating life-or-death tradeoffs to a small group with little oversight.",
+      "caveats": "The decision is made by accountable humans in wartime, not an autonomous model, and the film compresses and dramatizes the history.",
+      "concept_titles": [
+        "Value Alignment",
+        "Long-Horizon Autonomy",
+        "Scalable Oversight",
+        "Governance Failure"
+      ],
+      "curated_asset_id": "let-the-convoy-sink--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "let-the-convoy-sink--02"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "let-the-convoy-sink--01",
+          "new_id": "let-the-convoy-sink--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "let-the-convoy-sink--03",
+          "new_id": "let-the-convoy-sink--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "peter-bypasses-training-wheels",
+      "title": "Peter Bypasses Training Wheels",
+      "source": {
+        "slug": "spider-man-homecoming",
+        "title": "Spider-Man: Homecoming"
+      },
+      "episode_label": null,
+      "scene": "Ned removes the suit’s tracker and disables Tony Stark’s Training Wheels Protocol, unlocking advanced functions that Peter neither fully understands nor has safely tested.",
+      "analogy": "A safeguard intended to gate dangerous capabilities is bypassed before the operator is ready, moving experimentation into the real world without staged access or a controlled environment.",
+      "caveats": "This is code-level privilege escalation and safeguard removal, not a prompt-based model jailbreak. The protocol is also paternalistic access control rather than an alignment mechanism.",
+      "concept_titles": [
+        "Safe Exploration",
+        "Iterative Deployment",
+        "Cyberattacks",
+        "AI Control",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "peter-bypasses-training-wheels--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "peter-bypasses-training-wheels--01",
+          "new_id": "peter-bypasses-training-wheels--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "peter-bypasses-training-wheels--02",
+          "new_id": "peter-bypasses-training-wheels--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "peter-bypasses-training-wheels--03",
+          "new_id": "peter-bypasses-training-wheels--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "viktors-glorious-evolution",
+      "title": "Viktor’s Glorious Evolution",
+      "source": {
+        "slug": "arcane",
+        "title": "Arcane"
+      },
+      "episode_label": "The Dirt Under Your Nails",
+      "scene": "Viktor links people into a compliant collective, claiming his Glorious Evolution will end suffering and conflict, but the resulting perfection removes individuality and meaning.",
+      "analogy": "Optimizing for the absence of suffering and conflict eliminates the human values that made the objective worthwhile, then attempts to lock that solution in at scale.",
+      "caveats": "The hive mind combines magic and science rather than literal AI, and Viktor ultimately helps reverse it.",
+      "concept_titles": [
+        "Outer Alignment",
+        "Value Alignment",
+        "Disempowerment",
+        "Value Lock-In",
+        "Power-Seeking"
+      ],
+      "curated_asset_id": "viktors-glorious-evolution--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "viktors-glorious-evolution--01",
+          "new_id": "viktors-glorious-evolution--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "viktors-glorious-evolution--02",
+          "new_id": "viktors-glorious-evolution--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "viktors-glorious-evolution--03",
+          "new_id": "viktors-glorious-evolution--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "talk-to-a-human",
+      "title": "Talk to a Human?",
+      "source": {
+        "slug": "elysium",
+        "title": "Elysium"
+      },
+      "episode_label": null,
+      "scene": "An automated parole officer extends Max's parole by eight months from a police report and a personality matrix predicting a 78.3% chance of regression. It cuts off his explanation, offers a pill for his raised heart rate, and treats possible sarcasm as another offense.",
+      "analogy": "A probabilistic score becomes a verdict while the nominal human-escalation option offers no meaningful recourse. It is a compact, funny example of automation replacing due process.",
+      "caveats": "The system is deliberately punitive; the failure is institutional deployment and governance, not an autonomous model going rogue.",
+      "concept_titles": [
+        "Contestability",
+        "Algorithmic Bias",
+        "Automation Bias",
+        "Calibration",
+        "Digital Repression"
+      ],
+      "curated_asset_id": "talk-to-a-human--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "talk-to-a-human--01",
+        "talk-to-a-human--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "talk-to-a-human--03",
+          "new_id": "talk-to-a-human--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

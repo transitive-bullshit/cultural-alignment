@@ -1,0 +1,473 @@
+[
+  {
+    "id": "no-face-buys-approval--curated",
+    "scenario_slug": "no-face-buys-approval",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f12481ff919bc1fe354d07bf/gallery-47f402063b97e3c02f1c490dcfea12aa1275cafc90cef4e5a1bdc6e76b103620.webp",
+    "width": 1920,
+    "height": 1038,
+    "alt": "Still from Spirited Away illustrating No-Face Buys Approval",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAQCdASoIAAQAA8BgJYgCdAEalflnsAD+8UIlOQwLxFVSvnIHZDjDm27L0pZQAAA=",
+    "content_hash": "47f402063b97e3c02f1c490dcfea12aa1275cafc90cef4e5a1bdc6e76b103620",
+    "protected_regions": [
+      {
+        "id": "no-face-buys-approval--mask",
+        "label": "No-Face’s white mask and eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [46, 17, 12, 24]
+      },
+      {
+        "id": "no-face-buys-approval--body",
+        "label": "No-Face’s enormous reaching body",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [0, 16, 65, 82]
+      },
+      {
+        "id": "no-face-buys-approval--chihiro",
+        "label": "Chihiro’s face and red uniform",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [69, 48, 10, 38]
+      },
+      {
+        "id": "no-face-buys-approval--workers",
+        "label": "Bathhouse workers and serving bowls",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [39, 50, 61, 48]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "attendance-record-hack--curated",
+    "scenario_slug": "attendance-record-hack",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c9edb27f12481098230c0300b80c06e/gallery-15746f75efd94cc38189713142e3c33eccee204ed9fa344d7255d907c04433be.webp",
+    "width": 1920,
+    "height": 809,
+    "alt": "Still from Ferris Bueller's Day Off illustrating Attendance Record Hack",
+    "blur_data_url": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACQAQCdASoIAAMAA8BgJaQAAlvrjgAA+xdZAZyE0qnS1wQpf/AAAAAA",
+    "content_hash": "15746f75efd94cc38189713142e3c33eccee204ed9fa344d7255d907c04433be",
+    "protected_regions": [
+      {
+        "id": "attendance-record-hack--ferris",
+        "label": "Ferris’s profile and body at the keyboard",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [14, 4, 34, 92]
+      },
+      {
+        "id": "attendance-record-hack--monitor",
+        "label": "Amber attendance-record screen and readout",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [52, 31, 29, 49]
+      },
+      {
+        "id": "attendance-record-hack--computer",
+        "label": "Monitor casing and desk computer",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [48, 24, 38, 74]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "predator-vs-dutch--curated",
+    "scenario_slug": "predator-vs-dutch",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c9edb27f124813e9b05d335696ca672/gallery-d50482930e3eea8da0b64917bf1eb72f869abff6aace3f22738de840968e786c.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Predator illustrating Predator vs Dutch",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACQAQCdASoIAAUAA8BgJZQAAp0ispwA/p+hNacsOs6JpR//BAhd4l4AAAA=",
+    "content_hash": "d50482930e3eea8da0b64917bf1eb72f869abff6aace3f22738de840968e786c",
+    "protected_regions": [
+      {
+        "id": "predator-vs-dutch--dutch-face",
+        "label": "Dutch’s mud-covered face and eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [57, 4, 25, 34]
+      },
+      {
+        "id": "predator-vs-dutch--dutch-body",
+        "label": "Dutch’s camouflaged body and pose",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [50, 18, 47, 78]
+      },
+      {
+        "id": "predator-vs-dutch--bow",
+        "label": "Improvised bow and shaft crossing the frame",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [42, 0, 18, 96]
+      },
+      {
+        "id": "predator-vs-dutch--watermark",
+        "label": "Existing lower-left source watermark",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [0, 76, 28, 22]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "no-war-in-ba-sing-se--curated",
+    "scenario_slug": "no-war-in-ba-sing-se",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c9edb27f1248140bb7be4aff325f756/gallery-e6c3c7db3e592ce71175e995d92dd166f7477982a0fe1430eedf09e14ce11463.webp",
+    "width": 1920,
+    "height": 1082,
+    "alt": "Still from Avatar: The Last Airbender illustrating There is No War in Ba Sing Se",
+    "blur_data_url": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACwAQCdASoIAAUAA8BgJQBdgBue3nKwAP6srT3qxAw3Z3B7U/KJ3uNuPNElyvr1GYwZn/7dgAA=",
+    "content_hash": "e6c3c7db3e592ce71175e995d92dd166f7477982a0fe1430eedf09e14ce11463",
+    "protected_regions": [
+      {
+        "id": "no-war-in-ba-sing-se--joo-dee-face",
+        "label": "Joo Dee’s fixed smile and eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [38, 10, 27, 44]
+      },
+      {
+        "id": "no-war-in-ba-sing-se--joo-dee",
+        "label": "Joo Dee’s hair and green-robed figure",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [28, 0, 43, 99]
+      },
+      {
+        "id": "no-war-in-ba-sing-se--city",
+        "label": "Ba Sing Se skyline and Earth Kingdom architecture",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 42, 100, 57]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "dwights-fire-drill--curated",
+    "scenario_slug": "dwights-fire-drill",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c9edb27f124815ea0b8f9ec0cf749ce/gallery-02d3ac6588abc5a846e1a73cf4e1b982f7cae0b4a3253b93d4757755a6df9fcc.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from The Office illustrating Dwight's Fire Drill",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoIAAUAA8BgJZwAApyD7zLAAPZVWXj5cmyiGCOH1omiGH5g7oNaOAAA",
+    "content_hash": "02d3ac6588abc5a846e1a73cf4e1b982f7cae0b4a3253b93d4757755a6df9fcc",
+    "protected_regions": [
+      {
+        "id": "dwights-fire-drill--stanley-face",
+        "label": "Stanley’s panicked face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [16, 62, 23, 35]
+      },
+      {
+        "id": "dwights-fire-drill--raised-arm",
+        "label": "Raised arm and fist in the evacuation pileup",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [40, 9, 20, 71]
+      },
+      {
+        "id": "dwights-fire-drill--ceiling-legs",
+        "label": "Legs disappearing through the ceiling",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [48, 9, 24, 58]
+      },
+      {
+        "id": "dwights-fire-drill--foreground-worker",
+        "label": "Foreground employee trapped in the crowd",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [64, 55, 36, 44]
+      },
+      {
+        "id": "dwights-fire-drill--office-logo",
+        "label": "The Office title mark",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [3, 5, 30, 37]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "scrat-breaks-pangaea--curated",
+    "scenario_slug": "scrat-breaks-pangaea",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c9edb27f1248161b3d4faab520b0783/gallery-d7425a86e5261412f8da62bfe8cbb1754c6c6b44186cbd2683f38cd89ecbf28c.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Ice Age: Continental Drift illustrating Scrat Breaks Pangaea",
+    "blur_data_url": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAQAgCdASoIAAUAA8BgJbACdGuAApSLwLmAAP62q58RQaNfrlKObpuF5Qc+kwR76Zu0cxnObzk42w3zeh1HDP0XTtxHFe8/gAA=",
+    "content_hash": "d7425a86e5261412f8da62bfe8cbb1754c6c6b44186cbd2683f38cd89ecbf28c",
+    "protected_regions": [
+      {
+        "id": "scrat-breaks-pangaea--scrat-face",
+        "label": "Scrat’s strained face and eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [28, 24, 36, 35]
+      },
+      {
+        "id": "scrat-breaks-pangaea--scrat-body",
+        "label": "Scrat’s body and tail",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [42, 0, 45, 76]
+      },
+      {
+        "id": "scrat-breaks-pangaea--acorn",
+        "label": "The acorn wedged into the continental crack",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [35, 58, 24, 41]
+      },
+      {
+        "id": "scrat-breaks-pangaea--claws",
+        "label": "Scrat’s gripping claws and physical effort",
+        "kind": "gesture",
+        "priority": "soft",
+        "source_rect": [58, 45, 26, 34]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "mewtwo-rejects-its-creators--curated",
+    "scenario_slug": "mewtwo-rejects-its-creators",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c9edb27f124817d94e2e3374875956f/gallery-a1c58b14b275096b003c05ac064cbfae88cec3e90a8cdad8e7b03c143d2517f5.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Pokémon: The First Movie illustrating Mewtwo Rejects Its Creators",
+    "blur_data_url": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADQAQCdASoIAAUAA8BgJbACdAD0k63GAADeY7tTOlwwalXIUGFgjKDawptdai/oQhPdlhRkMTgXr3OaDL3PqAAA",
+    "content_hash": "a1c58b14b275096b003c05ac064cbfae88cec3e90a8cdad8e7b03c143d2517f5",
+    "protected_regions": [
+      {
+        "id": "mewtwo-rejects-its-creators--face",
+        "label": "Mewtwo’s face and glowing eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [28, 10, 46, 58]
+      },
+      {
+        "id": "mewtwo-rejects-its-creators--body",
+        "label": "Mewtwo’s upper body and outstretched arm",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [21, 47, 65, 52]
+      },
+      {
+        "id": "mewtwo-rejects-its-creators--burning-lab",
+        "label": "Burning laboratory backdrop",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 12, 100, 82]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "gandalf-refuses-the-ring--curated",
+    "scenario_slug": "gandalf-refuses-the-ring",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c9edb27f124819babaadc3211d3355d/gallery-9ea246297d8001639d70d505dc14b33863f0e688d0b341b12d72a89b3ec76956.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from The Lord of the Rings: The Fellowship of the Ring illustrating Gandalf Refuses the Ring",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAUAA8BgJZQCdAEOI+oAAP7s3xcfNedypgYekLpPjioAAAA=",
+    "content_hash": "9ea246297d8001639d70d505dc14b33863f0e688d0b341b12d72a89b3ec76956",
+    "protected_regions": [
+      {
+        "id": "gandalf-refuses-the-ring--frodo-face",
+        "label": "Frodo’s face and frightened expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [49, 8, 42, 78]
+      },
+      {
+        "id": "gandalf-refuses-the-ring--ring",
+        "label": "The One Ring held between Frodo’s fingers",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [37, 34, 14, 30]
+      },
+      {
+        "id": "gandalf-refuses-the-ring--hand",
+        "label": "Frodo’s extended hand and fingers",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [17, 19, 43, 64]
+      },
+      {
+        "id": "gandalf-refuses-the-ring--watermark",
+        "label": "Existing lower-left studio mark",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [2, 72, 16, 26]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "omni-mans-long-game--curated",
+    "scenario_slug": "omni-mans-long-game",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c9edb27f12481a09a1cd6fccda6af88/gallery-1379bb3fda53576656bf9a56be5c365ec586a60825cc2609cd292709ec15117e.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Invincible illustrating Omni-Man's Long Game",
+    "blur_data_url": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADwAQCdASoIAAUAA8BgJZgC7AEWYUMhgYAA/q0C9na8ONAK4cqEZipwreET0o073b0boP8F5F4AAA==",
+    "content_hash": "1379bb3fda53576656bf9a56be5c365ec586a60825cc2609cd292709ec15117e",
+    "protected_regions": [
+      {
+        "id": "omni-mans-long-game--mark-face",
+        "label": "Mark’s bloodied face and eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [35, 14, 28, 39]
+      },
+      {
+        "id": "omni-mans-long-game--mark-body",
+        "label": "Mark’s battered body in the landscape",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [12, 14, 55, 85]
+      },
+      {
+        "id": "omni-mans-long-game--hand",
+        "label": "Omni-Man’s hand gripping Mark’s head",
+        "kind": "gesture",
+        "priority": "soft",
+        "source_rect": [55, 16, 17, 31]
+      },
+      {
+        "id": "omni-mans-long-game--watermark",
+        "label": "Existing Prime Video watermark",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [3, 84, 12, 12]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "ed-209-misfires--curated",
+    "scenario_slug": "ed-209-misfires",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c9edb27f12481c6a1c1e8ba3804b77b/gallery-6b8165865b6cca50fe4c5d4dbd681b497fc817e186c3dd6b8f42ae0a1fb3a492.webp",
+    "width": 1222,
+    "height": 688,
+    "alt": "Still from RoboCop illustrating ED-209 Misfires",
+    "blur_data_url": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoIAAUAA8BgJZwAAvdohLiAAP7sD9Yv5DfiSH75SeYTi1JKvSXgAA==",
+    "content_hash": "6b8165865b6cca50fe4c5d4dbd681b497fc817e186c3dd6b8f42ae0a1fb3a492",
+    "protected_regions": [
+      {
+        "id": "ed-209-misfires--robot",
+        "label": "ED-209’s armored body and sensor head",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [14, 0, 68, 92]
+      },
+      {
+        "id": "ed-209-misfires--left-gun",
+        "label": "ED-209’s left cannon assembly",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [0, 13, 28, 37]
+      },
+      {
+        "id": "ed-209-misfires--right-gun",
+        "label": "ED-209’s right cannon assembly",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [70, 11, 30, 37]
+      },
+      {
+        "id": "ed-209-misfires--executives",
+        "label": "OCP executives watching the demonstration",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [61, 56, 39, 43]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "poisoning-future-memory--curated",
+    "scenario_slug": "poisoning-future-memory",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c9edb27f12481ceaf67efba97ff3872/gallery-0870caae4db028e6726bb659a861420b61b9ddadb7a63e2fe2eb07a8660d17ca.webp",
+    "width": 1600,
+    "height": 1200,
+    "alt": "Still from Memento illustrating Poisoning Future Memory",
+    "blur_data_url": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADQAQCdASoIAAYAA8BgJQBOgB6Vx3loAAD+wobBiUOI65uq8VTytL0h+4qZeTq+76M6xRh4FIHp6vZDhIAAAA==",
+    "content_hash": "0870caae4db028e6726bb659a861420b61b9ddadb7a63e2fe2eb07a8660d17ca",
+    "protected_regions": [
+      {
+        "id": "poisoning-future-memory--leonard-face",
+        "label": "Leonard’s face and downcast gaze",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [10, 0, 25, 36]
+      },
+      {
+        "id": "poisoning-future-memory--tattoos",
+        "label": "Leonard’s tattooed torso and arms",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [4, 21, 65, 70]
+      },
+      {
+        "id": "poisoning-future-memory--note",
+        "label": "The paper note Leonard is reading",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [29, 66, 51, 28]
+      },
+      {
+        "id": "poisoning-future-memory--hands",
+        "label": "Leonard’s hands holding the note",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [22, 65, 50, 34]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-magi-vote--curated",
+    "scenario_slug": "the-magi-vote",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c9edb27f12481d3ab32da823b00c611/gallery-f1acc5d90c2efa1b6ec909ebf44d7a8bc482fbe88707926b72d891eee407fe7f.webp",
+    "width": 1444,
+    "height": 1080,
+    "alt": "Still from Neon Genesis Evangelion illustrating The MAGI Vote",
+    "blur_data_url": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACwAQCdASoIAAYAA8BgJQBOgB6EGUMwAPffryorb41Xu+0tYsvKxYS9A2iNXdi8ZTFL1SRzn2q23+P1tAAAAA==",
+    "content_hash": "f1acc5d90c2efa1b6ec909ebf44d7a8bc482fbe88707926b72d891eee407fe7f",
+    "protected_regions": [
+      {
+        "id": "the-magi-vote--eva-face",
+        "label": "Evangelion unit’s face and eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [39, 19, 31, 32]
+      },
+      {
+        "id": "the-magi-vote--eva-body",
+        "label": "Evangelion armor and silhouette",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [0, 21, 100, 78]
+      },
+      {
+        "id": "the-magi-vote--horns",
+        "label": "Distinctive horn and antenna silhouette",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [20, 0, 38, 43]
+      }
+    ],
+    "annotation_status": "complete"
+  }
+]

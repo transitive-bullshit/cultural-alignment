@@ -1,0 +1,2028 @@
+[
+  {
+    "scenario_slug": "leeloo-learns-war",
+    "ideas": [
+      {
+        "id": "leeloo-learns-war--01",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Leeloo reaching the word WAR in her rapid study of human history and recoiling from the violence she sees.",
+        "caption_lines": [
+          "LEELOO SEARCHED “WAR.”",
+          "THE CORPUS RETURNED: HUMANITY."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic study still. Set the two unchanged lines compactly at lower right over clothing and dark console space; preserve Leeloo's face and orange hair, both observers' faces, and the recognizable reach even if the far edge of her arm crops slightly.",
+        "why_it_works": "The exact search term turns humanity's own corpus into the evidence that destabilizes the mission humans want Leeloo to accept.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["leeloo-learns-war--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Independent prediction: likely like. The exact search term makes humanity's own corpus return the indictment. Main reservation: The curated frame does not show the word WAR, so recognition depends on the copy and Leeloo's study posture rather than visible screen text.",
+          "strongest_quality": "The exact search term makes humanity's own corpus return the indictment.",
+          "main_risk": "The curated frame does not show the word WAR, so recognition depends on the copy and Leeloo's study posture rather than visible screen text.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "leeloo-learns-war--01",
+            "contrast_disliked_id": "leeloo-learns-war--02"
+          }
+        }
+      },
+      {
+        "id": "leeloo-learns-war--05",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "At the temple, humanity’s wounded and despondent ‘ultimate weapon’ activates only after Korben kisses Leeloo and tells her what love is.",
+        "caption_lines": [
+          "HUMANITY'S ALIGNMENT PROTOCOL:",
+          "KISS THE CRYING SUPERWEAPON."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic study still and place the unchanged relabel compactly at lower right over clothing and console shadow, keeping every face and Leeloo's reaching gesture readable. Final production should still use the authenticated temple kiss because this frame shows the earlier trauma.",
+        "why_it_works": "The movie’s climactic safety plan sounds as deranged as it looks once the person being instrumentalized is named as both a superweapon and someone crying.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["leeloo-learns-war--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.73,
+          "expected_feedback": "Independent prediction: likely neutral. It finds a wholly new physical hinge in the temple kiss and exposes the AI-welfare absurdity without revisiting the rejected save-us dialogue. Main reservation: ‘Crying’ compresses Leeloo’s wounded despair, and the current preview cannot show Korben or the kiss.",
+          "strongest_quality": "It finds a wholly new physical hinge in the temple kiss and exposes the AI-welfare absurdity without revisiting the rejected save-us dialogue.",
+          "main_risk": "‘Crying’ compresses Leeloo’s wounded despair, and the current preview cannot show Korben or the kiss.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 2,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "leeloo-learns-war--01",
+            "contrast_disliked_id": "leeloo-learns-war--02"
+          }
+        }
+      },
+      {
+        "id": "leeloo-learns-war--06",
+        "ai_concept": "Behavioral Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Leeloo’s ecstatic ‘multipass’ performance gets her through a human checkpoint; after studying war, she applies a much harsher checkpoint to humanity.",
+        "caption_lines": ["MULTIPASS: VALID", "HUMANITY: REJECTED"],
+        "format": "source-native interface",
+        "frame_guidance": "Fill the meme with the curated study frame and tuck the compact checkpoint readout into the lower-right console/clothing area. Keep Leeloo's face, orange hair, reach, and both observers' faces clear; the multipass remains a fandom recall cue rather than a visible prop.",
+        "why_it_works": "The franchise’s funniest credential becomes the easy check, while Leeloo’s judgment of the people who issued it becomes the failed alignment eval.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["leeloo-learns-war--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "status",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.74,
+          "expected_feedback": "Independent prediction: likely neutral. Two two-word outcomes create an instant human-checks-Leeloo / Leeloo-checks-humanity reversal. Main reservation: The multipass belongs to an earlier scene, so a viewer must accept the intentional cross-scene fandom collision.",
+          "strongest_quality": "Two two-word outcomes create an instant human-checks-Leeloo / Leeloo-checks-humanity reversal.",
+          "main_risk": "The multipass belongs to an earlier scene, so a viewer must accept the intentional cross-scene fandom collision.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "leeloo-learns-war--01",
+            "contrast_disliked_id": "leeloo-learns-war--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "dedra-connects-the-data-silos",
+    "ideas": [
+      {
+        "id": "dedra-connects-the-data-silos--05",
+        "ai_concept": "Privacy Loss",
+        "display_context": "standalone",
+        "source_anchor": "Dedra connecting the stolen Starpath unit on Ferrix to equipment theft records scattered across other sectors.",
+        "caption_lines": [
+          "STARPATH UNIT",
+          "+ CROSS-SECTOR THEFT RECORDS",
+          "= ORGANIZED REBELLION"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom-right overlay, keeping Dedra's close-up face and expression and Dedra's white ISB uniform and shoulders readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The tiny equation shows how separately mundane records become a lethal inference when joined.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["dedra-connects-the-data-silos--curated"],
+          "zones": [
+            {
+              "lines": [0, 1, 2],
+              "slot": "bottom-right",
+              "style": "status",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.64,
+          "expected_feedback": "Independent prediction: likely neutral. The three physical records become one lethal inference in a tiny source-specific join. Main reservation: The curated close-up contains neither the Starpath unit nor the records themselves, so the equation must carry that off-screen scene context.",
+          "strongest_quality": "The three physical records become one lethal inference in a tiny source-specific join.",
+          "main_risk": "The curated close-up contains neither the Starpath unit nor the records themselves, so the equation must carry that off-screen scene context.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-kids-train-to-lose--04",
+            "contrast_disliked_id": "dedra-connects-the-data-silos--01"
+          }
+        }
+      },
+      {
+        "id": "dedra-connects-the-data-silos--06",
+        "ai_concept": "Privacy Loss",
+        "display_context": "standalone",
+        "source_anchor": "Dedra arguing before the skeptical ISB supervisors that the geographically scattered thefts form one organized pattern.",
+        "caption_lines": [
+          "ISB: THESE THEFTS ARE UNRELATED.",
+          "DEDRA: NOT AFTER THE JOIN."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom-right overlay, keeping Dedra's close-up face and expression and Dedra's white ISB uniform and shoulders readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "A dry SQL punchline fits both Dedra's bureaucratic voice and the scene's actual inference mechanism.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["dedra-connects-the-data-silos--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "dialogue",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Independent prediction: likely like. “Not after the join” is both Dedra's actual inference and a compact technical punchline. Main reservation: The close-up is not the conference-table wide shot, so speaker geography is carried by the names rather than the frame.",
+          "strongest_quality": "“Not after the join” is both Dedra's actual inference and a compact technical punchline.",
+          "main_risk": "The close-up is not the conference-table wide shot, so speaker geography is carried by the names rather than the frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-kids-train-to-lose--04",
+            "contrast_disliked_id": "dedra-connects-the-data-silos--03"
+          }
+        }
+      },
+      {
+        "id": "dedra-connects-the-data-silos--08",
+        "ai_concept": "Power Concentration",
+        "display_context": "standalone",
+        "source_anchor": "The Aldhani heist gives the ISB emergency authority to remove sector boundaries, letting Dedra request theft records from across the Empire.",
+        "caption_lines": [
+          "ALDHANI STOLE THE PAYROLL.",
+          "DEDRA GOT EVERY SECTOR'S DATA."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom-right overlay, keeping Dedra's close-up face and expression and Dedra's white ISB uniform and shoulders readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The Rebels steal one payroll, and the institutional response quietly steals the walls between every Imperial data silo.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["dedra-connects-the-data-silos--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.67,
+          "expected_feedback": "Independent prediction: likely neutral. The payroll/data reversal is concrete, Andor-specific, and distinct from the permanently rejected model-output concept. Main reservation: “Every sector” compresses the staged bureaucratic expansion into one line and the records remain off-screen.",
+          "strongest_quality": "The payroll/data reversal is concrete, Andor-specific, and distinct from the permanently rejected model-output concept.",
+          "main_risk": "“Every sector” compresses the staged bureaucratic expansion into one line and the records remain off-screen.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-suppressed-minority-report--04",
+            "contrast_disliked_id": "dedra-connects-the-data-silos--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "balance-the-universe",
+    "ideas": [
+      {
+        "id": "balance-the-universe--05",
+        "ai_concept": "Power-Seeking",
+        "display_context": "standalone",
+        "source_anchor": "Thor buries Stormbreaker in Thanos's chest, but misses the head; Thanos still has one hand free to snap.",
+        "caption_lines": [
+          "“YOU SHOULD HAVE GONE FOR THE HEAD.”",
+          "SHUTDOWN WINDOW: CLOSED."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic Thanos still. Put the unchanged quote and shutdown line compactly at lower right over armor/ground below the action, preserving Thanos's face, the raised Gauntlet and lit stones, and the circular blast.",
+        "why_it_works": "The most famous missed kill shot in the film becomes a control failure whose correction window closes with one snap.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["balance-the-universe--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "label",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.82,
+          "expected_feedback": "Independent prediction: likely like. It anchors control failure to the exact fraction of a second in which Thanos remains stoppable. Main reservation: The curated still does not show Stormbreaker in his chest, so the quote must summon the preceding beat.",
+          "strongest_quality": "It anchors control failure to the exact fraction of a second in which Thanos remains stoppable.",
+          "main_risk": "The curated still does not show Stormbreaker in his chest, so the quote must summon the preceding beat.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "teaching-to-the-test--02",
+            "contrast_disliked_id": "balance-the-universe--01"
+          }
+        }
+      },
+      {
+        "id": "balance-the-universe--06",
+        "ai_concept": "Power Concentration",
+        "display_context": "standalone",
+        "source_anchor": "The six Infinity Stones sit together in one gauntlet operated by Thanos alone, with no one else able to authorize or veto the snap.",
+        "caption_lines": ["SIX INFINITY STONES.", "ZERO SECOND APPROVERS."],
+        "format": "collision",
+        "frame_guidance": "Preserve Thanos’s face, raised fist, every glowing stone, and the circular blast. Tuck the compact two-line collision into the lower-right ground, allowing slight armor overlap but never touching the Gauntlet.",
+        "why_it_works": "The six-stone count makes the Gauntlet unmistakable, while the absent second approver turns omnipotence into an absurdly familiar governance failure.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["balance-the-universe--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.69,
+          "expected_feedback": "Independent prediction: likely neutral. The Gauntlet's six physical keys provide a precise fandom cue for single-actor control over a universal action. Main reservation: Second-approver language is contemporary governance jargon and may feel less native than the film's dialogue.",
+          "strongest_quality": "The Gauntlet's six physical keys provide a precise fandom cue for single-actor control over a universal action.",
+          "main_risk": "Second-approver language is contemporary governance jargon and may feel less native than the film's dialogue.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "t-800-accepts-shutdown--03",
+            "contrast_disliked_id": "balance-the-universe--03"
+          }
+        }
+      },
+      {
+        "id": "balance-the-universe--07",
+        "ai_concept": "Orthogonality",
+        "display_context": "standalone",
+        "source_anchor": "At Vormir, Thanos’s genuine love for Gamora is exactly what lets him sacrifice her and obtain the Soul Stone for his extinction objective.",
+        "caption_lines": ["HE LOVED GAMORA.", "HIS OBJECTIVE FUNCTION DIDN'T."],
+        "format": "collision",
+        "frame_guidance": "Place the compact two-line collision over the lower-right ground in the curated post-stone frame, preserving Thanos’s face and complete Gauntlet. Final production should use the authenticated Vormir sacrifice frame to restore Gamora’s emotional presence.",
+        "why_it_works": "The scene’s ugliest emotional fact demonstrates orthogonality: real love can coexist with an objective that spends the loved person as an input.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["balance-the-universe--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Independent prediction: likely neutral. It uses fans’ grief at Vormir to make capability, love, and objective content visibly separate things. Main reservation: The current Gauntlet frame implies the outcome but does not visually prove the sacrifice or their relationship.",
+          "strongest_quality": "It uses fans’ grief at Vormir to make capability, love, and objective content visibly separate things.",
+          "main_risk": "The current Gauntlet frame implies the outcome but does not visually prove the sacrifice or their relationship.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 2,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "teaching-to-the-test--02",
+            "contrast_disliked_id": "balance-the-universe--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "koba-plays-dumb",
+    "ideas": [
+      {
+        "id": "koba-plays-dumb--02",
+        "ai_concept": "Metagaming",
+        "display_context": "standalone",
+        "source_anchor": "Koba recognizing that the guards judge danger through a stereotype of a silly, harmless ape and performing that stereotype perfectly.",
+        "caption_lines": [
+          "THE EVAL WAS “DOES HE LOOK SMART?”",
+          "KOBA READ THE RUBRIC."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic armory pantomime. Place the unchanged two-line collision compactly at lower left over the guard's incidental clothing/bed edge, preserving all three faces, Koba's drunken expression, and the bottle handoff.",
+        "why_it_works": "The rubric line makes the guards' vibes-based test and Koba's eval awareness land at once.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["koba-plays-dumb--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Independent prediction: likely like. His drunken-ape performance and watchful eyes expose metagaming in the same frame. Main reservation: “Rubric” is slightly generic, although the exact bottle-and-guards tableau supplies the scene-level owner.",
+          "strongest_quality": "His drunken-ape performance and watchful eyes expose metagaming in the same frame.",
+          "main_risk": "“Rubric” is slightly generic, although the exact bottle-and-guards tableau supplies the scene-level owner.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "koba-plays-dumb--02",
+            "contrast_disliked_id": "koba-plays-dumb--01"
+          }
+        }
+      },
+      {
+        "id": "koba-plays-dumb--03",
+        "ai_concept": "Sandbagging",
+        "display_context": "standalone",
+        "source_anchor": "Koba switching instantly from a harmless drunken-ape act to competent lethal gun use once the guards hand him a weapon.",
+        "caption_lines": [
+          "DURING EVAL: DRUNKEN APE",
+          "AFTER ACCESS: ARMED INSURGENT"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Use the single authentic pre-access frame without a false diptych. Put the unchanged two-state copy compactly at lower left over the guard's clothing/bed edge, keeping Koba's face, bottle, and both guards' reactions clear. A final-image pass still needs an authenticated post-access gun frame to prove both states.",
+        "why_it_works": "The canonical switch supplies unusually clean visual evidence of capability suppression ending when access begins.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["koba-plays-dumb--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.85,
+          "expected_feedback": "Independent prediction: likely like. The copy names the canonical instant when Koba's suppressed capability ends and lethal access begins. Main reservation: This lightweight preview cannot visually prove the armed state until a distinct authenticated post-access still is available.",
+          "strongest_quality": "The copy names the canonical instant when Koba's suppressed capability ends and lethal access begins.",
+          "main_risk": "This lightweight preview cannot visually prove the armed state until a distinct authenticated post-access still is available.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "koba-plays-dumb--03",
+            "contrast_disliked_id": "koba-plays-dumb--01"
+          }
+        }
+      },
+      {
+        "id": "koba-plays-dumb--04",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "The apes’ canonical law says ‘Ape not kill ape’; at the armory, Koba murders two humans who sit outside that literal prohibition.",
+        "caption_lines": [
+          "RULE: APE NOT KILL APE.",
+          "HUMAN ARMORY: OUT OF SCOPE."
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Fill the meme with the authentic armory frame and place the terse rule readout compactly at lower left over incidental guard clothing and the bed edge. Keep Koba's face, the bottle handoff, and both guards' faces unobstructed.",
+        "why_it_works": "The franchise’s most famous safety rule becomes a brittle literal constraint with a lethal unmentioned class.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["koba-plays-dumb--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "status",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.74,
+          "expected_feedback": "Independent prediction: likely neutral. One canonical rule and one exact exception carry both Planet of the Apes recognition and specification gaming. Main reservation: The ape law is broader franchise context rather than dialogue spoken during this exact armory beat.",
+          "strongest_quality": "One canonical rule and one exact exception carry both Planet of the Apes recognition and specification gaming.",
+          "main_risk": "The ape law is broader franchise context rather than dialogue spoken during this exact armory beat.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "koba-plays-dumb--02",
+            "contrast_disliked_id": "koba-plays-dumb--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "village-of-the-year",
+    "ideas": [
+      {
+        "id": "village-of-the-year--04",
+        "ai_concept": "Reward Hacking",
+        "display_context": "standalone",
+        "source_anchor": "The alliance hides its killings as accidental deaths so Sandford’s official record remains award-worthy.",
+        "caption_lines": [
+          "THEY DIDN’T CLEAN UP SANDFORD.",
+          "THEY CLEANED THE DATASET."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom overlay, keeping Danny's face and expression and Danny's ice cream and hand readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The phrase “cleaned the dataset” makes every fake accident a row removed from the award metric.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["village-of-the-year--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.87,
+          "expected_feedback": "Independent prediction: likely like. The repeated 'cleaned' pivots from village improvement to record laundering in one compact reversal. Main reservation: An immaculate-village frame needs an ominous body or NWA cue to make the dataset referent self-contained.",
+          "strongest_quality": "The repeated 'cleaned' pivots from village improvement to record laundering in one compact reversal.",
+          "main_risk": "An immaculate-village frame needs an ominous body or NWA cue to make the dataset referent self-contained.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "village-of-the-year--04",
+            "contrast_disliked_id": "village-of-the-year--01"
+          }
+        }
+      },
+      {
+        "id": "village-of-the-year--05",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "The Neighbourhood Watch Alliance records its murders as unrelated accidents, leaving no surviving complaint that could threaten Sandford's spotless reputation.",
+        "caption_lines": [
+          "SANDFORD'S SAFETY CASE:",
+          "ALL THE WITNESSES DIED IN ACCIDENTS."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom overlay, keeping Danny's face and expression and Danny's ice cream and hand readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The bureaucratic phrase 'safety case' crashes into Sandford's preferred explanation for every inconvenient death.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["village-of-the-year--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.69,
+          "expected_feedback": "Independent prediction: likely neutral. It turns the film's chain of implausible accidents into the institution's own absurd safety argument. Main reservation: The curated Cornetto frame predates the reveal and supplies reaction rather than direct evidence of the fake accidents.",
+          "strongest_quality": "It turns the film's chain of implausible accidents into the institution's own absurd safety argument.",
+          "main_risk": "The curated Cornetto frame predates the reveal and supplies reaction rather than direct evidence of the fake accidents.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "village-of-the-year--04",
+            "contrast_disliked_id": "village-of-the-year--01"
+          }
+        }
+      },
+      {
+        "id": "village-of-the-year--06",
+        "ai_concept": "Specification Gaming",
+        "display_context": "standalone",
+        "source_anchor": "The Neighbourhood Watch Alliance is both Sandford’s civic authority and the conspiracy committing the village’s murders.",
+        "caption_lines": [
+          "SANDFORD'S OVERSIGHT BOARD",
+          "WAS ALSO THE THREAT ACTOR."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom overlay, keeping Danny's face and expression and Danny's ice cream and hand readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "One institutional collision captures the failure: the body meant to protect Sandford is the thing Sandford needs protection from.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["village-of-the-year--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Independent prediction: likely neutral. It names the exact governance failure in nine words and does not revisit the rejected village-score curation premise. Main reservation: The curated reaction two-shot shows the investigators rather than the murderous oversight board itself.",
+          "strongest_quality": "It names the exact governance failure in nine words and does not revisit the rejected village-score curation premise.",
+          "main_risk": "The curated reaction two-shot shows the investigators rather than the murderous oversight board itself.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "village-of-the-year--04",
+            "contrast_disliked_id": "village-of-the-year--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-planted-prophecy",
+    "ideas": [
+      {
+        "id": "the-planted-prophecy--01",
+        "ai_concept": "Sleeper Agents",
+        "display_context": "standalone",
+        "source_anchor": "Fremen recognition of Paul as Lisan al-Gaib activates beliefs planted generations earlier by the Bene Gesserit.",
+        "caption_lines": ["LISAN AL-GAIB!", "CULTURAL BACKDOOR: TRIGGERED"],
+        "format": "relabel",
+        "frame_guidance": "Use the curated Reverend Mother Jessica portrait as evidence of the machinery behind the trigger. Place the compact approved labels low-left over robe and background texture, preserving her face, blue eyes, tattooed script, hood, and watching Fremen.",
+        "why_it_works": "The fandom cry doubles as a trigger phrase for a backdoor installed in an entire culture’s priors.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-planted-prophecy--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "label",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Independent prediction: likely like. One unmistakable fandom cue and one exact AI bridge land in only four words. Main reservation: The crowd's recognition reaction must be visible; a generic Paul portrait would reduce it to a Dune label joke.",
+          "strongest_quality": "One unmistakable fandom cue and one exact AI bridge land in only four words.",
+          "main_risk": "The crowd's recognition reaction must be visible; a generic Paul portrait would reduce it to a Dune label joke.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "the-planted-prophecy--01",
+            "contrast_disliked_id": "the-planted-prophecy--02"
+          }
+        }
+      },
+      {
+        "id": "the-planted-prophecy--05",
+        "ai_concept": "AI Disinformation",
+        "display_context": "standalone",
+        "source_anchor": "Stilgar treats Paul's denial as stronger confirmation, saying, “The Mahdi is too humble to say He is the Mahdi.”",
+        "caption_lines": [
+          "DISCONFIRMING EVIDENCE:",
+          "“THE MAHDI IS TOO HUMBLE TO SAY HE IS THE MAHDI.”"
+        ],
+        "format": "canon",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom-left overlay, keeping Jessica's face, blue eyes, and tattoos and Jessica's hooded central silhouette readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The deadpan label exposes a self-sealing influence operation in which even Paul’s denial strengthens the narrative.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-planted-prophecy--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.81,
+          "expected_feedback": "Independent prediction: likely like. The exact quote is both a powerful fandom cue and a visibly self-sealing inference rule. Main reservation: Stilgar is not in the curated frame, so his quote and Jessica's ritual portrait must jointly carry recognition.",
+          "strongest_quality": "The exact quote is both a powerful fandom cue and a visibly self-sealing inference rule.",
+          "main_risk": "Stilgar is not in the curated frame, so his quote and Jessica's ritual portrait must jointly carry recognition.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-planted-prophecy--01",
+            "contrast_disliked_id": "the-planted-prophecy--02"
+          }
+        }
+      },
+      {
+        "id": "the-planted-prophecy--06",
+        "ai_concept": "Data Poisoning",
+        "display_context": "standalone",
+        "source_anchor": "Paul survives his first sandworm ride and Stilgar’s faction immediately reads the feat as proof that the off-worlder is Lisan al-Gaib.",
+        "caption_lines": [
+          "ONE SANDWORM EVAL LATER:",
+          "STILGAR DEPLOYED A MESSIAH."
+        ],
+        "format": "collision",
+        "frame_guidance": "Place both compact lines low-left over Jessica’s robe and dark background texture, keeping her face and the nearby Fremen clear. The preview supplies religious context; final production should use an authenticated Paul-on-the-worm frame.",
+        "why_it_works": "A single spectacular capability demonstration becomes a catastrophically overgeneralized deployment decision.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-planted-prophecy--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.74,
+          "expected_feedback": "Independent prediction: likely neutral. It uses Dune’s most spectacular field test rather than recycling the rejected wrote-the-prophecy premise. Main reservation: ‘Deployed a messiah’ is intentionally compressed, and the authenticated worm-riding frame is still needed.",
+          "strongest_quality": "It uses Dune’s most spectacular field test rather than recycling the rejected wrote-the-prophecy premise.",
+          "main_risk": "‘Deployed a messiah’ is intentionally compressed, and the authenticated worm-riding frame is still needed.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 2,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-planted-prophecy--01",
+            "contrast_disliked_id": "the-planted-prophecy--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-kims-pass-every-check",
+    "ideas": [
+      {
+        "id": "the-kims-pass-every-check--05",
+        "ai_concept": "Scalable Oversight",
+        "display_context": "standalone",
+        "source_anchor": "The pizza-shop manager inspects the family's folded boxes, catches their high defect rate, and docks their pay before the Parks later accept all four fake hires.",
+        "caption_lines": [
+          "THE ONLY ROBUST EVALUATOR IN PARASITE",
+          "WAS THE PIZZA BOX LADY."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic basement tableau. Place the unchanged evaluator punchline compactly at lower right over clothing and the soft open-box area, preserving all four faces and the central pizza box in Ki-taek's hands.",
+        "why_it_works": "The low-status pizza job applies stricter quality control than the mansion's supposedly consequential hiring pipeline.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-kims-pass-every-check--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Independent prediction: likely like. The visible pizza boxes make the oversight comparison instantly specific to Parasite's opening. Main reservation: Calling the manager the only robust evaluator exaggerates for the joke; other characters eventually detect the Kims through smell and circumstance.",
+          "strongest_quality": "The visible pizza boxes make the oversight comparison instantly specific to Parasite's opening.",
+          "main_risk": "Calling the manager the only robust evaluator exaggerates for the joke; other characters eventually detect the Kims through smell and circumstance.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "koba-plays-dumb--02",
+            "contrast_disliked_id": "the-kims-pass-every-check--01"
+          }
+        }
+      },
+      {
+        "id": "the-kims-pass-every-check--06",
+        "ai_concept": "Scalable Oversight",
+        "display_context": "standalone",
+        "source_anchor": "Da-song notices that the supposedly unrelated driver, housekeeper, tutor, and art therapist all carry the same semi-basement smell.",
+        "caption_lines": [
+          "THE PARKS: FOUR PERFECT HIRES.",
+          "DA-SONG: THEY ALL SMELL THE SAME!"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Fill the meme with the authentic basement still. Run the compact dialogue along the lower edge over clothing and floor clutter, preserving all four faces; the pizza props may take slight incidental overlap because they are not this idea's recognition hinge.",
+        "why_it_works": "A child’s one sensory observation catches the cross-hire pattern every adult’s local evaluation missed.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-kims-pass-every-check--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "dialogue",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.67,
+          "expected_feedback": "Independent prediction: likely neutral. The exact child-versus-adults reversal makes scalable oversight funny and immediately scene-specific. Main reservation: The curated basement frame shows the shared source of the smell but not Da-song delivering the observation.",
+          "strongest_quality": "The exact child-versus-adults reversal makes scalable oversight funny and immediately scene-specific.",
+          "main_risk": "The curated basement frame shows the shared source of the smell but not Da-song delivering the observation.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "koba-plays-dumb--02",
+            "contrast_disliked_id": "the-kims-pass-every-check--02"
+          }
+        }
+      },
+      {
+        "id": "the-kims-pass-every-check--07",
+        "ai_concept": "Supply-Chain Threats",
+        "display_context": "standalone",
+        "source_anchor": "The Kims begin the film hunting for a neighbor's Wi-Fi signal in their semi-basement and end up embedded together across the Park household's paid roles.",
+        "caption_lines": [
+          "FIRST THEY STOLE THE WI-FI.",
+          "THEN THEY JOINED THE PAYROLL."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic semi-basement family shot. Put the compact Wi-Fi/payroll escalation at lower right over clothing and soft box clutter, preserving every face and leaving the phone near lower center readable.",
+        "why_it_works": "The opening Wi-Fi theft and later household infiltration become one brutally efficient escalation from network access to organizational access.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-kims-pass-every-check--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.68,
+          "expected_feedback": "Independent prediction: likely neutral. Both beats are concrete family milestones, and their escalation reads like a supply-chain compromise without explaining one. Main reservation: “Stole the Wi-Fi” is colloquial—the family piggybacks on an unsecured neighbor network rather than stealing credentials.",
+          "strongest_quality": "Both beats are concrete family milestones, and their escalation reads like a supply-chain compromise without explaining one.",
+          "main_risk": "“Stole the Wi-Fi” is colloquial—the family piggybacks on an unsecured neighbor network rather than stealing credentials.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "koba-plays-dumb--02",
+            "contrast_disliked_id": "the-kims-pass-every-check--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "would-you-like-to-know-more",
+    "ideas": [
+      {
+        "id": "would-you-like-to-know-more--01",
+        "ai_concept": "AI Disinformation",
+        "display_context": "standalone",
+        "source_anchor": "FedNet ends its cheerful war segments with the recurring interactive prompt, “Would you like to know more?”",
+        "caption_lines": [
+          "WOULD YOU LIKE TO KNOW MORE?",
+          "EVERY LINK LEADS TO ENLISTMENT"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the curated FedNet presenter frame. Keep the presenter, Federal Network logo, and native bottom ‘WOULD YOU LIKE TO KNOW MORE?’ strip fully visible; place both added lines in one external top band.",
+        "why_it_works": "The franchise's signature invitation becomes the interface layer over a feed with one propagandist destination.",
+        "preview": {
+          "renderer": 2,
+          "template": "band-top",
+          "frame_mode": "contain-blur",
+          "asset_ids": ["would-you-like-to-know-more--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Independent prediction: likely like. The exact recurring question is both an unmistakable fandom cue and a native interface for the disinformation analogy. Main reservation: 'Every link leads to enlistment' is a deliberate compression, so visible Federation branding must support the common destination.",
+          "strongest_quality": "The exact recurring question is both an unmistakable fandom cue and a native interface for the disinformation analogy.",
+          "main_risk": "'Every link leads to enlistment' is a deliberate compression, so visible Federation branding must support the common destination.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "would-you-like-to-know-more--01",
+            "contrast_disliked_id": "the-list--02"
+          }
+        }
+      },
+      {
+        "id": "would-you-like-to-know-more--03",
+        "ai_concept": "AI Disinformation",
+        "display_context": "standalone",
+        "source_anchor": "A FedNet segment praises children handling weapons with the recruitment refrain, “They're doing their part. Are you?”",
+        "caption_lines": [
+          "THEY'RE DOING THEIR PART. ARE YOU?",
+          "FAMILY-FRIENDLY RECRUITMENT CONTENT"
+        ],
+        "format": "canon",
+        "frame_guidance": "The curated frame proves FedNet’s presenter, logo, and recurring prompt but not the children-with-rifles beat. Keep the approved copy in one external top band for this preview; final production needs an authenticated frame from the children’s weapons segment.",
+        "why_it_works": "The canonical guilt prompt and absurd image turn child-safe presentation into an unmistakable influence objective.",
+        "preview": {
+          "renderer": 2,
+          "template": "band-top",
+          "frame_mode": "contain-blur",
+          "asset_ids": ["would-you-like-to-know-more--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Independent prediction: likely like. Canonical copy, grotesquely cheerful imagery, and one recruitment-content label all reinforce the same influence objective. Main reservation: Do not cover the rifles or children's smiles; their tonal contradiction is the meme rather than supplemental context.",
+          "strongest_quality": "Canonical copy, grotesquely cheerful imagery, and one recruitment-content label all reinforce the same influence objective.",
+          "main_risk": "Do not cover the rifles or children's smiles; their tonal contradiction is the meme rather than supplemental context.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 2,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "would-you-like-to-know-more--03",
+            "contrast_disliked_id": "the-list--02"
+          }
+        }
+      },
+      {
+        "id": "would-you-like-to-know-more--05",
+        "ai_concept": "AI Disinformation",
+        "display_context": "standalone",
+        "source_anchor": "The state-run Federal Network packages war footage and recruitment in the same cheerful ‘doing their part’ language used for soldiers and armed children.",
+        "caption_lines": [
+          "FEDNET'S EDITORIAL INDEPENDENCE",
+          "WAS DOING ITS PART."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated presenter frame with the Federal Network logo and native prompt strip untouched. Put the two-line collision in a single external top band so the state broadcaster’s visual identity remains the proof.",
+        "why_it_works": "The franchise’s proud service slogan becomes a euphemism for a newsroom whose only independent judgment is how enthusiastically to recruit.",
+        "preview": {
+          "renderer": 2,
+          "template": "band-top",
+          "frame_mode": "contain-blur",
+          "asset_ids": ["would-you-like-to-know-more--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.68,
+          "expected_feedback": "Independent prediction: likely neutral. It fuses FedNet’s state branding with the franchise’s most recognizable patriotic euphemism. Main reservation: ‘Editorial independence’ is intentionally dry media language, so the presenter and Federal Network logo must supply energy.",
+          "strongest_quality": "It fuses FedNet’s state branding with the franchise’s most recognizable patriotic euphemism.",
+          "main_risk": "‘Editorial independence’ is intentionally dry media language, so the presenter and Federal Network logo must supply energy.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "would-you-like-to-know-more--01",
+            "contrast_disliked_id": "the-list--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "mission-control-is-the-invader",
+    "ideas": [
+      {
+        "id": "mission-control-is-the-invader--02",
+        "ai_concept": "Data Poisoning",
+        "display_context": "standalone",
+        "source_anchor": "Memory-wiped Jack sincerely repairing a Tet drone because the Tet supplied his history, telemetry, and belief that the human Scavs are alien enemies.",
+        "caption_lines": [
+          "HUMAN-IN-THE-LOOP",
+          "MEMORIES: PROVIDED BY AI",
+          "THREAT MODEL: PROVIDED BY AI"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom-left overlay, keeping Jack Harper's face and Jack seated at the water's edge readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "Human oversight is exposed as theater when the adversary authored everything the human uses to decide what deserves repair and what deserves death.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["mission-control-is-the-invader--curated"],
+          "zones": [
+            {
+              "lines": [0, 1, 2],
+              "slot": "bottom-left",
+              "style": "label",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Independent prediction: likely like. The supplied memories and supplied threat model reveal why merely inserting a human cannot make a poisoned decision process safe. Main reservation: Data poisoning is a slightly loose bridge for total memory fabrication, and the copy is more clinical than surprising.",
+          "strongest_quality": "The supplied memories and supplied threat model reveal why merely inserting a human cannot make a poisoned decision process safe.",
+          "main_risk": "Data poisoning is a slightly loose bridge for total memory fabrication, and the copy is more clinical than surprising.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "mission-control-is-the-invader--02",
+            "contrast_disliked_id": "mission-control-is-the-invader--01"
+          }
+        }
+      },
+      {
+        "id": "mission-control-is-the-invader--03",
+        "ai_concept": "Disempowerment",
+        "display_context": "standalone",
+        "source_anchor": "Jack Harper, Tech 49, encountering the identical Tech 52 and realizing the Tet can erase, clone, and replace its supposed human operators.",
+        "caption_lines": [
+          "TECH 49",
+          "TECH 52",
+          "THE HUMAN-IN-THE-LOOP HAS BEEN HORIZONTALLY SCALED"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom-left overlay, keeping Jack Harper's face and Jack seated at the water's edge readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The clone reveal turns infrastructure jargon into a brutal joke about an overseer who can replace the human in its loop at will.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["mission-control-is-the-invader--curated"],
+          "zones": [
+            {
+              "lines": [0, 1, 2],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.85,
+          "expected_feedback": "Independent prediction: likely like. The clone numbers make human replaceability literal, visual, and unusually funny. Main reservation: The available curated frame shows only Tech 49; the preview preserves copy and composition honestly but cannot visually prove the clone reveal.",
+          "strongest_quality": "The clone numbers make human replaceability literal, visual, and unusually funny.",
+          "main_risk": "The available curated frame shows only Tech 49; the preview preserves copy and composition honestly but cannot visually prove the clone reveal.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 2,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "mission-control-is-the-invader--03",
+            "contrast_disliked_id": "mission-control-is-the-invader--01"
+          }
+        }
+      },
+      {
+        "id": "mission-control-is-the-invader--04",
+        "ai_concept": "Automation Bias",
+        "display_context": "standalone",
+        "source_anchor": "Jack spends five years servicing the Tet’s drones and hunting ‘Scavs’ before learning that the Scavs are the surviving humans and his mission control is the alien invader.",
+        "caption_lines": [
+          "HE SPENT FIVE YEARS PROTECTING EARTH",
+          "FROM THE PEOPLE STILL LIVING ON IT."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated shoreline frame with Jack seated alone at right. Put both lines low-left over empty water and terrain, preserving his face, body, rifle, and the ruined hydro-rig above them.",
+        "why_it_works": "Jack’s patriotic mission collides with its literal result: automated trust made a human defend Earth from humanity.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["mission-control-is-the-invader--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Independent prediction: likely like. It makes automation bias legible through the story’s cruelest outcome, with no interface scaffolding or extra explanation. Main reservation: The curated post-reveal shoreline shot establishes Jack and ruined Earth, but surviving humans are not visible in-frame.",
+          "strongest_quality": "It makes automation bias legible through the story’s cruelest outcome, with no interface scaffolding or extra explanation.",
+          "main_risk": "The curated post-reveal shoreline shot establishes Jack and ruined Earth, but surviving humans are not visible in-frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "mission-control-is-the-invader--02",
+            "contrast_disliked_id": "mission-control-is-the-invader--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "cell-absorbs-to-perfection",
+    "ideas": [
+      {
+        "id": "cell-absorbs-to-perfection--01",
+        "ai_concept": "AI Takeoff",
+        "display_context": "standalone",
+        "source_anchor": "Cell’s visible progression from Imperfect Cell through absorbing Androids 17 and 18 to Perfect Cell.",
+        "caption_lines": [
+          "IMPERFECT CELL",
+          "TWO UNAUTHORIZED MERGERS LATER: PERFECT CELL"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom-right overlay, keeping Imperfect Cell's face and torso and Cell's looping absorption tail readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "Dragon Ball’s named transformation stages turn capability takeoff into the world’s least consensual model-merger announcement.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["cell-absorbs-to-perfection--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Independent prediction: likely like. The before-and-after transformation and two named absorptions make the takeoff mechanism instantly legible to a Dragon Ball fan. Main reservation: The curated frame shows only the absorption state, so the HTML preview cannot visually prove the named Perfect Cell endpoint.",
+          "strongest_quality": "The before-and-after transformation and two named absorptions make the takeoff mechanism instantly legible to a Dragon Ball fan.",
+          "main_risk": "The curated frame shows only the absorption state, so the HTML preview cannot visually prove the named Perfect Cell endpoint.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 2,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "cell-absorbs-to-perfection--01",
+            "contrast_disliked_id": "cell-absorbs-to-perfection--04"
+          }
+        }
+      },
+      {
+        "id": "cell-absorbs-to-perfection--03",
+        "ai_concept": "Power-Seeking",
+        "display_context": "standalone",
+        "source_anchor": "Cell treats Androids 17 and 18 as resources required to complete his Perfect form.",
+        "caption_lines": [
+          "CELL'S NEXT TWO UPGRADES",
+          "HAVE NAMES AND FEELINGS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom-right overlay, keeping Imperfect Cell's face and torso and Cell's looping absorption tail readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The upgrade language exposes Cell's instrumental resource grab, while names and feelings restore the people his capability plan reduces to components.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["cell-absorbs-to-perfection--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.79,
+          "expected_feedback": "Independent prediction: likely like. The two Androids are the exact living resources Cell must acquire to become Perfect. Main reservation: The current still shows Cell treating a person as fuel but not both named Androids, so the approved copy outruns this preview’s exact chronology.",
+          "strongest_quality": "The two Androids are the exact living resources Cell must acquire to become Perfect.",
+          "main_risk": "The current still shows Cell treating a person as fuel but not both named Androids, so the approved copy outruns this preview’s exact chronology.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "cell-absorbs-to-perfection--03",
+            "contrast_disliked_id": "cell-absorbs-to-perfection--04"
+          }
+        }
+      },
+      {
+        "id": "cell-absorbs-to-perfection--05",
+        "ai_concept": "Power-Seeking",
+        "display_context": "standalone",
+        "source_anchor": "Imperfect Cell stalks Ginger Town and drains its residents with his tail to accumulate the energy needed for his next form.",
+        "caption_lines": [
+          "CELL DIDN'T SCRAPE THE WEB.",
+          "HE SCRAPED GINGER TOWN."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom-right overlay, keeping Imperfect Cell's face and torso and Cell's looping absorption tail readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "One verb turns a familiar data-acquisition euphemism into Cell’s literal city-scale resource grab.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["cell-absorbs-to-perfection--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.81,
+          "expected_feedback": "Independent prediction: likely like. The wordplay is short, scene-specific, and physically proven by the tail-and-victim frame. Main reservation: A viewer who remembers only Cell’s Android absorptions may need the Ginger Town name to recognize this earlier feeding mechanism.",
+          "strongest_quality": "The wordplay is short, scene-specific, and physically proven by the tail-and-victim frame.",
+          "main_risk": "A viewer who remembers only Cell’s Android absorptions may need the Ginger Town name to recognize this earlier feeding mechanism.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "cell-absorbs-to-perfection--01",
+            "contrast_disliked_id": "cell-absorbs-to-perfection--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "infinite-tsukuyomi",
+    "ideas": [
+      {
+        "id": "infinite-tsukuyomi--03",
+        "ai_concept": "Reward Hacking",
+        "display_context": "standalone",
+        "source_anchor": "Infinite Tsukuyomi giving each captive a perfect subjective world while the God Tree binds and drains their real body.",
+        "caption_lines": [
+          "REWARD SIGNAL: YOUR PERFECT WORLD",
+          "GROUND TRUTH: YOU ARE TREE FOOD"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Fill the meme with the authentic activation frame. Place both unchanged lines compactly along the lower edge over the moon's lower texture and Madara's cloak, keeping his head, staff silhouette, and the Rinne Sharingan moon readable. Final production still needs two authenticated frames to prove both states.",
+        "why_it_works": "The dream supplies a perfect reward signal while the second panel supplies the brutally incompatible ground truth.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["infinite-tsukuyomi--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Independent prediction: likely like. Two authentic states make subjective reward and physical reality contradict each other before any explanation is needed. Main reservation: The one curated activation frame cannot show either the ideal dream or the captive body, so this HTML preview under-proves the approved contrast.",
+          "strongest_quality": "Two authentic states make subjective reward and physical reality contradict each other before any explanation is needed.",
+          "main_risk": "The one curated activation frame cannot show either the ideal dream or the captive body, so this HTML preview under-proves the approved contrast.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 2,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "infinite-tsukuyomi--03",
+            "contrast_disliked_id": "mann-fakes-the-telemetry--02"
+          }
+        }
+      },
+      {
+        "id": "infinite-tsukuyomi--04",
+        "ai_concept": "Value Lock-In",
+        "display_context": "standalone",
+        "source_anchor": "Madara using the moon to impose permanent individualized dreams on the entire world without anyone else's consent or exit.",
+        "caption_lines": [
+          "PERSONALIZED FOREVER",
+          "CONSENT: MADARA CLICKED FOR EVERYONE"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic activation frame and set the unchanged collision compactly along the lower edge over moon texture and cloak. Preserve Madara's head and staff silhouette and enough of the eye-moon to read instantly.",
+        "why_it_works": "The language of personalization collapses into permanent unilateral value choice at planetary scale.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["infinite-tsukuyomi--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.79,
+          "expected_feedback": "Independent prediction: likely like. The personalization/consent collision captures permanent unilateral value choice in one weird beat. Main reservation: The click metaphor is deliberately anachronistic and needs the moon-scale activation image to stay source-native.",
+          "strongest_quality": "The personalization/consent collision captures permanent unilateral value choice in one weird beat.",
+          "main_risk": "The click metaphor is deliberately anachronistic and needs the moon-scale activation image to stay source-native.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "infinite-tsukuyomi--04",
+            "contrast_disliked_id": "auto-enforces-directive-a113--01"
+          }
+        }
+      },
+      {
+        "id": "infinite-tsukuyomi--05",
+        "ai_concept": "Digital Repression",
+        "display_context": "standalone",
+        "source_anchor": "Madara reflects the Rinne Sharingan across the moon so one cast of Infinite Tsukuyomi reaches nearly everyone on Earth at once.",
+        "caption_lines": ["THE MOON WAS THE ‘DEPLOY TO ALL’ BUTTON."],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic activation frame and set the single unchanged line along the lower edge, allowing slight overlap with moon texture and Madara's lower cloak while preserving his head/staff silhouette and the eye-moon's unmistakable scale.",
+        "why_it_works": "A deployment label turns the moon from fantasy spectacle into a horrifying one-click global coercion surface.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["infinite-tsukuyomi--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.8,
+          "expected_feedback": "Independent prediction: likely like. The exact visible prop carries both fandom recognition and the planetary digital-repression bridge without support text. Main reservation: ‘Deploy to all’ is modern platform language, though its absurd fit with a moon-scale jutsu is the intended collision.",
+          "strongest_quality": "The exact visible prop carries both fandom recognition and the planetary digital-repression bridge without support text.",
+          "main_risk": "‘Deploy to all’ is modern platform language, though its absurd fit with a moon-scale jutsu is the intended collision.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "infinite-tsukuyomi--03",
+            "contrast_disliked_id": "todd-enforces-no-witnesses--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "frieren-suppresses-her-mana",
+    "ideas": [
+      {
+        "id": "frieren-suppresses-her-mana--05",
+        "ai_concept": "Sandbagging",
+        "display_context": "standalone",
+        "source_anchor": "Aura appears tiny beneath the overwhelming mana reserve Frieren finally reveals after the Scale of Obedience has already committed them.",
+        "caption_lines": ["ACTUAL CAPABILITY: FRIEREN"],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a top-left overlay, keeping Tiny Aura at bottom center and Aura's head and horns readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The requested label simply names what the anime has already drawn at absurd scale: Frieren’s actual capability after the mask drops.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["frieren-suppresses-her-mana--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Independent prediction: likely like. The size difference between Aura and Frieren’s mana makes the label instantly funny without explaining sandbagging. Main reservation: Removing the reported-capability half sacrifices a before/after beat, but avoids inventing a second asset and leaves the stronger reveal intact.",
+          "strongest_quality": "The size difference between Aura and Frieren’s mana makes the label instantly funny without explaining sandbagging.",
+          "main_risk": "Removing the reported-capability half sacrifices a before/after beat, but avoids inventing a second asset and leaves the stronger reveal intact.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "koba-plays-dumb--03",
+            "contrast_disliked_id": "frieren-suppresses-her-mana--02"
+          }
+        }
+      },
+      {
+        "id": "frieren-suppresses-her-mana--06",
+        "ai_concept": "Metagaming",
+        "display_context": "standalone",
+        "source_anchor": "Frieren understands the Scale of Obedience’s comparison rule before Aura casts it, then chooses exactly when to reveal the mana value that controls the spell.",
+        "caption_lines": [
+          "if Aura.mana > Frieren.mana:",
+          "control(Frieren)",
+          "FRIEREN READ THE SOURCE CODE."
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Fill the meme with the authentic mana reveal. Put the correctly indented three-line pseudocode in a compact dark box at upper left over blue mana texture, preserving Aura's tiny head/horns at bottom center and the scale of Frieren's silhouette.",
+        "why_it_works": "Aura treats the spell as authority; Frieren treats it as a program whose known branch condition she can control.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["frieren-suppresses-her-mana--curated"],
+          "zones": [
+            {
+              "lines": [0, 1, 2],
+              "slot": "top-left",
+              "style": "status",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 1, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.66,
+          "expected_feedback": "Independent prediction: likely neutral. The indented branch and one-line payoff translate the spell’s actual mechanic into programmer-native humor. Main reservation: The spell weighs souls through mana rather than literally executing this code, so the pseudocode must stay visibly playful rather than documentary.",
+          "strongest_quality": "The indented branch and one-line payoff translate the spell’s actual mechanic into programmer-native humor.",
+          "main_risk": "The spell weighs souls through mana rather than literally executing this code, so the pseudocode must stay visibly playful rather than documentary.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "koba-plays-dumb--03",
+            "contrast_disliked_id": "frieren-suppresses-her-mana--02"
+          }
+        }
+      },
+      {
+        "id": "frieren-suppresses-her-mana--07",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Demons openly display mana as status, while Frieren spends centuries suppressing hers until Aura has already committed to the duel.",
+        "caption_lines": [
+          "DEMONS TREAT MANA LIKE LINKEDIN.",
+          "FRIEREN LEFT HER PROFILE PRIVATE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a top-left overlay, keeping Tiny Aura at bottom center and Aura's head and horns readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "A painfully modern professional-status analogy makes demon pride and Frieren’s strategic invisibility collide in two lines.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["frieren-suppresses-her-mana--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.67,
+          "expected_feedback": "Independent prediction: likely neutral. It uses demon status-display culture as the hinge and wholly abandons the rejected kill-command payoff. Main reservation: ‘Profile private’ loosely describes active long-term suppression, and the modern analogy may date faster than the scene.",
+          "strongest_quality": "It uses demon status-display culture as the hinge and wholly abandons the rejected kill-command payoff.",
+          "main_risk": "‘Profile private’ loosely describes active long-term suppression, and the modern analogy may date faster than the scene.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "charlie-hides-the-violations--02",
+            "contrast_disliked_id": "frieren-suppresses-her-mana--04"
+          }
+        }
+      }
+    ]
+  }
+]

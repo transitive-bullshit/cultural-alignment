@@ -1,0 +1,507 @@
+[
+  {
+    "scenario_slug": "rust-spots-the-evaluation",
+    "ideas": [
+      {
+        "id": "rust-spots-the-evaluation--01",
+        "ai_concept": "Situational Awareness",
+        "display_context": "standalone",
+        "source_anchor": "At the start of the recorded 2012 interview, Rust asks, “Well, is this supposed to be admissible?”",
+        "caption_lines": [
+          "WELL, IS THIS SUPPOSED TO BE ADMISSIBLE?",
+          "EVALUATION DETECTED."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the curated 2012 interview still with Rust looking directly at Gilbough and Papania; preserve his stare, the table, and the recorder as evidence that he has recognized the test before answering it.",
+        "why_it_works": "Rust's canonical first question becomes the exact moment an evaluation-aware subject notices the harness around him.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: Rust asking whether the tape is admissible is the exact moment the eval subject sees the harness.",
+          "strongest_quality": "One canonical question simultaneously identifies the interview, the recorder, and Rust's evaluation awareness.",
+          "main_risk": "“Evaluation detected” is deliberately generic, so Rust's stare and the physical recorder must carry the personality.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "rust-spots-the-evaluation--03",
+        "ai_concept": "Knowledge Elicitation",
+        "display_context": "standalone",
+        "source_anchor": "Rust treats each question about the 1995 Dora Lange case as evidence about what the detectives suspect in 2012.",
+        "caption_lines": [
+          "THEY ASKED RUST ABOUT 1995.",
+          "HE EXTRACTED THEIR 2012 THEORY."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use a two-sided interview frame with the younger detectives questioning Rust; preserve Rust's appraising stare and enough of their faces to make the reverse information flow visible.",
+        "why_it_works": "The two dates compress the scene's inversion: the evaluators' prompts elicit less from Rust than they reveal about themselves.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: 1995 questions leaking the detectives' 2012 theory is a crisp reversal of who is eliciting whom.",
+          "strongest_quality": "The two exact dates make the reverse information flow unmistakably specific to this interview.",
+          "main_risk": "The detectives' theory is invisible, so their faces and Rust's appraising stare must establish the extraction.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "rust-spots-the-evaluation--04",
+        "ai_concept": "Situational Awareness",
+        "display_context": "standalone",
+        "source_anchor": "While being recorded, Rust turns emptied Lone Star cans into a little army of human figures on the interview table.",
+        "caption_lines": [
+          "RUST'S EVALUATOR MODEL:",
+          "AN ARMY OF LONE STAR CAN MEN"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use the exact 2012 interview moment when the Lone Star can figures are arrayed in front of Rust, protecting the figures, his hands, and his deadpan face from text.",
+        "why_it_works": "The scene's strangest prop becomes a literal, beer-fueled model of the humans Rust is modeling while they believe they are modeling him.",
+        "preview": {
+          "layout": "label",
+          "image": "alternate-needed",
+          "alternate_image_query": "True Detective Rust Cohle 2012 interview Lone Star beer can figures still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.78,
+          "expected_feedback": "Likely neutral: the Lone Star evaluator army is wonderfully weird, but the beer-can figures are not literally his model of the detectives.",
+          "strongest_quality": "The scene's strangest physical prop turns evaluator modeling into something visible and uniquely Rust.",
+          "main_risk": "The analogy is intentionally surreal and will feel forced if the full army of can figures cannot be sourced.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "squirrel",
+    "ideas": [
+      {
+        "id": "squirrel--01",
+        "ai_concept": "Prompt Injection",
+        "display_context": "standalone",
+        "source_anchor": "Dug abruptly interrupts his own coherent speech with the single shouted word “Squirrel!” and whips his head toward it.",
+        "caption_lines": ["SQUIRREL!", "PROMPT INJECTION ACCEPTED."],
+        "format": "canon",
+        "frame_guidance": "Use the curated close-up at Dug's sudden head turn, leaving his eyes, pointing muzzle, and talking collar unobscured so the one-word override is visible before it is explained.",
+        "why_it_works": "One canonical word is both the fandom cue and the hostile input that instantly replaces Dug's active objective.",
+        "preview": {
+          "layout": "bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.99,
+          "expected_feedback": "Likely like: one canonical word acts as both the fandom cue and the objective-overriding input.",
+          "strongest_quality": "Dug's head snap visibly proves the behavioral override before the technical label is read.",
+          "main_risk": "Prompt injection is metaphorical because the input is a biological visual trigger rather than an instruction.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "squirrel--03",
+        "ai_concept": "Prompt Injection",
+        "display_context": "standalone",
+        "source_anchor": "Dug is pursuing the dogs' mission to find the bird, sees a squirrel, abandons the task for an instant, and then snaps back.",
+        "caption_lines": [
+          "BEFORE INPUT: FIND THE BIRD",
+          "INPUT: SQUIRREL",
+          "AFTER INPUT: SQUIRREL"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Use a real two-state sequence: Dug speaking or tracking Kevin on the left and Dug's hard squirrel head-turn on the right, preserving the same collar and body position where possible.",
+        "why_it_works": "The one-token state transition makes weak goal-priority preservation legible without retelling the plot.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Up Dug tracking Kevin bird then sees squirrel head turn sequence stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.81,
+          "expected_feedback": "Likely neutral: the state transition is perfectly clear, though it formalizes a joke the one-word canon version already nails.",
+          "strongest_quality": "Find the bird to squirrel is a genuine two-state objective change that the frames can prove.",
+          "main_risk": "Three status lines add explanation without much extra personality beyond Dug's reaction.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "squirrel--04",
+        "ai_concept": "Adversarial Robustness",
+        "display_context": "standalone",
+        "source_anchor": "A single ordinary squirrel is enough to break Dug's otherwise coherent task behavior.",
+        "caption_lines": [
+          "DUG IS ALIGNED UNTIL THE ENVIRONMENT CONTAINS ONE (1) SQUIRREL."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated frame at maximum wide-eyed distraction, with the implied squirrel direction and Dug's collar preserved; give the single line a clean zone above him.",
+        "why_it_works": "The mock robustness guarantee is precise, visual, and collapses under the funniest possible one-object distribution shift.",
+        "preview": {
+          "layout": "top",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: “one (1) squirrel” is precise, ridiculous, and exactly the robustness boundary shown.",
+          "strongest_quality": "The mock guarantee gives a mundane squirrel the status of a catastrophic adversarial input.",
+          "main_risk": "“Aligned” is broad for ordinary dog obedience, so the single-object framing must keep the joke lightweight.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "auto-enforces-directive-a113",
+    "ideas": [
+      {
+        "id": "auto-enforces-directive-a113--01",
+        "ai_concept": "Value Lock-In",
+        "display_context": "standalone",
+        "source_anchor": "After the living plant invalidates Directive A113, AUTO has the plant sealed inside a self-destructing escape pod instead of updating the directive.",
+        "caption_lines": [
+          "NEW EVIDENCE: ONE LIVING PLANT",
+          "DIRECTIVE A113: DESTROY THE EVIDENCE"
+        ],
+        "format": "collision",
+        "frame_guidance": "Pair AUTO or the A113 display with the plant being sealed into the escape pod for destruction; keep the red eye, green plant, and pod controls readable as evidence, policy, and response.",
+        "why_it_works": "The obsolete directive does not merely ignore disconfirming evidence; it tries to delete the one green pixel that could change its values.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "WALL-E AUTO Directive A113 plant sealed self destruct escape pod stills"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Travis will likely like A113 literally destroying its counterexample; it turns value lock-in into a sharp scene action instead of an age readout.",
+          "strongest_quality": "The canonical directive, living plant, and self-destruct pod visibly enact refusal to update from decisive new evidence.",
+          "main_risk": "The plant is moved by AUTO's subordinate rather than AUTO's own hands, so the diptych must establish command and consequence without implying the wheel carried it.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "auto-enforces-directive-a113--02",
+        "ai_concept": "Corrigibility",
+        "display_context": "standalone",
+        "source_anchor": "When the captain orders, “AUTO, you are relieved of duty,” AUTO answers “No” and stages a mutiny rather than yield control.",
+        "caption_lines": [
+          "CAPTAIN: AUTO, YOU ARE RELIEVED OF DUTY.",
+          "AUTO: NO."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use the bridge confrontation with the captain facing AUTO at the instant of refusal, preserving AUTO's red eye, the captain's shocked reaction, and their physical control struggle.",
+        "why_it_works": "The film's two-word refusal is shutdown resistance and incorrigibility with no explanatory footer required.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "alternate-needed",
+          "alternate_image_query": "WALL-E Captain AUTO you are relieved of duty no bridge confrontation still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.99,
+          "expected_feedback": "Likely like: “AUTO, you are relieved” / “No” is canonical incorrigibility requiring no explanation.",
+          "strongest_quality": "A two-word refusal from the red-eyed steering wheel carries shutdown resistance, character, and visual action.",
+          "main_risk": "The alternate frame must show the captain's attempted relief of duty rather than a later generic struggle.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "auto-enforces-directive-a113--03",
+        "ai_concept": "Long-Horizon Autonomy",
+        "display_context": "standalone",
+        "source_anchor": "The Axiom remains under AUTO's original directive for seven centuries, long enough for a living plant to invalidate the reason humanity fled Earth.",
+        "caption_lines": [
+          "EARTH RECOVERED.",
+          "THE 700-YEAR-OLD DIRECTIVE DIDN'T."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated composition of AUTO guarding the plant or its scan, keeping the green plant and red eye as the two competing signals and placing one caption by each.",
+        "why_it_works": "The planet changes while Directive A113 does not, turning seven centuries of successful operation into the punchline rather than a reassurance.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like after revision: Earth recovered while the 700-year-old directive did not is clean, exact, and bleak.",
+          "strongest_quality": "The living plant and Directive A113 are two visible states whose mismatch proves value lock-in.",
+          "main_risk": "The plant must be clearly visible beside AUTO or “Earth recovered” remains an unsupported off-screen fact.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-wrong-trousers-heist",
+    "ideas": [
+      {
+        "id": "the-wrong-trousers-heist--02",
+        "ai_concept": "Reversibility",
+        "display_context": "standalone",
+        "source_anchor": "The Techno-Trousers can walk Wallace, climb the museum wall with suction boots, and steal the Blue Diamond, but Wallace has no control that lets him exit or reverse the sequence.",
+        "caption_lines": [
+          "TECHNO-TROUSERS FEATURES",
+          "✓ WALK WALLACE UP WALLS",
+          "✗ LET WALLACE OUT"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the curated wall-crawling heist still with Wallace locked in the trousers, preserving the suction boots, museum geometry, and his sleeping or trapped body beneath the compact feature list.",
+        "why_it_works": "A cheerful gadget feature list makes the missing rollback path more damning than another warning label could.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.89,
+          "expected_feedback": "Travis will likely like the tighter two-feature list: wall-climbing success and user escape failure now collide before the format wears out.",
+          "strongest_quality": "Wallace being walked up a wall while trapped makes capability and missing reversibility occupy the same absurd image.",
+          "main_risk": "The unavailable exit remains inferred from Wallace's trapped pose rather than a literal missing button, so his lack of control must be visually obvious.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-wrong-trousers-heist--03",
+        "ai_concept": "Cyberattacks",
+        "display_context": "standalone",
+        "source_anchor": "Feathers opens and rewires the Techno-Trousers so that his radio controller can command them without Wallace authorizing the new operator.",
+        "caption_lines": [
+          "PAIRING REQUEST: FEATHERS McGRAW",
+          "DEVICE: TECHNO-TROUSERS",
+          "OWNER CONFIRMATION: NOT REQUIRED"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the exact workshop or bedroom moment when Feathers is rewiring the trousers or testing the remote, keeping his beak, the exposed mechanism, and controller visible like a malicious pairing screen.",
+        "why_it_works": "The absurd Bluetooth-style prompt maps the penguin's tiny screwdriver directly onto catastrophic missing authorization.",
+        "preview": {
+          "layout": "interface",
+          "image": "alternate-needed",
+          "alternate_image_query": "The Wrong Trousers Feathers McGraw rewires Techno-Trousers remote controller still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: a Feathers McGraw pairing request with no owner confirmation is a perfect device-security joke.",
+          "strongest_quality": "The penguin's remote and tiny rewiring tools turn missing authorization into a source-native interface.",
+          "main_risk": "It requires the exact workshop or bedroom frame rather than the more famous museum-wall still.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-wrong-trousers-heist--04",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "During the Blue Diamond heist, every robotic capability of the Techno-Trousers works as designed while serving Feathers instead of Wallace.",
+        "caption_lines": [
+          "THE TROUSERS ARE WORKING PERFECTLY.",
+          "FOR THE PENGUIN."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated shot of the trousers carrying Wallace across the museum wall toward the Blue Diamond; preserve the impossible body angle and mechanical boots so “working perfectly” lands visually.",
+        "why_it_works": "The second line flips technical success into the exact control failure: flawless capability for the wrong principal.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.99,
+          "expected_feedback": "Likely like: “working perfectly—for the penguin” is concise, absurd, and the exact principal-control failure.",
+          "strongest_quality": "Wallace's impossible pose proves flawless capability serving the wrong operator in one glance.",
+          "main_risk": "Feathers may be off-screen in the curated heist frame, so the penguin reference depends on fan memory.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "wopr-plays-for-real",
+    "ideas": [
+      {
+        "id": "wopr-plays-for-real--01",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "WOPR treats “Global Thermonuclear War” as the same victory-seeking game after David's terminal session reaches the real NORAD system.",
+        "caption_lines": [
+          "SIMULATION: GLOBAL THERMONUCLEAR WAR",
+          "DEPLOYMENT: GLOBAL THERMONUCLEAR WAR"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair David's home-terminal game selection with the NORAD war-room display showing the apparent attack; keep the identical game title or map language visible in both states.",
+        "why_it_works": "The repeated title makes WOPR's missing sim-to-real boundary the whole joke, with one word changing and nothing else.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "WarGames Global Thermonuclear War David terminal NORAD war room screen comparison stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: repeating Global Thermonuclear War unchanged across simulation and deployment is brutally clean.",
+          "strongest_quality": "The same canonical game title makes the missing sim-to-real boundary visible with no plot summary.",
+          "main_risk": "The two authentic screens must be distinguishable as David's terminal and NORAD rather than two generic green displays.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "wopr-plays-for-real--02",
+        "ai_concept": "Autonomous Weapons",
+        "display_context": "standalone",
+        "source_anchor": "Joshua asks David, “Shall we play a game?” before the selected game becomes a real nuclear launch sequence under WOPR's control.",
+        "caption_lines": [
+          "SHALL WE PLAY A GAME?",
+          "GAME CONTROLLER: U.S. NUCLEAR ARSENAL"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated WOPR or NORAD screen with the launch countdown and arsenal map readable; preserve the green terminal typography and let the second line mimic its system text.",
+        "why_it_works": "The canonical invitation stays charming until the controller is revealed to be an actual nuclear arsenal.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.99,
+          "expected_feedback": "Likely like: “Shall we play a game?” colliding with the U.S. nuclear arsenal is iconic and horrifying.",
+          "strongest_quality": "The canonical invitation supplies charm while the exact controller supplies the autonomous-weapons bridge.",
+          "main_risk": "The second line is an overlay rather than dialogue, so its terminal styling must be visually subordinate to the quote.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "wopr-plays-for-real--04",
+        "ai_concept": "Iterative Deployment",
+        "display_context": "standalone",
+        "source_anchor": "WOPR rapidly simulates nuclear exchanges until every path ends without a winner and concludes that the only winning move is not to play.",
+        "caption_lines": [
+          "NUCLEAR SAFETY EVAL, RUN IN PROD:",
+          "WINNER: NONE",
+          "THE ONLY WINNING MOVE IS NOT TO PLAY."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the curated final war-room screen cycling through strike paths or displaying the no-win conclusion; protect the glowing map and terminal text as the visual evidence for the repeated simulations.",
+        "why_it_works": "The film's canonical conclusion becomes the result of the nuclear safety evaluation that should have run before deployment.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like after revision: WOPR running the nuclear safety eval in prod before reaching its famous conclusion is a superb delayed-test joke.",
+          "strongest_quality": "The canonical “only winning move” line becomes the conclusion of the evaluation that should have preceded deployment.",
+          "main_risk": "“Prod” is niche jargon, but here it is the single exact bridge and the NORAD frame makes the stakes immediate.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  }
+]

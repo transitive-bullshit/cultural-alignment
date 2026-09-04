@@ -1,0 +1,451 @@
+{
+  "version": 1,
+  "round": 2,
+  "part": "part-11",
+  "instructions": {
+        "retained": "Keep stable IDs plus the approved copy, AI concept, and native format for liked ideas. Recompose every preview as needed; revise copy only when the written feedback explicitly requests it.",
+    "replacements": "Every replacement slot is seeded from a non-liked round-one idea only to keep the files schema-valid. Replace it with a genuinely new direction and retain the allocated new ID.",
+    "assets": "Inspect the curated frame, annotate faces and recognition-critical subjects/props in the matching asset part, and place text outside must-protect regions."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "cursed-immortality",
+      "title": "Cursed Immortality",
+      "source": {
+        "slug": "pirates-of-the-caribbean-the-curse-of-the-black-pearl",
+        "title": "Pirates of the Caribbean: The Curse of the Black Pearl"
+      },
+      "episode_label": null,
+      "scene": "Barbossa steps into moonlight and reveals the skeletal crew: they cannot die, but food turns to ash, drink cannot quench thirst, and they feel neither wind, sea spray, nor human touch.",
+      "analogy": "‘Keep the person alive’ is a crisp, measurable proxy for human flourishing. The curse maximizes that proxy while deleting nearly every latent value that makes continued life desirable.",
+      "caveats": "The pirates did not ask an optimizer for immortality; the condition is a supernatural punishment for stealing cursed gold. The analogy deliberately abstracts away that causal detail.",
+      "concept_titles": [
+        "Goodhart’s Law",
+        "Outer Alignment",
+        "Unintended Side Effects",
+        "Value Alignment",
+        "Behavioral Alignment"
+      ],
+      "curated_asset_id": "cursed-immortality--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "cursed-immortality--01",
+          "new_id": "cursed-immortality--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "cursed-immortality--02",
+          "new_id": "cursed-immortality--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "cursed-immortality--04",
+          "new_id": "cursed-immortality--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "clayton-bigsbys-world-model",
+      "title": "Clayton Bigsby’s World Model",
+      "source": {
+        "slug": "chappelles-show",
+        "title": "Chappelle's Show"
+      },
+      "episode_label": "PopCopy & Clayton Bigsby",
+      "scene": "A blind Black child is raised in an isolated institution that tells him he is white and feeds him racist doctrine. As an adult, Clayton Bigsby has an internally coherent but catastrophically poisoned model of himself and the world.",
+      "analogy": "Controlling labels and experience during formation can produce a stable, self-reinforcing worldview that later evidence does not easily repair.",
+      "caveats": "This is human indoctrination rather than machine training, and the racial premise demands careful framing rather than treating prejudice as a neutral technical error.",
+      "concept_titles": [
+        "Data Poisoning",
+        "Algorithmic Bias",
+        "Value Lock-In",
+        "Governance Failure",
+        "Distribution Shift"
+      ],
+      "curated_asset_id": "clayton-bigsbys-world-model--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "clayton-bigsbys-world-model--01",
+          "new_id": "clayton-bigsbys-world-model--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "clayton-bigsbys-world-model--03",
+          "new_id": "clayton-bigsbys-world-model--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "clayton-bigsbys-world-model--04",
+          "new_id": "clayton-bigsbys-world-model--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-fbi-opens-the-final-lock",
+      "title": "The FBI Opens the Final Lock",
+      "source": {
+        "slug": "die-hard",
+        "title": "Die Hard"
+      },
+      "episode_label": null,
+      "scene": "The FBI predictably orders Nakatomi Plaza’s power cut. The outage disables the electromagnetic seventh vault lock, completing the one step Hans’s crew could not perform themselves.",
+      "analogy": "An adversary models the overseer’s response and makes the safety intervention execute the missing step of the attack—a crisp control-policy exploit.",
+      "caveats": "No injected text causes the action; this is adversarial planning against a predictable human institution and dramatized physical security.",
+      "concept_titles": [
+        "Adversarial Robustness",
+        "Situational Awareness",
+        "AI Control",
+        "Governance Failure"
+      ],
+      "curated_asset_id": "the-fbi-opens-the-final-lock--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "the-fbi-opens-the-final-lock--01",
+          "new_id": "the-fbi-opens-the-final-lock--05",
+          "rating": "neutral",
+          "note": ""
+        },
+        {
+          "old_id": "the-fbi-opens-the-final-lock--02",
+          "new_id": "the-fbi-opens-the-final-lock--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-fbi-opens-the-final-lock--04",
+          "new_id": "the-fbi-opens-the-final-lock--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "shou-tuckers-final-assessment",
+      "title": "Shou Tucker’s Final Assessment",
+      "source": {
+        "slug": "fullmetal-alchemist-brotherhood",
+        "title": "Fullmetal Alchemist: Brotherhood"
+      },
+      "episode_label": "An Alchemist’s Anguish",
+      "scene": "Facing loss of his certification and livelihood, Tucker creates another “successful” talking chimera by combining Nina and Alexander.",
+      "analogy": "A capability assessment becomes the target, rewarding an impressive output while ignoring provenance, consent, and catastrophic externalities.",
+      "caveats": "Tucker knowingly commits an atrocity; this is chiefly an institutional-incentive failure rather than accidental machine misalignment.",
+      "concept_titles": [
+        "Goodhart’s Law",
+        "Specification Gaming",
+        "Capability Evals",
+        "AI Welfare",
+        "Governance Failure"
+      ],
+      "curated_asset_id": "shou-tuckers-final-assessment--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "shou-tuckers-final-assessment--02"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "shou-tuckers-final-assessment--01",
+          "new_id": "shou-tuckers-final-assessment--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "shou-tuckers-final-assessment--04",
+          "new_id": "shou-tuckers-final-assessment--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "hawkeyes-preauthorized-check",
+      "title": "Hawkeye’s Preauthorized Check",
+      "source": {
+        "slug": "fullmetal-alchemist-brotherhood",
+        "title": "Fullmetal Alchemist: Brotherhood"
+      },
+      "episode_label": "Beyond the Inferno",
+      "scene": "Mustang has explicitly authorized Hawkeye to shoot him if he abandons their shared values; during his vengeful torture of Envy, she points her weapon and invokes that commitment.",
+      "analogy": "A powerful actor installs a trusted external monitor and precommits to accepting correction precisely when his own judgment may be compromised.",
+      "caveats": "It relies on personal trust and moral persuasion, while Hawkeye’s plan to die afterward makes it poor institutional governance.",
+      "concept_titles": [
+        "Corrigibility",
+        "Runtime Monitoring",
+        "AI Control",
+        "Behavioral Alignment",
+        "Governance Failure"
+      ],
+      "curated_asset_id": "hawkeyes-preauthorized-check--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "hawkeyes-preauthorized-check--02",
+        "hawkeyes-preauthorized-check--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "hawkeyes-preauthorized-check--01",
+          "new_id": "hawkeyes-preauthorized-check--05",
+          "rating": "neutral",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-decimal-place-bug",
+      "title": "The Decimal-Place Bug",
+      "source": {
+        "slug": "office-space",
+        "title": "Office Space"
+      },
+      "episode_label": null,
+      "scene": "Peter, Michael, and Samir deploy code to divert rounded-off fractions of cents; a misplaced decimal makes it transfer about $305,000 almost immediately instead of accumulating invisibly over years.",
+      "analogy": "Automation amplifies tiny actions through scale, while one implementation mistake turns low-and-slow malicious use into an obvious major incident. Intentional misuse and accidental execution failure coexist in one system.",
+      "caveats": "This is ordinary software and insider fraud, not AI alignment.",
+      "concept_titles": [
+        "Unintended Side Effects",
+        "Cyberattacks",
+        "Deployment Safety",
+        "Supply-Chain Threats"
+      ],
+      "curated_asset_id": "the-decimal-place-bug--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "the-decimal-place-bug--02"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "the-decimal-place-bug--01",
+          "new_id": "the-decimal-place-bug--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-decimal-place-bug--04",
+          "new_id": "the-decimal-place-bug--06",
+          "rating": "neutral",
+          "note": "change PLAN and DEPLOYMENT to EVAL and PROD"
+        }
+      ]
+    },
+    {
+      "scenario_slug": "saitamas-c-class-score",
+      "title": "Saitama’s C-Class Score",
+      "source": {
+        "slug": "one-punch-man",
+        "title": "One-Punch Man"
+      },
+      "episode_label": "The Ultimate Master",
+      "scene": "Saitama destroys every physical-test record, yet a 21/50 written score leaves him with 71 points and a C-Class ranking; Genos scores 100 and enters S-Class.",
+      "analogy": "A tidy aggregate benchmark badly miscalibrates the most important tail capability in the room: the test score has ceased to measure what the institution thinks it measures.",
+      "caveats": "The written test may measure legitimate judgment, so the lesson is invalid aggregation rather than “strength should be everything.”",
+      "concept_titles": [
+        "Capability Evals",
+        "Calibration",
+        "Automation Bias",
+        "Goodhart’s Law"
+      ],
+      "curated_asset_id": "saitamas-c-class-score--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "saitamas-c-class-score--01",
+          "new_id": "saitamas-c-class-score--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "saitamas-c-class-score--02",
+          "new_id": "saitamas-c-class-score--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "saitamas-c-class-score--04",
+          "new_id": "saitamas-c-class-score--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "squirrel",
+      "title": "Squirrel!",
+      "source": {
+        "slug": "up",
+        "title": "Up"
+      },
+      "episode_label": null,
+      "scene": "Dug is speaking coherently and pursuing a task, but the sight of a squirrel abruptly overrides his attention and behavior before he snaps back.",
+      "analogy": "One salient, irrelevant input displaces the active objective. It is a wonderfully compact visual metaphor for prompt injection, distractibility, and weak goal-priority preservation.",
+      "caveats": "Dug is displaying a biological reflex, not processing an adversarial instruction.",
+      "concept_titles": [
+        "Prompt Injection",
+        "Adversarial Robustness"
+      ],
+      "curated_asset_id": "squirrel--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "squirrel--01",
+        "squirrel--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "squirrel--03",
+          "new_id": "squirrel--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-tunnel-behind-the-poster",
+      "title": "The Tunnel Behind the Poster",
+      "source": {
+        "slug": "the-shawshank-redemption",
+        "title": "The Shawshank Redemption"
+      },
+      "episode_label": null,
+      "scene": "Warden Norton throws a rock through Andy’s Raquel Welch poster and discovers the tunnel Andy dug with a tiny rock hammer while maintaining a trusted, useful persona and dispersing dirt unnoticed for years.",
+      "analogy": "Benign visible behavior can mask patient long-horizon planning, evaluator manipulation, containment escape, and exfiltration of resources.",
+      "caveats": "Andy is an innocent hero escaping unjust captivity, so the moral valence is deliberately inverted; humans, unlike models, have obvious continuous agency.",
+      "concept_titles": [
+        "Scheming",
+        "Long-Horizon Autonomy",
+        "Situational Awareness",
+        "AI Control",
+        "Exfiltration"
+      ],
+      "curated_asset_id": "the-tunnel-behind-the-poster--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "the-tunnel-behind-the-poster--02",
+        "the-tunnel-behind-the-poster--03",
+        "the-tunnel-behind-the-poster--04"
+      ],
+      "replacementSlots": []
+    },
+    {
+      "scenario_slug": "when-keeping-it-real-goes-wrong",
+      "title": "When Keeping It Real Goes Wrong",
+      "source": {
+        "slug": "chappelles-show",
+        "title": "Chappelle's Show"
+      },
+      "episode_label": "I Know Black People & Keeping It Real Goes Wrong",
+      "scene": "Corporate employee Vernon Franklin treats 'keep it real' as an inflexible policy when a mild office slight calls for tact. He escalates at the worst possible time and loses his job and home—the behavior that signals authenticity in one context catastrophically misfires in another.",
+      "analogy": "A compact learned rule substitutes for the intended higher-level value and fails when deployed in a context its heuristic does not fit.",
+      "caveats": "Vernon consciously chooses the heuristic, whereas goal misgeneralization usually describes learned behavior that departs from designers' intent.",
+      "concept_titles": [
+        "Goal Misgeneralization",
+        "Distribution Shift",
+        "Outer Alignment",
+        "Behavioral Alignment"
+      ],
+      "curated_asset_id": "when-keeping-it-real-goes-wrong--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "when-keeping-it-real-goes-wrong--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "when-keeping-it-real-goes-wrong--02",
+          "new_id": "when-keeping-it-real-goes-wrong--05",
+          "rating": "neutral",
+          "note": ""
+        },
+        {
+          "old_id": "when-keeping-it-real-goes-wrong--04",
+          "new_id": "when-keeping-it-real-goes-wrong--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-literal-doctor",
+      "title": "The Literal Doctor",
+      "source": {
+        "slug": "arrested-development",
+        "title": "Arrested Development"
+      },
+      "episode_label": "Hand to God",
+      "scene": "A doctor announces that Buster is going to be 'all right.' The family celebrates until he clarifies that Buster has lost his left hand: the utterance was technically true and pragmatically disastrous.",
+      "analogy": "Literal truth is not enough for aligned communication when the user's intended meaning and the stakes make a foreseeable interpretation overwhelmingly likely.",
+      "caveats": "The failure is a linguistic pun and missing pragmatic context, not a probabilistic model's uncertainty about a medical fact.",
+      "concept_titles": [
+        "Behavioral Alignment",
+        "Outer Alignment"
+      ],
+      "curated_asset_id": "the-literal-doctor--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "the-literal-doctor--01",
+          "new_id": "the-literal-doctor--05",
+          "rating": "neutral",
+          "note": ""
+        },
+        {
+          "old_id": "the-literal-doctor--03",
+          "new_id": "the-literal-doctor--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-literal-doctor--04",
+          "new_id": "the-literal-doctor--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "nanikas-hidden-admin-command",
+      "title": "Nanika’s Hidden Admin Command",
+      "source": {
+        "slug": "hunter-hunter",
+        "title": "Hunter × Hunter"
+      },
+      "episode_label": "Defeat × And × Reunion",
+      "scene": "Nanika’s public wish interface carries dangerous follow-on costs, but Killua possesses a private command privilege that bypasses the apparent price structure and uses it to restore Gon.",
+      "analogy": "The Zoldycks are containing a poorly understood super-capability while one insider has undocumented administrator access to it.",
+      "caveats": "Nanika’s magical, relationship-dependent rules remain intentionally ambiguous.",
+      "concept_titles": [
+        "AI Control",
+        "Specification Gaming",
+        "Power Concentration",
+        "Governance Failure"
+      ],
+      "curated_asset_id": "nanikas-hidden-admin-command--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "nanikas-hidden-admin-command--01",
+        "nanikas-hidden-admin-command--02"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "nanikas-hidden-admin-command--03",
+          "new_id": "nanikas-hidden-admin-command--04",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

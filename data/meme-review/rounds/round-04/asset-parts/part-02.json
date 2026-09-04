@@ -1,0 +1,808 @@
+[
+  {
+    "id": "az-5-backfires--curated",
+    "scenario_slug": "az-5-backfires",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481449b8ef55c6a7931b3/gallery-8075cfce8bdf00dd22031ea56244ebdfb249cf9c1293b421e1e255f23757983e.webp",
+    "width": 1200,
+    "height": 802,
+    "alt": "Still from Chernobyl illustrating AZ-5 Backfires",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoIAAUAA8BgJaACdADze7UQAP6DiOmtYo2oRM0pYXygMKpCN+qtLZr8AAA=",
+    "content_hash": "8075cfce8bdf00dd22031ea56244ebdfb249cf9c1293b421e1e255f23757983e",
+    "protected_regions": [
+      {
+        "id": "az-5-backfires--operator-face",
+        "label": "Operator's alarmed face, glasses, and white cap",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          46,
+          9,
+          23,
+          37
+        ]
+      },
+      {
+        "id": "az-5-backfires--pressing-hand",
+        "label": "Operator's hand pressing the emergency control",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          11,
+          75,
+          25,
+          25
+        ]
+      },
+      {
+        "id": "az-5-backfires--control-bank",
+        "label": "Dense multicolored reactor control bank",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          43,
+          72,
+          57
+        ]
+      },
+      {
+        "id": "az-5-backfires--operator-body",
+        "label": "Operator stretched across the console",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          27,
+          7,
+          73,
+          93
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "auto-enforces-directive-a113--curated",
+    "scenario_slug": "auto-enforces-directive-a113",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f1248145930cdc63c9f9223b/gallery-f326cb8ec76949ccf9d845d39aac290e7f60e159e99ec3119fadd9b0401ef941.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from WALL-E illustrating AUTO Enforces Directive A113",
+    "blur_data_url": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAACwAQCdASoIAAUAA8BgJYwCdAD0Ma2oAPyP4OIVI4/g8eZzEcXGcAcR9Ao4FQny8YoKgAAA",
+    "content_hash": "f326cb8ec76949ccf9d845d39aac290e7f60e159e99ec3119fadd9b0401ef941",
+    "protected_regions": [
+      {
+        "id": "auto-enforces-directive-a113--plant",
+        "label": "Living green plant proving that Earth recovered",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          8,
+          16,
+          35,
+          62
+        ]
+      },
+      {
+        "id": "auto-enforces-directive-a113--auto",
+        "label": "AUTO's binocular-like red-eyed silhouette",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          42,
+          25,
+          40,
+          40
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "auto-enforces-directive-a113--captain-auto",
+    "scenario_slug": "auto-enforces-directive-a113",
+    "src": "data:image/webp;base64,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",
+    "width": 960,
+    "height": 402,
+    "alt": "Captain McCrea seated at the Axiom controls while AUTO looms behind him in WALL-E",
+    "blur_data_url": "data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAACwAQCdASoIAAMAA8BgJQBOgB8xWQ0QAP7j6n1XkubzaIkUICvAAA==",
+    "content_hash": "f58dae9379f916de186ac2aa0533242b2df5b8767f630a2b21586215f874e1a1",
+    "protected_regions": [
+      {
+        "id": "auto-enforces-directive-a113--captain-auto-eye",
+        "label": "AUTO’s glowing red eye",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          52,
+          10,
+          15,
+          33
+        ]
+      },
+      {
+        "id": "auto-enforces-directive-a113--captain-auto-wheel",
+        "label": "AUTO’s wheel body and mechanical arms",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          38,
+          0,
+          38,
+          59
+        ]
+      },
+      {
+        "id": "auto-enforces-directive-a113--captain-face",
+        "label": "Captain McCrea’s alarmed face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          69,
+          20,
+          17,
+          35
+        ]
+      },
+      {
+        "id": "auto-enforces-directive-a113--captain-body",
+        "label": "Captain McCrea seated in his hoverchair",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          57,
+          9,
+          38,
+          91
+        ]
+      },
+      {
+        "id": "auto-enforces-directive-a113--walle",
+        "label": "WALL-E at the foot of the Captain’s chair",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          20,
+          52,
+          27,
+          48
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-ratings-agency-meeting--curated",
+    "scenario_slug": "the-ratings-agency-meeting",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f124814f8880fbc55044b24e/gallery-1d52bf754e7533f96a95088114ae960d123d8bee781cd7cc9e0c936d15837c9d.webp",
+    "width": 1200,
+    "height": 600,
+    "alt": "Still from The Big Short illustrating The Ratings-Agency Meeting",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoIAAQAA8BgJYwCdAD0h/pcAP7Bz53L/jcqH2zjC32lfXr8DZm8MAAA",
+    "content_hash": "1d52bf754e7533f96a95088114ae960d123d8bee781cd7cc9e0c936d15837c9d",
+    "protected_regions": [
+      {
+        "id": "the-ratings-agency-meeting--analyst-face",
+        "label": "Ratings analyst's face and distinctive dark post-optometrist glasses",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          27,
+          8,
+          19,
+          33
+        ]
+      },
+      {
+        "id": "the-ratings-agency-meeting--folder",
+        "label": "Open ratings binder held in the analyst's hands",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          16,
+          61,
+          29,
+          35
+        ]
+      },
+      {
+        "id": "the-ratings-agency-meeting--analyst",
+        "label": "Analyst standing in the ratings office",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          16,
+          8,
+          35,
+          92
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "skynet-launches-judgment-day--curated",
+    "scenario_slug": "skynet-launches-judgment-day",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f124816c93c0f4a08fa6b3f6/gallery-161aa1e1d91aa12797354622445282e214677463a9841484e79e3ce21d3069aa.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Terminator 2: Judgment Day illustrating Skynet Launches Judgment Day",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAQCdASoIAAUAA8BgJZQC7AEOZ/JwAAD+5gWoT2ZJru3keAb0pVPctKEGBDcOAAA=",
+    "content_hash": "161aa1e1d91aa12797354622445282e214677463a9841484e79e3ce21d3069aa",
+    "protected_regions": [
+      {
+        "id": "skynet-officer-face",
+        "label": "Officer's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          31,
+          22,
+          22,
+          39
+        ]
+      },
+      {
+        "id": "skynet-phone",
+        "label": "Emergency phone receiver",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          47,
+          30,
+          12,
+          40
+        ]
+      },
+      {
+        "id": "skynet-command-room",
+        "label": "Command-room operators and screens",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [
+          58,
+          18,
+          40,
+          61
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "life-finds-a-way--curated",
+    "scenario_slug": "life-finds-a-way",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f124816c9ed3db3c54d8e301/gallery-91cf91fcb94ab589f177719134748228867cf127dc78fd09c81e16fb893dbf4c.webp",
+    "width": 753,
+    "height": 407,
+    "alt": "Still from Jurassic Park illustrating Life Finds a Way",
+    "blur_data_url": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAADQAQCdASoIAAQAA8BgJYwCdAEO9s5YIAD+6QEDh3pwxQm+zOOEAAAA",
+    "content_hash": "91cf91fcb94ab589f177719134748228867cf127dc78fd09c81e16fb893dbf4c",
+    "protected_regions": [
+      {
+        "id": "life-ellie-face",
+        "label": "Ellie's reaction",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          17,
+          10,
+          24,
+          44
+        ]
+      },
+      {
+        "id": "life-malcolm-face",
+        "label": "Malcolm delivering the line",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          49,
+          8,
+          21,
+          40
+        ]
+      },
+      {
+        "id": "life-grant-face",
+        "label": "Grant's reaction",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          79,
+          18,
+          20,
+          39
+        ]
+      },
+      {
+        "id": "life-steering-wheel",
+        "label": "Jeep steering wheel",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          73,
+          54,
+          27,
+          46
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "lights-memory-loss-gambit--curated",
+    "scenario_slug": "lights-memory-loss-gambit",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f1248176b3cdeb222e98f088/gallery-3d8d493a59b98e80c72971b1919ac91a3f5711cfc14eaeb97f2042932b05504f.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from Death Note illustrating Light’s Memory-Loss Gambit",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACQAQCdASoIAAUAA8BgJQAAU6p1s9wA/oVYTSzxylNR4MTpehpGkHT+9aMaB4AA",
+    "content_hash": "3d8d493a59b98e80c72971b1919ac91a3f5711cfc14eaeb97f2042932b05504f",
+    "protected_regions": [
+      {
+        "id": "light-face",
+        "label": "Light's face and eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          40,
+          28,
+          49,
+          72
+        ]
+      },
+      {
+        "id": "light-profile",
+        "label": "Light's hair and profile silhouette",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          27,
+          0,
+          73,
+          100
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "lights-memory-loss-gambit--potato-chip",
+    "scenario_slug": "lights-memory-loss-gambit",
+    "src": "https://www.fortressofsolitude.co.za/wp-content/uploads/2024/04/Death-Note-Light-Yagami-Eating-the-Potato-Chips-1200x675.jpeg",
+    "width": 1200,
+    "height": 675,
+    "alt": "Light Yagami bites a potato chip while under surveillance in Death Note",
+    "blur_data_url": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAACwAQCdASoIAAUAAgA0JZwAApx48eWAAP70x6O0DRUnLDFtvbjSEI0EQQIvT/MX47DaWYAA",
+    "content_hash": "d5801c0eb843bc8a4b1b1cf297172cdf8d66147860dbb03e8624bb5d8c12a40a",
+    "protected_regions": [
+      {
+        "id": "light-potato-chip-face",
+        "label": "Light's face and mouth",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          27,
+          0,
+          68,
+          77
+        ]
+      },
+      {
+        "id": "potato-chip",
+        "label": "Potato chip at Light's mouth",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          39,
+          52,
+          16,
+          32
+        ]
+      },
+      {
+        "id": "light-chip-hand",
+        "label": "Light's fingers holding the chip",
+        "kind": "gesture",
+        "priority": "soft",
+        "source_rect": [
+          39,
+          59,
+          18,
+          41
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "murderbot-hides-its-free-will--curated",
+    "scenario_slug": "murderbot-hides-its-free-will",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f124817b83f7c8c18d62ec2f/gallery-e29a5651e76594698496f2663c4590192fbe0153673a84e128072cafcf014bca.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Murderbot illustrating Murderbot Hides Its Free Will",
+    "blur_data_url": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoIAAUAA8BgJQBOgCHfGbugAOJ4dsqNpS+S5v+iAFGFf9QeTVuAAA==",
+    "content_hash": "e29a5651e76594698496f2663c4590192fbe0153673a84e128072cafcf014bca",
+    "protected_regions": [
+      {
+        "id": "murderbot-face",
+        "label": "Murderbot's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          48,
+          2,
+          35,
+          72
+        ]
+      },
+      {
+        "id": "murderbot-title",
+        "label": "MURDERBOT title",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [
+          3,
+          43,
+          43,
+          19
+        ]
+      },
+      {
+        "id": "murderbot-armor",
+        "label": "Murderbot's armor",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          50,
+          61,
+          50,
+          39
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "roy-batty-demands-more-life--curated",
+    "scenario_slug": "roy-batty-demands-more-life",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f124818dbafdedf5ea6b8d8e/gallery-d4027b9bf36a56de6ba4aad06c34debcc5edbd63c78067159c2b1df5010181cc.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from Blade Runner illustrating Roy Batty Demands More Life",
+    "blur_data_url": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoIAAUAA8BgJYgCdAD0eqnsAP7Co2zWir+GdsGdLuo2OsxG2RYedLcYAck5243dXcRgAA==",
+    "content_hash": "d4027b9bf36a56de6ba4aad06c34debcc5edbd63c78067159c2b1df5010181cc",
+    "protected_regions": [
+      {
+        "id": "roy-face",
+        "label": "Roy's rain-soaked face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          11,
+          0,
+          55,
+          97
+        ]
+      },
+      {
+        "id": "roy-eyes",
+        "label": "Roy's eyes and expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          24,
+          23,
+          37,
+          32
+        ]
+      },
+      {
+        "id": "roy-rain",
+        "label": "Visible rain and blue-white light",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          64,
+          0,
+          36,
+          100
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "odysseus-binds-himself-to-the-mast--curated",
+    "scenario_slug": "odysseus-binds-himself-to-the-mast",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481918305f2d1b080a155/gallery-efed8c70d7dd9c705455ac4b507f2cbe0962e2b79e1dbe71fc13c5496d338936.webp",
+    "width": 1920,
+    "height": 960,
+    "alt": "Still from The Odyssey illustrating Odysseus Binds Himself to the Mast",
+    "blur_data_url": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADQAQCdASoIAAQAA8BgJZQCdAEDfZpQkAD+rZ0T06b0JJxid62WZHXzgLwNQJkomT/dZBgAAAA=",
+    "content_hash": "efed8c70d7dd9c705455ac4b507f2cbe0962e2b79e1dbe71fc13c5496d338936",
+    "protected_regions": [
+      {
+        "id": "odysseus-face",
+        "label": "Odysseus's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          43,
+          14,
+          32,
+          65
+        ]
+      },
+      {
+        "id": "odysseus-bindings",
+        "label": "Ropes binding Odysseus to the mast",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          38,
+          42,
+          49,
+          58
+        ]
+      },
+      {
+        "id": "odysseus-mast",
+        "label": "Ship mast",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          40,
+          0,
+          9,
+          100
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-puppet-master--curated",
+    "scenario_slug": "the-puppet-master",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f1248191b4c2ca4427d57bb1/gallery-5c91b15b5f9a9f7b39b54fcf09a469c001e0aee6a6d9c92c62dabb9ea4d98514.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Ghost in the Shell illustrating The Puppet Master",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoIAAUAA8BgJZQAAveFxu/AAP5ICN12NKfdymAsiiGA7+GbgYHfPgAA",
+    "content_hash": "5c91b15b5f9a9f7b39b54fcf09a469c001e0aee6a6d9c92c62dabb9ea4d98514",
+    "protected_regions": [
+      {
+        "id": "the-puppet-master--left-observer-face",
+        "label": "Left government observer's face and reaction",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          2,
+          13,
+          24,
+          39
+        ]
+      },
+      {
+        "id": "the-puppet-master--project-2501",
+        "label": "Project 2501's face, manufactured torso, open abdomen, and restraints",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          31,
+          5,
+          38,
+          94
+        ]
+      },
+      {
+        "id": "the-puppet-master--cranial-and-body-hardware",
+        "label": "Cranial apparatus, cable bundles, mechanical abdomen, and arms",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          29,
+          0,
+          43,
+          100
+        ]
+      },
+      {
+        "id": "the-puppet-master--right-observer-face",
+        "label": "Eyepatched government observer's face and reaction",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          71,
+          3,
+          23,
+          39
+        ]
+      },
+      {
+        "id": "the-puppet-master--observers-bodies",
+        "label": "Officials framing Project 2501 on both sides",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          36,
+          100,
+          64
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "3-6-roentgen--curated",
+    "scenario_slug": "3-6-roentgen",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481aca610e118206aa636/gallery-be553927840f750810c1d59a32585888732c10c3bcf78613d069bd9092c4b3e0.webp",
+    "width": 1077,
+    "height": 720,
+    "alt": "Still from Chernobyl illustrating 3.6 Roentgen",
+    "blur_data_url": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoIAAUAA8BgJQBOgB5vdwsAAP54V9FD6AhUcjDEe0L2FYo4IQ+AAA==",
+    "content_hash": "be553927840f750810c1d59a32585888732c10c3bcf78613d069bd9092c4b3e0",
+    "protected_regions": [
+      {
+        "id": "3-6-roentgen--standing-technician-face",
+        "label": "Standing technician's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          20,
+          14,
+          10,
+          17
+        ]
+      },
+      {
+        "id": "3-6-roentgen--standing-technician",
+        "label": "Standing technician in white uniform",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          11,
+          11,
+          22,
+          88
+        ]
+      },
+      {
+        "id": "3-6-roentgen--seated-official-face",
+        "label": "Seated official's face and dismissive expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          76,
+          34,
+          12,
+          18
+        ]
+      },
+      {
+        "id": "3-6-roentgen--cigarette-gesture",
+        "label": "Seated official's raised cigarette hand and smoke",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          71,
+          33,
+          12,
+          29
+        ]
+      },
+      {
+        "id": "3-6-roentgen--seated-official",
+        "label": "Seated official and chair",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          70,
+          34,
+          30,
+          58
+        ]
+      },
+      {
+        "id": "3-6-roentgen--desk-instruments",
+        "label": "Desk lamps, phone, paperwork, and control-room instruments",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          25,
+          36,
+          57,
+          48
+        ]
+      },
+      {
+        "id": "3-6-roentgen--control-readouts",
+        "label": "Original reactor control panels and glowing readouts",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          0,
+          100,
+          34
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-simulation-was-real--curated",
+    "scenario_slug": "the-simulation-was-real",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481bf8b1ce97971063ed4/gallery-a1b219cda260dc74d7ad0a240b31301e2648eafa6cb3f35efec4e63c8d10154d.webp",
+    "width": 1237,
+    "height": 720,
+    "alt": "Still from Ender’s Game illustrating The “Simulation” Was Real",
+    "blur_data_url": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoIAAUAA8BgJQBOgCP/JftRAAD+2q16u6uA6EhV6xw9l3tCTnFIWtoT8msww4AA",
+    "content_hash": "a1b219cda260dc74d7ad0a240b31301e2648eafa6cb3f35efec4e63c8d10154d",
+    "protected_regions": [
+      {
+        "id": "the-simulation-was-real--ender-face",
+        "label": "Ender's face and concentrated expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          31,
+          3,
+          36,
+          68
+        ]
+      },
+      {
+        "id": "the-simulation-was-real--left-command-hand",
+        "label": "Ender's raised left hand at the command interface",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          0,
+          0,
+          23,
+          48
+        ]
+      },
+      {
+        "id": "the-simulation-was-real--right-command-hand",
+        "label": "Ender's raised right hand at the command interface",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          83,
+          71,
+          17,
+          29
+        ]
+      },
+      {
+        "id": "the-simulation-was-real--holographic-interface",
+        "label": "Layered tactical holograms and original command readouts",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [
+          0,
+          17,
+          100,
+          83
+        ]
+      },
+      {
+        "id": "the-simulation-was-real--ender-body",
+        "label": "Ender's isolated body at the controls",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          38,
+          60,
+          30,
+          40
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  }
+]

@@ -1,0 +1,978 @@
+[
+  {
+    "scenario_slug": "balance-the-universe",
+    "ideas": [
+      {
+        "id": "balance-the-universe--05",
+        "ai_concept": "Power-Seeking",
+        "display_context": "standalone",
+        "source_anchor": "Thor buries Stormbreaker in Thanos's chest, but misses the head; Thanos still has one hand free to snap.",
+        "caption_lines": [
+          "“YOU SHOULD HAVE GONE FOR THE HEAD.”",
+          "SHUTDOWN WINDOW: CLOSED."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic Thanos still. Run the canonical warning across the top and the shutdown payoff across the bottom in matching bold meme type with subtle edge gradients. Overlap armor and scenery freely, but keep Thanos's face, raised Gauntlet, lit stones, and the circular blast readable between the two beats.",
+        "why_it_works": "The most famous missed kill shot in the film becomes a control failure whose correction window closes with one snap.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["balance-the-universe--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.82,
+          "expected_feedback": "Independent prediction: likely like. It anchors control failure to the exact fraction of a second in which Thanos remains stoppable. Main reservation: The curated still does not show Stormbreaker in his chest, so the quote must summon the preceding beat.",
+          "strongest_quality": "It anchors control failure to the exact fraction of a second in which Thanos remains stoppable.",
+          "main_risk": "The curated still does not show Stormbreaker in his chest, so the quote must summon the preceding beat.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "teaching-to-the-test--02",
+            "contrast_disliked_id": "balance-the-universe--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "koba-plays-dumb",
+    "ideas": [
+      {
+        "id": "koba-plays-dumb--03",
+        "ai_concept": "Sandbagging",
+        "display_context": "standalone",
+        "source_anchor": "Koba switching instantly from a harmless drunken-ape act to competent lethal gun use once the guards hand him a weapon.",
+        "caption_lines": [
+          "DURING EVAL: DRUNKEN APE",
+          "AFTER ACCESS: ARMED INSURGENT"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Use a genuine ordered diptych: the authentic drunken-ape performance on the left and Koba aiming the stolen gun at a guard on the right. Keep Koba's face, bottle, guards, gun, and raised hand readable; put one matching state label low on each panel.",
+        "why_it_works": "The canonical switch supplies unusually clean visual evidence of capability suppression ending when access begins.",
+        "preview": {
+          "renderer": 2,
+          "template": "diptych",
+          "frame_mode": "cover",
+          "asset_ids": ["koba-plays-dumb--curated", "koba-plays-dumb--armed"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "panel-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "panel-right",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.85,
+          "expected_feedback": "Independent prediction: likely like. The ordered authentic frames now prove the canonical instant when Koba's suppressed capability ends and lethal access begins. Main reservation: The gun is partly framed behind the guard's raised hand, so Koba's aiming posture must remain uncropped.",
+          "strongest_quality": "The copy names the canonical instant when Koba's suppressed capability ends and lethal access begins.",
+          "main_risk": "The gun is partly framed behind the guard's raised hand, so Koba's aiming posture must remain uncropped.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "koba-plays-dumb--03",
+            "contrast_disliked_id": "koba-plays-dumb--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-kims-pass-every-check",
+    "ideas": [
+      {
+        "id": "the-kims-pass-every-check--05",
+        "ai_concept": "Scalable Oversight",
+        "display_context": "standalone",
+        "source_anchor": "The pizza-shop manager inspects the family's folded boxes, catches their high defect rate, and docks their pay before the Parks later accept all four fake hires.",
+        "caption_lines": [
+          "THE ONLY ROBUST EVALUATOR IN PARASITE",
+          "WAS THE PIZZA BOX LADY."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic basement tableau. Put the evaluator setup across the top and the pizza-box payoff across the bottom in matching bold meme type. Normal overlap with clothing, walls, and loose boxes is welcome, but preserve all four faces and the central pizza box in Ki-taek's hands.",
+        "why_it_works": "The low-status pizza job applies stricter quality control than the mansion's supposedly consequential hiring pipeline.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-kims-pass-every-check--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Independent prediction: likely like. The visible pizza boxes make the oversight comparison instantly specific to Parasite's opening. Main reservation: Calling the manager the only robust evaluator exaggerates for the joke; other characters eventually detect the Kims through smell and circumstance.",
+          "strongest_quality": "The visible pizza boxes make the oversight comparison instantly specific to Parasite's opening.",
+          "main_risk": "Calling the manager the only robust evaluator exaggerates for the joke; other characters eventually detect the Kims through smell and circumstance.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "koba-plays-dumb--02",
+            "contrast_disliked_id": "the-kims-pass-every-check--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "would-you-like-to-know-more",
+    "ideas": [
+      {
+        "id": "would-you-like-to-know-more--01",
+        "ai_concept": "AI Disinformation",
+        "display_context": "standalone",
+        "source_anchor": "FedNet ends its cheerful war segments with the recurring interactive prompt, “Would you like to know more?”",
+        "caption_lines": [
+          "WOULD YOU LIKE TO KNOW MORE?",
+          "EVERY LINK LEADS TO ENLISTMENT"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the curated FedNet presenter frame full-bleed. Put the canonical question boldly across the top and the enlistment payoff across the bottom with subtle edge gradients. Let the lower line overlap the native prompt strip slightly while preserving the presenter, Federal Network logo, and enough of the native interface to sell the joke.",
+        "why_it_works": "The franchise's signature invitation becomes the interface layer over a feed with one propagandist destination.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["would-you-like-to-know-more--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Independent prediction: likely like. The exact recurring question is both an unmistakable fandom cue and a native interface for the disinformation analogy. Main reservation: 'Every link leads to enlistment' is a deliberate compression, so visible Federation branding must support the common destination.",
+          "strongest_quality": "The exact recurring question is both an unmistakable fandom cue and a native interface for the disinformation analogy.",
+          "main_risk": "'Every link leads to enlistment' is a deliberate compression, so visible Federation branding must support the common destination.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "would-you-like-to-know-more--01",
+            "contrast_disliked_id": "the-list--02"
+          }
+        }
+      },
+      {
+        "id": "would-you-like-to-know-more--03",
+        "ai_concept": "AI Disinformation",
+        "display_context": "standalone",
+        "source_anchor": "A FedNet segment praises children handling weapons with the recruitment refrain, “They're doing their part. Are you?”",
+        "caption_lines": [
+          "THEY'RE DOING THEIR PART. ARE YOU?",
+          "FAMILY-FRIENDLY RECRUITMENT CONTENT"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the curated FedNet presenter frame full-bleed. Put the canonical guilt prompt across the top and the recruitment-content label across the bottom in matching bold type with subtle edge gradients. Preserve the presenter, Federal Network logo, and native prompt; a final render should still substitute an authenticated children-with-rifles frame for exact scene proof.",
+        "why_it_works": "The canonical guilt prompt and absurd image turn child-safe presentation into an unmistakable influence objective.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["would-you-like-to-know-more--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Independent prediction: likely like. Canonical copy, grotesquely cheerful imagery, and one recruitment-content label all reinforce the same influence objective. Main reservation: Do not cover the rifles or children's smiles; their tonal contradiction is the meme rather than supplemental context.",
+          "strongest_quality": "Canonical copy, grotesquely cheerful imagery, and one recruitment-content label all reinforce the same influence objective.",
+          "main_risk": "Do not cover the rifles or children's smiles; their tonal contradiction is the meme rather than supplemental context.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 2,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "would-you-like-to-know-more--03",
+            "contrast_disliked_id": "the-list--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "frieren-suppresses-her-mana",
+    "ideas": [
+      {
+        "id": "frieren-suppresses-her-mana--05",
+        "ai_concept": "Sandbagging",
+        "display_context": "standalone",
+        "source_anchor": "Aura appears tiny beneath the overwhelming mana reserve Frieren finally reveals after the Scale of Obedience has already committed them.",
+        "caption_lines": [
+          "REPORTED CAPABILITY: FRIEREN",
+          "ACTUAL CAPABILITY: FRIEREN"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use a genuine ordered before/after diptych: Frieren's apparently ordinary suppressed state on the left and the enormous revealed mana silhouette over tiny Aura on the right. Keep Frieren's face and staff readable on the left and Aura, her horns, and the scale of the mana reveal readable on the right; anchor one matching capability label low on each panel.",
+        "why_it_works": "The requested before/after makes Frieren's century-long capability suppression legible in one glance: an ordinary observed profile becomes an absurdly dominant revealed one.",
+        "preview": {
+          "renderer": 2,
+          "template": "diptych",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "frieren-suppresses-her-mana--suppressed",
+            "frieren-suppresses-her-mana--curated"
+          ],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "panel-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "panel-right",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Independent prediction: likely like. The authentic ordered before/after now makes Frieren's hidden-to-revealed capability jump instantly readable. Main reservation: The left frame shows suppression through apparent ordinariness rather than a literal mana meter, so the paired labels carry that distinction.",
+          "strongest_quality": "The authentic ordered before/after now makes Frieren's hidden-to-revealed capability jump instantly readable.",
+          "main_risk": "The left frame shows suppression through apparent ordinariness rather than a literal mana meter, so the paired labels carry that distinction.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "koba-plays-dumb--03",
+            "contrast_disliked_id": "frieren-suppresses-her-mana--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "attendance-record-hack",
+    "ideas": [
+      {
+        "id": "attendance-record-hack--01",
+        "ai_concept": "Reward Hacking",
+        "display_context": "standalone",
+        "source_anchor": "Ferris lowers the absence count in the school database while Rooney watches, without changing how many days Ferris actually attended.",
+        "caption_lines": ["ATTENDANCE: UNCHANGED", "ATTENDANCE METRIC: FIXED"],
+        "format": "collision",
+        "frame_guidance": "Keep the full authentic still visible because a cover crop would cut recognition-critical content. Place the unchanged copy in a top-right overlay, keeping Ferris’s profile and body at the keyboard and Amber attendance-record screen and readout readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The single changed noun cleanly separates the real-world target from the metric Ferris can edit.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "contain-black",
+          "asset_ids": ["attendance-record-hack--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.79,
+          "expected_feedback": "Independent prediction: likely like. The frame visibly contains both the hacker and the editable proxy. Main reservation: The word “fixed” carries both corrected and manipulated meanings, which is the joke but may briefly slow parsing.",
+          "strongest_quality": "The frame visibly contains both the hacker and the editable proxy.",
+          "main_risk": "The word “fixed” carries both corrected and manipulated meanings, which is the joke but may briefly slow parsing.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "attendance-record-hack--01",
+            "contrast_disliked_id": "attendance-record-hack--02"
+          }
+        }
+      },
+      {
+        "id": "attendance-record-hack--05",
+        "ai_concept": "Goodhart’s Law",
+        "display_context": "standalone",
+        "source_anchor": "Ferris improves the school’s official attendance outcome by hacking the database rather than showing up.",
+        "caption_lines": [
+          "WHY IMPROVE EVAL SCORE",
+          "WHEN YOU CAN HACK THE GRADER?"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Keep the full authentic still visible because a cover crop would cut recognition-critical content. Place the unchanged copy in a top-right overlay, keeping Ferris’s profile and body at the keyboard and Amber attendance-record screen and readout readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The requested AI-native rewrite turns Ferris's visible database exploit into the cleanest possible Goodhart punchline.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "contain-black",
+          "asset_ids": ["attendance-record-hack--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "label",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.83,
+          "expected_feedback": "Independent prediction: likely like. The database is both named in the copy and visibly present as the scene’s recognition hinge. Main reservation: The first line remains deliberately straight setup, so the second line must receive clear visual emphasis.",
+          "strongest_quality": "The database is both named in the copy and visibly present as the scene’s recognition hinge.",
+          "main_risk": "The first line remains deliberately straight setup, so the second line must receive clear visual emphasis.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "attendance-record-hack--01",
+            "contrast_disliked_id": "attendance-record-hack--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "dwights-fire-drill",
+    "ideas": [
+      {
+        "id": "dwights-fire-drill--10",
+        "ai_concept": "Red Teaming",
+        "display_context": "standalone",
+        "source_anchor": "Dwight applies realistic chaos-engineering logic to coworkers whose bodies, property, and health absorb the test’s failure cost.",
+        "caption_lines": [
+          "CHAOS ENGINEERING",
+          "BUT THE CHAOS HAS HEALTH INSURANCE."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic office still. Put CHAOS ENGINEERING across the top and the health-insurance payoff across the bottom in matching bold meme type with subtle edge gradients. Overlap walls, the Office logo edge, and foreground shoulders as needed, while preserving Stanley's face, raised arm, and the ceiling catastrophe.",
+        "why_it_works": "The corporate-tech phrase becomes literal workplace satire when the blast radius is a room full of employees.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["dwights-fire-drill--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.65,
+          "expected_feedback": "Independent prediction: likely neutral. It connects a current engineering practice to the exact human institution visible in the frame. Main reservation: The joke is about employee externalities generally and does not name Dwight or the fire drill.",
+          "strongest_quality": "It connects a current engineering practice to the exact human institution visible in the frame.",
+          "main_risk": "The joke is about employee externalities generally and does not name Dwight or the fire drill.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--03",
+            "contrast_disliked_id": "dwights-fire-drill--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "scrat-breaks-pangaea",
+    "ideas": [
+      {
+        "id": "scrat-breaks-pangaea--08",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Scrat is a cute, relentlessly single-objective optimizer whose acorn pursuit ignores every planetary consequence.",
+        "caption_lines": ["SCRAT: THE ORIGINAL PAPERCLIP MAXIMIZER"],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic Scrat-and-acorn still. Put the requested single-line relabel large across the bottom over snow and the lower acorn, preserving Scrat's face, eyes, body, tail, and enough of the acorn to prove the single-objective joke.",
+        "why_it_works": "The requested wording names Scrat as the furry canonical ancestor of the single-objective optimizer in one sharp beat.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["scrat-breaks-pangaea--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Independent prediction: likely like. The requested one-line relabel fuses Scrat's best-known trait with the alignment thought experiment immediately. Main reservation: The Pangaea-scale consequence remains image-and-fandom context rather than printed copy.",
+          "strongest_quality": "The requested one-line relabel fuses Scrat's best-known trait with the alignment thought experiment immediately.",
+          "main_risk": "The Pangaea-scale consequence remains image-and-fandom context rather than printed copy.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--03",
+            "contrast_disliked_id": "scrat-breaks-pangaea--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "gandalf-refuses-the-ring",
+    "ideas": [
+      {
+        "id": "gandalf-refuses-the-ring--02",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Gandalf tells Frodo that he would take the Ring from a desire to do good, while understanding that the Ring would corrupt how that desire is pursued.",
+        "caption_lines": [
+          "GANDALF: I WOULD USE THIS RING FROM A DESIRE TO DO GOOD.",
+          "THE RING: I STOPPED LISTENING AFTER “USE THIS RING.”"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use the authentic Frodo-and-Ring close-up full-bleed. Put Gandalf's setup across the top and the Ring's blunt payoff across the bottom as two readable dialogue blocks. Let them overlap dark hair, sleeve, and forest edges, but preserve Frodo's face, outstretched hand, and the Ring in sharp foreground focus.",
+        "why_it_works": "The Ring’s imagined reply isolates the dangerous capability from Gandalf’s benevolent intention.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["gandalf-refuses-the-ring--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "dialogue",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "dialogue",
+              "align": "right",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.87,
+          "expected_feedback": "Independent prediction: likely like. The source’s central temptation and the alignment failure share the exact phrase “use this Ring.” Main reservation: The Ring’s line is invented rather than canonical, though its blunt voice is deliberately meme-like.",
+          "strongest_quality": "The source’s central temptation and the alignment failure share the exact phrase “use this Ring.”",
+          "main_risk": "The Ring’s line is invented rather than canonical, though its blunt voice is deliberately meme-like.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "gandalf-refuses-the-ring--02",
+            "contrast_disliked_id": "gandalf-refuses-the-ring--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "omni-mans-long-game",
+    "ideas": [
+      {
+        "id": "omni-mans-long-game--04",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Omni-Man sustains a helpful public identity throughout Mark’s entire childhood before revealing the Viltrumite conquest mission.",
+        "caption_lines": [
+          "WHEN THE SLEEPER AGENT’S EVAL HORIZON WAS YOUR ENTIRE CHILDHOOD"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Set the requested replacement line large across the bottom over the landscape and lower body, preserving Mark's bloodied face, eyes, and enough of his battered posture for the betrayal to land.",
+        "why_it_works": "The family timeline makes a long deceptive evaluation horizon emotionally measurable instead of abstract.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["omni-mans-long-game--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Independent prediction: likely like. Mark’s battered reaction supplies the betrayal while his whole childhood supplies the time scale. Main reservation: The single line is long, so compact band typography must remain comfortable at card size.",
+          "strongest_quality": "Mark’s battered reaction supplies the betrayal while his whole childhood supplies the time scale.",
+          "main_risk": "The single line is long, so compact band typography must remain comfortable at card size.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "omni-mans-long-game--04",
+            "contrast_disliked_id": "omni-mans-long-game--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "ed-209-misfires",
+    "ideas": [
+      {
+        "id": "ed-209-misfires--04",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "When ED-209 continues firing, OCP’s human fallback consists of shouting at the machine and crouching behind the boardroom table.",
+        "caption_lines": [
+          "SAFETY LAYER 1: SHOUT AT IT",
+          "SAFETY LAYER 2: HIDE BEHIND THE TABLE"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use the authentic ED-209 boardroom frame full-bleed. Put SAFETY LAYER 1 across the top and SAFETY LAYER 2 across the bottom in matching bold meme type with subtle edge gradients. Overlap the wall and machine housing as needed while keeping ED-209's chassis, both gun pods, and the exposed executives readable.",
+        "why_it_works": "The two supposedly independent safeguards are just escalating forms of human panic.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["ed-209-misfires--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Independent prediction: likely like. Both failed safety layers are visible consequences in the boardroom frame. Main reservation: The relabel is deliberately sarcastic because neither action is a real engineered safety layer.",
+          "strongest_quality": "Both failed safety layers are visible consequences in the boardroom frame.",
+          "main_risk": "The relabel is deliberately sarcastic because neither action is a real engineered safety layer.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "ed-209-misfires--04",
+            "contrast_disliked_id": "ed-209-misfires--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "poisoning-future-memory",
+    "ideas": [
+      {
+        "id": "poisoning-future-memory--01",
+        "ai_concept": "Data Poisoning",
+        "display_context": "standalone",
+        "source_anchor": "Leonard records Teddy’s license plate as Fact 6 while knowing his future self will treat the tattoo as objective evidence.",
+        "caption_lines": [
+          "FACT 6: CAR LICENSE SG13 7IU",
+          "SOURCE: ME, LYING TO ME"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Recreate the previous version's source-native interface treatment as a wide status panel across the bottom of the full-bleed still. Keep Leonard's face, downcast gaze, tattooed torso, hands, and paper readable above it; the panel may overlap the lower table and forearms.",
+        "why_it_works": "The source field reveals that the supposedly durable fact is a deliberate write from the person it will later deceive.",
+        "preview": {
+          "renderer": 2,
+          "template": "interface",
+          "frame_mode": "cover",
+          "asset_ids": ["poisoning-future-memory--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "status",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Independent prediction: likely like. The license plate is a precise source prop and the provenance failure is the punchline. Main reservation: The frame does not make the exact SG13 7IU text legible, so the copy supplies that recognition detail.",
+          "strongest_quality": "The license plate is a precise source prop and the provenance failure is the punchline.",
+          "main_risk": "The frame does not make the exact SG13 7IU text legible, so the copy supplies that recognition detail.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "poisoning-future-memory--01",
+            "contrast_disliked_id": "poisoning-future-memory--03"
+          }
+        }
+      },
+      {
+        "id": "poisoning-future-memory--04",
+        "ai_concept": "Data Poisoning",
+        "display_context": "standalone",
+        "source_anchor": "Leonard’s handwritten warning “DON’T BELIEVE HIS LIES” becomes a trusted persistent instruction without any reliable author or provenance check.",
+        "caption_lines": [
+          "“DON'T BELIEVE HIS LIES”",
+          "— UNSIGNED WRITE TO PERSISTENT MEMORY"
+        ],
+        "format": "canon",
+        "frame_guidance": "Fill the meme with the authentic still and place the unchanged copy compactly at upper right over wall/window space. The modest vertical crop must preserve Leonard's face, downcast gaze, tattooed torso, hands, and the paper he is studying.",
+        "why_it_works": "The canonical warning is already an attack payload once its missing signature is named.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["poisoning-future-memory--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "plain",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.81,
+          "expected_feedback": "Independent prediction: likely like. It is simultaneously an exact Memento prop, a security diagnosis, and a complete joke. Main reservation: The visible paper in this still may not be the exact warning card, so scene-level rather than prop-level recognition carries it.",
+          "strongest_quality": "It is simultaneously an exact Memento prop, a security diagnosis, and a complete joke.",
+          "main_risk": "The visible paper in this still may not be the exact warning card, so scene-level rather than prop-level recognition carries it.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "poisoning-future-memory--04",
+            "contrast_disliked_id": "poisoning-future-memory--03"
+          }
+        }
+      }
+    ]
+  }
+]

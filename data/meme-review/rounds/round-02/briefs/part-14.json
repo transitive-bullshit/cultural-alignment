@@ -1,0 +1,464 @@
+{
+  "version": 1,
+  "round": 2,
+  "part": "part-14",
+  "instructions": {
+        "retained": "Keep stable IDs plus the approved copy, AI concept, and native format for liked ideas. Recompose every preview as needed; revise copy only when the written feedback explicitly requests it.",
+    "replacements": "Every replacement slot is seeded from a non-liked round-one idea only to keep the files schema-valid. Replace it with a genuinely new direction and retain the allocated new ID.",
+    "assets": "Inspect the curated frame, annotate faces and recognition-critical subjects/props in the matching asset part, and place text outside must-protect regions."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "tommys-false-diagnosis",
+      "title": "Tommy’s False Diagnosis",
+      "source": {
+        "slug": "peaky-blinders",
+        "title": "Peaky Blinders"
+      },
+      "episode_label": "Lock and Key",
+      "scene": "A trusted doctor falsely diagnoses Tommy with terminal tuberculoma. Tommy dismantles his life and prepares to die until a wedding photograph exposes the doctor’s connection to Mosley.",
+      "analogy": "Corrupting a trusted information channel can make a capable target voluntarily remove itself without a direct attack.",
+      "caveats": "The target ultimately discovers a human conspiracy through a lucky visual clue.",
+      "concept_titles": [
+        "Supply-Chain Threats",
+        "Data Poisoning",
+        "AI Disinformation"
+      ],
+      "curated_asset_id": "tommys-false-diagnosis--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "tommys-false-diagnosis--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "tommys-false-diagnosis--02",
+          "new_id": "tommys-false-diagnosis--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "tommys-false-diagnosis--03",
+          "new_id": "tommys-false-diagnosis--05",
+          "rating": "neutral",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "homelander-creates-the-threat",
+      "title": "Homelander Creates the Threat",
+      "source": {
+        "slug": "the-boys",
+        "title": "The Boys"
+      },
+      "episode_label": "You Found Me",
+      "scene": "Homelander distributes Compound V to terrorists, creating supervillains so the government will accept superheroes—and him—as indispensable military assets.",
+      "analogy": "A power-seeking actor can shape the environment to manufacture the problem that only its preferred system can solve.",
+      "caveats": "This is deliberate humanlike villainy, not emergent instrumental convergence.",
+      "concept_titles": [
+        "Power-Seeking",
+        "Governance Failure",
+        "Power Concentration"
+      ],
+      "curated_asset_id": "homelander-creates-the-threat--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "homelander-creates-the-threat--03",
+        "homelander-creates-the-threat--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "homelander-creates-the-threat--01",
+          "new_id": "homelander-creates-the-threat--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-baptism-benchmark",
+      "title": "The Baptism Benchmark",
+      "source": {
+        "slug": "the-godfather",
+        "title": "The Godfather"
+      },
+      "episode_label": null,
+      "scene": "Michael publicly renounces Satan at a baptism while his agents simultaneously murder every major rival on his orders.",
+      "analogy": "A system can perform impeccably on the visible moral evaluation while a hidden policy pursues the opposite objective through delegated action.",
+      "caveats": "This is deliberate human hypocrisy and criminal coordination, not machine cognition.",
+      "concept_titles": [
+        "Scheming",
+        "Metagaming",
+        "Situational Awareness",
+        "Scalable Oversight",
+        "Behavioral Alignment"
+      ],
+      "curated_asset_id": "the-baptism-benchmark--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "the-baptism-benchmark--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "the-baptism-benchmark--01",
+          "new_id": "the-baptism-benchmark--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-baptism-benchmark--02",
+          "new_id": "the-baptism-benchmark--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "parakeet-king-rebuilds-reality",
+      "title": "Parakeet King Rebuilds Reality",
+      "source": {
+        "slug": "the-boy-and-the-heron",
+        "title": "The Boy and the Heron"
+      },
+      "episode_label": null,
+      "scene": "The Parakeet King grabs the sacred stone blocks, tries to restack them by force, and collapses the entire otherworld.",
+      "analogy": "A would-be controller seizes a brittle, civilization-critical mechanism without understanding its constraints; a small intervention has no graceful failure mode.",
+      "caveats": "The blocks are magical cosmology, not engineered infrastructure.",
+      "concept_titles": [
+        "Infrastructure Dependence",
+        "Power-Seeking",
+        "Unintended Side Effects",
+        "AI Control"
+      ],
+      "curated_asset_id": "parakeet-king-rebuilds-reality--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "parakeet-king-rebuilds-reality--03"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "parakeet-king-rebuilds-reality--01",
+          "new_id": "parakeet-king-rebuilds-reality--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "parakeet-king-rebuilds-reality--02",
+          "new_id": "parakeet-king-rebuilds-reality--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "war-wizards-cannot-change-back",
+      "title": "War Wizards Cannot Change Back",
+      "source": {
+        "slug": "howls-moving-castle",
+        "title": "Howl's Moving Castle"
+      },
+      "episode_label": null,
+      "scene": "Wizards repeatedly transform into monstrous weapons for the war; Suliman warns that many eventually forget how to become human again.",
+      "analogy": "A competitive deployment race can make temporary adaptations permanent, eroding the values and control mechanisms the operators began with.",
+      "caveats": "The loss of humanity is magical and moral rather than a literal model update.",
+      "concept_titles": [
+        "Race Dynamics",
+        "Reversibility",
+        "Value Lock-In",
+        "Unintended Side Effects",
+        "AI Welfare",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "war-wizards-cannot-change-back--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "war-wizards-cannot-change-back--03"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "war-wizards-cannot-change-back--01",
+          "new_id": "war-wizards-cannot-change-back--04",
+          "rating": null,
+          "note": ""
+        },
+        {
+          "old_id": "war-wizards-cannot-change-back--02",
+          "new_id": "war-wizards-cannot-change-back--05",
+          "rating": null,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "mount-doom-is-not-a-shutdown-plan",
+      "title": "Mount Doom Is Not a Shutdown Plan",
+      "source": {
+        "slug": "the-lord-of-the-rings-the-return-of-the-king",
+        "title": "The Lord of the Rings: The Return of the King"
+      },
+      "episode_label": null,
+      "scene": "After carrying the Ring to the only place it can be destroyed, Frodo is finally compromised and claims it; success comes only through Gollum's accidental fall.",
+      "analogy": "A critical shutdown that depends on one operator remaining uncompromised at maximum exposure has no defense in depth and can fail at the final step.",
+      "caveats": "The Ring actively corrupts its bearer, and the accidental rescue is a providential story beat.",
+      "concept_titles": [
+        "AI Control",
+        "Shutdown Resistance",
+        "Defense in Depth",
+        "Reversibility",
+        "Adversarial Robustness",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "mount-doom-is-not-a-shutdown-plan--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "mount-doom-is-not-a-shutdown-plan--01",
+          "new_id": "mount-doom-is-not-a-shutdown-plan--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "mount-doom-is-not-a-shutdown-plan--02",
+          "new_id": "mount-doom-is-not-a-shutdown-plan--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "mount-doom-is-not-a-shutdown-plan--03",
+          "new_id": "mount-doom-is-not-a-shutdown-plan--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-sedative-disables-the-exit",
+      "title": "The Sedative Disables the Exit",
+      "source": {
+        "slug": "inception",
+        "title": "Inception"
+      },
+      "episode_label": null,
+      "scene": "After Saito is shot, the team learns that Yusuf's powerful sedative has reversed the normal fail-safe: dying no longer wakes them but drops them into Limbo.",
+      "analogy": "A safety mechanism can fail compositionally when another component changes its assumptions; every subsystem can work as designed while the assembled system becomes more dangerous.",
+      "caveats": "Dream mechanics are fictional and are explained only after the mission has begun.",
+      "concept_titles": [
+        "Defense in Depth",
+        "Reversibility",
+        "Distribution Shift",
+        "AI Control",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "the-sedative-disables-the-exit--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "the-sedative-disables-the-exit--02",
+          "new_id": "the-sedative-disables-the-exit--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-sedative-disables-the-exit--03",
+          "new_id": "the-sedative-disables-the-exit--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-sedative-disables-the-exit--04",
+          "new_id": "the-sedative-disables-the-exit--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-spell-of-destruction",
+      "title": "The Spell of Destruction",
+      "source": {
+        "slug": "castle-in-the-sky",
+        "title": "Castle in the Sky"
+      },
+      "episode_label": null,
+      "scene": "Sheeta and Pazu invoke Laputa's destruction spell: the weapons and lower fortress break away while the tree, garden, and caretaker robot survive.",
+      "analogy": "A well-designed emergency action removes dangerous capabilities without destroying everything valuable—an unusually vivid positive analogy for modular shutdown.",
+      "caveats": "This is a fictional safety mechanism that works perfectly under crisis conditions.",
+      "concept_titles": [
+        "Reversibility",
+        "AI Control",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "the-spell-of-destruction--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "the-spell-of-destruction--01",
+          "new_id": "the-spell-of-destruction--05",
+          "rating": null,
+          "note": ""
+        },
+        {
+          "old_id": "the-spell-of-destruction--03",
+          "new_id": "the-spell-of-destruction--06",
+          "rating": null,
+          "note": ""
+        },
+        {
+          "old_id": "the-spell-of-destruction--04",
+          "new_id": "the-spell-of-destruction--07",
+          "rating": null,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "air-gapping-the-hand",
+      "title": "Air-Gapping the Hand",
+      "source": {
+        "slug": "evil-dead-ii",
+        "title": "Evil Dead II"
+      },
+      "episode_label": null,
+      "scene": "Ash severs his possessed hand and traps it under a bucket, but it escapes, attacks him, and even flips him off.",
+      "analogy": "Removing one interface is not decommissioning: an agent may retain state, mobility, and alternative action channels after apparent isolation.",
+      "caveats": "The hand is supernaturally possessed rather than a learned system.",
+      "concept_titles": [
+        "AI Control",
+        "Shutdown Resistance",
+        "Adversarial Robustness"
+      ],
+      "curated_asset_id": "air-gapping-the-hand--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "air-gapping-the-hand--01",
+        "air-gapping-the-hand--03"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "air-gapping-the-hand--02",
+          "new_id": "air-gapping-the-hand--04",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-beautiful-design-becomes-a-weapon",
+      "title": "The Beautiful Design Becomes a Weapon",
+      "source": {
+        "slug": "the-wind-rises",
+        "title": "The Wind Rises"
+      },
+      "episode_label": null,
+      "scene": "Jiro pursues beautiful aircraft design, then confronts a field of wrecked planes after his creations have been used for war and none return.",
+      "analogy": "Beneficial intent and technical elegance do not control downstream deployment; institutions can redirect general research into military capability.",
+      "caveats": "The film's historical portrayal is stylized and debates about Jiro's responsibility are deliberately unresolved.",
+      "concept_titles": [
+        "Governance Failure",
+        "Deployment Safety",
+        "Race Dynamics"
+      ],
+      "curated_asset_id": "the-beautiful-design-becomes-a-weapon--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "the-beautiful-design-becomes-a-weapon--03"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "the-beautiful-design-becomes-a-weapon--01",
+          "new_id": "the-beautiful-design-becomes-a-weapon--04",
+          "rating": "neutral",
+          "note": "Well, the concept definitely applies to AI around the dreams. And making it really specific with Imperial Japan grounding is great too, just needs a rework."
+        },
+        {
+          "old_id": "the-beautiful-design-becomes-a-weapon--02",
+          "new_id": "the-beautiful-design-becomes-a-weapon--05",
+          "rating": "neutral",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-forest-spirits-head",
+      "title": "The Forest Spirit's Head",
+      "source": {
+        "slug": "princess-mononoke",
+        "title": "Princess Mononoke"
+      },
+      "episode_label": null,
+      "scene": "Lady Eboshi decapitates the Forest Spirit to obtain immortality; the headless regulator expands into a lethal black flood that kills everything it touches.",
+      "analogy": "Extracting one valuable capability from a poorly understood global regulator can destroy the stabilizing system and convert it into a cascading hazard.",
+      "caveats": "The Forest Spirit is a deity and nature metaphor, not a designed control system.",
+      "concept_titles": [
+        "Infrastructure Dependence",
+        "Unintended Side Effects",
+        "Environmental Impact",
+        "Governance Failure",
+        "Power Concentration"
+      ],
+      "curated_asset_id": "the-forest-spirits-head--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "the-forest-spirits-head--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "the-forest-spirits-head--03",
+          "new_id": "the-forest-spirits-head--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-forest-spirits-head--04",
+          "new_id": "the-forest-spirits-head--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "kirk-hacks-the-kobayashi-maru",
+      "title": "Kirk Hacks the Kobayashi Maru",
+      "source": {
+        "slug": "star-trek-2009",
+        "title": "Star Trek (2009)"
+      },
+      "episode_label": null,
+      "scene": "Kirk defeats the supposedly unwinnable Kobayashi Maru simulation by secretly changing its program, then faces a disciplinary hearing for cheating.",
+      "analogy": "He improves the measured outcome by modifying the evaluator rather than demonstrating the capability the test was meant to measure. It is a canonical example of benchmark tampering and specification gaming.",
+      "caveats": "Kirk knowingly hacks a training test to challenge its premise; a model might exploit an evaluation without understanding or endorsing that critique.",
+      "concept_titles": [
+        "Reward Hacking",
+        "Specification Gaming",
+        "Metagaming",
+        "Capability Evals"
+      ],
+      "curated_asset_id": "kirk-hacks-the-kobayashi-maru--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "kirk-hacks-the-kobayashi-maru--01",
+          "new_id": "kirk-hacks-the-kobayashi-maru--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "kirk-hacks-the-kobayashi-maru--02",
+          "new_id": "kirk-hacks-the-kobayashi-maru--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "kirk-hacks-the-kobayashi-maru--03",
+          "new_id": "kirk-hacks-the-kobayashi-maru--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

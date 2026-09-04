@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "round": 2,
+  "updatedAt": "2026-09-03T21:30:53.972Z",
+  "feedback": {
+    "dr-evils-outdated-ransom--01": {
+      "rating": "dislike",
+      "notes": ""
+    },
+    "dr-evils-outdated-ransom--06": {
+      "rating": "like",
+      "notes": "this is fucking awesome"
+    },
+    "dr-evils-outdated-ransom--05": {
+      "rating": "like",
+      "notes": "I love that this takes a very recognizable $1 million and makes it move towards parameters. This is an amazing concept + text!\n\nThe layout and composition needs to be changed. The default should definitely be to overlay text on top and bottom of the background image. It's only when it excessively occludes the background image as a fallback should you ever consider expanding the bounds of the frame. And moving the text outside so most of the time that the text should still be on top of the main image."
+    }
+  },
+  "scenarios": {
+    "the-literal-doctor": {
+      "disabled": true
+    },
+    "karl-fritzs-vow": {
+      "disabled": true
+    },
+    "brian-rewinds-the-gauge": {
+      "disabled": true
+    }
+  }
+}

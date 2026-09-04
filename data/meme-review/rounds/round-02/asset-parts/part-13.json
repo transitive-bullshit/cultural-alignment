@@ -1,0 +1,571 @@
+[
+  {
+    "id": "will-becomes-the-spy--curated",
+    "scenario_slug": "will-becomes-the-spy",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f1248104b9e6e62d45c10146/gallery-c8a821fc8aa9af6aa6fdf6b51833455fcfc1535a66c9d6d4fd0e1eb9aae92820.webp",
+    "width": 1920,
+    "height": 1008,
+    "alt": "Still from Stranger Things illustrating Will Becomes the Spy",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAQAA8BgJZQCdAD0h/pcAP7aw0bP+1KfSn3D5DjPwRcAAAA=",
+    "content_hash": "c8a821fc8aa9af6aa6fdf6b51833455fcfc1535a66c9d6d4fd0e1eb9aae92820",
+    "protected_regions": [
+      {
+        "id": "will-face",
+        "label": "Will’s face and sideways glance",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [25, 17, 43, 64]
+      },
+      {
+        "id": "will-bowl-cut",
+        "label": "Will’s canonical bowl cut",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [25, 0, 44, 40]
+      },
+      {
+        "id": "will-torso",
+        "label": "Will’s coat and scarf",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [34, 58, 52, 42]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "takes-over--curated",
+    "scenario_slug": "takes-over",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f124810d991ce3746508db92/gallery-24471cf2ca9a701c6cf8686e4ac920aa43a60662a89a46d75f46c5428df7b681.webp",
+    "width": 1600,
+    "height": 900,
+    "alt": "Still from Mob Psycho 100 illustrating ???% Takes Over",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACQAQCdASoIAAUAA8BgJaQAAudZtgAA/B4fqfwwGW2tuurvjL3sfesTyDRTx4AAAAA=",
+    "content_hash": "24471cf2ca9a701c6cf8686e4ac920aa43a60662a89a46d75f46c5428df7b681",
+    "protected_regions": [
+      {
+        "id": "glowing-eyes",
+        "label": "???%’s two glowing eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [10, 7, 80, 49]
+      },
+      {
+        "id": "question-mark-percentage",
+        "label": "Canonical ???% title glyph",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [25, 60, 53, 34]
+      },
+      {
+        "id": "shadow-face",
+        "label": "Black-and-white ???% face silhouette",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [0, 0, 100, 100]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "hamsterdam--curated",
+    "scenario_slug": "hamsterdam",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f124812ea38bcfaca97a9673/gallery-8e2bece5f77f28356b69fc82b3f94fa8e855330b1516a7437b77aff94a01c129.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from The Wire illustrating Hamsterdam",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAQCdASoIAAUAA8BgJYwCdAD5imn1QADicdHKWqSCFXU38vh2qsZgDgnX0lAA",
+    "content_hash": "8e2bece5f77f28356b69fc82b3f94fa8e855330b1516a7437b77aff94a01c129",
+    "protected_regions": [
+      {
+        "id": "left-officer-face",
+        "label": "Left officer’s face and reaction",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [34, 17, 15, 29]
+      },
+      {
+        "id": "right-officer-face",
+        "label": "Right officer’s face and reaction",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [66, 0, 17, 36]
+      },
+      {
+        "id": "left-officer-body",
+        "label": "Left officer’s suit and police identification",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [24, 13, 34, 87]
+      },
+      {
+        "id": "right-officer-body",
+        "label": "Right officer’s leather jacket and stance",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [54, 0, 39, 100]
+      },
+      {
+        "id": "police-identification",
+        "label": "Badge and police ID",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [45, 49, 9, 23]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "off-the-chart-reassessment--curated",
+    "scenario_slug": "off-the-chart-reassessment",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f124812eae13e7bf500e785a/gallery-96c0583a712acba1409514310f61b675f989966b81f07b62f8dfab4095406728.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from Solo Leveling illustrating Off-the-Chart Reassessment",
+    "blur_data_url": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACwAQCdASoIAAUAA8BgJZQAAveGLzUgAP6KcCc8V4cOmHlF+/UCSfNwr9DVjaCHaCEQAA==",
+    "content_hash": "96c0583a712acba1409514310f61b675f989966b81f07b62f8dfab4095406728",
+    "protected_regions": [
+      {
+        "id": "jinwoo-face",
+        "label": "Jinwoo’s profile and expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [45, 16, 12, 27]
+      },
+      {
+        "id": "jinwoo-body",
+        "label": "Jinwoo standing between the machines",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [29, 16, 33, 84]
+      },
+      {
+        "id": "jinwoo-raised-fist",
+        "label": "Jinwoo’s raised testing hand",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [28, 29, 9, 24]
+      },
+      {
+        "id": "left-eval-hardware",
+        "label": "Black mana-measuring apparatus",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [0, 0, 37, 100]
+      },
+      {
+        "id": "sensor-panel",
+        "label": "Small sensor panel on the black apparatus",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [4, 33, 12, 22]
+      },
+      {
+        "id": "right-eval-hardware",
+        "label": "White reassessment apparatus",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [83, 8, 17, 92]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "android-17-destroys-the-remote--curated",
+    "scenario_slug": "android-17-destroys-the-remote",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f124813098c1c65ea33440cc/gallery-2153843b8e90171d1f7b3c3bd67538706645d4ceb47281d5e24d1d917e66eaa7.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Dragon Ball Z illustrating Android 17 Destroys His Creator",
+    "blur_data_url": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAACwAQCdASoIAAUAA8BgJQBOgB5vdqIAAM4fSXgwJIKYwcUNe8HBNFEKlTorh/e9+yHCQAAA",
+    "content_hash": "2153843b8e90171d1f7b3c3bd67538706645d4ceb47281d5e24d1d917e66eaa7",
+    "protected_regions": [
+      {
+        "id": "android-17-face",
+        "label": "Android 17’s calm face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [0, 32, 26, 37]
+      },
+      {
+        "id": "gero-face",
+        "label": "Dr. Gero’s panicked face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [57, 2, 24, 45]
+      },
+      {
+        "id": "android-17-body",
+        "label": "Android 17’s body and Red Ribbon insignia",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 28, 49, 72]
+      },
+      {
+        "id": "gero-body",
+        "label": "Dr. Gero’s body and orange armor",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [26, 0, 74, 100]
+      },
+      {
+        "id": "central-grab",
+        "label": "Android 17 and Gero’s central hand interaction",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [39, 41, 22, 27]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-queen-creates-meruem--curated",
+    "scenario_slug": "the-queen-creates-meruem",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f12481669320d9ef323b7eb5/gallery-2bb51e32050de1c29ce6500defc882a7fe2a6533ae5816d29b9377af2da91d6a.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from Hunter × Hunter illustrating The Queen Creates Meruem",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACQAQCdASoIAAUAA8BgJZwAAp05sqAA/u+iCJkv+ETbcGRxpReIH8rLOlbcQAAA",
+    "content_hash": "2bb51e32050de1c29ce6500defc882a7fe2a6533ae5816d29b9377af2da91d6a",
+    "protected_regions": [
+      {
+        "id": "meruem-face",
+        "label": "Meruem’s face and expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [34, 17, 33, 42]
+      },
+      {
+        "id": "meruem-eyes",
+        "label": "Meruem’s eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [35, 27, 32, 16]
+      },
+      {
+        "id": "meruem-helmet",
+        "label": "Meruem’s helmet and silhouette",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [24, 0, 53, 36]
+      },
+      {
+        "id": "meruem-torso",
+        "label": "Meruem’s upper torso",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [16, 44, 73, 56]
+      },
+      {
+        "id": "purple-aura",
+        "label": "Purple aura around Meruem",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [13, 0, 78, 100]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "karl-fritzs-vow--curated",
+    "scenario_slug": "karl-fritzs-vow",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f1248179af9be119c78004d2/gallery-64f08851af047e624f8d2ef2f9c33ee7472ca5018e1b884d25436703be8ad8d1.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from Attack on Titan illustrating Karl Fritz’s Vow",
+    "blur_data_url": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACwAQCdASoIAAUAA8BgJagCdADFavwAAOJDceAio4gGK7PwjPgpBPW+SDzYxTYFampeh9aegMj2WT6YAAA=",
+    "content_hash": "64f08851af047e624f8d2ef2f9c33ee7472ca5018e1b884d25436703be8ad8d1",
+    "protected_regions": [
+      {
+        "id": "royal-inheritor-face",
+        "label": "Royal inheritor’s full face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [27, 0, 47, 100]
+      },
+      {
+        "id": "founder-eyes",
+        "label": "Glowing purple Founding Titan eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [31, 32, 39, 27]
+      },
+      {
+        "id": "vow-markings",
+        "label": "Dark vow-possession markings below the eyes",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [31, 43, 39, 28]
+      },
+      {
+        "id": "dark-hair",
+        "label": "Hair framing the possessed face",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [19, 0, 63, 77]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "human-instrumentality--curated",
+    "scenario_slug": "human-instrumentality",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f12481a6ad2cca7d22371a28/gallery-8cefe22fc52f48f2493f43c893381c27a2cabb77a0cc2e1d2f27a4da382bda67.webp",
+    "width": 960,
+    "height": 600,
+    "alt": "Still from The End of Evangelion illustrating Human Instrumentality",
+    "blur_data_url": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADwAQCdASoIAAUAA8BgJbACdGuAAoF2qwAA4neO7LH/weyXWeYeCGAwQxBKkh6l3hJog80+O3/IAAAA",
+    "content_hash": "8cefe22fc52f48f2493f43c893381c27a2cabb77a0cc2e1d2f27a4da382bda67",
+    "protected_regions": [
+      {
+        "id": "rei-lilith-head",
+        "label": "Giant Rei/Lilith head and face",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [7, 4, 89, 77]
+      },
+      {
+        "id": "rei-lilith-eye",
+        "label": "Rei/Lilith’s red eye",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [42, 24, 9, 14]
+      },
+      {
+        "id": "shinji",
+        "label": "Shinji facing Rei/Lilith",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [55, 56, 10, 44]
+      },
+      {
+        "id": "asuka",
+        "label": "Asuka in the foreground",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [38, 73, 11, 27]
+      },
+      {
+        "id": "seele-monoliths",
+        "label": "SEELE monoliths across the foreground",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [10, 70, 49, 30]
+      },
+      {
+        "id": "orange-lcl",
+        "label": "Orange LCL landscape",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 74, 100, 26]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "buu-removes-babidi--curated",
+    "scenario_slug": "buu-removes-babidi",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f12481afa8a4f5c08988f0ec/gallery-9bdf52af987046052190a360d50684ae8f61fc8a79bc1891382c28a9876c3a6d.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from Dragon Ball Z illustrating Buu Removes Babidi",
+    "blur_data_url": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACwAQCdASoIAAUAA8BgJbACdADx+IsgAPvzuoj7Rf3fgMnfDObT+iINDdkYkvQlOfQa4VyTENce8BFBc8x0AAAA",
+    "content_hash": "9bdf52af987046052190a360d50684ae8f61fc8a79bc1891382c28a9876c3a6d",
+    "protected_regions": [
+      {
+        "id": "babidi-face",
+        "label": "Babidi’s face and expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [12, 34, 36, 32]
+      },
+      {
+        "id": "babidi-body",
+        "label": "Babidi’s small body",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [6, 25, 50, 75]
+      },
+      {
+        "id": "buu-face",
+        "label": "Majin Buu’s face and head",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [51, 9, 27, 38]
+      },
+      {
+        "id": "buu-body",
+        "label": "Majin Buu’s torso and clothing",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [44, 26, 56, 74]
+      },
+      {
+        "id": "buu-fists",
+        "label": "Buu’s clenched yellow-gloved fists",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [51, 33, 49, 33]
+      },
+      {
+        "id": "majin-emblem",
+        "label": "Majin emblem on Buu’s belt",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [62, 65, 15, 14]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "hdp-obeys-the-rules--curated",
+    "scenario_slug": "hdp-obeys-the-rules",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f12481ca83e8e294219367ce/gallery-bd60a2c70862da953bfb81d07c37a2a7d2491bd854679ad1a8784da7a5afd59d.webp",
+    "width": 1400,
+    "height": 704,
+    "alt": "Still from Pluribus illustrating HDP Obeys the Rules",
+    "blur_data_url": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACwAQCdASoIAAQAA8BgJaACdAD0gbSgAP7eGJ+2YbWNZ66tqpPiUxSwFxNnE98UAHaU6V8AAAA=",
+    "content_hash": "bd60a2c70862da953bfb81d07c37a2a7d2491bd854679ad1a8784da7a5afd59d",
+    "protected_regions": [
+      {
+        "id": "presenter-face",
+        "label": "HDP presenter’s face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [47, 12, 22, 47]
+      },
+      {
+        "id": "presenter-body",
+        "label": "Presenter’s body in the product demonstration",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [28, 29, 58, 68]
+      },
+      {
+        "id": "hdp-packet",
+        "label": "Human Derived Protein packet",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [35, 34, 13, 35]
+      },
+      {
+        "id": "packet-hand",
+        "label": "Hand holding the HDP packet",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [30, 39, 16, 32]
+      },
+      {
+        "id": "television-frame",
+        "label": "Television frame around the product demonstration",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [6, 3, 88, 95]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "five-golden-tickets--curated",
+    "scenario_slug": "five-golden-tickets",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f12481cdb288ddd8ede60fbd/gallery-97392f1c7659c95d910f261261b6cf4a99e179d0a63d6ab9a34f7f3bd419a21f.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from The Office illustrating Five Golden Tickets",
+    "blur_data_url": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACwAQCdASoIAAUAA8BgJYwCdADze7UQAN5XndbDxj13l9+1lO5412f3+dKeABxUPRAAAA==",
+    "content_hash": "97392f1c7659c95d910f261261b6cf4a99e179d0a63d6ab9a34f7f3bd419a21f",
+    "protected_regions": [
+      {
+        "id": "michael-face",
+        "label": "Michael Scott’s Wonka expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [32, 15, 25, 45]
+      },
+      {
+        "id": "wonka-hat",
+        "label": "Michael’s gray Willy Wonka top hat",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [28, 0, 32, 35]
+      },
+      {
+        "id": "michael-body",
+        "label": "Michael’s Wonka costume and bow tie",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [21, 31, 48, 69]
+      },
+      {
+        "id": "michael-gesture",
+        "label": "Michael’s raised hand and ticket gesture",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [0, 40, 23, 34]
+      },
+      {
+        "id": "dwight-face",
+        "label": "Dwight’s face behind Michael",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [56, 17, 21, 36]
+      },
+      {
+        "id": "coworker-face",
+        "label": "Background coworker’s face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [78, 40, 17, 31]
+      },
+      {
+        "id": "office-title",
+        "label": "Original The Office title mark",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [3, 55, 44, 45]
+      },
+      {
+        "id": "ticket-boxes",
+        "label": "Purple ticket-themed boxes at right",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [75, 63, 25, 37]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "kevins-keleven--curated",
+    "scenario_slug": "kevins-keleven",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f12481d2acd5f56cbe9f7e8f/gallery-d8b452426bc88d679ac5d74d01a56b8e9f008fa6c9d4496c953839a23f653f7c.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from The Office illustrating Kevin’s Keleven",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAQCdASoIAAUAA8BgJYwCdAD0h/tsAAD84qGhpZky0Kvr0rzojiVrB4MSYxKiQAA=",
+    "content_hash": "d8b452426bc88d679ac5d74d01a56b8e9f008fa6c9d4496c953839a23f653f7c",
+    "protected_regions": [
+      {
+        "id": "kevin-face",
+        "label": "Kevin Malone’s full face and deadpan expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [20, 0, 42, 70]
+      },
+      {
+        "id": "kevin-body",
+        "label": "Kevin’s suit and shoulders",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [5, 35, 60, 65]
+      },
+      {
+        "id": "background-coworker",
+        "label": "Coworker visible through the office window",
+        "kind": "face",
+        "priority": "soft",
+        "source_rect": [62, 34, 16, 28]
+      }
+    ],
+    "annotation_status": "complete"
+  }
+]

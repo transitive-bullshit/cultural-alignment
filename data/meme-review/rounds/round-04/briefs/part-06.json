@@ -1,0 +1,426 @@
+{
+  "version": 1,
+  "mode": "layout-refinement",
+  "source_batch": 3,
+  "target_batch": 4,
+  "part": "part-06",
+  "instructions": {
+    "scope": "Do not add meme ideas, IDs, concepts, formats, or source anchors. Work only on the retained lineages listed here.",
+    "finalized": "Copy finalized ideas and every referenced asset byte-for-byte. They are context only and must not be edited.",
+    "layout_only": "Keep approved caption copy and editorial fields exact. This is a typography refinement pass: try hero-sized conventional copy first, compare with the lineage’s earliest strong version when useful, and use standard only for a demonstrated wrap or focal collision. Add a subtle edge gradient when large overlay text needs contrast.",
+    "bounded_revision": "Apply only the explicit source feedback, including exact requested word changes. Keep the central concept, format, source anchor, and lineage ID unchanged. Otherwise follow the same hero-first typography and subtle-gradient guidance as layout-only ideas."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "both-goblets-are-poisoned",
+      "ideas": [
+        {
+          "id": "both-goblets-are-poisoned--08",
+          "scenario_slug": "both-goblets-are-poisoned",
+          "action": "bounded-revision",
+          "source_idea_sha256": "b083c588e426abd11a7d48c449a6304b1d2423fe94cb3bb5ba406d3de0cf75c7",
+          "source_editorial_sha256": "368007f6d8baa82c3c45dfb3b8d3a326e266c7683df01b215904d026454e9b1e",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the font size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "will-becomes-the-spy",
+      "ideas": [
+        {
+          "id": "will-becomes-the-spy--04",
+          "scenario_slug": "will-becomes-the-spy",
+          "action": "finalized",
+          "source_idea_sha256": "909da91bfe95922809ba2c84bbdff8356c3db0a47c4a518157e522f2493e2feb",
+          "source_editorial_sha256": "1b0cc71fa34c2e7f1196b2fe859502610e00506ce23752744cc8a137884df57d",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-71949419aa892bd5-1780"
+            }
+          }
+        },
+        {
+          "id": "will-becomes-the-spy--05",
+          "scenario_slug": "will-becomes-the-spy",
+          "action": "bounded-revision",
+          "source_idea_sha256": "5112b9e0639a1b4c548a8ce1912e01247f66cdb27621bd533889f7bcce6cad28",
+          "source_editorial_sha256": "bbc10f53feb891aa1262c4eaf4bae13671aeedb8e4e9bcb953f0c7f7003b257b",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "make the text just a bit bigger",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "kevins-keleven",
+      "ideas": [
+        {
+          "id": "kevins-keleven--01",
+          "scenario_slug": "kevins-keleven",
+          "action": "bounded-revision",
+          "source_idea_sha256": "851464ea7855085123bb68ba591e09b1f2b1a7b63fa8699fafc293eed5cb1ed2",
+          "source_editorial_sha256": "6ed8706f606596e82c675d39fd3ac1599cf35f5f7b74c6735ecc9f787b281a79",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the font size. remove periods",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "kevins-keleven--06",
+          "scenario_slug": "kevins-keleven",
+          "action": "finalized",
+          "source_idea_sha256": "72fc75021d14511111e2d128c7f48e03e5435f9a9e1a638da61d6afd63ff072b",
+          "source_editorial_sha256": "8836856c01ddf72b9c4be05de3069fc2ba46482d22066a233b53c284e3c9f9f3",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "i love it",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-02",
+              "payloadFingerprint": "v1-94146ac7966ecec3-2562"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "tommys-false-diagnosis",
+      "ideas": [
+        {
+          "id": "tommys-false-diagnosis--01",
+          "scenario_slug": "tommys-false-diagnosis",
+          "action": "bounded-revision",
+          "source_idea_sha256": "65d8dcc7ff40b3d726e672cab48f98fccbe96119c41fcaa4dee09bf73517b4d5",
+          "source_editorial_sha256": "23f449c98e733ac54c8aac043c854920aac872fa2968b6689de965be7bf290e5",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the text size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "homelander-creates-the-threat",
+      "ideas": [
+        {
+          "id": "homelander-creates-the-threat--04",
+          "scenario_slug": "homelander-creates-the-threat",
+          "action": "bounded-revision",
+          "source_idea_sha256": "4b52fa460b39b9200155664db0c1980d66a5261ded7aa5b501c563ccf0dfb4c3",
+          "source_editorial_sha256": "872fcac4431484cfb9b99d2df4d29d7966885faf3a87599303883c5d4542c0ed",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "replace \"HOMELANDER FOUNDED\" with \"WHEN THE THREAT ACTOR FOUNDS\"\n\nremove the period at the end of the sentence",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "homelander-creates-the-threat--05",
+          "scenario_slug": "homelander-creates-the-threat",
+          "action": "bounded-revision",
+          "source_idea_sha256": "a62391d42c4e83e9cba61d0b2e2470a650e85f9beca56dc1ec06d55683320dd9",
+          "source_editorial_sha256": "fbec1adfdc2bfd5488e3638f40c02880e19df4a767a9997c65ea267e09b18a7a",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the font size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-baptism-benchmark",
+      "ideas": [
+        {
+          "id": "the-baptism-benchmark--06",
+          "scenario_slug": "the-baptism-benchmark",
+          "action": "bounded-revision",
+          "source_idea_sha256": "6759821ec34ef2d8ab821ca8f4064313b901732930db233e5247b01ef4f6b194",
+          "source_editorial_sha256": "b469dc1eb2ef6c37f813e16d5448214409752a268f70b646f85641a894f83c9e",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the font size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "parakeet-king-rebuilds-reality",
+      "ideas": [
+        {
+          "id": "parakeet-king-rebuilds-reality--03",
+          "scenario_slug": "parakeet-king-rebuilds-reality",
+          "action": "bounded-revision",
+          "source_idea_sha256": "4c56bdd3820781059f4b038c92cec152d93898f6a85a10c4e9ca4008ded99fb7",
+          "source_editorial_sha256": "2a88cee9d10fca9f157ba09b4b58a84f9b819b8c697b709798615529d362d996",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the font size and move the text to be centered on the bottom",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "parakeet-king-rebuilds-reality--04",
+          "scenario_slug": "parakeet-king-rebuilds-reality",
+          "action": "bounded-revision",
+          "source_idea_sha256": "bb9278492fcc63be4373e8e5608d048121f86dc2dad148a35dd1906529d5558c",
+          "source_editorial_sha256": "5256357b99e2e715dc479797302a3238133881338d7f01bfca7edcf61bc12fab",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the font size and move the text to be centered on the bottom",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "mount-doom-is-not-a-shutdown-plan",
+      "ideas": [
+        {
+          "id": "mount-doom-is-not-a-shutdown-plan--04",
+          "scenario_slug": "mount-doom-is-not-a-shutdown-plan",
+          "action": "bounded-revision",
+          "source_idea_sha256": "01f448feb54e37c48a3a4d9a4f8467ae4ca00faba7b12b1c655c61abc5c7a7dc",
+          "source_editorial_sha256": "598e2ee61c7807d227eea299bb50da23ea73aa03e21fccd64d3be90d2767fde9",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the font size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-sedative-disables-the-exit",
+      "ideas": [
+        {
+          "id": "the-sedative-disables-the-exit--05",
+          "scenario_slug": "the-sedative-disables-the-exit",
+          "action": "bounded-revision",
+          "source_idea_sha256": "5f1c5905e49468fe0256d880c054996fba56be8de2bbc81366efabf5e7c3f60c",
+          "source_editorial_sha256": "86114e0c2c2d89e7b519bac81bd2dd299a4f9f3d76f2f39ec30292af8051338a",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "change the background image for this to be the famous image of a spinning top from the movie's end sequence",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-beautiful-design-becomes-a-weapon",
+      "ideas": [
+        {
+          "id": "the-beautiful-design-becomes-a-weapon--03",
+          "scenario_slug": "the-beautiful-design-becomes-a-weapon",
+          "action": "bounded-revision",
+          "source_idea_sha256": "2dcc92d704106caa7441356f5adbdd2cf289fb27609971eae20f1e25a0c1d6f0",
+          "source_editorial_sha256": "20c7c46ae01cb85b5809e30b27f6acc74e89266a17fa12538d94598690e9acc6",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the font size just a bit",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "the-beautiful-design-becomes-a-weapon--04",
+          "scenario_slug": "the-beautiful-design-becomes-a-weapon",
+          "action": "bounded-revision",
+          "source_idea_sha256": "f042c6c9f52ab398f2ac9ae5cd732396d05f64511146d7a32737cacaf9208476",
+          "source_editorial_sha256": "cc15210b1f358756963276af1f9f470ce1e19de47544ba2c1f85eafa97dd842f",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the font size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-forest-spirits-head",
+      "ideas": [
+        {
+          "id": "the-forest-spirits-head--01",
+          "scenario_slug": "the-forest-spirits-head",
+          "action": "bounded-revision",
+          "source_idea_sha256": "562465d86295cd13ad72f11695ea96c6811f1a842d793d8fb395bbba39a30889",
+          "source_editorial_sha256": "b59095d5a2284f66148692f82967f8123d8d65c390ecd41c181dd96cf00434e5",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the text size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "god-of-the-new-world",
+      "ideas": [
+        {
+          "id": "god-of-the-new-world--06",
+          "scenario_slug": "god-of-the-new-world",
+          "action": "bounded-revision",
+          "source_idea_sha256": "7f7be59b4c5405f9f144334d62447bf4c82e34ce04e672ee37b4e381cc836109",
+          "source_editorial_sha256": "2575bdb61773b744a13a3e603775469f2a995932231518c70c85e76bb0f92458",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "add the word \"PEN\" at the end of the second line",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    }
+  ]
+}

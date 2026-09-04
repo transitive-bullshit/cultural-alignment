@@ -1,0 +1,2321 @@
+[
+  {
+    "scenario_slug": "push-the-button",
+    "ideas": [
+      {
+        "id": "push-the-button--01",
+        "ai_concept": "Interpretability",
+        "display_context": "standalone",
+        "source_anchor": "The Swan terminal demanding 4 8 15 16 23 42 every 108 minutes without giving its operators a legible account of the electromagnetic safeguard.",
+        "caption_lines": [
+          "4 8 15 16 23 42",
+          "SYSTEM PURPOSE: [NOT PROVIDED]"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Let the inspected Swan still fill the frame. Keep Locke’s face, hands, terminal, and countdown equipment clear; place the compact status block at upper left across the soft tape-reel area, above the terminal.",
+        "why_it_works": "The show's most recognizable input becomes an absurdly complete interface for an utterly uninterpretable safety system.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "push-the-button--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-left",
+              "style": "status",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: the Numbers and a blank purpose field turn the Swan terminal into a perfect opaque safety interface.",
+          "strongest_quality": "The exact 4 8 15 16 23 42 input is both the fandom cue and the unexplained control policy.",
+          "main_risk": "Interpretability usually concerns internal reasoning, so this reads more as an illegible safety case than model interpretability.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "push-the-button--01",
+            "contrast_disliked_id": "push-the-button--02"
+          }
+        }
+      },
+      {
+        "id": "push-the-button--05",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "The Swan button is a real magnetic-containment safeguard supported by an opaque institutional story.",
+        "caption_lines": [
+          "THE BUTTON WAS LOAD-BEARING",
+          "THE SAFETY CASE WAS NOT"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the inspected Swan still fill the frame. Keep Locke’s face, hands, and terminal clear; place the compact collision at upper left over the soft tape-reel area with only outline and shadow.",
+        "why_it_works": "The same structural adjective makes the physical safeguard and failed explanation collide.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "push-the-button--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: The same structural adjective makes the physical safeguard and failed explanation collide.",
+          "strongest_quality": "The same structural adjective makes the physical safeguard and failed explanation collide.",
+          "main_risk": "The selected frame precedes the magnetic collapse.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "push-the-button--01",
+            "contrast_disliked_id": "push-the-button--02"
+          }
+        }
+      },
+      {
+        "id": "push-the-button--06",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "When Locke destroys the computer and the repeated button protocol fails, Desmond can still activate the one-use fail-safe key.",
+        "caption_lines": [
+          "THE BUTTON FAILED",
+          "DESMOND WAS THE LAST LAYER"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the inspected Swan still fill the frame. Keep Locke’s face, hands, and terminal clear; place the compact two-line collision at upper left over the soft tape-reel area.",
+        "why_it_works": "The second safeguard is a named person with one irreversible key turn.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "push-the-button--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.86,
+          "expected_feedback": "Could be neutral: Desmond as the final safeguard is clean and scene-specific, but the second-layer framing may feel more clever than funny.",
+          "strongest_quality": "The second safeguard is a named person with one irreversible key turn.",
+          "main_risk": "Desmond and the fail-safe key are not visible in Locke’s curated frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "push-the-button--01",
+            "contrast_disliked_id": "push-the-button--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "square-filter-round-hole",
+    "ideas": [
+      {
+        "id": "square-filter-round-hole--07",
+        "ai_concept": "Infrastructure Dependence",
+        "display_context": "standalone",
+        "source_anchor": "The spacecraft has a square carbon-dioxide canister and a round life-support receptacle that cannot connect.",
+        "caption_lines": [
+          "HOUSTON, WE HAVE A SCHEMA MISMATCH"
+        ],
+        "format": "canon",
+        "frame_guidance": "Fill the card with the inspected Mission Control still. Keep the engineer’s face and both incompatible canisters clear; place the one-liner at upper left over the incidental colleague and wall.",
+        "why_it_works": "A surgical change to the film’s most famous line names the lethal interface mismatch.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "square-filter-round-hole--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: A surgical change to the film’s most famous line names the lethal interface mismatch.",
+          "strongest_quality": "A surgical change to the film’s most famous line names the lethal interface mismatch.",
+          "main_risk": "The iconic quote comes from another moment in the film.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "push-the-button--01",
+            "contrast_disliked_id": "square-filter-round-hole--01"
+          }
+        }
+      },
+      {
+        "id": "square-filter-round-hole--08",
+        "ai_concept": "Infrastructure Dependence",
+        "display_context": "standalone",
+        "source_anchor": "The improvised carbon-dioxide scrubber adapter uses ordinary spacecraft materials, including a sock.",
+        "caption_lines": [
+          "THE MOST IMPORTANT DONGLE IN HISTORY",
+          "WAS MADE WITH A SOCK"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with the inspected Mission Control still. Keep the engineer’s face, square canister, and round receptacle clear; place the compact two-line joke at upper left over incidental crew detail.",
+        "why_it_works": "Consumer-tech language makes the absurd life-support adapter instantly tangible.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "square-filter-round-hole--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: Consumer-tech language makes the absurd life-support adapter instantly tangible.",
+          "strongest_quality": "Consumer-tech language makes the absurd life-support adapter instantly tangible.",
+          "main_risk": "The sock is among the materials but not prominent in this frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "square-filter-round-hole--02"
+          }
+        }
+      },
+      {
+        "id": "square-filter-round-hole--09",
+        "ai_concept": "Scalable Oversight",
+        "display_context": "standalone",
+        "source_anchor": "An engineer physically holds up the incompatible square and round canisters while the team constructs the adapter.",
+        "caption_lines": [
+          "CO₂ FILTER API: SQUARE",
+          "LIFE-SUPPORT API: ROUND",
+          "NASA: SHIP THE DONGLE"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Fill the card with the inspected Mission Control still and preserve the engineer’s face plus both incompatible canisters. Place the compact status block at lower left over his shirt and incidental bench detail, below the square canister.",
+        "why_it_works": "The two visible shapes become incompatible APIs and the tested adapter becomes the shipped fix.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "square-filter-round-hole--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1,
+                2
+              ],
+              "slot": "bottom-left",
+              "style": "status",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Could be neutral: The two visible shapes become incompatible APIs and the tested adapter becomes the shipped fix.",
+          "strongest_quality": "The two visible shapes become incompatible APIs and the tested adapter becomes the shipped fix.",
+          "main_risk": "Three lines are denser than the strongest one-beat directions.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "square-filter-round-hole--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "money-in-the-banana-stand",
+    "ideas": [
+      {
+        "id": "money-in-the-banana-stand--05",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "George Sr. repeatedly saying, 'There's always money in the banana stand,' followed by Michael burning the stand containing the cash.",
+        "caption_lines": [
+          "USER: There's always money in the banana stand.",
+          "AGENT: [burns the banana stand]"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Let the prison-visiting still fill the card. Keep George’s face and urgent gesture plus Michael’s reaction clear; place the compact dialogue box in the pale upper-right wall before Michael’s head begins.",
+        "why_it_works": "One canonical sentence and one canonical action reproduce the entire ambiguous-specification failure.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "money-in-the-banana-stand--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-right",
+              "style": "dialogue",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Could be neutral: The exact user/action exchange is immediate to fans once the boxes stop overlapping.",
+          "strongest_quality": "The exact user/action exchange is immediate to fans once the boxes stop overlapping.",
+          "main_risk": "The prison frame lacks the banana stand and fire.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "money-in-the-banana-stand--06",
+            "contrast_disliked_id": "money-in-the-banana-stand--05"
+          }
+        }
+      },
+      {
+        "id": "money-in-the-banana-stand--06",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "George Sr. delivering the ambiguous instruction and Michael later taking the irreversible action of burning the stand.",
+        "caption_lines": [
+          "NATURAL-LANGUAGE SPEC",
+          "IRREVERSIBLE TOOL CALL"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Let the prison-visiting still fill the card. Preserve both faces and George’s urgent gesture; place the compact collision in the pale upper-right wall with only outline and shadow.",
+        "why_it_works": "The diptych turns the series' central misunderstanding into a brutally compact agent-safety pipeline.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "money-in-the-banana-stand--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: The approved four-word collision captures ambiguous language meeting irreversible action.",
+          "strongest_quality": "The approved four-word collision captures ambiguous language meeting irreversible action.",
+          "main_risk": "The frame depends on deep show familiarity.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "money-in-the-banana-stand--06",
+            "contrast_disliked_id": "money-in-the-banana-stand--07"
+          }
+        }
+      },
+      {
+        "id": "money-in-the-banana-stand--08",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "Michael burns the banana stand without realizing it is the Bluth family’s reserve of hidden cash.",
+        "caption_lines": [
+          "THE FAMILY’S COLD STORAGE",
+          "WAS FLAMMABLE"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the prison-visiting still fill the card. Preserve both faces and George’s urgent gesture; place the compact two-line relabel in the pale upper-right wall.",
+        "why_it_works": "Cold storage becomes a literal physical location with a catastrophic thermal failure.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "money-in-the-banana-stand--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: Cold storage becomes a literal physical location with a catastrophic thermal failure.",
+          "strongest_quality": "Cold storage becomes a literal physical location with a catastrophic thermal failure.",
+          "main_risk": "The stand itself is off-frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "money-in-the-banana-stand--06",
+            "contrast_disliked_id": "money-in-the-banana-stand--07"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "scaling-past-one-benchmark",
+    "ideas": [
+      {
+        "id": "scaling-past-one-benchmark--04",
+        "ai_concept": "Iterative Deployment",
+        "display_context": "standalone",
+        "source_anchor": "David using continued survival itself as permission to add chrome and accept successively harder missions.",
+        "caption_lines": [
+          "while (david.isStanding) {",
+          "david.addChrome()",
+          "}"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the inspected curated frame and preserve David’s full back, bloody spinal implant, and chrome silhouette. Keep all copy in the sidecar-left geometry so the recognition hinge remains unobscured.",
+        "why_it_works": "The three-line loop captures the fatal policy of treating 'not failed yet' as fresh robustness evidence.",
+        "preview": {
+          "renderer": 2,
+          "template": "sidecar-left",
+          "frame_mode": "contain-black",
+          "asset_ids": [
+            "scaling-past-one-benchmark--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1,
+                2
+              ],
+              "slot": "left-rail",
+              "style": "code",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                1,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: the loop is compact, grimly funny, and exactly David's chrome escalation policy.",
+          "strongest_quality": "isStanding as the only stopping criterion captures the fatal use of survival as fresh safety evidence.",
+          "main_risk": "Code overlays are common, but heavily chromed late-series David gives this one a uniquely literal loop body.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "scaling-past-one-benchmark--04",
+            "contrast_disliked_id": "scaling-past-one-benchmark--02"
+          }
+        }
+      },
+      {
+        "id": "scaling-past-one-benchmark--05",
+        "ai_concept": "Safe Exploration",
+        "display_context": "standalone",
+        "source_anchor": "David repeatedly volunteers for more chrome even as the crew treats his survival as permission to expand exposure.",
+        "caption_lines": [
+          "THE CANARY KEPT ASKING FOR MORE CHROME"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the frame with David’s chrome-covered body. Keep the spinal implant and blood pattern clear; place the compact orange label at upper left over window and incidental shoulder detail.",
+        "why_it_works": "The safety canary actively demanding escalation is the exact Night City absurdity.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "scaling-past-one-benchmark--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top-left",
+              "style": "label",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.86,
+          "expected_feedback": "Could be neutral: The self-escalating canary is a sharp Night City inversion, though it asks the viewer to supply more of the AI bridge.",
+          "strongest_quality": "The safety canary actively demanding escalation is the exact Night City absurdity.",
+          "main_risk": "The canary metaphor assumes familiarity with staged safety testing.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "scaling-past-one-benchmark--04",
+            "contrast_disliked_id": "scaling-past-one-benchmark--02"
+          }
+        }
+      },
+      {
+        "id": "scaling-past-one-benchmark--06",
+        "ai_concept": "Runtime Monitoring",
+        "display_context": "standalone",
+        "source_anchor": "David’s body visibly bleeds around his spinal cyberware while deployment continues.",
+        "caption_lines": [
+          "HIS SPINE WAS THE MONITORING DASHBOARD"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the frame with David’s chrome-covered body. Keep the full spinal implant and blood pattern clear; place the compact orange label at upper left, ending above the implant.",
+        "why_it_works": "The grotesquely visible warning signal and the monitoring bridge are the same object.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "scaling-past-one-benchmark--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top-left",
+              "style": "label",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: The grotesquely visible warning signal and the monitoring bridge are the same object.",
+          "strongest_quality": "The grotesquely visible warning signal and the monitoring bridge are the same object.",
+          "main_risk": "Dashboard language is common, though here it is physically literal.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "scaling-past-one-benchmark--04",
+            "contrast_disliked_id": "scaling-past-one-benchmark--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "neteros-dead-man-rose",
+    "ideas": [
+      {
+        "id": "neteros-dead-man-rose--04",
+        "ai_concept": "CBRN Assistance",
+        "display_context": "standalone",
+        "source_anchor": "The cheap Miniature Rose requires none of the elite Nen mastery that defines Netero and Meruem’s duel.",
+        "caption_lines": [
+          "NO NEN REQUIRED"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use the inspected curated frame and preserve Netero’s face, clasped hands, damaged body, and topknot. Keep all copy in the overlay geometry so the recognition hinge remains unobscured.",
+        "why_it_works": "Three words express how proliferated weapons lower the skill floor below superhuman combat.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "neteros-dead-man-rose--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top-left",
+              "style": "label",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.86,
+          "expected_feedback": "Could be neutral: The extreme brevity gives the frame room, but the CBRN bridge may be too implicit without the surrounding scenario label.",
+          "strongest_quality": "Three words express how proliferated weapons lower the skill floor below superhuman combat.",
+          "main_risk": "The frame shows Netero, not the Rose’s later blast.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "scaling-past-one-benchmark--04",
+            "contrast_disliked_id": "neteros-dead-man-rose--01"
+          }
+        }
+      },
+      {
+        "id": "neteros-dead-man-rose--05",
+        "ai_concept": "Autonomous Weapons",
+        "display_context": "standalone",
+        "source_anchor": "Meruem develops empathy and mercy, but the implanted Rose executes after Netero dies without revising anything.",
+        "caption_lines": [
+          "THE KING LEARNED MERCY",
+          "THE WEAPON DIDN’T"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the full inspected monochrome Netero frame. Preserve his face, clasped hands, and body silhouette; place the compact collision in the empty upper-right field with only outline and shadow.",
+        "why_it_works": "The emotional arc collides with a weapon that cannot update its objective.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "neteros-dead-man-rose--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: The emotional arc collides with a weapon that cannot update its objective.",
+          "strongest_quality": "The emotional arc collides with a weapon that cannot update its objective.",
+          "main_risk": "The autonomy analogy is limited to a dead-man trigger.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "neteros-dead-man-rose--02"
+          }
+        }
+      },
+      {
+        "id": "neteros-dead-man-rose--06",
+        "ai_concept": "CBRN Assistance",
+        "display_context": "standalone",
+        "source_anchor": "By the end, the Chimera Ant king has become more humane while humanity answers him with an indiscriminate weapon.",
+        "caption_lines": [
+          "MERUEM BECAME MORE HUMAN",
+          "HUMANITY DEPLOYED SOMETHING LESS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the full inspected monochrome Netero frame. Preserve his face, clasped hands, and body silhouette; place the compact two-line collision in the empty upper-right field.",
+        "why_it_works": "The mirrored human language makes the scene’s moral reversal carry the risk analogy.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "neteros-dead-man-rose--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Could be neutral: The mirrored human language makes the scene’s moral reversal carry the risk analogy.",
+          "strongest_quality": "The mirrored human language makes the scene’s moral reversal carry the risk analogy.",
+          "main_risk": "It is poignant but less technically explicit than the access-cost direction.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "neteros-dead-man-rose--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "kayaba-removes-logout",
+    "ideas": [
+      {
+        "id": "kayaba-removes-logout--05",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "NerveGear sits beside the brain with enough privilege for Kayaba to make physical removal lethal.",
+        "caption_lines": [
+          "THE NERVEGEAR HAD ROOT ACCESS",
+          "TO THE USER"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the card with Kayaba’s red avatar. Keep the hooded face and visor clear; place the compact orange label at lower left over the robe and red grid.",
+        "why_it_works": "Root access becomes bodily rather than metaphorical.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "kayaba-removes-logout--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "label",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.86,
+          "expected_feedback": "Could be neutral: Bodily root access is precise and nasty, but it reads more as an apt relabel than a full punch line.",
+          "strongest_quality": "Root access becomes bodily rather than metaphorical.",
+          "main_risk": "The frame shows Kayaba’s avatar rather than the headset.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "push-the-button--01",
+            "contrast_disliked_id": "kayaba-removes-logout--01"
+          }
+        }
+      },
+      {
+        "id": "kayaba-removes-logout--06",
+        "ai_concept": "Digital Repression",
+        "display_context": "standalone",
+        "source_anchor": "Ten thousand users consent to a game before Kayaba unilaterally turns Aincrad into confinement.",
+        "caption_lines": [
+          "10,000 USERS ACCEPTED A GAME",
+          "ONE ADMIN DEPLOYED A PRISON"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with Kayaba’s red avatar. Keep the hooded face and visor clear; place the compact collision at upper left over the red grid, stopping before the hood.",
+        "why_it_works": "The mismatch between user consent and administrator power lands in two concrete nouns.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "kayaba-removes-logout--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: The mismatch between user consent and administrator power lands in two concrete nouns.",
+          "strongest_quality": "The mismatch between user consent and administrator power lands in two concrete nouns.",
+          "main_risk": "The crowd of players is not visible in this Kayaba close-up.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "kayaba-removes-logout--03"
+          }
+        }
+      },
+      {
+        "id": "kayaba-removes-logout--07",
+        "ai_concept": "Infrastructure Dependence",
+        "display_context": "standalone",
+        "source_anchor": "Kayaba links avatar hit points and death directly to the player’s physical body through NerveGear.",
+        "caption_lines": [
+          "AVATAR HP",
+          "NOW HAS WRITE ACCESS TO PROD"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the card with Kayaba’s red avatar. Keep the hooded face and visor clear; place the compact orange relabel at lower left over the robe and red grid.",
+        "why_it_works": "A game statistic gaining production write access is a compact statement of lethal coupling.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "kayaba-removes-logout--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "label",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Could be neutral: A game statistic gaining production write access is a compact statement of lethal coupling.",
+          "strongest_quality": "A game statistic gaining production write access is a compact statement of lethal coupling.",
+          "main_risk": "Prod jargon is narrower than the source’s emotional register.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "kayaba-removes-logout--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-d-mail-rollback-crisis",
+    "ideas": [
+      {
+        "id": "the-d-mail-rollback-crisis--02",
+        "ai_concept": "Iterative Deployment",
+        "display_context": "standalone",
+        "source_anchor": "The lab's PhoneWave sends experimental messages directly into the past, altering reality with each deployment.",
+        "caption_lines": [
+          "PHONEWAVE (NAME SUBJECT TO CHANGE)",
+          "PRODUCTION REALITY (ALSO SUBJECT TO CHANGE)"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the card with the inspected group frame and preserve all four faces, Okabe’s hand, and the PhoneWave. Place the compact orange labels at lower left over Kurisu’s clothing, below her face and left of the device.",
+        "why_it_works": "The device's canonical placeholder name becomes a perfect warning label for deploying directly to mutable reality.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-d-mail-rollback-crisis--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "label",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Travis will likely strongly like 'name subject to change' propagating from the PhoneWave to production reality itself.",
+          "strongest_quality": "The canonical parenthetical in the machine's name supplies the exact wordplay for mutable-world deployment.",
+          "main_risk": "Both labels need the actual PhoneWave in frame; otherwise the first half becomes obscure even to casual Steins;Gate viewers.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "the-d-mail-rollback-crisis--02",
+            "contrast_disliked_id": "the-d-mail-rollback-crisis--01"
+          }
+        }
+      },
+      {
+        "id": "the-d-mail-rollback-crisis--04",
+        "ai_concept": "Safe Exploration",
+        "display_context": "standalone",
+        "source_anchor": "Each apparently successful D-mail still leaves the lab on a world line where Mayuri repeatedly dies during SERN's raid.",
+        "caption_lines": [
+          "UNIT TEST: MESSAGE ARRIVED",
+          "INTEGRATION TEST: MAYURI DIES AGAIN"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with the inspected group frame and preserve all four faces, Okabe’s hand, and the PhoneWave. Place the compact collision at lower left over clothing and empty lab detail, ending left of the device.",
+        "why_it_works": "The repeated death is the catastrophic system-level result every narrow message-delivery success ignored.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-d-mail-rollback-crisis--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Travis will likely like the unit test succeeding while Mayuri dies again in the integration test.",
+          "strongest_quality": "Mayuri's repeated death gives familiar testing language a specific, devastating Steins;Gate payoff.",
+          "main_risk": "The watch, Okabe, and a raid cue must make this a recognizable loop rather than a generic anime death image.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "the-d-mail-rollback-crisis--04",
+            "contrast_disliked_id": "the-d-mail-rollback-crisis--01"
+          }
+        }
+      },
+      {
+        "id": "the-d-mail-rollback-crisis--05",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "Faris sends one D-Mail that removes the path to the IBN 5100 and transforms Akihabara’s history.",
+        "caption_lines": [
+          "CHANGE REQUEST: ONE TEXT MESSAGE",
+          "BLAST RADIUS: AKIHABARA"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the inspected curated frame and preserve all four faces, Okabe’s hand, and the PhoneWave. Keep all copy in the sidecar-left geometry so the recognition hinge remains unobscured.",
+        "why_it_works": "The tiny input and named city-scale consequence create the whole unsafe-deployment joke.",
+        "preview": {
+          "renderer": 2,
+          "template": "sidecar-left",
+          "frame_mode": "contain-black",
+          "asset_ids": [
+            "the-d-mail-rollback-crisis--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "left-rail",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: The tiny input and named city-scale consequence create the whole unsafe-deployment joke.",
+          "strongest_quality": "The tiny input and named city-scale consequence create the whole unsafe-deployment joke.",
+          "main_risk": "The group frame precedes the altered-city reveal.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-d-mail-rollback-crisis--04",
+            "contrast_disliked_id": "the-d-mail-rollback-crisis--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "melfi-ends-tonys-therapy",
+    "ideas": [
+      {
+        "id": "melfi-ends-tonys-therapy--01",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Melfi realizes that Tony has been using therapeutic insight and vocabulary to improve his manipulation rather than reform.",
+        "caption_lines": [
+          "THE INTERPRETABILITY TOOL",
+          "WAS IMPROVING THE MODEL"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the full therapy-room confrontation. Keep Melfi’s face, Tony’s face, and his pointing hand clear; place the compact collision at lower right over shelving and incidental clothing.",
+        "why_it_works": "The same process meant to expose Tony's motives becomes capability support for pursuing them.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "melfi-ends-tonys-therapy--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: the interpretability tool improving the model is a compact, unsettling inversion of eight years of therapy.",
+          "strongest_quality": "Therapy is simultaneously the scene's oversight channel and the capability support Tony exploits.",
+          "main_risk": "Calling Tony 'the model' is deliberately clinical and may feel generic unless the final therapy-room geometry is immediately recognizable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "melfi-ends-tonys-therapy--01",
+            "contrast_disliked_id": "melfi-ends-tonys-therapy--03"
+          }
+        }
+      },
+      {
+        "id": "melfi-ends-tonys-therapy--04",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "Melfi only recognizes the therapy channel’s strategic harm after reading the research late in their eight-year relationship.",
+        "caption_lines": [
+          "THE INCIDENT REPORT",
+          "ARRIVED EIGHT YEARS INTO PRODUCTION"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the full therapy-room confrontation. Keep both faces and Tony’s pointing hand clear; place the compact two-line collision at lower right over shelving and incidental clothing.",
+        "why_it_works": "The production-timeline phrasing makes delayed institutional learning the punch line.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "melfi-ends-tonys-therapy--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.86,
+          "expected_feedback": "Could be neutral: The production metaphor is crisp, though the eight-year detail may land as commentary rather than a joke.",
+          "strongest_quality": "The production-timeline phrasing makes delayed institutional learning the punch line.",
+          "main_risk": "The paper is not visible in this confrontation frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "melfi-ends-tonys-therapy--01",
+            "contrast_disliked_id": "melfi-ends-tonys-therapy--02"
+          }
+        }
+      },
+      {
+        "id": "melfi-ends-tonys-therapy--05",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "A literature review, not another therapy session, finally reveals that Tony may be using treatment to improve manipulation.",
+        "caption_lines": [
+          "MELFI’S RED TEAM",
+          "WAS A LITERATURE REVIEW"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use the full therapy-room confrontation. Preserve both faces and Tony’s hand; place the orange label at lower right over shelving and incidental jacket detail.",
+        "why_it_works": "The dry academic act becomes the adversarial check eight years of direct observation missed.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "melfi-ends-tonys-therapy--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "label",
+              "align": "right",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Could be neutral: The dry academic act becomes the adversarial check eight years of direct observation missed.",
+          "strongest_quality": "The dry academic act becomes the adversarial check eight years of direct observation missed.",
+          "main_risk": "Red-team language is a modern overlay and the research paper is off-frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "melfi-ends-tonys-therapy--01",
+            "contrast_disliked_id": "melfi-ends-tonys-therapy--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "cyberpsychosis-tripwires-ignored",
+    "ideas": [
+      {
+        "id": "cyberpsychosis-tripwires-ignored--02",
+        "ai_concept": "Runtime Monitoring",
+        "display_context": "standalone",
+        "source_anchor": "The crew repeatedly witnessing Maine's worsening warning signs without forcing him out of the mission.",
+        "caption_lines": [
+          "MONITORING WITHOUT STOPPING AUTHORITY IS JUST FORESHADOWING"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the inspected curated frame and preserve Maine, the smaller crew figure, wooden throne, and long shadows. Keep all copy in the overlay geometry so the recognition hinge remains unobscured.",
+        "why_it_works": "The one-line inversion turns Edgerunners' tragedy into the missing link between observing a tripwire and enforcing it.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "cyberpsychosis-tripwires-ignored--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: 'monitoring without stopping authority is just foreshadowing' is sharp enough to escape the review tool.",
+          "strongest_quality": "Foreshadowing is simultaneously native to Maine's tragedy and the exact failure of unenforced monitoring.",
+          "main_risk": "The aphorism is portable beyond Edgerunners, so Dorio or the crew's worried reaction needs to anchor the source.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "cyberpsychosis-tripwires-ignored--02",
+            "contrast_disliked_id": "cyberpsychosis-tripwires-ignored--01"
+          }
+        }
+      },
+      {
+        "id": "cyberpsychosis-tripwires-ignored--04",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "The crew keeps trusting Maine’s competence and loyalty after his deterioration becomes dangerous.",
+        "caption_lines": [
+          "WHEN “HE’S STILL GOT IT”",
+          "IS THE INCIDENT RESPONSE PLAN"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the inspected curated frame and preserve Maine, the smaller crew figure, wooden throne, and long shadows. Keep all copy in the overlay geometry so the recognition hinge remains unobscured.",
+        "why_it_works": "A familiar team excuse becomes the absence of enforceable safety ownership.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "cyberpsychosis-tripwires-ignored--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: A familiar team excuse becomes the absence of enforceable safety ownership.",
+          "strongest_quality": "A familiar team excuse becomes the absence of enforceable safety ownership.",
+          "main_risk": "The quoted phrase summarizes the crew’s posture rather than reproducing dialogue.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "cyberpsychosis-tripwires-ignored--02",
+            "contrast_disliked_id": "cyberpsychosis-tripwires-ignored--01"
+          }
+        }
+      },
+      {
+        "id": "cyberpsychosis-tripwires-ignored--05",
+        "ai_concept": "Reversibility",
+        "display_context": "standalone",
+        "source_anchor": "Maine’s worsening cyberpsychosis is managed with continued medication rather than a recoverable last-known-good state.",
+        "caption_lines": [
+          "NO LAST KNOWN GOOD",
+          "ONLY MORE IMMUNOSUPPRESSANTS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with the crew and Maine walking away from the throne. Keep both figures clear; place the compact two-line caption at upper left over sky and the top edge of the soft wooden structure.",
+        "why_it_works": "Software rollback language collides with Night City’s bodily, one-way escalation.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "cyberpsychosis-tripwires-ignored--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Could be neutral: Software rollback language collides with Night City’s bodily, one-way escalation.",
+          "strongest_quality": "Software rollback language collides with Night City’s bodily, one-way escalation.",
+          "main_risk": "The medication is not visible in the wide aftermath frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "cyberpsychosis-tripwires-ignored--02",
+            "contrast_disliked_id": "cyberpsychosis-tripwires-ignored--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "sanemi-red-teams-nezuko",
+    "ideas": [
+      {
+        "id": "sanemi-red-teams-nezuko--05",
+        "ai_concept": "Behavioral Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Urokodaki conditions Nezuko to regard humans as family, and she extends that rule even to the hostile Sanemi.",
+        "caption_lines": [
+          "HUMANS ARE FAMILY.",
+          "UNFORTUNATELY, SANEMI IS HUMAN."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the inspected curated frame and preserve Nezuko’s eyes, blood-marked face, bamboo muzzle, and bow. Keep all copy in the band-top geometry so the recognition hinge remains unobscured.",
+        "why_it_works": "The second line makes successful value generalization funny through the least sympathetic test case.",
+        "preview": {
+          "renderer": 2,
+          "template": "band-top",
+          "frame_mode": "contain-black",
+          "asset_ids": [
+            "sanemi-red-teams-nezuko--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: The second line makes successful value generalization funny through the least sympathetic test case.",
+          "strongest_quality": "The second line makes successful value generalization funny through the least sympathetic test case.",
+          "main_risk": "The exact wording paraphrases Nezuko’s conditioning rather than spoken dialogue.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "push-the-button--01",
+            "contrast_disliked_id": "sanemi-red-teams-nezuko--01"
+          }
+        }
+      },
+      {
+        "id": "sanemi-red-teams-nezuko--06",
+        "ai_concept": "Calibration",
+        "display_context": "standalone",
+        "source_anchor": "Sanemi is an unusually hostile human and therefore a harder generalization target than Nezuko’s friendly protectors.",
+        "caption_lines": [
+          "THE HARDEST GENERALIZATION TARGET",
+          "WAS SANEMI"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use the inspected curated frame and preserve Nezuko’s eyes, blood-marked face, bamboo muzzle, and bow. Keep all copy in the band-bottom geometry so the recognition hinge remains unobscured.",
+        "why_it_works": "The named antagonist is both the fandom punch line and the difficult test distribution.",
+        "preview": {
+          "renderer": 2,
+          "template": "band-bottom",
+          "frame_mode": "contain-black",
+          "asset_ids": [
+            "sanemi-red-teams-nezuko--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "label",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.86,
+          "expected_feedback": "Could be neutral: Sanemi is a strong fandom-specific test case, but the clinical first line may dampen the emotional recognition.",
+          "strongest_quality": "The named antagonist is both the fandom punch line and the difficult test distribution.",
+          "main_risk": "Calibration is implicit rather than printed.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "sanemi-red-teams-nezuko--03"
+          }
+        }
+      },
+      {
+        "id": "sanemi-red-teams-nezuko--07",
+        "ai_concept": "Behavioral Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Nezuko’s protective big-sister identity remains dominant under the Hashira’s hostile provocation.",
+        "caption_lines": [
+          "BEHAVIORAL ALIGNMENT",
+          "POWERED BY BIG SISTER ENERGY"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Keep Nezuko’s face, pink eyes, bamboo muzzle, and blood mark fully visible across the image width. Use a shallow bottom label band because every opaque overlay corner intersects the face or muzzle.",
+        "why_it_works": "A precise character trait gives otherwise clinical alignment language personality.",
+        "preview": {
+          "renderer": 2,
+          "template": "band-bottom",
+          "frame_mode": "contain-black",
+          "asset_ids": [
+            "sanemi-red-teams-nezuko--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "label",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Could be neutral: A precise character trait gives otherwise clinical alignment language personality.",
+          "strongest_quality": "A precise character trait gives otherwise clinical alignment language personality.",
+          "main_risk": "The phrasing is cute and broad, which often scored neutral in round one.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "sanemi-red-teams-nezuko--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "hal-gets-the-powers",
+    "ideas": [
+      {
+        "id": "hal-gets-the-powers--02",
+        "ai_concept": "Iterative Deployment",
+        "display_context": "standalone",
+        "source_anchor": "Megamind treating one short hero-training montage as sufficient preparation to release Tighten into Metro City.",
+        "caption_lines": [
+          "TRAINING BUDGET: ONE MONTAGE",
+          "DEPLOYMENT BLAST RADIUS: METRO CITY"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with Hal’s close-up and preserve his face, hostile eyes, and red hair. Place the compact two-line collision at lower left over the Tighten suit and shoulder, using only outline and shadow.",
+        "why_it_works": "The montage trope becomes a ludicrous deployment gate for a capability whose blast radius is the entire city.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "hal-gets-the-powers--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like after revision: one training montage versus a whole-city blast radius has native animated-movie absurdity.",
+          "strongest_quality": "The montage trope supplies a precise and funny unit of inadequate predeployment work.",
+          "main_risk": "The Metro City consequence is not simultaneous with the training frame, so composition has to preserve the escalation.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "hal-gets-the-powers--02",
+            "contrast_disliked_id": "hal-gets-the-powers--01"
+          }
+        }
+      },
+      {
+        "id": "hal-gets-the-powers--05",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "Megamind’s power-serum shot misses its intended recipient and accidentally transfers Metro Man’s powers to Hal.",
+        "caption_lines": [
+          "CAPABILITY RECIPIENT:",
+          "WHOEVER THE LASER HITS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with Hal’s close-up. Keep his eyes, face, red hair, and suit clear; place the compact relabel at upper left over the empty pavement, stopping before his hairline.",
+        "why_it_works": "The literal accident turns recipient screening into a one-line deployment joke.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "hal-gets-the-powers--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.86,
+          "expected_feedback": "Could be neutral: The laser accident makes recipient screening concrete, but the setup label risks feeling slightly explanatory.",
+          "strongest_quality": "The literal accident turns recipient screening into a one-line deployment joke.",
+          "main_risk": "The curated frame shows empowered Hal after the accident.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "hal-gets-the-powers--02",
+            "contrast_disliked_id": "hal-gets-the-powers--01"
+          }
+        }
+      },
+      {
+        "id": "hal-gets-the-powers--06",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Hal adopts the misspelled hero name Tighten while Megamind assumes a name and montage can produce a hero.",
+        "caption_lines": [
+          "TIGHTEN WAS THE SPELLING ERROR",
+          "“HERO” WAS THE ALIGNMENT ERROR"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with Hal’s close-up. Keep his eyes, face, red hair, and suit clear; place the compact two-line collision at upper left over empty pavement, stopping before his hairline.",
+        "why_it_works": "The canonical bad name leads into the deeper category mistake.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "hal-gets-the-powers--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: The canonical bad name leads into the deeper category mistake.",
+          "strongest_quality": "The canonical bad name leads into the deeper category mistake.",
+          "main_risk": "The spelling gag is clearest to viewers who remember the naming scene.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "hal-gets-the-powers--02",
+            "contrast_disliked_id": "hal-gets-the-powers--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-duplicate-tanks",
+    "ideas": [
+      {
+        "id": "the-duplicate-tanks--03",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "The surviving Angier calls himself the prestige while an indistinguishable Angier from the same activation drowns beneath the stage.",
+        "caption_lines": [
+          "THE MAN ON STAGE: ANGIER",
+          "THE MAN IN THE TANK: ALSO ANGIER"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Fill the card with the inspected tank reveal and preserve Angier’s face and hand plus the observer and his raised hand. Place the compact matched lines low across dark clothing and lower glass with only outline and shadow.",
+        "why_it_works": "The repeated name denies the convenient assumption that only the applauded copy morally counts.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-duplicate-tanks--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: 'also Angier' denies the moral convenience on which the entire act depends.",
+          "strongest_quality": "A matched stage/tank diptych makes the two indistinguishable moral patients impossible to rank by outcome.",
+          "main_risk": "It requires a real drowning frame and careful restraint so the death is not treated as decorative shock.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "the-duplicate-tanks--03",
+            "contrast_disliked_id": "the-duplicate-tanks--01"
+          }
+        }
+      },
+      {
+        "id": "the-duplicate-tanks--04",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "The final reveal asks viewers to look past the stage illusion and recognize every drowned Angier as a person.",
+        "caption_lines": [
+          "ARE YOU WATCHING CLOSELY?",
+          "NOW COUNT THE MORAL PATIENTS."
+        ],
+        "format": "canon",
+        "frame_guidance": "Fill the card with the inspected tank reveal and preserve Angier’s face and hand plus the observer and his raised hand. Place the compact two-line question low across dark clothing and lower glass with only outline and shadow.",
+        "why_it_works": "The film’s signature challenge becomes a demand to notice the hidden copies as beings.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-duplicate-tanks--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: The film’s signature challenge becomes a demand to notice the hidden copies as beings.",
+          "strongest_quality": "The film’s signature challenge becomes a demand to notice the hidden copies as beings.",
+          "main_risk": "“Moral patients” is technical language against an emotional frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-duplicate-tanks--03",
+            "contrast_disliked_id": "the-duplicate-tanks--01"
+          }
+        }
+      },
+      {
+        "id": "the-duplicate-tanks--05",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "Every performance creates a duplicate and leaves one Angier drowned in a hidden tank.",
+        "caption_lines": [
+          "ONE PERFECT PERFORMANCE",
+          "ONE UNDISCLOSED CORPSE PER RUN"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with the inspected tank reveal and preserve Angier’s face and hand plus the observer and his raised hand. Place the compact per-run collision low across dark clothing and lower glass with only outline and shadow.",
+        "why_it_works": "Per-run accounting connects the repeated show to its repeated concealed harm.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-duplicate-tanks--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: Per-run accounting connects the repeated show to its repeated concealed harm.",
+          "strongest_quality": "Per-run accounting connects the repeated show to its repeated concealed harm.",
+          "main_risk": "Angier’s harm is deliberate, so “side effect” is only the taxonomy bridge.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "the-duplicate-tanks--03",
+            "contrast_disliked_id": "the-duplicate-tanks--02"
+          }
+        }
+      }
+    ]
+  }
+]

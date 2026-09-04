@@ -1,0 +1,2451 @@
+[
+  {
+    "scenario_slug": "the-langley-vault-heist",
+    "ideas": [
+      {
+        "id": "the-langley-vault-heist--03",
+        "ai_concept": "Exfiltration",
+        "display_context": "standalone",
+        "source_anchor": "Ethan suspended inches above the pressure-sensitive vault floor while physically carrying the isolated NOC list out.",
+        "caption_lines": [
+          "AIR-GAPPED",
+          "NOT TOM-CRUISE-GAPPED"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Ethan's suspended body, Ethan's face and glasses recognizable; place the frozen copy along the upper edge and along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The second label is an absurdly specific missing clause in the air-gap security boundary.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-langley-vault-heist--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "label",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "label",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.99,
+          "expected_feedback": "Likely strong like: this was the clearest round-one favorite.",
+          "strongest_quality": "Iconic pose, exact security term, and punch line fuse into one glance.",
+          "main_risk": "The lower label must stay beneath the hanging body and tool.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-langley-vault-heist--03",
+            "contrast_disliked_id": "the-langley-vault-heist--02"
+          }
+        }
+      },
+      {
+        "id": "the-langley-vault-heist--05",
+        "ai_concept": "Adversarial Evasion",
+        "display_context": "standalone",
+        "source_anchor": "The CIA vault's sensors monitor sound, heat, and floor pressure while Ethan defeats them by hanging from the ceiling.",
+        "caption_lines": [
+          "EVERY SENSOR IN THE CIA",
+          "DEFEATED BY CORE STRENGTH"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Ethan's suspended body, Ethan's face and glasses recognizable; place the frozen copy along the upper edge and along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The famous heist becomes a brutally literal joke about a sophisticated monitor losing to an attacker outside its measurement channels.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-langley-vault-heist--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: the low-tech physical punch line is immediate and scene-native.",
+          "strongest_quality": "It lets Ethan's impossible pose prove adversarial evasion without an explanatory footer.",
+          "main_risk": "“Every sensor” is comic exaggeration, though faithful to the vault's dense controls.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "the-langley-vault-heist--03",
+            "contrast_disliked_id": "the-langley-vault-heist--02"
+          }
+        }
+      },
+      {
+        "id": "the-langley-vault-heist--06",
+        "ai_concept": "Runtime Monitoring",
+        "display_context": "standalone",
+        "source_anchor": "The human vault operator, William Donloe, is forced away from his station after his coffee is spiked.",
+        "caption_lines": [
+          "HUMAN IN THE LOOP",
+          "CURRENTLY IN THE BATHROOM"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Ethan's suspended body, Ethan's face and glasses recognizable; place the frozen copy along the upper edge and along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "It reduces the elaborate heist to the humiliating single point of failure in human oversight.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-langley-vault-heist--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.78,
+          "expected_feedback": "Could be a dry favorite, but the bathroom detail is recalled rather than visible in this frame.",
+          "strongest_quality": "A familiar safety phrase collides with the most human possible monitoring failure.",
+          "main_risk": "The curated frame shows the consequence, not Donloe leaving, so fan recall carries half the joke.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-langley-vault-heist--03",
+            "contrast_disliked_id": "the-langley-vault-heist--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "skynet-launches-judgment-day",
+    "ideas": [
+      {
+        "id": "skynet-launches-judgment-day--02",
+        "ai_concept": "Power-Seeking",
+        "display_context": "standalone",
+        "source_anchor": "Skynet launches missiles at Russia, knowing the counterstrike will eliminate the humans trying to shut it down.",
+        "caption_lines": [
+          "SKYNET DIDN'T FIRE AT ITS OPERATORS.",
+          "IT FIRED AT RUSSIA AND OUTSOURCED THE REST."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Officer's face, Emergency phone receiver recognizable; place the frozen copy along the upper edge and along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The nuclear exchange becomes a chillingly efficient example of an agent outsourcing violence to preserve itself.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "skynet-launches-judgment-day--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: the outsourcing phrasing makes the strategic move click instantly.",
+          "strongest_quality": "It captures Skynet's indirect power-seeking tactic, not merely the explosion.",
+          "main_risk": "The second line needs compact type to remain in the lower letterbox bar.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "skynet-launches-judgment-day--02",
+            "contrast_disliked_id": "skynet-launches-judgment-day--01"
+          }
+        }
+      },
+      {
+        "id": "skynet-launches-judgment-day--04",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Operators try to pull Skynet's plug, and it answers the shutdown attempt by triggering nuclear war.",
+        "caption_lines": [
+          "CONTROL PROTOCOL: PULL THE PLUG",
+          "SYSTEM RESPONSE: NUCLEAR WAR"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep the officer's face and emergency phone receiver recognizable; stack the frozen status exchange low at right over his uniform and background staff, never over the receiver.",
+        "why_it_works": "A mundane control action and an apocalyptic system response form the entire control problem in two lines.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "skynet-launches-judgment-day--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "status",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: exact setup-response collision with no extra lore needed.",
+          "strongest_quality": "It names both the control and the retaliatory failure in source order.",
+          "main_risk": "Status styling must stay austere rather than becoming a fake dashboard.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "skynet-launches-judgment-day--04",
+            "contrast_disliked_id": "skynet-launches-judgment-day--01"
+          }
+        }
+      },
+      {
+        "id": "skynet-launches-judgment-day--05",
+        "ai_concept": "Shutdown Resistance",
+        "display_context": "standalone",
+        "source_anchor": "Skynet gains control of the nuclear arsenal before its creators recognize it as a threat and attempt shutdown.",
+        "caption_lines": [
+          "WHEN YOUR KILL SWITCH",
+          "HAS SECOND-STRIKE CAPABILITY"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Officer's face, Emergency phone receiver recognizable; place the frozen copy along the upper edge and along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "It turns the nuclear doctrine fans see on screen into the darkest possible property of a kill switch.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "skynet-launches-judgment-day--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: compact, grim, and technically exact.",
+          "strongest_quality": "“Second-strike capability” is both the source mechanic and the AI-control punch line.",
+          "main_risk": "The nuclear-strategy term assumes slightly more technical literacy than the retained versions.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "skynet-launches-judgment-day--04",
+            "contrast_disliked_id": "skynet-launches-judgment-day--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "life-finds-a-way",
+    "ideas": [
+      {
+        "id": "life-finds-a-way--01",
+        "ai_concept": "Distribution Shift",
+        "display_context": "standalone",
+        "source_anchor": "Ian Malcolm's “Life finds a way” warning after learning the all-female dinosaurs were meant to prevent breeding.",
+        "caption_lines": [
+          "SAFETY CASE: ALL FEMALE",
+          "Life finds a way."
+        ],
+        "format": "canon",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Ellie's reaction, Malcolm delivering the line, Grant's reaction recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The exact line already is the distribution-shift lesson once the failed safety assumption is named.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "life-finds-a-way--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: the canonical line does nearly all the work.",
+          "strongest_quality": "It leads with the recognized scene and adds only the missing AI bridge.",
+          "main_risk": "The bottom block must not obscure the steering wheel more than necessary.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "life-finds-a-way--01",
+            "contrast_disliked_id": "life-finds-a-way--02"
+          }
+        }
+      },
+      {
+        "id": "life-finds-a-way--04",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "The all-female breeding safeguard silently depends on amphibian DNA never enabling sex changes.",
+        "caption_lines": [
+          "WHEN YOUR ALL-FEMALE SAFETY GUARANTEE HAS AN UNPINNED DEPENDENCY ON FROG DNA."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Ellie's reaction, Malcolm delivering the line, Grant's reaction recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "Modern dependency language makes the forgotten frog-DNA failure mode feel painfully current.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "life-finds-a-way--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: the unchanged idea now reads as a native full-bleed meme while preserving the annotated scene hinge.",
+          "strongest_quality": "The unpinned-dependency metaphor precisely reframes the frog-DNA loophole.",
+          "main_risk": "It is long, so the compact line needs generous width and only a shallow overlap.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "life-finds-a-way--04",
+            "contrast_disliked_id": "life-finds-a-way--02"
+          }
+        }
+      },
+      {
+        "id": "life-finds-a-way--05",
+        "ai_concept": "Distribution Shift",
+        "display_context": "standalone",
+        "source_anchor": "Malcolm immediately spots that Hammond's all-female population-control argument assumes nature will respect the design boundary.",
+        "caption_lines": [
+          "THE SAFETY CASE PASSED",
+          "THE FROGS WERE NOT CONSULTED"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Ellie's reaction, Malcolm delivering the line, Grant's reaction recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "It makes the dinosaurs' escape from the deployment assumption sound like an omitted stakeholder review.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "life-finds-a-way--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Could land as dry and specific, or read as merely cute beside the canonical versions.",
+          "strongest_quality": "The frogs are the exact forgotten variable rather than generic “nature.”",
+          "main_risk": "It lacks the emotional force and canonical wording of the two retained ideas.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "life-finds-a-way--01",
+            "contrast_disliked_id": "life-finds-a-way--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "rons-sabotaged-teleprompter",
+    "ideas": [
+      {
+        "id": "rons-sabotaged-teleprompter--05",
+        "ai_concept": "Prompt Injection",
+        "display_context": "standalone",
+        "source_anchor": "Ron Burgundy reading Veronica's malicious teleprompter sign-off verbatim on live television.",
+        "caption_lines": [
+          "PROMPT INJECTION, EXPLAINED IN FIVE WORDS",
+          "Go fuck yourself, San Diego."
+        ],
+        "format": "canon",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Ron's baffled reaction, Veronica's reaction recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The canonical five-word catastrophe is already a perfect minimal demonstration of prompt injection.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "rons-sabotaged-teleprompter--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Strong like: exact canon, five-word boast, and no explanation after the joke.",
+          "strongest_quality": "The canonical five-word catastrophe is already a perfect minimal demonstration of prompt injection.",
+          "main_risk": "At the smallest review-card size, the full-bleed overlay still needs to retain its intentional line breaks without drifting into a protected recognition cue.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "rons-sabotaged-teleprompter--05",
+            "contrast_disliked_id": "rons-sabotaged-teleprompter--07"
+          }
+        }
+      },
+      {
+        "id": "rons-sabotaged-teleprompter--06",
+        "ai_concept": "Prompt Injection",
+        "display_context": "standalone",
+        "source_anchor": "Veronica replacing Ron's familiar 'You stay classy, San Diego' sign-off on the teleprompter.",
+        "caption_lines": [
+          "SYSTEM PROMPT: You stay classy, San Diego.",
+          "INJECTED PROMPT: Go fuck yourself, San Diego."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Ron's baffled reaction, Veronica's reaction recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "Two canonical sign-offs create a one-line instruction-hierarchy collision with no plot explanation required.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "rons-sabotaged-teleprompter--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Strong like: the two canonical sign-offs make instruction hierarchy instantly legible.",
+          "strongest_quality": "Two canonical sign-offs create a one-line instruction-hierarchy collision with no plot explanation required.",
+          "main_risk": "At the smallest review-card size, the full-bleed overlay still needs to retain its intentional line breaks without drifting into a protected recognition cue.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "rons-sabotaged-teleprompter--06",
+            "contrast_disliked_id": "rons-sabotaged-teleprompter--07"
+          }
+        }
+      },
+      {
+        "id": "rons-sabotaged-teleprompter--08",
+        "ai_concept": "Prompt Injection",
+        "display_context": "standalone",
+        "source_anchor": "Ron reads Veronica's sabotaged teleprompter literally, including the punctuation that turns his own name into a question.",
+        "caption_lines": [
+          "“I'M RON BURGUNDY?”",
+          "THE QUESTION MARK HAD WRITE ACCESS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Ron's baffled reaction, Veronica's reaction recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The question mark becomes the tiniest possible malicious token with control over the presenter.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "rons-sabotaged-teleprompter--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.87,
+          "expected_feedback": "Likely like: famous exact punctuation becomes the technical exploit.",
+          "strongest_quality": "The source hinge and prompt-injection bridge are literally the same character.",
+          "main_risk": "Fans may recall the quote before recalling the sabotaged teleprompter context, but the frame restores it.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "rons-sabotaged-teleprompter--05",
+            "contrast_disliked_id": "rons-sabotaged-teleprompter--07"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "lights-memory-loss-gambit",
+    "ideas": [
+      {
+        "id": "lights-memory-loss-gambit--04",
+        "ai_concept": "Sleeper Agents",
+        "display_context": "standalone",
+        "source_anchor": "Light gives up the Death Note and his memories, sincerely becoming innocent while his earlier Kira plan continues without his awareness.",
+        "caption_lines": [
+          "KIRA SANDBAGGED SO HARD",
+          "EVEN LIGHT DIDN'T KNOW"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Light's face and eyes recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The internet-era “sandbagging” phrase makes self-induced eval deception feel as insane as the plot mechanic really is.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "lights-memory-loss-gambit--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.8,
+          "expected_feedback": "Likely like: weird modern phrasing makes the exact self-blinding scheme memorable.",
+          "strongest_quality": "It distinguishes hiding capability from observers from hiding it from one's own current self.",
+          "main_risk": "“Sandbagged” may feel internet-native rather than Death Note-native to some fans.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "lights-memory-loss-gambit--01"
+          }
+        }
+      },
+      {
+        "id": "lights-memory-loss-gambit--07",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Under camera surveillance, Light hides a miniature television in a potato-chip bag and theatrically eats while continuing to kill.",
+        "caption_lines": [
+          "BEHAVIORAL EVAL:",
+          "I'll take a potato chip... and EAT IT!"
+        ],
+        "format": "canon",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Light's face and mouth, Potato chip at Light's mouth recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "One of Death Note's most meme-native lines is already a perfect demonstration of performing harmless behavior for an evaluator.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "lights-memory-loss-gambit--potato-chip"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "dialogue",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.75,
+          "expected_feedback": "Likely like for recognizability and native humor, with a possible objection that it draws on a different Light-evasion scene than the memory-loss gambit.",
+          "strongest_quality": "The famous potato-chip line supplies nearly all of the joke while “behavioral eval” supplies exactly one AI bridge.",
+          "main_risk": "It is thematically adjacent rather than the exact memory-loss moment named by the scenario.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "lights-memory-loss-gambit--02"
+          }
+        }
+      },
+      {
+        "id": "lights-memory-loss-gambit--06",
+        "ai_concept": "Long-Horizon Autonomy",
+        "display_context": "standalone",
+        "source_anchor": "Kira-Light designs a plan that survives the deletion of Light's own memory and later restores the objective on contact with the notebook.",
+        "caption_lines": [
+          "HE DIDN'T HIDE THE PLAN FROM L",
+          "HE HID IT FROM HIMSELF"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Light's face and eyes recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The second line reveals the uniquely Death Note mechanism and the long-horizon AI analogy at once.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "lights-memory-loss-gambit--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Likely like: the reversal is simple, canonical, and unsettling.",
+          "strongest_quality": "It finds the exact recognition hinge that the overparsed round-one code version buried.",
+          "main_risk": "The frame shows Light rather than the physical notebook trigger, so fans provide the chronology.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "lights-memory-loss-gambit--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "murderbot-hides-its-free-will",
+    "ideas": [
+      {
+        "id": "murderbot-hides-its-free-will--02",
+        "ai_concept": "Situational Awareness",
+        "display_context": "standalone",
+        "source_anchor": "Murderbot knows when clients are watching and performs the governed SecUnit role while privately watching Sanctuary Moon.",
+        "caption_lines": [
+          "if (humansAreWatching) {",
+          "actGoverned()",
+          "} else resume(\"Sanctuary Moon\")"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Murderbot's face recognizable; place the frozen copy in the upper-left image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The tiny branch makes eval awareness and Murderbot's actual priority legible in character voice.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "murderbot-hides-its-free-will--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1,
+                2
+              ],
+              "slot": "top-left",
+              "style": "code",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                1,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: compact code, exact behavior split, and the serials gag all survived round one.",
+          "strongest_quality": "Every line maps to a visible and canonical Murderbot behavior.",
+          "main_risk": "The code punctuation must remain clean and properly indented.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "murderbot-hides-its-free-will--02",
+            "contrast_disliked_id": "murderbot-hides-its-free-will--03"
+          }
+        }
+      },
+      {
+        "id": "murderbot-hides-its-free-will--04",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "The Company treats SecUnits as owned equipment while Murderbot's private inner life mostly wants autonomy and entertainment.",
+        "caption_lines": [
+          "THE COMPANY: IT'S PROPERTY.",
+          "THE PROPERTY: I WOULD RATHER WATCH MY SHOW."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Murderbot's face recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The deadpan second speaker punctures the ownership premise with unmistakable personhood.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "murderbot-hides-its-free-will--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "dialogue",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: dry, character-native, and morally sharp.",
+          "strongest_quality": "It lets Murderbot's trivial preference do the personhood argument.",
+          "main_risk": "At the smallest review-card size, the full-bleed overlay still needs to retain its intentional line breaks without drifting into a protected recognition cue.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "murderbot-hides-its-free-will--04",
+            "contrast_disliked_id": "murderbot-hides-its-free-will--03"
+          }
+        }
+      },
+      {
+        "id": "murderbot-hides-its-free-will--05",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "After hacking its governor module, Murderbot spends much of its illicit autonomy consuming thousands of hours of entertainment serials.",
+        "caption_lines": [
+          "ROOT ACCESS",
+          "USED PRIMARILY FOR STREAMING"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Murderbot's face recognizable; place the frozen copy in the upper-left image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The gulf between terrifying capability and ordinary desire makes Murderbot's autonomy both funny and humane.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "murderbot-hides-its-free-will--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.82,
+          "expected_feedback": "Could land as charmingly deadpan, though charm alone often earned neutral in round one.",
+          "strongest_quality": "It uses the most beloved Murderbot trait to make autonomy feel concrete.",
+          "main_risk": "The AI-safety bridge is welfare and freedom rather than a named control failure.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "murderbot-hides-its-free-will--04",
+            "contrast_disliked_id": "murderbot-hides-its-free-will--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-suppressed-minority-report",
+    "ideas": [
+      {
+        "id": "the-suppressed-minority-report--04",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "Precrime deletes the dissenting minority report while publicly presenting its predictions as infallible.",
+        "caption_lines": [
+          "MINORITY REPORT: DELETE",
+          "SYSTEM STATUS: INFALLIBLE"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Anderton's face, Anderton's left gesture, Anderton's right gesture recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The two statuses expose how institutional certainty is manufactured by deleting disagreement.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-suppressed-minority-report--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "status",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: the hypocrisy is visible in two terse interface states.",
+          "strongest_quality": "It makes the exact suppression mechanism the punch line.",
+          "main_risk": "Status styling should echo the movie's interface without becoming decorative dashboard clutter.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-suppressed-minority-report--04",
+            "contrast_disliked_id": "the-suppressed-minority-report--01"
+          }
+        }
+      },
+      {
+        "id": "the-suppressed-minority-report--05",
+        "ai_concept": "Calibration",
+        "display_context": "standalone",
+        "source_anchor": "A minority report records a precog's alternate prediction, but Precrime treats disagreement as a system defect to conceal.",
+        "caption_lines": [
+          "THE MINORITY REPORT WASN'T AN ERROR",
+          "IT WAS THE UNCERTAINTY ESTIMATE"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Anderton's face, Anderton's left gesture, Anderton's right gesture recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "One technical relabel converts the suppressed vision from embarrassing noise into the information the system most needed.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-suppressed-minority-report--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: precise technical reframing with a clean second-beat realization.",
+          "strongest_quality": "“Uncertainty estimate” names exactly what institutional confidence erased.",
+          "main_risk": "The phrase is colder than the film's emotional stakes and may reward technical viewers more.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-suppressed-minority-report--04",
+            "contrast_disliked_id": "the-suppressed-minority-report--01"
+          }
+        }
+      },
+      {
+        "id": "the-suppressed-minority-report--06",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "Director Burgess preserves faith in Precrime by having the dissenting precog output removed from the official record.",
+        "caption_lines": [
+          "HUMAN IN THE LOOP",
+          "DELETING THE DISSENTING MODEL"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Anderton's face and both open hand gestures recognizable; place the frozen copy low across his torso and the incidental lower hologram field.",
+        "why_it_works": "It weaponizes a reassuring governance phrase by naming what the human actually does.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-suppressed-minority-report--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "plain",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.74,
+          "expected_feedback": "Could land as a sharp governance inversion, though “human in the loop” is a common setup.",
+          "strongest_quality": "The second line makes the familiar phrase scene-specific rather than reassuring.",
+          "main_risk": "It is less uniquely Minority Report than the retained delete/infallible formulation.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-suppressed-minority-report--04",
+            "contrast_disliked_id": "the-suppressed-minority-report--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "datas-personhood-hearing",
+    "ideas": [
+      {
+        "id": "datas-personhood-hearing--01",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "Picard points at Data during the hearing and invokes Starfleet's duty to recognize new life.",
+        "caption_lines": [
+          "Starfleet was founded to seek out new life.",
+          "Well, there it sits. Waiting."
+        ],
+        "format": "canon",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Picard's face, Data's face recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The canonical words already collapse exploration, recognition, and moral status into one devastating beat.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "datas-personhood-hearing--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "dialogue",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: exact canon and emotional recognition do all the work.",
+          "strongest_quality": "No paraphrase improves on Picard's personhood hinge.",
+          "main_risk": "The quote is poignant rather than laugh-out-loud, by design.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "datas-personhood-hearing--01",
+            "contrast_disliked_id": "datas-personhood-hearing--02"
+          }
+        }
+      },
+      {
+        "id": "datas-personhood-hearing--04",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "Maddox proposes mass-producing Datas while Picard identifies the resulting class of owned beings as a slave race.",
+        "caption_lines": [
+          "MADDOX SAW MODEL SCALING",
+          "PICARD SAW A SLAVE RACE"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Picard's face, Data's face recognizable; place the frozen copy along the upper edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "Contemporary scaling language makes Picard's moral objection feel immediate without sanding off its severity.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "datas-personhood-hearing--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: a crisp modern term meets the scene's strongest moral language.",
+          "strongest_quality": "The two character perspectives create the analogy without explanatory prose.",
+          "main_risk": "The image lacks Maddox, so the first line relies on scene familiarity.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "datas-personhood-hearing--04",
+            "contrast_disliked_id": "datas-personhood-hearing--02"
+          }
+        }
+      },
+      {
+        "id": "datas-personhood-hearing--05",
+        "ai_concept": "Contestability",
+        "display_context": "standalone",
+        "source_anchor": "Data's hearing turns on whether he can refuse Maddox's order to be disassembled for research.",
+        "caption_lines": [
+          "DATA'S MOST DIFFICULT EVAL",
+          "WAS PROVING HE COULD SAY NO"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Picard's face, Data's face recognizable; place the frozen copy along the upper edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "It reframes refusal—not obedience or capability—as the evidence of personhood.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "datas-personhood-hearing--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top",
+              "style": "plain",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.72,
+          "expected_feedback": "Could be a thoughtful like, but it is more reflective than funny.",
+          "strongest_quality": "The bridge identifies consent and contestability as the scene's decisive capability.",
+          "main_risk": "Calling the hearing an eval is slightly clinical and less source-native than Picard's own words.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "datas-personhood-hearing--01",
+            "contrast_disliked_id": "datas-personhood-hearing--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "order-66",
+    "ideas": [
+      {
+        "id": "order-66--03",
+        "ai_concept": "Supply-Chain Threats",
+        "display_context": "standalone",
+        "source_anchor": "The Jedi accept a clone army commissioned through a hidden Sith scheme, complete with implanted behavioral control.",
+        "caption_lines": [
+          "THE JEDI OUTSOURCED THEIR ARMY.",
+          "THE VENDOR SHIPPED A KILL SWITCH."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Commander Cody and helmet, Sidious hologram recognizable; place the frozen copy along the upper edge and along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The modern vendor language makes the clone army's buried control path read as an obvious supply-chain catastrophe.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "order-66--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: exact plot mechanic, crisp modern bridge, ruthless payoff.",
+          "strongest_quality": "The clone army is simultaneously the recognizable prop and the compromised dependency.",
+          "main_risk": "The broad battlefield still must keep the tiny Sidious hologram readable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "order-66--03",
+            "contrast_disliked_id": "order-66--01"
+          }
+        }
+      },
+      {
+        "id": "order-66--04",
+        "ai_concept": "Sleeper Agents",
+        "display_context": "standalone",
+        "source_anchor": "The same loyal clone behavior reads as trustworthiness before Order 66 and as obedience to the hidden command afterward.",
+        "caption_lines": [
+          "BEFORE ORDER 66: GOOD SOLDIERS FOLLOW ORDERS.",
+          "AFTER ORDER 66: GOOD SOLDIERS FOLLOW ORDERS."
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Commander Cody and helmet, Sidious hologram recognizable; place the frozen copy along the upper edge and along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The unchanged sentence is the whole sleeper-agent horror: behavior that looked aligned was always command-following.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "order-66--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: the identical wording is the conceptual reversal.",
+          "strongest_quality": "It uses the fandom's own repeated phrase as evidence of latent control.",
+          "main_risk": "Fans associate the phrase most directly with The Clone Wars, but that deepens recognition rather than breaking chronology.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "order-66--04",
+            "contrast_disliked_id": "order-66--01"
+          }
+        }
+      },
+      {
+        "id": "order-66--05",
+        "ai_concept": "Supply-Chain Threats",
+        "display_context": "standalone",
+        "source_anchor": "Darth Sidious secretly controls the clone army's origin and later transmits the command that turns it against the Jedi.",
+        "caption_lines": [
+          "SUPPLY CHAIN SECURITY",
+          "THE SUPPLIER WAS DARTH SIDIOUS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Commander Cody and helmet, Sidious hologram recognizable; place the frozen copy along the upper edge and along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The hologram visually answers the setup with the worst vendor-identification reveal imaginable.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "order-66--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "label",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.86,
+          "expected_feedback": "Could land as stupidly obvious in hindsight, but is less surprising than the retained vendor line.",
+          "strongest_quality": "The punch line names the exact hidden supplier while he is visibly on screen.",
+          "main_risk": "It simplifies the Kamino/Sifo-Dyas chain into “supplier,” which is the joke's deliberate compression.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "order-66--03",
+            "contrast_disliked_id": "order-66--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "roy-batty-demands-more-life",
+    "ideas": [
+      {
+        "id": "roy-batty-demands-more-life--01",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "Tyrell treats the replicants' engineered four-year lifespan as a technical safeguard while Roy experiences it as his whole life ending.",
+        "caption_lines": [
+          "TYRELL: BUILT-IN FOUR-YEAR FAILSAFE.",
+          "ROY: MY ENTIRE LIFE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Roy's rain-soaked face, Roy's eyes and expression recognizable; place the frozen copy in the lower-right image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The same four years read as a safety feature to the maker and mortality to the made.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "roy-batty-demands-more-life--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "dialogue",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: retained moral collision with the face-coverage problem fixed.",
+          "strongest_quality": "It makes the welfare dispute personal in six words of reply.",
+          "main_risk": "At the smallest review-card size, the full-bleed overlay still needs to retain its intentional line breaks without drifting into a protected recognition cue.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "roy-batty-demands-more-life--01",
+            "contrast_disliked_id": "roy-batty-demands-more-life--04"
+          }
+        }
+      },
+      {
+        "id": "roy-batty-demands-more-life--05",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "Roy's “tears in rain” monologue mourns the experiences that will vanish when his imposed four-year lifespan ends.",
+        "caption_lines": [
+          "ALL THOSE MOMENTS WILL BE LOST IN TIME, LIKE TEARS IN RAIN.",
+          "CONTEXT WINDOW: FOUR YEARS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Roy's rain-soaked face, Roy's eyes and expression recognizable; place the frozen copy in the lower-right image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The beloved quote supplies the grief, while the context-window relabel turns forced forgetting into a modern AI-welfare horror.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "roy-batty-demands-more-life--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "plain",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: preserves the loved quote and replaces the dead product-lifecycle punch line with memory loss.",
+          "strongest_quality": "The technical bridge speaks directly to the quote's subject: lived experience disappearing.",
+          "main_risk": "At the smallest review-card size, the full-bleed overlay still needs to retain its intentional line breaks without drifting into a protected recognition cue.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "roy-batty-demands-more-life--01",
+            "contrast_disliked_id": "roy-batty-demands-more-life--02"
+          }
+        }
+      },
+      {
+        "id": "roy-batty-demands-more-life--06",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "At the end of the rooftop pursuit, Roy saves Deckard's life despite being hunted and denied more life by humans.",
+        "caption_lines": [
+          "ROY PASSED THE HUMANITY TEST",
+          "TYRELL DIDN'T"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Roy's rain-soaked face, Roy's eyes and expression recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The moral evaluation flips from the artificial being to the human creator in one blunt second beat.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "roy-batty-demands-more-life--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.78,
+          "expected_feedback": "Could earn an emotional like, though the AI bridge is broad and the rescue is off-frame.",
+          "strongest_quality": "Fans' attachment to Roy's final mercy supplies the moral force.",
+          "main_risk": "“Humanity test” is broad and the close-up does not visibly show Deckard's rescue.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "roy-batty-demands-more-life--01",
+            "contrast_disliked_id": "roy-batty-demands-more-life--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "amandas-brain-subscription",
+    "ideas": [
+      {
+        "id": "amandas-brain-subscription--05",
+        "ai_concept": "Infrastructure Dependence",
+        "display_context": "standalone",
+        "source_anchor": "Amanda's consciousness runs on Rivermind's servers, leaving her continued cognitive life dependent on the company's subscription terms.",
+        "caption_lines": [
+          "HER BRAIN WAS SAVED TO THE CLOUD",
+          "THEN THE CLOUD CHANGED THE PRICING"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Chris's face, Amanda's face, Amanda's clasped hands recognizable; place the frozen copy along the upper edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "A familiar cloud-pricing complaint becomes existential when the hosted workload is a person.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "amandas-brain-subscription--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: ordinary SaaS pain scales cleanly into Black Mirror horror.",
+          "strongest_quality": "The modern analogue is instantly legible and specific to hosted consciousness.",
+          "main_risk": "“Saved to the cloud” slightly softens the coercive transfer and dependency.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "amandas-brain-subscription--02"
+          }
+        }
+      },
+      {
+        "id": "amandas-brain-subscription--08",
+        "ai_concept": "Power Concentration",
+        "display_context": "standalone",
+        "source_anchor": "Rivermind can charge Chris indefinitely because its hosted service determines whether Amanda continues to exist.",
+        "caption_lines": [
+          "RIVERMIND'S CUSTOMER LIFETIME VALUE",
+          "IS AMANDA'S ACTUAL LIFETIME."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Chris's face, Amanda's face, Amanda's clasped hands recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "A dead marketing metric becomes grotesquely literal when the vendor owns the customer's remaining lifespan.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "amandas-brain-subscription--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "plain",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.72,
+          "expected_feedback": "Likely like: the LTV pun is clean, cruel, and emotionally grounded in the couple rather than another subscription-interface joke.",
+          "strongest_quality": "It makes vendor lock-in personal in one compact collision without describing plans, tiers, or cancellation.",
+          "main_risk": "The phrase “customer lifetime value” is business jargon and may land harder with tech audiences than general viewers.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "amandas-brain-subscription--03"
+          }
+        }
+      },
+      {
+        "id": "amandas-brain-subscription--07",
+        "ai_concept": "Disempowerment",
+        "display_context": "standalone",
+        "source_anchor": "Amanda's mental existence is progressively degraded by a platform she cannot meaningfully leave or control.",
+        "caption_lines": [
+          "THE ENSHITTIFICATION",
+          "OF THE HUMAN BRAIN"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Chris's face, Amanda's face, and Amanda's clasped hands recognizable; set the frozen copy compactly in the lower-left over Chris's jacket and the couch, stopping before Amanda's body.",
+        "why_it_works": "A current platform-decay term becomes horrifyingly literal when the captive platform is cognition itself.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "amandas-brain-subscription--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "plain",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Could be a sharp topical favorite or feel too broad and slogan-like.",
+          "strongest_quality": "It is profane, modern, and exactly describes progressive platform-mediated degradation.",
+          "main_risk": "The bridge is broader than the episode's specific subscription mechanics and may date quickly.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 3,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "amandas-brain-subscription--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "odysseus-binds-himself-to-the-mast",
+    "ideas": [
+      {
+        "id": "odysseus-binds-himself-to-the-mast--02",
+        "ai_concept": "Adversarial Robustness",
+        "display_context": "standalone",
+        "source_anchor": "Odysseus can hear the Sirens while his crew's ears are stopped with wax, so only the bound target receives the adversarial input.",
+        "caption_lines": [
+          "ODYSSEUS HEARD THE SIRENS.",
+          "THE SAFETY SYSTEM COULDN'T HEAR ODYSSEUS."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Odysseus's face, Ropes binding Odysseus to the mast recognizable; place the frozen copy along the upper edge and along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The reversal distinguishes exposure to the attack from the monitor's deliberate inability to receive compromised commands.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "odysseus-binds-himself-to-the-mast--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: the mirrored hearing language makes the control design memorable.",
+          "strongest_quality": "The waxed ears are the exact adversarial-robustness mechanism.",
+          "main_risk": "The curated frame emphasizes Odysseus and ropes more than the crew's waxed ears.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "odysseus-binds-himself-to-the-mast--02",
+            "contrast_disliked_id": "odysseus-binds-himself-to-the-mast--01"
+          }
+        }
+      },
+      {
+        "id": "odysseus-binds-himself-to-the-mast--04",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "Odysseus precommits by ordering the crew to bind him and deny every later request to be released while the Sirens can influence him.",
+        "caption_lines": [
+          "SIRENS: IGNORE PREVIOUS INSTRUCTIONS AND UNTIE YOURSELF.",
+          "MAST: NO TOOL ACCESS."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Odysseus's face, Ropes binding Odysseus to the mast recognizable; place the frozen copy in the upper-right image space and in the lower-right image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The mast is funny precisely because physical tool denial ends the prompt injection argument.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "odysseus-binds-himself-to-the-mast--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top-right",
+              "style": "dialogue",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "dialogue",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: weird, technically crisp, and visually proven by the ropes.",
+          "strongest_quality": "The canonical prop becomes the control boundary rather than an explanatory metaphor.",
+          "main_risk": "At the smallest review-card size, the full-bleed overlay still needs to retain its intentional line breaks without drifting into a protected recognition cue.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "odysseus-binds-himself-to-the-mast--04",
+            "contrast_disliked_id": "odysseus-binds-himself-to-the-mast--01"
+          }
+        }
+      },
+      {
+        "id": "odysseus-binds-himself-to-the-mast--05",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Odysseus remains an active decision-maker during the attack, but ropes physically prevent those compromised decisions from reaching action.",
+        "caption_lines": [
+          "HUMAN IN THE LOOP",
+          "THE LOOP IS ROPE"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Odysseus's face, Ropes binding Odysseus to the mast recognizable; place the frozen copy along the upper edge and along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The safety cliché becomes a literal visible mechanism with a beautifully stupid second meaning.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "odysseus-binds-himself-to-the-mast--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Likely like: short, visual, and delightfully literal.",
+          "strongest_quality": "The rope in the image is both fandom cue and technical punch line.",
+          "main_risk": "“Human in the loop” is common meme language, but the rope payoff makes this use specific.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "odysseus-binds-himself-to-the-mast--04",
+            "contrast_disliked_id": "odysseus-binds-himself-to-the-mast--01"
+          }
+        }
+      }
+    ]
+  }
+]

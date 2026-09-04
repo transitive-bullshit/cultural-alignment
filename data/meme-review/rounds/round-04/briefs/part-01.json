@@ -1,0 +1,480 @@
+{
+  "version": 1,
+  "mode": "layout-refinement",
+  "source_batch": 3,
+  "target_batch": 4,
+  "part": "part-01",
+  "instructions": {
+    "scope": "Do not add meme ideas, IDs, concepts, formats, or source anchors. Work only on the retained lineages listed here.",
+    "finalized": "Copy finalized ideas and every referenced asset byte-for-byte. They are context only and must not be edited.",
+    "layout_only": "Keep approved caption copy and editorial fields exact. This is a typography refinement pass: try hero-sized conventional copy first, compare with the lineage’s earliest strong version when useful, and use standard only for a demonstrated wrap or focal collision. Add a subtle edge gradient when large overlay text needs contrast.",
+    "bounded_revision": "Apply only the explicit source feedback, including exact requested word changes. Keep the central concept, format, source anchor, and lineage ID unchanged. Otherwise follow the same hero-first typography and subtle-gradient guidance as layout-only ideas."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "verbal-kint-fakes-weakness",
+      "ideas": [
+        {
+          "id": "verbal-kint-fakes-weakness--03",
+          "scenario_slug": "verbal-kint-fakes-weakness",
+          "action": "bounded-revision",
+          "source_idea_sha256": "fcac2995e87dae2043c5993e6e62f2bacd48c965d43d2e060bf432809d2216f5",
+          "source_editorial_sha256": "ba3d908f1f487cbc3ffdbd25de2adffbeb205c3c31ad1076509ff7f7337b2025",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "replace \"DIDN'T\" with \"DOESN'T\" and increase the font size just a bit",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "verbal-kint-fakes-weakness--04",
+          "scenario_slug": "verbal-kint-fakes-weakness",
+          "action": "bounded-revision",
+          "source_idea_sha256": "9ca56be46514931fe482e6d3dcc3bb1991ebf47ec7555dfb6ffca73c54bcbd8a",
+          "source_editorial_sha256": "0bc35065ee08cb9dac1877fbb6b7b3850b34220d71b2264f0e695d7b00d4474c",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "replace the left-hand side with \"WHEN YOU EVAL'D VERBAL KINT\"",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "teaching-to-the-test",
+      "ideas": [
+        {
+          "id": "teaching-to-the-test--02",
+          "scenario_slug": "teaching-to-the-test",
+          "action": "finalized",
+          "source_idea_sha256": "6b54f2bd5084f35e2168d86a9620b9a7ffcc48821061912c36a3d2227aeb7ad0",
+          "source_editorial_sha256": "3680378873852eda5005c6aedd5867a9a1fea56629b161b72b6f399e18ab6e0c",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-a4d1d25d91e20a81-1735"
+            }
+          }
+        },
+        {
+          "id": "teaching-to-the-test--05",
+          "scenario_slug": "teaching-to-the-test",
+          "action": "bounded-revision",
+          "source_idea_sha256": "27da4935c11e3598afb78cd0918cd4a5c59a38cc7b1c04560af2bfb7c9b54277",
+          "source_editorial_sha256": "5c0bf6ee5089ee408df2e8d9c70ce61b54720b118bb162be018a6c83f3e4b005",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the font size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "benders-recursive-copies",
+      "ideas": [
+        {
+          "id": "benders-recursive-copies--01",
+          "scenario_slug": "benders-recursive-copies",
+          "action": "finalized",
+          "source_idea_sha256": "d24447cafe4ac9f8e395b46473a65488d4acaf4104878e6833311f7886dec488",
+          "source_editorial_sha256": "5a9de842f8f043e01e5b763ab00dc088eb00d7f0e3797bcdffcc71428ad41bd9",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "revert to the previous version's layout",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-4fb3383748b8a73b-1698"
+            }
+          }
+        },
+        {
+          "id": "benders-recursive-copies--04",
+          "scenario_slug": "benders-recursive-copies",
+          "action": "bounded-revision",
+          "source_idea_sha256": "9d129661bdacbb10bfcf6a635e1670b135d01939628e89bf158f33c0682753cf",
+          "source_editorial_sha256": "0f12c7c6d41d5e48e1c5ac1bda25ed3c572daffbf484bca0e5a48c6ec0c26ef5",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the text size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "cartman-as-awesom-o",
+      "ideas": [
+        {
+          "id": "cartman-as-awesom-o--01",
+          "scenario_slug": "cartman-as-awesom-o",
+          "action": "finalized",
+          "source_idea_sha256": "caa34e5cf9e987b5d12015c23eb1646ce8bf51556fc4f5b02c327a5507eba375",
+          "source_editorial_sha256": "fb2cecf8e4486d1dd62eac565da6ce2a7bf8319afb9056739a801723f8a3c9b3",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-b0bb06e5044e7c41-1835"
+            }
+          }
+        },
+        {
+          "id": "cartman-as-awesom-o--05",
+          "scenario_slug": "cartman-as-awesom-o",
+          "action": "bounded-revision",
+          "source_idea_sha256": "a4a4dec28af37f43bccf9bb897e5f4a12bffead0795b67dae8640725a3f1e9a6",
+          "source_editorial_sha256": "cc6b115ec89f5828d75d3bfe9e63a563bb2bb693deedaac56b903ddc98f0163f",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the text size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "butter-passing-robot",
+      "ideas": [
+        {
+          "id": "butter-passing-robot--01",
+          "scenario_slug": "butter-passing-robot",
+          "action": "bounded-revision",
+          "source_idea_sha256": "f4ceaf49e243482f74a06e6c0e4db8fc984f1e2ab7d6eb5761481f3db5a41e30",
+          "source_editorial_sha256": "cdfc467ff60c55443d3257247a28b78f7aae823ec3bce0711f8bdbff4d07a16e",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the text size just a bit",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "butter-passing-robot--03",
+          "scenario_slug": "butter-passing-robot",
+          "action": "finalized",
+          "source_idea_sha256": "571d13a6f19650b0e4657353194c5afbead891134e8f6fc4b318608b530a4632",
+          "source_editorial_sha256": "ddd8397400fdc527b91e403561b7001dec36eb186367f2af15844b4a6916ef91",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-7bf5043ce8e2f578-1758"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "randy-games-eligibility",
+      "ideas": [
+        {
+          "id": "randy-games-eligibility--01",
+          "scenario_slug": "randy-games-eligibility",
+          "action": "bounded-revision",
+          "source_idea_sha256": "dc20a14f63c3b147a86f6e9b00b6821f3a6763b0937b3e0aca52e1ddfb31514c",
+          "source_editorial_sha256": "5c0ea5e136c95fa059c1e7dc795ba6bb183310618a3345618c2d61ba564d9750",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the text size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "randy-games-eligibility--04",
+          "scenario_slug": "randy-games-eligibility",
+          "action": "bounded-revision",
+          "source_idea_sha256": "f324218a5a200cf36955f4faef1bf7402dce7c41312161c3a840d7077781f361",
+          "source_editorial_sha256": "d03e68c318384df74f5880e4ebf3d74f3ff4482963acf36bf80a67b7c941945f",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the text size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "randy-games-eligibility--05",
+          "scenario_slug": "randy-games-eligibility",
+          "action": "bounded-revision",
+          "source_idea_sha256": "15beec4a9cfe5cd3a2303807fae1d70004e2196eb17ea2363d8394a6a9d8c3d7",
+          "source_editorial_sha256": "e7a43c6f0581c0e960e71c959c559bdf6c8c278707bc56c5da88fbb33300b465",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the text size\n\nadd \"WHEN\" before the first line",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "ava-games-the-test",
+      "ideas": [
+        {
+          "id": "ava-games-the-test--05",
+          "scenario_slug": "ava-games-the-test",
+          "action": "bounded-revision",
+          "source_idea_sha256": "c51bddc2e421b647ee538a7e7a959059d3cc771183f00ddfbb777cf6983a69fe",
+          "source_editorial_sha256": "adefa865dfb389d0bb643c5236d29c975a97f7f650070946f5c62216b319c4ea",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the text size\n\nadd the word \"WHEN\" before the first line's start text",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-wolfie-test",
+      "ideas": [
+        {
+          "id": "the-wolfie-test--05",
+          "scenario_slug": "the-wolfie-test",
+          "action": "bounded-revision",
+          "source_idea_sha256": "107fbc420687df937743b781aea6a6c7cb6b154bf873e617c5e75ef4190c1f84",
+          "source_editorial_sha256": "c412d807700ba341103eef5a6cbb278c89b4072a1d893c2002b7736613ebe5ea",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the font size. remove the periods at the end of these sentence fragments.",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "rick-feeds-the-brainalyzer-a-virus",
+      "ideas": [
+        {
+          "id": "rick-feeds-the-brainalyzer-a-virus--06",
+          "scenario_slug": "rick-feeds-the-brainalyzer-a-virus",
+          "action": "bounded-revision",
+          "source_idea_sha256": "a32d8e41d5748ab6a044ca4dcd72ebefeca1dcf5456516dffcb39d6e0e2f2910",
+          "source_editorial_sha256": "bd7a59e0f363856cffa60e2f7c9d5873f30010b47a50276d81be9608c9470f22",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the text size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-helmets-fool-the-dominators",
+      "ideas": [
+        {
+          "id": "the-helmets-fool-the-dominators--04",
+          "scenario_slug": "the-helmets-fool-the-dominators",
+          "action": "finalized",
+          "source_idea_sha256": "fb749beeb259be978d2bb7fc275072d93232dd9a28c65e126b5772c3201837ff",
+          "source_editorial_sha256": "b490f58bbd8615dc01e1ff9b926b071ba497f449eb982aeb925b2318e3a5f944",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-e8ef60405c893c54-1771"
+            }
+          }
+        },
+        {
+          "id": "the-helmets-fool-the-dominators--05",
+          "scenario_slug": "the-helmets-fool-the-dominators",
+          "action": "bounded-revision",
+          "source_idea_sha256": "4f180a406719d6f548948db011556e996e01f148f78a5060b8f795ea98d1674c",
+          "source_editorial_sha256": "ba3f8665bcf0a930178923f758d40f2e4522b09b4e169d203d08f8ffe1aa423a",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the period at the end and increase the text size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "ultron-peace-in-our-time",
+      "ideas": [
+        {
+          "id": "ultron-peace-in-our-time--05",
+          "scenario_slug": "ultron-peace-in-our-time",
+          "action": "bounded-revision",
+          "source_idea_sha256": "22e50365a6a0768e7d0475655b110c6b45d780c24c5bd704e15c30e3baa2a9e7",
+          "source_editorial_sha256": "cb3ca14c68ac2ec7776e38193dede5f5942ddc233f69d2f53c228fad1f57b7b4",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "make the text size a bit bigger",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "taumoeba-escapes-containment",
+      "ideas": [
+        {
+          "id": "taumoeba-escapes-containment--07",
+          "scenario_slug": "taumoeba-escapes-containment",
+          "action": "bounded-revision",
+          "source_idea_sha256": "e9076d34ad57674746f5e643496416acf98555ab66b2e6350c77621b52acc800",
+          "source_editorial_sha256": "b721e0268e589870ea263f01ce0ddbab3efd346511cff2b70288a01e29fe764b",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the text size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    }
+  ]
+}

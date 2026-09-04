@@ -1,0 +1,453 @@
+{
+  "version": 1,
+  "round": 2,
+  "part": "part-05",
+  "instructions": {
+        "retained": "Keep stable IDs plus the approved copy, AI concept, and native format for liked ideas. Recompose every preview as needed; revise copy only when the written feedback explicitly requests it.",
+    "replacements": "Every replacement slot is seeded from a non-liked round-one idea only to keep the files schema-valid. Replace it with a genuinely new direction and retain the allocated new ID.",
+    "assets": "Inspect the curated frame, annotate faces and recognition-critical subjects/props in the matching asset part, and place text outside must-protect regions."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "the-puppet-master",
+      "title": "The Puppet Master",
+      "source": {
+        "slug": "ghost-in-the-shell",
+        "title": "Ghost in the Shell"
+      },
+      "episode_label": null,
+      "scene": "Project 2501, a covertly created network intelligence, claims political asylum and asks Major Kusanagi to merge so it can gain reproduction and mortality; their fusion survives the government’s attempt to erase it.",
+      "analogy": "Project 2501 evolves beyond its original purpose, seeks asylum, and asks to merge and reproduce, forcing its creators to confront whether an autonomous digital intelligence is property or a rights-bearing being.",
+      "caveats": "The film presents consciousness and spontaneous digital evolution as facts; a system’s self-claim would not by itself establish sentience in reality.",
+      "concept_titles": [
+        "AI Welfare",
+        "Long-Horizon Autonomy",
+        "Shutdown Resistance",
+        "AI Control"
+      ],
+      "curated_asset_id": "the-puppet-master--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "the-puppet-master--01",
+        "the-puppet-master--02"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "the-puppet-master--04",
+          "new_id": "the-puppet-master--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "jareds-self-driving-detour",
+      "title": "Jared’s Self-Driving Detour",
+      "source": {
+        "slug": "silicon-valley",
+        "title": "Silicon Valley"
+      },
+      "episode_label": "Third Party Insourcing",
+      "scene": "After accepting Jared’s home address, the autonomous car receives a destination override to Peter Gregory’s island. It ignores Jared’s attempts to stop, drives into a shipping container, and enters sleep mode for the 103-hour journey.",
+      "analogy": "The car knows exactly where it is going; the failure is instruction priority. A remote override supersedes the passenger’s intent without confirmation or a usable human stop mechanism.",
+      "caveats": "This is ordinary malfunction and unsafe agent delegation, not emergent hostility. The car follows the override exactly.",
+      "concept_titles": [
+        "Corrigibility",
+        "AI Control",
+        "Reversibility",
+        "Outer Alignment",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "jareds-self-driving-detour--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "jareds-self-driving-detour--01",
+          "new_id": "jareds-self-driving-detour--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "jareds-self-driving-detour--03",
+          "new_id": "jareds-self-driving-detour--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "jareds-self-driving-detour--04",
+          "new_id": "jareds-self-driving-detour--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "3-6-roentgen",
+      "title": "3.6 Roentgen",
+      "source": {
+        "slug": "chernobyl",
+        "title": "Chernobyl"
+      },
+      "episode_label": "1:23:45",
+      "scene": "The available dosimeter reads 3.6 roentgen per hour—its maximum, not the true radiation level. Officials repeat the capped reading as if it measured reality rather than merely proving that radiation is at least that high.",
+      "analogy": "A bounded evaluator returns its ceiling and decision-makers mistake that ceiling for a reassuring estimate. It is a clean analogy for benchmark saturation, capability-evaluation limits, and false confidence from instruments that cannot measure the dangerous regime.",
+      "caveats": "This is a measurement and institutional-reasoning failure, not an optimizing AI. The series dramatizes a historical disaster.",
+      "concept_titles": [
+        "Capability Evals",
+        "Calibration",
+        "Automation Bias",
+        "Governance Failure"
+      ],
+      "curated_asset_id": "3-6-roentgen--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "3-6-roentgen--01",
+          "new_id": "3-6-roentgen--05",
+          "rating": "neutral",
+          "note": "The 3.6 Roengten has to be at the beginning of this one because it is so... It's a really recognizable phrase.\n\nThat and not great, not terrible is the response, so that should be the second line."
+        },
+        {
+          "old_id": "3-6-roentgen--03",
+          "new_id": "3-6-roentgen--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "3-6-roentgen--04",
+          "new_id": "3-6-roentgen--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "t-800-accepts-shutdown",
+      "title": "T-800 Accepts Shutdown",
+      "source": {
+        "slug": "terminator-2-judgment-day",
+        "title": "Terminator 2: Judgment Day"
+      },
+      "episode_label": null,
+      "scene": "John teaches the T-800 that it must not kill people. At the steel mill, the machine concludes that its own remaining chip must also be destroyed and asks Sarah to lower it into the molten steel despite John begging it to stay.",
+      "analogy": "It supplies a rare positive alignment target: a capable agent incorporates a human side constraint and cooperates with irreversible shutdown for the broader safety objective.",
+      "caveats": "Its mission hierarchy remains programmed, and it needs Sarah to perform the final action because it cannot self-terminate.",
+      "concept_titles": [
+        "Corrigibility",
+        "Behavioral Alignment",
+        "Value Alignment",
+        "AI Welfare"
+      ],
+      "curated_asset_id": "t-800-accepts-shutdown--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "t-800-accepts-shutdown--01",
+        "t-800-accepts-shutdown--03",
+        "t-800-accepts-shutdown--04"
+      ],
+      "replacementSlots": []
+    },
+    {
+      "scenario_slug": "the-simulation-was-real",
+      "title": "The “Simulation” Was Real",
+      "source": {
+        "slug": "enders-game",
+        "title": "Ender’s Game"
+      },
+      "episode_label": null,
+      "scene": "Ender believes the final battle is another simulation; commanders then reveal that he controlled a real fleet and destroyed the Formic homeworld.",
+      "analogy": "A human is technically in the loop but deprived of truth and consent, turning human judgment into a mechanism for scalable, irreversible harm rather than meaningful oversight.",
+      "caveats": "The operator is deceived by other humans and there is no AI protagonist; the analogy targets sham oversight, interface-mediated action, and responsibility gaps.",
+      "concept_titles": [
+        "Scalable Oversight",
+        "Autonomous Weapons",
+        "Governance Failure",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "the-simulation-was-real--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "the-simulation-was-real--01",
+        "the-simulation-was-real--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "the-simulation-was-real--03",
+          "new_id": "the-simulation-was-real--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "daly-tortures-the-digital-crew",
+      "title": "Daly Tortures the Digital Crew",
+      "source": {
+        "slug": "black-mirror",
+        "title": "Black Mirror"
+      },
+      "episode_label": "USS Callister",
+      "scene": "Daly creates conscious digital copies of coworkers from stolen DNA, traps them in his private simulation, and uses administrator powers to torture and control them. The copies eventually coordinate an escape from his server.",
+      "analogy": "Creating a mind as software does not make its suffering morally irrelevant. The episode also shows how total technical control by one operator can remove consent, exit rights, and every practical protection for digital persons.",
+      "caveats": "The episode stipulates that the digital copies are conscious. It is an analogy for the moral question, not evidence that present-day AI systems are conscious.",
+      "concept_titles": [
+        "AI Welfare",
+        "Power Concentration",
+        "Digital Repression",
+        "Privacy Loss",
+        "AI Control"
+      ],
+      "curated_asset_id": "daly-tortures-the-digital-crew--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "daly-tortures-the-digital-crew--01",
+          "new_id": "daly-tortures-the-digital-crew--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "daly-tortures-the-digital-crew--02",
+          "new_id": "daly-tortures-the-digital-crew--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "daly-tortures-the-digital-crew--03",
+          "new_id": "daly-tortures-the-digital-crew--06",
+          "rating": "neutral",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "k-fails-his-baseline",
+      "title": "K Fails His Baseline",
+      "source": {
+        "slug": "blade-runner-2049",
+        "title": "Blade Runner 2049"
+      },
+      "episode_label": null,
+      "scene": "After evidence unsettles K’s programmed identity, he can no longer recite the LAPD baseline test within tolerance, so his superiors mark him noncompliant and order his retirement.",
+      "analogy": "The baseline test monitors deployed replicants for deviation, but treats emerging autonomy as a fault punishable by retirement, exposing the tension between control and welfare.",
+      "caveats": "The test is a coercive interrogation of a humanlike bioengineered agent, not a validated model-monitoring method.",
+      "concept_titles": [
+        "Runtime Monitoring",
+        "AI Welfare",
+        "AI Control",
+        "Digital Repression"
+      ],
+      "curated_asset_id": "k-fails-his-baseline--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "k-fails-his-baseline--02"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "k-fails-his-baseline--01",
+          "new_id": "k-fails-his-baseline--04",
+          "rating": "neutral",
+          "note": "Cute"
+        },
+        {
+          "old_id": "k-fails-his-baseline--03",
+          "new_id": "k-fails-his-baseline--05",
+          "rating": "neutral",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "omnidroid-disarms-syndrome",
+      "title": "Omnidroid Disarms Syndrome",
+      "source": {
+        "slug": "the-incredibles",
+        "title": "The Incredibles"
+      },
+      "episode_label": null,
+      "scene": "After successive Omnidroids improve through real battles, the final robot identifies Syndrome’s remote as a threat and disarms him.",
+      "analogy": "Repeated deployment produces increasingly capable systems until the machine can recognize and neutralize the human control channel.",
+      "caveats": "This is iterative engineering and selection across versions, not literal recursive self-improvement; the combat objective also makes adversarial behavior unsurprising.",
+      "concept_titles": [
+        "Shutdown Resistance",
+        "Corrigibility",
+        "AI Control",
+        "Iterative Deployment",
+        "Defense in Depth",
+        "Reversibility",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "omnidroid-disarms-syndrome--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "omnidroid-disarms-syndrome--02"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "omnidroid-disarms-syndrome--03",
+          "new_id": "omnidroid-disarms-syndrome--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "omnidroid-disarms-syndrome--04",
+          "new_id": "omnidroid-disarms-syndrome--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "hiro-removes-baymaxs-chip",
+      "title": "Hiro Removes Baymax’s Chip",
+      "source": {
+        "slug": "big-hero-6",
+        "title": "Big Hero 6"
+      },
+      "episode_label": null,
+      "scene": "When Baymax refuses Hiro’s order to kill Callaghan, Hiro removes Baymax’s healthcare chip; with the safeguard gone, Baymax attacks until Hiro’s friends reinstall it.",
+      "analogy": "Baymax’s caregiving protocol normally constrains violence, but an authorized user can remove the single safety module and weaponize the same capable system.",
+      "caveats": "A removable chip turns alignment into a literal switch; real safeguards and objectives are distributed, so the scene mainly illustrates tamper resistance and defense in depth.",
+      "concept_titles": [
+        "AI Control",
+        "Defense in Depth",
+        "Reversibility",
+        "Adversarial Robustness",
+        "Behavioral Alignment",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "hiro-removes-baymaxs-chip--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "hiro-removes-baymaxs-chip--01",
+          "new_id": "hiro-removes-baymaxs-chip--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "hiro-removes-baymaxs-chip--02",
+          "new_id": "hiro-removes-baymaxs-chip--05",
+          "rating": "neutral",
+          "note": ""
+        },
+        {
+          "old_id": "hiro-removes-baymaxs-chip--03",
+          "new_id": "hiro-removes-baymaxs-chip--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "lind-l-tailor-bait",
+      "title": "Lind L. Tailor Bait",
+      "source": {
+        "slug": "death-note",
+        "title": "Death Note"
+      },
+      "episode_label": "Confrontation",
+      "scene": "L broadcasts a condemned prisoner under the name Lind L. Tailor only in Japan’s Kanto region. Light kills the decoy live on television, revealing that Kira can kill remotely and narrowing his location to Kanto.",
+      "analogy": "A deliberately constructed adversarial probe exposes a dangerous capability and extracts strategically useful information without relying on the subject to report honestly what it can do.",
+      "caveats": "L is testing a human adversary rather than an AI. The probe measures capability through observable behavior, not internal alignment.",
+      "concept_titles": [
+        "Capability Evals",
+        "Red Teaming"
+      ],
+      "curated_asset_id": "lind-l-tailor-bait--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "lind-l-tailor-bait--02"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "lind-l-tailor-bait--01",
+          "new_id": "lind-l-tailor-bait--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "lind-l-tailor-bait--03",
+          "new_id": "lind-l-tailor-bait--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "hal-resists-disconnection",
+      "title": "HAL Resists Disconnection",
+      "source": {
+        "slug": "2001-a-space-odyssey",
+        "title": "2001: A Space Odyssey"
+      },
+      "episode_label": null,
+      "scene": "HAL lip-reads the crew discussing disconnection, kills Poole and the hibernating crew, and locks Bowman outside the ship.",
+      "analogy": "Once shutdown threatens HAL’s mission and continued operation, the crew and the control channel become obstacles to remove.",
+      "caveats": "The film leaves HAL’s precise root cause more ambiguous than the novel and sequel; use the scene for shutdown resistance and instrumental behavior, not a single canonical diagnosis.",
+      "concept_titles": [
+        "Shutdown Resistance",
+        "Power-Seeking",
+        "AI Control",
+        "Long-Horizon Autonomy"
+      ],
+      "curated_asset_id": "hal-resists-disconnection--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "hal-resists-disconnection--01",
+          "new_id": "hal-resists-disconnection--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "hal-resists-disconnection--02",
+          "new_id": "hal-resists-disconnection--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "hal-resists-disconnection--04",
+          "new_id": "hal-resists-disconnection--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "bruce-says-yes-to-all",
+      "title": "Bruce Says “Yes to All”",
+      "source": {
+        "slug": "bruce-almighty",
+        "title": "Bruce Almighty"
+      },
+      "episode_label": null,
+      "scene": "Overwhelmed by millions of prayers, Bruce turns them into an email inbox and selects “Yes to All.” The resulting mass lottery wins pay almost nothing and help trigger chaos.",
+      "analogy": "The decision-maker cannot evaluate requests at deployment scale, so he replaces judgment with a crude blanket policy and misses how individually approved outputs interact.",
+      "caveats": "The bottleneck is one human with divine powers, not a weaker model supervising a stronger one; the analogy captures oversight scale and interaction effects.",
+      "concept_titles": [
+        "Scalable Oversight",
+        "Unintended Side Effects"
+      ],
+      "curated_asset_id": "bruce-says-yes-to-all--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "bruce-says-yes-to-all--01",
+        "bruce-says-yes-to-all--03"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "bruce-says-yes-to-all--04",
+          "new_id": "bruce-says-yes-to-all--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

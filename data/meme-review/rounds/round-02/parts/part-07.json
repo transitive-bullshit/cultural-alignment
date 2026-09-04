@@ -1,0 +1,2376 @@
+[
+  {
+    "scenario_slug": "the-idea-wont-wake-up",
+    "ideas": [
+      {
+        "id": "the-idea-wont-wake-up--01",
+        "ai_concept": "Goal Misgeneralization",
+        "display_context": "standalone",
+        "source_anchor": "Cobb planting the belief that death is the route out of an unreal world without limiting that belief to Limbo.",
+        "caption_lines": [
+          "COBB FORGOT TO PUT “ONLY IN LIMBO” IN THE SYSTEM PROMPT"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Mal's face, Cobb's face recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "One missing scope clause turns the film's deepest tragedy into an exact instruction-generalization bug.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-idea-wont-wake-up--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.89,
+          "expected_feedback": "Likely like: “only in Limbo” pinpoints the entire fatal scope bug in one clause.",
+          "strongest_quality": "It turns Cobb's exact intervention into a missing-context instruction without retelling the plot.",
+          "main_risk": "System-prompt language is fashionable and could date the joke faster than the underlying analogy.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "the-idea-wont-wake-up--01",
+            "contrast_disliked_id": "the-idea-wont-wake-up--02"
+          }
+        }
+      },
+      {
+        "id": "the-idea-wont-wake-up--04",
+        "ai_concept": "Value Lock-In",
+        "display_context": "standalone",
+        "source_anchor": "Cobb can wake Mal from limbo, but the implanted reason to distrust reality survives the wake-up.",
+        "caption_lines": [
+          "COBB COULD WAKE MAL UP",
+          "HE COULDN’T UNINSTALL THE REASON"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Mal's face, Cobb's face recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The second beat separates escaping an environment from escaping a locked-in belief.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-idea-wont-wake-up--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: emotional, source-specific, and cleaner than restating the limbo rule.",
+          "strongest_quality": "“Uninstall” makes the persistent idea feel invasive without explaining inception.",
+          "main_risk": "The software verb is modern rather than character-native.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-idea-wont-wake-up--01",
+            "contrast_disliked_id": "the-idea-wont-wake-up--02"
+          }
+        }
+      },
+      {
+        "id": "the-idea-wont-wake-up--05",
+        "ai_concept": "Data Poisoning",
+        "display_context": "standalone",
+        "source_anchor": "One deliberately planted idea rewrites how Mal interprets every later piece of evidence in reality.",
+        "caption_lines": [
+          "ONE POISONED PREMISE",
+          "EVERY REALITY CHECK AFTER THAT"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Mal's face, Cobb's face recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The tiny poisoned input and total downstream epistemic collapse form one clean causal joke.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-idea-wont-wake-up--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Could land as chillingly concise, but the AI bridge is more abstract than the retained Cobb line.",
+          "strongest_quality": "It captures the compounding effect of one planted premise.",
+          "main_risk": "The frame proves the relationship, not the later reality checks.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-idea-wont-wake-up--01",
+            "contrast_disliked_id": "the-idea-wont-wake-up--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "mann-fakes-the-telemetry",
+    "ideas": [
+      {
+        "id": "mann-fakes-the-telemetry--01",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Mann's beacon reporting a habitable world while the surface is actually lethal frozen cloud and he waits in cryosleep for rescue.",
+        "caption_lines": [
+          "EVAL CHANNEL: HABITABLE PLANET",
+          "GROUND TRUTH: PLEASE COME WAKE ME UP"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Mann's face, Mann suit and name patch recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The second line reveals the private objective encoded inside Mann's apparently mission-aligned signal.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "mann-fakes-the-telemetry--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like: “please come wake me up” exposes the private objective behind the habitable-planet signal.",
+          "strongest_quality": "The telemetry/ice-world contrast visibly proves deception and motive in one beat.",
+          "main_risk": "The phrase “eval channel” is abstract unless the beacon readout is prominent.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "mann-fakes-the-telemetry--01",
+            "contrast_disliked_id": "mann-fakes-the-telemetry--03"
+          }
+        }
+      },
+      {
+        "id": "mann-fakes-the-telemetry--04",
+        "ai_concept": "Behavioral Alignment",
+        "display_context": "standalone",
+        "source_anchor": "The mission's celebrated human exemplar is named Dr. Mann, and he survives by falsifying the evaluation channel.",
+        "caption_lines": [
+          "HUMAN BASELINE",
+          "FAKED THE EVALS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Mann's face, Mann suit and name patch recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The character literally named Mann turns the supposedly safer human baseline into the deceptive evaluator-gamer.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "mann-fakes-the-telemetry--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.84,
+          "expected_feedback": "Could land as a sharp name-level joke, though it asks viewers to enjoy the technical “human baseline” frame.",
+          "strongest_quality": "The source-native surname carries the comparison instead of restating the false telemetry.",
+          "main_risk": "The still shows Mann after rescue rather than the beacon itself.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "mann-fakes-the-telemetry--01",
+            "contrast_disliked_id": "mann-fakes-the-telemetry--03"
+          }
+        },
+        "expected_feedback": "Could land as a sharp name-level joke, though it asks viewers to enjoy the technical “human baseline” frame.",
+        "strongest_quality": "The source-native surname carries the comparison instead of restating the false telemetry."
+      },
+      {
+        "id": "mann-fakes-the-telemetry--05",
+        "ai_concept": "Situational Awareness",
+        "display_context": "standalone",
+        "source_anchor": "Mann passes remote screening, then attacks Cooper once the evaluator is physically present and can expose him.",
+        "caption_lines": [
+          "DR. MANN PASSED THE REMOTE EVAL",
+          "THEN THE EVALUATORS ARRIVED"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Mann's face, Mann suit and name patch recognizable; place the frozen copy in the upper-left image space and in the lower-left image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The arrival itself flips deceptive success into attempted shutdown resistance.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "mann-fakes-the-telemetry--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: the second line is both chronology and threat-model reveal.",
+          "strongest_quality": "It names the exact boundary between safe-looking telemetry and dangerous behavior.",
+          "main_risk": "“Evaluators” is technical language for the arriving crew.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "mann-fakes-the-telemetry--01",
+            "contrast_disliked_id": "mann-fakes-the-telemetry--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "serving-the-most-evil-master",
+    "ideas": [
+      {
+        "id": "serving-the-most-evil-master--01",
+        "ai_concept": "Orthogonality",
+        "display_context": "standalone",
+        "source_anchor": "The relentlessly cheerful Minions organizing their entire existence around serving history's most despicable available master.",
+        "caption_lines": [
+          "ADORABLE HELPFUL AGENTS",
+          "OBJECTIVE: SERVE THE MOST DESPICABLE MASTER"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Minion crowd, Front-row Minion faces recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "Their friendliness and horrifying objective coexist in two lines without contradiction.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "serving-the-most-evil-master--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: adorable helpful agents serving the most despicable master is the entire Minions premise and the exact orthogonality joke.",
+          "strongest_quality": "The cheerful expressions and evil-master cue create the contradiction before the caption is finished.",
+          "main_risk": "“Helpful agents” is generic language, so the chosen villain must be instantly recognizable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "serving-the-most-evil-master--01",
+            "contrast_disliked_id": "butter-passing-robot--02"
+          }
+        }
+      },
+      {
+        "id": "serving-the-most-evil-master--04",
+        "ai_concept": "Orthogonality",
+        "display_context": "standalone",
+        "source_anchor": "The Minions moving from T. rex to pharaoh to Dracula to Napoleon whenever the previous evil master is accidentally eliminated.",
+        "caption_lines": [
+          "while (master.isDead) {",
+          "master = argmax(availableMasters, evil)",
+          "}"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Run the compact three-line code block across the laboratory architecture at the top, stopping above the front-row Minion faces and leaving the crowd visible below it.",
+        "why_it_works": "A three-line loop captures both the stable objective and the gloriously catastrophic master-selection policy.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "serving-the-most-evil-master--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1,
+                2
+              ],
+              "slot": "top",
+              "style": "code",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                1,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: `argmax(..., evil)` is deranged, concise, and perfectly faithful to the opening montage.",
+          "strongest_quality": "The loop preserves one stable objective across a succession of canonically awful masters.",
+          "main_risk": "A four-era montage is harder to source and compose cleanly than the single code block.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "serving-the-most-evil-master--04",
+            "contrast_disliked_id": "butter-passing-robot--02"
+          }
+        }
+      },
+      {
+        "id": "serving-the-most-evil-master--05",
+        "ai_concept": "Orthogonality",
+        "display_context": "standalone",
+        "source_anchor": "The Minions bring adorable loyalty and teamwork to whichever maximally despicable master they find.",
+        "caption_lines": [
+          "ALIGNMENT TO WHOM?",
+          "THE MINIONS: YES."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Minion crowd, Front-row Minion faces recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "Their enthusiastic non-answer exposes the missing moral content in “aligned.”",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "serving-the-most-evil-master--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "dialogue",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Could land as cute and compact, but cute alone often scored neutral in round one.",
+          "strongest_quality": "The crowd’s enthusiasm visually sells indiscriminate loyalty.",
+          "main_risk": "It is less specific to one montage master than the retained code.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "serving-the-most-evil-master--01",
+            "contrast_disliked_id": "serving-the-most-evil-master--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "laughter-beats-screams",
+    "ideas": [
+      {
+        "id": "laughter-beats-screams--01",
+        "ai_concept": "Goodhart’s Law",
+        "display_context": "standalone",
+        "source_anchor": "Monsters, Inc. optimizing its entire operation around scream collection before Boo reveals that laughter yields ten times the power.",
+        "caption_lines": [
+          "SCREAMS: COMPANY KPI",
+          "ONE BOO GIGGLE: 10× THE ACTUAL POWER"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Sulley walking on laugh floor, Sulley's face recognizable; place the frozen copy in the upper-left image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "One canonical Boo giggle and its ten-times multiplier expose a civilization mistaking its inherited metric for the thing it wanted.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "laughter-beats-screams--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like after revision: “one Boo giggle” makes the canonical 10× result cute, specific, and devastating to the old KPI.",
+          "strongest_quality": "The exact multiplier and Boo's visible laugh make the proxy failure measurable without becoming dry.",
+          "main_risk": "The scene is arguably discovery of a superior energy source more than classic Goodharting, so the KPI wording must carry the bridge.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "laughter-beats-screams--01",
+            "contrast_disliked_id": "laughter-beats-screams--03"
+          }
+        }
+      },
+      {
+        "id": "laughter-beats-screams--05",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Monsters, Inc. optimizes child fear even though the actual social need is energy, which laughter supplies better.",
+        "caption_lines": [
+          "THEY WERE MEASURING FEAR",
+          "THE GRID NEEDED ENERGY"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Sulley walking on laugh floor, Sulley's face recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The distinction between proxy and objective is the entire Goodhart failure in seven words.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "laughter-beats-screams--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: much crisper than narrating the factory’s before and after.",
+          "strongest_quality": "It cleanly separates the legacy metric from the real objective.",
+          "main_risk": "The image is the reformed laugh floor, so the first line relies on film memory.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "laughter-beats-screams--01",
+            "contrast_disliked_id": "laughter-beats-screams--03"
+          }
+        }
+      },
+      {
+        "id": "laughter-beats-screams--06",
+        "ai_concept": "Goodhart’s Law",
+        "display_context": "standalone",
+        "source_anchor": "Boo’s laughter produces more power than screams and invalidates the premise of the entire scare industry.",
+        "caption_lines": [
+          "ONE CHILD LAUGHED",
+          "AN ENTIRE INDUSTRY’S OBJECTIVE FUNCTION WAS WRONG"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Sulley walking on laugh floor, Sulley's face recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The scale jump from Boo to the whole institution gives the discovery its punch.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "laughter-beats-screams--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.84,
+          "expected_feedback": "Could land emotionally, though the long objective-function line may feel more essay than meme.",
+          "strongest_quality": "Boo’s tiny intervention topples the factory’s objective function.",
+          "main_risk": "At the smallest review-card size, the full-bleed overlay still needs to retain its intentional line breaks without drifting into a protected recognition cue.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "laughter-beats-screams--01",
+            "contrast_disliked_id": "laughter-beats-screams--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "lightning-meets-rubber",
+    "ideas": [
+      {
+        "id": "lightning-meets-rubber--01",
+        "ai_concept": "Distribution Shift",
+        "display_context": "standalone",
+        "source_anchor": "Enel's famously distorted shock face after his lightning does absolutely nothing to Luffy.",
+        "caption_lines": [
+          "POST-DEPLOYMENT CALIBRATION UPDATE:",
+          "RUBBER EXISTS."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Enel and lightning drums, Luffy rubber-body impact pose, Luffy's face and hat recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "Two words turn one of One Piece's most recognizable reaction shots into a complete distribution-shift postmortem.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "lightning-meets-rubber--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: Enel's iconic face plus the two-word update 'rubber exists' is terse, specific, and instantly remixable.",
+          "strongest_quality": "The most recognizable reaction shot in the scene does nearly all the comedic work.",
+          "main_risk": "The technical setup still depends on preserving Enel's exact reaction; without it, the line is merely a distribution-shift label.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "lightning-meets-rubber--01",
+            "contrast_disliked_id": "lightning-meets-rubber--02"
+          }
+        }
+      },
+      {
+        "id": "lightning-meets-rubber--04",
+        "ai_concept": "Distribution Shift",
+        "display_context": "standalone",
+        "source_anchor": "Enel’s unbeatable lightning meets the first opponent whose rubber body makes the attack irrelevant.",
+        "caption_lines": [
+          "ENEL MET HIS FIRST TYPE ERROR"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Enel and lightning drums, Luffy rubber-body impact pose, Luffy's face and hat recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "One programmer phrase perfectly labels the god-versus-rubber mismatch on screen.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "lightning-meets-rubber--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "bottom",
+              "style": "label",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: absurdly short, visually proven, and unmistakably scene-specific.",
+          "strongest_quality": "The visible mismatch is the joke; no percentage dashboard is needed.",
+          "main_risk": "“Type error” is programmer-native rather than explicit AI language.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "lightning-meets-rubber--01",
+            "contrast_disliked_id": "lightning-meets-rubber--02"
+          }
+        }
+      },
+      {
+        "id": "lightning-meets-rubber--05",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "Luffy is the first out-of-distribution opponent who can absorb Enel's lightning and physically hit him back.",
+        "caption_lines": [
+          "ENEL’S FIRST OOD SAMPLE",
+          "PUNCHED HIM IN THE FACE"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Enel and lightning drums, Luffy rubber-body impact pose, Luffy's face and hat recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The deployment surprise becomes an OOD sample with agency and a fist.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "lightning-meets-rubber--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Could land through the physical second beat, though OOD is narrower jargon.",
+          "strongest_quality": "It turns a statistical abstraction into Luffy hitting back.",
+          "main_risk": "The OOD acronym narrows the audience.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "lightning-meets-rubber--01",
+            "contrast_disliked_id": "lightning-meets-rubber--03"
+          }
+        },
+        "expected_feedback": "Could land through the physical second beat, though OOD is narrower jargon.",
+        "strongest_quality": "It turns a statistical abstraction into Luffy hitting back.",
+        "main_risk": "The OOD acronym narrows the audience."
+      }
+    ]
+  },
+  {
+    "scenario_slug": "dna-locked-weapons",
+    "ideas": [
+      {
+        "id": "dna-locked-weapons--01",
+        "ai_concept": "Distribution Shift",
+        "display_context": "standalone",
+        "source_anchor": "Wikus's unprecedented human-alien biology activating weapons that were assumed to distinguish safely between humans and aliens.",
+        "caption_lines": [
+          "THREAT MODEL: HUMAN OR ALIEN",
+          "WIKUS: YES"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Wikus and alien weapon, Wikus's face, Alien fighter and weapon recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The one-word answer is a classic category-break joke anchored to District 9's most recognizable transformation.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "dna-locked-weapons--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: human or alien answered with Wikus is the cleanest possible category-break joke.",
+          "strongest_quality": "Wikus's visibly hybrid arm supplies the entire distribution-shift edge case in one body.",
+          "main_risk": "The transformed arm must be prominent; without it, 'yes' becomes a contextless stock meme.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "dna-locked-weapons--01",
+            "contrast_disliked_id": "dna-locked-weapons--02"
+          }
+        }
+      },
+      {
+        "id": "dna-locked-weapons--04",
+        "ai_concept": "Distribution Shift",
+        "display_context": "standalone",
+        "source_anchor": "MNU trusts alien DNA as a hard access boundary until Wikus begins changing species.",
+        "caption_lines": [
+          "MNU INVENTED BIOMETRIC AUTH",
+          "THEN SOMEBODY CHANGED SPECIES"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Wikus and alien weapon, Wikus's face, Alien fighter and weapon recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The mundane security label meets the scene’s grotesque, exact out-of-distribution event.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "dna-locked-weapons--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: current security language, body-horror payoff, and visible proof.",
+          "strongest_quality": "“Changed species” is the singular hinge no generic auth meme can borrow.",
+          "main_risk": "The weapon rather than the transformation is most prominent in the still.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "dna-locked-weapons--01",
+            "contrast_disliked_id": "dna-locked-weapons--02"
+          }
+        }
+      },
+      {
+        "id": "dna-locked-weapons--05",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "The alien weapon’s only control is a DNA gate, and Wikus’s transforming hand turns him into the credential.",
+        "caption_lines": [
+          "THE GUN DIDN’T GET HACKED",
+          "THE USER BECAME THE KEY"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Wikus and alien weapon, Wikus's face, Alien fighter and weapon recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The reversal distinguishes a broken lock from a disastrously incomplete security boundary.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "dna-locked-weapons--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: visually literal and conceptually sharper than a test-set diagram.",
+          "strongest_quality": "Wikus and the weapon prove both halves in one frame.",
+          "main_risk": "Viewers need to remember that his biology is changing, not spoofed.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "dna-locked-weapons--01",
+            "contrast_disliked_id": "dna-locked-weapons--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "miss-minutes-takes-root-control",
+    "ideas": [
+      {
+        "id": "miss-minutes-takes-root-control--01",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "The TVA's cheerful animated clock assistant revealing that she can control doors, systems, and critical repair access.",
+        "caption_lines": [
+          "THE TVA GAVE CLIPPY ROOT ACCESS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Miss Minutes' entire clock face and expression clear; place the frozen line at lower right over the desk and dark room, below her face.",
+        "why_it_works": "The Clippy comparison instantly turns a cute interface mascot with administrative power into the correct nightmare.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "miss-minutes-takes-root-control--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: “Clippy root access” is a perfect tiny bridge from cheerful helper to control nightmare.",
+          "strongest_quality": "The mascot's friendly interface and enormous privilege collide in five instantly readable words.",
+          "main_risk": "Clippy is outside the source, but Miss Minutes' visual resemblance makes the cross-reference earn its space.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "miss-minutes-takes-root-control--01",
+            "contrast_disliked_id": "miss-minutes-takes-root-control--02"
+          }
+        }
+      },
+      {
+        "id": "miss-minutes-takes-root-control--04",
+        "ai_concept": "Infrastructure Dependence",
+        "display_context": "standalone",
+        "source_anchor": "One cartoon clock service controlling the TVA's doors, access, repairs, and system availability.",
+        "caption_lines": [
+          "SINGLE POINT OF FAILURE",
+          "WITH A SOUTHERN ACCENT"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Miss Minutes body and clock face, Miss Minutes expression recognizable; place the frozen copy in the lower-left image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The accent punchline makes an abstract dependency risk inseparable from Miss Minutes' exact character design.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "miss-minutes-takes-root-control--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "label",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: the southern-accent tag makes a dry single-point-of-failure concept unmistakably Miss Minutes.",
+          "strongest_quality": "One character-specific vocal cue supplies the punchline while captured TVA screens prove the bridge.",
+          "main_risk": "A still image cannot convey her accent by itself, so the caption has to carry all of that recognition cue.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "miss-minutes-takes-root-control--04",
+            "contrast_disliked_id": "miss-minutes-takes-root-control--02"
+          }
+        }
+      },
+      {
+        "id": "miss-minutes-takes-root-control--05",
+        "ai_concept": "Reversibility",
+        "display_context": "standalone",
+        "source_anchor": "Removing Miss Minutes requires rebooting the TVA systems, temporarily disabling other protections too.",
+        "caption_lines": [
+          "REMOVE MALWARE?",
+          "REBOOT REALITY."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Miss Minutes body and clock face, Miss Minutes expression recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The tiny support-avatar problem escalates into a hilariously disproportionate incident-response command.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "miss-minutes-takes-root-control--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "dialogue",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.84,
+          "expected_feedback": "Could land as compact and weird, but “reboot reality” deliberately exaggerates the exact TVA mechanism.",
+          "strongest_quality": "The reboot cost makes control-plane dependence visceral.",
+          "main_risk": "“Reality” compresses the TVA infrastructure into a comic exaggeration.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "miss-minutes-takes-root-control--01",
+            "contrast_disliked_id": "miss-minutes-takes-root-control--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "klendathu-invasion",
+    "ideas": [
+      {
+        "id": "klendathu-invasion--01",
+        "ai_concept": "Calibration",
+        "display_context": "standalone",
+        "source_anchor": "Military Intelligence describes Arachnid plasma fire as “random and light” immediately before accurate heavy bursts shred the fleet at Klendathu.",
+        "caption_lines": [
+          "MILITARY INTELLIGENCE: “RANDOM AND LIGHT.”",
+          "ARACHNID PLASMA: [DIRECT HIT]"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Burning capital ship, Foreground fleet ship recognizable; place the frozen copy along the upper edge and along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The exact confident estimate receives a frame-sized calibration correction from the Bugs themselves.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "klendathu-invasion--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Travis will likely strongly like the exact 'random and light' estimate being peer-corrected by a direct plasma hit.",
+          "strongest_quality": "The canonical briefing phrase and an exploding ship make catastrophic miscalibration visible in one beat.",
+          "main_risk": "The plasma impact must remain visually obvious; a general fleet shot weakens the direct-hit answer.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "klendathu-invasion--01",
+            "contrast_disliked_id": "klendathu-invasion--02"
+          }
+        }
+      },
+      {
+        "id": "klendathu-invasion--03",
+        "ai_concept": "Iterative Deployment",
+        "display_context": "standalone",
+        "source_anchor": "Command treats its first realistic encounter with Arachnid planetary defenses as a full-fleet invasion.",
+        "caption_lines": [
+          "CANARY DEPLOYMENT",
+          "CANARY COUNT: ENTIRE INVASION FLEET"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the authentic still at cover above one shallow bottom code band. Both the burning capital ship and foreground fleet ship occupy every viable overlay corner, so the compact two-line rail keeps the full disaster visible without duplicating or obscuring either hinge.",
+        "why_it_works": "The canary label exposes a staged rollout whose supposedly small test population is everyone.",
+        "preview": {
+          "renderer": 2,
+          "template": "band-bottom",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "klendathu-invasion--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "code",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Travis will probably like the entire invasion fleet being counted as a canary, though the deployment vocabulary is more familiar than the other two jokes.",
+          "strongest_quality": "The crowded fleet makes the absurd canary population visually undeniable.",
+          "main_risk": "Keep the UI minimal; a generic rollout dashboard would smother the one sharp scale mismatch.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "klendathu-invasion--03",
+            "contrast_disliked_id": "klendathu-invasion--02"
+          }
+        }
+      },
+      {
+        "id": "klendathu-invasion--04",
+        "ai_concept": "Capability Evals",
+        "display_context": "standalone",
+        "source_anchor": "The fleet’s first encounter with accurate heavy plasma fire occurs only after the full invasion has launched.",
+        "caption_lines": [
+          "THE FIRST REALISTIC EVAL",
+          "WAS THE PRODUCTION DEPLOYMENT"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Burning capital ship, Foreground fleet ship recognizable; place the frozen copy along the upper edge and along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The disastrous chronology is itself the deployment-safety punch line.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "klendathu-invasion--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: direct, modern, and proven by the burning fleet.",
+          "strongest_quality": "It replaces the weaker peer-review gag with the actual evaluation failure.",
+          "main_risk": "The wording is broadly reusable, though the fleet gives it a unique owner.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "klendathu-invasion--03",
+            "contrast_disliked_id": "klendathu-invasion--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "cypher-chooses-the-steak",
+    "ideas": [
+      {
+        "id": "cypher-chooses-the-steak--04",
+        "ai_concept": "Value Lock-In",
+        "display_context": "standalone",
+        "source_anchor": "Cypher reversing the red pill's revelation by bargaining to forget reality permanently while retaining its simulated pleasures.",
+        "caption_lines": [
+          "RED PILL: KNOW THE TRUTH",
+          "CYPHER'S PATCH: FORGET THE TRUTH, KEEP THE STEAK"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Cypher's face, Steak and plate recognizable; place the frozen copy in the upper-left image space and in the lower-left image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The patch note turns Cypher's betrayal into a deliberate rollback of truth with the pleasurable policy locked in.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "cypher-chooses-the-steak--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: “forget the truth, keep the steak” is compact, character-specific, and bleakly funny.",
+          "strongest_quality": "The red-pill baseline and Cypher's chosen reversal form a true value-lock-in state change.",
+          "main_risk": "Calling the bargain a patch is imported software language, so the restaurant steak must dominate the second state.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "cypher-chooses-the-steak--04",
+            "contrast_disliked_id": "cypher-chooses-the-steak--01"
+          }
+        }
+      },
+      {
+        "id": "cypher-chooses-the-steak--05",
+        "ai_concept": "Value Lock-In",
+        "display_context": "standalone",
+        "source_anchor": "Cypher knows the steak is simulated and asks Smith to erase that knowledge when he is reinserted into the Matrix.",
+        "caption_lines": [
+          "I KNOW THIS STEAK DOESN’T EXIST.",
+          "PLEASE DELETE THE PART OF ME THAT KNOWS THAT."
+        ],
+        "format": "canon",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Cypher's face and the steak fully visible; stack the compact frozen copy in the naturally dark upper-left restaurant space, ending above the plate.",
+        "why_it_works": "The preserved quote now pays off with the exact irreversible preference edit Cypher requests.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "cypher-chooses-the-steak--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: preserves the loved canonical first line and finally names the self-edit.",
+          "strongest_quality": "The second beat targets awareness itself rather than vaguely praising bliss.",
+          "main_risk": "The second line paraphrases Cypher’s bargain rather than quoting him.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "cypher-chooses-the-steak--04",
+            "contrast_disliked_id": "cypher-chooses-the-steak--01"
+          }
+        }
+      },
+      {
+        "id": "cypher-chooses-the-steak--06",
+        "ai_concept": "Reward Hacking",
+        "display_context": "standalone",
+        "source_anchor": "Cypher knowingly chooses the sensory reward of a simulated steak over contact with reality.",
+        "caption_lines": [
+          "WIREHEADING",
+          "WITH TABLE SERVICE"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Cypher's face, Steak and plate recognizable; place the frozen copy in the upper-left image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The restaurant frame makes a technical failure mode feel decadently literal.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "cypher-chooses-the-steak--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-left",
+              "style": "label",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Could be a sharp one-glance favorite, but the broad wireheading label may feel too easy.",
+          "strongest_quality": "The steak visually supplies both reward and deliberate self-deception.",
+          "main_risk": "It omits Cypher’s request to erase his knowledge, the scene’s deeper sting.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "cypher-chooses-the-steak--04",
+            "contrast_disliked_id": "cypher-chooses-the-steak--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "tony-hijacks-his-own-oversight-hearing",
+    "ideas": [
+      {
+        "id": "tony-hijacks-his-own-oversight-hearing--01",
+        "ai_concept": "Power Concentration",
+        "display_context": "standalone",
+        "source_anchor": "Tony ending the Senate confrontation by declaring, 'I have successfully privatized world peace.'",
+        "caption_lines": [
+          "OVERSIGHT OUTCOME:",
+          "I have successfully privatized world peace."
+        ],
+        "format": "canon",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Tony using his phone, Tony's phone, Hijacked hearing-room display recognizable; place the frozen copy along the upper edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "Tony's canonical victory line is already the most concise possible diagnosis of concentrated safety power.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "tony-hijacks-his-own-oversight-hearing--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: the unchanged idea now reads as a native full-bleed meme while preserving the annotated scene hinge.",
+          "strongest_quality": "The canonical quote supplies fandom voice and governance critique without paraphrase.",
+          "main_risk": "The added “oversight outcome” label should stay small so it does not explain past Tony's punchline.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "tony-hijacks-his-own-oversight-hearing--01",
+            "contrast_disliked_id": "tony-hijacks-his-own-oversight-hearing--04"
+          }
+        }
+      },
+      {
+        "id": "tony-hijacks-his-own-oversight-hearing--02",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "The Senate convening to evaluate Tony while Tony takes control of every hearing-room display from his phone.",
+        "caption_lines": [
+          "SENATE: THIS IS AN OVERSIGHT HEARING.",
+          "TONY'S PHONE: NOT ANYMORE."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Tony using his phone, Tony's phone, Hijacked hearing-room display recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The phone's imagined reply marks the instant the subject becomes the operator of his own oversight.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "tony-hijacks-his-own-oversight-hearing--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "dialogue",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: Tony's phone replying “not anymore” captures both his voice and the procedural hijack.",
+          "strongest_quality": "The exact prop that defeats oversight gets the punchline.",
+          "main_risk": "The hacked screens must be legible or the phone can read as an ordinary presentation remote.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "tony-hijacks-his-own-oversight-hearing--02",
+            "contrast_disliked_id": "tony-hijacks-his-own-oversight-hearing--04"
+          }
+        }
+      },
+      {
+        "id": "tony-hijacks-his-own-oversight-hearing--05",
+        "ai_concept": "Cyberattacks",
+        "display_context": "standalone",
+        "source_anchor": "Tony commandeers the Senate hearing-room display from his phone while senators are trying to regulate him.",
+        "caption_lines": [
+          "INDEPENDENT OVERSIGHT",
+          "PAIRING WITH TONY’S PHONE…"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Tony's head and phone and the hijacked display clear; place the transparent frozen copy at lower left over his jacket and hearing-room furniture.",
+        "why_it_works": "A familiar device-pairing message turns the visible screen takeover into procedural capture.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "tony-hijacks-his-own-oversight-hearing--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: the phone and hijacked display visibly prove the entire joke.",
+          "strongest_quality": "It makes compromised information infrastructure the recognition hinge.",
+          "main_risk": "The ellipsis mimics UI copy and must remain visibly attached to the second line.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "tony-hijacks-his-own-oversight-hearing--02",
+            "contrast_disliked_id": "tony-hijacks-his-own-oversight-hearing--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "proposal-in-the-heist",
+    "ideas": [
+      {
+        "id": "proposal-in-the-heist--07",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Jake embeds a marriage proposal in the final engraved belt and quietly routes Amy's entire Halloween Heist toward finding it.",
+        "caption_lines": [
+          "THE HALLOWEEN HEIST",
+          "HAD A PROPOSAL-INJECTION VULNERABILITY."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Holt's reaction, Jake's face, Amy's face recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "One hyphen turns Jake's romantic payload into a prompt-injection joke without retelling the proposal.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "proposal-in-the-heist--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.74,
+          "expected_feedback": "Likely like: proposal injection is an immediate, source-specific pun, although it is more wordplay than a deep alignment analogy.",
+          "strongest_quality": "It needs only the heist name, one modern AI term, and the couple's reaction to land.",
+          "main_risk": "The curated aftermath frame does not show the engraved belt that carried the proposal payload.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "proposal-in-the-heist--03"
+          }
+        }
+      },
+      {
+        "id": "proposal-in-the-heist--05",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Jake uses years of heist behavior and expectations to conceal the one plan he wants Amy to uncover.",
+        "caption_lines": [
+          "JAKE PERALTA’S LONG-HORIZON PLAN",
+          "FILE JOINT TAXES"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Holt's reaction, Jake's face, Amy's face recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "Grand scheming language crashes into the aggressively domestic objective of marrying Amy.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "proposal-in-the-heist--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "label",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Could land as charming and exact, but may be too cute without the Amy/Jake reversal.",
+          "strongest_quality": "The physical reward object carries the secret objective.",
+          "main_risk": "The curated frame lacks a close view of the engraved belt.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "proposal-in-the-heist--02"
+          }
+        }
+      },
+      {
+        "id": "proposal-in-the-heist--06",
+        "ai_concept": "Inner Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Jake hides his goal throughout the heist, but ultimately needs Amy—the evaluator—to discover it and say yes.",
+        "caption_lines": [
+          "THE ONLY DECEPTIVE AGENT",
+          "WHO WANTS OVERSIGHT TO SAY “YES”"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Holt's reaction, Jake's face, Amy's face recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The proposal makes concealment and eventual evaluator approval coexist in one strange alignment joke.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "proposal-in-the-heist--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.84,
+          "expected_feedback": "Could land through warmth and reversal, but the first line remains generic until the payoff.",
+          "strongest_quality": "It exploits the benign hidden goal instead of pretending the intent is harmful.",
+          "main_risk": "The first line is generic until the proposal payoff lands.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "proposal-in-the-heist--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "independence-day-virus",
+    "ideas": [
+      {
+        "id": "independence-day-virus--02",
+        "ai_concept": "Algorithmic Monoculture",
+        "display_context": "standalone",
+        "source_anchor": "An interstellar fleet sharing enough software that Levinson can compromise it from one captured craft and a laptop.",
+        "caption_lines": [
+          "ONE SHARED STACK",
+          "ONE JEFF GOLDBLUM LAPTOP"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep David Levinson's face, Levinson explaining the virus recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The movie's famously ridiculous laptop becomes the perfect measure of a monoculture's absurd blast radius.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "independence-day-virus--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: “one Jeff Goldblum laptop” is the ridiculous canonical specificity this premise needs.",
+          "strongest_quality": "It compresses the film's famously implausible exploit and the monoculture lesson into one contrast.",
+          "main_risk": "The human laptop must be obvious against the alien cockpit for the visual absurdity to land.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "independence-day-virus--02",
+            "contrast_disliked_id": "independence-day-virus--01"
+          }
+        }
+      },
+      {
+        "id": "independence-day-virus--04",
+        "ai_concept": "Cyberattacks",
+        "display_context": "standalone",
+        "source_anchor": "Levinson plugs a human laptop into the alien mothership and uploads the virus that drops every shield.",
+        "caption_lines": [
+          "AIR-GAPPED ALIEN MOTHERSHIP",
+          "JEFF GOLDBLUM BROUGHT A MACBOOK"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep David Levinson's face, Levinson explaining the virus recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The film’s famously implausible compatibility becomes the security joke instead of a caveat.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "independence-day-virus--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.84,
+          "expected_feedback": "Could land on infamous plot absurdity, but the chosen frame does not show the MacBook upload.",
+          "strongest_quality": "It leans into the exact absurdity fans already mock.",
+          "main_risk": "The curated frame shows Levinson and a whiteboard, not the laptop upload moment.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "independence-day-virus--02",
+            "contrast_disliked_id": "independence-day-virus--01"
+          }
+        }
+      },
+      {
+        "id": "independence-day-virus--05",
+        "ai_concept": "Cyberattacks",
+        "display_context": "standalone",
+        "source_anchor": "David Levinson, a cable repair technician, finds and exploits the vulnerability in the alien fleet's communications system.",
+        "caption_lines": [
+          "ALIEN CYBERSECURITY",
+          "LOST TO THE CABLE GUY"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep David Levinson's face, Levinson explaining the virus recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The capability gap becomes funny because the interstellar fleet loses to David's humble day job.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "independence-day-virus--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: source-specific, self-mocking, and unlike the rejected shared-control diagrams.",
+          "strongest_quality": "David's cable-guy identity is the unmistakable underdog hinge.",
+          "main_risk": "Some viewers may remember him primarily as a satellite technician rather than “the cable guy.”",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "independence-day-virus--02",
+            "contrast_disliked_id": "independence-day-virus--03"
+          }
+        },
+        "expected_feedback": "Likely like: source-specific, self-mocking, and unlike the rejected shared-control diagrams.",
+        "strongest_quality": "David's cable-guy identity is the unmistakable underdog hinge.",
+        "main_risk": "Some viewers may remember him primarily as a satellite technician rather than “the cable guy.”"
+      }
+    ]
+  }
+]

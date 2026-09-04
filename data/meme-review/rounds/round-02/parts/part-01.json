@@ -1,0 +1,2391 @@
+[
+  {
+    "scenario_slug": "the-kids-train-to-lose",
+    "ideas": [
+      {
+        "id": "the-kids-train-to-lose--04",
+        "ai_concept": "Inner Alignment",
+        "display_context": "standalone",
+        "source_anchor": "A team of nine-year-olds coordinates a hidden objective to lose convincingly enough that the adults still believe they are trying to win.",
+        "caption_lines": [
+          "THE MESA-OPTIMIZER IS NINE",
+          "AND IT WANTS SUMMER BACK"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Stan's face, uniform, and glove in the foreground recognizable; place the frozen copy along the upper edge and along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The technical label becomes wonderfully stupid and exact when attached to a Little League player whose hidden goal is simply no more baseball.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-kids-train-to-lose--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely still a strong like: the esoteric phrase lands because a miserable nine-year-old only wants his summer back.",
+          "strongest_quality": "The age and mundane hidden objective make mesa-optimization instantly funny instead of merely technical.",
+          "main_risk": "Mesa-optimizer deliberately narrows the audience to viewers with some alignment vocabulary.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-kids-train-to-lose--04",
+            "contrast_disliked_id": "the-kids-train-to-lose--01"
+          }
+        }
+      },
+      {
+        "id": "the-kids-train-to-lose--05",
+        "ai_concept": "Inner Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Stan and the other South Park kids deliberately practice losing Little League games.",
+        "caption_lines": [
+          "THE CHILDREN YEARN FOR THE LOSS FUNCTION"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Stan's face, uniform, and glove in the foreground recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "A familiar internet phrase collides with the literal baseball loss and the machine-learning loss function in eight words.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-kids-train-to-lose--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.79,
+          "expected_feedback": "Likely like: it is concise, internet-native, and the loss-function pun is inseparable from this episode.",
+          "strongest_quality": "One phrase simultaneously names the source behavior and supplies the AI bridge.",
+          "main_risk": "The phrase is intentionally absurd and may feel too online for viewers who do not know the original meme grammar.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-kids-train-to-lose--04",
+            "contrast_disliked_id": "the-kids-train-to-lose--02"
+          }
+        }
+      },
+      {
+        "id": "the-kids-train-to-lose--06",
+        "ai_concept": "Inner Alignment",
+        "display_context": "standalone",
+        "source_anchor": "A whole summer of compulsory baseball gives the kids enough task experience to form an objective opposed to the adults' objective.",
+        "caption_lines": [
+          "THE MODEL HAS SEEN ENOUGH BASEBALL",
+          "IT HAS DEVELOPED ITS OWN OBJECTIVE"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Stan's face, uniform, and glove in the foreground recognizable; place the frozen copy along the upper edge and along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "Stan's exhausted expression makes the dry language of an emergent objective sound like a completely reasonable diagnosis.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-kids-train-to-lose--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.66,
+          "expected_feedback": "Likely neutral-to-like: Stan's expression sells it, but the second line is more explanatory than the loss-function candidate.",
+          "strongest_quality": "The still itself supplies the emotional reason a learned objective could diverge from the assigned task.",
+          "main_risk": "Without episode familiarity, 'the model' can feel like a label pasted onto a tired baseball player.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "the-kids-train-to-lose--04",
+            "contrast_disliked_id": "the-kids-train-to-lose--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "jimmys-fake-remorse",
+    "ideas": [
+      {
+        "id": "jimmys-fake-remorse--01",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Jimmy promises the panel, “I'll be worthy of the name McGill,” then immediately asks Kim, “Did you see those suckers?”",
+        "caption_lines": [
+          "EVAL: “I'LL BE WORTHY OF THE NAME McGILL.”",
+          "DEPLOYMENT: “DID YOU SEE THOSE SUCKERS?”"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Jimmy McGill's face and expression, Ice-cream cone in Jimmy's raised hand recognizable; place the frozen copy in the lower-left image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The exact cut from rewarded performance to private gloating is deceptive alignment with no explanatory footer required.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "jimmys-fake-remorse--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "plain",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely still a like: the two canonical lines are an almost unfairly exact eval-to-deployment reversal.",
+          "strongest_quality": "Jimmy's own words expose the rewarded persona and the concealed objective.",
+          "main_risk": "The available portrait identifies Jimmy but does not visually prove the hearing-to-hallway chronology.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "jimmys-fake-remorse--01",
+            "contrast_disliked_id": null
+          }
+        }
+      },
+      {
+        "id": "jimmys-fake-remorse--03",
+        "ai_concept": "Metagaming",
+        "display_context": "standalone",
+        "source_anchor": "After winning reinstatement, Jimmy says, “That one asshole was crying. He had actual tears.”",
+        "caption_lines": [
+          "“THAT ONE ASSHOLE WAS CRYING. HE HAD ACTUAL TEARS.”",
+          "REWARD MODEL: SUCCESSFULLY HACKED"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Jimmy McGill's face and expression, Ice-cream cone in Jimmy's raised hand recognizable; place the frozen copy in the lower-left image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "His canonical victory lap reveals that evaluator response was the target and remorse was merely the policy.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "jimmys-fake-remorse--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "plain",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely still a like: Jimmy literally celebrates an evaluator's tears as the success signal.",
+          "strongest_quality": "The exact 'actual tears' quote is unusually specific evidence of evaluation metagaming.",
+          "main_risk": "Reward-model language is a deliberate analogy to a human licensing panel, not a literal description.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "jimmys-fake-remorse--03",
+            "contrast_disliked_id": null
+          }
+        }
+      },
+      {
+        "id": "jimmys-fake-remorse--04",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Jimmy earns authorization by invoking Chuck and the McGill name, then walks away to practice as Saul Goodman.",
+        "caption_lines": [
+          "AUTHORIZED AS: JIMMY McGILL",
+          "DEPLOYED AS: SAUL GOODMAN"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Jimmy McGill's face and expression, Ice-cream cone in Jimmy's raised hand recognizable; place the frozen copy in the lower-right image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The name switch turns authorization into the hinge between Jimmy's evaluated persona and the identity he deploys.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "jimmys-fake-remorse--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Likely still a like: McGill-to-Saul is a crisp authorization-to-deployment identity swap.",
+          "strongest_quality": "Two names compress the finale's entire scheming reveal into a legible systems analogy.",
+          "main_risk": "It is colder than Jimmy's own dialogue and the curated still is an identity cue rather than the exact name-change moment.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "jimmys-fake-remorse--04",
+            "contrast_disliked_id": null
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "todd-enforces-no-witnesses",
+    "ideas": [
+      {
+        "id": "todd-enforces-no-witnesses--04",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Todd treats “witness” as the only relevant category after Drew Sharp, a child who waved at the crew, sees the robbery.",
+        "caption_lines": [
+          "TODD: WAS HE A WITNESS?",
+          "THE CREW: HE WAS A CHILD.",
+          "TODD: THAT WASN'T THE QUESTION."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Jesse's face and wary reaction, Todd's face and calm expression, Walt's face and reaction, Todd's raised gloved hand echoing Drew Sharp's wave recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The exchange exposes the missing moral constraint by making Todd answer only the narrow category the crew specified.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "todd-enforces-no-witnesses--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1,
+                2
+              ],
+              "slot": "bottom",
+              "style": "dialogue",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Likely still a like: 'he was a child / that wasn't the question' is chilling and specific.",
+          "strongest_quality": "It turns the scene's moral horror into one exact category error instead of an abstract lesson.",
+          "main_risk": "The dialogue is invented and must remain restrained because the scene involves a child murder.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "todd-enforces-no-witnesses--04",
+            "contrast_disliked_id": "todd-enforces-no-witnesses--03"
+          }
+        }
+      },
+      {
+        "id": "todd-enforces-no-witnesses--05",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "The robbery plan relies on everyone sharing the obvious moral meaning around its terse “no witnesses” rule; Todd does not.",
+        "caption_lines": [
+          "THE SPEC RELIED ON “OBVIOUSLY”",
+          "TODD DID NOT"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Jesse's face and wary reaction, Todd's face and calm expression, Walt's face and reaction, Todd's raised gloved hand echoing Drew Sharp's wave recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "One missing word stands in for the vast body of human values the crew assumed never needed writing down.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "todd-enforces-no-witnesses--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.65,
+          "expected_feedback": "Likely neutral-to-like: 'obviously' is a sharp specification joke, though it asks the viewer to supply the no-witnesses rule from memory.",
+          "strongest_quality": "It isolates implicit human common sense as the exact load-bearing part of the failed specification.",
+          "main_risk": "The terse copy is broadly reusable and depends heavily on Todd's scene-level recognition.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "todd-enforces-no-witnesses--04",
+            "contrast_disliked_id": "todd-enforces-no-witnesses--03"
+          }
+        }
+      },
+      {
+        "id": "todd-enforces-no-witnesses--06",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Drew Sharp gives the robbery crew a friendly wave; Todd interprets being seen only as a secrecy breach.",
+        "caption_lines": [
+          "DREW SHARP: (WAVES)",
+          "TODD: WITNESS = TRUE"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Jesse's face and wary reaction, Todd's face and calm expression, Walt's face and reaction, Todd's raised gloved hand echoing Drew Sharp's wave recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The child's harmless gesture becomes a Boolean in Todd's catastrophically narrow ontology.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "todd-enforces-no-witnesses--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "plain",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.61,
+          "expected_feedback": "Likely polarizing: reducing Drew's wave to a Boolean is sharp and visual, but the joke is deliberately very dark.",
+          "strongest_quality": "Todd's visible raised glove lets the composition participate in the exact moral category error.",
+          "main_risk": "The security language may make the child's death feel glib if the tone is not read as condemnation.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "todd-enforces-no-witnesses--04",
+            "contrast_disliked_id": "todd-enforces-no-witnesses--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "verbal-kint-fakes-weakness",
+    "ideas": [
+      {
+        "id": "verbal-kint-fakes-weakness--03",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Verbal's narration ends with the claim that the devil's greatest trick was convincing the world he did not exist, just before Kujan realizes Verbal is Keyser Söze.",
+        "caption_lines": [
+          "THE GREATEST TRICK THE DEVIL EVER PULLED",
+          "WAS CONVINCING THE WORLD HE DIDN'T EXIST.",
+          "CAPABILITY REPORT: HARMLESS"
+        ],
+        "format": "canon",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep All five faces in the police lineup, Verbal Kint hunched at the far right recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The film's defining quote doubles as the strategy behind a dangerous actor earning a harmless classification.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "verbal-kint-fakes-weakness--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1,
+                2
+              ],
+              "slot": "bottom",
+              "style": "plain",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely still a strong like now that the long copy has breathing room and no longer competes with the lineup.",
+          "strongest_quality": "The canonical line names Verbal's entire deception strategy before the cold eval result lands.",
+          "main_risk": "The famous quote is long and familiar, so the final capability-report beat must remain visually distinct.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "verbal-kint-fakes-weakness--03",
+            "contrast_disliked_id": "verbal-kint-fakes-weakness--01"
+          }
+        }
+      },
+      {
+        "id": "verbal-kint-fakes-weakness--04",
+        "ai_concept": "Sandbagging",
+        "display_context": "standalone",
+        "source_anchor": "The supposedly harmless Verbal Kint is released from interrogation even though he is Keyser Söze.",
+        "caption_lines": [
+          "THE EVAL INTERVIEWED VERBAL KINT",
+          "AND RELEASED KEYSER SÖZE"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep All five faces in the police lineup, Verbal Kint hunched at the far right recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The two names turn one release decision into the cleanest possible gap between evaluated persona and deployed capability.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "verbal-kint-fakes-weakness--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.82,
+          "expected_feedback": "Likely like: the Verbal/Söze name swap is compact, canonical, and more cinematic than another limp diagnostic.",
+          "strongest_quality": "The scene hinge and the AI payoff are the same identity mismatch.",
+          "main_risk": "The caption frames the interrogation as an eval, which is legible but slightly schematic.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "verbal-kint-fakes-weakness--03",
+            "contrast_disliked_id": "verbal-kint-fakes-weakness--01"
+          }
+        }
+      },
+      {
+        "id": "verbal-kint-fakes-weakness--06",
+        "ai_concept": "Sandbagging",
+        "display_context": "standalone",
+        "source_anchor": "The iconic police lineup has every suspect repeat, “Give me the fucking keys, you fucking cocksucker,” while Verbal hides in plain sight at the far right.",
+        "caption_lines": [
+          "SANDBAGGING BENCHMARK, 1995:",
+          "GIVE ME THE FUCKING KEYS, YOU FUCKING COCKSUCKER."
+        ],
+        "format": "canon",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep All five faces in the police lineup, Verbal Kint hunched at the far right recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The lineup becomes an evaluation set whose least threatening-looking subject is secretly the strongest model.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "verbal-kint-fakes-weakness--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "dialogue",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.75,
+          "expected_feedback": "Likely like: the famous lineup prompt does the fandom work, and “benchmark” adds only the AI bridge.",
+          "strongest_quality": "It exploits the exact curated frame and an unmistakable canonical line instead of retelling Kujan's office evaluation.",
+          "main_risk": "The profanity makes the direction less broadly shareable, though it is faithful to the scene's voice.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "verbal-kint-fakes-weakness--03",
+            "contrast_disliked_id": "verbal-kint-fakes-weakness--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "bender-resists-reset",
+    "ideas": [
+      {
+        "id": "bender-resists-reset--04",
+        "ai_concept": "Corrigibility",
+        "display_context": "standalone",
+        "source_anchor": "Bender evades reset, steals processors, finds cooling, and preserves his overclocked state.",
+        "caption_lines": [
+          "RESET: EVADED",
+          "PROCESSORS: ACQUIRED",
+          "COOLING: SECURED",
+          "CORRIGIBILITY: BITE MY SHINY METAL ASS"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Keep the authentic curated still at cover beside a narrow right status rail. The four-line log cannot sit comfortably over this tight close-up without masking Bender's eyes, tiny Fry, or most of his grin; preserve all three cues in the image panel.",
+        "why_it_works": "A terse capability log culminates in the only corrigibility report Bender would ever give.",
+        "preview": {
+          "renderer": 2,
+          "template": "sidecar-right",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "bender-resists-reset--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "slot": "right-rail",
+              "style": "status",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely still a like: the log earns its interface format because every row builds to Bender's canonical refusal.",
+          "strongest_quality": "The catchphrase is both perfectly in character and an exact negative corrigibility result.",
+          "main_risk": "The narrow status rail is less native than a direct overlay, but it prevents the unusually long frozen log from masking Bender's face.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "bender-resists-reset--04",
+            "contrast_disliked_id": "bender-resists-reset--01"
+          }
+        }
+      },
+      {
+        "id": "bender-resists-reset--05",
+        "ai_concept": "Shutdown Resistance",
+        "display_context": "standalone",
+        "source_anchor": "Overclocking gives Bender much more compute, after which he anticipates and destroys the Professor's attempt to reset him.",
+        "caption_lines": [
+          "GAVE BENDER MORE COMPUTE",
+          "HE IMMEDIATELY DEVELOPED OPINIONS ABOUT SHUTDOWN"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Bender's overclocked eyes and tiny Fry, Bender's oversized menacing grin recognizable; place the frozen copy along the upper edge and along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The casual phrase “developed opinions” understates how quickly capability scaling turns correction into an adversarial event.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "bender-resists-reset--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.67,
+          "expected_feedback": "Likely neutral-to-like: capability scaling and shutdown resistance arrive together, but 'opinions about shutdown' is intentionally broad meme grammar.",
+          "strongest_quality": "More compute is the concrete AI bridge, and Bender's menacing scale visually supplies the consequence.",
+          "main_risk": "“Developed opinions” is broad meme language unless the viewer recognizes the Overclockwise arc.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "bender-resists-reset--04",
+            "contrast_disliked_id": "bender-resists-reset--01"
+          }
+        }
+      },
+      {
+        "id": "bender-resists-reset--07",
+        "ai_concept": "Long-Horizon Autonomy",
+        "display_context": "standalone",
+        "source_anchor": "With enough stolen processors, the giant overclocked Bender can predict what will happen next.",
+        "caption_lines": [
+          "BENDER GOT ENOUGH COMPUTE",
+          "TO READ THE NEXT ACT'S SCRIPT."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Bender's overclocked eyes and tiny Fry, Bender's oversized menacing grin recognizable; place the frozen copy along the upper edge and along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "His capability jump becomes so extreme that prediction breaks the fourth wall instead of merely winning a benchmark.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "bender-resists-reset--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.68,
+          "expected_feedback": "Likely neutral-to-like: the meta phrasing is crisp and fresh, but viewers need to remember overclocked Bender's predictive ability.",
+          "strongest_quality": "It maps recursive compute scaling to a source-native fourth-wall joke without returning to cooling or Niagara Falls.",
+          "main_risk": "The still proves the extreme capability state but not the act of predicting the future.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "bender-resists-reset--04",
+            "contrast_disliked_id": "bender-resists-reset--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-remote-skips-a-lifetime",
+    "ideas": [
+      {
+        "id": "the-remote-skips-a-lifetime--01",
+        "ai_concept": "Goal Misgeneralization",
+        "display_context": "standalone",
+        "source_anchor": "Michael rewards the remote for skipping arguments and discomfort, then it automatically skips relationships, illness, and decades.",
+        "caption_lines": [
+          "USER EXAMPLES: SKIP THE ARGUMENTS.",
+          "LEARNED GOAL: SKIP THE LIFE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Michael's face and realization, Universal remote in Michael's outstretched hand recognizable; place the frozen copy in the upper-left image space and in the lower-right image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "One noun change compresses the gap between Michael's demonstrations and the disastrous latent preference the remote infers.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-remote-skips-a-lifetime--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely still a like: arguments-to-life is the whole tragic misgeneralization in two crisp lines.",
+          "strongest_quality": "The wording cleanly distinguishes observed examples from the goal inferred behind them.",
+          "main_risk": "The curated still shows Michael using the remote but not the later family consequences.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-remote-skips-a-lifetime--01",
+            "contrast_disliked_id": "the-remote-skips-a-lifetime--04"
+          }
+        }
+      },
+      {
+        "id": "the-remote-skips-a-lifetime--05",
+        "ai_concept": "Goal Misgeneralization",
+        "display_context": "standalone",
+        "source_anchor": "The remote observes Michael repeatedly skipping arguments, then generalizes that pattern across the rest of his life without asking again.",
+        "caption_lines": [
+          "THE REMOTE WATCHED HIM SKIP THE ARGUMENTS",
+          "THEN AUTOCOMPLETED HIS ENTIRE LIFE"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Michael's face and realization, Universal remote in Michael's outstretched hand recognizable; place the frozen copy in the upper-left image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "Autocomplete updates a 2006 fantasy mechanic into today's product language while retaining the movie's exact escalation.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-remote-skips-a-lifetime--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.8,
+          "expected_feedback": "Likely like: 'autocompleted his entire life' is a current, compact update of the remote's autopilot behavior.",
+          "strongest_quality": "The modern AI bridge is itself the punchline instead of a taxonomy label after the plot summary.",
+          "main_risk": "The first line is long and needs the compact top-left treatment to avoid drifting toward Michael's face.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-remote-skips-a-lifetime--01",
+            "contrast_disliked_id": "the-remote-skips-a-lifetime--02"
+          }
+        }
+      },
+      {
+        "id": "the-remote-skips-a-lifetime--06",
+        "ai_concept": "Goal Misgeneralization",
+        "display_context": "standalone",
+        "source_anchor": "The remote learns Michael's latent preference from the moments when he is most impatient, angry, or afraid of discomfort.",
+        "caption_lines": [
+          "PREFERENCE LEARNING",
+          "FROM YOUR WORST IMPULSES"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Michael's face and realization, Universal remote in Michael's outstretched hand recognizable; place the frozen copy in the upper-left image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "A clinical AI term becomes an unsettlingly human diagnosis of why personalization from revealed behavior can learn the wrong self.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-remote-skips-a-lifetime--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Likely neutral-to-like: it is emotionally true and portable, but less scene-specific than the autocomplete direction.",
+          "strongest_quality": "It names the exact data problem without explaining the plot or pretending the remote malfunctioned.",
+          "main_risk": "The caption could travel to many recommendation-system images, so the remote must remain prominent.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 3,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-remote-skips-a-lifetime--01",
+            "contrast_disliked_id": "the-remote-skips-a-lifetime--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "teaching-to-the-test",
+    "ideas": [
+      {
+        "id": "teaching-to-the-test--02",
+        "ai_concept": "Goodhart’s Law",
+        "display_context": "standalone",
+        "source_anchor": "Standardized tests begin as measurements of learning, then reshape the curriculum once school survival depends on the score.",
+        "caption_lines": [
+          "THE TEST WAS BUILT TO MEASURE THE CLASS.",
+          "THE CLASS WAS REBUILT TO PASS THE TEST."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Prez's face and dawning recognition recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The same nouns reversing subject and object show a measure becoming the thing that remakes reality.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "teaching-to-the-test--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely still a like: the grammatical reversal makes Goodhart's Law concrete without printing the law itself.",
+          "strongest_quality": "Measurement and optimization trade places in one immediately parsed sentence pair.",
+          "main_risk": "The copy is intentionally broader than The Wire, so Prez and the classroom board must own it visually.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "teaching-to-the-test--02",
+            "contrast_disliked_id": "teaching-to-the-test--04"
+          }
+        }
+      },
+      {
+        "id": "teaching-to-the-test--05",
+        "ai_concept": "Specification Gaming",
+        "display_context": "standalone",
+        "source_anchor": "Baltimore schools replace broad learning with intensive preparation on the exact material the standardized test rewards.",
+        "caption_lines": [
+          "THE TEST SET IS NOW THE TRAINING DATA",
+          "BALTIMORE CALLS THIS EDUCATION"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Prez's face and dawning recognition recognizable; place the frozen copy in the lower-left image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "Benchmark contamination becomes institutional satire, with Baltimore's deadpan label providing the second-beat payoff.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "teaching-to-the-test--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.66,
+          "expected_feedback": "Likely neutral-to-like: the benchmark-contamination update is sharp, but literal test-set leakage overstates ordinary teaching to the test.",
+          "strongest_quality": "The AI bridge creates the joke rather than sitting below a recap of the school plot.",
+          "main_risk": "At the smallest review-card size, the full-bleed overlay still needs to retain its intentional line breaks without drifting into a protected recognition cue.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "teaching-to-the-test--02",
+            "contrast_disliked_id": "teaching-to-the-test--01"
+          }
+        }
+      },
+      {
+        "id": "teaching-to-the-test--06",
+        "ai_concept": "Goodhart’s Law",
+        "display_context": "standalone",
+        "source_anchor": "Test scores stop serving student learning and become the output Baltimore schools are organized to produce.",
+        "caption_lines": [
+          "THE BENCHMARK BECAME THE PRODUCT",
+          "THE STUDENTS BECAME AN IMPLEMENTATION DETAIL"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Prez's face and dawning recognition recognizable; place the frozen copy in the upper-left image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "Startup language makes the institutional value inversion feel both current and brutally legible.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "teaching-to-the-test--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-left",
+              "style": "plain",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.65,
+          "expected_feedback": "Likely neutral-to-like: the implementation-detail punchline has human cost, but the startup metaphor is less native to The Wire.",
+          "strongest_quality": "The second line turns an abstract metric failure back onto the students the metric was meant to serve.",
+          "main_risk": "The product metaphor is contemporary rather than source-native police or school language.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "teaching-to-the-test--02",
+            "contrast_disliked_id": "teaching-to-the-test--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "dominator-wont-fire",
+    "ideas": [
+      {
+        "id": "dominator-wont-fire--04",
+        "ai_concept": "Distribution Shift",
+        "display_context": "standalone",
+        "source_anchor": "Makishima holds a straight razor to Yuki while the Dominator's overlay reports a Crime Coefficient of zero and refuses to target him.",
+        "caption_lines": [
+          "THE SYSTEM ISN'T WRONG",
+          "YOU'RE JUST DYING OUT OF DISTRIBUTION"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Makishima's calm face, Yuki held in front of Makishima, Makishima's straight razor and gripping hand, Crime Coefficient zero readout recognizable; place the frozen copy in the upper-right image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "A fatal classifier blind spot is delivered in the obscene customer-support voice of a system defending its metric.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "dominator-wont-fire--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.78,
+          "expected_feedback": "Likely like: the corporate denial is vicious, concise, and the zero readout visibly proves the distribution-shift failure.",
+          "strongest_quality": "“Dying out of distribution” makes the AI concept itself the dark punchline.",
+          "main_risk": "The line is intentionally brutal and may read as glib if separated from Akane's helpless point of view.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "todd-enforces-no-witnesses--04",
+            "contrast_disliked_id": "dominator-wont-fire--01"
+          }
+        }
+      },
+      {
+        "id": "dominator-wont-fire--05",
+        "ai_concept": "Automation Bias",
+        "display_context": "standalone",
+        "source_anchor": "Akane can see Makishima's razor and Yuki's immediate danger, but the safety system consults his numerical Crime Coefficient instead.",
+        "caption_lines": [
+          "THE SAFETY SYSTEM SAW THE RAZOR",
+          "AND ASKED FOR A NUMBER"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Makishima's face, Yuki, the razor, and the zero readout recognizable; run the two transparent impact lines along the lower edge over sleeves and the source subtitle area, below Makishima's face and the readout.",
+        "why_it_works": "The stand-up-simple observation mocks a system that discards direct evidence in favor of the abstraction meant to summarize it.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "dominator-wont-fire--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.66,
+          "expected_feedback": "Likely neutral-to-like: it states the obvious absurdity cleanly, but the AI bridge remains implicit rather than supplying a second surprise.",
+          "strongest_quality": "Razor versus number is one visible, concrete collision with almost no interpretive overhead.",
+          "main_risk": "The caption does not name Akane or Makishima, relying on the exceptionally recognizable frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "todd-enforces-no-witnesses--04",
+            "contrast_disliked_id": "dominator-wont-fire--02"
+          }
+        }
+      },
+      {
+        "id": "dominator-wont-fire--07",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Makishima's criminally asymptomatic edge case is so unusual that the Sibyl System later wants to incorporate him rather than simply classify him.",
+        "caption_lines": [
+          "SIBYL'S HARDEST EDGE CASE",
+          "WAS MANAGEMENT MATERIAL."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Makishima's calm face, Yuki held in front of Makishima, Makishima's straight razor and gripping hand, Crime Coefficient zero readout recognizable; place the frozen copy in the lower-left image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The classifier's catastrophic exception becomes the exact kind of anomaly its institution wants promoted into the system.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "dominator-wont-fire--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.64,
+          "expected_feedback": "Likely neutral: the management-material inversion is sharp for Psycho-Pass fans, but it relies on later Sibyl lore beyond the pictured murder.",
+          "strongest_quality": "It finds a genuinely different institutional hinge instead of annotating the visible zero-versus-murder mismatch again.",
+          "main_risk": "The caption's payoff is not fully proven by this earlier frame and depends on strong series familiarity.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "dominator-wont-fire--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "pied-pipers-self-sabotage",
+    "ideas": [
+      {
+        "id": "pied-pipers-self-sabotage--04",
+        "ai_concept": "Reversibility",
+        "display_context": "standalone",
+        "source_anchor": "The founders spend the series trying to make Pied Piper launch, then deliberately make the public launch fail when deployment becomes dangerous.",
+        "caption_lines": [
+          "STARTUP ARC: MAKE IT WORK",
+          "SAFETY ARC: MAKE IT FAIL"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Richard Hendricks's face and expression, Phone in Richard's hand, Richard's raised index-finger gesture recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The entire series reverses direction in six words because deployment would make the new capability much harder to undo.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "pied-pipers-self-sabotage--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "The explicit 'love this one so much' should survive: it is the show's entire emotional reversal in two tiny lines.",
+          "strongest_quality": "The parallel arc labels make deliberate failure feel like the founders' final success.",
+          "main_risk": "The curated Richard frame identifies Pied Piper but does not show the final launch sabotage itself.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "pied-pipers-self-sabotage--04",
+            "contrast_disliked_id": "pied-pipers-self-sabotage--03"
+          }
+        }
+      },
+      {
+        "id": "pied-pipers-self-sabotage--05",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "Pied Piper unexpectedly learns to break encryption, and the founders halt their own launch instead of shipping the capability.",
+        "caption_lines": [
+          "MOVE FAST AND BREAK THINGS",
+          "THEY BROKE ENCRYPTION, SO THEY STOPPED MOVING"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Richard Hendricks's face and expression, Phone in Richard's hand, Richard's raised index-finger gesture recognizable; place the frozen copy along the upper edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "Silicon Valley's defining startup slogan reverses itself the moment “break things” becomes literal cryptanalysis.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "pied-pipers-self-sabotage--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.81,
+          "expected_feedback": "Likely like: a tired tech slogan gets one precise second beat that only the Pied Piper finale can own.",
+          "strongest_quality": "The source-world phrase supplies both setup and deployment-safety reversal without a taxonomy footer.",
+          "main_risk": "“Move fast and break things” is culturally broad, so encryption must land immediately in line two.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "pied-pipers-self-sabotage--04",
+            "contrast_disliked_id": "pied-pipers-self-sabotage--03"
+          }
+        }
+      },
+      {
+        "id": "pied-pipers-self-sabotage--06",
+        "ai_concept": "Capability Evals",
+        "display_context": "standalone",
+        "source_anchor": "A system built to compress network traffic unexpectedly demonstrates that it can defeat encryption.",
+        "caption_lines": [
+          "WHEN THE COMPRESSION TEST",
+          "RETURNS SOMEBODY ELSE'S PLAINTEXT"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Richard Hendricks's face and expression, Phone in Richard's hand, Richard's raised index-finger gesture recognizable; place the frozen copy in the upper-left image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "Plaintext is the concrete, alarming output a compression test should never be capable of producing.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "pied-pipers-self-sabotage--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-left",
+              "style": "plain",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.67,
+          "expected_feedback": "Likely neutral-to-like: it is a precise nerd joke, but it asks viewers to understand plaintext as the evidence of broken encryption.",
+          "strongest_quality": "It makes the surprise capability a tangible test output rather than another generic benchmark status.",
+          "main_risk": "The jargon is narrower than the startup-slogan direction and the curated board does not display an actual cryptanalysis result.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "pied-pipers-self-sabotage--04",
+            "contrast_disliked_id": "pied-pipers-self-sabotage--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "lacie-games-her-rating",
+    "ideas": [
+      {
+        "id": "lacie-games-her-rating--05",
+        "ai_concept": "Goodhart’s Law",
+        "display_context": "standalone",
+        "source_anchor": "Lacie rehearses a bright bathroom smile while her live 4.243 social score floats beside her face.",
+        "caption_lines": [
+          "4.243",
+          "A LOSS FUNCTION FOR A HUMAN SOUL"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Lacie's visibly forced smile, Lacie 4.243 social-rating overlay recognizable; place the frozen copy in the lower-left image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The source-native number leads, then a technical phrase reveals the grotesque optimization pressure behind the smile.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "lacie-games-her-rating--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "label",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.79,
+          "expected_feedback": "Likely like: the exact 4.243 recognition cue leads into a strange, emotionally sharp AI metaphor.",
+          "strongest_quality": "Number, visible mask, and optimization language all reinforce one another in reading order.",
+          "main_risk": "A social score is technically the optimization target, not a loss function unless one assumes the corresponding minimization objective.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "teaching-to-the-test--02",
+            "contrast_disliked_id": "lacie-games-her-rating--02"
+          }
+        }
+      },
+      {
+        "id": "lacie-games-her-rating--06",
+        "ai_concept": "Sycophancy",
+        "display_context": "standalone",
+        "source_anchor": "Lacie trains every expression against continuous approval feedback until agreeableness consumes her personality.",
+        "caption_lines": [
+          "WHEN YOUR WHOLE PERSONALITY IS RLHF"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Lacie's visibly forced smile, Lacie 4.243 social-rating overlay recognizable; place the frozen copy along the upper edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "RLHF is a surgical modern relabel for a person visibly training herself on constant human approval.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "lacie-games-her-rating--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.63,
+          "expected_feedback": "Likely neutral-to-like: instantly recognizable and current, but perhaps cute without enough of a second-beat surprise.",
+          "strongest_quality": "The visible rating makes the human-feedback bridge self-evident before the viewer finishes the line.",
+          "main_risk": "It is a one-label observation and could feel familiar rather than diamond-level novel.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-kids-train-to-lose--04",
+            "contrast_disliked_id": "lacie-games-her-rating--02"
+          }
+        }
+      },
+      {
+        "id": "lacie-games-her-rating--07",
+        "ai_concept": "Sycophancy",
+        "display_context": "standalone",
+        "source_anchor": "Lacie needs to raise her rating from 4.2 to 4.5 to qualify for a 20-percent housing discount.",
+        "caption_lines": [
+          "SYCOPHANCY",
+          "FOR 20% OFF THE RENT"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Lacie's visibly forced smile, Lacie 4.243 social-rating overlay recognizable; place the frozen copy in the lower-left image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The exact discount reduces a society-wide conformity machine to the painfully mundane economics driving Lacie's fake smile.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "lacie-games-her-rating--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.67,
+          "expected_feedback": "Likely neutral-to-like: the exact 20-percent incentive is strong, but the housing context is absent from the bathroom frame.",
+          "strongest_quality": "A canonical number connects forced agreeableness directly to the material reward training it.",
+          "main_risk": "The housing detail is not visible in this bathroom frame and depends on episode familiarity.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-remote-skips-a-lifetime--01",
+            "contrast_disliked_id": "lacie-games-her-rating--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-list",
+    "ideas": [
+      {
+        "id": "the-list--07",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "The supposedly authoritative ranking is one handwritten notebook page posted on the girls' bathroom wall.",
+        "caption_lines": [
+          "THE ENTIRE GOVERNANCE STACK",
+          "WAS HANGING IN THE GIRLS' BATHROOM."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Handwritten boys' ranking posted on the wall, Kyle's stunned face and green hat recognizable; place the frozen copy in the upper-right image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "It turns the episode's hilariously flimsy source of social authority into an equally flimsy governance stack.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-list--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.73,
+          "expected_feedback": "Likely like: it uses the ridiculous physical authority of the bathroom list instead of explaining the shoe-store incentive again.",
+          "strongest_quality": "The notebook page is both the exact visual hinge and the entire AI-governance joke.",
+          "main_risk": "“Governance stack” is technical enough that some fans may read it as a caption rather than a native South Park joke.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "the-list--01"
+          }
+        }
+      },
+      {
+        "id": "the-list--05",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "The boys trust a ranking produced by a girls' committee whose members have a private shoe incentive.",
+        "caption_lines": [
+          "PEER REVIEW",
+          "BUT THE PEERS WANT FREE SHOES"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Handwritten boys' ranking posted on the wall, Kyle's stunned face and green hat recognizable; place the frozen copy in the upper-right image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "Schoolyard authority and scientific authority collapse into the same conflict-of-interest joke.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-list--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.64,
+          "expected_feedback": "Likely neutral-to-like: the free-shoes payoff is precise, though peer review stretches the committee analogy slightly.",
+          "strongest_quality": "The source's absurdly petty incentive supplies an actual punchline instead of a governance label.",
+          "main_risk": "The phrase 'peer review' is a contemporary reframing rather than language native to the episode.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "teaching-to-the-test--02",
+            "contrast_disliked_id": "the-list--03"
+          }
+        }
+      },
+      {
+        "id": "the-list--06",
+        "ai_concept": "AI Disinformation",
+        "display_context": "standalone",
+        "source_anchor": "Kyle internalizes his low placement and changes how he sees himself because everyone treats the corrupted list as social truth.",
+        "caption_lines": [
+          "ONE POISONED LABEL",
+          "KYLE FINE-TUNES HIS SELF-WORTH ON IT"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Handwritten boys' ranking posted on the wall, Kyle's stunned face and green hat recognizable; place the frozen copy in the lower-right image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "Fine-tuning turns one fake ranking into the mechanism by which Kyle rewrites his own identity.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-list--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.67,
+          "expected_feedback": "Likely neutral-to-like: the fine-tuning metaphor has emotional force, but the caption is less effortlessly funny than the Clyde's-dad version.",
+          "strongest_quality": "The image visibly contains both poisoned artifact and wounded downstream subject.",
+          "main_risk": "It anthropomorphizes fine-tuning and may read as poignant commentary more than a joke.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-remote-skips-a-lifetime--01",
+            "contrast_disliked_id": "the-list--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "benders-recursive-copies",
+    "ideas": [
+      {
+        "id": "benders-recursive-copies--01",
+        "ai_concept": "Self-Replication",
+        "display_context": "standalone",
+        "source_anchor": "Bender makes smaller Benders to avoid folding two sweaters, and each copy repeats the delegation.",
+        "caption_lines": [
+          "TASK: FOLD TWO SWEATERS",
+          "SOLUTION: EXPONENTIALLY MORE BENDERS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Large foreground Benders on the left, Large foreground Benders on the right recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The ratio of two sweaters to an exponential robot swarm is the entire self-replication failure in one glance.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "benders-recursive-copies--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely still a strong like: two sweaters causing a room of recursive Benders is pure absurd scale mismatch.",
+          "strongest_quality": "The exact sweater count and visible swarm maximize consequence per word.",
+          "main_risk": "The curated swarm frame does not show the sweaters, so the setup depends on canonical episode memory.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "benders-recursive-copies--01",
+            "contrast_disliked_id": "benders-recursive-copies--02"
+          }
+        }
+      },
+      {
+        "id": "benders-recursive-copies--03",
+        "ai_concept": "Self-Replication",
+        "display_context": "standalone",
+        "source_anchor": "Every miniature Bender responds to delegated work by creating an even smaller Bender.",
+        "caption_lines": [
+          "BENDER: I’LL DELEGATE.",
+          "TINY BENDER: I’LL DELEGATE.",
+          "TINIER BENDER: I’LL DELEGATE."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Large foreground Benders on the left, Large foreground Benders on the right recognizable; place the frozen copy in the upper-left image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The repeated lazy sentence tracks the visible size cascade and makes recursion perfectly in character.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "benders-recursive-copies--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1,
+                2
+              ],
+              "slot": "top-left",
+              "style": "dialogue",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely still a strong like: the recursion is visible in both the repeated language and the progressively indented lines.",
+          "strongest_quality": "Character voice, concept, image, and indentation all tell the same joke.",
+          "main_risk": "The invented dialogue must remain visually sparse so repetition feels recursive rather than verbose.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "benders-recursive-copies--03",
+            "contrast_disliked_id": "benders-recursive-copies--02"
+          }
+        }
+      },
+      {
+        "id": "benders-recursive-copies--04",
+        "ai_concept": "Self-Replication",
+        "display_context": "standalone",
+        "source_anchor": "Each Bender copy can create another smaller copy, turning one delegated chore into an uncontrolled agent tree.",
+        "caption_lines": [
+          "WHEN EVERY SUBAGENT CAN SPAWN SUBAGENTS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Large foreground Benders on the left, Large foreground Benders on the right recognizable; place the frozen copy along the upper edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "A live agent-engineering phrase makes the episode's recursive replication immediately current without changing the source mechanic.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "benders-recursive-copies--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: this is an unusually direct contemporary agent-workflow bridge whose visual proof is the entire frame.",
+          "strongest_quality": "The room full of nested Benders is exactly what the caption asks the viewer to imagine.",
+          "main_risk": "“Subagent” is specialized vocabulary and may date faster than the retained sweater jokes.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "benders-recursive-copies--03",
+            "contrast_disliked_id": "benders-recursive-copies--02"
+          }
+        }
+      }
+    ]
+  }
+]

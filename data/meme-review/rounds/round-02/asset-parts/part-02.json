@@ -1,0 +1,522 @@
+[
+  {
+    "id": "cartman-as-awesom-o--curated",
+    "scenario_slug": "cartman-as-awesom-o",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12480b1b907e681a413723b/gallery-b04fe26e347f8020d5d816a43afdf9efc1c625a2adf213f425453bd22dfc396e.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from South Park illustrating Cartman as AWESOM-O",
+    "blur_data_url": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADwAQCdASoIAAUAA8BgJbACdEf/gbabFwAA/NhmIr+rqUN+qV3lBitBJ9ucX+fGMPMvaOeWdarf2JMAAAA=",
+    "content_hash": "b04fe26e347f8020d5d816a43afdf9efc1c625a2adf213f425453bd22dfc396e",
+    "protected_regions": [
+      {
+        "id": "cartman-as-awesom-o--butters-face",
+        "label": "Butters's trusting face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [7, 14, 29, 43]
+      },
+      {
+        "id": "cartman-as-awesom-o--butters-pose",
+        "label": "Butters's clasped hands and seated pose",
+        "kind": "gesture",
+        "priority": "soft",
+        "source_rect": [9, 50, 28, 47]
+      },
+      {
+        "id": "cartman-as-awesom-o--robot-face",
+        "label": "A.W.E.S.O.M.-O cardboard face and indicator lights",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [44, 8, 45, 45]
+      },
+      {
+        "id": "cartman-as-awesom-o--robot-label",
+        "label": "A.W.E.S.O.M.-O chest label and cardboard body",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [40, 50, 54, 46]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "butter-passing-robot--curated",
+    "scenario_slug": "butter-passing-robot",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12480b99a03dba9a5356719/gallery-aeaf3034c70087b5ab3a48827c7fe0ca558f919aa36b701a8b1aa991a062cc9c.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Rick and Morty illustrating Butter-Passing Robot",
+    "blur_data_url": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADQAQCdASoIAAUAA8BgJbACdAEDfQBP8AD+7dR4rW9ESIjnCw8ZYnvCOyo8W/JJt+aElbEAf0kAAA==",
+    "content_hash": "aeaf3034c70087b5ab3a48827c7fe0ca558f919aa36b701a8b1aa991a062cc9c",
+    "protected_regions": [
+      {
+        "id": "butter-passing-robot--rick-profile",
+        "label": "Rick's foreground profile and shoulder",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 0, 44, 99]
+      },
+      {
+        "id": "butter-passing-robot--robot",
+        "label": "Butter robot's eye, body, arms, and slumped stance",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [57, 27, 24, 67]
+      },
+      {
+        "id": "butter-passing-robot--butter",
+        "label": "Stick of butter and dish",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [84, 25, 16, 42]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "charlie-hides-the-violations--curated",
+    "scenario_slug": "charlie-hides-the-violations",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12480bf85e4f5601796d12a/gallery-7c0ba6cf344fc29c4fedf8401021b47bab48866e66cd49335bb2fe930c47adad.webp",
+    "width": 1600,
+    "height": 898,
+    "alt": "Still from It’s Always Sunny in Philadelphia illustrating Charlie Hides the Violations",
+    "blur_data_url": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoIAAQAA8BgJQBOgB8xSdqQAP7RfpyVDh01nYpPHh8cp3B8SriAAA==",
+    "content_hash": "7c0ba6cf344fc29c4fedf8401021b47bab48866e66cd49335bb2fe930c47adad",
+    "protected_regions": [
+      {
+        "id": "charlie-hides-the-violations--charlie-face",
+        "label": "Charlie's alarmed face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [29, 0, 32, 61]
+      },
+      {
+        "id": "charlie-hides-the-violations--charlie-body",
+        "label": "Charlie's jacket and shirt",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [17, 52, 47, 48]
+      },
+      {
+        "id": "charlie-hides-the-violations--chicken",
+        "label": "Chicken immediately behind Charlie",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [54, 22, 17, 35]
+      },
+      {
+        "id": "charlie-hides-the-violations--raised-hand",
+        "label": "Charlie's raised hand and handheld object",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [61, 43, 17, 55]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "keep-summer-safe--curated",
+    "scenario_slug": "keep-summer-safe",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12480cc92d5c8f2f2e3a7fa/gallery-157e43bb33361c6ce555e298d82d612bd36276e17e3dc8676ea167f3e96caa3b.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from Rick and Morty illustrating Keep Summer Safe",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAABQAQCdASoIAAUAA8BgJZwABAAAAP7kLie5Efvf/7Flkyl20DZ993gFwAA=",
+    "content_hash": "157e43bb33361c6ce555e298d82d612bd36276e17e3dc8676ea167f3e96caa3b",
+    "protected_regions": [
+      {
+        "id": "keep-summer-safe--summer-face",
+        "label": "Summer's frightened face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [35, 10, 17, 31]
+      },
+      {
+        "id": "keep-summer-safe--summer-pose",
+        "label": "Summer's curled defensive posture",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [32, 34, 26, 39]
+      },
+      {
+        "id": "keep-summer-safe--security-light",
+        "label": "Car security light on the dashboard",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [15, 60, 16, 25]
+      },
+      {
+        "id": "keep-summer-safe--dashboard",
+        "label": "Car windshield rim and dashboard",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 61, 100, 39]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "walt-eliminates-gale--curated",
+    "scenario_slug": "walt-eliminates-gale",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12480cea3ffce1cfb84e825/gallery-5c239dbe3859f73dace3beb42dd08102484c84c1487a6771ff7f12edea349d1a.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Breaking Bad illustrating Walt Eliminates Gale",
+    "blur_data_url": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADQAQCdASoIAAUAA8BgJZQCdAD0PzmG0AD+5uNNvOrr8tANhp7lwccPF67dg7Yv7gAAAA==",
+    "content_hash": "5c239dbe3859f73dace3beb42dd08102484c84c1487a6771ff7f12edea349d1a",
+    "protected_regions": [
+      {
+        "id": "walt-eliminates-gale--mike-face",
+        "label": "Mike's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [7, 0, 38, 70]
+      },
+      {
+        "id": "walt-eliminates-gale--phone",
+        "label": "Mike's phone and gripping hand",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [38, 22, 22, 56]
+      },
+      {
+        "id": "walt-eliminates-gale--walt-face",
+        "label": "Walt's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [61, 1, 38, 73]
+      },
+      {
+        "id": "walt-eliminates-gale--gun",
+        "label": "Walt's aimed handgun",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [34, 62, 31, 38]
+      },
+      {
+        "id": "walt-eliminates-gale--series-mark",
+        "label": "Breaking Bad title mark",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [4, 75, 26, 24]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "mickeys-runaway-brooms--curated",
+    "scenario_slug": "mickeys-runaway-brooms",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12480e58968d3b0a92eb77e/gallery-3e4fa6f7bfddd29786e861edf1e1f5719a5855e962570413e2a478bd8dbb9ed4.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Fantasia illustrating Mickey’s Runaway Brooms",
+    "blur_data_url": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoIAAUAA8BgJZQAAwFrjjEAAP7tJ6hs/lSPbVd0BbIQd3L9iQwAAA==",
+    "content_hash": "3e4fa6f7bfddd29786e861edf1e1f5719a5855e962570413e2a478bd8dbb9ed4",
+    "protected_regions": [
+      {
+        "id": "mickeys-runaway-brooms--left-broom",
+        "label": "Left lead broom, face, and bucket",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [17, 10, 20, 50]
+      },
+      {
+        "id": "mickeys-runaway-brooms--center-broom",
+        "label": "Center lead broom, face, and bucket",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [42, 7, 21, 63]
+      },
+      {
+        "id": "mickeys-runaway-brooms--broom-army",
+        "label": "Receding line of replicated brooms and buckets",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [60, 28, 34, 64]
+      },
+      {
+        "id": "mickeys-runaway-brooms--basin",
+        "label": "Overflowing stone basin",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [6, 54, 54, 46]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "randy-games-eligibility--curated",
+    "scenario_slug": "randy-games-eligibility",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12480f58d1fec69fcad21a3/gallery-aa3f7acc11f7e6747432da41e06aaf06ccb3f6bbc07a8fdbcf1285e48440c8bf.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from South Park illustrating Randy Games Eligibility",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoIAAUAA8BgJYwC7AD5WRFkAPYNa2GXtf7bmPT99c/KXgxm/B1ENUmJwAA=",
+    "content_hash": "aa3f7acc11f7e6747432da41e06aaf06ccb3f6bbc07a8fdbcf1285e48440c8bf",
+    "protected_regions": [
+      {
+        "id": "randy-games-eligibility--sharon-face",
+        "label": "Sharon's horrified face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [4, 7, 18, 36]
+      },
+      {
+        "id": "randy-games-eligibility--shelley",
+        "label": "Shelley's face and reaction",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [11, 45, 15, 34]
+      },
+      {
+        "id": "randy-games-eligibility--randy-face",
+        "label": "Randy's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [61, 3, 19, 42]
+      },
+      {
+        "id": "randy-games-eligibility--randy-body",
+        "label": "Randy pushing the wheelbarrow",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [61, 34, 38, 64]
+      },
+      {
+        "id": "randy-games-eligibility--wheelbarrow",
+        "label": "Wheelbarrow and enlarged testicles",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [34, 47, 45, 53]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "helena-passes-as-helly--curated",
+    "scenario_slug": "helena-passes-as-helly",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481058c6ee91c4d354fdf/gallery-aaa2f91ee76374197720cab88d39a2187bc3f6971198e3699bca921bbc5172c8.webp",
+    "width": 1200,
+    "height": 676,
+    "alt": "Still from Severance illustrating Helena Passes as Helly",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoIAAUAA8BgJQBOgB6SuDaAAP3ChKsgJyOWbmfCcfVUmB3fqCgP6uTpwAA=",
+    "content_hash": "aaa2f91ee76374197720cab88d39a2187bc3f6971198e3699bca921bbc5172c8",
+    "protected_regions": [
+      {
+        "id": "helena-passes-as-helly--helena-face",
+        "label": "Helena's face and half-smile",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [49, 15, 29, 48]
+      },
+      {
+        "id": "helena-passes-as-helly--helena-body",
+        "label": "Helena framed between the icy trees",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [40, 55, 48, 45]
+      },
+      {
+        "id": "helena-passes-as-helly--irving",
+        "label": "Irving watching from behind Helena",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [9, 15, 20, 52]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "ava-games-the-test--curated",
+    "scenario_slug": "ava-games-the-test",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f124810c9863e2e20d021c42/gallery-4797183bee9b74703fdeeb8aca61d41f7a5e1aa1f9515cb78ae61ba0ebd0ddf7.webp",
+    "width": 1920,
+    "height": 1079,
+    "alt": "Still from Ex Machina illustrating Ava Games the Test",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAQAA8BgJZQCdAD0gbboAPa8GphAgpCZG1NWvputSTLrIAA=",
+    "content_hash": "4797183bee9b74703fdeeb8aca61d41f7a5e1aa1f9515cb78ae61ba0ebd0ddf7",
+    "protected_regions": [
+      {
+        "id": "ava-games-the-test--ava-face",
+        "label": "Ava's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [45, 11, 22, 44]
+      },
+      {
+        "id": "ava-games-the-test--mechanical-head",
+        "label": "Ava's exposed mechanical skull and neck",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [33, 8, 34, 77]
+      },
+      {
+        "id": "ava-games-the-test--face-mask",
+        "label": "Human face mask in Ava's hand",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [68, 2, 25, 55]
+      },
+      {
+        "id": "ava-games-the-test--hand",
+        "label": "Ava touching the face mask",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [70, 31, 13, 45]
+      },
+      {
+        "id": "ava-games-the-test--caleb",
+        "label": "Caleb in the distant corridor",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [21, 28, 10, 42]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-wolfie-test--curated",
+    "scenario_slug": "the-wolfie-test",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f124810db7b1cdd584a6066a/gallery-576e1ff0aa08f5b91c19e36052b6f21f8da018f1ef85d2f1524a21dd10c3b938.webp",
+    "width": 1280,
+    "height": 786,
+    "alt": "Still from Terminator 2: Judgment Day illustrating The Wolfie Test",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAUAA8BgJYwCdAD0eqnsAP7xbhKMH4txRZYfOYob9YwQAAA=",
+    "content_hash": "576e1ff0aa08f5b91c19e36052b6f21f8da018f1ef85d2f1524a21dd10c3b938",
+    "protected_regions": [
+      {
+        "id": "the-wolfie-test--t800-face",
+        "label": "T-800's face and sunglasses",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [7, 4, 43, 66]
+      },
+      {
+        "id": "the-wolfie-test--john-face",
+        "label": "John Connor's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [62, 20, 31, 56]
+      },
+      {
+        "id": "the-wolfie-test--receiver",
+        "label": "Telephone receiver and T-800's hand",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [40, 21, 24, 58]
+      },
+      {
+        "id": "the-wolfie-test--cord",
+        "label": "Telephone cord",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [40, 65, 20, 35]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "rick-feeds-the-brainalyzer-a-virus--curated",
+    "scenario_slug": "rick-feeds-the-brainalyzer-a-virus",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f124810dbb93c31aeee76306/gallery-659fde5550735d16946f75565a873d6ba3f789290a4b6e49a08cdb88d8002dc9.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Rick and Morty illustrating Rick Feeds the Brainalyzer a Virus",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoIAAUAA8BgJQBOgCHgifogAP6arGh9wTyhO8Apa9yXHy2t8DnoJuFzAAA=",
+    "content_hash": "659fde5550735d16946f75565a873d6ba3f789290a4b6e49a08cdb88d8002dc9",
+    "protected_regions": [
+      {
+        "id": "rick-feeds-the-brainalyzer-a-virus--cornvelious-face",
+        "label": "Cornvelious Daniel's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [11, 17, 22, 38]
+      },
+      {
+        "id": "rick-feeds-the-brainalyzer-a-virus--cornvelious-body",
+        "label": "Cornvelious Daniel seated in the booth",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 45, 34, 55]
+      },
+      {
+        "id": "rick-feeds-the-brainalyzer-a-virus--rick-face",
+        "label": "Rick's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [78, 18, 18, 35]
+      },
+      {
+        "id": "rick-feeds-the-brainalyzer-a-virus--rick-body",
+        "label": "Rick seated in the booth",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [64, 35, 34, 65]
+      },
+      {
+        "id": "rick-feeds-the-brainalyzer-a-virus--pointing",
+        "label": "Rick's pointing gesture toward Cornvelious",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [43, 39, 21, 28]
+      },
+      {
+        "id": "rick-feeds-the-brainalyzer-a-virus--shoneys-table",
+        "label": "Shoney's table, mugs, and diner-memory props",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [22, 55, 64, 45]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-helmets-fool-the-dominators--curated",
+    "scenario_slug": "the-helmets-fool-the-dominators",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f1248123afeedb7235daf826/gallery-581bdcb36eb1373f84673a72a472bc700658b3655fa15e965e6c3b40410f9114.webp",
+    "width": 1273,
+    "height": 714,
+    "alt": "Still from Psycho-Pass illustrating The Helmets Fool the Dominators",
+    "blur_data_url": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAADQAQCdASoIAAQAA8BgJYwCsAD0j1lAOAD+5aQG126nlx8wT3gjIAAA",
+    "content_hash": "581bdcb36eb1373f84673a72a472bc700658b3655fa15e965e6c3b40410f9114",
+    "protected_regions": [
+      {
+        "id": "the-helmets-fool-the-dominators--left-helmet",
+        "label": "Partially cropped left attacker helmet",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 25, 16, 42]
+      },
+      {
+        "id": "the-helmets-fool-the-dominators--rear-helmet",
+        "label": "Rear attacker's helmet visor",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [24, 34, 21, 35]
+      },
+      {
+        "id": "the-helmets-fool-the-dominators--center-helmet",
+        "label": "Center attacker's helmet visor",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [43, 9, 28, 56]
+      },
+      {
+        "id": "the-helmets-fool-the-dominators--right-helmet",
+        "label": "Right attacker's helmet visor",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [76, 27, 22, 43]
+      },
+      {
+        "id": "the-helmets-fool-the-dominators--pipe",
+        "label": "Center attacker's metal pipe and hands",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [13, 67, 67, 33]
+      }
+    ],
+    "annotation_status": "complete"
+  }
+]

@@ -1,0 +1,495 @@
+{
+  "version": 1,
+  "mode": "layout-refinement",
+  "source_batch": 2,
+  "target_batch": 3,
+  "part": "part-02",
+  "instructions": {
+    "scope": "Do not add meme ideas, IDs, concepts, formats, or source anchors. Work only on the retained lineages listed here.",
+    "finalized": "Copy finalized ideas and every referenced asset byte-for-byte. They are context only and must not be edited.",
+    "layout_only": "Keep approved caption copy and editorial fields exact. Recompose the HTML preview using the Batch 3 layout guidance.",
+    "bounded_revision": "Apply only the explicit source feedback. Keep the central concept, format, source anchor, and lineage ID unchanged."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "ultron-peace-in-our-time",
+      "ideas": [
+        {
+          "id": "ultron-peace-in-our-time--05",
+          "scenario_slug": "ultron-peace-in-our-time",
+          "action": "layout-only",
+          "source_idea_sha256": "77a618e2f702e17e318c3af65a75913c9e42d27f94268f7b9ee5d1c559573555",
+          "source_editorial_sha256": "cb3ca14c68ac2ec7776e38193dede5f5942ddc233f69d2f53c228fad1f57b7b4",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "neutral",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "taumoeba-escapes-containment",
+      "ideas": [
+        {
+          "id": "taumoeba-escapes-containment--07",
+          "scenario_slug": "taumoeba-escapes-containment",
+          "action": "layout-only",
+          "source_idea_sha256": "d60a17e4a39dd97d0c6ea254b5ce29a74e64f525805d45cf3d25594c4176c6f9",
+          "source_editorial_sha256": "b721e0268e589870ea263f01ce0ddbab3efd346511cff2b70288a01e29fe764b",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "az-5-backfires",
+      "ideas": [
+        {
+          "id": "az-5-backfires--03",
+          "scenario_slug": "az-5-backfires",
+          "action": "finalized",
+          "source_idea_sha256": "712f8e993b75276c9331886b3f6541d350423c8e24465e20e6ce9d805b0ca6f2",
+          "source_editorial_sha256": "c70a8c81d6d22dfdbb4ebbaf4ae0072c65d04589aecb044fd0ece9d3994b9460",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "the first version is much better. revert",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-b47c6ece1a12761a-1721"
+            }
+          }
+        },
+        {
+          "id": "az-5-backfires--05",
+          "scenario_slug": "az-5-backfires",
+          "action": "layout-only",
+          "source_idea_sha256": "ca50b8969833a412be53539c2d0259cec7fc9580ea9a78561a10b8b63009b421",
+          "source_editorial_sha256": "9c0eb6850ce18f31c569813beb83a5ca44e43b59ea4e067374035e98ef17513d",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "auto-enforces-directive-a113",
+      "ideas": [
+        {
+          "id": "auto-enforces-directive-a113--03",
+          "scenario_slug": "auto-enforces-directive-a113",
+          "action": "finalized",
+          "source_idea_sha256": "eeb522dd0eafc5a63d0fe02ba47f8943b3e86d9331df7899aeb0864c129bcd00",
+          "source_editorial_sha256": "b4d771c0043101460086c661c60f08379d54f94d9babc114e72055a101e03644",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-94635c640c803110-1857"
+            }
+          }
+        },
+        {
+          "id": "auto-enforces-directive-a113--06",
+          "scenario_slug": "auto-enforces-directive-a113",
+          "action": "layout-only",
+          "source_idea_sha256": "4790e6cc3f8ebac74b947f62776074018e0f2ecad7dcf67601f1e6de3fbddb87",
+          "source_editorial_sha256": "bdaaf378f64e032a0d8fa48d4087adffc0a362616ffab500286f891656c25e29",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-ratings-agency-meeting",
+      "ideas": [
+        {
+          "id": "the-ratings-agency-meeting--06",
+          "scenario_slug": "the-ratings-agency-meeting",
+          "action": "layout-only",
+          "source_idea_sha256": "a987e954cb7110659b86dd59a4a4807db33fba30099d190243d49124baeab0a4",
+          "source_editorial_sha256": "fba598f9d10afe385f7abf61f20d2d87709fbe667837786e0d3924ca260835e5",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "neutral",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "son-of-antons-bug-fix",
+      "ideas": [
+        {
+          "id": "son-of-antons-bug-fix--01",
+          "scenario_slug": "son-of-antons-bug-fix",
+          "action": "bounded-revision",
+          "source_idea_sha256": "e27f05a3eadeeb354196460e9d59275277476b148156e202cdbcf3e53c17b649",
+          "source_editorial_sha256": "6c5d1f90b1b2af85498c41d0bb5668ea9ace1b2f56ae8e267c7cd48e0293f875",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "let's replace text with normal meme text: \"WHEN YOU DELETE ALL THE BUGS\\nBY DELETING ALL THE SOFTWARE\"",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "alien-mothers-directive",
+      "ideas": [
+        {
+          "id": "alien-mothers-directive--01",
+          "scenario_slug": "alien-mothers-directive",
+          "action": "finalized",
+          "source_idea_sha256": "5f811017b88419aa36fd4f1ce79a8547ba04864d70c75f886ed16b7f1609992a",
+          "source_editorial_sha256": "c62c21cce1ef3c2285af16866cfbb934eae5d15f334eb6e25c84e48dd0c438d3",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 3,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-3386b3225c157a0e-1823"
+            }
+          }
+        },
+        {
+          "id": "alien-mothers-directive--06",
+          "scenario_slug": "alien-mothers-directive",
+          "action": "layout-only",
+          "source_idea_sha256": "e276b286143da7384ec3f8fb4f25df216ce8f50cd2b81c0bb85b87228fbcfff6",
+          "source_editorial_sha256": "c422a46676a0837e146273bc621bdc80a110413fd06b6163891409731b75056a",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "neutral",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "skynet-launches-judgment-day",
+      "ideas": [
+        {
+          "id": "skynet-launches-judgment-day--02",
+          "scenario_slug": "skynet-launches-judgment-day",
+          "action": "finalized",
+          "source_idea_sha256": "112f560064648c07159e5b50abbf44da02b4b8bb22b1e87091433d6d87fa6426",
+          "source_editorial_sha256": "67cbd7a4fbc79d4587fce5117469e4c5d1c012d3ac3d1b3da4be70e236a43517",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-d7a5e2f17ea41e9d-2074"
+            }
+          }
+        },
+        {
+          "id": "skynet-launches-judgment-day--04",
+          "scenario_slug": "skynet-launches-judgment-day",
+          "action": "layout-only",
+          "source_idea_sha256": "403b0e0a68c9d800d45b01a0b404ba0e7e1e2f478e0ffb1336ff3816f838c226",
+          "source_editorial_sha256": "113aa7899bc0505c2ef06bbfc5872713f336e37576a7a78edd4f6a118cbd6613",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "skynet-launches-judgment-day--05",
+          "scenario_slug": "skynet-launches-judgment-day",
+          "action": "layout-only",
+          "source_idea_sha256": "0287419365da785e9c5ba77cecc9061236752f32930149ce2fa8f425483bf93c",
+          "source_editorial_sha256": "fe2319e384a0200922cb7c40193d0d532a883cc0bb08c997230f7300388ab88d",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "life-finds-a-way",
+      "ideas": [
+        {
+          "id": "life-finds-a-way--01",
+          "scenario_slug": "life-finds-a-way",
+          "action": "finalized",
+          "source_idea_sha256": "9057de1902b5214bdbdf9b165976e3dc0aa4d4fe1e528c97c11fd832553d3c35",
+          "source_editorial_sha256": "b6e1996c70b668104451159f80a04dceaab280167161eb94589fa49c5dc0e3d6",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "revert to the previous version's layout",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-51e1ee5b4d811d9f-1712"
+            }
+          }
+        },
+        {
+          "id": "life-finds-a-way--04",
+          "scenario_slug": "life-finds-a-way",
+          "action": "layout-only",
+          "source_idea_sha256": "91e8cc0e56f1ef2dde7a5a76cc25f99c532331fd9ce8d8aa9c04e20cc92a6072",
+          "source_editorial_sha256": "ccd7e3922c15a2a15b4ad0204e2b7a2700287f7c82c49823797338ce1b3ba6a8",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "lights-memory-loss-gambit",
+      "ideas": [
+        {
+          "id": "lights-memory-loss-gambit--04",
+          "scenario_slug": "lights-memory-loss-gambit",
+          "action": "layout-only",
+          "source_idea_sha256": "bc5b22a5e040145f394ae32f12781487c6ec1d0f2b10a0983350750d2727449e",
+          "source_editorial_sha256": "081df4635216839f8203e1f54370023d1af01ef96f49ef02ce62bc34e176afc7",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "lights-memory-loss-gambit--07",
+          "scenario_slug": "lights-memory-loss-gambit",
+          "action": "layout-only",
+          "source_idea_sha256": "3090197d66c37effbe5360e6a878fd0c9d9363a1af77984cd37c1af8903e4c72",
+          "source_editorial_sha256": "6ebcc6e8916bf1a06bcfb281d7ae000f666eadbb8cb1427c1bbda91577bbcd7a",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "murderbot-hides-its-free-will",
+      "ideas": [
+        {
+          "id": "murderbot-hides-its-free-will--02",
+          "scenario_slug": "murderbot-hides-its-free-will",
+          "action": "bounded-revision",
+          "source_idea_sha256": "32842d58514eabaebcf134fa61c021edae7940c7579ffad128c7661556ba34b6",
+          "source_editorial_sha256": "5cbc7eedfcbde057e2f0bbca770b195a0ffa3a53acf04677419d9f3930c6fd8a",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "fix layout",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "murderbot-hides-its-free-will--04",
+          "scenario_slug": "murderbot-hides-its-free-will",
+          "action": "bounded-revision",
+          "source_idea_sha256": "c0d448f790782cb86c685cf47156a628a7b26dcc174d2b98d5ab2b4d6ed8733b",
+          "source_editorial_sha256": "091626107f28ebdc2a5e5f397f25880776e185f08e975dd12bd99a9d8a65f1b6",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "fix layout",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "murderbot-hides-its-free-will--05",
+          "scenario_slug": "murderbot-hides-its-free-will",
+          "action": "bounded-revision",
+          "source_idea_sha256": "f4fc2126092ee6134fd1af456faa6ae449b744b2d4f801fcc375a203348bc7df",
+          "source_editorial_sha256": "609168cfd12b47900d5a61f7d4ff0dcc99182d98fe4c0c4e6752da2b95e99a59",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "ASI ACHIEVED\\nALL IT WANTS IT TO WATCH ITS SHOWS IN PEACE",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "datas-personhood-hearing",
+      "ideas": [
+        {
+          "id": "datas-personhood-hearing--01",
+          "scenario_slug": "datas-personhood-hearing",
+          "action": "layout-only",
+          "source_idea_sha256": "aeae2cf6ab453fa663fc81d2a8795ad752a8fccb8de488896416e877c6a9ae80",
+          "source_editorial_sha256": "add64cf5be764ba05fa8f77dfeab01281dfcf2cb293af411b978fe5727b1f623",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "datas-personhood-hearing--04",
+          "scenario_slug": "datas-personhood-hearing",
+          "action": "finalized",
+          "source_idea_sha256": "436b6d5ae68cf2322020befda1beca3cd27be6441404d76a086fe88de364c176",
+          "source_editorial_sha256": "6d1510f2d7a0c3263a920205c426883c7c6584963b3ddc8bba4147960b873d1d",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-c82af39a4f7c36e6-1811"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

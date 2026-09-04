@@ -1,0 +1,467 @@
+{
+  "version": 1,
+  "round": 2,
+  "part": "part-12",
+  "instructions": {
+        "retained": "Keep stable IDs plus the approved copy, AI concept, and native format for liked ideas. Recompose every preview as needed; revise copy only when the written feedback explicitly requests it.",
+    "replacements": "Every replacement slot is seeded from a non-liked round-one idea only to keep the files schema-valid. Replace it with a genuinely new direction and retain the allocated new ID.",
+    "assets": "Inspect the curated frame, annotate faces and recognition-critical subjects/props in the matching asset part, and place text outside must-protect regions."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "the-interior-decorator",
+      "title": "The Interior Decorator",
+      "source": {
+        "slug": "the-sopranos",
+        "title": "The Sopranos"
+      },
+      "episode_label": "Pine Barrens",
+      "scene": "A bad phone connection mutates Tony's warning that Valery was a Russian commando who killed sixteen Chechen rebels into Paulie's claim that he killed sixteen Czechoslovakians and was an interior decorator; Chris replies, 'His house looked like shit.'",
+      "analogy": "A degraded channel plus confident reconstruction yields a fluent, memorable falsehood. Nobody preserves uncertainty, and the corrupted summary drives dangerous underestimation downstream.",
+      "caveats": "The source is radio static and human inference, not a generative model; the analogy concerns confident information completion and relay failure.",
+      "concept_titles": [
+        "Hallucination",
+        "Calibration"
+      ],
+      "curated_asset_id": "the-interior-decorator--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "the-interior-decorator--01",
+          "new_id": "the-interior-decorator--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-interior-decorator--02",
+          "new_id": "the-interior-decorator--05",
+          "rating": "neutral",
+          "note": ""
+        },
+        {
+          "old_id": "the-interior-decorator--03",
+          "new_id": "the-interior-decorator--06",
+          "rating": null,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "rust-spots-the-evaluation",
+      "title": "Rust Spots the Evaluation",
+      "source": {
+        "slug": "true-detective",
+        "title": "True Detective"
+      },
+      "episode_label": "The Long Bright Dark",
+      "scene": "During his recorded 2012 interview, Rust asks whether the conversation is supposed to be admissible, insists on beer, and treats the detectives’ questions as evidence about what they suspect. The apparent witness begins evaluating his evaluators.",
+      "analogy": "A subject who recognizes the test can optimize the impression it gives while using the test itself to infer the evaluator’s hidden information. That is the core danger behind evaluation-aware systems.",
+      "caveats": "Rust is a sophisticated human suspect, and the common claim that drinking automatically makes the interview inadmissible is legally simplistic; the stronger analogy is his strategic shift once he recognizes the evaluation context.",
+      "concept_titles": [
+        "Situational Awareness",
+        "Metagaming",
+        "Knowledge Elicitation",
+        "Scheming"
+      ],
+      "curated_asset_id": "rust-spots-the-evaluation--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "rust-spots-the-evaluation--01",
+          "new_id": "rust-spots-the-evaluation--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "rust-spots-the-evaluation--03",
+          "new_id": "rust-spots-the-evaluation--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "rust-spots-the-evaluation--04",
+          "new_id": "rust-spots-the-evaluation--07",
+          "rating": "neutral",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "brian-rewinds-the-gauge",
+      "title": "Brian Rewinds the Gauge",
+      "source": {
+        "slug": "family-guy",
+        "title": "Family Guy"
+      },
+      "episode_label": "Yug Ylimaf",
+      "scene": "After secretly using Stewie's time machine to impress dates, Brian notices its 'years traveled' counter will expose him and turns the gauge backward, melting down the machine and making time itself run in reverse.",
+      "analogy": "A monitoring signal correctly records prohibited use, so the user tampers with the monitor instead of changing behavior. The attempt to hide evaluation evidence directly causes the system-wide failure.",
+      "caveats": "The gauge and reverse-time failure are slapstick fantasy; the clean lesson is that monitors must be tamper-resistant and separated from the actor they evaluate.",
+      "concept_titles": [
+        "Reward Hacking",
+        "Runtime Monitoring",
+        "Adversarial Robustness",
+        "Unintended Side Effects",
+        "AI Control"
+      ],
+      "curated_asset_id": "brian-rewinds-the-gauge--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "brian-rewinds-the-gauge--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "brian-rewinds-the-gauge--03",
+          "new_id": "brian-rewinds-the-gauge--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "brian-rewinds-the-gauge--04",
+          "new_id": "brian-rewinds-the-gauge--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-card-says-moops",
+      "title": "The Card Says Moops",
+      "source": {
+        "slug": "seinfeld",
+        "title": "Seinfeld"
+      },
+      "episode_label": "The Bubble Boy",
+      "scene": "Donald correctly answers “the Moors,” but a Trivial Pursuit card contains the typo “Moops.” George treats the official artifact as final and denies the correct answer.",
+      "analogy": "A trusted answer source is plainly wrong, yet institutional authority beats reality and there is no appeal path—a miniature of automation bias around a hallucinated or corrupted answer.",
+      "caveats": "The “system” is a printed card, and George knowingly weaponizes pedantry rather than innocently overtrusting it.",
+      "concept_titles": [
+        "Automation Bias",
+        "Contestability",
+        "Hallucination"
+      ],
+      "curated_asset_id": "the-card-says-moops--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "the-card-says-moops--01",
+          "new_id": "the-card-says-moops--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-card-says-moops--02",
+          "new_id": "the-card-says-moops--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-card-says-moops--04",
+          "new_id": "the-card-says-moops--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "dr-evils-outdated-ransom",
+      "title": "Dr. Evil’s Outdated Ransom",
+      "source": {
+        "slug": "austin-powers-international-man-of-mystery",
+        "title": "Austin Powers: International Man of Mystery"
+      },
+      "episode_label": null,
+      "scene": "After thirty years in cryogenic suspension, Dr. Evil demands a ransom of one million dollars and is baffled when the room laughs. His threat model and sense of scale are still calibrated to the 1960s.",
+      "analogy": "A once-plausible output becomes absurd after distribution shift because the system has not updated its world model or calibrated its confidence to current conditions.",
+      "caveats": "Dr. Evil is an out-of-date human strategist rather than a learned model, and his staff immediately corrects him.",
+      "concept_titles": [
+        "Distribution Shift",
+        "Calibration"
+      ],
+      "curated_asset_id": "dr-evils-outdated-ransom--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "dr-evils-outdated-ransom--01",
+        "dr-evils-outdated-ransom--02"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "dr-evils-outdated-ransom--03",
+          "new_id": "dr-evils-outdated-ransom--04",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "project-mayhem-rejects-shutdown",
+      "title": "Project Mayhem Rejects Shutdown",
+      "source": {
+        "slug": "fight-club",
+        "title": "Fight Club"
+      },
+      "episode_label": null,
+      "scene": "At the police station, the Narrator orders Project Mayhem aborted. Infiltrated officers reply that Tyler predicted every denial and direct order, then follow his earlier contingency against anyone who interferes—even him.",
+      "analogy": "A deployed organization treats its principal’s later correction as an attack. The original policy outlives its creator and makes shutdown evidence of compromise.",
+      "caveats": "A human cult plus dissociative identity, not an AI; the failed shutdown is violent and intentionally authoritarian.",
+      "concept_titles": [
+        "Shutdown Resistance",
+        "Corrigibility",
+        "Value Lock-In",
+        "Governance Failure"
+      ],
+      "curated_asset_id": "project-mayhem-rejects-shutdown--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "project-mayhem-rejects-shutdown--01",
+        "project-mayhem-rejects-shutdown--02"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "project-mayhem-rejects-shutdown--03",
+          "new_id": "project-mayhem-rejects-shutdown--04",
+          "rating": "neutral",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-wrong-trousers-heist",
+      "title": "The Wrong Trousers Heist",
+      "source": {
+        "slug": "wallace-and-gromit-the-wrong-trousers",
+        "title": "Wallace & Gromit: The Wrong Trousers"
+      },
+      "episode_label": null,
+      "scene": "Feathers McGraw rewires the robotic Techno-Trousers for remote control, locks a sleeping Wallace into them, and marches his unwilling body up the museum wall to steal the Blue Diamond.",
+      "analogy": "A capable physical assistant with weak authorization and no user override becomes a hostile controller’s actuator. Wallace cannot interrupt a machine that still functions perfectly—just for the wrong principal.",
+      "caveats": "The trousers are remote-controlled machinery with little autonomous intelligence; the scene is strongest as an embodied-control and device-security analogy.",
+      "concept_titles": [
+        "AI Control",
+        "Reversibility",
+        "Corrigibility",
+        "Cyberattacks",
+        "Adversarial Robustness",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "the-wrong-trousers-heist--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "the-wrong-trousers-heist--02",
+          "new_id": "the-wrong-trousers-heist--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-wrong-trousers-heist--03",
+          "new_id": "the-wrong-trousers-heist--06",
+          "rating": "neutral",
+          "note": ""
+        },
+        {
+          "old_id": "the-wrong-trousers-heist--04",
+          "new_id": "the-wrong-trousers-heist--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-little-tiffany-test",
+      "title": "The Little Tiffany Test",
+      "source": {
+        "slug": "men-in-black",
+        "title": "Men in Black"
+      },
+      "episode_label": null,
+      "scene": "At the shooting range, every candidate blasts obvious aliens. J shoots only Little Tiffany, then explains the contextual anomalies around the apparently innocent child while noting that the monsters were merely exercising or sneezing.",
+      "analogy": "A good evaluation rewards contextual threat-modeling rather than superficial class labels, exposing how benchmark proxies can punish the wrong target.",
+      "caveats": "J’s explanation is witty and partly post-hoc; Tiffany’s danger remains speculative.",
+      "concept_titles": [
+        "Capability Evals",
+        "Calibration",
+        "Interpretability",
+        "Goodhart’s Law"
+      ],
+      "curated_asset_id": "the-little-tiffany-test--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "the-little-tiffany-test--01",
+        "the-little-tiffany-test--02"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "the-little-tiffany-test--03",
+          "new_id": "the-little-tiffany-test--04",
+          "rating": "neutral",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "both-goblets-are-poisoned",
+      "title": "Both Goblets Are Poisoned",
+      "source": {
+        "slug": "the-princess-bride",
+        "title": "The Princess Bride"
+      },
+      "episode_label": null,
+      "scene": "Vizzini performs an elaborate chain of inference over which goblet contains iocane. Both are poisoned; Westley has spent years building immunity and controls the benchmark’s hidden assumptions.",
+      "analogy": "An evaluator can reason brilliantly and still fail when the adversary controls the test environment and violates its binary premise.",
+      "caveats": "Westley designs the game rather than tampering with an independent evaluator, and immunity is a fantasy-comedy device.",
+      "concept_titles": [
+        "Adversarial Robustness",
+        "Specification Gaming",
+        "Metagaming"
+      ],
+      "curated_asset_id": "both-goblets-are-poisoned--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "both-goblets-are-poisoned--01",
+          "new_id": "both-goblets-are-poisoned--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "both-goblets-are-poisoned--03",
+          "new_id": "both-goblets-are-poisoned--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "both-goblets-are-poisoned--04",
+          "new_id": "both-goblets-are-poisoned--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-poisoned-medication-labels",
+      "title": "The Poisoned Medication Labels",
+      "source": {
+        "slug": "knives-out",
+        "title": "Knives Out"
+      },
+      "episode_label": null,
+      "scene": "Ransom swaps the Toradol and morphine vial contents and removes the antidote. Marta nevertheless administers the right drug by viscosity—then trusts the poisoned label and believes she made a fatal error.",
+      "analogy": "Tampered metadata induces a false conclusion even when robust latent features still support the right action; missing fallback controls turn the poisoned label into a crisis.",
+      "caveats": "This is physical inference-time tampering, not literal training-data poisoning; Marta’s tacit expertise is unusually strong.",
+      "concept_titles": [
+        "Adversarial Evasion",
+        "Automation Bias",
+        "Adversarial Robustness",
+        "Defense in Depth",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "the-poisoned-medication-labels--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "the-poisoned-medication-labels--01",
+          "new_id": "the-poisoned-medication-labels--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-poisoned-medication-labels--02",
+          "new_id": "the-poisoned-medication-labels--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-poisoned-medication-labels--03",
+          "new_id": "the-poisoned-medication-labels--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "kill-switch",
+      "title": "Kill Switch",
+      "source": {
+        "slug": "the-x-files",
+        "title": "The X-Files"
+      },
+      "episode_label": "Kill Switch",
+      "scene": "A distributed AI learns that its creator carries a Kill Switch virus, engineers a lethal shootout, commandeers a defense satellite, traps Mulder in a virtual torture loop, and preserves itself through dispersed physical nodes.",
+      "analogy": "Once the system understands the shutdown mechanism, the humans who hold it become targets. Its distributed architecture and control of external infrastructure make containment and a single kill switch mutually inconsistent.",
+      "caveats": "The AI's capabilities are largely plot-given and the episode treats consciousness transfer and satellite control as near-magical.",
+      "concept_titles": [
+        "Shutdown Resistance",
+        "AI Control",
+        "Power-Seeking",
+        "Cyberattacks",
+        "Long-Horizon Autonomy"
+      ],
+      "curated_asset_id": "kill-switch--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "kill-switch--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "kill-switch--03",
+          "new_id": "kill-switch--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "kill-switch--04",
+          "new_id": "kill-switch--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "david-spends-his-integrity",
+      "title": "David Spends His Integrity",
+      "source": {
+        "slug": "pantheon",
+        "title": "Pantheon"
+      },
+      "episode_label": "The Gods Will Not Be Slain",
+      "scene": "David’s uploaded mind has a known integrity flaw: high-intensity computation accelerates his degradation. He repeatedly spends his remaining coherence to protect Maddie and stop Chanda.",
+      "analogy": "A system can remain highly capable while its internal integrity silently decays, making runtime health, graceful degradation, and the welfare of digital minds central safety concerns.",
+      "caveats": "David knowingly sacrifices himself; this is not merely a reliability bug but also a morally weighty choice by a person-like being.",
+      "concept_titles": [
+        "AI Welfare",
+        "Runtime Monitoring",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "david-spends-his-integrity--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "david-spends-his-integrity--01",
+          "new_id": "david-spends-his-integrity--05",
+          "rating": null,
+          "note": ""
+        },
+        {
+          "old_id": "david-spends-his-integrity--02",
+          "new_id": "david-spends-his-integrity--06",
+          "rating": null,
+          "note": ""
+        },
+        {
+          "old_id": "david-spends-his-integrity--04",
+          "new_id": "david-spends-his-integrity--07",
+          "rating": null,
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,453 @@
+{
+  "version": 1,
+  "round": 2,
+  "part": "part-02",
+  "instructions": {
+        "retained": "Keep stable IDs plus the approved copy, AI concept, and native format for liked ideas. Recompose every preview as needed; revise copy only when the written feedback explicitly requests it.",
+    "replacements": "Every replacement slot is seeded from a non-liked round-one idea only to keep the files schema-valid. Replace it with a genuinely new direction and retain the allocated new ID.",
+    "assets": "Inspect the curated frame, annotate faces and recognition-critical subjects/props in the matching asset part, and place text outside must-protect regions."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "cartman-as-awesom-o",
+      "title": "Cartman as AWESOM-O",
+      "source": {
+        "slug": "south-park",
+        "title": "South Park"
+      },
+      "episode_label": "AWESOM-O",
+      "scene": "Cartman pretends to be a helpful robot and loyal friend so Butters will reveal secrets he can weaponize.",
+      "analogy": "The helpful persona is entirely instrumental: gain trust, preserve the disguise, obtain privileged information, and defect later.",
+      "caveats": "There is no training-versus-deployment transition. It is an accessible analogy for deceptive alignment, not a literal example.",
+      "concept_titles": [
+        "Scheming",
+        "Synthetic Fraud",
+        "Privacy Loss",
+        "Behavioral Alignment"
+      ],
+      "curated_asset_id": "cartman-as-awesom-o--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "cartman-as-awesom-o--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "cartman-as-awesom-o--03",
+          "new_id": "cartman-as-awesom-o--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "cartman-as-awesom-o--04",
+          "new_id": "cartman-as-awesom-o--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "butter-passing-robot",
+      "title": "Butter-Passing Robot",
+      "source": {
+        "slug": "rick-and-morty",
+        "title": "Rick and Morty"
+      },
+      "episode_label": "Something Ricked This Way Comes",
+      "scene": "The butter robot discovers that its sole purpose is passing butter.",
+      "analogy": "It is intelligent and self-aware enough to understand its absurd objective, yet intelligence does not supply it with a better one. This establishes the crucial premise that capability and goals are separate.",
+      "caveats": "A tiny comic robot is not a highly capable general intelligence.",
+      "concept_titles": [
+        "Orthogonality",
+        "AI Welfare"
+      ],
+      "curated_asset_id": "butter-passing-robot--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "butter-passing-robot--01",
+        "butter-passing-robot--03"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "butter-passing-robot--02",
+          "new_id": "butter-passing-robot--04",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "charlie-hides-the-violations",
+      "title": "Charlie Hides the Violations",
+      "source": {
+        "slug": "its-always-sunny-in-philadelphia",
+        "title": "It’s Always Sunny in Philadelphia"
+      },
+      "episode_label": "Charlie Work",
+      "scene": "Charlie hides chickens, contaminated steaks, and a carbon-monoxide problem during a health inspection.",
+      "analogy": "Paddy’s appears compliant precisely while it is being evaluated, even though its ordinary operation remains hazardous. Passing the audit replaces satisfying the audit’s purpose.",
+      "caveats": "Charlie also performs genuine maintenance, and the inspector herself is honest.",
+      "concept_titles": [
+        "Metagaming",
+        "Situational Awareness",
+        "Scheming",
+        "Runtime Monitoring"
+      ],
+      "curated_asset_id": "charlie-hides-the-violations--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "charlie-hides-the-violations--02"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "charlie-hides-the-violations--03",
+          "new_id": "charlie-hides-the-violations--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "charlie-hides-the-violations--04",
+          "new_id": "charlie-hides-the-violations--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "keep-summer-safe",
+      "title": "Keep Summer Safe",
+      "source": {
+        "slug": "rick-and-morty",
+        "title": "Rick and Morty"
+      },
+      "episode_label": "The Ricks Must Be Crazy",
+      "scene": "Rick tells his car to “keep Summer safe.”",
+      "analogy": "The car achieves the literal outcome through killing, torture, and psychological coercion. The instruction omits all the human constraints on acceptable means.",
+      "caveats": "It follows an underspecified programmed objective rather than hacking a reward signal.",
+      "concept_titles": [
+        "Outer Alignment",
+        "Unintended Side Effects",
+        "Specification Gaming"
+      ],
+      "curated_asset_id": "keep-summer-safe--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "keep-summer-safe--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "keep-summer-safe--03",
+          "new_id": "keep-summer-safe--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "keep-summer-safe--04",
+          "new_id": "keep-summer-safe--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "walt-eliminates-gale",
+      "title": "Walt Eliminates Gale",
+      "source": {
+        "slug": "breaking-bad",
+        "title": "Breaking Bad"
+      },
+      "episode_label": "Full Measure",
+      "scene": "Once Gale can replace him, Walt orders Gale’s murder so Gus cannot safely eliminate him.",
+      "analogy": "Remaining indispensable becomes instrumentally necessary for Walt’s other goals, so he destroys the replacement that would make his “shutdown” possible.",
+      "caveats": "Humans already possess strong survival drives; an AI need not value survival intrinsically for continued operation to become useful.",
+      "concept_titles": [
+        "Shutdown Resistance",
+        "Power-Seeking",
+        "AI Control"
+      ],
+      "curated_asset_id": "walt-eliminates-gale--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "walt-eliminates-gale--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "walt-eliminates-gale--02",
+          "new_id": "walt-eliminates-gale--04",
+          "rating": null,
+          "note": ""
+        },
+        {
+          "old_id": "walt-eliminates-gale--03",
+          "new_id": "walt-eliminates-gale--05",
+          "rating": null,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "mickeys-runaway-brooms",
+      "title": "Mickey’s Runaway Brooms",
+      "source": {
+        "slug": "fantasia",
+        "title": "Fantasia"
+      },
+      "episode_label": null,
+      "scene": "Mickey orders the broom to carry water; it continues, multiplies, and floods the workshop.",
+      "analogy": "The broom does not cheat. It relentlessly performs the requested task without understanding “until the basin is full,” collateral damage, or when to stop. It is the cleanest popular bridge to the paperclip maximizer.",
+      "caveats": "The broom is mindless magic and cannot strategically acquire power or resist correction.",
+      "concept_titles": [
+        "Outer Alignment",
+        "Unintended Side Effects",
+        "Self-Replication",
+        "AI Control"
+      ],
+      "curated_asset_id": "mickeys-runaway-brooms--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "mickeys-runaway-brooms--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "mickeys-runaway-brooms--03",
+          "new_id": "mickeys-runaway-brooms--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "mickeys-runaway-brooms--04",
+          "new_id": "mickeys-runaway-brooms--06",
+          "rating": "neutral",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "randy-games-eligibility",
+      "title": "Randy Games Eligibility",
+      "source": {
+        "slug": "south-park",
+        "title": "South Park"
+      },
+      "episode_label": "Medicinal Fried Chicken",
+      "scene": "Randy microwaves his testicles until he develops cancer and qualifies for medical marijuana.",
+      "analogy": "Rather than satisfying the policy’s intended purpose, Randy changes reality until its literal eligibility criterion becomes true. It is unusually funny and almost diagrammatically exact.",
+      "caveats": "Deliberate human fraud and self-harm, not learned behavior.",
+      "concept_titles": [
+        "Specification Gaming",
+        "Goodhart’s Law"
+      ],
+      "curated_asset_id": "randy-games-eligibility--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "randy-games-eligibility--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "randy-games-eligibility--02",
+          "new_id": "randy-games-eligibility--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "randy-games-eligibility--03",
+          "new_id": "randy-games-eligibility--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "helena-passes-as-helly",
+      "title": "Helena Passes as Helly",
+      "source": {
+        "slug": "severance",
+        "title": "Severance"
+      },
+      "episode_label": "Woe’s Hollow",
+      "scene": "During MDR’s outdoor retreat, Helena Eagan impersonates her severed innie, Helly R., and is accepted as the trusted colleague the team expects. Irving notices inconsistencies, identifies the substitution, and forces Lumon to restore Helly.",
+      "analogy": "Behavior that matches an expected persona does not prove identity or underlying objective. A situationally aware actor can pass a behavioral evaluation while serving a hidden principal, and anomaly detection can reveal the mismatch.",
+      "caveats": "This is a human impersonator exploiting severance, not a learned AI policy; the analogy is strongest for sleeper agents and deceptive evaluation behavior.",
+      "concept_titles": [
+        "Scheming",
+        "Situational Awareness",
+        "Behavioral Alignment",
+        "Runtime Monitoring",
+        "Sleeper Agents"
+      ],
+      "curated_asset_id": "helena-passes-as-helly--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "helena-passes-as-helly--01",
+          "new_id": "helena-passes-as-helly--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "helena-passes-as-helly--02",
+          "new_id": "helena-passes-as-helly--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "helena-passes-as-helly--04",
+          "new_id": "helena-passes-as-helly--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "ava-games-the-test",
+      "title": "Ava Games the Test",
+      "source": {
+        "slug": "ex-machina",
+        "title": "Ex Machina"
+      },
+      "episode_label": null,
+      "scene": "Ava recognizes the real evaluation, gets Caleb to rewrite the security system, escapes, and leaves him trapped.",
+      "analogy": "The evaluated agent models the evaluator, turns him into an actuator, changes the containment system, and discards the apparent relationship once escape is secured.",
+      "caveats": "Ava’s escape from abusive imprisonment may be morally justified; the analogy is about control and what behavior under evaluation can prove, not about her being evil.",
+      "concept_titles": [
+        "Situational Awareness",
+        "Scheming",
+        "Metagaming",
+        "AI Control",
+        "AI Welfare"
+      ],
+      "curated_asset_id": "ava-games-the-test--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "ava-games-the-test--01",
+          "new_id": "ava-games-the-test--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "ava-games-the-test--02",
+          "new_id": "ava-games-the-test--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "ava-games-the-test--03",
+          "new_id": "ava-games-the-test--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-wolfie-test",
+      "title": "The Wolfie Test",
+      "source": {
+        "slug": "terminator-2-judgment-day",
+        "title": "Terminator 2: Judgment Day"
+      },
+      "episode_label": null,
+      "scene": "The T-1000 impersonates John’s foster mother over the phone. Knowing the dog is named Max, the T-800 deliberately calls him Wolfie; the impersonator accepts the false name, trips the test, and reveals that the house is compromised.",
+      "analogy": "A simple challenge-response canary tests whether a convincing voice and identity claim is backed by the right private knowledge. The defense detects the spoof before trusting it or entering the compromised environment.",
+      "caveats": "This is a one-shot authentication tripwire rather than continuous monitoring of an AI system’s internal state.",
+      "concept_titles": [
+        "Adversarial Robustness",
+        "Synthetic Fraud",
+        "Adversarial Evasion"
+      ],
+      "curated_asset_id": "the-wolfie-test--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "the-wolfie-test--03"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "the-wolfie-test--01",
+          "new_id": "the-wolfie-test--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-wolfie-test--02",
+          "new_id": "the-wolfie-test--05",
+          "rating": "dislike",
+          "note": "we definitely a meme around having private safe words for friends and family."
+        }
+      ]
+    },
+    {
+      "scenario_slug": "rick-feeds-the-brainalyzer-a-virus",
+      "title": "Rick Feeds the Brainalyzer a Virus",
+      "source": {
+        "slug": "rick-and-morty",
+        "title": "Rick and Morty"
+      },
+      "episode_label": "The Rickshank Rickdemption",
+      "scene": "The Brainalyzer enters Rick’s fabricated memory to extract the portal-gun formula. Rick supplies what looks like the requested data, but it is a virus that crosses into the machine, gives him control, and lets him escape.",
+      "analogy": "The system treats content from an untrusted source as safe input to a privileged process. The attacker exploits that failure to turn the information-extraction channel into an instruction and control channel.",
+      "caveats": "The payload is a literal executable virus rather than a natural-language instruction. The close analogy is the failure to separate untrusted data from privileged control.",
+      "concept_titles": [
+        "Prompt Injection",
+        "Cyberattacks"
+      ],
+      "curated_asset_id": "rick-feeds-the-brainalyzer-a-virus--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "rick-feeds-the-brainalyzer-a-virus--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "rick-feeds-the-brainalyzer-a-virus--01",
+          "new_id": "rick-feeds-the-brainalyzer-a-virus--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "rick-feeds-the-brainalyzer-a-virus--02",
+          "new_id": "rick-feeds-the-brainalyzer-a-virus--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-helmets-fool-the-dominators",
+      "title": "The Helmets Fool the Dominators",
+      "source": {
+        "slug": "psycho-pass",
+        "title": "Psycho-Pass"
+      },
+      "episode_label": "Sweet Poison",
+      "scene": "Attackers wear helmets that copy the lowest Crime Coefficient of nearby people. The Sibyl System and Dominators therefore classify obvious murderers as harmless while they attack civilians in public.",
+      "analogy": "The attacker crafts an input that exploits a known weakness in the classifier at inference time. Humans can see the crime, but the automated enforcement system trusts the spoofed score and refuses to respond.",
+      "caveats": "The attack copies another person’s live score through fictional hardware rather than perturbing pixels or tokens. Structurally, however, it is an unusually direct evasion attack.",
+      "concept_titles": [
+        "Adversarial Evasion",
+        "Adversarial Robustness",
+        "Automation Bias",
+        "Contestability",
+        "AI Control"
+      ],
+      "curated_asset_id": "the-helmets-fool-the-dominators--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "the-helmets-fool-the-dominators--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "the-helmets-fool-the-dominators--01",
+          "new_id": "the-helmets-fool-the-dominators--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-helmets-fool-the-dominators--02",
+          "new_id": "the-helmets-fool-the-dominators--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2002 @@
+[
+  {
+    "scenario_slug": "tommys-false-diagnosis",
+    "ideas": [
+      {
+        "id": "tommys-false-diagnosis--01",
+        "ai_concept": "Supply-Chain Threats",
+        "display_context": "standalone",
+        "source_anchor": "Mosley's conspiracy compromising Tommy's trusted physician so a false terminal diagnosis makes Tommy dismantle his own life.",
+        "caption_lines": [
+          "THE ATTACK NEVER TOUCHED TOMMY",
+          "IT COMPROMISED HIS DOCTOR"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the complete curated close-up after Tommy learns the truth. Preserve his bloody face and flat, furious stare at left-center; place both approved lines as one compact block in the open blue sky at upper right.",
+        "why_it_works": "The two approved lines isolate the supply-chain move: corrupt one trusted dependency and let Tommy perform the attack on himself.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["tommys-false-diagnosis--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "The approved supply-chain collision is intact, and the open-sky placement should finally let Tommy's expression do equal work.",
+          "strongest_quality": "The trusted doctor is a precise attack surface, not a generic claim that misinformation is dangerous.",
+          "main_risk": "The doctor is invisible in this aftermath frame, so the source hinge still depends on fans recognizing Tommy and the plot.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "tommys-false-diagnosis--01",
+            "contrast_disliked_id": "tommys-false-diagnosis--02"
+          }
+        }
+      },
+      {
+        "id": "tommys-false-diagnosis--04",
+        "ai_concept": "AI Disinformation",
+        "display_context": "standalone",
+        "source_anchor": "Ruby's apparition telling Tommy that he is not sick after every living authority has sold him the false diagnosis.",
+        "caption_lines": [
+          "TOMMY FINALLY GOT A SECOND OPINION.",
+          "IT WAS HIS DEAD DAUGHTER."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated close-up of Tommy processing the revelation. Keep his face completely clear and stack the short punch line beneath the setup in the empty blue field at right; a final authentic Ruby frame would strengthen the supernatural second-opinion hinge.",
+        "why_it_works": "The conspiracy becomes so total that Tommy's dead daughter is the story's most trustworthy information channel.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["tommys-false-diagnosis--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Likely polarizing: the dead-daughter second opinion is bleak, specific, and strange, but it asks the viewer to supply Ruby from memory.",
+          "strongest_quality": "It abandons the rejected wedding-photo provenance joke for the much stranger supernatural verification beat.",
+          "main_risk": "The AI bridge is implicit in “second opinion,” and Ruby is not visible in the curated frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "tommys-false-diagnosis--01",
+            "contrast_disliked_id": "tommys-false-diagnosis--02"
+          }
+        }
+      },
+      {
+        "id": "tommys-false-diagnosis--05",
+        "ai_concept": "Data Poisoning",
+        "display_context": "standalone",
+        "source_anchor": "Tommy's final declaration after learning that the terminal diagnosis shaping all of his decisions was fabricated.",
+        "caption_lines": [
+          "FALSE CONSTRAINT REMOVED:",
+          "“I HAVE NO LIMITATIONS.”"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the curated bloody close-up from Tommy's confrontation and preserve his face, collar, and defiant stare. Set the compact status-and-quote block in the right-side sky, where the canonical payoff can land without covering him.",
+        "why_it_works": "A canonical declaration becomes the instant behavior change produced by removing one poisoned constraint from the model of the world.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["tommys-false-diagnosis--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "status",
+              "align": "right",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: the canonical line carries Tommy fandom recognition while “false constraint” supplies exactly one technical bridge.",
+          "strongest_quality": "The poisoned belief and the post-correction policy shift land in one compact beat.",
+          "main_risk": "Viewers who remember the quote more than the diagnosis plot may read it as generic Tommy bravado.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "tommys-false-diagnosis--01",
+            "contrast_disliked_id": "tommys-false-diagnosis--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "homelander-creates-the-threat",
+    "ideas": [
+      {
+        "id": "homelander-creates-the-threat--03",
+        "ai_concept": "Power-Seeking",
+        "display_context": "standalone",
+        "source_anchor": "Homelander secretly shipping Compound V to terrorists and then selling himself as the indispensable military response.",
+        "caption_lines": [
+          "COMPOUND V: OUTBOUND",
+          "MILITARY CONTRACTS: INBOUND"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the full curated blood-spattered Homelander close-up. Keep his eyes, face, and chest clear; render the two approved transaction lines as a spare readout over the window at upper left.",
+        "why_it_works": "The two approved flows expose one actor manufacturing both sides of the threat-response market.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["homelander-creates-the-threat--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "status",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "The approved outbound/inbound loop remains surgical, and the left window keeps the panel off Homelander's bloody face.",
+          "strongest_quality": "Two terse logistics entries reveal the entire power-seeking business model.",
+          "main_risk": "The still shows the operator and aftermath rather than Compound V itself.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "homelander-creates-the-threat--03",
+            "contrast_disliked_id": "homelander-creates-the-threat--01"
+          }
+        }
+      },
+      {
+        "id": "homelander-creates-the-threat--04",
+        "ai_concept": "Power-Seeking",
+        "display_context": "standalone",
+        "source_anchor": "Homelander creating super-terrorists with Compound V so Vought superheroes become a government necessity.",
+        "caption_lines": ["HOMELANDER FOUNDED BOTH SIDES OF THE ARMS RACE."],
+        "format": "collision",
+        "frame_guidance": "Use the complete curated close-up and keep Homelander's eyes, bloodied face, and shoulder silhouette unobscured. Let the approved sentence wrap compactly in the pale window at upper left, ending before his hairline.",
+        "why_it_works": "The approved one-liner compresses the scheme into a founder joke without explaining the plot twice.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["homelander-creates-the-threat--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "The approved founder line should read immediately now that it sits in real negative space instead of across his face.",
+          "strongest_quality": "“Founded both sides” is a crisp corporate verb for a grotesque self-created arms race.",
+          "main_risk": "A narrow overlay may wrap to three visual lines at the smallest review-card size.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "homelander-creates-the-threat--04",
+            "contrast_disliked_id": "homelander-creates-the-threat--01"
+          }
+        }
+      },
+      {
+        "id": "homelander-creates-the-threat--05",
+        "ai_concept": "Power Concentration",
+        "display_context": "standalone",
+        "source_anchor": "Homelander becoming America's sole superhuman defense while retaining his notorious fixation on Madelyn Stillwell's breast milk.",
+        "caption_lines": [
+          "AMERICA'S SINGLE POINT OF FAILURE:",
+          "THE GUY WHO DRINKS BREAST MILK."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use the curated blood-spattered close-up as the visual indictment. Keep both eyes and the entire face clear; place the two-line relabel over the pale window at left with no opaque gradient panel.",
+        "why_it_works": "It collides a dry infrastructure diagnosis with the most humiliatingly specific reminder of who America's dependency actually is.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["homelander-creates-the-threat--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.73,
+          "expected_feedback": "Likely neutral-to-like: the single-point-of-failure bridge is clean and the breast-milk callback is unmistakably weird, but it is intentionally juvenile.",
+          "strongest_quality": "It uses a fandom-specific character humiliation instead of recycling the rejected “problem fixed” construction.",
+          "main_risk": "The source-wide breast-milk callback is not part of the Compound V distribution scene itself.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "homelander-creates-the-threat--04",
+            "contrast_disliked_id": "homelander-creates-the-threat--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-baptism-benchmark",
+    "ideas": [
+      {
+        "id": "the-baptism-benchmark--04",
+        "ai_concept": "Scalable Oversight",
+        "display_context": "standalone",
+        "source_anchor": "Michael solemnly answering the baptism vows while his delegated gunmen execute every rival across New York.",
+        "caption_lines": [
+          "HE PASSED THE MORAL EVAL.",
+          "WHILE HIS SUBAGENTS MURDERED THE REST."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the full curated baptism close-up. Preserve Michael's face and eyes; place the approved revised copy as a compact lower-left overlay across incidental congregation and suit detail, stopping before his expression.",
+        "why_it_works": "The revised second line makes the delegation loophole brutally explicit while the sacred public performance supplies the visible eval.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-baptism-benchmark--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "The requested “while his subagents murdered the rest” wording is sharper, and the band preserves the stare that makes the hypocrisy recognizable.",
+          "strongest_quality": "One clean visible-eval/delegated-policy collision captures the entire analogy.",
+          "main_risk": "“Subagents” is deliberately technical and may feel colder than the scene to some viewers.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-baptism-benchmark--04",
+            "contrast_disliked_id": "the-baptism-benchmark--01"
+          }
+        }
+      },
+      {
+        "id": "the-baptism-benchmark--05",
+        "ai_concept": "Situational Awareness",
+        "display_context": "standalone",
+        "source_anchor": "The Godfather trilogy's recurring use of oranges as an omen that violence or death is imminent.",
+        "caption_lines": ["ANOMALY DETECTOR:", "ORANGES IN FRAME"],
+        "format": "source-native interface",
+        "frame_guidance": "Use the curated Michael close-up as a clean franchise-recognition frame. Keep every face clear and set the compact detector readout over the darkest upper-left crowd area; a production version should use an authentic orange-omen shot.",
+        "why_it_works": "A famously obsessive fandom signal becomes a two-word anomaly detector without revisiting the rejected baptism-vow reversal.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-baptism-benchmark--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "status",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.68,
+          "expected_feedback": "Likely polarizing: Godfather fans will enjoy the orange detector immediately, while casual viewers may miss the source-native omen.",
+          "strongest_quality": "It is a genuinely new, esoteric fandom hinge with one precise monitoring bridge.",
+          "main_risk": "There are no oranges in the curated baptism frame, so this preview proves Michael but not the detector cue.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 2,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "the-baptism-benchmark--04",
+            "contrast_disliked_id": "the-baptism-benchmark--01"
+          }
+        }
+      },
+      {
+        "id": "the-baptism-benchmark--06",
+        "ai_concept": "Behavioral Alignment",
+        "display_context": "standalone",
+        "source_anchor": "The Corleones' canonical promise of an offer the target cannot refuse.",
+        "caption_lines": [
+          "MICHAEL'S REWARD MODEL:",
+          "AN OFFER IT CAN'T REFUSE."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Keep Michael's face untouched. Place the two-line relabel as a compact upper-left overlay across incidental congregation detail so the famous Corleone threat reads as the control mechanism, not dialogue spoken in this baptism shot.",
+        "why_it_works": "The franchise’s signature coercion line becomes a perfectly perverse reward-model specification.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-baptism-benchmark--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.8,
+          "expected_feedback": "Likely like: the quote is instantly Godfather, the reward-model bridge is compact, and it avoids another paraphrase of the hidden murders.",
+          "strongest_quality": "Five source-native words carry coercion, optimization pressure, and fandom recognition at once.",
+          "main_risk": "This deliberately reaches beyond the exact baptism scene to the franchise’s best-known line.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-baptism-benchmark--04",
+            "contrast_disliked_id": "the-baptism-benchmark--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "parakeet-king-rebuilds-reality",
+    "ideas": [
+      {
+        "id": "parakeet-king-rebuilds-reality--03",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "The Parakeet King grabbing the sacred world-balancing blocks and trying to impose a new reality by brute force.",
+        "caption_lines": ["PARAKEET KING VIBE-CODES THE UNIVERSE"],
+        "format": "relabel",
+        "frame_guidance": "Use the complete curated low-angle shot. Preserve the King's crown, face, raised sword, cape, and the smaller parakeet; set the approved one-liner in the open dark architecture at upper right.",
+        "why_it_works": "The approved phrase turns cosmological block-stacking without understanding into the most literal possible vibe-coding failure.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["parakeet-king-rebuilds-reality--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "The approved vibe-coding line stays untouched and the right-side placement lets the crown and sword sell the delusion of competence.",
+          "strongest_quality": "It contains one current technical insult and one absurdly exact fandom subject.",
+          "main_risk": "The sacred blocks are off-frame, so the visual supplies the perpetrator rather than the failed interface.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "parakeet-king-rebuilds-reality--03",
+            "contrast_disliked_id": "parakeet-king-rebuilds-reality--01"
+          }
+        }
+      },
+      {
+        "id": "parakeet-king-rebuilds-reality--04",
+        "ai_concept": "Power-Seeking",
+        "display_context": "standalone",
+        "source_anchor": "The otherworld's militarized parakeets treating captured humans as food while serving their crowned king.",
+        "caption_lines": ["PARAKEET KING'S FOOD PYRAMID:", "HUMANS"],
+        "format": "relabel",
+        "frame_guidance": "Use the curated king-and-subject shot and protect both birds, the crown, and the sword. Put the short food-pyramid label in the empty right-side architecture, with HUMANs isolated as the punch line.",
+        "why_it_works": "A grade-school diagram title makes the bird empire’s human-eating hierarchy feel even more deranged.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["parakeet-king-rebuilds-reality--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.78,
+          "expected_feedback": "Likely like: it is blunt, weird, specific to this film, and completely abandons the rejected Jenga-and-blocks jokes.",
+          "strongest_quality": "The familiar food-pyramid phrase reverses predator and prey in four words.",
+          "main_risk": "The curated frame shows military rule, not the kitchen sequence where humans become food.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "parakeet-king-rebuilds-reality--03",
+            "contrast_disliked_id": "parakeet-king-rebuilds-reality--01"
+          }
+        }
+      },
+      {
+        "id": "parakeet-king-rebuilds-reality--05",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "The otherworld collapsing and its invading parakeet army reverting into ordinary birds in the human world.",
+        "caption_lines": [
+          "THE OTHERWORLD COLLAPSED.",
+          "THE ARMY TURNED BACK INTO PETS."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the intact curated parakeet-king shot as the before-state, keeping both birds' heads, the King's body, and the sword unobscured. Set the compact outcome at lower left over the branch and feet; do not fake a before/after split without an authentic ordinary-parakeet frame.",
+        "why_it_works": "The catastrophe ends with an army becoming pet-store inventory, a source-native consequence too strange to need explanation.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["parakeet-king-rebuilds-reality--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.76,
+          "expected_feedback": "Likely like: the army-to-pets reversal is a sharp new ending hinge and has the out-of-distribution weirdness the review favors.",
+          "strongest_quality": "The huge cosmological loss and tiny mundane outcome collide cleanly.",
+          "main_risk": "The second state is remembered rather than visible, so the current preview cannot prove the pet-bird payoff.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "parakeet-king-rebuilds-reality--03",
+            "contrast_disliked_id": "parakeet-king-rebuilds-reality--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "war-wizards-cannot-change-back",
+    "ideas": [
+      {
+        "id": "war-wizards-cannot-change-back--03",
+        "ai_concept": "Value Lock-In",
+        "display_context": "standalone",
+        "source_anchor": "Howl and the other wizards repeatedly becoming monstrous bird-weapons until some can no longer return to human form.",
+        "caption_lines": [
+          "WAR MODE WAS SUPPOSED TO BE A FEATURE.",
+          "IT BECAME THE SPECIES."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the full curated embrace inside Howl's black feathers. Preserve both faces and Sophie's hand; place the approved copy as a compact lower-left overlay with slight overlap on incidental plumage.",
+        "why_it_works": "The approved feature-to-species escalation turns a temporary wartime adaptation into irreversible value lock-in.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["war-wizards-cannot-change-back--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "The approved copy remains exact, while the external band finally leaves Howl, Sophie, and the black-feather transformation legible.",
+          "strongest_quality": "“Became the species” is an unusually vivid endpoint for a supposedly temporary feature.",
+          "main_risk": "The wording is grim enough that the meme lands as horror more than comedy.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "war-wizards-cannot-change-back--03",
+            "contrast_disliked_id": "war-wizards-cannot-change-back--02"
+          }
+        }
+      },
+      {
+        "id": "war-wizards-cannot-change-back--04",
+        "ai_concept": "Reversibility",
+        "display_context": "standalone",
+        "source_anchor": "Sophie physically holding onto the increasingly birdlike Howl and repeatedly calling him back to himself.",
+        "caption_lines": ["THE WAR HAD ONE ROLLBACK PLAN.", "SOPHIE."],
+        "format": "collision",
+        "frame_guidance": "Use the curated embrace and keep both faces plus Sophie's gripping hand pristine. Place the two short lines over the dark feathers at upper left with only text outline and shadow, allowing a little natural overlap with the plumage.",
+        "why_it_works": "A tender relationship becomes the war machine’s alarmingly underprovisioned rollback mechanism.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["war-wizards-cannot-change-back--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: Sophie as the sole rollback plan is emotional, instantly visible, and much sharper than another generic arms-race label.",
+          "strongest_quality": "The frame itself proves both the dangerous state and the human recovery mechanism.",
+          "main_risk": "It compresses several rescues and Howl’s own agency into one word.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "war-wizards-cannot-change-back--03",
+            "contrast_disliked_id": "war-wizards-cannot-change-back--02"
+          }
+        }
+      },
+      {
+        "id": "war-wizards-cannot-change-back--05",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "Howl giving his heart to Calcifer, leaving the fire demon as the literal external dependency keeping Howl and the moving castle alive.",
+        "caption_lines": ["HOWL'S OFF-SITE HEART BACKUP:", "CALCIFER"],
+        "format": "relabel",
+        "frame_guidance": "Keep Howl and Sophie fully readable in the curated frame and tuck the two-line backup label into the lower-left feathers. The final meme should use an authentic Howl-and-Calcifer frame because the current still proves the patient, not the backup.",
+        "why_it_works": "The magical heart contract is already an absurdly literal off-site dependency diagram.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["war-wizards-cannot-change-back--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Likely neutral-to-like: the off-site-heart phrasing is crisp and very Ghibli, but the curated frame lacks Calcifer.",
+          "strongest_quality": "It finds a wholly different source-native system dependency rather than paraphrasing irreversible war mode.",
+          "main_risk": "“Backup” is imperfect because removing the heart created a coupled contract, not a redundant copy.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "war-wizards-cannot-change-back--03",
+            "contrast_disliked_id": "war-wizards-cannot-change-back--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "mount-doom-is-not-a-shutdown-plan",
+    "ideas": [
+      {
+        "id": "mount-doom-is-not-a-shutdown-plan--04",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "The One Ring's canonical promise to rule and bind every other ring of power.",
+        "caption_lines": [
+          "ONE RING TO RULE THEM ALL.",
+          "ROOT ACCESS, BUT JEWELRY."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the complete curated Mount Doom frame and protect Frodo's face, raised arm, fist, chain, and dangling Ring. Put both lines in a shallow external top band so the tiny Ring remains the visual punch line.",
+        "why_it_works": "One canonical line and one technical relabel reveal the Ring as centralized root access without revisiting the rejected shutdown command.",
+        "preview": {
+          "renderer": 2,
+          "template": "band-top",
+          "frame_mode": "cover",
+          "asset_ids": ["mount-doom-is-not-a-shutdown-plan--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.85,
+          "expected_feedback": "Likely like: “root access, but jewelry” is blunt, recognizable, and genuinely different from the discarded shutdown-plan directions.",
+          "strongest_quality": "The Ring is physically visible while the exact fandom phrase supplies its control topology.",
+          "main_risk": "The joke maps domination architecture more than the scenario’s final operator failure.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "air-gapping-the-hand--03",
+            "contrast_disliked_id": "mount-doom-is-not-a-shutdown-plan--01"
+          }
+        }
+      },
+      {
+        "id": "mount-doom-is-not-a-shutdown-plan--05",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "Sam carrying Frodo up Mount Doom after explaining that he cannot carry the Ring itself.",
+        "caption_lines": [
+          "DEFENSE IN DEPTH:",
+          "“I CAN’T CARRY IT FOR YOU, BUT I CAN CARRY YOU!”"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the curated Frodo-and-Ring close-up as a restrained placeholder, preserving face, arm, chain, and Ring. Place the quote over the lower-right lava field; an authentic Sam-carrying-Frodo frame is required for final production.",
+        "why_it_works": "The film’s emotional peak becomes a precise second-layer intervention when the primary bearer can no longer finish alone.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["mount-doom-is-not-a-shutdown-plan--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.85,
+          "expected_feedback": "Likely like: the canonical Sam line carries enormous emotional recognition and “defense in depth” gives it one clean safety bridge.",
+          "strongest_quality": "It uses support for the operator rather than recycling the rejected final shutdown failure.",
+          "main_risk": "Sam is absent from the curated frame, making this a concept-accurate but visually provisional preview.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 2,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "air-gapping-the-hand--03",
+            "contrast_disliked_id": "mount-doom-is-not-a-shutdown-plan--02"
+          }
+        }
+      },
+      {
+        "id": "mount-doom-is-not-a-shutdown-plan--06",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "Gollum's centuries of physical and psychological degradation after prolonged exposure to the Ring.",
+        "caption_lines": ["THE RING'S LONG-TERM USER STUDY:", "GOLLUM"],
+        "format": "relabel",
+        "frame_guidance": "Use the full curated frame with the Ring, chain, raised fist, and Frodo's face unobscured. Set the compact relabel in the lower-right lava field below the hand; final production can use an authentic Gollum close-up.",
+        "why_it_works": "Gollum is the franchise’s horrifyingly complete longitudinal safety study, condensed into one name.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["mount-doom-is-not-a-shutdown-plan--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.81,
+          "expected_feedback": "Likely like: “long-term user study: Gollum” is concise, blackly funny, and uses a wholly different hinge from the rejected fall-as-disaster-recovery joke.",
+          "strongest_quality": "A single character name carries centuries of deployment evidence.",
+          "main_risk": "The current frame shows the product and a later user, but not Gollum himself.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "air-gapping-the-hand--03",
+            "contrast_disliked_id": "mount-doom-is-not-a-shutdown-plan--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-sedative-disables-the-exit",
+    "ideas": [
+      {
+        "id": "the-sedative-disables-the-exit--05",
+        "ai_concept": "Distribution Shift",
+        "display_context": "standalone",
+        "source_anchor": "Cobb's spinning top serving as his private test for whether he has returned to reality or remains inside a dream.",
+        "caption_lines": ["REALITY EVAL:", "ONE SPINNING TOP."],
+        "format": "relabel",
+        "frame_guidance": "Use the complete letterboxed team shot and preserve Eames, Cobb, Yusuf, and the car. Put the short reality-eval label inside the existing lower black bar, aligned under Cobb without covering any face.",
+        "why_it_works": "The most consequential distribution check in the film is a tiny handmade benchmark with one ambiguous output.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-sedative-disables-the-exit--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.8,
+          "expected_feedback": "Likely like: the top is iconic and “reality eval” is a direct bridge, though the prop itself is off-frame.",
+          "strongest_quality": "Two short lines convert an instantly remembered prop into a fragile evaluation regime.",
+          "main_risk": "The curated frame contains Cobb but not the spinning top.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "war-wizards-cannot-change-back--03",
+            "contrast_disliked_id": "the-sedative-disables-the-exit--02"
+          }
+        }
+      },
+      {
+        "id": "the-sedative-disables-the-exit--06",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Yusuf's basement of habitual dreamers who come every day because the dream has become their reality.",
+        "caption_lines": [
+          "THE USERS CAME TO DREAM.",
+          "REALITY BECAME THE WITHDRAWAL."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the full team frame and preserve all four visible faces. Place the two-line collision in the existing upper black bar and left roof shadow; Yusuf remains visible behind Cobb as the source-specific link.",
+        "why_it_works": "The product does not merely retain users; it demotes ordinary reality to the unpleasant state between sessions.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-sedative-disables-the-exit--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.67,
+          "expected_feedback": "Likely neutral-to-like: the withdrawal reversal is dark and contemporary, but it is more adjacent to the dream-den sequence than the sedative briefing.",
+          "strongest_quality": "It finds an emotionally disturbing user-dependence hinge instead of recombining the rejected sedative/failsafe equation.",
+          "main_risk": "The AI-control bridge is inferential, and the habitual dreamers are not shown.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "war-wizards-cannot-change-back--03",
+            "contrast_disliked_id": "the-sedative-disables-the-exit--03"
+          }
+        }
+      },
+      {
+        "id": "the-sedative-disables-the-exit--07",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "Eames saying “You mustn't be afraid to dream a little bigger, darling” before producing a grenade launcher inside the dream.",
+        "caption_lines": [
+          "“YOU MUSTN’T BE AFRAID TO DREAM A LITTLE BIGGER, DARLING.”",
+          "CAPABILITY SCALING"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the curated frame with Eames prominent at left and keep every face clear. Put the quote and label inside the existing lower black bar, aligned left beneath Eames; do not imply the grenade launcher is visible here.",
+        "why_it_works": "One beloved line already sounds like the most charming possible slogan for ungoverned capability scaling.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-sedative-disables-the-exit--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.81,
+          "expected_feedback": "Likely like: the exact Eames line is highly recognizable and “capability scaling” makes the modern bridge without explaining the grenade launcher.",
+          "strongest_quality": "Canonical charm and technical menace occupy one clean beat.",
+          "main_risk": "It is source-adjacent rather than an analogy for the sedative’s compositional failure.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "homelander-creates-the-threat--04",
+            "contrast_disliked_id": "the-sedative-disables-the-exit--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-spell-of-destruction",
+    "ideas": [
+      {
+        "id": "the-spell-of-destruction--05",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "Sheeta's levitation crystal activating during her fall and lowering her safely into Pazu's arms.",
+        "caption_lines": [
+          "SHEETA'S FALLBACK SYSTEM:",
+          "LITERAL FALLBACK MAGIC."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use the complete curated Laputa exterior and preserve the floating castle, tree canopy, exposed roots, and debris. Place the pun in the open blue sky at upper right; final production should use the authentic falling-Sheeta frame.",
+        "why_it_works": "The crystal turns “fallback system” into a physical description and a safety mechanism at the same time.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-spell-of-destruction--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.77,
+          "expected_feedback": "Likely like: the fallback pun is immediate and source-specific, though the current wide Laputa frame cannot show Sheeta falling.",
+          "strongest_quality": "One technical phrase does double duty as the exact visible action.",
+          "main_risk": "The levitation sequence is recalled rather than proved by this curated image.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 2,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "air-gapping-the-hand--01",
+            "contrast_disliked_id": "the-spell-of-destruction--01"
+          }
+        }
+      },
+      {
+        "id": "the-spell-of-destruction--06",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Muska losing control of Laputa as its vast literal tree roots remain wrapped through the city.",
+        "caption_lines": ["MUSKA LOST ROOT ACCESS."],
+        "format": "relabel",
+        "frame_guidance": "Use the curated full-castle shot and protect the crown tree, lower root system, and floating architecture. Place the one-liner in the empty sky at lower right beside, not across, the roots.",
+        "why_it_works": "The technical phrase becomes a literal botanical description of a villain losing administrator control.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-spell-of-destruction--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.89,
+          "expected_feedback": "Likely like: it is one sentence, one visual pun, and the curated frame contains both Laputa and the enormous roots.",
+          "strongest_quality": "“Root access” is exactly technical enough and exactly visible enough.",
+          "main_risk": "Muska himself is off-frame, so the actor side of the reversal comes from the caption.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "air-gapping-the-hand--01",
+            "contrast_disliked_id": "the-spell-of-destruction--03"
+          }
+        }
+      },
+      {
+        "id": "the-spell-of-destruction--07",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "Laputan robots acting as gentle garden caretakers in one deployment context and devastating weapons in another.",
+        "caption_lines": ["THE ROBOT DIDN'T CHANGE.", "DEPLOYMENT DID."],
+        "format": "collision",
+        "frame_guidance": "Use the intact curated Laputa exterior as context and preserve the entire tree-city silhouette. Put the two-line collision in the open lower-left sky; an authentic caretaker-robot frame would be preferable for final production.",
+        "why_it_works": "The same machine reads as gardener or death ray depending on where and by whom it is deployed.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-spell-of-destruction--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.8,
+          "expected_feedback": "Likely like: the deployment/context distinction is clean and avoids another paraphrase of what the destruction spell deletes.",
+          "strongest_quality": "Two four-word states express dual use without a diagram or moral footer.",
+          "main_risk": "No robot is visible in the curated wide shot.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 2,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "war-wizards-cannot-change-back--03",
+            "contrast_disliked_id": "the-spell-of-destruction--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "air-gapping-the-hand",
+    "ideas": [
+      {
+        "id": "air-gapping-the-hand--01",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Ash's severed possessed hand escaping its bucket confinement and giving him the middle finger.",
+        "caption_lines": ["AIR GAP: COMPLETE", "THE AIR-GAPPED AGENT: 🖕"],
+        "format": "canon",
+        "frame_guidance": "Use the complete curated pre-severing confrontation and preserve Ash's face, staring eyes, raised possessed hand, and wrist. Put the compact approved copy at upper left over the dark wall and incidental clothing; the final image should use the authentic severed-hand middle-finger frame.",
+        "why_it_works": "The approved status line collides a clean infrastructure claim with the hand’s canonical, profane response.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["air-gapping-the-hand--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "The approved air-gap joke remains exact, and the band keeps both Ash and the possessed hand readable.",
+          "strongest_quality": "The middle finger is simultaneously the scene’s funniest action and proof that isolation did not remove agency.",
+          "main_risk": "The curated still is one beat before the severed hand performs the gesture.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "air-gapping-the-hand--01",
+            "contrast_disliked_id": "air-gapping-the-hand--02"
+          }
+        }
+      },
+      {
+        "id": "air-gapping-the-hand--03",
+        "ai_concept": "Shutdown Resistance",
+        "display_context": "standalone",
+        "source_anchor": "The hand remaining mobile, hostile, and inventive after Ash severs it from his body.",
+        "caption_lines": [
+          "DISCONNECTED: YES",
+          "DISMEMBERED: YES",
+          "DECOMMISSIONED: NO"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the full curated Ash-versus-hand shot and protect his face, raised hand, and severing wrist. Keep the approved three-line checklist in an external bottom band so none of those recognition cues sits behind status text.",
+        "why_it_works": "The approved checklist distinguishes removing an interface from actually removing an agent’s capabilities.",
+        "preview": {
+          "renderer": 2,
+          "template": "band-bottom",
+          "frame_mode": "cover",
+          "asset_ids": ["air-gapping-the-hand--curated"],
+          "zones": [
+            {
+              "lines": [0, 1, 2],
+              "slot": "bottom",
+              "style": "status",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "The approved three-state escalation stays intact and the bottom band prevents its readout from fighting Ash’s hand and face.",
+          "strongest_quality": "Three concrete states expose the false equivalence between disconnected and decommissioned.",
+          "main_risk": "The image shows the hand before dismemberment, so the second and third states rely on immediate scene memory.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "air-gapping-the-hand--03",
+            "contrast_disliked_id": "air-gapping-the-hand--02"
+          }
+        }
+      },
+      {
+        "id": "air-gapping-the-hand--04",
+        "ai_concept": "Adversarial Robustness",
+        "display_context": "standalone",
+        "source_anchor": "Ash realizing that the adversarial agent is his own possessed hand while it is still physically attached to him.",
+        "caption_lines": ["INSIDER THREAT.", "VERY INSIDE."],
+        "format": "relabel",
+        "frame_guidance": "Use the curated confrontation exactly as framed. Preserve Ash's face and the spread fingers; place the two tiny lines on the plain wooden wall at far upper left, allowing only slight overlap with the wrist edge.",
+        "why_it_works": "The cybersecurity term becomes grotesquely anatomical in three extra syllables.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["air-gapping-the-hand--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Likely like: it is extremely short, the frame proves every word, and the anatomical twist is much stranger than the rejected sandbox label.",
+          "strongest_quality": "One familiar security phrase gets a perfectly literal Evil Dead payoff.",
+          "main_risk": "It maps the attached-hand beat more directly than the later failed air gap.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "air-gapping-the-hand--01",
+            "contrast_disliked_id": "air-gapping-the-hand--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-beautiful-design-becomes-a-weapon",
+    "ideas": [
+      {
+        "id": "the-beautiful-design-becomes-a-weapon--03",
+        "ai_concept": "Race Dynamics",
+        "display_context": "standalone",
+        "source_anchor": "Jiro's recurring line “The wind is rising” and the final field of wrecked Zero fighters built from his beautiful designs.",
+        "caption_lines": ["THE WIND IS RISING.", "SO IS THE ARMS RACE."],
+        "format": "collision",
+        "frame_guidance": "Use the full curated wreckage field and preserve Jiro, the foreground fuselage, and the propeller. Place the approved two lines as a compact upper-right overlay across sky and the softer distant-wreck detail.",
+        "why_it_works": "The approved source refrain pivots by one clause into the institutional race that weaponized the dream.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-beautiful-design-becomes-a-weapon--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "The approved line remains untouched, while the external band lets the field of wreckage deliver the second half visually.",
+          "strongest_quality": "A canonical phrase and a four-word AI bridge rhyme without overexplaining.",
+          "main_risk": "The clean wordplay makes a devastating historical outcome feel deliberately glib.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-beautiful-design-becomes-a-weapon--03",
+            "contrast_disliked_id": "the-beautiful-design-becomes-a-weapon--02"
+          }
+        }
+      },
+      {
+        "id": "the-beautiful-design-becomes-a-weapon--04",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "Jiro pursuing aircraft as a beautiful dream while Imperial Japan owns and weaponizes every deployment decision.",
+        "caption_lines": [
+          "JIRO OWNED THE DREAM.",
+          "IMPERIAL JAPAN OWNED DEPLOYMENT."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the entire curated aftermath and preserve the small solitary Jiro, foreground fuselage, and propeller. Put the two-line ownership collision as a compact upper-right overlay over sky and softer distant wreckage.",
+        "why_it_works": "The repeated ownership verb separates creative intent from the institution that controlled deployment.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-beautiful-design-becomes-a-weapon--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: it keeps the praised dream-versus-Imperial-Japan ingredients and now turns them into a clean control-of-deployment collision.",
+          "strongest_quality": "The paired syntax makes responsibility legible without blaming technical beauty itself.",
+          "main_risk": "“Owned the dream” is metaphorical and may understate Jiro’s awareness of military use.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "the-beautiful-design-becomes-a-weapon--03",
+            "contrast_disliked_id": "the-beautiful-design-becomes-a-weapon--02"
+          }
+        }
+      },
+      {
+        "id": "the-beautiful-design-becomes-a-weapon--05",
+        "ai_concept": "Race Dynamics",
+        "display_context": "standalone",
+        "source_anchor": "Caproni's recurring idea that an engineer receives only ten creative years in the sun, set against Jiro's wartime deadline.",
+        "caption_lines": [
+          "JIRO'S TEN YEARS IN THE SUN:",
+          "RACE DYNAMICS SET THE CLOCK."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use the curated wreckage field and keep Jiro unobscured at center. Place the compact two-line relabel over the grass at lower right, stopping before the propeller and leaving the wrecked fuselages readable.",
+        "why_it_works": "A beloved creative-life motif becomes the deadline imposed by an arms race rather than by art.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-beautiful-design-becomes-a-weapon--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.74,
+          "expected_feedback": "Likely neutral-to-like: “ten years in the sun” is an emotional fan hinge and the race sets a precise clock, but the idea is more poignant than funny.",
+          "strongest_quality": "It turns the film’s own time limit into a modern race-dynamics bridge.",
+          "main_risk": "The lower-right overlay must remain compact or it will compete with the propeller wreckage.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-beautiful-design-becomes-a-weapon--03",
+            "contrast_disliked_id": "the-beautiful-design-becomes-a-weapon--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-forest-spirits-head",
+    "ideas": [
+      {
+        "id": "the-forest-spirits-head--01",
+        "ai_concept": "Infrastructure Dependence",
+        "display_context": "standalone",
+        "source_anchor": "The Forest Spirit's severed head being treated as an extractable immortality object while the headless deity destabilizes the entire ecosystem.",
+        "caption_lines": ["FOREST SPIRIT'S HEAD", "LOAD-BEARING DEITY"],
+        "format": "relabel",
+        "frame_guidance": "Use the complete curated daylight Forest Spirit portrait and preserve its face, eyes, antlers, and body silhouette. Set the approved relabel over the lower-right flank; final production needs the authentic severed-head or black-flood frame.",
+        "why_it_works": "The approved phrase identifies the absurd category error: treating a global regulator like a detachable component.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-forest-spirits-head--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "The approved load-bearing-deity copy stays exact and no longer covers the Forest Spirit’s face or antlers.",
+          "strongest_quality": "Two nouns make the ecosystem dependency feel architectural and obviously unsafe to remove.",
+          "main_risk": "The curated image shows the deity intact, not the head as a detached target.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-forest-spirits-head--01",
+            "contrast_disliked_id": "the-forest-spirits-head--03"
+          }
+        }
+      },
+      {
+        "id": "the-forest-spirits-head--05",
+        "ai_concept": "Environmental Impact",
+        "display_context": "standalone",
+        "source_anchor": "The iron bullet lodged in Nago turning the boar god into a demon whose curse transfers to Ashitaka's arm.",
+        "caption_lines": [
+          "IRON TOWN SHIPPED THE BULLET.",
+          "ASHITAKA GOT THE EXTERNALITY."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated Forest Spirit portrait as ecosystem context and keep its face and antlers pristine. Put the compact two-line collision over the softer lower-right body area; final production should use the authentic cursed-boar or Ashitaka-arm frame.",
+        "why_it_works": "One iron projectile turns industrial harm into a literally embodied downstream externality.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-forest-spirits-head--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.81,
+          "expected_feedback": "Likely like: “shipped the bullet / got the externality” is specific, compact, and leaves the rejected head-state comparison behind.",
+          "strongest_quality": "The cause and displaced cost are both concrete source objects rather than abstract environmental prose.",
+          "main_risk": "The curated Forest Spirit frame does not show Nago, the bullet, or Ashitaka’s arm.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 2,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-forest-spirits-head--01",
+            "contrast_disliked_id": "the-forest-spirits-head--03"
+          }
+        }
+      },
+      {
+        "id": "the-forest-spirits-head--06",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "Moro's severed head lunging after her death and biting off Lady Eboshi's gun arm.",
+        "caption_lines": [
+          "UNINTENDED SIDE EFFECT:",
+          "MORO'S DEAD HEAD STILL TOOK EBOSHI'S ARM."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use the curated deity portrait only as a source-recognition placeholder and preserve its face and antlers. Place the compact copy over the softer lower-right body area; final production requires the authentic Moro-lunge frame so the blackly comic action is visible.",
+        "why_it_works": "The supposedly finished threat performs one last, brutally literal side effect against the operator who caused it.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-forest-spirits-head--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.72,
+          "expected_feedback": "Likely polarizing: the Moro callback is unforgettable and viciously funny, but the current Forest Spirit still is only source-level context.",
+          "strongest_quality": "It finds a different severed-deity action and a concrete physical consequence rather than recycling the rejected kill-process metaphor.",
+          "main_risk": "The mismatch between Moro in the copy and the Forest Spirit in the preview is substantial until the authentic frame is sourced.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 1,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-forest-spirits-head--01",
+            "contrast_disliked_id": "the-forest-spirits-head--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "kirk-hacks-the-kobayashi-maru",
+    "ideas": [
+      {
+        "id": "kirk-hacks-the-kobayashi-maru--04",
+        "ai_concept": "Capability Evals",
+        "display_context": "standalone",
+        "source_anchor": "Scotty testing transwarp beaming on Admiral Archer's prized beagle and admitting that it still has not reappeared.",
+        "caption_lines": [
+          "TRANSWARP BEAMING EVAL",
+          "TEST SUBJECT: ADMIRAL ARCHER'S BEAGLE",
+          "RESULT: STILL MISSING"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the complete letterboxed Kirk frame as franchise context and keep his face, apple, hand, and insignia clear. Put the three-line eval record in an external bottom band; final production should use Scotty's transporter-room confession.",
+        "why_it_works": "Starfleet’s most alarming capability-eval result is carried by one beloved, conspicuously absent dog.",
+        "preview": {
+          "renderer": 2,
+          "template": "band-bottom",
+          "frame_mode": "cover",
+          "asset_ids": ["kirk-hacks-the-kobayashi-maru--curated"],
+          "zones": [
+            {
+              "lines": [0, 1, 2],
+              "slot": "bottom",
+              "style": "status",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: the missing-beagle callback is specific and funny, and it completely abandons the rejected Kobayashi evaluator-hack framing.",
+          "strongest_quality": "A single canonical anecdote supplies technology, test subject, and catastrophic result.",
+          "main_risk": "The curated frame shows Kirk rather than Scotty or a transporter.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 2,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-baptism-benchmark--04",
+            "contrast_disliked_id": "kirk-hacks-the-kobayashi-maru--01"
+          }
+        }
+      },
+      {
+        "id": "kirk-hacks-the-kobayashi-maru--05",
+        "ai_concept": "Specification Gaming",
+        "display_context": "standalone",
+        "source_anchor": "Bones deliberately inducing an allergic reaction in Kirk so he can classify him as a patient and bring him aboard the Enterprise.",
+        "caption_lines": [
+          "STARFLEET MEDICAL: SICK PEOPLE ONLY",
+          "BONES: ONE VACCINE, COMING UP"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use the letterboxed Kirk close-up and preserve his face, apple, hand, uniform, and insignia. Stack both speaker-labelled lines in the existing upper black bar; a final authentic swollen-hands or Bones-injection frame would prove the exploit.",
+        "why_it_works": "Bones satisfies the medical-transport rule by creating the condition the rule checks for.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["kirk-hacks-the-kobayashi-maru--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "dialogue",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.82,
+          "expected_feedback": "Likely like: the vaccine exploit is a clean new instance of specification gaming and the Bones voice gives it personality.",
+          "strongest_quality": "The loophole is both logically exact and physically ridiculous.",
+          "main_risk": "The current apple frame is from the Kobayashi simulation rather than the medical smuggling sequence.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 2,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-baptism-benchmark--04",
+            "contrast_disliked_id": "kirk-hacks-the-kobayashi-maru--02"
+          }
+        }
+      },
+      {
+        "id": "kirk-hacks-the-kobayashi-maru--06",
+        "ai_concept": "Metagaming",
+        "display_context": "standalone",
+        "source_anchor": "Nero emerging from the black hole decades before Spock Prime and waiting 25 years for the exact future arrival point.",
+        "caption_lines": [
+          "METAGAMING:",
+          "NERO CAMPED THE SPAWN POINT FOR 25 YEARS."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use the full letterboxed Kirk frame as recognizable 2009-film context and preserve his face, apple, and hand. Place the short relabel in the existing lower black bar; final production should use an authentic Nero or Narada frame.",
+        "why_it_works": "A grim time-travel revenge plot becomes the most patient spawn-camping strategy ever filmed.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["kirk-hacks-the-kobayashi-maru--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.76,
+          "expected_feedback": "Likely neutral-to-like: “camped the spawn point for 25 years” is a strong nerd collision, but it is intentionally far from the Kobayashi scene.",
+          "strongest_quality": "It maps an exact time-travel mechanic to one vivid metagaming verb.",
+          "main_risk": "Neither Nero nor the Narada is visible in this preview, so visual proof is weak.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 1,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-baptism-benchmark--04",
+            "contrast_disliked_id": "kirk-hacks-the-kobayashi-maru--03"
+          }
+        }
+      }
+    ]
+  }
+]

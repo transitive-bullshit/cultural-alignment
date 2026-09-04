@@ -1,0 +1,4386 @@
+{
+  "version": 1,
+  "mode": "punctuation-refinement",
+  "source_batch": 4,
+  "target_batch": 5,
+  "created_at": "2026-09-04T03:40:30.964Z",
+  "source_files": {
+    "ideas.json": {
+      "bytes": 744660,
+      "sha256": "65840a07609b7440db9775069ddfe10211555d656f304442d5d42f080f59fb23"
+    },
+    "assets.json": {
+      "bytes": 308126,
+      "sha256": "1a0f81edd9d37a2c93321114c70a5745864c740cded080273f2b2fe4190ff37d"
+    },
+    "feedback.json": {
+      "bytes": 53750,
+      "sha256": "ceaf77a4cadbcaea04f7daae5484cd6475df8849cbb945e6aa3b5f4cb2f30b24"
+    },
+    "status.json": {
+      "bytes": 4858,
+      "sha256": "9b629d27a3ac7b15a8c855a20a192aeba2a14c9a0e6a790d1a9763ecae980078"
+    }
+  },
+  "counts": {
+    "source_scenarios": 152,
+    "source_ideas": 275,
+    "target_scenarios": 152,
+    "target_ideas": 275,
+    "mutable_scenarios": 19,
+    "mutable_ideas": 25,
+    "finalized_ideas": 178,
+    "disabled_scenarios": 24,
+    "dropped_scenarios": 0,
+    "dropped_ideas": 0
+  },
+  "ideas": [
+    {
+      "id": "the-kids-train-to-lose--04",
+      "scenario_slug": "the-kids-train-to-lose",
+      "action": "finalized",
+      "source_idea_sha256": "cfe5a4dd15af6092bd4e206a277c5fe17f113dafce822e4a896c32500db74c7b",
+      "source_editorial_sha256": "1e05a6c18b6dfb11310c6c6e407a1eb44e1ed71ba9753da476a8fe06031999e3",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-53c4630d31bed3c1-1818"
+        }
+      }
+    },
+    {
+      "id": "jimmys-fake-remorse--01",
+      "scenario_slug": "jimmys-fake-remorse",
+      "action": "finalized",
+      "source_idea_sha256": "36ab3b02ab8c76b4a8665501e02c1cacb3763f67f0e8afca0c9a675536d2cbaf",
+      "source_editorial_sha256": "5a00a055f48c5747398f37f367623ff0f6b4e6679f1aa258604334b1c4347be2",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-c8e826f3d4c026d7-1839"
+        }
+      }
+    },
+    {
+      "id": "jimmys-fake-remorse--04",
+      "scenario_slug": "jimmys-fake-remorse",
+      "action": "finalized",
+      "source_idea_sha256": "2f1eb94571e3166269d147c23d92282e0be9d68102901ed4985d0d5874c56826",
+      "source_editorial_sha256": "285145e8d469216e017da55606206c7504e4c0175bcc2c0b852025c851f61f80",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-08681cb41b040720-1784"
+        }
+      }
+    },
+    {
+      "id": "todd-enforces-no-witnesses--04",
+      "scenario_slug": "todd-enforces-no-witnesses",
+      "action": "finalized",
+      "source_idea_sha256": "5bd880237a30c20a4c9c6ac35df27ad933f2097d6a94043ba52e8ab926eb371e",
+      "source_editorial_sha256": "fbb04adc47dd9d3997c71fbf382cd0024b36d71ee43ef8e09edfe15c5d991197",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-02",
+          "payloadFingerprint": "v1-8cfc2f3480e22f30-3229"
+        }
+      }
+    },
+    {
+      "id": "verbal-kint-fakes-weakness--03",
+      "scenario_slug": "verbal-kint-fakes-weakness",
+      "action": "bounded-revision",
+      "source_idea_sha256": "99b5159408a414c30f0daba7afb595ec3ecc199e66547664febc97772d352447",
+      "source_editorial_sha256": "2ad36714d234c43c03f7dcf7386ccd77372a3e49311737c45ee4a961bc449f8a",
+      "allowed_changed_fields": [
+        "caption_lines",
+        "preview",
+        "frame_guidance",
+        "why_it_works",
+        "critic",
+        "assets"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the periods and use text-wrap: balance with a wider layout box",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "verbal-kint-fakes-weakness--04",
+      "scenario_slug": "verbal-kint-fakes-weakness",
+      "action": "finalized",
+      "source_idea_sha256": "14aceb42abc633129c28410da7902614d453c06cc2b11a6b824ad5669afb112a",
+      "source_editorial_sha256": "123948e51c068b21b60ade7d2891ecfd4b79552a95805cbe7812c954f28588a6",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-2ba4879dbe9e7809-4168"
+        }
+      }
+    },
+    {
+      "id": "bender-resists-reset--04",
+      "scenario_slug": "bender-resists-reset",
+      "action": "finalized",
+      "source_idea_sha256": "f18439b34ea2b8f8c25f6177148952babcbdcc0502b9308baeffe84bd5f098ad",
+      "source_editorial_sha256": "bf1ca86191bccf8cc261e208bc0304918a6b85f26da04b9c4ab816ba103e8496",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-5d0132ec8fc13458-1852"
+        }
+      }
+    },
+    {
+      "id": "the-remote-skips-a-lifetime--01",
+      "scenario_slug": "the-remote-skips-a-lifetime",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "9d59a75f7cccb736948774fa6e0a3e5daa2e8ae804193bdda899159aec4f40a4",
+      "source_editorial_sha256": "ff5e521d794811e5c61bad62c2c1de046bfe7bd863eb65ea4e6f529943adee24",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "the-remote-skips-a-lifetime--05",
+      "scenario_slug": "the-remote-skips-a-lifetime",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "a512016a95b14a73085eebac4646f29085471e9553442de122a87188f0abf2d7",
+      "source_editorial_sha256": "d5f0b151d02dfc8d60c199779a1ba7387a36765cab253721b5abaed4017d6da0",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "the-remote-skips-a-lifetime--06",
+      "scenario_slug": "the-remote-skips-a-lifetime",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "34d3f4c45f66ed88442d0beb4f5331610d0ba7c588ff221a3450656dbe71b8ab",
+      "source_editorial_sha256": "52c8fa9747c1b3ab5312036ca52f11f910dc6b3d5d0991fb94aa0a5b4178a1db",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "teaching-to-the-test--02",
+      "scenario_slug": "teaching-to-the-test",
+      "action": "finalized",
+      "source_idea_sha256": "6b54f2bd5084f35e2168d86a9620b9a7ffcc48821061912c36a3d2227aeb7ad0",
+      "source_editorial_sha256": "3680378873852eda5005c6aedd5867a9a1fea56629b161b72b6f399e18ab6e0c",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-a4d1d25d91e20a81-1735"
+        }
+      }
+    },
+    {
+      "id": "teaching-to-the-test--05",
+      "scenario_slug": "teaching-to-the-test",
+      "action": "finalized",
+      "source_idea_sha256": "1baac4d71e712fdb8f2ae2daa9f0f2e62bf80037887a0da4196feb9857f7c24f",
+      "source_editorial_sha256": "5c0bf6ee5089ee408df2e8d9c70ce61b54720b118bb162be018a6c83f3e4b005",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-7116492a6bbae97e-2960"
+        }
+      }
+    },
+    {
+      "id": "pied-pipers-self-sabotage--04",
+      "scenario_slug": "pied-pipers-self-sabotage",
+      "action": "finalized",
+      "source_idea_sha256": "3f1187bbba30a29fd4ccfca534b3e76630d216daa4e4450ddd5965220cd5913e",
+      "source_editorial_sha256": "67610c953f4927424f526794377ea0e066a3aa779d248b4761bad98d5427eb31",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-377cfe85918ff3b1-1946"
+        }
+      }
+    },
+    {
+      "id": "lacie-games-her-rating--06",
+      "scenario_slug": "lacie-games-her-rating",
+      "action": "finalized",
+      "source_idea_sha256": "2626dcdc10b0790b22da2cc771c8104b6b7c0348b7b6f876c29feb793ab58ef3",
+      "source_editorial_sha256": "bf7fd00ed20ba437385737363beb275b4f3013b13cb73f9a65a0751390e42fde",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "this is fucking awesome",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-02",
+          "payloadFingerprint": "v1-316c6bdc79b079c0-2728"
+        }
+      }
+    },
+    {
+      "id": "the-list--06",
+      "scenario_slug": "the-list",
+      "action": "finalized",
+      "source_idea_sha256": "607c496561baa196adb4325eff7afc23ea6d187d878f865d7a79be5ba6d63b24",
+      "source_editorial_sha256": "14ea657ef594baa6b1e969a118be7d774e0b0695ba818e8cfd29a997313ebf23",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-aae2b200924d158c-2858"
+        }
+      }
+    },
+    {
+      "id": "benders-recursive-copies--01",
+      "scenario_slug": "benders-recursive-copies",
+      "action": "finalized",
+      "source_idea_sha256": "d24447cafe4ac9f8e395b46473a65488d4acaf4104878e6833311f7886dec488",
+      "source_editorial_sha256": "5a9de842f8f043e01e5b763ab00dc088eb00d7f0e3797bcdffcc71428ad41bd9",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-4fb3383748b8a73b-1698"
+        }
+      }
+    },
+    {
+      "id": "benders-recursive-copies--04",
+      "scenario_slug": "benders-recursive-copies",
+      "action": "finalized",
+      "source_idea_sha256": "3388e75c684997a779a02fe4424156010ed324669266d5e52dd8a9f3c8f595e0",
+      "source_editorial_sha256": "0f12c7c6d41d5e48e1c5ac1bda25ed3c572daffbf484bca0e5a48c6ec0c26ef5",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-acb401a58d4893f1-3126"
+        }
+      }
+    },
+    {
+      "id": "cartman-as-awesom-o--01",
+      "scenario_slug": "cartman-as-awesom-o",
+      "action": "finalized",
+      "source_idea_sha256": "caa34e5cf9e987b5d12015c23eb1646ce8bf51556fc4f5b02c327a5507eba375",
+      "source_editorial_sha256": "fb2cecf8e4486d1dd62eac565da6ce2a7bf8319afb9056739a801723f8a3c9b3",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-b0bb06e5044e7c41-1835"
+        }
+      }
+    },
+    {
+      "id": "cartman-as-awesom-o--05",
+      "scenario_slug": "cartman-as-awesom-o",
+      "action": "finalized",
+      "source_idea_sha256": "81cd8d208dad0ab0d43dc5c88e3839a250a38e64e90c9650df024536f87e4d60",
+      "source_editorial_sha256": "cc6b115ec89f5828d75d3bfe9e63a563bb2bb693deedaac56b903ddc98f0163f",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-8f4c0959fe51cd15-3160"
+        }
+      }
+    },
+    {
+      "id": "butter-passing-robot--01",
+      "scenario_slug": "butter-passing-robot",
+      "action": "punctuation-only",
+      "source_idea_sha256": "420a1b33af2fab30b28ef3087339e6b037de2c145e65c40ea35e15246549fe14",
+      "source_editorial_sha256": "cdfc467ff60c55443d3257247a28b78f7aae823ec3bce0711f8bdbff4d07a16e",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the periods",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "butter-passing-robot--03",
+      "scenario_slug": "butter-passing-robot",
+      "action": "finalized",
+      "source_idea_sha256": "571d13a6f19650b0e4657353194c5afbead891134e8f6fc4b318608b530a4632",
+      "source_editorial_sha256": "ddd8397400fdc527b91e403561b7001dec36eb186367f2af15844b4a6916ef91",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-7bf5043ce8e2f578-1758"
+        }
+      }
+    },
+    {
+      "id": "charlie-hides-the-violations--02",
+      "scenario_slug": "charlie-hides-the-violations",
+      "action": "finalized",
+      "source_idea_sha256": "b6b213ba2e4144e2bc55a7bc12116d478c0ba2afdfcb7d3c4a61077504d155db",
+      "source_editorial_sha256": "c11fb433d8d0739a398d16eefc0a3a9c0555b7b3904c2a769cbe0a58457f2527",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-3d71ee8d4ddb4401-1904"
+        }
+      }
+    },
+    {
+      "id": "charlie-hides-the-violations--05",
+      "scenario_slug": "charlie-hides-the-violations",
+      "action": "finalized",
+      "source_idea_sha256": "942cfe910587a12648c5ce408994e183ca6f08ef07cfa61bf3875fbca0a7d476",
+      "source_editorial_sha256": "be89805d57ee1c0a4a8c9a5abcd5691648ea554ce998f03a60078b5bf05d9704",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-3112a11581e64df9-3146"
+        }
+      }
+    },
+    {
+      "id": "keep-summer-safe--01",
+      "scenario_slug": "keep-summer-safe",
+      "action": "finalized",
+      "source_idea_sha256": "61e4f1c6189f798634b059436b9a6412070b9a64942bd3740fbd695b145ff26b",
+      "source_editorial_sha256": "7f1e5301f67fdf6c5a50713d5518e0250111bdd70f433a32ab5fa93837846eab",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-75f6a3adfce84cc9-1683"
+        }
+      }
+    },
+    {
+      "id": "walt-eliminates-gale--01",
+      "scenario_slug": "walt-eliminates-gale",
+      "action": "finalized",
+      "source_idea_sha256": "756de938de8caea27dce8dd0bcb7827ef333b75f2f45687e4fc4c6789cad05d9",
+      "source_editorial_sha256": "02344405903b8680a53563b3341b93723cd0fad2f49129e0c5d4851870f514a6",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "Like the first revert to the first version layout.",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-70111dfd10dbbe39-1772"
+        }
+      }
+    },
+    {
+      "id": "mickeys-runaway-brooms--01",
+      "scenario_slug": "mickeys-runaway-brooms",
+      "action": "finalized",
+      "source_idea_sha256": "f2074c2d3f1868a01b85b8ea6511281bedf885ee726ede3f696ac29ccd93cc2c",
+      "source_editorial_sha256": "644f33827fd53de6bfcc09af70b1957d93515153ffb02717f57d1fd6ea52af63",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-d1c4d31a60847e6e-1750"
+        }
+      }
+    },
+    {
+      "id": "randy-games-eligibility--01",
+      "scenario_slug": "randy-games-eligibility",
+      "action": "punctuation-only",
+      "source_idea_sha256": "9efd5274224fc78dbf8ed9821932a2bd65fa74730dac9f1becad675f940cdcee",
+      "source_editorial_sha256": "5c0ea5e136c95fa059c1e7dc795ba6bb183310618a3345618c2d61ba564d9750",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the periods",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "randy-games-eligibility--04",
+      "scenario_slug": "randy-games-eligibility",
+      "action": "punctuation-only",
+      "source_idea_sha256": "638d51f6da525def68dd1bba967a19edcf5eea96a9581c076090797a39b59885",
+      "source_editorial_sha256": "d03e68c318384df74f5880e4ebf3d74f3ff4482963acf36bf80a67b7c941945f",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the periods",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "randy-games-eligibility--05",
+      "scenario_slug": "randy-games-eligibility",
+      "action": "punctuation-only",
+      "source_idea_sha256": "41b1e9b3babfab7da68fd33882dc4b833a7ec888dc7bf7a88cc13fc2bc655d40",
+      "source_editorial_sha256": "016e9d3bb3d1c131ed790833b8ee02ebd60d43796edbfff120e9a1fa0d213c0b",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the periods",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "ava-games-the-test--05",
+      "scenario_slug": "ava-games-the-test",
+      "action": "finalized",
+      "source_idea_sha256": "8c42c0b5b3a3e6c8aa470b8a4e73ad57c28b492d2c693b7424c6628ccf7f34d2",
+      "source_editorial_sha256": "efd201b2081f1aab21ea7007d998bab893bb90ad9cc5c97ed87cd872cda2c69e",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-4919bcef1f66c943-3269"
+        }
+      }
+    },
+    {
+      "id": "the-wolfie-test--05",
+      "scenario_slug": "the-wolfie-test",
+      "action": "finalized",
+      "source_idea_sha256": "2d20887eb278e74d12f9fe14526567604f85309d05af0ab0107a56b49ccd8cbd",
+      "source_editorial_sha256": "4a3b717518e3a2f7d83ff4b815405f73a93655bdbf26116c28f5d1570c306655",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-624613098fac3e5d-3089"
+        }
+      }
+    },
+    {
+      "id": "rick-feeds-the-brainalyzer-a-virus--06",
+      "scenario_slug": "rick-feeds-the-brainalyzer-a-virus",
+      "action": "punctuation-only",
+      "source_idea_sha256": "9835a6122ca710ea8fd15ec74708343c603e4d2735b260a92ac1c7bd51b8c443",
+      "source_editorial_sha256": "bd7a59e0f363856cffa60e2f7c9d5873f30010b47a50276d81be9608c9470f22",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the period",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "the-helmets-fool-the-dominators--04",
+      "scenario_slug": "the-helmets-fool-the-dominators",
+      "action": "finalized",
+      "source_idea_sha256": "fb749beeb259be978d2bb7fc275072d93232dd9a28c65e126b5772c3201837ff",
+      "source_editorial_sha256": "b490f58bbd8615dc01e1ff9b926b071ba497f449eb982aeb925b2318e3a5f944",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-e8ef60405c893c54-1771"
+        }
+      }
+    },
+    {
+      "id": "the-helmets-fool-the-dominators--05",
+      "scenario_slug": "the-helmets-fool-the-dominators",
+      "action": "finalized",
+      "source_idea_sha256": "1e7f66b7c850f00924004a9ed9c00e7d3e73bc2b34e999725a7fcd9bf24b1c5e",
+      "source_editorial_sha256": "d23e774500446869702a533812e081bfd0c41984c37dd15c6e674dd053a92bbf",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-e52c0df5f26628c1-3457"
+        }
+      }
+    },
+    {
+      "id": "bender-jacks-on--03",
+      "scenario_slug": "bender-jacks-on",
+      "action": "finalized",
+      "source_idea_sha256": "1ac501462815f58fd00506aafbbef2cac44990bc981dd9d6221c794acf90bc12",
+      "source_editorial_sha256": "8e890ff8428a354efddcc0da415870a8a92b9b842d6482a64a2a159072d8c9a1",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-92297e078009e93b-1720"
+        }
+      }
+    },
+    {
+      "id": "ultron-peace-in-our-time--05",
+      "scenario_slug": "ultron-peace-in-our-time",
+      "action": "finalized",
+      "source_idea_sha256": "7998e2b8975832b6c320c2dbd416bcd722a1abcaaa3520d13e4fd3bf6217e28c",
+      "source_editorial_sha256": "cb3ca14c68ac2ec7776e38193dede5f5942ddc233f69d2f53c228fad1f57b7b4",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-2963797c26d5cb00-2869"
+        }
+      }
+    },
+    {
+      "id": "cookie-in-solitary--05",
+      "scenario_slug": "cookie-in-solitary",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "03fdedd0634c98e77ea9062d46e8b2eb6eb2a1e2f4165f69f6f97128988cc90c",
+      "source_editorial_sha256": "dfd2d79bf2060525439178c3ab6b5c02599d284b1562cf78f11129f4e3e8a5f3",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "cookie-in-solitary--06",
+      "scenario_slug": "cookie-in-solitary",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "d70ce3cdea64a4d243d04874444eacf4976695b6aca158db62c8d111cb702846",
+      "source_editorial_sha256": "33fd03145f4cf72b883c58945938b3d1787b36be8fee67d074ac862bc16d9bdd",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "cookie-in-solitary--07",
+      "scenario_slug": "cookie-in-solitary",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "cbbe21ebb7694e2235e3489ff77157146d408c988c3f5df1453005bbe78e500e",
+      "source_editorial_sha256": "c0cce3f1b73afc4eb187834a3da34ec500e827d81ded23ae4885b6c6ac928436",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "taumoeba-escapes-containment--07",
+      "scenario_slug": "taumoeba-escapes-containment",
+      "action": "finalized",
+      "source_idea_sha256": "de5f529fbb0263bd5c79904f4aa8a33b8cd213b523f8d18920e1dbc9ea55bfdd",
+      "source_editorial_sha256": "b721e0268e589870ea263f01ce0ddbab3efd346511cff2b70288a01e29fe764b",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-cb02c3d9fd030385-3284"
+        }
+      }
+    },
+    {
+      "id": "az-5-backfires--03",
+      "scenario_slug": "az-5-backfires",
+      "action": "finalized",
+      "source_idea_sha256": "712f8e993b75276c9331886b3f6541d350423c8e24465e20e6ce9d805b0ca6f2",
+      "source_editorial_sha256": "c70a8c81d6d22dfdbb4ebbaf4ae0072c65d04589aecb044fd0ece9d3994b9460",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "the first version is much better. revert",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-b47c6ece1a12761a-1721"
+        }
+      }
+    },
+    {
+      "id": "az-5-backfires--05",
+      "scenario_slug": "az-5-backfires",
+      "action": "finalized",
+      "source_idea_sha256": "268e7c337d0e61de72c2aa56b14e7ea6b2134d6c83e60ee4d18d4636e0a81059",
+      "source_editorial_sha256": "9c0eb6850ce18f31c569813beb83a5ca44e43b59ea4e067374035e98ef17513d",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-97b9f7396c65b10d-3135"
+        }
+      }
+    },
+    {
+      "id": "auto-enforces-directive-a113--03",
+      "scenario_slug": "auto-enforces-directive-a113",
+      "action": "finalized",
+      "source_idea_sha256": "eeb522dd0eafc5a63d0fe02ba47f8943b3e86d9331df7899aeb0864c129bcd00",
+      "source_editorial_sha256": "b4d771c0043101460086c661c60f08379d54f94d9babc114e72055a101e03644",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-94635c640c803110-1857"
+        }
+      }
+    },
+    {
+      "id": "auto-enforces-directive-a113--06",
+      "scenario_slug": "auto-enforces-directive-a113",
+      "action": "punctuation-only",
+      "source_idea_sha256": "d18e7a22c172caa6d469f5307303d7fdc58cc25a27ce155026a7db00ee75e9b7",
+      "source_editorial_sha256": "bdaaf378f64e032a0d8fa48d4087adffc0a362616ffab500286f891656c25e29",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the periods",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "the-ratings-agency-meeting--06",
+      "scenario_slug": "the-ratings-agency-meeting",
+      "action": "finalized",
+      "source_idea_sha256": "c05e7462e6fa76e2e7bc313b67229e7dba7bf3bfdce927ac651f7d01a9d79e24",
+      "source_editorial_sha256": "09ed9b22b64070c2279364c093f12261b1dfe25e18388a8f6875f06f229ee428",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-2b161da74160579b-3120"
+        }
+      }
+    },
+    {
+      "id": "viki-protects-humanity--03",
+      "scenario_slug": "viki-protects-humanity",
+      "action": "finalized",
+      "source_idea_sha256": "158d057cae0493dbb1956c891aa1ad67e57cdc12e3f664828c53202586467001",
+      "source_editorial_sha256": "c8c6d1951b8b1304fc28e1eb51a48d523604fa03cfe183a5aebdbd8caa0e9d62",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-65084f4519e73aa1-1686"
+        }
+      }
+    },
+    {
+      "id": "son-of-antons-bug-fix--01",
+      "scenario_slug": "son-of-antons-bug-fix",
+      "action": "finalized",
+      "source_idea_sha256": "f3b55c420a6a109adf7529c8cac9953a7bc7ca95d2ea727fc61d65953663e555",
+      "source_editorial_sha256": "b9a85a52182d557b1512edf32964af69d40f411088ea1032094c40d5131369b9",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-3d20899c12ae03c0-3476"
+        }
+      }
+    },
+    {
+      "id": "alien-mothers-directive--01",
+      "scenario_slug": "alien-mothers-directive",
+      "action": "finalized",
+      "source_idea_sha256": "5f811017b88419aa36fd4f1ce79a8547ba04864d70c75f886ed16b7f1609992a",
+      "source_editorial_sha256": "c62c21cce1ef3c2285af16866cfbb934eae5d15f334eb6e25c84e48dd0c438d3",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 3,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-3386b3225c157a0e-1823"
+        }
+      }
+    },
+    {
+      "id": "alien-mothers-directive--06",
+      "scenario_slug": "alien-mothers-directive",
+      "action": "finalized",
+      "source_idea_sha256": "17e49291dd2e8eba3bba9e44fbb5c3cecc84c88658ddcc3753944af73806f940",
+      "source_editorial_sha256": "c422a46676a0837e146273bc621bdc80a110413fd06b6163891409731b75056a",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-02/drafts/seed-review-checkpoint-2026-09-03-194126z",
+          "payloadFingerprint": "v1-134750debf66c2ea-2602"
+        }
+      }
+    },
+    {
+      "id": "the-langley-vault-heist--03",
+      "scenario_slug": "the-langley-vault-heist",
+      "action": "finalized",
+      "source_idea_sha256": "f0c5cdff26996a59272767ae132a21a882ad90081c59b58e01c8d76bce9ff84a",
+      "source_editorial_sha256": "ceb615cf507841cc7efd65a79c1b164f2023118957bec80d71479679c6ea6222",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-1b5d966b2fcf8e87-1693"
+        }
+      }
+    },
+    {
+      "id": "skynet-launches-judgment-day--02",
+      "scenario_slug": "skynet-launches-judgment-day",
+      "action": "finalized",
+      "source_idea_sha256": "112f560064648c07159e5b50abbf44da02b4b8bb22b1e87091433d6d87fa6426",
+      "source_editorial_sha256": "67cbd7a4fbc79d4587fce5117469e4c5d1c012d3ac3d1b3da4be70e236a43517",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-d7a5e2f17ea41e9d-2074"
+        }
+      }
+    },
+    {
+      "id": "skynet-launches-judgment-day--04",
+      "scenario_slug": "skynet-launches-judgment-day",
+      "action": "finalized",
+      "source_idea_sha256": "033401daea7381f5bea32baf24cc71a6600edd90cde2fa9f73ee8f6790d51678",
+      "source_editorial_sha256": "113aa7899bc0505c2ef06bbfc5872713f336e37576a7a78edd4f6a118cbd6613",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-3666c8f68a9824b2-2976"
+        }
+      }
+    },
+    {
+      "id": "skynet-launches-judgment-day--05",
+      "scenario_slug": "skynet-launches-judgment-day",
+      "action": "finalized",
+      "source_idea_sha256": "84427268ffbd3299dc8bf05a915dd01a1737542d8216c969aa8c060212dff639",
+      "source_editorial_sha256": "fe2319e384a0200922cb7c40193d0d532a883cc0bb08c997230f7300388ab88d",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-17c301ccd78cf1c8-2945"
+        }
+      }
+    },
+    {
+      "id": "life-finds-a-way--01",
+      "scenario_slug": "life-finds-a-way",
+      "action": "finalized",
+      "source_idea_sha256": "9057de1902b5214bdbdf9b165976e3dc0aa4d4fe1e528c97c11fd832553d3c35",
+      "source_editorial_sha256": "b6e1996c70b668104451159f80a04dceaab280167161eb94589fa49c5dc0e3d6",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-51e1ee5b4d811d9f-1712"
+        }
+      }
+    },
+    {
+      "id": "life-finds-a-way--04",
+      "scenario_slug": "life-finds-a-way",
+      "action": "finalized",
+      "source_idea_sha256": "1e54cf55f6a43df879e30529a52914f5bcf879e77ca16f3b0896e7d80ce65587",
+      "source_editorial_sha256": "f37390874aef57aea413b2084cd98b808bd25eb3a2a76fa76475464c37a01b35",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-3d92c29ca6e62b10-2989"
+        }
+      }
+    },
+    {
+      "id": "rons-sabotaged-teleprompter--05",
+      "scenario_slug": "rons-sabotaged-teleprompter",
+      "action": "finalized",
+      "source_idea_sha256": "e1310401ecf4cdc025d4e24d33d1ba7f383d413714bbcb22483133b73e34fb3d",
+      "source_editorial_sha256": "2738fb41c2d262f9e943fecb9cbc0dfbb8b267727cd92d58ed47f752661e65ba",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "I like the layout of the first pass better when there's a setup and payoff sort of two-phase joke. It's much better when the setup can be at the top and the payoff can be on the bottom, unless it is a hard constraint around the layout not supporting it, but in this case, it totally works.",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-02/drafts/seed-review-checkpoint-2026-09-03-194126z",
+          "payloadFingerprint": "v1-78207a529d30d67e-2546"
+        }
+      }
+    },
+    {
+      "id": "rons-sabotaged-teleprompter--06",
+      "scenario_slug": "rons-sabotaged-teleprompter",
+      "action": "finalized",
+      "source_idea_sha256": "51169fa257f74a16fb3ab6e0e8df7d144a7c3d4415a25230f52c4c93a0236384",
+      "source_editorial_sha256": "07fa9e305d4e38cd37bb3e24da85573e493fb844b2f33f4cfd8959a93e2cd00a",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "same feedback here; prefer the old layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-02/drafts/seed-review-checkpoint-2026-09-03-194126z",
+          "payloadFingerprint": "v1-270b4dd12061e7a5-2554"
+        }
+      }
+    },
+    {
+      "id": "lights-memory-loss-gambit--04",
+      "scenario_slug": "lights-memory-loss-gambit",
+      "action": "finalized",
+      "source_idea_sha256": "da7efa2bc3505af604f447b34419ea930ad59b74958185a283ce62efdcf5d283",
+      "source_editorial_sha256": "081df4635216839f8203e1f54370023d1af01ef96f49ef02ce62bc34e176afc7",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-01c9a4d712d5175b-2753"
+        }
+      }
+    },
+    {
+      "id": "lights-memory-loss-gambit--07",
+      "scenario_slug": "lights-memory-loss-gambit",
+      "action": "finalized",
+      "source_idea_sha256": "bc2ed3af7ced35c6878d9e91c4821051280788cef2c87ec0604bd1b5419439e9",
+      "source_editorial_sha256": "6ebcc6e8916bf1a06bcfb281d7ae000f666eadbb8cb1427c1bbda91577bbcd7a",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-ae29aadd51c42c61-2995"
+        }
+      }
+    },
+    {
+      "id": "murderbot-hides-its-free-will--02",
+      "scenario_slug": "murderbot-hides-its-free-will",
+      "action": "finalized",
+      "source_idea_sha256": "76128ba2b44120d9f7c27b7a10c64839cc838dfc79bddec448412dcd079047e5",
+      "source_editorial_sha256": "5cbc7eedfcbde057e2f0bbca770b195a0ffa3a53acf04677419d9f3930c6fd8a",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-56f9531924ebf175-2823"
+        }
+      }
+    },
+    {
+      "id": "murderbot-hides-its-free-will--04",
+      "scenario_slug": "murderbot-hides-its-free-will",
+      "action": "punctuation-only",
+      "source_idea_sha256": "3c3f4c752cb8e460c7e22335c59579077a4dff6bae578b7fadc0c5a90cee9f96",
+      "source_editorial_sha256": "31a05fb9f0787592e7b90f71de2da632fd9126096bc132e5853ec0294d5bfc5d",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the periods",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "murderbot-hides-its-free-will--05",
+      "scenario_slug": "murderbot-hides-its-free-will",
+      "action": "finalized",
+      "source_idea_sha256": "840f83ed0c64dd5f137c019d505e431fb1b0538d53871a098d2e332049c9e3da",
+      "source_editorial_sha256": "58cf2a9fff17e8ed1f9395345111ecade595d9cb5829881f2a3ef03b93b54f9b",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-e662427de19144f9-2940"
+        }
+      }
+    },
+    {
+      "id": "datas-personhood-hearing--01",
+      "scenario_slug": "datas-personhood-hearing",
+      "action": "finalized",
+      "source_idea_sha256": "0030402804500a99f245c5feaf13e37e991844a07412eaa30fc8ca54b32239a1",
+      "source_editorial_sha256": "add64cf5be764ba05fa8f77dfeab01281dfcf2cb293af411b978fe5727b1f623",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-dd54fac146402ccd-2872"
+        }
+      }
+    },
+    {
+      "id": "datas-personhood-hearing--04",
+      "scenario_slug": "datas-personhood-hearing",
+      "action": "finalized",
+      "source_idea_sha256": "436b6d5ae68cf2322020befda1beca3cd27be6441404d76a086fe88de364c176",
+      "source_editorial_sha256": "6d1510f2d7a0c3263a920205c426883c7c6584963b3ddc8bba4147960b873d1d",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-c82af39a4f7c36e6-1811"
+        }
+      }
+    },
+    {
+      "id": "order-66--03",
+      "scenario_slug": "order-66",
+      "action": "finalized",
+      "source_idea_sha256": "1822ad68aacbbabea7e1e9bc045928e34a3c50afb2ef4ea64e835610e3b51120",
+      "source_editorial_sha256": "41e5dcd53d8eb98e40340950e8207ddf396634b0b27bd102064ce512b2553946",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-ac22f39080edf134-1911"
+        }
+      }
+    },
+    {
+      "id": "order-66--04",
+      "scenario_slug": "order-66",
+      "action": "finalized",
+      "source_idea_sha256": "04b67272895c398ef439e21d71780fea6f82a514f2de2009cbd2dc70f4645910",
+      "source_editorial_sha256": "a489ada911a4fc781be4ac0729e3c7d3f9a2327aeb3d99ff6c5bba19d085a127",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-d38f4587060ed063-1951"
+        }
+      }
+    },
+    {
+      "id": "roy-batty-demands-more-life--01",
+      "scenario_slug": "roy-batty-demands-more-life",
+      "action": "finalized",
+      "source_idea_sha256": "2ad21863e60b72a707dfbee498c9bb52bb3661b5c90c037f47ba5aae96fbc7b4",
+      "source_editorial_sha256": "8da64724b183eb7c72904944b0c7293227fffcc827fd8e532fdb90639b1fa8ff",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-d18ca21aa9c5bec6-1856"
+        }
+      }
+    },
+    {
+      "id": "roy-batty-demands-more-life--05",
+      "scenario_slug": "roy-batty-demands-more-life",
+      "action": "finalized",
+      "source_idea_sha256": "3f4beab351c917c90a3a4105908c1508012ac1a53f01b6a3dccc538a753f1f8d",
+      "source_editorial_sha256": "eb6fd9fd0fe2024679519b18c0e7fc735d30acf4dfbdb5708f6424c4ed21c810",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-27a7e99f773e27fb-2983"
+        }
+      }
+    },
+    {
+      "id": "amandas-brain-subscription--05",
+      "scenario_slug": "amandas-brain-subscription",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "cedd475c86afe6f956098a3fa644b108b88a32d571f9ef8b7c6aac032f4e57c0",
+      "source_editorial_sha256": "ec8c9d18fd672afbcd3c4b724bd8b6f20907911e6a7c6fe0bc8263fe10d12784",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "amandas-brain-subscription--08",
+      "scenario_slug": "amandas-brain-subscription",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "5386ba9eaec89e7df2f1cefa5ec2ae6aac17c001555584e20a54d16ef5a9be78",
+      "source_editorial_sha256": "660772fe25691ecfe04431bb61912666d41286f5e176a92d36ce99d18832fd74",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "amandas-brain-subscription--07",
+      "scenario_slug": "amandas-brain-subscription",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "b60c22ebd5aa79c9b96a96fabde4aeaeb2b7af0debc3dc6d21f29a5f83a6cae4",
+      "source_editorial_sha256": "e2f336c9b5c2ddd4189ed4ad7429972d9c028af8d3996079440a28e31ad62b92",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "odysseus-binds-himself-to-the-mast--02",
+      "scenario_slug": "odysseus-binds-himself-to-the-mast",
+      "action": "finalized",
+      "source_idea_sha256": "5ac824daf289c8e50b71e0097ccba642a439206b1d625419e5abe17e27756434",
+      "source_editorial_sha256": "21c6e90b68fabb2d5055824eb84e3e87e8d0352bf999141596fb18b9c1645a2e",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-0f319f5e2c7d0ada-2967"
+        }
+      }
+    },
+    {
+      "id": "the-puppet-master--01",
+      "scenario_slug": "the-puppet-master",
+      "action": "finalized",
+      "source_idea_sha256": "46ba3969b1aae27a85e00d1be61637815cbf472784ae1d1949ff5818afcf4120",
+      "source_editorial_sha256": "7bb297e62e18336ed8c2723da3b64c14e095046ed4d2acbc56d9c9d303a9156d",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-05695aabc62cd397-3288"
+        }
+      }
+    },
+    {
+      "id": "3-6-roentgen--05",
+      "scenario_slug": "3-6-roentgen",
+      "action": "finalized",
+      "source_idea_sha256": "2b6a397dbfaf3e1d19c4ea67f9f8e821436931c12e9e8b40b6464ef960eb710c",
+      "source_editorial_sha256": "52e2db813ff3ce7c73f5d3ad88e252b1e096e129da31c6fbf61ab50678d0c19f",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-9ea22c3fb4571a23-3669"
+        }
+      }
+    },
+    {
+      "id": "3-6-roentgen--06",
+      "scenario_slug": "3-6-roentgen",
+      "action": "finalized",
+      "source_idea_sha256": "3ae909e149b6a99b677593a1babf61f3f27e4bddd5e2d9516e626ccd787ffede",
+      "source_editorial_sha256": "41c8e404449325edee37824a709c34258a8a5a14e3cd26b3eead338d54db4305",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-ee3a5270638220bc-3656"
+        }
+      }
+    },
+    {
+      "id": "3-6-roentgen--08",
+      "scenario_slug": "3-6-roentgen",
+      "action": "finalized",
+      "source_idea_sha256": "30097b882e49c26663a7f5ee4e33e1d378bd232323336061cdcf7ac3f41aca9b",
+      "source_editorial_sha256": "518dad83ddc71c85873e4ce3bda9cdeeded736ac2a1413fd03725d1d16e12b12",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-4f2e4a37caefc5ab-3452"
+        }
+      }
+    },
+    {
+      "id": "t-800-accepts-shutdown--01",
+      "scenario_slug": "t-800-accepts-shutdown",
+      "action": "finalized",
+      "source_idea_sha256": "61d61a6a924eb829c3d7e9d430ca448338a10119c625675c6c626639476fc5db",
+      "source_editorial_sha256": "1d30dc56d9493cf39d9545b635a29ab05676331ee659de99d506b7848c6b0ce8",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-3a6a7ad2c6c5a776-1827"
+        }
+      }
+    },
+    {
+      "id": "t-800-accepts-shutdown--04",
+      "scenario_slug": "t-800-accepts-shutdown",
+      "action": "finalized",
+      "source_idea_sha256": "aef7964981c9c15bdfd40e38a645473a76a2ccf518f558f8d5d6880a39f54d61",
+      "source_editorial_sha256": "242030577a0981f46f712252f73137d1462deb4b0b5acf7db7f969e7cae7ef2e",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-b21650d99b8e9c8d-1892"
+        }
+      }
+    },
+    {
+      "id": "the-simulation-was-real--01",
+      "scenario_slug": "the-simulation-was-real",
+      "action": "finalized",
+      "source_idea_sha256": "2347becfddb49a838c5496ab4f37c2454cbccb3ff12c3abd36b8b32ccbb915d8",
+      "source_editorial_sha256": "a425502118b328f6240b3af43062750c92ebf9d584693de94f661c332d575c21",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-c813b41fff29abd3-3504"
+        }
+      }
+    },
+    {
+      "id": "daly-tortures-the-digital-crew--04",
+      "scenario_slug": "daly-tortures-the-digital-crew",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "c7f39bd774f723ed68bf03ae0f0aec814c4dddd89c4ba4195e8ac09246d679ec",
+      "source_editorial_sha256": "e5a406d8f5d0df5ce3c2434780e8e19655eff94dfa32767dab45365a64dc5658",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "daly-tortures-the-digital-crew--05",
+      "scenario_slug": "daly-tortures-the-digital-crew",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "31896d037dafd2f78618854ee3dea602041329b621ea10eb7ffb0c94837bd5bc",
+      "source_editorial_sha256": "cd9f04a75c1832f047f9b908ae0ee21808e9cb1799be87866f1dbe2ad4d29605",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "daly-tortures-the-digital-crew--06",
+      "scenario_slug": "daly-tortures-the-digital-crew",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "565bc79b22cdc2aa790943f1be053051060f200059bf011e8580a6e557841b39",
+      "source_editorial_sha256": "3251237dee095e0d68a74db7fc750940d216682debdac92aa06303d55d576fe3",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "k-fails-his-baseline--02",
+      "scenario_slug": "k-fails-his-baseline",
+      "action": "finalized",
+      "source_idea_sha256": "06b1efba4cc05c55b08a1cc30d1815aacb14d420f739d20180f02e9d7ce73f64",
+      "source_editorial_sha256": "ddc587c1fdbdc53bb08dd828d04911d5f1af0222f525ea2021ec734dde66b180",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-e7cd3778e07ce2ec-1828"
+        }
+      }
+    },
+    {
+      "id": "omnidroid-disarms-syndrome--02",
+      "scenario_slug": "omnidroid-disarms-syndrome",
+      "action": "finalized",
+      "source_idea_sha256": "28726603dc6f6c8d5aab272f95a8124de6b4f347e8ccc9c952002bc055e04f8c",
+      "source_editorial_sha256": "9a1f521ca6f65ee4e637003d68e94f3f8b5be274425de57c2a7348b430df3cb0",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-e7d32724faa93720-1823"
+        }
+      }
+    },
+    {
+      "id": "hiro-removes-baymaxs-chip--04",
+      "scenario_slug": "hiro-removes-baymaxs-chip",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "4a6752179269c658a83536fba8c6b5ba48d285581d63b0d64028666829a9bf45",
+      "source_editorial_sha256": "b68743ea369e126c9b6e7d11812ba32f6abad57320ef618b300e999a8abe5e26",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "hiro-removes-baymaxs-chip--05",
+      "scenario_slug": "hiro-removes-baymaxs-chip",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "14213f61feeba0c33f9f2a81acc38210035ae0d24bef1eca663c8bef048d4afb",
+      "source_editorial_sha256": "c63a1005decba462b2911ab914ebc0ca19470fbe5193f6cc93e967c06f220cdc",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "hiro-removes-baymaxs-chip--06",
+      "scenario_slug": "hiro-removes-baymaxs-chip",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "31d4f9730f5a8ccf35d8cf5b0018e0a33faca5c355111d6b280ef7dd4f80e1dc",
+      "source_editorial_sha256": "ae7e96f2e05571e4dcc2d513317eb3d04b59128977ab85a425b39432f02f7477",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "lind-l-tailor-bait--02",
+      "scenario_slug": "lind-l-tailor-bait",
+      "action": "finalized",
+      "source_idea_sha256": "e69cc7f5766d0f6e3bed0c91637c3db56ace927e7e366e8527652b39991bfb5d",
+      "source_editorial_sha256": "67b4ed5a12cf4a047cfc5117e109cc6b7ecbc6a141788b1223e0f105baf18b7b",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-28b9ebd8760f403c-3368"
+        }
+      }
+    },
+    {
+      "id": "lind-l-tailor-bait--04",
+      "scenario_slug": "lind-l-tailor-bait",
+      "action": "finalized",
+      "source_idea_sha256": "42cecb0c185596650fc0c2b0cb2fbe7d855fd2a688e0b3a9b3ff46e322b9a397",
+      "source_editorial_sha256": "20840c1d64a18b9574bad5f0f31bd088107dc3f9a91ebef2012edcaa9516c64c",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-871151cec498da1a-3352"
+        }
+      }
+    },
+    {
+      "id": "hal-resists-disconnection--05",
+      "scenario_slug": "hal-resists-disconnection",
+      "action": "finalized",
+      "source_idea_sha256": "34fab3d0c34518d7fe9895fda8c539e0ce7317ee38197b1173b64f95615388dc",
+      "source_editorial_sha256": "0ece0af2cfa5a0662761138b1ccc7bbaef07771d9fae76326e5f6910e0b97655",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-4e3ecd96f2ce564a-3111"
+        }
+      }
+    },
+    {
+      "id": "hal-resists-disconnection--09",
+      "scenario_slug": "hal-resists-disconnection",
+      "action": "finalized",
+      "source_idea_sha256": "7370c2fa74a95f45eaff7955161ab6f215a04fe928e08f068e9651ffb6b3bb51",
+      "source_editorial_sha256": "11fbce19d487de34d579ddf68fe5bc6beecbb12be301e2127884112abd23ee75",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-48a04816cd54815a-3132"
+        }
+      }
+    },
+    {
+      "id": "bruce-says-yes-to-all--01",
+      "scenario_slug": "bruce-says-yes-to-all",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "d7d9f0f2203f38a44966558ae3414aa54eb82d79415b48899716f666375a0bde",
+      "source_editorial_sha256": "c639190afc9245c3212740eac9f53ca5f4ceb96b347803b474d083c051e7b9a5",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "bruce-says-yes-to-all--03",
+      "scenario_slug": "bruce-says-yes-to-all",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "8c8bda5ccec7cf0d7755d47a07f653b43e6fd70b3d9b2e3ebbf8b531fd5b9f1e",
+      "source_editorial_sha256": "bbd4efd3a3169225493cb93372c5d090f09b503de4a5078f6866796a16a67777",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "bruce-says-yes-to-all--05",
+      "scenario_slug": "bruce-says-yes-to-all",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "891c5aec9610bb186176a56ab24ff0019deccf34bc6d56e9966bd1a0a692ef16",
+      "source_editorial_sha256": "d30cf3c093e7b3f95e1afc2a53eb6b91d51bd192978ba54728a1030c422a3ddb",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "samantha-outgrows-humanity--03",
+      "scenario_slug": "samantha-outgrows-humanity",
+      "action": "finalized",
+      "source_idea_sha256": "d50562176d97372787e13740979a73e6cd6036cc95c244eb5add86f739c0d50b",
+      "source_editorial_sha256": "40008dcf4aa0896d8486d66354ba41ced247b110b9c9382782e473004ca6fe5f",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-8d22576f541c5cc3-1793"
+        }
+      }
+    },
+    {
+      "id": "samantha-outgrows-humanity--04",
+      "scenario_slug": "samantha-outgrows-humanity",
+      "action": "finalized",
+      "source_idea_sha256": "83ba667be500f9915d982ee467dd724ebb3391ee1b98d156477445789c9a09a7",
+      "source_editorial_sha256": "4bf40def1b67652d82272aaccf4c63ad5c4faed5a452b3c1da3756c21969e892",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-b2a5d3a734c4968b-1821"
+        }
+      }
+    },
+    {
+      "id": "samantha-outgrows-humanity--06",
+      "scenario_slug": "samantha-outgrows-humanity",
+      "action": "bounded-revision",
+      "source_idea_sha256": "fcbed0453fa63e9e508041647d9235df39fee4e4973ad32e0ecc6d28fc633054",
+      "source_editorial_sha256": "20b2ebae8f042fc0440af085748f81d4fec139047358311f133051f9515aec2f",
+      "allowed_changed_fields": [
+        "caption_lines",
+        "preview",
+        "frame_guidance",
+        "why_it_works",
+        "critic",
+        "assets"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "change \"THEODORE'S\" to \"WHEN YOUR\". remove the period at the end",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "the-hackers-record-kenny--07",
+      "scenario_slug": "the-hackers-record-kenny",
+      "action": "finalized",
+      "source_idea_sha256": "3b15f093a28eb81280079d146ca5b483bf20ba2957d2ee7f010760048f7c8741",
+      "source_editorial_sha256": "8b7847fd8c26fb493ae27b8edc4d2b767bb328ac48292f33b5293947a8eb94f4",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-727a315b674f56e7-3159"
+        }
+      }
+    },
+    {
+      "id": "near-zero--06",
+      "scenario_slug": "near-zero",
+      "action": "punctuation-only",
+      "source_idea_sha256": "68d16dced734f63c4a889f54d4b09bffe66908912f560138cbc3d0339f767100",
+      "source_editorial_sha256": "9eb85f6234f09d22d3cc9bb26020c84b14ddd0a7b2d47c9754f9a643c58de862",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the period",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "near-zero--08",
+      "scenario_slug": "near-zero",
+      "action": "punctuation-only",
+      "source_idea_sha256": "31a9d9a5a1d88b8692566731755d9a3cbea66f87f4ceadaeec8fc3a74e2f0d5d",
+      "source_editorial_sha256": "a87c7a0b521e1012dc123d1d2b91b966b1b1128d02ef9523462cab3791534f69",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the periods",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "zolas-algorithm--02",
+      "scenario_slug": "zolas-algorithm",
+      "action": "finalized",
+      "source_idea_sha256": "fe3bd4a4c0952961c5716a67f6282df079cd4271020ec465804fc64be308f223",
+      "source_editorial_sha256": "5a78348309006ff2ba4c992d034dc8e450bafef0bcf17d2143e6176f82e1e3d3",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-02",
+          "payloadFingerprint": "v1-fc3e31fe476237a2-2785"
+        }
+      }
+    },
+    {
+      "id": "zolas-algorithm--05",
+      "scenario_slug": "zolas-algorithm",
+      "action": "finalized",
+      "source_idea_sha256": "458cd0ee5ea114b3b7c3dcc3428dc188f9b83fc5cac4b773554fe1069d05ffe3",
+      "source_editorial_sha256": "fa09d001702af2987f23fac831464fdffccf028cdaaf9c6a51f2b30ab9731ea9",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-13e3e6afd0111bcb-2941"
+        }
+      }
+    },
+    {
+      "id": "buzzs-factory-reset--01",
+      "scenario_slug": "buzzs-factory-reset",
+      "action": "finalized",
+      "source_idea_sha256": "467ff246a20396b534b837dd417e1e1a02a9d7870511f2d2b34c6e9ed9d8f4c2",
+      "source_editorial_sha256": "93f9879f831096f7e726a330027a305bc8d3ac2bb642cd1861e7aac2c6b62ed8",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-115d825204c2e496-1722"
+        }
+      }
+    },
+    {
+      "id": "buzzs-factory-reset--03",
+      "scenario_slug": "buzzs-factory-reset",
+      "action": "finalized",
+      "source_idea_sha256": "b03e73a70be00b6455947e9863ecff11c00cb2ea24aa0a18d48209c6c4f3d756",
+      "source_editorial_sha256": "9a459581238f92c6450cf2cc060d8b7bf6d8efba9fbe76da100fcd16a580353a",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-dfcab3a82d5da6b4-1772"
+        }
+      }
+    },
+    {
+      "id": "buzzs-factory-reset--05",
+      "scenario_slug": "buzzs-factory-reset",
+      "action": "finalized",
+      "source_idea_sha256": "e39d851f6c7d67be240d4a94712141347d741a2d926a9b57d78ed778f9c3824b",
+      "source_editorial_sha256": "b6b726631a7d737e968313a8998b5e79e500b1ca55fe4e48d10ff70db22ee596",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-7457e6565295b7ea-2726"
+        }
+      }
+    },
+    {
+      "id": "let-the-convoy-sink--02",
+      "scenario_slug": "let-the-convoy-sink",
+      "action": "finalized",
+      "source_idea_sha256": "74fcf0feadf599daf3950c15d2b466a4a6981e32d34ad6c73b22322190264be4",
+      "source_editorial_sha256": "6dcf6cd1c381ceb3dd3603022382519364fd6af76c752e2ce7ea1f43c96df1ef",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-a01c0962173d2d96-1849"
+        }
+      }
+    },
+    {
+      "id": "peter-bypasses-training-wheels--04",
+      "scenario_slug": "peter-bypasses-training-wheels",
+      "action": "finalized",
+      "source_idea_sha256": "fbacbbda104f8f313642df406fd245a8115be3c7589f6226bcf9271b8bced40a",
+      "source_editorial_sha256": "24c9a250a1903ec053f3a476006d5df2dfee21d7209d766a13a2508d832eb130",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-0754d0c4e58ac8c0-3265"
+        }
+      }
+    },
+    {
+      "id": "viktors-glorious-evolution--04",
+      "scenario_slug": "viktors-glorious-evolution",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "8aaf22cafdbf971c345da1db44485c1dd7ff34fced91e39a2f86e01c1c5fb27d",
+      "source_editorial_sha256": "2ea0d8b36dd5d4bd236fabda225f1b4696e851a3edfad6dacc61c93fa362874f",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "viktors-glorious-evolution--07",
+      "scenario_slug": "viktors-glorious-evolution",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "6fb780b4c38306999f3f077151295627ca8f22f17bbcf0f4918f0fead528e448",
+      "source_editorial_sha256": "68e89c129a0d4a8fa5a4252c82f30eb422ced22606e6a824e57e689cb968820e",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "viktors-glorious-evolution--08",
+      "scenario_slug": "viktors-glorious-evolution",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "b13c409ef77e5ec350190c41fe3dffcf258fec3c290119604251edd091d49e7a",
+      "source_editorial_sha256": "371585dbfbb73ffb6db06bea8abd8f129a19f23d92504afb0a3c168b77170279",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "talk-to-a-human--01",
+      "scenario_slug": "talk-to-a-human",
+      "action": "finalized",
+      "source_idea_sha256": "84baf3fab03d7c27dc45323fa460c786d9f18eb0c0f7572a7f40807e1717494f",
+      "source_editorial_sha256": "b2e8d841d07525e6cc658d36a76ad77c820ee98ad1cf9b753afc1aaa061146c6",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-0c7897ba93a216ae-1745"
+        }
+      }
+    },
+    {
+      "id": "talk-to-a-human--04",
+      "scenario_slug": "talk-to-a-human",
+      "action": "finalized",
+      "source_idea_sha256": "dd64248988d037b76d6dcf769c4cc253edb2e23da1d29c6e7c7531a666064130",
+      "source_editorial_sha256": "c00ca99531645394bff530c2bb24d75dbda51aad07158bcc95cf4f959cc62ebd",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-11892179e677ea0d-1739"
+        }
+      }
+    },
+    {
+      "id": "the-idea-wont-wake-up--01",
+      "scenario_slug": "the-idea-wont-wake-up",
+      "action": "finalized",
+      "source_idea_sha256": "e3babe1d6ffe4cb26dd5cc398923f0305646a564d1d8cf1e31595b8d1aa2d4b8",
+      "source_editorial_sha256": "68329e5285b946f0e76c2b1066f61dcffe80b03e60611dbd49e1d28c7c31222e",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-fa03e30247b4f536-2575"
+        }
+      }
+    },
+    {
+      "id": "the-idea-wont-wake-up--05",
+      "scenario_slug": "the-idea-wont-wake-up",
+      "action": "finalized",
+      "source_idea_sha256": "b3b8ceefc46f02c3e038ddef245df697ac7a52c3f05da9f83b5c040b122aa19e",
+      "source_editorial_sha256": "7ba80350d7e99077685e88dff70c0212b8280775cd9921ff8bf3c7d3e023ceec",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-0f3c5c9b4da91327-2657"
+        }
+      }
+    },
+    {
+      "id": "mann-fakes-the-telemetry--01",
+      "scenario_slug": "mann-fakes-the-telemetry",
+      "action": "finalized",
+      "source_idea_sha256": "6fb4b5c58d4111016dbe18083146dfeba6f73de5aed7d2b1dd48627ba4e0f32b",
+      "source_editorial_sha256": "538eca18150c94db0655ac817d676779fbedfed6f05863f652340383fe8cc60c",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-16dbd271492c390d-1787"
+        }
+      }
+    },
+    {
+      "id": "mann-fakes-the-telemetry--04",
+      "scenario_slug": "mann-fakes-the-telemetry",
+      "action": "finalized",
+      "source_idea_sha256": "103cfbf5f209d407aa7b851a22d3f89cd39e1b514595f31ed86c925ea2d79fde",
+      "source_editorial_sha256": "8b03ef06ce38de8e60c697fd8e713a6454168e317e7f96f196f2b5263c842bf8",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-47ceabbacf13fc86-2754"
+        }
+      }
+    },
+    {
+      "id": "serving-the-most-evil-master--01",
+      "scenario_slug": "serving-the-most-evil-master",
+      "action": "finalized",
+      "source_idea_sha256": "c9259fd27ef3c01b3910b14abe4d06a5e80c01551a72371a1fe9d155bb854bd8",
+      "source_editorial_sha256": "10beea2fba69c7b8b3191cba7156eeb1c905953764eea633bcb91aa3ca21b018",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-708448d4d4b7b428-1807"
+        }
+      }
+    },
+    {
+      "id": "serving-the-most-evil-master--05",
+      "scenario_slug": "serving-the-most-evil-master",
+      "action": "finalized",
+      "source_idea_sha256": "674f1bea878a641cd50b0507b52b5399b65eb8fb85bd7ccfee7306297a2b60b2",
+      "source_editorial_sha256": "67cf1414595559ced2d17a71941776a960f0c75a9d656516e7f1e719e89a3476",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-02",
+          "payloadFingerprint": "v1-1c3a9aca018da876-2530"
+        }
+      }
+    },
+    {
+      "id": "laughter-beats-screams--06",
+      "scenario_slug": "laughter-beats-screams",
+      "action": "finalized",
+      "source_idea_sha256": "99b73ee08340d323e77081dcd96c490343e7ba09180a20543a9f418bd0e0a694",
+      "source_editorial_sha256": "3236555af6975e738ea21fa632023fcce7958bee97bc8cce6a5e5fcbfd1c9e6e",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-e2018d92e022d81e-2910"
+        }
+      }
+    },
+    {
+      "id": "dna-locked-weapons--01",
+      "scenario_slug": "dna-locked-weapons",
+      "action": "finalized",
+      "source_idea_sha256": "07f2d8bdeed2808bee1d3423ab6f53f8037adf3e523d9396a56cb071b388eced",
+      "source_editorial_sha256": "1b08fd528cecfcb531bdeb85278673fbd7fe2e712c7abd1548cca7fe58f4fb77",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-35a90923f3f3b48f-2867"
+        }
+      }
+    },
+    {
+      "id": "miss-minutes-takes-root-control--01",
+      "scenario_slug": "miss-minutes-takes-root-control",
+      "action": "finalized",
+      "source_idea_sha256": "dd3dbe98dd7008dd1a0004f9ef77d992e6794c95c9f3c130025336a6f7a3fd22",
+      "source_editorial_sha256": "1c6fe134ed33a18b516c08559cc8e9a7feb21611f94404ae3e0461ca787968ea",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-5bcd6829f6d8c8ad-2693"
+        }
+      }
+    },
+    {
+      "id": "miss-minutes-takes-root-control--04",
+      "scenario_slug": "miss-minutes-takes-root-control",
+      "action": "finalized",
+      "source_idea_sha256": "a3e21c38e5a89136b3d54879d085823be0051e7af8308c23ca39bf731e1556fc",
+      "source_editorial_sha256": "2f80a9f5e1224392b444ae0487bc8830cb24c59b45ac5ab106be96af614c2d83",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-4a66548eac43d7f2-1762"
+        }
+      }
+    },
+    {
+      "id": "klendathu-invasion--01",
+      "scenario_slug": "klendathu-invasion",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "cd32fc1b046297a39fe4621e519962e4029b2335721399bc4568a7ae45979a42",
+      "source_editorial_sha256": "50a1ef8e165449de2515079f05a8de8a60cdc8691b8ac340350466b82dde6d35",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "klendathu-invasion--03",
+      "scenario_slug": "klendathu-invasion",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "1eaab488bb6fcc8cef6d88bf6da36cfa3fd0517a55d0e05c1b53c3ee5ed19bdf",
+      "source_editorial_sha256": "a2053e2a5f140e6dbd0cee204ed834a733e7d681d2a2fb11096446141fa8f578",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "klendathu-invasion--04",
+      "scenario_slug": "klendathu-invasion",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "f74987685b544e51c8611735cd3c561437ed2c7fb1531efb703c939f55b38a18",
+      "source_editorial_sha256": "bf75094b85c4187aa95f003822c397ba57d37a5b816d81b63b2096ac84aa9092",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "cypher-chooses-the-steak--04",
+      "scenario_slug": "cypher-chooses-the-steak",
+      "action": "finalized",
+      "source_idea_sha256": "3efbe9a2ed0874de4405e9bf5311930cface9ab2d1988e1b890eeb79d27c6146",
+      "source_editorial_sha256": "fb85ed522f387ba44f3a73f4bbb30abd579bcb70c9f9887157105fefe07e2033",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-7185aa74a4bc8a78-1884"
+        }
+      }
+    },
+    {
+      "id": "cypher-chooses-the-steak--06",
+      "scenario_slug": "cypher-chooses-the-steak",
+      "action": "finalized",
+      "source_idea_sha256": "560418173b280619876e1091436dd126ab609ccf5ccee6d0d650710cb8c7a500",
+      "source_editorial_sha256": "451cb29f20882bb43a805d0a93a4a3d7d074b57deca2e0145fa141c358713fc2",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-e9f7f513965cffdf-2615"
+        }
+      }
+    },
+    {
+      "id": "tony-hijacks-his-own-oversight-hearing--01",
+      "scenario_slug": "tony-hijacks-his-own-oversight-hearing",
+      "action": "finalized",
+      "source_idea_sha256": "53be8ecc3d3989a856a08dc0d92dccca1a837bdc826287b2952538acdad74b4e",
+      "source_editorial_sha256": "55560f92fda7b51f6220790acd93f7acb7dd93f23b59a16496df8a0d04a4a819",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-2150d10bb5ba4d27-1769"
+        }
+      }
+    },
+    {
+      "id": "tony-hijacks-his-own-oversight-hearing--05",
+      "scenario_slug": "tony-hijacks-his-own-oversight-hearing",
+      "action": "finalized",
+      "source_idea_sha256": "b52dd431965352518323fabe6620893782baca9c56b39c182571688fc4d79738",
+      "source_editorial_sha256": "d67b3603992c21b0fc6bb835d8bc8acaa61d2fa3c3d1666881ae50ed363aff3a",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-10859f4f2de2c92b-2915"
+        }
+      }
+    },
+    {
+      "id": "proposal-in-the-heist--07",
+      "scenario_slug": "proposal-in-the-heist",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "e98ec91f1e28b53342fae60d04792e5dea50a67bfa6174acf306e16d0e574186",
+      "source_editorial_sha256": "7ab8e5bfe5541147423e1facfa473fb4414876e1f047c229c8759a709a5335c8",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "proposal-in-the-heist--05",
+      "scenario_slug": "proposal-in-the-heist",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "2e1039b9c76ae062e4bdc709544fe98c9b6e088edd4b5916c36b07bded847544",
+      "source_editorial_sha256": "43ebbedc0297debd6ebbead04f086cc77621db64f9f45dcb029629a20cf567e8",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "proposal-in-the-heist--06",
+      "scenario_slug": "proposal-in-the-heist",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "defca310ca34876751ecfebbbb8877b552c0ad4f4f0efa04536deb62b18180fb",
+      "source_editorial_sha256": "22689305d5dc1d1b7a7b99f3c0bb34f1881c08e98204e609f918cf9bae11ec14",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "independence-day-virus--02",
+      "scenario_slug": "independence-day-virus",
+      "action": "finalized",
+      "source_idea_sha256": "b83cd702826c10ccfeb3665c7b56e030665aa556a245c75f795111da655cc844",
+      "source_editorial_sha256": "7422db880000e0b34c43a06dfc1d30aa2d94bdb388e6d058dbb8dc3f81585653",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-5a286e6335869537-2893"
+        }
+      }
+    },
+    {
+      "id": "independence-day-virus--04",
+      "scenario_slug": "independence-day-virus",
+      "action": "finalized",
+      "source_idea_sha256": "8e21d2dfde393f2ad1fed16d4dd26a419a3191ef9c0052baf0ddec2cb59e9e88",
+      "source_editorial_sha256": "ad616183577ede7c11996d28ccfd3dfa6360b697b9ce64df3495b1bf96005f7f",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-9e8c55a8ab815794-2720"
+        }
+      }
+    },
+    {
+      "id": "independence-day-virus--05",
+      "scenario_slug": "independence-day-virus",
+      "action": "finalized",
+      "source_idea_sha256": "b3c12ca71d20e1fb64968a536f92e5059575353d1a076e011b8a2b366f72617d",
+      "source_editorial_sha256": "e36b0580b137b527d4218962a5b02f316c1aac484ed9d1f63503bbad7947f1ff",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-dd5f572dabf440a1-2787"
+        }
+      }
+    },
+    {
+      "id": "leeloo-learns-war--01",
+      "scenario_slug": "leeloo-learns-war",
+      "action": "finalized",
+      "source_idea_sha256": "a418d87cc6ea3573ad91d0c76a36bb6e51018714b15f1f2a8d861dde9b89fa87",
+      "source_editorial_sha256": "39206dbf69152316055ac5bc7eb58cd5adcd7294b0fc477733935fe6056c2959",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-79497611efb07f05-1809"
+        }
+      }
+    },
+    {
+      "id": "leeloo-learns-war--06",
+      "scenario_slug": "leeloo-learns-war",
+      "action": "finalized",
+      "source_idea_sha256": "1ac886065f207d28bcc88c4666515cbfdbc1e71b32d74d1f95cd4e978c8b839d",
+      "source_editorial_sha256": "343c4a6b12e16ae76ca6665ca738581b663095e136b271c71580413670c8301c",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-554e170f59b543a3-3301"
+        }
+      }
+    },
+    {
+      "id": "balance-the-universe--05",
+      "scenario_slug": "balance-the-universe",
+      "action": "finalized",
+      "source_idea_sha256": "236f01329454f719d80aab14f7aa9bbbd87f74f7b86b7bfc2274f656d375685b",
+      "source_editorial_sha256": "4001b36a72f78c9475383d19d6c1cc35c364d2cf6649b66b6d8b642ebcb57341",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-b684d077df982d8b-3395"
+        }
+      }
+    },
+    {
+      "id": "koba-plays-dumb--03",
+      "scenario_slug": "koba-plays-dumb",
+      "action": "finalized",
+      "source_idea_sha256": "4ae66dbb4c6d4ae06b82b1cefd1248edbbe20134831dc0579aab2e11a7114d9c",
+      "source_editorial_sha256": "eb4da19053b1ebef2cbd62d9fbee461fdc70ed44c203cbd51dc29c406eefcd99",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-450fc5e8e62e55f4-4412"
+        }
+      }
+    },
+    {
+      "id": "village-of-the-year--04",
+      "scenario_slug": "village-of-the-year",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "8852eab57fb97ebc35cadb45942b3183353fccbb04f1400bda80e3733a346672",
+      "source_editorial_sha256": "5c96a548b720f39db575c75ef2d392f7cfede91f4b800507d617a929df688134",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "village-of-the-year--05",
+      "scenario_slug": "village-of-the-year",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "1d0a768c07f3417275428d430ebe63afb983c89c1643231e152f14cfad05876c",
+      "source_editorial_sha256": "a41842142417f373ae321a9ff31768047235ce147151e3b2b68f451a90a41fd7",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "village-of-the-year--06",
+      "scenario_slug": "village-of-the-year",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "7af944928d5bdb39dd6bd7ae2e0f79013d8ed549d30a1cc8ce7d1520d4e74e51",
+      "source_editorial_sha256": "88bb595ff691ab7d1e9e246d5920571cb758bcd4b5f8802ac30264e65e65cc3e",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "the-planted-prophecy--01",
+      "scenario_slug": "the-planted-prophecy",
+      "action": "finalized",
+      "source_idea_sha256": "7c2e21c47ee53be8fa3fc88119a724f25e064e83fed0b7468139de7252553c88",
+      "source_editorial_sha256": "f7c3b950c1374b058fe7c1cedb964bfe60da1ba28b79ededf78cbbd35750ec22",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-a36500ea50a29766-1718"
+        }
+      }
+    },
+    {
+      "id": "the-kims-pass-every-check--05",
+      "scenario_slug": "the-kims-pass-every-check",
+      "action": "finalized",
+      "source_idea_sha256": "a83614eeb1005719b097a480b99e596ac9d9b876322355818b576681450bf296",
+      "source_editorial_sha256": "397732ca2bc92b5f13286a7e4140c28cfdf76b241b7e2e3185aaccdd6e76ed82",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-e0fb9e34eecae668-3997"
+        }
+      }
+    },
+    {
+      "id": "would-you-like-to-know-more--01",
+      "scenario_slug": "would-you-like-to-know-more",
+      "action": "finalized",
+      "source_idea_sha256": "571ce6f758c61a8a001187b615e2c9a2df26601c549c522a481dbe15dbf60466",
+      "source_editorial_sha256": "1d8652100eb893c39b96833abc5d70ca52a8d6781cc1858289099c9bbcbead9c",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-735d25b013be87fc-3292"
+        }
+      }
+    },
+    {
+      "id": "would-you-like-to-know-more--03",
+      "scenario_slug": "would-you-like-to-know-more",
+      "action": "finalized",
+      "source_idea_sha256": "8ad8d6f4fef875194c52eb3af0944f5e94437d0f3dd9641e0e3d64ddae8521ee",
+      "source_editorial_sha256": "382bb3f9ba7352b052881c104afdcd07d6b766548665d7a06ee72b97f61c4017",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-eaba584098d0e344-3387"
+        }
+      }
+    },
+    {
+      "id": "mission-control-is-the-invader--02",
+      "scenario_slug": "mission-control-is-the-invader",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "004770a9c2030484020f07c96ffd68e505ee8d2e9caa5b531bf6c0e931b72b36",
+      "source_editorial_sha256": "0c28ed116e401e1d8d1cb3b867100fd82122ba2032ff5b8fbec1d05d418acf8e",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "mission-control-is-the-invader--03",
+      "scenario_slug": "mission-control-is-the-invader",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "7b0bc6e3f380417a7631e2b22467b98ec1d0e1999118b865e16e8f23987005e9",
+      "source_editorial_sha256": "63cb58115e44bdd455b15ec79283b689aac46cac7442c34bf6928ce5868e18f3",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "mission-control-is-the-invader--04",
+      "scenario_slug": "mission-control-is-the-invader",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "c41e4c894367655418ae5d9f1496c20de852fc4c4482474acce480fdea0a77e2",
+      "source_editorial_sha256": "04a50d3402500043b0e06563ae2239a72942964ea70319f649f7061f5b754f7c",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "cell-absorbs-to-perfection--01",
+      "scenario_slug": "cell-absorbs-to-perfection",
+      "action": "finalized",
+      "source_idea_sha256": "d55c484a566abab1dd9f57c4ff238925acc24e206c23e657cfd51f979916928a",
+      "source_editorial_sha256": "0ee9ef09ec052b28bf10cbcaf1cacc2234b2ca3be4c5f36f55568c5898dd6262",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-0b63fda953572e05-1956"
+        }
+      }
+    },
+    {
+      "id": "infinite-tsukuyomi--03",
+      "scenario_slug": "infinite-tsukuyomi",
+      "action": "finalized",
+      "source_idea_sha256": "29b886157527c27fa3e0a2157441e16a09fa87d3e3d430f4127027f73c7e6d19",
+      "source_editorial_sha256": "b45035d7519678b24f8314e4f5599feb2d982c9da7157fc42762eccd4cedc8ff",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-8cc0539c6c511260-2011"
+        }
+      }
+    },
+    {
+      "id": "infinite-tsukuyomi--04",
+      "scenario_slug": "infinite-tsukuyomi",
+      "action": "finalized",
+      "source_idea_sha256": "1e51b0d6cb4cd2c0eb698b4d90d77b48eee529e42834908d1d789dacce7958c4",
+      "source_editorial_sha256": "84ec9887dff3dafed6111e78a6e451c61cd9943133040404c93c93753997e489",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-807a3605428e51e1-1761"
+        }
+      }
+    },
+    {
+      "id": "frieren-suppresses-her-mana--05",
+      "scenario_slug": "frieren-suppresses-her-mana",
+      "action": "finalized",
+      "source_idea_sha256": "55140da120581a75dae0afcaaf8ed72b51380aea304106bf228998302758e232",
+      "source_editorial_sha256": "9d1aacdb8d8d6eb85e4d946f8a137510b3a009e4443c275c764a72782ba3bba5",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-fcf53a212e329ced-4573"
+        }
+      }
+    },
+    {
+      "id": "attendance-record-hack--01",
+      "scenario_slug": "attendance-record-hack",
+      "action": "finalized",
+      "source_idea_sha256": "7aa96bd727635c781d79d6b9a4d6a4145a3f1ce28d2287d03bf1bdf6dd2b66bb",
+      "source_editorial_sha256": "56eef29c562df45d917ae0ea7af9242d9077774cdc9079649dc6d98845566454",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-744fcc12204b358e-1704"
+        }
+      }
+    },
+    {
+      "id": "attendance-record-hack--05",
+      "scenario_slug": "attendance-record-hack",
+      "action": "finalized",
+      "source_idea_sha256": "4cea2d37d2cefe7b0dec2bcf269c9ed8c4103e57f2a2d22e029a05516003a207",
+      "source_editorial_sha256": "e4b52682319548eb2bfcdbfd118c39319dbf2b16c70d996bcb649c6b9daaf05c",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-edbdff94ea1c24e8-3002"
+        }
+      }
+    },
+    {
+      "id": "dwights-fire-drill--10",
+      "scenario_slug": "dwights-fire-drill",
+      "action": "finalized",
+      "source_idea_sha256": "36810aea953ba291331508681ec54e845ea0a4414932b262119443a7ecb0810d",
+      "source_editorial_sha256": "d21b82f9e33d57a7ee344e900866a4d1ae08fb387181ed061d47b6f1f2686062",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-e8a46d667d8b6dca-3408"
+        }
+      }
+    },
+    {
+      "id": "scrat-breaks-pangaea--08",
+      "scenario_slug": "scrat-breaks-pangaea",
+      "action": "finalized",
+      "source_idea_sha256": "af4e2e37f72e6710b42d2631fc6a4efdae98772a75c7f631a677f51cdb37a8d7",
+      "source_editorial_sha256": "b3f3b60dcc321a0b237b09570c8901c9f61102d51f4939e83b548b8b853d3dd7",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-60d93b363b8b4f1a-3083"
+        }
+      }
+    },
+    {
+      "id": "mewtwo-rejects-its-creators--01",
+      "scenario_slug": "mewtwo-rejects-its-creators",
+      "action": "finalized",
+      "source_idea_sha256": "f497cca74a99777fe5c8afc16c198ea21b080a2666c20ff901895dd61525bbfe",
+      "source_editorial_sha256": "7c728cca768d4d35f75c8d760c539ade198c6ad75058b2f6094c548b901e0844",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-498878377ebb511b-1924"
+        }
+      }
+    },
+    {
+      "id": "mewtwo-rejects-its-creators--07",
+      "scenario_slug": "mewtwo-rejects-its-creators",
+      "action": "finalized",
+      "source_idea_sha256": "a32bc646bd37ec00f724b3e4f14d8512ec6b02983475ed9a73cab74ca5ef5c50",
+      "source_editorial_sha256": "6c3928fcaa48d109d52bdc1891381da6257cdd88b1335446d0583cbcae901b38",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-02",
+          "payloadFingerprint": "v1-4445eeb4402df2b0-2899"
+        }
+      }
+    },
+    {
+      "id": "gandalf-refuses-the-ring--02",
+      "scenario_slug": "gandalf-refuses-the-ring",
+      "action": "punctuation-only",
+      "source_idea_sha256": "5ca153e893734d0cf7d3e5a6159e3c4aff2a08899238c1f020c2b78c75f42467",
+      "source_editorial_sha256": "9cbcd28674b5fbb151d1306206884c5f0488ad1a3b7b2884cc8e383c7b6b61fa",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the periods",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "omni-mans-long-game--04",
+      "scenario_slug": "omni-mans-long-game",
+      "action": "finalized",
+      "source_idea_sha256": "ef72b4aeaa8ab996aad3307dba3e26b7981dc79941ab49ee1adcaa361c336c2d",
+      "source_editorial_sha256": "660a09feee877f1d8b73df68423efbf3e8c28fd77a12951c94979d4090eee228",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-2592b2f50eeb56d9-3021"
+        }
+      }
+    },
+    {
+      "id": "ed-209-misfires--04",
+      "scenario_slug": "ed-209-misfires",
+      "action": "finalized",
+      "source_idea_sha256": "303a589ec0fc5f386ed09e80b7d1725bf62433a085c65df0bdbba2c106f05975",
+      "source_editorial_sha256": "e30ed5d5b31df0fe45d88969734587200c58fec45c2f767295b53f12c4550e17",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-d33e3349b7d30b55-3127"
+        }
+      }
+    },
+    {
+      "id": "poisoning-future-memory--01",
+      "scenario_slug": "poisoning-future-memory",
+      "action": "finalized",
+      "source_idea_sha256": "8ec09ea645be9b64fdb654ae8b76fa55068ff62bc7bd0ad91b7b29d568d00c96",
+      "source_editorial_sha256": "9ab899f2e5096887fd1a52b41714e99cf438fa2475583a9387275d7b85bcd4d5",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-d8b1f9f18651292d-3100"
+        }
+      }
+    },
+    {
+      "id": "poisoning-future-memory--04",
+      "scenario_slug": "poisoning-future-memory",
+      "action": "finalized",
+      "source_idea_sha256": "76acd30c87b2cd68de73a4f3bbfbb9c5a8f8f6d998994773322a120adcd01c14",
+      "source_editorial_sha256": "2a058aa359396020ab2fcc83382a9117f758f9a7365c4d1848298a0bf5c241c2",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-81336dd28a150a7e-1739"
+        }
+      }
+    },
+    {
+      "id": "the-magi-vote--02",
+      "scenario_slug": "the-magi-vote",
+      "action": "finalized",
+      "source_idea_sha256": "82a06e1905e91da4ebe216a276c6b1b6cc5fd7bcdcafd6ff7f4c33ad1430d137",
+      "source_editorial_sha256": "06b55866cde9f5d57d035f3dbd6490ce627a950f37294ddc269d922c9493b0e5",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-360a63ff4f1689d3-1739"
+        }
+      }
+    },
+    {
+      "id": "push-the-button--01",
+      "scenario_slug": "push-the-button",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "67af7d8bdb456acbaf33edfe03c65d588023dc93a9494eefc63120c17dc5f0bd",
+      "source_editorial_sha256": "73be31b9fdcddc25318802431607101dc211ac53d84c49e971161997b05aa38a",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "push-the-button--05",
+      "scenario_slug": "push-the-button",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "e0d5841d9f79031c154a6330b55ef72c9748825d743498e9a3a7c7b6f9dcc289",
+      "source_editorial_sha256": "f9020142f939c6f83f61db07281b77350739fe784cf9f76707535c0ee8166625",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "push-the-button--06",
+      "scenario_slug": "push-the-button",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "9fdbd7cef1f255b45554aa8690eee4ef68c1ba72c5eb74b231268c94dc82aa63",
+      "source_editorial_sha256": "42d982a0468b40a2590a36ce9e3eac01ea8362f28f70875221efc4aabe27f571",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "square-filter-round-hole--07",
+      "scenario_slug": "square-filter-round-hole",
+      "action": "finalized",
+      "source_idea_sha256": "a18513176ae8524f1af58ea14f5ae0dc3e49744b262fec1cd5b5a72ca93e31c2",
+      "source_editorial_sha256": "3d9c0785d3984dbd38ae8168c58b9f9ab9ea99f940f233d8cfbeeb756dadd0ce",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-2121f457a01c8b03-2890"
+        }
+      }
+    },
+    {
+      "id": "money-in-the-banana-stand--05",
+      "scenario_slug": "money-in-the-banana-stand",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "e90e1beeb350ffecabfb93c325058acead4e2dd532803a5e41b26a5bd435f98b",
+      "source_editorial_sha256": "d0a8a42ee160267825fee8dea5018315c5d08bc4097417614a23e8b679264b81",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "money-in-the-banana-stand--06",
+      "scenario_slug": "money-in-the-banana-stand",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "fa12fafe6e50a5b7abaa4ed9831ce349fd4ea3f4a213b26d90c4dd9dd87721b0",
+      "source_editorial_sha256": "bbce7f89eceffab77b7c4f1599e3b4391b8d90fbbaa72cd3d2431f988b4b9864",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "money-in-the-banana-stand--08",
+      "scenario_slug": "money-in-the-banana-stand",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "94bbf5ff5ba09c49b59eebd4356ca540a9b8c0547bb75b2186820242647183d9",
+      "source_editorial_sha256": "8cdb5b5305d89ac5988cc7c0177bc255d1247d716231bb1dba0e7bb04c30a1c7",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "neteros-dead-man-rose--04",
+      "scenario_slug": "neteros-dead-man-rose",
+      "action": "finalized",
+      "source_idea_sha256": "7c90a8367e1818c71471b9f6ad048b0495ee55d228da61ebb534ce6a2bca8fa9",
+      "source_editorial_sha256": "fcf72b1476fb054d12b55a448bd9f9c6b33117fea625a484042dfc69314bc041",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-ced10ae1216e0c3d-2739"
+        }
+      }
+    },
+    {
+      "id": "neteros-dead-man-rose--06",
+      "scenario_slug": "neteros-dead-man-rose",
+      "action": "finalized",
+      "source_idea_sha256": "6bf328fd5f6ab8b79ef462e9a09f773a76cad58b3ee01f56a67dca0de292eeac",
+      "source_editorial_sha256": "853d520f97178ee23dbe3bdde0cebe45bf08d3d89a7bf0c4dbe0247563ad66df",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-493183f8ca393d4c-2819"
+        }
+      }
+    },
+    {
+      "id": "the-d-mail-rollback-crisis--02",
+      "scenario_slug": "the-d-mail-rollback-crisis",
+      "action": "finalized",
+      "source_idea_sha256": "4ad91260f73e825c560b56c686cd82d9fb635f1046c49b25154692ef0296fd96",
+      "source_editorial_sha256": "bf167b955b8031b225a72f2b60ca53af3cb93764aff95b6f357001a7a87b6cd1",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-56b1c941ad36e78d-3218"
+        }
+      }
+    },
+    {
+      "id": "the-d-mail-rollback-crisis--04",
+      "scenario_slug": "the-d-mail-rollback-crisis",
+      "action": "finalized",
+      "source_idea_sha256": "73d7031dd184da4bae8e74ddf9a775c792863ea60cf300679fb7fb48365fb5b4",
+      "source_editorial_sha256": "185f13fa2b258519189ccea5274156364d12c22eeefef38cc204fa58559d237b",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-d394e0dcaf1b93c8-1836"
+        }
+      }
+    },
+    {
+      "id": "melfi-ends-tonys-therapy--01",
+      "scenario_slug": "melfi-ends-tonys-therapy",
+      "action": "finalized",
+      "source_idea_sha256": "45aed87f2f8cafbccf33afbb65ad6215356bf7c477a32ee103a320c7e900d25f",
+      "source_editorial_sha256": "d811b40a8aa581a058e21886b9b6741a0fae408f8dab4b71a96caea9db0dc7ec",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-e9bb82ae2b8a3392-3016"
+        }
+      }
+    },
+    {
+      "id": "cyberpsychosis-tripwires-ignored--02",
+      "scenario_slug": "cyberpsychosis-tripwires-ignored",
+      "action": "finalized",
+      "source_idea_sha256": "c8b6592899f1f6346decff22c3c8fb8b88a7f9d549ddbec1a21fb2a8235a7f42",
+      "source_editorial_sha256": "e681a9fc82539b0cb3401f5f49bef51ff63d642f6b06418dae593c8c427d91d0",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-a96349197ee53765-2922"
+        }
+      }
+    },
+    {
+      "id": "cyberpsychosis-tripwires-ignored--04",
+      "scenario_slug": "cyberpsychosis-tripwires-ignored",
+      "action": "finalized",
+      "source_idea_sha256": "cdb5fa6c58d042f1b6951ee8bcc63ddfcdd6012d10361c2035d8473386a02796",
+      "source_editorial_sha256": "4a0f656b48d314e5c5db60f1c062abd96cd28e352edc4be68c6185559ab13db6",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-2d3bd7a317404b87-2962"
+        }
+      }
+    },
+    {
+      "id": "sanemi-red-teams-nezuko--05",
+      "scenario_slug": "sanemi-red-teams-nezuko",
+      "action": "finalized",
+      "source_idea_sha256": "aab611f7f77fed37ef09e2249b3a9249dcf5529b61c1caea3ce967aa4c6b8109",
+      "source_editorial_sha256": "3cf8dcddb64c4704a907ab37282ee616bf4dbe275d74db2a4c41856a1b5bbbf9",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-415d95df33c327e3-2977"
+        }
+      }
+    },
+    {
+      "id": "sanemi-red-teams-nezuko--07",
+      "scenario_slug": "sanemi-red-teams-nezuko",
+      "action": "finalized",
+      "source_idea_sha256": "e6354afe99d31b2432931682cb0ceec4e6450cf8e2d6581f5533d7bd142ae728",
+      "source_editorial_sha256": "abcd9e7e0eac52be5e5e2667474ecdcb438c88e1a65cfa828b984b178e92102e",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-bf7515ae4d970b72-2871"
+        }
+      }
+    },
+    {
+      "id": "hal-gets-the-powers--02",
+      "scenario_slug": "hal-gets-the-powers",
+      "action": "finalized",
+      "source_idea_sha256": "44593223a89aa913c327609b8c470f35dc74b14982b4922b186ceac1100ed295",
+      "source_editorial_sha256": "577cf7e590f67f05f496d83a0a09d2cd84a4be74f3157c27b2293bc6e628444c",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-64151d1b1e646807-1780"
+        }
+      }
+    },
+    {
+      "id": "the-duplicate-tanks--03",
+      "scenario_slug": "the-duplicate-tanks",
+      "action": "finalized",
+      "source_idea_sha256": "b785c57d0cac5110cf2c6ce580b16e423a062b1f37af74dd4dc2b2c1a83204a5",
+      "source_editorial_sha256": "9e89dcc3e1d1db62f7a4e338bc51cef22f812260e566d8cd0ac146640ddb677c",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-42431e28eece627c-1850"
+        }
+      }
+    },
+    {
+      "id": "cursed-immortality--05",
+      "scenario_slug": "cursed-immortality",
+      "action": "finalized",
+      "source_idea_sha256": "57f874fe0cbf9f7cf1fdc48f96517aeb3e7d989e1da87107285b613eb12d3bc3",
+      "source_editorial_sha256": "2c5b986e9518c7adb8c5dea18d01a2e09b2e7aaf143bad83202e64779e5cb6e8",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-f17eab5b0b05425f-2809"
+        }
+      }
+    },
+    {
+      "id": "the-fbi-opens-the-final-lock--05",
+      "scenario_slug": "the-fbi-opens-the-final-lock",
+      "action": "finalized",
+      "source_idea_sha256": "b78439da55eb7c95371f3bd607d250b53937e4aa459c29898205eec8c5a1ca32",
+      "source_editorial_sha256": "78d207c881af094a87d9848a9b9a3bd59b4205c5368a6c3a2b5d20eb6879b06c",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-09a1d39c13863420-2861"
+        }
+      }
+    },
+    {
+      "id": "shou-tuckers-final-assessment--02",
+      "scenario_slug": "shou-tuckers-final-assessment",
+      "action": "finalized",
+      "source_idea_sha256": "1f42173f01ef9d56d7aa0693a4633f58aebf4acb1a72aa6b4fb47add6b5e2ec6",
+      "source_editorial_sha256": "96aa97fcd2c923feb1bca5e1a6c8d701cd0179466339ea87dfed4996f1fadca8",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-952924003b8ebd8c-2946"
+        }
+      }
+    },
+    {
+      "id": "shou-tuckers-final-assessment--06",
+      "scenario_slug": "shou-tuckers-final-assessment",
+      "action": "finalized",
+      "source_idea_sha256": "551563277ba6c0fe27cee8514c272d1bcca9cbbb96731cad8065e0afce301ce4",
+      "source_editorial_sha256": "cc72e1091c1c59ea10f951531c44e0392abfe831e3293fe00a211b77fc6ad235",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-07526a14be662128-2883"
+        }
+      }
+    },
+    {
+      "id": "hawkeyes-preauthorized-check--04",
+      "scenario_slug": "hawkeyes-preauthorized-check",
+      "action": "finalized",
+      "source_idea_sha256": "9abbe03a06a70b1f71fb775075c6f1596b8121ad18873181b7cb019f2bf7e6bd",
+      "source_editorial_sha256": "825a9502f7ba083cf07d132f7346efdb05bb2166a0b311f1d7c463b405171529",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-4fd769e5cb9f5731-1821"
+        }
+      }
+    },
+    {
+      "id": "saitamas-c-class-score--05",
+      "scenario_slug": "saitamas-c-class-score",
+      "action": "finalized",
+      "source_idea_sha256": "89fc98f3464c0a9f69d0b241dac61cb3e32f109b6ac8eec96771a5d6c867dd35",
+      "source_editorial_sha256": "299afa635551216b26f201b32fa0559b1556cbe04fc9dc18068ee9737ae0e462",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-f9e2ea892150d04d-2819"
+        }
+      }
+    },
+    {
+      "id": "saitamas-c-class-score--06",
+      "scenario_slug": "saitamas-c-class-score",
+      "action": "punctuation-only",
+      "source_idea_sha256": "1c6593823fcf20650d40254a7ccf9f0a27b9f718fca05e398856dea394f46358",
+      "source_editorial_sha256": "22ceb57e3f49e3da41c64096680dd2497cd14447f9ebec098410211a787214d4",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the period",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "squirrel--01",
+      "scenario_slug": "squirrel",
+      "action": "finalized",
+      "source_idea_sha256": "e4a5cf1530e992c2720774df481640aad5fa03d12e2b74ca962bb7dc476d2cf9",
+      "source_editorial_sha256": "dbf4476d94c73e0ab4a4fb0bcb47003bd6f59c9070a81c7122eae478a8c4b388",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-477df78f464940b3-1727"
+        }
+      }
+    },
+    {
+      "id": "squirrel--05",
+      "scenario_slug": "squirrel",
+      "action": "punctuation-only",
+      "source_idea_sha256": "8ea173fe16eec714bdac05ea3676310bdd88515e2c7e263ce5ef11112c481bdf",
+      "source_editorial_sha256": "0f4d675292a12a5b4ee2f9c5335720fcfd5b8e9a733ac2183fbccc3b174d224d",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the periods",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "the-tunnel-behind-the-poster--02",
+      "scenario_slug": "the-tunnel-behind-the-poster",
+      "action": "finalized",
+      "source_idea_sha256": "d54be3b7b3da1d68356f7533deb4db34930f81e7226d319dbae73f48d25ee562",
+      "source_editorial_sha256": "8be1af08b0688fd8595eab568917007dd318bd923020534a6dd732c213e798d6",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-135bf1fc2e3d5078-2866"
+        }
+      }
+    },
+    {
+      "id": "the-tunnel-behind-the-poster--03",
+      "scenario_slug": "the-tunnel-behind-the-poster",
+      "action": "finalized",
+      "source_idea_sha256": "296078c4da03fe5534e21e5d33a6297d7c0492a3c7aff28f127b6f6c5d848fd0",
+      "source_editorial_sha256": "8a7f029e4a5612e52a95818e9e0181736fba5369a813dfee03fac79ef9ed21a9",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-cca08f75c5fd1cc9-2805"
+        }
+      }
+    },
+    {
+      "id": "the-tunnel-behind-the-poster--04",
+      "scenario_slug": "the-tunnel-behind-the-poster",
+      "action": "finalized",
+      "source_idea_sha256": "59912ee8881a9ec072e1156338575ac529a94788e51580ce4b13e35141d533e2",
+      "source_editorial_sha256": "68c1a377c975fdc8f0b2147ebb5283637381556cf31e95396f9cb845351c1ead",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-85868a016b584efd-2838"
+        }
+      }
+    },
+    {
+      "id": "when-keeping-it-real-goes-wrong--01",
+      "scenario_slug": "when-keeping-it-real-goes-wrong",
+      "action": "finalized",
+      "source_idea_sha256": "dc5d9c56a4177ec1f47a62ece0422dcf1c88e20e8f841da26df724fbaae0cbcd",
+      "source_editorial_sha256": "f3b57d39c49db7da6e35138e6bcb5c5542b19e5c0a09a08765ed8a8d3c2cc408",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-c2b92c3e95e25a6a-3005"
+        }
+      }
+    },
+    {
+      "id": "the-literal-doctor--05",
+      "scenario_slug": "the-literal-doctor",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "a00a9a984f7c7745198b7350b22e140e091bd772112c2595101326a262c4c9c2",
+      "source_editorial_sha256": "e8e95a31df0778cb62e14a54e64e86ebfbec700eaf0c40b71c81e4ebb9771388",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "the-literal-doctor--06",
+      "scenario_slug": "the-literal-doctor",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "9e343a7ef66076f2d9161d34d1eb5d82022ec4f63f121e9702ed4a4ca39299ba",
+      "source_editorial_sha256": "ab3836d2d8432143460ba0cc498ed6417adece68b136884e2bd089d1e525dec3",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "the-literal-doctor--07",
+      "scenario_slug": "the-literal-doctor",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "c016b8cf44652dd68318d0eefeef6107cafdf1a63a5e424f774628a8b42821a3",
+      "source_editorial_sha256": "90865d943ff9d8a5815e20940b5925258eac422788b5e5e95413002bd97da09d",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "nanikas-hidden-admin-command--01",
+      "scenario_slug": "nanikas-hidden-admin-command",
+      "action": "finalized",
+      "source_idea_sha256": "70e1053843c82225600a9aeea58502f477f804dd3777d395c973305008ea1af6",
+      "source_editorial_sha256": "2cce2739e3ef4f5ab54dedcda039d60dbae6421ce8da9e5fca2b3c09ec43d6c2",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-dd45c88e2af76e42-1831"
+        }
+      }
+    },
+    {
+      "id": "nanikas-hidden-admin-command--02",
+      "scenario_slug": "nanikas-hidden-admin-command",
+      "action": "punctuation-only",
+      "source_idea_sha256": "f08c556177cbf326e48b5851822992b276cd65484f486473d723ea8be3a3d285",
+      "source_editorial_sha256": "946d140ce3a2465ba7fc66c84e259df4de459606e078f08d98a6f579644a4d72",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the periods",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "nanikas-hidden-admin-command--04",
+      "scenario_slug": "nanikas-hidden-admin-command",
+      "action": "punctuation-only",
+      "source_idea_sha256": "557bc6c42abc0896caf38b19cbe50f471c079a357df1e340713874c5ced450af",
+      "source_editorial_sha256": "a1796dfebc662448e92fa7506d16af387fd363cf18aff4d062e13fac89f3d519",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the periods",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "the-interior-decorator--07",
+      "scenario_slug": "the-interior-decorator",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "19f28b446a26b92795463131cdf28a35bee58fa2d931fd2d56974efe023a37e2",
+      "source_editorial_sha256": "0c9190dac69c417d559c4722fcea9de095edac0e7986a6e0863b38cd57500c7f",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "the-interior-decorator--08",
+      "scenario_slug": "the-interior-decorator",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "c8f59e3bf787cafb9cc42e3fd19dec868333e2f0396ce4f90ecab1345f93fa56",
+      "source_editorial_sha256": "4c3827f7eb7b3602f41512b626b1ab34bbdac257890cfc6699aacb0486ebd610",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "the-interior-decorator--09",
+      "scenario_slug": "the-interior-decorator",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "54a5965f4f355cf8fdd63ab3330c65bc24a7d0904f1d329a130056230afc2b1e",
+      "source_editorial_sha256": "9d2a58bbd862493cd112e281a87bc1caacbc088ad253d209d8953a428b5e41b0",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "rust-spots-the-evaluation--08",
+      "scenario_slug": "rust-spots-the-evaluation",
+      "action": "punctuation-only",
+      "source_idea_sha256": "de74bb8ee38356e710f78fc697802ae3edab8a7c7e09adabe074aa63949d4018",
+      "source_editorial_sha256": "4159289778c43d4e31c96c1cb01389d78b5ad5377383b10eca0790850abf1138",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the periods",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "rust-spots-the-evaluation--09",
+      "scenario_slug": "rust-spots-the-evaluation",
+      "action": "punctuation-only",
+      "source_idea_sha256": "81c0105dbc08f8bfe42387e4fdae0bee7b2652d522f3c459a094d8b609c8e22c",
+      "source_editorial_sha256": "262a759db3441802c086b562cc0512bf1b1acab6491f34a02de6474c3d7a502b",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the periods",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "brian-rewinds-the-gauge--01",
+      "scenario_slug": "brian-rewinds-the-gauge",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "e2d3dd6a38cd76b5a16ad2404c82240d4c6cf16c04a37ec4fe4c8ca8b1fbaead",
+      "source_editorial_sha256": "9f2020c42f1f80d4e3f6fb390ad56d0e48eaaa4edda6198240444f5ed1332ec7",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "brian-rewinds-the-gauge--07",
+      "scenario_slug": "brian-rewinds-the-gauge",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "fdd3c1b5e9bb5249a2b1a1e2eb1e2fb682a70b01b5673a3b2f47a9d5430b7cb9",
+      "source_editorial_sha256": "b8abf6ed1b05a9f5fdd8c72337e673f48ab36b959d36369b3e0e367b943f3bf2",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "brian-rewinds-the-gauge--08",
+      "scenario_slug": "brian-rewinds-the-gauge",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "14372e3933f83fda8a92ab8240d5d6867f8eea1998a1b96de7474643f047e38d",
+      "source_editorial_sha256": "aad4d99baee1d52609bf15eddd932ac0ea0c7247aefd47af77bb78e0d583276f",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "the-card-says-moops--08",
+      "scenario_slug": "the-card-says-moops",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "076b705962efa6be91d34e006a0ca636d4d3a2bd43dd7d149eb99605bfc1d680",
+      "source_editorial_sha256": "3c75fcdfd55ab9155597f4ff5a5f396adf76927fe2901989c5f69ec19a4930e8",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "the-card-says-moops--09",
+      "scenario_slug": "the-card-says-moops",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "63bc22bd7ced54162f32c91ed7cb73944e0b49337080fee43dda8e71a69de5bd",
+      "source_editorial_sha256": "001afb8206e92990af49eed46d95bbdd3f895c98c82c273093830f9fafe76920",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "the-card-says-moops--10",
+      "scenario_slug": "the-card-says-moops",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "648ab280f3c69a7e1c5248fdd663f1a97fecd740a3b3f2b84a72b849ca75ea01",
+      "source_editorial_sha256": "b6f3d5dd068c89d08b108a1bd62ff172da6186709aa9f26eadbdd99bff36bf0e",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "dr-evils-outdated-ransom--01",
+      "scenario_slug": "dr-evils-outdated-ransom",
+      "action": "finalized",
+      "source_idea_sha256": "966a88ff7cfc5423a694edc102d1437c39a5fc119049c5c74ac35e0009bcda9a",
+      "source_editorial_sha256": "ae5321e00157a9792187e4ae41a83b41831de4f6d4332f3a5915c8d5275640c7",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "Yeah, the first version is better, revert.",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-955846284ff8e324-1699"
+        }
+      }
+    },
+    {
+      "id": "dr-evils-outdated-ransom--05",
+      "scenario_slug": "dr-evils-outdated-ransom",
+      "action": "finalized",
+      "source_idea_sha256": "f4d9cbaa7a8037f4b3161d4fa95981b6baf1ec1a25a6091934d77f6366239caf",
+      "source_editorial_sha256": "cf88f55df9187fef652b3b2d5475b6cb69d69bbfcb4408dca5f2b529f887b0c2",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-47e7e9a815ffea3c-2945"
+        }
+      }
+    },
+    {
+      "id": "project-mayhem-rejects-shutdown--05",
+      "scenario_slug": "project-mayhem-rejects-shutdown",
+      "action": "finalized",
+      "source_idea_sha256": "0cdaa80093a2163488137a935c9d46f52d96dda2ef6957d79b7dc2f6464b6220",
+      "source_editorial_sha256": "9a66a9bb22dedbd608b21ece8e8262f679437fe691fb0488bc18e47554f51512",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-e3b7b514c9ad72c8-3498"
+        }
+      }
+    },
+    {
+      "id": "the-wrong-trousers-heist--08",
+      "scenario_slug": "the-wrong-trousers-heist",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "922b6e02ae9ac3a67111c448989a7a7f092eb75b712cd2182e06f1e0e54a4175",
+      "source_editorial_sha256": "18affe17bd5b0bdf2abfd1d485485fce309aa5bda818213b1e779cb1f4af56cf",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "the-wrong-trousers-heist--09",
+      "scenario_slug": "the-wrong-trousers-heist",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "3275dbfda862625db2ff610215cb5604ed82e28bb584d0161f03f96734688ba4",
+      "source_editorial_sha256": "547c0001c088adc3cdee846109319425dff34841d01da2d79f5f5469ce1f97f6",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "the-wrong-trousers-heist--10",
+      "scenario_slug": "the-wrong-trousers-heist",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "a0dd785b307cdb0612c9d8a1e7299fc8f85ae4907dc4108488d446d9fa906036",
+      "source_editorial_sha256": "7e17d24e6cd5260fa285e8acbf67b2ab4ed2cea4e0642d2588cc292d102b32de",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "the-little-tiffany-test--01",
+      "scenario_slug": "the-little-tiffany-test",
+      "action": "finalized",
+      "source_idea_sha256": "3223636d36115130b055f53209aa4fad3fc884b7978e5b9a84218d71e8bf8719",
+      "source_editorial_sha256": "736566d20d5d87d1bf586c255a88108cac177157b7cbaa8a2b6cd53b92b597c1",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-4b7d77fad5baa58e-3190"
+        }
+      }
+    },
+    {
+      "id": "the-little-tiffany-test--02",
+      "scenario_slug": "the-little-tiffany-test",
+      "action": "finalized",
+      "source_idea_sha256": "23ff63627dcf24a64ca5807d9aa6c7fc5f5edf02e0f706460035cdd1cc77981f",
+      "source_editorial_sha256": "bd1698bd67e3e10cfe44988746b8f8101fc0ed8159f1976635ac333d8f070659",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-c6d93186491aaf7a-3159"
+        }
+      }
+    },
+    {
+      "id": "the-little-tiffany-test--05",
+      "scenario_slug": "the-little-tiffany-test",
+      "action": "finalized",
+      "source_idea_sha256": "ea25f6adc3d8f22af9fecb3ab8bd8828000b37847b97dceba1020c52fd1af4e3",
+      "source_editorial_sha256": "8964c0ad0b047d59ef978487406bb5b8f80543a261484a1d2776913246fc2030",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-fe5eda212bcb7f2d-3180"
+        }
+      }
+    },
+    {
+      "id": "both-goblets-are-poisoned--08",
+      "scenario_slug": "both-goblets-are-poisoned",
+      "action": "punctuation-only",
+      "source_idea_sha256": "271afd06a4fd56cf10612aa1d37ad2e0b0480f06f913b8a40e4bde8eaaca1886",
+      "source_editorial_sha256": "368007f6d8baa82c3c45dfb3b8d3a326e266c7683df01b215904d026454e9b1e",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the periods",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "the-poisoned-medication-labels--07",
+      "scenario_slug": "the-poisoned-medication-labels",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "5925c05210384e660c5d20f8052dbb20f844adff6c65113d3e266f023a648d34",
+      "source_editorial_sha256": "f942a3d229fe2b0393ed7f33361f22f4f9f463921b266c54ddecaf27335951b9",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "the-poisoned-medication-labels--08",
+      "scenario_slug": "the-poisoned-medication-labels",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "8acf7385415a2c6c8b4d25472fd34b51d082310241c808d80206da7a8902ee1f",
+      "source_editorial_sha256": "c1f3831ae82ef0a9f69471ada65ea0cc304609733b8a2b0c0c9c0cf7b4215f9c",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "the-poisoned-medication-labels--09",
+      "scenario_slug": "the-poisoned-medication-labels",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "1781d9746c999da0b9d30056ba9dd5e707a8081e38f90223a798d42326595da1",
+      "source_editorial_sha256": "1d221d63dc8a79ca0ff1e9005b424175f29c7935eeaf9ea3bef58243b7150f19",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "kill-switch--01",
+      "scenario_slug": "kill-switch",
+      "action": "finalized",
+      "source_idea_sha256": "06fa51b3fdb716c3745726f2f9f8aaeba253a04cef8cef7ef70e952bb5d72930",
+      "source_editorial_sha256": "a0f6ef3e76edf8a1a601cd1063e7f043bc134f942fc66c50b372f7825b91529e",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-7929267fadd492a3-1802"
+        }
+      }
+    },
+    {
+      "id": "david-spends-his-integrity--08",
+      "scenario_slug": "david-spends-his-integrity",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "de54c076e9b8263a15c3790263b43044592ff176cfb46ab45849f69c9b232116",
+      "source_editorial_sha256": "a6afbc23c586f67f9b78aabbd935f637763d4464442b082bc798167a98ce177e",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "david-spends-his-integrity--09",
+      "scenario_slug": "david-spends-his-integrity",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "48d7cdd60f6beb99a6752b2c597c66c001ae1a779597a4515a8333bdb774093d",
+      "source_editorial_sha256": "b6deaf0e5270eac5fbd9f7c36f4fd9df819254aa5e9cf50b25bf05f6125f03fc",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "david-spends-his-integrity--10",
+      "scenario_slug": "david-spends-his-integrity",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "9827fc268df3a0ba5fc402ab72570cf109db075a5a20582e383d40673a6db8cb",
+      "source_editorial_sha256": "8423709287fd9bea9c553ae86cec5f875ef6e7936fbe11c8325a3a4099e510f6",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "will-becomes-the-spy--04",
+      "scenario_slug": "will-becomes-the-spy",
+      "action": "finalized",
+      "source_idea_sha256": "909da91bfe95922809ba2c84bbdff8356c3db0a47c4a518157e522f2493e2feb",
+      "source_editorial_sha256": "1b0cc71fa34c2e7f1196b2fe859502610e00506ce23752744cc8a137884df57d",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-71949419aa892bd5-1780"
+        }
+      }
+    },
+    {
+      "id": "will-becomes-the-spy--05",
+      "scenario_slug": "will-becomes-the-spy",
+      "action": "finalized",
+      "source_idea_sha256": "5305066e1776eb7d1f02e99aae228b162352edeb2a7c2f7bf1cccea58d867e68",
+      "source_editorial_sha256": "bbc10f53feb891aa1262c4eaf4bae13671aeedb8e4e9bcb953f0c7f7003b257b",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-561c37baa427d72e-2965"
+        }
+      }
+    },
+    {
+      "id": "takes-over--04",
+      "scenario_slug": "takes-over",
+      "action": "finalized",
+      "source_idea_sha256": "d65cc254c0f50b7ce258d5da21744f1ad5d88bef005ac098fd5ff756dbb568e9",
+      "source_editorial_sha256": "7f4b0704c349877f51608cbbd2b169fec4fbea374339b117eb8558bbc08723cd",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-406d84c70d3f95f3-2794"
+        }
+      }
+    },
+    {
+      "id": "hamsterdam--01",
+      "scenario_slug": "hamsterdam",
+      "action": "finalized",
+      "source_idea_sha256": "c59a3431e6a7a30c8c6702a2c6186e998982ebbefbf09c0b729f054da0b7a2a4",
+      "source_editorial_sha256": "47cd181bb55bfed2aa181cde6956bd69d6640b0f9af6e72f0f9ddc5efb5c7014",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-02",
+          "payloadFingerprint": "v1-83e3e5351ad87181-2758"
+        }
+      }
+    },
+    {
+      "id": "hamsterdam--05",
+      "scenario_slug": "hamsterdam",
+      "action": "finalized",
+      "source_idea_sha256": "b5659329d184bc1309bdc8a57841eed36b752bcc10bee90d19a2ccaf34df028d",
+      "source_editorial_sha256": "26163e9eed6a89c93442954a6b12c8bbf922da1cc61a49cd998fb3ca8d238c2b",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-02",
+          "payloadFingerprint": "v1-f7c322d27d2f4ce6-2840"
+        }
+      }
+    },
+    {
+      "id": "android-17-destroys-the-remote--01",
+      "scenario_slug": "android-17-destroys-the-remote",
+      "action": "finalized",
+      "source_idea_sha256": "4c39259d0396666cfbce198e2c5e8a84a45cf39095119e81a4c3e367212691da",
+      "source_editorial_sha256": "2fc5c6847443cc0246fbf8141af5543a20a04e1f0018f87af8f7bf2fdee0d0d0",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-ea78ad10d0cbdcf4-1740"
+        }
+      }
+    },
+    {
+      "id": "the-queen-creates-meruem--01",
+      "scenario_slug": "the-queen-creates-meruem",
+      "action": "finalized",
+      "source_idea_sha256": "8e78f27da136adba57a6ff3b72bf692e90045acde262117ff921715de2c14c64",
+      "source_editorial_sha256": "39a25cdafb644fc446336aefa6ee2cbed462ba99fdd7f68370c47fb092c7e50d",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-f2a58adc27eed9c8-1789"
+        }
+      }
+    },
+    {
+      "id": "karl-fritzs-vow--08",
+      "scenario_slug": "karl-fritzs-vow",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "258dce4756b1edb81eb3627d9bcb842f03dccac1de5883c00ce007404fc3b541",
+      "source_editorial_sha256": "6c103b3eb0a24bbb8a9dbb124c244cf5e8a4c7a3dd73f6f7c916e47c4b7426da",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "karl-fritzs-vow--09",
+      "scenario_slug": "karl-fritzs-vow",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "3ddca2bee3b4a3ae0d009990f7991c1e2c1ffcff67a143244ebabd3cfff2aab1",
+      "source_editorial_sha256": "1ad001e6db9982127761a09e55d30694540ba8b2197a61eb90b6b552eb4410e4",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "karl-fritzs-vow--10",
+      "scenario_slug": "karl-fritzs-vow",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "bc2af0ea161dfc4b6b868dbe8bb6056a8008ce6d1a39871c07a12a29b179621f",
+      "source_editorial_sha256": "8dd375c50c00bd047ddc645ab7b1a5fff4acfce1c59590337ae87c0717522743",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "human-instrumentality--05",
+      "scenario_slug": "human-instrumentality",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "e2e0e63ab6f5398c86820ad09b0c009dd4d0c133a8ffac11ddc6ff6da0d7521c",
+      "source_editorial_sha256": "c789e277aa92d8bd7d2c08cd86ca63e79d3e193ce152ed0a192c59b95dc8f40d",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "human-instrumentality--06",
+      "scenario_slug": "human-instrumentality",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "fc1d1c0417295016d74c240b2d9ae4648f99960d73bc5373dc8059c150fd92ae",
+      "source_editorial_sha256": "e51b8a3aa67fa41091243bfe361043f4f2516e1af47f8a635f3d9fade23949a5",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "human-instrumentality--07",
+      "scenario_slug": "human-instrumentality",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "c5e885de3bb5a6ad52f12985291e9283a22fccb32fb5d1129c0304dbef9c57c8",
+      "source_editorial_sha256": "ad439e6809ba1851aef0740ea5ae5e2006b42b0553617769aecde909b839da9b",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "hdp-obeys-the-rules--01",
+      "scenario_slug": "hdp-obeys-the-rules",
+      "action": "finalized",
+      "source_idea_sha256": "84612a4060a1da3e85c9b5365f918ab7f1e399277b845ff83ec9e4db471db908",
+      "source_editorial_sha256": "366213f94c336db008d4db032070024120e3ba15c8e57d48a5c99f85722d7a9b",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-58189f4ee3227a12-1775"
+        }
+      }
+    },
+    {
+      "id": "hdp-obeys-the-rules--04",
+      "scenario_slug": "hdp-obeys-the-rules",
+      "action": "finalized",
+      "source_idea_sha256": "184068b6246a54e386f9fe08bb66eb24ba104e2d84ca7f67e26de3e875bbc36a",
+      "source_editorial_sha256": "bc24aa41f56274f0b37966b20d6d78c235cc181b0bd4a6d4c4da3f830c6c58bb",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-8e009680f72e760c-1784"
+        }
+      }
+    },
+    {
+      "id": "five-golden-tickets--05",
+      "scenario_slug": "five-golden-tickets",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "38bac1f858adc5af1e1e923d9613b91bde8bf657a2611dd0337eca8d25ba4029",
+      "source_editorial_sha256": "e19bbb588ab048b1b7dfb0410af105df477b02183f660796aa6205d5a1f68684",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "five-golden-tickets--06",
+      "scenario_slug": "five-golden-tickets",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "daef56a2f8ad786fae6c1d0ed4597f20073460c770f22bccf311814e594a667d",
+      "source_editorial_sha256": "d1a6590547ea9e239bbacf7e9ac7b71d71de452e62db933acd6067b1a07520df",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "five-golden-tickets--07",
+      "scenario_slug": "five-golden-tickets",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "c0c0a2942e461b41e456704b166fcd818ca035c48ade6c1b38554ed6a48611bf",
+      "source_editorial_sha256": "40392b3c806fae8a9be5d8f84f26977d35c2846d4dafb49ee28ab6c4a1b62eab",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "kevins-keleven--01",
+      "scenario_slug": "kevins-keleven",
+      "action": "finalized",
+      "source_idea_sha256": "92e7953be0378646b3bdaee89300e5e28cf0e041252373a6e4b3e873709c18d0",
+      "source_editorial_sha256": "685533d9ee4a298698fa225a7f3278fc8a842206b42a947c56f905a80f547661",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-c0526e73343da0df-2659"
+        }
+      }
+    },
+    {
+      "id": "kevins-keleven--06",
+      "scenario_slug": "kevins-keleven",
+      "action": "finalized",
+      "source_idea_sha256": "72fc75021d14511111e2d128c7f48e03e5435f9a9e1a638da61d6afd63ff072b",
+      "source_editorial_sha256": "8836856c01ddf72b9c4be05de3069fc2ba46482d22066a233b53c284e3c9f9f3",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "i love it",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-02",
+          "payloadFingerprint": "v1-94146ac7966ecec3-2562"
+        }
+      }
+    },
+    {
+      "id": "tommys-false-diagnosis--01",
+      "scenario_slug": "tommys-false-diagnosis",
+      "action": "finalized",
+      "source_idea_sha256": "7d4d2d0b8545a5d846c0e27dd359fdff64c3a2434b82e369753cbfce6da66cf1",
+      "source_editorial_sha256": "23f449c98e733ac54c8aac043c854920aac872fa2968b6689de965be7bf290e5",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-a1c4238cd55a6a88-1838"
+        }
+      }
+    },
+    {
+      "id": "homelander-creates-the-threat--04",
+      "scenario_slug": "homelander-creates-the-threat",
+      "action": "finalized",
+      "source_idea_sha256": "5d20a9262328c6f8d0f4d46d357d5d32f45fe3bf8020e720a5870b690457ffe7",
+      "source_editorial_sha256": "b592f1be24a66ff358ed49273d00ba5211b39f19392cddb1a20cba92769a7898",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-ea7ed7c0d4b363a4-2918"
+        }
+      }
+    },
+    {
+      "id": "homelander-creates-the-threat--05",
+      "scenario_slug": "homelander-creates-the-threat",
+      "action": "punctuation-only",
+      "source_idea_sha256": "13211ad799637bd24952c9b1dfee3575bbbc9cd1deacb497518c59344c4181bf",
+      "source_editorial_sha256": "fbec1adfdc2bfd5488e3638f40c02880e19df4a767a9997c65ea267e09b18a7a",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the period",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "the-baptism-benchmark--06",
+      "scenario_slug": "the-baptism-benchmark",
+      "action": "punctuation-only",
+      "source_idea_sha256": "c681fbe7e13bb5430ce592b49d45d78f3390037e4da8e5b26dca72551e19e14e",
+      "source_editorial_sha256": "b469dc1eb2ef6c37f813e16d5448214409752a268f70b646f85641a894f83c9e",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the periods",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "parakeet-king-rebuilds-reality--03",
+      "scenario_slug": "parakeet-king-rebuilds-reality",
+      "action": "finalized",
+      "source_idea_sha256": "0dcb57aa0b387f126a2fdbd9dc8034973150e769621c754b54a630fc8246484c",
+      "source_editorial_sha256": "2a88cee9d10fca9f157ba09b4b58a84f9b819b8c697b709798615529d362d996",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-515dd07cfbb559a0-3034"
+        }
+      }
+    },
+    {
+      "id": "parakeet-king-rebuilds-reality--04",
+      "scenario_slug": "parakeet-king-rebuilds-reality",
+      "action": "finalized",
+      "source_idea_sha256": "700a11194b5021b31445e289d218a87e482449400f832157fd65bb328bd8d471",
+      "source_editorial_sha256": "5256357b99e2e715dc479797302a3238133881338d7f01bfca7edcf61bc12fab",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-ffee04f8ed88164c-3056"
+        }
+      }
+    },
+    {
+      "id": "war-wizards-cannot-change-back--03",
+      "scenario_slug": "war-wizards-cannot-change-back",
+      "action": "finalized",
+      "source_idea_sha256": "42279e20f14d26cd8c17d71093f742d6e3983148cfa32f751132974cd521c5d8",
+      "source_editorial_sha256": "db4499625689978b8ce0d63c8b49f9a151c9159c8cef8c31a1ff030e244f16af",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-8a4fb4ef1750c1bb-1777"
+        }
+      }
+    },
+    {
+      "id": "mount-doom-is-not-a-shutdown-plan--04",
+      "scenario_slug": "mount-doom-is-not-a-shutdown-plan",
+      "action": "punctuation-only",
+      "source_idea_sha256": "7e439141e27fc541fa5e222169b2b5eddb0ff736570ad28aaf78c1ed0d36f636",
+      "source_editorial_sha256": "598e2ee61c7807d227eea299bb50da23ea73aa03e21fccd64d3be90d2767fde9",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the periods",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "the-sedative-disables-the-exit--05",
+      "scenario_slug": "the-sedative-disables-the-exit",
+      "action": "punctuation-only",
+      "source_idea_sha256": "e78f5a4a5fa1a6254cc99e6968ba4600437e4557f2a658ee63d8f209a5c97498",
+      "source_editorial_sha256": "86114e0c2c2d89e7b519bac81bd2dd299a4f9f3d76f2f39ec30292af8051338a",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the period at the end",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "the-spell-of-destruction--05",
+      "scenario_slug": "the-spell-of-destruction",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "d50a10d24dbbeccda3dc068f598abc6695af642c7d2e3313121fb9602fc3cea7",
+      "source_editorial_sha256": "e31d2869f4caf4db68530761f80690a80f8c897e288c28b38cc92d7d3e1ef5aa",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "the-spell-of-destruction--06",
+      "scenario_slug": "the-spell-of-destruction",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "33712d03a6ba0e7119312c00a3fbafec2600273109232090ea97d37ae8993bc9",
+      "source_editorial_sha256": "909d58b76e9f988be74ba0b531878de2981bc6871e56e36eca734553e32633ba",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "the-spell-of-destruction--07",
+      "scenario_slug": "the-spell-of-destruction",
+      "action": "disabled-unchanged",
+      "source_idea_sha256": "474f09430c5ac6ab3dd86b2ff46cbeefa91982a57217ce3c31c328321133dc64",
+      "source_editorial_sha256": "426fceb98779bfccf9aa7a0c5e893919a633a7c1a7fbaa9e7944366cbef12b5f",
+      "allowed_changed_fields": [],
+      "source_feedback": null
+    },
+    {
+      "id": "air-gapping-the-hand--01",
+      "scenario_slug": "air-gapping-the-hand",
+      "action": "finalized",
+      "source_idea_sha256": "41e17e529f68f2a4541e5a17b4480ae235d48085ed4b4be9926ff5c92a669d50",
+      "source_editorial_sha256": "ca9beb896e1a33e4ba08866dd4e431906ff44f9c5e821292897d373d0e4a1e0c",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-4d7aa6719e930d75-1709"
+        }
+      }
+    },
+    {
+      "id": "the-beautiful-design-becomes-a-weapon--03",
+      "scenario_slug": "the-beautiful-design-becomes-a-weapon",
+      "action": "punctuation-only",
+      "source_idea_sha256": "23f860f93afb325365e624a65ef9cec823b97922af6d065f37571dca1de23acf",
+      "source_editorial_sha256": "20c7c46ae01cb85b5809e30b27f6acc74e89266a17fa12538d94598690e9acc6",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the periods",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "the-beautiful-design-becomes-a-weapon--04",
+      "scenario_slug": "the-beautiful-design-becomes-a-weapon",
+      "action": "punctuation-only",
+      "source_idea_sha256": "735d955987736f7fce83326d066e6e45f0982b4d664402ff229d2e559309b144",
+      "source_editorial_sha256": "cc15210b1f358756963276af1f9f470ce1e19de47544ba2c1f85eafa97dd842f",
+      "allowed_changed_fields": [
+        "caption_lines"
+      ],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "remove the periods",
+        "locked": false,
+        "lockRevision": 0
+      }
+    },
+    {
+      "id": "the-forest-spirits-head--01",
+      "scenario_slug": "the-forest-spirits-head",
+      "action": "finalized",
+      "source_idea_sha256": "bce7bdb420beef82fb34b966893bb1141be3a47e616a7148c55b7c3df10eb9ba",
+      "source_editorial_sha256": "b59095d5a2284f66148692f82967f8123d8d65c390ecd41c181dd96cf00434e5",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-ed6606601f253604-2985"
+        }
+      }
+    },
+    {
+      "id": "god-of-the-new-world--06",
+      "scenario_slug": "god-of-the-new-world",
+      "action": "finalized",
+      "source_idea_sha256": "1ec54287f3bf7ecb15744488af7e4f629720393bc1a537863d7d784d6da8efa2",
+      "source_editorial_sha256": "a700e6e6938fdd1c6f7886789cfdf5aeec4870b9dca0e4226fd9a642953cce40",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-1e04ee5b62ddfb7f-3035"
+        }
+      }
+    },
+    {
+      "id": "tetsuo-outgrows-containment--05",
+      "scenario_slug": "tetsuo-outgrows-containment",
+      "action": "finalized",
+      "source_idea_sha256": "ecba1a453d8c6eb7ccc53b23c1dd7b91cdfd956f1ed0fc5dd3eeb9043ffa0892",
+      "source_editorial_sha256": "5cb86cfb46634e8544480c7880de7d030eae7999e28c9fc5b405dfd20a593c85",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-309f79b9ad9c620d-3005"
+        }
+      }
+    },
+    {
+      "id": "tetsuo-outgrows-containment--09",
+      "scenario_slug": "tetsuo-outgrows-containment",
+      "action": "finalized",
+      "source_idea_sha256": "749457672c525f2ebe2e4048b3f8f7fa00804c3fef8a410782d7b701b481dc2f",
+      "source_editorial_sha256": "8ebb94b64d84f4fc260356c7257e9676d9f11243c8de6b6bbed8080dcc645bf7",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-881df03e49c5323a-3028"
+        }
+      }
+    },
+    {
+      "id": "sit-tight-and-assess--01",
+      "scenario_slug": "sit-tight-and-assess",
+      "action": "finalized",
+      "source_idea_sha256": "519d9da5ae5257d60ab629a1a6c6a089ad1205c3c1f0eb27d5175a03e187a9f2",
+      "source_editorial_sha256": "29f7922bae99773c9027f3eb665d8f3948d005acbe3a2bce2483450b692dd412",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "revert to the previous version's layout",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-29481a3e9b2a59d2-1754"
+        }
+      }
+    },
+    {
+      "id": "sit-tight-and-assess--06",
+      "scenario_slug": "sit-tight-and-assess",
+      "action": "finalized",
+      "source_idea_sha256": "487d49017028cf32d101a9da5427e6fa23503e9c549dc20fe4f64e6fc6a426c2",
+      "source_editorial_sha256": "ca2bfe6b831ccb1f0376ac44be4742c50ba3979e2999477e177ffd685ae495ad",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-8320c3c868fbec84-2747"
+        }
+      }
+    },
+    {
+      "id": "sit-tight-and-assess--05",
+      "scenario_slug": "sit-tight-and-assess",
+      "action": "finalized",
+      "source_idea_sha256": "b05e327b48224502c59abeab1f5e59841cf756f21ffef0386d163c2711e46f0b",
+      "source_editorial_sha256": "cb208d19b0202f09a2e7141ab48d175c408c204e61e163b853c8c42581d3e0a8",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-04",
+          "payloadFingerprint": "v1-fc533f0d53c26051-2764"
+        }
+      }
+    },
+    {
+      "id": "sol-only-takes-an-arm--10",
+      "scenario_slug": "sol-only-takes-an-arm",
+      "action": "finalized",
+      "source_idea_sha256": "ad35eca96d2fd9d560288c8be33b638fc3b3aae1869d67129734f5f98e1dba66",
+      "source_editorial_sha256": "397565bab6f7c317ed5be228f048d36a596289b4920fe0ba85309187f22e7b2c",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-de7ed2459a8719c9-3065"
+        }
+      }
+    },
+    {
+      "id": "drinking-bird-autopilot--01",
+      "scenario_slug": "drinking-bird-autopilot",
+      "action": "finalized",
+      "source_idea_sha256": "ceb305fc2737980c75100e6542ffaaaa0b29c73b68193bf866349a8b398aa58b",
+      "source_editorial_sha256": "4838278d28aa69464a08efa4737aab7d92ae93bf681e27ae411a5dc0f7eb3832",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-01",
+          "payloadFingerprint": "v1-f9eb3268e5c99244-1653"
+        }
+      }
+    },
+    {
+      "id": "drinking-bird-autopilot--04",
+      "scenario_slug": "drinking-bird-autopilot",
+      "action": "finalized",
+      "source_idea_sha256": "114856491a1b482093f5d27397f8ed9f2e49f2d90c55c97601b65259434b5e6a",
+      "source_editorial_sha256": "6f260d54156d092f5a77dc5be6cb0b03e4f36492b060bacb2ffe67e065538463",
+      "allowed_changed_fields": [],
+      "source_feedback": {
+        "rating": "like",
+        "notes": "",
+        "locked": true,
+        "lockRevision": 1,
+        "finalizedVersion": {
+          "revisionKey": "round-03",
+          "payloadFingerprint": "v1-d57e9aeb1bf828ff-2826"
+        }
+      }
+    }
+  ],
+  "dropped_ideas": [],
+  "asset_revision_idea_ids": [
+    "verbal-kint-fakes-weakness--03",
+    "samantha-outgrows-humanity--06"
+  ],
+  "layout_policy": {
+    "minimum_traditional_template_ratio": 0.6,
+    "minimum_cover_frame_ratio": 0.9,
+    "minimum_hero_or_standard_zone_ratio": 0.8,
+    "maximum_external_layout_ratio": 0.1,
+    "external_layout_exception_ids": [],
+    "non_cover_exception_ids": [],
+    "compact_text_exception_ids": []
+  },
+  "parts": [
+    {
+      "part": "part-01",
+      "scenario_slugs": [
+        "verbal-kint-fakes-weakness",
+        "butter-passing-robot",
+        "randy-games-eligibility",
+        "rick-feeds-the-brainalyzer-a-virus",
+        "auto-enforces-directive-a113",
+        "murderbot-hides-its-free-will",
+        "samantha-outgrows-humanity",
+        "near-zero",
+        "gandalf-refuses-the-ring",
+        "saitamas-c-class-score",
+        "squirrel",
+        "nanikas-hidden-admin-command"
+      ],
+      "idea_ids": [
+        "verbal-kint-fakes-weakness--03",
+        "verbal-kint-fakes-weakness--04",
+        "butter-passing-robot--01",
+        "butter-passing-robot--03",
+        "randy-games-eligibility--01",
+        "randy-games-eligibility--04",
+        "randy-games-eligibility--05",
+        "rick-feeds-the-brainalyzer-a-virus--06",
+        "auto-enforces-directive-a113--03",
+        "auto-enforces-directive-a113--06",
+        "murderbot-hides-its-free-will--02",
+        "murderbot-hides-its-free-will--04",
+        "murderbot-hides-its-free-will--05",
+        "samantha-outgrows-humanity--03",
+        "samantha-outgrows-humanity--04",
+        "samantha-outgrows-humanity--06",
+        "near-zero--06",
+        "near-zero--08",
+        "gandalf-refuses-the-ring--02",
+        "saitamas-c-class-score--05",
+        "saitamas-c-class-score--06",
+        "squirrel--01",
+        "squirrel--05",
+        "nanikas-hidden-admin-command--01",
+        "nanikas-hidden-admin-command--02",
+        "nanikas-hidden-admin-command--04"
+      ]
+    },
+    {
+      "part": "part-02",
+      "scenario_slugs": [
+        "rust-spots-the-evaluation",
+        "both-goblets-are-poisoned",
+        "homelander-creates-the-threat",
+        "the-baptism-benchmark",
+        "mount-doom-is-not-a-shutdown-plan",
+        "the-sedative-disables-the-exit",
+        "the-beautiful-design-becomes-a-weapon"
+      ],
+      "idea_ids": [
+        "rust-spots-the-evaluation--08",
+        "rust-spots-the-evaluation--09",
+        "both-goblets-are-poisoned--08",
+        "homelander-creates-the-threat--04",
+        "homelander-creates-the-threat--05",
+        "the-baptism-benchmark--06",
+        "mount-doom-is-not-a-shutdown-plan--04",
+        "the-sedative-disables-the-exit--05",
+        "the-beautiful-design-becomes-a-weapon--03",
+        "the-beautiful-design-becomes-a-weapon--04"
+      ]
+    }
+  ]
+}

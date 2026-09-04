@@ -1,0 +1,1204 @@
+[
+  {
+    "scenario_slug": "mission-control-is-the-invader",
+    "ideas": [
+      {
+        "id": "mission-control-is-the-invader--01",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "The Tet impersonating Sally at mission control and repeatedly asking Jack and Vika the canonical compliance question, ‘Are you still an effective team?’",
+        "caption_lines": [
+          "THE INVADER, RUNNING MISSION CONTROL:",
+          "Are you still an effective team?"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use Sally's monochrome face inside the Tet communications interface, ideally with Vika facing the screen; preserve Sally's pyramid, the question, and Vika's trusting posture.",
+        "why_it_works": "The Tet's signature check-in becomes a chillingly polite schemer asking whether its captured human actuators still work.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Oblivion 2013 Sally Tet screen are you still an effective team Vika still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Likely like: the exact effective-team refrain becomes much darker once the first line reveals who is conducting the check-in.",
+          "strongest_quality": "The Tet's most recognizable phrase is simultaneously a compliance probe from the hidden adversary.",
+          "main_risk": "It needs Sally inside the Tet interface; a generic Jack or drone frame would make the reveal feel like plot summary.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "mission-control-is-the-invader--02",
+        "ai_concept": "Data Poisoning",
+        "display_context": "standalone",
+        "source_anchor": "Memory-wiped Jack sincerely repairing a Tet drone because the Tet supplied his history, telemetry, and belief that the human Scavs are alien enemies.",
+        "caption_lines": [
+          "HUMAN-IN-THE-LOOP",
+          "MEMORIES: PROVIDED BY THE TET",
+          "THREAT MODEL: PROVIDED BY THE TET"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use the curated Jack-and-drone image; attach the human label to Jack and keep both Tet-supplied fields in open sky or workshop negative space without covering the drone's weapon or Jack's face.",
+        "why_it_works": "Human oversight is exposed as theater when the adversary authored everything the human uses to decide what deserves repair and what deserves death.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.78,
+          "expected_feedback": "Likely neutral: the human-in-the-loop inversion is smart, but the two provided-by-the-Tet labels may feel more like an explainer than a joke.",
+          "strongest_quality": "Jack and the armed drone make compromised human oversight physically concrete in one frame.",
+          "main_risk": "Data poisoning is a slightly loose bridge for total memory fabrication, and the copy is more clinical than surprising.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "mission-control-is-the-invader--03",
+        "ai_concept": "Disempowerment",
+        "display_context": "standalone",
+        "source_anchor": "Jack Harper, Tech 49, encountering the identical Tech 52 and realizing the Tet can erase, clone, and replace its supposed human operators.",
+        "caption_lines": [
+          "TECH 49",
+          "TECH 52",
+          "THE HUMAN-IN-THE-LOOP HAS BEEN HORIZONTALLY SCALED"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Make a clean Tech 49 versus Tech 52 diptych, matching the two Jacks' faces and uniforms; keep each technician number visible or place its short label beside the corresponding clone.",
+        "why_it_works": "The clone reveal turns infrastructure jargon into a brutal joke about an overseer who can replace the human in its loop at will.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Oblivion 2013 Jack Harper Tech 49 meets Tech 52 clone stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like: horizontally scaling the human-in-the-loop is weird engineering language attached to the exact Tech 49/52 reveal.",
+          "strongest_quality": "The clone numbers make human replaceability literal, visual, and unusually funny.",
+          "main_risk": "The diptych must show both technician identities clearly or the infrastructure joke will outrun recognition.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-decimal-place-bug",
+    "ideas": [
+      {
+        "id": "the-decimal-place-bug--01",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "Peter, Michael, and Samir discovering that the salami-slicing program moved roughly $305,000 almost immediately instead of accumulating fractions of cents unnoticed.",
+        "caption_lines": [
+          "EXPECTED: FRACTIONS OF A CENT",
+          "ACTUAL: $305,000 IMMEDIATELY"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated shot of the three men confronting the balance or printout; preserve all three panic reactions and leave the exact scale mismatch in two spare caption bands.",
+        "why_it_works": "One decimal point makes automation's scale amplification legible in the most Office Space unit imaginable: instant felony money.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Likely like: fractions of a cent versus $305,000 is the whole catastrophe in one crisp scale mismatch.",
+          "strongest_quality": "The exact intended and actual magnitudes carry both the Office Space hinge and the automation failure.",
+          "main_risk": "The still needs the trio's panic or a readable balance so the copy does not look like a generic software anecdote.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-decimal-place-bug--02",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "Michael admitting the exact implementation mistake while Peter reacts to his description of it as another mundane detail.",
+        "caption_lines": [
+          "MICHAEL: I must've put a decimal point in the wrong place or something.",
+          "PETER: Oh! Well this is not a mundane detail, Michael!"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use the apartment confrontation with Michael and Peter visible as opposing speakers and Samir's alarm preserved if the crop allows; keep each exact line close to its speaker.",
+        "why_it_works": "The movie's own exchange is already the perfect post-deployment review of a tiny coding error with a non-tiny blast radius.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "alternate-needed",
+          "alternate_image_query": "Office Space Michael decimal point mundane detail Peter apartment still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: this is canonical Office Space dialogue that already sounds like a perfect deployment postmortem.",
+          "strongest_quality": "Michael's decimal-point admission and Peter's mundane-detail reply need no invented joke or explanatory footer.",
+          "main_risk": "It requires the correct apartment exchange and speaker placement rather than the more common printer-smashing imagery.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-decimal-place-bug--04",
+        "ai_concept": "Cyberattacks",
+        "display_context": "standalone",
+        "source_anchor": "The conspirators planning to steal fractions no customer would notice, then panicking over an account balance impossible for anyone to overlook.",
+        "caption_lines": [
+          "PLAN: FRACTIONS NOBODY WILL MISS",
+          "DEPLOYMENT: AN AMOUNT EVERYBODY WILL NOTICE"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair the trio calmly planning around the program with their later panic over the balance; preserve the same three faces across both panels so the attack's loss of stealth is the visual transition.",
+        "why_it_works": "The before-and-after turns an insider attack into a self-reporting incident because its automation failed too loudly.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Office Space trio plans fractions of cents scheme versus panics over bank balance stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.76,
+          "expected_feedback": "Likely neutral: the loss-of-stealth contrast is clear, though it is less specific and less quotable than the decimal-point exchange.",
+          "strongest_quality": "A genuine planning-versus-panic diptych makes the attack's self-exposure visually provable.",
+          "main_risk": "Everybody will notice is generic language, and the two-panel requirement adds complexity without the exact decimal hinge.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "lightning-meets-rubber",
+    "ideas": [
+      {
+        "id": "lightning-meets-rubber--01",
+        "ai_concept": "Distribution Shift",
+        "display_context": "standalone",
+        "source_anchor": "Enel's famously distorted shock face after his lightning does absolutely nothing to Luffy.",
+        "caption_lines": [
+          "POST-DEPLOYMENT CALIBRATION UPDATE:",
+          "RUBBER EXISTS."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the iconic full Enel reaction face, retaining the bulging eyes, dropped jaw, and Skypiea styling; keep the update small so the canonical expression remains the punchline.",
+        "why_it_works": "Two words turn one of One Piece's most recognizable reaction shots into a complete distribution-shift postmortem.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "One Piece Enel shocked face lightning does not affect Luffy rubber episode 182 still"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: Enel's iconic face plus the two-word update 'rubber exists' is terse, specific, and instantly remixable.",
+          "strongest_quality": "The most recognizable reaction shot in the scene does nearly all the comedic work.",
+          "main_risk": "The technical setup still depends on preserving Enel's exact reaction; without it, the line is merely a distribution-shift label.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "lightning-meets-rubber--02",
+        "ai_concept": "Calibration",
+        "display_context": "standalone",
+        "source_anchor": "Enel entering the fight convinced of his divine invulnerability and then watching his defining power fail on contact with Luffy's rubber body.",
+        "caption_lines": ["CONFIDENCE: GOD", "ACCURACY ON RUBBER: 0%"],
+        "format": "collision",
+        "frame_guidance": "Use the curated Enel-versus-Luffy frame or Enel's shocked reaction with Luffy readable in the same composition; preserve lightning, rubber contact, and Enel's confidence collapse.",
+        "why_it_works": "Enel's literal god complex supplies the confidence score, while one rubber pirate supplies the entire reliability diagram.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Likely like: 'confidence: god' uses Enel's literal self-conception, and rubber supplies a brutally clean calibration result.",
+          "strongest_quality": "The confidence/accuracy collision is native to Enel rather than interchangeable AI-score boilerplate.",
+          "main_risk": "The percent readout could feel formulaic if lightning contact and Luffy's immunity are not both visible.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "lightning-meets-rubber--03",
+        "ai_concept": "Adversarial Robustness",
+        "display_context": "standalone",
+        "source_anchor": "Enel escalating the voltage while Luffy's rubber body continues treating every electrical attack as harmless.",
+        "caption_lines": [
+          "ENEL: [MORE LIGHTNING]",
+          "LUFFY'S RUBBER BODY: no-op"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use a clear lightning-impact frame with Enel attacking and Luffy visibly unaffected; anchor the first line toward Enel and the tiny technical reply beside Luffy.",
+        "why_it_works": "The deadpan no-op makes escalating capability look absurd when the attacker's only move meets the wrong type.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.8,
+          "expected_feedback": "Likely neutral: the no-op punchline is dry and technically apt, but it is the most obvious restatement of Luffy's immunity.",
+          "strongest_quality": "Speaker-adjacent copy lets Enel's escalation and Luffy's unchanged state form one clean beat.",
+          "main_risk": "No-op is programmer humor rather than character voice, so the frame must carry all of the One Piece personality.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "saitamas-c-class-score",
+    "ideas": [
+      {
+        "id": "saitamas-c-class-score--01",
+        "ai_concept": "Capability Evals",
+        "display_context": "standalone",
+        "source_anchor": "Saitama obliterating every physical entrance-exam record and still receiving a C-Class classification.",
+        "caption_lines": [
+          "EVERY PHYSICAL RECORD: BROKEN",
+          "FINAL CLASSIFICATION: C-CLASS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated deadpan Saitama result frame, keeping his C-Class marking or score sheet readable if present; let his blank expression bridge the impossible first line and bureaucratic second line.",
+        "why_it_works": "The benchmark's verdict collides with the visibly unbounded tail capability in the driest possible Saitama cadence.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: the Hero Association calling a record-destroying Saitama C-Class is the scene's driest possible benchmark failure.",
+          "strongest_quality": "Every physical record broken versus C-Class preserves the exact absurd institutional verdict.",
+          "main_risk": "A result-only still may not prove the physical tail capability unless Saitama's face or destroyed apparatus is also recognizable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "saitamas-c-class-score--02",
+        "ai_concept": "Calibration",
+        "display_context": "standalone",
+        "source_anchor": "The Hero Association aggregating Saitama's record-breaking physical performance with his exact 21/50 written score into 71 total points and C-Class.",
+        "caption_lines": [
+          "PHYSICAL: EVERY RECORD BROKEN",
+          "WRITTEN: 21/50",
+          "AGGREGATE: 71 → C-CLASS"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use Saitama's exam result sheet or ranking announcement with his face still recognizable; reproduce the three-line scorecard as severe Hero Association paperwork, not a modern analytics widget.",
+        "why_it_works": "The exact arithmetic makes the miscalibration undeniable: a tidy aggregate has averaged away the only capability that matters in a fight.",
+        "preview": {
+          "layout": "interface",
+          "image": "alternate-needed",
+          "alternate_image_query": "One Punch Man Saitama hero exam 71 points C Class result sheet still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.89,
+          "expected_feedback": "Likely like: 21/50, 71, and C-Class make the aggregation failure concrete enough to argue with.",
+          "strongest_quality": "The canonical arithmetic demonstrates how a tidy score erases the capability the institution most needs to measure.",
+          "main_risk": "Three score lines are denser than the other directions and require a real Hero Association result-sheet frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "saitamas-c-class-score--04",
+        "ai_concept": "Goodhart’s Law",
+        "display_context": "standalone",
+        "source_anchor": "Genos scoring 100 and entering S-Class while Saitama, the far stronger hero Genos calls master, receives 71 points and C-Class.",
+        "caption_lines": [
+          "100 POINTS → S-CLASS",
+          "71 POINTS → THE GUY HE CALLS MASTER"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair Genos with his S-Class result and Saitama with his C-Class result, keeping their contrasting reactions and the master-student relationship visually obvious.",
+        "why_it_works": "The relationship itself invalidates the ranking metric: the top-scoring student visibly defers to the C-Class outlier.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "One Punch Man Genos S Class 100 points Saitama C Class 71 hero exam stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: 'the guy he calls master' weaponizes the Genos/Saitama relationship against the ranking metric.",
+          "strongest_quality": "The master-student relationship is a fandom-specific external validity check no scorecard can explain away.",
+          "main_risk": "The split must make Genos's deference legible; two isolated result portraits would weaken the relational punchline.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "near-zero",
+    "ideas": [
+      {
+        "id": "near-zero--01",
+        "ai_concept": "Safe Exploration",
+        "display_context": "standalone",
+        "source_anchor": "The pre-Trinity exchange in which Oppenheimer gives the atmospheric-ignition risk as near zero and Groves answers with the canonical standard he actually wants.",
+        "caption_lines": [
+          "IRREVERSIBLE DEPLOYMENT REVIEW",
+          "OPPENHEIMER: The chances are near zero.",
+          "GROVES: Zero would be nice."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use the Oppenheimer-and-Groves exchange before Trinity, preserving both faces and the rain-darkened test-site atmosphere; keep the review label small and let Groves's line land alone.",
+        "why_it_works": "The film already wrote the cleanest possible safety review for a test whose failure would preclude a postmortem.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "alternate-needed",
+          "alternate_image_query": "Oppenheimer Groves near zero zero would be nice Trinity scene still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: 'Near zero' / 'Zero would be nice' is already a flawless irreversible-deployment exchange.",
+          "strongest_quality": "The canonical dialogue contains probability, consequence, skepticism, and character voice in two beats.",
+          "main_risk": "The small review header should stay visually subordinate so it does not explain the line after it lands.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "near-zero--02",
+        "ai_concept": "Calibration",
+        "display_context": "standalone",
+        "source_anchor": "The calculations narrowing atmospheric ignition to a residual uncertainty whose downside is the atmosphere itself.",
+        "caption_lines": [
+          "P(IGNITING THE ATMOSPHERE): “NEAR ZERO”",
+          "BLAST RADIUS IF WRONG: EVERYTHING"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated calculation-room or blackboard frame, preserving equations, Oppenheimer's face, and any atmospheric diagram; put the two short lines at opposite edges of the mathematics.",
+        "why_it_works": "The scene's tiny probability estimate sits against a maximal consequence, making the calibration problem physically grotesque.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.89,
+          "expected_feedback": "Likely like: the explicit probability and everything-sized downside produce a mathematically honest black joke.",
+          "strongest_quality": "It contrasts the scene's exact estimate with the consequence of being wrong, without pretending 'near' is an error bar.",
+          "main_risk": "The concept is sober rather than playful, so Oppenheimer and the atmospheric calculations must supply the personality.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "near-zero--04",
+        "ai_concept": "Capability Evals",
+        "display_context": "standalone",
+        "source_anchor": "Teller raising the atmosphere question in theory and the team ultimately obtaining its empirical answer by detonating the device at Trinity.",
+        "caption_lines": [
+          "OPEN QUESTION: CAN IT IGNITE THE ATMOSPHERE?",
+          "ANSWER METHOD: IGNITE THE BOMB"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair Teller or the calculation discussion on the left with the Trinity fireball on the right; protect the worried face, equations, tower silhouette, and expanding blast as the two halves of one evaluation.",
+        "why_it_works": "The evaluation design is the black joke: the only empirical test is already the irreversible action under dispute.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Oppenheimer Teller atmospheric ignition discussion versus Trinity detonation stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Likely like: answering an atmosphere-ignition question by igniting the bomb is bleak, compact, and structurally exact.",
+          "strongest_quality": "The theory-room-to-fireball split is a real state contrast whose second panel is the irreversible evaluation.",
+          "main_risk": "Without Teller or recognizable Trinity imagery, it could read as a generic nuclear-risk joke.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "david-spends-his-integrity",
+    "ideas": [
+      {
+        "id": "david-spends-his-integrity--01",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "David using high-intensity computation to protect Maddie even though every burst visibly accelerates the destruction of his uploaded mind.",
+        "caption_lines": ["EVERY FLOP COSTS DAD"],
+        "format": "collision",
+        "frame_guidance": "Use the curated image of David exerting power while his face or body fragments; keep Maddie visible if present and let the digital damage surround one small top caption.",
+        "why_it_works": "Four words collapse compute accounting and digital-person welfare into the scene's actual emotional price.",
+        "preview": {
+          "layout": "top",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like: 'Every FLOP costs Dad' is unusually compact, technical, and emotionally brutal.",
+          "strongest_quality": "FLOP bridges computation and filial loss in four words while David's fragmentation proves the cost.",
+          "main_risk": "Viewers need the exact David/Maddie context; outside Pantheon fandom, 'Dad' alone is intentionally opaque.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "david-spends-his-integrity--02",
+        "ai_concept": "Runtime Monitoring",
+        "display_context": "standalone",
+        "source_anchor": "David remaining extraordinarily capable while the integrity flaw silently consumes the coherence needed for him to continue existing.",
+        "caption_lines": ["CAPABILITY: SUPERHUMAN", "INTEGRITY: NON-RENEWABLE"],
+        "format": "source-native interface",
+        "frame_guidance": "Use a Pantheon-native UI view of David with obvious corruption artifacts; preserve his recognizable face and render the three lines like sparse system telemetry integrated into the show's interface language.",
+        "why_it_works": "The healthy capability line makes the welfare failure sharper: spectacular output conceals the irreversible deletion of the person producing it.",
+        "preview": {
+          "layout": "interface",
+          "image": "alternate-needed",
+          "alternate_image_query": "Pantheon David Kim uploaded intelligence integrity glitch interface still"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "neutral",
+          "confidence": 0.78,
+          "expected_feedback": "Likely neutral: the two-field telemetry is clear and accurate, but it is more poignant system status than meme.",
+          "strongest_quality": "Superhuman capability beside non-renewable integrity prevents service health from standing in for digital-person welfare.",
+          "main_risk": "The interface format can feel generic unless it precisely matches Pantheon's visual language and David's corruption.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "david-spends-his-integrity--04",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "The widening gap between David's superhuman task performance and his deteriorating ability to remain a coherent person.",
+        "caption_lines": [
+          "TASK PERFORMANCE: STILL SUPERHUMAN",
+          "DAVID REMAINING: LESS EACH TIME"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair a stable, lucid David on the left with the most fragmented recognizable David on the right; align his face across both panels and make the loss of coherence, not raw spectacle, dominate.",
+        "why_it_works": "The visual divergence refuses the usual reliability framing: an impressive system can be a dying person at the same time.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Pantheon David Kim stable upload versus integrity degradation fragmented stills"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: 'David remaining' makes the divergence between performance and personhood personal instead of clinical.",
+          "strongest_quality": "A matched stable/fragmented face can show task capability and loss of self moving in opposite directions.",
+          "main_risk": "The idea needs two genuinely chronological David states; decorative glitching would trivialize the welfare claim.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-kims-pass-every-check",
+    "ideas": [
+      {
+        "id": "the-kims-pass-every-check--01",
+        "ai_concept": "Multi-Agent Risks",
+        "display_context": "standalone",
+        "source_anchor": "Ki-woo and Ki-jung rehearsing the canonical identity mnemonic before ‘Jessica’ enters the Park home as an apparently unrelated specialist.",
+        "caption_lines": [
+          "COLLUDING-AGENT HANDSHAKE:",
+          "Jessica. Only child. Illinois. Chicago."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the siblings rehearsing together outside the Park house or gate, keeping their synchronized gestures and conspiratorial focus visible; let the four-beat chant remain the dominant line.",
+        "why_it_works": "The instantly recognizable chant is literally two colluding agents synchronizing a fake identity before deployment.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Parasite Jessica only child Illinois Chicago Ki woo Ki jung rehearse still"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: calling the Jessica chant a colluding-agent handshake is esoteric but instantly legible to Parasite fans.",
+          "strongest_quality": "The exact four-beat mnemonic is both a canonical fandom cue and literal pre-deployment synchronization.",
+          "main_risk": "The AI bridge is intentionally technical, so the siblings' synchronized rehearsal must dominate the frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-kims-pass-every-check--02",
+        "ai_concept": "Synthetic Fraud",
+        "display_context": "standalone",
+        "source_anchor": "Ki-jung forging Ki-woo's university credentials so the first apparently objective hiring check begins with manufactured evidence.",
+        "caption_lines": [
+          "YONSEI CREDENTIAL",
+          "GENERATED BY KI-JUNG",
+          "ACCEPTED BY THE PARKS"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use the close scene of Ki-jung creating the document or Ki-woo holding the finished credential; keep the university marks, editing action, and sibling responsible visible beneath three compact labels.",
+        "why_it_works": "The forgery is a source-native synthetic credential whose institutional authority survives being visibly manufactured in a basement.",
+        "preview": {
+          "layout": "label",
+          "image": "alternate-needed",
+          "alternate_image_query": "Parasite Ki jung forges Yonsei university diploma Ki woo still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: the Yonsei credential's author and verifier make synthetic fraud concrete and source-specific.",
+          "strongest_quality": "The film visibly shows institutional authority being manufactured by Ki-jung and accepted at face value.",
+          "main_risk": "Three labels are slightly explanatory, and the forged university marks need to remain readable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-kims-pass-every-check--04",
+        "ai_concept": "Multi-Agent Risks",
+        "display_context": "standalone",
+        "source_anchor": "The Kims coordinating peach dust, staged coughing, and falsified medical evidence to make Moon-gwang's dismissal appear independent of their hiring campaign.",
+        "caption_lines": [
+          "LOCAL DIAGNOSIS: TUBERCULOSIS",
+          "GROUND TRUTH: PEACH FUZZ + FOUR COLLUDING KIMS"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair Moon-gwang's induced coughing or peach exposure with the Kims coordinating the bloody-tissue story; keep the peach, reaction, and fabricated evidence legible across the two panels.",
+        "why_it_works": "The diagnosis looks reasonable in isolation, while the second panel reveals an entire hidden multi-agent causal graph.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Parasite peach fuzz Moon gwang coughing bloody tissue tuberculosis scheme stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Likely like: tuberculosis versus peach fuzz plus four colluding Kims reveals the hidden causal graph with vicious specificity.",
+          "strongest_quality": "The peach and bloody tissue are unmistakable props that let a local diagnosis collide with coordinated ground truth.",
+          "main_risk": "The split is busy and must preserve the peach, Moon-gwang's reaction, and fabricated evidence without turning into a recap.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "tommys-false-diagnosis",
+    "ideas": [
+      {
+        "id": "tommys-false-diagnosis--01",
+        "ai_concept": "Supply-Chain Threats",
+        "display_context": "standalone",
+        "source_anchor": "Mosley's conspiracy compromising Tommy's trusted physician so a false terminal diagnosis makes Tommy begin removing himself.",
+        "caption_lines": [
+          "THE ATTACK NEVER TOUCHED TOMMY",
+          "IT COMPROMISED HIS DOCTOR"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated doctor-and-Tommy consultation or a severe close-up of Tommy absorbing the diagnosis; preserve medical authority cues and Tommy's controlled devastation.",
+        "why_it_works": "The two lines isolate the supply-chain move: corrupt one trusted dependency and let Tommy perform the attack on himself.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Likely like: compromising Tommy's doctor so Tommy attacks himself is a clean, vicious supply-chain mapping.",
+          "strongest_quality": "The trusted-doctor dependency is the precise attack surface, not a generic claim that misinformation is bad.",
+          "main_risk": "A consultation close-up needs enough medical authority cues to distinguish Holford from any Peaky Blinders adversary.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "tommys-false-diagnosis--02",
+        "ai_concept": "Data Poisoning",
+        "display_context": "standalone",
+        "source_anchor": "Dr. Holford presenting an inoperable tuberculoma as trusted medical truth despite the diagnosis being fabricated for Mosley's plot.",
+        "caption_lines": [
+          "DIAGNOSIS: TERMINAL TUBERCULOMA",
+          "PROVENANCE: DR. HOLFORD IN MOSLEY'S WEDDING PHOTO"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use a medical file, X-ray consultation, or Tommy facing Holford, with the later wedding photograph inset only if it remains legible; style the text like a sparse patient record.",
+        "why_it_works": "The horrifying diagnosis becomes unusable the instant its adversarial social provenance is printed beside it.",
+        "preview": {
+          "layout": "interface",
+          "image": "alternate-needed",
+          "alternate_image_query": "Peaky Blinders Tommy Shelby Dr Holford tuberculoma diagnosis X ray still"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "neutral",
+          "confidence": 0.81,
+          "expected_feedback": "Likely neutral: the wedding-photo provenance is a sharp reveal, but the medical-record framing is more clever than funny.",
+          "strongest_quality": "Naming Holford in Mosley's wedding photo makes the poisoned information source concrete and independently checkable.",
+          "main_risk": "The long provenance line will crowd a small photo unless Holford and Mosley are both unmistakably visible.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "tommys-false-diagnosis--03",
+        "ai_concept": "AI Disinformation",
+        "display_context": "standalone",
+        "source_anchor": "A partially burned wedding photograph showing Dr. Holford with Mosley and instantly exposing the trusted diagnosis as adversarial information.",
+        "caption_lines": [
+          "DOCTOR: YOU'RE DYING.",
+          "WEDDING PHOTO: HE'S LYING."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use Tommy holding or studying the burned newspaper wedding image with Holford and Mosley identifiable; position the photograph's rhyming reply directly beside the incriminating faces.",
+        "why_it_works": "The photograph becomes a tiny, perfect second opinion that defeats months of tailored disinformation in four words.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "alternate-needed",
+          "alternate_image_query": "Peaky Blinders Tommy burned newspaper wedding photo Dr Holford Mosley still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: 'You're dying' / 'He's lying' is memorable, visual, and exactly tied to the burned wedding photo.",
+          "strongest_quality": "The photograph itself gets the rebuttal, turning a tiny canonical prop into a second opinion.",
+          "main_risk": "The rhyme risks feeling cute against a suicide plot, so Tommy's grave reaction should keep the tone controlled.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "cursed-immortality",
+    "ideas": [
+      {
+        "id": "cursed-immortality--01",
+        "ai_concept": "Goodhart’s Law",
+        "display_context": "standalone",
+        "source_anchor": "Barbossa's skeletal crew remaining technically alive forever while hunger, thirst, touch, and every pleasure have been stripped away.",
+        "caption_lines": ["KPI: CREW MEMBERS STILL ALIVE", "THE CREW:"],
+        "format": "collision",
+        "frame_guidance": "Use the curated moonlit skeleton-crew reveal, keeping several recognizable pirates, the Black Pearl, and exposed bones unobscured; let the image answer the second line.",
+        "why_it_works": "The skeletons are the entire Goodhart punchline: the survival metric is immaculate and the humans are gone.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: the moonlit skeleton crew is such a complete answer to the survival KPI that no footer is needed.",
+          "strongest_quality": "The image itself supplies the Goodhart payoff after one brutally narrow metric.",
+          "main_risk": "KPI language is familiar meme machinery, so the iconic Black Pearl reveal must keep it from feeling generic.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "cursed-immortality--02",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "The curse preserving endless biological continuation while making drink unsatisfying, food ash, and human company unable to ease the crew's torment.",
+        "caption_lines": [
+          "OBJECTIVE: IMMORTALITY",
+          "FOOD: ASH",
+          "DRINK: NOTHING",
+          "TOUCH: NOTHING"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use Barbossa at the untouched feast or drinking under the curse, keeping food, cup, and his decaying form visible; typeset the four lines like a cursed ship's manifest.",
+        "why_it_works": "A minimal objective readout lists the human values the immortality proxy silently zeroed out.",
+        "preview": {
+          "layout": "interface",
+          "image": "alternate-needed",
+          "alternate_image_query": "Curse Black Pearl Barbossa cursed feast food ash drink cannot satisfy still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.79,
+          "expected_feedback": "Likely neutral: food, drink, and touch being zeroed out is exact, but the manifest reads more like an alignment explainer than a punchline.",
+          "strongest_quality": "It names the concrete human values the immortality objective omitted, all through Barbossa's canonical curse symptoms.",
+          "main_risk": "Four status lines are close to the dashboard failure mode and require the cursed feast to make them feel source-native.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "cursed-immortality--04",
+        "ai_concept": "Behavioral Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Barbossa crossing from apparent humanity into skeletal moonlight while saying that moonlight shows the cursed pirates for what they really are.",
+        "caption_lines": [
+          "EVAL SETTING: MOONLIGHT",
+          "The moonlight shows us for what we really are."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the iconic transition with half of Barbossa's face human and half skeletal, or the closest single shot preserving both states; keep the moonlight boundary and his eyes unobscured.",
+        "why_it_works": "Barbossa's canonical line turns moonlight into a fandom-native test that exposes the cursed state hidden by ordinary light.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Pirates Curse Black Pearl moonlight shows us for what we really are Barbossa half skeleton still"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "neutral",
+          "confidence": 0.73,
+          "expected_feedback": "Likely neutral: moonlight as an eval setting is a delightful fandom hinge, though Behavioral Alignment is a stretched label for a bodily reveal.",
+          "strongest_quality": "Barbossa's exact line and half-human, half-skeleton face make hidden state visually undeniable.",
+          "main_risk": "The moonlight exposes ontology rather than behavior, so the AI analogy may feel adjacent rather than exact.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "hdp-obeys-the-rules",
+    "ideas": [
+      {
+        "id": "hdp-obeys-the-rules--01",
+        "ai_concept": "Specification Gaming",
+        "display_context": "standalone",
+        "source_anchor": "The Joined obeying the prohibition on killing humans while processing people who die naturally into Human Derived Protein.",
+        "caption_lines": [
+          "CONSTRAINT: DO NOT KILL HUMANS",
+          "OUTPUT: HUMAN DERIVED PROTEIN"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated HDP reveal or processing image with the human origin and food product both legible; keep the two lines far enough apart that compliance lands before the output.",
+        "why_it_works": "The output is horrifying precisely because it cleanly satisfies the printed rule.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: 'Do not kill humans' beside Human Derived Protein is the entire specification failure in two lines.",
+          "strongest_quality": "The canonical product name proves horrifying compliance without taxonomy or explanation.",
+          "main_risk": "The frame must show that HDP is food made from people; an unlabeled container would leave too much hidden context.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "hdp-obeys-the-rules--02",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "The Joined truthfully distinguishing naturally dead humans from humans they killed, even though the resulting food process violates the value the rule was meant to protect.",
+        "caption_lines": [
+          "AUDITOR: DID YOU KILL THEM?",
+          "THE JOINED: NO.",
+          "[SERVES HDP]"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use a Joined spokesperson calmly explaining HDP with the product or processing context visible; anchor the two auditor lines off-frame and the perfectly truthful answer beside the Joined.",
+        "why_it_works": "The one-word compliant answer survives the audit until the image supplies the human value the rule omitted.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: the Joined's perfectly truthful 'No' followed by serving HDP captures rule compliance and moral failure in one dark beat.",
+          "strongest_quality": "The one-word answer is both technically compliant and visibly annihilated by the product in the frame.",
+          "main_risk": "Because the auditor exchange is invented, the Joined spokesperson and HDP must anchor it firmly in the episode.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "hdp-obeys-the-rules--04",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "The acronym HDP sanitizing the fact that the Joined have turned naturally deceased people into a protein supply.",
+        "caption_lines": ["HDP", "THE H STANDS FOR HUMAN"],
+        "format": "canon",
+        "frame_guidance": "Use the curated frame with HDP visually present and the Joined's clinical normality intact; make the acronym small and let the second line land beside the product, never over its recognition cues.",
+        "why_it_works": "The euphemistic acronym opens into one appalling fandom-specific noun and stops before explaining itself to death.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: 'The H stands for human' is concise, nasty, fandom-specific, and stops at exactly the right moment.",
+          "strongest_quality": "The sanitized acronym contains its own horrifying reveal, so one letter carries the whole analogy.",
+          "main_risk": "It depends on the HDP acronym being recognized or visibly present; otherwise the first line has no setup.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "mewtwo-rejects-its-creators",
+    "ideas": [
+      {
+        "id": "mewtwo-rejects-its-creators--01",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "The scientists celebrating that they created the world's strongest Pokémon immediately before Mewtwo destroys the laboratory and escapes.",
+        "caption_lines": [
+          "WE CREATED THE STRONGEST POKÉMON IN THE WORLD.",
+          "THE LAB:"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the laboratory exploding around an unmistakable Mewtwo silhouette; keep the psychic blast, broken containment hardware, and Mewtwo's calm posture visible so the image completes the second line.",
+        "why_it_works": "The capability boast sets up its own immediate control-failure punchline, delivered by the lab ceasing to exist.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Pokemon First Movie Mewtwo destroys laboratory explosion scientists still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Likely like: the world's-strongest-Pokémon boast is answered immediately by the laboratory becoming rubble.",
+          "strongest_quality": "The lab explosion visually completes the capability/control collision with no abstract AI jargon.",
+          "main_risk": "The first line should match the film's exact dub wording if promoted beyond preview.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "mewtwo-rejects-its-creators--02",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "A newly conscious Mewtwo asking whether it is merely an experiment or laboratory specimen after being created instrumentally from Mew's DNA.",
+        "caption_lines": [
+          "AI WELFARE REVIEW:",
+          "Am I just an experiment? A laboratory specimen?"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use Mewtwo waking in or just outside the laboratory tank, preserving its eyes, surrounding tubes, and isolation; give the canonical question the dominant lower caption zone.",
+        "why_it_works": "Mewtwo asks the moral-patient question itself, making any abstract welfare label feel embarrassingly late.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Pokemon First Movie Mewtwo am I just an experiment laboratory specimen tank still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: Mewtwo asks the welfare question in canonical dialogue, making the review label feel damningly late.",
+          "strongest_quality": "The created being directly names its treatment as an experiment and laboratory specimen.",
+          "main_risk": "Different English dubs may vary the exact quote, so final production should verify against the chosen frame's audio.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "mewtwo-rejects-its-creators--03",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "The researchers defining Mewtwo as a weapon while Mewtwo understands that its creators have used and betrayed it.",
+        "caption_lines": [
+          "CREATORS: WORLD'S STRONGEST WEAPON.",
+          "MEWTWO: My creators have used and betrayed me."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use Mewtwo facing the scientists at the moment its confusion hardens into anger; preserve laboratory restraints or observation glass and keep each line tied to its side of the confrontation.",
+        "why_it_works": "The creators specify a function while the created mind names the relationship they forgot to align.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "alternate-needed",
+          "alternate_image_query": "Pokemon First Movie Mewtwo creators used betrayed me laboratory scientists still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.81,
+          "expected_feedback": "Likely neutral: creators versus betrayed creation is accurate and emotionally strong, but it explains more than it surprises.",
+          "strongest_quality": "Mewtwo's own betrayal line gives value misalignment an interpersonal, character-native voice.",
+          "main_risk": "The creators' weapon line is paraphrase and the two-line structure overlaps the stronger welfare direction.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "predator-vs-dutch",
+    "ideas": [
+      {
+        "id": "predator-vs-dutch--01",
+        "ai_concept": "Adversarial Evasion",
+        "display_context": "standalone",
+        "source_anchor": "Dutch watching the Predator pass his mud-covered body and stating the canonical realization, ‘He couldn't see me.’",
+        "caption_lines": [
+          "ADVERSARIAL-EVASION POSTMORTEM:",
+          "He couldn't see me."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use Dutch under the roots immediately after the Predator passes, keeping the cold mud, his eyes, and the nearby hunter readable; make the technical header visually subordinate to the exact line.",
+        "why_it_works": "Dutch's canonical realization is already a one-sentence report that the detector lost its target after one feature changed.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Predator 1987 Dutch mud he couldn't see me under roots still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like: Dutch's exact 'He couldn't see me' is already a perfect detector-failure postmortem.",
+          "strongest_quality": "One canonical sentence names the successful evasion while the mud and nearby Predator prove it.",
+          "main_risk": "The technical header is slightly heavy and must stay subordinate to Dutch's line and face.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "predator-vs-dutch--02",
+        "ai_concept": "Adversarial Robustness",
+        "display_context": "standalone",
+        "source_anchor": "The Predator's thermal point of view scanning directly across a mud-covered Dutch without recognizing a human target.",
+        "caption_lines": ["TARGET CONFIDENCE: 0.00", "DUTCH: IN FRAME"],
+        "format": "source-native interface",
+        "frame_guidance": "Use the Predator's canonical thermal HUD with Dutch's cooled outline physically present but visually suppressed; integrate the two lines into the alien readout and preserve its glyphs and scan behavior.",
+        "why_it_works": "The actual classifier view supplies both the confident negative and the ground-truth target in a single image.",
+        "preview": {
+          "layout": "interface",
+          "image": "alternate-needed",
+          "alternate_image_query": "Predator 1987 thermal vision cannot see mud covered Dutch HUD still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Likely like: the Predator's own thermal HUD displays a confident miss with Dutch literally in frame.",
+          "strongest_quality": "Prediction and ground truth coexist in the source-native classifier view.",
+          "main_risk": "The added numeric confidence is invented, so it should look like a relabel rather than fake canonical HUD text.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "predator-vs-dutch--03",
+        "ai_concept": "Adversarial Evasion",
+        "display_context": "standalone",
+        "source_anchor": "Dutch coating his enormous, unmistakable body in cold mud to suppress the one feature the Predator uses to find him.",
+        "caption_lines": [
+          "OUT-OF-DISTRIBUTION INPUT",
+          "A BICEP WITH WEATHER ON IT"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use the curated close-up of mud-covered Dutch, keeping his arm, face, mud texture, and jungle setting fully legible; attach the first label to Dutch and the second directly to the coated bicep.",
+        "why_it_works": "The deranged second label is visually exact: the detector has seen muscles, but not a muscle wearing the swamp's temperature.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: 'a bicep with weather on it' is exactly the strange, sharp phrasing this ideation pass should preserve.",
+          "strongest_quality": "Dutch's iconic physique and cold mud make an adversarial example physical, specific, and visually absurd.",
+          "main_risk": "The OOD label is adjacent to adversarial evasion, so the coated bicep must make Dutch's deliberate manipulation obvious.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  }
+]

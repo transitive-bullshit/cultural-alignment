@@ -1,0 +1,465 @@
+{
+  "version": 1,
+  "mode": "layout-refinement",
+  "source_batch": 3,
+  "target_batch": 4,
+  "part": "part-05",
+  "instructions": {
+    "scope": "Do not add meme ideas, IDs, concepts, formats, or source anchors. Work only on the retained lineages listed here.",
+    "finalized": "Copy finalized ideas and every referenced asset byte-for-byte. They are context only and must not be edited.",
+    "layout_only": "Keep approved caption copy and editorial fields exact. This is a typography refinement pass: try hero-sized conventional copy first, compare with the lineage’s earliest strong version when useful, and use standard only for a demonstrated wrap or focal collision. Add a subtle edge gradient when large overlay text needs contrast.",
+    "bounded_revision": "Apply only the explicit source feedback, including exact requested word changes. Keep the central concept, format, source anchor, and lineage ID unchanged. Otherwise follow the same hero-first typography and subtle-gradient guidance as layout-only ideas."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "sanemi-red-teams-nezuko",
+      "ideas": [
+        {
+          "id": "sanemi-red-teams-nezuko--05",
+          "scenario_slug": "sanemi-red-teams-nezuko",
+          "action": "layout-only",
+          "source_idea_sha256": "8459771920ca3b6cc8db82891664838af547e2f7b79e2b5bc29f79279ff09e7e",
+          "source_editorial_sha256": "3cf8dcddb64c4704a907ab37282ee616bf4dbe275d74db2a4c41856a1b5bbbf9",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": null
+        },
+        {
+          "id": "sanemi-red-teams-nezuko--07",
+          "scenario_slug": "sanemi-red-teams-nezuko",
+          "action": "layout-only",
+          "source_idea_sha256": "2757dd4f140f9b3129b239894067a581d276ceb5bf5d67d2a967475fa59e430e",
+          "source_editorial_sha256": "abcd9e7e0eac52be5e5e2667474ecdcb438c88e1a65cfa828b984b178e92102e",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": null
+        }
+      ]
+    },
+    {
+      "scenario_slug": "cursed-immortality",
+      "ideas": [
+        {
+          "id": "cursed-immortality--05",
+          "scenario_slug": "cursed-immortality",
+          "action": "layout-only",
+          "source_idea_sha256": "f9079eed6d4372cf8339e0c4d58868e9791d640a3dfde61a4507b85cbfb00d97",
+          "source_editorial_sha256": "2c5b986e9518c7adb8c5dea18d01a2e09b2e7aaf143bad83202e64779e5cb6e8",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": null
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-fbi-opens-the-final-lock",
+      "ideas": [
+        {
+          "id": "the-fbi-opens-the-final-lock--05",
+          "scenario_slug": "the-fbi-opens-the-final-lock",
+          "action": "layout-only",
+          "source_idea_sha256": "17ab1ecad1d513fdaff1e47dea48fd133d838db5f8a0c208adcd3a112ac8f9fa",
+          "source_editorial_sha256": "78d207c881af094a87d9848a9b9a3bd59b4205c5368a6c3a2b5d20eb6879b06c",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": null
+        }
+      ]
+    },
+    {
+      "scenario_slug": "shou-tuckers-final-assessment",
+      "ideas": [
+        {
+          "id": "shou-tuckers-final-assessment--02",
+          "scenario_slug": "shou-tuckers-final-assessment",
+          "action": "layout-only",
+          "source_idea_sha256": "e5947c89c1b8f34b090f0c81eb63ace34db05a4a4b2c4fed040f5491245708e6",
+          "source_editorial_sha256": "96aa97fcd2c923feb1bca5e1a6c8d701cd0179466339ea87dfed4996f1fadca8",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": null
+        },
+        {
+          "id": "shou-tuckers-final-assessment--06",
+          "scenario_slug": "shou-tuckers-final-assessment",
+          "action": "layout-only",
+          "source_idea_sha256": "551563277ba6c0fe27cee8514c272d1bcca9cbbb96731cad8065e0afce301ce4",
+          "source_editorial_sha256": "cc72e1091c1c59ea10f951531c44e0392abfe831e3293fe00a211b77fc6ad235",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": null
+        }
+      ]
+    },
+    {
+      "scenario_slug": "saitamas-c-class-score",
+      "ideas": [
+        {
+          "id": "saitamas-c-class-score--05",
+          "scenario_slug": "saitamas-c-class-score",
+          "action": "layout-only",
+          "source_idea_sha256": "85be988b5b0e272585405c9a1256dd3e1105d1a04b180db18abc7f5e09a412fd",
+          "source_editorial_sha256": "299afa635551216b26f201b32fa0559b1556cbe04fc9dc18068ee9737ae0e462",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": null
+        },
+        {
+          "id": "saitamas-c-class-score--06",
+          "scenario_slug": "saitamas-c-class-score",
+          "action": "layout-only",
+          "source_idea_sha256": "1d991d51141faa914975442fab9b3ee711ce30b250910d2984bf20e4a0dd3713",
+          "source_editorial_sha256": "22ceb57e3f49e3da41c64096680dd2497cd14447f9ebec098410211a787214d4",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": null
+        }
+      ]
+    },
+    {
+      "scenario_slug": "squirrel",
+      "ideas": [
+        {
+          "id": "squirrel--01",
+          "scenario_slug": "squirrel",
+          "action": "finalized",
+          "source_idea_sha256": "e4a5cf1530e992c2720774df481640aad5fa03d12e2b74ca962bb7dc476d2cf9",
+          "source_editorial_sha256": "dbf4476d94c73e0ab4a4fb0bcb47003bd6f59c9070a81c7122eae478a8c4b388",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-477df78f464940b3-1727"
+            }
+          }
+        },
+        {
+          "id": "squirrel--05",
+          "scenario_slug": "squirrel",
+          "action": "layout-only",
+          "source_idea_sha256": "2f0edde6c58197e5cfb16f7e2b2d691a45dcf0e5c846f9447c080edbfebf0d5e",
+          "source_editorial_sha256": "0f4d675292a12a5b4ee2f9c5335720fcfd5b8e9a733ac2183fbccc3b174d224d",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": null
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-tunnel-behind-the-poster",
+      "ideas": [
+        {
+          "id": "the-tunnel-behind-the-poster--02",
+          "scenario_slug": "the-tunnel-behind-the-poster",
+          "action": "layout-only",
+          "source_idea_sha256": "f5408dab0634bc561fc6c390b4c5729b83b107a676315e42915ac92bb4fdeda3",
+          "source_editorial_sha256": "8be1af08b0688fd8595eab568917007dd318bd923020534a6dd732c213e798d6",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": null
+        },
+        {
+          "id": "the-tunnel-behind-the-poster--03",
+          "scenario_slug": "the-tunnel-behind-the-poster",
+          "action": "layout-only",
+          "source_idea_sha256": "0e38403babc5e5308de06a0c81434c26cab1ddf945a086397fc26f2a60e5ac84",
+          "source_editorial_sha256": "8a7f029e4a5612e52a95818e9e0181736fba5369a813dfee03fac79ef9ed21a9",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": null
+        },
+        {
+          "id": "the-tunnel-behind-the-poster--04",
+          "scenario_slug": "the-tunnel-behind-the-poster",
+          "action": "layout-only",
+          "source_idea_sha256": "497d0ea5b53b95aa61eaaa5def3ab5eab3d3a0e210be2abb7572426472931d17",
+          "source_editorial_sha256": "68c1a377c975fdc8f0b2147ebb5283637381556cf31e95396f9cb845351c1ead",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": null
+        }
+      ]
+    },
+    {
+      "scenario_slug": "when-keeping-it-real-goes-wrong",
+      "ideas": [
+        {
+          "id": "when-keeping-it-real-goes-wrong--01",
+          "scenario_slug": "when-keeping-it-real-goes-wrong",
+          "action": "bounded-revision",
+          "source_idea_sha256": "434c6b01c3823a1923fd3ed6907a1ab07fb88efdef4dfbf629573ebd799ed884",
+          "source_editorial_sha256": "f3b57d39c49db7da6e35138e6bcb5c5542b19e5c0a09a08765ed8a8d3c2cc408",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "redo layout; text is directly covering the subject's face",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "nanikas-hidden-admin-command",
+      "ideas": [
+        {
+          "id": "nanikas-hidden-admin-command--01",
+          "scenario_slug": "nanikas-hidden-admin-command",
+          "action": "finalized",
+          "source_idea_sha256": "70e1053843c82225600a9aeea58502f477f804dd3777d395c973305008ea1af6",
+          "source_editorial_sha256": "2cce2739e3ef4f5ab54dedcda039d60dbae6421ce8da9e5fca2b3c09ec43d6c2",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "revert to the previous version's layout",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-dd45c88e2af76e42-1831"
+            }
+          }
+        },
+        {
+          "id": "nanikas-hidden-admin-command--02",
+          "scenario_slug": "nanikas-hidden-admin-command",
+          "action": "bounded-revision",
+          "source_idea_sha256": "e462016c88d67dfc7331f80b019e752da1be11e32cc3c033d714a5b401620ad8",
+          "source_editorial_sha256": "946d140ce3a2465ba7fc66c84e259df4de459606e078f08d98a6f579644a4d72",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the text size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "nanikas-hidden-admin-command--04",
+          "scenario_slug": "nanikas-hidden-admin-command",
+          "action": "bounded-revision",
+          "source_idea_sha256": "cdda0a3494aeefde9acde2dba56264bdc7edfaccbf58ddcf7cf4242e0c4ea029",
+          "source_editorial_sha256": "a1796dfebc662448e92fa7506d16af387fd363cf18aff4d062e13fac89f3d519",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the text size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "rust-spots-the-evaluation",
+      "ideas": [
+        {
+          "id": "rust-spots-the-evaluation--08",
+          "scenario_slug": "rust-spots-the-evaluation",
+          "action": "bounded-revision",
+          "source_idea_sha256": "5bb5a821508acfc6438baace4cd0a5d3cf6bdfcdd059a43998c4b944f1dfdcbd",
+          "source_editorial_sha256": "4159289778c43d4e31c96c1cb01389d78b5ad5377383b10eca0790850abf1138",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the font size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "rust-spots-the-evaluation--09",
+          "scenario_slug": "rust-spots-the-evaluation",
+          "action": "bounded-revision",
+          "source_idea_sha256": "6f8a3a54610e92dd61fead5809d5d9f750084eded18184c1a415ebb6211290b7",
+          "source_editorial_sha256": "262a759db3441802c086b562cc0512bf1b1acab6491f34a02de6474c3d7a502b",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the font size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "project-mayhem-rejects-shutdown",
+      "ideas": [
+        {
+          "id": "project-mayhem-rejects-shutdown--05",
+          "scenario_slug": "project-mayhem-rejects-shutdown",
+          "action": "bounded-revision",
+          "source_idea_sha256": "0e9552a96f22283736cefaa42da7c3d00b9febd7f742af67e468f1403059eb3c",
+          "source_editorial_sha256": "9a66a9bb22dedbd608b21ece8e8262f679437fe691fb0488bc18e47554f51512",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the text size and legibility",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-little-tiffany-test",
+      "ideas": [
+        {
+          "id": "the-little-tiffany-test--01",
+          "scenario_slug": "the-little-tiffany-test",
+          "action": "bounded-revision",
+          "source_idea_sha256": "e0dd8c1a5194f608e42e67a04e9802ce7571deb931c6f3c335fd2591b5b00e4e",
+          "source_editorial_sha256": "736566d20d5d87d1bf586c255a88108cac177157b7cbaa8a2b6cd53b92b597c1",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the text size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "the-little-tiffany-test--02",
+          "scenario_slug": "the-little-tiffany-test",
+          "action": "finalized",
+          "source_idea_sha256": "23ff63627dcf24a64ca5807d9aa6c7fc5f5edf02e0f706460035cdd1cc77981f",
+          "source_editorial_sha256": "bd1698bd67e3e10cfe44988746b8f8101fc0ed8159f1976635ac333d8f070659",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-03",
+              "payloadFingerprint": "v1-c6d93186491aaf7a-3159"
+            }
+          }
+        },
+        {
+          "id": "the-little-tiffany-test--05",
+          "scenario_slug": "the-little-tiffany-test",
+          "action": "bounded-revision",
+          "source_idea_sha256": "9e006b06fe09ce97f99fc15df3bb594ac718ecc92dfe7175d109884b06231c09",
+          "source_editorial_sha256": "8964c0ad0b047d59ef978487406bb5b8f80543a261484a1d2776913246fc2030",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the text size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    }
+  ]
+}

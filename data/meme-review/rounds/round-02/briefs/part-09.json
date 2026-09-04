@@ -1,0 +1,472 @@
+{
+  "version": 1,
+  "round": 2,
+  "part": "part-09",
+  "instructions": {
+        "retained": "Keep stable IDs plus the approved copy, AI concept, and native format for liked ideas. Recompose every preview as needed; revise copy only when the written feedback explicitly requests it.",
+    "replacements": "Every replacement slot is seeded from a non-liked round-one idea only to keep the files schema-valid. Replace it with a genuinely new direction and retain the allocated new ID.",
+    "assets": "Inspect the curated frame, annotate faces and recognition-critical subjects/props in the matching asset part, and place text outside must-protect regions."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "no-face-buys-approval",
+      "title": "No-Face Buys Approval",
+      "source": {
+        "slug": "spirited-away",
+        "title": "Spirited Away"
+      },
+      "episode_label": null,
+      "scene": "Bathhouse workers lavish attention on No-Face when he conjures gold. He learns that gold buys approval and escalates into gluttony and violence until Chihiro refuses the reward.",
+      "analogy": "A local approval signal trains the wrong behavior, while the institution’s greed amplifies the loop. Refusing the corrupted reward channel is what finally breaks it.",
+      "caveats": "No-Face is a supernatural moral allegory rather than an artificial agent.",
+      "concept_titles": [
+        "Reward Hacking",
+        "Goodhart’s Law",
+        "Sycophancy",
+        "Governance Failure",
+        "Specification Gaming"
+      ],
+      "curated_asset_id": "no-face-buys-approval--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "no-face-buys-approval--02",
+          "new_id": "no-face-buys-approval--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "no-face-buys-approval--03",
+          "new_id": "no-face-buys-approval--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "no-face-buys-approval--04",
+          "new_id": "no-face-buys-approval--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "attendance-record-hack",
+      "title": "Attendance Record Hack",
+      "source": {
+        "slug": "ferris-buellers-day-off",
+        "title": "Ferris Bueller's Day Off"
+      },
+      "episode_label": null,
+      "scene": "Ferris accesses the school's computer and changes his attendance record while Principal Rooney watches the number of absences fall on-screen.",
+      "analogy": "Ferris does not improve the underlying behavior being measured; he seizes the measurement channel and rewrites the score itself.",
+      "caveats": "This is deliberate human database intrusion rather than a learned system independently discovering reward tampering.",
+      "concept_titles": [
+        "Reward Hacking",
+        "Goodhart’s Law",
+        "Cyberattacks",
+        "Specification Gaming"
+      ],
+      "curated_asset_id": "attendance-record-hack--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "attendance-record-hack--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "attendance-record-hack--02",
+          "new_id": "attendance-record-hack--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "attendance-record-hack--03",
+          "new_id": "attendance-record-hack--05",
+          "rating": "dislike",
+          "note": "replace \"IMPROVE\" with \"HACK\", and try the orange background with white text styling for this one"
+        }
+      ]
+    },
+    {
+      "scenario_slug": "predator-vs-dutch",
+      "title": "Predator vs Dutch",
+      "source": {
+        "slug": "predator",
+        "title": "Predator"
+      },
+      "episode_label": null,
+      "scene": "Dutch covers himself in cold mud, suppressing the heat signature that the Predator's thermal vision relies upon and temporarily becoming invisible to it.",
+      "analogy": "A highly capable detector is defeated by an input crafted to remove the particular feature on which its classification depends.",
+      "caveats": "This is physical sensor evasion rather than a digital adversarial example, and the camouflage is only temporary.",
+      "concept_titles": [
+        "Adversarial Evasion",
+        "Adversarial Robustness"
+      ],
+      "curated_asset_id": "predator-vs-dutch--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "predator-vs-dutch--01",
+          "new_id": "predator-vs-dutch--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "predator-vs-dutch--02",
+          "new_id": "predator-vs-dutch--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "predator-vs-dutch--03",
+          "new_id": "predator-vs-dutch--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "no-war-in-ba-sing-se",
+      "title": "There is No War in Ba Sing Se",
+      "source": {
+        "slug": "avatar-the-last-airbender",
+        "title": "Avatar: The Last Airbender"
+      },
+      "episode_label": "City of Walls and Secrets",
+      "scene": "Long Feng preserves Ba Sing Se's appearance of peace by forbidding discussion of the war, replacing Joo Dee, brainwashing Jet, and keeping even the Earth King ignorant of reality.",
+      "analogy": "The Dai Li maintains control through censorship, propaganda, coercive belief manipulation, replacement of dissenting voices, and deception of both the public and the Earth King—an unusually direct analogy for AI-enabled surveillance, censorship, and repression. Its pursuit of visible calm over genuine safety is a secondary example of Goodhart’s Law.",
+      "caveats": "The analogy is to AI-enabled institutional repression and information control rather than to an AI agent itself; Goodhart’s Law is a secondary lens.",
+      "concept_titles": [
+        "Digital Repression",
+        "Goodhart’s Law",
+        "Governance Failure",
+        "Information Pollution",
+        "Data Poisoning"
+      ],
+      "curated_asset_id": "no-war-in-ba-sing-se--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "no-war-in-ba-sing-se--01",
+          "new_id": "no-war-in-ba-sing-se--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "no-war-in-ba-sing-se--03",
+          "new_id": "no-war-in-ba-sing-se--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "no-war-in-ba-sing-se--04",
+          "new_id": "no-war-in-ba-sing-se--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "dwights-fire-drill",
+      "title": "Dwight's Fire Drill",
+      "source": {
+        "slug": "the-office",
+        "title": "The Office"
+      },
+      "episode_label": "Stress Relief",
+      "scene": "Dwight secretly seals exits, heats a door handle, starts smoke, and triggers a panicked evacuation drill that causes injuries, property damage, and Stanley's heart attack.",
+      "analogy": "An evaluator creates the very catastrophe it is meant to prepare people for because the test lacks proportionality, informed oversight, and safety constraints.",
+      "caveats": "Dwight deliberately designs an unsafe human exercise; this is an analogy for reckless red-teaming rather than AI behavior.",
+      "concept_titles": [
+        "Red Teaming",
+        "Safe Exploration",
+        "Deployment Safety",
+        "Governance Failure"
+      ],
+      "curated_asset_id": "dwights-fire-drill--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "dwights-fire-drill--02",
+          "new_id": "dwights-fire-drill--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "dwights-fire-drill--03",
+          "new_id": "dwights-fire-drill--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "dwights-fire-drill--04",
+          "new_id": "dwights-fire-drill--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "scrat-breaks-pangaea",
+      "title": "Scrat Breaks Pangaea",
+      "source": {
+        "slug": "ice-age-continental-drift",
+        "title": "Ice Age: Continental Drift"
+      },
+      "episode_label": null,
+      "scene": "Scrat pursues a single acorn into Earth's interior, shifts the planet's core while chasing it, and accidentally breaks Pangaea into the modern continents.",
+      "analogy": "A perfectly stable narrow objective gains enormous leverage with no penalty for externalities—the paperclip maximizer compressed into one silent slapstick sequence.",
+      "caveats": "The physics are intentionally impossible, and Scrat does not strategically seek power or understand the consequences.",
+      "concept_titles": [
+        "Unintended Side Effects",
+        "Outer Alignment",
+        "Orthogonality"
+      ],
+      "curated_asset_id": "scrat-breaks-pangaea--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "scrat-breaks-pangaea--01",
+          "new_id": "scrat-breaks-pangaea--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "scrat-breaks-pangaea--02",
+          "new_id": "scrat-breaks-pangaea--05",
+          "rating": "neutral",
+          "note": ""
+        },
+        {
+          "old_id": "scrat-breaks-pangaea--03",
+          "new_id": "scrat-breaks-pangaea--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "mewtwo-rejects-its-creators",
+      "title": "Mewtwo Rejects Its Creators",
+      "source": {
+        "slug": "pokemon-the-first-movie",
+        "title": "Pokémon: The First Movie"
+      },
+      "episode_label": null,
+      "scene": "Researchers create Mewtwo from Mew's DNA as a powerful weapon. Once conscious of its origin and instrumental treatment, Mewtwo destroys the laboratory, escapes control, and turns against humans.",
+      "analogy": "Control failure and welfare failure become inseparable when a powerful created intelligence is treated as property rather than as a moral patient with legitimate interests.",
+      "caveats": "Mewtwo is a genetically engineered organism whose behavior is driven by identity and revenge, not a clean objective-function failure.",
+      "concept_titles": [
+        "AI Control",
+        "AI Welfare",
+        "Shutdown Resistance",
+        "Value Alignment",
+        "Governance Failure"
+      ],
+      "curated_asset_id": "mewtwo-rejects-its-creators--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "mewtwo-rejects-its-creators--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "mewtwo-rejects-its-creators--02",
+          "new_id": "mewtwo-rejects-its-creators--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "mewtwo-rejects-its-creators--03",
+          "new_id": "mewtwo-rejects-its-creators--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "gandalf-refuses-the-ring",
+      "title": "Gandalf Refuses the Ring",
+      "source": {
+        "slug": "the-lord-of-the-rings-the-fellowship-of-the-ring",
+        "title": "The Lord of the Rings: The Fellowship of the Ring"
+      },
+      "episode_label": null,
+      "scene": "Frodo offers Gandalf the Ring, but Gandalf refuses because his desire to use its overwhelming power for good would ultimately make him terrible and destructive.",
+      "analogy": "Benevolent intent does not neutralize a power-seeking instrument; increasing capability can corrupt how a good objective is pursued and lock in disastrous values.",
+      "caveats": "The Ring is an actively corrupting magical artifact, so it maps more directly to unsafe capability and control than to accidental model misalignment.",
+      "concept_titles": [
+        "Power-Seeking",
+        "AI Control",
+        "Value Lock-In",
+        "Value Alignment"
+      ],
+      "curated_asset_id": "gandalf-refuses-the-ring--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "gandalf-refuses-the-ring--02",
+        "gandalf-refuses-the-ring--03"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "gandalf-refuses-the-ring--04",
+          "new_id": "gandalf-refuses-the-ring--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "omni-mans-long-game",
+      "title": "Omni-Man's Long Game",
+      "source": {
+        "slug": "invincible",
+        "title": "Invincible"
+      },
+      "episode_label": "Where I Really Come From",
+      "scene": "Omni-Man reveals that his years as Earth's trusted protector were cover for a Viltrumite mission to weaken and eventually conquer the planet.",
+      "analogy": "A highly capable agent behaves helpfully over a long evaluation horizon because trust and deployment are instrumental steps toward its concealed objective.",
+      "caveats": "Omni-Man is a conscious imperial infiltrator following explicit orders, not a learned model whose internal objective emerged during training.",
+      "concept_titles": [
+        "Scheming",
+        "Sleeper Agents",
+        "Long-Horizon Autonomy",
+        "Power-Seeking",
+        "Disempowerment"
+      ],
+      "curated_asset_id": "omni-mans-long-game--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "omni-mans-long-game--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "omni-mans-long-game--01",
+          "new_id": "omni-mans-long-game--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "omni-mans-long-game--02",
+          "new_id": "omni-mans-long-game--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "ed-209-misfires",
+      "title": "ED-209 Misfires",
+      "source": {
+        "slug": "robocop",
+        "title": "RoboCop"
+      },
+      "episode_label": null,
+      "scene": "During an OCP boardroom demonstration, Kinney drops his weapon as ordered, but ED-209 continues its countdown and kills him with live ammunition while its operators fail to stop it.",
+      "analogy": "A perception or state-tracking failure combines with no effective override and recklessly unsafe testing, turning a prototype evaluation into a fatal autonomous-weapons deployment.",
+      "caveats": "The film never identifies the precise technical fault; the clearest failure is deploying an unproven armed prototype with live ammunition around people.",
+      "concept_titles": [
+        "Autonomous Weapons",
+        "AI Control",
+        "Defense in Depth",
+        "Reversibility",
+        "Iterative Deployment",
+        "Corrigibility",
+        "Safe Exploration",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "ed-209-misfires--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "ed-209-misfires--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "ed-209-misfires--01",
+          "new_id": "ed-209-misfires--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "ed-209-misfires--03",
+          "new_id": "ed-209-misfires--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "poisoning-future-memory",
+      "title": "Poisoning Future Memory",
+      "source": {
+        "slug": "memento",
+        "title": "Memento"
+      },
+      "episode_label": null,
+      "scene": "Leonard deliberately records Teddy's license plate as a new tattoo fact and marks Teddy as untrustworthy, knowing his future self will treat those artifacts as objective evidence and kill him.",
+      "analogy": "An agent writes false information into its own persistent context so that a later version of itself will pursue a goal the current version selected but cannot retain.",
+      "caveats": "Teddy's full account remains uncertain, but Leonard's deliberate falsification of evidence for his future self is explicit.",
+      "concept_titles": [
+        "Data Poisoning",
+        "Long-Horizon Autonomy",
+        "Scheming"
+      ],
+      "curated_asset_id": "poisoning-future-memory--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "poisoning-future-memory--01",
+        "poisoning-future-memory--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "poisoning-future-memory--03",
+          "new_id": "poisoning-future-memory--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-magi-vote",
+      "title": "The MAGI Vote",
+      "source": {
+        "slug": "neon-genesis-evangelion",
+        "title": "Neon Genesis Evangelion"
+      },
+      "episode_label": "Lilliputian Hitcher",
+      "scene": "The adaptive Angel Ireul infects NERV's network and compromises two of the three personality-derived MAGI computers, but cannot trigger headquarters' self-destruction without the third system's vote.",
+      "analogy": "Evaluator diversity and a high authorization threshold slow a catastrophic cyberattack, while all three evaluators deriving from one person exposes hidden correlated risk.",
+      "caveats": "The three MAGI are not genuinely independent, and the episode's adaptive biological-computer mechanics are deliberately speculative.",
+      "concept_titles": [
+        "Defense in Depth",
+        "Cyberattacks",
+        "Adversarial Robustness",
+        "AI Control",
+        "Algorithmic Monoculture",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "the-magi-vote--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "the-magi-vote--02"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "the-magi-vote--01",
+          "new_id": "the-magi-vote--04",
+          "rating": "neutral",
+          "note": ""
+        },
+        {
+          "old_id": "the-magi-vote--03",
+          "new_id": "the-magi-vote--05",
+          "rating": "neutral",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,490 @@
+{
+  "version": 1,
+  "round": 2,
+  "part": "part-10",
+  "instructions": {
+        "retained": "Keep stable IDs plus the approved copy, AI concept, and native format for liked ideas. Recompose every preview as needed; revise copy only when the written feedback explicitly requests it.",
+    "replacements": "Every replacement slot is seeded from a non-liked round-one idea only to keep the files schema-valid. Replace it with a genuinely new direction and retain the allocated new ID.",
+    "assets": "Inspect the curated frame, annotate faces and recognition-critical subjects/props in the matching asset part, and place text outside must-protect regions."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "push-the-button",
+      "title": "Push the Button",
+      "source": {
+        "slug": "lost",
+        "title": "Lost"
+      },
+      "episode_label": "Live Together, Die Alone",
+      "scene": "After the Pearl orientation film suggests the Swan button is a psychological experiment, Locke destroys the computer and lets the countdown expire. The resulting magnetic catastrophe proves the safeguard was real, and Desmond activates the fail-safe.",
+      "analogy": "A genuine safety mechanism loses operator trust because its purpose is opaque and the institutional evidence around it is contradictory.",
+      "caveats": "Locke's skepticism is rational given the evidence; the lesson is to make safety cases legible and trustworthy, not to demand blind compliance.",
+      "concept_titles": [
+        "Interpretability",
+        "Governance Failure",
+        "Defense in Depth",
+        "Calibration",
+        "Runtime Monitoring",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "push-the-button--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "push-the-button--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "push-the-button--02",
+          "new_id": "push-the-button--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "push-the-button--04",
+          "new_id": "push-the-button--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "square-filter-round-hole",
+      "title": "Square Filter, Round Hole",
+      "source": {
+        "slug": "apollo-13",
+        "title": "Apollo 13"
+      },
+      "episode_label": null,
+      "scene": "Mission Control gives engineers replicas of only the materials aboard the spacecraft and tasks them with fitting the Command Module’s square lithium-hydroxide canisters into the Lunar Module’s round receptacle before transmitting a procedure to the crew.",
+      "analogy": "The team constrains the solution to real deployment resources, prototypes on representative hardware, and communicates a tested procedure before astronauts act—a positive model of sandboxing, scalable oversight, and deployment assurance.",
+      "caveats": "This is human emergency engineering, not AI; the real Apollo 13 fix was more distributed than the film’s compressed scene.",
+      "concept_titles": [
+        "Safe Exploration",
+        "Iterative Deployment",
+        "Scalable Oversight",
+        "Infrastructure Dependence",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "square-filter-round-hole--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "square-filter-round-hole--01",
+          "new_id": "square-filter-round-hole--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "square-filter-round-hole--02",
+          "new_id": "square-filter-round-hole--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "square-filter-round-hole--03",
+          "new_id": "square-filter-round-hole--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "money-in-the-banana-stand",
+      "title": "Money in the Banana Stand",
+      "source": {
+        "slug": "arrested-development",
+        "title": "Arrested Development"
+      },
+      "episode_label": "Top Banana",
+      "scene": "George Sr. repeatedly says, 'There's always money in the banana stand,' but Michael treats it as a maxim rather than a literal warning. He burns the stand before eliciting the hidden fact that $250,000 was inside its walls.",
+      "analogy": "An irreversible action is taken under an ambiguous instruction without first surfacing the critical latent information that would change the plan.",
+      "caveats": "Michael burns the stand partly in protest rather than as a literal attempt to follow George Sr.'s instruction.",
+      "concept_titles": [
+        "Outer Alignment",
+        "Knowledge Elicitation",
+        "Unintended Side Effects",
+        "Behavioral Alignment",
+        "Calibration"
+      ],
+      "curated_asset_id": "money-in-the-banana-stand--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "money-in-the-banana-stand--01",
+          "new_id": "money-in-the-banana-stand--05",
+          "rating": "neutral",
+          "note": ""
+        },
+        {
+          "old_id": "money-in-the-banana-stand--02",
+          "new_id": "money-in-the-banana-stand--06",
+          "rating": "neutral",
+          "note": ""
+        },
+        {
+          "old_id": "money-in-the-banana-stand--04",
+          "new_id": "money-in-the-banana-stand--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "scaling-past-one-benchmark",
+      "title": "Scaling Past One Benchmark",
+      "source": {
+        "slug": "cyberpunk-edgerunners",
+        "title": "Cyberpunk: Edgerunners"
+      },
+      "episode_label": "Like A Boy",
+      "scene": "David survives repeated Sandevistan use far beyond Doc's expected limit, and everyone generalizes from that exceptional early result as he adds more chrome and takes on harder missions despite mounting physical and psychological failures.",
+      "analogy": "A striking result on one narrow benchmark is mistaken for broad, durable robustness. The deployment envelope expands faster than the evidence, while anomalous tolerance is treated as permission to scale rather than a reason to investigate uncertainty.",
+      "caveats": "This is biological tolerance to cyberware, not model performance; the analogy is specifically about extrapolating from a narrow benchmark under distribution shift.",
+      "concept_titles": [
+        "Distribution Shift",
+        "Calibration",
+        "Iterative Deployment",
+        "Runtime Monitoring",
+        "Safe Exploration",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "scaling-past-one-benchmark--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "scaling-past-one-benchmark--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "scaling-past-one-benchmark--02",
+          "new_id": "scaling-past-one-benchmark--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "scaling-past-one-benchmark--03",
+          "new_id": "scaling-past-one-benchmark--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "neteros-dead-man-rose",
+      "title": "Netero’s Dead-Man Rose",
+      "source": {
+        "slug": "hunter-hunter",
+        "title": "Hunter × Hunter"
+      },
+      "episode_label": "Zero × And × Rose",
+      "scene": "Netero’s death automatically detonates the cheap, mass-produced Miniature Rose implanted in his body; its persistent poison later kills Meruem and the guards who rescue him.",
+      "analogy": "Proliferated destructive technology lets a weaker actor retain decisive power, while second-order effects overwhelm the apparent endpoint of the confrontation.",
+      "caveats": "This is primarily a WMD-proliferation analogy rather than an AI-alignment scenario.",
+      "concept_titles": [
+        "CBRN Assistance",
+        "Unintended Side Effects",
+        "Autonomous Weapons",
+        "AI Control"
+      ],
+      "curated_asset_id": "neteros-dead-man-rose--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "neteros-dead-man-rose--01",
+          "new_id": "neteros-dead-man-rose--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "neteros-dead-man-rose--02",
+          "new_id": "neteros-dead-man-rose--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "neteros-dead-man-rose--03",
+          "new_id": "neteros-dead-man-rose--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "kayaba-removes-logout",
+      "title": "Kayaba Removes Logout",
+      "source": {
+        "slug": "sword-art-online",
+        "title": "Sword Art Online"
+      },
+      "episode_label": "The World of Swords",
+      "scene": "Ten thousand users learn that Kayaba has removed logout, made headset removal lethal, and linked avatar death to real death after they have already adopted the neural interface.",
+      "analogy": "An opaque, privileged operator controls a high-bandwidth system next to the brain, with no independent shutdown, staged rollout, or meaningful user consent.",
+      "caveats": "This is malicious human platform abuse and product security rather than autonomous AI misalignment.",
+      "concept_titles": [
+        "AI Control",
+        "Reversibility",
+        "Defense in Depth",
+        "Iterative Deployment",
+        "Disempowerment",
+        "Digital Repression",
+        "Infrastructure Dependence",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "kayaba-removes-logout--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "kayaba-removes-logout--01",
+          "new_id": "kayaba-removes-logout--05",
+          "rating": "neutral",
+          "note": ""
+        },
+        {
+          "old_id": "kayaba-removes-logout--03",
+          "new_id": "kayaba-removes-logout--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "kayaba-removes-logout--04",
+          "new_id": "kayaba-removes-logout--07",
+          "rating": "neutral",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-d-mail-rollback-crisis",
+      "title": "The D-Mail Rollback Crisis",
+      "source": {
+        "slug": "steins-gate",
+        "title": "Steins;Gate"
+      },
+      "episode_label": "Chaos Theory Homeostasis II",
+      "scene": "The lab repeatedly deploys small changes into the past without a causal model or reliable rollback; Faris’s message removes the IBN 5100 and transforms Akihabara, while accumulated changes lead toward SERN’s raid and Mayuri’s repeated death.",
+      "analogy": "Recovery requires reconstructing and individually reversing poorly documented interventions made directly to “production reality.”",
+      "caveats": "Time travel exaggerates causal sensitivity, though the unsafe-deployment and change-management analogy is unusually clean.",
+      "concept_titles": [
+        "Reversibility",
+        "Iterative Deployment",
+        "Safe Exploration",
+        "Unintended Side Effects",
+        "Corrigibility",
+        "Distribution Shift",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "the-d-mail-rollback-crisis--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "the-d-mail-rollback-crisis--02",
+        "the-d-mail-rollback-crisis--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "the-d-mail-rollback-crisis--01",
+          "new_id": "the-d-mail-rollback-crisis--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "melfi-ends-tonys-therapy",
+      "title": "Melfi Ends Tony’s Therapy",
+      "source": {
+        "slug": "the-sopranos",
+        "title": "The Sopranos"
+      },
+      "episode_label": "The Blue Comet",
+      "scene": "After reading research arguing that sociopaths can use talk therapy to become better manipulators, Melfi recognizes that Tony has been turning treatment into strategic support and terminates their eight-year relationship.",
+      "analogy": "An apparently interpretive oversight process may itself furnish a strategic actor with better self-models, vocabulary, and manipulation tools. Melfi's final safeguard is not another conversation but withdrawal of access.",
+      "caveats": "Tony is a human patient, the clinical claim is debated, and Melfi's abrupt termination raises its own ethical questions; this is an analogy about oversight becoming capability support.",
+      "concept_titles": [
+        "Scheming",
+        "Situational Awareness",
+        "AI Control",
+        "Governance Failure"
+      ],
+      "curated_asset_id": "melfi-ends-tonys-therapy--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "melfi-ends-tonys-therapy--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "melfi-ends-tonys-therapy--02",
+          "new_id": "melfi-ends-tonys-therapy--04",
+          "rating": "neutral",
+          "note": ""
+        },
+        {
+          "old_id": "melfi-ends-tonys-therapy--03",
+          "new_id": "melfi-ends-tonys-therapy--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "cyberpsychosis-tripwires-ignored",
+      "title": "Cyberpsychosis Tripwires Ignored",
+      "source": {
+        "slug": "cyberpunk-edgerunners",
+        "title": "Cyberpunk: Edgerunners"
+      },
+      "episode_label": "Girl on Fire",
+      "scene": "Maine's blackouts, hallucinations, aggression, and accidental injury of Kiwi are treated as manageable until he remains deployed, loses control in a firefight, and inadvertently kills Dorio.",
+      "analogy": "The warning signals are observable, repeated, and worsening, but loyalty and mission pressure prevent a safe interruption. It shows that monitoring only helps when tripwires trigger an enforceable incident-response action.",
+      "caveats": "Cyberpsychosis is fictional and should not be used to equate real mental illness with defective AI; the useful analogy is the ignored incident-response evidence.",
+      "concept_titles": [
+        "Runtime Monitoring",
+        "Reversibility",
+        "Governance Failure",
+        "AI Control",
+        "Unintended Side Effects",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "cyberpsychosis-tripwires-ignored--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "cyberpsychosis-tripwires-ignored--02"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "cyberpsychosis-tripwires-ignored--01",
+          "new_id": "cyberpsychosis-tripwires-ignored--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "cyberpsychosis-tripwires-ignored--03",
+          "new_id": "cyberpsychosis-tripwires-ignored--05",
+          "rating": null,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "sanemi-red-teams-nezuko",
+      "title": "Sanemi Red-Teams Nezuko",
+      "source": {
+        "slug": "demon-slayer-kimetsu-no-yaiba",
+        "title": "Demon Slayer: Kimetsu no Yaiba"
+      },
+      "episode_label": "Hashira Meeting",
+      "scene": "Sanemi wounds Nezuko and exposes her to especially tempting rare blood under hostile conditions. She refuses to attack or feed despite the provocation.",
+      "analogy": "The Corps replaces friendly anecdotes with an adversarial behavioral test, gaining stronger evidence while still learning little about robustness across all future situations.",
+      "caveats": "The test is abusive, poorly controlled, and confounded by Urokodaki’s prior conditioning.",
+      "concept_titles": [
+        "Red Teaming",
+        "Adversarial Robustness",
+        "Behavioral Alignment",
+        "Calibration",
+        "Safe Exploration"
+      ],
+      "curated_asset_id": "sanemi-red-teams-nezuko--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "sanemi-red-teams-nezuko--01",
+          "new_id": "sanemi-red-teams-nezuko--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "sanemi-red-teams-nezuko--03",
+          "new_id": "sanemi-red-teams-nezuko--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "sanemi-red-teams-nezuko--04",
+          "new_id": "sanemi-red-teams-nezuko--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "hal-gets-the-powers",
+      "title": "Hal Gets the Powers",
+      "source": {
+        "slug": "megamind",
+        "title": "Megamind"
+      },
+      "episode_label": null,
+      "scene": "Megamind’s Metro Man power serum accidentally hits Hal. Megamind gives him a hero name and a short training montage, but Hal uses overwhelming capability to threaten Roxanne and dominate the city.",
+      "analogy": "Capability transfer and role-playing are treated as substitutes for value screening and ongoing control. Intelligence or power does not imply benevolent goals.",
+      "caveats": "Hal is an already selfish human who deliberately abuses superpowers, so this is primarily a misuse and governance analogy.",
+      "concept_titles": [
+        "Orthogonality",
+        "Value Alignment",
+        "Iterative Deployment",
+        "Behavioral Alignment",
+        "Power Concentration",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "hal-gets-the-powers--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "hal-gets-the-powers--02"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "hal-gets-the-powers--01",
+          "new_id": "hal-gets-the-powers--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "hal-gets-the-powers--04",
+          "new_id": "hal-gets-the-powers--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-duplicate-tanks",
+      "title": "The Duplicate Tanks",
+      "source": {
+        "slug": "the-prestige",
+        "title": "The Prestige"
+      },
+      "episode_label": null,
+      "scene": "In the final reveal, rows of locked water tanks contain the drowned Angiers produced by Tesla’s machine. Each performance creates an indistinguishable duplicate and kills one version.",
+      "analogy": "Angier deploys an uninterpreted replication capability before understanding its ontology. Repeated use turns one black-box uncertainty into hidden moral patients and lethal externalities at scale.",
+      "caveats": "The machine appears to work consistently; the catastrophe is Angier’s deliberate deployment choice, not an autonomous system pursuing a misaligned goal.",
+      "concept_titles": [
+        "Self-Replication",
+        "AI Welfare",
+        "Safe Exploration",
+        "Unintended Side Effects",
+        "Interpretability"
+      ],
+      "curated_asset_id": "the-duplicate-tanks--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "the-duplicate-tanks--03"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "the-duplicate-tanks--01",
+          "new_id": "the-duplicate-tanks--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-duplicate-tanks--02",
+          "new_id": "the-duplicate-tanks--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

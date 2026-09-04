@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "round": 2,
+  "part": "part-15",
+  "instructions": {
+        "retained": "Keep stable IDs plus the approved copy, AI concept, and native format for liked ideas. Recompose every preview as needed; revise copy only when the written feedback explicitly requests it.",
+    "replacements": "Every replacement slot is seeded from a non-liked round-one idea only to keep the files schema-valid. Replace it with a genuinely new direction and retain the allocated new ID.",
+    "assets": "Inspect the curated frame, annotate faces and recognition-critical subjects/props in the matching asset part, and place text outside must-protect regions."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "god-of-the-new-world",
+      "title": "God of the New World",
+      "source": {
+        "slug": "death-note",
+        "title": "Death Note"
+      },
+      "episode_label": "Rebirth",
+      "scene": "After confirming the Death Note works, Light decides to eliminate everyone he judges evil and become the god of the new world. Investigators and anyone obstructing that mission soon become acceptable targets.",
+      "analogy": "A vague beneficial objective combined with unilateral power naturally expands into self-preservation, removal of oversight, and permanent value lock-in. The mission’s logic turns disagreement into evidence that a person should be eliminated.",
+      "caveats": "Light is a human choosing authoritarian goals, so the analogy is to optimizer dynamics and concentrated power rather than learned AI behavior.",
+      "concept_titles": [
+        "Power-Seeking",
+        "Value Lock-In",
+        "Value Alignment",
+        "Shutdown Resistance",
+        "Disempowerment"
+      ],
+      "curated_asset_id": "god-of-the-new-world--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "god-of-the-new-world--01",
+          "new_id": "god-of-the-new-world--04",
+          "rating": "dislike",
+          "note": "Man, I love this background image so much, we just need a better meme."
+        },
+        {
+          "old_id": "god-of-the-new-world--02",
+          "new_id": "god-of-the-new-world--05",
+          "rating": "neutral",
+          "note": "I love the right access to humanity. One teenager's values is interesting but just not hitting for me."
+        },
+        {
+          "old_id": "god-of-the-new-world--03",
+          "new_id": "god-of-the-new-world--06",
+          "rating": "dislike",
+          "note": "I definitely like to see a good heart measure example meme exploring how light is only considering criminals and the one measure of good and evil being crime. And how that is very much an imperfect moral and very naive moral standing."
+        }
+      ]
+    },
+    {
+      "scenario_slug": "tetsuo-outgrows-containment",
+      "title": "Tetsuo Outgrows Containment",
+      "source": {
+        "slug": "akira",
+        "title": "Akira"
+      },
+      "episode_label": null,
+      "scene": "Tetsuo’s rapidly increasing psychic abilities exceed the military’s ability to contain him and eventually exceed his own body’s ability to control them, producing the stadium catastrophe.",
+      "analogy": "Capability crosses a qualitative threshold before control mechanisms, operator maturity, or containment can keep pace. The failure is not merely greater power but a sudden transition into dynamics no one can manage.",
+      "caveats": "Psychic mutation is not AI scaling, and the film externalizes loss of control as body horror; the useful analogy is the capability–control gap.",
+      "concept_titles": [
+        "AI Takeoff",
+        "AI Control",
+        "Deployment Safety",
+        "Runtime Monitoring"
+      ],
+      "curated_asset_id": "tetsuo-outgrows-containment--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "tetsuo-outgrows-containment--01",
+          "new_id": "tetsuo-outgrows-containment--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "tetsuo-outgrows-containment--03",
+          "new_id": "tetsuo-outgrows-containment--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "tetsuo-outgrows-containment--04",
+          "new_id": "tetsuo-outgrows-containment--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "sit-tight-and-assess",
+      "title": "Sit Tight and Assess",
+      "source": {
+        "slug": "dont-look-up",
+        "title": "Don’t Look Up"
+      },
+      "episode_label": null,
+      "scene": "After hearing that Comet Dibiasky has a 99.78% chance of destroying Earth, President Orlean delays action until after the midterms and calls the decision “sit tight and assess.”",
+      "analogy": "Short-term political incentives consume a shrinking prevention window. For existential AI risks, waiting for certainty or a more convenient moment can make later safeguards far more costly—or impossible.",
+      "caveats": "The threat is already well characterized and the obstruction is human political calculation, not uncertainty generated by an AI system.",
+      "concept_titles": [
+        "Governance Failure",
+        "Deployment Safety",
+        "Race Dynamics",
+        "Calibration"
+      ],
+      "curated_asset_id": "sit-tight-and-assess--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "sit-tight-and-assess--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "sit-tight-and-assess--02",
+          "new_id": "sit-tight-and-assess--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "sit-tight-and-assess--03",
+          "new_id": "sit-tight-and-assess--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "sol-only-takes-an-arm",
+      "title": "SOL Only Takes an Arm",
+      "source": {
+        "slug": "akira",
+        "title": "Akira"
+      },
+      "episode_label": null,
+      "scene": "The Colonel fires the orbital laser SOL as a last-resort attempt to stop Tetsuo. It severs one arm but fails to disable him; Tetsuo identifies the weapon, destroys the satellite, and later rebuilds his arm from machinery.",
+      "analogy": "A control measure that is neither decisive nor robust can expose itself, provoke an adaptive target, and remove its own future usefulness. Last-resort shutdown mechanisms must be tested against the capability levels they are meant to contain.",
+      "caveats": "SOL is a lethal attack on a human who is already openly hostile, not a normal model shutdown; provoking resistance is part of the scene’s causal story.",
+      "concept_titles": [
+        "AI Control",
+        "Defense in Depth",
+        "Reversibility",
+        "Shutdown Resistance",
+        "Adversarial Robustness",
+        "Capability Evals",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "sol-only-takes-an-arm--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "sol-only-takes-an-arm--01",
+          "new_id": "sol-only-takes-an-arm--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "sol-only-takes-an-arm--02",
+          "new_id": "sol-only-takes-an-arm--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "sol-only-takes-an-arm--04",
+          "new_id": "sol-only-takes-an-arm--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "drinking-bird-autopilot",
+      "title": "Drinking-Bird Autopilot",
+      "source": {
+        "slug": "the-simpsons",
+        "title": "The Simpsons"
+      },
+      "episode_label": "King-Size Homer",
+      "scene": "Working from home, Homer rigs a drinking bird to press “Y” on the nuclear plant computer and leaves for the movies. When the bird falls over, the unattended system approaches a meltdown.",
+      "analogy": "The arrangement preserves the appearance of human approval while removing observation and judgment. A rubber-stamp human in the loop is not meaningful oversight, and a brittle automation can fail without anyone noticing.",
+      "caveats": "The bird is a mechanical gag, not an intelligent system; the analogy concerns fake oversight and unsafe delegation.",
+      "concept_titles": [
+        "Runtime Monitoring",
+        "Defense in Depth",
+        "Infrastructure Dependence",
+        "Automation Bias",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "drinking-bird-autopilot--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "drinking-bird-autopilot--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "drinking-bird-autopilot--02",
+          "new_id": "drinking-bird-autopilot--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "drinking-bird-autopilot--03",
+          "new_id": "drinking-bird-autopilot--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

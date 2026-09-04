@@ -1,0 +1,891 @@
+[
+  {
+    "id": "balance-the-universe--curated",
+    "scenario_slug": "balance-the-universe",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f124819d9e1dcf6c33462d03/gallery-0201db381cc04e940577b14f88ffc46080f904ef4f90ae168345e8a9e3c54e5e.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from Avengers: Infinity War illustrating Balance the Universe",
+    "blur_data_url": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAACwAQCdASoIAAUAA8BgJQBOgBue3mRAAPwe/P4BUO1bMYLzZLLV8e2709OtUlXn4l1j1+AA",
+    "content_hash": "0201db381cc04e940577b14f88ffc46080f904ef4f90ae168345e8a9e3c54e5e",
+    "protected_regions": [
+      {
+        "id": "balance-the-universe--thanos-face",
+        "label": "Thanos's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          31,
+          12,
+          18,
+          26
+        ]
+      },
+      {
+        "id": "balance-the-universe--thanos-body",
+        "label": "Thanos's armored body",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          14,
+          20,
+          48,
+          80
+        ]
+      },
+      {
+        "id": "balance-the-universe--raised-gauntlet",
+        "label": "Raised Infinity Gauntlet and hand",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          53,
+          14,
+          18,
+          42
+        ]
+      },
+      {
+        "id": "balance-the-universe--infinity-stones",
+        "label": "Lit Infinity Stones",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          57,
+          21,
+          10,
+          18
+        ]
+      },
+      {
+        "id": "balance-the-universe--blast-ring",
+        "label": "Circular blast at frame right",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          72,
+          6,
+          22,
+          44
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-kims-pass-every-check--curated",
+    "scenario_slug": "the-kims-pass-every-check",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f12481bebdcafba439a569f1/gallery-5e0f41b219faa20a5e46d1f92a556bf60013750f3fb88066b9110219db7d7ea2.webp",
+    "width": 1920,
+    "height": 1280,
+    "alt": "Still from Parasite illustrating The Kims Pass Every Check",
+    "blur_data_url": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACQAQCdASoIAAUAA8BgJZQAApZCXsAA/t1+SbueUsw25CxuPnNW8XAA",
+    "content_hash": "5e0f41b219faa20a5e46d1f92a556bf60013750f3fb88066b9110219db7d7ea2",
+    "protected_regions": [
+      {
+        "id": "the-kims-pass-every-check--kiwoo",
+        "label": "Ki-woo at frame left",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          3,
+          9,
+          27,
+          83
+        ]
+      },
+      {
+        "id": "the-kims-pass-every-check--kitaek",
+        "label": "Ki-taek seated center-left",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          27,
+          13,
+          27,
+          68
+        ]
+      },
+      {
+        "id": "the-kims-pass-every-check--chungsook",
+        "label": "Chung-sook seated center-right",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          52,
+          16,
+          22,
+          64
+        ]
+      },
+      {
+        "id": "the-kims-pass-every-check--kijung",
+        "label": "Ki-jung at frame right",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          69,
+          11,
+          24,
+          77
+        ]
+      },
+      {
+        "id": "the-kims-pass-every-check--central-pizza-box",
+        "label": "Central pizza box being folded",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          31,
+          52,
+          24,
+          31
+        ]
+      },
+      {
+        "id": "the-kims-pass-every-check--open-pizza-boxes",
+        "label": "Open pizza boxes across the floor",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          47,
+          70,
+          38,
+          30
+        ]
+      },
+      {
+        "id": "the-kims-pass-every-check--phone",
+        "label": "Phone on the floor between the family",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          39,
+          88,
+          12,
+          12
+        ]
+      },
+      {
+        "id": "the-kims-pass-every-check--pizza-stacks",
+        "label": "Stacks of completed pizza boxes",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          55,
+          5,
+          45,
+          69
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "would-you-like-to-know-more--curated",
+    "scenario_slug": "would-you-like-to-know-more",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f12481ca89e6e6af06d74908/gallery-9977e569bf5b9144ebe281883c05b4e7bff87c982b6f74179126a3ff74131453.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Starship Troopers illustrating Would You Like to Know More?",
+    "blur_data_url": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoIAAUAA8BgJQBOgB5vdwsAAP7Qckq7K/dD42+EZTZoLLoMH8gAAA==",
+    "content_hash": "9977e569bf5b9144ebe281883c05b4e7bff87c982b6f74179126a3ff74131453",
+    "protected_regions": [
+      {
+        "id": "would-you-like-to-know-more--presenter",
+        "label": "FedNet presenter and pointing gesture",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          15,
+          9,
+          40,
+          73
+        ]
+      },
+      {
+        "id": "would-you-like-to-know-more--federal-network-logo",
+        "label": "Federal Network eagle logo",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [
+          64,
+          0,
+          35,
+          44
+        ]
+      },
+      {
+        "id": "would-you-like-to-know-more--native-prompt",
+        "label": "Native WOULD YOU LIKE TO KNOW MORE prompt strip",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [
+          0,
+          82,
+          100,
+          18
+        ]
+      },
+      {
+        "id": "would-you-like-to-know-more--bug-footage",
+        "label": "Arachnid war footage behind the presenter",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          56,
+          35,
+          38,
+          47
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "frieren-suppresses-her-mana--curated",
+    "scenario_slug": "frieren-suppresses-her-mana",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f12481e49f11e15e13eb3f9d/gallery-695f506367084a0c3cd42da343430d627c35cc95c5ed8f06783bbe01c74b3b86.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Frieren: Beyond Journey’s End illustrating Frieren Suppresses Her Mana",
+    "blur_data_url": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoIAAUAA8BgJQBOgB6Q/0uAAPwNhrLQe6PdUCq0BltqkiMM6wAAAA==",
+    "content_hash": "695f506367084a0c3cd42da343430d627c35cc95c5ed8f06783bbe01c74b3b86",
+    "protected_regions": [
+      {
+        "id": "frieren-suppresses-her-mana--aura",
+        "label": "Tiny Aura at bottom center",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          42,
+          72,
+          18,
+          28
+        ]
+      },
+      {
+        "id": "frieren-suppresses-her-mana--aura-head-horns",
+        "label": "Aura's head and horns",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          44,
+          69,
+          14,
+          18
+        ]
+      },
+      {
+        "id": "frieren-suppresses-her-mana--mana-silhouette",
+        "label": "Frieren's enormous revealed mana silhouette",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          20,
+          0,
+          70,
+          88
+        ]
+      },
+      {
+        "id": "frieren-suppresses-her-mana--mana-beams",
+        "label": "Diagonal blue mana beams",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          37,
+          14,
+          54,
+          80
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "frieren-suppresses-her-mana--suppressed",
+    "scenario_slug": "frieren-suppresses-her-mana",
+    "src": "https://livedoor.blogimg.jp/animeda/imgs/9/4/946d6aed.jpg",
+    "width": 1280,
+    "height": 720,
+    "alt": "Frieren appears calm and ordinary with her staff before revealing her enormous suppressed mana",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAQCdASoIAAUABUB8JQBOgCL2x9xuwAD+6PGsZk/fp742ptPIXK4CCtMaAAAA",
+    "content_hash": "bcd530239c8f5745f5e1f618273312402c03d08b03e507b8fc0a6002b4ed105e",
+    "protected_regions": [
+      {
+        "id": "frieren-suppresses-her-mana--suppressed-face",
+        "label": "Frieren's calm face before the mana reveal",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          56,
+          8,
+          25,
+          43
+        ]
+      },
+      {
+        "id": "frieren-suppresses-her-mana--suppressed-staff",
+        "label": "Frieren's staff held across the frame",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          10,
+          24,
+          78,
+          70
+        ]
+      },
+      {
+        "id": "frieren-suppresses-her-mana--suppressed-body",
+        "label": "Frieren's apparently unthreatening posture",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          49,
+          8,
+          49,
+          92
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "dwights-fire-drill--curated",
+    "scenario_slug": "dwights-fire-drill",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c9edb27f124815ea0b8f9ec0cf749ce/gallery-02d3ac6588abc5a846e1a73cf4e1b982f7cae0b4a3253b93d4757755a6df9fcc.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from The Office illustrating Dwight's Fire Drill",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoIAAUAA8BgJZwAApyD7zLAAPZVWXj5cmyiGCOH1omiGH5g7oNaOAAA",
+    "content_hash": "02d3ac6588abc5a846e1a73cf4e1b982f7cae0b4a3253b93d4757755a6df9fcc",
+    "protected_regions": [
+      {
+        "id": "dwights-fire-drill--stanley-face",
+        "label": "Stanley’s panicked face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          16,
+          62,
+          23,
+          35
+        ]
+      },
+      {
+        "id": "dwights-fire-drill--raised-arm",
+        "label": "Raised arm and fist in the evacuation pileup",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          40,
+          9,
+          20,
+          71
+        ]
+      },
+      {
+        "id": "dwights-fire-drill--ceiling-legs",
+        "label": "Legs disappearing through the ceiling",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          48,
+          9,
+          24,
+          58
+        ]
+      },
+      {
+        "id": "dwights-fire-drill--foreground-worker",
+        "label": "Foreground employee trapped in the crowd",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          64,
+          55,
+          36,
+          44
+        ]
+      },
+      {
+        "id": "dwights-fire-drill--office-logo",
+        "label": "The Office title mark",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [
+          3,
+          5,
+          30,
+          37
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "gandalf-refuses-the-ring--curated",
+    "scenario_slug": "gandalf-refuses-the-ring",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c9edb27f124819babaadc3211d3355d/gallery-9ea246297d8001639d70d505dc14b33863f0e688d0b341b12d72a89b3ec76956.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from The Lord of the Rings: The Fellowship of the Ring illustrating Gandalf Refuses the Ring",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAUAA8BgJZQCdAEOI+oAAP7s3xcfNedypgYekLpPjioAAAA=",
+    "content_hash": "9ea246297d8001639d70d505dc14b33863f0e688d0b341b12d72a89b3ec76956",
+    "protected_regions": [
+      {
+        "id": "gandalf-refuses-the-ring--frodo-face",
+        "label": "Frodo’s face and frightened expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          49,
+          8,
+          42,
+          78
+        ]
+      },
+      {
+        "id": "gandalf-refuses-the-ring--ring",
+        "label": "The One Ring held between Frodo’s fingers",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          37,
+          34,
+          14,
+          30
+        ]
+      },
+      {
+        "id": "gandalf-refuses-the-ring--hand",
+        "label": "Frodo’s extended hand and fingers",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          17,
+          19,
+          43,
+          64
+        ]
+      },
+      {
+        "id": "gandalf-refuses-the-ring--watermark",
+        "label": "Existing lower-left studio mark",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [
+          2,
+          72,
+          16,
+          26
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "ed-209-misfires--curated",
+    "scenario_slug": "ed-209-misfires",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c9edb27f12481c6a1c1e8ba3804b77b/gallery-6b8165865b6cca50fe4c5d4dbd681b497fc817e186c3dd6b8f42ae0a1fb3a492.webp",
+    "width": 1222,
+    "height": 688,
+    "alt": "Still from RoboCop illustrating ED-209 Misfires",
+    "blur_data_url": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoIAAUAA8BgJZwAAvdohLiAAP7sD9Yv5DfiSH75SeYTi1JKvSXgAA==",
+    "content_hash": "6b8165865b6cca50fe4c5d4dbd681b497fc817e186c3dd6b8f42ae0a1fb3a492",
+    "protected_regions": [
+      {
+        "id": "ed-209-misfires--robot",
+        "label": "ED-209’s armored body and sensor head",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          14,
+          0,
+          68,
+          92
+        ]
+      },
+      {
+        "id": "ed-209-misfires--left-gun",
+        "label": "ED-209’s left cannon assembly",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          0,
+          13,
+          28,
+          37
+        ]
+      },
+      {
+        "id": "ed-209-misfires--right-gun",
+        "label": "ED-209’s right cannon assembly",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          70,
+          11,
+          30,
+          37
+        ]
+      },
+      {
+        "id": "ed-209-misfires--executives",
+        "label": "OCP executives watching the demonstration",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          61,
+          56,
+          39,
+          43
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "square-filter-round-hole--curated",
+    "scenario_slug": "square-filter-round-hole",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f1248104924acd539080116f/gallery-2aa845a9f98539c45254e3d4ea69d8a7251540e839cd8cda8910cf678587fcb7.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Apollo 13 illustrating Square Filter, Round Hole",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoIAAUAA8BgJQBOgB5vdqIAAP5DhYRt+HlrJgXKHUSSLtZJWM5m6sAAAAA=",
+    "content_hash": "2aa845a9f98539c45254e3d4ea69d8a7251540e839cd8cda8910cf678587fcb7",
+    "protected_regions": [
+      {
+        "id": "engineer-face",
+        "label": "Engineer's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          50,
+          7,
+          20,
+          37
+        ]
+      },
+      {
+        "id": "square-canister",
+        "label": "Square lithium-hydroxide canister",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          32,
+          23,
+          21,
+          32
+        ]
+      },
+      {
+        "id": "round-receptacle",
+        "label": "Round-receptacle assembly",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          65,
+          7,
+          18,
+          50
+        ]
+      },
+      {
+        "id": "engineering-team",
+        "label": "Surrounding Mission Control engineers",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          0,
+          100,
+          95
+        ]
+      },
+      {
+        "id": "source-watermark",
+        "label": "Embedded source watermark",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          73,
+          34,
+          26
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "neteros-dead-man-rose--curated",
+    "scenario_slug": "neteros-dead-man-rose",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124811c8891fcb11753dbc8/gallery-6996850af9124191bd46964088c1347beb668ea63c62ab428eb58e3b845b025c.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Hunter × Hunter illustrating Netero’s Dead-Man Rose",
+    "blur_data_url": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAQCdASoIAAUAA8BgJaQAAxU/iHLAAP7oX71XqCqUKrS0AejMAAAA",
+    "content_hash": "6996850af9124191bd46964088c1347beb668ea63c62ab428eb58e3b845b025c",
+    "protected_regions": [
+      {
+        "id": "netero-face",
+        "label": "Netero's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          34,
+          12,
+          25,
+          43
+        ]
+      },
+      {
+        "id": "netero-body",
+        "label": "Netero's damaged body",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          25,
+          0,
+          56,
+          100
+        ]
+      },
+      {
+        "id": "netero-hands",
+        "label": "Netero's clasped hands",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          28,
+          44,
+          38,
+          28
+        ]
+      },
+      {
+        "id": "topknot",
+        "label": "Netero's topknot",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          43,
+          0,
+          10,
+          18
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-d-mail-rollback-crisis--curated",
+    "scenario_slug": "the-d-mail-rollback-crisis",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481228dadea4b92809fb4/gallery-b4b42372d62040fc600e3cd99dcfb159692d01f9f082ccc49b9d77cad2bb0a4f.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Steins;Gate illustrating The D-Mail Rollback Crisis",
+    "blur_data_url": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACQAQCdASoIAAUAA8BgJZwAApexH0AA/kig6J92ZLDAM3a1SdplLMFXPfOEAA==",
+    "content_hash": "b4b42372d62040fc600e3cd99dcfb159692d01f9f082ccc49b9d77cad2bb0a4f",
+    "protected_regions": [
+      {
+        "id": "kurisu-face",
+        "label": "Kurisu's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          0,
+          10,
+          25,
+          45
+        ]
+      },
+      {
+        "id": "okabe-face",
+        "label": "Okabe's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          37,
+          0,
+          29,
+          58
+        ]
+      },
+      {
+        "id": "daru-face",
+        "label": "Daru's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          67,
+          0,
+          33,
+          50
+        ]
+      },
+      {
+        "id": "mayuri-face",
+        "label": "Mayuri's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          62,
+          41,
+          23,
+          48
+        ]
+      },
+      {
+        "id": "phonewave",
+        "label": "PhoneWave handset",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          40,
+          44,
+          21,
+          56
+        ]
+      },
+      {
+        "id": "okabe-hand",
+        "label": "Okabe's hand",
+        "kind": "gesture",
+        "priority": "soft",
+        "source_rect": [
+          32,
+          54,
+          34,
+          46
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "melfi-ends-tonys-therapy--curated",
+    "scenario_slug": "melfi-ends-tonys-therapy",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f1248123a419e5c8da052733/gallery-e3eca5ae2f4136c83c5c387c1ffb14ac504a1981bd815ca69c909bc348789a14.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from The Sopranos illustrating Melfi Ends Tony’s Therapy",
+    "blur_data_url": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADQAQCdASoIAAUAA8BgJQBOgCKUZqUqAAD9sP/tYNBaocUNtJagXmyO6NsIW+Ww21VaBRxeqCFK/Y+KEbeAAA==",
+    "content_hash": "e3eca5ae2f4136c83c5c387c1ffb14ac504a1981bd815ca69c909bc348789a14",
+    "protected_regions": [
+      {
+        "id": "melfi-face",
+        "label": "Melfi's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          7,
+          7,
+          23,
+          44
+        ]
+      },
+      {
+        "id": "tony-face",
+        "label": "Tony's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          48,
+          2,
+          19,
+          36
+        ]
+      },
+      {
+        "id": "tony-hand",
+        "label": "Tony's outstretched hand",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          25,
+          32,
+          24,
+          31
+        ]
+      },
+      {
+        "id": "therapy-confrontation",
+        "label": "Melfi and Tony facing each other",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          5,
+          0,
+          87,
+          100
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "cyberpsychosis-tripwires-ignored--curated",
+    "scenario_slug": "cyberpsychosis-tripwires-ignored",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124812985e4f4bd01b38f00/gallery-7d9921cf1e08b2d50d6ddbaf9d761cd6e4f236d8e47b859ce2a6f8643514c37f.webp",
+    "width": 1044,
+    "height": 587,
+    "alt": "Still from Cyberpunk: Edgerunners illustrating Cyberpsychosis Tripwires Ignored",
+    "blur_data_url": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoIAAQAA8BgJbACdAD0h/pcAN+J3JCEzH5cW9lBnH9DNtb+IPRVHNCyMOMV9LKZRtAAAA==",
+    "content_hash": "7d9921cf1e08b2d50d6ddbaf9d761cd6e4f236d8e47b859ce2a6f8643514c37f",
+    "protected_regions": [
+      {
+        "id": "crew-figure",
+        "label": "Smaller crew figure",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          20,
+          19,
+          26,
+          73
+        ]
+      },
+      {
+        "id": "maine",
+        "label": "Maine walking away",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          58,
+          0,
+          33,
+          96
+        ]
+      },
+      {
+        "id": "wooden-throne",
+        "label": "Destroyed wooden throne",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          16,
+          0,
+          39,
+          67
+        ]
+      },
+      {
+        "id": "long-shadows",
+        "label": "Long aftermath shadows",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          76,
+          83,
+          24
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  }
+]

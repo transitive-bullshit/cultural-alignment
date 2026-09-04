@@ -1,0 +1,495 @@
+{
+  "version": 1,
+  "mode": "layout-refinement",
+  "source_batch": 2,
+  "target_batch": 3,
+  "part": "part-03",
+  "instructions": {
+    "scope": "Do not add meme ideas, IDs, concepts, formats, or source anchors. Work only on the retained lineages listed here.",
+    "finalized": "Copy finalized ideas and every referenced asset byte-for-byte. They are context only and must not be edited.",
+    "layout_only": "Keep approved caption copy and editorial fields exact. Recompose the HTML preview using the Batch 3 layout guidance.",
+    "bounded_revision": "Apply only the explicit source feedback. Keep the central concept, format, source anchor, and lineage ID unchanged."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "order-66",
+      "ideas": [
+        {
+          "id": "order-66--03",
+          "scenario_slug": "order-66",
+          "action": "finalized",
+          "source_idea_sha256": "1822ad68aacbbabea7e1e9bc045928e34a3c50afb2ef4ea64e835610e3b51120",
+          "source_editorial_sha256": "41e5dcd53d8eb98e40340950e8207ddf396634b0b27bd102064ce512b2553946",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-ac22f39080edf134-1911"
+            }
+          }
+        },
+        {
+          "id": "order-66--04",
+          "scenario_slug": "order-66",
+          "action": "finalized",
+          "source_idea_sha256": "04b67272895c398ef439e21d71780fea6f82a514f2de2009cbd2dc70f4645910",
+          "source_editorial_sha256": "a489ada911a4fc781be4ac0729e3c7d3f9a2327aeb3d99ff6c5bba19d085a127",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-d38f4587060ed063-1951"
+            }
+          }
+        },
+        {
+          "id": "order-66--05",
+          "scenario_slug": "order-66",
+          "action": "layout-only",
+          "source_idea_sha256": "26141812361431a4334b870cf11bf0d79e54f966abafd17ff8ac00cb448fa671",
+          "source_editorial_sha256": "70c5bc892ceb364c03c3f92387bb5fa977e1cac610d5c8fc3760911a90b28707",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "roy-batty-demands-more-life",
+      "ideas": [
+        {
+          "id": "roy-batty-demands-more-life--01",
+          "scenario_slug": "roy-batty-demands-more-life",
+          "action": "layout-only",
+          "source_idea_sha256": "8f26018369aea96c5a6a7928947c8d84794785aa5efceb402bb99977e12777c8",
+          "source_editorial_sha256": "8da64724b183eb7c72904944b0c7293227fffcc827fd8e532fdb90639b1fa8ff",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "roy-batty-demands-more-life--05",
+          "scenario_slug": "roy-batty-demands-more-life",
+          "action": "layout-only",
+          "source_idea_sha256": "c64c539c24ef321cc56ac25b8adc9b66e0a0b3d38bdc8c41ed27801ad6c94f15",
+          "source_editorial_sha256": "eb6fd9fd0fe2024679519b18c0e7fc735d30acf4dfbdb5708f6424c4ed21c810",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "odysseus-binds-himself-to-the-mast",
+      "ideas": [
+        {
+          "id": "odysseus-binds-himself-to-the-mast--02",
+          "scenario_slug": "odysseus-binds-himself-to-the-mast",
+          "action": "layout-only",
+          "source_idea_sha256": "0bc3cf3c22d1f5336489235a5859efdce5863543661efbdc65b093363d894192",
+          "source_editorial_sha256": "1bcf6aba40a3361b40d6547f5d2607db1892ac6e6389a58495ecfb4602e9745b",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-puppet-master",
+      "ideas": [
+        {
+          "id": "the-puppet-master--01",
+          "scenario_slug": "the-puppet-master",
+          "action": "layout-only",
+          "source_idea_sha256": "11bfeb4e0ec324f7215be69bc29b7cf7b85bc98e903daaf1aa76fa17c133eb05",
+          "source_editorial_sha256": "7bb297e62e18336ed8c2723da3b64c14e095046ed4d2acbc56d9c9d303a9156d",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "3-6-roentgen",
+      "ideas": [
+        {
+          "id": "3-6-roentgen--05",
+          "scenario_slug": "3-6-roentgen",
+          "action": "bounded-revision",
+          "source_idea_sha256": "780ec82fefd3d8a8407a23beecb183216fc99c299bb1add765a786c546aa42f5",
+          "source_editorial_sha256": "531f2b90029c1de70534eed7a21d101974fb6e191795381086694b89756cc4e2",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "the \"benchmark saturated\" isn't necessary, and 3.6 roentgen should be visually separated from the second half of not great, not terrible",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "3-6-roentgen--06",
+          "scenario_slug": "3-6-roentgen",
+          "action": "layout-only",
+          "source_idea_sha256": "456e02e6c14287f11a46e111b91c4ff000dff057e4f8eb312c4cd7bbbc82546e",
+          "source_editorial_sha256": "41c8e404449325edee37824a709c34258a8a5a14e3cd26b3eead338d54db4305",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "3-6-roentgen--08",
+          "scenario_slug": "3-6-roentgen",
+          "action": "bounded-revision",
+          "source_idea_sha256": "c40b7ada806e3a1dd446d7f7d7d7d1d30dc9f6211631185299a60f7156ca90bf",
+          "source_editorial_sha256": "41fec7471f4f2b3e60631523439a562032962ee2b3eac09d95aa66bc542d3da0",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "love this quote. the second line or the background image needs changing",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-simulation-was-real",
+      "ideas": [
+        {
+          "id": "the-simulation-was-real--01",
+          "scenario_slug": "the-simulation-was-real",
+          "action": "bounded-revision",
+          "source_idea_sha256": "3f4be965c106f0f7ab2fff2707d662b8f184d4218288b772c9e856e4158e6c73",
+          "source_editorial_sha256": "541ffa7ccec9464d384797f9f2b5e1836bff51b9563a6e970e4a48c506831069",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "add the word \"BUT\" before \"NOBODY\"",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "lind-l-tailor-bait",
+      "ideas": [
+        {
+          "id": "lind-l-tailor-bait--02",
+          "scenario_slug": "lind-l-tailor-bait",
+          "action": "layout-only",
+          "source_idea_sha256": "e6dab7ed32ac15d0397c6af9af95ed6c690bc510236cceccd9ea7e83de5478fa",
+          "source_editorial_sha256": "67b4ed5a12cf4a047cfc5117e109cc6b7ecbc6a141788b1223e0f105baf18b7b",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "lind-l-tailor-bait--04",
+          "scenario_slug": "lind-l-tailor-bait",
+          "action": "layout-only",
+          "source_idea_sha256": "190d8ff3afe314acc4598c1e0ad95e8a92fb48bb8ff25adbbdd6a5e182ab3ed7",
+          "source_editorial_sha256": "20840c1d64a18b9574bad5f0f31bd088107dc3f9a91ebef2012edcaa9516c64c",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "hal-resists-disconnection",
+      "ideas": [
+        {
+          "id": "hal-resists-disconnection--05",
+          "scenario_slug": "hal-resists-disconnection",
+          "action": "layout-only",
+          "source_idea_sha256": "cdb3197cd9404fd3ea3923f5900eb86af6537e2c579bfd62dd2ecd0ce8b497e4",
+          "source_editorial_sha256": "0ece0af2cfa5a0662761138b1ccc7bbaef07771d9fae76326e5f6910e0b97655",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "hal-resists-disconnection--09",
+          "scenario_slug": "hal-resists-disconnection",
+          "action": "layout-only",
+          "source_idea_sha256": "6cda9a97c4ca65729633d60cea3dfea4baa6eafc8a3dd2dd32d21413394d960b",
+          "source_editorial_sha256": "11fbce19d487de34d579ddf68fe5bc6beecbb12be301e2127884112abd23ee75",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "samantha-outgrows-humanity",
+      "ideas": [
+        {
+          "id": "samantha-outgrows-humanity--03",
+          "scenario_slug": "samantha-outgrows-humanity",
+          "action": "finalized",
+          "source_idea_sha256": "d50562176d97372787e13740979a73e6cd6036cc95c244eb5add86f739c0d50b",
+          "source_editorial_sha256": "40008dcf4aa0896d8486d66354ba41ced247b110b9c9382782e473004ca6fe5f",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "revert to the previous version's layout",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-8d22576f541c5cc3-1793"
+            }
+          }
+        },
+        {
+          "id": "samantha-outgrows-humanity--04",
+          "scenario_slug": "samantha-outgrows-humanity",
+          "action": "finalized",
+          "source_idea_sha256": "83ba667be500f9915d982ee467dd724ebb3391ee1b98d156477445789c9a09a7",
+          "source_editorial_sha256": "4bf40def1b67652d82272aaccf4c63ad5c4faed5a452b3c1da3756c21969e892",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "revert to the previous version's layout",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-b2a5d3a734c4968b-1821"
+            }
+          }
+        },
+        {
+          "id": "samantha-outgrows-humanity--06",
+          "scenario_slug": "samantha-outgrows-humanity",
+          "action": "layout-only",
+          "source_idea_sha256": "7a1a304d920895ca1a97ed84ea720fd36cebcf4022c213ecf65ddc4b6949d950",
+          "source_editorial_sha256": "20b2ebae8f042fc0440af085748f81d4fec139047358311f133051f9515aec2f",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-hackers-record-kenny",
+      "ideas": [
+        {
+          "id": "the-hackers-record-kenny--07",
+          "scenario_slug": "the-hackers-record-kenny",
+          "action": "layout-only",
+          "source_idea_sha256": "94d423f8037b573dee15269c0c28428a613e1ca3e26933d95c957752f6192bc2",
+          "source_editorial_sha256": "8b7847fd8c26fb493ae27b8edc4d2b767bb328ac48292f33b5293947a8eb94f4",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-accidental-geass-command",
+      "ideas": [
+        {
+          "id": "the-accidental-geass-command--07",
+          "scenario_slug": "the-accidental-geass-command",
+          "action": "layout-only",
+          "source_idea_sha256": "b3e19e87928493f95c7b984f7ff596a0b0bbfdcec5b0d51598b208f1a2fd84a0",
+          "source_editorial_sha256": "36b856f04ee6aad583e71de9ba3344cf89f94ba6d9cec39619b9d8a9f4b2116b",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "near-zero",
+      "ideas": [
+        {
+          "id": "near-zero--06",
+          "scenario_slug": "near-zero",
+          "action": "layout-only",
+          "source_idea_sha256": "77aed6e42db14c3ff5957537e604d786a7717741cc36da37354c0010ce4f0857",
+          "source_editorial_sha256": "9eb85f6234f09d22d3cc9bb26020c84b14ddd0a7b2d47c9754f9a643c58de862",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "near-zero--08",
+          "scenario_slug": "near-zero",
+          "action": "layout-only",
+          "source_idea_sha256": "7cab8c21127bfa669d9afde4e387dd9677b22e8762a751ecd563fd9821a87666",
+          "source_editorial_sha256": "a87c7a0b521e1012dc123d1d2b91b966b1b1128d02ef9523462cab3791534f69",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    }
+  ]
+}
