@@ -1,0 +1,662 @@
+[
+  {
+    "id": "when-keeping-it-real-goes-wrong--curated",
+    "scenario_slug": "when-keeping-it-real-goes-wrong",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f1248191bc12eb242e416094/gallery-50638abc29188f576edc6303a054037f9935f110d7be159fa10b1642225644bf.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from Chappelle's Show illustrating When Keeping It Real Goes Wrong",
+    "blur_data_url": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACwAQCdASoIAAUAA8BgJQBOgBt6Q2gAAP5DiK3wNQvWclG/pu7NPLPJIw0aw1RtcQAAAA==",
+    "content_hash": "50638abc29188f576edc6303a054037f9935f110d7be159fa10b1642225644bf",
+    "protected_regions": [
+      {
+        "id": "chappelle-face",
+        "label": "Dave Chappelle's host expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          37,
+          0,
+          29,
+          47
+        ]
+      },
+      {
+        "id": "chappelle-host",
+        "label": "Chappelle at the segment lectern",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          28,
+          0,
+          49,
+          100
+        ]
+      },
+      {
+        "id": "cue-cards",
+        "label": "Segment cue cards",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          33,
+          86,
+          34,
+          14
+        ]
+      },
+      {
+        "id": "lapel-mic",
+        "label": "Chappelle's lapel microphone",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          49,
+          49,
+          4,
+          11
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "nanikas-hidden-admin-command--curated",
+    "scenario_slug": "nanikas-hidden-admin-command",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481a7a3f4f050a58a4e48/gallery-744826355893eb461b0cb7b957ffa4ea334c476d14420c5925751e372a15d018.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from Hunter × Hunter illustrating Nanika’s Hidden Admin Command",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAUAA8BgJaQAAupjFf+AAP7tHZZPl3QsBqCIQwTsLbRgAAA=",
+    "content_hash": "744826355893eb461b0cb7b957ffa4ea334c476d14420c5925751e372a15d018",
+    "protected_regions": [
+      {
+        "id": "nanika-face",
+        "label": "Nanika's face and tears",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          22,
+          14,
+          38,
+          62
+        ]
+      },
+      {
+        "id": "killua-head",
+        "label": "Killua's white hair and head",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          52,
+          0,
+          39,
+          54
+        ]
+      },
+      {
+        "id": "embrace-hands",
+        "label": "Nanika and Killua's embrace and hands",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          35,
+          48,
+          59,
+          52
+        ]
+      },
+      {
+        "id": "nanika-killua-pair",
+        "label": "Nanika and Killua together",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          16,
+          0,
+          82,
+          100
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "rust-spots-the-evaluation--curated",
+    "scenario_slug": "rust-spots-the-evaluation",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481bb9c47fff7d186b2fb/gallery-8764e80e8a386b23ea5d6c71c07b76f9a2662916056d6107b1de5101d21de3fa.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from True Detective illustrating Rust Spots the Evaluation",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADQAQCdASoIAAQAA8BgJQBOgCPg+vCuAAD+0Ol3J+UpnTOGPNDC7uYAAAA=",
+    "content_hash": "8764e80e8a386b23ea5d6c71c07b76f9a2662916056d6107b1de5101d21de3fa",
+    "protected_regions": [
+      {
+        "id": "rust-spots-the-evaluation--rust-face",
+        "label": "Rust’s face and evaluative stare",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          58,
+          7,
+          17,
+          31
+        ]
+      },
+      {
+        "id": "rust-spots-the-evaluation--rust",
+        "label": "Rust seated at the interview table",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          52,
+          7,
+          35,
+          92
+        ]
+      },
+      {
+        "id": "rust-spots-the-evaluation--beer",
+        "label": "Lone Star cans and interview beer",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          39,
+          59,
+          27,
+          40
+        ]
+      },
+      {
+        "id": "rust-spots-the-evaluation--hands",
+        "label": "Rust’s hands around the can",
+        "kind": "gesture",
+        "priority": "soft",
+        "source_rect": [
+          57,
+          60,
+          19,
+          27
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "dr-evils-outdated-ransom--curated",
+    "scenario_slug": "dr-evils-outdated-ransom",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481cab9add7fca42f4440/gallery-5dc2228acd7744f5780101ee08bb7c2488be1abe01f6428f2d8c69ffabcedd24.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from Austin Powers: International Man of Mystery illustrating Dr. Evil’s Outdated Ransom",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoIAAUAA8BgJQBOgB6NpEUAAPYbP3f3EZlEQsoTInDqRJbYET0BFalAAAA=",
+    "content_hash": "5dc2228acd7744f5780101ee08bb7c2488be1abe01f6428f2d8c69ffabcedd24",
+    "protected_regions": [
+      {
+        "id": "dr-evils-outdated-ransom--face",
+        "label": "Dr. Evil’s full face and raised eyebrow",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          25,
+          0,
+          54,
+          94
+        ]
+      },
+      {
+        "id": "dr-evils-outdated-ransom--pinky",
+        "label": "Raised pinky, mouth, and ring",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          43,
+          59,
+          24,
+          40
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "project-mayhem-rejects-shutdown--curated",
+    "scenario_slug": "project-mayhem-rejects-shutdown",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481cabfdffeeccdb35e39/gallery-82b26d93653ad1359e55b4477be1ff698b132847df4a6327b067514008ab4c6d.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Fight Club illustrating Project Mayhem Rejects Shutdown",
+    "blur_data_url": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoIAAUAA8BgJbACdAD0eqnsAP6EEiOdOY2De586quy8pgb96KUSYZC27ZGojI8gB7KszbQA",
+    "content_hash": "82b26d93653ad1359e55b4477be1ff698b132847df4a6327b067514008ab4c6d",
+    "protected_regions": [
+      {
+        "id": "project-mayhem-rejects-shutdown--narrator-face",
+        "label": "The Narrator’s terrified face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          42,
+          11,
+          23,
+          53
+        ]
+      },
+      {
+        "id": "project-mayhem-rejects-shutdown--narrator",
+        "label": "The Narrator restrained on the table",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          34,
+          25,
+          38,
+          74
+        ]
+      },
+      {
+        "id": "project-mayhem-rejects-shutdown--restraining-arms",
+        "label": "Officers’ arms pinning the Narrator",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          0,
+          0,
+          49,
+          98
+        ]
+      },
+      {
+        "id": "project-mayhem-rejects-shutdown--blade",
+        "label": "Visible blade and threatening officer at right",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          72,
+          19,
+          28,
+          71
+        ]
+      },
+      {
+        "id": "project-mayhem-rejects-shutdown--watermark",
+        "label": "Existing lower-left source watermark",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          75,
+          23,
+          25
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-little-tiffany-test--curated",
+    "scenario_slug": "the-little-tiffany-test",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481dca3d0f2351d8fd809/gallery-153ba92947ec1b64a5d302b2cf7d300c3a415b48cda3bc1c335175d8d31e7b3f.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Men in Black illustrating The Little Tiffany Test",
+    "blur_data_url": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADQAQCdASoIAAUAA8BgJaACdAEWTctjUAD7iCgYmgTtv0KHVFTsAWemESV1ZI02UI89NhcxvK6F2a/VB/yAAAAA",
+    "content_hash": "153ba92947ec1b64a5d302b2cf7d300c3a415b48cda3bc1c335175d8d31e7b3f",
+    "protected_regions": [
+      {
+        "id": "the-little-tiffany-test--jay-face",
+        "label": "Agent J’s face and expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          27,
+          4,
+          20,
+          31
+        ]
+      },
+      {
+        "id": "the-little-tiffany-test--jay",
+        "label": "Agent J’s red-jacketed figure",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          15,
+          0,
+          43,
+          99
+        ]
+      },
+      {
+        "id": "the-little-tiffany-test--zed-face",
+        "label": "Zed’s face and reaction",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          60,
+          7,
+          18,
+          31
+        ]
+      },
+      {
+        "id": "the-little-tiffany-test--zed",
+        "label": "Zed’s suited figure",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          53,
+          0,
+          42,
+          99
+        ]
+      },
+      {
+        "id": "the-little-tiffany-test--watermark",
+        "label": "Existing Scene City mark",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [
+          1,
+          5,
+          20,
+          20
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "both-goblets-are-poisoned--curated",
+    "scenario_slug": "both-goblets-are-poisoned",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481e1b895c7ee33ac0dd7/gallery-54ad987528b44603635a5bed99e554abc94f6bb5e17b43385f14b6c48afd12eb.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from The Princess Bride illustrating Both Goblets Are Poisoned",
+    "blur_data_url": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACwAQCdASoIAAUAA8BgJYwCw7Dx+XPAAP5zNzK0dhim6bQiP+aKHc/EF+Rl3bYz4QgAAA==",
+    "content_hash": "54ad987528b44603635a5bed99e554abc94f6bb5e17b43385f14b6c48afd12eb",
+    "protected_regions": [
+      {
+        "id": "both-goblets-are-poisoned--vizzini-face",
+        "label": "Vizzini’s animated face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          6,
+          13,
+          27,
+          46
+        ]
+      },
+      {
+        "id": "both-goblets-are-poisoned--buttercup",
+        "label": "Blindfolded Buttercup",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          35,
+          0,
+          29,
+          95
+        ]
+      },
+      {
+        "id": "both-goblets-are-poisoned--westley",
+        "label": "Westley across the table",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          74,
+          7,
+          26,
+          92
+        ]
+      },
+      {
+        "id": "both-goblets-are-poisoned--goblets",
+        "label": "Both goblets on the table",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          30,
+          69,
+          41,
+          29
+        ]
+      },
+      {
+        "id": "both-goblets-are-poisoned--watermark",
+        "label": "Existing lower-left source watermark",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          72,
+          22,
+          25
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "will-becomes-the-spy--curated",
+    "scenario_slug": "will-becomes-the-spy",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f1248104b9e6e62d45c10146/gallery-c8a821fc8aa9af6aa6fdf6b51833455fcfc1535a66c9d6d4fd0e1eb9aae92820.webp",
+    "width": 1920,
+    "height": 1008,
+    "alt": "Still from Stranger Things illustrating Will Becomes the Spy",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAQAA8BgJZQCdAD0h/pcAP7aw0bP+1KfSn3D5DjPwRcAAAA=",
+    "content_hash": "c8a821fc8aa9af6aa6fdf6b51833455fcfc1535a66c9d6d4fd0e1eb9aae92820",
+    "protected_regions": [
+      {
+        "id": "will-face",
+        "label": "Will’s face and sideways glance",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          25,
+          17,
+          43,
+          64
+        ]
+      },
+      {
+        "id": "will-bowl-cut",
+        "label": "Will’s canonical bowl cut",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          25,
+          0,
+          44,
+          40
+        ]
+      },
+      {
+        "id": "will-torso",
+        "label": "Will’s coat and scarf",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          34,
+          58,
+          52,
+          42
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "takes-over--curated",
+    "scenario_slug": "takes-over",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f124810d991ce3746508db92/gallery-24471cf2ca9a701c6cf8686e4ac920aa43a60662a89a46d75f46c5428df7b681.webp",
+    "width": 1600,
+    "height": 900,
+    "alt": "Still from Mob Psycho 100 illustrating ???% Takes Over",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACQAQCdASoIAAUAA8BgJaQAAudZtgAA/B4fqfwwGW2tuurvjL3sfesTyDRTx4AAAAA=",
+    "content_hash": "24471cf2ca9a701c6cf8686e4ac920aa43a60662a89a46d75f46c5428df7b681",
+    "protected_regions": [
+      {
+        "id": "glowing-eyes",
+        "label": "???%’s two glowing eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          10,
+          7,
+          80,
+          49
+        ]
+      },
+      {
+        "id": "question-mark-percentage",
+        "label": "Canonical ???% title glyph",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [
+          25,
+          60,
+          53,
+          34
+        ]
+      },
+      {
+        "id": "shadow-face",
+        "label": "Black-and-white ???% face silhouette",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          0,
+          0,
+          100,
+          100
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "kevins-keleven--curated",
+    "scenario_slug": "kevins-keleven",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f12481d2acd5f56cbe9f7e8f/gallery-d8b452426bc88d679ac5d74d01a56b8e9f008fa6c9d4496c953839a23f653f7c.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from The Office illustrating Kevin’s Keleven",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAQCdASoIAAUAA8BgJYwCdAD0h/tsAAD84qGhpZky0Kvr0rzojiVrB4MSYxKiQAA=",
+    "content_hash": "d8b452426bc88d679ac5d74d01a56b8e9f008fa6c9d4496c953839a23f653f7c",
+    "protected_regions": [
+      {
+        "id": "kevin-face",
+        "label": "Kevin Malone’s full face and deadpan expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          20,
+          0,
+          42,
+          70
+        ]
+      },
+      {
+        "id": "kevin-body",
+        "label": "Kevin’s suit and shoulders",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          5,
+          35,
+          60,
+          65
+        ]
+      },
+      {
+        "id": "background-coworker",
+        "label": "Coworker visible through the office window",
+        "kind": "face",
+        "priority": "soft",
+        "source_rect": [
+          62,
+          34,
+          16,
+          28
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "tommys-false-diagnosis--curated",
+    "scenario_slug": "tommys-false-diagnosis",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f12481e6b14be30e0c8fb496/gallery-53345818b2e9255ec10921867317d0e016b40fe353924e3978c1c53bcea152f3.webp",
+    "width": 1284,
+    "height": 856,
+    "alt": "Still from Peaky Blinders illustrating Tommy’s False Diagnosis",
+    "blur_data_url": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoIAAUAA8BgJaACdAD0h/pcAP63sQqSJBmXxwfa+1Id5+8JWdrXGem9s183BnlnN8ZQgAAA",
+    "content_hash": "53345818b2e9255ec10921867317d0e016b40fe353924e3978c1c53bcea152f3",
+    "protected_regions": [
+      {
+        "id": "tommys-false-diagnosis--tommy-face",
+        "label": "Tommy's bloodied face and stare",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          34,
+          7,
+          33,
+          59
+        ]
+      },
+      {
+        "id": "tommys-false-diagnosis--tommy-body",
+        "label": "Tommy's suit, collar, and silhouette",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          50,
+          66,
+          50
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "homelander-creates-the-threat--curated",
+    "scenario_slug": "homelander-creates-the-threat",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f12481ff8956fc188ebec6b4/gallery-44a0e22b924852d5b76ab995a20407b0de13eae0511f96c7d2429267ea374c3e.webp",
+    "width": 1600,
+    "height": 900,
+    "alt": "Still from The Boys illustrating Homelander Creates the Threat",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAUAA8BgJZwAAxafKsQgAP6jeurDbZHUlZoz9G/pvW5MBAA=",
+    "content_hash": "44a0e22b924852d5b76ab995a20407b0de13eae0511f96c7d2429267ea374c3e",
+    "protected_regions": [
+      {
+        "id": "homelander-creates-the-threat--homelander-face",
+        "label": "Homelander's blood-spattered face and eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          40,
+          0,
+          38,
+          76
+        ]
+      },
+      {
+        "id": "homelander-creates-the-threat--homelander-body",
+        "label": "Homelander's armored shoulder and chest",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          24,
+          65,
+          76,
+          35
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  }
+]

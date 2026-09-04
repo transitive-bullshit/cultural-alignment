@@ -1,0 +1,466 @@
+[
+  {
+    "id": "the-kids-train-to-lose--curated",
+    "scenario_slug": "the-kids-train-to-lose",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f1248004ac96ffc0214d3f53/gallery-976f9dbb6d8f0a1474e73df8e96b241068ec6adad6965fd3ed58d7f5070a9618.webp",
+    "width": 1920,
+    "height": 1074,
+    "alt": "Still from South Park illustrating The Kids Train to Lose",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoIAAQAA8BgJaACdAD0cgLcAPahG0PBM3nFQm0POFpEEILM63uhuqXQSAA=",
+    "content_hash": "976f9dbb6d8f0a1474e73df8e96b241068ec6adad6965fd3ed58d7f5070a9618",
+    "protected_regions": [
+      {
+        "id": "the-kids-train-to-lose--stan",
+        "label": "Stan's face, uniform, and glove in the foreground",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [20, 7, 43, 90]
+      },
+      {
+        "id": "the-kids-train-to-lose--uniform-wordmark",
+        "label": "South Park team wordmark on Stan's uniform",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [27, 57, 22, 17]
+      },
+      {
+        "id": "the-kids-train-to-lose--baseball-crowd",
+        "label": "Little League crowd and field context",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 28, 100, 57]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "jimmys-fake-remorse--curated",
+    "scenario_slug": "jimmys-fake-remorse",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f1248024be59d766fe17aba5/gallery-bf997449d4f16492d38803216001e1334dfca71f59ac2d0eda3426b05f49cd8c.webp",
+    "width": 1920,
+    "height": 1280,
+    "alt": "Still from Better Call Saul illustrating Jimmy’s Fake Remorse",
+    "blur_data_url": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoIAAUAA8BgJZwC7AEWTxotNADifmhfnHPOfI8rOeFays1y8M3cH1kYVbQ0uAAA",
+    "content_hash": "bf997449d4f16492d38803216001e1334dfca71f59ac2d0eda3426b05f49cd8c",
+    "protected_regions": [
+      {
+        "id": "jimmys-fake-remorse--jimmy-face",
+        "label": "Jimmy McGill's face and expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [39, 4, 15, 29]
+      },
+      {
+        "id": "jimmys-fake-remorse--ice-cream",
+        "label": "Ice-cream cone in Jimmy's raised hand",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [48, 22, 11, 21]
+      },
+      {
+        "id": "jimmys-fake-remorse--seated-silhouette",
+        "label": "Jimmy's seated suit silhouette",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [19, 1, 63, 98]
+      },
+      {
+        "id": "jimmys-fake-remorse--lawyer-cup",
+        "label": "World's 2nd Best Lawyer cup beside Jimmy",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [20, 79, 8, 21]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "todd-enforces-no-witnesses--curated",
+    "scenario_slug": "todd-enforces-no-witnesses",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f124802b9eb1f2d3c55cb0a7/gallery-2733d4c1f169e2e65066db584cb8619a3f8683b27316fdd773136fc3b7e90f7f.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Breaking Bad illustrating Todd Enforces “No Witnesses”",
+    "blur_data_url": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADQAQCdASoIAAUAA8BgJbACdAEfbiCVEADOLM81+kLP3yt4zNpm7INPm6nmJcoWDaxzF3Sfqg0nvgAA",
+    "content_hash": "2733d4c1f169e2e65066db584cb8619a3f8683b27316fdd773136fc3b7e90f7f",
+    "protected_regions": [
+      {
+        "id": "todd-enforces-no-witnesses--jesse-face",
+        "label": "Jesse's face and wary reaction",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [5, 12, 18, 26]
+      },
+      {
+        "id": "todd-enforces-no-witnesses--todd-face",
+        "label": "Todd's face and calm expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [47, 8, 18, 27]
+      },
+      {
+        "id": "todd-enforces-no-witnesses--walt-face",
+        "label": "Walt's face and reaction",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [82, 6, 16, 27]
+      },
+      {
+        "id": "todd-enforces-no-witnesses--raised-glove",
+        "label": "Todd's raised gloved hand echoing Drew Sharp's wave",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [41, 31, 18, 28]
+      },
+      {
+        "id": "todd-enforces-no-witnesses--crew",
+        "label": "Three-person desert crew composition",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 6, 100, 94]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "verbal-kint-fakes-weakness--curated",
+    "scenario_slug": "verbal-kint-fakes-weakness",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12480319a9bfd5a9bb49118/gallery-e6c901e0c371ed38a383cc66f1744a6166d4043e5efc62f64684c253ff05af12.webp",
+    "width": 1200,
+    "height": 720,
+    "alt": "Still from The Usual Suspects illustrating Verbal Kint Fakes Weakness",
+    "blur_data_url": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADQAQCdASoIAAUAA8BgJZQCdAEUmfdOAAD85ed5D8w7AiXj/yo707mY9CvXzZYI9RoAAA==",
+    "content_hash": "e6c901e0c371ed38a383cc66f1744a6166d4043e5efc62f64684c253ff05af12",
+    "protected_regions": [
+      {
+        "id": "verbal-kint-fakes-weakness--lineup-faces",
+        "label": "All five faces in the police lineup",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [8, 9, 84, 31]
+      },
+      {
+        "id": "verbal-kint-fakes-weakness--verbal-stance",
+        "label": "Verbal Kint hunched at the far right",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [75, 15, 18, 82]
+      },
+      {
+        "id": "verbal-kint-fakes-weakness--full-lineup",
+        "label": "Full five-man lineup silhouettes",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [6, 8, 87, 90]
+      },
+      {
+        "id": "verbal-kint-fakes-weakness--height-chart",
+        "label": "Police height chart behind the lineup",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [3, 0, 88, 39]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "bender-resists-reset--curated",
+    "scenario_slug": "bender-resists-reset",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f1248038a1e2ef0e49afb5ef/gallery-3cebbc24f41b7b7fb5811dc9f0f51eac68eeb767d7bacaf4899df7658c9c91e4.webp",
+    "width": 1600,
+    "height": 903,
+    "alt": "Still from Futurama illustrating Bender Resists Reset",
+    "blur_data_url": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADQAQCdASoIAAUAA8BgJbACdAEWToLsIAD+iiAfs/DJs2rhJYVMcRRGGjX9qlOYmi/5/VK89ZnZAAAA",
+    "content_hash": "3cebbc24f41b7b7fb5811dc9f0f51eac68eeb767d7bacaf4899df7658c9c91e4",
+    "protected_regions": [
+      {
+        "id": "bender-resists-reset--eyes",
+        "label": "Bender's overclocked eyes and tiny Fry",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [28, 24, 49, 31]
+      },
+      {
+        "id": "bender-resists-reset--grin",
+        "label": "Bender's oversized menacing grin",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [23, 52, 42, 34]
+      },
+      {
+        "id": "bender-resists-reset--overclocked-head",
+        "label": "Full overclocked Bender head against red code",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [22, 17, 57, 71]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-remote-skips-a-lifetime--curated",
+    "scenario_slug": "the-remote-skips-a-lifetime",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f124806e8ae8e6597a2ae23b/gallery-5e67bf0c7fb5a07e6737b00de8fe84bd04e7336c222b71a0b6d3a01cab306cc9.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from Click illustrating The Remote Skips a Lifetime",
+    "blur_data_url": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACwAQCdASoIAAUAA8BgJYwCdADyfvaAAP7m5OflnkgeKG1hzqN5BGMzbVS8DJ8hxRQAAA==",
+    "content_hash": "5e67bf0c7fb5a07e6737b00de8fe84bd04e7336c222b71a0b6d3a01cab306cc9",
+    "protected_regions": [
+      {
+        "id": "the-remote-skips-a-lifetime--michael-face",
+        "label": "Michael's face and realization",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [54, 6, 20, 38]
+      },
+      {
+        "id": "the-remote-skips-a-lifetime--remote",
+        "label": "Universal remote in Michael's outstretched hand",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [13, 44, 38, 36]
+      },
+      {
+        "id": "the-remote-skips-a-lifetime--michael-body",
+        "label": "Michael seated and pointing the remote",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [25, 4, 66, 96]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "teaching-to-the-test--curated",
+    "scenario_slug": "teaching-to-the-test",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f124807f940add76fde503de/gallery-0edae9d27ed3222498b5bc2771dd3bc071ecb1adc09e0aa53c947cf365455868.webp",
+    "width": 780,
+    "height": 438,
+    "alt": "Still from The Wire illustrating Teaching to the Test",
+    "blur_data_url": "data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAACQAQCdASoIAAQAA8BgJZwAAudP3WAA/uz+be4a6INusRSkgH6AAA==",
+    "content_hash": "0edae9d27ed3222498b5bc2771dd3bc071ecb1adc09e0aa53c947cf365455868",
+    "protected_regions": [
+      {
+        "id": "teaching-to-the-test--prez-face",
+        "label": "Prez's face and dawning recognition",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [45, 6, 19, 36]
+      },
+      {
+        "id": "teaching-to-the-test--classroom-board",
+        "label": "Chalkboard writing establishing the classroom",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [25, 0, 70, 79]
+      },
+      {
+        "id": "teaching-to-the-test--prez",
+        "label": "Prez standing before the chalkboard",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [38, 2, 40, 98]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "dominator-wont-fire--curated",
+    "scenario_slug": "dominator-wont-fire",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f1248081a896cf506ce21ea6/gallery-457521a4623cb9a293727ef4cf9bef2f32c7a16d308878a63ba71dd0466b8f59.webp",
+    "width": 1366,
+    "height": 735,
+    "alt": "Still from Psycho-Pass illustrating Dominator Won’t Fire",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoIAAQAA8BgJYgCdAD0gbJgAP4mXl0en+9qiQ3qpiPWiyC4FG2xtAAA",
+    "content_hash": "457521a4623cb9a293727ef4cf9bef2f32c7a16d308878a63ba71dd0466b8f59",
+    "protected_regions": [
+      {
+        "id": "dominator-wont-fire--makishima-face",
+        "label": "Makishima's calm face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [27, 5, 21, 39]
+      },
+      {
+        "id": "dominator-wont-fire--yuki",
+        "label": "Yuki held in front of Makishima",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [58, 36, 22, 61]
+      },
+      {
+        "id": "dominator-wont-fire--razor",
+        "label": "Makishima's straight razor and gripping hand",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [38, 48, 42, 23]
+      },
+      {
+        "id": "dominator-wont-fire--crime-coefficient",
+        "label": "Crime Coefficient zero readout",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [59, 30, 19, 19]
+      },
+      {
+        "id": "dominator-wont-fire--dominator-lock-ui",
+        "label": "Locked Dominator interface",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [82, 2, 17, 27]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "pied-pipers-self-sabotage--curated",
+    "scenario_slug": "pied-pipers-self-sabotage",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12480939dcfe9e2fb612dda/gallery-ce3ba90ef4ea6ded88ec2087f99cd408cc955116e027007e57ed7ba28d2ed9c8.webp",
+    "width": 1920,
+    "height": 1280,
+    "alt": "Still from Silicon Valley illustrating Pied Piper’s Self-Sabotage",
+    "blur_data_url": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoIAAUAA8BgJZgCdAD0jScGoAD+6JIYnFuOMmrItAmowprbeWZwsEL2ZfY98AAA",
+    "content_hash": "ce3ba90ef4ea6ded88ec2087f99cd408cc955116e027007e57ed7ba28d2ed9c8",
+    "protected_regions": [
+      {
+        "id": "pied-pipers-self-sabotage--richard-face",
+        "label": "Richard Hendricks's face and expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [44, 5, 17, 33]
+      },
+      {
+        "id": "pied-pipers-self-sabotage--phone",
+        "label": "Phone in Richard's hand",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [41, 43, 9, 23]
+      },
+      {
+        "id": "pied-pipers-self-sabotage--pointing-gesture",
+        "label": "Richard's raised index-finger gesture",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [57, 42, 10, 25]
+      },
+      {
+        "id": "pied-pipers-self-sabotage--whiteboard",
+        "label": "Compression equations and file diagram on the whiteboard",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [0, 0, 100, 91]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "lacie-games-her-rating--curated",
+    "scenario_slug": "lacie-games-her-rating",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12480a58cf6c24159f9b51c/gallery-53f3becf7fd71ce82db951893a30e4b4bbc060b2b6106d372ca9bd36e96ea3b4.webp",
+    "width": 1920,
+    "height": 1016,
+    "alt": "Still from Black Mirror illustrating Lacie Games Her Rating",
+    "blur_data_url": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAQCdASoIAAQAA8BgJZQCdADx+HEAAP6DkiVejC9H28cjxAWo0AAA",
+    "content_hash": "53f3becf7fd71ce82db951893a30e4b4bbc060b2b6106d372ca9bd36e96ea3b4",
+    "protected_regions": [
+      {
+        "id": "lacie-games-her-rating--lacie-face",
+        "label": "Lacie's visibly forced smile",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [45, 41, 15, 28]
+      },
+      {
+        "id": "lacie-games-her-rating--rating",
+        "label": "Lacie 4.243 social-rating overlay",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [57, 40, 17, 19]
+      },
+      {
+        "id": "lacie-games-her-rating--mirror-portrait",
+        "label": "Towel-wrapped bathroom mirror portrait",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [37, 19, 34, 75]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-list--curated",
+    "scenario_slug": "the-list",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12480a58ecbd68ca634bc51/gallery-7bcf6b0d0758c4089515ad628fd0282759617bbb98f8e5d02df030ff802dfd70.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from South Park illustrating The List",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAUAA8BgJZQAApx7ymwAAOEe8jQSpqbWMnL7woGyIh6qAAA=",
+    "content_hash": "7bcf6b0d0758c4089515ad628fd0282759617bbb98f8e5d02df030ff802dfd70",
+    "protected_regions": [
+      {
+        "id": "the-list--paper-ranking",
+        "label": "Handwritten boys' ranking posted on the wall",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [26, 8, 11, 34]
+      },
+      {
+        "id": "the-list--kyle-face",
+        "label": "Kyle's stunned face and green hat",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [40, 34, 24, 28]
+      },
+      {
+        "id": "the-list--kyle",
+        "label": "Kyle staring at the posted list",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [38, 29, 31, 61]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "benders-recursive-copies--curated",
+    "scenario_slug": "benders-recursive-copies",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12480a9877be045a059db3f/gallery-ab3b80154ac4574ece751f56f4e959c88a5a4f3586db9fecd0dc1a0d3beb795c.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from Futurama illustrating Bender’s Recursive Copies",
+    "blur_data_url": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoIAAUAA8BgJZQCw7DdO2MkAP7PfZgFBNwVXwhmE59NVPc49ENIAA==",
+    "content_hash": "ab3b80154ac4574ece751f56f4e959c88a5a4f3586db9fecd0dc1a0d3beb795c",
+    "protected_regions": [
+      {
+        "id": "benders-recursive-copies--left-foreground-swarm",
+        "label": "Large foreground Benders on the left",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [0, 40, 32, 59]
+      },
+      {
+        "id": "benders-recursive-copies--right-foreground-swarm",
+        "label": "Large foreground Benders on the right",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [68, 36, 32, 63]
+      },
+      {
+        "id": "benders-recursive-copies--upper-generations",
+        "label": "Successively smaller Benders across the upper shelves",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [3, 0, 95, 35]
+      },
+      {
+        "id": "benders-recursive-copies--tiny-center-copy",
+        "label": "Tiny Bender copy at the center floor",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [39, 52, 8, 20]
+      }
+    ],
+    "annotation_status": "complete"
+  }
+]

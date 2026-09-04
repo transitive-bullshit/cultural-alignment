@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "round": 2,
+  "draft": "partial-review-layout-checkpoint-2026-09-03-213522z",
+  "feedback_updated_at": "2026-09-03T21:30:53.972Z",
+  "warning": "This feedback reviews the exact draft ideas in this directory. Do not transfer ratings by ID to later copy without comparing the archived idea payload.",
+  "files": {
+    "ideas.json": {
+      "bytes": 1367996,
+      "sha256": "0f893c34d859b29871f0a6fb4b281326c48149afa7aa76cd8b117a4d94ff3a5b"
+    },
+    "assets.json": {
+      "bytes": 208781,
+      "sha256": "9bd40bf93177787b5c842c4c466a74eb49d45b2535662759c48ee0d27ab6716f"
+    },
+    "feedback.json": {
+      "bytes": 1087,
+      "sha256": "e31c0eb07ac48c09f49a058458b47f77008dd2632a5531e9c2e73b8db65634bd"
+    }
+  }
+}

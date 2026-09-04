@@ -1,0 +1,187 @@
+[
+  {
+    "scenario_slug": "sit-tight-and-assess",
+    "ideas": [
+      {
+        "id": "sit-tight-and-assess--01",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "President Orlean answers a 99.78% extinction probability with the exact phrase ‘sit tight and assess.’",
+        "caption_lines": [
+          "EXTINCTION PROBABILITY: 99.78%",
+          "Sit tight and assess."
+        ],
+        "format": "canon",
+        "frame_guidance": "Retain the exact approved number and line, using Dibiasky's stunned reaction as the visual reply; place both lines at upper right in open office space so her face remains completely clear.",
+        "why_it_works": "The exact probability and exact euphemism form a complete governance-failure joke without added explanation.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["sit-tight-and-assess--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Independent prediction: likely like. Two canonical facts already contain the entire joke and the entire risk analogy. Main reservation: Orlean is not in the curated frame, so Dibiasky's recognizable disbelief has to read as the reaction to the quoted decision.",
+          "strongest_quality": "Two canonical facts already contain the entire joke and the entire risk analogy.",
+          "main_risk": "Orlean is not in the curated frame, so Dibiasky's recognizable disbelief has to read as the reaction to the quoted decision.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "sit-tight-and-assess--01",
+            "contrast_disliked_id": "sit-tight-and-assess--02"
+          }
+        }
+      },
+      {
+        "id": "sit-tight-and-assess--06",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "The administration’s delay eventually hardens into the source’s canonical public command: ‘Don’t Look Up.’",
+        "caption_lines": ["PLANETARY DEFENSE POLICY:", "DON’T LOOK UP."],
+        "format": "relabel",
+        "frame_guidance": "Keep the letterboxed Oval Office reaction full-bleed. Put the policy setup in the upper black bar and “DON'T LOOK UP.” in the lower bar at matched hero impact size, keeping Dibiasky's face and shoulders completely clear between them.",
+        "why_it_works": "The movie title becomes the administration’s entire catastrophe policy, compressing denial and governance failure into four source-native words.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["sit-tight-and-assess--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.69,
+          "expected_feedback": "Likely neutral-to-like: the title phrase now lands as a large bottom payoff while the existing black bars leave Dibiasky's reaction untouched.",
+          "strongest_quality": "The most recognizable phrase in the source doubles cleanly as a disastrous policy label.",
+          "main_risk": "The slogan belongs to the later public campaign while this frame is the earlier Oval Office briefing.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "sit-tight-and-assess--01",
+            "contrast_disliked_id": "sit-tight-and-assess--03"
+          }
+        }
+      },
+      {
+        "id": "sit-tight-and-assess--05",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "Dibiasky realizes that demanding still more evidence is not neutral when the remaining intervention window only moves in one direction.",
+        "caption_lines": [
+          "WHEN ‘WAIT FOR MORE EVIDENCE’",
+          "IS THE IRREVERSIBLE DECISION"
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep Dibiasky's letterboxed reaction full-bleed. Put the evidence-delay setup in the upper black bar and the irreversible-decision payoff in the lower bar at matched hero impact size, leaving her face and shoulders unobstructed between them.",
+        "why_it_works": "It reframes delay itself as the consequential choice, which is the scene's precise governance trap.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["sit-tight-and-assess--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.68,
+          "expected_feedback": "Likely neutral: the hidden asymmetry is unchanged, but its setup and consequence now occupy opposite bars instead of one small box.",
+          "strongest_quality": "It names the hidden asymmetry that makes ‘assess’ an action rather than a pause.",
+          "main_risk": "Without the exact probability or canonical quote, the idea relies heavily on Dibiasky's reaction for scene-level specificity.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "sit-tight-and-assess--01",
+            "contrast_disliked_id": "sit-tight-and-assess--02"
+          }
+        }
+      }
+    ]
+  }
+]

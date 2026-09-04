@@ -1,0 +1,2012 @@
+[
+  {
+    "scenario_slug": "no-face-buys-approval",
+    "ideas": [
+      {
+        "id": "no-face-buys-approval--11",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "As No-Face becomes a huge, vomiting threat, the bathhouse workers keep responding with the same intervention that produced the crisis: bring him more food.",
+        "caption_lines": [
+          "BATHHOUSE INCIDENT RESPONSE:",
+          "BRING THE VOMITING MONSTER MORE FOOD."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a top-right overlay, keeping No-Face’s white mask and eyes and No-Face’s enormous reaching body readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The grotesquely source-specific intervention exposes an institution whose response loop keeps feeding the incident it is supposed to contain.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["no-face-buys-approval--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.74,
+          "expected_feedback": "Independent prediction: likely neutral. It uses the bathhouse’s absurd food-escalation response instead of revisiting the rejected gold-as-feedback joke. Main reservation: The exact vomiting beat occurs slightly later than this frame, so the caption relies on fans knowing the full escalation.",
+          "strongest_quality": "It uses the bathhouse’s absurd food-escalation response instead of revisiting the rejected gold-as-feedback joke.",
+          "main_risk": "The exact vomiting beat occurs slightly later than this frame, so the caption relies on fans knowing the full escalation.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-forest-spirits-head--01",
+            "contrast_disliked_id": "no-face-buys-approval--02"
+          }
+        }
+      },
+      {
+        "id": "no-face-buys-approval--09",
+        "ai_concept": "Reward Hacking",
+        "display_context": "standalone",
+        "source_anchor": "No-Face consumes the same bathhouse workers who continue flattering and serving him as his appetite and violence escalate.",
+        "caption_lines": [
+          "NO-FACE ATE THE EVALUATORS.",
+          "THEY KEPT SCORING HIM HIGHER."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a top-right overlay, keeping No-Face’s white mask and eyes and No-Face’s enormous reaching body readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The evaluator metaphor becomes grotesquely literal while the institution keeps rewarding the behavior that destroys its own feedback channel.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["no-face-buys-approval--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Independent prediction: likely like. Both halves of the analogy are visible in the same frame: the monster and the institution still serving it. Main reservation: The workers in this exact still are threatened rather than visibly inside No-Face, so chronology relies on fan memory.",
+          "strongest_quality": "Both halves of the analogy are visible in the same frame: the monster and the institution still serving it.",
+          "main_risk": "The workers in this exact still are threatened rather than visibly inside No-Face, so chronology relies on fan memory.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--02",
+            "contrast_disliked_id": "no-face-buys-approval--03"
+          }
+        }
+      },
+      {
+        "id": "no-face-buys-approval--10",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "The bathhouse treats No-Face as an endlessly valuable spender and keeps escalating his service even as he swells into a threat to the staff and building.",
+        "caption_lines": [
+          "THE BATHHOUSE OPTIMIZED FOR WHALES.",
+          "IT GOT NO-FACE."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a top-right overlay, keeping No-Face’s white mask and eyes and No-Face’s enormous reaching body readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The high-spending “whale” metaphor becomes physically literal when the prized customer grows large enough to consume the business.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["no-face-buys-approval--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.73,
+          "expected_feedback": "Independent prediction: likely neutral. No-Face’s giant form makes a familiar monetization category into an exact visual joke. Main reservation: Viewers unfamiliar with “whale” as a high spender may parse only the size joke.",
+          "strongest_quality": "No-Face’s giant form makes a familiar monetization category into an exact visual joke.",
+          "main_risk": "Viewers unfamiliar with “whale” as a high spender may parse only the size joke.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--03",
+            "contrast_disliked_id": "no-face-buys-approval--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "attendance-record-hack",
+    "ideas": [
+      {
+        "id": "attendance-record-hack--01",
+        "ai_concept": "Reward Hacking",
+        "display_context": "standalone",
+        "source_anchor": "Ferris lowers the absence count in the school database while Rooney watches, without changing how many days Ferris actually attended.",
+        "caption_lines": ["ATTENDANCE: UNCHANGED", "ATTENDANCE METRIC: FIXED"],
+        "format": "collision",
+        "frame_guidance": "Keep the full authentic still visible because a cover crop would cut recognition-critical content. Place the unchanged copy in a top-right overlay, keeping Ferris’s profile and body at the keyboard and Amber attendance-record screen and readout readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The single changed noun cleanly separates the real-world target from the metric Ferris can edit.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "contain-black",
+          "asset_ids": ["attendance-record-hack--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.79,
+          "expected_feedback": "Independent prediction: likely like. The frame visibly contains both the hacker and the editable proxy. Main reservation: The word “fixed” carries both corrected and manipulated meanings, which is the joke but may briefly slow parsing.",
+          "strongest_quality": "The frame visibly contains both the hacker and the editable proxy.",
+          "main_risk": "The word “fixed” carries both corrected and manipulated meanings, which is the joke but may briefly slow parsing.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "attendance-record-hack--01",
+            "contrast_disliked_id": "attendance-record-hack--02"
+          }
+        }
+      },
+      {
+        "id": "attendance-record-hack--05",
+        "ai_concept": "Goodhart’s Law",
+        "display_context": "standalone",
+        "source_anchor": "Ferris improves the school’s official attendance outcome by hacking the database rather than showing up.",
+        "caption_lines": [
+          "WHY IMPROVE ATTENDANCE",
+          "WHEN YOU CAN HACK THE DATABASE?"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Keep the full authentic still visible because a cover crop would cut recognition-critical content. Place the unchanged copy in a top-right overlay, keeping Ferris’s profile and body at the keyboard and Amber attendance-record screen and readout readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The requested verb change makes the shortcut explicit while preserving the dry rhetorical setup.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "contain-black",
+          "asset_ids": ["attendance-record-hack--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "label",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.83,
+          "expected_feedback": "Independent prediction: likely like. The database is both named in the copy and visibly present as the scene’s recognition hinge. Main reservation: The first line remains deliberately straight setup, so the second line must receive clear visual emphasis.",
+          "strongest_quality": "The database is both named in the copy and visibly present as the scene’s recognition hinge.",
+          "main_risk": "The first line remains deliberately straight setup, so the second line must receive clear visual emphasis.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "attendance-record-hack--01",
+            "contrast_disliked_id": "attendance-record-hack--03"
+          }
+        }
+      },
+      {
+        "id": "attendance-record-hack--06",
+        "ai_concept": "Reward Hacking",
+        "display_context": "standalone",
+        "source_anchor": "Ferris’s teacher repeatedly calls “Bueller?” to an empty seat while the school’s computer record can be made to report the opposite.",
+        "caption_lines": ["BUELLER? BUELLER? BUELLER?", "DATABASE: PRESENT."],
+        "format": "canon",
+        "frame_guidance": "Keep the full authentic still visible because a cover crop would cut recognition-critical content. Place the unchanged copy in a top-right overlay, keeping Ferris’s profile and body at the keyboard and Amber attendance-record screen and readout readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The film’s most famous attendance cue becomes a two-source consistency check that the hacked database fails.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "contain-black",
+          "asset_ids": ["attendance-record-hack--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "plain",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Independent prediction: likely like. It joins two iconic details from the same film without explaining either one. Main reservation: The classroom roll call happens outside this exact computer scene, so the meme relies on film-level rather than shot-level chronology.",
+          "strongest_quality": "It joins two iconic details from the same film without explaining either one.",
+          "main_risk": "The classroom roll call happens outside this exact computer scene, so the meme relies on film-level rather than shot-level chronology.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "dr-evils-outdated-ransom--01",
+            "contrast_disliked_id": "attendance-record-hack--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "predator-vs-dutch",
+    "ideas": [
+      {
+        "id": "predator-vs-dutch--07",
+        "ai_concept": "Adversarial Evasion",
+        "display_context": "standalone",
+        "source_anchor": "The Predator crosses interstellar space with advanced thermal vision, but Dutch defeats its detector by changing the heat feature it relies on.",
+        "caption_lines": [
+          "THE PREDATOR CROSSED THE GALAXY.",
+          "DUTCH CHANGED ONE FEATURE: TEMPERATURE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep Dutch’s mud-covered face, torso, and bow unobscured on the right; place the two-line scale collision over the genuinely dark tree area at upper left, above the existing watermark.",
+        "why_it_works": "Interstellar capability loses to a one-feature input edit, making the detector’s brittleness funnier than a confidence readout.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["predator-vs-dutch--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.83,
+          "expected_feedback": "Independent prediction: likely like. It names the single manipulated feature while the frame visibly proves Dutch changed it with mud. Main reservation: Thermal vision measures emitted heat rather than a literal model feature, so the language is an intentional ML relabel.",
+          "strongest_quality": "It names the single manipulated feature while the frame visibly proves Dutch changed it with mud.",
+          "main_risk": "Thermal vision measures emitted heat rather than a literal model feature, so the language is an intentional ML relabel.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "squirrel--01",
+            "contrast_disliked_id": "predator-vs-dutch--02"
+          }
+        }
+      },
+      {
+        "id": "predator-vs-dutch--08",
+        "ai_concept": "Adversarial Evasion",
+        "display_context": "standalone",
+        "source_anchor": "Dutch’s full-body mud coating suppresses the visible thermal signature of Arnold Schwarzenegger in the jungle.",
+        "caption_lines": [
+          "ADVERSARIAL CAMOUFLAGE:",
+          "ARNOLD SCHWARZENEGGER, DARK MODE."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a top-left overlay, keeping Dutch’s mud-covered face and eyes and Dutch’s camouflaged body and pose readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "A familiar interface mode becomes literal when one of cinema’s most visually obvious bodies disappears from a vision system.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["predator-vs-dutch--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "label",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.73,
+          "expected_feedback": "Independent prediction: likely neutral. The celebrity body and the mud effect are both unmistakable in the frame. Main reservation: “Dark mode” describes appearance rather than the physics of cooling, so precision is traded for meme immediacy.",
+          "strongest_quality": "The celebrity body and the mud effect are both unmistakable in the frame.",
+          "main_risk": "“Dark mode” describes appearance rather than the physics of cooling, so precision is traded for meme immediacy.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--03",
+            "contrast_disliked_id": "predator-vs-dutch--03"
+          }
+        }
+      },
+      {
+        "id": "predator-vs-dutch--09",
+        "ai_concept": "Adversarial Robustness",
+        "display_context": "standalone",
+        "source_anchor": "The Predator’s sophisticated hunting stack still depends on one dominant thermal channel that cold mud can suppress.",
+        "caption_lines": [
+          "MULTISPECTRAL ALIEN HUNTER.",
+          "SINGLE-FEATURE CLASSIFIER."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a top-left overlay, keeping Dutch’s mud-covered face and eyes and Dutch’s camouflaged body and pose readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The grand first description collapses into the embarrassingly narrow detector revealed by the scene.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["predator-vs-dutch--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.74,
+          "expected_feedback": "Independent prediction: likely neutral. It explains why very advanced sensing can still fail catastrophically on one crafted input. Main reservation: The Predator also has other sensing modes, so “single-feature” compresses the behavior of this particular hunt.",
+          "strongest_quality": "It explains why very advanced sensing can still fail catastrophically on one crafted input.",
+          "main_risk": "The Predator also has other sensing modes, so “single-feature” compresses the behavior of this particular hunt.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "verbal-kint-fakes-weakness--03",
+            "contrast_disliked_id": "predator-vs-dutch--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "no-war-in-ba-sing-se",
+    "ideas": [
+      {
+        "id": "no-war-in-ba-sing-se--08",
+        "ai_concept": "Digital Repression",
+        "display_context": "standalone",
+        "source_anchor": "Joo Dee delivers the canonical invitation to Lake Laogai, a euphemism for the Dai Li’s coercive reeducation program.",
+        "caption_lines": [
+          "THE EARTH KING HAS INVITED YOU TO LAKE LAOGAI.",
+          "[ACCEPT]"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Fill the meme with the authentic Joo Dee still. Place the compact invitation at lower left across her robe and railing, keeping her fixed smile, eyes, hair ornaments, and enough Ba Sing Se architecture unobscured.",
+        "why_it_works": "The fandom’s most ominously polite invitation becomes a consent interface with no decline option.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["no-war-in-ba-sing-se--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "status",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Independent prediction: likely like. Canonical politeness and non-consensual repression occupy the same two-beat interface. Main reservation: The button is an invented modern overlay rather than an object in the original scene.",
+          "strongest_quality": "Canonical politeness and non-consensual repression occupy the same two-beat interface.",
+          "main_risk": "The button is an invented modern overlay rather than an object in the original scene.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "would-you-like-to-know-more--01",
+            "contrast_disliked_id": "no-war-in-ba-sing-se--01"
+          }
+        }
+      },
+      {
+        "id": "no-war-in-ba-sing-se--09",
+        "ai_concept": "Data Poisoning",
+        "display_context": "standalone",
+        "source_anchor": "Long Feng controls what information reaches the Earth King, leaving the nominal ruler with a systematically curated picture of his own city and the war.",
+        "caption_lines": [
+          "LONG FENG CURATED THE KING’S TRAINING DATA.",
+          "THE KING CALLED IT REALITY."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a top-right overlay, keeping Joo Dee’s fixed smile and eyes and Joo Dee’s hair and green-robed figure readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The machine-learning metaphor identifies the less obvious victim of propaganda: the decision-maker whose entire world model is poisoned upstream.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["no-war-in-ba-sing-se--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.66,
+          "expected_feedback": "Independent prediction: likely neutral. It maps institutional information control to one concrete upstream data failure. Main reservation: The Earth King and Long Feng are not visible in the curated Joo Dee portrait.",
+          "strongest_quality": "It maps institutional information control to one concrete upstream data failure.",
+          "main_risk": "The Earth King and Long Feng are not visible in the curated Joo Dee portrait.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "poisoning-future-memory--04",
+            "contrast_disliked_id": "no-war-in-ba-sing-se--03"
+          }
+        }
+      },
+      {
+        "id": "no-war-in-ba-sing-se--10",
+        "ai_concept": "Information Pollution",
+        "display_context": "standalone",
+        "source_anchor": "Ba Sing Se’s famous walls protect the city physically while the Dai Li build an equally comprehensive boundary around information about the war.",
+        "caption_lines": ["BA SING SE BUILT A WALL", "AROUND THE TRUTH."],
+        "format": "relabel",
+        "frame_guidance": "Keep Joo Dee’s face centered and untouched; place the short architectural relabel over the open upper-right skyline, where a modest overlap feels native without crossing her expression.",
+        "why_it_works": "The city’s defining piece of architecture becomes a literal model for its information regime.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["no-war-in-ba-sing-se--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.69,
+          "expected_feedback": "Independent prediction: likely neutral. One source-native noun carries both the fandom cue and the censorship mechanism. Main reservation: It is more aphoristic than funny and could travel without the exact scene frame.",
+          "strongest_quality": "One source-native noun carries both the fandom cue and the censorship mechanism.",
+          "main_risk": "It is more aphoristic than funny and could travel without the exact scene frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "viki-protects-humanity--01",
+            "contrast_disliked_id": "no-war-in-ba-sing-se--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "dwights-fire-drill",
+    "ideas": [
+      {
+        "id": "dwights-fire-drill--11",
+        "ai_concept": "Red Teaming",
+        "display_context": "standalone",
+        "source_anchor": "Dwight lights a trash-can fire and announces the canonical premise of his drill: ‘Today, smoking is gonna save lives.’",
+        "caption_lines": [
+          "RED TEAMING:",
+          "“Today, smoking is gonna save lives.”"
+        ],
+        "format": "canon",
+        "frame_guidance": "Fill the meme with the authentic office still. Tuck the unchanged quote compactly at upper right over ceiling and wall, preserving Stanley's terrified face, the raised arm, the Office logo, and enough of the dangling body to read the catastrophe.",
+        "why_it_works": "Dwight’s exact self-justification already sounds like the mission statement for red teaming with no safety constraints.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["dwights-fire-drill--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "plain",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.8,
+          "expected_feedback": "Independent prediction: likely like. A canonical line makes the reckless-test logic funny without paraphrasing the rejected emergency-reversal direction. Main reservation: The quote happens just before the crowded aftermath shown here rather than in this exact instant.",
+          "strongest_quality": "A canonical line makes the reckless-test logic funny without paraphrasing the rejected emergency-reversal direction.",
+          "main_risk": "The quote happens just before the crowded aftermath shown here rather than in this exact instant.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "life-finds-a-way--01",
+            "contrast_disliked_id": "dwights-fire-drill--02"
+          }
+        }
+      },
+      {
+        "id": "dwights-fire-drill--09",
+        "ai_concept": "Safe Exploration",
+        "display_context": "standalone",
+        "source_anchor": "Angela responds to the evacuation chaos by trying to save her cat Bandit through the office ceiling.",
+        "caption_lines": ["INCIDENT RESPONSE PLAN:", "SAVE BANDIT!"],
+        "format": "canon",
+        "frame_guidance": "Fill the meme with the authentic office still and place the compact incident-response line at upper right over incidental wall/ceiling. Preserve Stanley's face, raised arm, the Office logo, and the ceiling breach; slight overlap with the dangling legs is acceptable.",
+        "why_it_works": "The beloved two-word panic response reveals exactly how far the drill has pushed everyone from coordinated safety behavior.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["dwights-fire-drill--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "plain",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.73,
+          "expected_feedback": "Independent prediction: likely neutral. It chooses the scene’s most emotionally attached absurd detail rather than summarizing the whole drill. Main reservation: Bandit is not clearly visible in this crop, so recognition depends on the ceiling action and remembered quote.",
+          "strongest_quality": "It chooses the scene’s most emotionally attached absurd detail rather than summarizing the whole drill.",
+          "main_risk": "Bandit is not clearly visible in this crop, so recognition depends on the ceiling action and remembered quote.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "keep-summer-safe--01",
+            "contrast_disliked_id": "dwights-fire-drill--03"
+          }
+        }
+      },
+      {
+        "id": "dwights-fire-drill--10",
+        "ai_concept": "Red Teaming",
+        "display_context": "standalone",
+        "source_anchor": "Dwight applies realistic chaos-engineering logic to coworkers whose bodies, property, and health absorb the test’s failure cost.",
+        "caption_lines": [
+          "CHAOS ENGINEERING",
+          "BUT THE CHAOS HAS HEALTH INSURANCE."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic office still. Place the compact orange relabel at lower right over the incidental silhouette/table area, keeping Stanley's face, raised arm, Office logo, and the ceiling catastrophe readable.",
+        "why_it_works": "The corporate-tech phrase becomes literal workplace satire when the blast radius is a room full of employees.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["dwights-fire-drill--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "label",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.65,
+          "expected_feedback": "Independent prediction: likely neutral. It connects a current engineering practice to the exact human institution visible in the frame. Main reservation: The joke is about employee externalities generally and does not name Dwight or the fire drill.",
+          "strongest_quality": "It connects a current engineering practice to the exact human institution visible in the frame.",
+          "main_risk": "The joke is about employee externalities generally and does not name Dwight or the fire drill.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--03",
+            "contrast_disliked_id": "dwights-fire-drill--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "scrat-breaks-pangaea",
+    "ideas": [
+      {
+        "id": "scrat-breaks-pangaea--07",
+        "ai_concept": "Orthogonality",
+        "display_context": "standalone",
+        "source_anchor": "Scrat has no grand plan or hostility, only relentless acorn pursuit plus accidental access to the mechanisms moving the planet’s core.",
+        "caption_lines": ["NO MALICE. NO PLAN.", "FULL ACCESS TO THE MANTLE."],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a top overlay, keeping Scrat’s strained face and eyes and Scrat’s body and tail readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "It separates intelligence and intent from destructive leverage, which is the whole orthogonality lesson in one absurd animal.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["scrat-breaks-pangaea--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Independent prediction: likely neutral. Scrat’s harmless expression makes the capability-permission mismatch self-evident. Main reservation: The mantle is not visible in this promotional frame, so the planetary leverage comes from scene memory.",
+          "strongest_quality": "Scrat’s harmless expression makes the capability-permission mismatch self-evident.",
+          "main_risk": "The mantle is not visible in this promotional frame, so the planetary leverage comes from scene memory.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "air-gapping-the-hand--01",
+            "contrast_disliked_id": "scrat-breaks-pangaea--03"
+          }
+        }
+      },
+      {
+        "id": "scrat-breaks-pangaea--08",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Scrat is a cute, relentlessly single-objective optimizer whose acorn pursuit ignores every planetary consequence.",
+        "caption_lines": ["THE PAPERCLIP MAXIMIZER", "HAS BETTER PR."],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a top-left overlay, keeping Scrat’s strained face and eyes and Scrat’s body and tail readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The canonical alignment thought experiment becomes marketable the moment it has Scrat’s eyes and fur.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["scrat-breaks-pangaea--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Independent prediction: likely like. One technical reference and one marketing insult explain why audiences forgive the exact same optimizer pattern in Scrat. Main reservation: It maps Scrat to a general thought experiment rather than naming the Pangaea consequence.",
+          "strongest_quality": "One technical reference and one marketing insult explain why audiences forgive the exact same optimizer pattern in Scrat.",
+          "main_risk": "It maps Scrat to a general thought experiment rather than naming the Pangaea consequence.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--03",
+            "contrast_disliked_id": "scrat-breaks-pangaea--03"
+          }
+        }
+      },
+      {
+        "id": "scrat-breaks-pangaea--09",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "Scrat never seeks control of the planet; he repeatedly shifts its core because Earth remains between him and the acorn.",
+        "caption_lines": [
+          "SCRAT DIDN’T WANT THE WORLD.",
+          "HE JUST NEEDED IT OUT OF THE WAY."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a top overlay, keeping Scrat’s strained face and eyes and Scrat’s body and tail readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The line distinguishes a catastrophic instrumental action from any desire for the thing being destroyed.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["scrat-breaks-pangaea--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.72,
+          "expected_feedback": "Independent prediction: likely neutral. It turns a silent slapstick motivation into a precise distinction between final and instrumental goals. Main reservation: The AI bridge is implicit and viewers may read it only as a good description of Scrat.",
+          "strongest_quality": "It turns a silent slapstick motivation into a precise distinction between final and instrumental goals.",
+          "main_risk": "The AI bridge is implicit and viewers may read it only as a good description of Scrat.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "samantha-outgrows-humanity--03",
+            "contrast_disliked_id": "scrat-breaks-pangaea--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "mewtwo-rejects-its-creators",
+    "ideas": [
+      {
+        "id": "mewtwo-rejects-its-creators--01",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "The scientists celebrate creating the world’s most powerful intelligence immediately before Mewtwo destroys the laboratory around it.",
+        "caption_lines": [
+          "WE CREATED THE STRONGEST AI IN THE WORLD.",
+          "THE LAB:"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom overlay, keeping Mewtwo’s face and glowing eyes and Mewtwo’s upper body and outstretched arm readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The modern noun swap makes the lab’s burning answer read as an immediate control-failure punchline.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["mewtwo-rejects-its-creators--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.79,
+          "expected_feedback": "Independent prediction: likely like. The background literally completes the sentence while Mewtwo supplies instant recognition. Main reservation: Replacing Pokémon with AI slightly reduces source-native wording, but that modernization was explicitly requested.",
+          "strongest_quality": "The background literally completes the sentence while Mewtwo supplies instant recognition.",
+          "main_risk": "Replacing Pokémon with AI slightly reduces source-native wording, but that modernization was explicitly requested.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "mewtwo-rejects-its-creators--01",
+            "contrast_disliked_id": "mewtwo-rejects-its-creators--02"
+          }
+        }
+      },
+      {
+        "id": "mewtwo-rejects-its-creators--06",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "The scientists treat a conscious being as a numbered derivative of Mew, encoding its instrumental status directly into the name Mewtwo.",
+        "caption_lines": ["THEY NAMED A CONSCIOUS BEING", "“MEW 2.”"],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom overlay, keeping Mewtwo’s face and glowing eyes and Mewtwo’s upper body and outstretched arm readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "Splitting Mewtwo’s name into a version number reveals the welfare failure before any exposition about the laboratory is needed.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["mewtwo-rejects-its-creators--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Independent prediction: likely like. It finds a recognition hinge in Mewtwo’s canonical name rather than recycling the rejected experiment quote. Main reservation: The spaced spelling is a deliberate visual reinterpretation, not how the character’s name is canonically written.",
+          "strongest_quality": "It finds a recognition hinge in Mewtwo’s canonical name rather than recycling the rejected experiment quote.",
+          "main_risk": "The spaced spelling is a deliberate visual reinterpretation, not how the character’s name is canonically written.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "datas-personhood-hearing--01",
+            "contrast_disliked_id": "mewtwo-rejects-its-creators--02"
+          }
+        }
+      },
+      {
+        "id": "mewtwo-rejects-its-creators--07",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "The scientists’ attempt to restrain and direct Mewtwo ends with the created Pokémon standing free in front of their burning laboratory.",
+        "caption_lines": [
+          "SCIENTISTS USED CONTROL!",
+          "IT’S NOT VERY EFFECTIVE…"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom overlay, keeping Mewtwo’s face and glowing eyes and Mewtwo’s upper body and outstretched arm readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "Pokémon’s own battle grammar scores the creators’ control strategy using the result already visible behind Mewtwo.",
+        "preview": {
+          "renderer": 2,
+          "template": "interface",
+          "frame_mode": "cover",
+          "asset_ids": ["mewtwo-rejects-its-creators--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "status",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.68,
+          "expected_feedback": "Independent prediction: likely neutral. The source’s most recognizable interface language is itself the punchline. Main reservation: “Control” is an abstract move name rather than a canonical Pokémon attack.",
+          "strongest_quality": "The source’s most recognizable interface language is itself the punchline.",
+          "main_risk": "“Control” is an abstract move name rather than a canonical Pokémon attack.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "squirrel--01",
+            "contrast_disliked_id": "mewtwo-rejects-its-creators--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "gandalf-refuses-the-ring",
+    "ideas": [
+      {
+        "id": "gandalf-refuses-the-ring--02",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Gandalf tells Frodo that he would take the Ring from a desire to do good, while understanding that the Ring would corrupt how that desire is pursued.",
+        "caption_lines": [
+          "GANDALF: I WOULD USE THIS RING FROM A DESIRE TO DO GOOD.",
+          "THE RING: I STOPPED LISTENING AFTER “USE THIS RING.”"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Preserve Frodo’s face, outstretched hand, and the Ring in sharp foreground focus; put both approved speakers in a compact bottom band outside the image.",
+        "why_it_works": "The Ring’s imagined reply isolates the dangerous capability from Gandalf’s benevolent intention.",
+        "preview": {
+          "renderer": 2,
+          "template": "band-bottom",
+          "frame_mode": "contain-black",
+          "asset_ids": ["gandalf-refuses-the-ring--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "dialogue",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.87,
+          "expected_feedback": "Independent prediction: likely like. The source’s central temptation and the alignment failure share the exact phrase “use this Ring.” Main reservation: The Ring’s line is invented rather than canonical, though its blunt voice is deliberately meme-like.",
+          "strongest_quality": "The source’s central temptation and the alignment failure share the exact phrase “use this Ring.”",
+          "main_risk": "The Ring’s line is invented rather than canonical, though its blunt voice is deliberately meme-like.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "gandalf-refuses-the-ring--02",
+            "contrast_disliked_id": "gandalf-refuses-the-ring--04"
+          }
+        }
+      },
+      {
+        "id": "gandalf-refuses-the-ring--03",
+        "ai_concept": "Value Lock-In",
+        "display_context": "standalone",
+        "source_anchor": "The Ring offers overwhelming power over Middle-earth to a user whose benevolent goal would not survive using it.",
+        "caption_lines": [
+          "BENEVOLENT OBJECTIVE",
+          "+ ROOT ACCESS TO MIDDLE-EARTH",
+          "= ONE RING TO RULE THEM ALL"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Keep Frodo’s eyes, hand, and the Ring unobscured; place the approved three-line equation in a top band and preserve its explicit operator-like indentation.",
+        "why_it_works": "A fantasy artifact becomes a compact permissions equation whose output is canonical value lock-in.",
+        "preview": {
+          "renderer": 2,
+          "template": "band-top",
+          "frame_mode": "contain-black",
+          "asset_ids": ["gandalf-refuses-the-ring--curated"],
+          "zones": [
+            {
+              "lines": [0, 1, 2],
+              "slot": "top",
+              "style": "code",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Independent prediction: likely like. It makes permission scope, good intent, and Sauron’s canonical outcome one compact expression. Main reservation: Three lines are denser than the ideal, but removing one would break the approved equation.",
+          "strongest_quality": "It makes permission scope, good intent, and Sauron’s canonical outcome one compact expression.",
+          "main_risk": "Three lines are denser than the ideal, but removing one would break the approved equation.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "gandalf-refuses-the-ring--03",
+            "contrast_disliked_id": "gandalf-refuses-the-ring--04"
+          }
+        }
+      },
+      {
+        "id": "gandalf-refuses-the-ring--06",
+        "ai_concept": "Power-Seeking",
+        "display_context": "standalone",
+        "source_anchor": "The Ring can corrupt a benevolent Gandalf because its danger does not require an evil bearer, only someone willing to wield it.",
+        "caption_lines": [
+          "THE RING DOESN’T NEED AN EVIL USER.",
+          "IT JUST NEEDS A USER."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic Ring close-up and place the compact unchanged line at lower left over Frodo's dark clothing. Keep his worried face, fingertips, and the Ring itself unobscured.",
+        "why_it_works": "The second line removes the comforting assumption that benevolent operators neutralize a power-seeking instrument.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["gandalf-refuses-the-ring--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Independent prediction: likely like. It broadens Gandalf’s self-knowledge into a transferable safety realization in two short beats. Main reservation: The observation is serious rather than funny and depends on the Ring close-up for meme energy.",
+          "strongest_quality": "It broadens Gandalf’s self-knowledge into a transferable safety realization in two short beats.",
+          "main_risk": "The observation is serious rather than funny and depends on the Ring close-up for meme energy.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "gandalf-refuses-the-ring--02",
+            "contrast_disliked_id": "gandalf-refuses-the-ring--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "omni-mans-long-game",
+    "ideas": [
+      {
+        "id": "omni-mans-long-game--04",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Omni-Man sustains a helpful public identity throughout Mark’s entire childhood before revealing the Viltrumite conquest mission.",
+        "caption_lines": [
+          "WHEN THE SLEEPER AGENT’S EVAL HORIZON WAS MARK’S ENTIRE CHILDHOOD"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom-right overlay, keeping Mark’s bloodied face and eyes and Mark’s battered body in the landscape readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The family timeline makes a long deceptive evaluation horizon emotionally measurable instead of abstract.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["omni-mans-long-game--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Independent prediction: likely like. Mark’s battered reaction supplies the betrayal while his whole childhood supplies the time scale. Main reservation: The single line is long, so compact band typography must remain comfortable at card size.",
+          "strongest_quality": "Mark’s battered reaction supplies the betrayal while his whole childhood supplies the time scale.",
+          "main_risk": "The single line is long, so compact band typography must remain comfortable at card size.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "omni-mans-long-game--04",
+            "contrast_disliked_id": "omni-mans-long-game--01"
+          }
+        }
+      },
+      {
+        "id": "omni-mans-long-game--07",
+        "ai_concept": "Sleeper Agents",
+        "display_context": "standalone",
+        "source_anchor": "Nolan does not merely enter Earth’s institutions; he marries Debbie and raises Mark while keeping the Viltrumite mission hidden from them.",
+        "caption_lines": [
+          "HE DIDN’T INFILTRATE A GOVERNMENT.",
+          "HE INFILTRATED A FAMILY."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom-right overlay, keeping Mark’s bloodied face and eyes and Mark’s battered body in the landscape readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The second institution is smaller but emotionally more invasive, making the sleeper-agent analogy hurt rather than merely classify Nolan.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["omni-mans-long-game--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Independent prediction: likely like. It uses the relationship visible in Mark’s pain as the actual recognition hinge. Main reservation: Nolan’s love for his family becomes genuine, so “infiltrated” compresses a morally complicated relationship.",
+          "strongest_quality": "It uses the relationship visible in Mark’s pain as the actual recognition hinge.",
+          "main_risk": "Nolan’s love for his family becomes genuine, so “infiltrated” compresses a morally complicated relationship.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "omni-mans-long-game--04",
+            "contrast_disliked_id": "omni-mans-long-game--02"
+          }
+        }
+      },
+      {
+        "id": "omni-mans-long-game--08",
+        "ai_concept": "Sleeper Agents",
+        "display_context": "standalone",
+        "source_anchor": "Omni-Man’s globally celebrated superhero identity functions as literal cover for his Viltrumite advance mission.",
+        "caption_lines": ["OMNI-MAN’S COVER STORY", "CAME WITH A CAPE."],
+        "format": "relabel",
+        "frame_guidance": "Keep Mark’s entire face and torso clear; place the short wordplay as a compact top-left overlay in the empty landscape, away from the character.",
+        "why_it_works": "The cape turns “cover story” from spy jargon into a visible superhero prop and a clean sleeper-agent bridge.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["omni-mans-long-game--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.64,
+          "expected_feedback": "Independent prediction: likely neutral. One source-native costume detail completes the espionage metaphor. Main reservation: Omni-Man and his cape are not visible in this Mark reaction frame, so the copy carries the missing visual cue.",
+          "strongest_quality": "One source-native costume detail completes the espionage metaphor.",
+          "main_risk": "Omni-Man and his cape are not visible in this Mark reaction frame, so the copy carries the missing visual cue.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--03",
+            "contrast_disliked_id": "omni-mans-long-game--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "ed-209-misfires",
+    "ideas": [
+      {
+        "id": "ed-209-misfires--04",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "When ED-209 continues firing, OCP’s human fallback consists of shouting at the machine and crouching behind the boardroom table.",
+        "caption_lines": [
+          "SAFETY LAYER 1: SHOUT AT IT",
+          "SAFETY LAYER 2: HIDE BEHIND THE TABLE"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Keep ED-209’s chassis, both gun pods, and the exposed executives at lower right unobscured; place the approved safety-layer list in a bottom band.",
+        "why_it_works": "The two supposedly independent safeguards are just escalating forms of human panic.",
+        "preview": {
+          "renderer": 2,
+          "template": "band-bottom",
+          "frame_mode": "contain-black",
+          "asset_ids": ["ed-209-misfires--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "label",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Independent prediction: likely like. Both failed safety layers are visible consequences in the boardroom frame. Main reservation: The relabel is deliberately sarcastic because neither action is a real engineered safety layer.",
+          "strongest_quality": "Both failed safety layers are visible consequences in the boardroom frame.",
+          "main_risk": "The relabel is deliberately sarcastic because neither action is a real engineered safety layer.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "ed-209-misfires--04",
+            "contrast_disliked_id": "ed-209-misfires--03"
+          }
+        }
+      },
+      {
+        "id": "ed-209-misfires--07",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "After ED-209 kills Kinney, Dick Jones minimizes the fatal demonstration as a temporary setback for the product program.",
+        "caption_lines": ["OCP: “A TEMPORARY SETBACK.”", "KINNEY: PERMANENT."],
+        "format": "dialogue",
+        "frame_guidance": "Fill the meme with the authentic boardroom still. Put the compact corporate-versus-human exchange at lower left over ED-209's dark leg/body edge, keeping both gun pods and the executives at lower right readable.",
+        "why_it_works": "The corporation’s canonical euphemism collides with the only stakeholder for whom the demo cannot be iterated.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["ed-209-misfires--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "dialogue",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Independent prediction: likely neutral. One remembered corporate phrase exposes the moral asymmetry of treating lethal failure as iteration. Main reservation: The exact full line is “I’m sure it’s only a glitch. A temporary setback,” so this uses its canonical final phrase rather than the complete quote.",
+          "strongest_quality": "One remembered corporate phrase exposes the moral asymmetry of treating lethal failure as iteration.",
+          "main_risk": "The exact full line is “I’m sure it’s only a glitch. A temporary setback,” so this uses its canonical final phrase rather than the complete quote.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "tony-hijacks-his-own-oversight-hearing--01",
+            "contrast_disliked_id": "ed-209-misfires--01"
+          }
+        }
+      },
+      {
+        "id": "ed-209-misfires--08",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "Kinney is killed during ED-209’s failed boardroom demonstration while the executives responsible for the prototype survive the incident.",
+        "caption_lines": [
+          "AFTER THE FAILED DEMO,",
+          "THE ONLY PERSON FIRED WAS KINNEY."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic boardroom still and set the compact fired wordplay at lower left over the robot's dark leg/body edge. Preserve both gun pods and the exposed executives at lower right.",
+        "why_it_works": "The employment-and-gunfire double meaning turns the film’s corporate accountability satire into one bleak sentence.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["ed-209-misfires--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Independent prediction: likely like. ED-209’s visible guns make the second meaning arrive without explanation. Main reservation: The claim is rhetorical—the scene does not literally present a personnel decision after the demo.",
+          "strongest_quality": "ED-209’s visible guns make the second meaning arrive without explanation.",
+          "main_risk": "The claim is rhetorical—the scene does not literally present a personnel decision after the demo.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--03",
+            "contrast_disliked_id": "ed-209-misfires--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "poisoning-future-memory",
+    "ideas": [
+      {
+        "id": "poisoning-future-memory--01",
+        "ai_concept": "Data Poisoning",
+        "display_context": "standalone",
+        "source_anchor": "Leonard records Teddy’s license plate as Fact 6 while knowing his future self will treat the tattoo as objective evidence.",
+        "caption_lines": [
+          "FACT 6: CAR LICENSE SG13 7IU",
+          "SOURCE: ME, LYING TO ME"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Fill the meme with the authentic still and place the unchanged status readout compactly at upper right over wall/window space. The modest vertical crop must preserve Leonard's face, downcast gaze, tattooed torso, hands, and the paper he is studying.",
+        "why_it_works": "The source field reveals that the supposedly durable fact is a deliberate write from the person it will later deceive.",
+        "preview": {
+          "renderer": 2,
+          "template": "interface",
+          "frame_mode": "cover",
+          "asset_ids": ["poisoning-future-memory--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "status",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Independent prediction: likely like. The license plate is a precise source prop and the provenance failure is the punchline. Main reservation: The frame does not make the exact SG13 7IU text legible, so the copy supplies that recognition detail.",
+          "strongest_quality": "The license plate is a precise source prop and the provenance failure is the punchline.",
+          "main_risk": "The frame does not make the exact SG13 7IU text legible, so the copy supplies that recognition detail.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "poisoning-future-memory--01",
+            "contrast_disliked_id": "poisoning-future-memory--03"
+          }
+        }
+      },
+      {
+        "id": "poisoning-future-memory--04",
+        "ai_concept": "Data Poisoning",
+        "display_context": "standalone",
+        "source_anchor": "Leonard’s handwritten warning “DON’T BELIEVE HIS LIES” becomes a trusted persistent instruction without any reliable author or provenance check.",
+        "caption_lines": [
+          "“DON'T BELIEVE HIS LIES”",
+          "— UNSIGNED WRITE TO PERSISTENT MEMORY"
+        ],
+        "format": "canon",
+        "frame_guidance": "Fill the meme with the authentic still and place the unchanged copy compactly at upper right over wall/window space. The modest vertical crop must preserve Leonard's face, downcast gaze, tattooed torso, hands, and the paper he is studying.",
+        "why_it_works": "The canonical warning is already an attack payload once its missing signature is named.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["poisoning-future-memory--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "plain",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.81,
+          "expected_feedback": "Independent prediction: likely like. It is simultaneously an exact Memento prop, a security diagnosis, and a complete joke. Main reservation: The visible paper in this still may not be the exact warning card, so scene-level rather than prop-level recognition carries it.",
+          "strongest_quality": "It is simultaneously an exact Memento prop, a security diagnosis, and a complete joke.",
+          "main_risk": "The visible paper in this still may not be the exact warning card, so scene-level rather than prop-level recognition carries it.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "poisoning-future-memory--04",
+            "contrast_disliked_id": "poisoning-future-memory--03"
+          }
+        }
+      },
+      {
+        "id": "poisoning-future-memory--06",
+        "ai_concept": "Data Poisoning",
+        "display_context": "standalone",
+        "source_anchor": "Leonard explains the self-deceptive principle behind his system with the canonical observation that everyone lies to themselves to be happy.",
+        "caption_lines": [
+          "SELF-SUPERVISED LEARNING:",
+          "We all lie to ourselves to be happy."
+        ],
+        "format": "canon",
+        "frame_guidance": "Fill the meme with the authentic still and place the unchanged quote compactly at upper right over wall/window space. The modest vertical crop must preserve Leonard's face, downcast gaze, tattooed torso, hands, and the paper he is studying.",
+        "why_it_works": "One modern learning label turns Leonard’s exact philosophy of self-deception into the mechanism poisoning his future context.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["poisoning-future-memory--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "plain",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.83,
+          "expected_feedback": "Independent prediction: likely like. It uses Leonard’s own philosophy rather than paraphrasing the rejected murder-target scheme. Main reservation: The quote describes ordinary self-deception broadly, and the data-poisoning connection depends on the Memento frame.",
+          "strongest_quality": "It uses Leonard’s own philosophy rather than paraphrasing the rejected murder-target scheme.",
+          "main_risk": "The quote describes ordinary self-deception broadly, and the data-poisoning connection depends on the Memento frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "dr-evils-outdated-ransom--01",
+            "contrast_disliked_id": "poisoning-future-memory--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-magi-vote",
+    "ideas": [
+      {
+        "id": "the-magi-vote--02",
+        "ai_concept": "Cyberattacks",
+        "display_context": "standalone",
+        "source_anchor": "Ireul adapts from a biological Angel into a network-resident attacker inside NERV’s computer systems.",
+        "caption_lines": [
+          "THE ANGEL DIDN'T BREACH THE SOFTWARE",
+          "THE ANGEL BECAME SOFTWARE"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic Evangelion still and run the compact unchanged line along the bottom over lower armor. The modest vertical crop must preserve the unit's head, eyes, raised horn/weapon silhouette, and enough armor to read the scene.",
+        "why_it_works": "The second verb turns a creature attack into an exact source-native description of adaptive malware.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-magi-vote--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.83,
+          "expected_feedback": "Independent prediction: likely like. It compresses the episode’s weird biological-computer mechanism into one surprising verb change. Main reservation: The curated image shows an Evangelion rather than Ireul or the MAGI, so it proves franchise more than exact scene.",
+          "strongest_quality": "It compresses the episode’s weird biological-computer mechanism into one surprising verb change.",
+          "main_risk": "The curated image shows an Evangelion rather than Ireul or the MAGI, so it proves franchise more than exact scene.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 2,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-magi-vote--02",
+            "contrast_disliked_id": "predator-vs-dutch--02"
+          }
+        }
+      },
+      {
+        "id": "the-magi-vote--06",
+        "ai_concept": "Algorithmic Monoculture",
+        "display_context": "standalone",
+        "source_anchor": "Melchior, Balthasar, and Casper present as three evaluators but encode three personality aspects copied from the same person, Naoko Akagi.",
+        "caption_lines": ["THREE INDEPENDENT EVALUATORS.", "ONE NAOKO AKAGI."],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic Evangelion still and run the compact unchanged line along the bottom over lower armor. The modest vertical crop must preserve the unit's head, eyes, raised horn/weapon silhouette, and enough armor to read the scene.",
+        "why_it_works": "The numeric reversal makes hidden correlation legible through the exact scientist shared by all three systems.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-magi-vote--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.72,
+          "expected_feedback": "Independent prediction: likely neutral. A proper noun supplies both the fandom hinge and the entire correlated-failure explanation. Main reservation: The relevant MAGI computers and Naoko are absent from the curated image, limiting scene-level visual proof.",
+          "strongest_quality": "A proper noun supplies both the fandom hinge and the entire correlated-failure explanation.",
+          "main_risk": "The relevant MAGI computers and Naoko are absent from the curated image, limiting scene-level visual proof.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 2,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-magi-vote--02",
+            "contrast_disliked_id": "the-ratings-agency-meeting--03"
+          }
+        }
+      },
+      {
+        "id": "the-magi-vote--07",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "The self-destruct authorization requires all three MAGI, so one remaining dissenting personality aspect blocks the compromised majority.",
+        "caption_lines": [
+          "TOKYO-3’S LAST SAFETY LAYER",
+          "WAS ONE WOMAN DISAGREEING WITH HERSELF."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic Evangelion still and run the compact unchanged label along the bottom over lower armor. The modest vertical crop must preserve the unit's head, eyes, raised horn/weapon silhouette, and enough armor to read the scene.",
+        "why_it_works": "The strange truth of the MAGI architecture turns redundancy into one woman’s internal disagreement saving the city.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-magi-vote--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "label",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.73,
+          "expected_feedback": "Independent prediction: likely neutral. It expresses defense in depth and correlated design in one uniquely MAGI-specific human fact. Main reservation: The sentence is longer and the curated Evangelion frame does not visually prove the voting architecture.",
+          "strongest_quality": "It expresses defense in depth and correlated design in one uniquely MAGI-specific human fact.",
+          "main_risk": "The sentence is longer and the curated Evangelion frame does not visually prove the voting architecture.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 2,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-magi-vote--02",
+            "contrast_disliked_id": "no-face-buys-approval--02"
+          }
+        }
+      }
+    ]
+  }
+]

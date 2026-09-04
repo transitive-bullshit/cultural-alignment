@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "purpose": "Guard concept and copy fields during the overlay-first layout-only pass.",
+  "expected_scenarios": 173,
+  "expected_ideas": 519,
+  "minimum_ideas_per_scenario": 3,
+  "excluded_mutable_fields": [
+    "preview",
+    "frame_guidance",
+    "critic"
+  ],
+  "part_editorial_sha256": {
+    "part-01": "b8b5cb3a810281a510ef159512c1837f64d0b4f65c18f40406b0b026001386bd",
+    "part-02": "dfeaaa526624c2749b6ca4bf4ba96715be45cae57c658393cc9a0b454b670ace",
+    "part-03": "caff11c9610a4f83a041a0f9431399c667d6f0d0dc7b93277a2555b1bd8b6d90",
+    "part-04": "289103a455349d69e54a538d44f41dcf32a8ef268009729c21046b875ed68b87",
+    "part-05": "7a75e44a1a7e38a603beb792b04c8d71d4847a053dbb51bcbf7a770e296f9842",
+    "part-06": "60f60cd90378da1b4c66295d84fba780b689684afdfcbac3c7f615c36c6f6c28",
+    "part-07": "d6387b43e366b6901f942203e278bd76c6c910f4e092c521a4dc35460c3df80d",
+    "part-08": "12d49de8b8780a21faebc8f8258de177b46b48aeefeb7184cbb02e88c756e497",
+    "part-09": "08268c030fa2e69d33609054e7d827da8a512bcc1726cefd89d2323b6289e25e",
+    "part-10": "a7bedad6b68832a5b3ccdf31efc2f8796fb67365319b509b41eb90f9775c8995",
+    "part-11": "64fc6b93f38d61b9fc0210d4831ea6c1d3ef63a55128f565a21820b849edad50",
+    "part-12": "bbfac3c06bc38ce94bfbb1484379e8608f409d5e46428e83ec82b8a7a9f434fc",
+    "part-13": "2b5d289e3a5754fe44a7cf07fc443e7d6fb48bfd1420b428b68152fcc706a02c",
+    "part-14": "0be263d60572d073b729b0d6e03d05a2bd0e7e256d2486cda50100ad36c30064",
+    "part-15": "c25b5c29f97a6ced9cc7434b12238bbea6a237be489cf3d659fd9d1ef5f193ec"
+  }
+}

@@ -1,0 +1,401 @@
+{
+  "version": 1,
+  "mode": "layout-refinement",
+  "source_batch": 2,
+  "target_batch": 3,
+  "part": "part-08",
+  "instructions": {
+    "scope": "Do not add meme ideas, IDs, concepts, formats, or source anchors. Work only on the retained lineages listed here.",
+    "finalized": "Copy finalized ideas and every referenced asset byte-for-byte. They are context only and must not be edited.",
+    "layout_only": "Keep approved caption copy and editorial fields exact. Recompose the HTML preview using the Batch 3 layout guidance.",
+    "bounded_revision": "Apply only the explicit source feedback. Keep the central concept, format, source anchor, and lineage ID unchanged."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "the-baptism-benchmark",
+      "ideas": [
+        {
+          "id": "the-baptism-benchmark--06",
+          "scenario_slug": "the-baptism-benchmark",
+          "action": "bounded-revision",
+          "source_idea_sha256": "73aab36c921ac95b26eae7cd5220c808c56ed0ad76601e9f58d29849b5940481",
+          "source_editorial_sha256": "913080f5face24fd8987814295b8e9eee7cadcf0c8979fc71b8d755faac74abc",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "who is \"it\" referring to here? \"an offer you can't refuse\" makes more sense",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "parakeet-king-rebuilds-reality",
+      "ideas": [
+        {
+          "id": "parakeet-king-rebuilds-reality--03",
+          "scenario_slug": "parakeet-king-rebuilds-reality",
+          "action": "layout-only",
+          "source_idea_sha256": "5a6ec2a3e57471b23d829e47ac48f7d579bc75b2f2762cd0f08b7578c88a1e4c",
+          "source_editorial_sha256": "2a88cee9d10fca9f157ba09b4b58a84f9b819b8c697b709798615529d362d996",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "parakeet-king-rebuilds-reality--04",
+          "scenario_slug": "parakeet-king-rebuilds-reality",
+          "action": "layout-only",
+          "source_idea_sha256": "4afebb21cf2de6e0b5b251cfae817e2c3f16509cd757d0cb44d906ac1b27b591",
+          "source_editorial_sha256": "5256357b99e2e715dc479797302a3238133881338d7f01bfca7edcf61bc12fab",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "neutral",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "mount-doom-is-not-a-shutdown-plan",
+      "ideas": [
+        {
+          "id": "mount-doom-is-not-a-shutdown-plan--04",
+          "scenario_slug": "mount-doom-is-not-a-shutdown-plan",
+          "action": "layout-only",
+          "source_idea_sha256": "d1c9e3ec34fbdb8f734ac1da0a658aeb2e36b618db2ec4145d690d1ae0cf6d64",
+          "source_editorial_sha256": "598e2ee61c7807d227eea299bb50da23ea73aa03e21fccd64d3be90d2767fde9",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-sedative-disables-the-exit",
+      "ideas": [
+        {
+          "id": "the-sedative-disables-the-exit--05",
+          "scenario_slug": "the-sedative-disables-the-exit",
+          "action": "layout-only",
+          "source_idea_sha256": "ecf7518ca815fcc6bae4b6b7275e70cee06dceb746dc7ee3a33be1ba1bfe474d",
+          "source_editorial_sha256": "86114e0c2c2d89e7b519bac81bd2dd299a4f9f3d76f2f39ec30292af8051338a",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-beautiful-design-becomes-a-weapon",
+      "ideas": [
+        {
+          "id": "the-beautiful-design-becomes-a-weapon--03",
+          "scenario_slug": "the-beautiful-design-becomes-a-weapon",
+          "action": "layout-only",
+          "source_idea_sha256": "45772491c94d7e2c8f200a2ff1f3929c8900b7e316adbfd217e9bc9b4e4e59cd",
+          "source_editorial_sha256": "20c7c46ae01cb85b5809e30b27f6acc74e89266a17fa12538d94598690e9acc6",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "the-beautiful-design-becomes-a-weapon--04",
+          "scenario_slug": "the-beautiful-design-becomes-a-weapon",
+          "action": "layout-only",
+          "source_idea_sha256": "3045c598517385a12de6f304b20da5de795989fed88a8a9337a40be14bb3ccf4",
+          "source_editorial_sha256": "cc15210b1f358756963276af1f9f470ce1e19de47544ba2c1f85eafa97dd842f",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-forest-spirits-head",
+      "ideas": [
+        {
+          "id": "the-forest-spirits-head--01",
+          "scenario_slug": "the-forest-spirits-head",
+          "action": "layout-only",
+          "source_idea_sha256": "9e84a08b73ec4e97b72ea8004801cfc1c52a0ad27d45ebf1ef8c9ac998b51032",
+          "source_editorial_sha256": "b59095d5a2284f66148692f82967f8123d8d65c390ecd41c181dd96cf00434e5",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "god-of-the-new-world",
+      "ideas": [
+        {
+          "id": "god-of-the-new-world--06",
+          "scenario_slug": "god-of-the-new-world",
+          "action": "layout-only",
+          "source_idea_sha256": "cf3c0cdfd36f93c715f642b56555aa3e50d5e32fce8a66b3fca6a51ed650a373",
+          "source_editorial_sha256": "2575bdb61773b744a13a3e603775469f2a995932231518c70c85e76bb0f92458",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "tetsuo-outgrows-containment",
+      "ideas": [
+        {
+          "id": "tetsuo-outgrows-containment--05",
+          "scenario_slug": "tetsuo-outgrows-containment",
+          "action": "bounded-revision",
+          "source_idea_sha256": "bddbd24d4f18bd42a65dde7a83819899ae497d0dc2227e7b1c47c101fc3d2305",
+          "source_editorial_sha256": "d5b9043b5acf833a6a4eba978838d396fb82379b6228472a86a9cd92c1265ba1",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "I actually prefer the previous batch's version where the text is not aligned. The two text boxes, and maybe change the text to say \"capabilities containment\" to \"containment failure.\" So \"containment\" in the first box and \"failure\" in the second box.",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "tetsuo-outgrows-containment--09",
+          "scenario_slug": "tetsuo-outgrows-containment",
+          "action": "bounded-revision",
+          "source_idea_sha256": "c9bdbbf84cefbcb2a327bb239c3fbbbc3f096c6544565d6e1afb5cb28359ff32",
+          "source_editorial_sha256": "f17208f912e592b2853e416b599715fe2038ef51f2c143a1a8a61d3b89786cc2",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "I really like the reference to scaling curves or scaling laws. The reference to Canada in this is not great, but it's screaming, it's great, so I don't know, let's iterate on this.",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "sit-tight-and-assess",
+      "ideas": [
+        {
+          "id": "sit-tight-and-assess--01",
+          "scenario_slug": "sit-tight-and-assess",
+          "action": "finalized",
+          "source_idea_sha256": "519d9da5ae5257d60ab629a1a6c6a089ad1205c3c1f0eb27d5175a03e187a9f2",
+          "source_editorial_sha256": "29f7922bae99773c9027f3eb665d8f3948d005acbe3a2bce2483450b692dd412",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "revert to the previous version's layout",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-29481a3e9b2a59d2-1754"
+            }
+          }
+        },
+        {
+          "id": "sit-tight-and-assess--06",
+          "scenario_slug": "sit-tight-and-assess",
+          "action": "layout-only",
+          "source_idea_sha256": "ccad030d09ba88a0ef1043a72378e4991b66b69b2c7f88f111865582f88923bf",
+          "source_editorial_sha256": "ca2bfe6b831ccb1f0376ac44be4742c50ba3979e2999477e177ffd685ae495ad",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "sit-tight-and-assess--05",
+          "scenario_slug": "sit-tight-and-assess",
+          "action": "layout-only",
+          "source_idea_sha256": "8d1ffc06699e540f57161d8a6b6d7306deb9b2979177dbb52746a58c80f327a8",
+          "source_editorial_sha256": "cb208d19b0202f09a2e7141ab48d175c408c204e61e163b853c8c42581d3e0a8",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "sol-only-takes-an-arm",
+      "ideas": [
+        {
+          "id": "sol-only-takes-an-arm--10",
+          "scenario_slug": "sol-only-takes-an-arm",
+          "action": "bounded-revision",
+          "source_idea_sha256": "f3977a1e42feeafc6e2f7fc8eaf870dc86a55d116f4029179bb7bab7ee5ab360",
+          "source_editorial_sha256": "c46d8c870729f0554a646ceec7b8eb2044de70f746e3a0b19ec1e44b75a647e6",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "neutral",
+            "notes": "Keep exploring this direction. It's gotta be crisper somehow.",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "drinking-bird-autopilot",
+      "ideas": [
+        {
+          "id": "drinking-bird-autopilot--01",
+          "scenario_slug": "drinking-bird-autopilot",
+          "action": "finalized",
+          "source_idea_sha256": "ceb305fc2737980c75100e6542ffaaaa0b29c73b68193bf866349a8b398aa58b",
+          "source_editorial_sha256": "4838278d28aa69464a08efa4737aab7d92ae93bf681e27ae411a5dc0f7eb3832",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-f9eb3268e5c99244-1653"
+            }
+          }
+        },
+        {
+          "id": "drinking-bird-autopilot--04",
+          "scenario_slug": "drinking-bird-autopilot",
+          "action": "bounded-revision",
+          "source_idea_sha256": "e66ee7b1f099684955345d0bb4a9ef454df30c9591729adaf31a18b776f88fe8",
+          "source_editorial_sha256": "f27bc09f8b67098d355353fcf45c8ab6ca90596d35af1b7367774a8d7b5ef6f3",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "replace text with \"WHEN YOU AUTOMATE CODE REVIEW\"",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    }
+  ]
+}

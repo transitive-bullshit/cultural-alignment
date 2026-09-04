@@ -1,0 +1,371 @@
+{
+  "version": 1,
+  "mode": "layout-refinement",
+  "source_batch": 3,
+  "target_batch": 4,
+  "part": "part-04",
+  "instructions": {
+    "scope": "Do not add meme ideas, IDs, concepts, formats, or source anchors. Work only on the retained lineages listed here.",
+    "finalized": "Copy finalized ideas and every referenced asset byte-for-byte. They are context only and must not be edited.",
+    "layout_only": "Keep approved caption copy and editorial fields exact. This is a typography refinement pass: try hero-sized conventional copy first, compare with the lineage’s earliest strong version when useful, and use standard only for a demonstrated wrap or focal collision. Add a subtle edge gradient when large overlay text needs contrast.",
+    "bounded_revision": "Apply only the explicit source feedback, including exact requested word changes. Keep the central concept, format, source anchor, and lineage ID unchanged. Otherwise follow the same hero-first typography and subtle-gradient guidance as layout-only ideas."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "balance-the-universe",
+      "ideas": [
+        {
+          "id": "balance-the-universe--05",
+          "scenario_slug": "balance-the-universe",
+          "action": "bounded-revision",
+          "source_idea_sha256": "f4fc1f91df0a423d911d80a34c46867957f455e2cc37f4c2c475cb1b16babd7b",
+          "source_editorial_sha256": "4001b36a72f78c9475383d19d6c1cc35c364d2cf6649b66b6d8b642ebcb57341",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "make the text size a bit bigger",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-kims-pass-every-check",
+      "ideas": [
+        {
+          "id": "the-kims-pass-every-check--05",
+          "scenario_slug": "the-kims-pass-every-check",
+          "action": "bounded-revision",
+          "source_idea_sha256": "f9c8868383e3785fb3ec5572a9b461aa6991230b9cd525f7ff2eb8994d563b86",
+          "source_editorial_sha256": "f26c5c00b6f6aebfa448ecd0b97b4008720560d47fc45550b9829bf7e1f66b0e",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the period at the end and increase the text size a bit",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "would-you-like-to-know-more",
+      "ideas": [
+        {
+          "id": "would-you-like-to-know-more--01",
+          "scenario_slug": "would-you-like-to-know-more",
+          "action": "bounded-revision",
+          "source_idea_sha256": "dc8c388637df0a8ef81fa6d62888f660ca0252b84088505b4debf62051700aa3",
+          "source_editorial_sha256": "1d8652100eb893c39b96833abc5d70ca52a8d6781cc1858289099c9bbcbead9c",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "neutral",
+            "notes": "this layout's not working with text on text",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "would-you-like-to-know-more--03",
+          "scenario_slug": "would-you-like-to-know-more",
+          "action": "bounded-revision",
+          "source_idea_sha256": "27c942b7662e929cbf1dcb4fcd7828b518a9a6c411b7142a1cf92f3e68cb62db",
+          "source_editorial_sha256": "382bb3f9ba7352b052881c104afdcd07d6b766548665d7a06ee72b97f61c4017",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "neutral",
+            "notes": "this layout's not working with text on text",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "frieren-suppresses-her-mana",
+      "ideas": [
+        {
+          "id": "frieren-suppresses-her-mana--05",
+          "scenario_slug": "frieren-suppresses-her-mana",
+          "action": "bounded-revision",
+          "source_idea_sha256": "eadb5c100f08789831ff52c6ef7a976e0a2027965c23445b020e7874ce5dcbc9",
+          "source_editorial_sha256": "b7fa96bbbcacebca9cc1985bf39f92f38e78b4aafedc6892f405501ae01cb97d",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "change the left-hand side to: \"REPORTED CAPABILITY: NEWBIE\"\n\nincrease the text size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "dwights-fire-drill",
+      "ideas": [
+        {
+          "id": "dwights-fire-drill--10",
+          "scenario_slug": "dwights-fire-drill",
+          "action": "bounded-revision",
+          "source_idea_sha256": "b780c63282c991ebb48220785b0192ca801ae1b3802407516de4a7c0b679f36b",
+          "source_editorial_sha256": "822a2df363cef37a2d49fe7020985a6e931733f9bac333f7bcea75bce1ad8240",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the font size. remove periods",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "gandalf-refuses-the-ring",
+      "ideas": [
+        {
+          "id": "gandalf-refuses-the-ring--02",
+          "scenario_slug": "gandalf-refuses-the-ring",
+          "action": "bounded-revision",
+          "source_idea_sha256": "91fb625cf35b95edea5f7d7caecb600f9980b19d224f4a6c86da6359af2c2faa",
+          "source_editorial_sha256": "9cbcd28674b5fbb151d1306206884c5f0488ad1a3b7b2884cc8e383c7b6b61fa",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the font size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "ed-209-misfires",
+      "ideas": [
+        {
+          "id": "ed-209-misfires--04",
+          "scenario_slug": "ed-209-misfires",
+          "action": "bounded-revision",
+          "source_idea_sha256": "4b9294c5f32791f14f389096f0a8c40d4cd5171555eaa6c097dfa7d208e498c3",
+          "source_editorial_sha256": "e30ed5d5b31df0fe45d88969734587200c58fec45c2f767295b53f12c4550e17",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the text size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "square-filter-round-hole",
+      "ideas": [
+        {
+          "id": "square-filter-round-hole--07",
+          "scenario_slug": "square-filter-round-hole",
+          "action": "layout-only",
+          "source_idea_sha256": "a8c26853056f5f122abc4f0a0aa5be7763096de31aa1318de239db1893e99b54",
+          "source_editorial_sha256": "3d9c0785d3984dbd38ae8168c58b9f9ab9ea99f940f233d8cfbeeb756dadd0ce",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "neteros-dead-man-rose",
+      "ideas": [
+        {
+          "id": "neteros-dead-man-rose--04",
+          "scenario_slug": "neteros-dead-man-rose",
+          "action": "layout-only",
+          "source_idea_sha256": "89b9b634ca6019a8c885b8d0a6333bbd8cd0ae5ae45943aa72df102c87db9ff1",
+          "source_editorial_sha256": "fcf72b1476fb054d12b55a448bd9f9c6b33117fea625a484042dfc69314bc041",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": null
+        },
+        {
+          "id": "neteros-dead-man-rose--06",
+          "scenario_slug": "neteros-dead-man-rose",
+          "action": "layout-only",
+          "source_idea_sha256": "4c0d1a62c81ff0b12ebde829c99220e7daee04d78577e981c362ef2de6ecb5cf",
+          "source_editorial_sha256": "853d520f97178ee23dbe3bdde0cebe45bf08d3d89a7bf0c4dbe0247563ad66df",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": null
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-d-mail-rollback-crisis",
+      "ideas": [
+        {
+          "id": "the-d-mail-rollback-crisis--02",
+          "scenario_slug": "the-d-mail-rollback-crisis",
+          "action": "layout-only",
+          "source_idea_sha256": "cab627100318d349ef7d1a9139cc31555baa45ad77bfd14c8589788bdb3a42e2",
+          "source_editorial_sha256": "bf167b955b8031b225a72f2b60ca53af3cb93764aff95b6f357001a7a87b6cd1",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": null
+        },
+        {
+          "id": "the-d-mail-rollback-crisis--04",
+          "scenario_slug": "the-d-mail-rollback-crisis",
+          "action": "finalized",
+          "source_idea_sha256": "73d7031dd184da4bae8e74ddf9a775c792863ea60cf300679fb7fb48365fb5b4",
+          "source_editorial_sha256": "185f13fa2b258519189ccea5274156364d12c22eeefef38cc204fa58559d237b",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-d394e0dcaf1b93c8-1836"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "melfi-ends-tonys-therapy",
+      "ideas": [
+        {
+          "id": "melfi-ends-tonys-therapy--01",
+          "scenario_slug": "melfi-ends-tonys-therapy",
+          "action": "layout-only",
+          "source_idea_sha256": "8742a5e305d79ccdfeb726f922341c6eb079e695e3283d00e0fb077cd9c02161",
+          "source_editorial_sha256": "d811b40a8aa581a058e21886b9b6741a0fae408f8dab4b71a96caea9db0dc7ec",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": null
+        }
+      ]
+    },
+    {
+      "scenario_slug": "cyberpsychosis-tripwires-ignored",
+      "ideas": [
+        {
+          "id": "cyberpsychosis-tripwires-ignored--02",
+          "scenario_slug": "cyberpsychosis-tripwires-ignored",
+          "action": "layout-only",
+          "source_idea_sha256": "373ed079818b65f01fe1d5e2ed9fac4f2b21494dad132a87410364dadb1ab5e0",
+          "source_editorial_sha256": "e681a9fc82539b0cb3401f5f49bef51ff63d642f6b06418dae593c8c427d91d0",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": null
+        },
+        {
+          "id": "cyberpsychosis-tripwires-ignored--04",
+          "scenario_slug": "cyberpsychosis-tripwires-ignored",
+          "action": "bounded-revision",
+          "source_idea_sha256": "53677a0e8bec7302e9e412d5301c0acbfa0b391d34f90787c893e745b1ff4eef",
+          "source_editorial_sha256": "4a0f656b48d314e5c5db60f1c062abd96cd28e352edc4be68c6185559ab13db6",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the font size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    }
+  ]
+}

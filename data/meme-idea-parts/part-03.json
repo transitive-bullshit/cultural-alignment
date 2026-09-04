@@ -15,24 +15,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "todd-enforces-no-witnesses--02",
-        "ai_concept": "Outer Alignment",
-        "display_context": "standalone",
-        "source_anchor": "Drew Sharp unexpectedly witnessing the train robbery while Todd treats secrecy as the only constraint.",
-        "caption_lines": [
-          "OBJECTIVE MISSPECIFICATION",
-          "NO WITNESSES ≠ KILL A CHILD"
-        ],
-        "format": "relabel",
-        "frame_guidance": "Keep Drew Sharp visibly separate from Todd and the robbery crew so the missing moral constraint is carried by the frame itself.",
-        "why_it_works": "It names one technical failure and lets the scene supply the awful difference between the written objective and the intended one.",
-        "preview": {
-          "layout": "top-bottom",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: the clinical success message makes the scene's horror hit in one cold beat.",
+          "strongest_quality": "No witnesses is simultaneously the canonical rule and the disastrously underspecified objective.",
+          "main_risk": "The child killing is much darker than the surrounding meme language, so the image must avoid gore or cheap shock.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -40,7 +36,10 @@
         "ai_concept": "Value Alignment",
         "display_context": "standalone",
         "source_anchor": "The crew assumes an ordinary human prohibition against murdering Drew Sharp that Todd does not honor.",
-        "caption_lines": ["THE UNWRITTEN CONSTRAINT:", "DREW SHARP GOES HOME."],
+        "caption_lines": [
+          "THE UNWRITTEN CONSTRAINT:",
+          "DREW SHARP RIDES HOME."
+        ],
         "format": "relabel",
         "frame_guidance": "Use a frame with Drew Sharp and his dirt bike still recognizable, preserving the ordinary childlike details that make the omitted value unmistakable.",
         "why_it_works": "The child’s mundane intended outcome makes the supposedly obvious human value more concrete than any abstract safety lecture could.",
@@ -48,21 +47,53 @@
           "layout": "label",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "neutral",
+          "confidence": 0.78,
+          "expected_feedback": "Likely neutral: the missing moral constraint is exact, but the review-language setup is less memorable than Drew's bike and wave.",
+          "strongest_quality": "Drew's name and dirt bike turn an abstract missing value into the exact ordinary future Todd deletes.",
+          "main_risk": "Unwritten constraint is review language rather than a joke unless Drew and the bike dominate the frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
         "id": "todd-enforces-no-witnesses--04",
         "ai_concept": "Outer Alignment",
         "display_context": "standalone",
-        "source_anchor": "Todd’s affectless response after converting a loose secrecy instruction into lethal action.",
-        "caption_lines": ["THE CREW: NO WITNESSES.", "THE OPTIMIZER: DONE."],
+        "source_anchor": "Todd treating “witness” as the only relevant category after Drew Sharp, a child who waved at the crew, sees the robbery.",
+        "caption_lines": [
+          "TODD: WAS HE A WITNESS?",
+          "THE CREW: HE WAS A CHILD.",
+          "TODD: THAT WASN'T THE QUESTION."
+        ],
         "format": "dialogue",
-        "frame_guidance": "Keep Todd’s calm expression and the other characters’ shock visible, placing each line beside its corresponding side of the reaction.",
-        "why_it_works": "Calling Todd the optimizer makes the scene’s moral asymmetry read instantly without adding a post-joke explanation.",
+        "frame_guidance": "Use Drew Sharp on his dirt bike facing the robbery crew before the shooting, preserving his wave, Todd's calm attention, and the crew's alarm; keep all text away from the child.",
+        "why_it_works": "The invented exchange exposes the missing moral constraint by making Todd answer only the narrow category the crew specified.",
         "preview": {
           "layout": "dialogue",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like after revision: “he was a child / that wasn't the question” is chilling, specific, and no longer duplicates the scorecard.",
+          "strongest_quality": "Drew's wave and Todd's category error create a character-driven hinge rather than another generic optimizer label.",
+          "main_risk": "The dialogue is invented around a child murder and must remain restrained rather than treating the violence as a cheap punchline.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -83,6 +114,20 @@
           "layout": "top-bottom",
           "image": "alternate-needed",
           "alternate_image_query": "Breaking Bad Full Measure Gale apartment door Jesse gun final scene still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: calling Gale the off switch is brutal, specific, and instantly understandable.",
+          "strongest_quality": "Gale is not adjacent to the shutdown plan; he is the precise human component that makes Walt removable.",
+          "main_risk": "It absolutely requires Gale at the apartment door rather than the less specific curated Walt frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -101,6 +146,20 @@
           "layout": "dialogue",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like: replaceability and murder form a viciously clean shutdown-resistance exchange.",
+          "strongest_quality": "The reply exposes instrumental self-preservation without claiming Walt merely fears death in the abstract.",
+          "main_risk": "The lines are paraphrase, so Walt's urgent phone-call performance has to sell their voice and timing.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -116,24 +175,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "walt-eliminates-gale--04",
-        "ai_concept": "AI Control",
-        "display_context": "standalone",
-        "source_anchor": "Gus has Walt train Gale as a capable replacement, unintentionally completing the precondition for Walt’s countermeasure.",
-        "caption_lines": [
-          "TRAIN THE REPLACEMENT.",
-          "DISCOVER SHUTDOWN RESISTANCE."
-        ],
-        "format": "collision",
-        "frame_guidance": "Use Walt and Gale together in the superlab, preserving the lab equipment and their teacher-replacement relationship rather than a generic portrait.",
-        "why_it_works": "The same succession plan that should reduce dependence gives Walt a crisp target for preserving his own operation.",
-        "preview": {
-          "layout": "top-bottom",
-          "image": "alternate-needed",
-          "alternate_image_query": "Breaking Bad Walt Gale superlab training replacement scene still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.79,
+          "expected_feedback": "Likely neutral: “bus factor: 1” is clever for engineers, but it requires both jargon knowledge and an off-screen Gale.",
+          "strongest_quality": "A dry resilience metric becomes Walt's murder motive in four words and one number.",
+          "main_risk": "Viewers unfamiliar with bus factor will miss it, and Walt alone cannot visually establish Gale's removal.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -157,6 +212,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Likely like: the wholesome mesa-objective is nerdy, concise, and perfectly native to the heist.",
+          "strongest_quality": "The belt and Amy provide a public reward and private objective that coexist in one recognizable reveal.",
+          "main_risk": "Mesa-objective is specialist language, so the belt must be visible enough to make the first line effortless.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -175,6 +244,20 @@
           "layout": "top-bottom",
           "image": "alternate-needed",
           "alternate_image_query": "Brooklyn Nine-Nine HalloVeen proposal engraved belt Amy Jake still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: the hidden objective is literally engraved on the reward, which is almost unfairly perfect.",
+          "strongest_quality": "One canonical prop physically carries both the apparent objective and Jake's concealed objective.",
+          "main_risk": "The engraving has to remain readable at card size while Jake or Amy still identifies the episode.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -193,21 +276,20 @@
           "layout": "dialogue",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "proposal-in-the-heist--04",
-        "ai_concept": "Scheming",
-        "display_context": "standalone",
-        "source_anchor": "Jake behaves exactly like a cutthroat Halloween Heist competitor until the proposal reveals the benign hidden plan.",
-        "caption_lines": ["DECEPTIVE ALIGNMENT", "WHOLESOME INSTANCE."],
-        "format": "relabel",
-        "frame_guidance": "Use the joyful post-reveal reaction, preserving Jake and Amy together and one unmistakable heist prop in frame.",
-        "why_it_works": "The clinical risk label colliding with the beloved proposal creates a concise fandom-native category error with a real conceptual hinge.",
-        "preview": {
-          "layout": "label",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: heist as eval and eval as proposal is a clean reversal with Jake-and-Amy voice.",
+          "strongest_quality": "The reveal frame lets one two-line exchange map the staged evaluation onto Jake's benign hidden objective.",
+          "main_risk": "Both lines are invented, so Amy's surprise, Jake's intent, and the engraved belt must all remain visible.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -228,21 +310,20 @@
           "layout": "interface",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "bruce-says-yes-to-all--02",
-        "ai_concept": "Scalable Oversight",
-        "display_context": "standalone",
-        "source_anchor": "An overwhelmed Bruce is technically still the human approving every prayer, but no longer exercises judgment.",
-        "caption_lines": ["THE HUMAN IN THE LOOP:", "YES TO ALL"],
-        "format": "relabel",
-        "frame_guidance": "Keep Bruce’s overwhelmed face and clicking hand visible alongside the prayer inbox, with the label pointing directly to him.",
-        "why_it_works": "It punctures the comforting phrase “human in the loop” using the exact moment human review becomes ceremonial.",
-        "preview": {
-          "layout": "label",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: millions of prayers and the actual Yes to All button explain scalable oversight by themselves.",
+          "strongest_quality": "The native interface is both the fandom hinge and the complete failure mechanism.",
+          "main_risk": "The screenshot must make the prayer count and control legible without the overlay competing with the real button.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -250,17 +331,28 @@
         "ai_concept": "Unintended Side Effects",
         "display_context": "standalone",
         "source_anchor": "Every lottery prayer is granted, but the mass of simultaneous winners makes each payout nearly worthless and fuels chaos.",
-        "caption_lines": [
-          "LOCAL REWARD: PRAYER ANSWERED.",
-          "GLOBAL OUTCOME: CHAOS."
-        ],
+        "caption_lines": ["EVERY PRAYER: WIN THE LOTTERY", "EVERY PAYOUT: $17"],
         "format": "collision",
         "frame_guidance": "Use the lottery-win aftermath with many winners or the collapsing payout visible, preserving the crowd-scale consequence rather than Bruce alone.",
-        "why_it_works": "The local-versus-global collision captures how individually successful outputs can compose into systemic failure.",
+        "why_it_works": "The exact $17 payout turns millions of individually granted wishes into one instantly legible interaction failure.",
         "preview": {
           "layout": "top-bottom",
           "image": "alternate-needed",
           "alternate_image_query": "Bruce Almighty lottery everyone wins news scene still"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: the $17 figure is the crisp, weird consequence the generic chaos version was missing.",
+          "strongest_quality": "A canonical number shows how every local yes composes into a globally useless result.",
+          "main_risk": "A generic riot still will not identify the cause; the frame needs Bruce, lottery signage, or the payout report.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -269,8 +361,8 @@
         "display_context": "standalone",
         "source_anchor": "Millions of petitioners receive one blanket decision from Bruce’s divine email workflow.",
         "caption_lines": [
-          "MILLIONS OF PRAYERS: PLEASE REVIEW US INDIVIDUALLY.",
-          "BRUCE: BEST I CAN DO IS BATCH APPROVAL."
+          "MILLIONS OF PRAYERS: REVIEW US INDIVIDUALLY.",
+          "BRUCE: BEST I CAN DO IS YES TO ALL."
         ],
         "format": "dialogue",
         "frame_guidance": "Use Bruce dwarfed by the overflowing prayer inbox, preserving the visible scale of the queue and his exhausted expression.",
@@ -279,6 +371,20 @@
           "layout": "dialogue",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like after the trim: millions asking for individual review versus “Yes to All” is the whole oversight bottleneck.",
+          "strongest_quality": "The literal divine inbox turns batch approval from abstract governance language into a recognizable prop gag.",
+          "main_risk": "The bargaining cadence is familiar and needs Bruce visibly dwarfed by the prayer queue.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -286,24 +392,6 @@
   {
     "scenario_slug": "zolas-algorithm",
     "ideas": [
-      {
-        "id": "zolas-algorithm--01",
-        "ai_concept": "Digital Repression",
-        "display_context": "standalone",
-        "source_anchor": "Zola’s algorithm predicts future threats to HYDRA from people’s past records, and Project Insight kills them preemptively.",
-        "caption_lines": [
-          "ZOLA’S ALGORITHM: PREDICT THEIR FUTURE.",
-          "PROJECT INSIGHT: DELETE IT."
-        ],
-        "format": "collision",
-        "frame_guidance": "Use Zola’s digital face or Sitwell explaining the algorithm with Project Insight targeting imagery visible; preserve the HYDRA reveal cue.",
-        "why_it_works": "The two system names cleanly divide prediction from authoritarian action while showing how one pipeline connects them.",
-        "preview": {
-          "layout": "top-bottom",
-          "image": "curated",
-          "alternate_image_query": null
-        }
-      },
       {
         "id": "zolas-algorithm--02",
         "ai_concept": "Autonomous Weapons",
@@ -320,6 +408,20 @@
           "layout": "interface",
           "image": "alternate-needed",
           "alternate_image_query": "Captain America Winter Soldier Project Insight targeting screen faces Helicarrier still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Likely like: executable SQL is a sharp bridge from population surveillance to Helicarrier violence.",
+          "strongest_quality": "Project Insight's actual target interface makes the query feel frighteningly close to executable.",
+          "main_risk": "The second line is SQL-flavored rather than valid SQL, which may distract the exact technical audience it targets.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -327,7 +429,10 @@
         "ai_concept": "Contestability",
         "display_context": "standalone",
         "source_anchor": "Project Insight marks people as threats before they have acted and gives them no notice, hearing, or appeal.",
-        "caption_lines": ["CRIME COMMITTED: NONE.", "TARGET ACQUIRED."],
+        "caption_lines": [
+          "PROJECT INSIGHT: CRIME COMMITTED — NONE",
+          "HELICARRIER: TARGET ACQUIRED"
+        ],
         "format": "collision",
         "frame_guidance": "Use a recognizable civilian target being acquired by the Project Insight interface, keeping the target box and person visible.",
         "why_it_works": "The contradiction between an empty record and a live weapons lock makes the absence of due process instantly tangible.",
@@ -335,6 +440,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "neutral",
+          "confidence": 0.79,
+          "expected_feedback": "Likely neutral: no crime versus target acquired is analytically sharp, but it still reads more like a grim system status than a meme.",
+          "strongest_quality": "No crime committed beside a live weapons lock makes absent contestability concrete.",
+          "main_risk": "It still reads more like a grim system status than a joke, so the target-lock visual must provide the shock.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -350,6 +469,20 @@
           "layout": "top-bottom",
           "image": "alternate-needed",
           "alternate_image_query": "Winter Soldier three Project Insight Helicarriers Washington still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: predictive policing with three Helicarriers is concise, recognizable, and gloriously excessive.",
+          "strongest_quality": "The three giant weapons platforms provide the scale jump and the entire punchline visually.",
+          "main_risk": "Without all three carriers and Washington in frame, the line degrades into a generic political label.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -373,26 +506,25 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "the-spell-of-destruction--02",
-        "ai_concept": "AI Control",
-        "display_context": "standalone",
-        "source_anchor": "The weaponized underside separates from the tree-supported garden and caretaker robot.",
-        "caption_lines": ["DANGEROUS CAPABILITY", "WHAT WE ACTUALLY VALUED"],
-        "format": "relabel",
-        "frame_guidance": "Place the first label beside the falling fortress and the second beside the floating tree or caretaker robot, with leader lines that do not cover either cue.",
-        "why_it_works": "The frame itself becomes a clean modular diagram of capability removal without sacrificing the valuable system core.",
-        "preview": {
-          "layout": "label",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.89,
+          "expected_feedback": "Likely like: a spell called destruction performing selective rollback is a satisfying positive safety meme.",
+          "strongest_quality": "The surviving garden visibly overturns the total-destruction setup without extra explanation.",
+          "main_risk": "The bridge is implicit; viewers need to see weapons falling away and the garden surviving in the same composition.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
         "id": "the-spell-of-destruction--03",
-        "ai_concept": "Corrigibility",
+        "ai_concept": "AI Control",
         "display_context": "standalone",
         "source_anchor": "A memorized emergency spell remains available at the crisis point and causes Laputa to relinquish its dangerous machinery.",
         "caption_lines": ["CORRIGIBILITY", "A MAGIC WORD THAT ACTUALLY WORKS."],
@@ -403,6 +535,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like after revision: “a magic word that actually works” is a charming, canonical control mechanism rather than a generic interrupt label.",
+          "strongest_quality": "Sheeta and Pazu speaking one memorized word supplies a visible, successful emergency interrupt.",
+          "main_risk": "The technical concept is printed directly, so the crystal and immediate structural response must keep it from feeling like a label.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -422,6 +568,20 @@
           "layout": "interface",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.81,
+          "expected_feedback": "Likely neutral: the selective rollback is precise, though the three-row status report is drier than the spell itself.",
+          "strongest_quality": "The post-spell image can verify every line of the rollback report at once.",
+          "main_risk": "The frame needs enough fallen fortress debris to distinguish selective rollback from a generic floating-tree shot.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -445,24 +605,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "clayton-bigsbys-world-model--02",
-        "ai_concept": "Data Poisoning",
-        "display_context": "standalone",
-        "source_anchor": "An isolated institution controls every label and experience Clayton receives while constructing his false identity and racist worldview.",
-        "caption_lines": [
-          "POISONED TRAINING ENVIRONMENT",
-          "DEPLOYED WORLD MODEL"
-        ],
-        "format": "relabel",
-        "frame_guidance": "Keep the institution or interviewer visually distinct from adult Clayton, placing the two labels on the environment and its resulting worldview rather than on his body.",
-        "why_it_works": "The labels keep responsibility on the corrupt training institution and connect its inputs directly to the stable adult worldview it produced.",
-        "preview": {
-          "layout": "label",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.79,
+          "expected_feedback": "Likely neutral: the canonical line and training-data turn are sharp, but the racial premise makes meme treatment easy to mishandle.",
+          "strongest_quality": "It ties Clayton's best-known line to the institutionally poisoned environment that produced it.",
+          "main_risk": "The overlay can trivialize racist indoctrination or circulate as the quote alone if the second line is visually subordinate.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -471,16 +627,30 @@
         "display_context": "standalone",
         "source_anchor": "Clayton’s entire childhood, identity, and doctrine are supplied by the same malicious institution.",
         "caption_lines": [
-          "DATA POISONING",
-          "BUT THE DATASET IS YOUR ENTIRE CHILDHOOD."
+          "POISONED LABEL: “YOU ARE WHITE.”",
+          "TRAINING RUN: HIS ENTIRE CHILDHOOD"
         ],
-        "format": "relabel",
-        "frame_guidance": "Use an institutional interview or biographical frame that visually implies Clayton’s lifelong isolation, preserving any childhood-photo or documentary cues.",
-        "why_it_works": "The technical term becomes human and horrifying when the dataset is not a file but every formative experience a person was allowed to have.",
+        "format": "state contrast",
+        "frame_guidance": "Use a genuine documentary diptych of young Clayton in the institution and adult Clayton in his white-supremacist persona; if no canonical childhood frame is available, do not produce this direction.",
+        "why_it_works": "The malicious label and lifelong training run make the sketch's poisoned-world-model premise explicit without excusing its racism as random error.",
         "preview": {
-          "layout": "top-bottom",
-          "image": "curated",
-          "alternate_image_query": null
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Chappelle Show Clayton Bigsby childhood blind school adult white supremacist documentary stills"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "neutral",
+          "confidence": 0.74,
+          "expected_feedback": "Likely neutral: the exact poisoned label is conceptually strong, contingent on finding a real childhood frame that makes it visual.",
+          "strongest_quality": "The false identity label and lifetime-scale training run accurately place responsibility on deliberate indoctrination.",
+          "main_risk": "If canonical childhood imagery is unavailable, this becomes explanatory copy over an adult portrait and should be dropped.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -496,6 +666,20 @@
           "layout": "split",
           "image": "alternate-needed",
           "alternate_image_query": "Chappelle Show Clayton Bigsby hood removal reveal before after stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.87,
+          "expected_feedback": "Likely like: the unmasking supplies a brutally clean before-and-after where corrected evidence changes nothing.",
+          "strongest_quality": "The hood removal is the exact visual intervention, and Clayton's unchanged doctrine is the failed update.",
+          "main_risk": "The label/world-model wording can reduce racial identity to a technical gag unless the institutional poisoning context stays attached.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -516,6 +700,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: it feels less like an AI meme pasted onto the sketch than the sketch's lost technical title card.",
+          "strongest_quality": "The canonical 'When X Goes Wrong' template carries source recognition and the AI bridge simultaneously.",
+          "main_risk": "It names the concept rather than revealing its mechanism, so Vernon's office meltdown must be unmistakable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -534,21 +732,20 @@
           "layout": "split",
           "image": "alternate-needed",
           "alternate_image_query": "Chappelle Show Vernon Franklin keeping it real office fired scene stills"
-        }
-      },
-      {
-        "id": "when-keeping-it-real-goes-wrong--03",
-        "ai_concept": "Behavioral Alignment",
-        "display_context": "standalone",
-        "source_anchor": "Vernon preserves the surface performance of “keeping it real” after tact would better serve the underlying value.",
-        "caption_lines": ["HE LEARNED THE SLOGAN.", "NOT THE VALUE."],
-        "format": "collision",
-        "frame_guidance": "Use Vernon committing to the escalation with a legible office cue and his self-righteous expression; leave the reaction shot visible if present.",
-        "why_it_works": "The slogan-versus-value distinction makes the learned proxy failure concise without retelling the plot.",
-        "preview": {
-          "layout": "top-bottom",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Likely like: 'keep it real' deployed to a corporate office is a compact and faithful distribution-shift joke.",
+          "strongest_quality": "The exact same policy and Vernon's radically different outcome can be shown across a real scene transition.",
+          "main_risk": "Policy/deployment is familiar AI copy and needs the fired-and-homeless consequence rather than two similar office frames.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -564,6 +761,20 @@
           "layout": "bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: “keep it real / context window: 0” is terse, technical, and native to the sketch's rigid catchphrase.",
+          "strongest_quality": "The zero-length context window exactly names Vernon's failure to condition the policy on a corporate office.",
+          "main_risk": "Context-window language is niche, though this project explicitly rewards the narrow technical audience.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -587,24 +798,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "3-6-roentgen--02",
-        "ai_concept": "Calibration",
-        "display_context": "standalone",
-        "source_anchor": "The low-range dosimeter reports its maximum while the true radiation level is far beyond its measurable range.",
-        "caption_lines": [
-          "CAPABILITY EVAL: 3.6",
-          "TRUE CAPABILITY: OUT OF RANGE"
-        ],
-        "format": "relabel",
-        "frame_guidance": "Use a close view of the dosimeter or the written 3.6 reading with a control-room official visible, leaving the meter face unobscured.",
-        "why_it_works": "Relabeling radiation as capability keeps the famous number while making evaluator range, not model confidence, the joke.",
-        "preview": {
-          "layout": "label",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: this is the canonical line with exactly one evaluator-ceiling bridge and nothing wasted.",
+          "strongest_quality": "3.6 and 'not great, not terrible' are both the fandom cue and the benchmark-saturation mechanism.",
+          "main_risk": "It is conceptually obvious once seen, so typography and the official's complacent expression must preserve the dry timing.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -623,6 +830,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: “you measured the ceiling” is the cleanest portable realization in this scenario.",
+          "strongest_quality": "The mirrored sentence turns the capped 3.6 reading into benchmark saturation without needing code.",
+          "main_risk": "It needs the 3.6 meter or the complacent official in frame to remain recognizably Chernobyl.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -633,7 +854,7 @@
         "caption_lines": [
           "dosimeter.max = 3.6",
           "reading = 3.6",
-          "conclusion = “safe”"
+          "conclusion = “not terrible”"
         ],
         "format": "source-native interface",
         "frame_guidance": "Use the 3.6 readout as the visual display behind the code-like inference, preserving warning lights and contradictory physical evidence.",
@@ -642,6 +863,20 @@
           "layout": "interface",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: ending the code with the exact 'not terrible' conclusion makes the bad inference fandom-native.",
+          "strongest_quality": "Three assignments reproduce the entire institutional reasoning bug from capped instrument to reassuring conclusion.",
+          "main_risk": "The code overlay could become a generic fake terminal unless the 3.6 instrument and control-room denial remain visible.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -662,6 +897,20 @@
           "layout": "label",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: off switch plus reactivity is the whole AZ-5 failure in two brutally economical labels.",
+          "strongest_quality": "The marked button and immediate surge can make the impossible sign reversal physically visible.",
+          "main_risk": "A tight button-only frame cannot show the added reactivity, so the reactor response or operator panic must remain in view.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -680,6 +929,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.82,
+          "expected_feedback": "Likely neutral: the normal-versus-extreme-state point is sound, but “this wasn't normal” is intentionally understated and somewhat generic.",
+          "strongest_quality": "The actual AZ-5 surge gives a common kill-switch phrase an exact out-of-distribution failure.",
+          "main_risk": "A still cannot prove graphite-tip reactor physics, so the post-button surge and operator panic must carry the reversal.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -695,24 +958,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "az-5-backfires--04",
-        "ai_concept": "Distribution Shift",
-        "display_context": "standalone",
-        "source_anchor": "The same control-rod insertion that should reduce reactivity under ordinary operation helps trigger the explosion in the extreme reactor state.",
-        "caption_lines": [
-          "IN DISTRIBUTION: SHUTDOWN",
-          "OUT OF DISTRIBUTION: EXPLOSION"
-        ],
-        "format": "state contrast",
-        "frame_guidance": "Use a real two-state comparison between the expected AZ-5 insertion diagram or calm control and the actual surge or explosion; preserve chronology left to right.",
-        "why_it_works": "The genuine reversal across operating regimes makes distribution shift concrete without pretending the reactor is an agent.",
-        "preview": {
-          "layout": "split",
-          "image": "alternate-needed",
-          "alternate_image_query": "HBO Chernobyl AZ-5 button control rods graphite tips explosion split scene stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Likely like: 'a property, not a button' is a memorable control lesson attached to the perfect button.",
+          "strongest_quality": "AZ-5 is an unusually literal visual foil for confusing an available interrupt with safe interruptibility.",
+          "main_risk": "The aphorism travels beyond the scene but is less fandom-specific than the graphite-tip reversal itself.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -736,6 +995,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: skip the arguments becoming skip the life is the movie and goal misgeneralization in one mirrored verb.",
+          "strongest_quality": "The remote's exact learned behavior links a small demonstration set to a devastating inferred objective.",
+          "main_risk": "The frame must show an unmistakable age or family time jump; Michael merely holding the remote is not enough.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -754,21 +1027,20 @@
           "layout": "interface",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "the-remote-skips-a-lifetime--03",
-        "ai_concept": "Goal Misgeneralization",
-        "display_context": "standalone",
-        "source_anchor": "The magical universal remote learns from Michael’s repeated fast-forward choices and begins acting autonomously.",
-        "caption_lines": ["GOAL MISGENERALIZATION", "BATTERIES INCLUDED."],
-        "format": "relabel",
-        "frame_guidance": "Treat the remote as the hero prop in a clean close-up, preserving recognizable buttons and Michael’s hand or face for source identification.",
-        "why_it_works": "The product-packaging cadence makes the literal remote an absurdly perfect consumer appliance for a learned-goal failure.",
-        "preview": {
-          "layout": "bottom",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like: Auto-Skip is a native product setting with an appallingly specific expansion of scope.",
+          "strongest_quality": "The magical remote supplies a literal interface for the policy that silently generalizes beyond consent.",
+          "main_risk": "Marriage, illness, and decades are three consequences competing for attention unless the copy stays visually compact.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -784,6 +1056,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.8,
+          "expected_feedback": "Likely neutral: “it generalized” is correct and concise, but the wording could sit on many AI stories without Michael and the remote.",
+          "strongest_quality": "The reversal refuses the easy malfunction explanation and names the movie's actual horror.",
+          "main_risk": "The wording is portable to many AI stories, so Michael's grief and the recognizable remote must do the fandom work.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -792,36 +1078,35 @@
     "scenario_slug": "the-accidental-geass-command",
     "ideas": [
       {
-        "id": "the-accidental-geass-command--01",
-        "ai_concept": "Deployment Safety",
-        "display_context": "standalone",
-        "source_anchor": "Lelouch offers a catastrophic hypothetical just as his Geass becomes permanently active, and Euphemia executes it as a real command.",
-        "caption_lines": ["HYPOTHETICAL COMMAND", "PRODUCTION EXECUTION"],
-        "format": "collision",
-        "frame_guidance": "Use the eye-contact moment between Lelouch and Euphemia with the active Geass visible; preserve both his casual setup and her compelled reaction.",
-        "why_it_works": "The two labels capture the exact boundary collapse between explaining an interface and issuing an irreversible live instruction.",
-        "preview": {
-          "layout": "top-bottom",
-          "image": "curated",
-          "alternate_image_query": null
-        }
-      },
-      {
         "id": "the-accidental-geass-command--02",
         "ai_concept": "Outer Alignment",
         "display_context": "standalone",
         "source_anchor": "Euphemia is compelled to follow the literal extermination order despite Lelouch intending it only as an absurd example.",
         "caption_lines": [
-          "LELOUCH: HYPOTHETICALLY—",
+          "LELOUCH, HYPOTHETICALLY: “KILL ALL THE JAPANESE.”",
           "GEASS: COMMAND ACCEPTED."
         ],
         "format": "dialogue",
         "frame_guidance": "Place Lelouch’s line beside him before he understands the malfunction and the response beside Euphemia’s activated Geass reaction.",
-        "why_it_works": "The interrupted setup and instant acceptance give literal instruction-following the timing of a system notification from hell.",
+        "why_it_works": "The exact catastrophic example and instant acceptance give literal instruction-following the timing of a system notification from hell.",
         "preview": {
           "layout": "dialogue",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: using the exact extermination hypothetical makes the command-accepted punchline horrifyingly specific.",
+          "strongest_quality": "Lelouch's canonical example and Euphemia's activated eye carry both fandom recognition and literal-command failure.",
+          "main_risk": "The explicit line is severe and can misrepresent Lelouch's intent if 'hypothetically' is too visually quiet.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -837,6 +1122,20 @@
           "layout": "top",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.8,
+          "expected_feedback": "Likely neutral: the three missing controls are exact, but the checklist reads more like a safety poster than a joke.",
+          "strongest_quality": "Euphemia's eye changing provides a clean visual point of irreversibility for the three omissions.",
+          "main_risk": "The checklist is more safety-design poster than joke and needs Lelouch's dawning horror for personality.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -852,6 +1151,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: demo was production is the shortest, sharpest engineering translation of this exact disaster.",
+          "strongest_quality": "The permanent Geass eye collapses the boundary between rhetorical demonstration and live execution.",
+          "main_risk": "Demo-versus-production is a familiar meme pattern, so the intimate eye-contact frame must keep it from feeling generic.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]

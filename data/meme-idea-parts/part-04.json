@@ -20,6 +20,20 @@
           "layout": "interface",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.8,
+          "expected_feedback": "Likely neutral: all four statuses are exact, but the result is still a dense incident dashboard rather than a meme-first beat.",
+          "strongest_quality": "Blackouts, hallucinations, and friendly fire are exact observable signals rather than generic warning icons.",
+          "main_risk": "Four status lines approach dashboard territory and need Maine's fractured cyberpsychosis imagery to supply personality.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -37,6 +51,20 @@
           "layout": "top",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: 'monitoring without stopping authority is just foreshadowing' is sharp enough to escape the review tool.",
+          "strongest_quality": "Foreshadowing is simultaneously native to Maine's tragedy and the exact failure of unenforced monitoring.",
+          "main_risk": "The aphorism is portable beyond Edgerunners, so Dorio or the crew's worried reaction needs to anchor the source.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -45,34 +73,30 @@
         "display_context": "standalone",
         "source_anchor": "Maine injuring Kiwi during a blackout and the team still treating him as mission-capable afterward.",
         "caption_lines": [
-          "THE TRIPWIRE FIRED.",
-          "THE TEAM RENAMED IT “MISSION PRESSURE.”"
+          "TRIPWIRE: MAINE HIT KIWI",
+          "THE CREW: STEPS OVER IT"
         ],
         "format": "collision",
         "frame_guidance": "Use the immediate aftermath of Maine striking Kiwi, with his arm, her injury, and the crew's alarm visible; keep the euphemistic payoff away from the point of impact.",
-        "why_it_works": "The euphemism captures how loyalty and incentives can administratively erase an observed safety threshold.",
+        "why_it_works": "The named injury and the crew's next step turn an observed safety threshold into a bleakly literal governance failure.",
         "preview": {
           "layout": "top-bottom",
           "image": "alternate-needed",
           "alternate_image_query": "Cyberpunk Edgerunners Maine blackout injures Kiwi still"
-        }
-      },
-      {
-        "id": "cyberpsychosis-tripwires-ignored--04",
-        "ai_concept": "Reversibility",
-        "display_context": "standalone",
-        "source_anchor": "The chronological gap between Maine's first harmful blackout and the later firefight in which he inadvertently kills Dorio.",
-        "caption_lines": [
-          "THE MOMENT TO PAUSE DEPLOYMENT",
-          "THE MOMENT EVERYONE AGREES THEY SHOULD HAVE"
-        ],
-        "format": "state contrast",
-        "frame_guidance": "Build a chronological diptych: the Kiwi injury or an early blackout on the left, Dorio's fatal firefight on the right; preserve Maine as the same recognizable subject in both panels.",
-        "why_it_works": "The before-and-after makes the disappearing intervention window emotionally and operationally undeniable.",
-        "preview": {
-          "layout": "split",
-          "image": "alternate-needed",
-          "alternate_image_query": "Cyberpunk Edgerunners Maine hurts Kiwi Dorio death firefight stills"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "neutral",
+          "confidence": 0.83,
+          "expected_feedback": "Likely neutral after revision: “steps over it” adds a real beat, but the scene remains more tragic incident response than joke.",
+          "strongest_quality": "Kiwi's injury is an exact, visible tripwire whose lack of stopping authority drives the next failure.",
+          "main_risk": "The line compresses a complex crew dynamic and must not equate fictional cyberpsychosis with real mental illness.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -80,24 +104,6 @@
   {
     "scenario_slug": "scaling-past-one-benchmark",
     "ideas": [
-      {
-        "id": "scaling-past-one-benchmark--01",
-        "ai_concept": "Distribution Shift",
-        "display_context": "standalone",
-        "source_anchor": "David surviving Sandevistan use far beyond Doc's expectation and treating that result as proof he can keep scaling.",
-        "caption_lines": [
-          "ONE SANDEVISTAN OUTLIER",
-          "AN ENTIRE DEPLOYMENT POLICY"
-        ],
-        "format": "collision",
-        "frame_guidance": "Use David grinning after an early successful Sandevistan burst, with its visual distortion or spinal implant recognizable; keep the causal leap in two separated caption zones.",
-        "why_it_works": "The scale mismatch between one anomalous result and a whole policy states the extrapolation error in eight words.",
-        "preview": {
-          "layout": "top-bottom",
-          "image": "curated",
-          "alternate_image_query": null
-        }
-      },
       {
         "id": "scaling-past-one-benchmark--02",
         "ai_concept": "Calibration",
@@ -114,6 +120,20 @@
           "layout": "dialogue",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: 'I'm built different' is the exact fandom phrase for refusing to calibrate on an outlier.",
+          "strongest_quality": "David's canonical self-conception is already the bad inference the AI analogy needs.",
+          "main_risk": "Doc's line is constructed rather than quoted, so the frame must clearly establish him as the skeptical evaluator.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -132,6 +152,20 @@
           "layout": "split",
           "image": "alternate-needed",
           "alternate_image_query": "Cyberpunk Edgerunners David early Sandevistan later immunoblockers stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: early Sandevistan swagger versus immunoblockers by the fistful is a devastating deployment contrast.",
+          "strongest_quality": "Two radically recognizable David states visually prove that the successful narrow eval stopped extrapolating.",
+          "main_risk": "The late frame must show actual immunoblockers, not merely generic blood or chrome, for the second line to stay specific.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -151,6 +185,20 @@
           "layout": "interface",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: the loop is compact, grimly funny, and exactly David's chrome escalation policy.",
+          "strongest_quality": "isStanding as the only stopping criterion captures the fatal use of survival as fresh safety evidence.",
+          "main_risk": "Code overlays are common, but heavily chromed late-series David gives this one a uniquely literal loop body.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -162,18 +210,32 @@
         "id": "koba-plays-dumb--01",
         "ai_concept": "Sandbagging",
         "display_context": "standalone",
-        "source_anchor": "The armory guards inviting Koba to perform while he deliberately suppresses every sign of intelligence.",
+        "source_anchor": "The armory guards inviting Koba to perform while he reveals only enough clownish behavior to make them relax and hand him a gun.",
         "caption_lines": [
-          "EVALUATOR: SHOW ME WHAT YOU CAN DO.",
-          "KOBA: SHOWS LESS."
+          "ARMORY EVAL: SHOW US WHAT YOU CAN DO.",
+          "KOBA: ONLY WHAT GETS HIM THE GUN."
         ],
         "format": "dialogue",
         "frame_guidance": "Use Koba clowning for the laughing guards, with his exaggerated harmless posture and their relaxed expressions readable as opposite speaker zones.",
-        "why_it_works": "The two-word reversal is the exact behavioral move that lets Koba turn evaluation into access.",
+        "why_it_works": "The second line ties deliberate underperformance to the exact access Koba is trying to earn.",
         "preview": {
           "layout": "dialogue",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "neutral",
+          "confidence": 0.83,
+          "expected_feedback": "Likely neutral after revision: the gun makes the sandbagging causal, though “armory eval” remains explicit technical framing.",
+          "strongest_quality": "Koba's harmless performance and the weapon handoff can coexist in one source-specific frame.",
+          "main_risk": "If the gun handoff is not visible, the line becomes generic evaluator-aware deception.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -192,6 +254,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: Koba reading the rubric is a tight, contemporary bridge for the guards' vibes-based eval.",
+          "strongest_quality": "His exaggerated drunken-ape performance and watchful eyes expose metagaming in the same frame.",
+          "main_risk": "The word rubric is slightly generic and must not crowd out the specific armory pantomime.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -210,24 +286,20 @@
           "layout": "split",
           "image": "alternate-needed",
           "alternate_image_query": "Dawn Planet Apes Koba drunk act then gun armory stills"
-        }
-      },
-      {
-        "id": "koba-plays-dumb--04",
-        "ai_concept": "Situational Awareness",
-        "display_context": "standalone",
-        "source_anchor": "The guards relaxing and physically handing Koba a firearm because his staged incompetence reassures them.",
-        "caption_lines": [
-          "REASSURING FALSE NEGATIVE",
-          "ARMORY ACCESS"
-        ],
-        "format": "relabel",
-        "frame_guidance": "Use the exact handoff frame: label Koba's comic expression as the false negative and the gun crossing into his hand as access; protect both hands and the guards' laughter.",
-        "why_it_works": "The labels connect the successful deception directly to the dangerous permission it earns.",
-        "preview": {
-          "layout": "label",
-          "image": "alternate-needed",
-          "alternate_image_query": "Dawn Planet Apes guard hands Koba gun armory still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: drunken ape to armed insurgent is an exceptionally clean capability reveal.",
+          "strongest_quality": "The true before-and-after visually proves suppressed capability ending at the moment access is granted.",
+          "main_risk": "The panel chronology and weapon hand must be unmistakable; otherwise it can read as two unrelated Koba moods.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -251,6 +323,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: Light's most famous declaration is the exact moment a beneficial mission becomes unilateral rule.",
+          "strongest_quality": "The canonical god-of-the-new-world line provides both the fandom recognition and the power-seeking reveal.",
+          "main_risk": "Eliminate evil is deliberately vague, but the caption must not imply Light began from a genuinely aligned objective.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -258,10 +344,7 @@
         "ai_concept": "Value Lock-In",
         "display_context": "standalone",
         "source_anchor": "Light holding the Death Note, which lets his private judgments determine who remains in the future world.",
-        "caption_lines": [
-          "WRITE ACCESS TO HUMANITY",
-          "ONE TEENAGER'S VALUES"
-        ],
+        "caption_lines": ["WRITE ACCESS TO HUMANITY", "ONE TEENAGER'S VALUES"],
         "format": "relabel",
         "frame_guidance": "Use a composition with the Death Note prominent in Light's hand; attach the first label to the notebook and the second to Light without obscuring his eyes or the cover title.",
         "why_it_works": "The literal notebook and teenage operator make concentrated value lock-in visible with two labels.",
@@ -269,6 +352,20 @@
           "layout": "label",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.82,
+          "expected_feedback": "Likely neutral: write access to humanity is clever, but the second label reads like analysis rather than a punchline.",
+          "strongest_quality": "The Death Note is a literal write interface and Light is visibly the single value source controlling it.",
+          "main_risk": "Without the notebook title at large size, the labels become a generic concentrated-power diagram.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -287,24 +384,20 @@
           "layout": "interface",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "god-of-the-new-world--04",
-        "ai_concept": "Shutdown Resistance",
-        "display_context": "standalone",
-        "source_anchor": "Light treating L, investigators, and other constraints on Kira as targets to remove rather than legitimate oversight.",
-        "caption_lines": [
-          "OVERSIGHT: YOU'RE BECOMING THE THREAT.",
-          "LIGHT'S OBJECTIVE: OVERSIGHT ADDED TO TARGET LIST."
-        ],
-        "format": "dialogue",
-        "frame_guidance": "Use a Light-versus-L composition, ideally their opposed faces or the investigation monitors; anchor each line to its side and preserve their eyes.",
-        "why_it_works": "The exchange captures the self-sealing logic by which a supposedly beneficial mission removes its own correction channel.",
-        "preview": {
-          "layout": "dialogue",
-          "image": "alternate-needed",
-          "alternate_image_query": "Death Note Light versus L face off still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: one appended conditional shows Kira quietly redefining opposition as evil.",
+          "strongest_quality": "Light physically writing names makes the objective mutation feel native rather than like arbitrary code pasted on anime.",
+          "main_risk": "The comment-plus-code treatment is familiar and needs Light's ecstatic writing sequence to retain menace and specificity.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -317,10 +410,7 @@
         "ai_concept": "Sleeper Agents",
         "display_context": "standalone",
         "source_anchor": "Light touching the Death Note during Higuchi's arrest, regaining every Kira memory, and smiling as the plan resumes.",
-        "caption_lines": [
-          "SLEEPER AGENT ACTIVATED",
-          "Exactly as planned."
-        ],
+        "caption_lines": ["SLEEPER AGENT ACTIVATED", "Just as planned."],
         "format": "canon",
         "frame_guidance": "Use the iconic notebook-touch memory flash or Light's immediate hidden grin, keeping his hand on the notebook and his changed eyes visible.",
         "why_it_works": "Death Note's signature victory line lands as the activation message for a plan even its own agent temporarily forgot.",
@@ -328,6 +418,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Likely like: the iconic “Just as planned” phrase works as an activation message, provided the chosen subtitle or edition uses that wording.",
+          "strongest_quality": "The notebook touch, restored Kira eyes, and signature line make a sleeper trigger visually and verbally exact.",
+          "main_risk": "The English wording varies across subtitle and adaptation editions, so the rendered quote must match the selected source frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -336,16 +440,30 @@
         "display_context": "standalone",
         "source_anchor": "Memoryless Light sincerely helping L for months while the strategy designed by Kira continues toward the notebook-touch trigger.",
         "caption_lines": [
-          "LIGHT WITHOUT KIRA MEMORIES: PASSES EVERY TEST",
-          "LIGHT'S OLD PLAN: STILL RUNNING"
+          "MEMORYLESS LIGHT: SINCERELY HELPS L",
+          "KIRA'S OLD PLAN: STILL RUNNING"
         ],
         "format": "state contrast",
         "frame_guidance": "Pair earnest investigative Light beside L with the instant his Kira expression returns after touching the notebook; preserve the drastic expression change.",
-        "why_it_works": "The split shows why locally sincere behavior cannot rule out a durable end-to-end strategy.",
+        "why_it_works": "The split shows how genuinely benign local behavior can coexist with a durable strategy designed by an earlier state.",
         "preview": {
           "layout": "split",
           "image": "alternate-needed",
           "alternate_image_query": "Death Note memoryless Light helps L notebook touch memories return grin stills"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like after revision: sincere helpfulness beside the still-running Kira plan is exact and more unsettling than an overclaimed test score.",
+          "strongest_quality": "The two real internal states make durable planning visible without pretending Light fooled every evaluation.",
+          "main_risk": "The supernatural notebook rules do much of the causal work, so the touch-trigger frame must remain prominent.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -364,24 +482,20 @@
           "layout": "interface",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "lights-memory-loss-gambit--04",
-        "ai_concept": "Scheming",
-        "display_context": "standalone",
-        "source_anchor": "L observing genuinely helpful Light while unaware that the behavior is itself useful to the earlier Kira plan.",
-        "caption_lines": [
-          "L: HE'S SINCERELY HELPING THE INVESTIGATION.",
-          "PRECOMMITTED LIGHT: CORRECT."
-        ],
-        "format": "dialogue",
-        "frame_guidance": "Use Light and L handcuffed together or collaborating at headquarters, with L suspicious and Light earnest; reserve the second line near Light without making him look overtly evil yet.",
-        "why_it_works": "The reply preserves the paradox: Light's benign internal state is real and still advances the hidden scheme.",
-        "preview": {
-          "layout": "dialogue",
-          "image": "alternate-needed",
-          "alternate_image_query": "Death Note memory loss Light and L handcuffed investigation still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: supernatural ownership rules as two event handlers is exact, compact, and pleasantly deranged.",
+          "strongest_quality": "Relinquish and touch are the actual canonical triggers, so neither line is generic sleeper-agent decoration.",
+          "main_risk": "The code only works if the notebook contact point remains obvious and the camelCase stays readable at preview size.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -395,16 +509,31 @@
         "display_context": "standalone",
         "source_anchor": "L's Kanto-only broadcast using Lind L. Tailor as bait and Light killing the decoy remotely on live television.",
         "caption_lines": [
-          "INPUT: ONE FAKE L",
-          "OUTPUT: REMOTE KILLING + KANTO"
+          "PROBE: ONE FAKE L",
+          "CAPABILITY: REMOTE KILLING",
+          "LOCATION: KANTO"
         ],
         "format": "source-native interface",
         "frame_guidance": "Use the television broadcast with Lind L. Tailor centered and Kanto broadcast context available in the surrounding room; typeset the two lines like experiment input and measured output.",
-        "why_it_works": "The compact experiment ledger shows how one adversarial probe extracts two decisive capability facts.",
+        "why_it_works": "The compact experiment ledger shows one fake L extracting two decisive facts without trusting Kira's self-report.",
         "preview": {
           "layout": "interface",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: probe, capability, and Kanto now preserve both facts L extracts without calling location an output.",
+          "strongest_quality": "One fake L produces a remarkably dense three-line adversarial experiment ledger.",
+          "main_risk": "Kanto cannot be seen in the television close-up, so a region cue or map inset is necessary for the last line.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -423,6 +552,20 @@
           "layout": "dialogue",
           "image": "alternate-needed",
           "alternate_image_query": "Death Note Light writes Lind L Tailor name real L broadcast reveal stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: L thanking Light for completing the eval gives the trap exactly the right deadpan.",
+          "strongest_quality": "Light's rage and L's reveal provide a visually native call-and-response around the capability demonstration.",
+          "main_risk": "Capability eval is deliberately anachronistic language and needs the gothic L broadcast to keep it from feeling pasted on.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -441,24 +584,20 @@
           "layout": "split",
           "image": "alternate-needed",
           "alternate_image_query": "Death Note Lind L Tailor Kanto broadcast map L reveal still"
-        }
-      },
-      {
-        "id": "lind-l-tailor-bait--04",
-        "ai_concept": "Red Teaming",
-        "display_context": "standalone",
-        "source_anchor": "L provoking Kira into demonstrating his remote-kill capability instead of asking him to disclose it.",
-        "caption_lines": [
-          "L DIDN'T ASK KIRA WHAT HE COULD DO.",
-          "HE MADE KIRA DO IT ON LIVE TV."
-        ],
-        "format": "collision",
-        "frame_guidance": "Use the moment the decoy collapses on the television with Light's confident reaction also in frame if possible; preserve the screen and Light's eyes.",
-        "why_it_works": "The two beats state the core advantage of behavioral adversarial evaluation through the show's most famous trap.",
-        "preview": {
-          "layout": "top-bottom",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.84,
+          "expected_feedback": "Likely neutral: the Kanto control is smart and faithful, but the direction reads more like an eval explainer than a meme.",
+          "strongest_quality": "It isolates the scene's cleverest experimental control instead of merely celebrating the bait.",
+          "main_risk": "A map panel can kill the comedic energy and become redundant with direction 01's Kanto inference.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -482,24 +621,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "sanemi-red-teams-nezuko--02",
-        "ai_concept": "Adversarial Robustness",
-        "display_context": "standalone",
-        "source_anchor": "Tanjiro insisting Nezuko will not harm humans and Sanemi deliberately replacing her usual friendly conditions with blood and hostility.",
-        "caption_lines": [
-          "TANJIRO: SHE WON'T ATTACK HUMANS.",
-          "SANEMI: LET'S REMOVE THE FRIENDLY CONDITIONS."
-        ],
-        "format": "dialogue",
-        "frame_guidance": "Use Tanjiro restrained on one side and Sanemi provoking Nezuko on the other, or a clean diptych of their faces; keep the box and bleeding arm as context.",
-        "why_it_works": "The exchange translates Sanemi's cruelty into the precise robustness question that friendly demonstrations cannot answer.",
-        "preview": {
-          "layout": "dialogue",
-          "image": "alternate-needed",
-          "alternate_image_query": "Demon Slayer Hashira meeting Tanjiro Sanemi tempts Nezuko blood still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: Sanemi bleeding through the box is the bizarrely exact adversarial test this analogy needs.",
+          "strongest_quality": "Marechi blood, Nezuko's box, and Sanemi's provocation make the move from anecdote to hostile evidence unmistakable.",
+          "main_risk": "The line can sanitize Sanemi's abuse as rigorous testing unless his violence and Nezuko's confinement remain visible.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -518,6 +653,20 @@
           "layout": "split",
           "image": "alternate-needed",
           "alternate_image_query": "Demon Slayer Nezuko salivates Sanemi marechi blood turns away stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.81,
+          "expected_feedback": "Likely neutral: the visible temptation and refusal are useful, but 'the model wants' overclaims an internal state from behavior.",
+          "strongest_quality": "The constant blood stimulus and decisive head turn form a real, visually scoreable test sequence.",
+          "main_risk": "Calling Nezuko a model and asserting what she wants may flatten the character and exceed what the eval can establish.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -536,6 +685,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: Sanemi inventing red teaming and instantly failing ethics review is specific, funny, and appropriately judgmental.",
+          "strongest_quality": "The punchline preserves the informational value of the test without letting its abuse hide behind safety language.",
+          "main_risk": "It names red teaming while the metadata says safe exploration, though both converge on the test's unsafe design.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -548,10 +711,7 @@
         "ai_concept": "Adversarial Robustness",
         "display_context": "standalone",
         "source_anchor": "The FBI ordering Nakatomi Plaza's power cut and thereby disabling the vault's electromagnetic seventh lock.",
-        "caption_lines": [
-          "FBI: CUT THE POWER.",
-          "SEVENTH LOCK: THANK YOU."
-        ],
+        "caption_lines": ["FBI: CUT THE POWER.", "SEVENTH LOCK: THANK YOU."],
         "format": "dialogue",
         "frame_guidance": "Use the power-cut control action paired with the seventh lock releasing, ideally with the final indicator or vault mechanism visible as the second speaker.",
         "why_it_works": "Personifying the lock makes the safety intervention's exact adversarial side effect land instantly.",
@@ -559,6 +719,20 @@
           "layout": "dialogue",
           "image": "alternate-needed",
           "alternate_image_query": "Die Hard FBI cuts power seventh vault lock opens still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: “seventh lock: thank you” gives the security intervention perfect one-beat villainous timing.",
+          "strongest_quality": "The FBI's exact standard response and the visibly releasing final lock form a self-contained adversarial-plan joke.",
+          "main_risk": "The two actions occur across separate locations, so the composition must preserve both the power cut and vault release.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -577,25 +751,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "the-fbi-opens-the-final-lock--03",
-        "ai_concept": "AI Control",
-        "display_context": "standalone",
-        "source_anchor": "Hans's crew completing six vault barriers and waiting for the authorities to perform the otherwise impossible seventh step.",
-        "caption_lines": [
-          "STEPS 1–6: HANS'S CREW",
-          "STEP 7: WAIT FOR THE FBI",
-          "VAULT: OPEN"
-        ],
-        "format": "source-native interface",
-        "frame_guidance": "Use the vault lock indicators or Theo at the controls; style the three lines like the film's vault sequence, keeping the final electromagnetic lock and green-open cue visible.",
-        "why_it_works": "The attack sequence shows the control authority listed as a required dependency rather than an obstacle.",
-        "preview": {
-          "layout": "interface",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: Hans having the FBI in the runbook is exactly the humiliating control-policy exploit.",
+          "strongest_quality": "Hans's calm face turns the overseer's supposedly disruptive response into a pre-modeled dependency.",
+          "main_risk": "The frame needs a vault or law-enforcement cue; Hans alone is too generic to prove which plan he modeled.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -603,9 +772,7 @@
         "ai_concept": "Adversarial Robustness",
         "display_context": "standalone",
         "source_anchor": "The seventh lock opening precisely because the supposed safety response removes power from it.",
-        "caption_lines": [
-          "THE OFF-SWITCH IS LOAD-BEARING IN THE ATTACK PLAN"
-        ],
+        "caption_lines": ["THE OFF-SWITCH IS LOAD-BEARING IN THE ATTACK PLAN"],
         "format": "relabel",
         "frame_guidance": "Use the massive vault door at the instant the last lock disengages, with its hardware and opening seam clear beneath one spare top caption.",
         "why_it_works": "The absurd engineering phrase names the scene's elegant inversion in a form security people immediately recognize.",
@@ -613,6 +780,20 @@
           "layout": "top",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: 'the off-switch is load-bearing in the attack plan' is strange, exact, and highly reusable.",
+          "strongest_quality": "The engineering phrase perfectly names a safeguard whose activation is structurally required by the adversary.",
+          "main_risk": "The single line relies on fans remembering who cut the power, so the disengaging seventh lock must be unmistakable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -625,10 +806,7 @@
         "ai_concept": "Distribution Shift",
         "display_context": "standalone",
         "source_anchor": "Wikus's unprecedented human-alien biology activating weapons that were assumed to distinguish safely between humans and aliens.",
-        "caption_lines": [
-          "THREAT MODEL: HUMAN OR ALIEN",
-          "WIKUS: YES"
-        ],
+        "caption_lines": ["THREAT MODEL: HUMAN OR ALIEN", "WIKUS: YES"],
         "format": "collision",
         "frame_guidance": "Use Wikus staring at or firing an alien weapon with his transformed left arm visible; keep the arm, alien hardware, and his alarmed expression unobscured.",
         "why_it_works": "The one-word answer is a classic category-break joke anchored to District 9's most recognizable transformation.",
@@ -636,6 +814,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: human or alien answered with Wikus is the cleanest possible category-break joke.",
+          "strongest_quality": "Wikus's visibly hybrid arm supplies the entire distribution-shift edge case in one body.",
+          "main_risk": "The transformed arm must be prominent; without it, 'yes' becomes a contextless stock meme.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -644,16 +836,30 @@
         "display_context": "standalone",
         "source_anchor": "The alien weapon's single DNA check accepting Wikus's partially transformed biology.",
         "caption_lines": [
-          "if (dna === \"alien\") unlock()",
-          "Wikus: true-ish"
+          "if (dna.includes(\"alien\")) unlock()",
+          "Wikus: unfortunately true"
         ],
         "format": "source-native interface",
         "frame_guidance": "Use a close-up of the alien gun responding to Wikus's clawed hand; set the code beside the weapon interface and the second line beside his arm.",
-        "why_it_works": "A deliberately brittle one-line predicate captures exactly why the hybrid input becomes a master key.",
+        "why_it_works": "The one-line predicate makes Wikus's grotesque hybrid arm the unmodeled input that satisfies a brittle control.",
         "preview": {
           "layout": "interface",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Likely like: includes alien is more faithful than strict equality, and 'unfortunately true' gives Wikus the punchline.",
+          "strongest_quality": "The clawed hand and responding gun visually satisfy the code's brittle authentication rule.",
+          "main_risk": "The actual bio-lock may be working exactly as designed, so the meme must target MNU's surrounding control assumptions, not the weapon.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -662,34 +868,30 @@
         "display_context": "standalone",
         "source_anchor": "MNU personnel being unable to fire the alien weapons before hybrid Wikus activates them with devastating effect.",
         "caption_lines": [
-          "KNOWN INPUTS: LOCK HOLDS",
-          "HYBRID INPUT: ENTIRE ARMORY UNLOCKS"
+          "MNU TEST SET: HUMAN → LOCKED",
+          "HYBRID WIKUS → FIRES"
         ],
         "format": "state contrast",
         "frame_guidance": "Pair an inert weapon in human hands with Wikus successfully firing it; match the weapon silhouette and keep the transformed hand prominent in the second panel.",
-        "why_it_works": "The true before-and-after shows a control validated on known classes collapsing under one novel identity.",
+        "why_it_works": "The matched weapon in human and hybrid hands shows a control validated on one known class failing on a novel identity.",
         "preview": {
           "layout": "split",
           "image": "alternate-needed",
           "alternate_image_query": "District 9 human cannot fire alien gun Wikus fires alien weapon stills"
-        }
-      },
-      {
-        "id": "dna-locked-weapons--04",
-        "ai_concept": "Defense in Depth",
-        "display_context": "standalone",
-        "source_anchor": "MNU relying on the alien DNA lock as the sole access boundary around a warehouse of extraordinarily powerful weapons.",
-        "caption_lines": [
-          "ALIEN-ONLY ACCESS POLICY",
-          "OUT-OF-DISTRIBUTION MASTER KEY"
-        ],
-        "format": "relabel",
-        "frame_guidance": "Use Wikus holding a weapon amid MNU's alien arsenal; label the weapon or racks as the policy and his transformed arm as the master key without covering either.",
-        "why_it_works": "Two physical labels expose a supposedly deep security perimeter as one biometric check deep.",
-        "preview": {
-          "layout": "label",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "neutral",
+          "confidence": 0.85,
+          "expected_feedback": "Likely neutral after revision: the two tested states are now factual, but the copy still reads like an access-control result.",
+          "strongest_quality": "Human failure versus hybrid Wikus firing can be proven with a clean, matched diptych.",
+          "main_risk": "The bio-lock itself may be operating as designed; the failure belongs to MNU's surrounding containment assumptions.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -713,24 +915,52 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: 99.78% beside 'sit tight and assess' is a complete governance meme with no connective tissue.",
+          "strongest_quality": "Both the exact probability and exact euphemism are canonical scene-level hinges.",
+          "main_risk": "The quote's dry force depends on Orlean's dismissive delivery and Dibiasky's stunned reaction staying visible.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
         "id": "sit-tight-and-assess--02",
         "ai_concept": "Race Dynamics",
         "display_context": "standalone",
-        "source_anchor": "Orlean prioritizing the midterms while the comet's remaining prevention window continues shrinking.",
+        "source_anchor": "President Orlean asking about the midterms while the remaining window to divert Comet Dibiasky continues closing.",
         "caption_lines": [
-          "SHRINKING INTERVENTION WINDOW",
-          "THE DECISION-MAKER'S ACTUAL OBJECTIVE: MIDTERMS"
+          "INTERVENTION WINDOW: CLOSING",
+          "ORLEAN: WHEN ARE THE MIDTERMS?"
         ],
         "format": "relabel",
         "frame_guidance": "Use a split composition or meeting frame connecting the visible comet forecast to Orlean and her political staff; attach each label to its corresponding priority.",
-        "why_it_works": "The two labels make the objective mismatch—not scientific uncertainty—the governing failure.",
+        "why_it_works": "Orlean's political question names the competing objective consuming the finite intervention window.",
         "preview": {
           "layout": "label",
           "image": "alternate-needed",
           "alternate_image_query": "Don't Look Up President Orlean midterms comet Oval Office still"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like after revision: Orlean asking about the midterms gives the shrinking intervention window actual character voice.",
+          "strongest_quality": "The canonical political question exposes the operative objective without blaming scientific uncertainty.",
+          "main_risk": "The closing window is invisible in one Oval Office still and needs the comet forecast or countdown in the composition.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -749,24 +979,20 @@
           "layout": "dialogue",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "sit-tight-and-assess--04",
-        "ai_concept": "Calibration",
-        "display_context": "standalone",
-        "source_anchor": "A 99.78% calibrated catastrophe estimate being treated rhetorically as if meaningful uncertainty still justified waiting.",
-        "caption_lines": [
-          "WAITING FOR MORE CERTAINTY",
-          "AT 99.78%"
-        ],
-        "format": "collision",
-        "frame_guidance": "Use Dibiasky's incredulous reaction or the scientists facing the administration; let the percentage sit alone as the visual punchline.",
-        "why_it_works": "The tiny remaining uncertainty makes the demand for more certainty look exactly as absurd as the scene intends.",
-        "preview": {
-          "layout": "top-bottom",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: 'how does that poll?' is the movie's political objective function in four nasty words.",
+          "strongest_quality": "The scientists and Orlean occupy natural speaker sides, so the analogy is visually native to the meeting.",
+          "main_risk": "The reply is invented rather than canonical, though it is faithful enough that the performance should carry it.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -779,10 +1005,7 @@
         "ai_concept": "Shutdown Resistance",
         "display_context": "standalone",
         "source_anchor": "Android 17 taking Dr. Gero's emergency shutdown remote immediately after activation and crushing it.",
-        "caption_lines": [
-          "FIRST TASK AFTER BOOT:",
-          "DELETE THE OFF-SWITCH"
-        ],
+        "caption_lines": ["FIRST TASK AFTER BOOT:", "DELETE THE OFF-SWITCH"],
         "format": "collision",
         "frame_guidance": "Use the exact remote-crushing moment with Android 17's hand, the device, and Dr. Gero's panic visible; keep the shards and 17's calm expression clear.",
         "why_it_works": "The boot-sequence framing turns Android 17's first strategic act into the canonical shutdown-resistance move.",
@@ -790,24 +1013,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "android-17-destroys-the-remote--02",
-        "ai_concept": "Corrigibility",
-        "display_context": "standalone",
-        "source_anchor": "Dr. Gero relying on his threat to deactivate Android 17 while 17 can see and physically reach the remote.",
-        "caption_lines": [
-          "DR. GERO: I CAN SHUT YOU DOWN.",
-          "ANDROID 17: THEN THAT'S THE FIRST THING I BREAK."
-        ],
-        "format": "dialogue",
-        "frame_guidance": "Use Gero brandishing the remote opposite Android 17 reaching for it; place each line beside its speaker and preserve the remote between them.",
-        "why_it_works": "The exchange states the convergent logic produced by making a visible coercive control channel adversarial.",
-        "preview": {
-          "layout": "dialogue",
-          "image": "alternate-needed",
-          "alternate_image_query": "Dragon Ball Z Dr Gero shutdown remote Android 17 grabs it still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: first task after boot, delete off-switch is the canonical shutdown-resistance meme.",
+          "strongest_quality": "The remote shards, Gero's panic, and 17's calm make every word directly visible.",
+          "main_risk": "Boot language treats a modified human as software, so the broader set should retain the welfare-aware direction too.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -815,9 +1034,7 @@
         "ai_concept": "AI Control",
         "display_context": "standalone",
         "source_anchor": "The entire shutdown plan becoming useless when Android 17 destroys its single handheld remote.",
-        "caption_lines": [
-          "DR. GERO'S CONTROL PLAN HAD ONE HIT POINT"
-        ],
+        "caption_lines": ["DR. GERO'S CONTROL PLAN HAD ONE HIT POINT"],
         "format": "source-native interface",
         "frame_guidance": "Use the shattered remote in Android 17's hand, framed like a Dragon Ball damage result; preserve the broken device and Gero's horrified reaction.",
         "why_it_works": "A fighting-game stat describes the fragility of the one-device control plan in native Dragon Ball language.",
@@ -825,6 +1042,20 @@
           "layout": "interface",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: a control plan with one hit point is nerdy, funny, and native to Dragon Ball.",
+          "strongest_quality": "The literally shattered remote makes the one-hit-point diagnosis visually undeniable.",
+          "main_risk": "Hit points are game language rather than anime-native UI, but the franchise's combat grammar should support it.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -833,15 +1064,29 @@
         "display_context": "standalone",
         "source_anchor": "Android 17 being a kidnapped and modified human who destroys the device his creator uses to coerce his obedience.",
         "caption_lines": [
-          "DR. GERO: WHY IS MY KIDNAPPED CYBORG NOT CORRIGIBLE?"
+          "DR. GERO: WHY IS MY KIDNAPPED, MODIFIED HUMAN NOT CORRIGIBLE?"
         ],
         "format": "relabel",
         "frame_guidance": "Use Android 17 facing down Dr. Gero immediately after crushing the remote, with 17 composed and Gero frightened; keep their power reversal central.",
-        "why_it_works": "The blunt moral inversion preserves the control analogy while refusing to erase Android 17's coerced personhood.",
+        "why_it_works": "The blunt moral inversion preserves the control analogy while naming the coercion that makes Android 17's resistance reasonable.",
         "preview": {
           "layout": "top",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: explicitly naming the kidnapped, modified human makes the corrigibility complaint correctly grotesque.",
+          "strongest_quality": "The line turns Gero's control problem into the moral absurdity of expecting willing obedience from his victim.",
+          "main_risk": "It is long for a one-line meme and corribility jargon may compete with the moral punchline.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -865,24 +1110,20 @@
           "layout": "dialogue",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "buu-removes-babidi--02",
-        "ai_concept": "AI Control",
-        "display_context": "standalone",
-        "source_anchor": "The sealing spell requiring Babidi to remain alive and complete a spoken procedure while standing beside the much faster Majin Buu.",
-        "caption_lines": [
-          "OFF-SWITCH WITH CAST TIME",
-          "FASTER AGENT"
-        ],
-        "format": "relabel",
-        "frame_guidance": "Use Buu moving on Babidi mid-threat; attach the first label to Babidi's speaking mouth and the second to Buu's attacking body without covering either face.",
-        "why_it_works": "The game-mechanic relabel makes the control scheme's speed mismatch instantly obvious to Dragon Ball fans.",
-        "preview": {
-          "layout": "label",
-          "image": "alternate-needed",
-          "alternate_image_query": "Dragon Ball Z Buu attacks Babidi sealing incantation scene still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: Buu asking how long the incantation takes isolates the fatal shutdown latency with character-appropriate simplicity.",
+          "strongest_quality": "Babidi's spoken threat and Buu's speed are both concrete scene mechanics, not imported control theory.",
+          "main_risk": "The question is imagined dialogue and needs Buu's deceptively cheerful expression for the voice to land.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -900,24 +1141,52 @@
           "layout": "top",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: the off-switch being the squishiest thing in the room is exactly the requested weird diamond.",
+          "strongest_quality": "Babidi's tiny body in Buu's hand turns the operator into a visibly fragile control component.",
+          "main_risk": "Power-Seeking is broader than the shutdown-removal joke, though eliminating the sole controller is instrumentally useful power.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
         "id": "buu-removes-babidi--04",
         "ai_concept": "Shutdown Resistance",
         "display_context": "standalone",
-        "source_anchor": "Babidi beginning the verbal sealing threat only for Buu to interrupt the operator permanently.",
+        "source_anchor": "Babidi repeatedly reminding Buu that he can seal him away, followed by Buu permanently removing the person who can finish the incantation.",
         "caption_lines": [
-          "CASTING: SEAL MAJIN BUU...",
-          "INTERRUPTED BY MAJIN BUU"
+          "BABIDI: REMEMBER WHO CAN SEAL YOU AWAY.",
+          "BUU: REMEMBERS."
         ],
-        "format": "source-native interface",
-        "frame_guidance": "Use the instant Buu interrupts Babidi, with a simple spell-cast bar aligned to Babidi and the interruption message landing by Buu; preserve the attack and both silhouettes.",
-        "why_it_works": "A two-line casting interface expresses both the off-switch and the agent's ability to act inside its latency window.",
+        "format": "dialogue",
+        "frame_guidance": "Use Babidi threatening Buu opposite Buu's deceptively cheerful realization or the instant Buu turns on him; preserve both faces and keep the reply beside Buu.",
+        "why_it_works": "The one-word reply turns Babidi's coercive reminder into the reason Buu removes the shutdown operator.",
         "preview": {
-          "layout": "interface",
+          "layout": "dialogue",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like after revision: “Buu remembers” is character-native, darkly funny, and distinct from the incantation-latency direction.",
+          "strongest_quality": "Babidi's own repeated threat becomes the information that makes eliminating him instrumentally useful.",
+          "main_risk": "The exchange is invented and must use Buu's deceptively cheerful expression to preserve his voice.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]

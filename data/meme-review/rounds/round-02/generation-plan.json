@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "round": 2,
+  "source_archive": {
+    "ideas_sha256": "004b6f9b24cfbc2b7b290bc7ea394fef7c687e5d5a23b47313c6754c5a079359",
+    "feedback_sha256": "fa268bc6357e519b5ce6ae0982823a38f5bb94e24241020bb595f2005a2a0b82"
+  },
+  "scenarios": 173,
+  "target_ideas": 519,
+  "retained_likes": 156,
+  "replacement_slots": 363,
+  "parts": [
+    {
+      "part": "part-01",
+      "scenarios": 12,
+      "retained_likes": 12,
+      "replacement_slots": 24
+    },
+    {
+      "part": "part-02",
+      "scenarios": 12,
+      "retained_likes": 11,
+      "replacement_slots": 25
+    },
+    {
+      "part": "part-03",
+      "scenarios": 12,
+      "retained_likes": 10,
+      "replacement_slots": 26
+    },
+    {
+      "part": "part-04",
+      "scenarios": 12,
+      "retained_likes": 15,
+      "replacement_slots": 21
+    },
+    {
+      "part": "part-05",
+      "scenarios": 12,
+      "retained_likes": 12,
+      "replacement_slots": 24
+    },
+    {
+      "part": "part-06",
+      "scenarios": 12,
+      "retained_likes": 10,
+      "replacement_slots": 26
+    },
+    {
+      "part": "part-07",
+      "scenarios": 12,
+      "retained_likes": 15,
+      "replacement_slots": 21
+    },
+    {
+      "part": "part-08",
+      "scenarios": 12,
+      "retained_likes": 13,
+      "replacement_slots": 23
+    },
+    {
+      "part": "part-09",
+      "scenarios": 12,
+      "retained_likes": 9,
+      "replacement_slots": 27
+    },
+    {
+      "part": "part-10",
+      "scenarios": 12,
+      "retained_likes": 8,
+      "replacement_slots": 28
+    },
+    {
+      "part": "part-11",
+      "scenarios": 12,
+      "retained_likes": 12,
+      "replacement_slots": 24
+    },
+    {
+      "part": "part-12",
+      "scenarios": 12,
+      "retained_likes": 8,
+      "replacement_slots": 28
+    },
+    {
+      "part": "part-13",
+      "scenarios": 12,
+      "retained_likes": 9,
+      "replacement_slots": 27
+    },
+    {
+      "part": "part-14",
+      "scenarios": 12,
+      "retained_likes": 10,
+      "replacement_slots": 26
+    },
+    {
+      "part": "part-15",
+      "scenarios": 5,
+      "retained_likes": 2,
+      "replacement_slots": 13
+    }
+  ]
+}

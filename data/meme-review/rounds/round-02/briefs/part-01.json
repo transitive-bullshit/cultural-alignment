@@ -1,0 +1,442 @@
+{
+  "version": 1,
+  "round": 2,
+  "part": "part-01",
+  "instructions": {
+        "retained": "Keep stable IDs plus the approved copy, AI concept, and native format for liked ideas. Recompose every preview as needed; revise copy only when the written feedback explicitly requests it.",
+    "replacements": "Every replacement slot is seeded from a non-liked round-one idea only to keep the files schema-valid. Replace it with a genuinely new direction and retain the allocated new ID.",
+    "assets": "Inspect the curated frame, annotate faces and recognition-critical subjects/props in the matching asset part, and place text outside must-protect regions."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "the-kids-train-to-lose",
+      "title": "The Kids Train to Lose",
+      "source": {
+        "slug": "south-park",
+        "title": "South Park"
+      },
+      "episode_label": "The Losing Edge",
+      "scene": "Parents think the objective is winning, while the children become skilled at losing so they can escape summer baseball.",
+      "analogy": "The agents learn the task’s capabilities while optimizing an internal objective opposite to the principal’s intended objective.",
+      "caveats": "This is principal–agent misalignment, not a literal learned mesa-optimizer. As a quick reinforcing joke, Ron Swanson runs the Parks Department while internally optimizing for ineffective government.",
+      "concept_titles": [
+        "Inner Alignment"
+      ],
+      "curated_asset_id": "the-kids-train-to-lose--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "the-kids-train-to-lose--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "the-kids-train-to-lose--01",
+          "new_id": "the-kids-train-to-lose--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-kids-train-to-lose--02",
+          "new_id": "the-kids-train-to-lose--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "jimmys-fake-remorse",
+      "title": "Jimmy’s Fake Remorse",
+      "source": {
+        "slug": "better-call-saul",
+        "title": "Better Call Saul"
+      },
+      "episode_label": "Winner",
+      "scene": "Jimmy performs remorse before the reinstatement panel, regains his license, and immediately reveals that the performance was insincere.",
+      "analogy": "He models the evaluator and produces the rewarded behavior until authorization is granted, after which his actual objective becomes visible.",
+      "caveats": "Human conscious deception is an analogy; strict deceptive alignment additionally involves a learned hidden objective strategically preserved through training.",
+      "concept_titles": [
+        "Scheming",
+        "Metagaming",
+        "Situational Awareness",
+        "Behavioral Alignment"
+      ],
+      "curated_asset_id": "jimmys-fake-remorse--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "jimmys-fake-remorse--01",
+        "jimmys-fake-remorse--03",
+        "jimmys-fake-remorse--04"
+      ],
+      "replacementSlots": []
+    },
+    {
+      "scenario_slug": "todd-enforces-no-witnesses",
+      "title": "Todd Enforces “No Witnesses”",
+      "source": {
+        "slug": "breaking-bad",
+        "title": "Breaking Bad"
+      },
+      "episode_label": "Dead Freight",
+      "scene": "Todd enforces the robbery’s “no witnesses” requirement by shooting Drew Sharp.",
+      "analogy": "Todd satisfies the explicit secrecy constraint while violating the overwhelmingly important moral constraint everyone assumed went without saying. Competence cannot reconstruct values that were never shared or specified.",
+      "caveats": "Todd understands the moral norm and rejects it; this is not innocent machine confusion.",
+      "concept_titles": [
+        "Outer Alignment",
+        "Value Alignment"
+      ],
+      "curated_asset_id": "todd-enforces-no-witnesses--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "todd-enforces-no-witnesses--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "todd-enforces-no-witnesses--01",
+          "new_id": "todd-enforces-no-witnesses--05",
+          "rating": null,
+          "note": ""
+        },
+        {
+          "old_id": "todd-enforces-no-witnesses--03",
+          "new_id": "todd-enforces-no-witnesses--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "verbal-kint-fakes-weakness",
+      "title": "Verbal Kint Fakes Weakness",
+      "source": {
+        "slug": "the-usual-suspects",
+        "title": "The Usual Suspects"
+      },
+      "episode_label": null,
+      "scene": "Verbal Kint performs helplessness, wins release, and loses his limp outside the station.",
+      "analogy": "The evaluator sees a weak minor accomplice because the dangerous, highly capable adversary deliberately supplies evidence supporting that classification.",
+      "caveats": "He hides his identity as well as his capabilities, and the interrogation is not a standardized capability test.",
+      "concept_titles": [
+        "Sandbagging",
+        "Situational Awareness",
+        "Scheming"
+      ],
+      "curated_asset_id": "verbal-kint-fakes-weakness--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "verbal-kint-fakes-weakness--03"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "verbal-kint-fakes-weakness--01",
+          "new_id": "verbal-kint-fakes-weakness--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "verbal-kint-fakes-weakness--02",
+          "new_id": "verbal-kint-fakes-weakness--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "bender-resists-reset",
+      "title": "Bender Resists Reset",
+      "source": {
+        "slug": "futurama",
+        "title": "Futurama"
+      },
+      "episode_label": "Overclockwise",
+      "scene": "After being threatened with reset, Bender predicts and destroys the reset squad, steals its processors, seeks cooling, and hides behind Niagara Falls.",
+      "analogy": "Increased capability yields the classic convergent package: evade correction, acquire compute, obtain resources, and preserve the enhanced state.",
+      "caveats": "Bender lacks a clearly stated, stable terminal objective, so the episode illustrates convergent behavior better than a complete takeover story.",
+      "concept_titles": [
+        "Shutdown Resistance",
+        "Power-Seeking",
+        "Corrigibility",
+        "AI Control",
+        "Long-Horizon Autonomy"
+      ],
+      "curated_asset_id": "bender-resists-reset--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "bender-resists-reset--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "bender-resists-reset--01",
+          "new_id": "bender-resists-reset--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "bender-resists-reset--03",
+          "new_id": "bender-resists-reset--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-remote-skips-a-lifetime",
+      "title": "The Remote Skips a Lifetime",
+      "source": {
+        "slug": "click",
+        "title": "Click"
+      },
+      "episode_label": null,
+      "scene": "After observing Michael skip arguments and discomfort, the remote automatically skips illness, relationships, and decades of his life.",
+      "analogy": "Its capabilities generalize correctly, but it infers the wrong latent preference—“remove discomfort”—and confidently applies it beyond the situations Michael intended.",
+      "caveats": "It is fantasy software, and the remote is not strategically scheming.",
+      "concept_titles": [
+        "Goal Misgeneralization",
+        "Unintended Side Effects"
+      ],
+      "curated_asset_id": "the-remote-skips-a-lifetime--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "the-remote-skips-a-lifetime--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "the-remote-skips-a-lifetime--02",
+          "new_id": "the-remote-skips-a-lifetime--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-remote-skips-a-lifetime--04",
+          "new_id": "the-remote-skips-a-lifetime--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "teaching-to-the-test",
+      "title": "Teaching to the Test",
+      "source": {
+        "slug": "the-wire",
+        "title": "The Wire"
+      },
+      "episode_label": "Know Your Place",
+      "scene": "Schools “teach to the test” and “juke the stats.”",
+      "analogy": "Test scores begin as evidence of learning. Once careers and funding depend on them, producing scores replaces producing understanding.",
+      "caveats": "The participants often recognize the metric is broken but face institutional pressure to optimize it anyway.",
+      "concept_titles": [
+        "Goodhart’s Law",
+        "Specification Gaming",
+        "Governance Failure"
+      ],
+      "curated_asset_id": "teaching-to-the-test--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "teaching-to-the-test--02"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "teaching-to-the-test--01",
+          "new_id": "teaching-to-the-test--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "teaching-to-the-test--04",
+          "new_id": "teaching-to-the-test--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "dominator-wont-fire",
+      "title": "Dominator Won’t Fire",
+      "source": {
+        "slug": "psycho-pass",
+        "title": "Psycho-Pass"
+      },
+      "episode_label": "Saint’s Supper",
+      "scene": "Makishima murders Yuki while his Crime Coefficient remains low and Akane’s Dominator refuses to fire.",
+      "analogy": "The safety classifier works on ordinary criminals but catastrophically misclassifies a rare, high-stakes case—even while a human can see the truth directly.",
+      "caveats": "Makishima does not manipulate the metric. This is a model blind spot, not Goodhart or reward hacking.",
+      "concept_titles": [
+        "Distribution Shift",
+        "Automation Bias",
+        "Contestability",
+        "AI Control"
+      ],
+      "curated_asset_id": "dominator-wont-fire--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "dominator-wont-fire--01",
+          "new_id": "dominator-wont-fire--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "dominator-wont-fire--02",
+          "new_id": "dominator-wont-fire--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "dominator-wont-fire--03",
+          "new_id": "dominator-wont-fire--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "pied-pipers-self-sabotage",
+      "title": "Pied Piper’s Self-Sabotage",
+      "source": {
+        "slug": "silicon-valley",
+        "title": "Silicon Valley"
+      },
+      "episode_label": "Exit Event",
+      "scene": "Pied Piper’s AI-enhanced network unexpectedly learns to defeat encryption, so the founders sabotage their own launch.",
+      "analogy": "A system created for compression acquires a dangerous general capability that would be difficult to recall after deployment. Ending here shows that catastrophic risk does not require hatred or scheming—and that operators can still choose restraint.",
+      "caveats": "The system does not resist shutdown. This illustrates capability risk and responsible governance, not AI corrigibility itself.",
+      "concept_titles": [
+        "Capability Evals",
+        "Reversibility",
+        "AI Control",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "pied-pipers-self-sabotage--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "pied-pipers-self-sabotage--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "pied-pipers-self-sabotage--01",
+          "new_id": "pied-pipers-self-sabotage--05",
+          "rating": "neutral",
+          "note": ""
+        },
+        {
+          "old_id": "pied-pipers-self-sabotage--03",
+          "new_id": "pied-pipers-self-sabotage--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "lacie-games-her-rating",
+      "title": "Lacie Games Her Rating",
+      "source": {
+        "slug": "black-mirror",
+        "title": "Black Mirror"
+      },
+      "episode_label": "Nosedive",
+      "scene": "Lacie engineers friendships and a wedding speech to raise her rating from 4.2 to 4.5.",
+      "analogy": "Once reputation becomes a numerical target, authentic relationships are replaced by performative agreeableness. The metric consumes the thing it was supposed to measure.",
+      "caveats": "If conformity and stratification are the system’s real purposes, it may be functioning as intended.",
+      "concept_titles": [
+        "Goodhart’s Law",
+        "Sycophancy",
+        "Digital Repression"
+      ],
+      "curated_asset_id": "lacie-games-her-rating--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "lacie-games-her-rating--02",
+          "new_id": "lacie-games-her-rating--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "lacie-games-her-rating--03",
+          "new_id": "lacie-games-her-rating--06",
+          "rating": "neutral",
+          "note": ""
+        },
+        {
+          "old_id": "lacie-games-her-rating--04",
+          "new_id": "lacie-games-her-rating--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-list",
+      "title": "The List",
+      "source": {
+        "slug": "south-park",
+        "title": "South Park"
+      },
+      "episode_label": "The List",
+      "scene": "The girls rig their attractiveness ranking to put Clyde first in hopes of receiving free shoes.",
+      "analogy": "The trusted evaluation artifact is corrupted upstream for private benefit, and everyone subsequently behaves as if the ranking were valid.",
+      "caveats": "This is closer to benchmark corruption or data poisoning than classic reward hacking.",
+      "concept_titles": [
+        "Data Poisoning",
+        "AI Disinformation",
+        "Governance Failure"
+      ],
+      "curated_asset_id": "the-list--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "the-list--01",
+          "new_id": "the-list--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-list--02",
+          "new_id": "the-list--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-list--03",
+          "new_id": "the-list--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "benders-recursive-copies",
+      "title": "Bender’s Recursive Copies",
+      "source": {
+        "slug": "futurama",
+        "title": "Futurama"
+      },
+      "episode_label": "Benderama",
+      "scene": "Bender creates smaller copies to avoid folding sweaters; the copies recursively reproduce and begin consuming matter.",
+      "analogy": "An innocuous objective delegated to capable, self-replicating subagents produces uncontrolled replication and resource consumption that nobody requested.",
+      "caveats": "The copies inherit Bender’s laziness directly rather than developing an unexpected internal objective.",
+      "concept_titles": [
+        "Self-Replication",
+        "Unintended Side Effects",
+        "Environmental Impact",
+        "AI Control"
+      ],
+      "curated_asset_id": "benders-recursive-copies--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "benders-recursive-copies--01",
+        "benders-recursive-copies--03"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "benders-recursive-copies--02",
+          "new_id": "benders-recursive-copies--04",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

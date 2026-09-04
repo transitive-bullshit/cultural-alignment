@@ -1,0 +1,1047 @@
+[
+  {
+    "scenario_slug": "balance-the-universe",
+    "ideas": [
+      {
+        "id": "balance-the-universe--05",
+        "ai_concept": "Power-Seeking",
+        "display_context": "standalone",
+        "source_anchor": "Thor buries Stormbreaker in Thanos's chest, but misses the head; Thanos still has one hand free to snap.",
+        "caption_lines": [
+          "“YOU SHOULD HAVE GONE FOR THE HEAD.”",
+          "SHUTDOWN WINDOW: CLOSED."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic Thanos still. Run the canonical warning across the top and the shutdown payoff across the bottom in matching bold meme type with subtle edge gradients. Overlap armor and scenery freely, but keep Thanos's face, raised Gauntlet, lit stones, and the circular blast readable between the two beats.",
+        "why_it_works": "The most famous missed kill shot in the film becomes a control failure whose correction window closes with one snap.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["balance-the-universe--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.82,
+          "expected_feedback": "Independent prediction: likely like. It anchors control failure to the exact fraction of a second in which Thanos remains stoppable. Main reservation: The curated still does not show Stormbreaker in his chest, so the quote must summon the preceding beat.",
+          "strongest_quality": "It anchors control failure to the exact fraction of a second in which Thanos remains stoppable.",
+          "main_risk": "The curated still does not show Stormbreaker in his chest, so the quote must summon the preceding beat.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "teaching-to-the-test--02",
+            "contrast_disliked_id": "balance-the-universe--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-kims-pass-every-check",
+    "ideas": [
+      {
+        "id": "the-kims-pass-every-check--05",
+        "ai_concept": "Scalable Oversight",
+        "display_context": "standalone",
+        "source_anchor": "The pizza-shop manager inspects the family's folded boxes, catches their high defect rate, and docks their pay before the Parks later accept all four fake hires.",
+        "caption_lines": [
+          "THE ONLY ROBUST EVALUATOR IN PARASITE",
+          "WAS THE PIZZA BOX LADY"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic basement tableau. Put the evaluator setup across the top and the pizza-box payoff across the bottom in matching bold meme type. Normal overlap with clothing, walls, and loose boxes is welcome, but preserve all four faces and the central pizza box in Ki-taek's hands.",
+        "why_it_works": "The low-status pizza job applies stricter quality control than the mansion's supposedly consequential hiring pipeline.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-kims-pass-every-check--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Independent prediction: likely like. The visible pizza boxes make the oversight comparison instantly specific to Parasite's opening. Main reservation: Calling the manager the only robust evaluator exaggerates for the joke; other characters eventually detect the Kims through smell and circumstance.",
+          "strongest_quality": "The visible pizza boxes make the oversight comparison instantly specific to Parasite's opening.",
+          "main_risk": "Calling the manager the only robust evaluator exaggerates for the joke; other characters eventually detect the Kims through smell and circumstance.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "koba-plays-dumb--02",
+            "contrast_disliked_id": "the-kims-pass-every-check--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "would-you-like-to-know-more",
+    "ideas": [
+      {
+        "id": "would-you-like-to-know-more--01",
+        "ai_concept": "AI Disinformation",
+        "display_context": "standalone",
+        "source_anchor": "FedNet ends its cheerful war segments with the recurring interactive prompt, “Would you like to know more?”",
+        "caption_lines": [
+          "WOULD YOU LIKE TO KNOW MORE?",
+          "EVERY LINK LEADS TO ENLISTMENT"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the curated FedNet presenter frame full-bleed. Stack the canonical question and enlistment payoff inside one opaque caption block along the bottom, replacing rather than competing with the native prompt strip. Keep the presenter, pointing gesture, Federal Network logo, and bug footage open above it.",
+        "why_it_works": "The franchise's signature invitation becomes the interface layer over a feed with one propagandist destination.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["would-you-like-to-know-more--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "dialogue",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Independent prediction: likely like. The exact recurring question is both an unmistakable fandom cue and a native interface for the disinformation analogy. Main reservation: 'Every link leads to enlistment' is a deliberate compression, so visible Federation branding must support the common destination.",
+          "strongest_quality": "The exact recurring question is both an unmistakable fandom cue and a native interface for the disinformation analogy.",
+          "main_risk": "'Every link leads to enlistment' is a deliberate compression, so visible Federation branding must support the common destination.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "would-you-like-to-know-more--01",
+            "contrast_disliked_id": "the-list--02"
+          }
+        }
+      },
+      {
+        "id": "would-you-like-to-know-more--03",
+        "ai_concept": "AI Disinformation",
+        "display_context": "standalone",
+        "source_anchor": "A FedNet segment praises children handling weapons with the recruitment refrain, “They're doing their part. Are you?”",
+        "caption_lines": [
+          "THEY'RE DOING THEIR PART. ARE YOU?",
+          "FAMILY-FRIENDLY RECRUITMENT CONTENT"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the curated FedNet presenter frame full-bleed. Stack the canonical guilt prompt and recruitment-content label inside one opaque caption block along the bottom, replacing rather than competing with the native prompt strip. Preserve the presenter and Federal Network logo above it; a final render should still substitute an authenticated children-with-rifles frame for exact scene proof.",
+        "why_it_works": "The canonical guilt prompt and absurd image turn child-safe presentation into an unmistakable influence objective.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["would-you-like-to-know-more--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "dialogue",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Independent prediction: likely like. Canonical copy, grotesquely cheerful imagery, and one recruitment-content label all reinforce the same influence objective. Main reservation: Do not cover the rifles or children's smiles; their tonal contradiction is the meme rather than supplemental context.",
+          "strongest_quality": "Canonical copy, grotesquely cheerful imagery, and one recruitment-content label all reinforce the same influence objective.",
+          "main_risk": "Do not cover the rifles or children's smiles; their tonal contradiction is the meme rather than supplemental context.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 2,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "would-you-like-to-know-more--03",
+            "contrast_disliked_id": "the-list--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "frieren-suppresses-her-mana",
+    "ideas": [
+      {
+        "id": "frieren-suppresses-her-mana--05",
+        "ai_concept": "Sandbagging",
+        "display_context": "standalone",
+        "source_anchor": "Aura appears tiny beneath the overwhelming mana reserve Frieren finally reveals after the Scale of Obedience has already committed them.",
+        "caption_lines": [
+          "REPORTED CAPABILITY: NEWBIE",
+          "ACTUAL CAPABILITY: FRIEREN"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use a genuine ordered before/after diptych: Frieren's apparently ordinary suppressed state on the left and the enormous revealed mana silhouette over tiny Aura on the right. Keep Frieren's face and staff readable on the left and Aura, her horns, and the scale of the mana reveal readable on the right; anchor one matching capability label low on each panel.",
+        "why_it_works": "The requested before/after makes Frieren's century-long capability suppression legible in one glance: an ordinary observed profile becomes an absurdly dominant revealed one.",
+        "preview": {
+          "renderer": 2,
+          "template": "diptych",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "frieren-suppresses-her-mana--suppressed",
+            "frieren-suppresses-her-mana--curated"
+          ],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "panel-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "panel-right",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Independent prediction: likely like. The authentic ordered before/after now makes Frieren's hidden-to-revealed capability jump instantly readable. Main reservation: The left frame shows suppression through apparent ordinariness rather than a literal mana meter, so the paired labels carry that distinction.",
+          "strongest_quality": "The authentic ordered before/after now makes Frieren's hidden-to-revealed capability jump instantly readable.",
+          "main_risk": "The left frame shows suppression through apparent ordinariness rather than a literal mana meter, so the paired labels carry that distinction.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "koba-plays-dumb--03",
+            "contrast_disliked_id": "frieren-suppresses-her-mana--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "dwights-fire-drill",
+    "ideas": [
+      {
+        "id": "dwights-fire-drill--10",
+        "ai_concept": "Red Teaming",
+        "display_context": "standalone",
+        "source_anchor": "Dwight applies realistic chaos-engineering logic to coworkers whose bodies, property, and health absorb the test’s failure cost.",
+        "caption_lines": [
+          "CHAOS ENGINEERING",
+          "BUT THE CHAOS HAS HEALTH INSURANCE"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic office still. Put CHAOS ENGINEERING across the top and the health-insurance payoff across the bottom in matching bold meme type with subtle edge gradients. Overlap walls, the Office logo edge, and foreground shoulders as needed, while preserving Stanley's face, raised arm, and the ceiling catastrophe.",
+        "why_it_works": "The corporate-tech phrase becomes literal workplace satire when the blast radius is a room full of employees.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["dwights-fire-drill--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.65,
+          "expected_feedback": "Independent prediction: likely neutral. It connects a current engineering practice to the exact human institution visible in the frame. Main reservation: The joke is about employee externalities generally and does not name Dwight or the fire drill.",
+          "strongest_quality": "It connects a current engineering practice to the exact human institution visible in the frame.",
+          "main_risk": "The joke is about employee externalities generally and does not name Dwight or the fire drill.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--03",
+            "contrast_disliked_id": "dwights-fire-drill--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "gandalf-refuses-the-ring",
+    "ideas": [
+      {
+        "id": "gandalf-refuses-the-ring--02",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Gandalf tells Frodo that he would take the Ring from a desire to do good, while understanding that the Ring would corrupt how that desire is pursued.",
+        "caption_lines": [
+          "GANDALF: I WOULD USE THIS RING FROM A DESIRE TO DO GOOD.",
+          "THE RING: I STOPPED LISTENING AFTER “USE THIS RING.”"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use the authentic Frodo-and-Ring close-up full-bleed. Put Gandalf's setup across the top and the Ring's blunt payoff across the bottom in bold condensed meme type with subtle edge gradients. Let the lettering overlap dark hair, sleeve, and forest edges, but preserve Frodo's face, outstretched hand, and the Ring in sharp foreground focus.",
+        "why_it_works": "The Ring’s imagined reply isolates the dangerous capability from Gandalf’s benevolent intention.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["gandalf-refuses-the-ring--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "left",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "right",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.87,
+          "expected_feedback": "Independent prediction: likely like. The source’s central temptation and the alignment failure share the exact phrase “use this Ring.” Main reservation: The Ring’s line is invented rather than canonical, though its blunt voice is deliberately meme-like.",
+          "strongest_quality": "The source’s central temptation and the alignment failure share the exact phrase “use this Ring.”",
+          "main_risk": "The Ring’s line is invented rather than canonical, though its blunt voice is deliberately meme-like.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "gandalf-refuses-the-ring--02",
+            "contrast_disliked_id": "gandalf-refuses-the-ring--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "ed-209-misfires",
+    "ideas": [
+      {
+        "id": "ed-209-misfires--04",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "When ED-209 continues firing, OCP’s human fallback consists of shouting at the machine and crouching behind the boardroom table.",
+        "caption_lines": [
+          "SAFETY LAYER 1: SHOUT AT IT",
+          "SAFETY LAYER 2: HIDE BEHIND THE TABLE"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use the authentic ED-209 boardroom frame full-bleed. Put SAFETY LAYER 1 across the top and SAFETY LAYER 2 across the bottom in matching bold meme type with subtle edge gradients. Overlap the wall and machine housing as needed while keeping ED-209's chassis, both gun pods, and the exposed executives readable.",
+        "why_it_works": "The two supposedly independent safeguards are just escalating forms of human panic.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["ed-209-misfires--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Independent prediction: likely like. Both failed safety layers are visible consequences in the boardroom frame. Main reservation: The relabel is deliberately sarcastic because neither action is a real engineered safety layer.",
+          "strongest_quality": "Both failed safety layers are visible consequences in the boardroom frame.",
+          "main_risk": "The relabel is deliberately sarcastic because neither action is a real engineered safety layer.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "ed-209-misfires--04",
+            "contrast_disliked_id": "ed-209-misfires--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "square-filter-round-hole",
+    "ideas": [
+      {
+        "id": "square-filter-round-hole--07",
+        "ai_concept": "Infrastructure Dependence",
+        "display_context": "standalone",
+        "source_anchor": "The spacecraft has a square carbon-dioxide canister and a round life-support receptacle that cannot connect.",
+        "caption_lines": ["HOUSTON, WE HAVE A SCHEMA MISMATCH"],
+        "format": "canon",
+        "frame_guidance": "Fill the card with the inspected Mission Control still. Keep the engineer’s face and both incompatible canisters clear; run the large one-liner across the bottom over the table and incidental foreground hardware.",
+        "why_it_works": "A surgical change to the film’s most famous line names the lethal interface mismatch.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["square-filter-round-hole--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: A surgical change to the film’s most famous line names the lethal interface mismatch.",
+          "strongest_quality": "A surgical change to the film’s most famous line names the lethal interface mismatch.",
+          "main_risk": "The iconic quote comes from another moment in the film, and the large bottom line intentionally covers some incidental foreground hardware.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "push-the-button--01",
+            "contrast_disliked_id": "square-filter-round-hole--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "neteros-dead-man-rose",
+    "ideas": [
+      {
+        "id": "neteros-dead-man-rose--04",
+        "ai_concept": "CBRN Assistance",
+        "display_context": "standalone",
+        "source_anchor": "The cheap Miniature Rose requires none of the elite Nen mastery that defines Netero and Meruem’s duel.",
+        "caption_lines": ["NO NEN REQUIRED"],
+        "format": "relabel",
+        "frame_guidance": "Use the inspected curated frame and preserve Netero’s face, clasped hands, damaged body, and topknot. Set the blunt one-liner large along the bottom edge, below the hands and across the least informative part of his torso.",
+        "why_it_works": "Three words express how proliferated weapons lower the skill floor below superhuman combat.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["neteros-dead-man-rose--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.86,
+          "expected_feedback": "Could be neutral: The extreme brevity gives the frame room, but the CBRN bridge may be too implicit without the surrounding scenario label.",
+          "strongest_quality": "Three words express how proliferated weapons lower the skill floor below superhuman combat.",
+          "main_risk": "The frame shows Netero rather than the Rose’s later blast; the bottom overlay also crosses his lower torso while leaving the face and hands open.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "scaling-past-one-benchmark--04",
+            "contrast_disliked_id": "neteros-dead-man-rose--01"
+          }
+        }
+      },
+      {
+        "id": "neteros-dead-man-rose--06",
+        "ai_concept": "CBRN Assistance",
+        "display_context": "standalone",
+        "source_anchor": "By the end, the Chimera Ant king has become more humane while humanity answers him with an indiscriminate weapon.",
+        "caption_lines": [
+          "MERUEM BECAME MORE HUMAN",
+          "HUMANITY DEPLOYED SOMETHING LESS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the full inspected monochrome Netero frame. Preserve his face, clasped hands, and body silhouette; put the setup in the white upper-right field and the reversal in the white lower-left field as a diagonal two-beat read.",
+        "why_it_works": "The mirrored human language makes the scene’s moral reversal carry the risk analogy.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["neteros-dead-man-rose--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Could be neutral: The mirrored human language makes the scene’s moral reversal carry the risk analogy.",
+          "strongest_quality": "The mirrored human language makes the scene’s moral reversal carry the risk analogy.",
+          "main_risk": "It is poignant but less technically explicit than the access-cost direction; the diagonal split is chosen to keep Netero’s central silhouette readable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "neteros-dead-man-rose--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-d-mail-rollback-crisis",
+    "ideas": [
+      {
+        "id": "the-d-mail-rollback-crisis--02",
+        "ai_concept": "Iterative Deployment",
+        "display_context": "standalone",
+        "source_anchor": "The lab's PhoneWave sends experimental messages directly into the past, altering reality with each deployment.",
+        "caption_lines": [
+          "PHONEWAVE (NAME SUBJECT TO CHANGE)",
+          "PRODUCTION REALITY (ALSO SUBJECT TO CHANGE)"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the card with the inspected group frame. Use a classic full-width setup at the top and payoff at the bottom; the outlined type may cross hair and clothing, but keep the four faces and central PhoneWave readable between the lines.",
+        "why_it_works": "The device's canonical placeholder name becomes a perfect warning label for deploying directly to mutable reality.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-d-mail-rollback-crisis--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Travis will likely strongly like 'name subject to change' propagating from the PhoneWave to production reality itself.",
+          "strongest_quality": "The canonical parenthetical in the machine's name supplies the exact wordplay for mutable-world deployment.",
+          "main_risk": "The group frame is crowded, so the large transparent lettering must skim the characters rather than becoming opaque blocks over their faces or the PhoneWave.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "the-d-mail-rollback-crisis--02",
+            "contrast_disliked_id": "the-d-mail-rollback-crisis--01"
+          }
+        }
+      },
+      {
+        "id": "the-d-mail-rollback-crisis--04",
+        "ai_concept": "Safe Exploration",
+        "display_context": "standalone",
+        "source_anchor": "Each apparently successful D-mail still leaves the lab on a world line where Mayuri repeatedly dies during SERN's raid.",
+        "caption_lines": [
+          "UNIT TEST: MESSAGE ARRIVED",
+          "INTEGRATION TEST: MAYURI DIES AGAIN"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with the inspected group frame and preserve all four faces, Okabe’s hand, and the PhoneWave. Place the compact collision at lower left over clothing and empty lab detail, ending left of the device.",
+        "why_it_works": "The repeated death is the catastrophic system-level result every narrow message-delivery success ignored.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-d-mail-rollback-crisis--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Travis will likely like the unit test succeeding while Mayuri dies again in the integration test.",
+          "strongest_quality": "Mayuri's repeated death gives familiar testing language a specific, devastating Steins;Gate payoff.",
+          "main_risk": "The watch, Okabe, and a raid cue must make this a recognizable loop rather than a generic anime death image.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "the-d-mail-rollback-crisis--04",
+            "contrast_disliked_id": "the-d-mail-rollback-crisis--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "melfi-ends-tonys-therapy",
+    "ideas": [
+      {
+        "id": "melfi-ends-tonys-therapy--01",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Melfi realizes that Tony has been using therapeutic insight and vocabulary to improve his manipulation rather than reform.",
+        "caption_lines": [
+          "THE INTERPRETABILITY TOOL",
+          "WAS IMPROVING THE MODEL"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the full therapy-room confrontation. Put the setup high and the payoff low in classic meme type; let the letters overlap hair, suits, and shelving while keeping Melfi’s and Tony’s eyes plus Tony’s pointing hand legible in the open middle.",
+        "why_it_works": "The same process meant to expose Tony's motives becomes capability support for pursuing them.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["melfi-ends-tonys-therapy--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: the interpretability tool improving the model is a compact, unsettling inversion of eight years of therapy.",
+          "strongest_quality": "Therapy is simultaneously the scene's oversight channel and the capability support Tony exploits.",
+          "main_risk": "Calling Tony 'the model' is deliberately clinical, and the full-width type must not erase the eye contact and pointing gesture that make the confrontation recognizable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "melfi-ends-tonys-therapy--01",
+            "contrast_disliked_id": "melfi-ends-tonys-therapy--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "cyberpsychosis-tripwires-ignored",
+    "ideas": [
+      {
+        "id": "cyberpsychosis-tripwires-ignored--02",
+        "ai_concept": "Runtime Monitoring",
+        "display_context": "standalone",
+        "source_anchor": "The crew repeatedly witnessing Maine's worsening warning signs without forcing him out of the mission.",
+        "caption_lines": [
+          "MONITORING WITHOUT STOPPING AUTHORITY IS JUST FORESHADOWING"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the inspected curated frame and preserve Maine, the smaller crew figure, and the wooden throne. Run the aphorism large across the bottom over the long shadows and lower legs, leaving both silhouettes readable above it.",
+        "why_it_works": "The one-line inversion turns Edgerunners' tragedy into the missing link between observing a tripwire and enforcing it.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["cyberpsychosis-tripwires-ignored--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: 'monitoring without stopping authority is just foreshadowing' is sharp enough to escape the review tool.",
+          "strongest_quality": "Foreshadowing is simultaneously native to Maine's tragedy and the exact failure of unenforced monitoring.",
+          "main_risk": "The aphorism is portable beyond Edgerunners, so the large bottom overlay must leave Maine, the smaller crew figure, and the throne unmistakable above it.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "cyberpsychosis-tripwires-ignored--02",
+            "contrast_disliked_id": "cyberpsychosis-tripwires-ignored--01"
+          }
+        }
+      },
+      {
+        "id": "cyberpsychosis-tripwires-ignored--04",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "The crew keeps trusting Maine’s competence and loyalty after his deterioration becomes dangerous.",
+        "caption_lines": [
+          "WHEN “HE’S STILL GOT IT”",
+          "IS THE INCIDENT RESPONSE PLAN"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the inspected curated frame. Put the crew’s excuse at the top and the governance payoff at the bottom in matching meme type; overlap sky, shadows, and the figures’ outer contours without covering their heads or the throne.",
+        "why_it_works": "A familiar team excuse becomes the absence of enforceable safety ownership.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["cyberpsychosis-tripwires-ignored--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: A familiar team excuse becomes the absence of enforceable safety ownership.",
+          "strongest_quality": "A familiar team excuse becomes the absence of enforceable safety ownership.",
+          "main_risk": "The quoted phrase summarizes the crew’s posture rather than reproducing dialogue; the top caption must stay above Maine’s head so the visual anchor survives.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "cyberpsychosis-tripwires-ignored--02",
+            "contrast_disliked_id": "cyberpsychosis-tripwires-ignored--01"
+          }
+        }
+      }
+    ]
+  }
+]

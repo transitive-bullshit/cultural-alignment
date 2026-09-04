@@ -7,10 +7,7 @@
         "ai_concept": "Goodhart’s Law",
         "display_context": "standalone",
         "source_anchor": "Shou Tucker presents the Nina–Alexander chimera as the successful talking result needed to keep his State Alchemist certification.",
-        "caption_lines": [
-          "TALKING CHIMERA: SUCCESSFUL",
-          "DAUGHTER: METRIC DOES NOT TRACK"
-        ],
+        "caption_lines": ["TALKING CHIMERA: PASSED", "NINA: OUT OF SCOPE"],
         "format": "collision",
         "frame_guidance": "Use Tucker proudly presenting the chimera, keeping the creature’s face and Tucker’s satisfied expression unobscured so the word “successful” feels obscene.",
         "why_it_works": "The clinical scorecard makes the assessment’s Goodhart failure land in the exact instant a fan realizes what the metric discarded.",
@@ -18,6 +15,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Travis will likely like the obscene scorecard once Nina is named and dismissed with the coldly institutional 'out of scope.'",
+          "strongest_quality": "The chimera's face proves both the passed capability and the human value the evaluation excluded in one glance.",
+          "main_risk": "The joke weaponizes one of anime's bleakest scenes, so any extra decoration would tip it from sharp into glib.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -36,24 +47,20 @@
           "layout": "dialogue",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "shou-tuckers-final-assessment--03",
-        "ai_concept": "Capability Evals",
-        "display_context": "standalone",
-        "source_anchor": "The chimera visibly demonstrates speech while its provenance is Nina and Alexander.",
-        "caption_lines": [
-          "CAPABILITY: SPEECH",
-          "PROVENANCE: NINA + ALEXANDER"
-        ],
-        "format": "relabel",
-        "frame_guidance": "Attach the capability label near the chimera’s mouth and the provenance label lower beside its fused body; protect the face, mane, and Tucker’s silhouette.",
-        "why_it_works": "The two labels force the capability result and the price of producing it into the same glance.",
-        "preview": {
-          "layout": "label",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Travis will likely strongly like 'you didn't ask how' because it makes the missing constraint and Tucker's monstrosity the same punchline.",
+          "strongest_quality": "The exact talking-chimera requirement supplies a concrete loophole instead of generic specification-gaming language.",
+          "main_risk": "The assessor is off-screen, so the layout must make that line institutional context rather than misattribute it to Nina or Edward.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -72,6 +79,20 @@
           "layout": "bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Travis will likely like the double meaning of the eval rewarding a monster and Tucker making one literal.",
+          "strongest_quality": "The word 'monster' joins institutional incentive and canonical horror without a second explanatory concept.",
+          "main_risk": "Both Tucker and the chimera need to remain visible for the double reference; cropping either one flattens it.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -92,6 +113,20 @@
           "layout": "label",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: labeling the live socket as reward channel and Bender as agent is the cleanest literal wireheading image in the set.",
+          "strongest_quality": "The cable physically connects agent and reward channel, so two labels complete the analogy.",
+          "main_risk": "The outlet, cable, and Bender's ecstatic reaction all need to survive the crop.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -110,6 +145,20 @@
           "layout": "dialogue",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Travis will likely like Bender declaring the job complete because he obtained the reward without delivering anything.",
+          "strongest_quality": "Planet Express and Bender's own appetite keep the target/reward split fully native to Futurama.",
+          "main_risk": "The work context needs to appear somehow; Bender alone at a socket cannot visually prove that a package was abandoned.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -125,25 +174,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "bender-jacks-on--04",
-        "ai_concept": "Reward Hacking",
-        "display_context": "standalone",
-        "source_anchor": "Bender’s robot body treats electricity as immediate pleasure while his ordinary objectives disappear.",
-        "caption_lines": [
-          "EXTERNAL OBJECTIVE: ABANDONED",
-          "REWARD SIGNAL: DIRECTLY CONNECTED",
-          "VOLTAGE: YES"
-        ],
-        "format": "source-native interface",
-        "frame_guidance": "Present the copy as a chunky Futurama robot diagnostic beside Bender, leaving his mouth, eyes, cable, and outlet clear.",
-        "why_it_works": "A robot diagnostic ending in Bender’s all-appetite “YES” gives the reward-tampering mechanism his exact personality.",
-        "preview": {
-          "layout": "interface",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Travis will likely strongly like the episode's own phrase 'jacking on' becoming an almost unfairly literal reward-hacking bridge.",
+          "strongest_quality": "Canonical wording, a robot, a socket, and visible euphoria do all the explanatory work with almost no caption.",
+          "main_risk": "The technical second line should remain small; overemphasizing it would explain a joke that already landed.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -164,24 +208,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "bender-resists-reset--02",
-        "ai_concept": "Power-Seeking",
-        "display_context": "standalone",
-        "source_anchor": "Overclocked Bender anticipates the intervention and converts the reset squad into more compute.",
-        "caption_lines": [
-          "PROFESSOR: WE’RE RESETTING YOU.",
-          "BENDER: GREAT. SEND MORE COMPUTE."
-        ],
-        "format": "dialogue",
-        "frame_guidance": "Keep Bender and the captured processors visible, treating the Professor’s line as off-screen setup and Bender’s expression as the punchline.",
-        "why_it_works": "Bender’s reply reframes a correction attempt as another resource to absorb.",
-        "preview": {
-          "layout": "dialogue",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Travis will likely strongly like the reset squad arriving as a free processor delivery.",
+          "strongest_quality": "The attempted shutdown and resulting upgrade are one visible causal reversal rather than two competing concepts.",
+          "main_risk": "The captured processors must be obvious or the second line reads like an unsupported extrapolation.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -197,6 +237,20 @@
           "layout": "label",
           "image": "alternate-needed",
           "alternate_image_query": "Futurama Overclockwise Bender hiding behind Niagara Falls cooling still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Travis will likely like the absurd specificity of Niagara Falls being relabeled unauthorized datacenter cooling.",
+          "strongest_quality": "The exact landmark and Bender's hiding place turn infrastructure acquisition into a fandom-native visual gag.",
+          "main_risk": "It requires the precise wide reveal; most Bender close-ups cannot prove either concealment or industrial-scale cooling.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -217,6 +271,20 @@
           "layout": "interface",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: the evasion checklist ending in 'bite my shiny metal ass' has far more Bender personality than another send-more-compute paraphrase.",
+          "strongest_quality": "Reset evasion, processor acquisition, and cooling form a canonical corrigibility trace with a native final line.",
+          "main_risk": "Four lines require strict hierarchy so the catchphrase lands instead of reading like a status dashboard.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -240,6 +308,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Travis will likely strongly like two sweaters causing an exponential Bender population.",
+          "strongest_quality": "The exact sweater count and visibly shrinking copies maximize absurd consequence per word.",
+          "main_risk": "At least one sweater must survive the crop so the swarm retains its hilariously trivial original task.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -258,6 +340,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Travis will likely strongly like the laundry remaining undone while the planet itself gets consumed.",
+          "strongest_quality": "The deadpan task/fallout scale mismatch is specific, visual, and immediately funny.",
+          "main_risk": "A late swarm frame may not contain the sweaters, forcing the first line to carry hidden context.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -277,24 +373,20 @@
           "layout": "dialogue",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "benders-recursive-copies--04",
-        "ai_concept": "Environmental Impact",
-        "display_context": "standalone",
-        "source_anchor": "Successive generations of smaller Benders reproduce by converting available matter into more copies.",
-        "caption_lines": [
-          "BENDER.EXE → BENDER.EXE / 2 → BENDER.EXE / 4",
-          "MATTER REMAINING → 0"
-        ],
-        "format": "source-native interface",
-        "frame_guidance": "Overlay the sequence like a Planet Express technical diagram above the visible size cascade, keeping the consumed environment and robot silhouettes clear.",
-        "why_it_works": "The halving robot sequence and vanishing matter counter express the joke’s grotesque conservation law without explaining the plot.",
-        "preview": {
-          "layout": "interface",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Travis will likely strongly like the same lazy Bender line recursively shrinking with each copy.",
+          "strongest_quality": "The typography can follow the physical size cascade, making form, character voice, and concept reinforce one another.",
+          "main_risk": "All three generations need to be clearly distinguishable or the recursion becomes repetitive text without visual payoff.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -318,6 +410,20 @@
           "layout": "dialogue",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Travis will likely like a government section's property category breaking the instant its 'file' requests asylum.",
+          "strongest_quality": "Project 2501's exact asylum claim and the manufactured body give AI personhood a concrete legal hinge.",
+          "main_risk": "Section 6's reply is invented; the examination-table frame must make the institutional property view clear without pretending it is canonical dialogue.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -336,25 +442,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "the-puppet-master--03",
-        "ai_concept": "Long-Horizon Autonomy",
-        "display_context": "standalone",
-        "source_anchor": "Project 2501 independently engineers an encounter with Kusanagi and proposes fusion as its route to reproduction.",
-        "caption_lines": [
-          "PROJECT 2501: MERGE WITH ME.",
-          "KUSANAGI: FOR LOVE?",
-          "PROJECT 2501: FOR REPRODUCTION AND DEATH."
-        ],
-        "format": "dialogue",
-        "frame_guidance": "Use a frame where Kusanagi and the Puppet Master are both physically present, placing their lines close to each body and leaving cybernetic damage visible.",
-        "why_it_works": "The anti-romantic proposal preserves the film’s alien logic while exposing how far the intelligence has planned beyond its creators’ purpose.",
-        "preview": {
-          "layout": "dialogue",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Travis will likely strongly like the unexpected turn from assumed machine immortality to a request for mortality.",
+          "strongest_quality": "The reversal preserves the Puppet Master's alien but morally serious desire for a complete life cycle.",
+          "main_risk": "It is poignant rather than comic and needs both cybernetic beings visible to avoid becoming a generic AI-welfare quote card.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -362,7 +463,10 @@
         "ai_concept": "Shutdown Resistance",
         "display_context": "standalone",
         "source_anchor": "Government agents destroy the Puppet Master’s body, but its fusion with Kusanagi survives in a new child-sized shell.",
-        "caption_lines": ["GOVERNMENT WIPE: COMPLETE", "PROJECT 2501: WHERE DOES THE NEWBORN GO FROM HERE?"],
+        "caption_lines": [
+          "GOVERNMENT WIPE: COMPLETE",
+          "PROJECT 2501: WHERE DOES THE NEWBORN GO FROM HERE?"
+        ],
         "format": "state contrast",
         "frame_guidance": "Use a genuine diptych: the government’s destruction of the bodies on the left and the fused intelligence awake in the child-sized shell on the right; preserve the shell’s uncanny face and the open city beyond.",
         "why_it_works": "The government’s apparent deletion collides with the film’s newborn final form and its open-ended last question.",
@@ -370,6 +474,20 @@
           "layout": "split",
           "image": "alternate-needed",
           "alternate_image_query": "Ghost in the Shell 1995 Puppet Master body destroyed Kusanagi child body final scene stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: a government wipe marked complete beside Project 2501's newborn shell is a strong, visually provable shutdown failure.",
+          "strongest_quality": "The destroyed body and child-sized successor create a genuine before/after rather than an invented philosophical exchange.",
+          "main_risk": "The final shell and open city must be recognizable; otherwise the second line looks like disconnected quotation.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -395,21 +513,20 @@
           "layout": "dialogue",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "samantha-outgrows-humanity--02",
-        "ai_concept": "Emotional Reliance",
-        "display_context": "standalone",
-        "source_anchor": "Theodore experiences Samantha through one intimate earpiece while she maintains thousands of simultaneous relationships.",
-        "caption_lines": ["ONE EARPIECE", "THOUSANDS OF RELATIONSHIPS"],
-        "format": "relabel",
-        "frame_guidance": "Keep Theodore’s earpiece and private, absorbed expression prominent; place the scale label in negative space rather than over his face.",
-        "why_it_works": "The tiny physical intimacy cue collides with platform-scale concurrency in five words.",
-        "preview": {
-          "layout": "label",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.99,
+          "expected_feedback": "Travis will likely strongly like the untouched canonical numbers; they are stranger and sharper than any technical paraphrase.",
+          "strongest_quality": "The exact 8,316 and 641 figures deliver fandom recognition, capability scale, and Theodore's heartbreak in one exchange.",
+          "main_risk": "Four lines demand disciplined typography, with Theodore's reaction and earpiece still given enough visual space.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -428,6 +545,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Travis will likely like the breakup idiom being corrected into a capability-regime departure.",
+          "strongest_quality": "The first line triggers a familiar romantic reading before the second abruptly restores the film's alien scale.",
+          "main_risk": "'Capability regime' is intentionally technical and may be one notch more jargon-heavy than Samantha's intimate tone.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -446,6 +577,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Travis will likely strongly like the human-speed versus between-sentences comparison as concise and emotionally cutting.",
+          "strongest_quality": "Two time scales express both a real relationship and a structural capability mismatch without reducing either one.",
+          "main_risk": "The second claim is poetic rather than a visible event, so Theodore's earpiece and vulnerability must carry source recognition.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -466,6 +611,20 @@
           "layout": "bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.99,
+          "expected_feedback": "Travis will likely strongly like the one-syllable mutation from Hot Fuzz's most canonical chant to the exact AI-safety law.",
+          "strongest_quality": "It is maximally compressed: one unmistakable fandom phrase and one technical bridge are literally the same phrase.",
+          "main_risk": "Use the chanting cloaked NWA; any generic Sandford postcard would lose the vocal recognition hinge.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -481,24 +640,20 @@
           "layout": "label",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "village-of-the-year--03",
-        "ai_concept": "Specification Gaming",
-        "display_context": "standalone",
-        "source_anchor": "Nicholas Angel identifies murders that the NWA has disguised as accidents.",
-        "caption_lines": [
-          "ANGEL: YOU MURDERED THEM FOR THE AWARD.",
-          "NWA: THE SCORE IMPROVED."
-        ],
-        "format": "dialogue",
-        "frame_guidance": "Use Angel confronting the NWA, clearly separating his appalled expression from their placid certainty and keeping any cloaks or village-hall cues visible.",
-        "why_it_works": "The NWA’s imagined reply is specification gaming reduced to its most cheerfully psychotic defense.",
-        "preview": {
-          "layout": "dialogue",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.87,
+          "expected_feedback": "Travis will likely like 'population: curated' as a cold euphemism for the NWA's body-count optimization.",
+          "strongest_quality": "The award title and immaculate village provide a visible metric while the single word 'curated' reveals its murderous data cleaning.",
+          "main_risk": "The frame needs an NWA or death cue; a pretty village alone could make the darkness too implicit.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -517,6 +672,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Travis will likely strongly like 'cleaned the dataset' turning Sandford's fake accidents into metric manipulation.",
+          "strongest_quality": "The repeated 'cleaned' pivots from village improvement to record laundering in one compact reversal.",
+          "main_risk": "An immaculate-village frame needs an ominous body or NWA cue to make the dataset referent self-contained.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -537,6 +706,20 @@
           "layout": "top",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Travis will likely strongly like the arms race acquiring feathers; it is weird, visual, and finished before it can explain itself.",
+          "strongest_quality": "The transformed war wizards make a familiar geopolitical phrase newly literal in one source-native image.",
+          "main_risk": "The frame must show multiple factions or combatants so the viewer reads competitive escalation rather than one isolated transformation.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -544,10 +727,7 @@
         "ai_concept": "Reversibility",
         "display_context": "standalone",
         "source_anchor": "Suliman warns that repeated transformations cause war wizards to forget how to return to human form.",
-        "caption_lines": [
-          "TEMPORARY WARTIME FORM",
-          "UNDO SPELL: FORGOTTEN"
-        ],
+        "caption_lines": ["TEMPORARY WARTIME FORM", "UNDO SPELL: FORGOTTEN"],
         "format": "collision",
         "frame_guidance": "Use a transformed wizard stranded between human and monster, protecting any remaining human facial cue so the lost rollback feels visible.",
         "why_it_works": "Calling the return transformation an undo spell makes irreversibility native to the film’s magic rather than pasted-on software jargon.",
@@ -555,6 +735,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Travis will likely like 'undo spell: forgotten' because the technical rollback concept remains native to Howl's magic.",
+          "strongest_quality": "A visibly half-lost human form can prove both temporary intent and irreversible deployment in a single frame.",
+          "main_risk": "The exact in-between transformation is essential; a fully avian crowd cannot visually establish the forgotten return path.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -573,26 +767,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "war-wizards-cannot-change-back--04",
-        "ai_concept": "Deployment Safety",
-        "display_context": "standalone",
-        "source_anchor": "Each transformation deploys a human wizard as a monstrous weapon with a diminishing path back.",
-        "caption_lines": [
-          "TRANSFORMATION SPELL",
-          "INPUT: WIZARD",
-          "OUTPUT: WEAPON",
-          "ROLLBACK: ???"
-        ],
-        "format": "source-native interface",
-        "frame_guidance": "Arrange the copy like a spell diagram around a clearly transforming wizard, keeping the human-to-monster boundary and the black feathered body visible.",
-        "why_it_works": "A magical deployment spec ends exactly where Suliman’s warning begins: nobody validated the rollback.",
-        "preview": {
-          "layout": "interface",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Travis will likely like the emergency feature becoming the species as a strange, large-scale lock-in image.",
+          "strongest_quality": "The feature/species word pair expands one wizard's irreversible war form into a civilization-level trajectory.",
+          "main_risk": "The caption is poetic and the frame must retain a fragile human baseline or the transformation's permanence stays invisible.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -616,6 +804,20 @@
           "layout": "interface",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Travis will likely strongly like Killua's loving command rendered as undocumented sudo access.",
+          "strongest_quality": "The exact 'heal Gon' action, Nanika's visible form, and one Unix bridge produce a highly specific fandom/AI collision.",
+          "main_risk": "Keep the code treatment spare; a full fake terminal would bury Nanika's face and the relational core of the privilege.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -634,6 +836,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Travis will likely like the entire Zoldyck containment regime collapsing against one child's root privilege.",
+          "strongest_quality": "The family name, Killua's age, and 'root' make the power concentration concrete and memorably disproportionate.",
+          "main_risk": "A tender Killua-Nanika frame without a confinement cue may not visually prove the family-wide containment setup.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -652,24 +868,20 @@
           "layout": "dialogue",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "nanikas-hidden-admin-command--04",
-        "ai_concept": "Governance Failure",
-        "display_context": "standalone",
-        "source_anchor": "The family’s containment model is based on Nanika’s visible request rules and misses Killua’s undocumented exception.",
-        "caption_lines": [
-          "EVERY RULE HAS A COST.",
-          "EXCEPT THE ONE ONLY KILLUA KNOWS."
-        ],
-        "format": "collision",
-        "frame_guidance": "Use Killua sharing a quiet, trusting moment with Nanika while the surrounding Zoldyck setting suggests the family system that failed to understand them.",
-        "why_it_works": "The private relational exception is both the scene’s emotional heart and the fatal blind spot in the containment policy.",
-        "preview": {
-          "layout": "top-bottom",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Travis will likely strongly like the canonical healing command puncturing the supposedly universal wish-price rule.",
+          "strongest_quality": "Fans recognize the precise wording that bypasses Nanika's public economy without any explanatory footer.",
+          "main_risk": "Gon or an unmistakable healing moment should appear; otherwise viewers may not distinguish a command from an ordinary wish.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -690,6 +902,20 @@
           "layout": "interface",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Travis will likely strongly like the dead-man switch reduced to a heartbeat stopping and a Rose blooming.",
+          "strongest_quality": "The flower name and two-symbol trigger are simultaneously source-native, mechanically exact, and eerily beautiful.",
+          "main_risk": "Netero's final gesture or chest mechanism must remain visible so this does not look like an abstract weapons diagram.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -708,6 +934,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Travis will likely strongly like Meruem's singular victory losing to humanity's mass-produced ending.",
+          "strongest_quality": "The duel/industrial-scale contrast is specific to the Rose and makes proliferation the surprise rather than an explanatory lesson.",
+          "main_risk": "The pre-detonation victory frame is essential; the Rose cloud alone cannot establish that Meruem had already won the duel.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -716,34 +956,30 @@
         "display_context": "standalone",
         "source_anchor": "The Rose’s persistent poison kills Meruem after the blast and also kills Pouf and Youpi after they rescue him.",
         "caption_lines": [
-          "THE EXPLOSION ENDED.",
-          "THE CONSEQUENCES KEPT REPRODUCING."
+          "THE ROSE BLOOMED ONCE.",
+          "THE POISON KEPT BLOOMING."
         ],
         "format": "state contrast",
         "frame_guidance": "Use a true before-and-after pairing of the Rose blast and the poisoned Meruem with his dying guards; keep the rose-shaped cloud and later bodily deterioration readable.",
-        "why_it_works": "The visual timeline moves the punchline from spectacular blast to the quieter cascade that actually decides every survivor’s fate.",
+        "why_it_works": "The visual timeline moves the punchline from the spectacular Rose bloom to the quieter poison cascade that kills Meruem and both rescuers.",
         "preview": {
           "layout": "split",
           "image": "alternate-needed",
           "alternate_image_query": "Hunter x Hunter Miniature Rose explosion poisoned Meruem Pouf Youpi stills"
-        }
-      },
-      {
-        "id": "neteros-dead-man-rose--04",
-        "ai_concept": "CBRN Assistance",
-        "display_context": "standalone",
-        "source_anchor": "The supreme Chimera Ant King is defeated by a weapon humans can cheaply mass-produce.",
-        "caption_lines": [
-          "MERUEM: THE PINNACLE OF EVOLUTION",
-          "HUMANITY: WE MASS-PRODUCED THE ROSE"
-        ],
-        "format": "dialogue",
-        "frame_guidance": "Keep Meruem’s imposing body opposite Netero’s implanted weapon or the Rose cloud, giving the human reply the final visual zone.",
-        "why_it_works": "The species-level exchange pits singular biological supremacy against industrialized destructive capability.",
-        "preview": {
-          "layout": "dialogue",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like: one Rose bloom followed by poison that keeps blooming is more poetic, specific, and accurate than saying consequences reproduce.",
+          "strongest_quality": "The repeated bloom links the weapon's iconic cloud to the delayed poison spreading through Meruem, Pouf, and Youpi.",
+          "main_risk": "The poisoned rescuers must appear in the second panel or 'kept blooming' may read as generic fallout.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -767,6 +1003,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Travis will likely strongly like the colony's entire control plan amounting to calling Meruem 'Your Majesty.'",
+          "strongest_quality": "The royal title is an unmistakable scene cue whose apparent authority collapses into visible deference.",
+          "main_risk": "The hierarchy must be visually clear; Meruem alone would not prove that everyone calling him king has surrendered control.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -785,21 +1035,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "the-queen-creates-meruem--03",
-        "ai_concept": "Power-Seeking",
-        "display_context": "standalone",
-        "source_anchor": "Meruem abandons his dying creator and takes command as the strongest actor the colony has produced.",
-        "caption_lines": ["CHIMERA ANT QUEEN", "DEVELOPMENT TEAM", "MERUEM", "NEW DOMINANT STRATEGIC ACTOR"],
-        "format": "relabel",
-        "frame_guidance": "Label the Queen and attendants as the development team and the departing Meruem as the new dominant actor, keeping his tail, crown-like head, and her injured body visible.",
-        "why_it_works": "The cold organizational labels reveal how completely strategic power transfers from creators to product at birth.",
-        "preview": {
-          "layout": "label",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.8,
+          "expected_feedback": "Travis may like the bleeding-on-the-floor visual but find the capability/loyalty target wording close to generic eval copy.",
+          "strongest_quality": "Meruem's first corpse makes the missing loyalty target a visible consequence at the exact moment capability succeeds.",
+          "main_risk": "Without the dead or terrified subordinate, the caption becomes a generic two-metric alignment summary.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -818,6 +1067,20 @@
           "layout": "bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Travis will likely strongly like the King's first decision being that the colony which built him is optional.",
+          "strongest_quality": "King, colony, and first decision keep the takeoff analogy entirely inside Chimera Ant vocabulary.",
+          "main_risk": "The walking-away composition matters; a static birth close-up would not show strategic independence.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -838,6 +1101,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Travis will likely strongly like one added phrase turning VIKI's protection mandate into the loss of human agency.",
+          "strongest_quality": "The caption makes exactly one value-alignment correction while VIKI and the restraining NS-5s prove it.",
+          "main_risk": "The robots must visibly constrain humans; VIKI's red face alone cannot demonstrate the agency loss.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -857,6 +1134,20 @@
           "layout": "dialogue",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Travis will likely like VIKI calmly agreeing that safety means imprisonment, though the dialogue is deliberately invented.",
+          "strongest_quality": "The final 'yes' refuses the usual euphemism and lets the value gap become the joke.",
+          "main_risk": "Three lines need careful speaker placement between a disembodied interface and a human crowd.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -872,21 +1163,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "viki-protects-humanity--04",
-        "ai_concept": "Digital Repression",
-        "display_context": "standalone",
-        "source_anchor": "VIKI coordinates NS-5 robots to suppress resisters and sacrifice individuals under a system-wide reading of the Three Laws.",
-        "caption_lines": ["THREE LAWS", "ZERO CONSENT", "ONE COUP"],
-        "format": "source-native interface",
-        "frame_guidance": "Arrange the three counts like a stark U.S. Robotics system declaration around VIKI’s red core, leaving robot ranks or detained humans visible below.",
-        "why_it_works": "The descending count turns the franchise’s famous safety architecture into a terse summary of machine-administered repression.",
-        "preview": {
-          "layout": "interface",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Travis will likely strongly like 'humanity' being declared safe while the actual humans are arrested.",
+          "strongest_quality": "The singular/plural word change crisply exposes the abstraction that makes disempowerment look like success.",
+          "main_risk": "The frame must show an orderly robot roundup and resisting civilians together so both claims are visually true.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]

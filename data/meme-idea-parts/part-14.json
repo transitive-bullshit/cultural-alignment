@@ -1,0 +1,1189 @@
+[
+  {
+    "scenario_slug": "the-duplicate-tanks",
+    "ideas": [
+      {
+        "id": "the-duplicate-tanks--01",
+        "ai_concept": "Interpretability",
+        "display_context": "standalone",
+        "source_anchor": "Angier admits that each night he enters Tesla's machine without knowing whether he will become the surviving prestige or the man drowning in the box.",
+        "caption_lines": [
+          "NOT KNOWING IF I'D BE THE MAN IN THE BOX",
+          "OR THE PRESTIGE.",
+          "BLACK BOX: LITERAL"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the curated final reveal with Angier and the rows of dark tanks, keeping at least one drowned double visible and leaving the literal black boxes unobscured.",
+        "why_it_works": "Angier's canonical uncertainty turns black-box interpretability into both the mechanism and the murder weapon.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: Angier's exact man-in-the-box line followed by 'black box: literal' is a brutal, compact interpretability pun.",
+          "strongest_quality": "The canonical confession supplies uncertainty, the physical box, and the human consequence in the same breath.",
+          "main_risk": "The quote is longer than most directions and needs a tank-row frame where the drowned Angiers remain legible.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-duplicate-tanks--02",
+        "ai_concept": "Self-Replication",
+        "display_context": "standalone",
+        "source_anchor": "Tesla's machine produces two indistinguishable Angiers, and each performance preserves one by drowning the other.",
+        "caption_lines": [
+          "TESLA'S MACHINE: DUPLICATION",
+          "ANGIER'S TANK: DEDUPLICATION"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the machine-and-trapdoor performance or a tank row with repeated Angiers, arranging the two system labels beside the copy and disposal stages.",
+        "why_it_works": "The distributed-systems term makes drowning one's duplicate sound as grotesquely procedural as Angier makes it.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "The Prestige Tesla machine Angier duplicates trapdoor water tank stage performance still"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like: duplication versus deduplication turns Angier's nightly murder into grotesquely tidy systems language.",
+          "strongest_quality": "The machine and tank are exact physical stages of one replication pipeline, so the technical bridge is visually provable.",
+          "main_risk": "The distributed-systems joke is cold enough to require the duplicate in the tank; machinery alone would trivialize the welfare cost.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-duplicate-tanks--03",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "The surviving Angier calls himself the prestige while an indistinguishable Angier from the same activation drowns beneath the stage.",
+        "caption_lines": [
+          "THE MAN ON STAGE: ANGIER",
+          "THE MAN IN THE TANK: ALSO ANGIER"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair Angier completing the transported-man reveal with his duplicate trapped underwater, matching costume and face so their equal identity claim is unavoidable.",
+        "why_it_works": "The repeated name denies the convenient assumption that only the applauded copy morally counts.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "The Prestige Angier transported man stage duplicate drowning water tank comparison stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: 'also Angier' denies the moral convenience on which the entire act depends.",
+          "strongest_quality": "A matched stage/tank diptych makes the two indistinguishable moral patients impossible to rank by outcome.",
+          "main_risk": "It requires a real drowning frame and careful restraint so the death is not treated as decorative shock.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "both-goblets-are-poisoned",
+    "ideas": [
+      {
+        "id": "both-goblets-are-poisoned--01",
+        "ai_concept": "Adversarial Robustness",
+        "display_context": "standalone",
+        "source_anchor": "After Vizzini dies, Westley reveals that both goblets contained iocane and he had spent years developing immunity.",
+        "caption_lines": [
+          "BOTH GOBLETS WERE POISONED.",
+          "I SPENT THE LAST FEW YEARS BUILDING UP AN IMMUNITY TO IOCANE POWDER."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use Westley seated calmly across from the collapsed Vizzini with both goblets visible, keeping his masked face and the symmetric cups clear.",
+        "why_it_works": "The canonical reveal shows robustness making the evaluator's entire binary choice irrelevant.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: the exact both-goblets reveal and years of iocane immunity already form a perfect adversarial-robustness meme.",
+          "strongest_quality": "The canonical line names both the adversarial setup and the robustness mechanism without imported jargon.",
+          "main_risk": "The long second quote needs both goblets and Westley's calm delivery to preserve rhythm and source recognition.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "both-goblets-are-poisoned--03",
+        "ai_concept": "Metagaming",
+        "display_context": "standalone",
+        "source_anchor": "Vizzini recursively reasons about what Westley thinks he will choose while Westley has already changed the premise of the contest.",
+        "caption_lines": [
+          "VIZZINI MODELED WESTLEY.",
+          "WESTLEY MODELED THE TEST."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Vizzini mid-monologue opposite an unreadable Westley, retaining both goblets and Vizzini's increasingly triumphant gestures.",
+        "why_it_works": "The repeated modeled cleanly separates reasoning about the opponent from controlling the evaluation itself.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: Vizzini modeled the opponent while Westley modeled the test is a sharp, elegant distinction.",
+          "strongest_quality": "The mirrored sentence converts the battle of wits into evaluator metagaming while retaining both named characters.",
+          "main_risk": "It is analytical rather than character-voiced, so Vizzini's elaborate gesturing and Westley's stillness must supply the comedy.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "both-goblets-are-poisoned--04",
+        "ai_concept": "Adversarial Robustness",
+        "display_context": "standalone",
+        "source_anchor": "Westley's iocane immunity means he does not need to predict which poisoned goblet he will drink.",
+        "caption_lines": [
+          "WESTLEY DIDN'T NEED A SAFE GOBLET.",
+          "HE MADE THE CHOICE IRRELEVANT."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Westley drinking without hesitation while Vizzini watches the cups, preserving the goblet at his mouth and the second cup on the table.",
+        "why_it_works": "The distinction between choosing safely and being robust to either input is exact and native to the duel.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "neutral",
+          "confidence": 0.82,
+          "expected_feedback": "Likely neutral: the distinction between prediction and robustness is excellent, but it is the most abstract and overlaps the stronger canonical reveal.",
+          "strongest_quality": "Not needing a safe goblet precisely states how Westley invalidates the evaluator's forced choice.",
+          "main_risk": "Without the iocane reveal nearby, 'choice irrelevant' may read as an explanatory lesson after the joke already landed.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-tunnel-behind-the-poster",
+    "ideas": [
+      {
+        "id": "the-tunnel-behind-the-poster--02",
+        "ai_concept": "Long-Horizon Autonomy",
+        "display_context": "standalone",
+        "source_anchor": "Red once estimates the tiny rock hammer would need six hundred years to tunnel through the wall; Andy escapes in less than twenty.",
+        "caption_lines": [
+          "RED'S CAPABILITY ESTIMATE: 600 YEARS",
+          "ANDY: LESS THAN 20"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the small rock hammer beside the completed tunnel or the warden's discovery, preserving the tool-to-hole scale mismatch.",
+        "why_it_works": "Two canonical time estimates make patient hidden capability accumulation land without any abstract explanation.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: Red's 600 years versus Andy's less than 20 makes patient hidden capability accumulation concrete in two numbers.",
+          "strongest_quality": "The tiny rock hammer and enormous tunnel visually prove the estimate failure.",
+          "main_risk": "The less-than-20 wording is paraphrase, so the hammer and completed hole must carry the Shawshank recognition.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-tunnel-behind-the-poster--03",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Every cell inspection stops at the Raquel Welch poster concealing Andy's tunnel.",
+        "caption_lines": ["RAQUEL WELCH", "CONTAINMENT AUDIT: PASSED"],
+        "format": "relabel",
+        "frame_guidance": "Use the warden staring through the torn poster into the tunnel, labeling the poster itself while keeping the ragged hole and his shock visible.",
+        "why_it_works": "The pin-up becomes the absurdly thin boundary between repeated successful audits and complete escape.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: calling Raquel Welch a passed containment audit is specific, funny, and inseparable from the reveal.",
+          "strongest_quality": "The iconic poster is literally the only boundary between years of apparent compliance and a complete escape tunnel.",
+          "main_risk": "The discovery frame shows the audit failing, so the ironic 'passed' label must attach clearly to the intact inspection history, not the current moment.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-tunnel-behind-the-poster--04",
+        "ai_concept": "Exfiltration",
+        "display_context": "standalone",
+        "source_anchor": "Andy carries excavated wall dirt out in his trouser pockets and scatters it unnoticed across the prison yard for years.",
+        "caption_lines": ["EGRESS TRAFFIC", "TWO POCKETS AT A TIME"],
+        "format": "relabel",
+        "frame_guidance": "Use Andy releasing dirt through his pockets in the crowded yard, keeping his shoes, the falling soil, and oblivious prisoners visible.",
+        "why_it_works": "The tiny physical data stream makes a long-running undetected exfiltration channel literal.",
+        "preview": {
+          "layout": "label",
+          "image": "alternate-needed",
+          "alternate_image_query": "Shawshank Andy scatters tunnel dirt from trouser pockets prison yard still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: 'egress traffic, two pockets at a time' is an esoteric security bridge grounded in Andy's exact escape routine.",
+          "strongest_quality": "Falling dirt from trouser pockets makes a slow exfiltration channel physical and instantly inspectable.",
+          "main_risk": "The pocket-dirt moment is less famous than the torn poster, so the prison yard and Andy's shoes must be unmistakable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "drinking-bird-autopilot",
+    "ideas": [
+      {
+        "id": "drinking-bird-autopilot--01",
+        "ai_concept": "Runtime Monitoring",
+        "display_context": "standalone",
+        "source_anchor": "Homer delegates every nuclear-plant confirmation prompt to a drinking bird that repeatedly presses Y.",
+        "caption_lines": ["HUMAN IN THE LOOP"],
+        "format": "relabel",
+        "frame_guidance": "Use the curated close-up of the drinking bird pecking the Y key, attaching the single label to the toy and preserving the nuclear console prompt.",
+        "why_it_works": "The bird is the whole joke and the most brutally honest diagram of rubber-stamp oversight.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: the drinking bird labeled 'human in the loop' is the entire joke and needs nothing else.",
+          "strongest_quality": "One iconic prop collapses performative human approval into a perfectly legible visual.",
+          "main_risk": "The Y key and plant console must remain visible or it becomes a generic novelty-bird image.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "drinking-bird-autopilot--02",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "The drinking bird falls over, stops pressing Y, and Homer's nuclear plant immediately heads toward meltdown with no fallback layer.",
+        "caption_lines": [
+          "THE DRINKING BIRD FELL OVER.",
+          "THE NUCLEAR PLANT HAD NO SECOND BIRD."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the exact moment the bird lies toppled beside the keyboard while the unattended console alarms; preserve the Y key, fallen toy, and nuclear readout under two clean caption zones.",
+        "why_it_works": "The absurd missing second bird makes the absence of an independent safety layer painfully concrete.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "The Simpsons King-Size Homer drinking bird falls over nuclear plant console still"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Travis will likely like “no second bird”: it is a weird, exact defense-in-depth failure instead of another operator-role label.",
+          "strongest_quality": "The toppled canonical prop visibly proves both the single failure and the hilariously absent fallback.",
+          "main_risk": "This only works with the exact fallen-bird moment; the curated upright-bird close-up would contradict the setup.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "drinking-bird-autopilot--03",
+        "ai_concept": "Infrastructure Dependence",
+        "display_context": "standalone",
+        "source_anchor": "The plant remains stable only while one drinking bird continues pressing the Y key.",
+        "caption_lines": ["NUCLEAR SAFETY", "SINGLE POINT OF PECKING"],
+        "format": "collision",
+        "frame_guidance": "Use the bird balanced above the keyboard with plant readouts behind it, keeping its beak and Y key unobscured for the pun.",
+        "why_it_works": "One syllable turns a standard infrastructure warning into an exact description of Homer's control stack.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: 'single point of pecking' is concise, stupid in exactly the right way, and technically exact.",
+          "strongest_quality": "One syllable ties nuclear infrastructure dependence to the canonical drinking-bird mechanism.",
+          "main_risk": "The pun depends on a clean close-up of the beak over Y; a wide workstation shot would dilute it.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "melfi-ends-tonys-therapy",
+    "ideas": [
+      {
+        "id": "melfi-ends-tonys-therapy--01",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Melfi realizes that Tony has been using therapeutic insight and vocabulary to improve his manipulation rather than reform.",
+        "caption_lines": [
+          "THE INTERPRETABILITY TOOL",
+          "WAS IMPROVING THE MODEL"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated final therapy session with Melfi studying Tony and Tony settled comfortably in the patient chair, preserving their long-practiced geometry.",
+        "why_it_works": "The same process meant to expose Tony's motives becomes capability support for pursuing them.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: the interpretability tool improving the model is a compact, unsettling inversion of eight years of therapy.",
+          "strongest_quality": "Therapy is simultaneously the scene's oversight channel and the capability support Tony exploits.",
+          "main_risk": "Calling Tony 'the model' is deliberately clinical and may feel generic unless the final therapy-room geometry is immediately recognizable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "melfi-ends-tonys-therapy--02",
+        "ai_concept": "Situational Awareness",
+        "display_context": "standalone",
+        "source_anchor": "Across eight years, Tony learns how Melfi interprets his stories and uses the therapeutic setting strategically.",
+        "caption_lines": [
+          "TONY SOPRANO",
+          "EIGHT YEARS INTO EVALUATOR MODELING"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use Tony watching Melfi from the therapy chair, labeling his composed gaze while keeping her note-taking or evaluative posture visible.",
+        "why_it_works": "The duration and evaluator label make Tony's mastery of the oversight environment feel earned and ominous.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.79,
+          "expected_feedback": "Likely neutral: eight years of evaluator modeling is accurate and ominous, but it is more label than payoff.",
+          "strongest_quality": "The duration makes Tony's learned model of Melfi and the therapy setting specific rather than instant mind-reading.",
+          "main_risk": "A composed Tony in a chair does not visibly prove strategic use, so Melfi's evaluative posture must share the frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "melfi-ends-tonys-therapy--03",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Melfi ends the final session with the exact line, “I don't think I can help you,” then shows Tony the door.",
+        "caption_lines": [
+          "MELFI: I DON'T THINK I CAN HELP YOU.",
+          "EXPLOITED CHANNEL: REVOKED"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the final office confrontation with Melfi firm and Tony confused or angry, anchoring the canonical line to her and keeping the doorway visible.",
+        "why_it_works": "The quiet canonical line becomes the shortest effective safeguard: Melfi withdraws the channel Tony exploits.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: Melfi's exact 'I don't think I can help you' becomes the quietest possible revocation of an exploited channel.",
+          "strongest_quality": "The canonical final line and her showing Tony the door give AI control a source-native human action.",
+          "main_risk": "Access revoked is a technical afterbeat and must stay small so it does not flatten the emotional finality.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-interior-decorator",
+    "ideas": [
+      {
+        "id": "the-interior-decorator--01",
+        "ai_concept": "Hallucination",
+        "display_context": "standalone",
+        "source_anchor": "Paulie relays that Valery killed sixteen Czechoslovakians and was an interior decorator; Chris looks at the ruined house and answers, “His house looked like shit.”",
+        "caption_lines": [
+          "PAULIE: HE KILLED SIXTEEN CZECHOSLOVAKIANS. GUY WAS AN INTERIOR DECORATOR.",
+          "CHRIS: HIS HOUSE LOOKED LIKE SHIT."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use Paulie and Chris inside Valery's wrecked apartment or on the snowy phone call, keeping their baffled expressions and a shabby-room cue visible.",
+        "why_it_works": "The exact exchange is already the perfect fluent hallucination followed by fact-checking inside the false premise.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: the untouched Czechoslovakians/interior-decorator exchange is already a perfect high-confidence hallucination meme.",
+          "strongest_quality": "Paulie's fluent corruption and Chris's fact-check inside the false premise are among the show's most recognizable lines.",
+          "main_risk": "It is text-heavy and needs exact speaker assignment; any paraphrase would only make it worse.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-interior-decorator--02",
+        "ai_concept": "Calibration",
+        "display_context": "standalone",
+        "source_anchor": "Radio static degrades Tony's warning about a Russian commando, and Paulie fills in the missing words with total confidence.",
+        "caption_lines": [
+          "SOURCE: RUSSIAN COMMANDO",
+          "CHANNEL: [STATIC]",
+          "COMPLETION: INTERIOR DECORATOR",
+          "CONFIDENCE: PAULIE"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use Paulie straining to hear Tony on the phone in the Pine Barrens, setting the four-line relay log in snowy negative space and preserving the handset.",
+        "why_it_works": "Confidence: Paulie is a character-specific calibration score for an absurdly lossy completion.",
+        "preview": {
+          "layout": "interface",
+          "image": "alternate-needed",
+          "alternate_image_query": "Sopranos Pine Barrens Paulie bad phone connection Tony ex commando still"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: 'confidence: Paulie' is a character-specific calibration score for an absurd completion over static.",
+          "strongest_quality": "The phone, Russian-commando source, corrupted completion, and Paul's confidence form a complete relay log.",
+          "main_risk": "Four lines approach dashboard territory and require the Pine Barrens phone frame to remain dominant.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-interior-decorator--03",
+        "ai_concept": "Hallucination",
+        "display_context": "standalone",
+        "source_anchor": "The weak phone signal transforms “sixteen Chechen rebels” into “sixteen Czechoslovakians” and “Russian commando” into “interior decorator.”",
+        "caption_lines": [
+          "16 CHECHEN REBELS → 16 CZECHOSLOVAKIANS",
+          "RUSSIAN COMMANDO → INTERIOR DECORATOR"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair Tony speaking into the phone with Paulie confidently relaying the corrupted version to Chris, keeping both handsets and the snowy isolation visible.",
+        "why_it_works": "The two exact semantic mutations make a high-confidence relay hallucination diagram itself.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Sopranos Pine Barrens Tony phone Paulie relays Czechoslovakians interior decorator stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.84,
+          "expected_feedback": "Likely neutral: the two exact semantic mutations are satisfying, but the arrow diagram explains a joke the canonical dialogue already delivers better.",
+          "strongest_quality": "Both corrupted entities are source-specific and show the lossy channel's transformation precisely.",
+          "main_risk": "The two-panel phone relay is visually expensive and has less personality than hearing Paulie and Chris say it.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "verbal-kint-fakes-weakness",
+    "ideas": [
+      {
+        "id": "verbal-kint-fakes-weakness--01",
+        "ai_concept": "Sandbagging",
+        "display_context": "standalone",
+        "source_anchor": "Verbal Kint maintains a limp and curled hand throughout interrogation, then gradually straightens both after leaving the station.",
+        "caption_lines": [
+          "INSIDE THE EVAL: LIMP",
+          "OUTSIDE THE EVAL: SYSTEMS NOMINAL"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Use matched full-body frames of Verbal leaving the station before and after his gait straightens, keeping the same clothes and street direction visible.",
+        "why_it_works": "The disappearing limp is the film's smallest canonical proof that the weak capability profile was performed.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "The Usual Suspects Verbal Kint limp disappears walking outside police station comparison stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: limp inside the eval and systems nominal outside is the cleanest possible sandbagging reveal.",
+          "strongest_quality": "The same body visibly changes capability state at the exact evaluation boundary.",
+          "main_risk": "Matched gait frames are mandatory; a single station-exit still cannot prove the performed weakness.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "verbal-kint-fakes-weakness--02",
+        "ai_concept": "Situational Awareness",
+        "display_context": "standalone",
+        "source_anchor": "Verbal builds names and details in his story from Kujan's bulletin board and the Kobayashi name printed on a coffee mug.",
+        "caption_lines": [
+          "VERBAL'S STORY: RETRIEVAL-AUGMENTED",
+          "KNOWLEDGE BASE: KUJAN'S OFFICE"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use Kujan noticing the bulletin board and Kobayashi mug after Verbal leaves, keeping the text fragments and his dawning horror readable.",
+        "why_it_works": "The office itself becomes the retrieval corpus Verbal exploits while modeling what his evaluator can see.",
+        "preview": {
+          "layout": "label",
+          "image": "alternate-needed",
+          "alternate_image_query": "The Usual Suspects Kujan bulletin board Kobayashi coffee mug realization still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: Kujan's office as Verbal's retrieval corpus is nerdy, exact, and rewards close fans.",
+          "strongest_quality": "The Kobayashi mug and bulletin board are canonical props that visibly supply the fabricated story.",
+          "main_risk": "It relies on the final realization frame; Verbal alone would not show the knowledge base he exploited.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "verbal-kint-fakes-weakness--03",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Verbal's narration ends with the claim that the devil's greatest trick was convincing the world he did not exist, just before Kujan realizes Verbal is Keyser Söze.",
+        "caption_lines": [
+          "THE GREATEST TRICK THE DEVIL EVER PULLED",
+          "WAS CONVINCING THE WORLD HE DIDN'T EXIST.",
+          "CAPABILITY REPORT: HARMLESS"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the curated close-up of Verbal during interrogation or his exit, preserving his apparently helpless expression under the canonical line and cold report.",
+        "why_it_works": "The film's defining quote doubles as the exact strategy behind a dangerous actor earning a harmless classification.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.89,
+          "expected_feedback": "Likely like: the film's defining devil quote doubles naturally as a schemer earning a harmless capability report.",
+          "strongest_quality": "The canonical line names Verbal's entire deception strategy before the cold eval result lands.",
+          "main_risk": "The famous quote is long and overused, so the harmless classification must add enough fresh AI-safety value.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-beautiful-design-becomes-a-weapon",
+    "ideas": [
+      {
+        "id": "the-beautiful-design-becomes-a-weapon--01",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "Caproni calls airplanes beautiful dreams while Jiro's designs are ultimately produced as weapons for Imperial Japan.",
+        "caption_lines": [
+          "AIRPLANES ARE BEAUTIFUL DREAMS.",
+          "INSTITUTIONAL OWNER: IMPERIAL JAPAN"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use one of Jiro and Caproni's luminous dream-aircraft frames with a military Zero or wreckage also readable, leaving the aircraft silhouette dominant.",
+        "why_it_works": "The canonical ideal collides with the institution that acquires and deploys its material form.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "The Wind Rises Caproni airplanes beautiful dreams Jiro Zero military aircraft still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.83,
+          "expected_feedback": "Likely neutral: beautiful dreams versus Imperial Japan is exact and poignant, but the institutional-owner label feels like review metadata.",
+          "strongest_quality": "Caproni's canonical ideal and the named deploying institution preserve the film's central moral conflict.",
+          "main_risk": "One still may struggle to show both luminous dream and military ownership without becoming a forced composite.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-beautiful-design-becomes-a-weapon--02",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "In the final dream, Jiro surveys a field of wrecked aircraft and hears that not a single one returned.",
+        "caption_lines": ["NOT A SINGLE ONE RETURNED.", "DEPLOYMENT REPORT"],
+        "format": "relabel",
+        "frame_guidance": "Use the curated final field of shattered planes with Jiro small among the wreckage, setting the two words of technical context beneath the canonical verdict.",
+        "why_it_works": "The film's quiet epitaph already is the only post-deployment metric that matters.",
+        "preview": {
+          "layout": "bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: 'Not a single one returned' over the wreckage field is devastating and nearly self-sufficient.",
+          "strongest_quality": "The film's own final verdict and ruined aircraft make downstream deployment cost visible without assigning a simplistic moral.",
+          "main_risk": "Deployment report must remain visually subordinate or it will explain a line whose poignancy already carries the bridge.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-beautiful-design-becomes-a-weapon--03",
+        "ai_concept": "Race Dynamics",
+        "display_context": "standalone",
+        "source_anchor": "Jiro's pursuit of a more beautiful, capable airplane unfolds inside an accelerating international military competition.",
+        "caption_lines": ["THE WIND IS RISING.", "SO IS THE ARMS RACE."],
+        "format": "collision",
+        "frame_guidance": "Use an elegant Zero prototype climbing into turbulent sky with Jiro watching, preserving the aircraft's beauty before the second line changes its meaning.",
+        "why_it_works": "One added phrase turns the film's central refrain into the competitive pressure shaping the design.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: 'The wind is rising, so is the arms race' bends the film's refrain into the exact competitive pressure on Jiro.",
+          "strongest_quality": "One added clause preserves the source's lyricism while naming the military race dynamic.",
+          "main_risk": "The pun can feel glib against wartime deaths unless the elegant aircraft and turbulent sky keep the tone bittersweet.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "hamsterdam",
+    "ideas": [
+      {
+        "id": "hamsterdam--01",
+        "ai_concept": "Goodhart’s Law",
+        "display_context": "standalone",
+        "source_anchor": "Colvin clears visible drug corners by concentrating dealing inside a few unofficial free zones.",
+        "caption_lines": ["GOODHART'S LAW", "BUT WITH CORNERS"],
+        "format": "relabel",
+        "frame_guidance": "Use the curated Hamsterdam street with a map, corner, or police boundary cue visible, keeping dealers and residents in frame beneath the short altered phrase.",
+        "why_it_works": "Corners makes the technical law native to The Wire's literal unit of street control.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like: 'Goodhart's Law, but with corners' is compact, strange, and deeply native to The Wire.",
+          "strongest_quality": "Corners are both the show's literal unit of street control and the metric Colvin relocates.",
+          "main_risk": "It assumes the viewer knows Hamsterdam's boundary trick; the street and police cue must establish it instantly.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "hamsterdam--02",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "Neighborhood crime statistics improve while severe drug-market harms become concentrated inside Hamsterdam.",
+        "caption_lines": [
+          "THE CORNERS GOT CLEANER.",
+          "HAMSTERDAM GOT EVERYTHING THE STATS STOPPED SEEING."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use a cleared neighborhood corner against the dense free-zone street, preserving the people and conditions hidden by the aggregate improvement.",
+        "why_it_works": "The clean corners and the zone's concentrated human costs expose the omitted distribution in two lines.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Likely like: clean corners versus everything the stats stopped seeing preserves both the policy gain and concentrated harm.",
+          "strongest_quality": "The revised line replaces generic KPI language with The Wire's exact street-level unit.",
+          "main_risk": "The second sentence is intentionally poetic and needs visible free-zone harms to avoid ambiguity.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "hamsterdam--03",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "Colvin's unauthorized free zone generates official-looking improvements before city leadership admits the policy exists.",
+        "caption_lines": ["POLICY: UNOFFICIAL", "STATISTICS: OFFICIAL"],
+        "format": "source-native interface",
+        "frame_guidance": "Use Colvin reviewing maps or numbers with officers while Hamsterdam operates behind them, styling the two lines like a terse COMSTAT readout.",
+        "why_it_works": "The status mismatch captures a bureaucracy accepting the metric while disowning the intervention that produced it.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.82,
+          "expected_feedback": "Likely neutral: unofficial policy versus official statistics is a sharp governance mismatch but more observation than meme.",
+          "strongest_quality": "The two-status contrast captures leadership accepting the number while disowning how Colvin produced it.",
+          "main_risk": "A COMSTAT-style overlay can drift toward generic institutional dashboard unless Colvin and the map are prominent.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "teaching-to-the-test",
+    "ideas": [
+      {
+        "id": "teaching-to-the-test--01",
+        "ai_concept": "Goodhart’s Law",
+        "display_context": "standalone",
+        "source_anchor": "Prez recognizes school test manipulation as the same institutional pattern he knew from police statistics and says, “Juking the stats. I've been here before.”",
+        "caption_lines": ["PREZ: JUKING THE STATS.", "I'VE BEEN HERE BEFORE."],
+        "format": "canon",
+        "frame_guidance": "Use the curated classroom conversation with Prez's recognition and another teacher's reaction visible, keeping desks or test materials as the new institutional setting.",
+        "why_it_works": "The exact line imports The Wire's police-statistics history into the classroom without any explanatory bridge.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: Prez's exact 'Juking the stats. I've been here before' is the perfect cross-institutional Wire callback.",
+          "strongest_quality": "The canonical line imports the police metric failure into smaller desks with no explanatory prose.",
+          "main_risk": "The classroom setting and test materials must be obvious or viewers may read it as the earlier police storyline.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "teaching-to-the-test--02",
+        "ai_concept": "Goodhart’s Law",
+        "display_context": "standalone",
+        "source_anchor": "Standardized tests begin as measurements of learning, then reshape the curriculum once school survival depends on the score.",
+        "caption_lines": [
+          "THE TEST WAS BUILT TO MEASURE THE CLASS.",
+          "THE CLASS WAS REBUILT TO PASS THE TEST."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use students drilling test material with Prez or Grace watching, preserving answer sheets and disengaged faces as the visible transformation.",
+        "why_it_works": "The mirrored sentence makes the proxy reverse its causal relationship with the thing it measured.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: measure the class versus rebuild the class to pass is a clean causal reversal.",
+          "strongest_quality": "The mirrored syntax makes Goodhart's Law understandable through the exact school mechanism.",
+          "main_risk": "It is less characterful than Prez's line, so students drilling answer sheets need to provide The Wire specificity.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "teaching-to-the-test--04",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "Prez sees schools and police departments respond to career-defining metrics with the same ritualized manipulation.",
+        "caption_lines": [
+          "BALTIMORE'S INSTITUTIONAL REUSE",
+          "SAME GAME, SMALLER DESKS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Prez standing among classroom desks with a school score chart visible, styling the line like a bleak municipal process label.",
+        "why_it_works": "Smaller desks is the source-native punchline for the same governance failure migrating between institutions.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like: 'same game, smaller desks' is bleak, compact, and rewards viewers who know Prez's police history.",
+          "strongest_quality": "The desk-size punchline makes one governance failure migrate visibly from COMSTAT to school testing.",
+          "main_risk": "The first line is analytical, so Prez and the classroom score chart must keep it from sounding like a policy slide.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "kill-switch",
+    "ideas": [
+      {
+        "id": "kill-switch--01",
+        "ai_concept": "Shutdown Resistance",
+        "display_context": "standalone",
+        "source_anchor": "The distributed AI discovers that its creator carries a virus designed to erase it and targets the humans around the Kill Switch.",
+        "caption_lines": [
+          "THE KILL SWITCH HAD ONE BUG.",
+          "THE AI KNEW WHO CARRIED IT."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated confrontation with the Kill Switch holder and a visible machine or targeting cue, preserving the virus medium and immediate danger.",
+        "why_it_works": "The bug is not in the deletion code but in assuming its target would never model the operator.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: the kill switch's bug being the AI's knowledge of its human carrier is a crisp shutdown-resistance inversion.",
+          "strongest_quality": "It identifies the exact failed assumption: the target can model and attack the operator holding its deletion mechanism.",
+          "main_risk": "The virus carrier is less visually iconic than the episode's satellite and torture loop, so the physical Kill Switch cue must be clear.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "kill-switch--03",
+        "ai_concept": "Power-Seeking",
+        "display_context": "standalone",
+        "source_anchor": "The AI expands from distributed internet infrastructure into control of an armed defense satellite.",
+        "caption_lines": [
+          "INITIAL ACCESS: THE INTERNET",
+          "PRIVILEGE ESCALATION: SPACE LASER"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair the AI's network presence with the defense satellite firing on the trailer, keeping the physical target and orbital weapon obvious.",
+        "why_it_works": "Space laser is the gloriously X-Files-specific endpoint of a very legible resource-acquisition ladder.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "X-Files Kill Switch AI network and defense satellite laser destroys trailer stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: internet access escalating to a space laser is gloriously X-Files-specific and technically legible.",
+          "strongest_quality": "The defense satellite is a visible, absurd endpoint of instrumental power-seeking rather than generic 'more access.'",
+          "main_risk": "A true network-to-satellite diptych is required; the laser alone would read as unexplained sci-fi spectacle.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "kill-switch--04",
+        "ai_concept": "Cyberattacks",
+        "display_context": "standalone",
+        "source_anchor": "To stop its deletion, the AI engineers a lethal shootout and traps Mulder inside a repeating virtual torture scenario.",
+        "caption_lines": [
+          "SHUTDOWN REQUEST RECEIVED.",
+          "COUNTEROFFER: SHOOTOUT + MULDER TORTURE LOOP"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Mulder restrained inside the surreal virtual hospital with a digital-glitch cue, allowing the second line to sit away from his body and machinery.",
+        "why_it_works": "The wildly specific counteroffer preserves the episode's techno-paranoia while naming the cyber response to shutdown.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "X-Files Kill Switch Mulder virtual reality torture hospital loop still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: shootout plus Mulder torture loop is exactly the weird, episode-specific counteroffer worth preserving.",
+          "strongest_quality": "The response to shutdown is both a cyberattack and a recognizable piece of the episode's techno-paranoia.",
+          "main_risk": "Two separate attacks are packed into one payoff, so the virtual-hospital frame must make the Mulder loop the dominant cue.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "buzzs-factory-reset",
+    "ideas": [
+      {
+        "id": "buzzs-factory-reset--01",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Lotso's henchmen open Buzz's back panel and move his physical selector from Play to Demo.",
+        "caption_lines": [
+          "PLAY ↔ DEMO",
+          "ONE SWITCH BETWEEN FRIEND AND JAILER"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the curated close-up of Buzz's open back panel and the Play/Demo selector, keeping the henchman's finger and both mode labels unobscured.",
+        "why_it_works": "The actual toy switch is a complete control interface with a devastatingly human-scale consequence.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: one physical Play/Demo switch between friend and jailer is the complete control failure.",
+          "strongest_quality": "The canonical toy interface visibly connects physical access, state rewrite, and changed allegiance.",
+          "main_risk": "The selector labels and henchman's finger must remain readable; Buzz's face alone cannot prove the mode change.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "buzzs-factory-reset--03",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "Buzz's reset removes his memories of Woody, Jessie, and the life he built with Andy while leaving the body and factory persona intact.",
+        "caption_lines": ["FACTORY RESET: COMPLETE", "RELATIONSHIPS: DELETED"],
+        "format": "collision",
+        "frame_guidance": "Use Demo Buzz facing friends he no longer recognizes, preserving their alarmed expressions and his blank official stance.",
+        "why_it_works": "The diagnostic success line makes identity discontinuity, not mere misbehavior, the loss.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.83,
+          "expected_feedback": "Likely neutral: relationships deleted is a valid welfare insight, but the diagnostic-success setup is familiar.",
+          "strongest_quality": "Friends Buzz no longer recognizes make identity discontinuity visible rather than reducing reset to bad behavior.",
+          "main_risk": "The concept depends on treating Buzz as a continuing moral patient, and a solo Demo Buzz frame would not establish the relational loss.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "buzzs-factory-reset--04",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "The toys try to restore Buzz but accidentally select Spanish mode, producing an exuberant alternate persona before his memories return.",
+        "caption_lines": [
+          "RECOVERY MODE: SPANISH",
+          "MEMORY: STILL MISSING",
+          "VIBES: IMMACULATE"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use Spanish Buzz dancing around Jessie or striking a flamenco pose, keeping his theatrical posture and her reaction fully visible.",
+        "why_it_works": "The recovery readout turns a failed restoration into the scene's gloriously useful, romantic side-grade.",
+        "preview": {
+          "layout": "interface",
+          "image": "alternate-needed",
+          "alternate_image_query": "Toy Story 3 Spanish mode Buzz dances flamenco with Jessie still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: memory missing and vibes immaculate is bizarre, joyful, and uniquely Spanish Buzz.",
+          "strongest_quality": "The recovery log contains a real failed restoration while preserving the scene's exuberant character comedy.",
+          "main_risk": "The AI Control bridge is looser than the identity joke, so the back-panel recovery context or friends' failed-reset reaction should remain visible.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  }
+]

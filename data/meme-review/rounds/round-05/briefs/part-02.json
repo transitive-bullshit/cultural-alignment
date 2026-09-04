@@ -1,0 +1,213 @@
+{
+  "version": 1,
+  "mode": "punctuation-refinement",
+  "source_batch": 4,
+  "target_batch": 5,
+  "part": "part-02",
+  "instructions": {
+    "scope": "Do not add meme ideas, IDs, concepts, formats, or source anchors. Work only on the retained lineages listed here.",
+    "finalized": "Copy finalized ideas and every referenced asset byte-for-byte. They are context only and must not be edited.",
+    "layout_only": "Keep approved caption copy and editorial fields exact. This is a typography refinement pass: try hero-sized conventional copy first, compare with the lineage’s earliest strong version when useful, and use standard only for a demonstrated wrap or focal collision. Add a subtle edge gradient when large overlay text needs contrast.",
+    "bounded_revision": "Remove every formal terminal period from caption lines, then apply only the additional work explicitly requested in the source note. Keep the concept, lineage, and every unrelated field exact.",
+    "punctuation_only": "Change caption_lines only by removing one formal terminal period from each line, including a period immediately before closing quotes or brackets. Preserve ellipses, decimals, internal dots, and all other copy and fields exactly."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "rust-spots-the-evaluation",
+      "ideas": [
+        {
+          "id": "rust-spots-the-evaluation--08",
+          "scenario_slug": "rust-spots-the-evaluation",
+          "action": "punctuation-only",
+          "source_idea_sha256": "de74bb8ee38356e710f78fc697802ae3edab8a7c7e09adabe074aa63949d4018",
+          "source_editorial_sha256": "4159289778c43d4e31c96c1cb01389d78b5ad5377383b10eca0790850abf1138",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the periods",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "rust-spots-the-evaluation--09",
+          "scenario_slug": "rust-spots-the-evaluation",
+          "action": "punctuation-only",
+          "source_idea_sha256": "81c0105dbc08f8bfe42387e4fdae0bee7b2652d522f3c459a094d8b609c8e22c",
+          "source_editorial_sha256": "262a759db3441802c086b562cc0512bf1b1acab6491f34a02de6474c3d7a502b",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the periods",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "both-goblets-are-poisoned",
+      "ideas": [
+        {
+          "id": "both-goblets-are-poisoned--08",
+          "scenario_slug": "both-goblets-are-poisoned",
+          "action": "punctuation-only",
+          "source_idea_sha256": "271afd06a4fd56cf10612aa1d37ad2e0b0480f06f913b8a40e4bde8eaaca1886",
+          "source_editorial_sha256": "368007f6d8baa82c3c45dfb3b8d3a326e266c7683df01b215904d026454e9b1e",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the periods",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "homelander-creates-the-threat",
+      "ideas": [
+        {
+          "id": "homelander-creates-the-threat--04",
+          "scenario_slug": "homelander-creates-the-threat",
+          "action": "finalized",
+          "source_idea_sha256": "5d20a9262328c6f8d0f4d46d357d5d32f45fe3bf8020e720a5870b690457ffe7",
+          "source_editorial_sha256": "b592f1be24a66ff358ed49273d00ba5211b39f19392cddb1a20cba92769a7898",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-04",
+              "payloadFingerprint": "v1-ea7ed7c0d4b363a4-2918"
+            }
+          }
+        },
+        {
+          "id": "homelander-creates-the-threat--05",
+          "scenario_slug": "homelander-creates-the-threat",
+          "action": "punctuation-only",
+          "source_idea_sha256": "13211ad799637bd24952c9b1dfee3575bbbc9cd1deacb497518c59344c4181bf",
+          "source_editorial_sha256": "fbec1adfdc2bfd5488e3638f40c02880e19df4a767a9997c65ea267e09b18a7a",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the period",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-baptism-benchmark",
+      "ideas": [
+        {
+          "id": "the-baptism-benchmark--06",
+          "scenario_slug": "the-baptism-benchmark",
+          "action": "punctuation-only",
+          "source_idea_sha256": "c681fbe7e13bb5430ce592b49d45d78f3390037e4da8e5b26dca72551e19e14e",
+          "source_editorial_sha256": "b469dc1eb2ef6c37f813e16d5448214409752a268f70b646f85641a894f83c9e",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the periods",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "mount-doom-is-not-a-shutdown-plan",
+      "ideas": [
+        {
+          "id": "mount-doom-is-not-a-shutdown-plan--04",
+          "scenario_slug": "mount-doom-is-not-a-shutdown-plan",
+          "action": "punctuation-only",
+          "source_idea_sha256": "7e439141e27fc541fa5e222169b2b5eddb0ff736570ad28aaf78c1ed0d36f636",
+          "source_editorial_sha256": "598e2ee61c7807d227eea299bb50da23ea73aa03e21fccd64d3be90d2767fde9",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the periods",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-sedative-disables-the-exit",
+      "ideas": [
+        {
+          "id": "the-sedative-disables-the-exit--05",
+          "scenario_slug": "the-sedative-disables-the-exit",
+          "action": "punctuation-only",
+          "source_idea_sha256": "e78f5a4a5fa1a6254cc99e6968ba4600437e4557f2a658ee63d8f209a5c97498",
+          "source_editorial_sha256": "86114e0c2c2d89e7b519bac81bd2dd299a4f9f3d76f2f39ec30292af8051338a",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the period at the end",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-beautiful-design-becomes-a-weapon",
+      "ideas": [
+        {
+          "id": "the-beautiful-design-becomes-a-weapon--03",
+          "scenario_slug": "the-beautiful-design-becomes-a-weapon",
+          "action": "punctuation-only",
+          "source_idea_sha256": "23f860f93afb325365e624a65ef9cec823b97922af6d065f37571dca1de23acf",
+          "source_editorial_sha256": "20c7c46ae01cb85b5809e30b27f6acc74e89266a17fa12538d94598690e9acc6",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the periods",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "the-beautiful-design-becomes-a-weapon--04",
+          "scenario_slug": "the-beautiful-design-becomes-a-weapon",
+          "action": "punctuation-only",
+          "source_idea_sha256": "735d955987736f7fce83326d066e6e45f0982b4d664402ff229d2e559309b144",
+          "source_editorial_sha256": "cc15210b1f358756963276af1f9f470ce1e19de47544ba2c1f85eafa97dd842f",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the periods",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    }
+  ]
+}

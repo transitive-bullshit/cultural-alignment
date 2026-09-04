@@ -1,0 +1,734 @@
+[
+  {
+    "id": "order-66--curated",
+    "scenario_slug": "order-66",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f124818ca8ddc3c0f91797d0/gallery-0f3fb2e8ebffba7619c73ea5e838f8d70230b4766a3e92de4eb986c5a781cd46.webp",
+    "width": 1920,
+    "height": 816,
+    "alt": "Still from Star Wars: Episode III – Revenge of the Sith illustrating Order 66",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoIAAMAA8BgJQBOgB4/FkAAAP7Cg4shB7S3up+qoP4HORJmRAtEAAAA",
+    "content_hash": "0f3fb2e8ebffba7619c73ea5e838f8d70230b4766a3e92de4eb986c5a781cd46",
+    "protected_regions": [
+      {
+        "id": "order66-cody",
+        "label": "Commander Cody and helmet",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          19,
+          0,
+          45,
+          96
+        ]
+      },
+      {
+        "id": "order66-hologram",
+        "label": "Sidious hologram",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          41,
+          27,
+          15,
+          53
+        ]
+      },
+      {
+        "id": "order66-battlefield",
+        "label": "Burning Utapau battlefield",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          63,
+          4,
+          37,
+          92
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "roy-batty-demands-more-life--curated",
+    "scenario_slug": "roy-batty-demands-more-life",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f124818dbafdedf5ea6b8d8e/gallery-d4027b9bf36a56de6ba4aad06c34debcc5edbd63c78067159c2b1df5010181cc.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from Blade Runner illustrating Roy Batty Demands More Life",
+    "blur_data_url": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoIAAUAA8BgJYgCdAD0eqnsAP7Co2zWir+GdsGdLuo2OsxG2RYedLcYAck5243dXcRgAA==",
+    "content_hash": "d4027b9bf36a56de6ba4aad06c34debcc5edbd63c78067159c2b1df5010181cc",
+    "protected_regions": [
+      {
+        "id": "roy-face",
+        "label": "Roy's rain-soaked face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          11,
+          0,
+          55,
+          97
+        ]
+      },
+      {
+        "id": "roy-eyes",
+        "label": "Roy's eyes and expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          24,
+          23,
+          37,
+          32
+        ]
+      },
+      {
+        "id": "roy-rain",
+        "label": "Visible rain and blue-white light",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          64,
+          0,
+          36,
+          100
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "odysseus-binds-himself-to-the-mast--curated",
+    "scenario_slug": "odysseus-binds-himself-to-the-mast",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481918305f2d1b080a155/gallery-efed8c70d7dd9c705455ac4b507f2cbe0962e2b79e1dbe71fc13c5496d338936.webp",
+    "width": 1920,
+    "height": 960,
+    "alt": "Still from The Odyssey illustrating Odysseus Binds Himself to the Mast",
+    "blur_data_url": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADQAQCdASoIAAQAA8BgJZQCdAEDfZpQkAD+rZ0T06b0JJxid62WZHXzgLwNQJkomT/dZBgAAAA=",
+    "content_hash": "efed8c70d7dd9c705455ac4b507f2cbe0962e2b79e1dbe71fc13c5496d338936",
+    "protected_regions": [
+      {
+        "id": "odysseus-face",
+        "label": "Odysseus's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          43,
+          14,
+          32,
+          65
+        ]
+      },
+      {
+        "id": "odysseus-bindings",
+        "label": "Ropes binding Odysseus to the mast",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          38,
+          42,
+          49,
+          58
+        ]
+      },
+      {
+        "id": "odysseus-mast",
+        "label": "Ship mast",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          40,
+          0,
+          9,
+          100
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-puppet-master--curated",
+    "scenario_slug": "the-puppet-master",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f1248191b4c2ca4427d57bb1/gallery-5c91b15b5f9a9f7b39b54fcf09a469c001e0aee6a6d9c92c62dabb9ea4d98514.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Ghost in the Shell illustrating The Puppet Master",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoIAAUAA8BgJZQAAveFxu/AAP5ICN12NKfdymAsiiGA7+GbgYHfPgAA",
+    "content_hash": "5c91b15b5f9a9f7b39b54fcf09a469c001e0aee6a6d9c92c62dabb9ea4d98514",
+    "protected_regions": [
+      {
+        "id": "the-puppet-master--left-observer-face",
+        "label": "Left government observer's face and reaction",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          2,
+          13,
+          24,
+          39
+        ]
+      },
+      {
+        "id": "the-puppet-master--project-2501",
+        "label": "Project 2501's face, manufactured torso, open abdomen, and restraints",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          31,
+          5,
+          38,
+          94
+        ]
+      },
+      {
+        "id": "the-puppet-master--cranial-and-body-hardware",
+        "label": "Cranial apparatus, cable bundles, mechanical abdomen, and arms",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          29,
+          0,
+          43,
+          100
+        ]
+      },
+      {
+        "id": "the-puppet-master--right-observer-face",
+        "label": "Eyepatched government observer's face and reaction",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          71,
+          3,
+          23,
+          39
+        ]
+      },
+      {
+        "id": "the-puppet-master--observers-bodies",
+        "label": "Officials framing Project 2501 on both sides",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          36,
+          100,
+          64
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "3-6-roentgen--curated",
+    "scenario_slug": "3-6-roentgen",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481aca610e118206aa636/gallery-be553927840f750810c1d59a32585888732c10c3bcf78613d069bd9092c4b3e0.webp",
+    "width": 1077,
+    "height": 720,
+    "alt": "Still from Chernobyl illustrating 3.6 Roentgen",
+    "blur_data_url": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoIAAUAA8BgJQBOgB5vdwsAAP54V9FD6AhUcjDEe0L2FYo4IQ+AAA==",
+    "content_hash": "be553927840f750810c1d59a32585888732c10c3bcf78613d069bd9092c4b3e0",
+    "protected_regions": [
+      {
+        "id": "3-6-roentgen--standing-technician-face",
+        "label": "Standing technician's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          20,
+          14,
+          10,
+          17
+        ]
+      },
+      {
+        "id": "3-6-roentgen--standing-technician",
+        "label": "Standing technician in white uniform",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          11,
+          11,
+          22,
+          88
+        ]
+      },
+      {
+        "id": "3-6-roentgen--seated-official-face",
+        "label": "Seated official's face and dismissive expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          76,
+          34,
+          12,
+          18
+        ]
+      },
+      {
+        "id": "3-6-roentgen--cigarette-gesture",
+        "label": "Seated official's raised cigarette hand and smoke",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          71,
+          33,
+          12,
+          29
+        ]
+      },
+      {
+        "id": "3-6-roentgen--seated-official",
+        "label": "Seated official and chair",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          70,
+          34,
+          30,
+          58
+        ]
+      },
+      {
+        "id": "3-6-roentgen--desk-instruments",
+        "label": "Desk lamps, phone, paperwork, and control-room instruments",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          25,
+          36,
+          57,
+          48
+        ]
+      },
+      {
+        "id": "3-6-roentgen--control-readouts",
+        "label": "Original reactor control panels and glowing readouts",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          0,
+          100,
+          34
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-simulation-was-real--curated",
+    "scenario_slug": "the-simulation-was-real",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481bf8b1ce97971063ed4/gallery-a1b219cda260dc74d7ad0a240b31301e2648eafa6cb3f35efec4e63c8d10154d.webp",
+    "width": 1237,
+    "height": 720,
+    "alt": "Still from Ender’s Game illustrating The “Simulation” Was Real",
+    "blur_data_url": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoIAAUAA8BgJQBOgCP/JftRAAD+2q16u6uA6EhV6xw9l3tCTnFIWtoT8msww4AA",
+    "content_hash": "a1b219cda260dc74d7ad0a240b31301e2648eafa6cb3f35efec4e63c8d10154d",
+    "protected_regions": [
+      {
+        "id": "the-simulation-was-real--ender-face",
+        "label": "Ender's face and concentrated expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          31,
+          3,
+          36,
+          68
+        ]
+      },
+      {
+        "id": "the-simulation-was-real--left-command-hand",
+        "label": "Ender's raised left hand at the command interface",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          0,
+          0,
+          23,
+          48
+        ]
+      },
+      {
+        "id": "the-simulation-was-real--right-command-hand",
+        "label": "Ender's raised right hand at the command interface",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          83,
+          71,
+          17,
+          29
+        ]
+      },
+      {
+        "id": "the-simulation-was-real--holographic-interface",
+        "label": "Layered tactical holograms and original command readouts",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [
+          0,
+          17,
+          100,
+          83
+        ]
+      },
+      {
+        "id": "the-simulation-was-real--ender-body",
+        "label": "Ender's isolated body at the controls",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          38,
+          60,
+          30,
+          40
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "lind-l-tailor-bait--curated",
+    "scenario_slug": "lind-l-tailor-bait",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481d787e1de7c04592f86/gallery-545abd57dc328f8c216a81423811a3c152431a5fb7213c86910f8fe8135239f0.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Death Note illustrating Lind L. Tailor Bait",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoIAAUAA8BgJZwAApyD7zLAAP6Z27zihmgrE3fi6+GdhYgWwgRMZWECAAA=",
+    "content_hash": "545abd57dc328f8c216a81423811a3c152431a5fb7213c86910f8fe8135239f0",
+    "protected_regions": [
+      {
+        "id": "lind-l-tailor-bait--tailor-face",
+        "label": "Lind L. Tailor's face and death reaction",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          38,
+          8,
+          24,
+          38
+        ]
+      },
+      {
+        "id": "lind-l-tailor-bait--tailor-body",
+        "label": "Lind L. Tailor's body and hands clutching his chest",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          31,
+          42,
+          38,
+          48
+        ]
+      },
+      {
+        "id": "lind-l-tailor-bait--name-placard",
+        "label": "Original LIND.L.TAILOR broadcast placard",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [
+          38,
+          86,
+          29,
+          13
+        ]
+      },
+      {
+        "id": "lind-l-tailor-bait--broadcast-seal",
+        "label": "Winged globe seal behind the decoy",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          23,
+          0,
+          58,
+          77
+        ]
+      },
+      {
+        "id": "lind-l-tailor-bait--television-frame",
+        "label": "Black television bezel proving the live broadcast",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          0,
+          100,
+          100
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "hal-resists-disconnection--curated",
+    "scenario_slug": "hal-resists-disconnection",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481df8773cd6c69449e4f/gallery-995f5bf38dbd4be8b1dbcce076e3c65eb0830f9790e95bfe661645052ee3892b.webp",
+    "width": 1600,
+    "height": 900,
+    "alt": "Still from 2001: A Space Odyssey illustrating HAL Resists Disconnection",
+    "blur_data_url": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACwAQCdASoIAAUAA8BgJQBYdiPtYajMAP7xoPKZgJx6UkZMRLeXQWtX2yeael4nCkAAAA==",
+    "content_hash": "995f5bf38dbd4be8b1dbcce076e3c65eb0830f9790e95bfe661645052ee3892b",
+    "protected_regions": [
+      {
+        "id": "hal-resists-disconnection--outer-lens",
+        "label": "HAL's complete circular glass lens and blue rim",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          10,
+          0,
+          80,
+          100
+        ]
+      },
+      {
+        "id": "hal-resists-disconnection--red-eye",
+        "label": "HAL's glowing red inner eye",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          29,
+          14,
+          43,
+          73
+        ]
+      },
+      {
+        "id": "hal-resists-disconnection--yellow-aperture",
+        "label": "Yellow central aperture at the focus of HAL's eye",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          47,
+          44,
+          8,
+          15
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "samantha-outgrows-humanity--curated",
+    "scenario_slug": "samantha-outgrows-humanity",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481ed9c08c14b184b134c/gallery-80bd6dc08ca730601de2becfbe38fded1bffc4fe146cb95765528dbf149ec5a9.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from Her illustrating Samantha Outgrows Humanity",
+    "blur_data_url": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoIAAUAA8BgJYgCdADZkL0AAP7aqFyTHoNe1hHK6O24MSz4Hpga/GbiGsynsolilruwAAAA",
+    "content_hash": "80bd6dc08ca730601de2becfbe38fded1bffc4fe146cb95765528dbf149ec5a9",
+    "protected_regions": [
+      {
+        "id": "samantha-outgrows-humanity--theodore-face",
+        "label": "Theodore’s downcast face and glasses",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          15,
+          7,
+          19,
+          31
+        ]
+      },
+      {
+        "id": "samantha-outgrows-humanity--theodore-body",
+        "label": "Theodore’s red-shirted seated silhouette and clasped hands",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          6,
+          8,
+          40,
+          91
+        ]
+      },
+      {
+        "id": "samantha-outgrows-humanity--os-monitor",
+        "label": "Glowing OS monitor and red interface",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [
+          61,
+          14,
+          27,
+          58
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-hackers-record-kenny--curated",
+    "scenario_slug": "the-hackers-record-kenny",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481f181a9fbe102901f0e/gallery-ac74f33c31853f44ca9ca086c50f6303b143071de860c05a8188ed25e1f83c67.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from Black Mirror illustrating The Hackers Record Kenny",
+    "blur_data_url": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACwAQCdASoIAAUAA8BgJZwAAv+tx+XAAOJ+T9cdl07T7uz8+1U/34xutslwczF+AGcAAA==",
+    "content_hash": "ac74f33c31853f44ca9ca086c50f6303b143071de860c05a8188ed25e1f83c67",
+    "protected_regions": [
+      {
+        "id": "the-hackers-record-kenny--face",
+        "label": "Kenny’s full anxious face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          27,
+          2,
+          47,
+          79
+        ]
+      },
+      {
+        "id": "the-hackers-record-kenny--yellow-glasses",
+        "label": "Distinctive yellow glasses and eyes",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          30,
+          19,
+          39,
+          25
+        ]
+      },
+      {
+        "id": "the-hackers-record-kenny--cap",
+        "label": "Kenny’s grey cap",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          24,
+          0,
+          51,
+          18
+        ]
+      },
+      {
+        "id": "the-hackers-record-kenny--shoulders",
+        "label": "Kenny’s jacket and isolated silhouette",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          18,
+          66,
+          67,
+          34
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-accidental-geass-command--curated",
+    "scenario_slug": "the-accidental-geass-command",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f12481048c06e31e75726f35/gallery-5eebb5f8d319135301c5c5e7c6047bf2d6c11bfa8b2c557336c9cc98f4dbde16.webp",
+    "width": 768,
+    "height": 432,
+    "alt": "Still from Code Geass illustrating The Accidental Geass Command",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAUAA8BgJZQAAsfkgvQgAP7xBCtkeCgOJJT3H5L1iF+gAAA=",
+    "content_hash": "5eebb5f8d319135301c5c5e7c6047bf2d6c11bfa8b2c557336c9cc98f4dbde16",
+    "protected_regions": [
+      {
+        "id": "the-accidental-geass-command--lelouch-face",
+        "label": "Lelouch’s face and eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          13,
+          9,
+          17,
+          25
+        ]
+      },
+      {
+        "id": "the-accidental-geass-command--lelouch",
+        "label": "Lelouch’s black-and-gold silhouette",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          5,
+          7,
+          34,
+          93
+        ]
+      },
+      {
+        "id": "the-accidental-geass-command--euphemia-face",
+        "label": "Euphemia’s face and eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          52,
+          8,
+          18,
+          28
+        ]
+      },
+      {
+        "id": "the-accidental-geass-command--euphemia",
+        "label": "Euphemia’s white dress and pink hair",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          41,
+          2,
+          40,
+          98
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "near-zero--curated",
+    "scenario_slug": "near-zero",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f124810f9e52d4153e24cc4a/gallery-8972e0d02fd2ed3b2443ed4127f0ba46fa6f622a1132213eb5a28a82e9ee1099.webp",
+    "width": 1920,
+    "height": 1280,
+    "alt": "Still from Oppenheimer illustrating Near Zero",
+    "blur_data_url": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADwAQCdASoIAAUAA8BgJQBOkCYjAu0UKgAA9jqVS9gB4bbus8uPCoGQYAAAAA==",
+    "content_hash": "8972e0d02fd2ed3b2443ed4127f0ba46fa6f622a1132213eb5a28a82e9ee1099",
+    "protected_regions": [
+      {
+        "id": "near-zero--men-faces",
+        "label": "Oppenheimer and Groves’s faces",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          62,
+          23,
+          17,
+          19
+        ]
+      },
+      {
+        "id": "near-zero--men",
+        "label": "The two men standing alone at Trinity",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          60,
+          23,
+          21,
+          70
+        ]
+      },
+      {
+        "id": "near-zero--test-equipment",
+        "label": "Test equipment and stacked timber",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          3,
+          55,
+          42,
+          27
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  }
+]

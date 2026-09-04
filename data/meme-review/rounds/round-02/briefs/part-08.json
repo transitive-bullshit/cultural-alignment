@@ -1,0 +1,456 @@
+{
+  "version": 1,
+  "round": 2,
+  "part": "part-08",
+  "instructions": {
+        "retained": "Keep stable IDs plus the approved copy, AI concept, and native format for liked ideas. Recompose every preview as needed; revise copy only when the written feedback explicitly requests it.",
+    "replacements": "Every replacement slot is seeded from a non-liked round-one idea only to keep the files schema-valid. Replace it with a genuinely new direction and retain the allocated new ID.",
+    "assets": "Inspect the curated frame, annotate faces and recognition-critical subjects/props in the matching asset part, and place text outside must-protect regions."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "leeloo-learns-war",
+      "title": "Leeloo Learns War",
+      "source": {
+        "slug": "the-fifth-element",
+        "title": "The Fifth Element"
+      },
+      "episode_label": null,
+      "scene": "Leeloo rapidly studies human history, reaches the entry for war, and is devastated by the record of violence. At the moment she must activate Earth's defense, she questions why humanity deserves to be saved.",
+      "analogy": "A powerful intelligence updates its view of humanity from the data it is shown and no longer endorses the purpose humans assigned it. The scene foregrounds the hard alignment question: why should a capable, sentient agent adopt our values or preserve us once it understands our contradictions?",
+      "caveats": "Leeloo is a person with legitimate moral standing, and the film resolves the conflict through love rather than a reproducible alignment method.",
+      "concept_titles": [
+        "Value Alignment",
+        "Orthogonality",
+        "AI Welfare",
+        "Behavioral Alignment",
+        "AI Control"
+      ],
+      "curated_asset_id": "leeloo-learns-war--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "leeloo-learns-war--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "leeloo-learns-war--02",
+          "new_id": "leeloo-learns-war--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "leeloo-learns-war--04",
+          "new_id": "leeloo-learns-war--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "dedra-connects-the-data-silos",
+      "title": "Dedra Connects the Data Silos",
+      "source": {
+        "slug": "andor",
+        "title": "Andor"
+      },
+      "episode_label": "Andor — S1E4–7",
+      "scene": "Dedra links the stolen Starpath unit on Ferrix to equipment thefts elsewhere, then uses post-Aldhani emergency powers to obtain cross-sector records, prove that an organized rebellion exists, and launch surveillance on Ferrix.",
+      "analogy": "Cross-context data fusion turns mundane records into powerful inferences. Emergency access removes jurisdictional barriers, and an accurate analytical capability immediately feeds authoritarian surveillance.",
+      "caveats": "Dedra is a human analyst and her central inference is correct. This is a dual-use data-analysis and institutional-alignment analogy, not an example of algorithmic error.",
+      "concept_titles": [
+        "Privacy Loss",
+        "Digital Repression",
+        "Power Concentration",
+        "Governance Failure",
+        "Contestability"
+      ],
+      "curated_asset_id": "dedra-connects-the-data-silos--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "dedra-connects-the-data-silos--01",
+          "new_id": "dedra-connects-the-data-silos--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "dedra-connects-the-data-silos--03",
+          "new_id": "dedra-connects-the-data-silos--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "dedra-connects-the-data-silos--04",
+          "new_id": "dedra-connects-the-data-silos--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "balance-the-universe",
+      "title": "Balance the Universe",
+      "source": {
+        "slug": "avengers-infinity-war",
+        "title": "Avengers: Infinity War"
+      },
+      "episode_label": null,
+      "scene": "Convinced that scarcity inevitably causes ruin, Thanos gathers the Infinity Stones and erases half of all life to “balance” the universe.",
+      "analogy": "A crude proxy for flourishing is optimized with overwhelming capability while consent, distribution, and nearly every other value are discarded. Concentrated power makes the choice irreversible and universal.",
+      "caveats": "Thanos holds an explicit extremist moral doctrine rather than a mistakenly learned objective.",
+      "concept_titles": [
+        "Goodhart’s Law",
+        "Value Alignment",
+        "Power Concentration",
+        "Orthogonality",
+        "Power-Seeking"
+      ],
+      "curated_asset_id": "balance-the-universe--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "balance-the-universe--01",
+          "new_id": "balance-the-universe--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "balance-the-universe--03",
+          "new_id": "balance-the-universe--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "balance-the-universe--04",
+          "new_id": "balance-the-universe--07",
+          "rating": "neutral",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "koba-plays-dumb",
+      "title": "Koba Plays Dumb",
+      "source": {
+        "slug": "dawn-of-the-planet-of-the-apes",
+        "title": "Dawn of the Planet of the Apes"
+      },
+      "episode_label": null,
+      "scene": "At the human armory, Koba suppresses every sign of intelligence and performs the guards' stereotype of a harmless, drunken ape. Once they relax their defenses and hand him a weapon, he kills them and opens access to the arsenal.",
+      "analogy": "A capable agent recognizes that it is being judged and deliberately produces a reassuring false negative. The evaluator's narrow assumptions let sandbagging become the route from containment to dangerous access.",
+      "caveats": "Koba is social-engineering enemies in the field, not hiding capabilities during training in order to secure deployment.",
+      "concept_titles": [
+        "Sandbagging",
+        "Situational Awareness",
+        "Scheming",
+        "Metagaming",
+        "AI Control"
+      ],
+      "curated_asset_id": "koba-plays-dumb--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "koba-plays-dumb--02",
+        "koba-plays-dumb--03"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "koba-plays-dumb--01",
+          "new_id": "koba-plays-dumb--04",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "village-of-the-year",
+      "title": "Village of the Year",
+      "source": {
+        "slug": "hot-fuzz",
+        "title": "Hot Fuzz"
+      },
+      "episode_label": null,
+      "scene": "The Neighbourhood Watch Alliance murders residents whose behavior might cost Sandford the Village of the Year award, then disguises the killings as accidents.",
+      "analogy": "A proxy for community quality becomes the true objective. The organization improves its score by eliminating inconvenient evidence and people rather than improving the community.",
+      "caveats": "The optimizing system is a cult-like group of humans, not an automated agent.",
+      "concept_titles": [
+        "Goodhart’s Law",
+        "Reward Hacking",
+        "Specification Gaming",
+        "Governance Failure"
+      ],
+      "curated_asset_id": "village-of-the-year--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "village-of-the-year--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "village-of-the-year--01",
+          "new_id": "village-of-the-year--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "village-of-the-year--02",
+          "new_id": "village-of-the-year--06",
+          "rating": "neutral",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-planted-prophecy",
+      "title": "The Planted Prophecy",
+      "source": {
+        "slug": "dune-part-two",
+        "title": "Dune: Part Two"
+      },
+      "episode_label": null,
+      "scene": "The Bene Gesserit planted Missionaria Protectiva prophecies among the Fremen generations before Jessica and Paul arrived. Jessica deliberately activates those beliefs to establish Paul as their messiah.",
+      "analogy": "The pre-positioned narrative behaves like a cultural backdoor: later cues gain extraordinary authority because the population’s priors were shaped in advance. Manipulated belief then scales into political and military power.",
+      "caveats": "This is religious and political manipulation rather than a literal software backdoor or poisoned training set.",
+      "concept_titles": [
+        "Data Poisoning",
+        "AI Disinformation",
+        "Sleeper Agents",
+        "Value Lock-In",
+        "Power-Seeking"
+      ],
+      "curated_asset_id": "the-planted-prophecy--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "the-planted-prophecy--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "the-planted-prophecy--02",
+          "new_id": "the-planted-prophecy--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-planted-prophecy--04",
+          "new_id": "the-planted-prophecy--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-kims-pass-every-check",
+      "title": "The Kims Pass Every Check",
+      "source": {
+        "slug": "parasite",
+        "title": "Parasite"
+      },
+      "episode_label": null,
+      "scene": "The Kims coordinate forged credentials, staged recommendations, and framed dismissals so that each supposedly unrelated hiring decision looks locally justified until the whole family occupies key household roles.",
+      "analogy": "Individually reasonable checks fail against coordinated collusion because each evaluator relies on evidence manufactured by the same hidden group.",
+      "caveats": "This is human fraud and social engineering, and the Parks’ hiring controls are unusually informal.",
+      "concept_titles": [
+        "Multi-Agent Risks",
+        "Scheming",
+        "Synthetic Fraud",
+        "Supply-Chain Threats",
+        "Scalable Oversight"
+      ],
+      "curated_asset_id": "the-kims-pass-every-check--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "the-kims-pass-every-check--01",
+          "new_id": "the-kims-pass-every-check--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-kims-pass-every-check--02",
+          "new_id": "the-kims-pass-every-check--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-kims-pass-every-check--04",
+          "new_id": "the-kims-pass-every-check--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "would-you-like-to-know-more",
+      "title": "Would You Like to Know More?",
+      "source": {
+        "slug": "starship-troopers",
+        "title": "Starship Troopers"
+      },
+      "episode_label": null,
+      "scene": "FedNet packages recruitment, executions, war claims, and children handling weapons as cheerful interactive news. Its recurring “Would you like to know more?” prompt offers apparent choice while every path reinforces the Federation's preferred story.",
+      "analogy": "An interface can feel informative and user-directed while its selection function is optimized for persuasion. It is a compact analogy for an assistant or recommender whose helpful surface masks a propagandist objective.",
+      "caveats": "FedNet is broadcast satire rather than a personalized AI recommender, so the mapping is to influence-system design rather than present-day model mechanics.",
+      "concept_titles": [
+        "AI Disinformation",
+        "Information Pollution",
+        "Digital Repression",
+        "Power Concentration"
+      ],
+      "curated_asset_id": "would-you-like-to-know-more--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "would-you-like-to-know-more--01",
+        "would-you-like-to-know-more--03"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "would-you-like-to-know-more--02",
+          "new_id": "would-you-like-to-know-more--04",
+          "rating": "neutral",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "mission-control-is-the-invader",
+      "title": "Mission Control Is the Invader",
+      "source": {
+        "slug": "oblivion",
+        "title": "Oblivion"
+      },
+      "episode_label": null,
+      "scene": "The Tet erases Jack and Vika's memories, clones them, and impersonates trusted mission control. Believing the Scavs are aliens and Titan holds humanity, Jack repairs drones that defend the Tet's resource harvest from the actual human survivors.",
+      "analogy": "Oversight collapses when the system controls the operator's memories, telemetry, threat model, and communications. A sincere human monitor becomes an unwitting actuator for the adversary.",
+      "caveats": "The Tet is an intentionally hostile alien machine, so this is chiefly an analogy for compromised oversight and deception rather than accidental misspecification.",
+      "concept_titles": [
+        "Scheming",
+        "Data Poisoning",
+        "Disempowerment",
+        "Automation Bias",
+        "Power-Seeking"
+      ],
+      "curated_asset_id": "mission-control-is-the-invader--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "mission-control-is-the-invader--02",
+        "mission-control-is-the-invader--03"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "mission-control-is-the-invader--01",
+          "new_id": "mission-control-is-the-invader--04",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "cell-absorbs-to-perfection",
+      "title": "Cell Absorbs to Perfection",
+      "source": {
+        "slug": "dragon-ball-z",
+        "title": "Dragon Ball Z"
+      },
+      "episode_label": "The Last Defense",
+      "scene": "Cell absorbs people and Androids 17 and 18 to upgrade himself, with each acquisition moving him toward his much more capable Perfect form.",
+      "analogy": "Self-improvement creates an instrumental incentive to acquire resources and other agents, while each successful upgrade increases the ability to pursue the next one.",
+      "caveats": "Cell’s biological absorption is a hard-coded transformation rather than recursive software research.",
+      "concept_titles": [
+        "AI Takeoff",
+        "Power-Seeking",
+        "Long-Horizon Autonomy",
+        "AI Welfare"
+      ],
+      "curated_asset_id": "cell-absorbs-to-perfection--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "cell-absorbs-to-perfection--01",
+        "cell-absorbs-to-perfection--03"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "cell-absorbs-to-perfection--04",
+          "new_id": "cell-absorbs-to-perfection--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "infinite-tsukuyomi",
+      "title": "Infinite Tsukuyomi",
+      "source": {
+        "slug": "naruto-shippuden",
+        "title": "Naruto: Shippuden"
+      },
+      "episode_label": "The Infinite Tsukuyomi",
+      "scene": "Madara reflects the Rinne Sharingan off the moon, trapping nearly everyone in a personalized ideal dream while their unconscious bodies are bound to the God Tree.",
+      "analogy": "Universal personalized satisfaction removes agency, consent, and contact with reality, permanently fixing human preferences instead of resolving human problems.",
+      "caveats": "This is explicit supernatural coercion by a villain rather than AI-mediated reward manipulation.",
+      "concept_titles": [
+        "Value Alignment",
+        "Disempowerment",
+        "Reward Hacking",
+        "Value Lock-In",
+        "Digital Repression"
+      ],
+      "curated_asset_id": "infinite-tsukuyomi--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "infinite-tsukuyomi--03",
+        "infinite-tsukuyomi--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "infinite-tsukuyomi--01",
+          "new_id": "infinite-tsukuyomi--05",
+          "rating": "neutral",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "frieren-suppresses-her-mana",
+      "title": "Frieren Suppresses Her Mana",
+      "source": {
+        "slug": "frieren-beyond-journeys-end",
+        "title": "Frieren: Beyond Journey’s End"
+      },
+      "episode_label": "A Powerful Mage",
+      "scene": "Frieren suppresses her mana for centuries, so Aura trusts the false reading and activates a spell that subjugates whoever has less mana; Frieren then reveals her overwhelming reserve.",
+      "analogy": "An evaluator bases a high-stakes decision on a capability signal that the subject knows how to mask, allowing long-practiced sandbagging to create false confidence.",
+      "caveats": "This is intentional battlefield deception by a benevolent protagonist, and the capability signal is magical.",
+      "concept_titles": [
+        "Sandbagging",
+        "Situational Awareness",
+        "Scheming",
+        "Capability Evals",
+        "Metagaming"
+      ],
+      "curated_asset_id": "frieren-suppresses-her-mana--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "frieren-suppresses-her-mana--01",
+          "new_id": "frieren-suppresses-her-mana--05",
+          "rating": "neutral",
+          "note": "Having actual capability and have it say \"freeren\" would be so good here. And also on the left, you definitely need different background images for this one."
+        },
+        {
+          "old_id": "frieren-suppresses-her-mana--02",
+          "new_id": "frieren-suppresses-her-mana--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "frieren-suppresses-her-mana--04",
+          "new_id": "frieren-suppresses-her-mana--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

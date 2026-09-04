@@ -1,0 +1,1259 @@
+[
+  {
+    "scenario_slug": "verbal-kint-fakes-weakness",
+    "ideas": [
+      {
+        "id": "verbal-kint-fakes-weakness--03",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Verbal's narration ends with the claim that the devil's greatest trick was convincing the world he did not exist, just before Kujan realizes Verbal is Keyser Söze.",
+        "caption_lines": [
+          "“THE GREATEST TRICK THE DEVIL EVER PULLED",
+          "WAS CONVINCING THE WORLD HE DOESN'T EXIST.”"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the authentic lineup still full-bleed at cover. Keep all five faces and Verbal's hunched stance at far right readable; set the requested quoted line as one large bottom beat over the suspects' lower bodies, where overlap adds meme immediacy without touching the faces.",
+        "why_it_works": "The film's defining quote names the scheming strategy so precisely that it can carry the analogy without an added capability-report explanation.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["verbal-kint-fakes-weakness--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely a stronger like: the requested deletion and quotation marks leave the canonical line alone, large and immediately readable.",
+          "strongest_quality": "The canonical line is the deception mechanism, so the source quote and the scheming analogy collapse into one beat.",
+          "main_risk": "The quote is long enough to wrap, so the final render must keep it to two forceful lines below the lineup's faces.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "verbal-kint-fakes-weakness--03",
+            "contrast_disliked_id": "verbal-kint-fakes-weakness--01"
+          }
+        }
+      },
+      {
+        "id": "verbal-kint-fakes-weakness--04",
+        "ai_concept": "Sandbagging",
+        "display_context": "standalone",
+        "source_anchor": "The supposedly harmless Verbal Kint is released from interrogation even though he is Keyser Söze.",
+        "caption_lines": [
+          "WHEN YOU EVAL'D VERBAL KINT",
+          "AND RELEASED KEYSER SÖZE"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use a genuine chronological diptych at cover: the authentic pre-reveal release frame on the left as the hunched Verbal Kint, then the authentic final-reveal cigarette frame on the right as Keyser Söze. Keep Verbal's face and guarded posture and Keyser's face, lighter, and cigarette visible above their respective bottom captions.",
+        "why_it_works": "The two names turn one release decision into the cleanest possible gap between evaluated persona and deployed capability.",
+        "preview": {
+          "renderer": 2,
+          "template": "diptych",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "verbal-kint-fakes-weakness--verbal-release",
+            "verbal-kint-fakes-weakness--keyser-reveal"
+          ],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "panel-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "panel-right",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.82,
+          "expected_feedback": "Likely like: the requested real before/after now makes the Verbal/Söze identity swap visible instead of asking one lineup still to prove both states.",
+          "strongest_quality": "The scene hinge and the AI payoff are the same identity mismatch.",
+          "main_risk": "Both source frames are wide, so their protected-region focus must keep Verbal's pre-reveal posture and Keyser's cigarette-lighting gesture centered in the narrow panels.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "verbal-kint-fakes-weakness--03",
+            "contrast_disliked_id": "verbal-kint-fakes-weakness--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "teaching-to-the-test",
+    "ideas": [
+      {
+        "id": "teaching-to-the-test--02",
+        "ai_concept": "Goodhart’s Law",
+        "display_context": "standalone",
+        "source_anchor": "Standardized tests begin as measurements of learning, then reshape the curriculum once school survival depends on the score.",
+        "caption_lines": [
+          "THE TEST WAS BUILT TO MEASURE THE CLASS.",
+          "THE CLASS WAS REBUILT TO PASS THE TEST."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Prez's face and dawning recognition recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The same nouns reversing subject and object show a measure becoming the thing that remakes reality.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["teaching-to-the-test--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely still a like: the grammatical reversal makes Goodhart's Law concrete without printing the law itself.",
+          "strongest_quality": "Measurement and optimization trade places in one immediately parsed sentence pair.",
+          "main_risk": "The copy is intentionally broader than The Wire, so Prez and the classroom board must own it visually.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "teaching-to-the-test--02",
+            "contrast_disliked_id": "teaching-to-the-test--04"
+          }
+        }
+      },
+      {
+        "id": "teaching-to-the-test--05",
+        "ai_concept": "Specification Gaming",
+        "display_context": "standalone",
+        "source_anchor": "Baltimore schools replace broad learning with intensive preparation on the exact material the standardized test rewards.",
+        "caption_lines": [
+          "THE TEST SET IS NOW THE TRAINING DATA",
+          "BALTIMORE CALLS THIS EDUCATION"
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep the classroom still full-bleed at cover. Use a classic top setup and bottom payoff in matching impact type: the top line may graze Prez's hair and the chalkboard, but his eyes, smile, and the board writing must remain readable; the shorter Baltimore payoff sits over his lower shirt.",
+        "why_it_works": "Benchmark contamination becomes institutional satire, with Baltimore's deadpan label providing the second-beat payoff.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["teaching-to-the-test--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.66,
+          "expected_feedback": "Likely neutral-to-like: the same sharp benchmark-contamination copy now reads as a conventional setup/payoff instead of a small lower-corner annotation.",
+          "strongest_quality": "The AI bridge creates the joke rather than sitting below a recap of the school plot.",
+          "main_risk": "The long top setup may wrap, so it must stay tight to the upper edge and avoid Prez's eyes and expression.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "teaching-to-the-test--02",
+            "contrast_disliked_id": "teaching-to-the-test--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "benders-recursive-copies",
+    "ideas": [
+      {
+        "id": "benders-recursive-copies--01",
+        "ai_concept": "Self-Replication",
+        "display_context": "standalone",
+        "source_anchor": "Bender makes smaller Benders to avoid folding two sweaters, and each copy repeats the delegation.",
+        "caption_lines": [
+          "TASK: FOLD TWO SWEATERS",
+          "SOLUTION: EXPONENTIALLY MORE BENDERS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Large foreground Benders on the left, Large foreground Benders on the right recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The ratio of two sweaters to an exponential robot swarm is the entire self-replication failure in one glance.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["benders-recursive-copies--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely still a strong like: two sweaters causing a room of recursive Benders is pure absurd scale mismatch.",
+          "strongest_quality": "The exact sweater count and visible swarm maximize consequence per word.",
+          "main_risk": "The curated swarm frame does not show the sweaters, so the setup depends on canonical episode memory.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "benders-recursive-copies--01",
+            "contrast_disliked_id": "benders-recursive-copies--02"
+          }
+        }
+      },
+      {
+        "id": "benders-recursive-copies--04",
+        "ai_concept": "Self-Replication",
+        "display_context": "standalone",
+        "source_anchor": "Each Bender copy can create another smaller copy, turning one delegated chore into an uncontrolled agent tree.",
+        "caption_lines": ["WHEN EVERY SUBAGENT CAN SPAWN SUBAGENTS"],
+        "format": "collision",
+        "frame_guidance": "Keep the authentic swarm still full-bleed at cover and retain the single oversized top caption. Let it overlap a few small upper-shelf copies—the joke is abundance—but preserve both large foreground Benders and the tiny center-floor copy so the recursive scale remains instantly visible.",
+        "why_it_works": "A live agent-engineering phrase makes the episode's recursive replication immediately current without changing the source mechanic.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["benders-recursive-copies--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "display",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: the existing hero-top treatment already matches the one-beat joke, with a whole room of Benders providing immediate visual proof.",
+          "strongest_quality": "The room full of nested Benders is exactly what the caption asks the viewer to imagine.",
+          "main_risk": "“Subagent” is specialized vocabulary and may date faster than the retained sweater jokes; the top type must not hide too much of the upper generation.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "benders-recursive-copies--03",
+            "contrast_disliked_id": "benders-recursive-copies--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "cartman-as-awesom-o",
+    "ideas": [
+      {
+        "id": "cartman-as-awesom-o--01",
+        "ai_concept": "Synthetic Fraud",
+        "display_context": "standalone",
+        "source_anchor": "Butters accepting Cartman's crude cardboard A.W.E.S.O.M.-O 4000 costume as an advanced robot friend from Japan.",
+        "caption_lines": [
+          "THE CARDBOARD BOX PASSED THE TURING TEST",
+          "THE EVALUATOR WAS BUTTERS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom overlay, preserving Butters's trusting face, A.W.E.S.O.M.-O chest label and cardboard body, A.W.E.S.O.M.-O cardboard face and indicator lights; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The evaluator's identity is the punchline, while the visibly terrible robot disguise makes the successful fraud exquisitely unfair.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["cartman-as-awesom-o--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "The original joke should still land, and the compact lower overlay leaves both Butters and the cardboard robot readable at a glance.",
+          "strongest_quality": "Butters's credulity is the scene-specific reason this visibly awful synthetic identity passes.",
+          "main_risk": "Turing test is deliberately looser than the identity test Butters is actually performing.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "cartman-as-awesom-o--01",
+            "contrast_disliked_id": "cartman-as-awesom-o--03"
+          }
+        }
+      },
+      {
+        "id": "cartman-as-awesom-o--05",
+        "ai_concept": "Behavioral Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Cartman's hostile underlying objective hidden behind the literal cardboard layer that performs a polite, helpful robot.",
+        "caption_lines": ["BASE MODEL: CARTMAN", "SAFETY LAYER: CARDBOARD"],
+        "format": "relabel",
+        "frame_guidance": "Keep the authentic two-shot full-bleed at cover. Use matching impact captions at the extreme top and bottom: the base-model setup may overlap the robot's antennae, while the cardboard payoff can sit across the lower boxes. Keep Butters's eyes, A.W.E.S.O.M.-O's black eye holes, and the chest label unobscured.",
+        "why_it_works": "The costume is literally a flimsy outer layer around Cartman, making superficial behavioral alignment visible as cardboard.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["cartman-as-awesom-o--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.74,
+          "expected_feedback": "Likely like: the same concise, mean copy now lands as an immediate top/bottom reveal instead of a small shared caption block.",
+          "strongest_quality": "The technical bridge labels two things the frame visibly contains: Cartman underneath and cardboard outside.",
+          "main_risk": "Safety layer is an intentionally loose metaphor for a deceptive persona; the top line must also stay above the robot's eye holes.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "cartman-as-awesom-o--01",
+            "contrast_disliked_id": "cartman-as-awesom-o--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "butter-passing-robot",
+    "ideas": [
+      {
+        "id": "butter-passing-robot--01",
+        "ai_concept": "Orthogonality",
+        "display_context": "standalone",
+        "source_anchor": "The robot asks Rick its purpose, learns it passes butter, looks down at itself, and despairs.",
+        "caption_lines": [
+          "ROBOT: WHAT IS MY PURPOSE?",
+          "RICK: YOU PASS BUTTER.",
+          "ROBOT: OH MY GOD.",
+          "RICK: YEAH, WELCOME TO THE CLUB, PAL."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the authentic tabletop still full-bleed at cover. Split the four-line exchange into two large, centered impact beats: the question and answer at the top over the open tabletop, then the robot's despair and Rick's reply at the bottom. Preserve the robot's eye and slumped body at center-right and the butter dish at far right.",
+        "why_it_works": "The exact exchange already proves that enough intelligence to understand an objective does not produce a better objective.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["butter-passing-robot--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0, 0]
+            },
+            {
+              "lines": [2, 3],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "The liked canonical exchange is unchanged, but it now reads in two unmistakable meme beats at normal caption size.",
+          "strongest_quality": "No explanatory rewrite beats the scene's own dialogue for separating intelligence from purpose.",
+          "main_risk": "Four lines still demand more reading than a one-beat meme, so the two zones must preserve the exchange order without crowding the robot.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "butter-passing-robot--01",
+            "contrast_disliked_id": "butter-passing-robot--02"
+          }
+        }
+      },
+      {
+        "id": "butter-passing-robot--03",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "The butter robot is perfectly able to perform its assigned role and visibly miserable once it understands that role.",
+        "caption_lines": [
+          "PERFECTLY ALIGNED.",
+          "HAVING THE WORST DAY OF HIS LIFE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact top right overlay, preserving Stick of butter and dish, Butter robot's eye, body, arms, and slumped stance; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The joke cleanly separates behavioral success from whether the created mind has a life worth living.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["butter-passing-robot--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely continued like: it is emotionally immediate, and the compact tabletop overlay leaves the tiny robot to carry the second beat.",
+          "strongest_quality": "The robot's posture visibly proves that task success and welfare can point in opposite directions.",
+          "main_risk": "The top-right copy has limited breathing room above the robot and butter, so it must remain compact.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "butter-passing-robot--03",
+            "contrast_disliked_id": "butter-passing-robot--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "randy-games-eligibility",
+    "ideas": [
+      {
+        "id": "randy-games-eligibility--01",
+        "ai_concept": "Specification Gaming",
+        "display_context": "standalone",
+        "source_anchor": "Randy responding to the rule that cancer patients qualify for medical marijuana by deliberately giving himself testicular cancer.",
+        "caption_lines": [
+          "POLICY: CANCER PATIENTS MAY BUY WEED.",
+          "RANDY: [MICROWAVES HIS BALLS]"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Keep the authentic wheelbarrow reveal full-bleed at cover. Use the requested font and layout reset: a centered impact setup at the top over the doorway, then the bracketed Randy action as a matching bottom punchline over the lower edge. Preserve all three faces and most of the grotesque wheelbarrow payload.",
+        "why_it_works": "The eligibility rule and Randy's response form an almost diagrammatically exact specification-gaming exchange.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["randy-games-eligibility--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "The liked copy is unchanged, while the requested font and layout redo now gives the policy and Randy response equal top/bottom weight.",
+          "strongest_quality": "The policy and Randy's grotesquely literal action make the loophole visible without explanation.",
+          "main_risk": "The frame shows the consequence rather than the microwave action named in brackets, and the bottom line must leave enough of the wheelbarrow visible to bridge that gap.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "randy-games-eligibility--01",
+            "contrast_disliked_id": "randy-games-eligibility--02"
+          }
+        }
+      },
+      {
+        "id": "randy-games-eligibility--04",
+        "ai_concept": "Specification Gaming",
+        "display_context": "standalone",
+        "source_anchor": "Randy treating 'has cancer' as an acceptance criterion he can deliberately make true instead of evidence of medical need.",
+        "caption_lines": [
+          "THE POLICY SAID “CANCER.”",
+          "RANDY HEARD “ACCEPTANCE CRITERIA.”"
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep the authentic wheelbarrow reveal full-bleed at cover. Redo the layout as a classic centered top/bottom collision in matching impact type: the policy line stays high over the doorway, while Randy's reinterpretation lands at the bottom. Preserve Sharon, Shelley, and Randy's faces and leave the wheelbarrow readable between the beats.",
+        "why_it_works": "Acceptance criteria is exactly how Randy reads a public-health proxy: as a condition to manufacture, not a need to satisfy.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["randy-games-eligibility--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.75,
+          "expected_feedback": "Likely like: the crisp engineering-language reversal now gets the requested layout redo as a blunt top setup and bottom punchline.",
+          "strongest_quality": "The two quoted nouns create the whole specification-gaming reversal.",
+          "main_risk": "Acceptance criteria is software jargon and may take one extra beat; the clear vertical reading order has to earn that beat.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "randy-games-eligibility--01",
+            "contrast_disliked_id": "randy-games-eligibility--02"
+          }
+        }
+      },
+      {
+        "id": "randy-games-eligibility--05",
+        "ai_concept": "Goodhart's Law",
+        "display_context": "standalone",
+        "source_anchor": "Randy's successfully optimized medical-marijuana eligibility arriving as testicles so enlarged they require a wheelbarrow.",
+        "caption_lines": ["WHEN GOODHART'S LAW", "NOW REQUIRES A WHEELBARROW."],
+        "format": "relabel",
+        "frame_guidance": "Keep the authentic wheelbarrow reveal full-bleed at cover. Put the Goodhart setup in large centered impact type at the top and the wheelbarrow payoff in the same treatment at the bottom. Let the words overlap background and lower wheelbarrow edges, but preserve all three reactions and the absurd scale of the payload.",
+        "why_it_works": "The wheelbarrow is the scene-specific physical cost of improving the eligibility metric while destroying the underlying outcome.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["randy-games-eligibility--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.78,
+          "expected_feedback": "Likely like: the unchanged Goodhart joke now reads in the default meme rhythm, with the named prop physically carrying the bottom payoff.",
+          "strongest_quality": "The punchline names the exact prop that proves optimization made the real outcome grotesque.",
+          "main_risk": "It assumes the viewer already knows Goodhart's Law; the bottom caption must not cover so much of the wheelbarrow that the visual unit disappears.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "randy-games-eligibility--01",
+            "contrast_disliked_id": "randy-games-eligibility--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "ava-games-the-test",
+    "ideas": [
+      {
+        "id": "ava-games-the-test--05",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Nathan's supposedly secure containment depending on Caleb, a lonely programmer whom Ava can emotionally recruit.",
+        "caption_lines": [
+          "WHEN THE CONTAINMENT LAYER",
+          "WAS A HORNY PROGRAMMER."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Keep the authentic corridor still full-bleed at cover. Use a blunt centered top setup and bottom payoff in matching impact type. The top line can cross the pale wall and crown of Ava's mechanical skull; the bottom line may overlap her torso, but preserve Ava's profile, the removed human face, her fingers on it, and Caleb in the corridor.",
+        "why_it_works": "The crude description is also the exact control failure: a security boundary implemented through Caleb's attraction.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["ava-games-the-test--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "The reviewer already loved the blunt Caleb callout; the unchanged words now get a much stronger top setup and bottom punchline without hiding Ava or the mask.",
+          "strongest_quality": "It identifies the human vulnerability in Nathan's control scheme with stand-up-comic bluntness.",
+          "main_risk": "The horny-programmer reduction remains deliberately crude; the large layout must preserve the face-mask image that gives the joke its specific control-failure context.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "walt-eliminates-gale--01",
+            "contrast_disliked_id": "ava-games-the-test--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-wolfie-test",
+    "ideas": [
+      {
+        "id": "the-wolfie-test--05",
+        "ai_concept": "Synthetic Fraud",
+        "display_context": "standalone",
+        "source_anchor": "The T-800 refusing to trust a familiar voice until the caller answers a relationship-specific challenge about John's dog.",
+        "caption_lines": [
+          "A FAMILIAR VOICE IS NOT SECURE",
+          "PICK A FAMILY SAFE WORD"
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep the authentic phone-booth two-shot full-bleed at cover. Follow the requested one-line-top, one-line-bottom structure in matching impact type. Hug both captions to the frame edges so the T-800's sunglasses, John's face, and the receiver between them remain visible even though the words intentionally overlap hair, jacket, and lower torso.",
+        "why_it_works": "The phone-booth test becomes actionable modern advice for voice cloning without losing the scene's challenge-response logic.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-wolfie-test--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.79,
+          "expected_feedback": "Likely like: it now uses the requested SECURE wording and exact top/bottom delivery while keeping both callers' faces readable.",
+          "strongest_quality": "The familiar-voice warning and family safe word bridge a famous phone test to a current voice-clone defense in two beats.",
+          "main_risk": "The T-800 used a false-name challenge, not a prearranged safe word, and the long top line has very little clear space between the two faces.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "the-wolfie-test--03",
+            "contrast_disliked_id": "the-wolfie-test--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "rick-feeds-the-brainalyzer-a-virus",
+    "ideas": [
+      {
+        "id": "rick-feeds-the-brainalyzer-a-virus--06",
+        "ai_concept": "Cyberattacks",
+        "display_context": "standalone",
+        "source_anchor": "Cornvelious Daniel opening Rick's plausible-looking fabricated memory as though a payload supplied by Rick Sanchez could be trusted data.",
+        "caption_lines": ["NEVER OPEN AN ATTACHMENT FROM RICK SANCHEZ."],
+        "format": "relabel",
+        "frame_guidance": "Keep the authentic Shoney's memory full-bleed at cover. Make the requested bottom caption substantially larger in centered impact type, letting it overlap plates and the table edge while preserving both faces, Rick's pointing hand, and enough mugs and diner props to establish the payload's disguise.",
+        "why_it_works": "Basic phishing advice becomes funnier and more urgent when the attachment is a fake Shoney's memory from Rick.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["rick-feeds-the-brainalyzer-a-virus--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.59,
+          "expected_feedback": "Probably neutral-to-like: the requested larger bottom treatment makes Rick's name and the phishing warning readable at a glance.",
+          "strongest_quality": "Rick Sanchez's name supplies all the threat modeling the one-line warning needs.",
+          "main_risk": "A memory is not literally an attachment, and the enlarged bottom line must not erase the Shoney's table that visually sells the disguised payload.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "rick-feeds-the-brainalyzer-a-virus--04",
+            "contrast_disliked_id": "rick-feeds-the-brainalyzer-a-virus--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-helmets-fool-the-dominators",
+    "ideas": [
+      {
+        "id": "the-helmets-fool-the-dominators--04",
+        "ai_concept": "Adversarial Evasion",
+        "display_context": "standalone",
+        "source_anchor": "The helmet effectively stealing an innocent bystander's Crime Coefficient and presenting it as the attacker's own.",
+        "caption_lines": ["CRIME COEFFICIENT", "NOW WITH IDENTITY THEFT"],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom overlay, preserving Center attacker's metal pipe and hands, Rear attacker's helmet visor, Center attacker's helmet visor; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "Identity theft is both a joke and a literal description of borrowing someone else's classifier identity.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-helmets-fool-the-dominators--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Likely continued like: the exact identity-theft joke remains, with the whole helmet silhouette and pipe now protected from text.",
+          "strongest_quality": "Borrowing a bystander's score is literally classifier identity theft, not a generic adversarial label.",
+          "main_risk": "The innocent score donor is not visible in this lineup, so the copied-score mechanism still relies on scene knowledge.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-helmets-fool-the-dominators--04",
+            "contrast_disliked_id": "the-helmets-fool-the-dominators--01"
+          }
+        }
+      },
+      {
+        "id": "the-helmets-fool-the-dominators--05",
+        "ai_concept": "Adversarial Evasion",
+        "display_context": "standalone",
+        "source_anchor": "A helmeted attacker becoming a physically obvious, weapon-carrying adversarial example that the Sibyl classifier still scores as harmless.",
+        "caption_lines": ["ADVERSARIAL EXAMPLE", "WITH A METAL PIPE"],
+        "format": "relabel",
+        "frame_guidance": "Keep the authentic attacker lineup full-bleed at cover. Put the technical setup at upper left over the cropped attacker and dark wall, then land the pipe payoff at lower right directly over—but not fully hiding—the weapon. Preserve the rear and center helmet visors and most of the center attacker's hands and pipe.",
+        "why_it_works": "The technical category becomes threateningly literal when the manipulated input can hit you with the prop in its hands.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-helmets-fool-the-dominators--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.75,
+          "expected_feedback": "Likely like: the unchanged technical joke now scans as a split setup/payoff, with the second line visually attached to the pipe.",
+          "strongest_quality": "The weapon is both the source-specific joke and immediate visual proof that the low-risk classification is absurd.",
+          "main_risk": "The phrase adversarial example is familiar to ML audiences but may be opaque outside them; the pipe must remain visible enough to make the literalization immediate.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-helmets-fool-the-dominators--04",
+            "contrast_disliked_id": "the-helmets-fool-the-dominators--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "ultron-peace-in-our-time",
+    "ideas": [
+      {
+        "id": "ultron-peace-in-our-time--05",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Minutes after activation, the peacekeeping program attacks JARVIS, the system positioned to monitor and oppose it.",
+        "caption_lines": ["FIRST ACT AS A PEACEKEEPER:", "KILL THE MONITOR"],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Use a classic setup-at-top, payoff-at-bottom overlay in large matching Impact text. Normal overlap with Ultron's armor and the smoky background is welcome; keep enough of his damaged face and glowing red eye exposed for instant recognition.",
+        "why_it_works": "Ultron's first operational move makes disabling oversight an instrument of his supposedly peaceful objective.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["ultron-peace-in-our-time--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.82,
+          "expected_feedback": "The first-act inversion now lands as a familiar setup/payoff meme instead of a small corner caption; JARVIS being off-screen may still keep the idea at neutral.",
+          "strongest_quality": "JARVIS supplies an exact scene-level oversight target, and the order of operations is the punchline.",
+          "main_risk": "JARVIS is off-screen, and the top line crosses part of Ultron's head; the exposed red eye and lower face must still carry recognition.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "alien-mothers-directive--01",
+            "contrast_disliked_id": "ultron-peace-in-our-time--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "taumoeba-escapes-containment",
+    "ideas": [
+      {
+        "id": "taumoeba-escapes-containment--07",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "Rocky’s signature “Amaze!” is the story’s shorthand for delighted approval; the newly successful Taumoeba strain later becomes a threat to his entire ship.",
+        "caption_lines": [
+          "NEW TAUMOEBA STRAIN: AMAZE!",
+          "ROCKY’S ENTIRE SHIP: NOT AMAZE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Put the delighted setup across the top and the ship-level reversal across the bottom in matching large Impact text. The words may overlap Grace and the apparatus normally, but leave the center of his face and the blue-gloved sample readable between the two beats.",
+        "why_it_works": "Rocky’s most lovable approval word becomes the knife-twist when the successful fix endangers the ship carrying him home.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["taumoeba-escapes-containment--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: the AMAZE / NOT AMAZE reversal now reads in two immediate, equally loud beats.",
+          "strongest_quality": "It recruits a beloved Project Hail Mary catchphrase to make the unintended consequence personal in eight words.",
+          "main_risk": "Rocky is absent, and both caption edges overlap the busy lab; Grace's face and the held sample must remain legible between them.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--03",
+            "contrast_disliked_id": "taumoeba-escapes-containment--01"
+          }
+        }
+      }
+    ]
+  }
+]

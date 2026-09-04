@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "round": "round-01",
+  "files": {
+    "ideas.json": {
+      "bytes": 861108,
+      "sha256": "004b6f9b24cfbc2b7b290bc7ea394fef7c687e5d5a23b47313c6754c5a079359"
+    },
+    "feedback.json": {
+      "bytes": 48555,
+      "sha256": "fa268bc6357e519b5ce6ae0982823a38f5bb94e24241020bb595f2005a2a0b82"
+    },
+    "scenario-previews.json": {
+      "bytes": 111503,
+      "sha256": "222c26dd506b4155e82a396c8cd757c1ca6f42e3a8784ebb4f688691743dc145"
+    }
+  }
+}

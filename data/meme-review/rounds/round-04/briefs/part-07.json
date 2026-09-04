@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "mode": "layout-refinement",
+  "source_batch": 3,
+  "target_batch": 4,
+  "part": "part-07",
+  "instructions": {
+    "scope": "Do not add meme ideas, IDs, concepts, formats, or source anchors. Work only on the retained lineages listed here.",
+    "finalized": "Copy finalized ideas and every referenced asset byte-for-byte. They are context only and must not be edited.",
+    "layout_only": "Keep approved caption copy and editorial fields exact. This is a typography refinement pass: try hero-sized conventional copy first, compare with the lineage’s earliest strong version when useful, and use standard only for a demonstrated wrap or focal collision. Add a subtle edge gradient when large overlay text needs contrast.",
+    "bounded_revision": "Apply only the explicit source feedback, including exact requested word changes. Keep the central concept, format, source anchor, and lineage ID unchanged. Otherwise follow the same hero-first typography and subtle-gradient guidance as layout-only ideas."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "sit-tight-and-assess",
+      "ideas": [
+        {
+          "id": "sit-tight-and-assess--01",
+          "scenario_slug": "sit-tight-and-assess",
+          "action": "finalized",
+          "source_idea_sha256": "519d9da5ae5257d60ab629a1a6c6a089ad1205c3c1f0eb27d5175a03e187a9f2",
+          "source_editorial_sha256": "29f7922bae99773c9027f3eb665d8f3948d005acbe3a2bce2483450b692dd412",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "revert to the previous version's layout",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-29481a3e9b2a59d2-1754"
+            }
+          }
+        },
+        {
+          "id": "sit-tight-and-assess--06",
+          "scenario_slug": "sit-tight-and-assess",
+          "action": "finalized",
+          "source_idea_sha256": "487d49017028cf32d101a9da5427e6fa23503e9c549dc20fe4f64e6fc6a426c2",
+          "source_editorial_sha256": "ca2bfe6b831ccb1f0376ac44be4742c50ba3979e2999477e177ffd685ae495ad",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-03",
+              "payloadFingerprint": "v1-8320c3c868fbec84-2747"
+            }
+          }
+        },
+        {
+          "id": "sit-tight-and-assess--05",
+          "scenario_slug": "sit-tight-and-assess",
+          "action": "bounded-revision",
+          "source_idea_sha256": "cf1f8736596ce74cdb50a066409fc4306fb6e9ba61c8f5e6c1393eb64332d649",
+          "source_editorial_sha256": "cb208d19b0202f09a2e7141ab48d175c408c204e61e163b853c8c42581d3e0a8",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "increase the text size",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    }
+  ]
+}

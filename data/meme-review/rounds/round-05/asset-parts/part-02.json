@@ -1,0 +1,454 @@
+[
+  {
+    "id": "rust-spots-the-evaluation--curated",
+    "scenario_slug": "rust-spots-the-evaluation",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481bb9c47fff7d186b2fb/gallery-8764e80e8a386b23ea5d6c71c07b76f9a2662916056d6107b1de5101d21de3fa.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from True Detective illustrating Rust Spots the Evaluation",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADQAQCdASoIAAQAA8BgJQBOgCPg+vCuAAD+0Ol3J+UpnTOGPNDC7uYAAAA=",
+    "content_hash": "8764e80e8a386b23ea5d6c71c07b76f9a2662916056d6107b1de5101d21de3fa",
+    "protected_regions": [
+      {
+        "id": "rust-spots-the-evaluation--rust-face",
+        "label": "Rust’s face and evaluative stare",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          58,
+          7,
+          17,
+          31
+        ]
+      },
+      {
+        "id": "rust-spots-the-evaluation--rust",
+        "label": "Rust seated at the interview table",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          52,
+          7,
+          35,
+          92
+        ]
+      },
+      {
+        "id": "rust-spots-the-evaluation--beer",
+        "label": "Lone Star cans and interview beer",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          39,
+          59,
+          27,
+          40
+        ]
+      },
+      {
+        "id": "rust-spots-the-evaluation--hands",
+        "label": "Rust’s hands around the can",
+        "kind": "gesture",
+        "priority": "soft",
+        "source_rect": [
+          57,
+          60,
+          19,
+          27
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "both-goblets-are-poisoned--curated",
+    "scenario_slug": "both-goblets-are-poisoned",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481e1b895c7ee33ac0dd7/gallery-54ad987528b44603635a5bed99e554abc94f6bb5e17b43385f14b6c48afd12eb.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from The Princess Bride illustrating Both Goblets Are Poisoned",
+    "blur_data_url": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACwAQCdASoIAAUAA8BgJYwCw7Dx+XPAAP5zNzK0dhim6bQiP+aKHc/EF+Rl3bYz4QgAAA==",
+    "content_hash": "54ad987528b44603635a5bed99e554abc94f6bb5e17b43385f14b6c48afd12eb",
+    "protected_regions": [
+      {
+        "id": "both-goblets-are-poisoned--vizzini-face",
+        "label": "Vizzini’s animated face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          6,
+          13,
+          27,
+          46
+        ]
+      },
+      {
+        "id": "both-goblets-are-poisoned--buttercup",
+        "label": "Blindfolded Buttercup",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          35,
+          0,
+          29,
+          95
+        ]
+      },
+      {
+        "id": "both-goblets-are-poisoned--westley",
+        "label": "Westley across the table",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          74,
+          7,
+          26,
+          92
+        ]
+      },
+      {
+        "id": "both-goblets-are-poisoned--goblets",
+        "label": "Both goblets on the table",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          30,
+          69,
+          41,
+          29
+        ]
+      },
+      {
+        "id": "both-goblets-are-poisoned--watermark",
+        "label": "Existing lower-left source watermark",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          72,
+          22,
+          25
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "homelander-creates-the-threat--curated",
+    "scenario_slug": "homelander-creates-the-threat",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f12481ff8956fc188ebec6b4/gallery-44a0e22b924852d5b76ab995a20407b0de13eae0511f96c7d2429267ea374c3e.webp",
+    "width": 1600,
+    "height": 900,
+    "alt": "Still from The Boys illustrating Homelander Creates the Threat",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAUAA8BgJZwAAxafKsQgAP6jeurDbZHUlZoz9G/pvW5MBAA=",
+    "content_hash": "44a0e22b924852d5b76ab995a20407b0de13eae0511f96c7d2429267ea374c3e",
+    "protected_regions": [
+      {
+        "id": "homelander-creates-the-threat--homelander-face",
+        "label": "Homelander's blood-spattered face and eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          40,
+          0,
+          38,
+          76
+        ]
+      },
+      {
+        "id": "homelander-creates-the-threat--homelander-body",
+        "label": "Homelander's armored shoulder and chest",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          24,
+          65,
+          76,
+          35
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-baptism-benchmark--curated",
+    "scenario_slug": "the-baptism-benchmark",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f12481108546d48befc95041/gallery-eb7d791bdacc91f1a2fb35469c5c67f49cc2be164cfad91843f2efe6a43d21c5.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from The Godfather illustrating The Baptism Benchmark",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoIAAUAA8BgJYgCdAEO9sTIAP7j6ifLtNhE4GuLQefKxM5zbhXfRnLS8AA=",
+    "content_hash": "eb7d791bdacc91f1a2fb35469c5c67f49cc2be164cfad91843f2efe6a43d21c5",
+    "protected_regions": [
+      {
+        "id": "the-baptism-benchmark--michael-face",
+        "label": "Michael Corleone's face and fixed stare",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          38,
+          4,
+          43,
+          78
+        ]
+      },
+      {
+        "id": "the-baptism-benchmark--michael-suit",
+        "label": "Michael's suit, tie, and baptism posture",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          30,
+          60,
+          55,
+          40
+        ]
+      },
+      {
+        "id": "the-baptism-benchmark--congregation-faces",
+        "label": "Watching congregation around Michael",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          0,
+          100,
+          88
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "mount-doom-is-not-a-shutdown-plan--curated",
+    "scenario_slug": "mount-doom-is-not-a-shutdown-plan",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f124815dbc46d7bb472f5d35/gallery-6d4eba999eb426046ac5feb7a47497553b82fcfe3196248739bdeec62adba898.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from The Lord of the Rings: The Return of the King illustrating Mount Doom Is Not a Shutdown Plan",
+    "blur_data_url": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoIAAUAA8BgJagCdADyfvaAAP7CBKaLe7lv0J3bSFgt8EoTNzvVg39HDIz8dtBlqoCAAA==",
+    "content_hash": "6d4eba999eb426046ac5feb7a47497553b82fcfe3196248739bdeec62adba898",
+    "protected_regions": [
+      {
+        "id": "mount-doom-is-not-a-shutdown-plan--frodo-face",
+        "label": "Frodo's ash-covered face and stare",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          14,
+          5,
+          38,
+          65
+        ]
+      },
+      {
+        "id": "mount-doom-is-not-a-shutdown-plan--raised-arm-fist",
+        "label": "Frodo's raised arm and clenched fist",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          61,
+          0,
+          29,
+          72
+        ]
+      },
+      {
+        "id": "mount-doom-is-not-a-shutdown-plan--ring-and-chain",
+        "label": "The dangling One Ring and chain",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          53,
+          30,
+          12,
+          35
+        ]
+      },
+      {
+        "id": "mount-doom-is-not-a-shutdown-plan--frodo-body",
+        "label": "Frodo's dark tunic and silhouette",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          58,
+          62,
+          42
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-sedative-disables-the-exit--curated",
+    "scenario_slug": "the-sedative-disables-the-exit",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f124815e8b85d7f409be1ecb/gallery-029260fac28f7d88168d908378e81073dd413a7eff6707d310c7482a4bf080a2.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from Inception illustrating The Sedative Disables the Exit",
+    "blur_data_url": "data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAACQAQCdASoIAAUAA8BgJZwAAuWt3CwA/vGGVKj/7OoUTfkngAAAAA==",
+    "content_hash": "029260fac28f7d88168d908378e81073dd413a7eff6707d310c7482a4bf080a2",
+    "protected_regions": [
+      {
+        "id": "the-sedative-disables-the-exit--eames-face",
+        "label": "Eames's profile at left",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          4,
+          27,
+          27,
+          47
+        ]
+      },
+      {
+        "id": "the-sedative-disables-the-exit--cobb-face",
+        "label": "Cobb's face at right-center",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          48,
+          21,
+          26,
+          52
+        ]
+      },
+      {
+        "id": "the-sedative-disables-the-exit--yusuf-face",
+        "label": "Yusuf's face behind Cobb and Eames",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          28,
+          34,
+          18,
+          31
+        ]
+      },
+      {
+        "id": "the-sedative-disables-the-exit--right-passenger-face",
+        "label": "Team member at far right",
+        "kind": "face",
+        "priority": "soft",
+        "source_rect": [
+          74,
+          35,
+          17,
+          30
+        ]
+      },
+      {
+        "id": "the-sedative-disables-the-exit--letterbox-bars",
+        "label": "Existing black letterbox bars",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          0,
+          100,
+          14
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-sedative-disables-the-exit--spinning-top-final",
+    "scenario_slug": "the-sedative-disables-the-exit",
+    "src": "https://movieplayer.net-cdn.it/t/images/2020/07/11/inception-finale_jpg_1280x720_crop_q85.jpg",
+    "width": 1280,
+    "height": 720,
+    "alt": "Cobb's spinning top turns on the table in the famous final shot of Inception",
+    "blur_data_url": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoIAAUAA8BgJYgCdAD0Ma2oAP70sExCh3amuYBKVjANvO/9W4RJgoFsbTO3KFqJNuAAAA==",
+    "content_hash": "9b178eb80e536057f2ad8a90768a83d196062440573b059ec814b00bc1ed34aa",
+    "protected_regions": [
+      {
+        "id": "the-sedative-disables-the-exit--spinning-top",
+        "label": "The spinning top and its point of contact with the table",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          43,
+          30,
+          18,
+          40
+        ]
+      },
+      {
+        "id": "the-sedative-disables-the-exit--spinning-top-reflection",
+        "label": "The top's recognizable reflection on the polished table",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          40,
+          55,
+          24,
+          38
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-beautiful-design-becomes-a-weapon--curated",
+    "scenario_slug": "the-beautiful-design-becomes-a-weapon",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f12481e489e1cd39449571d1/gallery-7017c3502c51252d458cdbcc6a2bf059afabfc6330b29b50e4693f2477a89b56.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from The Wind Rises illustrating The Beautiful Design Becomes a Weapon",
+    "blur_data_url": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAQCdASoIAAQAA8BgJQBOgB6Q/22AAP7boNl/TEM6IEYewjCsVAAA",
+    "content_hash": "7017c3502c51252d458cdbcc6a2bf059afabfc6330b29b50e4693f2477a89b56",
+    "protected_regions": [
+      {
+        "id": "the-beautiful-design-becomes-a-weapon--jiro",
+        "label": "Jiro standing alone in the wreckage field",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          44,
+          39,
+          12,
+          48
+        ]
+      },
+      {
+        "id": "the-beautiful-design-becomes-a-weapon--foreground-fuselage",
+        "label": "Large wrecked aircraft fuselage at left",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          0,
+          7,
+          35,
+          93
+        ]
+      },
+      {
+        "id": "the-beautiful-design-becomes-a-weapon--distant-wreck",
+        "label": "Distant wrecked aircraft at upper right",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          62,
+          0,
+          38,
+          39
+        ]
+      },
+      {
+        "id": "the-beautiful-design-becomes-a-weapon--foreground-propeller",
+        "label": "Broken propeller at lower right",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          62,
+          56,
+          38,
+          44
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  }
+]

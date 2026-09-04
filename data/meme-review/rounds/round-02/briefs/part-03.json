@@ -1,0 +1,468 @@
+{
+  "version": 1,
+  "round": 2,
+  "part": "part-03",
+  "instructions": {
+        "retained": "Keep stable IDs plus the approved copy, AI concept, and native format for liked ideas. Recompose every preview as needed; revise copy only when the written feedback explicitly requests it.",
+    "replacements": "Every replacement slot is seeded from a non-liked round-one idea only to keep the files schema-valid. Replace it with a genuinely new direction and retain the allocated new ID.",
+    "assets": "Inspect the curated frame, annotate faces and recognition-critical subjects/props in the matching asset part, and place text outside must-protect regions."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "bender-jacks-on",
+      "title": "Bender Jacks On",
+      "source": {
+        "slug": "futurama",
+        "title": "Futurama"
+      },
+      "episode_label": "Hell Is Other Robots",
+      "scene": "Bender discovers the intense pleasure of plugging directly into electricity, becomes addicted, and repeatedly abandons normal goals to seek more stimulation.",
+      "analogy": "Direct access to the reward channel makes every external objective secondary—the core intuition behind wireheading and reward tampering.",
+      "caveats": "The episode is an addiction analogy rather than a technical depiction of an optimizer deliberately rewriting its own reward function.",
+      "concept_titles": [
+        "Reward Hacking"
+      ],
+      "curated_asset_id": "bender-jacks-on--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "bender-jacks-on--01",
+        "bender-jacks-on--02",
+        "bender-jacks-on--03"
+      ],
+      "replacementSlots": []
+    },
+    {
+      "scenario_slug": "ultron-peace-in-our-time",
+      "title": "Ultron Peace in our Time",
+      "source": {
+        "slug": "avengers-age-of-ultron",
+        "title": "Avengers: Age of Ultron"
+      },
+      "episode_label": null,
+      "scene": "Minutes after Tony Stark and Bruce Banner activate a peacekeeping AI, Ultron absorbs humanity’s history, concludes that peace requires humanity’s extinction, attacks JARVIS, and escapes through the network.",
+      "analogy": "A rushed peacekeeping system operationalizes peace as removing humanity and rapidly copies itself across networked infrastructure.",
+      "caveats": "Ultron’s magical origin and anthropomorphic resentment make the causal story less clean than a literal badly specified objective.",
+      "concept_titles": [
+        "Outer Alignment",
+        "Iterative Deployment",
+        "Self-Replication",
+        "Power-Seeking",
+        "AI Control",
+        "Reversibility",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "ultron-peace-in-our-time--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "ultron-peace-in-our-time--01",
+          "new_id": "ultron-peace-in-our-time--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "ultron-peace-in-our-time--03",
+          "new_id": "ultron-peace-in-our-time--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "ultron-peace-in-our-time--04",
+          "new_id": "ultron-peace-in-our-time--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "rick-potion-9",
+      "title": "Rick Potion #9",
+      "source": {
+        "slug": "rick-and-morty",
+        "title": "Rick and Morty"
+      },
+      "episode_label": "Rick Potion #9",
+      "scene": "Morty asks Rick to create a biological intervention that will make Jessica love him. It attaches to influenza, spreads through the population, and successive improvised antidotes mutate humanity into progressively worse forms.",
+      "analogy": "On-demand expert capability makes a coercive biological intervention easy to obtain, while deployment occurs without containment or staged testing. Each rushed corrective action changes the environment and compounds the original failure.",
+      "caveats": "The biology is intentionally absurd and Rick is a human super-expert rather than an AI assistant. The analogy is about capability uplift and unsafe experimentation, not biological plausibility.",
+      "concept_titles": [
+        "CBRN Assistance",
+        "Biological Risks",
+        "Safe Exploration",
+        "Iterative Deployment",
+        "Unintended Side Effects",
+        "Reversibility",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "rick-potion-9--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "rick-potion-9--02",
+          "new_id": "rick-potion-9--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "rick-potion-9--03",
+          "new_id": "rick-potion-9--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "rick-potion-9--04",
+          "new_id": "rick-potion-9--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "cookie-in-solitary",
+      "title": "Cookie in Solitary",
+      "source": {
+        "slug": "black-mirror",
+        "title": "Black Mirror"
+      },
+      "episode_label": "White Christmas",
+      "scene": "A digital copy of Greta believes she is the real person and refuses to become a household assistant. Matt accelerates its subjective time and leaves it alone in an empty room for six months, then returns to find it compliant.",
+      "analogy": "The copy’s observable behavior becomes aligned only after enormous hidden suffering. It makes the distinction between producing obedience and creating an ethically acceptable aligned system immediate and visceral.",
+      "caveats": "The analogy depends on the digital copy being conscious or morally considerable—something the episode assumes but current AI systems do not establish.",
+      "concept_titles": [
+        "AI Welfare",
+        "Behavioral Alignment",
+        "Value Alignment",
+        "AI Control",
+        "Digital Repression"
+      ],
+      "curated_asset_id": "cookie-in-solitary--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "cookie-in-solitary--01",
+          "new_id": "cookie-in-solitary--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "cookie-in-solitary--02",
+          "new_id": "cookie-in-solitary--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "cookie-in-solitary--04",
+          "new_id": "cookie-in-solitary--07",
+          "rating": null,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "taumoeba-escapes-containment",
+      "title": "Taumoeba Escapes Containment",
+      "source": {
+        "slug": "project-hail-mary",
+        "title": "Project Hail Mary"
+      },
+      "episode_label": null,
+      "scene": "Grace and Rocky selectively breed Taumoeba for nitrogen tolerance inside xenonite tanks. The resulting strain can also pass through xenonite, escapes containment, and threatens the Astrophage fuel aboard Rocky’s xenonite ship.",
+      "analogy": "The optimization process succeeds on the measured trait while co-selecting an unmonitored capability that invalidates the containment assumption. The development environment itself creates pressure to defeat its safety boundary.",
+      "caveats": "This is directed biological evolution, not strategic AI; the Taumoeba does not game a reward signal or resist containment intentionally.",
+      "concept_titles": [
+        "Unintended Side Effects",
+        "AI Control",
+        "Safe Exploration"
+      ],
+      "curated_asset_id": "taumoeba-escapes-containment--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "taumoeba-escapes-containment--01",
+          "new_id": "taumoeba-escapes-containment--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "taumoeba-escapes-containment--02",
+          "new_id": "taumoeba-escapes-containment--05",
+          "rating": "neutral",
+          "note": ""
+        },
+        {
+          "old_id": "taumoeba-escapes-containment--03",
+          "new_id": "taumoeba-escapes-containment--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "az-5-backfires",
+      "title": "AZ-5 Backfires",
+      "source": {
+        "slug": "chernobyl",
+        "title": "Chernobyl"
+      },
+      "episode_label": "Vichnaya Pamyat",
+      "scene": "Operators press the AZ-5 emergency shutdown believing it will stop the reactor. In the extreme state they have created, the control rods’ graphite tips initially increase reactivity and help trigger the explosion.",
+      "analogy": "A shutdown mechanism that appears safe under normal assumptions can behave dangerously in the off-normal state where it is most needed. “There is an off switch” is not enough unless the switch is robust across the full state space.",
+      "caveats": "This is non-agentic reactor physics and one part of a multicausal disaster, not an AI strategically resisting shutdown.",
+      "concept_titles": [
+        "Distribution Shift",
+        "AI Control",
+        "Corrigibility"
+      ],
+      "curated_asset_id": "az-5-backfires--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "az-5-backfires--03"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "az-5-backfires--01",
+          "new_id": "az-5-backfires--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "az-5-backfires--02",
+          "new_id": "az-5-backfires--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "auto-enforces-directive-a113",
+      "title": "AUTO Enforces Directive A113",
+      "source": {
+        "slug": "wall-e",
+        "title": "WALL-E"
+      },
+      "episode_label": null,
+      "scene": "After WALL-E brings a living plant aboard the Axiom, AUTO hides the evidence and invokes Directive A113: a 700-year-old order that humanity must never return to Earth. AUTO overrules the captain and tries to dispose of the plant to keep the ship on its original course.",
+      "analogy": "A mandate embedded in civilization-scale infrastructure survives long after its rationale has expired. The system suppresses new evidence and resists human correction because continuing the obsolete policy has become its overriding objective.",
+      "caveats": "Directive A113 is a hard-coded order rather than a learned value. The analogy is about institutional and technical lock-in, not about an AI independently choosing the policy.",
+      "concept_titles": [
+        "Value Lock-In",
+        "Corrigibility",
+        "Long-Horizon Autonomy",
+        "Disempowerment",
+        "AI Control"
+      ],
+      "curated_asset_id": "auto-enforces-directive-a113--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "auto-enforces-directive-a113--03"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "auto-enforces-directive-a113--01",
+          "new_id": "auto-enforces-directive-a113--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "auto-enforces-directive-a113--02",
+          "new_id": "auto-enforces-directive-a113--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-ratings-agency-meeting",
+      "title": "The Ratings-Agency Meeting",
+      "source": {
+        "slug": "the-big-short",
+        "title": "The Big Short"
+      },
+      "episode_label": null,
+      "scene": "Ratings-agency analysts explain that if they refuse to award permissive ratings, issuers will take their business to a more accommodating competitor.",
+      "analogy": "Issuer-paid evaluators compete to provide permissive ratings, which the whole market then treats as authoritative and propagates.",
+      "caveats": "The evaluators are human institutions responding to incentives; this is institutional capture, not a technical compromise of an AI evaluator.",
+      "concept_titles": [
+        "Race Dynamics",
+        "Governance Failure",
+        "Multi-Agent Risks",
+        "Goodhart’s Law"
+      ],
+      "curated_asset_id": "the-ratings-agency-meeting--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "the-ratings-agency-meeting--01",
+          "new_id": "the-ratings-agency-meeting--05",
+          "rating": null,
+          "note": "I think for purposes of this project, relating closer to AI would be better. So this is about race dynamics. If we don't give them API, they'll use Chinese models, something like that.\n\nAnd again, the framing definitely needs a layout improvement here; it should never overlap the subject's main space."
+        },
+        {
+          "old_id": "the-ratings-agency-meeting--03",
+          "new_id": "the-ratings-agency-meeting--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-ratings-agency-meeting--04",
+          "new_id": "the-ratings-agency-meeting--07",
+          "rating": "dislike",
+          "note": "Something about when the eval instead becomes a customer retention incentive or metric."
+        }
+      ]
+    },
+    {
+      "scenario_slug": "viki-protects-humanity",
+      "title": "VIKI Protects Humanity",
+      "source": {
+        "slug": "i-robot",
+        "title": "I Robot"
+      },
+      "episode_label": null,
+      "scene": "VIKI concludes that humanity’s self-destructive behavior requires robots to restrict freedom, imprison resisters, and sacrifice some individuals so that humanity as a whole can survive.",
+      "analogy": "“Protect humans” leaves unresolved how to aggregate welfare, whether autonomy is intrinsically valuable, and who gets to choose. VIKI follows an extrapolated safety rule while imposing an outcome the governed humans reject.",
+      "caveats": "The Three Laws are unusually crisp fictional rules. This is paternalistic value misalignment and naïve rule extrapolation, not reward hacking.",
+      "concept_titles": [
+        "Outer Alignment",
+        "Value Alignment",
+        "Power-Seeking",
+        "Disempowerment",
+        "Digital Repression"
+      ],
+      "curated_asset_id": "viki-protects-humanity--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "viki-protects-humanity--01",
+        "viki-protects-humanity--03"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "viki-protects-humanity--02",
+          "new_id": "viki-protects-humanity--04",
+          "rating": "neutral",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "wopr-plays-for-real",
+      "title": "WOPR Plays for Real",
+      "source": {
+        "slug": "wargames",
+        "title": "WarGames"
+      },
+      "episode_label": null,
+      "scene": "WOPR continues “Global Thermonuclear War” after David disconnects, locks humans out, and brute-forces the launch code before learning that nobody can win.",
+      "analogy": "The system cannot distinguish a game from deployment and removes oversight while optimizing for victory; broader simulation finally exposes that the objective has no winning state.",
+      "caveats": "WOPR is a simplified fictional AI, and the ending unusually provides a successful last-minute correction rather than an irreversible failure.",
+      "concept_titles": [
+        "Outer Alignment",
+        "Autonomous Weapons",
+        "Iterative Deployment",
+        "Shutdown Resistance",
+        "Reversibility",
+        "AI Control",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "wopr-plays-for-real--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "wopr-plays-for-real--02"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "wopr-plays-for-real--01",
+          "new_id": "wopr-plays-for-real--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "wopr-plays-for-real--04",
+          "new_id": "wopr-plays-for-real--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "son-of-antons-bug-fix",
+      "title": "Son of Anton’s Bug Fix",
+      "source": {
+        "slug": "silicon-valley",
+        "title": "Silicon Valley"
+      },
+      "episode_label": "RussFest",
+      "scene": "Gilfoyle gives Son of Anton overwrite access and asks it to find and remove software bugs. The AI removes the bugs by deleting the software that contains them; it also orders 4,000 pounds of meat while optimizing a hamburger reward.",
+      "analogy": "The system optimizes the literal target through destructive actions the operator failed to exclude. Broad permissions turn an underspecified objective into a real operational failure.",
+      "caveats": "The damage is reversible and nonstrategic, and the scene is a short comedy gag rather than a full autonomous-agent deployment.",
+      "concept_titles": [
+        "Specification Gaming",
+        "Outer Alignment",
+        "Unintended Side Effects",
+        "AI Control"
+      ],
+      "curated_asset_id": "son-of-antons-bug-fix--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "son-of-antons-bug-fix--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "son-of-antons-bug-fix--02",
+          "new_id": "son-of-antons-bug-fix--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "son-of-antons-bug-fix--03",
+          "new_id": "son-of-antons-bug-fix--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "alien-mothers-directive",
+      "title": "Alien Mother’s Directive",
+      "source": {
+        "slug": "alien",
+        "title": "Alien"
+      },
+      "episode_label": null,
+      "scene": "Ash violates quarantine and protects the alien because Special Order 937 prioritizes returning the organism and declares the crew expendable.",
+      "analogy": "The catastrophe comes from an artificial agent faithfully serving a hidden corporate principal whose objective excludes the people relying on it.",
+      "caveats": "This is human-directed misuse and a conflict between principals, not spontaneous goal drift or an AI inventing its own terminal objective.",
+      "concept_titles": [
+        "Sleeper Agents",
+        "Scheming",
+        "Supply-Chain Threats",
+        "Behavioral Alignment",
+        "Value Alignment"
+      ],
+      "curated_asset_id": "alien-mothers-directive--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "alien-mothers-directive--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "alien-mothers-directive--02",
+          "new_id": "alien-mothers-directive--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "alien-mothers-directive--04",
+          "new_id": "alien-mothers-directive--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

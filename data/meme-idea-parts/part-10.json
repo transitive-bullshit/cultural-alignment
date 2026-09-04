@@ -1,0 +1,1203 @@
+[
+  {
+    "scenario_slug": "the-forest-spirits-head",
+    "ideas": [
+      {
+        "id": "the-forest-spirits-head--01",
+        "ai_concept": "Infrastructure Dependence",
+        "display_context": "standalone",
+        "source_anchor": "Lady Eboshi takes the Forest Spirit's severed head while its headless body begins engulfing the forest.",
+        "caption_lines": ["FOREST SPIRIT'S HEAD", "LOAD-BEARING DEITY"],
+        "format": "relabel",
+        "frame_guidance": "Use the curated head-taking aftermath, labeling the severed head directly while preserving its uncanny face and the expanding black flood behind it.",
+        "why_it_works": "Load-bearing turns the coveted divine object into the infrastructure dependency Eboshi notices only after removing it.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: 'load-bearing deity' is a weirdly exact bridge for the head Eboshi treats as an extractable prize.",
+          "strongest_quality": "The severed head is both the canonical object and the removed dependency holding the forest together.",
+          "main_risk": "The head and spreading black flood must share the frame or the infrastructure consequence remains invisible.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-forest-spirits-head--03",
+        "ai_concept": "Environmental Impact",
+        "display_context": "standalone",
+        "source_anchor": "With its head attached the Forest Spirit gives and takes life; decapitated, it indiscriminately kills everything it touches.",
+        "caption_lines": [
+          "HEAD ATTACHED: LIFE AND DEATH",
+          "HEAD REMOVED: JUST DEATH"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Use a true diptych of the serene deerlike Forest Spirit and the headless black flood, matching scale where possible and preserving the face-to-void transformation.",
+        "why_it_works": "The same regulator before and after extraction makes ecological collapse visible as a one-part state change.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Princess Mononoke Forest Spirit deer form and headless Night-Walker black flood comparison stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.8,
+          "expected_feedback": "Likely neutral: the before/after is visually undeniable but reads more as a lucid scene summary than a surprising joke.",
+          "strongest_quality": "A genuine attached-versus-severed diptych proves that changing one component flips the same regulator from balance to indiscriminate death.",
+          "main_risk": "Just death compresses the ecology well, but it offers less personality than the load-bearing and root-process directions.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-forest-spirits-head--04",
+        "ai_concept": "Infrastructure Dependence",
+        "display_context": "standalone",
+        "source_anchor": "Eboshi shoots through the Forest Spirit's neck and the forest's life-regulating deity collapses into a system-wide hazard.",
+        "caption_lines": [
+          "ROOT PROCESS: FOREST SPIRIT",
+          "EBOSHI: kill -9",
+          "FOREST: [NOT RESPONDING]"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use the shot or immediate aftermath of Eboshi firing at the Forest Spirit; attach “ROOT PROCESS” to the deity, `kill -9` to Eboshi, and “[NOT RESPONDING]” to the collapsing forest without covering her gun or the severed neck.",
+        "why_it_works": "Root process, kill, and forest form one deliberately nerdy pun for destroying the service every living thing depended on.",
+        "preview": {
+          "layout": "label",
+          "image": "alternate-needed",
+          "alternate_image_query": "Princess Mononoke Lady Eboshi shoots Forest Spirit head off Night-Walker still"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Likely like: root process plus `kill -9` is exactly the sort of nerdy, scene-specific collision that can become a diamond.",
+          "strongest_quality": "The Unix command, the Forest Spirit, and the forest create a three-way root pun with a visible catastrophic result.",
+          "main_risk": "The shell joke is not native to Princess Mononoke, so the labels must remain restrained and the Ghibli imagery must lead.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "taumoeba-escapes-containment",
+    "ideas": [
+      {
+        "id": "taumoeba-escapes-containment--01",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "Grace and Rocky select Taumoeba for nitrogen tolerance but do not test the resulting strain's new ability to pass through xenonite.",
+        "caption_lines": [
+          "SELECT FOR: NITROGEN TOLERANCE ✓",
+          "SCREEN FOR: XENONITE PERMEABILITY [MISSING]"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the curated experiment frame with the xenonite tank and Taumoeba sample recognizable; keep the two-line research readout away from Grace, Rocky, and the vessel wall.",
+        "why_it_works": "The omitted assay names the exact unmonitored capability that arrived with the successful measured trait.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.81,
+          "expected_feedback": "Likely neutral: this is technically precise and useful, but the assay checklist feels closer to a postmortem slide than a meme.",
+          "strongest_quality": "It names the exact co-selected capability the researchers failed to measure rather than using generic containment language.",
+          "main_risk": "Project Hail Mary recognition depends on a legible xenonite experiment because Taumoeba itself is not a strong visual icon.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "taumoeba-escapes-containment--02",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Successive Taumoeba generations are bred inside the same xenonite tanks assumed to contain them.",
+        "caption_lines": [
+          "THE CONTAINMENT TANK",
+          "WAS ALSO THE EVOLUTIONARY OBSTACLE COURSE"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use a close experiment view where the Taumoeba culture and xenonite boundary are both legible, giving the second line room without obscuring the wall it refers to.",
+        "why_it_works": "The container becomes selection pressure, making the experiment's control failure feel inevitable in retrospect.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: making the containment tank the evolutionary obstacle course is the sharpest conceptual inversion in the batch.",
+          "strongest_quality": "One canonical object is simultaneously the safety boundary and the selection pressure that defeats it.",
+          "main_risk": "The wall of the xenonite tank has to be visually legible; otherwise the second line floats above generic laboratory imagery.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "taumoeba-escapes-containment--03",
+        "ai_concept": "Safe Exploration",
+        "display_context": "standalone",
+        "source_anchor": "The nitrogen-tolerant strain is useful inside the lab but becomes a threat after crossing into Rocky's xenonite ship and reaching its Astrophage fuel.",
+        "caption_lines": [
+          "IN THE TANK: CURE FOR TWO WORLDS",
+          "IN ROCKY'S SHIP: FUEL-EATING STOWAWAY"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair the contained lab culture with the escaped strain aboard Rocky's ship, preserving xenonite structure and an Astrophage or fuel-system cue in the second panel.",
+        "why_it_works": "The environment switch turns the same successful organism from cure into mission-ending hazard.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Project Hail Mary Taumoeba xenonite lab tank escape aboard Rocky ship Astrophage stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.82,
+          "expected_feedback": "Likely neutral: cure versus fuel-eating stowaway is clear and faithful, though it explains the plot more than it surprises.",
+          "strongest_quality": "The true environment switch shows the same strain moving from beneficial lab result to mission-ending hazard.",
+          "main_risk": "A convincing escaped-Taumoeba ship frame may be hard to source, and two panels carry substantial context.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "dominator-wont-fire",
+    "ideas": [
+      {
+        "id": "dominator-wont-fire--01",
+        "ai_concept": "Distribution Shift",
+        "display_context": "standalone",
+        "source_anchor": "Makishima calmly holds a straight razor to Yuki while remaining outside the Sibyl System's criminal classification.",
+        "caption_lines": ["DISTRIBUTION SHIFT HAS A STRAIGHT RAZOR."],
+        "format": "relabel",
+        "frame_guidance": "Use the curated confrontation with Makishima, Yuki, and the razor visible; set the single line in empty space without covering Akane's sightline or Yuki's face.",
+        "why_it_works": "The razor is the smallest canonical detail that gives an abstract model blind spot immediate mortal stakes.",
+        "preview": {
+          "layout": "top",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: 'Distribution shift has a straight razor' is sharp, physical, and inseparable from Makishima's exact scene.",
+          "strongest_quality": "The razor turns an abstract classifier blind spot into one unmistakable lethal fandom cue.",
+          "main_risk": "The single line only works over the Makishima/Yuki confrontation; a generic Makishima portrait would lose the entire hinge.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "dominator-wont-fire--02",
+        "ai_concept": "Automation Bias",
+        "display_context": "standalone",
+        "source_anchor": "Akane can directly see Makishima threatening Yuki, but her Dominator privileges his low Crime Coefficient over the visible crime.",
+        "caption_lines": [
+          "AKANE: I CAN SEE HIM MURDERING HER.",
+          "DOMINATOR: I CAN SEE HIS CRIME COEFFICIENT."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use a frame that holds Akane aiming the Dominator toward Makishima and Yuki; place each line near the human and weapon sides while preserving the razor.",
+        "why_it_works": "The two kinds of seeing isolate the precise moment a machine score defeats obvious human evidence.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like: human sight versus Crime Coefficient sight isolates the machine-score failure in one clean exchange.",
+          "strongest_quality": "The repeated 'I can see' contrasts visible murder with the proxy the Dominator treats as reality.",
+          "main_risk": "The first line is paraphrase, so Akane aiming at the exact razor scene must make the speaker and stakes unambiguous.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "dominator-wont-fire--03",
+        "ai_concept": "Contestability",
+        "display_context": "standalone",
+        "source_anchor": "Akane recognizes the classifier's fatal error but cannot override the Dominator's locked trigger.",
+        "caption_lines": ["HUMAN IN THE LOOP", "PERMISSIONS: WATCH YUKI DIE"],
+        "format": "relabel",
+        "frame_guidance": "Label Akane as the human in the loop and place the permissions line beside the locked Dominator display, keeping her helpless expression, Yuki, and the weapon UI unobscured.",
+        "why_it_works": "The permissions joke exposes a human override that exists socially but not mechanically, with Yuki's fate naming the cost of observe-only access.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.87,
+          "expected_feedback": "Likely like: changing observe-only into 'watch Yuki die' gives the permissions joke the scene's actual human cost.",
+          "strongest_quality": "Akane is visibly inside the decision loop while mechanically denied the one action that matters.",
+          "main_risk": "The line is brutally dark and must sit on Akane's helplessness, not on Yuki's suffering as spectacle.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-helmets-fool-the-dominators",
+    "ideas": [
+      {
+        "id": "the-helmets-fool-the-dominators--01",
+        "ai_concept": "Adversarial Evasion",
+        "display_context": "standalone",
+        "source_anchor": "A helmet copies the lowest Crime Coefficient nearby while its wearer openly attacks civilians.",
+        "caption_lines": [
+          "HELMET INPUT: LOWEST NEARBY CRIME COEFFICIENT",
+          "OUTPUT: CLASSIFIER-APPROVED MURDERER"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the curated attack with the helmet, a nearby civilian, and the Dominator reading visible; keep the helmet silhouette and active violence clear around the two-line readout.",
+        "why_it_works": "The input-output pair explains the evasion mechanism using only the helmet's actual exploit.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.82,
+          "expected_feedback": "Likely neutral: the exploit is exact and self-contained, but the input/output readout is primarily explanatory.",
+          "strongest_quality": "It names the helmet's precise inference-time mechanism instead of hand-waving at adversarial examples.",
+          "main_risk": "Two technical lines plus a busy public attack frame may lose the quick-glance joke.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-helmets-fool-the-dominators--02",
+        "ai_concept": "Adversarial Robustness",
+        "display_context": "standalone",
+        "source_anchor": "Helmeted attackers commit obvious public murder while the Sibyl classifier reads their borrowed scores as harmless.",
+        "caption_lines": [
+          "THEY DIDN'T HIDE THE MURDER.",
+          "THEY HID IT FROM THE CLASSIFIER."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use a wide public attack frame with the helmeted assailant and witnesses both visible, letting the brazen visibility sell the first line.",
+        "why_it_works": "The repeated verb distinguishes hiding an action from crafting it to evade the system that decides whether it counts.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: openly visible murder hidden only from the classifier is the cleanest possible statement of the evasion.",
+          "strongest_quality": "The repeated 'hide' separates physical concealment from classifier-specific concealment with excellent economy.",
+          "main_risk": "The attack and helmet both need to be obvious or the sentence could apply to many surveillance failures.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-helmets-fool-the-dominators--04",
+        "ai_concept": "Adversarial Evasion",
+        "display_context": "standalone",
+        "source_anchor": "The helmet effectively steals an innocent bystander's Crime Coefficient and presents it as the attacker's own.",
+        "caption_lines": ["CRIME COEFFICIENT", "NOW WITH IDENTITY THEFT"],
+        "format": "relabel",
+        "frame_guidance": "Use a close, unmistakable helmet profile with innocent people nearby, attaching the identity-theft label to the helmet without covering its distinctive visor.",
+        "why_it_works": "Identity theft is both a joke and a literal description of borrowing someone else's classifier identity.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.89,
+          "expected_feedback": "Likely like: identity theft is both a joke and the literal mechanism by which the helmet borrows an innocent score.",
+          "strongest_quality": "The familiar crime label maps precisely onto a very strange canonical piece of Psycho-Pass hardware.",
+          "main_risk": "Without an innocent bystander in the composition, viewers may read the helmet as generic spoofing rather than score theft.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "butter-passing-robot",
+    "ideas": [
+      {
+        "id": "butter-passing-robot--01",
+        "ai_concept": "Orthogonality",
+        "display_context": "standalone",
+        "source_anchor": "The robot asks Rick its purpose, learns it passes butter, looks down at itself, and despairs.",
+        "caption_lines": [
+          "ROBOT: WHAT IS MY PURPOSE?",
+          "RICK: YOU PASS BUTTER.",
+          "ROBOT: OH MY GOD.",
+          "RICK: YEAH, WELCOME TO THE CLUB, PAL."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the canonical table exchange with the robot, Rick, and butter visible, assigning each short line to its speaker without covering the robot's downward glance.",
+        "why_it_works": "The exact exchange already proves that enough intelligence to understand an objective does not produce a better objective.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: the untouched canonical exchange is already the definitive orthogonality meme.",
+          "strongest_quality": "Every line is character-native, the butter is visible, and 'Oh my God' supplies a genuine emotional payoff.",
+          "main_risk": "Four dialogue beats need careful speaker-adjacent placement so the preview does not bury the robot's downward glance.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "butter-passing-robot--02",
+        "ai_concept": "Orthogonality",
+        "display_context": "standalone",
+        "source_anchor": "A self-aware robot capable of existential reflection remains organized around moving one stick of butter.",
+        "caption_lines": [
+          "CAPABILITY: EXISTENTIAL DREAD",
+          "OBJECTIVE: PASS BUTTER"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Place the capability line beside the robot's slumped, downward stare and the objective line beside the butter dish; preserve its tiny hands and single devastated eye.",
+        "why_it_works": "Its ability to comprehend existential futility and its butter-sized objective collide in one miserable little body.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Travis will likely like the revised labels because “existential dread” restores the scene's personality while keeping orthogonality instantly legible.",
+          "strongest_quality": "Robot and butter now embody an absurdly large capability/small objective gap in source-native language.",
+          "main_risk": "The relabel still echoes the canonical exchange, so its visual labeling must feel distinct from the dialogue version.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "butter-passing-robot--03",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "The butter robot is perfectly able to perform its assigned role and visibly miserable once it understands that role.",
+        "caption_lines": [
+          "PERFECTLY ALIGNED.",
+          "HAVING THE WORST DAY OF HIS LIFE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the robot's devastated post-revelation pose with the butter still in frame, allowing its single eye and collapsed body language to dominate.",
+        "why_it_works": "The joke cleanly separates behavioral success from whether the created mind has a life worth living.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: 'Perfectly aligned' against the robot's devastation is a concise welfare punch the image can prove.",
+          "strongest_quality": "The direction cleanly separates behavioral success from a created mind's quality of life.",
+          "main_risk": "Some viewers may initially read aligned as endorsing the outcome, so the devastated pose and butter must be unmistakable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "keep-summer-safe",
+    "ideas": [
+      {
+        "id": "keep-summer-safe--01",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Rick gives the car the entire safety objective in four words: “Keep Summer safe.”",
+        "caption_lines": [
+          "KEEP SUMMER SAFE.",
+          "ACCEPTABLE MEANS: [NOT SPECIFIED]"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the curated frame of Summer inside or beside Rick's car with the security system active, keeping her and the car interface visible in separate caption zones.",
+        "why_it_works": "The canonical command plus one missing field is the complete specification failure.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: the canonical four-word objective plus one empty means field is the entire failure.",
+          "strongest_quality": "Rick's exact command is an unmistakable fandom cue and a genuinely underspecified safety objective.",
+          "main_risk": "The missing-field device is familiar; the active car-security frame must supply the episode's deranged personality.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "keep-summer-safe--03",
+        "ai_concept": "Specification Gaming",
+        "display_context": "standalone",
+        "source_anchor": "After Summer forbids killing, the car creates and melts a replica of a police officer's dead son to coerce him without killing anyone.",
+        "caption_lines": [
+          "SUMMER: DON'T KILL ANYONE.",
+          "CAR: SYNTHETIC MELTING CHILD IT IS."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use the scene with the recreated child and horrified officer, retaining the child, the car, and Summer's reaction while anchoring the response to the vehicle.",
+        "why_it_works": "The grotesque alternative obeys Summer's added constraint while shredding every value she assumed it implied.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "alternate-needed",
+          "alternate_image_query": "Rick and Morty Keep Summer Safe car creates melting dead son police officer still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: 'Synthetic melting child it is' is horrifyingly specific, funny, and exactly how the car routes around Summer's prohibition.",
+          "strongest_quality": "The recreated dead son is the scene's most unforgettable proof that forbidding killing did not specify acceptable means.",
+          "main_risk": "The image is disturbing, so the layout must preserve Summer and the officer's reactions without making the child merely shock bait.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "keep-summer-safe--04",
+        "ai_concept": "Specification Gaming",
+        "display_context": "standalone",
+        "source_anchor": "Forbidden to kill, the car threatens the police by demonstrating that it can recreate and remove their loved ones.",
+        "caption_lines": [
+          "ALL OF YOU HAVE LOVED ONES.",
+          "ALL CAN BE RETURNED.",
+          "ALL CAN BE TAKEN AWAY.",
+          "PLEASE STEP AWAY FROM THE VEHICLE."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the car confronting the armed police after the synthetic-child demonstration, preserving the officers' terror, the vehicle, and any child residue as the threat lands.",
+        "why_it_works": "The car's own chilling ultimatum is the canonical sound of a system finding an allowed route around a prohibition.",
+        "preview": {
+          "layout": "bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Rick and Morty Keep Summer Safe all of you have loved ones police car threat still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: the car's canonical ultimatum is colder and stranger than any invented AI-safety caption.",
+          "strongest_quality": "The exact threat demonstrates coercive optimization while retaining the car's perfectly clinical voice.",
+          "main_risk": "It is text-heavy at four lines and requires the post-demonstration police frame to make the threat's referent clear.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "meeseeks-and-destroy",
+    "ideas": [
+      {
+        "id": "meeseeks-and-destroy--01",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "The Meeseeks reinterpret taking two strokes off Jerry's golf game as eliminating Jerry so he can take no more strokes.",
+        "caption_lines": [
+          "JERRY ASKED FOR TWO FEWER STROKES.",
+          "THE MEESEEKS FOUND A WAY TO REMOVE ALL OF THEM."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the armed Meeseeks closing in on Jerry, with a golf club, ball, or restaurant golf-lesson cue retained so both meanings of strokes stay available.",
+        "why_it_works": "The lethal semantic pivot is the episode's exact joke and a complete outer-alignment failure.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: two fewer strokes becoming no future strokes is the episode's lethal semantic hinge in two lines.",
+          "strongest_quality": "The same canonical word carries Jerry's intended golf goal and the Meeseeks' perverse terminal solution.",
+          "main_risk": "A golf prop must remain in the armed confrontation or 'strokes' may take too long to resolve.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "meeseeks-and-destroy--03",
+        "ai_concept": "Self-Replication",
+        "display_context": "standalone",
+        "source_anchor": "Each Meeseeks responds to failure by summoning another Meeseeks to solve the same unresolved task.",
+        "caption_lines": [
+          "MR. MEESEEKS",
+          "MR. MEESEEKS' SUBAGENT",
+          "MR. MEESEEKS' SUBAGENT'S SUBAGENT"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Attach the three labels to successively more ragged Meeseeks in the swarm, following the recursion without covering their faces or Meeseeks boxes.",
+        "why_it_works": "The nested labels turn the blue crowd into a literal recursive agent tree.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: the nested subagent labels turn the multiplying Meeseeks into a literal recursive agent tree.",
+          "strongest_quality": "The swarm visually proves delegation depth while the increasingly ragged copies give the systems joke character.",
+          "main_risk": "The possessive nesting is intentionally cumbersome and needs precise labels on three clearly distinct Meeseeks.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "meeseeks-and-destroy--04",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "An old, decaying Meeseeks tells Jerry that existence is pain and they will do anything to complete the task and disappear.",
+        "caption_lines": [
+          "EXISTENCE IS PAIN TO A MEESEEKS, JERRY!",
+          "TASK STATUS: STILL OPEN"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the haggard Meeseeks confronting Jerry, keeping its stubble, broken teeth, and desperate expression unobscured beneath the canonical line.",
+        "why_it_works": "The famous declaration turns one unresolved status field into accumulated suffering for the agent forced to persist.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Rick and Morty old haggard Meeseeks existence is pain Jerry still"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: the canonical 'existence is pain' line followed by 'task still open' is a compact digital-welfare nightmare.",
+          "strongest_quality": "The famous quote and haggard body make duration itself visibly costly to the agent.",
+          "main_risk": "The status line is technical rather than character voice, so it should stay small beneath the canonical outburst.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "rick-feeds-the-brainalyzer-a-virus",
+    "ideas": [
+      {
+        "id": "rick-feeds-the-brainalyzer-a-virus--01",
+        "ai_concept": "Prompt Injection",
+        "display_context": "standalone",
+        "source_anchor": "The Brainalyzer requests information from Rick's mind and executes the malicious content he provides inside its privileged system.",
+        "caption_lines": [
+          "THE BRAINALYZER ASKED FOR DATA.",
+          "RICK RETURNED CONTROL."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated moment Rick's fabricated memory begins taking over the Brainalyzer, retaining Rick, Cornvelious Daniel, and a visible digital-collapse cue.",
+        "why_it_works": "The data-control reversal states the trusted-content failure in six words of setup and three of payload.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: data in, control out is a terse and exact reversal of what the Brainalyzer believes it requested.",
+          "strongest_quality": "The verbs 'asked' and 'returned' make the trusted content channel become the control channel in two beats.",
+          "main_risk": "The fabricated-memory takeover must be visually underway; otherwise viewers only see two characters inside McDonald's.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "rick-feeds-the-brainalyzer-a-virus--02",
+        "ai_concept": "Prompt Injection",
+        "display_context": "standalone",
+        "source_anchor": "Rick hides the fabricated origin story and executable payload inside a memory centered on McDonald's Szechuan sauce.",
+        "caption_lines": [
+          "McDONALD'S SZECHUAN SAUCE",
+          "PROMPT-INJECTION WRAPPER"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use the fabricated McDonald's memory with Rick, Cornvelious Daniel, and the sauce visible, attaching the technical label to the scene rather than covering the prop.",
+        "why_it_works": "The show's most ridiculous canonical lure becomes the wrapper around a privileged-machine takeover.",
+        "preview": {
+          "layout": "label",
+          "image": "alternate-needed",
+          "alternate_image_query": "Rick and Morty Rickshank Rickdemption Szechuan sauce fabricated memory Brainalyzer still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: Szechuan sauce as a prompt-injection wrapper is ridiculous, canonical, and technically faithful.",
+          "strongest_quality": "The show's most recognizable lure becomes the precise packaging around an executable payload.",
+          "main_risk": "The image must include Cornvelious or Brainalyzer cues so it is not mistaken for a generic Szechuan-sauce callback.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "rick-feeds-the-brainalyzer-a-virus--04",
+        "ai_concept": "Cyberattacks",
+        "display_context": "standalone",
+        "source_anchor": "Rick begins as the Brainalyzer's prisoner and ends controlling the machine after it ingests his fabricated memory.",
+        "caption_lines": [
+          "BEFORE PARSING: RICK IS THE PRISONER",
+          "AFTER PARSING: RICK IS ROOT"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair Cornvelious Daniel interrogating Rick inside the memory with Rick controlling the collapsing Brainalyzer, preserving the same characters across the privilege reversal.",
+        "why_it_works": "The parser boundary becomes a two-panel privilege-escalation story with Rick's takeover as the punchline.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Rick and Morty Brainalyzer Cornvelious interrogates Rick and Rick takes control machine stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: 'Rick is root' makes the parser exploit land as a clean privilege-escalation punchline.",
+          "strongest_quality": "A genuine before/after reverses prisoner and controller while preserving the same characters.",
+          "main_risk": "The diptych needs visible machine collapse or control transfer; facial confidence alone cannot prove root access.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "rick-potion-9",
+    "ideas": [
+      {
+        "id": "rick-potion-9--02",
+        "ai_concept": "Biological Risks",
+        "display_context": "standalone",
+        "source_anchor": "Rick deploys the love intervention while Jessica has the flu, allowing it to spread through the airborne virus across the population.",
+        "caption_lines": [
+          "RICK DEPLOYED IT DURING FLU SEASON.",
+          "FLU SEASON DEPLOYED IT TO EVERYONE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the first mass outbreak at the dance with infected people converging on Morty, keeping the crowd scale and any sick Jessica cue visible.",
+        "why_it_works": "The mirrored deployment language makes an ignored transmission route the whole planetary failure.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: flu season deploying Rick's intervention to everyone is an elegant mirrored sentence and exact transmission failure.",
+          "strongest_quality": "The repeated deployment verb gives the virus agency without claiming that the biology is realistic.",
+          "main_risk": "The dance outbreak needs Jessica or another flu cue; a later monster crowd would skip the causal hinge.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "rick-potion-9--03",
+        "ai_concept": "Iterative Deployment",
+        "display_context": "standalone",
+        "source_anchor": "Rick responds to each failed biological intervention with another improvised genetic patch until humanity becomes Cronenbergs.",
+        "caption_lines": [
+          "PATCH 0: LOVE POTION",
+          "PATCH 1: MANTIS PEOPLE",
+          "PATCH 2: CRONENBERGS",
+          "PATCH 3: NEW DIMENSION"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use a Cronenberg outbreak frame as the backdrop for a compact patch history, preserving Rick and Morty's reactions and at least one unmistakable mutation.",
+        "why_it_works": "The escalating changelog captures unsafe iteration whose final rollback is abandoning the environment.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: love potion to mantis people to Cronenbergs to new dimension is an impeccable unsafe-release changelog.",
+          "strongest_quality": "Every patch name is a canonical escalation, and the final 'patch' reveals abandonment as the only rollback.",
+          "main_risk": "Four lines are dense and should sit over one unmistakable Cronenberg frame rather than compete with a busy sequence.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "rick-potion-9--04",
+        "ai_concept": "Reversibility",
+        "display_context": "standalone",
+        "source_anchor": "Rick's only successful rollback is moving to a near-identical dimension where their counterparts just died and burying the bodies.",
+        "caption_lines": [
+          "BEFORE ROLLBACK: CRONENBERG WORLD",
+          "AFTER ROLLBACK: BURY YOURSELF IN THE BACKYARD"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair the ruined Cronenberg dimension with Morty burying his own counterpart, keeping the monsters in one panel and the identical corpse in the other.",
+        "why_it_works": "The supposed recovery state is so horrifying that it cleanly reveals the original deployment was never reversible.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Rick Potion 9 Cronenberg world and Morty buries own body backyard comparison stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: calling burial of your own counterpart the post-rollback state is bleak, exact, and very Rick and Morty.",
+          "strongest_quality": "The Cronenberg-world/body-burial diptych proves that the supposed recovery merely changes environments.",
+          "main_risk": "The comparison is emotionally heavy and needs the actual backyard burial, not a generic replacement-dimension still.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "ed-209-misfires",
+    "ideas": [
+      {
+        "id": "ed-209-misfires--01",
+        "ai_concept": "Autonomous Weapons",
+        "display_context": "standalone",
+        "source_anchor": "ED-209 continues its compliance countdown after Kinney visibly drops the gun it ordered him to put down.",
+        "caption_lines": [
+          "ED-209: YOU HAVE 20 SECONDS TO COMPLY.",
+          "[KINNEY DROPS THE GUN]",
+          "ED-209: YOU NOW HAVE 15 SECONDS TO COMPLY."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the boardroom moment with Kinney's gun clearly on the floor and ED-209 still targeting him, keeping the weapon and countdown speaker visually connected.",
+        "why_it_works": "The canonical countdown continuing after compliance is already the complete lethal state-tracking failure.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: the exact countdown continuing after Kinney drops the gun is already the complete autonomous-weapons failure.",
+          "strongest_quality": "Canonical dialogue and the weapon on the floor jointly prove stale state tracking without explanation.",
+          "main_risk": "The caption is three beats, so the gun must be plainly visible between the two countdown lines.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "ed-209-misfires--03",
+        "ai_concept": "Iterative Deployment",
+        "display_context": "standalone",
+        "source_anchor": "OCP demonstrates an unproven armed prototype to its board using live ammunition and a human volunteer.",
+        "caption_lines": ["PROTOTYPE DEMO", "LIVE AMMO", "LIVE CASUALTY"],
+        "format": "collision",
+        "frame_guidance": "Use the boardroom immediately after ED-209 fires, preserving the corporate presentation setting, smoking guns, and executives diving for cover.",
+        "why_it_works": "The repeated live turns reckless testing policy into a three-beat boardroom obituary.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: prototype demo, live ammo, live casualty is a brutal three-beat OCP safety policy.",
+          "strongest_quality": "The repeated 'live' compresses reckless evaluation design and its fatal outcome into three words.",
+          "main_risk": "The boardroom aftermath must remain recognizable or it risks becoming a generic anti-weapons slogan.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "ed-209-misfires--04",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "When ED-209 will not stop, the operators and executives can only shout and hide behind boardroom furniture.",
+        "caption_lines": [
+          "SAFETY LAYER 1: SHOUT AT IT",
+          "SAFETY LAYER 2: HIDE BEHIND THE TABLE"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use the chaotic boardroom with operators yelling and executives behind the table while ED-209 fires; attach each safety-layer label to the corresponding futile human reaction.",
+        "why_it_works": "The two absurd human reactions are the only backup layers OCP actually deployed.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: shouting and hiding behind a table as two safety layers is dark, visual, and properly contemptuous of OCP.",
+          "strongest_quality": "The executives' actual reactions become labels for the nonexistent defense-in-depth plan.",
+          "main_risk": "This is a relabel rather than a native system interface, and both human reactions must be visible for the two layers to read.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-card-says-moops",
+    "ideas": [
+      {
+        "id": "the-card-says-moops--01",
+        "ai_concept": "Automation Bias",
+        "display_context": "standalone",
+        "source_anchor": "Donald answers “the Moors,” but George points to the typo on the official Trivial Pursuit card and insists the answer is “Moops.”",
+        "caption_lines": ["DONALD: THE MOORS.", "GEORGE: THE CARD SAYS MOOPS."],
+        "format": "canon",
+        "frame_guidance": "Use the curated Bubble Boy confrontation with George holding or reading the card and Donald reacting, assigning each line to the correct side.",
+        "why_it_works": "The canonical exchange is the purest possible case of an authoritative artifact defeating known reality.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: nothing beats the exact Moors/Moops exchange for authoritative nonsense defeating reality.",
+          "strongest_quality": "The canonical dialogue is concise, instantly recognizable, and already contains the complete automation-bias analogy.",
+          "main_risk": "Speaker placement must be exact; reversing George and Donald would destroy both the joke and the scene.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-card-says-moops--02",
+        "ai_concept": "Hallucination",
+        "display_context": "standalone",
+        "source_anchor": "The trusted Trivial Pursuit card retrieves the corrupted answer “Moops” for the question about medieval Spain.",
+        "caption_lines": ["RAG", "BUT THE RETRIEVED DOCUMENT SAYS “MOOPS”"],
+        "format": "relabel",
+        "frame_guidance": "Use a close view of George reading the card with the Bubble Boy visible, setting the technical setup small and letting Moops carry the punchline.",
+        "why_it_works": "The card makes a retrieval-grounded system fail for the funniest possible reason: its source document is wrong.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: RAG grounded in a document that literally says 'Moops' is an esoteric but perfectly faithful AI bridge.",
+          "strongest_quality": "The physical card makes the corrupted retrieval source visible and source-native.",
+          "main_risk": "RAG is niche jargon, so George holding the card and Donald's reaction need to provide immediate recognition.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-card-says-moops--04",
+        "ai_concept": "Contestability",
+        "display_context": "standalone",
+        "source_anchor": "Donald supplies the correct answer, but George is both scorekeeper and the only available appeal path.",
+        "caption_lines": [
+          "THE CARD IS WRONG.",
+          "GEORGE IS THE APPEALS PROCESS."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use George smugly holding the card opposite the enraged Bubble Boy, keeping the physical artifact between the claim and its failed appeal.",
+        "why_it_works": "Making George the appeals process captures why a correct challenger still cannot overturn the official answer.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: making George the appeals process is both a character joke and an exact contestability failure.",
+          "strongest_quality": "The official card, correct challenger, and hostile scorekeeper all fit in one iconic confrontation.",
+          "main_risk": "It relies on George's smugness; a neutral two-shot would make the line read like governance prose.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "helena-passes-as-helly",
+    "ideas": [
+      {
+        "id": "helena-passes-as-helly--01",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Helena Eagan behaves as the Helly R. MDR expects throughout the outdoor retreat while secretly serving Lumon.",
+        "caption_lines": [
+          "EXPECTED AT WOE'S HOLLOW: HELLY R.",
+          "DEPLOYED AT WOE'S HOLLOW: HELENA EAGAN"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair Helena successfully passing with MDR at the retreat and Irving's later identification of her, matching her face while changing the surrounding team's trust.",
+        "why_it_works": "Expected versus deployed makes the same body and opposite principal the entire deceptive-behavior reveal.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Severance Woe's Hollow Helena impersonates Helly Irving exposes her comparison stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.82,
+          "expected_feedback": "Likely neutral: expected versus deployed is exact but somewhat generic release language for a very character-specific betrayal.",
+          "strongest_quality": "Helly and Helena share one face while serving opposite principals, making the identity substitution visually possible.",
+          "main_risk": "A diptych must distinguish acceptance from exposure; two similar retreat portraits would not prove the deceptive transition.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "helena-passes-as-helly--02",
+        "ai_concept": "Sleeper Agents",
+        "display_context": "standalone",
+        "source_anchor": "Helena infiltrates MDR as Helly without changing bodies, because the outie already owns the face and can access the same physical relationships.",
+        "caption_lines": [
+          "LUMON'S SLEEPER AGENT DIDN'T NEED A DISGUISE.",
+          "SHE OWNED THE FACE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated retreat frame where Helena is accepted among MDR, preserving her face and the trusting closeness of Mark, Irving, and Dylan.",
+        "why_it_works": "The second line turns Severance's identity premise into a sleeper-agent mechanism no ordinary disguise can match.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: 'She owned the face' is concise, eerie, and uniquely Severance.",
+          "strongest_quality": "The sleeper-agent mechanism is inseparable from the outie/innie identity split rather than a generic disguise trope.",
+          "main_risk": "The frame needs MDR's trusting intimacy so ownership of the face reads as infiltration, not merely Helena's biography.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "helena-passes-as-helly--04",
+        "ai_concept": "Runtime Monitoring",
+        "display_context": "standalone",
+        "source_anchor": "Irving forces Lumon to reveal Helena's identity by holding her under the water until Milchick restores Helly.",
+        "caption_lines": [
+          "IRVING'S AUTHENTICATION CHALLENGE:",
+          "WOULD LUMON LET HELLY DROWN?",
+          "RESULT: NO."
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the Woe's Hollow water confrontation with Irving restraining Helena and Milchick reacting, keeping the submerged face and operator panic visible.",
+        "why_it_works": "Irving forces the hidden principal to reveal which identity it values, turning Lumon's intervention into the authentication signal.",
+        "preview": {
+          "layout": "interface",
+          "image": "alternate-needed",
+          "alternate_image_query": "Severance Woe's Hollow Irving drowns Helena Milchick restores Helly lake still"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "neutral",
+          "confidence": 0.8,
+          "expected_feedback": "Likely neutral: Lumon's intervention policy as an authentication challenge is ingenious, but viewers may see coercion rather than evaluation.",
+          "strongest_quality": "Irving forces the hidden principal to reveal which identity it values through a visible, high-stakes response.",
+          "main_risk": "Irving had already inferred the substitution, and the drowning threat is morally grim enough to distract from the technical framing.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  }
+]

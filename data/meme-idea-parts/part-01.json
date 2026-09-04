@@ -170,24 +170,25 @@
         "display_context": "standalone",
         "source_anchor": "Tetsuo retaliating by reaching into orbit and destroying the SOL satellite after surviving its attack.",
         "caption_lines": [
-          "FAIL ONCE.",
-          "TEACH THE TARGET WHERE YOUR ONLY FAILSAFE LIVES."
+          "FAILSAFE CAPACITY: ONE SHOT",
+          "RESULT: ONE ARM",
+          "RETRY: SATELLITE DESTROYED"
         ],
-        "format": "collision",
-        "frame_guidance": "Use the satellite-destruction moment with SOL recognizable in orbit and the retaliation visibly underway; keep the exploding hardware clear of the lower payoff line.",
-        "why_it_works": "The terse escalation captures how an irreversible failed intervention can erase its own second chance.",
+        "format": "source-native interface",
+        "frame_guidance": "Use the satellite-destruction moment with SOL recognizable in orbit and Tetsuo's retaliation visibly underway; set the three lines as a sparse failure report away from the exploding hardware.",
+        "why_it_works": "The status trace turns a partially successful strike into a control system with no surviving second attempt.",
         "preview": {
-          "layout": "top-bottom",
+          "layout": "interface",
           "image": "alternate-needed",
           "alternate_image_query": "Akira Tetsuo destroys SOL satellite orbit still"
         },
         "critic": {
           "verdict": "revise",
           "predicted_rating": "like",
-          "confidence": 0.8,
-          "expected_feedback": "Calling SOL the only failsafe is cleaner than calling it an off-switch; the retaliation is the actual joke.",
-          "strongest_quality": "Tetsuo physically deleting the failed intervention gives reversibility a rare, memorable action image.",
-          "main_risk": "'Failsafe' still abstracts a lethal orbital attack, so the satellite destruction must dominate the frame.",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like after revision: one shot, one arm, no satellite is a cleaner and genuinely distinct reversibility failure.",
+          "strongest_quality": "The exact partial result and destroyed orbital weapon quantify why this control attempt cannot be retried.",
+          "main_risk": "Calling a lethal orbital weapon a failsafe remains deliberate abstraction, so SOL's destruction must dominate the frame.",
           "glance_test": {
             "source": true,
             "analogy": true,
@@ -518,9 +519,9 @@
         },
         "critic": {
           "verdict": "revise",
-          "predicted_rating": "like",
-          "confidence": 0.83,
-          "expected_feedback": "The SQL-shaped equation is the right nerdy bridge, but it needs the actual evidence display rather than a generic Dedra close-up.",
+          "predicted_rating": "neutral",
+          "confidence": 0.78,
+          "expected_feedback": "Likely neutral: the cross-sector join is analytically elegant, but three equation rows read more like an explainer than a meme.",
           "strongest_quality": "Three concrete source entities show privacy loss emerging from the join rather than from any one record.",
           "main_risk": "It is closer to an elegant explainer than a joke, and three lines may feel clinical.",
           "glance_test": {
@@ -579,9 +580,9 @@
         },
         "critic": {
           "verdict": "revise",
-          "predicted_rating": "like",
-          "confidence": 0.82,
-          "expected_feedback": "This is the right dual-use knife: the model is not wrong, the Empire owns where the correct answer goes.",
+          "predicted_rating": "neutral",
+          "confidence": 0.77,
+          "expected_feedback": "Likely neutral: the dual-use point is correct, but “model output” over a human analyst risks feeling imposed rather than discovered.",
           "strongest_quality": "The Empire is an unmistakable source cue and a complete institutional-alignment verdict in one word.",
           "main_risk": "Dedra is a human analyst in canon, so MODEL OUTPUT must read as deliberate AI relabeling rather than a factual claim about the scene.",
           "glance_test": {
@@ -680,9 +681,9 @@
         },
         "critic": {
           "verdict": "revise",
-          "predicted_rating": "like",
-          "confidence": 0.79,
-          "expected_feedback": "The startup cliché earns its keep because Apollo 13 is the exact environment where a bad patch cannot be shrugged off.",
+          "predicted_rating": "neutral",
+          "confidence": 0.75,
+          "expected_feedback": "Likely neutral: Apollo 13 gives the slogan real stakes, but “move fast and break things” is still a heavily worn setup.",
           "strongest_quality": "A familiar slogan gets a scene-specific rebuke from two iconic incompatible pieces of hardware.",
           "main_risk": "'Move fast and break things' is well-worn and could feel generic if the props are not visually dominant.",
           "glance_test": {
@@ -948,9 +949,9 @@
         },
         "critic": {
           "verdict": "revise",
-          "predicted_rating": "like",
-          "confidence": 0.8,
-          "expected_feedback": "The two parses are useful and exact, but this is a technical relabel—not an interface native to the hospital scene.",
+          "predicted_rating": "neutral",
+          "confidence": 0.76,
+          "expected_feedback": "Likely neutral: the two parses are exact, but the three-line diagram explains a joke the canonical version already lands faster.",
           "strongest_quality": "It isolates the literal/pragmatic split using the exact ambiguous phrase instead of generic alignment jargon.",
           "main_risk": "Three lines explain more than the canonical version and could feel like a diagram if typography is too formal.",
           "glance_test": {

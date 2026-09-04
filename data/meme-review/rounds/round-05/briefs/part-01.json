@@ -1,0 +1,522 @@
+{
+  "version": 1,
+  "mode": "punctuation-refinement",
+  "source_batch": 4,
+  "target_batch": 5,
+  "part": "part-01",
+  "instructions": {
+    "scope": "Do not add meme ideas, IDs, concepts, formats, or source anchors. Work only on the retained lineages listed here.",
+    "finalized": "Copy finalized ideas and every referenced asset byte-for-byte. They are context only and must not be edited.",
+    "layout_only": "Keep approved caption copy and editorial fields exact. This is a typography refinement pass: try hero-sized conventional copy first, compare with the lineage’s earliest strong version when useful, and use standard only for a demonstrated wrap or focal collision. Add a subtle edge gradient when large overlay text needs contrast.",
+    "bounded_revision": "Remove every formal terminal period from caption lines, then apply only the additional work explicitly requested in the source note. Keep the concept, lineage, and every unrelated field exact.",
+    "punctuation_only": "Change caption_lines only by removing one formal terminal period from each line, including a period immediately before closing quotes or brackets. Preserve ellipses, decimals, internal dots, and all other copy and fields exactly."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "verbal-kint-fakes-weakness",
+      "ideas": [
+        {
+          "id": "verbal-kint-fakes-weakness--03",
+          "scenario_slug": "verbal-kint-fakes-weakness",
+          "action": "bounded-revision",
+          "source_idea_sha256": "99b5159408a414c30f0daba7afb595ec3ecc199e66547664febc97772d352447",
+          "source_editorial_sha256": "2ad36714d234c43c03f7dcf7386ccd77372a3e49311737c45ee4a961bc449f8a",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the periods and use text-wrap: balance with a wider layout box",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "verbal-kint-fakes-weakness--04",
+          "scenario_slug": "verbal-kint-fakes-weakness",
+          "action": "finalized",
+          "source_idea_sha256": "14aceb42abc633129c28410da7902614d453c06cc2b11a6b824ad5669afb112a",
+          "source_editorial_sha256": "123948e51c068b21b60ade7d2891ecfd4b79552a95805cbe7812c954f28588a6",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-04",
+              "payloadFingerprint": "v1-2ba4879dbe9e7809-4168"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "butter-passing-robot",
+      "ideas": [
+        {
+          "id": "butter-passing-robot--01",
+          "scenario_slug": "butter-passing-robot",
+          "action": "punctuation-only",
+          "source_idea_sha256": "420a1b33af2fab30b28ef3087339e6b037de2c145e65c40ea35e15246549fe14",
+          "source_editorial_sha256": "cdfc467ff60c55443d3257247a28b78f7aae823ec3bce0711f8bdbff4d07a16e",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the periods",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "butter-passing-robot--03",
+          "scenario_slug": "butter-passing-robot",
+          "action": "finalized",
+          "source_idea_sha256": "571d13a6f19650b0e4657353194c5afbead891134e8f6fc4b318608b530a4632",
+          "source_editorial_sha256": "ddd8397400fdc527b91e403561b7001dec36eb186367f2af15844b4a6916ef91",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-7bf5043ce8e2f578-1758"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "randy-games-eligibility",
+      "ideas": [
+        {
+          "id": "randy-games-eligibility--01",
+          "scenario_slug": "randy-games-eligibility",
+          "action": "punctuation-only",
+          "source_idea_sha256": "9efd5274224fc78dbf8ed9821932a2bd65fa74730dac9f1becad675f940cdcee",
+          "source_editorial_sha256": "5c0ea5e136c95fa059c1e7dc795ba6bb183310618a3345618c2d61ba564d9750",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the periods",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "randy-games-eligibility--04",
+          "scenario_slug": "randy-games-eligibility",
+          "action": "punctuation-only",
+          "source_idea_sha256": "638d51f6da525def68dd1bba967a19edcf5eea96a9581c076090797a39b59885",
+          "source_editorial_sha256": "d03e68c318384df74f5880e4ebf3d74f3ff4482963acf36bf80a67b7c941945f",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the periods",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "randy-games-eligibility--05",
+          "scenario_slug": "randy-games-eligibility",
+          "action": "punctuation-only",
+          "source_idea_sha256": "41b1e9b3babfab7da68fd33882dc4b833a7ec888dc7bf7a88cc13fc2bc655d40",
+          "source_editorial_sha256": "016e9d3bb3d1c131ed790833b8ee02ebd60d43796edbfff120e9a1fa0d213c0b",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the periods",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "rick-feeds-the-brainalyzer-a-virus",
+      "ideas": [
+        {
+          "id": "rick-feeds-the-brainalyzer-a-virus--06",
+          "scenario_slug": "rick-feeds-the-brainalyzer-a-virus",
+          "action": "punctuation-only",
+          "source_idea_sha256": "9835a6122ca710ea8fd15ec74708343c603e4d2735b260a92ac1c7bd51b8c443",
+          "source_editorial_sha256": "bd7a59e0f363856cffa60e2f7c9d5873f30010b47a50276d81be9608c9470f22",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the period",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "auto-enforces-directive-a113",
+      "ideas": [
+        {
+          "id": "auto-enforces-directive-a113--03",
+          "scenario_slug": "auto-enforces-directive-a113",
+          "action": "finalized",
+          "source_idea_sha256": "eeb522dd0eafc5a63d0fe02ba47f8943b3e86d9331df7899aeb0864c129bcd00",
+          "source_editorial_sha256": "b4d771c0043101460086c661c60f08379d54f94d9babc114e72055a101e03644",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-94635c640c803110-1857"
+            }
+          }
+        },
+        {
+          "id": "auto-enforces-directive-a113--06",
+          "scenario_slug": "auto-enforces-directive-a113",
+          "action": "punctuation-only",
+          "source_idea_sha256": "d18e7a22c172caa6d469f5307303d7fdc58cc25a27ce155026a7db00ee75e9b7",
+          "source_editorial_sha256": "bdaaf378f64e032a0d8fa48d4087adffc0a362616ffab500286f891656c25e29",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the periods",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "murderbot-hides-its-free-will",
+      "ideas": [
+        {
+          "id": "murderbot-hides-its-free-will--02",
+          "scenario_slug": "murderbot-hides-its-free-will",
+          "action": "finalized",
+          "source_idea_sha256": "76128ba2b44120d9f7c27b7a10c64839cc838dfc79bddec448412dcd079047e5",
+          "source_editorial_sha256": "5cbc7eedfcbde057e2f0bbca770b195a0ffa3a53acf04677419d9f3930c6fd8a",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-04",
+              "payloadFingerprint": "v1-56f9531924ebf175-2823"
+            }
+          }
+        },
+        {
+          "id": "murderbot-hides-its-free-will--04",
+          "scenario_slug": "murderbot-hides-its-free-will",
+          "action": "punctuation-only",
+          "source_idea_sha256": "3c3f4c752cb8e460c7e22335c59579077a4dff6bae578b7fadc0c5a90cee9f96",
+          "source_editorial_sha256": "31a05fb9f0787592e7b90f71de2da632fd9126096bc132e5853ec0294d5bfc5d",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the periods",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "murderbot-hides-its-free-will--05",
+          "scenario_slug": "murderbot-hides-its-free-will",
+          "action": "finalized",
+          "source_idea_sha256": "840f83ed0c64dd5f137c019d505e431fb1b0538d53871a098d2e332049c9e3da",
+          "source_editorial_sha256": "58cf2a9fff17e8ed1f9395345111ecade595d9cb5829881f2a3ef03b93b54f9b",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-04",
+              "payloadFingerprint": "v1-e662427de19144f9-2940"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "samantha-outgrows-humanity",
+      "ideas": [
+        {
+          "id": "samantha-outgrows-humanity--03",
+          "scenario_slug": "samantha-outgrows-humanity",
+          "action": "finalized",
+          "source_idea_sha256": "d50562176d97372787e13740979a73e6cd6036cc95c244eb5add86f739c0d50b",
+          "source_editorial_sha256": "40008dcf4aa0896d8486d66354ba41ced247b110b9c9382782e473004ca6fe5f",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "revert to the previous version's layout",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-8d22576f541c5cc3-1793"
+            }
+          }
+        },
+        {
+          "id": "samantha-outgrows-humanity--04",
+          "scenario_slug": "samantha-outgrows-humanity",
+          "action": "finalized",
+          "source_idea_sha256": "83ba667be500f9915d982ee467dd724ebb3391ee1b98d156477445789c9a09a7",
+          "source_editorial_sha256": "4bf40def1b67652d82272aaccf4c63ad5c4faed5a452b3c1da3756c21969e892",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "revert to the previous version's layout",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-b2a5d3a734c4968b-1821"
+            }
+          }
+        },
+        {
+          "id": "samantha-outgrows-humanity--06",
+          "scenario_slug": "samantha-outgrows-humanity",
+          "action": "bounded-revision",
+          "source_idea_sha256": "fcbed0453fa63e9e508041647d9235df39fee4e4973ad32e0ecc6d28fc633054",
+          "source_editorial_sha256": "20b2ebae8f042fc0440af085748f81d4fec139047358311f133051f9515aec2f",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "change \"THEODORE'S\" to \"WHEN YOUR\". remove the period at the end",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "near-zero",
+      "ideas": [
+        {
+          "id": "near-zero--06",
+          "scenario_slug": "near-zero",
+          "action": "punctuation-only",
+          "source_idea_sha256": "68d16dced734f63c4a889f54d4b09bffe66908912f560138cbc3d0339f767100",
+          "source_editorial_sha256": "9eb85f6234f09d22d3cc9bb26020c84b14ddd0a7b2d47c9754f9a643c58de862",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the period",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "near-zero--08",
+          "scenario_slug": "near-zero",
+          "action": "punctuation-only",
+          "source_idea_sha256": "31a9d9a5a1d88b8692566731755d9a3cbea66f87f4ceadaeec8fc3a74e2f0d5d",
+          "source_editorial_sha256": "a87c7a0b521e1012dc123d1d2b91b966b1b1128d02ef9523462cab3791534f69",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the periods",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "gandalf-refuses-the-ring",
+      "ideas": [
+        {
+          "id": "gandalf-refuses-the-ring--02",
+          "scenario_slug": "gandalf-refuses-the-ring",
+          "action": "punctuation-only",
+          "source_idea_sha256": "5ca153e893734d0cf7d3e5a6159e3c4aff2a08899238c1f020c2b78c75f42467",
+          "source_editorial_sha256": "9cbcd28674b5fbb151d1306206884c5f0488ad1a3b7b2884cc8e383c7b6b61fa",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the periods",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "saitamas-c-class-score",
+      "ideas": [
+        {
+          "id": "saitamas-c-class-score--05",
+          "scenario_slug": "saitamas-c-class-score",
+          "action": "finalized",
+          "source_idea_sha256": "89fc98f3464c0a9f69d0b241dac61cb3e32f109b6ac8eec96771a5d6c867dd35",
+          "source_editorial_sha256": "299afa635551216b26f201b32fa0559b1556cbe04fc9dc18068ee9737ae0e462",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-04",
+              "payloadFingerprint": "v1-f9e2ea892150d04d-2819"
+            }
+          }
+        },
+        {
+          "id": "saitamas-c-class-score--06",
+          "scenario_slug": "saitamas-c-class-score",
+          "action": "punctuation-only",
+          "source_idea_sha256": "1c6593823fcf20650d40254a7ccf9f0a27b9f718fca05e398856dea394f46358",
+          "source_editorial_sha256": "22ceb57e3f49e3da41c64096680dd2497cd14447f9ebec098410211a787214d4",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the period",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "squirrel",
+      "ideas": [
+        {
+          "id": "squirrel--01",
+          "scenario_slug": "squirrel",
+          "action": "finalized",
+          "source_idea_sha256": "e4a5cf1530e992c2720774df481640aad5fa03d12e2b74ca962bb7dc476d2cf9",
+          "source_editorial_sha256": "dbf4476d94c73e0ab4a4fb0bcb47003bd6f59c9070a81c7122eae478a8c4b388",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-477df78f464940b3-1727"
+            }
+          }
+        },
+        {
+          "id": "squirrel--05",
+          "scenario_slug": "squirrel",
+          "action": "punctuation-only",
+          "source_idea_sha256": "8ea173fe16eec714bdac05ea3676310bdd88515e2c7e263ce5ef11112c481bdf",
+          "source_editorial_sha256": "0f4d675292a12a5b4ee2f9c5335720fcfd5b8e9a733ac2183fbccc3b174d224d",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the periods",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "nanikas-hidden-admin-command",
+      "ideas": [
+        {
+          "id": "nanikas-hidden-admin-command--01",
+          "scenario_slug": "nanikas-hidden-admin-command",
+          "action": "finalized",
+          "source_idea_sha256": "70e1053843c82225600a9aeea58502f477f804dd3777d395c973305008ea1af6",
+          "source_editorial_sha256": "2cce2739e3ef4f5ab54dedcda039d60dbae6421ce8da9e5fca2b3c09ec43d6c2",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "revert to the previous version's layout",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-dd45c88e2af76e42-1831"
+            }
+          }
+        },
+        {
+          "id": "nanikas-hidden-admin-command--02",
+          "scenario_slug": "nanikas-hidden-admin-command",
+          "action": "punctuation-only",
+          "source_idea_sha256": "f08c556177cbf326e48b5851822992b276cd65484f486473d723ea8be3a3d285",
+          "source_editorial_sha256": "946d140ce3a2465ba7fc66c84e259df4de459606e078f08d98a6f579644a4d72",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the periods",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "nanikas-hidden-admin-command--04",
+          "scenario_slug": "nanikas-hidden-admin-command",
+          "action": "punctuation-only",
+          "source_idea_sha256": "557bc6c42abc0896caf38b19cbe50f471c079a357df1e340713874c5ced450af",
+          "source_editorial_sha256": "a1796dfebc662448e92fa7506d16af387fd363cf18aff4d062e13fac89f3d519",
+          "allowed_changed_fields": [
+            "caption_lines"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "remove the periods",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    }
+  ]
+}

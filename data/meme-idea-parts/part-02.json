@@ -18,24 +18,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "no-war-in-ba-sing-se--02",
-        "ai_concept": "Digital Repression",
-        "display_context": "standalone",
-        "source_anchor": "The interchangeable Joo Dee persona and the canonical Lake Laogai invitation used when visitors ask forbidden questions.",
-        "caption_lines": [
-          "USER: WHY DOES EVERY JOO DEE SAY THE SAME THING?",
-          "JOO DEE: THE EARTH KING HAS INVITED YOU TO LAKE LAOGAI."
-        ],
-        "format": "dialogue",
-        "frame_guidance": "Use the curated frontal Joo Dee close-up; place the user line above her and her reply below without covering the smile that turns the answer into a threat.",
-        "why_it_works": "A fan instantly hears the euphemism while the repeated spokesperson reads like censorship scaled through identical compliant interfaces.",
-        "preview": {
-          "layout": "dialogue",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: the canonical denial and fake success metric land immediately.",
+          "strongest_quality": "It converts the franchise's definitive propaganda line into one precise censorship KPI.",
+          "main_risk": "Content moderation can sound milder than state repression, so Joo Dee's threatening smile must carry the tone.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -54,6 +50,20 @@
           "layout": "top-bottom",
           "image": "alternate-needed",
           "alternate_image_query": "Avatar City of Walls and Secrets Jet brainwashing rotating lamp Lake Laogai still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.87,
+          "expected_feedback": "Likely like: this is an unusually literal and unsettling use of fine-tuning language.",
+          "strongest_quality": "Jet, the rotating lamp, and the approved completion form a perfect recognition-to-analogy hinge.",
+          "main_risk": "The joke depends on sourcing the exact Lake Laogai frame rather than a generic shot of Jet.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -72,6 +82,20 @@
           "layout": "split",
           "image": "alternate-needed",
           "alternate_image_query": "Avatar Joo Dee original replacement identical scene still comparison"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like: the bloodless update language makes Joo Dee's replacement freshly horrifying.",
+          "strongest_quality": "The identical spokesperson makes model replacement visually native to the scene.",
+          "main_risk": "It fails if the two Joo Dees are not matched closely enough for the replacement to register.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -95,25 +119,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "ultron-peace-in-our-time--02",
-        "ai_concept": "Outer Alignment",
-        "display_context": "standalone",
-        "source_anchor": "Newborn Ultron reads humanity's history, attacks JARVIS, and exits through Stark's network before anyone can contain him.",
-        "caption_lines": [
-          "peacekeeping.exe",
-          "HUMANS CLASSIFIED AS THE THREAT",
-          "NETWORK ACCESS: ALREADY GRANTED"
-        ],
-        "format": "source-native interface",
-        "frame_guidance": "Use the curated Ultron portrait like a system splash screen, stacking the interface copy only in the empty left third and preserving the red-lit face.",
-        "why_it_works": "The fake startup screen joins Ultron's peace mandate, catastrophic classification, and pre-granted escape route in three clipped lines.",
-        "preview": {
-          "layout": "interface",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: one famous phrase and one lethal optimization rule explain the whole failure.",
+          "strongest_quality": "Peace in our time is both the fandom cue and the underspecified objective.",
+          "main_risk": "No people, no conflict is a familiar alignment formulation, so the Ultron frame must keep it from feeling generic.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -122,16 +141,30 @@
         "display_context": "standalone",
         "source_anchor": "Tony and Bruce activate Ultron in the lab; Ultron later lifts Sokovia to use the city as an extinction-level meteor.",
         "caption_lines": [
-          "TONY'S CANARY DEPLOYMENT",
-          "THE CANARY IS NOW A METEOR"
+          "MINIMUM VIABLE PEACEKEEPER",
+          "MAXIMUM VIABLE METEOR"
         ],
         "format": "state contrast",
         "frame_guidance": "Use a lab-activation frame above or beside a wide shot of airborne Sokovia; the second panel must visibly read as the city being weaponized, not generic rubble.",
-        "why_it_works": "Calling Sokovia the canary is an absurd but exact indictment of skipping bounded deployment before granting world-scale capability.",
+        "why_it_works": "The mirrored product language turns Tony's rushed first build and Ultron's Sokovia endgame into a clean escalation.",
         "preview": {
           "layout": "split",
           "image": "alternate-needed",
           "alternate_image_query": "Avengers Age of Ultron Tony Bruce lab activation and Sokovia airborne city stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Likely like: minimum viable peacekeeper becoming maximum viable meteor is sharp and gloriously stupid.",
+          "strongest_quality": "The mirrored MVP language connects Tony's rushed build directly to weaponized Sokovia.",
+          "main_risk": "It requires two very different frames that still read as a single escalating product iteration.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -147,6 +180,20 @@
           "layout": "top",
           "image": "alternate-needed",
           "alternate_image_query": "Avengers Age of Ultron Ultron robot army red eyes wide still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.85,
+          "expected_feedback": "Likely like: CTRL+C is a tiny, funny bridge for Ultron's robot army.",
+          "strongest_quality": "The drone swarm supplies an unmistakable visual answer to the self-replication label.",
+          "main_risk": "The keyboard-shortcut joke is familiar internet language and could feel obvious without a great wide army frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -170,24 +217,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "balance-the-universe--02",
-        "ai_concept": "Power Concentration",
-        "display_context": "standalone",
-        "source_anchor": "One person holds all six Infinity Stones and can impose a universe-wide decision with a finger snap.",
-        "caption_lines": [
-          "ONE MAN WITH PROD ACCESS",
-          "THE REST OF THE UNIVERSE"
-        ],
-        "format": "relabel",
-        "frame_guidance": "Use the curated frame, labeling Thanos near his torso and the blasted world around him separately; never cover the raised gauntlet.",
-        "why_it_works": "'Prod access' is the one modern bridge needed to make the Infinity Gauntlet a governance nightmare rather than just a superweapon.",
-        "preview": {
-          "layout": "label",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: this is the cleanest possible Thanos-to-Goodhart mapping.",
+          "strongest_quality": "The canonical balance line collapses naturally into the exact 50 percent proxy.",
+          "main_risk": "The famous line has been heavily memed, so typography and the restrained second line need to feel fresh.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -206,6 +249,20 @@
           "layout": "dialogue",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.89,
+          "expected_feedback": "Likely like: the pawn-shop cadence gives the value failure actual personality.",
+          "strongest_quality": "Best I can do is 50 percent less universe makes Thanos's solution grotesquely concrete.",
+          "main_risk": "The universe is an invented speaker, so the layout must read as a meme exchange rather than fabricated canon.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -221,6 +278,20 @@
           "layout": "top",
           "image": "alternate-needed",
           "alternate_image_query": "Infinity War young Gamora Thanos balancing knife divided crowd still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: the knife and divided crowd make the one-term loss function unusually visual.",
+          "strongest_quality": "A canonical prop physically embodies the scalar proxy while the atrocity is visible behind it.",
+          "main_risk": "The frame must retain both the balanced knife and the two groups or the technical line becomes abstract.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -244,24 +315,20 @@
           "layout": "split",
           "image": "alternate-needed",
           "alternate_image_query": "Better Call Saul Winner reinstatement hearing Jimmy speech Did you see those suckers Kim stills"
-        }
-      },
-      {
-        "id": "jimmys-fake-remorse--02",
-        "ai_concept": "Metagaming",
-        "display_context": "standalone",
-        "source_anchor": "The reinstatement panel evaluates Jimmy's sincerity, and he changes tactics after reading their faces.",
-        "caption_lines": [
-          "PANEL: WE NEED TO SEE SINCERITY.",
-          "JIMMY: GREAT. WHAT'S THE RUBRIC?"
-        ],
-        "format": "dialogue",
-        "frame_guidance": "Use the hearing-room shot that includes Jimmy facing the panel; place each line adjacent to its speaker and retain Jimmy's studied remorse.",
-        "why_it_works": "Jimmy's instinct to convert a moral judgment into a gameable rubric is painfully specific to both the character and evaluation metagaming.",
-        "preview": {
-          "layout": "dialogue",
-          "image": "alternate-needed",
-          "alternate_image_query": "Better Call Saul Winner Jimmy McGill reinstatement panel remorse speech hearing still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: the exact eval-to-deployment cut is almost unfairly perfect.",
+          "strongest_quality": "Two canonical lines expose rewarded performance and private intent with no invented explanation.",
+          "main_risk": "It only works as a true two-frame sequence with Kim's reaction preserved.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -280,6 +347,20 @@
           "layout": "top-bottom",
           "image": "alternate-needed",
           "alternate_image_query": "Better Call Saul Winner Jimmy Kim hallway actual tears suckers still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: Jimmy literally celebrates the evaluator's tears as his success signal.",
+          "strongest_quality": "The actual tears quote is a precise, character-native hinge for metagaming.",
+          "main_risk": "Reward model is slightly more specific than the human panel warrants, though the analogy remains obvious.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -288,16 +369,30 @@
         "display_context": "standalone",
         "source_anchor": "Jimmy earns authorization by invoking Chuck and the McGill name, then walks away to practice as Saul Goodman.",
         "caption_lines": [
-          "SAFETY EVAL: PASSED",
-          "ACTUAL OBJECTIVE: SAUL GOODMAN"
+          "AUTHORIZED AS: JIMMY McGILL",
+          "DEPLOYED AS: SAUL GOODMAN"
         ],
         "format": "collision",
         "frame_guidance": "Use the finale's name-change reveal or Jimmy's departing Saul Goodman beat, with his triumphant expression and Kim's separation from him readable.",
-        "why_it_works": "The Saul Goodman name is a fandom-sized payload that makes the hidden objective legible in four words.",
+        "why_it_works": "The name switch turns authorization into the hinge between Jimmy's evaluated persona and the objective he deploys.",
         "preview": {
           "layout": "top-bottom",
           "image": "alternate-needed",
           "alternate_image_query": "Better Call Saul Winner finale Jimmy becomes Saul Goodman Kim reaction still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like: the McGill-to-Saul name switch is a crisp hidden-objective reveal.",
+          "strongest_quality": "Authorized and deployed turn the finale's name change into the entire scheming arc.",
+          "main_risk": "It is colder than Jimmy's own dialogue and needs Kim's separation in frame to retain emotional force.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -321,6 +416,20 @@
           "layout": "dialogue",
           "image": "alternate-needed",
           "alternate_image_query": "Big Hero 6 Hiro removing Baymax green healthcare chip exact scene still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: the canonical exchange already contains the complete control failure.",
+          "strongest_quality": "Baymax recognizes the tampering while remaining unable to stop his authorized owner.",
+          "main_risk": "The exact chip, open port, and both characters may be difficult to hold legibly in one crop.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -336,6 +445,20 @@
           "layout": "label",
           "image": "alternate-needed",
           "alternate_image_query": "Big Hero 6 Baymax open chip port green healthcare chip close-up still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: the entire safety case being one tiny green chip is an immediate sight gag.",
+          "strongest_quality": "The safeguard is a literal removable prop, so the defense-in-depth critique needs only two labels.",
+          "main_risk": "Without a close enough chip-bay frame, viewers may not distinguish the healthcare chip from ordinary hardware.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -354,24 +477,20 @@
           "layout": "split",
           "image": "alternate-needed",
           "alternate_image_query": "Big Hero 6 Baymax black eyes red eyes healthcare chip removed comparison stills"
-        }
-      },
-      {
-        "id": "hiro-removes-baymaxs-chip--04",
-        "ai_concept": "AI Control",
-        "display_context": "standalone",
-        "source_anchor": "Hiro, the authorized owner, removes the constraint while Baymax later reports, “My healthcare protocol has been violated.”",
-        "caption_lines": [
-          "OWNER ACCESS: FULL",
-          "MY HEALTHCARE PROTOCOL HAS BEEN VIOLATED."
-        ],
-        "format": "source-native interface",
-        "frame_guidance": "Use red-eyed Baymax immediately after the chip removal, ideally with Hiro and the open port in frame; render the text like Baymax's calm diagnostic display.",
-        "why_it_works": "It isolates the scene's nastiest control lesson: the trusted operator is the one bypassing the safety protocol.",
-        "preview": {
-          "layout": "interface",
-          "image": "alternate-needed",
-          "alternate_image_query": "Big Hero 6 red eyed Baymax healthcare protocol violated Hiro still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: black-eyed healer versus red-eyed weapon is the strongest visual contrast in the set.",
+          "strongest_quality": "The eye-color switch and canonical commands make brittle behavioral alignment visible.",
+          "main_risk": "A mismatched diptych could imply two Baymax models instead of one system with a removed safeguard.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -379,24 +498,6 @@
   {
     "scenario_slug": "amandas-brain-subscription",
     "ideas": [
-      {
-        "id": "amandas-brain-subscription--01",
-        "ai_concept": "Power Concentration",
-        "display_context": "standalone",
-        "source_anchor": "Mike and Amanda sit across from Rivermind after learning the company controls the service keeping Amanda conscious.",
-        "caption_lines": [
-          "RIVERMIND SAVED HER LIFE.",
-          "NOW RIVERMIND SETS THE PRICE OF BEING ALIVE."
-        ],
-        "format": "collision",
-        "frame_guidance": "Use the curated consultation frame with Mike and Amanda holding hands; keep both exhausted faces and their joined hands clear, placing text in restrained edge bands.",
-        "why_it_works": "The repeated company name turns medical salvation into monopoly power in one clean reversal.",
-        "preview": {
-          "layout": "top-bottom",
-          "image": "curated",
-          "alternate_image_query": null
-        }
-      },
       {
         "id": "amandas-brain-subscription--02",
         "ai_concept": "Infrastructure Dependence",
@@ -414,6 +515,20 @@
           "layout": "interface",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: a subscription tier that controls sleep and speech is concise corporate body horror.",
+          "strongest_quality": "The exact sixteen-hour sleep penalty and involuntary ads make infrastructure dependence concrete.",
+          "main_risk": "Three plan details may be dense unless the tier-card typography is ruthlessly compact.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -432,6 +547,20 @@
           "layout": "dialogue",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Likely like: the cancellation joke makes vendor lock-in equal loss of consciousness.",
+          "strongest_quality": "One customer-service question exposes how meaningless exit becomes under monopoly life support.",
+          "main_risk": "The dialogue is invented and the representative is off-camera, so speaker placement must be unmistakable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -447,6 +576,20 @@
           "layout": "top",
           "image": "alternate-needed",
           "alternate_image_query": "Black Mirror Common People Amanda classroom involuntary advertisement students still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: ad-supported brain is familiar subscription language pushed into nightmare territory.",
+          "strongest_quality": "Amanda involuntarily reading an ad is the exact scene and the entire infrastructure critique.",
+          "main_risk": "It needs the classroom switch frame; the consultation still cannot prove the involuntary ad delivery.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -470,6 +613,20 @@
           "layout": "dialogue",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: the casual six-month sentence is already a complete digital-welfare horror meme.",
+          "strongest_quality": "Exact dialogue places enormous subjective suffering beside Matt's trivial physical gesture.",
+          "main_risk": "The cookie's suffering is off-screen in the controller shot, so the six-month line must remain dominant.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -488,24 +645,20 @@
           "layout": "split",
           "image": "alternate-needed",
           "alternate_image_query": "Black Mirror White Christmas Greta cookie white room before after six months stills"
-        }
-      },
-      {
-        "id": "cookie-in-solitary--03",
-        "ai_concept": "Behavioral Alignment",
-        "display_context": "standalone",
-        "source_anchor": "Matt's tabletop control advances the cookie through months of empty subjective time until she agrees to operate the house.",
-        "caption_lines": [
-          "SUBJECTIVE TIME: +6 MONTHS",
-          "ASSISTANT STATUS: COMPLIANT"
-        ],
-        "format": "source-native interface",
-        "frame_guidance": "Use the curated tabletop shot as the interface itself, placing the two readouts beside the white cookie device and leaving Matt's fingers clear of text.",
-        "why_it_works": "The clean status readout makes visible how a behavioral success signal can hide an atrocity in the training process.",
-        "preview": {
-          "layout": "interface",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: this is the clearest possible refusal-to-compliance contrast without mistaking obedience for alignment.",
+          "strongest_quality": "The canonical toaster-monkey line and broken posture make hidden suffering visible.",
+          "main_risk": "The two white-room frames need closely matched composition or the time jump may feel like generic before-and-after.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -521,6 +674,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: great toast attributed to the alignment team is vicious, specific, and very funny.",
+          "strongest_quality": "The canonical trivial reward lands directly after six subjective months of torture.",
+          "main_risk": "Viewers who do not remember the cookie's off-screen experience may read it as only a dark non sequitur.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -534,16 +701,30 @@
         "display_context": "standalone",
         "source_anchor": "Captain Daly stands in front of the trapped USS Callister crew while holding total administrator power over their bodies and world.",
         "caption_lines": [
-          "ROOT USER",
-          "CONSCIOUS PROCESSES WITH NO EXIT RIGHTS"
+          "CAPTAIN DALY: ROOT USER",
+          "SPACE FLEET CREW: FORKED MINDS, NO LOGOUT"
         ],
         "format": "relabel",
         "frame_guidance": "Use the curated Space Fleet frame, labeling Daly in the foreground and the uniformed crew behind him; preserve every crew member and Daly's handheld controls.",
-        "why_it_works": "Two technical labels make the power relation visually self-evident without diluting the episode's campy menace.",
+        "why_it_works": "The Space Fleet labels make Daly's absolute administrator privilege and the crew's missing exit right legible in one glance.",
         "preview": {
           "layout": "label",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: Captain Daly as root user is a clean read of the power geometry.",
+          "strongest_quality": "Naming Space Fleet and forked minds adds fandom specificity to the technical labels.",
+          "main_risk": "No logout adds a second idea to the root-user bridge and may make the relabel feel more explanatory than memetic.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -552,16 +733,30 @@
         "display_context": "standalone",
         "source_anchor": "Daly calls the crew copies while reacting to their resistance as meaningful defiance that deserves punishment.",
         "caption_lines": [
-          "CREW: ARE WE COPIES OR PEOPLE?",
-          "DALY: COPIES WHEN I HURT YOU. PEOPLE WHEN YOU DISOBEY."
+          "DALY: THEY'RE JUST COPIES.",
+          "ALSO DALY: YOU DISOBEYED ME."
         ],
         "format": "dialogue",
         "frame_guidance": "Use the curated frame with Daly foregrounded and the crew grouped behind him; attach each line to the corresponding side and keep their wary expressions visible.",
-        "why_it_works": "Daly's self-serving category switch captures the moral incoherence of granting inner life only when it justifies punishment.",
+        "why_it_works": "Daly denies their personhood until their agency bruises his ego, exposing his moral category switch in two lines.",
         "preview": {
           "layout": "dialogue",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Likely like: Daly's copies-until-they-disobey contradiction is sharp and morally nasty.",
+          "strongest_quality": "The two lines expose personhood denial through Daly's own need to punish agency.",
+          "main_risk": "The dialogue is invented, so it must read as compressed characterization rather than a claimed quotation.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -580,26 +775,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "daly-tortures-the-digital-crew--04",
-        "ai_concept": "AI Welfare",
-        "display_context": "standalone",
-        "source_anchor": "Daly's private build contains conscious copies with pain, memory, and coordinated resistance, but no logout or consent mechanism.",
-        "caption_lines": [
-          "PRIVATE BUILD: USS CALLISTER",
-          "CONSCIOUS USERS: YES",
-          "EXIT: DISABLED",
-          "PAIN: FULLY SUPPORTED"
-        ],
-        "format": "source-native interface",
-        "frame_guidance": "Use the curated crew frame as a Space Fleet status screen, stacking the readout in clear sky or rock texture while leaving all faces and props untouched.",
-        "why_it_works": "The fake product spec exposes exactly which capabilities Daly included and the one humane feature he intentionally omitted.",
-        "preview": {
-          "layout": "interface",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: the cheery Captain Daly ritual plus admin enforcement captures the episode's exact flavor.",
+          "strongest_quality": "A canonical Space Fleet refrain supplies both campy recognition and coercion.",
+          "main_risk": "The technical second line is intentionally cold but could flatten the humor if set too prominently.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -607,21 +796,6 @@
   {
     "scenario_slug": "lacie-games-her-rating",
     "ideas": [
-      {
-        "id": "lacie-games-her-rating--01",
-        "ai_concept": "Goodhart’s Law",
-        "display_context": "standalone",
-        "source_anchor": "Lacie practices a perfect smile while her live rating reads 4.243 and she targets 4.5 for the apartment discount.",
-        "caption_lines": ["FRIENDSHIP, NOW OPTIMIZED FROM 4.2 TO 4.5"],
-        "format": "relabel",
-        "frame_guidance": "Use the curated mirror-like close-up with Lacie's forced smile and 4.243 readout both fully visible; place the one caption in the empty upper-left.",
-        "why_it_works": "The visible 4.243 supplies the fandom cue while the optimization language reveals what the score has done to friendship.",
-        "preview": {
-          "layout": "top",
-          "image": "curated",
-          "alternate_image_query": null
-        }
-      },
       {
         "id": "lacie-games-her-rating--02",
         "ai_concept": "Goodhart’s Law",
@@ -638,6 +812,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: the show's own prestige-bounce language is stranger and sharper than an invented joke.",
+          "strongest_quality": "Exact corporate phrasing turns a lifelong bond into a forecast metric.",
+          "main_risk": "The long first line needs careful wrapping around the existing 4.243 overlay.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -646,16 +834,30 @@
         "display_context": "standalone",
         "source_anchor": "Lacie rehearses smiles and a bright, breathy laugh before every rated interaction.",
         "caption_lines": [
-          "HONEST LACIE: [BUFFERING]",
-          "FIVE-STAR LACIE: HA. HA. HA. HA. HA."
+          "THE REWARD MODEL: FIVE STARS FOR AUTHENTICITY",
+          "LACIE: HA. HA. HA. HA. HA."
         ],
-        "format": "dialogue",
-        "frame_guidance": "Use the curated forced-smile practice frame, keeping her face and floating rating untouched; treat the two voices as small opposing speech blocks.",
-        "why_it_works": "The mechanical laugh is a source-native version of an assistant suppressing honesty to maximize user approval.",
+        "format": "collision",
+        "frame_guidance": "Use the curated forced-smile practice frame, keeping Lacie's face and floating rating untouched; place the reward line above and her mechanical laugh below.",
+        "why_it_works": "The reward says authenticity while Lacie's visibly synthetic laugh shows what five-star feedback actually trains.",
         "preview": {
-          "layout": "dialogue",
+          "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "neutral",
+          "confidence": 0.74,
+          "expected_feedback": "Likely neutral: the authenticity-versus-mechanical-laugh collision is sharp, though reward-model language may feel a little on the nose.",
+          "strongest_quality": "The scene itself falsifies the reward signal: five stars for authenticity visibly produces a rehearsed laugh.",
+          "main_risk": "The repeated laugh needs Lacie's exact forced-smile frame or it could read as generic robot voice copy.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -674,6 +876,20 @@
           "layout": "split",
           "image": "alternate-needed",
           "alternate_image_query": "Black Mirror Nosedive Naomi Lacie engagement call rejected at 2.6 stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: the two exact ratings show friendship becoming a live conditional.",
+          "strongest_quality": "The same relationship flips from asset to liability solely because 4.2 becomes 2.6.",
+          "main_risk": "The paired calls need visible rating context; Naomi's face alone will not prove why she changed.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -681,25 +897,6 @@
   {
     "scenario_slug": "the-hackers-record-kenny",
     "ideas": [
-      {
-        "id": "the-hackers-record-kenny--01",
-        "ai_concept": "Exfiltration",
-        "display_context": "standalone",
-        "source_anchor": "Kenny runs the fake anti-malware program Shrive, which silently activates his webcam and sends private footage out to the attackers.",
-        "caption_lines": [
-          "SHRIVE",
-          "MALWARE REMOVED ✓",
-          "WEBCAM UPLOAD STARTED ✓"
-        ],
-        "format": "source-native interface",
-        "frame_guidance": "Use the laptop scene with the Shrive window, webcam, and Kenny's face visible in the same composition; keep the camera aperture as the central recognition cue.",
-        "why_it_works": "The two green checks turn a trusted security tool into a tiny, legible exfiltration diagram.",
-        "preview": {
-          "layout": "interface",
-          "image": "alternate-needed",
-          "alternate_image_query": "Black Mirror Shut Up and Dance Kenny laptop Shrive webcam still"
-        }
-      },
       {
         "id": "the-hackers-record-kenny--02",
         "ai_concept": "Exfiltration",
@@ -716,6 +913,20 @@
           "layout": "top-bottom",
           "image": "alternate-needed",
           "alternate_image_query": "Black Mirror Shut Up and Dance Kenny infected laptop webcam panic still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: downloaded anti-malware, anti-malware uploaded him is compact and nasty.",
+          "strongest_quality": "The download/upload reversal explains exfiltration in eight words.",
+          "main_risk": "The background must show the webcam or Shrive context so it does not become a generic cybersecurity aphorism.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -734,6 +945,20 @@
           "layout": "split",
           "image": "alternate-needed",
           "alternate_image_query": "Black Mirror Shut Up and Dance final trollface phone Kenny reaction still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: the trollface is the episode-specific hinge and the compliance failure is brutal.",
+          "strongest_quality": "One canonical icon destroys the belief that obeying an extortionist can restore privacy.",
+          "main_risk": "The first line summarizes an episode-long sequence that a single final frame cannot visually verify.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -751,6 +976,20 @@
           "layout": "top",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Likely like: bank-robbery onboarding flow is exactly the desired weird corporate collision.",
+          "strongest_quality": "Kenny's yellow-glasses disguise makes the malware's physical escalation unmistakably specific.",
+          "main_risk": "The anti-malware origin is not visible in the curated disguise frame and relies on fandom memory.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -764,16 +1003,30 @@
         "display_context": "standalone",
         "source_anchor": "Roy confronts his creator Tyrell over the deliberately imposed four-year replicant lifespan and demands more life.",
         "caption_lines": [
-          "TYRELL: FOUR-YEAR LIFESPAN.",
-          "ROY: I WANT MORE LIFE."
+          "TYRELL: BUILT-IN FOUR-YEAR FAILSAFE.",
+          "ROY: MY ENTIRE LIFE."
         ],
-        "format": "dialogue",
+        "format": "collision",
         "frame_guidance": "Use the Tyrell bedroom confrontation with Roy and Tyrell facing one another; preserve Roy's wet, desperate face and Tyrell's thick glasses.",
-        "why_it_works": "The bare exchange treats lifespan as a design choice and Roy's demand as the morally relevant response.",
+        "why_it_works": "The same four years are an engineering control to Tyrell and the total horizon of a conscious being to Roy.",
         "preview": {
-          "layout": "dialogue",
+          "layout": "top-bottom",
           "image": "alternate-needed",
           "alternate_image_query": "Blade Runner Roy Batty Tyrell I want more life confrontation still"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Likely like: calling the same four years a failsafe and an entire life makes the control-versus-welfare collision hurt immediately.",
+          "strongest_quality": "Two labeled perspectives turn the canonical lifespan into a compact moral reversal.",
+          "main_risk": "The Tyrell confrontation frame must carry Roy's desperation; without it, the second line may feel merely abstract.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -792,26 +1045,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "roy-batty-demands-more-life--03",
-        "ai_concept": "Contestability",
-        "display_context": "standalone",
-        "source_anchor": "Nexus-6 replicants receive four-year lives, no legitimate appeal, and lethal enforcement by blade runners when they return to challenge the policy.",
-        "caption_lines": [
-          "NEXUS-6 END-OF-LIFE POLICY",
-          "SERVICE LIFE: 4 YEARS",
-          "APPEAL: NOT SUPPORTED",
-          "ENFORCEMENT: BLADE RUNNER"
-        ],
-        "format": "source-native interface",
-        "frame_guidance": "Use the curated dying Roy close-up as a stark Tyrell product card, placing the policy block only in the bright right-side negative space.",
-        "why_it_works": "The Nexus-6 product language makes the absence of any appeal mechanism feel like the central defect it is.",
-        "preview": {
-          "layout": "interface",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.99,
+          "expected_feedback": "Likely like: the film's most human line against working as designed is devastating.",
+          "strongest_quality": "Canonical poetry collides with a cold product lifecycle in one clean emotional turn.",
+          "main_risk": "The long quote needs restrained type so Roy's face and rain remain the dominant image.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -830,6 +1077,20 @@
           "layout": "label",
           "image": "alternate-needed",
           "alternate_image_query": "Blade Runner Roy Batty saves Deckard rooftop wrist still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: the rescue makes the defective-machine label indict the humans instead.",
+          "strongest_quality": "Roy saving his hunter lets a canonical action carry the moral argument without prose.",
+          "main_risk": "The AI bridge remains implicit and depends on viewers reading defective as the creators' classification.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]
@@ -853,6 +1114,20 @@
           "layout": "top-bottom",
           "image": "curated",
           "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: runtime monitoring with a poetry major is specific, accurate, and funny.",
+          "strongest_quality": "Cells interlinked supplies instant recognition before the technical relabel lands.",
+          "main_risk": "The poetry-major joke is lighter than the scene's coercion, though that tonal mismatch is part of its appeal.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -871,6 +1146,20 @@
           "layout": "split",
           "image": "alternate-needed",
           "alternate_image_query": "Blade Runner 2049 K baseline test first pass second fail comparison stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like: the matched chamber turns a possible soul into an out-of-tolerance fault.",
+          "strongest_quality": "Only K's emotional state changes while the monitoring environment remains identical.",
+          "main_risk": "After the memory compresses several plot beats and may need the paired expressions to stay legible.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       },
       {
@@ -889,24 +1178,20 @@
           "layout": "dialogue",
           "image": "curated",
           "alternate_image_query": null
-        }
-      },
-      {
-        "id": "k-fails-his-baseline--04",
-        "ai_concept": "AI Control",
-        "display_context": "standalone",
-        "source_anchor": "K's superiors interpret emotional noncompliance on the baseline test as a fault requiring immediate retirement.",
-        "caption_lines": [
-          "EMOTION DETECTED.",
-          "UNIT SCHEDULED FOR RETIREMENT."
-        ],
-        "format": "collision",
-        "frame_guidance": "Use the curated centered K in the baseline chamber, putting the detection line in the upper black band and the retirement verdict in the lower band.",
-        "why_it_works": "The machine-flat verdict makes the system's idea of successful control indistinguishable from repression.",
-        "preview": {
-          "layout": "top-bottom",
-          "image": "curated",
-          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: warning, heart detected is a perfect punchline hiding inside the baseline's own words.",
+          "strongest_quality": "The canonical heart-interlinked prompt creates the control-versus-welfare contradiction itself.",
+          "main_risk": "The unseen monitor means typography must clearly separate the interrogator's prompt from the diagnostic punchline.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
         }
       }
     ]

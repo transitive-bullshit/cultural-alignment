@@ -1,0 +1,795 @@
+[
+  {
+    "id": "square-filter-round-hole--curated",
+    "scenario_slug": "square-filter-round-hole",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f1248104924acd539080116f/gallery-2aa845a9f98539c45254e3d4ea69d8a7251540e839cd8cda8910cf678587fcb7.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Apollo 13 illustrating Square Filter, Round Hole",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoIAAUAA8BgJQBOgB5vdqIAAP5DhYRt+HlrJgXKHUSSLtZJWM5m6sAAAAA=",
+    "content_hash": "2aa845a9f98539c45254e3d4ea69d8a7251540e839cd8cda8910cf678587fcb7",
+    "protected_regions": [
+      {
+        "id": "engineer-face",
+        "label": "Engineer's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          50,
+          7,
+          20,
+          37
+        ]
+      },
+      {
+        "id": "square-canister",
+        "label": "Square lithium-hydroxide canister",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          32,
+          23,
+          21,
+          32
+        ]
+      },
+      {
+        "id": "round-receptacle",
+        "label": "Round-receptacle assembly",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          65,
+          7,
+          18,
+          50
+        ]
+      },
+      {
+        "id": "engineering-team",
+        "label": "Surrounding Mission Control engineers",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          0,
+          100,
+          95
+        ]
+      },
+      {
+        "id": "source-watermark",
+        "label": "Embedded source watermark",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          73,
+          34,
+          26
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "neteros-dead-man-rose--curated",
+    "scenario_slug": "neteros-dead-man-rose",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124811c8891fcb11753dbc8/gallery-6996850af9124191bd46964088c1347beb668ea63c62ab428eb58e3b845b025c.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Hunter × Hunter illustrating Netero’s Dead-Man Rose",
+    "blur_data_url": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAQCdASoIAAUAA8BgJaQAAxU/iHLAAP7oX71XqCqUKrS0AejMAAAA",
+    "content_hash": "6996850af9124191bd46964088c1347beb668ea63c62ab428eb58e3b845b025c",
+    "protected_regions": [
+      {
+        "id": "netero-face",
+        "label": "Netero's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          34,
+          12,
+          25,
+          43
+        ]
+      },
+      {
+        "id": "netero-body",
+        "label": "Netero's damaged body",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          25,
+          0,
+          56,
+          100
+        ]
+      },
+      {
+        "id": "netero-hands",
+        "label": "Netero's clasped hands",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          28,
+          44,
+          38,
+          28
+        ]
+      },
+      {
+        "id": "topknot",
+        "label": "Netero's topknot",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          43,
+          0,
+          10,
+          18
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-d-mail-rollback-crisis--curated",
+    "scenario_slug": "the-d-mail-rollback-crisis",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481228dadea4b92809fb4/gallery-b4b42372d62040fc600e3cd99dcfb159692d01f9f082ccc49b9d77cad2bb0a4f.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Steins;Gate illustrating The D-Mail Rollback Crisis",
+    "blur_data_url": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACQAQCdASoIAAUAA8BgJZwAApexH0AA/kig6J92ZLDAM3a1SdplLMFXPfOEAA==",
+    "content_hash": "b4b42372d62040fc600e3cd99dcfb159692d01f9f082ccc49b9d77cad2bb0a4f",
+    "protected_regions": [
+      {
+        "id": "kurisu-face",
+        "label": "Kurisu's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          0,
+          10,
+          25,
+          45
+        ]
+      },
+      {
+        "id": "okabe-face",
+        "label": "Okabe's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          37,
+          0,
+          29,
+          58
+        ]
+      },
+      {
+        "id": "daru-face",
+        "label": "Daru's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          67,
+          0,
+          33,
+          50
+        ]
+      },
+      {
+        "id": "mayuri-face",
+        "label": "Mayuri's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          62,
+          41,
+          23,
+          48
+        ]
+      },
+      {
+        "id": "phonewave",
+        "label": "PhoneWave handset",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          40,
+          44,
+          21,
+          56
+        ]
+      },
+      {
+        "id": "okabe-hand",
+        "label": "Okabe's hand",
+        "kind": "gesture",
+        "priority": "soft",
+        "source_rect": [
+          32,
+          54,
+          34,
+          46
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "melfi-ends-tonys-therapy--curated",
+    "scenario_slug": "melfi-ends-tonys-therapy",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f1248123a419e5c8da052733/gallery-e3eca5ae2f4136c83c5c387c1ffb14ac504a1981bd815ca69c909bc348789a14.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from The Sopranos illustrating Melfi Ends Tony’s Therapy",
+    "blur_data_url": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADQAQCdASoIAAUAA8BgJQBOgCKUZqUqAAD9sP/tYNBaocUNtJagXmyO6NsIW+Ww21VaBRxeqCFK/Y+KEbeAAA==",
+    "content_hash": "e3eca5ae2f4136c83c5c387c1ffb14ac504a1981bd815ca69c909bc348789a14",
+    "protected_regions": [
+      {
+        "id": "melfi-face",
+        "label": "Melfi's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          7,
+          7,
+          23,
+          44
+        ]
+      },
+      {
+        "id": "tony-face",
+        "label": "Tony's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          48,
+          2,
+          19,
+          36
+        ]
+      },
+      {
+        "id": "tony-hand",
+        "label": "Tony's outstretched hand",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          25,
+          32,
+          24,
+          31
+        ]
+      },
+      {
+        "id": "therapy-confrontation",
+        "label": "Melfi and Tony facing each other",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          5,
+          0,
+          87,
+          100
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "cyberpsychosis-tripwires-ignored--curated",
+    "scenario_slug": "cyberpsychosis-tripwires-ignored",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124812985e4f4bd01b38f00/gallery-7d9921cf1e08b2d50d6ddbaf9d761cd6e4f236d8e47b859ce2a6f8643514c37f.webp",
+    "width": 1044,
+    "height": 587,
+    "alt": "Still from Cyberpunk: Edgerunners illustrating Cyberpsychosis Tripwires Ignored",
+    "blur_data_url": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoIAAQAA8BgJbACdAD0h/pcAN+J3JCEzH5cW9lBnH9DNtb+IPRVHNCyMOMV9LKZRtAAAA==",
+    "content_hash": "7d9921cf1e08b2d50d6ddbaf9d761cd6e4f236d8e47b859ce2a6f8643514c37f",
+    "protected_regions": [
+      {
+        "id": "crew-figure",
+        "label": "Smaller crew figure",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          20,
+          19,
+          26,
+          73
+        ]
+      },
+      {
+        "id": "maine",
+        "label": "Maine walking away",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          58,
+          0,
+          33,
+          96
+        ]
+      },
+      {
+        "id": "wooden-throne",
+        "label": "Destroyed wooden throne",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          16,
+          0,
+          39,
+          67
+        ]
+      },
+      {
+        "id": "long-shadows",
+        "label": "Long aftermath shadows",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          76,
+          83,
+          24
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "sanemi-red-teams-nezuko--curated",
+    "scenario_slug": "sanemi-red-teams-nezuko",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124812db516d80e1ab68c1f/gallery-3efc0b88d71e8b06a4fec386d9e6768dc01451d9c39d628518e6d9e132e5ef3f.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Demon Slayer: Kimetsu no Yaiba illustrating Sanemi Red-Teams Nezuko",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoIAAUAA8BgJZQAAxPDOiSAAP7zKy8pIp+n4y+1WME/KlgALakKgAAA",
+    "content_hash": "3efc0b88d71e8b06a4fec386d9e6768dc01451d9c39d628518e6d9e132e5ef3f",
+    "protected_regions": [
+      {
+        "id": "nezuko-face",
+        "label": "Nezuko's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          24,
+          0,
+          52,
+          88
+        ]
+      },
+      {
+        "id": "nezuko-eyes",
+        "label": "Nezuko's eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          29,
+          25,
+          38,
+          28
+        ]
+      },
+      {
+        "id": "bamboo-muzzle",
+        "label": "Bamboo muzzle",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          35,
+          53,
+          32,
+          21
+        ]
+      },
+      {
+        "id": "blood-mark",
+        "label": "Blood on Nezuko",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          67,
+          59,
+          12,
+          24
+        ]
+      },
+      {
+        "id": "hair-bow",
+        "label": "Nezuko's bow",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          67,
+          0,
+          17,
+          16
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "cursed-immortality--curated",
+    "scenario_slug": "cursed-immortality",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124815486e0f8e30ebeba0a/gallery-73b32a337fa802728da218f67eb044de54858cff84e10785b60d7b71dd44baae.webp",
+    "width": 1600,
+    "height": 900,
+    "alt": "Still from Pirates of the Caribbean: The Curse of the Black Pearl illustrating Cursed Immortality",
+    "blur_data_url": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACwAQCdASoIAAUAA8BgJYgCdAD0cgEQAP7xlQm1Tv+LUZM1iS7XnhbWyqtSSa9FbbEgAA==",
+    "content_hash": "73b32a337fa802728da218f67eb044de54858cff84e10785b60d7b71dd44baae",
+    "protected_regions": [
+      {
+        "id": "barbossa-face",
+        "label": "Barbossa's face and eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          30,
+          4,
+          46,
+          83
+        ]
+      },
+      {
+        "id": "jack-monkey-face",
+        "label": "Jack the monkey's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          76,
+          9,
+          17,
+          36
+        ]
+      },
+      {
+        "id": "barbossa-hat-and-head",
+        "label": "Barbossa's hat and silhouette",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          5,
+          0,
+          75,
+          100
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-fbi-opens-the-final-lock--curated",
+    "scenario_slug": "the-fbi-opens-the-final-lock",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f1248166a598d185496af293/gallery-850f1dbea46b75df1f6673046b57bac7d3230bd0b2a97fa8e7bcd20a890a4689.webp",
+    "width": 1560,
+    "height": 1040,
+    "alt": "Still from Die Hard illustrating The FBI Opens the Final Lock",
+    "blur_data_url": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACQAQCdASoIAAUAA8BgJQBOgBuhgKAA/ub3QsTPIu66jpLdvByyQokMfz8XGkFjHuS6QSGMgAA=",
+    "content_hash": "850f1dbea46b75df1f6673046b57bac7d3230bd0b2a97fa8e7bcd20a890a4689",
+    "protected_regions": [
+      {
+        "id": "hans-face",
+        "label": "Hans Gruber's face and expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          27,
+          1,
+          47,
+          81
+        ]
+      },
+      {
+        "id": "hans-radio-hand",
+        "label": "Hans holding the radio",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          20,
+          33,
+          28,
+          67
+        ]
+      },
+      {
+        "id": "hans-silhouette",
+        "label": "Hans's head and shoulders",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          18,
+          0,
+          75,
+          100
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "shou-tuckers-final-assessment--curated",
+    "scenario_slug": "shou-tuckers-final-assessment",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124816aa738f3e17d39727b/gallery-4f82712ebea1d2fe99f44519174bf0f1d91239b5ed5ee9d40db2af409b3aae57.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Fullmetal Alchemist: Brotherhood illustrating Shou Tucker’s Final Assessment",
+    "blur_data_url": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADQAQCdASoIAAUAA8BgJagCdAD5WRO0AAD+6jLCVKDLv6HtuL62zRoMvRC5AeN0mqtDV/70vAIAAA==",
+    "content_hash": "4f82712ebea1d2fe99f44519174bf0f1d91239b5ed5ee9d40db2af409b3aae57",
+    "protected_regions": [
+      {
+        "id": "tucker-face",
+        "label": "Shou Tucker's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          36,
+          8,
+          19,
+          48
+        ]
+      },
+      {
+        "id": "nina-face",
+        "label": "Nina's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          55,
+          17,
+          18,
+          43
+        ]
+      },
+      {
+        "id": "nina-embrace",
+        "label": "Nina hugging Tucker",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          30,
+          31,
+          53,
+          66
+        ]
+      },
+      {
+        "id": "tucker-nina-pair",
+        "label": "Tucker and Nina together",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          28,
+          6,
+          57,
+          94
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "shou-tuckers-final-assessment--chimera",
+    "scenario_slug": "shou-tuckers-final-assessment",
+    "src": "https://fwmedia.fandomwire.com/wp-content/uploads/2024/02/09130909/shou-tucker-fuses-his-daughter-and-his-dog.jpg",
+    "width": 1440,
+    "height": 1080,
+    "alt": "Shou Tucker presents the Nina–Alexander chimera in his laboratory",
+    "blur_data_url": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAQCdASoIAAUAAgA0JbACdAEXtkMrOrAA/v11o5LT7Dfb/9YZTpfjLnegCQ930pB1v+Rnfn4Nc6c99wxJC4AA",
+    "content_hash": "250ecb36fd7a7f3491f7361df963bac1ac229d4e7891dac20bf96b896c8c9112",
+    "protected_regions": [
+      {
+        "id": "chimera-face",
+        "label": "Nina–Alexander chimera's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          53,
+          34,
+          31,
+          48
+        ]
+      },
+      {
+        "id": "tucker-profile",
+        "label": "Shou Tucker's profile",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          29,
+          11,
+          23,
+          43
+        ]
+      },
+      {
+        "id": "chimera-body",
+        "label": "The chimera's body and posture",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          45,
+          32,
+          50,
+          68
+        ]
+      },
+      {
+        "id": "tucker-body",
+        "label": "Tucker presenting the chimera",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          10,
+          52,
+          90
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "saitamas-c-class-score--curated",
+    "scenario_slug": "saitamas-c-class-score",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481819abae5240b0fffa5/gallery-03edbf8b8ed3007248360cd4d957271833f8e1221ff1892579e2cdea54598182.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from One-Punch Man illustrating Saitama’s C-Class Score",
+    "blur_data_url": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACQAQCdASoIAAUAA8BgJQBOgB4/EIgA/sl+hvQF/lemlR/qylJtSId1RB8CpA7/6rgUbihggocgAA==",
+    "content_hash": "03edbf8b8ed3007248360cd4d957271833f8e1221ff1892579e2cdea54598182",
+    "protected_regions": [
+      {
+        "id": "c-class-certificate",
+        "label": "C-Class certificate and 71-point result",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [
+          5,
+          0,
+          53,
+          96
+        ]
+      },
+      {
+        "id": "saitama-face",
+        "label": "Saitama's embarrassed face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          51,
+          3,
+          38,
+          89
+        ]
+      },
+      {
+        "id": "saitama-raised-hand",
+        "label": "Saitama holding the certificate",
+        "kind": "gesture",
+        "priority": "soft",
+        "source_rect": [
+          36,
+          0,
+          20,
+          19
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "squirrel--curated",
+    "scenario_slug": "squirrel",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f1248181bc6cd9524ca099c3/gallery-03d4c88a754ed00e1e8a4ac98c53a034fbe0b10507ad0a2ef1d520a5e33c28ef.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from Up illustrating Squirrel!",
+    "blur_data_url": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACwAQCdASoIAAUAA8BgJaACdADdO2GgAP51NXUrFdUQi+bbTJW3oU3gKTnfxYQVQJxfebYrRimec+2AAAA=",
+    "content_hash": "03d4c88a754ed00e1e8a4ac98c53a034fbe0b10507ad0a2ef1d520a5e33c28ef",
+    "protected_regions": [
+      {
+        "id": "dug-face",
+        "label": "Dug's wide-eyed face and nose",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          34,
+          4,
+          58,
+          73
+        ]
+      },
+      {
+        "id": "translator-collar",
+        "label": "Dug's glowing translator collar",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          36,
+          49,
+          40,
+          22
+        ]
+      },
+      {
+        "id": "carl-profile",
+        "label": "Carl's recognizable profile",
+        "kind": "face",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          1,
+          25,
+          99
+        ]
+      },
+      {
+        "id": "dug-body",
+        "label": "Dug's full attentive posture",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          32,
+          4,
+          63,
+          96
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-tunnel-behind-the-poster--curated",
+    "scenario_slug": "the-tunnel-behind-the-poster",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124818ebc52d0a8390af530/gallery-e7c4527187f18b0463dacc0afab4a37ffaaa6946fbf820cfc32e1e0b3558c5e3.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from The Shawshank Redemption illustrating The Tunnel Behind the Poster",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACQAQCdASoIAAUAA8BgJZwAAltMeAAA/vGPGbNnCZO4NS/sSC4K5SFAAAA=",
+    "content_hash": "e7c4527187f18b0463dacc0afab4a37ffaaa6946fbf820cfc32e1e0b3558c5e3",
+    "protected_regions": [
+      {
+        "id": "warden-face",
+        "label": "Warden Norton's face through the tunnel",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          37,
+          6,
+          29,
+          65
+        ]
+      },
+      {
+        "id": "guard-face",
+        "label": "Guard looking through the tunnel",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          22,
+          14,
+          17,
+          33
+        ]
+      },
+      {
+        "id": "tunnel-rim",
+        "label": "The excavated tunnel rim and opening",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          0,
+          100,
+          100
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  }
+]

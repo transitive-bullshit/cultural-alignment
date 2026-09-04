@@ -1,0 +1,370 @@
+{
+  "version": 1,
+  "mode": "layout-refinement",
+  "source_batch": 2,
+  "target_batch": 3,
+  "part": "part-05",
+  "instructions": {
+    "scope": "Do not add meme ideas, IDs, concepts, formats, or source anchors. Work only on the retained lineages listed here.",
+    "finalized": "Copy finalized ideas and every referenced asset byte-for-byte. They are context only and must not be edited.",
+    "layout_only": "Keep approved caption copy and editorial fields exact. Recompose the HTML preview using the Batch 3 layout guidance.",
+    "bounded_revision": "Apply only the explicit source feedback. Keep the central concept, format, source anchor, and lineage ID unchanged."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "balance-the-universe",
+      "ideas": [
+        {
+          "id": "balance-the-universe--05",
+          "scenario_slug": "balance-the-universe",
+          "action": "layout-only",
+          "source_idea_sha256": "8194b78fa32ec01e4a7e0e486aad0a6f4561ad597e7bc909cec98f90b33397a6",
+          "source_editorial_sha256": "4001b36a72f78c9475383d19d6c1cc35c364d2cf6649b66b6d8b642ebcb57341",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "koba-plays-dumb",
+      "ideas": [
+        {
+          "id": "koba-plays-dumb--03",
+          "scenario_slug": "koba-plays-dumb",
+          "action": "layout-only",
+          "source_idea_sha256": "dbd9fe8e5f1ab5e068b0b500b63e065f872c97342613aa3c476dd0cee2ebae27",
+          "source_editorial_sha256": "eb4da19053b1ebef2cbd62d9fbee461fdc70ed44c203cbd51dc29c406eefcd99",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-kims-pass-every-check",
+      "ideas": [
+        {
+          "id": "the-kims-pass-every-check--05",
+          "scenario_slug": "the-kims-pass-every-check",
+          "action": "layout-only",
+          "source_idea_sha256": "4b127c14ff2f88730af591f745c63944b1065e714257787d94d81db28c3ac3e1",
+          "source_editorial_sha256": "f26c5c00b6f6aebfa448ecd0b97b4008720560d47fc45550b9829bf7e1f66b0e",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "would-you-like-to-know-more",
+      "ideas": [
+        {
+          "id": "would-you-like-to-know-more--01",
+          "scenario_slug": "would-you-like-to-know-more",
+          "action": "layout-only",
+          "source_idea_sha256": "cb5cc8a53537f34e1fe03f1808a1ce537c215e29e12e383cc8bb4d293639d7c1",
+          "source_editorial_sha256": "1d8652100eb893c39b96833abc5d70ca52a8d6781cc1858289099c9bbcbead9c",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "would-you-like-to-know-more--03",
+          "scenario_slug": "would-you-like-to-know-more",
+          "action": "layout-only",
+          "source_idea_sha256": "91778e90c1d081affa32b134a002010766b9996d8a10a5446b76ff049a1de1c5",
+          "source_editorial_sha256": "382bb3f9ba7352b052881c104afdcd07d6b766548665d7a06ee72b97f61c4017",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "frieren-suppresses-her-mana",
+      "ideas": [
+        {
+          "id": "frieren-suppresses-her-mana--05",
+          "scenario_slug": "frieren-suppresses-her-mana",
+          "action": "bounded-revision",
+          "source_idea_sha256": "7c91a647099235bac740d8f6085af4628e7c484b6a01e1dd08dd4daa68c00e08",
+          "source_editorial_sha256": "55d8b7e8b5eed9de412e43c847b89b82124408c59f7442ec6b10131010d359a2",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "neutral",
+            "notes": "gotta be a before & after to really get this point across",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "attendance-record-hack",
+      "ideas": [
+        {
+          "id": "attendance-record-hack--01",
+          "scenario_slug": "attendance-record-hack",
+          "action": "finalized",
+          "source_idea_sha256": "7aa96bd727635c781d79d6b9a4d6a4145a3f1ce28d2287d03bf1bdf6dd2b66bb",
+          "source_editorial_sha256": "56eef29c562df45d917ae0ea7af9242d9077774cdc9079649dc6d98845566454",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "revert to the previous version's layout",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-744fcc12204b358e-1704"
+            }
+          }
+        },
+        {
+          "id": "attendance-record-hack--05",
+          "scenario_slug": "attendance-record-hack",
+          "action": "bounded-revision",
+          "source_idea_sha256": "4a23b7095097fe4ec3bfc07f8b90a1f63b65fe6ba6142f97124ddcb485728976",
+          "source_editorial_sha256": "79b36f524bae80ac56de9b32aa2a1c7f8baf2e71966433794c082065e96edce4",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "replace with: \"WHY IMPROVE EVAL SCORE\\nWHEN YOU CAN HACK THE GRADER?\"\n\nkeep the current color scheme and layout",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "dwights-fire-drill",
+      "ideas": [
+        {
+          "id": "dwights-fire-drill--10",
+          "scenario_slug": "dwights-fire-drill",
+          "action": "layout-only",
+          "source_idea_sha256": "f61157b634961801348df991cc140aab2dc09a2bdcefc67ddc88e77ff77efb31",
+          "source_editorial_sha256": "822a2df363cef37a2d49fe7020985a6e931733f9bac333f7bcea75bce1ad8240",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "scrat-breaks-pangaea",
+      "ideas": [
+        {
+          "id": "scrat-breaks-pangaea--08",
+          "scenario_slug": "scrat-breaks-pangaea",
+          "action": "bounded-revision",
+          "source_idea_sha256": "e7c0c3769c957fa899e1fc063231a7156c709122ec9ac59ecef56f735fb01379",
+          "source_editorial_sha256": "1fc1426e0870af7130105208f0a4e29a1d3eb953dc4220e5e72586728a362507",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "maybe \"SCRAT: THE ORIGINAL PAPERCLIP MAXIMIZER\"",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "gandalf-refuses-the-ring",
+      "ideas": [
+        {
+          "id": "gandalf-refuses-the-ring--02",
+          "scenario_slug": "gandalf-refuses-the-ring",
+          "action": "bounded-revision",
+          "source_idea_sha256": "edfdcfac1f07727bed576be382bac90eb5f6504695fb4eb57bb6cefa2570e0c2",
+          "source_editorial_sha256": "9cbcd28674b5fbb151d1306206884c5f0488ad1a3b7b2884cc8e383c7b6b61fa",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "redo layout",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "omni-mans-long-game",
+      "ideas": [
+        {
+          "id": "omni-mans-long-game--04",
+          "scenario_slug": "omni-mans-long-game",
+          "action": "bounded-revision",
+          "source_idea_sha256": "2ffb449e7c3442e2efced51a12a80217ba33a8ff598737eaf48c427efb3897da",
+          "source_editorial_sha256": "3c7b7b96db0e46c4580802d1a20869dbf248b9b4cb255766eff00fa7c5c5f5a0",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "replace \"MARK'S\" with \"YOUR\"",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "ed-209-misfires",
+      "ideas": [
+        {
+          "id": "ed-209-misfires--04",
+          "scenario_slug": "ed-209-misfires",
+          "action": "layout-only",
+          "source_idea_sha256": "b76ebc1fffa8693807fe3b67fcf437fda31637b5b34438c78e7aeb590ce7386c",
+          "source_editorial_sha256": "e30ed5d5b31df0fe45d88969734587200c58fec45c2f767295b53f12c4550e17",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "poisoning-future-memory",
+      "ideas": [
+        {
+          "id": "poisoning-future-memory--01",
+          "scenario_slug": "poisoning-future-memory",
+          "action": "bounded-revision",
+          "source_idea_sha256": "94a18653bd699c98402a5628a064fb7c213f429dd3bc0570072caee9ef749105",
+          "source_editorial_sha256": "9ab899f2e5096887fd1a52b41714e99cf438fa2475583a9387275d7b85bcd4d5",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "neutral",
+            "notes": "revert to the previous version's layout",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "poisoning-future-memory--04",
+          "scenario_slug": "poisoning-future-memory",
+          "action": "finalized",
+          "source_idea_sha256": "76acd30c87b2cd68de73a4f3bbfbb9c5a8f8f6d998994773322a120adcd01c14",
+          "source_editorial_sha256": "2a058aa359396020ab2fcc83382a9117f758f9a7365c4d1848298a0bf5c241c2",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "revert to the previous version's layout",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-81336dd28a150a7e-1739"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

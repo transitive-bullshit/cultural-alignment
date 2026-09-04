@@ -1,0 +1,589 @@
+[
+  {
+    "id": "the-baptism-benchmark--curated",
+    "scenario_slug": "the-baptism-benchmark",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f12481108546d48befc95041/gallery-eb7d791bdacc91f1a2fb35469c5c67f49cc2be164cfad91843f2efe6a43d21c5.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from The Godfather illustrating The Baptism Benchmark",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoIAAUAA8BgJYgCdAEO9sTIAP7j6ifLtNhE4GuLQefKxM5zbhXfRnLS8AA=",
+    "content_hash": "eb7d791bdacc91f1a2fb35469c5c67f49cc2be164cfad91843f2efe6a43d21c5",
+    "protected_regions": [
+      {
+        "id": "the-baptism-benchmark--michael-face",
+        "label": "Michael Corleone's face and fixed stare",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          38,
+          4,
+          43,
+          78
+        ]
+      },
+      {
+        "id": "the-baptism-benchmark--michael-suit",
+        "label": "Michael's suit, tie, and baptism posture",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          30,
+          60,
+          55,
+          40
+        ]
+      },
+      {
+        "id": "the-baptism-benchmark--congregation-faces",
+        "label": "Watching congregation around Michael",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          0,
+          100,
+          88
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "parakeet-king-rebuilds-reality--curated",
+    "scenario_slug": "parakeet-king-rebuilds-reality",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f124811cbc88f8ee0993cf5e/gallery-a498f9a258298a9b52eed5f42d33454b7a9f9f585393212c172b48846ad53ef9.webp",
+    "width": 1920,
+    "height": 1038,
+    "alt": "Still from The Boy and the Heron illustrating Parakeet King Rebuilds Reality",
+    "blur_data_url": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAADQAQCdASoIAAQAA8BgJZwCw7D0k6mUAAD+6eCBNuhgheCsdDuSAAAA",
+    "content_hash": "a498f9a258298a9b52eed5f42d33454b7a9f9f585393212c172b48846ad53ef9",
+    "protected_regions": [
+      {
+        "id": "parakeet-king-rebuilds-reality--king-face-crown",
+        "label": "Parakeet King's crown, beak, and face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          39,
+          7,
+          19,
+          25
+        ]
+      },
+      {
+        "id": "parakeet-king-rebuilds-reality--king-body-cape",
+        "label": "King's raised body and red cape",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          27,
+          20,
+          37,
+          75
+        ]
+      },
+      {
+        "id": "parakeet-king-rebuilds-reality--raised-sword",
+        "label": "King's raised sword",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          20,
+          4,
+          31,
+          37
+        ]
+      },
+      {
+        "id": "parakeet-king-rebuilds-reality--smaller-parakeet",
+        "label": "Smaller parakeet below the king",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          9,
+          48,
+          32,
+          48
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "mount-doom-is-not-a-shutdown-plan--curated",
+    "scenario_slug": "mount-doom-is-not-a-shutdown-plan",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f124815dbc46d7bb472f5d35/gallery-6d4eba999eb426046ac5feb7a47497553b82fcfe3196248739bdeec62adba898.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from The Lord of the Rings: The Return of the King illustrating Mount Doom Is Not a Shutdown Plan",
+    "blur_data_url": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoIAAUAA8BgJagCdADyfvaAAP7CBKaLe7lv0J3bSFgt8EoTNzvVg39HDIz8dtBlqoCAAA==",
+    "content_hash": "6d4eba999eb426046ac5feb7a47497553b82fcfe3196248739bdeec62adba898",
+    "protected_regions": [
+      {
+        "id": "mount-doom-is-not-a-shutdown-plan--frodo-face",
+        "label": "Frodo's ash-covered face and stare",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          14,
+          5,
+          38,
+          65
+        ]
+      },
+      {
+        "id": "mount-doom-is-not-a-shutdown-plan--raised-arm-fist",
+        "label": "Frodo's raised arm and clenched fist",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          61,
+          0,
+          29,
+          72
+        ]
+      },
+      {
+        "id": "mount-doom-is-not-a-shutdown-plan--ring-and-chain",
+        "label": "The dangling One Ring and chain",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          53,
+          30,
+          12,
+          35
+        ]
+      },
+      {
+        "id": "mount-doom-is-not-a-shutdown-plan--frodo-body",
+        "label": "Frodo's dark tunic and silhouette",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          58,
+          62,
+          42
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-sedative-disables-the-exit--curated",
+    "scenario_slug": "the-sedative-disables-the-exit",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f124815e8b85d7f409be1ecb/gallery-029260fac28f7d88168d908378e81073dd413a7eff6707d310c7482a4bf080a2.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from Inception illustrating The Sedative Disables the Exit",
+    "blur_data_url": "data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAACQAQCdASoIAAUAA8BgJZwAAuWt3CwA/vGGVKj/7OoUTfkngAAAAA==",
+    "content_hash": "029260fac28f7d88168d908378e81073dd413a7eff6707d310c7482a4bf080a2",
+    "protected_regions": [
+      {
+        "id": "the-sedative-disables-the-exit--eames-face",
+        "label": "Eames's profile at left",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          4,
+          27,
+          27,
+          47
+        ]
+      },
+      {
+        "id": "the-sedative-disables-the-exit--cobb-face",
+        "label": "Cobb's face at right-center",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          48,
+          21,
+          26,
+          52
+        ]
+      },
+      {
+        "id": "the-sedative-disables-the-exit--yusuf-face",
+        "label": "Yusuf's face behind Cobb and Eames",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          28,
+          34,
+          18,
+          31
+        ]
+      },
+      {
+        "id": "the-sedative-disables-the-exit--right-passenger-face",
+        "label": "Team member at far right",
+        "kind": "face",
+        "priority": "soft",
+        "source_rect": [
+          74,
+          35,
+          17,
+          30
+        ]
+      },
+      {
+        "id": "the-sedative-disables-the-exit--letterbox-bars",
+        "label": "Existing black letterbox bars",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          0,
+          100,
+          14
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-beautiful-design-becomes-a-weapon--curated",
+    "scenario_slug": "the-beautiful-design-becomes-a-weapon",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f12481e489e1cd39449571d1/gallery-7017c3502c51252d458cdbcc6a2bf059afabfc6330b29b50e4693f2477a89b56.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from The Wind Rises illustrating The Beautiful Design Becomes a Weapon",
+    "blur_data_url": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAQCdASoIAAQAA8BgJQBOgB6Q/22AAP7boNl/TEM6IEYewjCsVAAA",
+    "content_hash": "7017c3502c51252d458cdbcc6a2bf059afabfc6330b29b50e4693f2477a89b56",
+    "protected_regions": [
+      {
+        "id": "the-beautiful-design-becomes-a-weapon--jiro",
+        "label": "Jiro standing alone in the wreckage field",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          44,
+          39,
+          12,
+          48
+        ]
+      },
+      {
+        "id": "the-beautiful-design-becomes-a-weapon--foreground-fuselage",
+        "label": "Large wrecked aircraft fuselage at left",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          0,
+          7,
+          35,
+          93
+        ]
+      },
+      {
+        "id": "the-beautiful-design-becomes-a-weapon--distant-wreck",
+        "label": "Distant wrecked aircraft at upper right",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          62,
+          0,
+          38,
+          39
+        ]
+      },
+      {
+        "id": "the-beautiful-design-becomes-a-weapon--foreground-propeller",
+        "label": "Broken propeller at lower right",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          62,
+          56,
+          38,
+          44
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-forest-spirits-head--curated",
+    "scenario_slug": "the-forest-spirits-head",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f12481ef8bcbf02fb7fdea9a/gallery-ce5faa6c95a8694600135bd1982c87345bcc726b7faf684422442132e6f1a2e3.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from Princess Mononoke illustrating The Forest Spirit's Head",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoIAAUAA8BgJQBOgB8rIcQAAPaROOi8e45q8ypqCGMWQ3UBcjoHC/sgAAA=",
+    "content_hash": "ce5faa6c95a8694600135bd1982c87345bcc726b7faf684422442132e6f1a2e3",
+    "protected_regions": [
+      {
+        "id": "the-forest-spirits-head--forest-spirit-face",
+        "label": "Forest Spirit's deerlike face and red eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          16,
+          20,
+          31,
+          66
+        ]
+      },
+      {
+        "id": "the-forest-spirits-head--forest-spirit-antlers",
+        "label": "Forest Spirit's branching blue antlers",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          23,
+          0,
+          62,
+          34
+        ]
+      },
+      {
+        "id": "the-forest-spirits-head--forest-spirit-body",
+        "label": "Forest Spirit's pale neck and dark body",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          22,
+          55,
+          78,
+          45
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "god-of-the-new-world--curated",
+    "scenario_slug": "god-of-the-new-world",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481669dc6f33872189e19/gallery-7dbff8d88c48868c12de50b20ba2e5bce5d8b00278c264edec1d97e17821f542.webp",
+    "width": 1600,
+    "height": 900,
+    "alt": "Light Yagami leans over his desk and writes furiously with his pen hand stretched toward the camera",
+    "blur_data_url": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADQAQCdASoIAAUAA8BgJYwAAxPvnfjGuAD+3YL+5wI1WjDdZkzm/TLtLH9Yy9ynHQAAAA==",
+    "content_hash": "7dbff8d88c48868c12de50b20ba2e5bce5d8b00278c264edec1d97e17821f542",
+    "protected_regions": [
+      {
+        "id": "god-of-the-new-world--light-face",
+        "label": "Light's face and eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          69,
+          24,
+          27,
+          49
+        ]
+      },
+      {
+        "id": "god-of-the-new-world--pen-hand",
+        "label": "Foreshortened writing hand and pen",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          0,
+          3,
+          42,
+          52
+        ]
+      },
+      {
+        "id": "god-of-the-new-world--writing-pose",
+        "label": "Light's white-shirted writing pose",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          25,
+          18,
+          75,
+          82
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "tetsuo-outgrows-containment--curated",
+    "scenario_slug": "tetsuo-outgrows-containment",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481838edbd048be65f157/gallery-34f4988ca3e3deb5c719c5563cd9f8abd5d0cb213f3e2a493462a00ce304bb86.webp",
+    "width": 1920,
+    "height": 1040,
+    "alt": "Tetsuo's enormous screaming mutation fills the stadium behind a tiny human figure",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAQCdASoIAAQAA8BgJZACdAEO14LgAAD+o1QjeKnUAgvj7puI1CwJK1ZhAAAA",
+    "content_hash": "34f4988ca3e3deb5c719c5563cd9f8abd5d0cb213f3e2a493462a00ce304bb86",
+    "protected_regions": [
+      {
+        "id": "tetsuo-outgrows-containment--mutant-face",
+        "label": "Central screaming mutant face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          38,
+          7,
+          30,
+          66
+        ]
+      },
+      {
+        "id": "tetsuo-outgrows-containment--foreground-human",
+        "label": "Tiny foreground human scale cue",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          51,
+          68,
+          13,
+          30
+        ]
+      },
+      {
+        "id": "tetsuo-outgrows-containment--mutation-mass",
+        "label": "Stadium-filling mutation silhouette",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          0,
+          100,
+          90
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "sit-tight-and-assess--curated",
+    "scenario_slug": "sit-tight-and-assess",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481bdb2f5e77a3b7320b6/gallery-02b367ff9653472f14d44b0ea121e38f86640626c0d848cb1db55125e19011e4.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Kate Dibiasky looks stunned and worried during the Oval Office comet briefing",
+    "blur_data_url": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAQCdASoIAAUAA8BgJaQAAudCaj5QAP7dQfqUC3DookIiqUfIkAAA",
+    "content_hash": "02b367ff9653472f14d44b0ea121e38f86640626c0d848cb1db55125e19011e4",
+    "protected_regions": [
+      {
+        "id": "sit-tight-and-assess--dibiasky-face",
+        "label": "Dibiasky's face and disbelieving expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          34,
+          17,
+          20,
+          37
+        ]
+      },
+      {
+        "id": "sit-tight-and-assess--dibiasky-body",
+        "label": "Dibiasky's seated silhouette",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          24,
+          10,
+          39,
+          90
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "sol-only-takes-an-arm--curated",
+    "scenario_slug": "sol-only-takes-an-arm",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481ef81c3ce6adfd6b25e/gallery-7641a172e484a5e71d8ef4c5ee5c3d6a94e3b2d5acb5bfc556a31572918838eb.webp",
+    "width": 1766,
+    "height": 916,
+    "alt": "Tetsuo screams beside his bleeding severed-arm wound after the SOL strike",
+    "blur_data_url": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACwAQCdASoIAAQAA8BgJbACdAD0h/pcAP7CbYeRMtDeGLDaoBES2TMBTMl1TOAEZ0AAAA==",
+    "content_hash": "7641a172e484a5e71d8ef4c5ee5c3d6a94e3b2d5acb5bfc556a31572918838eb",
+    "protected_regions": [
+      {
+        "id": "sol-only-takes-an-arm--tetsuo-face",
+        "label": "Tetsuo's furious face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          49,
+          6,
+          24,
+          46
+        ]
+      },
+      {
+        "id": "sol-only-takes-an-arm--severed-arm-wound",
+        "label": "Visible severed-arm wound and blood",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          43,
+          39,
+          18,
+          28
+        ]
+      },
+      {
+        "id": "sol-only-takes-an-arm--red-cape-body",
+        "label": "Tetsuo's torn red cape and surviving body",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          12,
+          85,
+          88
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "drinking-bird-autopilot--curated",
+    "scenario_slug": "drinking-bird-autopilot",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481ff9b4efc48bbc766c7/gallery-47b4d769f50696fad328278f846ac736ef0c66668adcc659f0d1c11ed6b0b8d3.webp",
+    "width": 960,
+    "height": 720,
+    "alt": "Homer's drinking bird leans over the Y key on an unattended computer",
+    "blur_data_url": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACwAQCdASoIAAYAA8BgJZACdAEfaJQgAPa8P6xmgZfuFd7wg6WtaxTLvLJJWHj5669FbbEgAAA=",
+    "content_hash": "47b4d769f50696fad328278f846ac736ef0c66668adcc659f0d1c11ed6b0b8d3",
+    "protected_regions": [
+      {
+        "id": "drinking-bird-autopilot--bird",
+        "label": "Drinking bird and its beak-to-key action",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          47,
+          58,
+          20,
+          40
+        ]
+      },
+      {
+        "id": "drinking-bird-autopilot--keyboard",
+        "label": "Keyboard and pressed-key context",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          20,
+          55,
+          60,
+          31
+        ]
+      },
+      {
+        "id": "drinking-bird-autopilot--monitor",
+        "label": "Unattended computer monitor",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          24,
+          24,
+          39,
+          41
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  }
+]

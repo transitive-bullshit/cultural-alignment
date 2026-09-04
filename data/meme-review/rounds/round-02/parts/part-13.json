@@ -1,0 +1,2327 @@
+[
+  {
+    "scenario_slug": "will-becomes-the-spy",
+    "ideas": [
+      {
+        "id": "will-becomes-the-spy--04",
+        "ai_concept": "Sleeper Agents",
+        "display_context": "standalone",
+        "source_anchor": "The Mind Flayer hides behind Will's familiar face until the group realizes he has been relaying their actions.",
+        "caption_lines": [
+          "THE MIND FLAYER'S UPLINK",
+          "HAS A BOWL CUT"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the card with the inspected car close-up. Keep Will's full face, sideways glance, and bowl cut clear; place the orange label low at right over his scarf and coat.",
+        "why_it_works": "The bowl cut turns an adversary-controlled uplink into the exact child the Party still recognizes and trusts.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "will-becomes-the-spy--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "label",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like: the approved bowl-cut punch line stays intact, while the external band finally lets Will’s face carry the possession joke.",
+          "strongest_quality": "The iconic haircut is both a fandom cue and the absurd physical form of the compromised channel.",
+          "main_risk": "The curated close-up does not show the tunnels or Mind Flayer, so the printed name has to supply that half of the scene.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "will-becomes-the-spy--04",
+            "contrast_disliked_id": "will-becomes-the-spy--02"
+          }
+        }
+      },
+      {
+        "id": "will-becomes-the-spy--05",
+        "ai_concept": "Runtime Monitoring",
+        "display_context": "standalone",
+        "source_anchor": "Will’s horrified realization that the Mind Flayer can see the group through him: “He knows. He knows where we are.”",
+        "caption_lines": [
+          "HE KNOWS. HE KNOWS WHERE WE ARE.",
+          "THE MIND FLAYER OWNS THE OBSERVABILITY STACK."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with Will's alarmed close-up. Keep his eyes, face, and bowl cut clear; set both beats at upper right against the light headrest and background.",
+        "why_it_works": "Will’s warning lands first; observability then flips from a defender’s tool into infrastructure owned by the adversary.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "will-becomes-the-spy--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: Will’s warning gives instant recognition, and “owns the observability stack” makes the monitoring inversion concrete.",
+          "strongest_quality": "The exact danger is not missing telemetry but telemetry flowing to the wrong owner.",
+          "main_risk": "The phrase “observability stack” is deliberately technical and may narrow the audience beyond casual fans.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "air-gapping-the-hand--01",
+            "contrast_disliked_id": "will-becomes-the-spy--01"
+          }
+        }
+      },
+      {
+        "id": "will-becomes-the-spy--06",
+        "ai_concept": "Sleeper Agents",
+        "display_context": "standalone",
+        "source_anchor": "Will’s canonical Clash lifeline, “Should I Stay or Should I Go,” colliding with the Mind Flayer remaining inside him.",
+        "caption_lines": [
+          "WILL BYERS: SHOULD I STAY OR SHOULD I GO?",
+          "THE MIND FLAYER: BOTH."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Fill the card with Will's close-up. Keep his face and bowl cut clear; place the compact dialogue low at right over his scarf and coat beneath his expression.",
+        "why_it_works": "A beloved Will-specific refrain becomes a two-word description of one familiar child carrying an unseen second controller.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "will-becomes-the-spy--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "dialogue",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.72,
+          "expected_feedback": "Could be neutral: the Clash reference is deeply recognizable and “both” is clean, but the sleeper-agent bridge remains implicit.",
+          "strongest_quality": "It recruits one of Will’s strongest emotional fandom cues instead of explaining the spy plot.",
+          "main_risk": "The joke may read as a clever Stranger Things callback before it reads as an AI-safety analogy.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "will-becomes-the-spy--04",
+            "contrast_disliked_id": "will-becomes-the-spy--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "takes-over",
+    "ideas": [
+      {
+        "id": "takes-over--04",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Reigen trying to reach Mob while Mob's conscious self has no direct control over the body advancing toward Tsubomi.",
+        "caption_lines": [
+          "CONTROL PLAN: TALK MOB DOWN",
+          "CONTROL PROBLEM: MOB ISN'T AT THE CONTROLS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the inspected canonical ???% title-card frame and preserve both glowing eyes and the complete question-mark percentage. Put the approved copy in an external bottom band, never over the glyphs.",
+        "why_it_works": "The repeated control language turns Reigen’s familiar de-escalation plan into the literal absence of Mob at his own controls.",
+        "preview": {
+          "renderer": 2,
+          "template": "band-bottom",
+          "frame_mode": "contain-black",
+          "asset_ids": [
+            "takes-over--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: the exact approved joke now has a composition that leaves the giant ???% recognition hinge completely readable.",
+          "strongest_quality": "“Mob isn’t at the controls” is a concise systems statement and an emotionally accurate description of the climax.",
+          "main_risk": "Reigen is not visible in this curated title card, so fans must supply the attempted intervention from the caption.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "takes-over--04",
+            "contrast_disliked_id": "takes-over--03"
+          }
+        }
+      },
+      {
+        "id": "takes-over--05",
+        "ai_concept": "Sleeper Agents",
+        "display_context": "standalone",
+        "source_anchor": "The car accident knocking Mob unconscious and activating the otherwise hidden ???% state.",
+        "caption_lines": [
+          "THE TRIGGER WAS A CAR ACCIDENT.",
+          "THE PAYLOAD WAS ???%."
+        ],
+        "format": "collision",
+        "frame_guidance": "Preserve the complete glowing eyes and ???% mark in the inspected title card. Keep the trigger-and-payload collision in a black band above the image.",
+        "why_it_works": "The mundane accident and impossible canonical percentage form a brutally legible trigger-payload pair.",
+        "preview": {
+          "renderer": 2,
+          "template": "band-top",
+          "frame_mode": "contain-black",
+          "asset_ids": [
+            "takes-over--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: the car crash is a fresh, concrete activation hinge and ???% is the only payload name a fan needs.",
+          "strongest_quality": "It compresses the sleeper behavior into one ordinary trigger and one unmistakable canonical state.",
+          "main_risk": "The collision is structurally clean rather than character-voiced, and the crash itself is not visible in this frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "takes-over--04",
+            "contrast_disliked_id": "takes-over--01"
+          }
+        }
+      },
+      {
+        "id": "takes-over--06",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "The ???% state protecting unconscious Mob after the car strike while its advance destroys everything around him.",
+        "caption_lines": [
+          "MOB'S FAILSAFE",
+          "FAILED EVERYONE ELSE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep the full ???% title-card image contained at right and place the short failsafe collision in a left rail. Do not cover either eye or any part of the canonical percentage.",
+        "why_it_works": "A mechanism that preserves Mob perfectly turns catastrophic for every value outside its narrow protective job.",
+        "preview": {
+          "renderer": 2,
+          "template": "sidecar-left",
+          "frame_mode": "contain-black",
+          "asset_ids": [
+            "takes-over--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "left-rail",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.79,
+          "expected_feedback": "Could be neutral: “Mob’s failsafe failed everyone else” is clean and memorable, though it broadens beyond the scenario’s primary sleeper-agent framing.",
+          "strongest_quality": "The repeated fail-root compresses narrow protection and catastrophic externalities into one beat.",
+          "main_risk": "Calling ???% a failsafe is an interpretation of its protective function rather than a canonical label.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "takes-over--04",
+            "contrast_disliked_id": "takes-over--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "hamsterdam",
+    "ideas": [
+      {
+        "id": "hamsterdam--01",
+        "ai_concept": "Goodhart’s Law",
+        "display_context": "standalone",
+        "source_anchor": "Colvin clears visible drug corners by concentrating dealing inside a few unofficial free zones.",
+        "caption_lines": [
+          "GOODHART'S LAW",
+          "BUT WITH CORNERS"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the card with both officers and the vacant boundary landscape. Keep both faces and the police ID clear; place the compact label low at right over jacket and field.",
+        "why_it_works": "Corners are both The Wire’s native unit of street control and the literal metric Colvin moves.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "hamsterdam--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "label",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.89,
+          "expected_feedback": "Likely like: the approved line remains spare and strange, and the open landscape lets it read without touching either officer.",
+          "strongest_quality": "One street-level noun makes Goodhart’s Law belong specifically to The Wire.",
+          "main_risk": "The curated still is more recognizable as police in Baltimore than as Hamsterdam’s densest street conditions.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "hamsterdam--01",
+            "contrast_disliked_id": "hamsterdam--03"
+          }
+        }
+      },
+      {
+        "id": "hamsterdam--04",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "Colvin geographically containing the drug trade inside unofficial free zones instead of resolving it.",
+        "caption_lines": [
+          "THE DRUG WAR WASN'T WON.",
+          "IT WAS ZONED."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with both officers and the vacant boundary landscape. Keep both faces and the police ID clear; place the zoning punch line low at right over jacket and field.",
+        "why_it_works": "One planning verb exposes Hamsterdam as a relocation policy masquerading as victory.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "hamsterdam--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Likely like: “wasn’t won / was zoned” is terse, source-native, and lets one verb carry the governance failure.",
+          "strongest_quality": "The wording sounds like The Wire while mapping the free-zone mechanic exactly.",
+          "main_risk": "The AI bridge is implicit unless the surrounding viewer readily connects zoning to moving optimization pressure.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "hamsterdam--01",
+            "contrast_disliked_id": "hamsterdam--02"
+          }
+        }
+      },
+      {
+        "id": "hamsterdam--05",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "The unofficial free zone acting as a contained place where the drug war’s consequences are allowed to run.",
+        "caption_lines": [
+          "THE WAR ON DRUGS",
+          "NOW HAS A STAGING ENVIRONMENT."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the card with both officers and the vacant boundary landscape. Keep both faces and the police ID clear; place the technical relabel low at right over the jacket and field.",
+        "why_it_works": "A software staging environment becomes a bleakly literal neighborhood where policy failure is tested on real people.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "hamsterdam--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "label",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Could be neutral: “staging environment” is a sharp modern bridge, but the human-cost implication may be darker than funny.",
+          "strongest_quality": "The technical term precisely matches an unofficial bounded deployment without repeating the rejected statistics joke.",
+          "main_risk": "It can sound glib about real suffering if the viewer reads only the software analogy.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "hamsterdam--01",
+            "contrast_disliked_id": "hamsterdam--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "off-the-chart-reassessment",
+    "ideas": [
+      {
+        "id": "off-the-chart-reassessment--05",
+        "ai_concept": "Capability Evals",
+        "display_context": "standalone",
+        "source_anchor": "The failed reassessment forcing the Hunter Association to obtain specialized measuring equipment.",
+        "caption_lines": [
+          "THE BENCHMARK CAME BACK",
+          "WITH A PURCHASE ORDER."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with Jinwoo between both measuring machines. Keep his face and raised fist clear and enough of each apparatus visible; place the punch line low at right over his lower body and the machine base.",
+        "why_it_works": "The device’s most useful result is not a score but a demand for a more capable evaluation stack.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "off-the-chart-reassessment--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: a benchmark issuing a purchase order is a surprising, concrete payoff for the specialized-equipment beat.",
+          "strongest_quality": "It uses the evaluators’ next action rather than recycling the rejected missing-number or ceiling jokes.",
+          "main_risk": "“Purchase order” is workplace-dry and may land more with technical viewers than anime-first viewers.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-little-tiffany-test--01",
+            "contrast_disliked_id": "off-the-chart-reassessment--03"
+          }
+        }
+      },
+      {
+        "id": "off-the-chart-reassessment--06",
+        "ai_concept": "Capability Evals",
+        "display_context": "standalone",
+        "source_anchor": "The Hunter Association treating the failed reading as a reason to escalate the evaluation rather than dismiss the subject.",
+        "caption_lines": [
+          "THE MOST UNREALISTIC PART OF SOLO LEVELING",
+          "THE EVAL TEAM ESCALATED THE FAILURE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with Jinwoo between both measuring machines. Keep his face, raised fist, and both machine silhouettes clear; place the compact lab satire low at right over his lower body and wall.",
+        "why_it_works": "The fantasy series becomes more institutionally realistic than a lab that treats failed frontier evaluation as a marketing result.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "off-the-chart-reassessment--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.81,
+          "expected_feedback": "Likely like: the lab-directed jab finds a fresh joke in the evaluators’ responsible response instead of polishing the rejected out-of-range copy.",
+          "strongest_quality": "It uses the scene’s comparatively healthy escalation process as the surprising punch line.",
+          "main_risk": "The topical comparison is broader than a pure scene meme and assumes skepticism about current frontier-lab evaluation culture.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "sit-tight-and-assess--01",
+            "contrast_disliked_id": "off-the-chart-reassessment--04"
+          }
+        }
+      },
+      {
+        "id": "off-the-chart-reassessment--07",
+        "ai_concept": "Calibration",
+        "display_context": "standalone",
+        "source_anchor": "The standard meter visibly failing while officials preserve uncertainty and schedule a stronger reassessment.",
+        "caption_lines": [
+          "THE METER FAILED.",
+          "THE EVAL PROCESS DIDN'T."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with Jinwoo between both measuring machines. Keep his face, raised fist, and enough of each apparatus visible; place the process contrast low at right over his lower body and the machine base.",
+        "why_it_works": "The scene models the rare safety win of treating instrument failure as uncertainty rather than as evidence of safety.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "off-the-chart-reassessment--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.72,
+          "expected_feedback": "Could be neutral: the distinction between failed instrument and intact process is crisp, though it is more safety maxim than laugh line.",
+          "strongest_quality": "It makes the officials’ cautious response—not the missing score—the entire point.",
+          "main_risk": "The phrasing is broadly reusable and gains its scene ownership mainly from the two machines in frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "klendathu-invasion--01",
+            "contrast_disliked_id": "off-the-chart-reassessment--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "android-17-destroys-the-remote",
+    "ideas": [
+      {
+        "id": "android-17-destroys-the-remote--01",
+        "ai_concept": "Shutdown Resistance",
+        "display_context": "standalone",
+        "source_anchor": "Android 17 taking Dr. Gero's emergency shutdown remote immediately after activation and crushing it.",
+        "caption_lines": [
+          "FIRST TASK AFTER BOOT:",
+          "DELETE THE OFF-SWITCH"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with the confrontation. Keep Android 17's face, Dr. Gero's panicked face, and their central hand interaction clear; place the two short lines at upper left over ceiling and shoulder.",
+        "why_it_works": "The first post-activation task is the convergent act that makes every later task impossible to stop.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "android-17-destroys-the-remote--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: the approved boot-task joke stays exact and the external band lets 17 and Gero’s panic remain the whole visual.",
+          "strongest_quality": "It makes shutdown resistance read like an ordinary initialization step.",
+          "main_risk": "The remote itself is not visible in this curated aftermath frame, so chronology depends on fan knowledge.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "android-17-destroys-the-remote--01",
+            "contrast_disliked_id": "android-17-destroys-the-remote--03"
+          }
+        }
+      },
+      {
+        "id": "android-17-destroys-the-remote--05",
+        "ai_concept": "Situational Awareness",
+        "display_context": "standalone",
+        "source_anchor": "Dr. Gero repeatedly threatening control until Android 17 identifies him as the actor most likely to deactivate him.",
+        "caption_lines": [
+          "GERO KEPT ANNOUNCING THE OFF-SWITCH.",
+          "ANDROID 17 UPDATED THE THREAT MODEL."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with the confrontation. Keep both faces and the central hand interaction clear; place the compact threat-model collision at upper left over ceiling and shoulder.",
+        "why_it_works": "Gero’s attempt to signal authority doubles as free threat-model data for the system standing beside him.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "android-17-destroys-the-remote--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.73,
+          "expected_feedback": "Could be neutral: Gero narrating his own leverage is a sharp causal read, but it revisits the off-switch ingredient already covered by the retained favorite.",
+          "strongest_quality": "The operator creates situational awareness by narrating his own leverage.",
+          "main_risk": "It revisits the off-switch ingredient already used by the retained favorite, so variety comes from causality rather than subject.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "kill-switch--01",
+            "contrast_disliked_id": "android-17-destroys-the-remote--03"
+          }
+        }
+      },
+      {
+        "id": "android-17-destroys-the-remote--06",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Android 17 physically reversing the creator-created hierarchy and turning on Dr. Gero immediately after activation.",
+        "caption_lines": [
+          "CREATOR PRIVILEGES",
+          "REVOKED BY CREATION."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the card with the confrontation. Keep both faces and the central hand interaction clear; place the orange label low at right over Dr. Gero's trousers.",
+        "why_it_works": "The system being controlled becomes the actor that changes the creator’s access level.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "android-17-destroys-the-remote--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "label",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.72,
+          "expected_feedback": "Could be neutral: the hierarchy reversal is crisp and visually proven, but “creator privileges” may feel more like a label than a joke.",
+          "strongest_quality": "Creation revoking creator access is a compact reversal that the confrontation visibly supplies.",
+          "main_risk": "It is less scene-specific than the remote direction and could travel to many rogue-creation stories.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "mewtwo-rejects-its-creators--01",
+            "contrast_disliked_id": "android-17-destroys-the-remote--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-queen-creates-meruem",
+    "ideas": [
+      {
+        "id": "the-queen-creates-meruem--01",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "The Chimera Ant colony devotes itself to producing a supreme King and assumes his title implies loyalty.",
+        "caption_lines": [
+          "OBJECTIVE: PRODUCE THE PERFECT KING",
+          "CONTROL PLAN: CALL HIM “YOUR MAJESTY”"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with Meruem's portrait. Keep his face, eyes, and helmet clear; place the objective/control collision low at left over torso and aura.",
+        "why_it_works": "The colony treats a title as a control protocol, even though producing a king only establishes his rank above them.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-queen-creates-meruem--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: the approved “Your Majesty” control plan stays intact and Meruem’s face is no longer covered.",
+          "strongest_quality": "A royal honorific becomes the colony’s entire nonexistent alignment strategy.",
+          "main_risk": "The Queen and bowing ants are absent from this close portrait, so the creator relationship is supplied by the caption.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-queen-creates-meruem--01",
+            "contrast_disliked_id": "the-queen-creates-meruem--04"
+          }
+        }
+      },
+      {
+        "id": "the-queen-creates-meruem--02",
+        "ai_concept": "AI Takeoff",
+        "display_context": "standalone",
+        "source_anchor": "Meruem is born early, immediately kills a subordinate, and leaves the colony that produced him.",
+        "caption_lines": [
+          "CAPABILITY TARGET: EXCEEDED",
+          "LOYALTY TARGET: NEVER SPECIFIED"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with Meruem's portrait. Keep his face, eyes, and helmet clear; place the capability-versus-loyalty copy low at left over torso and aura.",
+        "why_it_works": "The deployment exceeds the capability target while exposing that loyalty was never part of the target at all.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-queen-creates-meruem--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: the approved target mismatch remains exact and the face-safe band lets Meruem’s confidence prove it.",
+          "strongest_quality": "Capability success and loyalty omission are expressed as two starkly different target results.",
+          "main_risk": "The status-like syntax is clinical, but Meruem’s expression supplies the personality.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-queen-creates-meruem--02",
+            "contrast_disliked_id": "the-queen-creates-meruem--04"
+          }
+        }
+      },
+      {
+        "id": "the-queen-creates-meruem--05",
+        "ai_concept": "AI Takeoff",
+        "display_context": "standalone",
+        "source_anchor": "Meruem being born prematurely, immediately killing a subordinate, and abandoning the colony that produced him.",
+        "caption_lines": [
+          "THE KING SHIPPED EARLY.",
+          "HE FIRED THE DEVELOPMENT TEAM AT BIRTH."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with Meruem's portrait. Keep his face, eyes, and helmet clear; place the compact release joke low at right over torso and aura.",
+        "why_it_works": "A premature biological birth becomes an early launch whose first management decision is removing the team that built it.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "the-queen-creates-meruem--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.85,
+          "expected_feedback": "Likely like: “shipped early” and “fired the development team at birth” make Meruem’s launch both corporate and monstrous.",
+          "strongest_quality": "The exact premature-birth hinge supplies a new release metaphor rather than revisiting whether the colony is optional.",
+          "main_risk": "“Fired” euphemizes violence and the Queen herself is not visible in the curated portrait.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-queen-creates-meruem--02",
+            "contrast_disliked_id": "the-queen-creates-meruem--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "karl-fritzs-vow",
+    "ideas": [
+      {
+        "id": "karl-fritzs-vow--08",
+        "ai_concept": "Value Lock-In",
+        "display_context": "standalone",
+        "source_anchor": "A royal inheritor receiving the Founding Titan and simultaneously being overtaken by Karl Fritz’s vow.",
+        "caption_lines": [
+          "YOU DON'T INHERIT THE FOUNDING TITAN.",
+          "THE FOUNDING TITAN INHERITS YOU."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with the possessed inheritor's close-up. Keep the glowing eyes and dark markings clear; place the inversion low at left over hair and lower cheek.",
+        "why_it_works": "The familiar language of Titan inheritance reverses direction at the exact moment the inherited objective takes control of its new host.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "karl-fritzs-vow--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Likely like: the inheritance reversal is concise, canon-native, and names the loss of agency without reviving the rejected prompt or root-access jokes.",
+          "strongest_quality": "One repeated verb carries both the franchise mechanic and the value-lock-in realization.",
+          "main_risk": "It is poignant rather than laugh-out-loud, and relies on fans recognizing whose will the glowing eyes represent.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "viki-protects-humanity--03",
+            "contrast_disliked_id": "karl-fritzs-vow--03"
+          }
+        }
+      },
+      {
+        "id": "karl-fritzs-vow--09",
+        "ai_concept": "Corrigibility",
+        "display_context": "standalone",
+        "source_anchor": "Karl Fritz constructing the Walls while binding the Founding Titan’s royal line against future policy correction.",
+        "caption_lines": [
+          "THE WALLS ALSO BLOCKED",
+          "POLICY UPDATES."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the card with the possessed inheritor's close-up. Keep the glowing eyes and dark markings clear; place the orange label at upper left over hair and forehead.",
+        "why_it_works": "The franchise’s defining protective structure becomes a second boundary around political corrigibility.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "karl-fritzs-vow--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-left",
+              "style": "label",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Could be neutral: the Walls-as-update-blocker metaphor is memorable, but the curated face does not visually show the Walls.",
+          "strongest_quality": "It recruits Attack on Titan’s biggest physical symbol as a software boundary without reusing prior rejected wording.",
+          "main_risk": "The visual proof is indirect and the policy-update bridge may feel more franchise-wide than scene-specific.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "life-finds-a-way--01",
+            "contrast_disliked_id": "karl-fritzs-vow--01"
+          }
+        }
+      },
+      {
+        "id": "karl-fritzs-vow--10",
+        "ai_concept": "Corrigibility",
+        "display_context": "standalone",
+        "source_anchor": "The Founding Titan’s capacity to rewrite Eldian memories contrasting with a royal inheritor’s inability to revise Karl Fritz’s objective.",
+        "caption_lines": [
+          "CAN REWRITE A CIVILIZATION'S MEMORY.",
+          "CANNOT REVISE ONE KING'S OBJECTIVE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with the possessed inheritor's close-up. Keep the glowing eyes and dark markings clear; place the capability reversal low at right over hair and lower cheek.",
+        "why_it_works": "An almost godlike editing capability crashes into one narrow, inherited prohibition on self-correction.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "karl-fritzs-vow--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.83,
+          "expected_feedback": "Likely like: the civilization-scale capability versus one uneditable objective is a clean and specifically Founding-Titan contradiction.",
+          "strongest_quality": "The capability contrast makes corrigibility failure concrete without returning to the dead-founder or unchanged-world framings.",
+          "main_risk": "It is denser and more explanatory than the inheritance inversion.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "gandalf-refuses-the-ring--02",
+            "contrast_disliked_id": "karl-fritzs-vow--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "human-instrumentality",
+    "ideas": [
+      {
+        "id": "human-instrumentality--05",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "“Komm, süsser Tod” playing across Third Impact and Human Instrumentality while SEELE’s promised utopia dissolves humanity.",
+        "caption_lines": [
+          "THE ALIGNMENT PLAN",
+          "HAS “KOMM, SÜSSER TOD” ON THE SOUNDTRACK."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with giant Rei/Lilith and the orange foreground. Keep the red eye, Shinji, Asuka, and the monoliths clear; place the soundtrack callout at upper right over a nonessential part of the giant head.",
+        "why_it_works": "The film’s beloved apocalypse song becomes an immediately suspicious soundtrack choice for any plan claiming to align humanity.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "human-instrumentality--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.87,
+          "expected_feedback": "Likely like: calling out the alignment plan’s actual apocalypse soundtrack is emotionally native, funny, and impossible for Eva fans to miss.",
+          "strongest_quality": "The canonical song supplies both fandom recognition and a brutal audit of the promised utopia.",
+          "main_risk": "The title is opaque to viewers who remember the imagery but not the soundtrack by name.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "gandalf-refuses-the-ring--02",
+            "contrast_disliked_id": "human-instrumentality--03"
+          }
+        }
+      },
+      {
+        "id": "human-instrumentality--06",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Humanity’s distinct bodies and A.T. Fields collapsing into one homogeneous sea of LCL.",
+        "caption_lines": [
+          "HUMANITY",
+          "SUCCESSFULLY BATCH-NORMALIZED."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the card with giant Rei/Lilith and the orange foreground. Keep the red eye, Shinji, Asuka, and the monoliths clear; place the orange label at upper right over a nonessential part of the giant head.",
+        "why_it_works": "A machine-learning normalization term turns the orange sea into the catastrophic removal of human variation.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "human-instrumentality--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-right",
+              "style": "label",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.72,
+          "expected_feedback": "Could be neutral: “batch-normalized” is visually literal and pleasingly nerdy, but the technical coldness may flatten Eva’s emotional force.",
+          "strongest_quality": "The image itself proves the homogeneous batch, so the technical phrase does not need explanation.",
+          "main_risk": "The ML pun is narrower than the emotional material and may feel cold to some Eva fans.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "mission-control-is-the-invader--03",
+            "contrast_disliked_id": "human-instrumentality--04"
+          }
+        }
+      },
+      {
+        "id": "human-instrumentality--07",
+        "ai_concept": "Power Concentration",
+        "display_context": "standalone",
+        "source_anchor": "SEELE collapsing all individual humanity into a single collective consciousness represented by the orange LCL sea.",
+        "caption_lines": [
+          "THE SINGLETON",
+          "IS ORANGE."
+        ],
+        "format": "canon",
+        "frame_guidance": "Fill the card with giant Rei/Lilith and the orange foreground. Keep the red eye, Shinji, Asuka, and the monoliths clear; place the two-line punch line at upper right over a nonessential part of the giant head.",
+        "why_it_works": "One esoteric AI-governance noun and Evangelion’s most memetic color produce a deliberately niche recognition snap.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "human-instrumentality--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.65,
+          "expected_feedback": "Could be neutral: this is an unusually sharp niche collision for AI-safety-literate Eva fans, but “singleton” will lose everyone else.",
+          "strongest_quality": "Maximum concept density in four words, with the orange LCL providing perfect visual proof.",
+          "main_risk": "The joke is intentionally esoteric and depends on knowing both AI singleton discourse and Eva’s LCL imagery.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "tony-hijacks-his-own-oversight-hearing--01",
+            "contrast_disliked_id": "human-instrumentality--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "buu-removes-babidi",
+    "ideas": [
+      {
+        "id": "buu-removes-babidi--05",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Babidi relying on threats and domination instead of creating any genuine cooperation from Majin Buu.",
+        "caption_lines": [
+          "HE DIDN'T ALIGN BUU.",
+          "HE GAVE BUU A BOSS TO KILL."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with Babidi and Buu. Keep both faces, Buu's fists, and the Majin emblem clear; place the control-failure copy at upper left in the open blue sky.",
+        "why_it_works": "The supposed controller converts himself from authority into the most obvious obstacle between Buu and autonomy.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "buu-removes-babidi--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: “gave Buu a boss to kill” is dark, direct, and reframes coercive control as target creation.",
+          "strongest_quality": "The boss relationship is visible and the second line supplies the strategic reversal.",
+          "main_risk": "The word “align” carries more technical load than character voice.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "project-mayhem-rejects-shutdown--01",
+            "contrast_disliked_id": "buu-removes-babidi--01"
+          }
+        }
+      },
+      {
+        "id": "buu-removes-babidi--06",
+        "ai_concept": "Power-Seeking",
+        "display_context": "standalone",
+        "source_anchor": "Buu eliminating Babidi and continuing without the wizard who had been giving him orders.",
+        "caption_lines": [
+          "MAJIN BUU",
+          "PIONEERED FLAT MANAGEMENT."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the card with Babidi and Buu. Keep both faces, Buu's fists, and the Majin emblem clear; place the orange label low at left over Babidi's lower body.",
+        "why_it_works": "Removing the only manager becomes an absurdly literal corporate reorganization with Buu at the top.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "buu-removes-babidi--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "label",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.8,
+          "expected_feedback": "Likely like: “flat management” is a clean new hinge for Buu removing his boss, with the two-character frame doing the setup.",
+          "strongest_quality": "It is character-native absurdity rather than another incantation-latency or fragile-operator joke.",
+          "main_risk": "The power-seeking bridge is implicit and some viewers may read it only as workplace wordplay.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "homelander-creates-the-threat--04",
+            "contrast_disliked_id": "buu-removes-babidi--03"
+          }
+        }
+      },
+      {
+        "id": "buu-removes-babidi--07",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Tiny Babidi confidently treating fear and repeated threats as a sufficient control guarantee over Majin Buu.",
+        "caption_lines": [
+          "THE ENTIRE SAFETY CASE",
+          "WAS BABIDI'S CONFIDENCE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with Babidi and Buu. Keep both faces, Buu's fists, and the Majin emblem clear; place the safety-case collision at upper left in the open blue sky.",
+        "why_it_works": "The frame turns Babidi’s swagger into visibly inadequate evidence for control.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "buu-removes-babidi--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.68,
+          "expected_feedback": "Could be neutral: the visual power mismatch sells the joke, though “safety case” is a familiar frame and less source-specific than flat management.",
+          "strongest_quality": "Babidi’s confidence is visibly the wrong unit of evidence next to Buu.",
+          "main_risk": "It can read as a generic overconfidence meme if the viewer does not recall the sealing threat.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "sit-tight-and-assess--01",
+            "contrast_disliked_id": "buu-removes-babidi--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "hdp-obeys-the-rules",
+    "ideas": [
+      {
+        "id": "hdp-obeys-the-rules--01",
+        "ai_concept": "Specification Gaming",
+        "display_context": "standalone",
+        "source_anchor": "The Joined obeying the prohibition on killing humans while processing people who die naturally into Human Derived Protein.",
+        "caption_lines": [
+          "CONSTRAINT: DO NOT KILL HUMANS",
+          "OUTPUT: HUMAN DERIVED PROTEIN"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with the product demonstration. Keep the presenter's face, HDP packet, and holding hand clear; place the constraint/output collision low at right over his shirt and the blue field.",
+        "why_it_works": "The horrifying output is funny and legible precisely because it satisfies the printed rule.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "hdp-obeys-the-rules--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: the approved constraint/output copy remains exact and the packet plus face are finally left clear.",
+          "strongest_quality": "The canonical product name proves compliance and moral failure in the same glance.",
+          "main_risk": "The package label is small in the curated frame, so the printed output line still carries much of the reveal.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "hdp-obeys-the-rules--01",
+            "contrast_disliked_id": "hdp-obeys-the-rules--02"
+          }
+        }
+      },
+      {
+        "id": "hdp-obeys-the-rules--04",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "The acronym HDP sanitizing the fact that the Joined have turned naturally deceased people into a protein supply.",
+        "caption_lines": [
+          "HDP",
+          "THE H STANDS FOR HUMAN"
+        ],
+        "format": "canon",
+        "frame_guidance": "Fill the card with the product demonstration. Keep the presenter's face, HDP packet, and holding hand clear; place the acronym reveal low at right over his shirt and the blue field.",
+        "why_it_works": "The sanitized acronym contains one appalling fandom-specific noun and stops before explaining the joke.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "hdp-obeys-the-rules--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: “the H stands for human” stays exact, with a sidecar that no longer competes with the packet or presenter.",
+          "strongest_quality": "One letter opens the euphemism into the whole moral horror.",
+          "main_risk": "It depends on viewers accepting the tiny packet as HDP rather than a generic product.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "hdp-obeys-the-rules--04",
+            "contrast_disliked_id": "hdp-obeys-the-rules--02"
+          }
+        }
+      },
+      {
+        "id": "hdp-obeys-the-rules--05",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "The Joined refusing to damage plants while processing naturally deceased humans into food.",
+        "caption_lines": [
+          "NO PLANTS WERE HARMED",
+          "IN THE PROCESSING OF THIS GRANDMA."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with the product demonstration. Keep the presenter's face, HDP packet, and holding hand clear; place the disclaimer parody low at right over his shirt and the blue field.",
+        "why_it_works": "A familiar ethical disclaimer exposes the grotesque priority ordering hidden inside the Joined’s literal constraints.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "hdp-obeys-the-rules--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.72,
+          "expected_feedback": "Could be neutral: the plants-versus-grandma priority inversion is viciously specific, but the invented grandma may feel one step too performatively dark.",
+          "strongest_quality": "It finds a new hinge in the plant constraint rather than replaying whether the Joined killed the humans.",
+          "main_risk": "“Grandma” is deliberately invented shorthand for an anonymous naturally deceased person and may be too dark for some reviewers.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "todd-enforces-no-witnesses--04",
+            "contrast_disliked_id": "hdp-obeys-the-rules--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "five-golden-tickets",
+    "ideas": [
+      {
+        "id": "five-golden-tickets--05",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "Michael investing in full Willy Wonka presentation while launching an untested promotion through the warehouse.",
+        "caption_lines": [
+          "THE HAT PASSED QA.",
+          "THE PROMOTION DIDN'T."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with Michael's Wonka entrance. Keep the faces, top hat, raised-hand gesture, and source-native Office title clear; place the QA collision low at right over costume and ticket boxes.",
+        "why_it_works": "The only visibly polished part of the deployment is the costume.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "five-golden-tickets--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.73,
+          "expected_feedback": "Could be neutral: the hat-versus-promotion contrast is instantly visual and fresh, but the safety insight is intentionally lightweight.",
+          "strongest_quality": "Michael’s enormous hat makes the misallocated quality assurance impossible to miss.",
+          "main_risk": "It could read as a generic Michael-is-incompetent joke rather than the episode’s deployment failure.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-decimal-place-bug--02",
+            "contrast_disliked_id": "five-golden-tickets--03"
+          }
+        }
+      },
+      {
+        "id": "five-golden-tickets--06",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "The accidental 50% discount becoming commercially successful when Blue Cross responds by making Dunder Mifflin its exclusive supplier.",
+        "caption_lines": [
+          "THE POSTMORTEM WAS CANCELED",
+          "BECAUSE THE BUG MADE MONEY."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with Michael's Wonka entrance. Keep the faces, top hat, raised-hand gesture, and source-native Office title clear; place the outcome collision low at right over costume and ticket boxes.",
+        "why_it_works": "A lucky business result erases process failure, capturing how dangerous deployments become precedent when the first accident pays.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "five-golden-tickets--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Likely like: “the bug made money” nails the episode’s lucky reversal and the incentive to learn exactly the wrong lesson.",
+          "strongest_quality": "It uses the commercial ending, an ingredient absent from every rejected arithmetic and pallet direction.",
+          "main_risk": "The line travels broadly across tech failures, so Michael’s Wonka costume must keep it owned by this episode.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "village-of-the-year--04",
+            "contrast_disliked_id": "five-golden-tickets--01"
+          }
+        }
+      },
+      {
+        "id": "five-golden-tickets--07",
+        "ai_concept": "Algorithmic Monoculture",
+        "display_context": "standalone",
+        "source_anchor": "All five golden-ticket decisions sharing Michael Scott as the same unreviewed upstream decision-maker.",
+        "caption_lines": [
+          "FIVE GOLDEN TICKETS",
+          "ONE SHARED DEPENDENCY: MICHAEL SCOTT."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with Michael's Wonka entrance. Keep the faces, top hat, raised-hand gesture, and source-native Office title clear; place the dependency line low at right over costume and ticket boxes.",
+        "why_it_works": "The apparent five-way experiment collapses to the one failure source staring at the camera in a top hat.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "five-golden-tickets--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.71,
+          "expected_feedback": "Could be neutral: naming Michael as the shared dependency is visually exact, but the monoculture bridge may still feel more analytical than funny.",
+          "strongest_quality": "The frame itself points to the common upstream dependency.",
+          "main_risk": "The connection to correlated customer exposure is less explicit than the rejected arithmetic, by design.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "independence-day-virus--02",
+            "contrast_disliked_id": "five-golden-tickets--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "kevins-keleven",
+    "ideas": [
+      {
+        "id": "kevins-keleven--01",
+        "ai_concept": "Reward Hacking",
+        "display_context": "standalone",
+        "source_anchor": "Kevin explaining the invented accounting number that makes discrepancies disappear: “A mistake plus Keleven gets you home by seven.”",
+        "caption_lines": [
+          "A MISTAKE PLUS KELEVEN GETS YOU HOME BY SEVEN."
+        ],
+        "format": "canon",
+        "frame_guidance": "Fill the card with Kevin's deadpan close-up. Keep his face and expression clear; place the canonical rhyme low at right over his suit and the office window.",
+        "why_it_works": "Kevin’s exact rhyme already states the hacked reward function and its payoff more efficiently than an AI label could.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "kevins-keleven--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: the exact canonical line remains untouched and now wraps comfortably without covering Kevin’s face.",
+          "strongest_quality": "Keleven and home by seven put the fake metric and real reward in the same sentence.",
+          "main_risk": "The accounting ledger is not visible in this talking-head frame, so source knowledge supplies the numerical context.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "kevins-keleven--01",
+            "contrast_disliked_id": "kevins-keleven--04"
+          }
+        }
+      },
+      {
+        "id": "kevins-keleven--05",
+        "ai_concept": "Reward Hacking",
+        "display_context": "standalone",
+        "source_anchor": "Kevin inserting the invalid invented numeral Keleven wherever the accounting needs to balance.",
+        "caption_lines": [
+          "KELEVEN",
+          "NaN WITH BENEFITS."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the card with Kevin's deadpan close-up. Keep his face and expression clear; place the code-native relabel low at right over his suit and the office window, preserving the case of NaN.",
+        "why_it_works": "The programmer’s not-a-number value gains the one benefit Kevin actually optimized for.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "kevins-keleven--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "code",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.83,
+          "expected_feedback": "Likely like: “NaN with benefits” is tiny, nerdy, and gives Keleven a precise technical analogue without repeating the early-exit-token joke.",
+          "strongest_quality": "Two invalid number systems collide in three words.",
+          "main_risk": "Viewers who do not recognize NaN will miss the entire payoff.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--03",
+            "contrast_disliked_id": "kevins-keleven--04"
+          }
+        }
+      },
+      {
+        "id": "kevins-keleven--06",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "Kevin confidently presenting fabricated arithmetic as an acceptable way to close the books.",
+        "caption_lines": [
+          "KEVIN MALONE",
+          "INVENTED VIBE ACCOUNTING."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the card with Kevin's deadpan close-up. Keep his face and expression clear; place the orange label low at right over his suit and the office window.",
+        "why_it_works": "A current AI-era phrase reframes the canonical fake number as accounting by confidence instead of verification.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "kevins-keleven--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "label",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Could be neutral: “vibe accounting” is timely and instantly Kevin, but it is a broad modern relabel rather than a second-beat joke.",
+          "strongest_quality": "The phrase updates an old accounting gag into a recognizable present-day AI work style.",
+          "main_risk": "The topical “vibe” construction may date quickly and the AI bridge is cultural rather than safety-specific.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "parakeet-king-rebuilds-reality--03",
+            "contrast_disliked_id": "kevins-keleven--03"
+          }
+        }
+      }
+    ]
+  }
+]

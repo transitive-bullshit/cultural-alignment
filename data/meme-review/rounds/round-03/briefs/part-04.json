@@ -1,0 +1,512 @@
+{
+  "version": 1,
+  "mode": "layout-refinement",
+  "source_batch": 2,
+  "target_batch": 3,
+  "part": "part-04",
+  "instructions": {
+    "scope": "Do not add meme ideas, IDs, concepts, formats, or source anchors. Work only on the retained lineages listed here.",
+    "finalized": "Copy finalized ideas and every referenced asset byte-for-byte. They are context only and must not be edited.",
+    "layout_only": "Keep approved caption copy and editorial fields exact. Recompose the HTML preview using the Batch 3 layout guidance.",
+    "bounded_revision": "Apply only the explicit source feedback. Keep the central concept, format, source anchor, and lineage ID unchanged."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "zolas-algorithm",
+      "ideas": [
+        {
+          "id": "zolas-algorithm--02",
+          "scenario_slug": "zolas-algorithm",
+          "action": "finalized",
+          "source_idea_sha256": "fe3bd4a4c0952961c5716a67f6282df079cd4271020ec465804fc64be308f223",
+          "source_editorial_sha256": "5a78348309006ff2ba4c992d034dc8e450bafef0bcf17d2143e6176f82e1e3d3",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-02",
+              "payloadFingerprint": "v1-fc3e31fe476237a2-2785"
+            }
+          }
+        },
+        {
+          "id": "zolas-algorithm--05",
+          "scenario_slug": "zolas-algorithm",
+          "action": "layout-only",
+          "source_idea_sha256": "2c9e8e1b97f0cb885d6095221219dcb6c91df8881ed6406cf1d6acba243b523a",
+          "source_editorial_sha256": "fa09d001702af2987f23fac831464fdffccf028cdaaf9c6a51f2b30ab9731ea9",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "buzzs-factory-reset",
+      "ideas": [
+        {
+          "id": "buzzs-factory-reset--01",
+          "scenario_slug": "buzzs-factory-reset",
+          "action": "finalized",
+          "source_idea_sha256": "467ff246a20396b534b837dd417e1e1a02a9d7870511f2d2b34c6e9ed9d8f4c2",
+          "source_editorial_sha256": "93f9879f831096f7e726a330027a305bc8d3ac2bb642cd1861e7aac2c6b62ed8",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-115d825204c2e496-1722"
+            }
+          }
+        },
+        {
+          "id": "buzzs-factory-reset--03",
+          "scenario_slug": "buzzs-factory-reset",
+          "action": "finalized",
+          "source_idea_sha256": "b03e73a70be00b6455947e9863ecff11c00cb2ea24aa0a18d48209c6c4f3d756",
+          "source_editorial_sha256": "9a459581238f92c6450cf2cc060d8b7bf6d8efba9fbe76da100fcd16a580353a",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-dfcab3a82d5da6b4-1772"
+            }
+          }
+        },
+        {
+          "id": "buzzs-factory-reset--05",
+          "scenario_slug": "buzzs-factory-reset",
+          "action": "bounded-revision",
+          "source_idea_sha256": "68635f1860877725834f7766b5ba687db0eb0842e86bec64851e3e0de701c976",
+          "source_editorial_sha256": "5bed799d546e9ae8af49d13260157c8e1ead1f5e147285a27fd4cdb52d3a70e1",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "replace with \"WHEN YOUR SOUL HAS AN ON/OFF SWITCH\"",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "peter-bypasses-training-wheels",
+      "ideas": [
+        {
+          "id": "peter-bypasses-training-wheels--04",
+          "scenario_slug": "peter-bypasses-training-wheels",
+          "action": "layout-only",
+          "source_idea_sha256": "8ed64fa8538f81d80a5eed5bdaa5130e9979a4e91faed74338a66735876554f8",
+          "source_editorial_sha256": "24c9a250a1903ec053f3a476006d5df2dfee21d7209d766a13a2508d832eb130",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-idea-wont-wake-up",
+      "ideas": [
+        {
+          "id": "the-idea-wont-wake-up--01",
+          "scenario_slug": "the-idea-wont-wake-up",
+          "action": "layout-only",
+          "source_idea_sha256": "bb3a718c14a1d839852a468de25d2a5effcac21dd428975d58ed6710d94d598e",
+          "source_editorial_sha256": "68329e5285b946f0e76c2b1066f61dcffe80b03e60611dbd49e1d28c7c31222e",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "the-idea-wont-wake-up--05",
+          "scenario_slug": "the-idea-wont-wake-up",
+          "action": "layout-only",
+          "source_idea_sha256": "0016565d3b78d0f68cdca7939416361434ac190347490bd47a77c63525eec313",
+          "source_editorial_sha256": "7ba80350d7e99077685e88dff70c0212b8280775cd9921ff8bf3c7d3e023ceec",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "mann-fakes-the-telemetry",
+      "ideas": [
+        {
+          "id": "mann-fakes-the-telemetry--01",
+          "scenario_slug": "mann-fakes-the-telemetry",
+          "action": "finalized",
+          "source_idea_sha256": "6fb4b5c58d4111016dbe18083146dfeba6f73de5aed7d2b1dd48627ba4e0f32b",
+          "source_editorial_sha256": "538eca18150c94db0655ac817d676779fbedfed6f05863f652340383fe8cc60c",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "revert to the previous version's layout",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-16dbd271492c390d-1787"
+            }
+          }
+        },
+        {
+          "id": "mann-fakes-the-telemetry--04",
+          "scenario_slug": "mann-fakes-the-telemetry",
+          "action": "layout-only",
+          "source_idea_sha256": "fae2cea160745b66237624612f1d398b14e2a395a471653a482c81441ae6b7b4",
+          "source_editorial_sha256": "8220c9d9946d84c1c1566b09e053b41df95c95c5f1e833e8b261bb33e499a4ee",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "laughter-beats-screams",
+      "ideas": [
+        {
+          "id": "laughter-beats-screams--06",
+          "scenario_slug": "laughter-beats-screams",
+          "action": "bounded-revision",
+          "source_idea_sha256": "bd61467b593aa05fd3a649f003901a77c80c33c40a07d3bf24972fa7881befe4",
+          "source_editorial_sha256": "b58858ec7243e2de577360097123dd53aa300c7735c8127432478738538c7110",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "make it sharper",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "dna-locked-weapons",
+      "ideas": [
+        {
+          "id": "dna-locked-weapons--01",
+          "scenario_slug": "dna-locked-weapons",
+          "action": "layout-only",
+          "source_idea_sha256": "43b4b4a8953e646b727160e6915f2ffd4177f8f607adb6415fb4c04023e499ad",
+          "source_editorial_sha256": "1b08fd528cecfcb531bdeb85278673fbd7fe2e712c7abd1548cca7fe58f4fb77",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "miss-minutes-takes-root-control",
+      "ideas": [
+        {
+          "id": "miss-minutes-takes-root-control--01",
+          "scenario_slug": "miss-minutes-takes-root-control",
+          "action": "bounded-revision",
+          "source_idea_sha256": "59fa5cdeeaede1efa1116ec44ecc0e44246c307208d1ef0bc35d7121dc2a09ed",
+          "source_editorial_sha256": "1c6fe134ed33a18b516c08559cc8e9a7feb21611f94404ae3e0461ca787968ea",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "change the layout to have the same size text in the previous version (so larger than this one) but centered at the bottom of the screen",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "miss-minutes-takes-root-control--04",
+          "scenario_slug": "miss-minutes-takes-root-control",
+          "action": "finalized",
+          "source_idea_sha256": "a3e21c38e5a89136b3d54879d085823be0051e7af8308c23ca39bf731e1556fc",
+          "source_editorial_sha256": "2f80a9f5e1224392b444ae0487bc8830cb24c59b45ac5ab106be96af614c2d83",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "revert to the previous version's layout",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-4a66548eac43d7f2-1762"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "cypher-chooses-the-steak",
+      "ideas": [
+        {
+          "id": "cypher-chooses-the-steak--04",
+          "scenario_slug": "cypher-chooses-the-steak",
+          "action": "finalized",
+          "source_idea_sha256": "3efbe9a2ed0874de4405e9bf5311930cface9ab2d1988e1b890eeb79d27c6146",
+          "source_editorial_sha256": "fb85ed522f387ba44f3a73f4bbb30abd579bcb70c9f9887157105fefe07e2033",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-7185aa74a4bc8a78-1884"
+            }
+          }
+        },
+        {
+          "id": "cypher-chooses-the-steak--06",
+          "scenario_slug": "cypher-chooses-the-steak",
+          "action": "layout-only",
+          "source_idea_sha256": "195786e051d3bffba7284eb2e78e258f4481bbdfeb0663754775c0d5345207fe",
+          "source_editorial_sha256": "451cb29f20882bb43a805d0a93a4a3d7d074b57deca2e0145fa141c358713fc2",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "tony-hijacks-his-own-oversight-hearing",
+      "ideas": [
+        {
+          "id": "tony-hijacks-his-own-oversight-hearing--01",
+          "scenario_slug": "tony-hijacks-his-own-oversight-hearing",
+          "action": "finalized",
+          "source_idea_sha256": "53be8ecc3d3989a856a08dc0d92dccca1a837bdc826287b2952538acdad74b4e",
+          "source_editorial_sha256": "55560f92fda7b51f6220790acd93f7acb7dd93f23b59a16496df8a0d04a4a819",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "revert to the previous version's layout",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-2150d10bb5ba4d27-1769"
+            }
+          }
+        },
+        {
+          "id": "tony-hijacks-his-own-oversight-hearing--05",
+          "scenario_slug": "tony-hijacks-his-own-oversight-hearing",
+          "action": "layout-only",
+          "source_idea_sha256": "8a9e36517f7dd58b75d6806446b7003c7013998d5ffd6bf5f100d0127dc03d62",
+          "source_editorial_sha256": "d67b3603992c21b0fc6bb835d8bc8acaa61d2fa3c3d1666881ae50ed363aff3a",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "independence-day-virus",
+      "ideas": [
+        {
+          "id": "independence-day-virus--02",
+          "scenario_slug": "independence-day-virus",
+          "action": "bounded-revision",
+          "source_idea_sha256": "2c457b7a6f626341afebff0c51ef6f3b1f602f4683949b25f76781137cebfefb",
+          "source_editorial_sha256": "e2b57f96483089e42efa5bf7e7a2a49e94ac5ab0b68dadeafd67287c6706df6d",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "let's change to: \"WHEN YOUR DEPLOYMENT STRATEGY\\nMEETS JEFF GOLDBLUM\"",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "independence-day-virus--04",
+          "scenario_slug": "independence-day-virus",
+          "action": "layout-only",
+          "source_idea_sha256": "04568909bcb314512fa90f8a420158a85405a7b25048396e94cd8a166e14f15f",
+          "source_editorial_sha256": "ad616183577ede7c11996d28ccfd3dfa6360b697b9ce64df3495b1bf96005f7f",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "independence-day-virus--05",
+          "scenario_slug": "independence-day-virus",
+          "action": "layout-only",
+          "source_idea_sha256": "5896b955fe14c63469ea5d6014f60afe348ef43c0f165a39a2fdce47834d2416",
+          "source_editorial_sha256": "809c7a230d39c9725bc3a97350014caedf43420fcacc9f8071da31e4f825b2e5",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "leeloo-learns-war",
+      "ideas": [
+        {
+          "id": "leeloo-learns-war--01",
+          "scenario_slug": "leeloo-learns-war",
+          "action": "finalized",
+          "source_idea_sha256": "a418d87cc6ea3573ad91d0c76a36bb6e51018714b15f1f2a8d861dde9b89fa87",
+          "source_editorial_sha256": "39206dbf69152316055ac5bc7eb58cd5adcd7294b0fc477733935fe6056c2959",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-79497611efb07f05-1809"
+            }
+          }
+        },
+        {
+          "id": "leeloo-learns-war--06",
+          "scenario_slug": "leeloo-learns-war",
+          "action": "layout-only",
+          "source_idea_sha256": "471276ea6c3cf8b4ee93646284a0e625d097ae52859f5ae331666cc01c80992d",
+          "source_editorial_sha256": "343c4a6b12e16ae76ca6665ca738581b663095e136b271c71580413670c8301c",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,840 @@
+[
+  {
+    "scenario_slug": "god-of-the-new-world",
+    "ideas": [
+      {
+        "id": "god-of-the-new-world--07",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "The Death Note devotes elaborate rules to how names are written and misspelled, while leaving the moral category ‘evil’ entirely to the person holding the pen.",
+        "caption_lines": [
+          "THE DEATH NOTE HAS RULES FOR MISSPELLING A NAME.",
+          "‘EVIL’ IS LEFT TO THE USER."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated writing frenzy with Light's pen, outstretched hand, and face completely visible; keep the compact two-line specification joke at lower left, below the pen hand and across incidental sleeve and bookshelf detail.",
+        "why_it_works": "The notebook’s microscopic syntax rules make the complete absence of a moral specification feel both source-native and absurd.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["god-of-the-new-world--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.89,
+          "expected_feedback": "Independent prediction: likely like. The visible pen and the notebook’s famously fussy rules carry both the fandom cue and specification failure. Main reservation: The individual misspelling rules are not printed in this still, so the first line depends on established fan knowledge.",
+          "strongest_quality": "The visible pen and the notebook’s famously fussy rules carry both the fandom cue and specification failure.",
+          "main_risk": "The individual misspelling rules are not printed in this still, so the first line depends on established fan knowledge.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "gandalf-refuses-the-ring--03",
+            "contrast_disliked_id": "god-of-the-new-world--01"
+          }
+        }
+      },
+      {
+        "id": "god-of-the-new-world--05",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Light builds his first moral model from criminals named on television, then treats that narrow proxy as a complete definition of evil.",
+        "caption_lines": [
+          "KIRA'S MORAL BENCHMARK",
+          "DATASET: PEOPLE THE NEWS CALLED CRIMINALS",
+          "RESULT: ‘EVIL’ SOLVED"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Keep Light and the pen fully visible in a contained image to the right of a black text rail; the three-line benchmark readout belongs entirely in the rail and must not spill over the hand or face.",
+        "why_it_works": "The narrow television-criminal dataset turns Light's childish moral certainty into a recognizable alignment-eval failure.",
+        "preview": {
+          "renderer": 2,
+          "template": "sidecar-left",
+          "frame_mode": "contain-black",
+          "asset_ids": ["god-of-the-new-world--curated"],
+          "zones": [
+            {
+              "lines": [0, 1, 2],
+              "slot": "left-rail",
+              "style": "status",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.87,
+          "expected_feedback": "Independent prediction: likely like. The dataset line identifies the exact proxy failure instead of vaguely calling Light misaligned. Main reservation: Fans must remember that television crime reports supplied Light's early targets, though the Kira label should bridge that quickly.",
+          "strongest_quality": "The dataset line identifies the exact proxy failure instead of vaguely calling Light misaligned.",
+          "main_risk": "Fans must remember that television crime reports supplied Light's early targets, though the Kira label should bridge that quickly.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-ratings-agency-meeting--05",
+            "contrast_disliked_id": "god-of-the-new-world--03"
+          }
+        }
+      },
+      {
+        "id": "god-of-the-new-world--06",
+        "ai_concept": "Value Lock-In",
+        "display_context": "standalone",
+        "source_anchor": "Light's ordinary pen becomes the physical interface through which one person's judgments permanently remove other people from the future.",
+        "caption_lines": ["VALUE LOCK-IN", "NOW AVAILABLE IN BALLPOINT"],
+        "format": "relabel",
+        "frame_guidance": "Use the full curated gesture and keep the pen tip, hand, and Light's face unobscured; place the two short lines at lower left over incidental sleeve and bookshelf detail.",
+        "why_it_works": "The cheery product language collides with a literal pen that gives one teenager irreversible write access to humanity.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["god-of-the-new-world--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Independent prediction: likely like. The visible pen is both the recognition hinge and the mechanism of irreversible value lock-in. Main reservation: The Death Note itself is off-frame, so the Kira pose and ballpoint line must be enough for instant recognition.",
+          "strongest_quality": "The visible pen is both the recognition hinge and the mechanism of irreversible value lock-in.",
+          "main_risk": "The Death Note itself is off-frame, so the Kira pose and ballpoint line must be enough for instant recognition.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "drinking-bird-autopilot--01",
+            "contrast_disliked_id": "god-of-the-new-world--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "tetsuo-outgrows-containment",
+    "ideas": [
+      {
+        "id": "tetsuo-outgrows-containment--05",
+        "ai_concept": "AI Takeoff",
+        "display_context": "standalone",
+        "source_anchor": "Tetsuo's stadium-scale mutation dwarfing the human figure and every containment measure around him.",
+        "caption_lines": ["CAPABILITIES", "CONTAINMENT"],
+        "format": "relabel",
+        "frame_guidance": "Retain the reviewed orange-on-black labels: CAPABILITIES in the upper-left mass and CONTAINMENT over the lower-left mutation, never on the central mutant face or the tiny foreground figure. Let the authentic still fill the frame.",
+        "why_it_works": "The grotesque size ratio turns the capability-control gap into a literal visual comparison.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["tetsuo-outgrows-containment--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top-left",
+              "style": "label",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom-left",
+              "style": "label",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Independent prediction: likely like. Two labels and one obscene size difference deliver the entire capability-control analogy at a glance. Main reservation: The labels must remain compact enough that CAPABILITIES does not swallow the mutation's central face.",
+          "strongest_quality": "Two labels and one obscene size difference deliver the entire capability-control analogy at a glance.",
+          "main_risk": "The labels must remain compact enough that CAPABILITIES does not swallow the mutation's central face.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "tetsuo-outgrows-containment--05",
+            "contrast_disliked_id": "tetsuo-outgrows-containment--06"
+          }
+        }
+      },
+      {
+        "id": "tetsuo-outgrows-containment--08",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "Kaneda stands in front of Tetsuo's stadium-filling mutation after years of knowing exactly how combustible Tetsuo was before anyone amplified him.",
+        "caption_lines": [
+          "RESEARCH TEAM: ‘THE TAKEOFF WAS UNEXPECTED.’",
+          "KANEDA: ‘HAVE YOU MET TETSUO?’"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Keep the mutation and the small foreground figure completely visible; set the imagined exchange together in an external bottom band rather than pretending the speakers occupy clean negative space.",
+        "why_it_works": "Kaneda's lifelong familiarity with Tetsuo punctures the institutional claim that this particular deployment disaster was unforeseeable.",
+        "preview": {
+          "renderer": 2,
+          "template": "band-bottom",
+          "frame_mode": "contain-black",
+          "asset_ids": ["tetsuo-outgrows-containment--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "dialogue",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.74,
+          "expected_feedback": "Independent prediction: likely neutral. The Kaneda-Tetsuo history is an emotional recognition hinge that makes the deployment critique personal. Main reservation: The dialogue is invented, so it depends on sounding natural enough to read as commentary rather than fake canon.",
+          "strongest_quality": "The Kaneda-Tetsuo history is an emotional recognition hinge that makes the deployment critique personal.",
+          "main_risk": "The dialogue is invented, so it depends on sounding natural enough to read as commentary rather than fake canon.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "tetsuo-outgrows-containment--05",
+            "contrast_disliked_id": "tetsuo-outgrows-containment--07"
+          }
+        }
+      },
+      {
+        "id": "tetsuo-outgrows-containment--09",
+        "ai_concept": "AI Takeoff",
+        "display_context": "standalone",
+        "source_anchor": "The expanding mutation still has Tetsuo's screaming face and voice inside it, including his iconic cries for Kaneda.",
+        "caption_lines": ["THE SCALING CURVE", "IS SCREAMING ‘KANEDA!’"],
+        "format": "collision",
+        "frame_guidance": "Preserve the central screaming mutant face and the tiny foreground figure; place both lines at lower left over incidental mutation mass and let the body-horror scale be the punchline.",
+        "why_it_works": "A sterile scaling curve becoming a screaming Akira monster is a bizarre but instantly legible qualitative-takeoff image.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["tetsuo-outgrows-containment--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.81,
+          "expected_feedback": "Independent prediction: likely like. ‘KANEDA!’ turns a generic capability curve into one exact emotional sound from the source. Main reservation: Viewers who remember the mutation but not the shouted name may read it as surrealism before the joke clicks.",
+          "strongest_quality": "‘KANEDA!’ turns a generic capability curve into one exact emotional sound from the source.",
+          "main_risk": "Viewers who remember the mutation but not the shouted name may read it as surrealism before the joke clicks.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "tetsuo-outgrows-containment--05",
+            "contrast_disliked_id": "tetsuo-outgrows-containment--06"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "sit-tight-and-assess",
+    "ideas": [
+      {
+        "id": "sit-tight-and-assess--01",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "President Orlean answers a 99.78% extinction probability with the exact phrase ‘sit tight and assess.’",
+        "caption_lines": [
+          "EXTINCTION PROBABILITY: 99.78%",
+          "Sit tight and assess."
+        ],
+        "format": "canon",
+        "frame_guidance": "Retain the exact approved number and line, using Dibiasky's stunned reaction as the visual reply; place both lines at upper right in open office space so her face remains completely clear.",
+        "why_it_works": "The exact probability and exact euphemism form a complete governance-failure joke without added explanation.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["sit-tight-and-assess--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Independent prediction: likely like. Two canonical facts already contain the entire joke and the entire risk analogy. Main reservation: Orlean is not in the curated frame, so Dibiasky's recognizable disbelief has to read as the reaction to the quoted decision.",
+          "strongest_quality": "Two canonical facts already contain the entire joke and the entire risk analogy.",
+          "main_risk": "Orlean is not in the curated frame, so Dibiasky's recognizable disbelief has to read as the reaction to the quoted decision.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "sit-tight-and-assess--01",
+            "contrast_disliked_id": "sit-tight-and-assess--02"
+          }
+        }
+      },
+      {
+        "id": "sit-tight-and-assess--06",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "The administration’s delay eventually hardens into the source’s canonical public command: ‘Don’t Look Up.’",
+        "caption_lines": ["PLANETARY DEFENSE POLICY:", "DON’T LOOK UP."],
+        "format": "relabel",
+        "frame_guidance": "Preserve Dibiasky's whole face and shoulders; place the short policy relabel over the open upper-right office background, well clear of her expression.",
+        "why_it_works": "The movie title becomes the administration’s entire catastrophe policy, compressing denial and governance failure into four source-native words.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["sit-tight-and-assess--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.69,
+          "expected_feedback": "Independent prediction: likely neutral. The most recognizable phrase in the source doubles cleanly as a disastrous policy label. Main reservation: The slogan belongs to the later public campaign, while this frame is the earlier Oval Office briefing.",
+          "strongest_quality": "The most recognizable phrase in the source doubles cleanly as a disastrous policy label.",
+          "main_risk": "The slogan belongs to the later public campaign, while this frame is the earlier Oval Office briefing.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "sit-tight-and-assess--01",
+            "contrast_disliked_id": "sit-tight-and-assess--03"
+          }
+        }
+      },
+      {
+        "id": "sit-tight-and-assess--05",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "Dibiasky realizes that demanding still more evidence is not neutral when the remaining intervention window only moves in one direction.",
+        "caption_lines": [
+          "WHEN ‘WAIT FOR MORE EVIDENCE’",
+          "IS THE IRREVERSIBLE DECISION"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Dibiasky's worried reaction without any facial overlap; keep both compact lines together at lower right over open office background and let the quiet close-up carry the dread.",
+        "why_it_works": "It reframes delay itself as the consequential choice, which is the scene's precise governance trap.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["sit-tight-and-assess--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.68,
+          "expected_feedback": "Independent prediction: likely neutral. It names the hidden asymmetry that makes ‘assess’ an action rather than a pause. Main reservation: Without the exact probability or canonical quote, the idea relies more heavily on the still for scene-level specificity.",
+          "strongest_quality": "It names the hidden asymmetry that makes ‘assess’ an action rather than a pause.",
+          "main_risk": "Without the exact probability or canonical quote, the idea relies more heavily on the still for scene-level specificity.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "sit-tight-and-assess--01",
+            "contrast_disliked_id": "sit-tight-and-assess--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "sol-only-takes-an-arm",
+    "ideas": [
+      {
+        "id": "sol-only-takes-an-arm--11",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "The military’s last-resort control measure is an orbital laser fired into Neo-Tokyo, leaving a vast destructive footprint around the target it is meant to contain.",
+        "caption_lines": [
+          "THE MILITARY’S CONTROL PLAN",
+          "HAD A TOKYO-SIZED BLAST RADIUS."
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep Tetsuo's face and severed-arm wound fully visible; place the compact two-line blast-radius collision at upper left over cape and rubble, stopping before his face.",
+        "why_it_works": "Calling a city-striking orbital weapon a control plan makes the intervention’s own deployment risk impossible to miss.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["sol-only-takes-an-arm--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.68,
+          "expected_feedback": "Independent prediction: likely neutral. It shifts the hinge from Tetsuo’s retaliation to the control intervention’s absurd collateral footprint. Main reservation: The frame proves Tetsuo’s injury more directly than the off-screen damage across Neo-Tokyo.",
+          "strongest_quality": "It shifts the hinge from Tetsuo’s retaliation to the control intervention’s absurd collateral footprint.",
+          "main_risk": "The frame proves Tetsuo’s injury more directly than the off-screen damage across Neo-Tokyo.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "ed-209-misfires--04",
+            "contrast_disliked_id": "sol-only-takes-an-arm--05"
+          }
+        }
+      },
+      {
+        "id": "sol-only-takes-an-arm--12",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "After conventional military force fails, the Colonel escalates to SOL—an orbital laser whose name literally means sun.",
+        "caption_lines": ["DEFENSE IN DEPTH:", "TANKS. THEN THE SUN."],
+        "format": "relabel",
+        "frame_guidance": "Keep Tetsuo's face and wound unobscured; set the short escalation ladder at upper left over the red cape and rubble, allowing only incidental overlap with the soft body region.",
+        "why_it_works": "The name SOL turns an already deranged escalation ladder into a compact, source-native defense-in-depth joke.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["sol-only-takes-an-arm--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.69,
+          "expected_feedback": "Independent prediction: likely neutral. The source weapon’s name supplies the entire second beat in three words. Main reservation: The frame shows only the aftermath; viewers need enough Akira recall to know SOL is the orbital ‘sun.’",
+          "strongest_quality": "The source weapon’s name supplies the entire second beat in three words.",
+          "main_risk": "The frame shows only the aftermath; viewers need enough Akira recall to know SOL is the orbital ‘sun.’",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "ed-209-misfires--04",
+            "contrast_disliked_id": "sol-only-takes-an-arm--06"
+          }
+        }
+      },
+      {
+        "id": "sol-only-takes-an-arm--10",
+        "ai_concept": "Reversibility",
+        "display_context": "standalone",
+        "source_anchor": "The Colonel's last-resort strike leaves an extremely capable and now injured Tetsuo alive, angry, and able to retaliate.",
+        "caption_lines": [
+          "A LAST RESORT WITH AN ANGRY SURVIVOR",
+          "IS JUST THE FIRST ESCALATION."
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep the full aftermath frame and preserve Tetsuo's face and wound; place the compact two-line inversion at upper left over incidental cape and rubble.",
+        "why_it_works": "The reversal turns ‘last resort’ from comforting language into an irreversible escalation when the target survives it.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["sol-only-takes-an-arm--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "plain",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.67,
+          "expected_feedback": "Independent prediction: likely neutral. It focuses on the irreversible strategic consequence instead of recycling the rejected arm-as-objective premise. Main reservation: The wording is broadly applicable and needs Tetsuo's unmistakable wounded-survivor frame to stay scene-specific.",
+          "strongest_quality": "It focuses on the irreversible strategic consequence instead of recycling the rejected arm-as-objective premise.",
+          "main_risk": "The wording is broadly applicable and needs Tetsuo's unmistakable wounded-survivor frame to stay scene-specific.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "sit-tight-and-assess--01",
+            "contrast_disliked_id": "sol-only-takes-an-arm--07"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "drinking-bird-autopilot",
+    "ideas": [
+      {
+        "id": "drinking-bird-autopilot--01",
+        "ai_concept": "Runtime Monitoring",
+        "display_context": "standalone",
+        "source_anchor": "Homer delegates every nuclear-plant confirmation prompt to a drinking bird that repeatedly presses Y.",
+        "caption_lines": ["HUMAN IN THE LOOP"],
+        "format": "relabel",
+        "frame_guidance": "Keep the exact approved one-label joke in the empty upper-left wall area; the bird, beak, keyboard, and monitor remain completely visible.",
+        "why_it_works": "The bird is the whole joke and the most brutally honest diagram of rubber-stamp oversight.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["drinking-bird-autopilot--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top-left",
+              "style": "label",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Independent prediction: likely like. One iconic prop collapses performative human approval into a perfectly legible visual. Main reservation: The label has to stay left of the monitor so the bird remains the immediate focal point.",
+          "strongest_quality": "One iconic prop collapses performative human approval into a perfectly legible visual.",
+          "main_risk": "The label has to stay left of the monitor so the bird remains the immediate focal point.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "drinking-bird-autopilot--01",
+            "contrast_disliked_id": "drinking-bird-autopilot--02"
+          }
+        }
+      },
+      {
+        "id": "drinking-bird-autopilot--04",
+        "ai_concept": "Automation Bias",
+        "display_context": "standalone",
+        "source_anchor": "Homer does not automate reactor judgment; he automates the gesture that lets him pretend he exercised it.",
+        "caption_lines": [
+          "HOMER AUTOMATED THE PART WHERE HE PRETENDS TO CHECK."
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep the bird, beak-to-key action, and keyboard visible; place the compact sentence at upper right over the monitor casing and wall, allowing incidental overlap with the soft screen area.",
+        "why_it_works": "The blunt stand-up framing distinguishes useful automation from automating away the only human judgment the process claimed to have.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["drinking-bird-autopilot--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.87,
+          "expected_feedback": "Independent prediction: likely like. It isolates the exact part of human oversight Homer outsourced: pretending to inspect before approving. Main reservation: The sentence is longer than the one-label classic, so the external band must keep it effortless to scan.",
+          "strongest_quality": "It isolates the exact part of human oversight Homer outsourced: pretending to inspect before approving.",
+          "main_risk": "The sentence is longer than the one-label classic, so the external band must keep it effortless to scan.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "drinking-bird-autopilot--01",
+            "contrast_disliked_id": "drinking-bird-autopilot--02"
+          }
+        }
+      },
+      {
+        "id": "drinking-bird-autopilot--05",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "A mechanical bird operates Homer's computer unattended with exactly one available action: pressing the Y key.",
+        "caption_lines": ["COMPUTER-USE AGENT (1995)", "PERMISSIONS: Y KEY"],
+        "format": "relabel",
+        "frame_guidance": "Put the compact current-tech relabel at upper right over the monitor casing; preserve the bird, its beak-to-key geometry, and keyboard as the full visual proof.",
+        "why_it_works": "Reframing Homer's toy as an early computer-use agent makes constrained tool permissions funny while showing that narrow permissions do not make delegation safe.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["drinking-bird-autopilot--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "status",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Independent prediction: likely like. The modern product category maps cleanly onto an iconic old prop without explaining the scene. Main reservation: The safety lesson is implicit in the unattended nuclear context, which the cropped workstation only partially communicates.",
+          "strongest_quality": "The modern product category maps cleanly onto an iconic old prop without explaining the scene.",
+          "main_risk": "The safety lesson is implicit in the unattended nuclear context, which the cropped workstation only partially communicates.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "drinking-bird-autopilot--01",
+            "contrast_disliked_id": "drinking-bird-autopilot--03"
+          }
+        }
+      }
+    ]
+  }
+]

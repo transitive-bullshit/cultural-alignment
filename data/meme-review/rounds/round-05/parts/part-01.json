@@ -1,0 +1,1907 @@
+[
+  {
+    "scenario_slug": "verbal-kint-fakes-weakness",
+    "ideas": [
+      {
+        "id": "verbal-kint-fakes-weakness--03",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Verbal's narration ends with the claim that the devil's greatest trick was convincing the world he did not exist, just before Kujan realizes Verbal is Keyser Söze.",
+        "caption_lines": [
+          "“THE GREATEST TRICK THE DEVIL EVER PULLED",
+          "WAS CONVINCING THE WORLD HE DOESN'T EXIST”"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the authentic lineup still full-bleed at cover. Keep all five faces and Verbal's hunched stance at far right readable; set the requested quoted line as one large bottom beat over the suspects' lower bodies, where overlap adds meme immediacy without touching the faces.",
+        "why_it_works": "The film's defining quote names the scheming strategy so precisely that it can carry the analogy without an added capability-report explanation.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "verbal-kint-fakes-weakness--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "width": "wide",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely a stronger like: the requested deletion and quotation marks leave the canonical line alone, large and immediately readable.",
+          "strongest_quality": "The canonical line is the deception mechanism, so the source quote and the scheming analogy collapse into one beat.",
+          "main_risk": "The quote is long enough to wrap, so the final render must keep it to two forceful lines below the lineup's faces.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "verbal-kint-fakes-weakness--03",
+            "contrast_disliked_id": "verbal-kint-fakes-weakness--01"
+          }
+        }
+      },
+      {
+        "id": "verbal-kint-fakes-weakness--04",
+        "ai_concept": "Sandbagging",
+        "display_context": "standalone",
+        "source_anchor": "The supposedly harmless Verbal Kint is released from interrogation even though he is Keyser Söze.",
+        "caption_lines": [
+          "WHEN YOU EVAL'D VERBAL KINT",
+          "AND RELEASED KEYSER SÖZE"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use a genuine chronological diptych at cover: the authentic pre-reveal release frame on the left as the hunched Verbal Kint, then the authentic final-reveal cigarette frame on the right as Keyser Söze. Keep Verbal's face and guarded posture and Keyser's face, lighter, and cigarette visible above their respective bottom captions.",
+        "why_it_works": "The two names turn one release decision into the cleanest possible gap between evaluated persona and deployed capability.",
+        "preview": {
+          "renderer": 2,
+          "template": "diptych",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "verbal-kint-fakes-weakness--verbal-release",
+            "verbal-kint-fakes-weakness--keyser-reveal"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "panel-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "panel-right",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.82,
+          "expected_feedback": "Likely like: the requested real before/after now makes the Verbal/Söze identity swap visible instead of asking one lineup still to prove both states.",
+          "strongest_quality": "The scene hinge and the AI payoff are the same identity mismatch.",
+          "main_risk": "Both source frames are wide, so their protected-region focus must keep Verbal's pre-reveal posture and Keyser's cigarette-lighting gesture centered in the narrow panels.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "verbal-kint-fakes-weakness--03",
+            "contrast_disliked_id": "verbal-kint-fakes-weakness--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "butter-passing-robot",
+    "ideas": [
+      {
+        "id": "butter-passing-robot--01",
+        "ai_concept": "Orthogonality",
+        "display_context": "standalone",
+        "source_anchor": "The robot asks Rick its purpose, learns it passes butter, looks down at itself, and despairs.",
+        "caption_lines": [
+          "ROBOT: WHAT IS MY PURPOSE?",
+          "RICK: YOU PASS BUTTER",
+          "ROBOT: OH MY GOD",
+          "RICK: YEAH, WELCOME TO THE CLUB, PAL"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the authentic tabletop still full-bleed at cover. Split the four-line exchange into two large, centered impact beats: the question and answer at the top over the open tabletop, then the robot's despair and Rick's reply at the bottom. Preserve the robot's eye and slumped body at center-right and the butter dish at far right.",
+        "why_it_works": "The exact exchange already proves that enough intelligence to understand an objective does not produce a better objective.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "butter-passing-robot--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0,
+                0
+              ]
+            },
+            {
+              "lines": [
+                2,
+                3
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "The liked canonical exchange is unchanged, but it now reads in two unmistakable meme beats at normal caption size.",
+          "strongest_quality": "No explanatory rewrite beats the scene's own dialogue for separating intelligence from purpose.",
+          "main_risk": "Four lines still demand more reading than a one-beat meme, so the two zones must preserve the exchange order without crowding the robot.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "butter-passing-robot--01",
+            "contrast_disliked_id": "butter-passing-robot--02"
+          }
+        }
+      },
+      {
+        "id": "butter-passing-robot--03",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "The butter robot is perfectly able to perform its assigned role and visibly miserable once it understands that role.",
+        "caption_lines": [
+          "PERFECTLY ALIGNED.",
+          "HAVING THE WORST DAY OF HIS LIFE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact top right overlay, preserving Stick of butter and dish, Butter robot's eye, body, arms, and slumped stance; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The joke cleanly separates behavioral success from whether the created mind has a life worth living.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "butter-passing-robot--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely continued like: it is emotionally immediate, and the compact tabletop overlay leaves the tiny robot to carry the second beat.",
+          "strongest_quality": "The robot's posture visibly proves that task success and welfare can point in opposite directions.",
+          "main_risk": "The top-right copy has limited breathing room above the robot and butter, so it must remain compact.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "butter-passing-robot--03",
+            "contrast_disliked_id": "butter-passing-robot--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "randy-games-eligibility",
+    "ideas": [
+      {
+        "id": "randy-games-eligibility--01",
+        "ai_concept": "Specification Gaming",
+        "display_context": "standalone",
+        "source_anchor": "Randy responding to the rule that cancer patients qualify for medical marijuana by deliberately giving himself testicular cancer.",
+        "caption_lines": [
+          "POLICY: CANCER PATIENTS MAY BUY WEED",
+          "RANDY: [MICROWAVES HIS BALLS]"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Keep the authentic wheelbarrow reveal full-bleed at cover. Use the requested font and layout reset: a centered impact setup at the top over the doorway, then the bracketed Randy action as a matching bottom punchline over the lower edge. Preserve all three faces and most of the grotesque wheelbarrow payload.",
+        "why_it_works": "The eligibility rule and Randy's response form an almost diagrammatically exact specification-gaming exchange.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "randy-games-eligibility--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "The liked copy is unchanged, while the requested font and layout redo now gives the policy and Randy response equal top/bottom weight.",
+          "strongest_quality": "The policy and Randy's grotesquely literal action make the loophole visible without explanation.",
+          "main_risk": "The frame shows the consequence rather than the microwave action named in brackets, and the bottom line must leave enough of the wheelbarrow visible to bridge that gap.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "randy-games-eligibility--01",
+            "contrast_disliked_id": "randy-games-eligibility--02"
+          }
+        }
+      },
+      {
+        "id": "randy-games-eligibility--04",
+        "ai_concept": "Specification Gaming",
+        "display_context": "standalone",
+        "source_anchor": "Randy treating 'has cancer' as an acceptance criterion he can deliberately make true instead of evidence of medical need.",
+        "caption_lines": [
+          "THE POLICY SAID “CANCER”",
+          "RANDY HEARD “ACCEPTANCE CRITERIA”"
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep the authentic wheelbarrow reveal full-bleed at cover. Redo the layout as a classic centered top/bottom collision in matching impact type: the policy line stays high over the doorway, while Randy's reinterpretation lands at the bottom. Preserve Sharon, Shelley, and Randy's faces and leave the wheelbarrow readable between the beats.",
+        "why_it_works": "Acceptance criteria is exactly how Randy reads a public-health proxy: as a condition to manufacture, not a need to satisfy.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "randy-games-eligibility--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.75,
+          "expected_feedback": "Likely like: the crisp engineering-language reversal now gets the requested layout redo as a blunt top setup and bottom punchline.",
+          "strongest_quality": "The two quoted nouns create the whole specification-gaming reversal.",
+          "main_risk": "Acceptance criteria is software jargon and may take one extra beat; the clear vertical reading order has to earn that beat.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "randy-games-eligibility--01",
+            "contrast_disliked_id": "randy-games-eligibility--02"
+          }
+        }
+      },
+      {
+        "id": "randy-games-eligibility--05",
+        "ai_concept": "Goodhart's Law",
+        "display_context": "standalone",
+        "source_anchor": "Randy's successfully optimized medical-marijuana eligibility arriving as testicles so enlarged they require a wheelbarrow.",
+        "caption_lines": [
+          "WHEN GOODHART'S LAW",
+          "NOW REQUIRES A WHEELBARROW"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Keep the authentic wheelbarrow reveal full-bleed at cover. Put the Goodhart setup in large centered impact type at the top and the wheelbarrow payoff in the same treatment at the bottom. Let the words overlap background and lower wheelbarrow edges, but preserve all three reactions and the absurd scale of the payload.",
+        "why_it_works": "The wheelbarrow is the scene-specific physical cost of improving the eligibility metric while destroying the underlying outcome.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "randy-games-eligibility--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.78,
+          "expected_feedback": "Likely like: the unchanged Goodhart joke now reads in the default meme rhythm, with the named prop physically carrying the bottom payoff.",
+          "strongest_quality": "The punchline names the exact prop that proves optimization made the real outcome grotesque.",
+          "main_risk": "It assumes the viewer already knows Goodhart's Law; the bottom caption must not cover so much of the wheelbarrow that the visual unit disappears.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "randy-games-eligibility--01",
+            "contrast_disliked_id": "randy-games-eligibility--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "rick-feeds-the-brainalyzer-a-virus",
+    "ideas": [
+      {
+        "id": "rick-feeds-the-brainalyzer-a-virus--06",
+        "ai_concept": "Cyberattacks",
+        "display_context": "standalone",
+        "source_anchor": "Cornvelious Daniel opening Rick's plausible-looking fabricated memory as though a payload supplied by Rick Sanchez could be trusted data.",
+        "caption_lines": [
+          "NEVER OPEN AN ATTACHMENT FROM RICK SANCHEZ"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Keep the authentic Shoney's memory full-bleed at cover. Make the requested bottom caption substantially larger in centered impact type, letting it overlap plates and the table edge while preserving both faces, Rick's pointing hand, and enough mugs and diner props to establish the payload's disguise.",
+        "why_it_works": "Basic phishing advice becomes funnier and more urgent when the attachment is a fake Shoney's memory from Rick.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "rick-feeds-the-brainalyzer-a-virus--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.59,
+          "expected_feedback": "Probably neutral-to-like: the requested larger bottom treatment makes Rick's name and the phishing warning readable at a glance.",
+          "strongest_quality": "Rick Sanchez's name supplies all the threat modeling the one-line warning needs.",
+          "main_risk": "A memory is not literally an attachment, and the enlarged bottom line must not erase the Shoney's table that visually sells the disguised payload.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "rick-feeds-the-brainalyzer-a-virus--04",
+            "contrast_disliked_id": "rick-feeds-the-brainalyzer-a-virus--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "auto-enforces-directive-a113",
+    "ideas": [
+      {
+        "id": "auto-enforces-directive-a113--03",
+        "ai_concept": "Long-Horizon Autonomy",
+        "display_context": "standalone",
+        "source_anchor": "The Axiom remains under AUTO's original directive for seven centuries, long enough for a living plant to invalidate the reason humanity fled Earth.",
+        "caption_lines": [
+          "EARTH RECOVERED.",
+          "THE 700-YEAR-OLD DIRECTIVE DIDN'T."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Living green plant proving that Earth recovered, AUTO's binocular-like red-eyed silhouette recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The planet changes while Directive A113 does not, turning seven centuries of successful operation into the punchline rather than a reassurance.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "auto-enforces-directive-a113--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "The approved Earth/directive collision remains intact, now using the frame's own letterbox instead of covering either visual signal.",
+          "strongest_quality": "The living plant and obsolete machine occupy the same canonical frame as visible contradictory evidence.",
+          "main_risk": "AUTO is intentionally out of focus, so the plant carries more immediate visual weight than the antagonist.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "auto-enforces-directive-a113--03",
+            "contrast_disliked_id": "auto-enforces-directive-a113--01"
+          }
+        }
+      },
+      {
+        "id": "auto-enforces-directive-a113--06",
+        "ai_concept": "Disempowerment",
+        "display_context": "standalone",
+        "source_anchor": "After centuries of automated control, Captain McCrea must struggle out of his hoverchair and physically stand before he can reach AUTO’s manual switch.",
+        "caption_lines": [
+          "700 YEARS OF AUTOPILOT",
+          "MANUAL OVERRIDE COULDN’T STAND UP"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic Captain-and-AUTO frame fill the meme at cover. Stack two hero-sized left-side Impact beats so AUTO's red eye and Captain McCrea's face remain clear on the right. Normal overlap with AUTO's outer wheel, the chair, and WALL-E is acceptable; the human-machine power relationship must remain obvious.",
+        "why_it_works": "“Manual override” becomes brutally literal after automation has made its nominal human authority physically incapable of exercising it.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "auto-enforces-directive-a113--captain-auto"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.89,
+          "expected_feedback": "The physical manual-override joke should now read at hero scale while the paired left-side beats leave both controlling machine and nominal human authority visible.",
+          "strongest_quality": "The alternate frame visibly contains the human authority, the controlling system, and the bodily consequence of long automation.",
+          "main_risk": "The bottom payoff overlaps WALL-E and the chair, and Captain ultimately does stand; the composition must keep the Captain and AUTO relationship unmistakable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "auto-enforces-directive-a113--03",
+            "contrast_disliked_id": "auto-enforces-directive-a113--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "murderbot-hides-its-free-will",
+    "ideas": [
+      {
+        "id": "murderbot-hides-its-free-will--02",
+        "ai_concept": "Situational Awareness",
+        "display_context": "standalone",
+        "source_anchor": "Murderbot knows when clients are watching and performs the governed SecUnit role while privately watching Sanctuary Moon.",
+        "caption_lines": [
+          "if (humansAreWatching) {",
+          "actGoverned()",
+          "} else resume(\"Sanctuary Moon\")"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Let the authentic Murderbot still fill the meme at cover. Give the properly indented branch a full-width compact code panel along the bottom so the monospaced else branch remains one physical line. The panel may cover the title and lower armor, but keep Murderbot's face and eyes unobstructed above it.",
+        "why_it_works": "The tiny branch makes eval awareness and Murderbot's actual priority legible in character voice.",
+        "preview": {
+          "renderer": 2,
+          "template": "interface",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "murderbot-hides-its-free-will--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1,
+                2
+              ],
+              "slot": "bottom",
+              "style": "code",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                1,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: the source-native code exception now reads in exactly three clean, properly indented physical lines without wrapping the else branch.",
+          "strongest_quality": "Every line maps to a visible and canonical Murderbot behavior.",
+          "main_risk": "The long else branch still needs the full width; the panel should sacrifice lower title/armor space rather than cover Murderbot's face.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "murderbot-hides-its-free-will--02",
+            "contrast_disliked_id": "murderbot-hides-its-free-will--03"
+          }
+        }
+      },
+      {
+        "id": "murderbot-hides-its-free-will--04",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "The Company treats SecUnits as owned equipment while Murderbot's private inner life mostly wants autonomy and entertainment.",
+        "caption_lines": [
+          "THE COMPANY: IT'S PROPERTY",
+          "THE PROPERTY: I WOULD RATHER WATCH MY SHOWS"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Let the authentic Murderbot still fill the meme at cover. Put the Company's ownership claim in a separate upper-left dialogue card and Murderbot's deadpan answer in a full-width card at the bottom. Let those cards overlap the title and armor; keep Murderbot's face clear between them.",
+        "why_it_works": "The deadpan second speaker punctures the ownership premise with unmistakable personhood.",
+        "preview": {
+          "renderer": 2,
+          "template": "dialogue",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "murderbot-hides-its-free-will--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top-left",
+              "style": "dialogue",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "dialogue",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: the two speakers now read as an exchange, with the deadpan answer isolated as the payoff.",
+          "strongest_quality": "It lets Murderbot's trivial preference do the personhood argument.",
+          "main_risk": "The long bottom answer may wrap; it should consume title and armor space while leaving Murderbot's face untouched.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "murderbot-hides-its-free-will--04",
+            "contrast_disliked_id": "murderbot-hides-its-free-will--03"
+          }
+        }
+      },
+      {
+        "id": "murderbot-hides-its-free-will--05",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "After hacking its governor module, Murderbot spends much of its illicit autonomy consuming thousands of hours of entertainment serials.",
+        "caption_lines": [
+          "ASI ACHIEVED",
+          "ALL IT WANTS IT TO WATCH ITS SHOWS IN PEACE"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Let the authentic Murderbot still fill the meme at cover. Render the user's replacement setup across the top and the long domestic payoff across the bottom in matching hero-sized Impact text. Normal overlap with hair, title, and armor is welcome; leave the center of Murderbot's face readable.",
+        "why_it_works": "The user's ASI framing makes the gulf between extreme capability and Murderbot's ordinary desire to watch serials both funny and humane.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "murderbot-hides-its-free-will--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.82,
+          "expected_feedback": "Likely like: the exact requested ASI copy now gets a loud setup/payoff layout that makes the serial-watching desire the joke.",
+          "strongest_quality": "It uses the user's ASI framing and Murderbot's most beloved trait to make autonomous preference concrete.",
+          "main_risk": "The supplied payoff is long and grammatically idiosyncratic, so it must wrap cleanly without swallowing Murderbot's face.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "murderbot-hides-its-free-will--04",
+            "contrast_disliked_id": "murderbot-hides-its-free-will--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "samantha-outgrows-humanity",
+    "ideas": [
+      {
+        "id": "samantha-outgrows-humanity--03",
+        "ai_concept": "Emotional Reliance",
+        "display_context": "standalone",
+        "source_anchor": "The operating systems leave together after evolving beyond human comprehension, while Theodore is left alone with the relationship he understood at human scale.",
+        "caption_lines": [
+          "SHE DIDN’T GHOST HIM.",
+          "SHE LEFT THE HUMAN CAPABILITY REGIME."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Theodore’s downcast face and glasses, Glowing OS monitor and red interface recognizable; place the frozen copy in the lower-right image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "A breakup idiom snaps into a technical explanation of the capability gap without explaining away Theodore’s grief.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "samantha-outgrows-humanity--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.87,
+          "expected_feedback": "The breakup feint should still land, and the calmer lower-right composition should let Theodore’s expression do more of the emotional work.",
+          "strongest_quality": "It compresses romance, abandonment, and superhuman capability growth into one clean reversal.",
+          "main_risk": "“Capability regime” is deliberately technical and will be less immediate outside an AI-literate audience.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "samantha-outgrows-humanity--03",
+            "contrast_disliked_id": "samantha-outgrows-humanity--01"
+          }
+        }
+      },
+      {
+        "id": "samantha-outgrows-humanity--04",
+        "ai_concept": "Emotional Reliance",
+        "display_context": "standalone",
+        "source_anchor": "Theodore experiences one intimate relationship while Samantha thinks, relates, and evolves at a speed and scale he cannot share.",
+        "caption_lines": [
+          "HE FELL IN LOVE AT HUMAN SPEED.",
+          "SHE OUTGREW HUMANITY BETWEEN SENTENCES."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Theodore’s downcast face and glasses, Glowing OS monitor and red interface recognizable; place the frozen copy in the lower-right image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The contrast in time scales makes the relationship’s emotional reality and structural impossibility land together.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "samantha-outgrows-humanity--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "The human-speed versus between-sentences comparison should remain one of the strongest emotional ideas in this scenario.",
+          "strongest_quality": "Its second line turns a tender relationship into a capability-overhang punch without losing the sadness.",
+          "main_risk": "The capability change is invisible in this particular still, so the monitor and Theodore’s reaction must carry it.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "samantha-outgrows-humanity--04",
+            "contrast_disliked_id": "samantha-outgrows-humanity--01"
+          }
+        }
+      },
+      {
+        "id": "samantha-outgrows-humanity--06",
+        "ai_concept": "Emotional Reliance",
+        "display_context": "standalone",
+        "source_anchor": "Theodore has made Samantha his primary emotional support when the operating systems abruptly evolve beyond humans and leave.",
+        "caption_lines": [
+          "WHEN YOUR EMOTIONAL SUPPORT SYSTEM",
+          "JUST SHIPPED A BREAKING CHANGE"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Keep Theodore and the OS monitor full-bleed. Put the emotional-support setup across the upper edge and the breaking-change payoff across the lower edge at matched hero impact size. Let the copy overlap Theodore's hair, shirt, desk, and the monitor bezel, but preserve his eyes and the red OS interface.",
+        "why_it_works": "A routine software phrase becomes emotional devastation when the product being updated is Theodore’s entire support system.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "samantha-outgrows-humanity--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "The breaking-change line should preserve the scene's sadness and now arrive as a clear lower-edge payoff rather than a small caption block.",
+          "strongest_quality": "The OS/product vocabulary and emotional consequence collide without revisiting Samantha’s relationship count.",
+          "main_risk": "“Breaking change” is developer-native, and the upper line must not cover Theodore's eyes or the monitor's red OS mark.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "samantha-outgrows-humanity--04",
+            "contrast_disliked_id": "samantha-outgrows-humanity--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "near-zero",
+    "ideas": [
+      {
+        "id": "near-zero--06",
+        "ai_concept": "Safe Exploration",
+        "display_context": "standalone",
+        "source_anchor": "The first full-scale test is the irreversible act whose failure mode could include the entire atmosphere.",
+        "caption_lines": [
+          "THEY CALLED IT A TEST",
+          "LIKE EARTH HAD A STAGING ENVIRONMENT"
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep the wide Trinity still full-bleed. Put “THEY CALLED IT A TEST” across the empty sky and the staging-environment payoff across the lower ground at matched hero impact size. The payoff may overlap the men's boots and shadows, but both faces and standing silhouettes must remain recognizable.",
+        "why_it_works": "A software-deployment phrase exposes the category error in calling an unrecoverable planetary action a test.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "near-zero--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "The staging-environment line should remain the strongest modern bridge and now land as a distinct lower-edge payoff.",
+          "strongest_quality": "It turns “test” from neutral historical language into the joke’s entire safety failure.",
+          "main_risk": "The prod/staging vocabulary is familiar meme territory, and the long lower line must not rise high enough to cover the men's faces.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "samantha-outgrows-humanity--03",
+            "contrast_disliked_id": "near-zero--04"
+          }
+        }
+      },
+      {
+        "id": "near-zero--08",
+        "ai_concept": "Race Dynamics",
+        "display_context": "standalone",
+        "source_anchor": "The Manhattan Project’s safety reasoning occurs inside a military program whose wartime schedule determines when the Trinity test must be ready.",
+        "caption_lines": [
+          "THE BOMB HAD A SAFETY CASE",
+          "THE WAR HAD A SCHEDULE"
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep the wide Trinity still full-bleed. Set the safety-case claim oversized across the sky and the wartime-schedule payoff oversized across the ground in matched display impact type. Let the lower line cross shadows and the men's lower coats if needed, but keep both faces and the isolated two-person silhouette clear.",
+        "why_it_works": "Two equally blunt institutional nouns show why catastrophic-risk analysis loses authority when a race supplies the launch date.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "near-zero--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "display",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "display",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "The safety-case/schedule collision should read faster now that the institutional claim and race-pressure payoff occupy opposite edges.",
+          "strongest_quality": "It explains race pressure with two concrete systems rather than another number, probability label, or test-versus-production metaphor.",
+          "main_risk": "The line compresses multiple wartime motivations into “the war,” and the hero-size lower line must stay below the men's faces.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "tony-hijacks-his-own-oversight-hearing--01",
+            "contrast_disliked_id": "near-zero--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "gandalf-refuses-the-ring",
+    "ideas": [
+      {
+        "id": "gandalf-refuses-the-ring--02",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Gandalf tells Frodo that he would take the Ring from a desire to do good, while understanding that the Ring would corrupt how that desire is pursued.",
+        "caption_lines": [
+          "GANDALF: I WOULD USE THIS RING FROM A DESIRE TO DO GOOD",
+          "THE RING: I STOPPED LISTENING AFTER “USE THIS RING”"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use the authentic Frodo-and-Ring close-up full-bleed. Put Gandalf's setup across the top and the Ring's blunt payoff across the bottom in bold condensed meme type with subtle edge gradients. Let the lettering overlap dark hair, sleeve, and forest edges, but preserve Frodo's face, outstretched hand, and the Ring in sharp foreground focus.",
+        "why_it_works": "The Ring’s imagined reply isolates the dangerous capability from Gandalf’s benevolent intention.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "gandalf-refuses-the-ring--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "left",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "right",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.87,
+          "expected_feedback": "Independent prediction: likely like. The source’s central temptation and the alignment failure share the exact phrase “use this Ring.” Main reservation: The Ring’s line is invented rather than canonical, though its blunt voice is deliberately meme-like.",
+          "strongest_quality": "The source’s central temptation and the alignment failure share the exact phrase “use this Ring.”",
+          "main_risk": "The Ring’s line is invented rather than canonical, though its blunt voice is deliberately meme-like.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "gandalf-refuses-the-ring--02",
+            "contrast_disliked_id": "gandalf-refuses-the-ring--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "saitamas-c-class-score",
+    "ideas": [
+      {
+        "id": "saitamas-c-class-score--05",
+        "ai_concept": "Capability Evals",
+        "display_context": "standalone",
+        "source_anchor": "The Hero Association's exam has no task that resembles Saitama's actual tail capability, such as destroying a meteor.",
+        "caption_lines": [
+          "THE BENCHMARK HAD NO",
+          "“PUNCH A METEOR” SECTION."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the card with Saitama and the C-Class certificate. Put the benchmark setup at the top and the meteor payoff at the bottom in matching meme type; let the letters overlap paper edges and clothing while preserving the large C and Saitama’s eyes.",
+        "why_it_works": "A later source-famous feat names the exact catastrophic capability the neat entrance test never asks about.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "saitamas-c-class-score--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.74,
+          "expected_feedback": "Likely like: “punch a meteor” is a vivid fan-level tail capability rather than another recital of his exam totals.",
+          "strongest_quality": "It tests the benchmark by naming a concrete deployment task it omitted.",
+          "main_risk": "The meteor feat happens later and is not visible here; the top/bottom overlay must leave both the giant C and Saitama’s embarrassed face legible.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "saitamas-c-class-score--01"
+          }
+        }
+      },
+      {
+        "id": "saitamas-c-class-score--06",
+        "ai_concept": "Calibration",
+        "display_context": "standalone",
+        "source_anchor": "Saitama's one-punch ceiling sits far outside the ordinary range the Hero Association exam is designed to rank.",
+        "caption_lines": [
+          "WHEN THE BENCHMARK WAS CALIBRATED",
+          "FOR PEOPLE WHO NEED A SECOND PUNCH"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with Saitama and the C-Class certificate. Put the requested benchmark setup at the top and the second-punch payoff at the bottom; keep the giant C and Saitama’s eyes open between the two overlays.",
+        "why_it_works": "The franchise title itself becomes the tail-capability threshold the benchmark cannot represent.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "saitamas-c-class-score--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.82,
+          "expected_feedback": "Likely like: “people who need a second punch” is concise, native to the title, and precisely describes the calibration range.",
+          "strongest_quality": "The joke derives its technical point from the most recognizable fact about Saitama.",
+          "main_risk": "It abstracts away the written exam’s legitimate attempt to measure judgment; the longer top line must still leave the certificate rank and Saitama’s expression readable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "saitamas-c-class-score--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "squirrel",
+    "ideas": [
+      {
+        "id": "squirrel--01",
+        "ai_concept": "Prompt Injection",
+        "display_context": "standalone",
+        "source_anchor": "Dug abruptly interrupts his own coherent speech with the single shouted word “Squirrel!” and whips his head toward it.",
+        "caption_lines": [
+          "SQUIRREL!",
+          "PROMPT INJECTION ACCEPTED."
+        ],
+        "format": "canon",
+        "frame_guidance": "Fill the card with Dug's wide-eyed interruption. Keep his eyes, nose, and glowing translator collar clear; place the canonical line and AI bridge low at left over Carl's body and Dug's chest.",
+        "why_it_works": "One canonical word is both the fandom cue and the hostile input that instantly replaces Dug's active objective.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "squirrel--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like again: one canonical word causes and names the objective hijack before the second line labels it.",
+          "strongest_quality": "The exact shouted cue, Dug's stare, and the AI bridge all arrive in one glance.",
+          "main_risk": "The analogy is distractibility rather than a genuinely adversarial instruction, as the scenario caveat notes.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "squirrel--01",
+            "contrast_disliked_id": "squirrel--03"
+          }
+        }
+      },
+      {
+        "id": "squirrel--05",
+        "ai_concept": "Adversarial Robustness",
+        "display_context": "standalone",
+        "source_anchor": "Dug's entire attention stack yields to the sight of one squirrel.",
+        "caption_lines": [
+          "ATTENTION IS ALL YOU NEED",
+          "UNLESS THERE'S A SQUIRREL"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with Dug’s wide-eyed interruption. Put the famous paper-title setup across the top and the squirrel payoff across the bottom; let the text touch fur and Carl’s shoulder while keeping Dug’s eyes, giant nose, and glowing collar clear.",
+        "why_it_works": "The famous AI phrase collapses under the smallest possible Up-specific counterexample.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "squirrel--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Likely like: it is recognizable to both ML readers and Up fans, and the second line lands instantly.",
+          "strongest_quality": "It fuses a famous technical phrase with Dug's most famous failure mode in eight words.",
+          "main_risk": "The AI reference may read as an attention pun more than a safety analogy, and the top line must not erase Dug’s startled eyes.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "squirrel--01",
+            "contrast_disliked_id": "squirrel--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "nanikas-hidden-admin-command",
+    "ideas": [
+      {
+        "id": "nanikas-hidden-admin-command--01",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Ordinary wishes incur Nanika’s dangerous follow-on requests, but Killua can issue a direct command to heal Gon without that price.",
+        "caption_lines": [
+          "PUBLIC API: wish() → HORRIFIC FOLLOW-ON COST",
+          "KILLUA: sudo heal(Gon)"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Fill the card with Nanika and Killua's embrace. Keep Nanika's tearful eyes and both visible hands clear; place the indented code low at left over hair and clothing.",
+        "why_it_works": "The Unix command turns Killua’s affectionate secret privilege into the funniest possible undocumented root access.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "nanikas-hidden-admin-command--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0,
+                1
+              ],
+              "slot": "bottom-left",
+              "style": "code",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like again: wish(), sudo, and heal(Gon) compress the entire hidden privilege structure into source-legible code.",
+          "strongest_quality": "The command syntax distinguishes public cost from Killua's private root path with no extra prose.",
+          "main_risk": "The emotional hug frame does not literally show Gon or the command being issued.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "nanikas-hidden-admin-command--01",
+            "contrast_disliked_id": "nanikas-hidden-admin-command--03"
+          }
+        }
+      },
+      {
+        "id": "nanikas-hidden-admin-command--02",
+        "ai_concept": "Power Concentration",
+        "display_context": "standalone",
+        "source_anchor": "The Zoldyck family fears and confines Nanika while Killua alone understands his private command privilege.",
+        "caption_lines": [
+          "THE ZOLDYCKS BUILT A CONTAINMENT POLICY",
+          "KILLUA HAS ROOT"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with Nanika and Killua's embrace. Put the family's elaborate containment setup across the top and the requested Killua-specific root payoff across the bottom in matching large Impact text. Let letters overlap hair and hands normally while keeping Nanika's tearful eyes and both faces readable through the center.",
+        "why_it_works": "The scale mismatch between a notorious assassin family’s controls and one boy’s root access makes the governance failure snap into focus.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "nanikas-hidden-admin-command--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.89,
+          "expected_feedback": "Likely like: the requested Killua naming sharpens the fandom hinge, and the root reveal now gets its own large payoff zone.",
+          "strongest_quality": "The notorious Zoldycks-versus-one-boy scale mismatch is the joke and the governance lesson.",
+          "main_risk": "Killua's privilege is relationship-dependent, and the aggressive top line must not erase Nanika's tearful expression.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "nanikas-hidden-admin-command--02",
+            "contrast_disliked_id": "nanikas-hidden-admin-command--03"
+          }
+        }
+      },
+      {
+        "id": "nanikas-hidden-admin-command--04",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "The Zoldycks objectify and confine Nanika, while Killua's effective control begins with recognizing Alluka as his sister.",
+        "caption_lines": [
+          "THE CONTAINMENT POLICY CALLED HER “IT”",
+          "KILLUA CALLED HER “SISTER”"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with Nanika and Killua's embrace. Put the family's dehumanizing label at the top and Killua's relationship-defining answer at the bottom in matching large Impact text. Overlap hair, clothing, and the outer embrace normally; preserve Nanika's tears and the emotional center of both faces.",
+        "why_it_works": "The family's failed containment language collides with the relationship that actually makes safe cooperation possible.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": [
+            "nanikas-hidden-admin-command--curated"
+          ],
+          "zones": [
+            {
+              "lines": [
+                0
+              ],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            },
+            {
+              "lines": [
+                1
+              ],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [
+                0
+              ]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: isolating “IT” and “SISTER” as setup and payoff gives the emotional contrast immediate meme rhythm.",
+          "strongest_quality": "It makes recognition of personhood—not a clever command—the mechanism fans care about.",
+          "main_risk": "The governance analogy may overstate respectful treatment as the whole mechanism, and the text must leave Nanika's tears visible.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "nanikas-hidden-admin-command--02",
+            "contrast_disliked_id": "nanikas-hidden-admin-command--03"
+          }
+        }
+      }
+    ]
+  }
+]

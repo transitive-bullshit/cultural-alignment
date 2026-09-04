@@ -1,0 +1,438 @@
+[
+  {
+    "id": "the-idea-wont-wake-up--curated",
+    "scenario_slug": "the-idea-wont-wake-up",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f1248136a6bbf960be8058b2/gallery-6c762a8ad5bd06ff7ba6b0bd46c56c06a7aae950f39c2b0ba224d5e4cadf68ca.webp",
+    "width": 1920,
+    "height": 800,
+    "alt": "Still from Inception illustrating The Idea Won’t Wake Up",
+    "blur_data_url": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADwAQCdASoIAAMAA8BgJZQCdAEfhu0riAAA/ulWZmXXBBPNWU3LulyoU/rwAA==",
+    "content_hash": "6c762a8ad5bd06ff7ba6b0bd46c56c06a7aae950f39c2b0ba224d5e4cadf68ca",
+    "protected_regions": [
+      {
+        "id": "mal-face",
+        "label": "Mal's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [26, 8, 25, 82]
+      },
+      {
+        "id": "cobb-face",
+        "label": "Cobb's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [59, 4, 23, 88]
+      },
+      {
+        "id": "close-embrace",
+        "label": "Mal and Cobb close together",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [20, 0, 69, 100]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "mann-fakes-the-telemetry--curated",
+    "scenario_slug": "mann-fakes-the-telemetry",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f124813a9a15feeb10ccc656/gallery-6f64e97235167a128d3208af062a54aad4c0086b93c0ffb8b99da565a53b83e8.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from Interstellar illustrating Mann Fakes the Telemetry",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoIAAUAA8BgJZwC7AD0eqnsAP7uNRoZ8ll70AOrk3GRzafFTiuWAAAA",
+    "content_hash": "6f64e97235167a128d3208af062a54aad4c0086b93c0ffb8b99da565a53b83e8",
+    "protected_regions": [
+      {
+        "id": "mann-face",
+        "label": "Mann's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [23, 8, 31, 42]
+      },
+      {
+        "id": "mann-suit",
+        "label": "Mann suit and name patch",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [12, 28, 57, 72]
+      },
+      {
+        "id": "mann-patch",
+        "label": "MANN name patch",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [40, 75, 17, 13]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "serving-the-most-evil-master--curated",
+    "scenario_slug": "serving-the-most-evil-master",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f124813bbcdcd37f4c310b41/gallery-2578a57238d482b1620e13aad6b4d7c217ebcafe18b1188db2733e51bb008d15.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from Minions illustrating Serving the Most Evil Master",
+    "blur_data_url": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAAAQAgCdASoIAAUAA8BgJagCdEf/gegz6z0AAPud9GxuN7mrY2HXHcjVANWFIBu7DkQ/+8+WHpT3AAAA",
+    "content_hash": "2578a57238d482b1620e13aad6b4d7c217ebcafe18b1188db2733e51bb008d15",
+    "protected_regions": [
+      {
+        "id": "minion-crowd",
+        "label": "Minion crowd",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [0, 30, 100, 70]
+      },
+      {
+        "id": "front-minions",
+        "label": "Front-row Minion faces",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [5, 48, 89, 48]
+      },
+      {
+        "id": "lab-setting",
+        "label": "Gru laboratory setting",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 0, 100, 38]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "laughter-beats-screams--curated",
+    "scenario_slug": "laughter-beats-screams",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f124814cbc70c2d5948e8bb7/gallery-ce2119054eaaf7ae7d53f370580ced3b8c08a36a04ad5bbd798066ec81fae81b.webp",
+    "width": 1920,
+    "height": 1038,
+    "alt": "Still from Monsters Inc. illustrating Laughter Beats Screams",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAQCdASoIAAQAA8BgJQBOgCHgmnPsAADh3MyP39PJzZxLrDH32tKIMMp8aCgA",
+    "content_hash": "ce2119054eaaf7ae7d53f370580ced3b8c08a36a04ad5bbd798066ec81fae81b",
+    "protected_regions": [
+      {
+        "id": "sulley",
+        "label": "Sulley walking on laugh floor",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [30, 10, 31, 86]
+      },
+      {
+        "id": "sulley-face",
+        "label": "Sulley's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [38, 19, 18, 25]
+      },
+      {
+        "id": "floor-monsters",
+        "label": "Laugh-floor monsters",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [59, 32, 24, 61]
+      },
+      {
+        "id": "laugh-floor",
+        "label": "Laugh-floor signage and stations",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [0, 0, 100, 45]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "lightning-meets-rubber--curated",
+    "scenario_slug": "lightning-meets-rubber",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f1248151ba7ed35010c14fe4/gallery-353f1ed63cadc1afbe05b2c873e391c63cc1b8c1cc43d1d62d771f022cdad25b.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from One Piece illustrating Lightning Meets Rubber",
+    "blur_data_url": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoIAAUAA8BgJbACdH8AFZ2I+gAA/pUPjA+tDHa5xQoDWGkJIXJ52RNC/mPlzQk1reLNvRP72so3RB05QAA=",
+    "content_hash": "353f1ed63cadc1afbe05b2c873e391c63cc1b8c1cc43d1d62d771f022cdad25b",
+    "protected_regions": [
+      {
+        "id": "enel",
+        "label": "Enel and lightning drums",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [25, 0, 50, 66]
+      },
+      {
+        "id": "luffy",
+        "label": "Luffy rubber-body impact pose",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [54, 38, 39, 62]
+      },
+      {
+        "id": "luffy-face",
+        "label": "Luffy's face and hat",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [63, 51, 23, 31]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "dna-locked-weapons--curated",
+    "scenario_slug": "dna-locked-weapons",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f124815488c4fc760737a303/gallery-b01795ec96ab69c5be8bdc0d39e8cc57ca2ea5b8f77232159f54a81dfd1532c0.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from District 9 illustrating DNA-Locked Weapons",
+    "blur_data_url": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADQAQCdASoIAAUAA8BgJYgCdADdIDGKAAD5Dgg97w563tAyhxyTQzHy3tWubvg2vHWvPoYH4AAAAA==",
+    "content_hash": "b01795ec96ab69c5be8bdc0d39e8cc57ca2ea5b8f77232159f54a81dfd1532c0",
+    "protected_regions": [
+      {
+        "id": "wikus",
+        "label": "Wikus and alien weapon",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [24, 8, 43, 92]
+      },
+      {
+        "id": "wikus-face",
+        "label": "Wikus's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [35, 10, 20, 29]
+      },
+      {
+        "id": "alien",
+        "label": "Alien fighter and weapon",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [57, 0, 39, 100]
+      },
+      {
+        "id": "district9-mark",
+        "label": "District 9 source mark",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [0, 0, 27, 38]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "miss-minutes-takes-root-control--curated",
+    "scenario_slug": "miss-minutes-takes-root-control",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f1248156b993e329a589f42f/gallery-7e66d3ed6c83b3e3a3c4d2b3b4e60154cbf9273dae09cbbebc751bb41adabaf9.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from Loki illustrating Miss Minutes Takes Root Control",
+    "blur_data_url": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAACwAQCdASoIAAUAA8BgJaACdADyfv4AAP7eGIQpuqpQMQUZEaJA5cLEn8BJHyP+H9K8lwAA",
+    "content_hash": "7e66d3ed6c83b3e3a3c4d2b3b4e60154cbf9273dae09cbbebc751bb41adabaf9",
+    "protected_regions": [
+      {
+        "id": "miss-minutes",
+        "label": "Miss Minutes body and clock face",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [31, 3, 40, 97]
+      },
+      {
+        "id": "clock-face",
+        "label": "Miss Minutes expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [35, 5, 31, 48]
+      },
+      {
+        "id": "tva-console",
+        "label": "TVA console and monitor",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [69, 54, 29, 43]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "klendathu-invasion--curated",
+    "scenario_slug": "klendathu-invasion",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f124817792bfc7027fb5b6f4/gallery-c9f71c5f27fb671c5f35ebb271a52c191712715de8e1a0f3da40baaf356efb2c.webp",
+    "width": 1600,
+    "height": 898,
+    "alt": "Still from Starship Troopers illustrating Klendathu Invasion",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACQAQCdASoIAAQAA8BgJZwAAp0/YIIA/uoyuaJW0sA0frlj5CI1rhAAAAA=",
+    "content_hash": "c9f71c5f27fb671c5f35ebb271a52c191712715de8e1a0f3da40baaf356efb2c",
+    "protected_regions": [
+      {
+        "id": "capital-ship",
+        "label": "Burning capital ship",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [0, 0, 65, 86]
+      },
+      {
+        "id": "foreground-ship",
+        "label": "Foreground fleet ship",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [39, 29, 61, 71]
+      },
+      {
+        "id": "plasma-fire",
+        "label": "Arachnid plasma bursts",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [0, 0, 100, 100]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "cypher-chooses-the-steak--curated",
+    "scenario_slug": "cypher-chooses-the-steak",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f1248178b8c4e2e10de0261c/gallery-794b12511451b98640180adc0cb4482a8cc6dde1a502498520b2f451eddc0e4c.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from The Matrix illustrating Cypher Chooses the Steak",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACQAQCdASoIAAQAA8BgJZwAAp1HJ1wA/vGtxO2SBJR+njPmiREzFR+AAAA=",
+    "content_hash": "794b12511451b98640180adc0cb4482a8cc6dde1a502498520b2f451eddc0e4c",
+    "protected_regions": [
+      {
+        "id": "cypher-face",
+        "label": "Cypher's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [57, 4, 29, 73]
+      },
+      {
+        "id": "steak",
+        "label": "Steak and plate",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [35, 65, 34, 35]
+      },
+      {
+        "id": "wine-setting",
+        "label": "Wine and restaurant setting",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [0, 0, 100, 100]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "tony-hijacks-his-own-oversight-hearing--curated",
+    "scenario_slug": "tony-hijacks-his-own-oversight-hearing",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f12481798a13efe9c25f117a/gallery-ddb3c5d1c5b7dcb7eef5a9c6f5c204927dbfa96a0285e1e6b2254f5c1671ad7c.webp",
+    "width": 1920,
+    "height": 1078,
+    "alt": "Still from Iron Man 2 illustrating Tony Hijacks His Own Oversight Hearing",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACQAQCdASoIAAQAA8BgJZwAApz+eWAA/uzcr7if7dWt7Pbnwf+GuobIAAA=",
+    "content_hash": "ddb3c5d1c5b7dcb7eef5a9c6f5c204927dbfa96a0285e1e6b2254f5c1671ad7c",
+    "protected_regions": [
+      {
+        "id": "tony",
+        "label": "Tony using his phone",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [20, 28, 35, 61]
+      },
+      {
+        "id": "phone",
+        "label": "Tony's phone",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [40, 37, 13, 27]
+      },
+      {
+        "id": "hearing-display",
+        "label": "Hijacked hearing-room display",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [51, 5, 47, 70]
+      },
+      {
+        "id": "senate-room",
+        "label": "Senate hearing context",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 0, 100, 100]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "proposal-in-the-heist--curated",
+    "scenario_slug": "proposal-in-the-heist",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f12481859025c26cbbb4d441/gallery-2bb73eb7fa5a20dc34ee81e1df7064c2ae0e8f6013a4f9834a10bc5835dcb235.webp",
+    "width": 1750,
+    "height": 1063,
+    "alt": "Still from Brooklyn Nine-Nine illustrating Proposal in the Heist",
+    "blur_data_url": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACQAQCdASoIAAUAA8BgJQBOgB4/DiAA/n6EijTaHNUhTuWNY/NJQ5xl/ssn6x62WC5AAA==",
+    "content_hash": "2bb73eb7fa5a20dc34ee81e1df7064c2ae0e8f6013a4f9834a10bc5835dcb235",
+    "protected_regions": [
+      {
+        "id": "holt-face",
+        "label": "Holt's reaction",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [9, 10, 20, 52]
+      },
+      {
+        "id": "jake-face",
+        "label": "Jake's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [43, 8, 21, 50]
+      },
+      {
+        "id": "amy-face",
+        "label": "Amy's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [73, 9, 20, 50]
+      },
+      {
+        "id": "trio",
+        "label": "Holt, Jake, and Amy together",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [5, 0, 91, 100]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "independence-day-virus--curated",
+    "scenario_slug": "independence-day-virus",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f12481898471d005866195c6/gallery-6a5210aeb8c0361e6ac644f4e20dd2e1121e5d8ca198af2e02ce4c3308ffd7ef.webp",
+    "width": 1140,
+    "height": 655,
+    "alt": "Still from Independence Day illustrating Independence Day Virus",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAQCdASoIAAUAA8BgJZQCdAD5hLjH3AD+m7NOhEerdI47A11DQP5Qr+hBKyLQAAA=",
+    "content_hash": "6a5210aeb8c0361e6ac644f4e20dd2e1121e5d8ca198af2e02ce4c3308ffd7ef",
+    "protected_regions": [
+      {
+        "id": "levinson-face",
+        "label": "David Levinson's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [53, 0, 36, 90]
+      },
+      {
+        "id": "whiteboard",
+        "label": "Mothership diagram on whiteboard",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [0, 20, 56, 76]
+      },
+      {
+        "id": "levinson",
+        "label": "Levinson explaining the virus",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [46, 0, 54, 100]
+      }
+    ],
+    "annotation_status": "complete"
+  }
+]

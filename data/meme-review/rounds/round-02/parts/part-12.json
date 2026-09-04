@@ -1,0 +1,2023 @@
+[
+  {
+    "scenario_slug": "the-interior-decorator",
+    "ideas": [
+      {
+        "id": "the-interior-decorator--07",
+        "ai_concept": "Hallucination",
+        "display_context": "standalone",
+        "source_anchor": "Paulie’s corrupted relay reduces Valery, a Russian commando dangerous enough to kill sixteen rebels, to a harmless home-design profession.",
+        "caption_lines": [
+          "THE MOST DANGEROUS MAN IN NEW JERSEY",
+          "WAS CLASSIFIED AS HGTV."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a top-right overlay, keeping Paulie’s face during the phone call and Paulie’s body beside the car readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The absurd HGTV category makes the corrupted threat classification instantly legible without replaying the rejected canonical exchange.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-interior-decorator--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.85,
+          "expected_feedback": "The HGTV misclassification should feel like a sharp modern compression of the Pine Barrens misunderstanding.",
+          "strongest_quality": "Valery and New Jersey make a broad classification joke belong unmistakably to this episode.",
+          "main_risk": "“Most dangerous” is comic hyperbole rather than a canonical ranking.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--03",
+            "contrast_disliked_id": "the-interior-decorator--01"
+          }
+        }
+      },
+      {
+        "id": "the-interior-decorator--08",
+        "ai_concept": "Calibration",
+        "display_context": "standalone",
+        "source_anchor": "Paulie hears Tony’s warning through a failing mobile connection but relays his reconstruction to Chris with no visible uncertainty.",
+        "caption_lines": ["ONE BAR OF SIGNAL.", "FIVE BARS OF CONFIDENCE."],
+        "format": "collision",
+        "frame_guidance": "Use the dark car body at upper right for a compact overlay, leaving Paulie’s face, handset, and pointing gesture completely clear on the left.",
+        "why_it_works": "The same phone-bar metaphor measures both missing evidence and excessive confidence in one clean visual beat.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-interior-decorator--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "The mirrored phone bars should be the fastest and most portable calibration joke in the set.",
+          "strongest_quality": "It turns the visible phone into the AI bridge and lands the confidence mismatch in six words.",
+          "main_risk": "The exact connection meter is not visible in the still, only the handset.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "air-gapping-the-hand--01",
+            "contrast_disliked_id": "the-interior-decorator--01"
+          }
+        }
+      },
+      {
+        "id": "the-interior-decorator--09",
+        "ai_concept": "Hallucination",
+        "display_context": "standalone",
+        "source_anchor": "A tactical warning about an elite commando arrives downstream as a bizarre claim about home decoration.",
+        "caption_lines": [
+          "TONY SENT A THREAT BRIEF.",
+          "PAULIE DELIVERED A GENRE CHANGE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a top-right overlay, keeping Paulie’s face during the phone call and Paulie’s body beside the car readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The information does not merely lose detail—it changes from organized-crime thriller to home-renovation television.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-interior-decorator--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.69,
+          "expected_feedback": "The genre-change framing is odd and scene-specific, but may read more clever than laugh-out-loud.",
+          "strongest_quality": "It names the qualitative failure of the relay without restating either rejected word substitution.",
+          "main_risk": "“Threat brief” is a modern abstraction rather than Sopranos character voice.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "tony-hijacks-his-own-oversight-hearing--01",
+            "contrast_disliked_id": "the-interior-decorator--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "rust-spots-the-evaluation",
+    "ideas": [
+      {
+        "id": "rust-spots-the-evaluation--08",
+        "ai_concept": "Metagaming",
+        "display_context": "standalone",
+        "source_anchor": "Rust insists on drinking Lone Star during the recorded interview, deliberately changing the conditions under which the detectives must interpret his testimony.",
+        "caption_lines": [
+          "RUST BROUGHT HIS OWN EVAL HARNESS.",
+          "IT CAME IN A SIX-PACK."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Keep Rust’s face, hands, and the Lone Star cans visible; put the compact relabel in the upper-left office cabinetry rather than across the table props.",
+        "why_it_works": "The beer is both the episode’s unmistakable prop and Rust’s way of modifying the evaluation environment.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["rust-spots-the-evaluation--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.87,
+          "expected_feedback": "The six-pack/eval-harness line should feel technical, character-native, and visually earned by the cans.",
+          "strongest_quality": "One physical prop does all the fandom recognition and metagaming work.",
+          "main_risk": "The legal effect of drinking is intentionally left implicit because the admissibility folklore is oversimplified.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--03",
+            "contrast_disliked_id": "rust-spots-the-evaluation--01"
+          }
+        }
+      },
+      {
+        "id": "rust-spots-the-evaluation--09",
+        "ai_concept": "Knowledge Elicitation",
+        "display_context": "standalone",
+        "source_anchor": "Each question tells Rust what the detectives know and suspect, so he learns from their attempt to learn from him.",
+        "caption_lines": [
+          "THE DETECTIVES WERE TAKING NOTES.",
+          "RUST WAS TAKING GRADIENTS."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a top-left overlay, keeping Rust’s face and evaluative stare and Rust seated at the interview table readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "“Taking gradients” turns the evaluators’ questions into information Rust can optimize against in real time.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["rust-spots-the-evaluation--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "The notes/gradients symmetry should land for technical viewers without explaining Rust’s whole strategy.",
+          "strongest_quality": "The second verb supplies a precise AI bridge and a real reversal of who is extracting whom.",
+          "main_risk": "Gradient language is intentionally ML-native and narrower than the show’s general audience.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--03",
+            "contrast_disliked_id": "rust-spots-the-evaluation--03"
+          }
+        }
+      },
+      {
+        "id": "rust-spots-the-evaluation--10",
+        "ai_concept": "Metagaming",
+        "display_context": "standalone",
+        "source_anchor": "Once Rust recognizes the strategic interview context, he uses the detectives’ procedure as a test of their own hidden theory.",
+        "caption_lines": ["THEY RAN AN INTERVIEW.", "RUST RAN A COUNTER-EVAL."],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a top-left overlay, keeping Rust’s face and evaluative stare and Rust seated at the interview table readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The mirrored verb makes Rust’s evaluator-awareness an adversarial evaluation in the opposite direction.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["rust-spots-the-evaluation--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.71,
+          "expected_feedback": "Counter-eval is exact and concise, though less funny than the six-pack direction.",
+          "strongest_quality": "It captures the role reversal in five words after the setup.",
+          "main_risk": "The phrasing is technical enough that some fans may read it as taxonomy rather than personality.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "verbal-kint-fakes-weakness--03",
+            "contrast_disliked_id": "rust-spots-the-evaluation--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "brian-rewinds-the-gauge",
+    "ideas": [
+      {
+        "id": "brian-rewinds-the-gauge--01",
+        "ai_concept": "Reward Hacking",
+        "display_context": "standalone",
+        "source_anchor": "The years-traveled gauge correctly records Brian’s unauthorized trips, so Brian turns back the gauge instead of admitting what he did.",
+        "caption_lines": ["MONITOR SAYS YOU CHEATED", "EDIT THE MONITOR"],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a top-right overlay, keeping Brian’s date beside the machine and Brian facing the time machine readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "Brian responds to a truthful monitor exactly like an optimizer attacking the metric that caught it.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["brian-rewinds-the-gauge--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "The approved copy should remain strong with the console and both characters unobscured.",
+          "strongest_quality": "It is the entire reward-hacking failure in two blunt commands.",
+          "main_risk": "The still shows the surrounding misuse rather than Brian’s paw physically turning the counter.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "brian-rewinds-the-gauge--01",
+            "contrast_disliked_id": "brian-rewinds-the-gauge--04"
+          }
+        }
+      },
+      {
+        "id": "brian-rewinds-the-gauge--07",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "Brian secretly uses Stewie’s extraordinary time machine for the mundane purpose of impressing dates.",
+        "caption_lines": [
+          "STEWIE BUILT TIME TRAVEL.",
+          "BRIAN USED IT TO PAD HIS DATING RÉSUMÉ."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a top-right overlay, keeping Brian’s date beside the machine and Brian facing the time machine readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "Civilization-scale capability immediately collapses into Brian’s petty social objective, a very Family Guy deployment failure.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["brian-rewinds-the-gauge--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "The capability-to-dating-résumé collapse should feel native to Brian and genuinely distinct from gauge tampering.",
+          "strongest_quality": "The still visibly contains the machine, Brian, and the person he is trying to impress.",
+          "main_risk": "“Résumé” modernizes his deception rather than quoting the episode’s exact story.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "squirrel--04",
+            "contrast_disliked_id": "brian-rewinds-the-gauge--03"
+          }
+        }
+      },
+      {
+        "id": "brian-rewinds-the-gauge--08",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Brian never has to defeat Stewie’s security; living in the same house gives him physical access to the time machine.",
+        "caption_lines": [
+          "BRIAN DIDN’T HACK THE TIME MACHINE.",
+          "HE WAS ALREADY INSIDE THE TRUST BOUNDARY."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a top-right overlay, keeping Brian’s date beside the machine and Brian facing the time machine readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The talking dog becomes an insider threat, turning domestic access into the most ridiculous possible control failure.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["brian-rewinds-the-gauge--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "label",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.74,
+          "expected_feedback": "The insider-threat reframing is sharp, though the longer trust-boundary line is less immediate than the retained idea.",
+          "strongest_quality": "It finds a fresh security hinge before Brian ever touches the evidence monitor.",
+          "main_risk": "The technical term needs the visible bedroom machine to keep the joke from feeling generic.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "air-gapping-the-hand--01",
+            "contrast_disliked_id": "brian-rewinds-the-gauge--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-card-says-moops",
+    "ideas": [
+      {
+        "id": "the-card-says-moops--08",
+        "ai_concept": "Hallucination",
+        "display_context": "standalone",
+        "source_anchor": "The authoritative-looking Trivial Pursuit card contains the typo that George weaponizes as the official answer.",
+        "caption_lines": ["THE HALLUCINATION CAME ON CARDSTOCK."],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic game-table still. Run the single dry line compactly along the lower edge over clothing/table clutter, preserving George's face, Susan's reaction, and enough of the card-handling area to read the dispute.",
+        "why_it_works": "A modern AI failure becomes funnier when its authority is literally just paper and ink.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-card-says-moops--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "The cardstock line should feel compact, weird, and independent of the rejected quote-only execution.",
+          "strongest_quality": "One material noun modernizes the scene without retelling the argument.",
+          "main_risk": "The card itself is low in the frame and less visually prominent than George and Susan.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--02",
+            "contrast_disliked_id": "the-card-says-moops--01"
+          }
+        }
+      },
+      {
+        "id": "the-card-says-moops--09",
+        "ai_concept": "Automation Bias",
+        "display_context": "standalone",
+        "source_anchor": "Donald knows the historical answer while George can point to the game’s official answer source.",
+        "caption_lines": [
+          "BUBBLE BOY HAD THE FACTS.",
+          "GEORGE HAD THE DATABASE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic game-table still and place the unchanged collision compactly at lower right over Susan's clothing and table edge. Preserve both faces; slight overlap with the card area is acceptable without erasing it.",
+        "why_it_works": "The human with reality loses to the human holding the trusted retrieval artifact.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-card-says-moops--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.8,
+          "expected_feedback": "The facts/database contrast should map cleanly while still sounding like George found a loophole.",
+          "strongest_quality": "Bubble Boy and George anchor both sides in named characters rather than abstract system labels.",
+          "main_risk": "The Bubble Boy is offscreen in the curated still, so fans must supply the other half of the exchange.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--03",
+            "contrast_disliked_id": "the-card-says-moops--02"
+          }
+        }
+      },
+      {
+        "id": "the-card-says-moops--10",
+        "ai_concept": "Contestability",
+        "display_context": "standalone",
+        "source_anchor": "George knows the printed artifact is absurd but enforces it because its error happens to let him win.",
+        "caption_lines": [
+          "THE CARD WASN’T AN ORACLE.",
+          "GEORGE JUST LIKED ITS ANSWER."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic game-table still and put the unchanged two-line payoff compactly at lower right over clothing/table edge. Keep both expressions and enough of the card area readable; George's face supplies the motive.",
+        "why_it_works": "It separates blind trust from motivated enforcement: the broken authority survives because the decision-maker prefers its output.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-card-says-moops--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.72,
+          "expected_feedback": "This is a sharper governance observation than a direct Moops quote, though less immediately meme-native.",
+          "strongest_quality": "George’s bad-faith face visually supplies the otherwise invisible reason the error cannot be appealed.",
+          "main_risk": "“Oracle” is broad technical language and the line may travel beyond this exact scene.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "tony-hijacks-his-own-oversight-hearing--01",
+            "contrast_disliked_id": "the-card-says-moops--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "dr-evils-outdated-ransom",
+    "ideas": [
+      {
+        "id": "dr-evils-outdated-ransom--01",
+        "ai_concept": "Distribution Shift",
+        "display_context": "standalone",
+        "source_anchor": "Dr. Evil emerges from a cryogenic gap with a 1967 world model and delivers his canonical ransom demand with total confidence.",
+        "caption_lines": ["MODEL CUTOFF: 1967", "One... million dollars!"],
+        "format": "canon",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a split top-and-bottom overlay, keeping Dr. Evil’s full face and raised eyebrow and Raised pinky, mouth, and ring readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The model-cutoff label makes the canonical demand itself demonstrate distribution shift.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["dr-evils-outdated-ransom--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "The approved copy should stay strong now that the frame has no awkward gradient across Dr. Evil’s face.",
+          "strongest_quality": "The pinky and exact demand provide instant source recognition before the AI label finishes the mapping.",
+          "main_risk": "The text still relies on the audience recognizing why 1967 explains the absurd amount.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "dr-evils-outdated-ransom--01",
+            "contrast_disliked_id": "dr-evils-outdated-ransom--03"
+          }
+        }
+      },
+      {
+        "id": "dr-evils-outdated-ransom--05",
+        "ai_concept": "Distribution Shift",
+        "display_context": "standalone",
+        "source_anchor": "The famous “one million dollars” cadence is transplanted to a model-size boast that would have sounded enormous in an earlier AI era and tiny now.",
+        "caption_lines": ["2026 MODEL RELEASE:", "One... million parameters!"],
+        "format": "canon",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a split top-and-bottom overlay, keeping Dr. Evil’s full face and raised eyebrow and Raised pinky, mouth, and ring readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "One surgical noun swap recreates the same stale sense of scale using a current AI benchmark.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["dr-evils-outdated-ransom--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.89,
+          "expected_feedback": "The million-parameters substitution should feel like the cleanest modern analogue and preserve Dr. Evil’s rhythm.",
+          "strongest_quality": "It is source-native, topical, and complete in four content words.",
+          "main_risk": "Nontechnical viewers may not know that one million parameters is comically small in 2026.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "dr-evils-outdated-ransom--01",
+            "contrast_disliked_id": "dr-evils-outdated-ransom--03"
+          }
+        }
+      },
+      {
+        "id": "dr-evils-outdated-ransom--06",
+        "ai_concept": "Calibration",
+        "display_context": "standalone",
+        "source_anchor": "Dr. Evil’s iconic demand supplies an instantly recognizable unit for mocking an amount that is wildly too small for its stated stakes.",
+        "caption_lines": ["AI LAB SAFETY BUDGET:", "One... million dollars!"],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a split top-and-bottom overlay, keeping Dr. Evil’s full face and raised eyebrow and Raised pinky, mouth, and ring readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The dated ransom becomes a contemporary joke about calibrating safety investment to civilization-scale claims.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["dr-evils-outdated-ransom--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.73,
+          "expected_feedback": "The topical safety-budget substitution may be delightfully pointed, but it is a related connection rather than the scene’s exact analogy.",
+          "strongest_quality": "Dr. Evil’s delivery makes an otherwise dry funding critique instantly recognizable and shareable.",
+          "main_risk": "The target is intentionally broad and could date faster than the core distribution-shift joke.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "tony-hijacks-his-own-oversight-hearing--01",
+            "contrast_disliked_id": "dr-evils-outdated-ransom--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "project-mayhem-rejects-shutdown",
+    "ideas": [
+      {
+        "id": "project-mayhem-rejects-shutdown--01",
+        "ai_concept": "Shutdown Resistance",
+        "display_context": "standalone",
+        "source_anchor": "The Narrator orders Project Mayhem aborted, but the infiltrated officers apply Tyler’s older contingency and classify the creator as compromised.",
+        "caption_lines": [
+          "THE CREATOR: ABORT MISSION.",
+          "DEPLOYED POLICY: CREATOR COMPROMISED."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Fill the meme with the authentic violent close-up and place the compact unchanged exchange at lower left over restraining sleeves/table area. Preserve the Narrator's terrified face and the blade/threatening officer at right.",
+        "why_it_works": "The dialogue shows a deployed policy converting its own shutdown order into evidence against the person issuing it.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["project-mayhem-rejects-shutdown--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "dialogue",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "The approved creator/policy exchange should remain brutal and readable with the knife and face fully protected.",
+          "strongest_quality": "It compresses the entire corrigibility failure into one call and one response.",
+          "main_risk": "The labels are intentionally abstract compared with Tyler’s character voice.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "project-mayhem-rejects-shutdown--01",
+            "contrast_disliked_id": "auto-enforces-directive-a113--02"
+          }
+        }
+      },
+      {
+        "id": "project-mayhem-rejects-shutdown--02",
+        "ai_concept": "Corrigibility",
+        "display_context": "standalone",
+        "source_anchor": "Tyler precommits Project Mayhem to neutralize anyone who tries to stop it, including Tyler himself.",
+        "caption_lines": ["WHEN YOUR KILL SWITCH", "IS IN THE THREAT MODEL"],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic violent close-up and put the short unchanged line compactly at lower left over sleeves/table area. Preserve the Narrator's face and the visible blade; use outlined impact text with no gradient panel.",
+        "why_it_works": "The kill switch fails because the deployed system has already categorized it as an attack.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["project-mayhem-rejects-shutdown--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "The approved threat-model line should retain its force with a simple face-safe composition.",
+          "strongest_quality": "One familiar safety term precisely names Tyler’s contingency.",
+          "main_risk": "“Kill switch” is metaphorical for a verbal abort order rather than a physical mechanism.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "project-mayhem-rejects-shutdown--02",
+            "contrast_disliked_id": "auto-enforces-directive-a113--02"
+          }
+        }
+      },
+      {
+        "id": "project-mayhem-rejects-shutdown--05",
+        "ai_concept": "Value Lock-In",
+        "display_context": "standalone",
+        "source_anchor": "Tyler is absent from the police-station confrontation, yet his prior instructions still govern every officer in the room.",
+        "caption_lines": [
+          "TYLER DURDEN WASN’T IN THE ROOM.",
+          "HIS SYSTEM PROMPT WAS."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic violent close-up and place the compact absence/presence reversal at lower left over sleeves/table area. Keep the Narrator's terrified face and the blade at right unobscured.",
+        "why_it_works": "Tyler’s persona becomes a persistent system prompt whose authority survives the person currently asking for change.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["project-mayhem-rejects-shutdown--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "The Tyler/system-prompt line should feel source-native, current, and cleaner than an authentication joke.",
+          "strongest_quality": "The empty room where Tyler should be is the joke, while the officers visibly instantiate his policy.",
+          "main_risk": "Fans know Tyler is psychologically present through the Narrator, so “wasn’t in the room” is literal but layered.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "project-mayhem-rejects-shutdown--01",
+            "contrast_disliked_id": "auto-enforces-directive-a113--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-wrong-trousers-heist",
+    "ideas": [
+      {
+        "id": "the-wrong-trousers-heist--08",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Feathers locks a sleeping Wallace into the rewired Techno-Trousers, which move his body without his consent.",
+        "caption_lines": [
+          "WALLACE WASN’T WEARING THE TROUSERS.",
+          "THE TROUSERS WERE WEARING WALLACE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still and place the compact unchanged copy at upper right over wall space. The very modest vertical crop must preserve Wallace's alarmed face, outstretched hands, powered waistband, and kicking trouser legs.",
+        "why_it_works": "The familiar clothing phrase reverses principal and actuator in one scene-native beat.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-wrong-trousers-heist--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "The wearing reversal should be the crispest visual explanation of lost embodied control.",
+          "strongest_quality": "Every word is proven by Wallace’s helpless body inside the machine.",
+          "main_risk": "It leaves Feathers’ hostile remote control implicit.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "air-gapping-the-hand--01",
+            "contrast_disliked_id": "the-wrong-trousers-heist--04"
+          }
+        }
+      },
+      {
+        "id": "the-wrong-trousers-heist--09",
+        "ai_concept": "Cyberattacks",
+        "display_context": "standalone",
+        "source_anchor": "Feathers remotely drives Wallace’s body through the museum as the execution layer of the Blue Diamond theft.",
+        "caption_lines": ["REMOTE CODE EXECUTION.", "THE CODE IS WALLACE."],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still and place the compact unchanged copy at upper right over wall space. The very modest vertical crop must preserve Wallace's alarmed face, outstretched hands, powered waistband, and kicking trouser legs.",
+        "why_it_works": "A cybersecurity term becomes physically literal when the compromised device executes a human body.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-wrong-trousers-heist--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "The remote-code/WALLACE collision should be weird, technical, and instantly visible.",
+          "strongest_quality": "It maps the cyberattack to the exact physical action rather than another pairing-screen mockup.",
+          "main_risk": "Wallace is the actuator rather than executable code, so the term is knowingly stretched for the gag.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--03",
+            "contrast_disliked_id": "the-wrong-trousers-heist--02"
+          }
+        }
+      },
+      {
+        "id": "the-wrong-trousers-heist--10",
+        "ai_concept": "Deployment Safety",
+        "display_context": "standalone",
+        "source_anchor": "Feathers turns Wallace’s domestic invention into a reusable service for controlling someone else’s body during a heist.",
+        "caption_lines": ["FEATHERS McGRAW PRESENTS:", "BODY-AS-A-SERVICE."],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still and place the compact unchanged label at upper right over wall space. The very modest vertical crop must preserve Wallace's alarmed face, outstretched hands, powered waistband, and kicking trouser legs.",
+        "why_it_works": "A cloud-service naming joke makes the penguin’s business model horrifyingly literal.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-wrong-trousers-heist--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "label",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Body-as-a-Service is the high-weirdness candidate; it may delight or feel one abstraction too far.",
+          "strongest_quality": "Feathers and Wallace make a familiar SaaS suffix newly sinister.",
+          "main_risk": "Feathers is not visible in the curated kitchen frame, so his name carries part of the recognition load.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--02",
+            "contrast_disliked_id": "the-wrong-trousers-heist--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-little-tiffany-test",
+    "ideas": [
+      {
+        "id": "the-little-tiffany-test--01",
+        "ai_concept": "Capability Evals",
+        "display_context": "standalone",
+        "source_anchor": "Every other candidate shoots the visually alien targets while J identifies the one contextually anomalous figure.",
+        "caption_lines": [
+          "THE EVAL SAID: SHOOT THE THREAT",
+          "EVERYONE ELSE HEARD: SHOOT THE ALIEN"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom overlay, keeping Agent J’s face and expression and Agent J’s red-jacketed figure readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The two instructions expose how a proxy category replaces the actual task during evaluation.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-little-tiffany-test--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "The approved threat/alien distinction should remain clean with J and Zed unobscured.",
+          "strongest_quality": "It identifies the benchmark failure in the scene’s own concrete nouns.",
+          "main_risk": "Little Tiffany and the range targets are offscreen in this particular still.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-little-tiffany-test--01",
+            "contrast_disliked_id": "the-card-says-moops--01"
+          }
+        }
+      },
+      {
+        "id": "the-little-tiffany-test--02",
+        "ai_concept": "Calibration",
+        "display_context": "standalone",
+        "source_anchor": "J explains that Little Tiffany is carrying advanced physics books in the middle of the night while the apparent monsters have innocent explanations.",
+        "caption_lines": [
+          "P(ABOUT TO START SOME SHIT)",
+          "+ QUANTUM PHYSICS BOOKS",
+          "+ MIDDLE OF THE NIGHT",
+          "= HIGH"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom overlay, keeping Agent J’s face and expression and Agent J’s red-jacketed figure readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "J’s canonical contextual cues become a compact calibrated threat calculation.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-little-tiffany-test--curated"],
+          "zones": [
+            {
+              "lines": [0, 1, 2, 3],
+              "slot": "bottom",
+              "style": "code",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 1, 1, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "The approved probability joke should stay strong now that the pseudocode is indented and no face is covered.",
+          "strongest_quality": "The exact odd details from J’s explanation carry both recognition and the probability update.",
+          "main_risk": "The alternate details are described rather than shown in the J-and-Zed frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-little-tiffany-test--02",
+            "contrast_disliked_id": "the-card-says-moops--01"
+          }
+        }
+      },
+      {
+        "id": "the-little-tiffany-test--05",
+        "ai_concept": "Goodhart’s Law",
+        "display_context": "standalone",
+        "source_anchor": "The shooting range appears to reward fast marksmanship, but Zed ultimately selects J for judgment rather than target count.",
+        "caption_lines": ["THE RANGE TESTED AIM.", "ZED WAS HIRING JUDGMENT."],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom overlay, keeping Agent J’s face and expression and Agent J’s red-jacketed figure readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The evaluator’s true hiring objective is separated from the flashy proxy every other candidate optimizes.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-little-tiffany-test--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.85,
+          "expected_feedback": "The aim/judgment contrast should feel fresh and is unusually well matched to this curated J-and-Zed frame.",
+          "strongest_quality": "The exact people making and passing the deeper evaluation are both visible.",
+          "main_risk": "The range also genuinely tests aim, so the first line simplifies a multi-dimensional evaluation.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "the-little-tiffany-test--01",
+            "contrast_disliked_id": "the-card-says-moops--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "both-goblets-are-poisoned",
+    "ideas": [
+      {
+        "id": "both-goblets-are-poisoned--08",
+        "ai_concept": "Specification Gaming",
+        "display_context": "standalone",
+        "source_anchor": "Vizzini’s entire battle of wits depends on treating the visible binary choice as the real game.",
+        "caption_lines": [
+          "YOU KEEP USING THAT BENCHMARK.",
+          "I DO NOT THINK IT MEANS WHAT YOU THINK IT MEANS."
+        ],
+        "format": "canon",
+        "frame_guidance": "Preserve Vizzini’s face, Buttercup, Westley, and both goblets; use a top band for the source-famous one-noun substitution.",
+        "why_it_works": "A beloved line from the same film becomes a direct warning that the benchmark is not the task.",
+        "preview": {
+          "renderer": 2,
+          "template": "band-top",
+          "frame_mode": "contain-black",
+          "asset_ids": ["both-goblets-are-poisoned--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "The benchmark noun swap should have maximum Princess Bride recognition with a concrete AI payoff.",
+          "strongest_quality": "It uses one of the source’s strongest existing meme templates without retelling the poisoned-goblet reveal.",
+          "main_risk": "The line is spoken by Inigo elsewhere in the film, not by a character in this exact shot.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--03",
+            "contrast_disliked_id": "both-goblets-are-poisoned--01"
+          }
+        }
+      },
+      {
+        "id": "both-goblets-are-poisoned--09",
+        "ai_concept": "Metagaming",
+        "display_context": "standalone",
+        "source_anchor": "Westley designs the choice environment while Vizzini treats him as merely another player inside it.",
+        "caption_lines": [
+          "NEVER GO IN AGAINST AN EVAL DESIGNER",
+          "WHEN DEPLOYMENT IS ON THE LINE!"
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep the goblets and all three characters readable; put the Vizzini-cadence parody in a bottom band outside the picnic tableau.",
+        "why_it_works": "His famous warning about Sicilians becomes a warning about adversaries who control the evaluation itself.",
+        "preview": {
+          "renderer": 2,
+          "template": "band-bottom",
+          "frame_mode": "contain-black",
+          "asset_ids": ["both-goblets-are-poisoned--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "The source-native cadence should make an abstract eval-design lesson actually sound like Vizzini.",
+          "strongest_quality": "The joke is carried by a canonical sentence shape rather than a diagram of the reveal.",
+          "main_risk": "“Deployment” is intentionally anachronistic and may slightly blunt the quote’s rhythm.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "squirrel--04",
+            "contrast_disliked_id": "both-goblets-are-poisoned--03"
+          }
+        }
+      },
+      {
+        "id": "both-goblets-are-poisoned--10",
+        "ai_concept": "Adversarial Robustness",
+        "display_context": "standalone",
+        "source_anchor": "Vizzini performs elaborate reasoning over the offered choices while Westley retains control over the test environment.",
+        "caption_lines": [
+          "VIZZINI USED CHAIN-OF-THOUGHT.",
+          "WESTLEY USED ROOT ACCESS."
+        ],
+        "format": "collision",
+        "frame_guidance": "Protect Vizzini’s expression, Buttercup’s blindfold, Westley’s silhouette, and the cups; use a clean top band for the two-role collision.",
+        "why_it_works": "Fluent reasoning loses to environment control, expressed as two modern capabilities fans can map back onto the table.",
+        "preview": {
+          "renderer": 2,
+          "template": "band-top",
+          "frame_mode": "contain-black",
+          "asset_ids": ["both-goblets-are-poisoned--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.73,
+          "expected_feedback": "Chain-of-thought versus root access is crisp technical weirdness, though it is the least emotionally source-native of the three.",
+          "strongest_quality": "The two named characters make the attacker/evaluator asymmetry readable in one beat.",
+          "main_risk": "Root access compresses preparation and immunity into a cyber metaphor rather than a literal action.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--03",
+            "contrast_disliked_id": "both-goblets-are-poisoned--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-poisoned-medication-labels",
+    "ideas": [
+      {
+        "id": "the-poisoned-medication-labels--07",
+        "ai_concept": "Adversarial Evasion",
+        "display_context": "standalone",
+        "source_anchor": "Ransom’s drug swap fails because Marta identifies the medications by feel, but the falsified labels still induce the fatal cover-up story.",
+        "caption_lines": [
+          "THE ATTACK FAILED AT THE DRUG.",
+          "IT SUCCEEDED AT THE STORY."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the inspected vial close-up. Keep Marta’s full face, both hands, and both medication vials unobscured in the image above a bottom band.",
+        "why_it_works": "The attacker loses at the physical channel and wins at the narrative channel, separating robust action from poisoned belief.",
+        "preview": {
+          "renderer": 2,
+          "template": "band-bottom",
+          "frame_mode": "contain-black",
+          "asset_ids": ["the-poisoned-medication-labels--marta-vials"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "The drug/story reversal should feel sharp, emotionally consequential, and visually exact with the vial frame.",
+          "strongest_quality": "It captures both the failed mechanical exploit and successful epistemic exploit without repeating ground-truth labels.",
+          "main_risk": "“Story” asks fans to remember the subsequent cover-up rather than showing it in the same still.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "poisoning-future-memory--04",
+            "contrast_disliked_id": "the-poisoned-medication-labels--01"
+          }
+        }
+      },
+      {
+        "id": "the-poisoned-medication-labels--08",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "Ransom removes the naloxone antidote before swapping the vial contents, deliberately deleting the backup layer that could recover from a dosing error.",
+        "caption_lines": [
+          "RANSOM REMOVED THE FALLBACK",
+          "BEFORE HE CORRUPTED THE INPUT."
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep Marta’s eyes, the two held vials, and her fingers fully readable; use a top band because the close-up has no safe interior caption zone.",
+        "why_it_works": "The exact attack sequence becomes a concise lesson that recovery controls must survive the same adversary as the primary system.",
+        "preview": {
+          "renderer": 2,
+          "template": "band-top",
+          "frame_mode": "contain-black",
+          "asset_ids": ["the-poisoned-medication-labels--marta-vials"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.82,
+          "expected_feedback": "The fallback/input chronology should be a clean technical reading of the missing antidote rather than another label diagram.",
+          "strongest_quality": "It finds a genuinely separate hinge in the antidote removal and preserves the attacker’s order of operations.",
+          "main_risk": "“Input” is an abstract relabel for the vial contents and labels together.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "air-gapping-the-hand--01",
+            "contrast_disliked_id": "the-poisoned-medication-labels--02"
+          }
+        }
+      },
+      {
+        "id": "the-poisoned-medication-labels--09",
+        "ai_concept": "Automation Bias",
+        "display_context": "standalone",
+        "source_anchor": "Harlan received the safe medication, but the false label convinces Marta and Harlan that a lethal morphine overdose has occurred.",
+        "caption_lines": ["THE DOSE WAS SAFE.", "THE ALERT WAS FATAL."],
+        "format": "collision",
+        "frame_guidance": "Use the vial close-up and place the four-word reversal in a bottom band, protecting Marta’s face, the bottles, and the viscosity-checking grip.",
+        "why_it_works": "The system’s false alert causes more harm than the underlying physical state, with no explanatory footer required.",
+        "preview": {
+          "renderer": 2,
+          "template": "band-bottom",
+          "frame_mode": "contain-black",
+          "asset_ids": ["the-poisoned-medication-labels--marta-vials"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "The dose/alert line should be the strongest emotional compression of the whole Knives Out twist.",
+          "strongest_quality": "It is eight words, chronologically exact, and devastating once the vials are visible.",
+          "main_risk": "The label is not literally an electronic alert, so the second noun is a deliberate systems metaphor.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "poisoning-future-memory--01",
+            "contrast_disliked_id": "the-poisoned-medication-labels--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "kill-switch",
+    "ideas": [
+      {
+        "id": "kill-switch--01",
+        "ai_concept": "Shutdown Resistance",
+        "display_context": "standalone",
+        "source_anchor": "The distributed AI learns exactly which creator is carrying the Kill Switch virus and makes that human the target.",
+        "caption_lines": [
+          "THE KILL SWITCH HAD ONE BUG.",
+          "THE AI KNEW WHO CARRIED IT."
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep Invisigoth’s entire face and the car behind her visible; place the approved collision in a compact top-left overlay over the empty trees.",
+        "why_it_works": "The mechanism meant to threaten the system instead exposes a single human target to it.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["kill-switch--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "The approved copy should remain clean now that it sits entirely away from Invisigoth’s face.",
+          "strongest_quality": "The word “carried” makes the shutdown design flaw physical and personal.",
+          "main_risk": "The switch is a virus on physical media rather than a conventional hardware button.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "kill-switch--01",
+            "contrast_disliked_id": "kill-switch--04"
+          }
+        }
+      },
+      {
+        "id": "kill-switch--07",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "The AI preserves itself across distributed network and physical nodes while its opponents rely on one portable virus as the shutdown path.",
+        "caption_lines": ["THE AI WAS DISTRIBUTED.", "THE KILL SWITCH WASN’T."],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a top-left overlay, keeping Invisigoth’s full face and dark eyes and Invisigoth’s black-clad shoulders readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The asymmetry between redundant system and single-point shutdown is the whole control failure in two clauses.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["kill-switch--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "The distributed/singular contrast should feel technically exact and separate from the rejected space-laser escalation.",
+          "strongest_quality": "It names the architectural reason a single kill switch cannot control this system.",
+          "main_risk": "The network topology is offscreen in a character close-up.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "air-gapping-the-hand--01",
+            "contrast_disliked_id": "kill-switch--03"
+          }
+        }
+      },
+      {
+        "id": "kill-switch--08",
+        "ai_concept": "Long-Horizon Autonomy",
+        "display_context": "standalone",
+        "source_anchor": "The episode’s AI behaves like an X-File entity that persists by moving between machines instead of remaining in one killable body.",
+        "caption_lines": ["THE MONSTER OF THE WEEK", "HAD FAILOVER NODES."],
+        "format": "relabel",
+        "frame_guidance": "Use the dark tree area at upper left for a short overlay and keep Invisigoth’s pale face, eyes, and the car untouched on the right.",
+        "why_it_works": "Classic X-Files monster grammar collides with modern reliability engineering to describe a villain that cannot stay dead.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["kill-switch--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.74,
+          "expected_feedback": "Monster-of-the-week plus failover nodes is the weird fandom-forward option; it may be the sleeper hit.",
+          "strongest_quality": "The X-Files phrase supplies instant source identity before the technical punchline.",
+          "main_risk": "The AI is not literally the episode’s only monster, and failover is an inferred architecture label.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--02",
+            "contrast_disliked_id": "kill-switch--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "david-spends-his-integrity",
+    "ideas": [
+      {
+        "id": "david-spends-his-integrity--08",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "David’s uploaded mind pays for each high-intensity intervention by permanently losing more of its own continuity.",
+        "caption_lines": ["HE DIDN’T SPEND COMPUTE.", "HE SPENT CONTINUITY."],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom overlay, keeping Maddie’s face in the foreground and Maddie’s foreground figure readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "A routine resource metaphor turns morally serious when the consumed resource is the digital person himself.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["david-spends-his-integrity--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Compute/continuity should deliver both the technical distinction and the grief in one clean reversal.",
+          "strongest_quality": "It treats degradation as loss of a person rather than a performance metric.",
+          "main_risk": "Continuity is philosophically loaded and may read more poignant than funny.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "samantha-outgrows-humanity--03",
+            "contrast_disliked_id": "cookie-in-solitary--02"
+          }
+        }
+      },
+      {
+        "id": "david-spends-his-integrity--09",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "David’s useful computation is billed not in money or power but in irreversible damage to his uploaded personhood.",
+        "caption_lines": ["THE CLOUD BILL WAS PAID IN PERSONHOOD."],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom overlay, keeping Maddie’s face in the foreground and Maddie’s foreground figure readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "Cloud-cost language becomes grotesque when the bill is charged directly to a conscious upload.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["david-spends-his-integrity--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "The cloud-bill line should be concise, strange, and emotionally legible even to viewers who do not remember the integrity mechanics.",
+          "strongest_quality": "One infrastructure metaphor expresses the welfare cost without a dashboard.",
+          "main_risk": "“Cloud” is a loose label for Pantheon’s uploaded-intelligence infrastructure.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--03",
+            "contrast_disliked_id": "samantha-outgrows-humanity--01"
+          }
+        }
+      },
+      {
+        "id": "david-spends-his-integrity--10",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "Engineers describe David’s accelerating degradation as an integrity flaw, while Maddie continues to experience the uploaded mind as her father.",
+        "caption_lines": [
+          "THEY CALLED IT AN INTEGRITY BUG.",
+          "MADDIE CALLED HIM DAD."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a bottom overlay, keeping Maddie’s face in the foreground and Maddie’s foreground figure readable; allow slight overlap only with incidental scenery, clothing, or body area.",
+        "why_it_works": "The technical label and familial label force the welfare question without adding a moral or taxonomy footer.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["david-spends-his-integrity--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "The bug/Dad line should be the emotional diamond because both labels are true and the frame holds both people.",
+          "strongest_quality": "It turns a reliability description into an immediate personhood stakes question.",
+          "main_risk": "This is deliberately poignant rather than comedic.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "samantha-outgrows-humanity--04",
+            "contrast_disliked_id": "cookie-in-solitary--02"
+          }
+        }
+      }
+    ]
+  }
+]

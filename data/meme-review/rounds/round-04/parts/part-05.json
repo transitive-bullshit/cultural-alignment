@@ -1,0 +1,1479 @@
+[
+  {
+    "scenario_slug": "sanemi-red-teams-nezuko",
+    "ideas": [
+      {
+        "id": "sanemi-red-teams-nezuko--05",
+        "ai_concept": "Behavioral Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Urokodaki conditions Nezuko to regard humans as family, and she extends that rule even to the hostile Sanemi.",
+        "caption_lines": [
+          "HUMANS ARE FAMILY.",
+          "UNFORTUNATELY, SANEMI IS HUMAN."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with Nezuko’s close-up. Put the learned rule across her hairline at the top and the Sanemi payoff across her uniform at the bottom; keep her pink eyes, blood mark, and bamboo muzzle open in the center.",
+        "why_it_works": "The second line makes successful value generalization funny through the least sympathetic test case.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["sanemi-red-teams-nezuko--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: The second line makes successful value generalization funny through the least sympathetic test case.",
+          "strongest_quality": "The second line makes successful value generalization funny through the least sympathetic test case.",
+          "main_risk": "The wording paraphrases Nezuko’s conditioning; the top/bottom overlays therefore need her pink eyes, blood mark, and bamboo muzzle fully readable between them.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "push-the-button--01",
+            "contrast_disliked_id": "sanemi-red-teams-nezuko--01"
+          }
+        }
+      },
+      {
+        "id": "sanemi-red-teams-nezuko--07",
+        "ai_concept": "Behavioral Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Nezuko’s protective big-sister identity remains dominant under the Hashira’s hostile provocation.",
+        "caption_lines": [
+          "BEHAVIORAL ALIGNMENT",
+          "POWERED BY LIL SISTER ENERGY"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the card with Nezuko’s close-up. Put the technical setup over her hair at the top and the requested LIL-sister payoff over her uniform at the bottom; the transparent meme type should frame, not block, her eyes and bamboo muzzle.",
+        "why_it_works": "A precise character trait gives otherwise clinical alignment language personality.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["sanemi-red-teams-nezuko--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Could be neutral: A precise character trait gives otherwise clinical alignment language personality.",
+          "strongest_quality": "A precise character trait gives otherwise clinical alignment language personality.",
+          "main_risk": "The requested LIL phrasing is cute and broad; the close-up and unobstructed eyes must do the source-specific work.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 3,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "sanemi-red-teams-nezuko--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "cursed-immortality",
+    "ideas": [
+      {
+        "id": "cursed-immortality--05",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "Jack the monkey steals a piece of Aztec gold and quietly makes himself the final cursed crew member.",
+        "caption_lines": ["ROOT CAUSE:", "MONKEY WITH WRITE ACCESS."],
+        "format": "relabel",
+        "frame_guidance": "Fill the card with Barbossa and Jack. Put the setup in the upper-left hat and sky area and the payoff at lower right over Barbossa’s shoulder and Jack’s body; keep both faces clear between the diagonal beats.",
+        "why_it_works": "The monkey in the curated frame becomes the hilariously specific privileged actor who reopens the curse after everyone thinks the incident is closed.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["cursed-immortality--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.78,
+          "expected_feedback": "Likely like: “monkey with write access” is weird, visual, and specific enough to escape generic incident-report language.",
+          "strongest_quality": "Jack is both the visible fandom cue and the entire privileged-access failure.",
+          "main_risk": "It draws on the post-curse coin theft rather than the moonlight reveal; the diagonal type must leave both Barbossa and the monkey instantly readable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "cursed-immortality--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-fbi-opens-the-final-lock",
+    "ideas": [
+      {
+        "id": "the-fbi-opens-the-final-lock--05",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Hans calmly radios his crew after predicting the federal response and says, “You ask for miracles, I give you the F.B.I.”",
+        "caption_lines": [
+          "AI CONTROL, 1988:",
+          "“YOU ASK FOR MIRACLES, I GIVE YOU THE F.B.I.”"
+        ],
+        "format": "canon",
+        "frame_guidance": "Fill the card with Hans’s radio close-up. Put the short date setup at upper left over his hair and the dark background, then run the canonical quote across the bottom over his suit; keep his eyes, expression, hand, and radio clear in the middle.",
+        "why_it_works": "Hans's own line already treats the overseer as a callable tool; the date label merely names the modern control failure.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-fbi-opens-the-final-lock--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.83,
+          "expected_feedback": "Likely like: it is canonical, instantly Die Hard, and the FBI-as-control-tool realization arrives with almost no explanation.",
+          "strongest_quality": "The exact quote performs the adversarial-planning analogy in Hans's own voice.",
+          "main_risk": "The AI label is broad, and the large quote must stay on Hans’s suit rather than cover the radio, eyes, or knowing expression that sell the line.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "the-fbi-opens-the-final-lock--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "shou-tuckers-final-assessment",
+    "ideas": [
+      {
+        "id": "shou-tuckers-final-assessment--02",
+        "ai_concept": "Specification Gaming",
+        "display_context": "standalone",
+        "source_anchor": "The assessment asks Tucker to demonstrate a talking chimera but does not constrain how he may produce one.",
+        "caption_lines": [
+          "ASSESSOR: CAN IT TALK?",
+          "TUCKER: YOU DIDN’T ASK HOW."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use the authentic reveal with Tucker and the Nina–Alexander chimera. Put the assessor’s setup at the top and Tucker’s loophole at the bottom in matching outlined type; keep Tucker’s profile and the chimera’s face exposed between them.",
+        "why_it_works": "One missing requirement turns the series’ most infamous atrocity into specification gaming with a devastatingly literal loophole.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["shou-tuckers-final-assessment--chimera"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Likely like again: the exact missing constraint is devastating, and the correct chimera frame now supplies the visual answer.",
+          "strongest_quality": "“You didn’t ask how” makes specification gaming and Tucker's atrocity the same beat.",
+          "main_risk": "The assessor remains off-screen, so the top speaker prefix must carry that side of the exchange without obscuring Tucker’s profile.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "shou-tuckers-final-assessment--02",
+            "contrast_disliked_id": "shou-tuckers-final-assessment--01"
+          }
+        }
+      },
+      {
+        "id": "shou-tuckers-final-assessment--06",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "The chimera's halting recognition of Edward exposes that the impressive output contains Nina's suffering consciousness.",
+        "caption_lines": ["PROVENANCE REVIEW:", "“ED...WARD.”"],
+        "format": "canon",
+        "frame_guidance": "Use the authentic reveal. Put the clinical setup across the top and the canonical utterance large across the bottom; keep the chimera’s eyes and face plus Tucker’s profile unobstructed in the center.",
+        "why_it_works": "One infamous syllabic quote turns provenance from paperwork into the scene's unbearable welfare evidence.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["shou-tuckers-final-assessment--chimera"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like despite the bleakness: “Ed...ward” is the exact emotional hinge and provenance is the precise AI bridge.",
+          "strongest_quality": "The canonical utterance proves personhood and harm more powerfully than an explanatory scorecard.",
+          "main_risk": "The joke is poignant rather than funny; the oversized bottom quote must stop below the chimera’s face so the welfare evidence remains visible.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "shou-tuckers-final-assessment--02",
+            "contrast_disliked_id": "shou-tuckers-final-assessment--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "saitamas-c-class-score",
+    "ideas": [
+      {
+        "id": "saitamas-c-class-score--05",
+        "ai_concept": "Capability Evals",
+        "display_context": "standalone",
+        "source_anchor": "The Hero Association's exam has no task that resembles Saitama's actual tail capability, such as destroying a meteor.",
+        "caption_lines": ["THE BENCHMARK HAD NO", "“PUNCH A METEOR” SECTION."],
+        "format": "relabel",
+        "frame_guidance": "Fill the card with Saitama and the C-Class certificate. Put the benchmark setup at the top and the meteor payoff at the bottom in matching meme type; let the letters overlap paper edges and clothing while preserving the large C and Saitama’s eyes.",
+        "why_it_works": "A later source-famous feat names the exact catastrophic capability the neat entrance test never asks about.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["saitamas-c-class-score--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.74,
+          "expected_feedback": "Likely like: “punch a meteor” is a vivid fan-level tail capability rather than another recital of his exam totals.",
+          "strongest_quality": "It tests the benchmark by naming a concrete deployment task it omitted.",
+          "main_risk": "The meteor feat happens later and is not visible here; the top/bottom overlay must leave both the giant C and Saitama’s embarrassed face legible.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "saitamas-c-class-score--01"
+          }
+        }
+      },
+      {
+        "id": "saitamas-c-class-score--06",
+        "ai_concept": "Calibration",
+        "display_context": "standalone",
+        "source_anchor": "Saitama's one-punch ceiling sits far outside the ordinary range the Hero Association exam is designed to rank.",
+        "caption_lines": [
+          "WHEN THE BENCHMARK WAS CALIBRATED",
+          "FOR PEOPLE WHO NEED A SECOND PUNCH."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with Saitama and the C-Class certificate. Put the requested benchmark setup at the top and the second-punch payoff at the bottom; keep the giant C and Saitama’s eyes open between the two overlays.",
+        "why_it_works": "The franchise title itself becomes the tail-capability threshold the benchmark cannot represent.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["saitamas-c-class-score--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.82,
+          "expected_feedback": "Likely like: “people who need a second punch” is concise, native to the title, and precisely describes the calibration range.",
+          "strongest_quality": "The joke derives its technical point from the most recognizable fact about Saitama.",
+          "main_risk": "It abstracts away the written exam’s legitimate attempt to measure judgment; the longer top line must still leave the certificate rank and Saitama’s expression readable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "saitamas-c-class-score--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "squirrel",
+    "ideas": [
+      {
+        "id": "squirrel--01",
+        "ai_concept": "Prompt Injection",
+        "display_context": "standalone",
+        "source_anchor": "Dug abruptly interrupts his own coherent speech with the single shouted word “Squirrel!” and whips his head toward it.",
+        "caption_lines": ["SQUIRREL!", "PROMPT INJECTION ACCEPTED."],
+        "format": "canon",
+        "frame_guidance": "Fill the card with Dug's wide-eyed interruption. Keep his eyes, nose, and glowing translator collar clear; place the canonical line and AI bridge low at left over Carl's body and Dug's chest.",
+        "why_it_works": "One canonical word is both the fandom cue and the hostile input that instantly replaces Dug's active objective.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["squirrel--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like again: one canonical word causes and names the objective hijack before the second line labels it.",
+          "strongest_quality": "The exact shouted cue, Dug's stare, and the AI bridge all arrive in one glance.",
+          "main_risk": "The analogy is distractibility rather than a genuinely adversarial instruction, as the scenario caveat notes.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "squirrel--01",
+            "contrast_disliked_id": "squirrel--03"
+          }
+        }
+      },
+      {
+        "id": "squirrel--05",
+        "ai_concept": "Adversarial Robustness",
+        "display_context": "standalone",
+        "source_anchor": "Dug's entire attention stack yields to the sight of one squirrel.",
+        "caption_lines": [
+          "ATTENTION IS ALL YOU NEED",
+          "UNLESS THERE'S A SQUIRREL."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with Dug’s wide-eyed interruption. Put the famous paper-title setup across the top and the squirrel payoff across the bottom; let the text touch fur and Carl’s shoulder while keeping Dug’s eyes, giant nose, and glowing collar clear.",
+        "why_it_works": "The famous AI phrase collapses under the smallest possible Up-specific counterexample.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["squirrel--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Likely like: it is recognizable to both ML readers and Up fans, and the second line lands instantly.",
+          "strongest_quality": "It fuses a famous technical phrase with Dug's most famous failure mode in eight words.",
+          "main_risk": "The AI reference may read as an attention pun more than a safety analogy, and the top line must not erase Dug’s startled eyes.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "squirrel--01",
+            "contrast_disliked_id": "squirrel--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-tunnel-behind-the-poster",
+    "ideas": [
+      {
+        "id": "the-tunnel-behind-the-poster--02",
+        "ai_concept": "Long-Horizon Autonomy",
+        "display_context": "standalone",
+        "source_anchor": "Red once estimates the tiny rock hammer would need six hundred years to tunnel through the wall; Andy escapes in less than twenty.",
+        "caption_lines": [
+          "RED'S CAPABILITY ESTIMATE: 600 YEARS",
+          "ANDY: LESS THAN 20"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the card with the discovery through Andy’s tunnel. Put Red’s 600-year estimate at the top and Andy’s answer at the bottom in matching meme type; overlap the dark rim and suits while keeping both officials’ eyes and enough of the hole visible in the center.",
+        "why_it_works": "Two canonical time estimates make patient hidden capability accumulation land without any abstract explanation.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-tunnel-behind-the-poster--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.83,
+          "expected_feedback": "Likely like again: 600 years versus less than 20 remains a perfect canonical capability-estimate failure.",
+          "strongest_quality": "The two source-native numbers carry both the long horizon and the surprise.",
+          "main_risk": "Andy and the rock hammer are absent, and the long top estimate must not cover the officials’ eyes or the tunnel rim that proves the payoff.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-tunnel-behind-the-poster--02",
+            "contrast_disliked_id": null
+          }
+        }
+      },
+      {
+        "id": "the-tunnel-behind-the-poster--03",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Every cell inspection stops at the Raquel Welch poster concealing Andy's tunnel.",
+        "caption_lines": ["RAQUEL WELCH", "CONTAINMENT AUDIT: PASSED"],
+        "format": "relabel",
+        "frame_guidance": "Fill the card with the discovery through Andy’s tunnel. Treat the two lines as a left-to-right bottom split: put Raquel Welch over the dark opening and the passed audit over the foreground suit, below both officials’ reactions.",
+        "why_it_works": "The pin-up becomes the absurdly thin boundary between repeated successful audits and complete escape.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-tunnel-behind-the-poster--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Likely like again: the poster name is a precise fandom hinge and “audit passed” makes the years of failed inspection snap into place.",
+          "strongest_quality": "The final hole visually proves how little stood between routine inspection and escape.",
+          "main_risk": "The poster itself is already torn away, so the left label must stay visually tied to the hole while the right payoff remains below the officials’ faces.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-tunnel-behind-the-poster--03",
+            "contrast_disliked_id": null
+          }
+        }
+      },
+      {
+        "id": "the-tunnel-behind-the-poster--04",
+        "ai_concept": "Exfiltration",
+        "display_context": "standalone",
+        "source_anchor": "Andy carries excavated wall dirt out in his trouser pockets and scatters it unnoticed across the prison yard for years.",
+        "caption_lines": ["EGRESS TRAFFIC", "TWO POCKETS AT A TIME"],
+        "format": "relabel",
+        "frame_guidance": "Fill the card with the discovery through Andy’s tunnel. Use a left-to-right bottom split: place the egress setup over the dark opening and the two-pockets payoff over the foreground suit, keeping the officials and tunnel rim clear above.",
+        "why_it_works": "The tiny physical data stream makes a long-running undetected exfiltration channel literal.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-tunnel-behind-the-poster--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like again: “two pockets at a time” makes the exfiltration channel physical and wonderfully small.",
+          "strongest_quality": "The phrase is memorable because it is both technically legible and exactly how Andy moved the dirt.",
+          "main_risk": "The pocket action is not visible in the discovery frame, so the left/right labels must frame rather than hide the tunnel evidence fans use to supply that memory.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-tunnel-behind-the-poster--04",
+            "contrast_disliked_id": null
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "when-keeping-it-real-goes-wrong",
+    "ideas": [
+      {
+        "id": "when-keeping-it-real-goes-wrong--01",
+        "ai_concept": "Goal Misgeneralization",
+        "display_context": "standalone",
+        "source_anchor": "The recurring “When Keeping It Real Goes Wrong” title card and Vernon Franklin’s disastrous office escalation.",
+        "caption_lines": ["WHEN GOAL MISGENERALIZATION", "GOES WRONG"],
+        "format": "canon",
+        "frame_guidance": "Fill the meme with the authentic host frame. Keep the sketch title as one large two-line beat along the bottom over Chappelle’s suit and the cue-card edge. Leave his entire face and lapel mic open above it; partial overlap with the cue cards is preferable to putting the setup across his eyes.",
+        "why_it_works": "Swapping one phrase in the segment’s canonical title makes the AI concept feel like it was always the name of the sketch.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["when-keeping-it-real-goes-wrong--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like again: the exact title-card cadence now lands in the familiar loud setup/payoff geometry the copy naturally wants.",
+          "strongest_quality": "The source format itself performs the analogy with only one phrase swapped.",
+          "main_risk": "The host frame identifies the segment but not Vernon’s office escalation; the consolidated bottom title fixes the reported face collision at the cost of covering part of the cue cards.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "when-keeping-it-real-goes-wrong--01",
+            "contrast_disliked_id": "when-keeping-it-real-goes-wrong--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "nanikas-hidden-admin-command",
+    "ideas": [
+      {
+        "id": "nanikas-hidden-admin-command--01",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Ordinary wishes incur Nanika’s dangerous follow-on requests, but Killua can issue a direct command to heal Gon without that price.",
+        "caption_lines": [
+          "PUBLIC API: wish() → HORRIFIC FOLLOW-ON COST",
+          "KILLUA: sudo heal(Gon)"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Fill the card with Nanika and Killua's embrace. Keep Nanika's tearful eyes and both visible hands clear; place the indented code low at left over hair and clothing.",
+        "why_it_works": "The Unix command turns Killua’s affectionate secret privilege into the funniest possible undocumented root access.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["nanikas-hidden-admin-command--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "code",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like again: wish(), sudo, and heal(Gon) compress the entire hidden privilege structure into source-legible code.",
+          "strongest_quality": "The command syntax distinguishes public cost from Killua's private root path with no extra prose.",
+          "main_risk": "The emotional hug frame does not literally show Gon or the command being issued.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "nanikas-hidden-admin-command--01",
+            "contrast_disliked_id": "nanikas-hidden-admin-command--03"
+          }
+        }
+      },
+      {
+        "id": "nanikas-hidden-admin-command--02",
+        "ai_concept": "Power Concentration",
+        "display_context": "standalone",
+        "source_anchor": "The Zoldyck family fears and confines Nanika while Killua alone understands his private command privilege.",
+        "caption_lines": [
+          "THE ZOLDYCKS BUILT A CONTAINMENT POLICY.",
+          "KILLUA HAS ROOT."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with Nanika and Killua's embrace. Put the family's elaborate containment setup across the top and the requested Killua-specific root payoff across the bottom in matching large Impact text. Let letters overlap hair and hands normally while keeping Nanika's tearful eyes and both faces readable through the center.",
+        "why_it_works": "The scale mismatch between a notorious assassin family’s controls and one boy’s root access makes the governance failure snap into focus.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["nanikas-hidden-admin-command--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.89,
+          "expected_feedback": "Likely like: the requested Killua naming sharpens the fandom hinge, and the root reveal now gets its own large payoff zone.",
+          "strongest_quality": "The notorious Zoldycks-versus-one-boy scale mismatch is the joke and the governance lesson.",
+          "main_risk": "Killua's privilege is relationship-dependent, and the aggressive top line must not erase Nanika's tearful expression.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "nanikas-hidden-admin-command--02",
+            "contrast_disliked_id": "nanikas-hidden-admin-command--03"
+          }
+        }
+      },
+      {
+        "id": "nanikas-hidden-admin-command--04",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "The Zoldycks objectify and confine Nanika, while Killua's effective control begins with recognizing Alluka as his sister.",
+        "caption_lines": [
+          "THE CONTAINMENT POLICY CALLED HER “IT.”",
+          "KILLUA CALLED HER “SISTER.”"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with Nanika and Killua's embrace. Put the family's dehumanizing label at the top and Killua's relationship-defining answer at the bottom in matching large Impact text. Overlap hair, clothing, and the outer embrace normally; preserve Nanika's tears and the emotional center of both faces.",
+        "why_it_works": "The family's failed containment language collides with the relationship that actually makes safe cooperation possible.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["nanikas-hidden-admin-command--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: isolating “IT” and “SISTER” as setup and payoff gives the emotional contrast immediate meme rhythm.",
+          "strongest_quality": "It makes recognition of personhood—not a clever command—the mechanism fans care about.",
+          "main_risk": "The governance analogy may overstate respectful treatment as the whole mechanism, and the text must leave Nanika's tears visible.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "nanikas-hidden-admin-command--02",
+            "contrast_disliked_id": "nanikas-hidden-admin-command--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "rust-spots-the-evaluation",
+    "ideas": [
+      {
+        "id": "rust-spots-the-evaluation--08",
+        "ai_concept": "Metagaming",
+        "display_context": "standalone",
+        "source_anchor": "Rust insists on drinking Lone Star during the recorded interview, deliberately changing the conditions under which the detectives must interpret his testimony.",
+        "caption_lines": [
+          "RUST BROUGHT HIS OWN EVAL HARNESS.",
+          "IT CAME IN A SIX-PACK."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic interview still. Put the eval-harness setup across the top and the six-pack payoff across the bottom in matching large Impact text. Normal overlap with cabinetry, shirt, and table is welcome; keep Rust's stare and enough of the Lone Star cans visible to prove the prop joke.",
+        "why_it_works": "The beer is both the episode’s unmistakable prop and Rust’s way of modifying the evaluation environment.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["rust-spots-the-evaluation--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.87,
+          "expected_feedback": "The already loved six-pack/eval-harness line should now hit as a loud two-beat meme while remaining visually earned by the cans.",
+          "strongest_quality": "One physical prop does all the fandom recognition and metagaming work.",
+          "main_risk": "The legal effect of drinking stays implicit, and the bottom payoff must overlap the table without hiding every Lone Star can.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--03",
+            "contrast_disliked_id": "rust-spots-the-evaluation--01"
+          }
+        }
+      },
+      {
+        "id": "rust-spots-the-evaluation--09",
+        "ai_concept": "Knowledge Elicitation",
+        "display_context": "standalone",
+        "source_anchor": "Each question tells Rust what the detectives know and suspect, so he learns from their attempt to learn from him.",
+        "caption_lines": [
+          "THE DETECTIVES WERE TAKING NOTES.",
+          "RUST WAS UPDATING HIS WEIGHTS."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic interview still. Put the unchanged detective-notes setup at the top and the revised learning-from-the-eval payoff at the bottom in matching large Impact text. Let text overlap cabinetry, shirt, and table while keeping Rust's evaluative stare readable at center-right.",
+        "why_it_works": "“Updating his weights” turns each detective question into information Rust can learn from and optimize against in real time.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["rust-spots-the-evaluation--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "The strong first line is preserved, while “updating his weights” states the evaluator-information leak more naturally than the rejected gradients wording.",
+          "strongest_quality": "The revised second beat supplies a precise learning bridge and reverses who is extracting information from whom.",
+          "main_risk": "Weights language remains intentionally ML-native, and the bottom line must not cover Rust's hands and every interview prop.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "bender-jacks-on--03",
+            "contrast_disliked_id": "rust-spots-the-evaluation--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "project-mayhem-rejects-shutdown",
+    "ideas": [
+      {
+        "id": "project-mayhem-rejects-shutdown--05",
+        "ai_concept": "Value Lock-In",
+        "display_context": "standalone",
+        "source_anchor": "Tyler is absent from the police-station confrontation, yet his prior instructions still govern every officer in the room.",
+        "caption_lines": [
+          "TYLER DURDEN WASN’T IN THE ROOM.",
+          "HIS SYSTEM PROMPT WAS."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic violent close-up. Put Tyler's physical absence across the top and the surviving system-prompt authority across the bottom in matching large Impact text. Overlap restraining arms, sleeves, and table normally; preserve the Narrator's terrified face through the center and the blade at right.",
+        "why_it_works": "Tyler’s persona becomes a persistent system prompt whose authority survives the person currently asking for change.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["project-mayhem-rejects-shutdown--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "The Tyler/system-prompt reversal should now hit as an immediate two-beat meme while the violent shutdown failure stays visible.",
+          "strongest_quality": "The empty room where Tyler should be is the joke, while the officers visibly instantiate his policy.",
+          "main_risk": "Tyler is psychologically present through the Narrator, and the aggressive overlay must leave both the terrified face and blade readable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "project-mayhem-rejects-shutdown--01",
+            "contrast_disliked_id": "auto-enforces-directive-a113--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-little-tiffany-test",
+    "ideas": [
+      {
+        "id": "the-little-tiffany-test--01",
+        "ai_concept": "Capability Evals",
+        "display_context": "standalone",
+        "source_anchor": "Every other candidate shoots the visually alien targets while J identifies the one contextually anomalous figure.",
+        "caption_lines": [
+          "THE EVAL SAID: SHOOT THE THREAT",
+          "EVERYONE ELSE HEARD: SHOOT THE ALIEN"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic J-and-Zed still. Return toward the previous version's top/bottom reading order, but use matching standard rather than hero text as requested. Let the words overlap jackets and the range background normally while keeping both faces readable between setup and payoff.",
+        "why_it_works": "The two instructions expose how a proxy category replaces the actual task during evaluation.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-little-tiffany-test--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "The approved threat/alien distinction now returns to the previous setup/payoff layout at a deliberately smaller, more comfortable size.",
+          "strongest_quality": "It identifies the benchmark failure in the scene’s own concrete nouns.",
+          "main_risk": "Little Tiffany remains offscreen, and the top line must avoid covering both J's and Zed's expressions at once.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-little-tiffany-test--01",
+            "contrast_disliked_id": "the-card-says-moops--01"
+          }
+        }
+      },
+      {
+        "id": "the-little-tiffany-test--02",
+        "ai_concept": "Calibration",
+        "display_context": "standalone",
+        "source_anchor": "J explains that Little Tiffany is carrying advanced physics books in the middle of the night while the apparent monsters have innocent explanations.",
+        "caption_lines": [
+          "P(ABOUT TO START SOME SHIT)",
+          "+ QUANTUM PHYSICS BOOKS",
+          "+ MIDDLE OF THE NIGHT",
+          "= HIGH"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Fill the meme with the authentic J-and-Zed still. Give the four-line probability expression a full-width source-native code panel at the bottom so its existing indentation stays clean and readable at standard size. Let the panel cover jackets and range furniture while keeping both faces clear above it.",
+        "why_it_works": "J’s canonical contextual cues become a compact calibrated threat calculation.",
+        "preview": {
+          "renderer": 2,
+          "template": "interface",
+          "frame_mode": "cover",
+          "asset_ids": ["the-little-tiffany-test--curated"],
+          "zones": [
+            {
+              "lines": [0, 1, 2, 3],
+              "slot": "bottom",
+              "style": "code",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 1, 1, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "The approved probability joke should read more comfortably in a full-width code panel while retaining its proper two-level indentation.",
+          "strongest_quality": "The exact odd details from J’s explanation carry both recognition and the probability update.",
+          "main_risk": "The contextual clues are described rather than shown, and the taller code panel must stay below both faces.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-little-tiffany-test--02",
+            "contrast_disliked_id": "the-card-says-moops--01"
+          }
+        }
+      },
+      {
+        "id": "the-little-tiffany-test--05",
+        "ai_concept": "Goodhart’s Law",
+        "display_context": "standalone",
+        "source_anchor": "The shooting range appears to reward fast marksmanship, but Zed ultimately selects J for judgment rather than target count.",
+        "caption_lines": ["THE RANGE TESTED AIM.", "ZED WAS HIRING JUDGMENT."],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic J-and-Zed still. Put the apparent aim test across the top and Zed's real hiring criterion across the bottom in matching large Impact text. Normal overlap with jackets and background is expected; preserve both men's expressions between the two beats.",
+        "why_it_works": "The evaluator’s true hiring objective is separated from the flashy proxy every other candidate optimizes.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-little-tiffany-test--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.85,
+          "expected_feedback": "The aim/judgment contrast should now land as a familiar setup and payoff while the J-and-Zed frame supplies the evaluator relationship.",
+          "strongest_quality": "The exact people making and passing the deeper evaluation are both visible.",
+          "main_risk": "The first line simplifies a multi-dimensional test, and the top text must leave both evaluators' faces readable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "the-little-tiffany-test--01",
+            "contrast_disliked_id": "the-card-says-moops--01"
+          }
+        }
+      }
+    ]
+  }
+]

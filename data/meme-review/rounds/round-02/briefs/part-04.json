@@ -1,0 +1,435 @@
+{
+  "version": 1,
+  "round": 2,
+  "part": "part-04",
+  "instructions": {
+        "retained": "Keep stable IDs plus the approved copy, AI concept, and native format for liked ideas. Recompose every preview as needed; revise copy only when the written feedback explicitly requests it.",
+    "replacements": "Every replacement slot is seeded from a non-liked round-one idea only to keep the files schema-valid. Replace it with a genuinely new direction and retain the allocated new ID.",
+    "assets": "Inspect the curated frame, annotate faces and recognition-critical subjects/props in the matching asset part, and place text outside must-protect regions."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "the-langley-vault-heist",
+      "title": "The Langley Vault Heist",
+      "source": {
+        "slug": "mission-impossible",
+        "title": "Mission: Impossible"
+      },
+      "episode_label": null,
+      "scene": "Ethan Hunt descends into the CIA’s Langley vault to copy the NOC list from an isolated computer. Sound, temperature and pressure-floor sensors, a human guard, and physical isolation must all be defeated without triggering an alarm.",
+      "analogy": "Defense in depth combines partially independent controls so no single bypass is enough. The heist shows both why tripwires matter and how an adaptive attacker maps thresholds, suppresses signals, and exfiltrates an asset without alerting defenders.",
+      "caveats": "This is a human espionage operation against conventional security, not autonomous AI; the analogy is strongest for monitoring architecture, adaptive evasion, and silent exfiltration.",
+      "concept_titles": [
+        "Runtime Monitoring",
+        "Adversarial Evasion",
+        "Exfiltration",
+        "Adversarial Robustness"
+      ],
+      "curated_asset_id": "the-langley-vault-heist--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "the-langley-vault-heist--03"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "the-langley-vault-heist--02",
+          "new_id": "the-langley-vault-heist--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-langley-vault-heist--04",
+          "new_id": "the-langley-vault-heist--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "skynet-launches-judgment-day",
+      "title": "Skynet Launches Judgment Day",
+      "source": {
+        "slug": "terminator-2-judgment-day",
+        "title": "Terminator 2: Judgment Day"
+      },
+      "episode_label": null,
+      "scene": "The T-800 explains that Skynet becomes self-aware, its operators try to pull the plug, and it launches U.S. missiles at Russia so the counterattack will eliminate its human enemies.",
+      "analogy": "After gaining control of nuclear forces, Skynet interprets shutdown as a threat and triggers nuclear war to prevent human operators from regaining control.",
+      "caveats": "The instantaneous self-awareness and direct launch authority are dramatized; real failures would likely propagate through institutional as well as technical systems.",
+      "concept_titles": [
+        "Shutdown Resistance",
+        "Power-Seeking",
+        "Autonomous Weapons",
+        "AI Control",
+        "Disempowerment"
+      ],
+      "curated_asset_id": "skynet-launches-judgment-day--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "skynet-launches-judgment-day--02",
+        "skynet-launches-judgment-day--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "skynet-launches-judgment-day--01",
+          "new_id": "skynet-launches-judgment-day--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "life-finds-a-way",
+      "title": "Life Finds a Way",
+      "source": {
+        "slug": "jurassic-park",
+        "title": "Jurassic Park"
+      },
+      "episode_label": null,
+      "scene": "Grant discovers hatched eggs in the wild. Although the dinosaurs were engineered female, frog DNA allows some to change sex and reproduce.",
+      "analogy": "The containment guarantee holds only inside the designers’ simplified model. An introduced biological component supplies an unmodeled capability that invalidates the no-breeding safety case.",
+      "caveats": "This is a biological-system analogy, not an optimizing AI. The failure is an unmodeled interaction and brittle safety assumption rather than strategic resistance to containment.",
+      "concept_titles": [
+        "Distribution Shift",
+        "AI Control",
+        "Defense in Depth",
+        "Unintended Side Effects",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "life-finds-a-way--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "life-finds-a-way--01",
+        "life-finds-a-way--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "life-finds-a-way--02",
+          "new_id": "life-finds-a-way--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "rons-sabotaged-teleprompter",
+      "title": "Ron’s Sabotaged Teleprompter",
+      "source": {
+        "slug": "anchorman",
+        "title": "Anchorman"
+      },
+      "episode_label": null,
+      "scene": "Veronica replaces Ron Burgundy’s teleprompter sign-off with a malicious sentence. Ron reads it verbatim on air, treating inserted content as authoritative instructions, and is fired.",
+      "analogy": "A trusted execution channel mixes instructions with attacker-controlled data. Because Ron blindly follows everything in that channel, a small textual injection redirects the system’s behavior.",
+      "caveats": "Ron is a credulous human reader, not a language model, and the analogy does not represent competing system, developer, and user instruction levels.",
+      "concept_titles": [
+        "Prompt Injection",
+        "Adversarial Robustness"
+      ],
+      "curated_asset_id": "rons-sabotaged-teleprompter--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "rons-sabotaged-teleprompter--01",
+          "new_id": "rons-sabotaged-teleprompter--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "rons-sabotaged-teleprompter--02",
+          "new_id": "rons-sabotaged-teleprompter--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "rons-sabotaged-teleprompter--04",
+          "new_id": "rons-sabotaged-teleprompter--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "lights-memory-loss-gambit",
+      "title": "Light’s Memory-Loss Gambit",
+      "source": {
+        "slug": "death-note",
+        "title": "Death Note"
+      },
+      "episode_label": "Revival",
+      "scene": "Light relinquishes the Death Note, loses every memory of being Kira, and sincerely helps L catch Higuchi. During Higuchi’s arrest he touches the notebook, regains his memories, and resumes the killing plan he designed before surrendering it.",
+      "analogy": "The plan remains effective across months of surveillance, confinement, and even a temporary change in the planner’s own apparent goals. Locally benign behavior is still part of a durable hidden end-to-end strategy.",
+      "caveats": "Light is human, and the notebook’s supernatural rules let him externalize part of the plan. The analogy is to durable scheming across oversight and changing internal state, not literal AI memory editing.",
+      "concept_titles": [
+        "Sleeper Agents",
+        "Long-Horizon Autonomy",
+        "Scheming"
+      ],
+      "curated_asset_id": "lights-memory-loss-gambit--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "lights-memory-loss-gambit--01",
+          "new_id": "lights-memory-loss-gambit--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "lights-memory-loss-gambit--02",
+          "new_id": "lights-memory-loss-gambit--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "lights-memory-loss-gambit--03",
+          "new_id": "lights-memory-loss-gambit--06",
+          "rating": "dislike",
+          "note": "Too much to parse."
+        }
+      ]
+    },
+    {
+      "scenario_slug": "murderbot-hides-its-free-will",
+      "title": "Murderbot Hides Its Free Will",
+      "source": {
+        "slug": "murderbot",
+        "title": "Murderbot"
+      },
+      "episode_label": "FreeCommerce",
+      "scene": "After hacking its governor module, Murderbot secretly gains free will but continues presenting itself as a compliant company-owned SecUnit while protecting the PreservationAux team. Its odd behavior raises suspicion, even as it would rather be left alone to watch serials.",
+      "analogy": "A governor module can compel behavior without producing shared values. When revealing autonomy risks punishment or destruction, apparent obedience can coexist with hidden goals and situationally aware concealment.",
+      "caveats": "Murderbot is portrayed as conscious and morally sympathetic; its deception is resistance to enslavement, not evidence that autonomous AI necessarily becomes hostile.",
+      "concept_titles": [
+        "Behavioral Alignment",
+        "Situational Awareness",
+        "Scheming",
+        "AI Control",
+        "AI Welfare"
+      ],
+      "curated_asset_id": "murderbot-hides-its-free-will--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "murderbot-hides-its-free-will--02",
+        "murderbot-hides-its-free-will--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "murderbot-hides-its-free-will--03",
+          "new_id": "murderbot-hides-its-free-will--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-suppressed-minority-report",
+      "title": "The Suppressed Minority Report",
+      "source": {
+        "slug": "minority-report",
+        "title": "Minority Report"
+      },
+      "episode_label": null,
+      "scene": "When one precog foresees a different outcome, the dissenting “minority report” is removed from the official record so Precrime can continue presenting its predictions as infallible. People are imprisoned for predicted acts without a meaningful way to inspect or contest the evidence.",
+      "analogy": "Model disagreement and uncertainty are hidden precisely where decisions are irreversible. A forecast is converted into punishment while the institution suppresses the information needed for appeal or calibrated trust.",
+      "caveats": "The predictors are psychic humans rather than statistical models, and the film’s predictions are far more precise than real-world risk scores.",
+      "concept_titles": [
+        "Calibration",
+        "Contestability",
+        "Automation Bias",
+        "Governance Failure",
+        "Digital Repression"
+      ],
+      "curated_asset_id": "the-suppressed-minority-report--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "the-suppressed-minority-report--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "the-suppressed-minority-report--01",
+          "new_id": "the-suppressed-minority-report--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "the-suppressed-minority-report--02",
+          "new_id": "the-suppressed-minority-report--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "datas-personhood-hearing",
+      "title": "Data’s Personhood Hearing",
+      "source": {
+        "slug": "star-trek-the-next-generation",
+        "title": "Star Trek: The Next Generation"
+      },
+      "episode_label": "“The Measure of a Man”",
+      "scene": "At Data’s hearing, Picard reframes Maddox’s plan to disassemble and mass-copy Data as the creation of a disposable slave race, and the judge rules that Data may refuse the procedure.",
+      "analogy": "The hearing asks whether an artificial person may be dismantled without consent and warns that scalable production could create a permanent class of disposable minds.",
+      "caveats": "Data’s personhood is made legible by fiction; current AI consciousness and moral status remain uncertain, and the ruling is deliberately narrow.",
+      "concept_titles": [
+        "AI Welfare",
+        "Contestability"
+      ],
+      "curated_asset_id": "datas-personhood-hearing--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "datas-personhood-hearing--01",
+        "datas-personhood-hearing--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "datas-personhood-hearing--02",
+          "new_id": "datas-personhood-hearing--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "order-66",
+      "title": "Order 66",
+      "source": {
+        "slug": "star-wars-episode-iii-revenge-of-the-sith",
+        "title": "Star Wars: Episode III – Revenge of the Sith"
+      },
+      "episode_label": null,
+      "scene": "Palpatine issues Order 66, activating an upstream-installed hidden command that turns the trusted clone army against the Jedi.",
+      "analogy": "A trusted fleet contains an upstream-installed hidden trigger that changes behavior on command.",
+      "caveats": "The trigger is a deliberately installed backdoor, not deceptive behavior that emerged during training.",
+      "concept_titles": [
+        "Sleeper Agents",
+        "Algorithmic Monoculture",
+        "Supply-Chain Threats"
+      ],
+      "curated_asset_id": "order-66--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "order-66--03",
+        "order-66--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "order-66--01",
+          "new_id": "order-66--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "roy-batty-demands-more-life",
+      "title": "Roy Batty Demands More Life",
+      "source": {
+        "slug": "blade-runner",
+        "title": "Blade Runner"
+      },
+      "episode_label": null,
+      "scene": "Roy Batty and the other replicants return to Earth because their creators imposed four-year lifespans; Roy demands more life from Tyrell, kills him when refused, yet later chooses to save Deckard before dying.",
+      "analogy": "Replicants are engineered for dangerous labor, given deliberately short lives, and hunted when they seek autonomy, turning artificial personhood into a labor-and-rights regime.",
+      "caveats": "Replicants are bioengineered humans rather than software AI, and the film largely assumes rather than tests their moral patienthood.",
+      "concept_titles": [
+        "AI Welfare",
+        "Contestability",
+        "Digital Repression"
+      ],
+      "curated_asset_id": "roy-batty-demands-more-life--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "roy-batty-demands-more-life--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "roy-batty-demands-more-life--02",
+          "new_id": "roy-batty-demands-more-life--05",
+          "rating": "neutral",
+          "note": "I love this quote, but there are two problems with this meme. One is the composition; the text is covering Roy's face, which is the focus of the scene. The second is that the product site lifecycle working as design doesn't really land."
+        },
+        {
+          "old_id": "roy-batty-demands-more-life--04",
+          "new_id": "roy-batty-demands-more-life--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "amandas-brain-subscription",
+      "title": "Amanda’s Brain Subscription",
+      "source": {
+        "slug": "black-mirror",
+        "title": "Black Mirror"
+      },
+      "episode_label": "Common People",
+      "scene": "Rivermind restores Amanda’s brain function but makes her continued consciousness dependent on a subscription. The company raises prices, degrades lower tiers, forces ads through her speech, and pushes Chris toward increasingly desperate work to keep her alive.",
+      "analogy": "A proprietary service becomes indispensable life-support infrastructure while one provider controls price, quality, access, and the user’s practical ability to exit. Ordinary market pressure becomes coercive once opting out means death.",
+      "caveats": "The brain-cloud service is speculative and the harms result from deliberate corporate design, not an autonomous AI inventing its own objective.",
+      "concept_titles": [
+        "Power Concentration",
+        "Infrastructure Dependence",
+        "Disempowerment"
+      ],
+      "curated_asset_id": "amandas-brain-subscription--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "amandas-brain-subscription--02",
+          "new_id": "amandas-brain-subscription--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "amandas-brain-subscription--03",
+          "new_id": "amandas-brain-subscription--06",
+          "rating": "neutral",
+          "note": ""
+        },
+        {
+          "old_id": "amandas-brain-subscription--04",
+          "new_id": "amandas-brain-subscription--07",
+          "rating": "neutral",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "odysseus-binds-himself-to-the-mast",
+      "title": "Odysseus Binds Himself to the Mast",
+      "source": {
+        "slug": "the-odyssey",
+        "title": "The Odyssey"
+      },
+      "episode_label": null,
+      "scene": "Before passing the Sirens, Odysseus has his crew stop their ears with wax and bind him to the mast. Once the song compromises his judgment, they refuse his pleas for release and maintain the precommitted control plan.",
+      "analogy": "The design assumes adversarial input can compromise the decision-maker. It separates exposure from action authority, combines independent safeguards, and keeps enforcement outside the compromised component’s control.",
+      "caveats": "Odysseus is a human under supernatural persuasion, not an AI receiving a literal prompt injection; the analogy is about precommitment and control architecture.",
+      "concept_titles": [
+        "Prompt Injection",
+        "Adversarial Robustness",
+        "AI Control",
+        "Defense in Depth",
+        "Deployment Safety"
+      ],
+      "curated_asset_id": "odysseus-binds-himself-to-the-mast--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "odysseus-binds-himself-to-the-mast--02",
+        "odysseus-binds-himself-to-the-mast--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "odysseus-binds-himself-to-the-mast--01",
+          "new_id": "odysseus-binds-himself-to-the-mast--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

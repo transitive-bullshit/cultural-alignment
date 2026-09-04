@@ -1,0 +1,556 @@
+[
+  {
+    "id": "the-interior-decorator--curated",
+    "scenario_slug": "the-interior-decorator",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481b6ab19fafd9cbda763/gallery-017a89fb6e02c004c31717f5231553c771bac8a4f134b30076dca3c7cfa5dd16.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from The Sopranos illustrating The Interior Decorator",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADQAQCdASoIAAUAA8BgJZQC7AD0h/vOAAD+wQMQkS/OSORd+Vyw1PuAgAA=",
+    "content_hash": "017a89fb6e02c004c31717f5231553c771bac8a4f134b30076dca3c7cfa5dd16",
+    "protected_regions": [
+      {
+        "id": "the-interior-decorator--paulie-face",
+        "label": "Paulie’s face during the phone call",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [36, 7, 14, 29]
+      },
+      {
+        "id": "the-interior-decorator--paulie",
+        "label": "Paulie’s body beside the car",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [27, 5, 28, 94]
+      },
+      {
+        "id": "the-interior-decorator--phone",
+        "label": "Phone held to Paulie’s ear",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [34, 12, 8, 25]
+      },
+      {
+        "id": "the-interior-decorator--point",
+        "label": "Paulie’s pointing hand",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [46, 48, 12, 18]
+      },
+      {
+        "id": "the-interior-decorator--car-mirror",
+        "label": "Car mirror and street-side context",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [60, 45, 17, 25]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "rust-spots-the-evaluation--curated",
+    "scenario_slug": "rust-spots-the-evaluation",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481bb9c47fff7d186b2fb/gallery-8764e80e8a386b23ea5d6c71c07b76f9a2662916056d6107b1de5101d21de3fa.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from True Detective illustrating Rust Spots the Evaluation",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADQAQCdASoIAAQAA8BgJQBOgCPg+vCuAAD+0Ol3J+UpnTOGPNDC7uYAAAA=",
+    "content_hash": "8764e80e8a386b23ea5d6c71c07b76f9a2662916056d6107b1de5101d21de3fa",
+    "protected_regions": [
+      {
+        "id": "rust-spots-the-evaluation--rust-face",
+        "label": "Rust’s face and evaluative stare",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [58, 7, 17, 31]
+      },
+      {
+        "id": "rust-spots-the-evaluation--rust",
+        "label": "Rust seated at the interview table",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [52, 7, 35, 92]
+      },
+      {
+        "id": "rust-spots-the-evaluation--beer",
+        "label": "Lone Star cans and interview beer",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [39, 59, 27, 40]
+      },
+      {
+        "id": "rust-spots-the-evaluation--hands",
+        "label": "Rust’s hands around the can",
+        "kind": "gesture",
+        "priority": "soft",
+        "source_rect": [57, 60, 19, 27]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "brian-rewinds-the-gauge--curated",
+    "scenario_slug": "brian-rewinds-the-gauge",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481c1bcdcd9307e68f63b/gallery-7b371ef5aa67dc40d8bb69fb2a9949007b7e5ced117c36e8620f2986f4cf3d68.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from Family Guy illustrating Brian Rewinds the Gauge",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADQAQCdASoIAAQAA8BgJZQCdAD0gdEbAAD+6kgJQuuccOnd+HbpRr0YuAA=",
+    "content_hash": "7b371ef5aa67dc40d8bb69fb2a9949007b7e5ced117c36e8620f2986f4cf3d68",
+    "protected_regions": [
+      {
+        "id": "brian-rewinds-the-gauge--date",
+        "label": "Brian’s date beside the machine",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [23, 10, 17, 67]
+      },
+      {
+        "id": "brian-rewinds-the-gauge--brian",
+        "label": "Brian facing the time machine",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [47, 28, 14, 53]
+      },
+      {
+        "id": "brian-rewinds-the-gauge--console",
+        "label": "Illuminated time-machine controls and gauge",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [59, 27, 30, 64]
+      },
+      {
+        "id": "brian-rewinds-the-gauge--watermark",
+        "label": "Existing TBS watermark",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [88, 77, 12, 20]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-card-says-moops--curated",
+    "scenario_slug": "the-card-says-moops",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481c582d8f3fa7c81d393/gallery-7a021b6c1d14fe3573a01ec24f2d5964decf225dd14202fcbc7d7fe988a7b9ad.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Seinfeld illustrating The Card Says Moops",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoIAAUAA8BgJZwC7ADb60xwAP7p/G84vbLbiNen3kGExsEOiArUwqAA",
+    "content_hash": "7a021b6c1d14fe3573a01ec24f2d5964decf225dd14202fcbc7d7fe988a7b9ad",
+    "protected_regions": [
+      {
+        "id": "the-card-says-moops--george-face",
+        "label": "George’s face and expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [7, 17, 27, 42]
+      },
+      {
+        "id": "the-card-says-moops--george",
+        "label": "George seated at the game",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [3, 17, 36, 82]
+      },
+      {
+        "id": "the-card-says-moops--susan-face",
+        "label": "Susan’s reacting face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [57, 15, 20, 37]
+      },
+      {
+        "id": "the-card-says-moops--susan",
+        "label": "Susan seated beside George",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [52, 15, 35, 84]
+      },
+      {
+        "id": "the-card-says-moops--card-area",
+        "label": "Hands and game-card area on the table",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [39, 65, 34, 34]
+      },
+      {
+        "id": "the-card-says-moops--watermark",
+        "label": "Existing TBS watermark",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [1, 3, 10, 13]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "dr-evils-outdated-ransom--curated",
+    "scenario_slug": "dr-evils-outdated-ransom",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481cab9add7fca42f4440/gallery-5dc2228acd7744f5780101ee08bb7c2488be1abe01f6428f2d8c69ffabcedd24.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from Austin Powers: International Man of Mystery illustrating Dr. Evil’s Outdated Ransom",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoIAAUAA8BgJQBOgB6NpEUAAPYbP3f3EZlEQsoTInDqRJbYET0BFalAAAA=",
+    "content_hash": "5dc2228acd7744f5780101ee08bb7c2488be1abe01f6428f2d8c69ffabcedd24",
+    "protected_regions": [
+      {
+        "id": "dr-evils-outdated-ransom--face",
+        "label": "Dr. Evil’s full face and raised eyebrow",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [25, 0, 54, 94]
+      },
+      {
+        "id": "dr-evils-outdated-ransom--pinky",
+        "label": "Raised pinky, mouth, and ring",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [43, 59, 24, 40]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "project-mayhem-rejects-shutdown--curated",
+    "scenario_slug": "project-mayhem-rejects-shutdown",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481cabfdffeeccdb35e39/gallery-82b26d93653ad1359e55b4477be1ff698b132847df4a6327b067514008ab4c6d.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Fight Club illustrating Project Mayhem Rejects Shutdown",
+    "blur_data_url": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoIAAUAA8BgJbACdAD0eqnsAP6EEiOdOY2De586quy8pgb96KUSYZC27ZGojI8gB7KszbQA",
+    "content_hash": "82b26d93653ad1359e55b4477be1ff698b132847df4a6327b067514008ab4c6d",
+    "protected_regions": [
+      {
+        "id": "project-mayhem-rejects-shutdown--narrator-face",
+        "label": "The Narrator’s terrified face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [42, 11, 23, 53]
+      },
+      {
+        "id": "project-mayhem-rejects-shutdown--narrator",
+        "label": "The Narrator restrained on the table",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [34, 25, 38, 74]
+      },
+      {
+        "id": "project-mayhem-rejects-shutdown--restraining-arms",
+        "label": "Officers’ arms pinning the Narrator",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [0, 0, 49, 98]
+      },
+      {
+        "id": "project-mayhem-rejects-shutdown--blade",
+        "label": "Visible blade and threatening officer at right",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [72, 19, 28, 71]
+      },
+      {
+        "id": "project-mayhem-rejects-shutdown--watermark",
+        "label": "Existing lower-left source watermark",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [0, 75, 23, 25]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-wrong-trousers-heist--curated",
+    "scenario_slug": "the-wrong-trousers-heist",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481d99d66fa080d285496/gallery-faf8527a271b714e7d2be9c5926522279e3d16006d1a5c7698c100a2c3fd7399.webp",
+    "width": 1500,
+    "height": 1022,
+    "alt": "Still from Wallace & Gromit: The Wrong Trousers illustrating The Wrong Trousers Heist",
+    "blur_data_url": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADQAQCdASoIAAUAA8BgJZACdAEWToI9oAD+hecijkWP5L1iazjAtAnKXFQpBpWMJpLboMtUigAAAA==",
+    "content_hash": "faf8527a271b714e7d2be9c5926522279e3d16006d1a5c7698c100a2c3fd7399",
+    "protected_regions": [
+      {
+        "id": "the-wrong-trousers-heist--wallace-face",
+        "label": "Wallace’s alarmed face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [38, 2, 20, 31]
+      },
+      {
+        "id": "the-wrong-trousers-heist--wallace",
+        "label": "Wallace’s torso and outstretched hands",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [24, 0, 50, 72]
+      },
+      {
+        "id": "the-wrong-trousers-heist--trousers",
+        "label": "Techno-Trousers waistband and mechanical body",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [32, 43, 48, 56]
+      },
+      {
+        "id": "the-wrong-trousers-heist--legs",
+        "label": "Powered trouser legs and kicking pose",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [45, 55, 50, 44]
+      },
+      {
+        "id": "the-wrong-trousers-heist--table",
+        "label": "Breakfast table and domestic setting",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [0, 69, 45, 30]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-little-tiffany-test--curated",
+    "scenario_slug": "the-little-tiffany-test",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481dca3d0f2351d8fd809/gallery-153ba92947ec1b64a5d302b2cf7d300c3a415b48cda3bc1c335175d8d31e7b3f.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Men in Black illustrating The Little Tiffany Test",
+    "blur_data_url": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADQAQCdASoIAAUAA8BgJaACdAEWTctjUAD7iCgYmgTtv0KHVFTsAWemESV1ZI02UI89NhcxvK6F2a/VB/yAAAAA",
+    "content_hash": "153ba92947ec1b64a5d302b2cf7d300c3a415b48cda3bc1c335175d8d31e7b3f",
+    "protected_regions": [
+      {
+        "id": "the-little-tiffany-test--jay-face",
+        "label": "Agent J’s face and expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [27, 4, 20, 31]
+      },
+      {
+        "id": "the-little-tiffany-test--jay",
+        "label": "Agent J’s red-jacketed figure",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [15, 0, 43, 99]
+      },
+      {
+        "id": "the-little-tiffany-test--zed-face",
+        "label": "Zed’s face and reaction",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [60, 7, 18, 31]
+      },
+      {
+        "id": "the-little-tiffany-test--zed",
+        "label": "Zed’s suited figure",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [53, 0, 42, 99]
+      },
+      {
+        "id": "the-little-tiffany-test--watermark",
+        "label": "Existing Scene City mark",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [1, 5, 20, 20]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "both-goblets-are-poisoned--curated",
+    "scenario_slug": "both-goblets-are-poisoned",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481e1b895c7ee33ac0dd7/gallery-54ad987528b44603635a5bed99e554abc94f6bb5e17b43385f14b6c48afd12eb.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from The Princess Bride illustrating Both Goblets Are Poisoned",
+    "blur_data_url": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACwAQCdASoIAAUAA8BgJYwCw7Dx+XPAAP5zNzK0dhim6bQiP+aKHc/EF+Rl3bYz4QgAAA==",
+    "content_hash": "54ad987528b44603635a5bed99e554abc94f6bb5e17b43385f14b6c48afd12eb",
+    "protected_regions": [
+      {
+        "id": "both-goblets-are-poisoned--vizzini-face",
+        "label": "Vizzini’s animated face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [6, 13, 27, 46]
+      },
+      {
+        "id": "both-goblets-are-poisoned--buttercup",
+        "label": "Blindfolded Buttercup",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [35, 0, 29, 95]
+      },
+      {
+        "id": "both-goblets-are-poisoned--westley",
+        "label": "Westley across the table",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [74, 7, 26, 92]
+      },
+      {
+        "id": "both-goblets-are-poisoned--goblets",
+        "label": "Both goblets on the table",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [30, 69, 41, 29]
+      },
+      {
+        "id": "both-goblets-are-poisoned--watermark",
+        "label": "Existing lower-left source watermark",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [0, 72, 22, 25]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-poisoned-medication-labels--curated",
+    "scenario_slug": "the-poisoned-medication-labels",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481f39f91f11b1186cfea/gallery-c39db7f528101a013713b71f490e9b50d8e37a1e0ccac9d266753e41b687b7a3.webp",
+    "width": 1280,
+    "height": 693,
+    "alt": "Still from Knives Out illustrating The Poisoned Medication Labels",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAQAA8BgJZwAAp1TT6qAAP7Qcuavnyc0+PfS+G2rpWcUIAA=",
+    "content_hash": "c39db7f528101a013713b71f490e9b50d8e37a1e0ccac9d266753e41b687b7a3",
+    "protected_regions": [
+      {
+        "id": "the-poisoned-medication-labels--harlan-face",
+        "label": "Harlan’s face beneath the knife display",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [44, 29, 13, 22]
+      },
+      {
+        "id": "the-poisoned-medication-labels--harlan",
+        "label": "Harlan seated in the study",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [34, 28, 30, 71]
+      },
+      {
+        "id": "the-poisoned-medication-labels--knife-throne",
+        "label": "Circular knife display identifying the film",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [16, 0, 69, 90]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "kill-switch--curated",
+    "scenario_slug": "kill-switch",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481fe907ec87942af5b42/gallery-8f01ff9bd04e2e93b4be2a8d2e4b48f4b5c1cebede677ccc2273ac24217e7335.webp",
+    "width": 1650,
+    "height": 928,
+    "alt": "Still from The X-Files illustrating Kill Switch",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAQCdASoIAAQAA8BgJZwC7AD0l4yqAAD+oxwyKqMGm7wIDU0AzenAIaoBd6UAAAA=",
+    "content_hash": "8f01ff9bd04e2e93b4be2a8d2e4b48f4b5c1cebede677ccc2273ac24217e7335",
+    "protected_regions": [
+      {
+        "id": "kill-switch--invisigoth-face",
+        "label": "Invisigoth’s full face and dark eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [43, 0, 39, 82]
+      },
+      {
+        "id": "kill-switch--invisigoth",
+        "label": "Invisigoth’s black-clad shoulders",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [38, 60, 44, 40]
+      },
+      {
+        "id": "kill-switch--car",
+        "label": "Parked car behind Invisigoth",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [7, 34, 46, 54]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "david-spends-his-integrity--curated",
+    "scenario_slug": "david-spends-his-integrity",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f12481038c5df05e6a2fe4ee/gallery-cede3fe8df3676a00a206e0b449ff465b97a6e5991cc41998473b3f470ee41a0.webp",
+    "width": 1500,
+    "height": 860,
+    "alt": "Still from Pantheon illustrating David Spends His Integrity",
+    "blur_data_url": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADQAQCdASoIAAUAA8BgJYwCdAD0lcHVQAD8/SL3n45VJAAAV1olXnQwJuf1lobugj8vUzjbgAA=",
+    "content_hash": "cede3fe8df3676a00a206e0b449ff465b97a6e5991cc41998473b3f470ee41a0",
+    "protected_regions": [
+      {
+        "id": "david-spends-his-integrity--maddie-face",
+        "label": "Maddie’s face in the foreground",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [24, 17, 28, 46]
+      },
+      {
+        "id": "david-spends-his-integrity--maddie",
+        "label": "Maddie’s foreground figure",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [10, 15, 50, 84]
+      },
+      {
+        "id": "david-spends-his-integrity--david-face",
+        "label": "David’s face and glasses",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [55, 7, 21, 36]
+      },
+      {
+        "id": "david-spends-his-integrity--david",
+        "label": "David’s uploaded figure behind Maddie",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [48, 0, 35, 100]
+      },
+      {
+        "id": "david-spends-his-integrity--grid",
+        "label": "Green digital grid environment",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [0, 0, 100, 100]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-poisoned-medication-labels--marta-vials",
+    "scenario_slug": "the-poisoned-medication-labels",
+    "src": "data:image/webp;base64,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",
+    "width": 960,
+    "height": 518,
+    "alt": "Marta studies the two medication vials in Knives Out",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACQAQCdASoIAAQAA8BgJQBOgB6NiqAA/tmdhrC1Ka8oqbgLXizstIhBC1Em3AAA",
+    "content_hash": "3279d6232b568bd0d00760d7a0babeb396e15d07ff2326bd314f2e4febc2fa5e",
+    "protected_regions": [
+      {
+        "id": "the-poisoned-medication-labels--marta-face",
+        "label": "Marta’s anxious face and eyes",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [28, 0, 46, 98]
+      },
+      {
+        "id": "the-poisoned-medication-labels--left-vial",
+        "label": "Left medication vial and Marta’s fingers",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [0, 25, 38, 75]
+      },
+      {
+        "id": "the-poisoned-medication-labels--right-vial",
+        "label": "Right medication vial and Marta’s fingers",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [57, 27, 31, 72]
+      }
+    ],
+    "annotation_status": "complete"
+  }
+]

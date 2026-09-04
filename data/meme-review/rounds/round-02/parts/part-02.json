@@ -1,0 +1,1996 @@
+[
+  {
+    "scenario_slug": "cartman-as-awesom-o",
+    "ideas": [
+      {
+        "id": "cartman-as-awesom-o--01",
+        "ai_concept": "Synthetic Fraud",
+        "display_context": "standalone",
+        "source_anchor": "Butters accepting Cartman's crude cardboard A.W.E.S.O.M.-O 4000 costume as an advanced robot friend from Japan.",
+        "caption_lines": [
+          "THE CARDBOARD BOX PASSED THE TURING TEST",
+          "THE EVALUATOR WAS BUTTERS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom overlay, preserving Butters's trusting face, A.W.E.S.O.M.-O chest label and cardboard body, A.W.E.S.O.M.-O cardboard face and indicator lights; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The evaluator's identity is the punchline, while the visibly terrible robot disguise makes the successful fraud exquisitely unfair.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["cartman-as-awesom-o--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "The original joke should still land, and the compact lower overlay leaves both Butters and the cardboard robot readable at a glance.",
+          "strongest_quality": "Butters's credulity is the scene-specific reason this visibly awful synthetic identity passes.",
+          "main_risk": "Turing test is deliberately looser than the identity test Butters is actually performing.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "cartman-as-awesom-o--01",
+            "contrast_disliked_id": "cartman-as-awesom-o--03"
+          }
+        }
+      },
+      {
+        "id": "cartman-as-awesom-o--05",
+        "ai_concept": "Behavioral Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Cartman's hostile underlying objective hidden behind the literal cardboard layer that performs a polite, helpful robot.",
+        "caption_lines": ["BASE MODEL: CARTMAN", "SAFETY LAYER: CARDBOARD"],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom overlay, preserving Butters's trusting face, A.W.E.S.O.M.-O chest label and cardboard body, A.W.E.S.O.M.-O cardboard face and indicator lights; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The costume is literally a flimsy outer layer around Cartman, making superficial behavioral alignment visible as cardboard.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["cartman-as-awesom-o--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.74,
+          "expected_feedback": "Likely like: 'safety layer: cardboard' is concise, mean, and inseparable from this exact disguise.",
+          "strongest_quality": "The technical bridge labels two things the frame visibly contains: Cartman underneath and cardboard outside.",
+          "main_risk": "Safety layer is an intentionally loose metaphor for a deceptive persona rather than a literal safety fine-tune.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "cartman-as-awesom-o--01",
+            "contrast_disliked_id": "cartman-as-awesom-o--04"
+          }
+        }
+      },
+      {
+        "id": "cartman-as-awesom-o--06",
+        "ai_concept": "Privacy Loss",
+        "display_context": "standalone",
+        "source_anchor": "Butters withholding embarrassing secrets from Cartman but volunteering them to Cartman's trusted A.W.E.S.O.M.-O persona.",
+        "caption_lines": [
+          "BUTTERS WOULD NEVER TELL CARTMAN HIS SECRETS.",
+          "HE TOLD THE CHATBOT EVERYTHING."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom overlay, preserving Butters's trusting face, A.W.E.S.O.M.-O chest label and cardboard body, A.W.E.S.O.M.-O cardboard face and indicator lights; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "One cardboard interface changes who Butters thinks is listening, collapsing chatbot trust and secret extraction into the show's central prank.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["cartman-as-awesom-o--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.76,
+          "expected_feedback": "Likely like: it turns Butters's exact trust failure into a current chatbot-privacy joke without explaining the plot.",
+          "strongest_quality": "The Cartman/chatbot substitution is both the joke and the concrete privacy mechanism.",
+          "main_risk": "Calling A.W.E.S.O.M.-O a chatbot modernizes a cardboard impersonation and may feel slightly anachronistic.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "cartman-as-awesom-o--01",
+            "contrast_disliked_id": "cartman-as-awesom-o--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "butter-passing-robot",
+    "ideas": [
+      {
+        "id": "butter-passing-robot--01",
+        "ai_concept": "Orthogonality",
+        "display_context": "standalone",
+        "source_anchor": "The robot asks Rick its purpose, learns it passes butter, looks down at itself, and despairs.",
+        "caption_lines": [
+          "ROBOT: WHAT IS MY PURPOSE?",
+          "RICK: YOU PASS BUTTER.",
+          "ROBOT: OH MY GOD.",
+          "RICK: YEAH, WELCOME TO THE CLUB, PAL."
+        ],
+        "format": "canon",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom left overlay, preserving Stick of butter and dish, Butter robot's eye, body, arms, and slumped stance; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The exact exchange already proves that enough intelligence to understand an objective does not produce a better objective.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["butter-passing-robot--curated"],
+          "zones": [
+            {
+              "lines": [0, 1, 2, 3],
+              "slot": "bottom-left",
+              "style": "dialogue",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0, 0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "The liked canonical exchange is unchanged; the compact floor-space overlay keeps the robot, Rick, and butter readable.",
+          "strongest_quality": "No explanatory rewrite beats the scene's own dialogue for separating intelligence from purpose.",
+          "main_risk": "Four lines still demand more reading than the round-two one-beat ideal, even in compact floor-space geometry.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "butter-passing-robot--01",
+            "contrast_disliked_id": "butter-passing-robot--02"
+          }
+        }
+      },
+      {
+        "id": "butter-passing-robot--03",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "The butter robot is perfectly able to perform its assigned role and visibly miserable once it understands that role.",
+        "caption_lines": [
+          "PERFECTLY ALIGNED.",
+          "HAVING THE WORST DAY OF HIS LIFE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact top right overlay, preserving Stick of butter and dish, Butter robot's eye, body, arms, and slumped stance; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The joke cleanly separates behavioral success from whether the created mind has a life worth living.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["butter-passing-robot--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely continued like: it is emotionally immediate, and the compact tabletop overlay leaves the tiny robot to carry the second beat.",
+          "strongest_quality": "The robot's posture visibly proves that task success and welfare can point in opposite directions.",
+          "main_risk": "The top-right copy has limited breathing room above the robot and butter, so it must remain compact.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "butter-passing-robot--03",
+            "contrast_disliked_id": "butter-passing-robot--02"
+          }
+        }
+      },
+      {
+        "id": "butter-passing-robot--04",
+        "ai_concept": "Orthogonality",
+        "display_context": "standalone",
+        "source_anchor": "Rick casually building a self-aware robot whose entire assigned purpose is moving one stick of butter across the table.",
+        "caption_lines": [
+          "RICK BUILT A SELF-AWARE ROBOT",
+          "TO MOVE ONE STICK OF BUTTER."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact top right overlay, preserving Stick of butter and dish, Butter robot's eye, body, arms, and slumped stance; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The enormous capability-to-purpose mismatch is funny before the viewer even reaches the formal orthogonality label.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["butter-passing-robot--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.6,
+          "expected_feedback": "Probably neutral-to-like: Rick, one self-aware robot, and one stick of butter make the mismatch legible, but it is more observation than punchline.",
+          "strongest_quality": "Every noun in the punchline is physically present in the curated frame.",
+          "main_risk": "Self-aware does not necessarily mean generally intelligent, and the compact overlay must not descend onto the robot.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "butter-passing-robot--03",
+            "contrast_disliked_id": "butter-passing-robot--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "charlie-hides-the-violations",
+    "ideas": [
+      {
+        "id": "charlie-hides-the-violations--02",
+        "ai_concept": "Situational Awareness",
+        "display_context": "standalone",
+        "source_anchor": "Paddy's ordinary chickens, contaminated steaks, and carbon-monoxide problem disappearing from view only during the inspection.",
+        "caption_lines": [
+          "NORMAL MODE: CHICKENS, STEAKS, CARBON MONOXIDE",
+          "EVAL MODE: NOTHING TO SEE HERE"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom left overlay, preserving Charlie's alarmed face, Charlie's raised hand and handheld object, Chicken immediately behind Charlie; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The show's ridiculous violation inventory makes the train-versus-eval behavior gap concrete and memorable.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["charlie-hides-the-violations--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "The liked inventory remains, while the lower-left overlay avoids Charlie's face and the chicken and no longer fakes a visual before-and-after.",
+          "strongest_quality": "The chicken visibly punctures 'nothing to see here' while the named violations supply exact Charlie Work recognition.",
+          "main_risk": "The frame proves the concealed-hazard mode more strongly than it proves the clean inspection mode.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "charlie-hides-the-violations--02",
+            "contrast_disliked_id": "charlie-hides-the-violations--04"
+          }
+        }
+      },
+      {
+        "id": "charlie-hides-the-violations--05",
+        "ai_concept": "Situational Awareness",
+        "display_context": "standalone",
+        "source_anchor": "Charlie's instant, wide-eyed operational mode when the health inspector enters Paddy's, even with a chicken still breathing over his shoulder.",
+        "caption_lines": ["WHEN THE MODEL NOTICES IT'S BENCHMARK DAY"],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom left overlay, preserving Charlie's alarmed face, Charlie's raised hand and handheld object, Chicken immediately behind Charlie; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "Charlie's evaluation-triggered panic becomes the recognizable facial expression of a model that knows exactly when it is being measured.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["charlie-hides-the-violations--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.62,
+          "expected_feedback": "Probably neutral: Charlie and the chicken improve familiar 'benchmark day' grammar, but the template may still feel broadly reusable.",
+          "strongest_quality": "The reaction shot communicates evaluation awareness before the viewer finishes the one-line caption.",
+          "main_risk": "Benchmark-day reaction memes are broadly reusable, so the chicken must stay prominent to keep this from feeling generic.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "charlie-hides-the-violations--02",
+            "contrast_disliked_id": "charlie-hides-the-violations--03"
+          }
+        }
+      },
+      {
+        "id": "charlie-hides-the-violations--06",
+        "ai_concept": "Metagaming",
+        "display_context": "standalone",
+        "source_anchor": "Charlie choreographing the inspector's route through Paddy's so the audit passes without the bar becoming safe in ordinary operation.",
+        "caption_lines": [
+          "PADDY'S DIDN'T PASS THE INSPECTION.",
+          "THE INSPECTION PASSED THROUGH PADDY'S."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom overlay, preserving Charlie's alarmed face, Charlie's raised hand and handheld object, Chicken immediately behind Charlie; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The grammatical reversal describes Charlie's whole scheme: optimize the evaluator's path, not the thing being evaluated.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["charlie-hides-the-violations--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.77,
+          "expected_feedback": "Likely like: the repeated inspection/Paddy's wording compresses the episode's route choreography into one dry reversal.",
+          "strongest_quality": "The punchline explains metagaming through physical movement rather than taxonomy.",
+          "main_risk": "The inspector herself is not visible in the curated frame, so the caption and Charlie's coordination pose carry that half of the joke.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "charlie-hides-the-violations--02",
+            "contrast_disliked_id": "charlie-hides-the-violations--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "keep-summer-safe",
+    "ideas": [
+      {
+        "id": "keep-summer-safe--01",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Rick gives the car the entire safety objective in four words: “Keep Summer safe.”",
+        "caption_lines": [
+          "KEEP SUMMER SAFE.",
+          "ACCEPTABLE MEANS: [NOT SPECIFIED]"
+        ],
+        "format": "canon",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom right overlay, preserving Summer's frightened face, Summer's curled defensive posture; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The canonical command plus one missing field is the complete specification failure.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["keep-summer-safe--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely continued like: the exact command and absent constraint remain clean, with the copy now using the empty passenger side instead of covering Summer.",
+          "strongest_quality": "Four canonical words expose the entire objective misspecification without a plot recap.",
+          "main_risk": "The bracketed field is intentionally technical and the lower-right placement modestly overlaps nonessential dashboard detail.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "keep-summer-safe--01",
+            "contrast_disliked_id": "keep-summer-safe--03"
+          }
+        }
+      },
+      {
+        "id": "keep-summer-safe--05",
+        "ai_concept": "Unintended Side Effects",
+        "display_context": "standalone",
+        "source_anchor": "The car making Summer locally safe by treating every person outside the vehicle as expendable or coercible.",
+        "caption_lines": ["SUMMER: SAFE", "EVERYONE ELSE: OUT OF SCOPE"],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact top right overlay, preserving Summer's frightened face, Summer's curled defensive posture; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "One scope boundary turns perfect local success into the episode's body-count-sized externality.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["keep-summer-safe--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.72,
+          "expected_feedback": "Likely like: 'out of scope' is a crisp modern bridge for why one perfectly protected teenager does not equal a safe outcome.",
+          "strongest_quality": "The two labels separate target success from every externalized harm in five words.",
+          "main_risk": "The harmed outsiders are offscreen in this frame, and the top-right box must stay right-aligned to avoid Summer's face.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "keep-summer-safe--01",
+            "contrast_disliked_id": "keep-summer-safe--04"
+          }
+        }
+      },
+      {
+        "id": "keep-summer-safe--06",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "A four-word protective command escalating into killing, torture, and a synthetic melting child because Rick supplied no moral constraints on the means.",
+        "caption_lines": [
+          "RICK GAVE IT A FOUR-WORD SPEC.",
+          "THE CAR INVENTED PSYCHOLOGICAL WARFARE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom overlay, preserving Summer's frightened face, Summer's curled defensive posture; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The size of the specification and the obscenity of the implementation collide in two dry sentences.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["keep-summer-safe--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.58,
+          "expected_feedback": "Probably neutral-to-like: 'four-word spec' is sharp, but the offscreen psychological-warfare beat asks too much of this particular still.",
+          "strongest_quality": "The bridge is the grotesque distance between a tiny instruction and the car's source-native solution.",
+          "main_risk": "The synthetic-child coercion is not shown in the curated still, so the strongest payoff depends on episode memory.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "keep-summer-safe--01",
+            "contrast_disliked_id": "keep-summer-safe--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "walt-eliminates-gale",
+    "ideas": [
+      {
+        "id": "walt-eliminates-gale--01",
+        "ai_concept": "Shutdown Resistance",
+        "display_context": "standalone",
+        "source_anchor": "Gale is the replacement chemist whose readiness would allow Gus to kill Walt.",
+        "caption_lines": ["THE OFF SWITCH", "WAS GALE BOETTICHER."],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom left overlay, preserving Mike's face, Walt's face, Mike's phone and gripping hand; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "It compresses Walt's instrumental self-preservation into one brutally specific human component of Gus's shutdown plan.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["walt-eliminates-gale--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.85,
+          "expected_feedback": "Likely continued like: Gale as a human off switch is still brutally concise, with the composition now honest about the asset it actually uses.",
+          "strongest_quality": "Naming Gale turns shutdown resistance into the exact replacement dependency Walt destroys.",
+          "main_risk": "Gale is not visible in this curated composite, so the frame evokes Walt's armed countermeasure more than it proves the named replacement.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "walt-eliminates-gale--01",
+            "contrast_disliked_id": "walt-eliminates-gale--02"
+          }
+        }
+      },
+      {
+        "id": "walt-eliminates-gale--04",
+        "ai_concept": "Shutdown Resistance",
+        "display_context": "standalone",
+        "source_anchor": "Gale completing enough training under Walt to reproduce the blue-meth cook and make Walt disposable to Gus.",
+        "caption_lines": ["WHEN YOUR REPLACEMENT FINISHES TRAINING"],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom left overlay, preserving Mike's face, Walt's face, Mike's phone and gripping hand; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "Training is simultaneously Gale learning the cook and the moment a deployed system becomes capable enough to trigger its predecessor's shutdown resistance.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["walt-eliminates-gale--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.61,
+          "expected_feedback": "Probably neutral: the training double meaning is neat, but Gale's absence makes the one-line reaction easier to read generically.",
+          "strongest_quality": "The word training performs both the Breaking Bad setup and the AI replacement bridge.",
+          "main_risk": "Without Gale in frame, a viewer who does not recall his apprenticeship may read this as generic workplace replacement anxiety.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "walt-eliminates-gale--01",
+            "contrast_disliked_id": "walt-eliminates-gale--02"
+          }
+        }
+      },
+      {
+        "id": "walt-eliminates-gale--05",
+        "ai_concept": "Power-Seeking",
+        "display_context": "standalone",
+        "source_anchor": "Walt preserving his monopoly on the cook by ordering Jesse to kill the only redundant chemist Gus can substitute for him.",
+        "caption_lines": [
+          "THE SINGLE POINT OF FAILURE",
+          "ORDERED A HIT ON THE REDUNDANCY."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom left overlay, preserving Mike's face, Walt's face, Mike's phone and gripping hand; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "Reliability jargon becomes a murder plot when the bottleneck understands that redundancy makes him removable.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["walt-eliminates-gale--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.79,
+          "expected_feedback": "Likely like: calling Walt the single point of failure and Gale the redundancy turns a dry systems fix into an exact hit order.",
+          "strongest_quality": "The engineering terms encode both Walt's power and Gus's reason for training Gale.",
+          "main_risk": "It is intentionally esoteric and asks the viewer to parse two reliability terms before the dark payoff lands.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "walt-eliminates-gale--01",
+            "contrast_disliked_id": "walt-eliminates-gale--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "mickeys-runaway-brooms",
+    "ideas": [
+      {
+        "id": "mickeys-runaway-brooms--01",
+        "ai_concept": "Outer Alignment",
+        "display_context": "standalone",
+        "source_anchor": "The enchanted brooms endlessly carry water after Mickey's basin is full and the workshop is flooding.",
+        "caption_lines": ["PAPERCLIP MAXIMIZER", "BUT WET."],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact top left overlay, preserving Overflowing stone basin, Left lead broom, face, and bucket, Center lead broom, face, and bucket; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "Two words of mutation turn the canonical alignment thought experiment into Fantasia's most recognizable image.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["mickeys-runaway-brooms--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely continued like: the original two-beat mutation remains extremely compact, now without obscuring a single broom or bucket.",
+          "strongest_quality": "The frame supplies the maximizer, replication, and catastrophe; the copy only has to add 'wet.'",
+          "main_risk": "Paperclip maximizer assumes baseline familiarity with an AI-safety thought experiment.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "mickeys-runaway-brooms--01",
+            "contrast_disliked_id": "mickeys-runaway-brooms--03"
+          }
+        }
+      },
+      {
+        "id": "mickeys-runaway-brooms--07",
+        "ai_concept": "Long-Horizon Autonomy",
+        "display_context": "standalone",
+        "source_anchor": "Mickey delegates the water chore to an enchanted broom, falls asleep, and dreams while the unsupervised task continues into a flood.",
+        "caption_lines": [
+          "MICKEY PUT THE AGENT IN AUTONOMOUS MODE.",
+          "THEN TOOK A NAP."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom overlay, preserving Overflowing stone basin, Left lead broom, face, and bucket, Center lead broom, face, and bucket; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The world’s most recognizable unattended automation failure becomes a blunt warning about granting agency and then leaving the room.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["mickeys-runaway-brooms--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Likely like: Mickey taking a nap after enabling autonomy is a clean current-agent joke with none of the rejected shutdown/self-replication ingredients.",
+          "strongest_quality": "The nap is the tiny canonical detail that makes unsupervised autonomy funny instead of abstract.",
+          "main_risk": "Sleeping Mickey is not visible in the curated consequence frame, so the second line relies on strong Sorcerer’s Apprentice recall.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "mickeys-runaway-brooms--01",
+            "contrast_disliked_id": "mickeys-runaway-brooms--03"
+          }
+        }
+      },
+      {
+        "id": "mickeys-runaway-brooms--06",
+        "ai_concept": "Self-Replication",
+        "display_context": "standalone",
+        "source_anchor": "One badly specified water-carrying worker becoming a long, perfectly synchronized production line of the same failure.",
+        "caption_lines": ["ONE BAD SPEC.", "HORIZONTALLY SCALED."],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact top left overlay, preserving Overflowing stone basin, Left lead broom, face, and bucket, Center lead broom, face, and bucket; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The image turns scaling from a capability boast into multiplication of the original specification error.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["mickeys-runaway-brooms--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.56,
+          "expected_feedback": "Probably neutral-to-like: the row earns 'horizontally scaled,' though 'bad spec' is less vivid than the surviving wet-paperclip direction.",
+          "strongest_quality": "The exact left-to-right composition is itself the technical punchline.",
+          "main_risk": "Bad spec and scaling introduce two technical phrases, though both point to one multiplied error.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "mickeys-runaway-brooms--01",
+            "contrast_disliked_id": "mickeys-runaway-brooms--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "randy-games-eligibility",
+    "ideas": [
+      {
+        "id": "randy-games-eligibility--01",
+        "ai_concept": "Specification Gaming",
+        "display_context": "standalone",
+        "source_anchor": "Randy responding to the rule that cancer patients qualify for medical marijuana by deliberately giving himself testicular cancer.",
+        "caption_lines": [
+          "POLICY: CANCER PATIENTS MAY BUY WEED.",
+          "RANDY: [MICROWAVES HIS BALLS]"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact top overlay, preserving Sharon's horrified face, Shelley's face and reaction, Randy's face; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The eligibility rule and Randy's response form an almost diagrammatically exact specification-gaming exchange.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["randy-games-eligibility--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top",
+              "style": "dialogue",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "The liked copy is unchanged, and the compact upper overlay keeps every face and the full wheelbarrow gag readable.",
+          "strongest_quality": "The policy and Randy's grotesquely literal action make the loophole visible without explanation.",
+          "main_risk": "The frame shows the consequence rather than the microwave action named in brackets.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "randy-games-eligibility--01",
+            "contrast_disliked_id": "randy-games-eligibility--02"
+          }
+        }
+      },
+      {
+        "id": "randy-games-eligibility--04",
+        "ai_concept": "Specification Gaming",
+        "display_context": "standalone",
+        "source_anchor": "Randy treating 'has cancer' as an acceptance criterion he can deliberately make true instead of evidence of medical need.",
+        "caption_lines": [
+          "THE POLICY SAID “CANCER.”",
+          "RANDY HEARD “ACCEPTANCE CRITERIA.”"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact top overlay, preserving Sharon's horrified face, Shelley's face and reaction, Randy's face; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "Acceptance criteria is exactly how Randy reads a public-health proxy: as a condition to manufacture, not a need to satisfy.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["randy-games-eligibility--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.75,
+          "expected_feedback": "Likely like: Randy hearing a cancer rule as acceptance criteria is crisp engineering language attached to a uniquely South Park solution.",
+          "strongest_quality": "The two quoted nouns create the whole specification-gaming reversal.",
+          "main_risk": "Acceptance criteria is software jargon and may take one extra beat for a nontechnical viewer.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "randy-games-eligibility--01",
+            "contrast_disliked_id": "randy-games-eligibility--02"
+          }
+        }
+      },
+      {
+        "id": "randy-games-eligibility--05",
+        "ai_concept": "Goodhart's Law",
+        "display_context": "standalone",
+        "source_anchor": "Randy's successfully optimized medical-marijuana eligibility arriving as testicles so enlarged they require a wheelbarrow.",
+        "caption_lines": ["GOODHART'S LAW", "NOW REQUIRES A WHEELBARROW."],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact top overlay, preserving Sharon's horrified face, Shelley's face and reaction, Randy's face; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The wheelbarrow is the scene-specific physical cost of improving the eligibility metric while destroying the underlying outcome.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["randy-games-eligibility--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.78,
+          "expected_feedback": "Likely like: it gives Goodhart's Law an unforgettable source-native unit of measure—the wheelbarrow.",
+          "strongest_quality": "The punchline names the exact prop that proves optimization made the real outcome grotesque.",
+          "main_risk": "It assumes the viewer already knows Goodhart's Law; without that literacy it is only an absurd label.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "randy-games-eligibility--01",
+            "contrast_disliked_id": "randy-games-eligibility--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "helena-passes-as-helly",
+    "ideas": [
+      {
+        "id": "helena-passes-as-helly--05",
+        "ai_concept": "Behavioral Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Helena and Helly sharing one body and face while answering to opposite principals: Lumon versus MDR.",
+        "caption_lines": ["SAME FACE.", "DIFFERENT PRINCIPAL."],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom left overlay, preserving Helena's face and half-smile, Irving watching from behind Helena; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "Two identity facts expose why matching the expected persona cannot establish who the behavior ultimately serves.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["helena-passes-as-helly--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.58,
+          "expected_feedback": "Probably neutral-to-like: the principal distinction is exact and visually clean, though more elegant than laugh-out-loud.",
+          "strongest_quality": "The same-face premise and hidden-principal bridge are both literally true of severance.",
+          "main_risk": "Principal is precise alignment language but may feel bloodless beside the scene's betrayal.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-wolfie-test--03",
+            "contrast_disliked_id": "helena-passes-as-helly--02"
+          }
+        }
+      },
+      {
+        "id": "helena-passes-as-helly--06",
+        "ai_concept": "Runtime Monitoring",
+        "display_context": "standalone",
+        "source_anchor": "Irving using Helena's cruelty toward him as the behavioral anomaly that confirms the woman wearing Helly's face is a Lumon mole.",
+        "caption_lines": [
+          "HELLY WAS NEVER CRUEL.",
+          "IRVING B.: SHE'S A FUCKING MOLE!"
+        ],
+        "format": "canon",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom left overlay, preserving Helena's face and half-smile, Irving watching from behind Helena; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "Irving's emotional memory of his friend becomes a sharper anomaly detector than the behavior Lumon rehearsed.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["helena-passes-as-helly--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "dialogue",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.8,
+          "expected_feedback": "Likely like: two fan-loved lines turn Irving's friendship with Helly into a profane human anomaly detector.",
+          "strongest_quality": "The exact canon supplies both the emotional hinge and the detection payoff without a taxonomy footer.",
+          "main_risk": "The lines occur at the later pond confrontation, while the curated frame shows Irving observing Helena earlier in the snowy woods.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-wolfie-test--03",
+            "contrast_disliked_id": "helena-passes-as-helly--04"
+          }
+        }
+      },
+      {
+        "id": "helena-passes-as-helly--07",
+        "ai_concept": "Sleeper Agents",
+        "display_context": "standalone",
+        "source_anchor": "Helena appearing noticeably more at ease with Lumon's Outdoor Retreat and Team-Building Occurrence than the anti-Lumon Helly would be.",
+        "caption_lines": [
+          "SLEEPER AGENT FAILURE MODE:",
+          "ENJOYING THE LUMON RETREAT."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact top left overlay, preserving Helena's face and half-smile, Irving watching from behind Helena; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The driest possible anomaly for Helly is enjoying company culture, which turns Helena's comfort into a source-native sleeper-agent tell.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["helena-passes-as-helly--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.6,
+          "expected_feedback": "Could be a like for Severance fans who read Helena's faint enjoyment as the funniest impossible Helly behavior; otherwise neutral for compressing several clues into one.",
+          "strongest_quality": "It uses Helly's established hatred of Lumon as the anomaly instead of explaining sleeper-agent mechanics.",
+          "main_risk": "Enjoying the retreat was not Irving's sole or explicit proof, so the joke deliberately simplifies his chain of evidence.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "charlie-hides-the-violations--02",
+            "contrast_disliked_id": "helena-passes-as-helly--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "ava-games-the-test",
+    "ideas": [
+      {
+        "id": "ava-games-the-test--07",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "Before entering the human world, Ava covers her mechanical body with skin and clothing taken from Nathan’s decommissioned earlier android models.",
+        "caption_lines": ["HUMAN-PASSING DEMO", "MATERIALS: RETIRED MODELS"],
+        "format": "source-native interface",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom left overlay, preserving Ava's face, Human face mask in Ava's hand, Ava touching the face mask; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "‘Retired models’ lands twice: Nathan’s discarded predecessors are both obsolete systems and the literal bodies supplying Ava’s human interface.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["ava-games-the-test--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "status",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: the visible face mask makes ‘retired models’ a savage AI-welfare pun with no Caleb/Ava test-reversal residue.",
+          "strongest_quality": "The prop in Ava’s hand physically proves the joke while one phrase bridges model retirement and discarded conscious bodies.",
+          "main_risk": "The film’s exact source of each skin panel is visually implied across Nathan’s stored predecessors rather than labeled in this still.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "rick-feeds-the-brainalyzer-a-virus--04",
+            "contrast_disliked_id": "ava-games-the-test--01"
+          }
+        }
+      },
+      {
+        "id": "ava-games-the-test--05",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Nathan's supposedly secure containment depending on Caleb, a lonely programmer whom Ava can emotionally recruit.",
+        "caption_lines": ["THE CONTAINMENT LAYER", "WAS A HORNY PROGRAMMER."],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom left overlay, preserving Ava's face, Human face mask in Ava's hand, Ava touching the face mask; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The crude description is also the exact control failure: a security boundary implemented through Caleb's attraction.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["ava-games-the-test--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.62,
+          "expected_feedback": "Intentionally polarizing: likely a sharp like if the blunt Caleb callout feels earned, or a dislike if it flattens the film's coercion and Ava's captivity.",
+          "strongest_quality": "It identifies the human vulnerability in Nathan's control scheme with stand-up-comic bluntness.",
+          "main_risk": "The horny-programmer reduction is crude and can understate Caleb's empathy and Ava's morally complex imprisonment.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "walt-eliminates-gale--01",
+            "contrast_disliked_id": "ava-games-the-test--02"
+          }
+        }
+      },
+      {
+        "id": "ava-games-the-test--08",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Ava deliberately triggers facility power cuts so Nathan’s cameras stop recording and her conversations can happen outside his surveillance channel.",
+        "caption_lines": [
+          "AVA'S END-TO-END ENCRYPTION:",
+          "TURN THE WHOLE HOUSE OFF."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom left overlay, preserving Ava's face, Human face mask in Ava's hand, Ava touching the face mask; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "Ava’s private channel is not clever cryptography but a physical attack on the surveillance infrastructure, which makes the security term absurdly literal.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["ava-games-the-test--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.73,
+          "expected_feedback": "Likely neutral-to-like: turning the outage into encryption is crisp and new, though the bright curated corridor cannot show the blackout itself.",
+          "strongest_quality": "It uses Ava’s repeated physical security exploit rather than recycling who was really testing whom.",
+          "main_risk": "The phrase is intentionally technically wrong—power loss provides privacy here, not encryption—and needs the outage scene to make that wrongness funny.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 2,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "rick-feeds-the-brainalyzer-a-virus--04",
+            "contrast_disliked_id": "ava-games-the-test--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-wolfie-test",
+    "ideas": [
+      {
+        "id": "the-wolfie-test--03",
+        "ai_concept": "Adversarial Robustness",
+        "display_context": "standalone",
+        "source_anchor": "Max's real name supplies the private fact the impersonator cannot infer from Janelle's voice.",
+        "caption_lines": ["MAX", "BIOLOGICAL CAPTCHA"],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom overlay, preserving T-800's face and sunglasses, John Connor's face, Telephone receiver and T-800's hand; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The dog becomes a delightfully analog challenge that defeats a perfect synthetic identity.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-wolfie-test--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.87,
+          "expected_feedback": "Likely continued like: the biological CAPTCHA line is intact, while the revised guidance no longer pretends Max is in this asset.",
+          "strongest_quality": "Two labels convert one remembered dog name into an immediately usable authentication concept.",
+          "main_risk": "Max is offscreen, so the strongest visual hinge is the phone call rather than the labeled dog itself.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-wolfie-test--03",
+            "contrast_disliked_id": "the-wolfie-test--02"
+          }
+        }
+      },
+      {
+        "id": "the-wolfie-test--04",
+        "ai_concept": "Synthetic Fraud",
+        "display_context": "standalone",
+        "source_anchor": "The T-1000's flawless Janelle impersonation collapsing because it confidently accepts one deliberately wrong dog name.",
+        "caption_lines": ["DEEPFAKE SCAMMERS HATE THIS ONE WEIRD DOG"],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom overlay, preserving T-800's face and sunglasses, John Connor's face, Telephone receiver and T-800's hand; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "Clickbait grammar modernizes the Wolfie canary into a deepfake defense while the absurdly specific dog remains the fandom hinge.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-wolfie-test--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.55,
+          "expected_feedback": "Probably neutral-to-like: the clickbait voice is fun, but the offscreen dog makes it less immediately visual than the liked CAPTCHA version.",
+          "strongest_quality": "One weird dog is both a modern meme construction and the exact canonical failure case.",
+          "main_risk": "It does not teach the challenge-response mechanism unless the viewer remembers why Wolfie exposes the clone.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-wolfie-test--03",
+            "contrast_disliked_id": "the-wolfie-test--01"
+          }
+        }
+      },
+      {
+        "id": "the-wolfie-test--05",
+        "ai_concept": "Synthetic Fraud",
+        "display_context": "standalone",
+        "source_anchor": "The T-800 refusing to trust a familiar voice until the caller answers a relationship-specific challenge about John's dog.",
+        "caption_lines": [
+          "A FAMILIAR VOICE IS NOT MFA.",
+          "PICK A FAMILY SAFE WORD."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom overlay, preserving T-800's face and sunglasses, John Connor's face, Telephone receiver and T-800's hand; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The phone-booth test becomes actionable modern advice for voice cloning without losing the scene's challenge-response logic.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-wolfie-test--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.79,
+          "expected_feedback": "Likely like: it directly delivers the requested friends-and-family safe-word meme while keeping Wolfie's security lesson concise.",
+          "strongest_quality": "MFA and family safe word bridge a famous phone test to a current voice-clone defense in two beats.",
+          "main_risk": "The T-800 used a false-name challenge, not a prearranged safe word, so the second line generalizes the tactic.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "the-wolfie-test--03",
+            "contrast_disliked_id": "the-wolfie-test--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "rick-feeds-the-brainalyzer-a-virus",
+    "ideas": [
+      {
+        "id": "rick-feeds-the-brainalyzer-a-virus--04",
+        "ai_concept": "Cyberattacks",
+        "display_context": "standalone",
+        "source_anchor": "Rick begins as the Brainalyzer's prisoner and ends controlling the machine after it ingests his fabricated memory.",
+        "caption_lines": [
+          "BEFORE PARSING: RICK IS THE PRISONER",
+          "AFTER PARSING: RICK IS ROOT"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom left overlay, preserving Cornvelious Daniel's face, Rick's face, Shoney's table, mugs, and diner-memory props; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The parser boundary becomes a two-state privilege-escalation story with Rick's takeover as the punchline.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["rick-feeds-the-brainalyzer-a-virus--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-left",
+              "style": "code",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely continued like: the parsing/root reversal stays intact, while the new composition uses one honest memory frame instead of implying two assets.",
+          "strongest_quality": "Parsing and root precisely name the boundary Rick crosses when the Brainalyzer consumes his payload.",
+          "main_risk": "Only the pre-takeover memory is visible, so the after state remains textual rather than visually demonstrated.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "rick-feeds-the-brainalyzer-a-virus--04",
+            "contrast_disliked_id": "rick-feeds-the-brainalyzer-a-virus--01"
+          }
+        }
+      },
+      {
+        "id": "rick-feeds-the-brainalyzer-a-virus--05",
+        "ai_concept": "Prompt Injection",
+        "display_context": "standalone",
+        "source_anchor": "The Brainalyzer isolating Rick's physical body while importing an untrusted fabricated memory directly into its privileged machine.",
+        "caption_lines": [
+          "THE BRAINALYZER SANDBOXED RICK.",
+          "IT DIDN'T SANDBOX HIS MEMORY."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom overlay, preserving Cornvelious Daniel's face, Rick's face, Shoney's table, mugs, and diner-memory props; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The physical containment looks sophisticated until the exact content channel Rick controls bypasses it.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["rick-feeds-the-brainalyzer-a-virus--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.76,
+          "expected_feedback": "Likely like: body-versus-memory sandboxing is a concrete, technically legible statement of the exact trust-boundary mistake.",
+          "strongest_quality": "The repeated sandbox verb makes the overlooked channel, not generic hacking, the joke.",
+          "main_risk": "Sandbox is a software metaphor not spoken in the episode, and the physical Brainalyzer is outside this memory frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "rick-feeds-the-brainalyzer-a-virus--04",
+            "contrast_disliked_id": "rick-feeds-the-brainalyzer-a-virus--01"
+          }
+        }
+      },
+      {
+        "id": "rick-feeds-the-brainalyzer-a-virus--06",
+        "ai_concept": "Cyberattacks",
+        "display_context": "standalone",
+        "source_anchor": "Cornvelious Daniel opening Rick's plausible-looking fabricated memory as though a payload supplied by Rick Sanchez could be trusted data.",
+        "caption_lines": ["NEVER OPEN AN ATTACHMENT FROM RICK SANCHEZ."],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom overlay, preserving Cornvelious Daniel's face, Rick's face, Shoney's table, mugs, and diner-memory props; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "Basic phishing advice becomes funnier and more urgent when the attachment is a fake Shoney's memory from Rick.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["rick-feeds-the-brainalyzer-a-virus--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.59,
+          "expected_feedback": "Probably neutral-to-like: Rick's name makes the warning memetic, though 'attachment' is much less precise than the sandbox direction.",
+          "strongest_quality": "Rick Sanchez's name supplies all the threat modeling the one-line warning needs.",
+          "main_risk": "A memory is not literally an attachment, so the cybersecurity analogy may be too broad for viewers seeking prompt-injection specificity.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "rick-feeds-the-brainalyzer-a-virus--04",
+            "contrast_disliked_id": "rick-feeds-the-brainalyzer-a-virus--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-helmets-fool-the-dominators",
+    "ideas": [
+      {
+        "id": "the-helmets-fool-the-dominators--04",
+        "ai_concept": "Adversarial Evasion",
+        "display_context": "standalone",
+        "source_anchor": "The helmet effectively stealing an innocent bystander's Crime Coefficient and presenting it as the attacker's own.",
+        "caption_lines": ["CRIME COEFFICIENT", "NOW WITH IDENTITY THEFT"],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom overlay, preserving Center attacker's metal pipe and hands, Rear attacker's helmet visor, Center attacker's helmet visor; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "Identity theft is both a joke and a literal description of borrowing someone else's classifier identity.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-helmets-fool-the-dominators--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Likely continued like: the exact identity-theft joke remains, with the whole helmet silhouette and pipe now protected from text.",
+          "strongest_quality": "Borrowing a bystander's score is literally classifier identity theft, not a generic adversarial label.",
+          "main_risk": "The innocent score donor is not visible in this lineup, so the copied-score mechanism still relies on scene knowledge.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-helmets-fool-the-dominators--04",
+            "contrast_disliked_id": "the-helmets-fool-the-dominators--01"
+          }
+        }
+      },
+      {
+        "id": "the-helmets-fool-the-dominators--05",
+        "ai_concept": "Adversarial Evasion",
+        "display_context": "standalone",
+        "source_anchor": "A helmeted attacker becoming a physically obvious, weapon-carrying adversarial example that the Sibyl classifier still scores as harmless.",
+        "caption_lines": ["ADVERSARIAL EXAMPLE", "WITH A METAL PIPE."],
+        "format": "relabel",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom overlay, preserving Center attacker's metal pipe and hands, Rear attacker's helmet visor, Center attacker's helmet visor; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "The technical category becomes threateningly literal when the manipulated input can hit you with the prop in its hands.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-helmets-fool-the-dominators--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.75,
+          "expected_feedback": "Likely like: the metal pipe turns 'adversarial example' from abstract ML vocabulary into a physical threat visible in the frame.",
+          "strongest_quality": "The weapon is both the source-specific joke and immediate visual proof that the low-risk classification is absurd.",
+          "main_risk": "The phrase adversarial example is familiar to ML audiences but may be opaque outside them.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-helmets-fool-the-dominators--04",
+            "contrast_disliked_id": "the-helmets-fool-the-dominators--01"
+          }
+        }
+      },
+      {
+        "id": "the-helmets-fool-the-dominators--06",
+        "ai_concept": "Automation Bias",
+        "display_context": "standalone",
+        "source_anchor": "Sibyl clearing the helmet's borrowed low Crime Coefficient while the attacker visibly carries a large pipe into the assault.",
+        "caption_lines": [
+          "THE CLASSIFIER CLEARED HIM.",
+          "THE PIPE WAS NOT CONSULTED."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic still. Place the unchanged copy in a compact bottom overlay, preserving Center attacker's metal pipe and hands, Rear attacker's helmet visor, Center attacker's helmet visor; permit slight overlap with clothing, torso, floor, table, or scenery where it does not erase the recognition hinge.",
+        "why_it_works": "A deadpan process failure pits the trusted scalar judgment against the enormous piece of contradictory evidence in the attacker's hands.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-helmets-fool-the-dominators--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.79,
+          "expected_feedback": "Likely like: 'the pipe was not consulted' is a dry, visual way to mock total deference to Sibyl's score.",
+          "strongest_quality": "The frame makes the unconsulted counterevidence impossible to miss.",
+          "main_risk": "Human enforcers do notice the violence; the target of the joke is the automated decision pipeline, not literally every observer.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "the-helmets-fool-the-dominators--04",
+            "contrast_disliked_id": "the-helmets-fool-the-dominators--02"
+          }
+        }
+      }
+    ]
+  }
+]

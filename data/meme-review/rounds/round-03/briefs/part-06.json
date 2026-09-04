@@ -1,0 +1,480 @@
+{
+  "version": 1,
+  "mode": "layout-refinement",
+  "source_batch": 2,
+  "target_batch": 3,
+  "part": "part-06",
+  "instructions": {
+    "scope": "Do not add meme ideas, IDs, concepts, formats, or source anchors. Work only on the retained lineages listed here.",
+    "finalized": "Copy finalized ideas and every referenced asset byte-for-byte. They are context only and must not be edited.",
+    "layout_only": "Keep approved caption copy and editorial fields exact. Recompose the HTML preview using the Batch 3 layout guidance.",
+    "bounded_revision": "Apply only the explicit source feedback. Keep the central concept, format, source anchor, and lineage ID unchanged."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "square-filter-round-hole",
+      "ideas": [
+        {
+          "id": "square-filter-round-hole--07",
+          "scenario_slug": "square-filter-round-hole",
+          "action": "layout-only",
+          "source_idea_sha256": "4ce8c3ec5e22e92b39c802877e62881501a7d2a0d8a0ec7736d200ad2e8ee1e0",
+          "source_editorial_sha256": "3d9c0785d3984dbd38ae8168c58b9f9ab9ea99f940f233d8cfbeeb756dadd0ce",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "neteros-dead-man-rose",
+      "ideas": [
+        {
+          "id": "neteros-dead-man-rose--04",
+          "scenario_slug": "neteros-dead-man-rose",
+          "action": "layout-only",
+          "source_idea_sha256": "25b9c8610dad860d150faab33b7dc5c34ac9df9868e67d008a7257c8317a270e",
+          "source_editorial_sha256": "fcf72b1476fb054d12b55a448bd9f9c6b33117fea625a484042dfc69314bc041",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "neteros-dead-man-rose--06",
+          "scenario_slug": "neteros-dead-man-rose",
+          "action": "layout-only",
+          "source_idea_sha256": "1be7000c2799955539180e97378f4862cad7ea678928922de9be281f744af5d8",
+          "source_editorial_sha256": "853d520f97178ee23dbe3bdde0cebe45bf08d3d89a7bf0c4dbe0247563ad66df",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "neutral",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-d-mail-rollback-crisis",
+      "ideas": [
+        {
+          "id": "the-d-mail-rollback-crisis--02",
+          "scenario_slug": "the-d-mail-rollback-crisis",
+          "action": "layout-only",
+          "source_idea_sha256": "c8dd07e9cfe83c6786481393210593e01c6d349a9b31e16646514684c11e30a3",
+          "source_editorial_sha256": "bf167b955b8031b225a72f2b60ca53af3cb93764aff95b6f357001a7a87b6cd1",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "the-d-mail-rollback-crisis--04",
+          "scenario_slug": "the-d-mail-rollback-crisis",
+          "action": "finalized",
+          "source_idea_sha256": "73d7031dd184da4bae8e74ddf9a775c792863ea60cf300679fb7fb48365fb5b4",
+          "source_editorial_sha256": "185f13fa2b258519189ccea5274156364d12c22eeefef38cc204fa58559d237b",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-d394e0dcaf1b93c8-1836"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "melfi-ends-tonys-therapy",
+      "ideas": [
+        {
+          "id": "melfi-ends-tonys-therapy--01",
+          "scenario_slug": "melfi-ends-tonys-therapy",
+          "action": "bounded-revision",
+          "source_idea_sha256": "1206218a54a9503cc66e0a5e1deba8a2cc490dd861d4b0ee5e5d924f6306e947",
+          "source_editorial_sha256": "d811b40a8aa581a058e21886b9b6741a0fae408f8dab4b71a96caea9db0dc7ec",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "improve layout",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "cyberpsychosis-tripwires-ignored",
+      "ideas": [
+        {
+          "id": "cyberpsychosis-tripwires-ignored--02",
+          "scenario_slug": "cyberpsychosis-tripwires-ignored",
+          "action": "layout-only",
+          "source_idea_sha256": "d971a732c0e026b3eb7a569ecdd9873550fc17ceb5b722c5f6a769998af04157",
+          "source_editorial_sha256": "e681a9fc82539b0cb3401f5f49bef51ff63d642f6b06418dae593c8c427d91d0",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "cyberpsychosis-tripwires-ignored--04",
+          "scenario_slug": "cyberpsychosis-tripwires-ignored",
+          "action": "layout-only",
+          "source_idea_sha256": "d7111385e203d1f0b8b5b32c7fd383f7d77f35dddfbe4d4458bc3e38372a5615",
+          "source_editorial_sha256": "4a0f656b48d314e5c5db60f1c062abd96cd28e352edc4be68c6185559ab13db6",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "sanemi-red-teams-nezuko",
+      "ideas": [
+        {
+          "id": "sanemi-red-teams-nezuko--05",
+          "scenario_slug": "sanemi-red-teams-nezuko",
+          "action": "layout-only",
+          "source_idea_sha256": "568feaba063f0905350ae9d0838ad84cd774358b7acc5f68fb8bb49e96314795",
+          "source_editorial_sha256": "3cf8dcddb64c4704a907ab37282ee616bf4dbe275d74db2a4c41856a1b5bbbf9",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "sanemi-red-teams-nezuko--07",
+          "scenario_slug": "sanemi-red-teams-nezuko",
+          "action": "bounded-revision",
+          "source_idea_sha256": "8ec9f15f90ff577052b3a3872956a8350c0def33375aefa0c1fae0344aea2267",
+          "source_editorial_sha256": "239f52992b29bb6892aaacc3652aff84eb45f591d45bf3318e265194cfffc1d8",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "replace BIG with LIL",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "cursed-immortality",
+      "ideas": [
+        {
+          "id": "cursed-immortality--05",
+          "scenario_slug": "cursed-immortality",
+          "action": "layout-only",
+          "source_idea_sha256": "6b804fc983ef0d72dacdca736629c23c5895f66926626d80e15f6570f1226d2a",
+          "source_editorial_sha256": "2c5b986e9518c7adb8c5dea18d01a2e09b2e7aaf143bad83202e64779e5cb6e8",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-fbi-opens-the-final-lock",
+      "ideas": [
+        {
+          "id": "the-fbi-opens-the-final-lock--05",
+          "scenario_slug": "the-fbi-opens-the-final-lock",
+          "action": "layout-only",
+          "source_idea_sha256": "d2ba098cffa425635f5d85ab3864ab620a7796269fdef50be2c8a803217b8238",
+          "source_editorial_sha256": "78d207c881af094a87d9848a9b9a3bd59b4205c5368a6c3a2b5d20eb6879b06c",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "shou-tuckers-final-assessment",
+      "ideas": [
+        {
+          "id": "shou-tuckers-final-assessment--02",
+          "scenario_slug": "shou-tuckers-final-assessment",
+          "action": "layout-only",
+          "source_idea_sha256": "1bd46936e09627606c3c5a07498f0e98ad0cf488868ac9519749ce7df9af26dd",
+          "source_editorial_sha256": "96aa97fcd2c923feb1bca5e1a6c8d701cd0179466339ea87dfed4996f1fadca8",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "shou-tuckers-final-assessment--06",
+          "scenario_slug": "shou-tuckers-final-assessment",
+          "action": "layout-only",
+          "source_idea_sha256": "eabca0e1445e35bf9cafecf963649357fea43ee94a522b87de54569122e5f81c",
+          "source_editorial_sha256": "cc72e1091c1c59ea10f951531c44e0392abfe831e3293fe00a211b77fc6ad235",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "saitamas-c-class-score",
+      "ideas": [
+        {
+          "id": "saitamas-c-class-score--05",
+          "scenario_slug": "saitamas-c-class-score",
+          "action": "bounded-revision",
+          "source_idea_sha256": "622daf7d3af54f5c966f7112619423f8c783e75438a2ba9f5617ff76d46e5314",
+          "source_editorial_sha256": "98ba2077b4ac550cdb3c4d85ef2e26036540326bced486029e27a524ea0fc3e0",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "replace \"EXAM\" with \"BENCHMARK\".",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "saitamas-c-class-score--06",
+          "scenario_slug": "saitamas-c-class-score",
+          "action": "bounded-revision",
+          "source_idea_sha256": "a15006d2faa7a66a9b34e589ed44f6cdda3ecd4fd3993d3ee4a7131190ba0f52",
+          "source_editorial_sha256": "18812d8791e31d4a08a02939b49d7b3280f784c9a8e9be4b24258b068f44dc6a",
+          "allowed_changed_fields": [
+            "caption_lines",
+            "preview",
+            "frame_guidance",
+            "why_it_works",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "\"WHEN THE BENCHMARK WAS CALIBRATED\\nFOR PEOPLE WHO NEED A SECOND PUNCH.\"",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "squirrel",
+      "ideas": [
+        {
+          "id": "squirrel--01",
+          "scenario_slug": "squirrel",
+          "action": "finalized",
+          "source_idea_sha256": "e4a5cf1530e992c2720774df481640aad5fa03d12e2b74ca962bb7dc476d2cf9",
+          "source_editorial_sha256": "dbf4476d94c73e0ab4a4fb0bcb47003bd6f59c9070a81c7122eae478a8c4b388",
+          "allowed_changed_fields": [],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": true,
+            "lockRevision": 1,
+            "finalizedVersion": {
+              "revisionKey": "round-01",
+              "payloadFingerprint": "v1-477df78f464940b3-1727"
+            }
+          }
+        },
+        {
+          "id": "squirrel--05",
+          "scenario_slug": "squirrel",
+          "action": "layout-only",
+          "source_idea_sha256": "e03af4bacd90d6afbbde1ff78c566593f88daf18b772420fbc8fb8910939a370",
+          "source_editorial_sha256": "0f4d675292a12a5b4ee2f9c5335720fcfd5b8e9a733ac2183fbccc3b174d224d",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-tunnel-behind-the-poster",
+      "ideas": [
+        {
+          "id": "the-tunnel-behind-the-poster--02",
+          "scenario_slug": "the-tunnel-behind-the-poster",
+          "action": "layout-only",
+          "source_idea_sha256": "c53c631f52eb08a4bbc05eb58cb53da5c051ee34dfae009f6ea4c8dc51d1c18c",
+          "source_editorial_sha256": "8be1af08b0688fd8595eab568917007dd318bd923020534a6dd732c213e798d6",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "the-tunnel-behind-the-poster--03",
+          "scenario_slug": "the-tunnel-behind-the-poster",
+          "action": "layout-only",
+          "source_idea_sha256": "410b348cd56682967bf41e03c76b3f247a985280569e70ff36e1dd23e59c6206",
+          "source_editorial_sha256": "8a7f029e4a5612e52a95818e9e0181736fba5369a813dfee03fac79ef9ed21a9",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        },
+        {
+          "id": "the-tunnel-behind-the-poster--04",
+          "scenario_slug": "the-tunnel-behind-the-poster",
+          "action": "layout-only",
+          "source_idea_sha256": "89271910eda22092a083dcf49a11942bd095ba6ac354ac29cf39201ffb2a371c",
+          "source_editorial_sha256": "68c1a377c975fdc8f0b2147ebb5283637381556cf31e95396f9cb845351c1ead",
+          "allowed_changed_fields": [
+            "preview",
+            "frame_guidance",
+            "critic",
+            "assets"
+          ],
+          "source_feedback": {
+            "rating": "like",
+            "notes": "",
+            "locked": false,
+            "lockRevision": 0
+          }
+        }
+      ]
+    }
+  ]
+}

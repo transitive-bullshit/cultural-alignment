@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "round": 2,
+  "draft": "seed-review-final-checkpoint-2026-09-03-200307z",
+  "feedback_updated_at": "2026-09-03T20:03:07.177Z",
+  "warning": "This feedback reviews the exact draft ideas in this directory. Do not transfer ratings by ID to later copy without comparing the archived idea payload.",
+  "files": {
+    "ideas.json": {
+      "bytes": 1563645,
+      "sha256": "dc3ce1bf55aad865d74dd323c060e195005151f2f37e7e26730557c9fb5c66b9"
+    },
+    "assets.json": {
+      "bytes": 175477,
+      "sha256": "294ccbbe04c473b376c4dd81946c739e5a107b4968d6a4dd0ec8f58b234f5949"
+    },
+    "feedback.json": {
+      "bytes": 7298,
+      "sha256": "7a9ecbb7a4db58f01a4ad20fb5034f8d5ddee624aff12dc8d0ababab225bcc3f"
+    }
+  }
+}

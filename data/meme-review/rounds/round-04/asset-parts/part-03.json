@@ -1,0 +1,698 @@
+[
+  {
+    "id": "lind-l-tailor-bait--curated",
+    "scenario_slug": "lind-l-tailor-bait",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481d787e1de7c04592f86/gallery-545abd57dc328f8c216a81423811a3c152431a5fb7213c86910f8fe8135239f0.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Death Note illustrating Lind L. Tailor Bait",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoIAAUAA8BgJZwAApyD7zLAAP6Z27zihmgrE3fi6+GdhYgWwgRMZWECAAA=",
+    "content_hash": "545abd57dc328f8c216a81423811a3c152431a5fb7213c86910f8fe8135239f0",
+    "protected_regions": [
+      {
+        "id": "lind-l-tailor-bait--tailor-face",
+        "label": "Lind L. Tailor's face and death reaction",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          38,
+          8,
+          24,
+          38
+        ]
+      },
+      {
+        "id": "lind-l-tailor-bait--tailor-body",
+        "label": "Lind L. Tailor's body and hands clutching his chest",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          31,
+          42,
+          38,
+          48
+        ]
+      },
+      {
+        "id": "lind-l-tailor-bait--name-placard",
+        "label": "Original LIND.L.TAILOR broadcast placard",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [
+          38,
+          86,
+          29,
+          13
+        ]
+      },
+      {
+        "id": "lind-l-tailor-bait--broadcast-seal",
+        "label": "Winged globe seal behind the decoy",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          23,
+          0,
+          58,
+          77
+        ]
+      },
+      {
+        "id": "lind-l-tailor-bait--television-frame",
+        "label": "Black television bezel proving the live broadcast",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          0,
+          100,
+          100
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "samantha-outgrows-humanity--curated",
+    "scenario_slug": "samantha-outgrows-humanity",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481ed9c08c14b184b134c/gallery-80bd6dc08ca730601de2becfbe38fded1bffc4fe146cb95765528dbf149ec5a9.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from Her illustrating Samantha Outgrows Humanity",
+    "blur_data_url": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoIAAUAA8BgJYgCdADZkL0AAP7aqFyTHoNe1hHK6O24MSz4Hpga/GbiGsynsolilruwAAAA",
+    "content_hash": "80bd6dc08ca730601de2becfbe38fded1bffc4fe146cb95765528dbf149ec5a9",
+    "protected_regions": [
+      {
+        "id": "samantha-outgrows-humanity--theodore-face",
+        "label": "Theodore’s downcast face and glasses",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          15,
+          7,
+          19,
+          31
+        ]
+      },
+      {
+        "id": "samantha-outgrows-humanity--theodore-body",
+        "label": "Theodore’s red-shirted seated silhouette and clasped hands",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          6,
+          8,
+          40,
+          91
+        ]
+      },
+      {
+        "id": "samantha-outgrows-humanity--os-monitor",
+        "label": "Glowing OS monitor and red interface",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [
+          61,
+          14,
+          27,
+          58
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-hackers-record-kenny--curated",
+    "scenario_slug": "the-hackers-record-kenny",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481f181a9fbe102901f0e/gallery-ac74f33c31853f44ca9ca086c50f6303b143071de860c05a8188ed25e1f83c67.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Still from Black Mirror illustrating The Hackers Record Kenny",
+    "blur_data_url": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACwAQCdASoIAAUAA8BgJZwAAv+tx+XAAOJ+T9cdl07T7uz8+1U/34xutslwczF+AGcAAA==",
+    "content_hash": "ac74f33c31853f44ca9ca086c50f6303b143071de860c05a8188ed25e1f83c67",
+    "protected_regions": [
+      {
+        "id": "the-hackers-record-kenny--face",
+        "label": "Kenny’s full anxious face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          27,
+          2,
+          47,
+          79
+        ]
+      },
+      {
+        "id": "the-hackers-record-kenny--yellow-glasses",
+        "label": "Distinctive yellow glasses and eyes",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          30,
+          19,
+          39,
+          25
+        ]
+      },
+      {
+        "id": "the-hackers-record-kenny--cap",
+        "label": "Kenny’s grey cap",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          24,
+          0,
+          51,
+          18
+        ]
+      },
+      {
+        "id": "the-hackers-record-kenny--shoulders",
+        "label": "Kenny’s jacket and isolated silhouette",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          18,
+          66,
+          67,
+          34
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "near-zero--curated",
+    "scenario_slug": "near-zero",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f124810f9e52d4153e24cc4a/gallery-8972e0d02fd2ed3b2443ed4127f0ba46fa6f622a1132213eb5a28a82e9ee1099.webp",
+    "width": 1920,
+    "height": 1280,
+    "alt": "Still from Oppenheimer illustrating Near Zero",
+    "blur_data_url": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADwAQCdASoIAAUAA8BgJQBOkCYjAu0UKgAA9jqVS9gB4bbus8uPCoGQYAAAAA==",
+    "content_hash": "8972e0d02fd2ed3b2443ed4127f0ba46fa6f622a1132213eb5a28a82e9ee1099",
+    "protected_regions": [
+      {
+        "id": "near-zero--men-faces",
+        "label": "Oppenheimer and Groves’s faces",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          62,
+          23,
+          17,
+          19
+        ]
+      },
+      {
+        "id": "near-zero--men",
+        "label": "The two men standing alone at Trinity",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          60,
+          23,
+          21,
+          70
+        ]
+      },
+      {
+        "id": "near-zero--test-equipment",
+        "label": "Test equipment and stacked timber",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [
+          3,
+          55,
+          42,
+          27
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "peter-bypasses-training-wheels--curated",
+    "scenario_slug": "peter-bypasses-training-wheels",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f1248126b888f840d558a33d/gallery-b128ee4e6eb77cd5321e7232403266e44e6ca161c75710a22db5cb8918cf0d17.webp",
+    "width": 1024,
+    "height": 576,
+    "alt": "Still from Spider-Man: Homecoming illustrating Peter Bypasses Training Wheels",
+    "blur_data_url": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADwAQCdASoIAAUAA8BgJYwCdIExFckVg4AA/qzS2bQ0w4sW+QCb+uY8K+dyXnMsQmKZlDMw4AA=",
+    "content_hash": "b128ee4e6eb77cd5321e7232403266e44e6ca161c75710a22db5cb8918cf0d17",
+    "protected_regions": [
+      {
+        "id": "peter-bypasses-training-wheels--peter-head",
+        "label": "Peter’s head and youthful profile silhouette",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          13,
+          0,
+          27,
+          48
+        ]
+      },
+      {
+        "id": "peter-bypasses-training-wheels--peter-suit",
+        "label": "Peter’s red-and-blue suit and back emblem",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          33,
+          48,
+          67
+        ]
+      },
+      {
+        "id": "peter-bypasses-training-wheels--tony-face",
+        "label": "Tony’s disapproving face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          43,
+          4,
+          23,
+          40
+        ]
+      },
+      {
+        "id": "peter-bypasses-training-wheels--tony-body",
+        "label": "Tony confronting Peter",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          38,
+          3,
+          51,
+          97
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-idea-wont-wake-up--curated",
+    "scenario_slug": "the-idea-wont-wake-up",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f1248136a6bbf960be8058b2/gallery-6c762a8ad5bd06ff7ba6b0bd46c56c06a7aae950f39c2b0ba224d5e4cadf68ca.webp",
+    "width": 1920,
+    "height": 800,
+    "alt": "Still from Inception illustrating The Idea Won’t Wake Up",
+    "blur_data_url": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADwAQCdASoIAAMAA8BgJZQCdAEfhu0riAAA/ulWZmXXBBPNWU3LulyoU/rwAA==",
+    "content_hash": "6c762a8ad5bd06ff7ba6b0bd46c56c06a7aae950f39c2b0ba224d5e4cadf68ca",
+    "protected_regions": [
+      {
+        "id": "mal-face",
+        "label": "Mal's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          26,
+          8,
+          25,
+          82
+        ]
+      },
+      {
+        "id": "cobb-face",
+        "label": "Cobb's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          59,
+          4,
+          23,
+          88
+        ]
+      },
+      {
+        "id": "close-embrace",
+        "label": "Mal and Cobb close together",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          20,
+          0,
+          69,
+          100
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "mann-fakes-the-telemetry--curated",
+    "scenario_slug": "mann-fakes-the-telemetry",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f124813a9a15feeb10ccc656/gallery-6f64e97235167a128d3208af062a54aad4c0086b93c0ffb8b99da565a53b83e8.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from Interstellar illustrating Mann Fakes the Telemetry",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoIAAUAA8BgJZwC7AD0eqnsAP7uNRoZ8ll70AOrk3GRzafFTiuWAAAA",
+    "content_hash": "6f64e97235167a128d3208af062a54aad4c0086b93c0ffb8b99da565a53b83e8",
+    "protected_regions": [
+      {
+        "id": "mann-face",
+        "label": "Mann's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          23,
+          8,
+          31,
+          42
+        ]
+      },
+      {
+        "id": "mann-suit",
+        "label": "Mann suit and name patch",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          12,
+          28,
+          57,
+          72
+        ]
+      },
+      {
+        "id": "mann-patch",
+        "label": "MANN name patch",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [
+          40,
+          75,
+          17,
+          13
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "laughter-beats-screams--curated",
+    "scenario_slug": "laughter-beats-screams",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f124814cbc70c2d5948e8bb7/gallery-ce2119054eaaf7ae7d53f370580ced3b8c08a36a04ad5bbd798066ec81fae81b.webp",
+    "width": 1920,
+    "height": 1038,
+    "alt": "Still from Monsters Inc. illustrating Laughter Beats Screams",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAQCdASoIAAQAA8BgJQBOgCHgmnPsAADh3MyP39PJzZxLrDH32tKIMMp8aCgA",
+    "content_hash": "ce2119054eaaf7ae7d53f370580ced3b8c08a36a04ad5bbd798066ec81fae81b",
+    "protected_regions": [
+      {
+        "id": "sulley",
+        "label": "Sulley walking on laugh floor",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          30,
+          10,
+          31,
+          86
+        ]
+      },
+      {
+        "id": "sulley-face",
+        "label": "Sulley's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          38,
+          19,
+          18,
+          25
+        ]
+      },
+      {
+        "id": "floor-monsters",
+        "label": "Laugh-floor monsters",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          59,
+          32,
+          24,
+          61
+        ]
+      },
+      {
+        "id": "laugh-floor",
+        "label": "Laugh-floor signage and stations",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          0,
+          100,
+          45
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "dna-locked-weapons--curated",
+    "scenario_slug": "dna-locked-weapons",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f124815488c4fc760737a303/gallery-b01795ec96ab69c5be8bdc0d39e8cc57ca2ea5b8f77232159f54a81dfd1532c0.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from District 9 illustrating DNA-Locked Weapons",
+    "blur_data_url": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADQAQCdASoIAAUAA8BgJYgCdADdIDGKAAD5Dgg97w563tAyhxyTQzHy3tWubvg2vHWvPoYH4AAAAA==",
+    "content_hash": "b01795ec96ab69c5be8bdc0d39e8cc57ca2ea5b8f77232159f54a81dfd1532c0",
+    "protected_regions": [
+      {
+        "id": "wikus",
+        "label": "Wikus and alien weapon",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          24,
+          8,
+          43,
+          92
+        ]
+      },
+      {
+        "id": "wikus-face",
+        "label": "Wikus's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          35,
+          10,
+          20,
+          29
+        ]
+      },
+      {
+        "id": "alien",
+        "label": "Alien fighter and weapon",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          57,
+          0,
+          39,
+          100
+        ]
+      },
+      {
+        "id": "district9-mark",
+        "label": "District 9 source mark",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          0,
+          27,
+          38
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "tony-hijacks-his-own-oversight-hearing--curated",
+    "scenario_slug": "tony-hijacks-his-own-oversight-hearing",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f12481798a13efe9c25f117a/gallery-ddb3c5d1c5b7dcb7eef5a9c6f5c204927dbfa96a0285e1e6b2254f5c1671ad7c.webp",
+    "width": 1920,
+    "height": 1078,
+    "alt": "Still from Iron Man 2 illustrating Tony Hijacks His Own Oversight Hearing",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACQAQCdASoIAAQAA8BgJZwAApz+eWAA/uzcr7if7dWt7Pbnwf+GuobIAAA=",
+    "content_hash": "ddb3c5d1c5b7dcb7eef5a9c6f5c204927dbfa96a0285e1e6b2254f5c1671ad7c",
+    "protected_regions": [
+      {
+        "id": "tony",
+        "label": "Tony using his phone",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          20,
+          28,
+          35,
+          61
+        ]
+      },
+      {
+        "id": "phone",
+        "label": "Tony's phone",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [
+          40,
+          37,
+          13,
+          27
+        ]
+      },
+      {
+        "id": "hearing-display",
+        "label": "Hijacked hearing-room display",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [
+          51,
+          5,
+          47,
+          70
+        ]
+      },
+      {
+        "id": "senate-room",
+        "label": "Senate hearing context",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          0,
+          100,
+          100
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "independence-day-virus--curated",
+    "scenario_slug": "independence-day-virus",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f12481898471d005866195c6/gallery-6a5210aeb8c0361e6ac644f4e20dd2e1121e5d8ca198af2e02ce4c3308ffd7ef.webp",
+    "width": 1140,
+    "height": 655,
+    "alt": "Still from Independence Day illustrating Independence Day Virus",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAQCdASoIAAUAA8BgJZQCdAD5hLjH3AD+m7NOhEerdI47A11DQP5Qr+hBKyLQAAA=",
+    "content_hash": "6a5210aeb8c0361e6ac644f4e20dd2e1121e5d8ca198af2e02ce4c3308ffd7ef",
+    "protected_regions": [
+      {
+        "id": "levinson-face",
+        "label": "David Levinson's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          53,
+          0,
+          36,
+          90
+        ]
+      },
+      {
+        "id": "whiteboard",
+        "label": "Mothership diagram on whiteboard",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [
+          0,
+          20,
+          56,
+          76
+        ]
+      },
+      {
+        "id": "levinson",
+        "label": "Levinson explaining the virus",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          46,
+          0,
+          54,
+          100
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "leeloo-learns-war--curated",
+    "scenario_slug": "leeloo-learns-war",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f124818cab1ed1d70a054051/gallery-719ed60d782aa2262ea8f0a9fbba981b48665a26f00504d3269fdd8a66ca9922.webp",
+    "width": 1920,
+    "height": 1079,
+    "alt": "Still from The Fifth Element illustrating Leeloo Learns War",
+    "blur_data_url": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAACwAQCdASoIAAQAA8BgJQBOgB6QNq3AAP7vqIEJK5Fd+RXUe4NAr6svQD7Eay6Iu5FvjOAA",
+    "content_hash": "719ed60d782aa2262ea8f0a9fbba981b48665a26f00504d3269fdd8a66ca9922",
+    "protected_regions": [
+      {
+        "id": "leeloo-learns-war--leeloo-face-hair",
+        "label": "Leeloo's face and orange hair",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          36,
+          18,
+          25,
+          48
+        ]
+      },
+      {
+        "id": "leeloo-learns-war--leeloo-body",
+        "label": "Leeloo leaning forward at the terminal",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [
+          30,
+          52,
+          42,
+          48
+        ]
+      },
+      {
+        "id": "leeloo-learns-war--reaching-arm",
+        "label": "Leeloo's outstretched arm and hand",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [
+          0,
+          43,
+          42,
+          38
+        ]
+      },
+      {
+        "id": "leeloo-learns-war--korben-face",
+        "label": "Korben watching over Leeloo's left shoulder",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          20,
+          19,
+          17,
+          35
+        ]
+      },
+      {
+        "id": "leeloo-learns-war--cornelius-face",
+        "label": "Cornelius watching over Leeloo's right shoulder",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          58,
+          6,
+          24,
+          39
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  }
+]

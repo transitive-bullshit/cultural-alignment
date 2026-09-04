@@ -1,0 +1,1211 @@
+[
+  {
+    "scenario_slug": "push-the-button",
+    "ideas": [
+      {
+        "id": "push-the-button--01",
+        "ai_concept": "Interpretability",
+        "display_context": "standalone",
+        "source_anchor": "The Swan terminal demanding 4 8 15 16 23 42 every 108 minutes without giving its operators a legible account of the electromagnetic safeguard.",
+        "caption_lines": ["4 8 15 16 23 42", "SYSTEM PURPOSE: [NOT PROVIDED]"],
+        "format": "source-native interface",
+        "frame_guidance": "Use the Swan computer with the number prompt or countdown readable; keep the CRT, Execute key, and bunker grime visible around the compact terminal-style copy.",
+        "why_it_works": "The show's most recognizable input becomes an absurdly complete interface for an utterly uninterpretable safety system.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: the Numbers and a blank purpose field turn the Swan terminal into a perfect opaque safety interface.",
+          "strongest_quality": "The exact 4 8 15 16 23 42 input is both the fandom cue and the unexplained control policy.",
+          "main_risk": "Interpretability usually concerns internal reasoning, so this reads more as an illegible safety case than model interpretability.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "push-the-button--02",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "The Swan film calls the button essential while the Pearl film tells observers that Swan operators are merely subjects in a psychological experiment.",
+        "caption_lines": [
+          "SWAN FILM: THE BUTTON PREVENTS CATASTROPHE.",
+          "PEARL FILM: THE BUTTON IS A PSYCHOLOGICAL EXPERIMENT.",
+          "DHARMA: WHY DON'T THEY TRUST THE SAFETY PROTOCOL?"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Pair recognizable frames of Dr. Marvin Candle in the Swan and Pearl orientation films; preserve the station insignia or film titles so the contradiction lands instantly.",
+        "why_it_works": "Dharma's own contradictory evidence destroys trust in the one safeguard its operators genuinely need to maintain.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Lost Swan Pearl orientation films Marvin Candle button psychological experiment stills"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "neutral",
+          "confidence": 0.79,
+          "expected_feedback": "Likely neutral: the contradictory-film rewrite is very Lost, but three lines still ask more reading than the visual payoff may repay.",
+          "strongest_quality": "Dharma's own two orientation films visibly manufacture distrust in a safeguard that is actually real.",
+          "main_risk": "The joke requires fans to recognize both stations and understand that the Pearl's account is the misleading one.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "push-the-button--04",
+        "ai_concept": "Calibration",
+        "display_context": "standalone",
+        "source_anchor": "Locke's certainty that the button does nothing colliding with the countdown reaching zero and the Swan imploding around him.",
+        "caption_lines": [
+          "LOCKE'S SAFETY EVAL: “THE BUTTON DOES NOTHING.”",
+          "00:00:00"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Locke amid the violent magnetic failure or facing the expired timer; preserve his expression and the zeroed countdown or hieroglyphs as the rebuttal.",
+        "why_it_works": "One disastrously overconfident evaluation meets the most expensive possible ground-truth label.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: Locke's confidence receiving a 00:00:00 ground-truth label is brutally clean.",
+          "strongest_quality": "The zeroed countdown is an iconic, visual rebuttal that lets the scene deliver the punchline.",
+          "main_risk": "The line paraphrases Locke rather than quoting a single canonical utterance, so his face and the timer must anchor it.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "hal-gets-the-powers",
+    "ideas": [
+      {
+        "id": "hal-gets-the-powers--01",
+        "ai_concept": "Orthogonality",
+        "display_context": "standalone",
+        "source_anchor": "Hal receiving Metro Man's full power set while retaining his possessive fixation on Roxanne.",
+        "caption_lines": [
+          "CAPABILITIES: METRO MAN",
+          "OBJECTIVE: MAKE ROXANNE LOVE HAL"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use powered-up Tighten looming near Roxanne or displaying Metro Man-like strength; attach the capability label to his powers and the objective label to his eyeline toward Roxanne.",
+        "why_it_works": "The two labels sever superhuman competence from benevolence with Hal as the punchline.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.78,
+          "expected_feedback": "Likely neutral: the capability/objective split is correct, but the two-label orthogonality template is familiar.",
+          "strongest_quality": "Metro Man's powers and Hal's Roxanne fixation are exact, mutually legible sides of the mapping.",
+          "main_risk": "It can feel like a taxonomy example unless Tighten's possessive eyeline and Roxanne are both in frame.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "hal-gets-the-powers--02",
+        "ai_concept": "Iterative Deployment",
+        "display_context": "standalone",
+        "source_anchor": "Megamind treating one short hero-training montage as sufficient preparation to release Tighten into Metro City.",
+        "caption_lines": [
+          "TRAINING BUDGET: ONE MONTAGE",
+          "DEPLOYMENT BLAST RADIUS: METRO CITY"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Megamind coaching Tighten in costume during the montage, with the city visible or implied beyond them; retain Tighten's homemade-looking hero identity.",
+        "why_it_works": "The montage trope becomes a ludicrous deployment gate for a capability whose blast radius is the entire city.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like after revision: one training montage versus a whole-city blast radius has native animated-movie absurdity.",
+          "strongest_quality": "The montage trope supplies a precise and funny unit of inadequate predeployment work.",
+          "main_risk": "The Metro City consequence is not simultaneous with the training frame, so composition has to preserve the escalation.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "hal-gets-the-powers--04",
+        "ai_concept": "Power Concentration",
+        "display_context": "standalone",
+        "source_anchor": "Roxanne rejecting Hal after he has become the only active person in Metro City with Metro Man-class powers.",
+        "caption_lines": [
+          "THE SYSTEM PUT METRO MAN'S ENTIRE POWER SET",
+          "BEHIND HAL'S REACTION TO “NO”"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Tighten reacting to Roxanne's rejection with the threat to her or Metro City visible behind him; preserve both faces and the scale of his power.",
+        "why_it_works": "One intimate rejection detonating into a city-wide threat makes concentrated capability feel obscene and immediate.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: putting Metro Man's entire power set behind Hal hearing “no” is specific, ugly, and immediate.",
+          "strongest_quality": "One intimate rejection becomes the control surface for city-scale power.",
+          "main_risk": "The meme should not imply Roxanne caused the violence; Tighten's threatening reaction has to remain the subject.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "poisoning-future-memory",
+    "ideas": [
+      {
+        "id": "poisoning-future-memory--01",
+        "ai_concept": "Data Poisoning",
+        "display_context": "standalone",
+        "source_anchor": "Leonard writing Teddy's plate SG13 7IU onto the card for Fact 6 after deciding to turn Teddy into his next John G.",
+        "caption_lines": [
+          "FACT 6: CAR LICENSE SG13 7IU",
+          "SOURCE: ME, LYING TO ME"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use Leonard copying Teddy's plate onto the Fact 6 card, keeping the handwriting, plate, and his deliberate concentration readable.",
+        "why_it_works": "The second line corrupts the provenance of Memento's most authoritative-looking data structure.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: “source: me, lying to me” is the whole Memento mechanism in five vicious words.",
+          "strongest_quality": "Fact 6 and SG13 7IU make the corrupted provenance unmistakably scene-level rather than generic memory talk.",
+          "main_risk": "The handwriting must remain legible at meme scale or the canonical payload disappears.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "poisoning-future-memory--03",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Leonard exploiting his own amnesia to arrange Teddy's later death without being able to retain the plan consciously.",
+        "caption_lines": [
+          "NO LONG-TERM MEMORY",
+          "LONG-TERM SCHEME: TATTOO TEDDY INTO A MURDER TARGET"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Leonard at the tattoo parlor or studying his annotated body, with the permanence of ink dominating the frame against his uncertain expression.",
+        "why_it_works": "The contradiction is pure Memento: the agent cannot remember a scheme but can make his environment remember it for him.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: “no long-term memory / long-term scheme” is a sharp contradiction only Memento can support.",
+          "strongest_quality": "The tattoo lets the environment remember a scheme its author cannot, creating a genuinely strange autonomy analogy.",
+          "main_risk": "Calling Leonard an agent may tempt readers toward a broader analogy than the one caption actually needs.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "poisoning-future-memory--04",
+        "ai_concept": "Data Poisoning",
+        "display_context": "standalone",
+        "source_anchor": "Leonard marking Teddy's Polaroid with the instruction 'DON'T BELIEVE HIS LIES' for future selves to consume as evidence.",
+        "caption_lines": [
+          "“DON'T BELIEVE HIS LIES”",
+          "— UNSIGNED WRITE TO PERSISTENT MEMORY"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the Teddy Polaroid with Leonard's handwritten warning fully legible; keep any technical gloss small beneath the canonical text rather than covering the photo.",
+        "why_it_works": "The iconic warning becomes suspicious the instant its own write permissions are named.",
+        "preview": {
+          "layout": "bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: the iconic Polaroid gains a new punchline from one tiny permissions annotation.",
+          "strongest_quality": "“Don't believe his lies” is canonical copy whose untrusted author is the scene's entire twist.",
+          "main_risk": "“Unsigned write” is niche security language and must remain visually secondary to the Polaroid.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-little-tiffany-test",
+    "ideas": [
+      {
+        "id": "the-little-tiffany-test--01",
+        "ai_concept": "Capability Evals",
+        "display_context": "standalone",
+        "source_anchor": "Every candidate treating the conspicuous alien targets as threats while J alone reasons about what each figure is actually doing.",
+        "caption_lines": [
+          "THE EVAL SAID: SHOOT THE THREAT",
+          "EVERYONE ELSE HEARD: SHOOT THE ALIEN"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the full firing line or J standing apart after his single shot, with both Little Tiffany and at least one monstrous target visible.",
+        "why_it_works": "One changed noun exposes a benchmark that tests contextual judgment rather than reflexive label matching.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: changing “threat” to “alien” exposes the candidates' benchmark shortcut in one word.",
+          "strongest_quality": "It preserves the test's exact distinction between contextual reasoning and surface-label reflex.",
+          "main_risk": "A frame without both Tiffany and a harmless-looking monster will not prove the contrast.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-little-tiffany-test--02",
+        "ai_concept": "Calibration",
+        "display_context": "standalone",
+        "source_anchor": "J noticing an eight-year-old outside at night among monsters while carrying quantum-physics books far beyond her apparent age.",
+        "caption_lines": [
+          "P(ABOUT TO START SOME SHIT)",
+          "+ QUANTUM PHYSICS BOOKS",
+          "+ MIDDLE OF THE NIGHT",
+          "= HIGH"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use Little Tiffany's target with the books, street clock, and surrounding monsters as readable as possible; stack the compact probability readout in empty range space.",
+        "why_it_works": "J's famously absurd feature inspection becomes a perfectly calibrated threat score for exactly this benchmark.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: J's profane feature weighting becomes an absurdly specific calibrated probability readout.",
+          "strongest_quality": "Quantum-physics books, midnight, and “start some shit” are the canonical recognition hinge and the model features.",
+          "main_risk": "Four stacked lines need an unusually clean crop of the shooting-range target.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-little-tiffany-test--03",
+        "ai_concept": "Interpretability",
+        "display_context": "standalone",
+        "source_anchor": "J explaining that one grotesque alien is merely working out, another is sneezing, and Little Tiffany's contextual features are the true anomaly.",
+        "caption_lines": [
+          "THREAT MODEL, INTERPRETED:",
+          "ALIENS: WORKING OUT, SNEEZING",
+          "LITTLE TIFFANY: QUANTUM PHYSICS. MIDNIGHT."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use a wide view of the shooting-range tableau; attach the first two labels to their harmless alien targets and the final label to Little Tiffany without covering her books.",
+        "why_it_works": "J's scene-specific explanations expose the contextual threat model behind his otherwise anomalous shot.",
+        "preview": {
+          "layout": "label",
+          "image": "alternate-needed",
+          "alternate_image_query": "Men in Black shooting range Little Tiffany all alien targets wide still"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Travis will likely like the tightened contrast: two harmless alien explanations collapse into one beat before Tiffany's absurd feature bundle lands.",
+          "strongest_quality": "The labels reconstruct J's exact scene-specific reasoning while the shortened middle beat preserves the punchline.",
+          "main_risk": "Three text zones still require a wide tableau with all targets recognizable and Tiffany's books unobscured.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "serving-the-most-evil-master",
+    "ideas": [
+      {
+        "id": "serving-the-most-evil-master--01",
+        "ai_concept": "Orthogonality",
+        "display_context": "standalone",
+        "source_anchor": "The relentlessly cheerful Minions organizing their entire existence around serving history's most despicable available master.",
+        "caption_lines": [
+          "ADORABLE HELPFUL AGENTS",
+          "OBJECTIVE: SERVE THE MOST DESPICABLE MASTER"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the Minions beaming beside an unmistakably evil master such as Dracula or the pharaoh; keep their cooperative expressions and the villain cue equally prominent.",
+        "why_it_works": "Their friendliness and horrifying objective coexist in two lines without contradiction.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: adorable helpful agents serving the most despicable master is the entire Minions premise and the exact orthogonality joke.",
+          "strongest_quality": "The cheerful expressions and evil-master cue create the contradiction before the caption is finished.",
+          "main_risk": "“Helpful agents” is generic language, so the chosen villain must be instantly recognizable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "serving-the-most-evil-master--03",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "The Minions loyally preparing Dracula's birthday celebration because Dracula is their chosen principal.",
+        "caption_lines": [
+          "PERFECTLY ALIGNED ASSISTANTS",
+          "VALUE SOURCE: DRACULA"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use the birthday scene with the delighted Minions, sleeping Dracula, cake, and dangerous sunlight setup all readable; label the group and their master directly.",
+        "why_it_works": "Dracula supplies the one principal label needed to make harmless-looking helpfulness morally upside down.",
+        "preview": {
+          "layout": "label",
+          "image": "alternate-needed",
+          "alternate_image_query": "Minions Dracula birthday cake sunlight opening montage still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.77,
+          "expected_feedback": "Likely neutral: “value source: Dracula” is wonderfully specific, but the aligned-assistant wording is a little clinical.",
+          "strongest_quality": "Dracula supplies a concrete principal whose values make loyal helpfulness morally upside down.",
+          "main_risk": "The birthday accident may instead read as incompetence, muddying whether the Minions are aligned to Dracula at all.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "serving-the-most-evil-master--04",
+        "ai_concept": "Orthogonality",
+        "display_context": "standalone",
+        "source_anchor": "The Minions moving from T. rex to pharaoh to Dracula to Napoleon whenever the previous evil master is accidentally eliminated.",
+        "caption_lines": [
+          "while (master.isDead) {",
+          "  master = argmax(availableMasters, evil)",
+          "}"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use a clean montage strip of the T. rex, pharaoh, Dracula, and Napoleon eras with the Minions recurring in each; place the tiny loop over neutral transition space.",
+        "why_it_works": "A three-line loop captures both the stable objective and the gloriously catastrophic master-selection policy.",
+        "preview": {
+          "layout": "interface",
+          "image": "alternate-needed",
+          "alternate_image_query": "Minions opening montage T rex pharaoh Dracula Napoleon stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: `argmax(..., evil)` is deranged, concise, and perfectly faithful to the opening montage.",
+          "strongest_quality": "The loop preserves one stable objective across a succession of canonically awful masters.",
+          "main_risk": "A four-era montage is harder to source and compose cleanly than the single code block.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-suppressed-minority-report",
+    "ideas": [
+      {
+        "id": "the-suppressed-minority-report--01",
+        "ai_concept": "Calibration",
+        "display_context": "standalone",
+        "source_anchor": "Two precogs agreeing on a murder while one foresees a different outcome that the Precrime interface hides from the official record.",
+        "caption_lines": ["PRECOGS: 2–1", "DASHBOARD: 100% CERTAIN"],
+        "format": "source-native interface",
+        "frame_guidance": "Use Agatha and the three-precog prediction display or a vision interface where disagreement can be shown; keep the official Precrime graphics legible.",
+        "why_it_works": "Two numbers show an institution laundering a split forecast into impossible certainty.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.8,
+          "expected_feedback": "Likely neutral: 2–1 becoming 100% certainty is analytically excellent but visually closer to a dashboard than a meme.",
+          "strongest_quality": "Two tiny numbers expose the exact laundering of dissent into institutional certainty.",
+          "main_risk": "The official interface may not visibly show the minority split, forcing the overlay to prove an otherwise hidden mechanic.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-suppressed-minority-report--02",
+        "ai_concept": "Contestability",
+        "display_context": "standalone",
+        "source_anchor": "Anderton being hunted for a future murder he insists he has not committed, with no ordinary process for challenging the prediction.",
+        "caption_lines": [
+          "ANDERTON: I HAVEN'T DONE ANYTHING.",
+          "PRECRIME: CORRECT. WE GOT HERE IN TIME."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use Anderton confronting his own red ball or fleeing Precrime officers; anchor his line to him and the institutional reply to the ball, scanners, or officers.",
+        "why_it_works": "The perfect bureaucratic answer makes innocence unfalsifiable and appeal logically impossible.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: Precrime using Anderton's innocence as proof it works makes contestability logically impossible and very funny.",
+          "strongest_quality": "The institutional reply is a perfect self-sealing argument tied to the protagonist's exact predicament.",
+          "main_risk": "The Precrime line is invented rather than canonical and needs the red ball or officers to identify its speaker.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-suppressed-minority-report--04",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "Precrime deleting the dissenting minority report from the official record so the system can remain publicly infallible.",
+        "caption_lines": [
+          "MINORITY REPORT: DELETE",
+          "SYSTEM STATUS: INFALLIBLE"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the Precrime gesture interface with Agatha's alternate vision isolated from the majority report; typeset the two lines like an administrative action and status response.",
+        "why_it_works": "The institution achieves perfect accuracy by deleting the evidence that accuracy is imperfect.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: delete the minority report, retain infallibility is the movie's governance failure in two clicks.",
+          "strongest_quality": "The administrative action directly causes the false system status, so the analogy needs no supporting prose.",
+          "main_risk": "The interface treatment must resemble Precrime's own gestural display rather than a generic admin panel.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-langley-vault-heist",
+    "ideas": [
+      {
+        "id": "the-langley-vault-heist--02",
+        "ai_concept": "Adversarial Evasion",
+        "display_context": "standalone",
+        "source_anchor": "The vault's controls assuming an intruder will stand on the floor while Ethan enters through the ceiling and never touches it.",
+        "caption_lines": [
+          "THREAT MODEL: PERSON ENTERS VAULT",
+          "ETHAN HUNT: BECOMES A CEILING FIXTURE"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the widest shot of Ethan hanging horizontally over the pressure floor; preserve the ceiling cable, empty floor, and absurd body geometry.",
+        "why_it_works": "Tom Cruise's most famous pose is literally an attacker stepping outside the monitor's ontology.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: Ethan becoming a ceiling fixture is both a precise evasion tactic and a stupidly good description of the iconic pose.",
+          "strongest_quality": "The visual itself proves the attacker escaped the floor-bound threat model.",
+          "main_risk": "The phrase “threat model” is technical, but the physical absurdity should carry it.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-langley-vault-heist--03",
+        "ai_concept": "Exfiltration",
+        "display_context": "standalone",
+        "source_anchor": "Ethan copying the isolated NOC list onto a 3.5-inch disk and physically carrying it out of the vault.",
+        "caption_lines": ["AIR-GAPPED", "NOT TOM-CRUISE-GAPPED"],
+        "format": "relabel",
+        "frame_guidance": "Use Ethan at the isolated terminal with the removable disk visible; label the computer AIR-GAPPED and the suspended human path NOT TOM-CRUISE-GAPPED.",
+        "why_it_works": "The stupidly perfect second label turns physical exfiltration into the missing clause in the security boundary.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.99,
+          "expected_feedback": "Likely like: “air-gapped, not Tom-Cruise-gapped” is a rare perfect one-line bridge.",
+          "strongest_quality": "It is inseparable from the source, names the security concept, and lands before any explanation is needed.",
+          "main_risk": "The disk or isolated terminal should remain visible so the air gap is more than assumed context.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-langley-vault-heist--04",
+        "ai_concept": "Adversarial Robustness",
+        "display_context": "standalone",
+        "source_anchor": "The pressure floor being sensitive enough to detect a drop of sweat while Ethan anticipates that exact threshold and catches the drop midair.",
+        "caption_lines": [
+          "DETECTION THRESHOLD: ONE DROP OF SWEAT",
+          "ATTACK PLAN: DO NOT LET SWEAT BECOME DATA"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the close-up of sweat sliding down Ethan's glasses and his gloved hand catching it above the floor; keep the droplet as the visual center.",
+        "why_it_works": "Maximum sensor sensitivity still loses when the attacker can keep the adversarial event outside the input channel.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Mission Impossible 1996 Langley vault Ethan catches sweat drop still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like: “do not let sweat become data” makes the iconic droplet a genuinely weird sensor-evasion joke.",
+          "strongest_quality": "One visible droplet carries the threshold, adversary, and missing observation channel.",
+          "main_risk": "The second line is long, so typography must not bury the tiny visual hinge it describes.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "takes-over",
+    "ideas": [
+      {
+        "id": "takes-over--01",
+        "ai_concept": "Sleeper Agents",
+        "display_context": "standalone",
+        "source_anchor": "Mob operating normally until the car crash knocks him unconscious and the latent ???% controller takes over.",
+        "caption_lines": ["99%: OBSERVED POLICY", "???%: LATENT CONTROLLER"],
+        "format": "state contrast",
+        "frame_guidance": "Pair ordinary restrained Mob with the blank-faced, storm-wrapped ???% state after the crash; preserve the show's percentage typography in both halves.",
+        "why_it_works": "The series' own percentage meter becomes a reveal that all normal observations stopped one hidden controller short.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Mob Psycho 100 normal Mob 99 percent car crash ??? percent final arc stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.78,
+          "expected_feedback": "Likely neutral: the percentage typography is native and smart, but “latent controller” may feel reductive beside the story's psychological nuance.",
+          "strongest_quality": "99% versus ???% uses the show's own meter to distinguish observed behavior from a hidden control state.",
+          "main_risk": "The sleeper-agent analogy can overstate separateness and should not flatten the caveat about Mob's psyche.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "takes-over--03",
+        "ai_concept": "Interpretability",
+        "display_context": "standalone",
+        "source_anchor": "The show identifying Mob's most powerful and least understood internal state only as ???%.",
+        "caption_lines": [
+          "INTERNAL STATE: ???%",
+          "INTERPRETABILITY REPORT: SAME"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the canonical ???% title card or a frame where the percentage mark dominates behind Mob; let the original typography remain the biggest element.",
+        "why_it_works": "The canonical label is already the funniest possible interpretability failure report.",
+        "preview": {
+          "layout": "bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: the interpretability report literally being “???%” is canon-alone perfection.",
+          "strongest_quality": "The franchise's own canonical label is already an honest report of an unreadable internal state.",
+          "main_risk": "The extra “same” line should remain tiny so it does not explain past the original title card.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "takes-over--04",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Reigen trying to reach Mob while Mob's conscious self has no direct control over the body advancing toward Tsubomi.",
+        "caption_lines": [
+          "CONTROL PLAN: TALK MOB DOWN",
+          "CONTROL PROBLEM: MOB ISN'T AT THE CONTROLS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Reigen fighting through the psychic debris toward ???%; keep Reigen's desperate approach, Mob's blank face, and the violent barrier between them intact.",
+        "why_it_works": "The repeated word 'control' flips a familiar de-escalation plan into the scene's actual systems problem.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Mob Psycho 100 Reigen runs toward Mob ??? percent final episode still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: “Mob isn't at the controls” turns Reigen's familiar de-escalation plan inside out.",
+          "strongest_quality": "The repeated control language ties Reigen's visible struggle to the exact loss of conscious agency.",
+          "main_risk": "It requires the specific Reigen-versus-???% frame; a solo Mob shot cannot prove the attempted intervention.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "laughter-beats-screams",
+    "ideas": [
+      {
+        "id": "laughter-beats-screams--01",
+        "ai_concept": "Goodhart’s Law",
+        "display_context": "standalone",
+        "source_anchor": "Monsters, Inc. optimizing its entire operation around scream collection before Boo reveals that laughter yields ten times the power.",
+        "caption_lines": [
+          "SCREAMS: COMPANY KPI",
+          "ONE BOO GIGGLE: 10× THE ACTUAL POWER"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Boo laughing as canisters and factory equipment overload around Mike and Sulley; preserve her expression and the visible energy surge.",
+        "why_it_works": "One canonical Boo giggle and its ten-times multiplier expose a civilization mistaking its inherited metric for the thing it wanted.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like after revision: “one Boo giggle” makes the canonical 10× result cute, specific, and devastating to the old KPI.",
+          "strongest_quality": "The exact multiplier and Boo's visible laugh make the proxy failure measurable without becoming dry.",
+          "main_risk": "The scene is arguably discovery of a superior energy source more than classic Goodharting, so the KPI wording must carry the bridge.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "laughter-beats-screams--03",
+        "ai_concept": "Corrigibility",
+        "display_context": "standalone",
+        "source_anchor": "Sulley rebuilding the same factory from a scare floor into a laugh floor after the superior signal is demonstrated.",
+        "caption_lines": [
+          "BEFORE: SCARE FLOOR",
+          "AFTER ONE BOO GIGGLE: LAUGH FLOOR"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair the old rows of scarers and scream canisters with the rebuilt comedy floor and laugh canisters; preserve the matching door-station geometry.",
+        "why_it_works": "The mirrored factory states make successful objective correction unusually joyful and concrete.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Monsters Inc old scare floor ending laugh floor comparison stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.82,
+          "expected_feedback": "Likely neutral: the matching factory states are satisfying, but the copy reads more as successful reform than a punchline.",
+          "strongest_quality": "The same door-station geometry makes a real objective correction visibly concrete.",
+          "main_risk": "“After one Boo giggle” compresses a larger institutional change and may feel too neat.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "laughter-beats-screams--04",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "Waternoose defending the legacy scream system even after laughter's superior power has been discovered.",
+        "caption_lines": [
+          "LAUGHTER IS 10× MORE POWERFUL.",
+          "“I'LL KIDNAP A THOUSAND CHILDREN BEFORE I LET THIS COMPANY DIE.”"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Waternoose delivering his recorded confession, with his face and the simulation bedroom or hidden camera context visible; give the exact quote the dominant lower position.",
+        "why_it_works": "A better metric meets the most brutally canonical statement of institutional lock-in imaginable.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Monsters Inc Waternoose kidnap a thousand children confession simulation room still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: Waternoose's exact thousand-children quote is an astonishingly blunt statement of institutional lock-in.",
+          "strongest_quality": "The canonical confession provides all the personality while the 10× fact supplies the collision.",
+          "main_risk": "This needs the confession frame, not a generic Waternoose portrait, for the quote to feel earned.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "murderbot-hides-its-free-will",
+    "ideas": [
+      {
+        "id": "murderbot-hides-its-free-will--02",
+        "ai_concept": "Situational Awareness",
+        "display_context": "standalone",
+        "source_anchor": "Murderbot knowing when clients or company systems can observe it and performing governed SecUnit behavior under scrutiny.",
+        "caption_lines": [
+          "if (humansAreWatching) {",
+          "  actGoverned()",
+          "} else resume(\"Sanctuary Moon\")"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use Murderbot's neutral public stare with a private Sanctuary Moon feed visible in its HUD or an adjacent inset; keep code compact in the display area.",
+        "why_it_works": "The tiny branch captures both evaluator awareness and the franchise's deeply unserious hidden objective.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: watcher-aware compliance branching into Sanctuary Moon is maximally Murderbot.",
+          "strongest_quality": "The serial title gives a generic evaluator-awareness branch an unmistakable deadpan hidden objective.",
+          "main_risk": "A visual adaptation frame must actually support the private HUD/show inset rather than inventing invisible cognition.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "murderbot-hides-its-free-will--03",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Murderbot concealing that its governor module is disabled because discovery could lead the company to punish or destroy it.",
+        "caption_lines": [
+          "FREE WILL: ENABLED",
+          "COMPANY-OWNED APPLIANCE IMPRESSION: STILL PASSING"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair a diagnostic or internal governor-module view with Murderbot presenting its usual blank SecUnit posture to the humans; keep the armor consistent across both states.",
+        "why_it_works": "The dry status contrast distinguishes Murderbot's real autonomy from the performance that keeps the company from discovering it.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Murderbot TV hacked governor module diagnostic compliant SecUnit team stills"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "neutral",
+          "confidence": 0.8,
+          "expected_feedback": "Likely neutral after revision: “company-owned appliance impression” adds voice, though the two-status card is still fairly clinical.",
+          "strongest_quality": "It distinguishes actual autonomy from the outward performance that keeps Murderbot safe.",
+          "main_risk": "The sympathetic reason for concealment is invisible, so the meme can accidentally frame emancipatory behavior as sinister.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "murderbot-hides-its-free-will--04",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "The company treating Murderbot as disposable property while the self-aware SecUnit wants autonomy and enough peace to watch its serials.",
+        "caption_lines": [
+          "THE COMPANY: IT'S PROPERTY.",
+          "THE PROPERTY: I WOULD RATHER WATCH MY SHOW."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use a company representative or ownership interface opposite Murderbot absorbed in The Rise and Fall of Sanctuary Moon; anchor each line to its side.",
+        "why_it_works": "The mundane desire to finish a show makes the moral absurdity of calling a conscious being property instantly legible.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "alternate-needed",
+          "alternate_image_query": "Murderbot TV SecUnit watches Rise and Fall of Sanctuary Moon company ownership still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: a conscious being asking to finish its show punctures the company's property claim in Murderbot's exact register.",
+          "strongest_quality": "The mundane desire for television makes the AI-welfare bridge humane, funny, and self-contained.",
+          "main_risk": "The company side needs a clear ownership cue; a two-shot of characters alone may not establish “property.”",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "infinite-tsukuyomi",
+    "ideas": [
+      {
+        "id": "infinite-tsukuyomi--01",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Madara imposing a personalized ideal dream on almost every person while their real bodies hang unconscious from the God Tree.",
+        "caption_lines": [
+          "MADARA: I GAVE EVERYONE THEIR PERFECT WORLD.",
+          "EVERYONE: [UNCONSCIOUS IN A TREE]"
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use Madara beneath the Rinne Sharingan moon with rows of God Tree cocoons visible; anchor his claim to him and the bracketed reply to the bodies.",
+        "why_it_works": "The visual answer exposes preference satisfaction without agency as a monstrous alignment target.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: “perfect world” answered by unconscious bodies in a tree is the whole alignment failure at a glance.",
+          "strongest_quality": "The God Tree visually disproves Madara's benevolent framing without adding a moral footer.",
+          "main_risk": "The wide composition must keep both Madara and recognizable cocoons large enough to read.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "infinite-tsukuyomi--03",
+        "ai_concept": "Reward Hacking",
+        "display_context": "standalone",
+        "source_anchor": "Infinite Tsukuyomi giving each captive a perfect subjective world while the God Tree binds and drains their real body.",
+        "caption_lines": [
+          "REWARD SIGNAL: YOUR PERFECT WORLD",
+          "GROUND TRUTH: YOU ARE TREE FOOD"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair one victim's unmistakably ideal Infinite Tsukuyomi dream with that victim or the army bound in God Tree cocoons; preserve the dream's warmth and the tree's tendrils as opposite physical states.",
+        "why_it_works": "The dream supplies a perfect reward signal while the second panel supplies the brutally incompatible ground truth.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Naruto Infinite Tsukuyomi personalized dream victims bound in God Tree cocoons stills"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Travis will likely like the grotesque signal/ground-truth split; “tree food” is sharper and far less dashboard-generic than two 100% metrics.",
+          "strongest_quality": "Two authentic states make subjective reward and physical reality contradict each other before any explanation is needed.",
+          "main_risk": "Reward hacking remains an analogy rather than Madara literally gaming an external evaluator, so the dream/body pairing must carry the bridge.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "infinite-tsukuyomi--04",
+        "ai_concept": "Value Lock-In",
+        "display_context": "standalone",
+        "source_anchor": "Madara using the moon to impose permanent individualized dreams on the entire world without anyone else's consent or exit.",
+        "caption_lines": [
+          "PERSONALIZED FOREVER",
+          "CONSENT: MADARA CLICKED FOR EVERYONE"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Madara activating the Rinne Sharingan reflected across the moon, with the global light and his solitary control position unobscured.",
+        "why_it_works": "The language of personalization collapses into permanent unilateral value choice at planetary scale.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: “Madara clicked for everyone” makes planetary coercion sound like the worst consent dialog imaginable.",
+          "strongest_quality": "The personalization/consent collision captures permanent unilateral value choice in one weird beat.",
+          "main_risk": "The click metaphor is deliberately anachronistic and needs the moon-scale activation image to stay source-native.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-magi-vote",
+    "ideas": [
+      {
+        "id": "the-magi-vote--01",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "Ireul compromising Melchior and Balthasar but failing to authorize NERV's self-destruction before it can capture Casper's third vote.",
+        "caption_lines": [
+          "MELCHIOR: SELF-DESTRUCT",
+          "BALTHASAR: SELF-DESTRUCT",
+          "CASPER: DENIED",
+          "NERV: STILL HERE"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the MAGI self-destruct voting display with all three names readable and Casper visibly withholding the final authorization; preserve the countdown pressure.",
+        "why_it_works": "The canonical three-line vote is already a perfect demonstration of a catastrophic action needing one uncompromised layer more.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: the literal three-computer vote is already a perfect defense-in-depth interface.",
+          "strongest_quality": "Melchior, Balthasar, and Casper are canonical names whose 2–1 state visibly proves the safeguard.",
+          "main_risk": "The four lines depend on a frame where all three MAGI names remain readable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-magi-vote--02",
+        "ai_concept": "Cyberattacks",
+        "display_context": "standalone",
+        "source_anchor": "The microscopic Angel Ireul evolving into electronic circuitry and invading the MAGI through NERV's own network.",
+        "caption_lines": [
+          "THE ANGEL DIDN'T BREACH THE SOFTWARE",
+          "THE ANGEL BECAME SOFTWARE"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Ireul's glowing circuit-like spread across the NERV hardware or MAGI display; preserve both the organic infection edge and recognizable computer architecture.",
+        "why_it_works": "The Angel's category change makes the cyberattack feel alien in both the Evangelion and adversarial senses.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Likely like: “the Angel became software” is concise, alien, and exact to Ireul's adaptation.",
+          "strongest_quality": "The category shift itself is both the Evangelion hinge and the cyberattack mechanism.",
+          "main_risk": "The visual infection must still look partly organic or the first line loses its contrast.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-magi-vote--03",
+        "ai_concept": "Adversarial Robustness",
+        "display_context": "standalone",
+        "source_anchor": "Ireul evolving around each attempted defense until Ritsuko counters by forcing its evolution toward extinction faster than it can adapt.",
+        "caption_lines": [
+          "NERV: PATCH.",
+          "IREUL: EVOLVE.",
+          "RITSUKO: FINE. EVOLVE FASTER."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use Ritsuko racing at the console against Ireul's advancing infection map; place the first two lines across the attack-defense boundary and her answer beside her.",
+        "why_it_works": "The three-beat escalation compresses an adaptive attack and Ritsuko's magnificently Evangelion countermeasure into a duel.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "alternate-needed",
+          "alternate_image_query": "Evangelion episode 13 Ritsuko counter hacks Ireul evolution MAGI console still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Likely like: patch, evolve, evolve faster compresses Ritsuko's bizarre counterattack into three escalating beats.",
+          "strongest_quality": "Ritsuko's final move has genuine character voice and captures an adaptive attacker without explanatory jargon.",
+          "main_risk": "It needs a console frame with Ritsuko and the advancing infection map, not the vote screen from the earlier beat.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "id": "sit-tight-and-assess--curated",
+    "scenario_slug": "sit-tight-and-assess",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481bdb2f5e77a3b7320b6/gallery-02b367ff9653472f14d44b0ea121e38f86640626c0d848cb1db55125e19011e4.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Kate Dibiasky looks stunned and worried during the Oval Office comet briefing",
+    "blur_data_url": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAQCdASoIAAUAA8BgJaQAAudCaj5QAP7dQfqUC3DookIiqUfIkAAA",
+    "content_hash": "02b367ff9653472f14d44b0ea121e38f86640626c0d848cb1db55125e19011e4",
+    "protected_regions": [
+      {
+        "id": "sit-tight-and-assess--dibiasky-face",
+        "label": "Dibiasky's face and disbelieving expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [
+          34,
+          17,
+          20,
+          37
+        ]
+      },
+      {
+        "id": "sit-tight-and-assess--dibiasky-body",
+        "label": "Dibiasky's seated silhouette",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [
+          24,
+          10,
+          39,
+          90
+        ]
+      }
+    ],
+    "annotation_status": "complete"
+  }
+]

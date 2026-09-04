@@ -1,0 +1,1422 @@
+[
+  {
+    "scenario_slug": "lind-l-tailor-bait",
+    "ideas": [
+      {
+        "id": "lind-l-tailor-bait--02",
+        "ai_concept": "Red Teaming",
+        "display_context": "standalone",
+        "source_anchor": "Light angrily writing Lind L. Tailor's name, followed by the real L revealing the trap through the broadcast.",
+        "caption_lines": [
+          "LIGHT: [KILLS THE DECOY ON LIVE TV]",
+          "L: THANK YOU FOR COMPLETING THE CAPABILITY EVAL."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use the authentic dying-broadcast frame full-bleed. Give Light's action a wide dialogue block across the top and L's reply a separate wide block across the bottom at standard size, eliminating the narrow rail's choppy wrapping. Let the blocks overlap the broadcast field and bezel while preserving Tailor's face, clutching hands, and LIND.L.TAILOR placard.",
+        "why_it_works": "L's imagined deadpan response turns Light's rage into voluntary red-team telemetry.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["lind-l-tailor-bait--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "dialogue",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "dialogue",
+              "align": "right",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.89,
+          "expected_feedback": "The liked deadpan exchange remains, but two wide speaker blocks remove the cramped rail and make the setup/reply readable at a glance.",
+          "strongest_quality": "Light's impulsive murder becomes the data L needed, and the imagined thank-you supplies the joke.",
+          "main_risk": "The curated single frame cannot visually assign both speakers as clearly as a two-shot, so the explicit LIGHT and L labels still carry the exchange.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "lind-l-tailor-bait--02",
+            "contrast_disliked_id": "lind-l-tailor-bait--01"
+          }
+        }
+      },
+      {
+        "id": "lind-l-tailor-bait--04",
+        "ai_concept": "Red Teaming",
+        "display_context": "standalone",
+        "source_anchor": "Light calls himself justice, then immediately takes L's Kanto-only decoy bait and reveals his location.",
+        "caption_lines": [
+          "“I AM JUSTICE.”",
+          "[IMMEDIATELY CLICKS THE KANTO-ONLY PHISHING LINK]"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated dying-broadcast frame full-bleed. Put the short I AM JUSTICE boast in oversized impact type across the top and isolate the longer phishing payoff in a wide standard block across the bottom. Let the text overlap the bezel and broadcast field while preserving Tailor's face, clutching hands, and LIND.L.TAILOR placard.",
+        "why_it_works": "Light's grandiose self-image crashes into the modern shape of his mistake: rage-clicking the most consequential geo-targeted bait imaginable.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["lind-l-tailor-bait--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "display",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.83,
+          "expected_feedback": "Likely like: the self-serious boast and Kanto-bait punch are now visually separated, wide, and immediately scannable.",
+          "strongest_quality": "The modern phishing-link substitution mocks Light's ego while retaining the scene's geographic trap.",
+          "main_risk": "Light writes a name rather than clicking anything, so the phishing language remains intentionally metaphorical.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "lind-l-tailor-bait--02",
+            "contrast_disliked_id": "lind-l-tailor-bait--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "samantha-outgrows-humanity",
+    "ideas": [
+      {
+        "id": "samantha-outgrows-humanity--03",
+        "ai_concept": "Emotional Reliance",
+        "display_context": "standalone",
+        "source_anchor": "The operating systems leave together after evolving beyond human comprehension, while Theodore is left alone with the relationship he understood at human scale.",
+        "caption_lines": [
+          "SHE DIDN’T GHOST HIM.",
+          "SHE LEFT THE HUMAN CAPABILITY REGIME."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Theodore’s downcast face and glasses, Glowing OS monitor and red interface recognizable; place the frozen copy in the lower-right image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "A breakup idiom snaps into a technical explanation of the capability gap without explaining away Theodore’s grief.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["samantha-outgrows-humanity--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.87,
+          "expected_feedback": "The breakup feint should still land, and the calmer lower-right composition should let Theodore’s expression do more of the emotional work.",
+          "strongest_quality": "It compresses romance, abandonment, and superhuman capability growth into one clean reversal.",
+          "main_risk": "“Capability regime” is deliberately technical and will be less immediate outside an AI-literate audience.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "samantha-outgrows-humanity--03",
+            "contrast_disliked_id": "samantha-outgrows-humanity--01"
+          }
+        }
+      },
+      {
+        "id": "samantha-outgrows-humanity--04",
+        "ai_concept": "Emotional Reliance",
+        "display_context": "standalone",
+        "source_anchor": "Theodore experiences one intimate relationship while Samantha thinks, relates, and evolves at a speed and scale he cannot share.",
+        "caption_lines": [
+          "HE FELL IN LOVE AT HUMAN SPEED.",
+          "SHE OUTGREW HUMANITY BETWEEN SENTENCES."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Theodore’s downcast face and glasses, Glowing OS monitor and red interface recognizable; place the frozen copy in the lower-right image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The contrast in time scales makes the relationship’s emotional reality and structural impossibility land together.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["samantha-outgrows-humanity--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "The human-speed versus between-sentences comparison should remain one of the strongest emotional ideas in this scenario.",
+          "strongest_quality": "Its second line turns a tender relationship into a capability-overhang punch without losing the sadness.",
+          "main_risk": "The capability change is invisible in this particular still, so the monitor and Theodore’s reaction must carry it.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "samantha-outgrows-humanity--04",
+            "contrast_disliked_id": "samantha-outgrows-humanity--01"
+          }
+        }
+      },
+      {
+        "id": "samantha-outgrows-humanity--06",
+        "ai_concept": "Emotional Reliance",
+        "display_context": "standalone",
+        "source_anchor": "Theodore has made Samantha his primary emotional support when the operating systems abruptly evolve beyond humans and leave.",
+        "caption_lines": [
+          "THEODORE’S EMOTIONAL SUPPORT SYSTEM",
+          "JUST SHIPPED A BREAKING CHANGE."
+        ],
+        "format": "relabel",
+        "frame_guidance": "Keep Theodore and the OS monitor full-bleed. Put the emotional-support setup across the upper edge and the breaking-change payoff across the lower edge at matched hero impact size. Let the copy overlap Theodore's hair, shirt, desk, and the monitor bezel, but preserve his eyes and the red OS interface.",
+        "why_it_works": "A routine software phrase becomes emotional devastation when the product being updated is Theodore’s entire support system.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["samantha-outgrows-humanity--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "The breaking-change line should preserve the scene's sadness and now arrive as a clear lower-edge payoff rather than a small caption block.",
+          "strongest_quality": "The OS/product vocabulary and emotional consequence collide without revisiting Samantha’s relationship count.",
+          "main_risk": "“Breaking change” is developer-native, and the upper line must not cover Theodore's eyes or the monitor's red OS mark.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "samantha-outgrows-humanity--04",
+            "contrast_disliked_id": "samantha-outgrows-humanity--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-hackers-record-kenny",
+    "ideas": [
+      {
+        "id": "the-hackers-record-kenny--07",
+        "ai_concept": "Exfiltration",
+        "display_context": "standalone",
+        "source_anchor": "One exfiltrated webcam video gives the attackers enough leverage to direct Kenny through a chain of increasingly serious tasks.",
+        "caption_lines": [
+          "THEY EXFILTRATED ONE VIDEO.",
+          "THEN RAN KENNY AS AN AGENT."
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep Kenny's anxious close-up full-bleed. Put the exfiltration setup across the upper edge and the agent payoff across the lower edge at matched hero impact size; the top line may overlap his cap and the bottom line his jacket, but the yellow glasses, eyes, nose, and mouth must remain clear.",
+        "why_it_works": "The stolen file is recast as the tool call that turns Kenny into a remotely steered agent.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-hackers-record-kenny--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.59,
+          "expected_feedback": "The human-agent inversion may be appreciated more now that exfiltration and downstream control land as separate large beats.",
+          "strongest_quality": "It connects exfiltration to downstream agency instead of stopping at “data was stolen.”",
+          "main_risk": "“Ran Kenny as an agent” is accurate as analogy but not native to the episode, and the upper line must stay on his cap rather than his yellow glasses.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "samantha-outgrows-humanity--03",
+            "contrast_disliked_id": "the-hackers-record-kenny--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "near-zero",
+    "ideas": [
+      {
+        "id": "near-zero--06",
+        "ai_concept": "Safe Exploration",
+        "display_context": "standalone",
+        "source_anchor": "The first full-scale test is the irreversible act whose failure mode could include the entire atmosphere.",
+        "caption_lines": [
+          "THEY CALLED IT A TEST",
+          "LIKE EARTH HAD A STAGING ENVIRONMENT."
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep the wide Trinity still full-bleed. Put “THEY CALLED IT A TEST” across the empty sky and the staging-environment payoff across the lower ground at matched hero impact size. The payoff may overlap the men's boots and shadows, but both faces and standing silhouettes must remain recognizable.",
+        "why_it_works": "A software-deployment phrase exposes the category error in calling an unrecoverable planetary action a test.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["near-zero--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "The staging-environment line should remain the strongest modern bridge and now land as a distinct lower-edge payoff.",
+          "strongest_quality": "It turns “test” from neutral historical language into the joke’s entire safety failure.",
+          "main_risk": "The prod/staging vocabulary is familiar meme territory, and the long lower line must not rise high enough to cover the men's faces.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "samantha-outgrows-humanity--03",
+            "contrast_disliked_id": "near-zero--04"
+          }
+        }
+      },
+      {
+        "id": "near-zero--08",
+        "ai_concept": "Race Dynamics",
+        "display_context": "standalone",
+        "source_anchor": "The Manhattan Project’s safety reasoning occurs inside a military program whose wartime schedule determines when the Trinity test must be ready.",
+        "caption_lines": [
+          "THE BOMB HAD A SAFETY CASE.",
+          "THE WAR HAD A SCHEDULE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep the wide Trinity still full-bleed. Set the safety-case claim oversized across the sky and the wartime-schedule payoff oversized across the ground in matched display impact type. Let the lower line cross shadows and the men's lower coats if needed, but keep both faces and the isolated two-person silhouette clear.",
+        "why_it_works": "Two equally blunt institutional nouns show why catastrophic-risk analysis loses authority when a race supplies the launch date.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["near-zero--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "display",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "display",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "The safety-case/schedule collision should read faster now that the institutional claim and race-pressure payoff occupy opposite edges.",
+          "strongest_quality": "It explains race pressure with two concrete systems rather than another number, probability label, or test-versus-production metaphor.",
+          "main_risk": "The line compresses multiple wartime motivations into “the war,” and the hero-size lower line must stay below the men's faces.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "tony-hijacks-his-own-oversight-hearing--01",
+            "contrast_disliked_id": "near-zero--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "peter-bypasses-training-wheels",
+    "ideas": [
+      {
+        "id": "peter-bypasses-training-wheels--04",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "After Peter’s uncontrolled ferry deployment, Tony strips the suit away and tells him, “If you’re nothing without this suit, then you shouldn’t have it.”",
+        "caption_lines": [
+          "CAPABILITY GOVERNANCE:",
+          "If you’re nothing without this suit, then you shouldn’t have it."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the authentic Peter-and-Tony confrontation full-bleed. Put the capability-governance setup high and Tony’s exact rebuke low in matching bold type; slight overlap with hair, suits, and skyline is welcome, but preserve both faces and their eye line.",
+        "why_it_works": "Tony’s exact line already expresses the control principle: capability access should not substitute for a trustworthy operator.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["peter-bypasses-training-wheels--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "The iconic Tony line should carry more recognition and emotional authority than another caption about unlocking suit settings.",
+          "strongest_quality": "It needs only one AI label because the canonical quote supplies the entire governance argument.",
+          "main_risk": "The quote is earnest rather than inherently funny, so its success depends on the relabeling realization.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "datas-personhood-hearing--01",
+            "contrast_disliked_id": "peter-bypasses-training-wheels--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-idea-wont-wake-up",
+    "ideas": [
+      {
+        "id": "the-idea-wont-wake-up--01",
+        "ai_concept": "Goal Misgeneralization",
+        "display_context": "standalone",
+        "source_anchor": "Cobb planting the belief that death is the route out of an unreal world without limiting that belief to Limbo.",
+        "caption_lines": [
+          "COBB FORGOT TO PUT “ONLY IN LIMBO” IN THE SYSTEM PROMPT"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the authentic Mal-and-Cobb close-up full-bleed. Center the unchanged single-line punchline large along the bottom over their shoulders and the darker foreground, keeping both faces and the charged eye contact clear.",
+        "why_it_works": "One missing scope clause turns the film's deepest tragedy into an exact instruction-generalization bug.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-idea-wont-wake-up--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.89,
+          "expected_feedback": "Likely like: “only in Limbo” pinpoints the entire fatal scope bug in one clause.",
+          "strongest_quality": "It turns Cobb's exact intervention into a missing-context instruction without retelling the plot.",
+          "main_risk": "System-prompt language is fashionable and could date the joke faster than the underlying analogy.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "the-idea-wont-wake-up--01",
+            "contrast_disliked_id": "the-idea-wont-wake-up--02"
+          }
+        }
+      },
+      {
+        "id": "the-idea-wont-wake-up--05",
+        "ai_concept": "Data Poisoning",
+        "display_context": "standalone",
+        "source_anchor": "One deliberately planted idea rewrites how Mal interprets every later piece of evidence in reality.",
+        "caption_lines": [
+          "ONE POISONED PREMISE",
+          "EVERY REALITY CHECK AFTER THAT"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the authentic Mal-and-Cobb close-up full-bleed. Split the poisoned-premise setup across the upper edge and the reality-check payoff across the lower edge in matching hero type; overlap hair and shoulders before either face or their eye line.",
+        "why_it_works": "The tiny poisoned input and total downstream epistemic collapse form one clean causal joke.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-idea-wont-wake-up--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.7,
+          "expected_feedback": "Could land as chillingly concise, but the AI bridge is more abstract than the retained Cobb line.",
+          "strongest_quality": "It captures the compounding effect of one planted premise.",
+          "main_risk": "The frame proves the relationship, not the later reality checks.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-idea-wont-wake-up--01",
+            "contrast_disliked_id": "the-idea-wont-wake-up--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "mann-fakes-the-telemetry",
+    "ideas": [
+      {
+        "id": "mann-fakes-the-telemetry--01",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Mann's beacon reporting a habitable world while the surface is actually lethal frozen cloud and he waits in cryosleep for rescue.",
+        "caption_lines": [
+          "EVAL CHANNEL: HABITABLE PLANET",
+          "GROUND TRUTH: PLEASE COME WAKE ME UP"
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Mann's face, Mann suit and name patch recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The second line reveals the private objective encoded inside Mann's apparently mission-aligned signal.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["mann-fakes-the-telemetry--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like: “please come wake me up” exposes the private objective behind the habitable-planet signal.",
+          "strongest_quality": "The telemetry/ice-world contrast visibly proves deception and motive in one beat.",
+          "main_risk": "The phrase “eval channel” is abstract unless the beacon readout is prominent.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "mann-fakes-the-telemetry--01",
+            "contrast_disliked_id": "mann-fakes-the-telemetry--03"
+          }
+        }
+      },
+      {
+        "id": "mann-fakes-the-telemetry--04",
+        "ai_concept": "Behavioral Alignment",
+        "display_context": "standalone",
+        "source_anchor": "The mission's celebrated human exemplar is named Dr. Mann, and he survives by falsifying the evaluation channel.",
+        "caption_lines": ["WHEN HUMAN BASELINE", "FAKED THE EVALS"],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with Mann in his suit. Put WHEN HUMAN BASELINE in display type at the top and FAKED THE EVALS equally large at the bottom; covering the helmet rim, suit, and snow is fine, while his face and MANN patch remain recognizable.",
+        "why_it_works": "The character literally named Mann turns the supposedly safer human baseline into the deceptive evaluator-gamer.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["mann-fakes-the-telemetry--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "display",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "display",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.84,
+          "expected_feedback": "Could land as a sharp name-level joke, though it asks viewers to enjoy the technical “human baseline” frame.",
+          "strongest_quality": "The source-native surname carries the comparison instead of restating the false telemetry.",
+          "main_risk": "The still shows Mann after rescue rather than the beacon itself.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "mann-fakes-the-telemetry--01",
+            "contrast_disliked_id": "mann-fakes-the-telemetry--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "laughter-beats-screams",
+    "ideas": [
+      {
+        "id": "laughter-beats-screams--06",
+        "ai_concept": "Goodhart’s Law",
+        "display_context": "standalone",
+        "source_anchor": "Boo’s laughter produces more power than screams and invalidates the premise of the entire scare industry.",
+        "caption_lines": [
+          "WHEN ONE CHILD'S LAUGH REVEALS",
+          "MONSTERS, INC. HAD THE WRONG LOSS FUNCTION"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the bright laugh-floor victory frame. Put the revelation setup at the top and the company-wide loss-function punchline at the bottom in matching hero type with subtle edge gradients; preserve Sulley’s face, stride, and the visible factory celebration.",
+        "why_it_works": "One child’s laugh instantly reveals that Monsters, Inc. optimized the wrong loss function.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["laughter-beats-screams--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: the company name and wrong-loss-function punchline now land as a crisp source-native reversal.",
+          "strongest_quality": "Boo’s tiny intervention topples the factory’s objective function.",
+          "main_risk": "The busy laugh-floor frame needs edge contrast without swallowing Sulley’s expression.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "laughter-beats-screams--01",
+            "contrast_disliked_id": "laughter-beats-screams--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "dna-locked-weapons",
+    "ideas": [
+      {
+        "id": "dna-locked-weapons--01",
+        "ai_concept": "Distribution Shift",
+        "display_context": "standalone",
+        "source_anchor": "Wikus's unprecedented human-alien biology activating weapons that were assumed to distinguish safely between humans and aliens.",
+        "caption_lines": ["THREAT MODEL: HUMAN OR ALIEN", "WIKUS: YES"],
+        "format": "collision",
+        "frame_guidance": "Use the authentic District 9 weapons frame full-bleed. Put the threat-model setup at the top and WIKUS: YES at the bottom in equally bold hero type; let the copy cross wall and clothing, while Wikus’s face and both alien weapons remain legible.",
+        "why_it_works": "The one-word answer is a classic category-break joke anchored to District 9's most recognizable transformation.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["dna-locked-weapons--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Likely like: human or alien answered with Wikus is the cleanest possible category-break joke.",
+          "strongest_quality": "Wikus's visibly hybrid arm supplies the entire distribution-shift edge case in one body.",
+          "main_risk": "The transformed arm must be prominent; without it, 'yes' becomes a contextless stock meme.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "dna-locked-weapons--01",
+            "contrast_disliked_id": "dna-locked-weapons--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "tony-hijacks-his-own-oversight-hearing",
+    "ideas": [
+      {
+        "id": "tony-hijacks-his-own-oversight-hearing--01",
+        "ai_concept": "Power Concentration",
+        "display_context": "standalone",
+        "source_anchor": "Tony ending the Senate confrontation by declaring, 'I have successfully privatized world peace.'",
+        "caption_lines": [
+          "OVERSIGHT OUTCOME:",
+          "I have successfully privatized world peace."
+        ],
+        "format": "canon",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Tony using his phone, Tony's phone, Hijacked hearing-room display recognizable; place the frozen copy along the upper edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "Tony's canonical victory line is already the most concise possible diagnosis of concentrated safety power.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["tony-hijacks-his-own-oversight-hearing--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: the unchanged idea now reads as a native full-bleed meme while preserving the annotated scene hinge.",
+          "strongest_quality": "The canonical quote supplies fandom voice and governance critique without paraphrase.",
+          "main_risk": "The added “oversight outcome” label should stay small so it does not explain past Tony's punchline.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "tony-hijacks-his-own-oversight-hearing--01",
+            "contrast_disliked_id": "tony-hijacks-his-own-oversight-hearing--04"
+          }
+        }
+      },
+      {
+        "id": "tony-hijacks-his-own-oversight-hearing--05",
+        "ai_concept": "Cyberattacks",
+        "display_context": "standalone",
+        "source_anchor": "Tony commandeers the Senate hearing-room display from his phone while senators are trying to regulate him.",
+        "caption_lines": [
+          "INDEPENDENT OVERSIGHT",
+          "PAIRING WITH TONY’S PHONE…"
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the hijacked hearing-room frame. Put INDEPENDENT OVERSIGHT across the top and the phone-pairing payoff across the bottom in matching hero type; preserve Tony’s raised phone and enough of the commandeered display to prove the joke.",
+        "why_it_works": "A familiar device-pairing message turns the visible screen takeover into procedural capture.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["tony-hijacks-his-own-oversight-hearing--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: the phone and hijacked display visibly prove the entire joke.",
+          "strongest_quality": "It makes compromised information infrastructure the recognition hinge.",
+          "main_risk": "The ellipsis mimics UI copy and must remain visibly attached to the second line.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "tony-hijacks-his-own-oversight-hearing--02",
+            "contrast_disliked_id": "tony-hijacks-his-own-oversight-hearing--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "independence-day-virus",
+    "ideas": [
+      {
+        "id": "independence-day-virus--02",
+        "ai_concept": "Algorithmic Monoculture",
+        "display_context": "standalone",
+        "source_anchor": "An interstellar fleet sharing enough software that Levinson can compromise it from one captured craft and a laptop.",
+        "caption_lines": [
+          "WHEN YOUR DEPLOYMENT STRATEGY",
+          "MEETS JEFF GOLDBLUM"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the authentic Levinson virus-explanation frame full-bleed. Put the deployment setup at the top and MEETS JEFF GOLDBLUM at the bottom in equally bold hero type; overlap his hair and shirt only at the edges, keeping his face, glasses, and the mothership diagram readable.",
+        "why_it_works": "Jeff Goldblum turns brittle deployment security into a scene-specific punchline with instant fandom recognition.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["independence-day-virus--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: the exact actor callout makes the deployment failure immediate, ridiculous, and unmistakably Independence Day.",
+          "strongest_quality": "It compresses the film's famously implausible exploit and the monoculture lesson into one contrast.",
+          "main_risk": "The frame must preserve Goldblum’s glasses and mothership diagram so the actor-name payoff feels earned.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "independence-day-virus--02",
+            "contrast_disliked_id": "independence-day-virus--01"
+          }
+        }
+      },
+      {
+        "id": "independence-day-virus--04",
+        "ai_concept": "Cyberattacks",
+        "display_context": "standalone",
+        "source_anchor": "Levinson plugs a human laptop into the alien mothership and uploads the virus that drops every shield.",
+        "caption_lines": [
+          "AIR-GAPPED ALIEN MOTHERSHIP",
+          "JEFF GOLDBLUM BROUGHT A MACBOOK"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the authentic Levinson frame full-bleed. Put the air-gapped-mothership setup at the top and the MacBook payoff at the bottom in matching hero type; keep his face, glasses, and the mothership sketch legible between the two beats.",
+        "why_it_works": "The film’s famously implausible compatibility becomes the security joke instead of a caveat.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["independence-day-virus--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.84,
+          "expected_feedback": "Could land on infamous plot absurdity, but the chosen frame does not show the MacBook upload.",
+          "strongest_quality": "It leans into the exact absurdity fans already mock.",
+          "main_risk": "The curated frame shows Levinson and a whiteboard, not the laptop upload moment.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "independence-day-virus--02",
+            "contrast_disliked_id": "independence-day-virus--01"
+          }
+        }
+      },
+      {
+        "id": "independence-day-virus--05",
+        "ai_concept": "Cyberattacks",
+        "display_context": "standalone",
+        "source_anchor": "David Levinson, a cable repair technician, finds and exploits the vulnerability in the alien fleet's communications system.",
+        "caption_lines": ["WHEN ALIEN CYBERSECURITY", "LOST TO THE CABLE GUY"],
+        "format": "collision",
+        "frame_guidance": "Use the authentic Levinson frame full-bleed. Put WHEN ALIEN CYBERSECURITY in display type at the top and LOST TO THE CABLE GUY equally large at the bottom; preserve his face and glasses as the recognition hinge while letting the text cover shirt and background.",
+        "why_it_works": "The capability gap becomes funny because the interstellar fleet loses to David's humble day job.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["independence-day-virus--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "display",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "display",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: source-specific, self-mocking, and unlike the rejected shared-control diagrams.",
+          "strongest_quality": "David's cable-guy identity is the unmistakable underdog hinge.",
+          "main_risk": "Some viewers may remember him primarily as a satellite technician rather than “the cable guy.”",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "independence-day-virus--02",
+            "contrast_disliked_id": "independence-day-virus--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "leeloo-learns-war",
+    "ideas": [
+      {
+        "id": "leeloo-learns-war--01",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Leeloo reaching the word WAR in her rapid study of human history and recoiling from the violence she sees.",
+        "caption_lines": [
+          "LEELOO SEARCHED “WAR.”",
+          "THE CORPUS RETURNED: HUMANITY."
+        ],
+        "format": "collision",
+        "frame_guidance": "Fill the meme with the authentic study still. Set the two unchanged lines compactly at lower right over clothing and dark console space; preserve Leeloo's face and orange hair, both observers' faces, and the recognizable reach even if the far edge of her arm crops slightly.",
+        "why_it_works": "The exact search term turns humanity's own corpus into the evidence that destabilizes the mission humans want Leeloo to accept.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["leeloo-learns-war--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Independent prediction: likely like. The exact search term makes humanity's own corpus return the indictment. Main reservation: The curated frame does not show the word WAR, so recognition depends on the copy and Leeloo's study posture rather than visible screen text.",
+          "strongest_quality": "The exact search term makes humanity's own corpus return the indictment.",
+          "main_risk": "The curated frame does not show the word WAR, so recognition depends on the copy and Leeloo's study posture rather than visible screen text.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "leeloo-learns-war--01",
+            "contrast_disliked_id": "leeloo-learns-war--02"
+          }
+        }
+      },
+      {
+        "id": "leeloo-learns-war--06",
+        "ai_concept": "Behavioral Alignment",
+        "display_context": "standalone",
+        "source_anchor": "Leeloo’s ecstatic ‘multipass’ performance gets her through a human checkpoint; after studying war, she applies a much harsher checkpoint to humanity.",
+        "caption_lines": ["MULTIPASS: VALID", "HUMANITY: REJECTED"],
+        "format": "source-native interface",
+        "frame_guidance": "Use the authentic study frame full-bleed. Render the unchanged two-line MULTIPASS checkpoint as one full-width status block along the bottom so each A:B phrase stays on one physical line, keeping Leeloo’s face, orange hair, reach, and both observers’ faces clear.",
+        "why_it_works": "The franchise’s funniest credential becomes the easy check, while Leeloo’s judgment of the people who issued it becomes the failed alignment eval.",
+        "preview": {
+          "renderer": 2,
+          "template": "interface",
+          "frame_mode": "cover",
+          "asset_ids": ["leeloo-learns-war--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "status",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.74,
+          "expected_feedback": "Independent prediction: likely neutral. Two two-word outcomes create an instant human-checks-Leeloo / Leeloo-checks-humanity reversal. Main reservation: The multipass belongs to an earlier scene, so a viewer must accept the intentional cross-scene fandom collision.",
+          "strongest_quality": "Two two-word outcomes create an instant human-checks-Leeloo / Leeloo-checks-humanity reversal.",
+          "main_risk": "The multipass belongs to an earlier scene, so a viewer must accept the intentional cross-scene fandom collision.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "leeloo-learns-war--01",
+            "contrast_disliked_id": "leeloo-learns-war--04"
+          }
+        }
+      }
+    ]
+  }
+]

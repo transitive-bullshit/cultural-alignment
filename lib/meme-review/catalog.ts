@@ -1,31 +1,28 @@
-import rawMemeIdeas from '@/data/meme-review/ideas.json'
 import { contentCatalog } from '@/lib/content/snapshot'
 import { focalPointToObjectPosition } from '@/lib/media/crop'
 
 import {
-  memeIdeaCollectionSchema,
-  type MemeIdea,
-  type ScenarioMemeIdeas
-} from './schema'
+  buildMemePreviewHistory,
+  type MemePreviewHistory,
+  type MemeReviewImage
+} from './history'
+import { loadMemeReviewWorkspace, type MemeReviewWorkspace } from './rounds'
+import type { MemeIdeaV2, MemeReviewAsset, ScenarioMemeIdeasV2 } from './schema'
+import type { MemeReviewBatchStatus } from './schema'
 
 export type MemeReviewScenario = {
   readonly slug: string
   readonly title: string
   readonly href: string
+  readonly featured: boolean
   readonly episodeLabel: string | null
   readonly source: {
     readonly slug: string
     readonly title: string
   }
-  readonly image: {
-    readonly src: string
-    readonly alt: string
-    readonly width: number
-    readonly height: number
-    readonly blurDataURL: string
-    readonly objectPosition: string
-  }
-  readonly ideas: readonly MemeIdea[]
+  readonly image: MemeReviewImage
+  readonly assets: readonly MemeReviewAsset[]
+  readonly ideas: readonly MemeIdeaV2[]
 }
 
 export type MemeReviewSource = {
@@ -34,43 +31,105 @@ export type MemeReviewSource = {
   readonly scenarios: readonly MemeReviewScenario[]
 }
 
+export type MemeReviewCatalog = {
+  readonly sources: readonly MemeReviewSource[]
+  readonly historyByIdeaId: MemePreviewHistory
+  readonly ideaIds: ReadonlySet<string>
+  readonly scenarioSlugs: ReadonlySet<string>
+  readonly reviewableIdeaIds: ReadonlySet<string>
+  readonly reviewableScenarioSlugs: ReadonlySet<string>
+  readonly activeBatch: number
+  readonly activeRevisionKey: string
+  readonly activeRevisionLabel: string
+  readonly status: MemeReviewBatchStatus
+  readonly feedbackPath: string
+}
+
 const collator = new Intl.Collator('en', {
   numeric: true,
   sensitivity: 'base'
 })
 
-export const memeIdeaCollection = memeIdeaCollectionSchema.parse(rawMemeIdeas)
+export async function loadMemeReviewCatalog(
+  workspace?: MemeReviewWorkspace
+): Promise<MemeReviewCatalog> {
+  const resolvedWorkspace = workspace ?? (await loadMemeReviewWorkspace())
+  const { activeBatch, historySnapshots, feedbackPath } = resolvedWorkspace
+  const sources = buildMemeReviewSources(activeBatch.ideas, activeBatch.assets)
+  const scenarioSlugs = new Set(
+    activeBatch.ideas.map(({ scenario_slug }) => scenario_slug)
+  )
+  const configuredReviewableSlugs = new Set(
+    activeBatch.status.reviewable_scenarios.filter((scenarioSlug) =>
+      scenarioSlugs.has(scenarioSlug)
+    )
+  )
 
-export const memeIdeaIds = new Set(
-  memeIdeaCollection.flatMap(({ ideas }) => ideas.map(({ id }) => id))
-)
+  const reviewableScenarioSlugs =
+    activeBatch.status.status === 'ready'
+      ? scenarioSlugs
+      : configuredReviewableSlugs
+  const reviewableIdeaIds = new Set(
+    activeBatch.ideas.flatMap(({ scenario_slug, ideas }) =>
+      reviewableScenarioSlugs.has(scenario_slug)
+        ? ideas.map(({ id }) => id)
+        : []
+    )
+  )
+
+  return {
+    sources,
+    historyByIdeaId: buildMemePreviewHistory({
+      activeIdeas: activeBatch.ideas,
+      historySnapshots
+    }),
+    ideaIds: new Set(
+      activeBatch.ideas.flatMap(({ ideas }) => ideas.map(({ id }) => id))
+    ),
+    scenarioSlugs,
+    reviewableIdeaIds,
+    reviewableScenarioSlugs,
+    activeBatch: activeBatch.number,
+    activeRevisionKey: activeBatch.revisionKey,
+    activeRevisionLabel: activeBatch.label,
+    status: activeBatch.status,
+    feedbackPath
+  }
+}
 
 export function buildMemeReviewSources(
-  ideaCollection: readonly ScenarioMemeIdeas[] = memeIdeaCollection
+  ideaCollection: readonly ScenarioMemeIdeasV2[],
+  assets: readonly MemeReviewAsset[]
 ): readonly MemeReviewSource[] {
-  const featuredCards = contentCatalog.listScenarioCards({
-    featuredOnly: true
-  })
-  const featuredSlugs = new Set(featuredCards.map(({ slug }) => slug))
+  const cardsBySlug = new Map(
+    contentCatalog.listScenarioCards().map((card) => [card.slug, card])
+  )
   const ideasByScenarioSlug = new Map(
     ideaCollection.map((scenario) => [scenario.scenario_slug, scenario])
   )
-
-  const missingScenarioSlugs = featuredCards.flatMap(({ slug }) =>
-    ideasByScenarioSlug.has(slug) ? [] : [slug]
+  const assetsByScenarioSlug = Map.groupBy(
+    assets,
+    ({ scenario_slug }) => scenario_slug
   )
-  const unfeaturedScenarioSlugs = ideaCollection.flatMap(({ scenario_slug }) =>
-    featuredSlugs.has(scenario_slug) ? [] : [scenario_slug]
+  const unknownScenarioSlugs = ideaCollection.flatMap(({ scenario_slug }) =>
+    cardsBySlug.has(scenario_slug) ? [] : [scenario_slug]
   )
+  const assetsForUnknownScenarios = [
+    ...new Set(
+      assets.flatMap(({ scenario_slug }) =>
+        ideasByScenarioSlug.has(scenario_slug) ? [] : [scenario_slug]
+      )
+    )
+  ]
 
-  if (missingScenarioSlugs.length || unfeaturedScenarioSlugs.length) {
+  if (unknownScenarioSlugs.length || assetsForUnknownScenarios.length) {
     throw new Error(
       [
-        missingScenarioSlugs.length
-          ? `Featured scenarios without meme ideas: ${missingScenarioSlugs.join(', ')}`
+        unknownScenarioSlugs.length
+          ? `Meme ideas for unknown scenarios: ${unknownScenarioSlugs.join(', ')}`
           : null,
-        unfeaturedScenarioSlugs.length
-          ? `Meme ideas for non-featured scenarios: ${unfeaturedScenarioSlugs.join(', ')}`
+        assetsForUnknownScenarios.length
+          ? `Meme assets without active ideas: ${assetsForUnknownScenarios.join(', ')}`
           : null
       ]
         .filter(Boolean)
@@ -78,30 +137,21 @@ export function buildMemeReviewSources(
     )
   }
 
-  const scenarios = featuredCards
-    .map((card): MemeReviewScenario => {
-      const scenario = contentCatalog.getScenarioPage(card.slug)
-      const ideaGroup = ideasByScenarioSlug.get(card.slug)
+  const scenarios = ideaCollection
+    .map(({ scenario_slug, ideas }): MemeReviewScenario => {
+      const card = cardsBySlug.get(scenario_slug)
+      const scenario = contentCatalog.getScenarioPage(scenario_slug)
+      const scenarioAssets = assetsByScenarioSlug.get(scenario_slug)
 
-      if (!scenario || !ideaGroup) {
-        throw new Error(`Missing meme review scenario: ${card.slug}`)
-      }
-
-      const conceptTitles = new Set(scenario.concepts.map(({ title }) => title))
-      const unknownConcepts = ideaGroup.ideas
-        .map(({ ai_concept }) => ai_concept)
-        .filter((concept) => !conceptTitles.has(concept))
-
-      if (unknownConcepts.length) {
-        throw new Error(
-          `Unknown AI concepts for ${card.slug}: ${unknownConcepts.join(', ')}`
-        )
+      if (!card || !scenario || !scenarioAssets?.length) {
+        throw new Error(`Missing meme review scenario: ${scenario_slug}`)
       }
 
       return {
         slug: scenario.slug,
         title: scenario.title,
         href: card.href,
+        featured: card.featured,
         episodeLabel: scenario.episode?.label ?? null,
         source: {
           slug: scenario.source.slug,
@@ -115,7 +165,8 @@ export function buildMemeReviewSources(
           blurDataURL: scenario.image.blurDataURL,
           objectPosition: focalPointToObjectPosition(scenario.image.focalPoint)
         },
-        ideas: ideaGroup.ideas
+        assets: scenarioAssets,
+        ideas
       }
     })
     .toSorted(

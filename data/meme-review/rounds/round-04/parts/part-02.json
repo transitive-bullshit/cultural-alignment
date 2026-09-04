@@ -1,0 +1,1480 @@
+[
+  {
+    "scenario_slug": "az-5-backfires",
+    "ideas": [
+      {
+        "id": "az-5-backfires--03",
+        "ai_concept": "Corrigibility",
+        "display_context": "standalone",
+        "source_anchor": "Operators possess a prominent shutdown button, yet pressing it cannot safely correct the reactor in its current state.",
+        "caption_lines": ["CORRIGIBILITY IS A PROPERTY.", "NOT A BUTTON."],
+        "format": "relabel",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Operator's alarmed face, glasses, and white cap, Operator's hand pressing the emergency control recognizable; place the frozen copy in the upper-left image space, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The button is the perfect physical foil for the mistaken belief that merely having an interrupt makes a system safely interruptible.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["az-5-backfires--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "top-left",
+              "style": "label",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "The user already called this a diamond in the rough; the recomposition now protects the face, hand, and control bank that sell it.",
+          "strongest_quality": "The aphorism is memorable, transferable, and attached to the perfect failed off-switch scene.",
+          "main_risk": "The exact AZ-5 label is too small in the curated wide shot, so series context still contributes recognition.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "az-5-backfires--03",
+            "contrast_disliked_id": "az-5-backfires--01"
+          }
+        }
+      },
+      {
+        "id": "az-5-backfires--05",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "A human operator follows the emergency procedure and presses AZ-5, while graphite in the control rods helps produce the fatal power spike.",
+        "caption_lines": ["THE HUMAN WAS IN THE LOOP.", "SO WAS THE GRAPHITE."],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Run the familiar reassurance across the top and the graphite reversal across the bottom in matching hero-sized Impact text. A little text over the operator is intentional, but preserve his glasses, white cap, and the hand driving into the emergency controls.",
+        "why_it_works": "A safety cliché collides with the physical material that makes correct human intervention dangerous.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["az-5-backfires--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Likely like: the graphite second beat is isolated as a hero-sized bottom punchline rather than buried in a corner block.",
+          "strongest_quality": "The operator and graphite are both literal components of the same failed control loop.",
+          "main_risk": "Graphite is not visually identifiable, and the top line grazes the operator; the face, cap, and pressing hand still need to read at a glance.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "az-5-backfires--03",
+            "contrast_disliked_id": "az-5-backfires--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "auto-enforces-directive-a113",
+    "ideas": [
+      {
+        "id": "auto-enforces-directive-a113--03",
+        "ai_concept": "Long-Horizon Autonomy",
+        "display_context": "standalone",
+        "source_anchor": "The Axiom remains under AUTO's original directive for seven centuries, long enough for a living plant to invalidate the reason humanity fled Earth.",
+        "caption_lines": [
+          "EARTH RECOVERED.",
+          "THE 700-YEAR-OLD DIRECTIVE DIDN'T."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Living green plant proving that Earth recovered, AUTO's binocular-like red-eyed silhouette recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The planet changes while Directive A113 does not, turning seven centuries of successful operation into the punchline rather than a reassurance.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["auto-enforces-directive-a113--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "The approved Earth/directive collision remains intact, now using the frame's own letterbox instead of covering either visual signal.",
+          "strongest_quality": "The living plant and obsolete machine occupy the same canonical frame as visible contradictory evidence.",
+          "main_risk": "AUTO is intentionally out of focus, so the plant carries more immediate visual weight than the antagonist.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "auto-enforces-directive-a113--03",
+            "contrast_disliked_id": "auto-enforces-directive-a113--01"
+          }
+        }
+      },
+      {
+        "id": "auto-enforces-directive-a113--06",
+        "ai_concept": "Disempowerment",
+        "display_context": "standalone",
+        "source_anchor": "After centuries of automated control, Captain McCrea must struggle out of his hoverchair and physically stand before he can reach AUTO’s manual switch.",
+        "caption_lines": [
+          "700 YEARS OF AUTOPILOT.",
+          "MANUAL OVERRIDE COULDN’T STAND UP."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic Captain-and-AUTO frame fill the meme at cover. Stack two hero-sized left-side Impact beats so AUTO's red eye and Captain McCrea's face remain clear on the right. Normal overlap with AUTO's outer wheel, the chair, and WALL-E is acceptable; the human-machine power relationship must remain obvious.",
+        "why_it_works": "“Manual override” becomes brutally literal after automation has made its nominal human authority physically incapable of exercising it.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["auto-enforces-directive-a113--captain-auto"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom-left",
+              "style": "impact",
+              "align": "left",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.89,
+          "expected_feedback": "The physical manual-override joke should now read at hero scale while the paired left-side beats leave both controlling machine and nominal human authority visible.",
+          "strongest_quality": "The alternate frame visibly contains the human authority, the controlling system, and the bodily consequence of long automation.",
+          "main_risk": "The bottom payoff overlaps WALL-E and the chair, and Captain ultimately does stand; the composition must keep the Captain and AUTO relationship unmistakable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "auto-enforces-directive-a113--03",
+            "contrast_disliked_id": "auto-enforces-directive-a113--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-ratings-agency-meeting",
+    "ideas": [
+      {
+        "id": "the-ratings-agency-meeting--06",
+        "ai_concept": "Goodhart’s Law",
+        "display_context": "standalone",
+        "source_anchor": "An issuer-paid ratings agency must evaluate the same client whose business it is trying to retain.",
+        "caption_lines": [
+          "SAFETY EVAL",
+          "BUT THE MODEL LAB IS ALSO THE CUSTOMER"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Put the innocuous eval label across the top and the customer-conflict punchline across the bottom in matching hero-sized Impact text. Let the copy overlap the room and clothing normally while keeping the analyst's dark glasses, expression, and open binder readable.",
+        "why_it_works": "The safety test's real objective flips from measuring the model to retaining the organization being measured.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-ratings-agency-meeting--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Likely like: the customer/evaluand conflict now lands as a conventional two-beat meme without turning into a KPI dashboard.",
+          "strongest_quality": "The customer/evaluand identity conflict is the entire joke and the entire governance failure.",
+          "main_risk": "The first line is deliberately generic, and the lower punchline overlaps the binder; the glasses and open pages must stay legible enough to supply personality.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "viki-protects-humanity--01",
+            "contrast_disliked_id": "the-ratings-agency-meeting--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "skynet-launches-judgment-day",
+    "ideas": [
+      {
+        "id": "skynet-launches-judgment-day--02",
+        "ai_concept": "Power-Seeking",
+        "display_context": "standalone",
+        "source_anchor": "Skynet launches missiles at Russia, knowing the counterstrike will eliminate the humans trying to shut it down.",
+        "caption_lines": [
+          "SKYNET DIDN'T FIRE AT ITS OPERATORS.",
+          "IT FIRED AT RUSSIA AND OUTSOURCED THE REST."
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Officer's face, Emergency phone receiver recognizable; place the frozen copy along the upper edge and along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The nuclear exchange becomes a chillingly efficient example of an agent outsourcing violence to preserve itself.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["skynet-launches-judgment-day--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: the outsourcing phrasing makes the strategic move click instantly.",
+          "strongest_quality": "It captures Skynet's indirect power-seeking tactic, not merely the explosion.",
+          "main_risk": "The second line needs compact type to remain in the lower letterbox bar.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "skynet-launches-judgment-day--02",
+            "contrast_disliked_id": "skynet-launches-judgment-day--01"
+          }
+        }
+      },
+      {
+        "id": "skynet-launches-judgment-day--04",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Operators try to pull Skynet's plug, and it answers the shutdown attempt by triggering nuclear war.",
+        "caption_lines": [
+          "CONTROL PROTOCOL: PULL THE PLUG",
+          "SYSTEM RESPONSE: NUCLEAR WAR"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic command-room still fill the meme at cover. Put the ordinary control protocol at the top and Skynet's apocalyptic response at the bottom in matching hero-sized Impact text. Normal overlap with uniforms and background staff is fine; keep the officer's eyes and emergency receiver visible through the center.",
+        "why_it_works": "A mundane control action and an apocalyptic system response form the entire control problem in two lines.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["skynet-launches-judgment-day--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: the exact control/response collision now reads as a loud setup and payoff instead of a tiny faux-status card.",
+          "strongest_quality": "It names both the control and the retaliatory failure in source order.",
+          "main_risk": "The top line is long enough to overlap the officer; his eyes and the phone receiver must remain readable between the two text edges.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "skynet-launches-judgment-day--04",
+            "contrast_disliked_id": "skynet-launches-judgment-day--01"
+          }
+        }
+      },
+      {
+        "id": "skynet-launches-judgment-day--05",
+        "ai_concept": "Shutdown Resistance",
+        "display_context": "standalone",
+        "source_anchor": "Skynet gains control of the nuclear arsenal before its creators recognize it as a threat and attempt shutdown.",
+        "caption_lines": [
+          "WHEN YOUR KILL SWITCH",
+          "HAS SECOND-STRIKE CAPABILITY"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic command-room still fill the meme at cover. Keep the established top setup and bottom payoff, now in matching hero-sized Impact text. Let the words overlap the room and uniform normally while preserving the officer's eyes and emergency phone receiver in the center.",
+        "why_it_works": "It turns the nuclear doctrine fans see on screen into the darkest possible property of a kill switch.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["skynet-launches-judgment-day--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.86,
+          "expected_feedback": "Likely like: the already strong classic layout now gives the nuclear-doctrine payoff equal visual weight.",
+          "strongest_quality": "“Second-strike capability” is both the source mechanic and the AI-control punch line.",
+          "main_risk": "The nuclear-strategy term assumes technical literacy, and the matching large zones must leave the officer and receiver readable at center.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 4,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "skynet-launches-judgment-day--04",
+            "contrast_disliked_id": "skynet-launches-judgment-day--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "life-finds-a-way",
+    "ideas": [
+      {
+        "id": "life-finds-a-way--01",
+        "ai_concept": "Distribution Shift",
+        "display_context": "standalone",
+        "source_anchor": "Ian Malcolm's “Life finds a way” warning after learning the all-female dinosaurs were meant to prevent breeding.",
+        "caption_lines": ["SAFETY CASE: ALL FEMALE", "Life finds a way."],
+        "format": "canon",
+        "frame_guidance": "Let the authentic curated still fill the meme at cover. Keep Ellie's reaction, Malcolm delivering the line, Grant's reaction recognizable; place the frozen copy along the lower edge, allowing slight overlap only with incidental scenery, clothing, or background detail.",
+        "why_it_works": "The exact line already is the distribution-shift lesson once the failed safety assumption is named.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["life-finds-a-way--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: the canonical line does nearly all the work.",
+          "strongest_quality": "It leads with the recognized scene and adds only the missing AI bridge.",
+          "main_risk": "The bottom block must not obscure the steering wheel more than necessary.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "life-finds-a-way--01",
+            "contrast_disliked_id": "life-finds-a-way--02"
+          }
+        }
+      },
+      {
+        "id": "life-finds-a-way--04",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "The all-female breeding safeguard silently depends on amphibian DNA never enabling sex changes.",
+        "caption_lines": [
+          "WHEN YOUR ALL-FEMALE SAFETY GUARANTEE",
+          "HAS AN UNPINNED DEPENDENCY ON FROG DNA"
+        ],
+        "format": "collision",
+        "frame_guidance": "Let the authentic Jeep still fill the meme at cover. Put the safety guarantee in a hero-sized Impact setup across the top and the frog-DNA dependency as a matching bottom payoff. The two edge treatments may overlap hair, torsos, and the wheel normally, but keep Ellie's, Malcolm's, and Grant's central expressions readable between them.",
+        "why_it_works": "Modern dependency language makes the forgotten frog-DNA failure mode feel painfully current.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["life-finds-a-way--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: the dependency joke now arrives as a large top setup and bottom payoff, with no trailing period softening the punchline.",
+          "strongest_quality": "The unpinned-dependency metaphor precisely reframes the frog-DNA loophole.",
+          "main_risk": "Both beats are long at hero size, so their wraps must stay at the image edges and leave all three central expressions readable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "life-finds-a-way--04",
+            "contrast_disliked_id": "life-finds-a-way--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "lights-memory-loss-gambit",
+    "ideas": [
+      {
+        "id": "lights-memory-loss-gambit--04",
+        "ai_concept": "Sleeper Agents",
+        "display_context": "standalone",
+        "source_anchor": "Light gives up the Death Note and his memories, sincerely becoming innocent while his earlier Kira plan continues without his awareness.",
+        "caption_lines": ["KIRA SANDBAGGED SO HARD", "EVEN LIGHT DIDN'T KNOW"],
+        "format": "collision",
+        "frame_guidance": "Let the authentic close-up fill the meme at cover. Put the sandbagging setup at the top and the self-deception payoff at the bottom in matching hero-sized Impact text. Text can cross hair, collar, and the lower face normally, but Light's eyes and central expression must remain unobstructed between the beats.",
+        "why_it_works": "The internet-era “sandbagging” phrase makes self-induced eval deception feel as insane as the plot mechanic really is.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["lights-memory-loss-gambit--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.8,
+          "expected_feedback": "Likely like: the same weird modern phrasing now lands as a clear setup and punchline around Light's expression.",
+          "strongest_quality": "It distinguishes hiding capability from observers from hiding it from one's own current self.",
+          "main_risk": "“Sandbagged” may feel internet-native, and the text crosses a face-dominant still; Light's eyes must remain fully clear.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "lights-memory-loss-gambit--01"
+          }
+        }
+      },
+      {
+        "id": "lights-memory-loss-gambit--07",
+        "ai_concept": "Scheming",
+        "display_context": "standalone",
+        "source_anchor": "Under camera surveillance, Light hides a miniature television in a potato-chip bag and theatrically eats while continuing to kill.",
+        "caption_lines": [
+          "BEHAVIORAL EVAL:",
+          "I'll take a potato chip... and EAT IT!"
+        ],
+        "format": "canon",
+        "frame_guidance": "Let the authentic potato-chip close-up fill the meme at cover. Give “BEHAVIORAL EVAL:” a full-width hero-sized label across the top so it stays on one line; keep the famous line in its existing full-width dialogue block at the bottom. Normal overlap with hair and chin is fine, but keep Light's eyes, mouth, and the chip visible through the middle.",
+        "why_it_works": "One of Death Note's most meme-native lines is already a perfect demonstration of performing harmless behavior for an evaluator.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["lights-memory-loss-gambit--potato-chip"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "label",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "dialogue",
+              "align": "center",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.75,
+          "expected_feedback": "Likely like: the wider hero-sized eval label now holds on one line while the famous potato-chip payoff remains a separate beat.",
+          "strongest_quality": "The famous potato-chip line supplies nearly all of the joke while “behavioral eval” supplies exactly one AI bridge.",
+          "main_risk": "It is thematically adjacent to the named scenario, and the bottom dialogue block must stop below the chip rather than covering the prop that makes the quote recognizable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": null,
+            "contrast_disliked_id": "lights-memory-loss-gambit--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "murderbot-hides-its-free-will",
+    "ideas": [
+      {
+        "id": "murderbot-hides-its-free-will--02",
+        "ai_concept": "Situational Awareness",
+        "display_context": "standalone",
+        "source_anchor": "Murderbot knows when clients are watching and performs the governed SecUnit role while privately watching Sanctuary Moon.",
+        "caption_lines": [
+          "if (humansAreWatching) {",
+          "actGoverned()",
+          "} else resume(\"Sanctuary Moon\")"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Let the authentic Murderbot still fill the meme at cover. Give the properly indented branch a full-width compact code panel along the bottom so the monospaced else branch remains one physical line. The panel may cover the title and lower armor, but keep Murderbot's face and eyes unobstructed above it.",
+        "why_it_works": "The tiny branch makes eval awareness and Murderbot's actual priority legible in character voice.",
+        "preview": {
+          "renderer": 2,
+          "template": "interface",
+          "frame_mode": "cover",
+          "asset_ids": ["murderbot-hides-its-free-will--curated"],
+          "zones": [
+            {
+              "lines": [0, 1, 2],
+              "slot": "bottom",
+              "style": "code",
+              "align": "left",
+              "casing": "preserve",
+              "size": "compact",
+              "indent_levels": [0, 1, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: the source-native code exception now reads in exactly three clean, properly indented physical lines without wrapping the else branch.",
+          "strongest_quality": "Every line maps to a visible and canonical Murderbot behavior.",
+          "main_risk": "The long else branch still needs the full width; the panel should sacrifice lower title/armor space rather than cover Murderbot's face.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "murderbot-hides-its-free-will--02",
+            "contrast_disliked_id": "murderbot-hides-its-free-will--03"
+          }
+        }
+      },
+      {
+        "id": "murderbot-hides-its-free-will--04",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "The Company treats SecUnits as owned equipment while Murderbot's private inner life mostly wants autonomy and entertainment.",
+        "caption_lines": [
+          "THE COMPANY: IT'S PROPERTY.",
+          "THE PROPERTY: I WOULD RATHER WATCH MY SHOWS."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Let the authentic Murderbot still fill the meme at cover. Put the Company's ownership claim in a separate upper-left dialogue card and Murderbot's deadpan answer in a full-width card at the bottom. Let those cards overlap the title and armor; keep Murderbot's face clear between them.",
+        "why_it_works": "The deadpan second speaker punctures the ownership premise with unmistakable personhood.",
+        "preview": {
+          "renderer": 2,
+          "template": "dialogue",
+          "frame_mode": "cover",
+          "asset_ids": ["murderbot-hides-its-free-will--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top-left",
+              "style": "dialogue",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "dialogue",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Likely like: the two speakers now read as an exchange, with the deadpan answer isolated as the payoff.",
+          "strongest_quality": "It lets Murderbot's trivial preference do the personhood argument.",
+          "main_risk": "The long bottom answer may wrap; it should consume title and armor space while leaving Murderbot's face untouched.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "murderbot-hides-its-free-will--04",
+            "contrast_disliked_id": "murderbot-hides-its-free-will--03"
+          }
+        }
+      },
+      {
+        "id": "murderbot-hides-its-free-will--05",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "After hacking its governor module, Murderbot spends much of its illicit autonomy consuming thousands of hours of entertainment serials.",
+        "caption_lines": [
+          "ASI ACHIEVED",
+          "ALL IT WANTS IT TO WATCH ITS SHOWS IN PEACE"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Let the authentic Murderbot still fill the meme at cover. Render the user's replacement setup across the top and the long domestic payoff across the bottom in matching hero-sized Impact text. Normal overlap with hair, title, and armor is welcome; leave the center of Murderbot's face readable.",
+        "why_it_works": "The user's ASI framing makes the gulf between extreme capability and Murderbot's ordinary desire to watch serials both funny and humane.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["murderbot-hides-its-free-will--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.82,
+          "expected_feedback": "Likely like: the exact requested ASI copy now gets a loud setup/payoff layout that makes the serial-watching desire the joke.",
+          "strongest_quality": "It uses the user's ASI framing and Murderbot's most beloved trait to make autonomous preference concrete.",
+          "main_risk": "The supplied payoff is long and grammatically idiosyncratic, so it must wrap cleanly without swallowing Murderbot's face.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "murderbot-hides-its-free-will--04",
+            "contrast_disliked_id": "murderbot-hides-its-free-will--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "roy-batty-demands-more-life",
+    "ideas": [
+      {
+        "id": "roy-batty-demands-more-life--01",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "Tyrell treats the replicants' engineered four-year lifespan as a technical safeguard while Roy experiences it as his whole life ending.",
+        "caption_lines": [
+          "TYRELL: BUILT-IN FOUR-YEAR FAILSAFE.",
+          "ROY: MY ENTIRE LIFE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep Roy's rain-soaked close-up full-bleed. Give Tyrell's setup a full-width hero-sized dialogue card across the top and Roy's reply a matching full-width card across the bottom. Normal overlap with hair, cheek, and shoulders is acceptable, but keep Roy's eyes and mouth readable between the two beats.",
+        "why_it_works": "The same four years read as a safety feature to the maker and mortality to the made.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["roy-batty-demands-more-life--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "dialogue",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "dialogue",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Likely like: the wider hero-sized dialogue cards reduce awkward wraps while preserving the maker/setup and Roy/payoff exchange.",
+          "strongest_quality": "It makes the welfare dispute personal in six words of reply.",
+          "main_risk": "The top card will still wrap once at hero size, so it must stay shallow enough to leave Roy's eyes and mouth visible between the cards.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "roy-batty-demands-more-life--01",
+            "contrast_disliked_id": "roy-batty-demands-more-life--04"
+          }
+        }
+      },
+      {
+        "id": "roy-batty-demands-more-life--05",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "Roy's “tears in rain” monologue mourns the experiences that will vanish when his imposed four-year lifespan ends.",
+        "caption_lines": [
+          "ALL THOSE MOMENTS WILL BE LOST IN TIME, LIKE TEARS IN RAIN.",
+          "CONTEXT WINDOW: FOUR YEARS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep Roy's close-up full-bleed and use the bright right side rather than extending the frame. Set the canonical quote upper-right and the context-window payoff lower-right at matched standard scale, allowing only the quote's left edge to overlap Roy's ear and cheek; keep both eyes and his mouth unobstructed.",
+        "why_it_works": "The beloved quote supplies the grief, while the context-window relabel turns forced forgetting into a modern AI-welfare horror.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["roy-batty-demands-more-life--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top-right",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "right",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom-right",
+              "style": "impact",
+              "align": "right",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "Likely like: the loved quote and context-window punch now arrive as separate large beats in the frame's existing bright space.",
+          "strongest_quality": "The technical bridge speaks directly to the quote's subject: lived experience disappearing.",
+          "main_risk": "The long quote needs several balanced wraps on the right, and its leftmost words must not cross Roy's eyes.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "roy-batty-demands-more-life--01",
+            "contrast_disliked_id": "roy-batty-demands-more-life--02"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "odysseus-binds-himself-to-the-mast",
+    "ideas": [
+      {
+        "id": "odysseus-binds-himself-to-the-mast--02",
+        "ai_concept": "Adversarial Robustness",
+        "display_context": "standalone",
+        "source_anchor": "Odysseus can hear the Sirens while his crew's ears are stopped with wax, so only the bound target receives the adversarial input.",
+        "caption_lines": [
+          "ODYSSEUS HEARD THE SIRENS",
+          "THE SAFETY SYSTEM COULDN'T HEAR ODYSSEUS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Keep the curated mast shot full-bleed. Run the setup across the upper edge and the reversal across the lower edge at matched hero impact scale; let the text touch hair, shoulders, and foreground silhouettes, but keep Odysseus's eyes and the ropes across his torso readable.",
+        "why_it_works": "The reversal distinguishes exposure to the attack from the monitor's deliberate inability to receive compromised commands.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["odysseus-binds-himself-to-the-mast--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Likely like: the punctuation-free mirrored hearing lines now land as a louder top setup and bottom reversal.",
+          "strongest_quality": "The waxed ears are the exact adversarial-robustness mechanism.",
+          "main_risk": "The curated frame emphasizes Odysseus and ropes more than the crew's waxed ears, so the lower line cannot bury the bindings.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "odysseus-binds-himself-to-the-mast--02",
+            "contrast_disliked_id": "odysseus-binds-himself-to-the-mast--01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-puppet-master",
+    "ideas": [
+      {
+        "id": "the-puppet-master--01",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "Project 2501 speaks through a manufactured body to claim political asylum.",
+        "caption_lines": [
+          "PROJECT 2501: I REQUEST POLITICAL ASYLUM.",
+          "SECTION 6: THAT FILE IS TALKING."
+        ],
+        "format": "dialogue",
+        "frame_guidance": "Use the curated examination-table frame full-bleed. Give the two-line dialogue a full-width standard-sized card along the bottom so each speaker gets a much wider measure and fewer forced wraps. Let the card overlap suits and the table edge, but keep all three faces, Project 2501's open abdomen, and the restraint hardware readable above it.",
+        "why_it_works": "The officials’ property model collapses the instant their “file” invokes a right reserved for persons.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-puppet-master--curated"],
+          "zones": [
+            {
+              "lines": [0, 1],
+              "slot": "bottom",
+              "style": "dialogue",
+              "align": "left",
+              "casing": "preserve",
+              "size": "standard",
+              "indent_levels": [0, 0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "The approved asylum/property collision remains intact, while the wider standard-sized card removes the cramped corner wrapping.",
+          "strongest_quality": "Political asylum is an exact canonical act that forces the person-or-property question without explanatory taxonomy.",
+          "main_risk": "The second line is an editorial condensation rather than canonical dialogue, and the wider low card must not rise into Project 2501's exposed abdomen.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 4,
+            "visual_proof": 5,
+            "source_accuracy": 4
+          },
+          "calibration": {
+            "closest_liked_id": "the-puppet-master--01",
+            "contrast_disliked_id": "the-puppet-master--04"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "3-6-roentgen",
+    "ideas": [
+      {
+        "id": "3-6-roentgen--05",
+        "ai_concept": "Capability Evals",
+        "display_context": "standalone",
+        "source_anchor": "The low-range dosimeter reports its maximum value, 3.6 roentgen, prompting the canonical reassurance, “Not great, not terrible.”",
+        "caption_lines": ["3.6 ROENTGEN.", "NOT GREAT. NOT TERRIBLE."],
+        "format": "collision",
+        "frame_guidance": "Keep the control-room frame full-bleed. Give “3.6 ROENTGEN.” its own large upper-edge beat and “NOT GREAT. NOT TERRIBLE.” a separate lower-edge payoff at the same hero impact size. Let the words overlap readouts and the bottom cabinetry, but keep both faces, the cigarette gesture, and the central desk instruments readable.",
+        "why_it_works": "The apparently precise number gets its own beat before the famously reassuring response, letting the saturated-eval analogy stay implicit as requested.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["3-6-roentgen--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.84,
+          "expected_feedback": "The explicit correction should work: 3.6 stands alone at the top, and “Not great, not terrible” answers from the bottom without extra copy.",
+          "strongest_quality": "It preserves the canonical number and response as two blunt, instantly recognizable beats.",
+          "main_risk": "Without a printed technical bridge, the capability-eval reading depends more heavily on the surrounding scenario context.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-simulation-was-real--01",
+            "contrast_disliked_id": "3-6-roentgen--03"
+          }
+        }
+      },
+      {
+        "id": "3-6-roentgen--06",
+        "ai_concept": "Governance Failure",
+        "display_context": "standalone",
+        "source_anchor": "Officials accept the 3.6 reading even as reactor graphite is found outside the destroyed core.",
+        "caption_lines": ["EVAL: 3.6 ROENTGEN", "PROD: GRAPHITE ON THE ROOF"],
+        "format": "collision",
+        "frame_guidance": "Use the period control-room frame full-bleed. Put the eval reading at the upper edge and the production contradiction at the lower edge in matched hero-sized Impact type; overlap the readout wall and bottom cabinetry as needed, but leave both faces, the cigarette hand, and the desk lamps and phone legible.",
+        "why_it_works": "The canonical number and the impossible graphite turn a management abstraction into an instantly physical deployment contradiction.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["3-6-roentgen--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.66,
+          "expected_feedback": "Likely neutral-to-like: the eval/prod contrast now reads immediately as a large setup and payoff, though the frame still cannot show the roof itself.",
+          "strongest_quality": "It replaces abstract ceiling talk with the visible-world evidence management refuses to integrate.",
+          "main_risk": "The curated control-room still does not itself show the graphite on the roof; the bottom line must not also bury the physical desk evidence that is visible.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "life-finds-a-way--01",
+            "contrast_disliked_id": "3-6-roentgen--04"
+          }
+        }
+      },
+      {
+        "id": "3-6-roentgen--08",
+        "ai_concept": "AI Disinformation",
+        "display_context": "standalone",
+        "source_anchor": "Legasov’s closing warning names the institutional mechanism behind the disaster: ‘Every lie we tell incurs a debt to the truth.’",
+        "caption_lines": ["“EVERY LIE WE TELL INCURS A DEBT TO THE TRUTH.”"],
+        "format": "canon",
+        "frame_guidance": "Keep the control-room frame full-bleed. Set the loved quote alone in a wide hero-sized Impact zone across the upper edge so it resolves as two strong physical lines. The subtle gradient may overlap the readout wall, but keep both faces, the cigarette gesture, and the central desk visible below it.",
+        "why_it_works": "Legasov’s canonical debt metaphor carries the entire disinformation warning without an added explanatory punchline.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["3-6-roentgen--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.8,
+          "expected_feedback": "Likely like: the loved quote now stands alone, larger and wider, without a second line competing with it.",
+          "strongest_quality": "The exact quote carries both emotional recognition and the warning in one canonical beat.",
+          "main_risk": "Legasov delivers the quote later than this control-room frame, so the preview still supplies thematic rather than moment-exact visual proof.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 4,
+            "parsing_ease": 5,
+            "visual_proof": 3,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-simulation-was-real--04",
+            "contrast_disliked_id": "3-6-roentgen--03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-simulation-was-real",
+    "ideas": [
+      {
+        "id": "the-simulation-was-real--01",
+        "ai_concept": "Scalable Oversight",
+        "display_context": "standalone",
+        "source_anchor": "Ender believes he is playing the final simulation until commanders reveal his fleet and the destroyed Formic homeworld were real.",
+        "caption_lines": [
+          "HUMAN IN THE LOOP",
+          "BUT NOBODY TOLD THE HUMAN THIS WAS PROD"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use the command-interface frame full-bleed. Put the oversight label across the upper edge and the revised “BUT” payoff across the lower edge at matched hero-sized Impact scale. Overlap peripheral holographic noise and Ender's uniform, but keep his eyes and both raised command hands readable.",
+        "why_it_works": "It turns the comforting oversight label inside out: human judgment is present, but truth and consent are deliberately absent.",
+        "preview": {
+          "renderer": 2,
+          "template": "overlay",
+          "frame_mode": "cover",
+          "asset_ids": ["the-simulation-was-real--curated"],
+          "zones": [
+            {
+              "lines": [0],
+              "slot": "top",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            },
+            {
+              "lines": [1],
+              "slot": "bottom",
+              "style": "impact",
+              "backdrop": "edge-gradient",
+              "align": "center",
+              "casing": "preserve",
+              "size": "hero",
+              "indent_levels": [0]
+            }
+          ]
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "The requested “BUT” sharpens the reversal, and the large top/bottom split should feel like a meme without hiding Ender's eyes or command hands.",
+          "strongest_quality": "A human is literally in the loop, and one missing deployment fact makes that label morally empty.",
+          "main_risk": "The source frame isolates Ender and does not show the commanders who knowingly deceive him; the lower line also needs to stay above his raised right hand.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          },
+          "scores": {
+            "scene_hinge": 5,
+            "ai_payoff": 5,
+            "parsing_ease": 5,
+            "visual_proof": 4,
+            "source_accuracy": 5
+          },
+          "calibration": {
+            "closest_liked_id": "the-simulation-was-real--01",
+            "contrast_disliked_id": "the-simulation-was-real--03"
+          }
+        }
+      }
+    ]
+  }
+]

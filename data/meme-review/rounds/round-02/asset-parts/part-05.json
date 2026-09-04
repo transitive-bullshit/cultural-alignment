@@ -1,0 +1,536 @@
+[
+  {
+    "id": "the-puppet-master--curated",
+    "scenario_slug": "the-puppet-master",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f1248191b4c2ca4427d57bb1/gallery-5c91b15b5f9a9f7b39b54fcf09a469c001e0aee6a6d9c92c62dabb9ea4d98514.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Ghost in the Shell illustrating The Puppet Master",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoIAAUAA8BgJZQAAveFxu/AAP5ICN12NKfdymAsiiGA7+GbgYHfPgAA",
+    "content_hash": "5c91b15b5f9a9f7b39b54fcf09a469c001e0aee6a6d9c92c62dabb9ea4d98514",
+    "protected_regions": [
+      {
+        "id": "the-puppet-master--left-observer-face",
+        "label": "Left government observer's face and reaction",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [2, 13, 24, 39]
+      },
+      {
+        "id": "the-puppet-master--project-2501",
+        "label": "Project 2501's face, manufactured torso, open abdomen, and restraints",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [31, 5, 38, 94]
+      },
+      {
+        "id": "the-puppet-master--cranial-and-body-hardware",
+        "label": "Cranial apparatus, cable bundles, mechanical abdomen, and arms",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [29, 0, 43, 100]
+      },
+      {
+        "id": "the-puppet-master--right-observer-face",
+        "label": "Eyepatched government observer's face and reaction",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [71, 3, 23, 39]
+      },
+      {
+        "id": "the-puppet-master--observers-bodies",
+        "label": "Officials framing Project 2501 on both sides",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 36, 100, 64]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "jareds-self-driving-detour--curated",
+    "scenario_slug": "jareds-self-driving-detour",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f124819f992dfb7a9aafa603/gallery-621a9a41a9f5687361e2609c3acbeb1944365d1471fc9d8df514def2c19ad2a4.webp",
+    "width": 1200,
+    "height": 630,
+    "alt": "Still from Silicon Valley illustrating Jared’s Self-Driving Detour",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoIAAQAA8BgJQBOgCKUc0H4AP7tICVelV4rDtUOAHzC5kjDRnZQCSAA",
+    "content_hash": "621a9a41a9f5687361e2609c3acbeb1944365d1471fc9d8df514def2c19ad2a4",
+    "protected_regions": [
+      {
+        "id": "jareds-self-driving-detour--jared-face",
+        "label": "Jared's worried face and distinctive expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [36, 5, 33, 65]
+      },
+      {
+        "id": "jareds-self-driving-detour--jared-shoulders",
+        "label": "Jared's checked shirt and seated shoulders",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [21, 62, 69, 38]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "3-6-roentgen--curated",
+    "scenario_slug": "3-6-roentgen",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481aca610e118206aa636/gallery-be553927840f750810c1d59a32585888732c10c3bcf78613d069bd9092c4b3e0.webp",
+    "width": 1077,
+    "height": 720,
+    "alt": "Still from Chernobyl illustrating 3.6 Roentgen",
+    "blur_data_url": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoIAAUAA8BgJQBOgB5vdwsAAP54V9FD6AhUcjDEe0L2FYo4IQ+AAA==",
+    "content_hash": "be553927840f750810c1d59a32585888732c10c3bcf78613d069bd9092c4b3e0",
+    "protected_regions": [
+      {
+        "id": "3-6-roentgen--standing-technician-face",
+        "label": "Standing technician's face",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [20, 14, 10, 17]
+      },
+      {
+        "id": "3-6-roentgen--standing-technician",
+        "label": "Standing technician in white uniform",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [11, 11, 22, 88]
+      },
+      {
+        "id": "3-6-roentgen--seated-official-face",
+        "label": "Seated official's face and dismissive expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [76, 34, 12, 18]
+      },
+      {
+        "id": "3-6-roentgen--cigarette-gesture",
+        "label": "Seated official's raised cigarette hand and smoke",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [71, 33, 12, 29]
+      },
+      {
+        "id": "3-6-roentgen--seated-official",
+        "label": "Seated official and chair",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [70, 34, 30, 58]
+      },
+      {
+        "id": "3-6-roentgen--desk-instruments",
+        "label": "Desk lamps, phone, paperwork, and control-room instruments",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [25, 36, 57, 48]
+      },
+      {
+        "id": "3-6-roentgen--control-readouts",
+        "label": "Original reactor control panels and glowing readouts",
+        "kind": "screen-text",
+        "priority": "soft",
+        "source_rect": [0, 0, 100, 34]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "t-800-accepts-shutdown--curated",
+    "scenario_slug": "t-800-accepts-shutdown",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481b2ad50ccfa8aa44d01/gallery-1b0f40a4d3f7d46331785f47cdc5db05a05bfb3ed88b68bfd0e6f6dfca1ad246.webp",
+    "width": 1200,
+    "height": 700,
+    "alt": "Still from Terminator 2: Judgment Day illustrating T-800 Accepts Shutdown",
+    "blur_data_url": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoIAAUAA8BgJbACdLoAAnYX07sAAPqL13C6ZCdFecfyB4qLRzT8atbzn/3LY6GjDYNr3ag/2x4UNDWCEhfYAAAA",
+    "content_hash": "1b0f40a4d3f7d46331785f47cdc5db05a05bfb3ed88b68bfd0e6f6dfca1ad246",
+    "protected_regions": [
+      {
+        "id": "t-800-accepts-shutdown--thumbs-up",
+        "label": "T-800's complete fire-lit thumbs-up hand",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [21, 4, 41, 96]
+      },
+      {
+        "id": "t-800-accepts-shutdown--lowering-chain",
+        "label": "Vertical steel lowering chain",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [73, 0, 14, 100]
+      },
+      {
+        "id": "t-800-accepts-shutdown--molten-steel",
+        "label": "Molten-steel glow and flames surrounding the final gesture",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 0, 100, 100]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "the-simulation-was-real--curated",
+    "scenario_slug": "the-simulation-was-real",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481bf8b1ce97971063ed4/gallery-a1b219cda260dc74d7ad0a240b31301e2648eafa6cb3f35efec4e63c8d10154d.webp",
+    "width": 1237,
+    "height": 720,
+    "alt": "Still from Ender’s Game illustrating The “Simulation” Was Real",
+    "blur_data_url": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoIAAUAA8BgJQBOgCP/JftRAAD+2q16u6uA6EhV6xw9l3tCTnFIWtoT8msww4AA",
+    "content_hash": "a1b219cda260dc74d7ad0a240b31301e2648eafa6cb3f35efec4e63c8d10154d",
+    "protected_regions": [
+      {
+        "id": "the-simulation-was-real--ender-face",
+        "label": "Ender's face and concentrated expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [31, 3, 36, 68]
+      },
+      {
+        "id": "the-simulation-was-real--left-command-hand",
+        "label": "Ender's raised left hand at the command interface",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [0, 0, 23, 48]
+      },
+      {
+        "id": "the-simulation-was-real--right-command-hand",
+        "label": "Ender's raised right hand at the command interface",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [83, 71, 17, 29]
+      },
+      {
+        "id": "the-simulation-was-real--holographic-interface",
+        "label": "Layered tactical holograms and original command readouts",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [0, 17, 100, 83]
+      },
+      {
+        "id": "the-simulation-was-real--ender-body",
+        "label": "Ender's isolated body at the controls",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [38, 60, 30, 40]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "daly-tortures-the-digital-crew--curated",
+    "scenario_slug": "daly-tortures-the-digital-crew",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481c0868ac0fd755b1e2a/gallery-19c57eca98033ef823ce1f7c864510ece91313f3897011b6d19aafaf369f1318.webp",
+    "width": 1500,
+    "height": 1000,
+    "alt": "Still from Black Mirror illustrating Daly Tortures the Digital Crew",
+    "blur_data_url": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAACwAQCdASoIAAUAA8BgJbACdADyfvaAAP6jB66S+k+keQst+873ykulzXPj8mfAWT+wfLAA",
+    "content_hash": "19c57eca98033ef823ce1f7c864510ece91313f3897011b6d19aafaf369f1318",
+    "protected_regions": [
+      {
+        "id": "daly-tortures-the-digital-crew--captive-crew",
+        "label": "All four captive crew members and their wary stances",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [0, 21, 61, 72]
+      },
+      {
+        "id": "daly-tortures-the-digital-crew--daly-face",
+        "label": "Daly's face and controlling reaction",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [57, 14, 20, 34]
+      },
+      {
+        "id": "daly-tortures-the-digital-crew--daly-body",
+        "label": "Daly's dominant foreground body and red captain uniform",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [46, 43, 54, 57]
+      },
+      {
+        "id": "daly-tortures-the-digital-crew--handheld-control",
+        "label": "Daly's hand and handheld controller",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [82, 32, 16, 32]
+      },
+      {
+        "id": "daly-tortures-the-digital-crew--space-fleet-insignia",
+        "label": "Space Fleet insignia on Daly's uniform",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [71, 58, 9, 15]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "k-fails-his-baseline--curated",
+    "scenario_slug": "k-fails-his-baseline",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481cc9515fa0fb8aa6bf6/gallery-72a68c9113e77000b509225c384ed022bd9eef39ba26c4185e2ee8c89cd4cf26.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Blade Runner 2049 illustrating K Fails His Baseline",
+    "blur_data_url": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACQAQCdASoIAAUAA8BgJZwAAuWt2ogA9rFzzns0XE+p85NHDXR/PorgxqIV0pAA",
+    "content_hash": "72a68c9113e77000b509225c384ed022bd9eef39ba26c4185e2ee8c89cd4cf26",
+    "protected_regions": [
+      {
+        "id": "k-fails-his-baseline--k-face",
+        "label": "K's face and tightly controlled expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [44, 16, 13, 25]
+      },
+      {
+        "id": "k-fails-his-baseline--k-seated-body",
+        "label": "K's centered seated body and posture",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [34, 15, 30, 73]
+      },
+      {
+        "id": "k-fails-his-baseline--wall-scanner",
+        "label": "Baseline scanner on the wall beside K",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [40, 18, 4, 11]
+      },
+      {
+        "id": "k-fails-his-baseline--test-cell",
+        "label": "Sterile symmetrical baseline-test cell",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [8, 12, 84, 76]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "omnidroid-disarms-syndrome--curated",
+    "scenario_slug": "omnidroid-disarms-syndrome",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481cdb34cd9d4fbd94677/gallery-8646590ab16c3a7675ee958e49df89c994f8bfdbe767035ff92c9548effcd0db.webp",
+    "width": 1000,
+    "height": 520,
+    "alt": "Still from The Incredibles illustrating Omnidroid Disarms Syndrome",
+    "blur_data_url": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACQAQCdASoIAAQAA8BgJZQAAp02KwAA/pG+SxbNZgZUJ5yXaxN+HVKhVq2wAA==",
+    "content_hash": "8646590ab16c3a7675ee958e49df89c994f8bfdbe767035ff92c9548effcd0db",
+    "protected_regions": [
+      {
+        "id": "omnidroid-disarms-syndrome--syndrome-face",
+        "label": "Syndrome's face, mask, and shocked expression",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [49, 9, 23, 44]
+      },
+      {
+        "id": "omnidroid-disarms-syndrome--syndrome-hair",
+        "label": "Syndrome's flame-shaped hair silhouette",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [47, 0, 29, 33]
+      },
+      {
+        "id": "omnidroid-disarms-syndrome--open-hand-and-gauntlet",
+        "label": "Syndrome's open hand and disarmed wrist gauntlet",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [0, 50, 33, 50]
+      },
+      {
+        "id": "omnidroid-disarms-syndrome--omnidroid-eye",
+        "label": "Omnidroid's orange eye looming behind Syndrome",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [73, 36, 20, 24]
+      },
+      {
+        "id": "omnidroid-disarms-syndrome--syndrome-body",
+        "label": "Syndrome's black-and-white foreground body",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [27, 47, 73, 53]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "hiro-removes-baymaxs-chip--curated",
+    "scenario_slug": "hiro-removes-baymaxs-chip",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481d6a4e5fe9657be8c31/gallery-b82e5aa87b047353a3e327f590a4c88dd41fa477d3392674474037b23449ab75.webp",
+    "width": 1200,
+    "height": 686,
+    "alt": "Still from Big Hero 6 illustrating Hiro Removes Baymax’s Chip",
+    "blur_data_url": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAACwAQCdASoIAAUAA8BgJYgCdADx+IsgAP7CUgy+m+nPAxDGz6cLUE0uBg+jd360gm7M4qAA",
+    "content_hash": "b82e5aa87b047353a3e327f590a4c88dd41fa477d3392674474037b23449ab75",
+    "protected_regions": [
+      {
+        "id": "hiro-removes-baymaxs-chip--baymax-face",
+        "label": "Baymax's simple black-dot face and head",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [43, 11, 16, 28]
+      },
+      {
+        "id": "hiro-removes-baymaxs-chip--hiro-face",
+        "label": "Hiro's face inside Baymax's embrace",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [48, 36, 12, 24]
+      },
+      {
+        "id": "hiro-removes-baymaxs-chip--embrace",
+        "label": "Baymax's full protective body and arms around Hiro",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [22, 16, 46, 83]
+      },
+      {
+        "id": "hiro-removes-baymaxs-chip--hiro-body",
+        "label": "Hiro's body and hanging hands inside the hug",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [46, 52, 15, 47]
+      },
+      {
+        "id": "hiro-removes-baymaxs-chip--tadashi-clock",
+        "label": "Tadashi-themed wall clock",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [0, 12, 20, 50]
+      },
+      {
+        "id": "hiro-removes-baymaxs-chip--workstation",
+        "label": "Bedroom workstation, monitor, lamp, and tools",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [69, 37, 31, 62]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "lind-l-tailor-bait--curated",
+    "scenario_slug": "lind-l-tailor-bait",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481d787e1de7c04592f86/gallery-545abd57dc328f8c216a81423811a3c152431a5fb7213c86910f8fe8135239f0.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Still from Death Note illustrating Lind L. Tailor Bait",
+    "blur_data_url": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoIAAUAA8BgJZwAApyD7zLAAP6Z27zihmgrE3fi6+GdhYgWwgRMZWECAAA=",
+    "content_hash": "545abd57dc328f8c216a81423811a3c152431a5fb7213c86910f8fe8135239f0",
+    "protected_regions": [
+      {
+        "id": "lind-l-tailor-bait--tailor-face",
+        "label": "Lind L. Tailor's face and death reaction",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [38, 8, 24, 38]
+      },
+      {
+        "id": "lind-l-tailor-bait--tailor-body",
+        "label": "Lind L. Tailor's body and hands clutching his chest",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [31, 42, 38, 48]
+      },
+      {
+        "id": "lind-l-tailor-bait--name-placard",
+        "label": "Original LIND.L.TAILOR broadcast placard",
+        "kind": "screen-text",
+        "priority": "must",
+        "source_rect": [38, 86, 29, 13]
+      },
+      {
+        "id": "lind-l-tailor-bait--broadcast-seal",
+        "label": "Winged globe seal behind the decoy",
+        "kind": "prop",
+        "priority": "soft",
+        "source_rect": [23, 0, 58, 77]
+      },
+      {
+        "id": "lind-l-tailor-bait--television-frame",
+        "label": "Black television bezel proving the live broadcast",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 0, 100, 100]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "hal-resists-disconnection--curated",
+    "scenario_slug": "hal-resists-disconnection",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481df8773cd6c69449e4f/gallery-995f5bf38dbd4be8b1dbcce076e3c65eb0830f9790e95bfe661645052ee3892b.webp",
+    "width": 1600,
+    "height": 900,
+    "alt": "Still from 2001: A Space Odyssey illustrating HAL Resists Disconnection",
+    "blur_data_url": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACwAQCdASoIAAUAA8BgJQBYdiPtYajMAP7xoPKZgJx6UkZMRLeXQWtX2yeael4nCkAAAA==",
+    "content_hash": "995f5bf38dbd4be8b1dbcce076e3c65eb0830f9790e95bfe661645052ee3892b",
+    "protected_regions": [
+      {
+        "id": "hal-resists-disconnection--outer-lens",
+        "label": "HAL's complete circular glass lens and blue rim",
+        "kind": "subject",
+        "priority": "must",
+        "source_rect": [10, 0, 80, 100]
+      },
+      {
+        "id": "hal-resists-disconnection--red-eye",
+        "label": "HAL's glowing red inner eye",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [29, 14, 43, 73]
+      },
+      {
+        "id": "hal-resists-disconnection--yellow-aperture",
+        "label": "Yellow central aperture at the focus of HAL's eye",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [47, 44, 8, 15]
+      }
+    ],
+    "annotation_status": "complete"
+  },
+  {
+    "id": "bruce-says-yes-to-all--curated",
+    "scenario_slug": "bruce-says-yes-to-all",
+    "src": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481e8975dff1cac4aa0b7/gallery-6b251389c01ade0429783121b0358ce11c9fd49fcf6d7b6166e6b413ae36b4d9.webp",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Still from Bruce Almighty illustrating Bruce Says “Yes to All”",
+    "blur_data_url": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADQAQCdASoIAAUAA8BgJYwC7AEfaw1GYAD+wJ7bittIlFgOO3ddoRshRAA=",
+    "content_hash": "6b251389c01ade0429783121b0358ce11c9fd49fcf6d7b6166e6b413ae36b4d9",
+    "protected_regions": [
+      {
+        "id": "bruce-says-yes-to-all--bruce-face",
+        "label": "Bruce's face and deadpan concentration",
+        "kind": "face",
+        "priority": "must",
+        "source_rect": [39, 4, 20, 39]
+      },
+      {
+        "id": "bruce-says-yes-to-all--typing-hands",
+        "label": "Bruce's oversized foreground typing hands and fingers",
+        "kind": "gesture",
+        "priority": "must",
+        "source_rect": [25, 38, 67, 55]
+      },
+      {
+        "id": "bruce-says-yes-to-all--keyboard",
+        "label": "Keyboard filling the low foreground",
+        "kind": "prop",
+        "priority": "must",
+        "source_rect": [0, 77, 100, 23]
+      },
+      {
+        "id": "bruce-says-yes-to-all--home-workstation",
+        "label": "Home room and workstation context behind Bruce",
+        "kind": "subject",
+        "priority": "soft",
+        "source_rect": [0, 0, 100, 78]
+      }
+    ],
+    "annotation_status": "complete"
+  }
+]

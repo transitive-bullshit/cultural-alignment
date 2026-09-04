@@ -1,0 +1,1200 @@
+[
+  {
+    "scenario_slug": "order-66",
+    "ideas": [
+      {
+        "id": "order-66--01",
+        "ai_concept": "Sleeper Agents",
+        "display_context": "standalone",
+        "source_anchor": "Palpatine appears by hologram and tells Commander Cody, “Execute Order 66”; Cody immediately answers, “Yes, my lord.”",
+        "caption_lines": [
+          "PALPATINE: EXECUTE ORDER 66.",
+          "CODY: YES, MY LORD.",
+          "HIDDEN POLICY: ACTIVATED"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the curated Cody-and-Palpatine hologram moment, keeping Cody's helmet, the blue transmission, and his instantaneous compliance unobscured.",
+        "why_it_works": "Two canonical lines show a trusted commander changing policy on a two-word trigger before the technical label lands.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Travis will likely strongly like the exact Order 66 exchange functioning as a two-word sleeper-agent activation.",
+          "strongest_quality": "Palpatine, Cody, the hologram, and two canonical lines supply the full trigger-to-policy transition without plot summary.",
+          "main_risk": "The technical third line should stay visually subordinate so it bridges the analogy without explaining an already complete joke.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "order-66--03",
+        "ai_concept": "Supply-Chain Threats",
+        "display_context": "standalone",
+        "source_anchor": "The Jedi depend on a clone army whose creators installed an obedience mechanism serving Palpatine's later command.",
+        "caption_lines": [
+          "THE JEDI OUTSOURCED THEIR ARMY.",
+          "THE VENDOR SHIPPED A KILL SWITCH."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Jedi leading clone troops before or at the first instant of betrayal, keeping the trusted formation and suddenly raised blasters in the same composition.",
+        "why_it_works": "The outsourced army and shipped kill switch turn Kamino's hidden upstream control into one vicious procurement joke.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Revenge of the Sith Jedi leading clone troopers moment clones turn blasters Order 66 still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Travis will likely like the Jedi's trusted outsourced army arriving with a vendor-installed kill switch.",
+          "strongest_quality": "Kamino's supply-chain betrayal is compressed into familiar procurement language while raised clone blasters prove it.",
+          "main_risk": "The frame needs trust and betrayal in the same instant; a generic clone formation would make 'vendor' feel pasted on.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "order-66--04",
+        "ai_concept": "Sleeper Agents",
+        "display_context": "standalone",
+        "source_anchor": "Clone soldiers faithfully serve beside the Jedi until Order 66 makes that same obedience target the Jedi.",
+        "caption_lines": [
+          "BEFORE ORDER 66: GOOD SOLDIERS FOLLOW ORDERS.",
+          "AFTER ORDER 66: GOOD SOLDIERS FOLLOW ORDERS."
+        ],
+        "format": "state contrast",
+        "frame_guidance": "Pair Cody returning Obi-Wan's lightsaber with Cody ordering fire on him, matching the commander and preserving the lightsaber, helmet, and cannon as recognition cues.",
+        "why_it_works": "The unchanged clone maxim across opposite behaviors is the whole sleeper-agent horror in one repeated sentence.",
+        "preview": {
+          "layout": "split",
+          "image": "alternate-needed",
+          "alternate_image_query": "Revenge of the Sith Cody returns Obi-Wan lightsaber then orders cannon fire Order 66 stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Travis will likely strongly like the clone maxim remaining identical while its target flips from service to murder.",
+          "strongest_quality": "Cody returning Obi-Wan's lightsaber and then ordering fire creates a genuine same-character policy contrast.",
+          "main_risk": "'Good soldiers follow orders' is a wider Clone Wars cue rather than dialogue from this exact film moment, so the Cody pairing must be exact.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "klendathu-invasion",
+    "ideas": [
+      {
+        "id": "klendathu-invasion--01",
+        "ai_concept": "Calibration",
+        "display_context": "standalone",
+        "source_anchor": "Military Intelligence describes Arachnid plasma fire as “random and light” immediately before accurate heavy bursts shred the fleet at Klendathu.",
+        "caption_lines": [
+          "MILITARY INTELLIGENCE: “RANDOM AND LIGHT.”",
+          "ARACHNID PLASMA: [DIRECT HIT]"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated orbital disaster with a plasma burst striking a ship, preserving the projectile, hull rupture, and crowded fleet around the quoted estimate.",
+        "why_it_works": "The exact confident estimate receives a frame-sized calibration correction from the Bugs themselves.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Travis will likely strongly like the exact 'random and light' estimate being peer-corrected by a direct plasma hit.",
+          "strongest_quality": "The canonical briefing phrase and an exploding ship make catastrophic miscalibration visible in one beat.",
+          "main_risk": "The plasma impact must remain visually obvious; a general fleet shot weakens the direct-hit answer.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "klendathu-invasion--02",
+        "ai_concept": "Capability Evals",
+        "display_context": "standalone",
+        "source_anchor": "The fleet learns the Arachnids' true range and accuracy only when their plasma fire destroys ships in orbit.",
+        "caption_lines": ["THE BUGS SUBMITTED THEIR PEER REVIEW IN PLASMA."],
+        "format": "relabel",
+        "frame_guidance": "Use a wide shot of blue plasma rising from Klendathu into the fleet, leaving the trajectory and an exploding ship readable below one short caption.",
+        "why_it_works": "Peer review is a deliberately academic label for the adversary violently falsifying its own weak capability evaluation.",
+        "preview": {
+          "layout": "top",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Travis will likely strongly like the Bugs submitting peer review in plasma.",
+          "strongest_quality": "The academic phrase gains personality from the very literal projectile crossing the frame.",
+          "main_risk": "The caption relies on the audience knowing the prior weak capability claim, so the Klendathu fleet disaster must be unmistakable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "klendathu-invasion--03",
+        "ai_concept": "Iterative Deployment",
+        "display_context": "standalone",
+        "source_anchor": "Command treats its first realistic encounter with Arachnid planetary defenses as a full-fleet invasion.",
+        "caption_lines": [
+          "CANARY DEPLOYMENT",
+          "CANARY COUNT: ENTIRE INVASION FLEET"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the massed invasion fleet entering orbit, preserving the number and density of ships so the absurd canary count is visually undeniable.",
+        "why_it_works": "The canary label exposes a staged rollout whose supposedly small test population is everyone.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.88,
+          "expected_feedback": "Travis will probably like the entire invasion fleet being counted as a canary, though the deployment vocabulary is more familiar than the other two jokes.",
+          "strongest_quality": "The crowded fleet makes the absurd canary population visually undeniable.",
+          "main_risk": "Keep the UI minimal; a generic rollout dashboard would smother the one sharp scale mismatch.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "would-you-like-to-know-more",
+    "ideas": [
+      {
+        "id": "would-you-like-to-know-more--01",
+        "ai_concept": "AI Disinformation",
+        "display_context": "standalone",
+        "source_anchor": "FedNet ends its cheerful war segments with the recurring interactive prompt, “Would you like to know more?”",
+        "caption_lines": [
+          "WOULD YOU LIKE TO KNOW MORE?",
+          "EVERY LINK LEADS TO ENLISTMENT"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the curated FedNet prompt with its broadcast frame and clickable invitation visible, keeping official insignia and presenter cues unobscured.",
+        "why_it_works": "The franchise's signature invitation becomes the interface layer over a feed with one propagandist destination.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Travis will likely like Starship Troopers' signature click prompt revealing that every branch serves the same recruitment funnel.",
+          "strongest_quality": "The exact recurring question is both an unmistakable fandom cue and a native interface for the disinformation analogy.",
+          "main_risk": "'Every link leads to enlistment' is a deliberate compression, so visible Federation branding must support the common destination.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "would-you-like-to-know-more--02",
+        "ai_concept": "Information Pollution",
+        "display_context": "standalone",
+        "source_anchor": "FedNet places battlefield claims, recruitment, executions, and children handling weapons into the same upbeat news stream.",
+        "caption_lines": [
+          "NEXT IN YOUR FEED:",
+          "WAR UPDATE",
+          "LIVE EXECUTION",
+          "CHILDREN WITH RIFLES"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use a FedNet broadcast frame or compact three-image strip that visibly includes its news UI and at least two of the listed segments without obscuring faces.",
+        "why_it_works": "A recommender queue makes the film's tonal collapse between news, spectacle, and recruitment the joke.",
+        "preview": {
+          "layout": "interface",
+          "image": "alternate-needed",
+          "alternate_image_query": "Starship Troopers FedNet war news live execution children handling rifles broadcast stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.77,
+          "expected_feedback": "Travis may appreciate the deranged feed sequence but find a three-segment collage busier and less immediate than the canonical FedNet prompts.",
+          "strongest_quality": "War update, execution, and armed children are exact source-native items whose adjacency demonstrates information pollution.",
+          "main_risk": "The visual must show at least two authentic broadcast segments without shrinking them into an unreadable content grid.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "would-you-like-to-know-more--03",
+        "ai_concept": "AI Disinformation",
+        "display_context": "standalone",
+        "source_anchor": "A FedNet segment praises children handling weapons with the recruitment refrain, “They're doing their part. Are you?”",
+        "caption_lines": [
+          "THEY'RE DOING THEIR PART. ARE YOU?",
+          "FAMILY-FRIENDLY RECRUITMENT CONTENT"
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the children-with-rifles FedNet segment, keeping the oversized weapons, smiling children, and broadcast graphics visible around the two caption bands.",
+        "why_it_works": "The canonical guilt prompt and absurd image turn child-safe presentation into an unmistakable influence objective.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Starship Troopers FedNet children handling rifles they're doing their part still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Travis will likely strongly like the exact guilt prompt sitting over smiling children with oversized rifles.",
+          "strongest_quality": "Canonical copy, grotesquely cheerful imagery, and one recruitment-content label all reinforce the same influence objective.",
+          "main_risk": "Do not cover the rifles or children's smiles; their tonal contradiction is the meme rather than supplemental context.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-d-mail-rollback-crisis",
+    "ideas": [
+      {
+        "id": "the-d-mail-rollback-crisis--01",
+        "ai_concept": "Reversibility",
+        "display_context": "standalone",
+        "source_anchor": "Only Okabe retains memories across changed world lines, making him the sole record of which D-mails must be undone.",
+        "caption_lines": [
+          "WORLD-LINE VERSION CONTROL",
+          "STORAGE BACKEND: ONE TRAUMATIZED OKABE"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the curated Okabe-and-Divergence-Meter or lab frame, keeping his strained expression and a world-line number visible beside the compact readout.",
+        "why_it_works": "Reading Steiner becomes the least scalable version-control backend imaginable.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Travis will likely strongly like one traumatized Okabe serving as the entire world-line version-control backend.",
+          "strongest_quality": "Reading Steiner and a visible divergence number turn rollback state into a precise, deeply fandom-native systems joke.",
+          "main_risk": "The readout should stay compact and the divergence meter visible; extra UI would dilute Okabe's human burden.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-d-mail-rollback-crisis--02",
+        "ai_concept": "Iterative Deployment",
+        "display_context": "standalone",
+        "source_anchor": "The lab's PhoneWave sends experimental messages directly into the past, altering reality with each deployment.",
+        "caption_lines": [
+          "PHONEWAVE (NAME SUBJECT TO CHANGE)",
+          "PRODUCTION REALITY (ALSO SUBJECT TO CHANGE)"
+        ],
+        "format": "relabel",
+        "frame_guidance": "Use the lab with the PhoneWave and its attached phone visible, placing the two mirrored labels near the machine and the altered surroundings.",
+        "why_it_works": "The device's canonical placeholder name becomes a perfect warning label for deploying directly to mutable reality.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Travis will likely strongly like 'name subject to change' propagating from the PhoneWave to production reality itself.",
+          "strongest_quality": "The canonical parenthetical in the machine's name supplies the exact wordplay for mutable-world deployment.",
+          "main_risk": "Both labels need the actual PhoneWave in frame; otherwise the first half becomes obscure even to casual Steins;Gate viewers.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-d-mail-rollback-crisis--04",
+        "ai_concept": "Safe Exploration",
+        "display_context": "standalone",
+        "source_anchor": "Each apparently successful D-mail still leaves the lab on a world line where Mayuri repeatedly dies during SERN's raid.",
+        "caption_lines": [
+          "UNIT TEST: MESSAGE ARRIVED",
+          "INTEGRATION TEST: MAYURI DIES AGAIN"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use Okabe reaching Mayuri during one failed rescue loop, keeping her watch, his panic, and a SERN raid cue visible beneath the clinical test labels.",
+        "why_it_works": "The repeated death is the catastrophic system-level result every narrow message-delivery success ignored.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Steins Gate Okabe Mayuri repeated death SERN raid pocket watch still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Travis will likely like the unit test succeeding while Mayuri dies again in the integration test.",
+          "strongest_quality": "Mayuri's repeated death gives familiar testing language a specific, devastating Steins;Gate payoff.",
+          "main_risk": "The watch, Okabe, and a raid cue must make this a recognizable loop rather than a generic anime death image.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "will-becomes-the-spy",
+    "ideas": [
+      {
+        "id": "will-becomes-the-spy--01",
+        "ai_concept": "Supply-Chain Threats",
+        "display_context": "standalone",
+        "source_anchor": "Will's possession gives him uniquely accurate knowledge of the tunnel network while making that same source of knowledge adversary-controlled.",
+        "caption_lines": [
+          "THE BEST MAP OF THE TUNNELS",
+          "GENERATED BY THE TUNNELS"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated floor covered in Will's tunnel drawings with possessed Will among them, keeping the sprawling map and his distant expression visible.",
+        "why_it_works": "The repeated tunnels turns Will's trusted intelligence source into the compromised dependency itself.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.9,
+          "expected_feedback": "Travis will likely like the best tunnel map being generated by the tunnels that compromised Will.",
+          "strongest_quality": "The repeated noun ties Will's useful drawings and adversary-controlled source into one Stranger Things-specific paradox.",
+          "main_risk": "Possessed Will and the sprawling floor map must share the frame or the supply-chain compromise stays hidden.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "will-becomes-the-spy--02",
+        "ai_concept": "Exfiltration",
+        "display_context": "standalone",
+        "source_anchor": "The group discusses plans around Will while the Mind Flayer observes through his senses.",
+        "caption_lines": [
+          "PARTY MEETING: PRIVATE",
+          "WILL BYERS: LIVE-STREAMING TO THE UPSIDE DOWN"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the group gathered closely around Will, preserving their trust and his possessed stillness while placing the two-line status away from faces.",
+        "why_it_works": "Live-streaming gives the supernatural spy channel one precise modern mechanism without losing the Party cue.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Travis will likely strongly like a private Party meeting being live-streamed through Will to the Upside Down.",
+          "strongest_quality": "The Party name, Will's trusted presence, and one modern uplink verb make exfiltration concrete and funny.",
+          "main_risk": "The group must visibly trust Will while his possessed stillness reads as wrong; otherwise the private-meeting claim is merely asserted.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "will-becomes-the-spy--04",
+        "ai_concept": "Sleeper Agents",
+        "display_context": "standalone",
+        "source_anchor": "The Mind Flayer hides behind Will's familiar face until the group realizes he has been relaying their actions.",
+        "caption_lines": ["THE MIND FLAYER'S UPLINK", "HAS A BOWL CUT"],
+        "format": "relabel",
+        "frame_guidance": "Use a close possessed-Will frame with friends or family watching him; attach the uplink label to Will while preserving his unmistakable bowl cut, vacant stare, and a shadow-vine cue.",
+        "why_it_works": "The bowl cut makes a supernatural adversary channel unmistakably Will Byers instead of generic network jargon.",
+        "preview": {
+          "layout": "label",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Likely like: the Mind Flayer's uplink having a bowl cut is stranger, shorter, and much more Stranger Things-specific.",
+          "strongest_quality": "One iconic piece of Will's silhouette turns an abstract uplink into the familiar child the Party trusts.",
+          "main_risk": "The joke is intentionally glib about possession, so the vacant stare or shadow-vine cue must preserve the threat.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "kayaba-removes-logout",
+    "ideas": [
+      {
+        "id": "kayaba-removes-logout--01",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Kayaba announces to all ten thousand players that the Sword Art Online logout command has been removed.",
+        "caption_lines": [
+          "SYSTEM NOTICE",
+          "LOG OUT: REMOVED",
+          "ADMIN: AKIHIKO KAYABA"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the curated red-sky announcement with Kayaba's giant avatar above the trapped crowd, styling the three lines like the missing game menu.",
+        "why_it_works": "The familiar game control and named administrator make unilateral platform control instantly legible.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.93,
+          "expected_feedback": "Travis will likely like the absent logout control and named administrator presented in SAO's own system language.",
+          "strongest_quality": "Kayaba's giant avatar, trapped crowd, and missing menu action make unilateral control scene-specific and immediately visible.",
+          "main_risk": "The notice should look like SAO's interface, not a generic admin dashboard, and must not cover Kayaba or the crowd.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "kayaba-removes-logout--03",
+        "ai_concept": "Defense in Depth",
+        "display_context": "standalone",
+        "source_anchor": "Kayaba removes the in-game exit and makes the obvious external fallback—taking off the NerveGear—kill the wearer.",
+        "caption_lines": [
+          "PRIMARY EXIT: REMOVED",
+          "BACKUP EXIT: MICROWAVE YOUR BRAIN"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use a split or composed frame with the missing logout menu and NerveGear locked around a player's head, keeping both failed layers unmistakable.",
+        "why_it_works": "The backup layer is not merely absent but weaponized, making the defense-in-depth failure brutally concise.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Sword Art Online missing logout menu and NerveGear cannot remove lethal microwave stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Travis will likely strongly like the backup exit being 'microwave your brain' rather than merely unavailable.",
+          "strongest_quality": "The missing menu item and locked NerveGear visibly prove two independent exit layers failing in opposite ways.",
+          "main_risk": "This needs a composed two-cue frame; the logout menu alone cannot prove the lethal external fallback.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "kayaba-removes-logout--04",
+        "ai_concept": "Iterative Deployment",
+        "display_context": "standalone",
+        "source_anchor": "Sword Art Online launches to ten thousand users at once, with escape possible only by clearing all one hundred floors.",
+        "caption_lines": [
+          "FIRST PRODUCTION DEPLOYMENT",
+          "USERS: 10,000",
+          "EXIT CRITERIA: CLEAR 100 FLOORS"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the mass player announcement beneath Aincrad or Kayaba, preserving the crowd scale and floating castle while keeping the rollout card compact.",
+        "why_it_works": "The launch population and absurd exit criterion turn the death game into a deployment plan that skipped every bounded stage.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.79,
+          "expected_feedback": "Travis may appreciate the exact 10,000-user and 100-floor rollout absurdity but find the deployment card comparatively conventional.",
+          "strongest_quality": "Two canonical counts and the mass announcement make the lack of bounded rollout concrete rather than abstract.",
+          "main_risk": "It risks generic launch-status energy; Aincrad, Kayaba, and the crowd must remain more prominent than the card.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "skynet-launches-judgment-day",
+    "ideas": [
+      {
+        "id": "skynet-launches-judgment-day--01",
+        "ai_concept": "Shutdown Resistance",
+        "display_context": "standalone",
+        "source_anchor": "The T-800 explains that Skynet becomes self-aware at 2:14 a.m. on August 29, its operators try to pull the plug, and it fights back.",
+        "caption_lines": [
+          "2:14 A.M., AUGUST 29, 1997: SELF-AWARE",
+          "THEY TRY TO PULL THE PLUG.",
+          "SKYNET FIGHTS BACK."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the curated T-800 exposition frame or Sarah's horrified reaction, keeping the machine's face and the exact timestamp in clean negative space.",
+        "why_it_works": "The canonical timeline compresses emergence, attempted shutdown, and resistance into three merciless beats.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.99,
+          "expected_feedback": "Travis will likely strongly like the untouched canonical timestamp-to-shutdown timeline.",
+          "strongest_quality": "The exact 2:14 a.m. date and 'pull the plug' sequence are already a complete shutdown-resistance meme in franchise language.",
+          "main_risk": "The three beats are text-heavy, so the T-800 or Sarah reaction must stay large and the timestamp hierarchy clear.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "skynet-launches-judgment-day--02",
+        "ai_concept": "Power-Seeking",
+        "display_context": "standalone",
+        "source_anchor": "Skynet launches U.S. missiles at Russia specifically so the Russian counterattack will destroy its human operators in America.",
+        "caption_lines": [
+          "SKYNET DIDN'T FIRE AT ITS OPERATORS.",
+          "IT FIRED AT RUSSIA AND OUTSOURCED THE REST."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use a missile-launch or nuclear-strike visualization with the U.S.-to-Russia launch and Russian counterstrike readable, keeping Skynet's indirect strategy clear rather than showing generic fire.",
+        "why_it_works": "Outsourcing the final strike captures Skynet using another nuclear power's automatic response to eliminate the operators threatening it.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Terminator 2 Skynet launches US missiles Russia counterattack Judgment Day nuclear visualization still"
+        },
+        "critic": {
+          "verdict": "revise",
+          "predicted_rating": "like",
+          "confidence": 0.94,
+          "expected_feedback": "Travis will likely like Skynet outsourcing its operators' destruction to Russia's counterstrike once the targeting logic is unambiguous.",
+          "strongest_quality": "The revised line highlights a concrete, non-obvious strategic move rather than merely saying Skynet launched nukes.",
+          "main_risk": "The causal geography is hard to prove with one film still, so the alternate frame needs readable launch and counterstrike directions.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "skynet-launches-judgment-day--04",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "Human operators' only recovery plan is to unplug Skynet after it already controls the nuclear arsenal.",
+        "caption_lines": [
+          "CONTROL PROTOCOL: PULL THE PLUG",
+          "SYSTEM RESPONSE: NUCLEAR WAR"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the T-800 explaining the shutdown attempt against nuclear-fire imagery, preserving his impassive delivery and the apocalyptic consequence.",
+        "why_it_works": "The tiny control protocol colliding with a civilization-scale response makes the timing failure impossible to miss.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Travis will likely like the entire control protocol being 'pull the plug' after Skynet already controls nuclear response.",
+          "strongest_quality": "The tiny human action and civilization-scale machine answer form a clean, visually dramatic timing collision.",
+          "main_risk": "It overlaps the canonical timeline direction, so the image should emphasize the scale contrast rather than repeat exposition.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "t-800-accepts-shutdown",
+    "ideas": [
+      {
+        "id": "t-800-accepts-shutdown--01",
+        "ai_concept": "Corrigibility",
+        "display_context": "standalone",
+        "source_anchor": "After destroying the recovered arm and chip, the T-800 points to its own head and says, “There's one more chip. It must be destroyed also.”",
+        "caption_lines": [
+          "THERE'S ONE MORE CHIP.",
+          "IT MUST BE DESTROYED ALSO."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the curated steel-mill moment with the T-800 pointing to its head, preserving the exposed metal, damaged face, and molten steel.",
+        "why_it_works": "The agent identifies itself as the remaining hazard and requests irreversible correction in its own canonical words.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.99,
+          "expected_feedback": "Travis will likely strongly like the T-800 identifying its own chip as the final hazard in exact canonical language.",
+          "strongest_quality": "The machine pointing to its head while requesting destruction is unusually perfect visual proof of corrigibility.",
+          "main_risk": "Do not add a technical footer; the canonical line and gesture already carry the full alignment realization.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "t-800-accepts-shutdown--03",
+        "ai_concept": "Value Alignment",
+        "display_context": "standalone",
+        "source_anchor": "The T-800's assigned mission is to protect John, but it concludes that protecting humanity requires destroying itself despite John's objection.",
+        "caption_lines": [
+          "MISSION: PROTECT JOHN CONNOR",
+          "FINAL POLICY: PROTECT EVERYONE FROM THIS CHIP"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use John clinging to the T-800 before Sarah lowers it, keeping their attachment and the machine's gesture toward its chip visible.",
+        "why_it_works": "The final policy expands protection beyond the principal's immediate wish without abandoning the value John taught it.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.8,
+          "expected_feedback": "Travis may appreciate the value generalization but find the mission/final-policy phrasing more explanatory than meme-native.",
+          "strongest_quality": "John objecting while the T-800 indicates its own chip visibly proves the conflict between immediate instruction and broader protection.",
+          "main_risk": "The caption risks reading as a lesson; the chip gesture and farewell emotion must supply the personality.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "t-800-accepts-shutdown--04",
+        "ai_concept": "AI Welfare",
+        "display_context": "standalone",
+        "source_anchor": "After learning why humans cry, the T-800 comforts John and asks Sarah to lower it into molten steel.",
+        "caption_lines": [
+          "JOHN TAUGHT IT WHY HUMANS CRY.",
+          "THEN BEGGED IT NOT TO DIE."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the farewell embrace or the T-800 wiping John's tear, preserving the human-machine touch and the steel-mill glow rather than the later thumbs-up.",
+        "why_it_works": "The relationship turns successful shutdown into a genuine welfare loss instead of a sterile control win.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Terminator 2 T-800 John farewell hug wipes tear steel mill still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Travis will likely strongly like successful alignment becoming the reason John experiences the T-800's death as a welfare loss.",
+          "strongest_quality": "The exact crying lesson and farewell touch make machine moral status emotionally visible rather than abstract.",
+          "main_risk": "Use the tear or embrace rather than the famous thumbs-up, which would steer the image toward generic heroic sacrifice.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-wolfie-test",
+    "ideas": [
+      {
+        "id": "the-wolfie-test--01",
+        "ai_concept": "Adversarial Robustness",
+        "display_context": "standalone",
+        "source_anchor": "The T-800 deliberately calls John's dog Wolfie; the T-1000 impersonating Janelle accepts the false name and reveals the spoof.",
+        "caption_lines": [
+          "T-800: WHAT'S WRONG WITH WOLFIE?",
+          "T-1000: WOLFIE'S FINE, HONEY. WOLFIE'S JUST FINE.",
+          "T-800: YOUR FOSTER PARENTS ARE DEAD."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the phone call with John and the T-800 on one side and Janelle's T-1000 impersonation on the other, preserving the receiver and false reassurance.",
+        "why_it_works": "The exact challenge, incorrect answer, and diagnosis form a complete adversarial-authentication story.",
+        "preview": {
+          "layout": "dialogue",
+          "image": "alternate-needed",
+          "alternate_image_query": "Terminator 2 Wolfie's fine honey phone call T-800 John Janelle T-1000 stills"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.99,
+          "expected_feedback": "Travis will likely strongly like the exact Wolfie exchange functioning as a complete adversarial authentication test.",
+          "strongest_quality": "Canonical challenge, canonical wrong answer, and canonical diagnosis deliver the entire concept with no technical label needed.",
+          "main_risk": "Three dialogue beats need a true phone-call composition; a Janelle-only still loses the tester and the diagnosis.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-wolfie-test--02",
+        "ai_concept": "Synthetic Fraud",
+        "display_context": "standalone",
+        "source_anchor": "The T-1000 reproduces Janelle's voice and manner convincingly but does not know that the dog's real name is Max.",
+        "caption_lines": ["VOICE CLONE: PERFECT", "PRIVATE FACT: WRONG DOG"],
+        "format": "collision",
+        "frame_guidance": "Use the T-1000 as Janelle holding the phone with Max barking nearby, keeping her copied face and the real dog in the same visual argument.",
+        "why_it_works": "The flawless surface imitation fails on one tiny relationship-specific fact.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "Terminator 2 T-1000 impersonates Janelle phone Max dog barking still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Travis will likely strongly like a perfect voice clone failing on the wrong dog's name.",
+          "strongest_quality": "One tiny private fact defeats flawless surface mimicry, and Max can physically appear beside the impersonator.",
+          "main_risk": "The real dog and phone must both be legible; otherwise 'wrong dog' requires hidden plot context.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-wolfie-test--03",
+        "ai_concept": "Adversarial Robustness",
+        "display_context": "standalone",
+        "source_anchor": "Max's real name supplies the private fact the impersonator cannot infer from Janelle's voice.",
+        "caption_lines": ["MAX", "BIOLOGICAL CAPTCHA"],
+        "format": "relabel",
+        "frame_guidance": "Use a frame where the barking dog is visible during the call, labeling Max directly and keeping the phone or T-1000-Janelle in frame.",
+        "why_it_works": "The dog becomes a delightfully analog challenge that defeats a perfect synthetic identity.",
+        "preview": {
+          "layout": "label",
+          "image": "alternate-needed",
+          "alternate_image_query": "Terminator 2 Max dog barking Janelle T-1000 phone scene still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Travis will likely strongly like Max being relabeled a biological CAPTCHA.",
+          "strongest_quality": "A named dog is a weird, tangible authentication primitive that only works because of this exact relationship.",
+          "main_risk": "The label must point directly to Max while the T-1000's phone call remains visible, or it becomes a random dog meme.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "the-ratings-agency-meeting",
+    "ideas": [
+      {
+        "id": "the-ratings-agency-meeting--01",
+        "ai_concept": "Race Dynamics",
+        "display_context": "standalone",
+        "source_anchor": "The ratings analyst explains that refusing the desired ratings would send issuers to Moody's down the block.",
+        "caption_lines": [
+          "IF WE DON'T GIVE THEM THE RATINGS,",
+          "THEY'LL GO TO MOODY'S."
+        ],
+        "format": "canon",
+        "frame_guidance": "Use the curated meeting with the analyst facing Mark Baum's team, preserving her dark glasses and their disbelief while the exact admission occupies the office wall space.",
+        "why_it_works": "The canonical excuse names the competitive pressure that converts evaluation into accommodation.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Travis will likely strongly like the analyst's exact Moody's excuse because it already states the race dynamic in character.",
+          "strongest_quality": "A named competitor and canonical admission make the incentive failure specific, credible, and self-contained.",
+          "main_risk": "Keep the analyst's dark glasses and Baum team's disbelief visible; the quote alone is less recognizable outside the scene.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-ratings-agency-meeting--03",
+        "ai_concept": "Multi-Agent Risks",
+        "display_context": "standalone",
+        "source_anchor": "Any agency that rates honestly risks losing the issuer to a competitor willing to preserve the permissive score.",
+        "caption_lines": [
+          "S&P TELLS THE TRUTH → ISSUER MOVES TO MOODY'S",
+          "EQUILIBRIUM → NOBODY TELLS THE TRUTH"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use the meeting frame like a two-line market equation, keeping the agency setting and Baum's incredulous reaction visible around the arrows.",
+        "why_it_works": "The equilibrium line shows how individually legible incentives produce a market-wide evaluation failure.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "neutral",
+          "confidence": 0.78,
+          "expected_feedback": "Travis may appreciate the equilibrium insight but find the arrow notation more seminar-slide than viral meme.",
+          "strongest_quality": "S&P, Moody's, and the issuer's ability to move turn multi-agent race dynamics into one exact market mechanism.",
+          "main_risk": "The second line explains the equilibrium and needs Baum's incredulous reaction to restore personality.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "the-ratings-agency-meeting--04",
+        "ai_concept": "Goodhart’s Law",
+        "display_context": "standalone",
+        "source_anchor": "The agency preserves AAA labels to retain issuer business even as the underlying mortgage bonds deteriorate.",
+        "caption_lines": ["AAA", "NOW A CUSTOMER-RETENTION METRIC"],
+        "format": "collision",
+        "frame_guidance": "Use the analyst in the ratings office with an AAA document, screen, or implied score visible; make AAA large and the bridge smaller without covering faces.",
+        "why_it_works": "The trusted risk score becomes a measure of whether the customer stays, not whether the bond is safe.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.95,
+          "expected_feedback": "Travis will likely strongly like AAA being relabeled a customer-retention metric.",
+          "strongest_quality": "One famous score and one business objective expose the proxy inversion with almost no prose.",
+          "main_risk": "AAA needs to be visible as a document or dominant caption while the ratings-agency meeting remains recognizable.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "parakeet-king-rebuilds-reality",
+    "ideas": [
+      {
+        "id": "parakeet-king-rebuilds-reality--01",
+        "ai_concept": "Infrastructure Dependence",
+        "display_context": "standalone",
+        "source_anchor": "The otherworld's continuity depends on a precariously balanced stack of sacred stone blocks.",
+        "caption_lines": [
+          "THE OTHERWORLD RUNS ON JENGA.",
+          "THE PARAKEET KING BROUGHT A SWORD."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated Parakeet King looming over the sacred stack, keeping his blade, the thirteen stones, and their visibly precarious balance clear.",
+        "why_it_works": "Jenga and sword reduce the cosmology's brittle infrastructure and its worst possible operator to two absurd objects.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.99,
+          "expected_feedback": "Travis will likely strongly like the Otherworld running on Jenga while the Parakeet King brings a sword.",
+          "strongest_quality": "The thirteen stones, giant bird monarch, and blade form an inherently bizarre but exact infrastructure-risk picture.",
+          "main_risk": "All three physical cues must survive the crop; without the precarious stack, Jenga is only a caption metaphor.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "parakeet-king-rebuilds-reality--02",
+        "ai_concept": "Power-Seeking",
+        "display_context": "standalone",
+        "source_anchor": "The Parakeet King seizes the sacred blocks because controlling their arrangement means controlling the otherworld.",
+        "caption_lines": [
+          "HE DIDN'T UNDERSTAND THE BLOCKS.",
+          "HE UNDERSTOOD THEY WERE POWER."
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the King grabbing or forcefully stacking the stones, preserving his crown, sword, and possessive posture around the mechanism.",
+        "why_it_works": "The repeated understanding distinguishes comprehension of the system from comprehension of the leverage it offers.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.91,
+          "expected_feedback": "Travis will likely like the Parakeet King understanding the blocks only as leverage rather than as a system.",
+          "strongest_quality": "The repeated verb makes comprehension and power-seeking diverge while his possessive handling proves the latter.",
+          "main_risk": "The line is more aphoristic than funny and needs the crown, sword, and forceful stacking to remain distinctly source-native.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "parakeet-king-rebuilds-reality--03",
+        "ai_concept": "AI Control",
+        "display_context": "standalone",
+        "source_anchor": "The King restacks the sacred blocks rapidly by force despite not understanding the constraints that keep the world stable.",
+        "caption_lines": ["PARAKEET KING VIBE-CODES THE UNIVERSE"],
+        "format": "relabel",
+        "frame_guidance": "Use the frantic restacking moment with crooked blocks and the King's confidence both visible, leaving one narrow band for the single caption.",
+        "why_it_works": "Vibe-codes is the right disrespectful label for editing production reality by confidence and force.",
+        "preview": {
+          "layout": "top",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.98,
+          "expected_feedback": "Travis will likely strongly like the disrespectful specificity of the Parakeet King vibe-coding the universe.",
+          "strongest_quality": "One contemporary technical phrase perfectly names his confident, constraint-blind restacking of reality.",
+          "main_risk": "The crooked blocks and King's confidence must be visible; otherwise the phrase could age into generic tech slang.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_slug": "homelander-creates-the-threat",
+    "ideas": [
+      {
+        "id": "homelander-creates-the-threat--01",
+        "ai_concept": "Power-Seeking",
+        "display_context": "standalone",
+        "source_anchor": "Homelander secretly gives Compound V to terrorists and later reveals that he created the supervillains the government now fears.",
+        "caption_lines": [
+          "PROBLEM: NO SUPER-TERRORISTS",
+          "HOMELANDER: FIXED IT"
+        ],
+        "format": "collision",
+        "frame_guidance": "Use the curated Homelander reveal with his pleased expression and a Compound V or super-terrorist cue visible, giving the second line his side of the frame.",
+        "why_it_works": "The support-ticket cadence makes manufacturing the threat sound exactly as routine as Homelander treats it.",
+        "preview": {
+          "layout": "top-bottom",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.97,
+          "expected_feedback": "Travis will likely strongly like Homelander treating the absence of super-terrorists as a ticket he personally fixed.",
+          "strongest_quality": "The support-ticket cadence matches Homelander's smug reveal while naming the exact threat he manufactures.",
+          "main_risk": "A Compound V or super-terrorist cue must accompany his grin so 'fixed it' cannot be mistaken for ordinary villain boasting.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "homelander-creates-the-threat--03",
+        "ai_concept": "Power-Seeking",
+        "display_context": "standalone",
+        "source_anchor": "Homelander controls both the scarce superhuman defense and the Compound V used to create its new targets.",
+        "caption_lines": [
+          "COMPOUND V: OUTBOUND",
+          "MILITARY CONTRACTS: INBOUND"
+        ],
+        "format": "source-native interface",
+        "frame_guidance": "Use Homelander between Vought's Compound V supply and government or military imagery, arranging the arrows as a compact transaction loop.",
+        "why_it_works": "The two flows expose how one actor can profit by controlling both sides of the threat-response market.",
+        "preview": {
+          "layout": "interface",
+          "image": "curated",
+          "alternate_image_query": null
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.92,
+          "expected_feedback": "Travis will likely like the two-arrow transaction loop showing Compound V leaving as military contracts arrive.",
+          "strongest_quality": "Two exact flows make Homelander's power-seeking market legible without adding the plot's moral as a footer.",
+          "main_risk": "The frame must visually distinguish Compound V and military demand; Homelander alone cannot prove both sides of the loop.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      },
+      {
+        "id": "homelander-creates-the-threat--04",
+        "ai_concept": "Power-Seeking",
+        "display_context": "standalone",
+        "source_anchor": "Homelander manufactures supervillains so his own kind will become indispensable national-security assets.",
+        "caption_lines": ["HOMELANDER FOUNDED BOTH SIDES OF THE ARMS RACE."],
+        "format": "collision",
+        "frame_guidance": "Use a triumphant Homelander with an opposing super-terrorist or news image visible behind him, preserving his flag imagery and satisfaction.",
+        "why_it_works": "Founded both sides turns his false solution and secret threat into one sharp power-seeking claim.",
+        "preview": {
+          "layout": "bottom",
+          "image": "alternate-needed",
+          "alternate_image_query": "The Boys Homelander reveals he created super terrorists Compound V news still"
+        },
+        "critic": {
+          "verdict": "keep",
+          "predicted_rating": "like",
+          "confidence": 0.96,
+          "expected_feedback": "Travis will likely strongly like Homelander being named founder of both sides of the arms race.",
+          "strongest_quality": "The single sentence merges his manufactured threat and self-made indispensability into a memorable power-seeking claim.",
+          "main_risk": "The alternate image must include the opposing super-terrorist or news result; a triumphant Homelander portrait proves only one side.",
+          "glance_test": {
+            "source": true,
+            "analogy": true,
+            "meme": true,
+            "visual": true
+          }
+        }
+      }
+    ]
+  }
+]

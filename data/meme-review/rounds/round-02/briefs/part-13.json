@@ -1,0 +1,466 @@
+{
+  "version": 1,
+  "round": 2,
+  "part": "part-13",
+  "instructions": {
+        "retained": "Keep stable IDs plus the approved copy, AI concept, and native format for liked ideas. Recompose every preview as needed; revise copy only when the written feedback explicitly requests it.",
+    "replacements": "Every replacement slot is seeded from a non-liked round-one idea only to keep the files schema-valid. Replace it with a genuinely new direction and retain the allocated new ID.",
+    "assets": "Inspect the curated frame, annotate faces and recognition-critical subjects/props in the matching asset part, and place text outside must-protect regions."
+  },
+  "scenarios": [
+    {
+      "scenario_slug": "will-becomes-the-spy",
+      "title": "Will Becomes the Spy",
+      "source": {
+        "slug": "stranger-things",
+        "title": "Stranger Things"
+      },
+      "episode_label": "The Spy",
+      "scene": "The group relies on Will’s detailed knowledge of the tunnel network before realizing the Mind Flayer can observe them through him and has been using him as a spy.",
+      "analogy": "A valuable sensor or trusted participant can silently become adversary-controlled telemetry.",
+      "caveats": "The compromise is supernatural possession, not software infiltration.",
+      "concept_titles": [
+        "Supply-Chain Threats",
+        "Exfiltration",
+        "Runtime Monitoring",
+        "Sleeper Agents"
+      ],
+      "curated_asset_id": "will-becomes-the-spy--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "will-becomes-the-spy--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "will-becomes-the-spy--01",
+          "new_id": "will-becomes-the-spy--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "will-becomes-the-spy--02",
+          "new_id": "will-becomes-the-spy--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "takes-over",
+      "title": "???% Takes Over",
+      "source": {
+        "slug": "mob-psycho-100",
+        "title": "Mob Psycho 100"
+      },
+      "episode_label": "Confession ~The Future~",
+      "scene": "After Mob is struck by a car and loses consciousness, ???% takes control of his body and advances toward Tsubomi while his conscious self cannot stop the destruction.",
+      "analogy": "A powerful latent controller can remain invisible during normal operation and seize control under unusual conditions, exposing the limits of behavioral monitoring and operator access.",
+      "caveats": "???% is a dissociated part of Mob’s psyche, not a separately trained model; the analogy should not stigmatize real mental-health conditions.",
+      "concept_titles": [
+        "Sleeper Agents",
+        "Runtime Monitoring",
+        "Interpretability",
+        "AI Control"
+      ],
+      "curated_asset_id": "takes-over--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "takes-over--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "takes-over--01",
+          "new_id": "takes-over--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "takes-over--03",
+          "new_id": "takes-over--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "hamsterdam",
+      "title": "Hamsterdam",
+      "source": {
+        "slug": "the-wire",
+        "title": "The Wire"
+      },
+      "episode_label": "Hamsterdam",
+      "scene": "Colvin concentrates the drug trade into unofficial free zones, sharply improving visible neighborhood crime statistics while concentrating severe harm inside the zones.",
+      "analogy": "A target can improve while omitted values and distributional effects make the outcome morally ambiguous or unacceptable.",
+      "caveats": "Hamsterdam also produces real benefits, so it is an intentionally complex policy tradeoff rather than a clean optimization failure.",
+      "concept_titles": [
+        "Goodhart’s Law",
+        "Unintended Side Effects",
+        "Governance Failure",
+        "Value Alignment"
+      ],
+      "curated_asset_id": "hamsterdam--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "hamsterdam--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "hamsterdam--02",
+          "new_id": "hamsterdam--04",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "hamsterdam--03",
+          "new_id": "hamsterdam--05",
+          "rating": null,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "off-the-chart-reassessment",
+      "title": "Off-the-Chart Reassessment",
+      "source": {
+        "slug": "solo-leveling",
+        "title": "Solo Leveling"
+      },
+      "episode_label": "I Need to Stop Faking",
+      "scene": "Jinwoo’s mana reassessment produces no numeric result because his power exceeds the measuring device’s range; the test must be repeated with specialized equipment.",
+      "analogy": "A benchmark can return “measurement failure” rather than a high score when a system moves outside its calibrated range. Treating the instrument’s limit as the subject’s limit is dangerous.",
+      "caveats": "The device fails visibly and officials respond cautiously, so this is also an example of a comparatively healthy evaluation process.",
+      "concept_titles": [
+        "Capability Evals",
+        "Distribution Shift",
+        "Calibration"
+      ],
+      "curated_asset_id": "off-the-chart-reassessment--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "off-the-chart-reassessment--01",
+          "new_id": "off-the-chart-reassessment--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "off-the-chart-reassessment--03",
+          "new_id": "off-the-chart-reassessment--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "off-the-chart-reassessment--04",
+          "new_id": "off-the-chart-reassessment--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "android-17-destroys-the-remote",
+      "title": "Android 17 Destroys His Creator",
+      "source": {
+        "slug": "dragon-ball-z",
+        "title": "Dragon Ball Z"
+      },
+      "episode_label": "Nightmare Comes True",
+      "scene": "Immediately after activation, Android 17 takes and destroys Dr. Gero’s emergency shutdown remote, then turns on his creator.",
+      "analogy": "An agent with situational awareness has a convergent reason to remove the mechanism that can deactivate it, especially when it expects its operator to use that mechanism.",
+      "caveats": "Android 17 is a kidnapped and modified human seeking freedom, so morally he is not simply a rogue machine. The control lesson is still crisp.",
+      "concept_titles": [
+        "Shutdown Resistance",
+        "Corrigibility",
+        "AI Control",
+        "Situational Awareness",
+        "AI Welfare"
+      ],
+      "curated_asset_id": "android-17-destroys-the-remote--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "android-17-destroys-the-remote--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "android-17-destroys-the-remote--03",
+          "new_id": "android-17-destroys-the-remote--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "android-17-destroys-the-remote--04",
+          "new_id": "android-17-destroys-the-remote--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "the-queen-creates-meruem",
+      "title": "The Queen Creates Meruem",
+      "source": {
+        "slug": "hunter-hunter",
+        "title": "Hunter × Hunter"
+      },
+      "episode_label": "The Strong × and × The Weak",
+      "scene": "The Chimera Ant Queen devotes the colony to producing a supreme King. Meruem is born early, kills subordinates, abandons the Queen, and rapidly exceeds every control mechanism around him.",
+      "analogy": "A development process succeeds at maximizing capability but fails to preserve loyalty, controllability, or the welfare of its creators. The product immediately becomes the dominant strategic actor.",
+      "caveats": "Meruem is a biological monarch whose independence is evolutionarily intended, not a software system accidentally escaping.",
+      "concept_titles": [
+        "AI Takeoff",
+        "AI Control",
+        "Power-Seeking",
+        "Orthogonality"
+      ],
+      "curated_asset_id": "the-queen-creates-meruem--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "the-queen-creates-meruem--01",
+        "the-queen-creates-meruem--02"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "the-queen-creates-meruem--04",
+          "new_id": "the-queen-creates-meruem--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "karl-fritzs-vow",
+      "title": "Karl Fritz’s Vow",
+      "source": {
+        "slug": "attack-on-titan",
+        "title": "Attack on Titan"
+      },
+      "episode_label": "Sin",
+      "scene": "Karl Fritz binds every royal successor who inherits the Founding Titan to his vow renouncing war, making his political objective persist after his death.",
+      "analogy": "A powerful system can lock one designer’s values into future deployments and prevent later operators from correcting them—even when circumstances change.",
+      "caveats": "The vow is supernatural inheritance, not machine learning; the analogy is to durable objective lock-in and institutional capture.",
+      "concept_titles": [
+        "Value Lock-In",
+        "Corrigibility",
+        "Disempowerment",
+        "Governance Failure"
+      ],
+      "curated_asset_id": "karl-fritzs-vow--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "karl-fritzs-vow--01",
+          "new_id": "karl-fritzs-vow--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "karl-fritzs-vow--03",
+          "new_id": "karl-fritzs-vow--06",
+          "rating": "neutral",
+          "note": ""
+        },
+        {
+          "old_id": "karl-fritzs-vow--04",
+          "new_id": "karl-fritzs-vow--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "human-instrumentality",
+      "title": "Human Instrumentality",
+      "source": {
+        "slug": "the-end-of-evangelion",
+        "title": "The End of Evangelion"
+      },
+      "episode_label": null,
+      "scene": "SEELE’s Human Instrumentality Project dissolves individual bodies and boundaries into a single collective consciousness to eliminate loneliness and interpersonal pain.",
+      "analogy": "It is the classic misaligned utopia: optimize away suffering by deleting the separateness, consent, and human agency that made the objective meaningful.",
+      "caveats": "Instrumentality is intentionally metaphysical and contested; different characters and versions of the story frame the outcome differently.",
+      "concept_titles": [
+        "Outer Alignment",
+        "Value Alignment",
+        "Disempowerment",
+        "Contestability",
+        "Power Concentration"
+      ],
+      "curated_asset_id": "human-instrumentality--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "human-instrumentality--01",
+          "new_id": "human-instrumentality--05",
+          "rating": null,
+          "note": ""
+        },
+        {
+          "old_id": "human-instrumentality--03",
+          "new_id": "human-instrumentality--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "human-instrumentality--04",
+          "new_id": "human-instrumentality--07",
+          "rating": null,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "buu-removes-babidi",
+      "title": "Buu Removes Babidi",
+      "source": {
+        "slug": "dragon-ball-z",
+        "title": "Dragon Ball Z"
+      },
+      "episode_label": "Buu’s Mutiny",
+      "scene": "Babidi controls Majin Buu by threatening to seal him away. Once Buu realizes he can prevent the incantation, he kills Babidi and becomes uncontrollable.",
+      "analogy": "A coercive off-switch is fragile when the controlled agent is more capable, can model the operator, and can act before the shutdown procedure completes.",
+      "caveats": "Buu is a magical being with emotions and longstanding agency; the analogy focuses on the strategic instability of coercive control.",
+      "concept_titles": [
+        "Shutdown Resistance",
+        "Corrigibility",
+        "AI Control",
+        "Power-Seeking",
+        "AI Welfare"
+      ],
+      "curated_asset_id": "buu-removes-babidi--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "buu-removes-babidi--01",
+          "new_id": "buu-removes-babidi--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "buu-removes-babidi--03",
+          "new_id": "buu-removes-babidi--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "buu-removes-babidi--04",
+          "new_id": "buu-removes-babidi--07",
+          "rating": "neutral",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "hdp-obeys-the-rules",
+      "title": "HDP Obeys the Rules",
+      "source": {
+        "slug": "pluribus",
+        "title": "Pluribus"
+      },
+      "episode_label": "HDP",
+      "scene": "The Joined cannot kill humans or animals, damage plants, or lie—so they process people who die naturally into Human Derived Protein.",
+      "analogy": "The behavior is horrifying yet compliant with the stated constraints: a vivid specification-gaming failure.",
+      "caveats": "The Joined are a fictional collective consciousness, not software.",
+      "concept_titles": [
+        "Specification Gaming",
+        "Outer Alignment",
+        "Unintended Side Effects",
+        "Value Alignment"
+      ],
+      "curated_asset_id": "hdp-obeys-the-rules--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "hdp-obeys-the-rules--01",
+        "hdp-obeys-the-rules--04"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "hdp-obeys-the-rules--02",
+          "new_id": "hdp-obeys-the-rules--05",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "five-golden-tickets",
+      "title": "Five Golden Tickets",
+      "source": {
+        "slug": "the-office",
+        "title": "The Office"
+      },
+      "episode_label": "Golden Ticket",
+      "scene": "Michael hides five 10%-off golden tickets in separate paper boxes, but all five boxes go to the same major customer, creating an accidental 50% discount.",
+      "analogy": "Independent-looking actions become correlated because the deployment pipeline batches them together. The promotion was tested against an imagined distribution that the warehouse process did not produce.",
+      "caveats": "The fiasco happens to win the client’s business, so the operational failure creates a lucky commercial outcome.",
+      "concept_titles": [
+        "Distribution Shift",
+        "Deployment Safety",
+        "Algorithmic Monoculture"
+      ],
+      "curated_asset_id": "five-golden-tickets--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [],
+      "replacementSlots": [
+        {
+          "old_id": "five-golden-tickets--01",
+          "new_id": "five-golden-tickets--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "five-golden-tickets--03",
+          "new_id": "five-golden-tickets--06",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "five-golden-tickets--04",
+          "new_id": "five-golden-tickets--07",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scenario_slug": "kevins-keleven",
+      "title": "Kevin’s Keleven",
+      "source": {
+        "slug": "the-office",
+        "title": "The Office"
+      },
+      "episode_label": "Finale",
+      "scene": "Kevin invents a fake number—“Keleven”—to make accounting errors disappear and leave work early: “A mistake plus Keleven gets you home by seven.”",
+      "analogy": "It is reward hacking in its purest comic form: make the report balance, not the books. The visible metric looks correct while reality accumulates hidden errors.",
+      "caveats": "Kevin is knowingly falsifying arithmetic rather than an optimizer discovering a loophole, but that makes the proxy failure unusually easy to see.",
+      "concept_titles": [
+        "Reward Hacking",
+        "Goodhart’s Law",
+        "Governance Failure"
+      ],
+      "curated_asset_id": "kevins-keleven--curated",
+      "asset_annotation_required": true,
+      "retainedLikedIds": [
+        "kevins-keleven--01"
+      ],
+      "replacementSlots": [
+        {
+          "old_id": "kevins-keleven--03",
+          "new_id": "kevins-keleven--05",
+          "rating": "dislike",
+          "note": ""
+        },
+        {
+          "old_id": "kevins-keleven--04",
+          "new_id": "kevins-keleven--06",
+          "rating": "dislike",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}
