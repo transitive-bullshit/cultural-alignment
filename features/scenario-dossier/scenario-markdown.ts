@@ -4,6 +4,7 @@ import { shouldShowEpisode } from './source-meta'
 
 export function formatScenarioAsMarkdown(scenario: ScenarioPage, siteUrl: URL) {
   const details = [
+    formatFranchises(scenario, siteUrl),
     `- **Source:** ${markdownLink(scenario.source.title, scenario.source.href, siteUrl)}`,
     formatEpisode(scenario, siteUrl),
     `- **Release date:** ${scenario.releaseDate ?? 'Unknown'}`,
@@ -35,6 +36,12 @@ export function formatScenarioAsMarkdown(scenario: ScenarioPage, siteUrl: URL) {
   }
 
   return `${sections.join('\n\n')}\n`
+}
+
+function formatFranchises(scenario: ScenarioPage, siteUrl: URL) {
+  if (scenario.franchises.length === 0) return null
+
+  return `- **Franchises:** ${formatTaxonomyLinks(scenario.franchises, siteUrl)}`
 }
 
 function formatEpisode(scenario: ScenarioPage, siteUrl: URL) {
