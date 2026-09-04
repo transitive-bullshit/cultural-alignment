@@ -29,7 +29,10 @@ test.describe('gallery introduction motion', () => {
     })
     await expect(canvas).toBeVisible({ timeout: 15_000 })
     await expect(canvas).toHaveAttribute('data-gallery-intro-motion', 'running')
-    await page.clock.pauseAt(await page.evaluate(() => Date.now()))
+    // Keep the target ahead of a slow protocol round trip. The render loop caps
+    // the resulting frame delta, and the assertion below guards the test state.
+    await page.clock.pauseAt(await page.evaluate(() => Date.now() + 5_000))
+    await expect(canvas).toHaveAttribute('data-gallery-intro-motion', 'running')
 
     const viewport = page.viewportSize()
     const canvasWidth = await canvas.getAttribute('width')
