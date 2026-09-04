@@ -28,7 +28,13 @@ export async function generateMetadata(
   const franchise = contentCatalog.getResourcePage('franchise', slug)
 
   return franchise
-    ? resolveContentSocialMetadata(getResourceSocialMetadata(franchise), parent)
+    ? resolveContentSocialMetadata(
+        getResourceSocialMetadata(franchise),
+        parent,
+        {
+          includeImages: false
+        }
+      )
     : {}
 }
 

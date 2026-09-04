@@ -7,8 +7,7 @@ import {
 } from '@/features/content-navigation/media-resource-opengraph-image'
 import { contentCatalog } from '@/lib/content/snapshot'
 
-export const alt =
-  'A Cultural Alignment media source poster with its release year'
+export const alt = 'A Cultural Alignment media franchise image'
 export const size = mediaResourceOpenGraphImageSize
 export const contentType = mediaResourceOpenGraphImageContentType
 
@@ -18,13 +17,12 @@ export default async function Image({
   readonly params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const source = contentCatalog.getResourcePage('source', slug)
+  const franchise = contentCatalog.getResourcePage('franchise', slug)
 
-  if (!source || source.kind !== 'source') notFound()
+  if (!franchise || franchise.kind !== 'franchise') notFound()
 
   return renderMediaResourceOpenGraphImage({
-    image: source.poster,
-    releaseYear: source.releaseDate?.slice(0, 4),
-    title: source.title
+    image: franchise.image,
+    title: franchise.title
   })
 }

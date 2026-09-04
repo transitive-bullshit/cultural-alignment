@@ -314,6 +314,11 @@ function SpatialField({
   const canvasBoundsRef = useRef<DOMRect | null>(null)
   const hoveredSlotRef = useRef<ActiveSlot | null>(null)
   const initializedStateRef = useRef<string | null>(null)
+  const autoMotionLayoutCountRef = useRef(0)
+  const pendingAutoMotionLayoutRef = useRef<{
+    count: number
+    offsetX: number
+  } | null>(null)
   const inertiaBurstActiveRef = useRef(false)
   const inertiaBurstHandledRef = useRef(false)
   const inertiaBurstVelocityRef = useRef(0)
@@ -769,7 +774,14 @@ function SpatialField({
         ? motionRef.current.velocity
         : { x: 0, y: 0 }
     }
-  }, [laneMotion, layout, slotYPositions])
+    if (automaticVelocityActive) {
+      autoMotionLayoutCountRef.current += 1
+      pendingAutoMotionLayoutRef.current = {
+        count: autoMotionLayoutCountRef.current,
+        offsetX: motionRef.current.offset.x
+      }
+    }
+  }, [gl, laneMotion, layout, slotYPositions])
 
   useEffect(() => {
     // Viewport changes may recreate the slot topology; only a new initial item
@@ -1357,6 +1369,16 @@ function SpatialField({
         offset: motionRef.current.offset,
         velocity: { x: 0, y: 0 }
       }
+    }
+    const pendingAutoMotionLayout = pendingAutoMotionLayoutRef.current
+    if (pendingAutoMotionLayout) {
+      setAutoMotionLayoutDiagnostic(
+        gl,
+        pendingAutoMotionLayout.count,
+        pendingAutoMotionLayout.offsetX,
+        motionRef.current.offset.x
+      )
+      pendingAutoMotionLayoutRef.current = null
     }
     const targetWarpSpeed =
       reducedMotion || smoothSizing
@@ -2394,6 +2416,21 @@ function setIntroMotionDiagnostic(
   gl.domElement.dataset.galleryIntroMotion = state
 }
 
+function setAutoMotionLayoutDiagnostic(
+  gl: WebGLRenderer,
+  count: number,
+  previousOffsetX: number,
+  offsetX: number
+) {
+  gl.domElement.dataset.galleryAutoMotionLayoutDirection =
+    offsetX < previousOffsetX
+      ? 'left'
+      : offsetX > previousOffsetX
+        ? 'right'
+        : 'stationary'
+  gl.domElement.dataset.galleryAutoMotionLayoutCount = String(count)
+}
+
 function syncGallerySizingDiagnostics({
   capacityLanes,
   gl,
@@ -2443,6 +2480,8 @@ function setInertiaBurstDiagnostic(
 }
 
 function clearMotionDiagnostics(gl: WebGLRenderer) {
+  delete gl.domElement.dataset.galleryAutoMotionLayoutCount
+  delete gl.domElement.dataset.galleryAutoMotionLayoutDirection
   delete gl.domElement.dataset.galleryInertiaBurst
   delete gl.domElement.dataset.galleryIntroMotion
 }
