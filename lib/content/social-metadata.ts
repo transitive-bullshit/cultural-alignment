@@ -57,7 +57,7 @@ export function getResourceSocialMetadata(
       return {
         canonical: resource.href,
         description: `Examples of AI Safety from ${sourceDescriptor}.`,
-        title: `AI safety analogies from ${resource.title}`,
+        title: `AI safety lessons from ${resource.title}`,
         type: 'website'
       }
     }

@@ -70,7 +70,7 @@ describe('social metadata derivation', () => {
       toSocialSentenceFragment(concept.title)
     )
     expect(sourceSocial.title).toBe(
-      `AI safety analogies from ${creditedSource.title}`
+      `AI safety lessons from ${creditedSource.title}`
     )
     expect(sourceSocial.description).toContain(
       `${sourceCredit} ${creditedSource.title}`
