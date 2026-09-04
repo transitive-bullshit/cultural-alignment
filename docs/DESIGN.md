@@ -36,7 +36,7 @@ Explicit header and lower-chrome safe areas keep cards and brackets on-screen. O
 
 ## Dossier
 
-The opening view pairs a cinematic media plate with a grid-owned title and vertical source metadata. The approved title scale is the current, smaller Dossier setting: `clamp(68px, 7.35vw, 120px)` on desktop and `clamp(55px, 17vw, 78px)` on mobile. It has no character-width cap; its layout column governs balanced, complete-word wrapping. The title precedes a vertical, left-× metadata list: source is actionable, episode and year are inert, and an episode label identical to the source title is omitted for movie-style records. The desktop header phrase is centered to the viewport independently of the identity and navigation widths.
+The opening view pairs a cinematic media plate with a grid-owned title and vertical source metadata. The approved title scale is the current, smaller Dossier setting: `clamp(68px, 7.35vw, 120px)` on desktop and `clamp(55px, 17vw, 78px)` on mobile. It has no character-width cap; its layout column governs balanced, complete-word wrapping. The title precedes a vertical, left-× metadata list: source is actionable, episode and year are inert, and an episode label identical to the source title is omitted for movie-style records.
 
 The reading order is fixed: Scene, Why this analogy works, Where the analogy breaks. Only the second panel is prominent, while all three reserve identical geometry.
 
