@@ -1,0 +1,41 @@
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+}
+
+.label {
+  margin: 0;
+  color: var(--proto-muted-ink);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 9px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.options {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 100%;
+}
+
+@media (max-width: 680px) {
+  .controls {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .options {
+    width: 100%;
+  }
+
+  .option {
+    flex: 1;
+    min-height: 44px;
+    padding-inline: 8px;
+  }
+}

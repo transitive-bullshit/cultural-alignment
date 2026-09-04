@@ -13,7 +13,7 @@ export default function SourcesPage() {
   return (
     <ResourceIndexPage
       kind='source'
-      resources={contentCatalog.listResources('source')}
+      resources={contentCatalog.listSourceResources()}
     />
   )
 }

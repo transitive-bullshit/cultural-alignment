@@ -339,6 +339,28 @@ describe('ContentCatalog', () => {
       'IMDb'
     ])
 
+    const sourceDatesById = new Map(
+      minimalSnapshot.sources.map(({ id, releaseDate }) => [id, releaseDate])
+    )
+    const sourceResources = catalog.listSourceResources()
+
+    expect(
+      sourceResources.every(
+        ({ id, releaseDate }) => releaseDate === sourceDatesById.get(id)
+      )
+    ).toBe(true)
+    expect(
+      sourceResources.every(
+        (resource, index) =>
+          index === 0 ||
+          sourceResources[index - 1]!.title.localeCompare(
+            resource.title,
+            'en',
+            { sensitivity: 'base' }
+          ) <= 0
+      )
+    ).toBe(true)
+
     for (const kind of [
       'source',
       'franchise',

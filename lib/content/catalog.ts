@@ -116,6 +116,11 @@ export type ResourceSummary = {
   readonly scenarioCount: number
 }
 
+export type SourceResourceSummary = ResourceSummary & {
+  readonly kind: 'source'
+  readonly releaseDate: string | null
+}
+
 type ExternalLink = {
   readonly label: string
   readonly href: string
@@ -158,6 +163,7 @@ export type ResourcePage =
 export type ContentCatalog = {
   listScenarioCards(query?: ScenarioListQuery): readonly GalleryScenario[]
   getScenarioPage(slug: string): ScenarioPage | null
+  listSourceResources(): readonly SourceResourceSummary[]
   listResources(kind: ResourceKind): readonly ResourceSummary[]
   getResourcePage(kind: ResourceKind, slug: string): ResourcePage | null
   getSearchDocuments(): readonly SearchDocument[]
@@ -573,6 +579,10 @@ export function createContentCatalog(input: unknown): ContentCatalog {
       return scenarioPageBySlug.get(slug) ?? null
     },
 
+    listSourceResources() {
+      return resourceSummaries.source
+    },
+
     listResources(kind) {
       return resourceSummaries[kind]
     },
@@ -625,7 +635,7 @@ function toSourceIdentity(source: SourceRecord): SourceIdentity {
 function toSourceSummary(
   source: SourceRecord,
   scenarioCount: number
-): ResourceSummary {
+): SourceResourceSummary {
   return {
     kind: 'source',
     id: source.id,
@@ -634,6 +644,7 @@ function toSourceSummary(
     title: source.title,
     detailTitle: source.title,
     description: source.description,
+    releaseDate: source.releaseDate,
     scenarioCount
   }
 }

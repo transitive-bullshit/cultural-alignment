@@ -1,8 +1,14 @@
 import type { ReactNode } from 'react'
 
+import {
+  isCollectionSort,
+  sortCollectionItemsByReleaseDate,
+  type CollectionSort
+} from '@/features/collection-sort/collection-sort'
+
 import type { ScenarioCollectionLayout } from './scenario-collection-list'
 
-export type ScenarioSort = 'default' | 'newest' | 'oldest'
+export type ScenarioSort = CollectionSort
 
 export type SortableScenarioEntry = Readonly<{
   content: ReactNode
@@ -11,7 +17,7 @@ export type SortableScenarioEntry = Readonly<{
 }>
 
 export function isScenarioSort(value: unknown): value is ScenarioSort {
-  return value === 'default' || value === 'newest' || value === 'oldest'
+  return isCollectionSort(value)
 }
 
 export function shouldEnableScenarioSorting(
@@ -28,21 +34,7 @@ export function sortScenarioCollectionItems<
     return sortFeaturedItemsFirst(items, ({ featured }) => featured)
   }
 
-  return items
-    .map((item, index) => ({ index, item }))
-    .toSorted((left, right) => {
-      const leftDate = left.item.releaseDate
-      const rightDate = right.item.releaseDate
-
-      if (leftDate === rightDate) return left.index - right.index
-      if (leftDate === null) return 1
-      if (rightDate === null) return -1
-
-      const dateOrder = leftDate < rightDate ? -1 : 1
-
-      return sort === 'oldest' ? dateOrder : -dateOrder
-    })
-    .map(({ item }) => item)
+  return sortCollectionItemsByReleaseDate(items, sort)
 }
 
 export function sortFeaturedItemsFirst<Item>(

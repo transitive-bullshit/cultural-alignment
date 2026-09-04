@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Image from 'next/image'
 import { ExternalLinkIcon } from 'lucide-react'
 
@@ -8,9 +7,15 @@ import { ScenarioCollection } from '@/features/scenario-collection/scenario-coll
 import type {
   ResourceKind,
   ResourcePage,
-  ResourceSummary
+  ResourceSummary,
+  SourceResourceSummary
 } from '@/lib/content/catalog'
 
+import {
+  DirectResourceListItem,
+  formatScenarioCount
+} from './direct-resource-list-item'
+import { SortableMediaSourceList } from './sortable-media-source-list'
 import styles from './resource-pages.module.css'
 
 const PRESENTATION = {
@@ -52,13 +57,17 @@ const PRESENTATION = {
   }
 >
 
-export function ResourceIndexPage({
-  kind,
-  resources
-}: {
-  readonly kind: ResourceKind
-  readonly resources: readonly ResourceSummary[]
-}) {
+type ResourceIndexPageProps =
+  | Readonly<{
+      kind: 'source'
+      resources: readonly SourceResourceSummary[]
+    }>
+  | Readonly<{
+      kind: Exclude<ResourceKind, 'source'>
+      resources: readonly ResourceSummary[]
+    }>
+
+export function ResourceIndexPage({ kind, resources }: ResourceIndexPageProps) {
   const presentation = PRESENTATION[kind]
 
   return (
@@ -74,7 +83,11 @@ export function ResourceIndexPage({
         </p>
       </section>
 
-      <ResourceList kind={kind} resources={resources} />
+      {kind === 'source' ? (
+        <SortableMediaSourceList resources={resources} />
+      ) : (
+        <ResourceList kind={kind} resources={resources} />
+      )}
     </main>
   )
 }
@@ -90,7 +103,6 @@ function ResourceList({
   readonly label?: string
   readonly resources: readonly ResourceSummary[]
 }) {
-  const ResourceTitle = headingLevel === 2 ? 'h2' : 'h3'
   const usesDirectLink = kind === 'source' || kind === 'franchise'
 
   return (
@@ -101,46 +113,47 @@ function ResourceList({
       data-resource-list
     >
       {resources.map((resource, index) => {
-        const indexNumber = String(index + 1).padStart(2, '0')
         const scenarioCount = formatScenarioCount(resource.scenarioCount)
+
+        if (usesDirectLink) {
+          return (
+            <DirectResourceListItem
+              key={resource.id}
+              headingLevel={headingLevel}
+              index={index}
+              resource={resource}
+            />
+          )
+        }
 
         return (
           <li key={resource.id}>
-            {usesDirectLink ? (
-              <Link href={resource.href}>
-                <span className={styles.indexNumber}>{indexNumber}</span>
-                <ResourceTitle>{resource.title}</ResourceTitle>
-                <span className={styles.itemCount}>{scenarioCount}</span>
-                <span className={styles.openMark} aria-hidden='true'>
-                  ↗
+            <ScrambleLink
+              animateOnReveal={false}
+              copyElement='h2'
+              duration={260}
+              href={resource.href}
+              label={`${resource.title}, ${scenarioCount}`}
+              leadingContent={
+                <span className={styles.indexNumber}>
+                  {String(index + 1).padStart(2, '0')}
                 </span>
-              </Link>
-            ) : (
-              <ScrambleLink
-                animateOnReveal={false}
-                copyElement='h2'
-                duration={260}
-                href={resource.href}
-                label={`${resource.title}, ${scenarioCount}`}
-                leadingContent={
-                  <span className={styles.indexNumber}>{indexNumber}</span>
-                }
-                prefetch='auto'
-                trailingContent={
-                  <>
-                    {kind === 'risk-family' && resource.description ? (
-                      <p>{resource.description}</p>
-                    ) : null}
-                    <span className={styles.itemCount}>{scenarioCount}</span>
-                    <span className={styles.openMark} aria-hidden='true'>
-                      ↗
-                    </span>
-                  </>
-                }
-              >
-                {resource.title}
-              </ScrambleLink>
-            )}
+              }
+              prefetch='auto'
+              trailingContent={
+                <>
+                  {kind === 'risk-family' && resource.description ? (
+                    <p>{resource.description}</p>
+                  ) : null}
+                  <span className={styles.itemCount}>{scenarioCount}</span>
+                  <span className={styles.openMark} aria-hidden='true'>
+                    ↗
+                  </span>
+                </>
+              }
+            >
+              {resource.title}
+            </ScrambleLink>
           </li>
         )
       })}
@@ -333,10 +346,6 @@ export function ResourceDetailPage({
       ) : null}
     </main>
   )
-}
-
-function formatScenarioCount(count: number) {
-  return `${count} ${count === 1 ? 'scenario' : 'scenarios'}`
 }
 
 function formatSourceType(sourceType: 'movie' | 'tv-show') {

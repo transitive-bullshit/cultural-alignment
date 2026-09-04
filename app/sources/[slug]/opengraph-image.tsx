@@ -81,33 +81,35 @@ export default async function Image({
 
       <div
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(23, 23, 19, 0), rgba(23, 23, 19, 0.58) 45%, rgba(23, 23, 19, 0.94) 100%)`,
-          bottom: 0,
+          backgroundImage: `linear-gradient(to bottom, rgba(23, 23, 19, 0.94), rgba(23, 23, 19, 0.58) 55%, rgba(23, 23, 19, 0) 100%)`,
           display: 'flex',
           height: 220,
           left: 0,
           position: 'absolute',
-          right: 0
+          right: 0,
+          top: 0
         }}
       />
 
       <div
         style={{
           alignItems: 'center',
-          bottom: 0,
           display: 'flex',
           justifyContent: 'space-between',
           left: 0,
-          padding: '0 52px 42px',
+          padding: '52px 64px 0',
           position: 'absolute',
-          right: 0
+          right: 0,
+          top: 0
         }}
       >
         <div
           style={{
             alignItems: 'center',
             display: 'flex',
-            gap: 18
+            flex: 1,
+            gap: 18,
+            minWidth: 0
           }}
         >
           <TargetMark />
@@ -117,13 +119,14 @@ export default async function Image({
               fontFamily: 'Barlow Condensed',
               fontSize: 48,
               fontWeight: 800,
+              flex: 1,
               letterSpacing: '-1.7px',
               lineHeight: 0.9,
+              minWidth: 0,
+              overflow: 'hidden',
               textOverflow: 'ellipsis',
               textTransform: 'uppercase',
-              whiteSpace: 'nowrap',
-              overflow: 'hidden',
-              maxWidth: '100%'
+              whiteSpace: 'nowrap'
             }}
           >
             {source.title}
@@ -136,7 +139,9 @@ export default async function Image({
               alignItems: 'center',
               display: 'flex',
               flexDirection: 'column',
-              gap: 6
+              flexShrink: 0,
+              gap: 6,
+              marginLeft: 40
             }}
           >
             <div
@@ -179,6 +184,7 @@ function TargetMark() {
       aria-hidden='true'
       fill='none'
       height='60'
+      style={{ flexShrink: 0 }}
       viewBox='0 0 60 60'
       width='60'
     >
