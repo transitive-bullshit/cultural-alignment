@@ -240,21 +240,6 @@ export function ScenarioMemes({
     setDialogAnnouncement(`Meme ${nextIndex + 1} of ${memes.length}`)
   }
 
-  const handleDialogKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
-    if (
-      memes.length < 2 ||
-      event.altKey ||
-      event.ctrlKey ||
-      event.metaKey ||
-      (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight')
-    ) {
-      return
-    }
-
-    event.preventDefault()
-    moveBy(event.key === 'ArrowRight' ? 1 : -1)
-  }
-
   const showNextBatch = () => {
     const nextVisibleCount = getNextVisibleMemeCount(visibleCount, memes.length)
 
@@ -304,6 +289,36 @@ export function ScenarioMemes({
         `Could not download meme ${memeIndex + 1}. Open the image in a new tab to save it instead.`
       )
     }
+  }
+
+  const handleDialogKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (
+      event.defaultPrevented ||
+      event.nativeEvent.isComposing ||
+      event.altKey ||
+      event.ctrlKey ||
+      event.metaKey
+    ) {
+      return
+    }
+
+    if (event.key.toLowerCase() === 'd') {
+      event.preventDefault()
+      if (event.repeat || downloadState === 'loading') return
+
+      void downloadActiveMeme()
+      return
+    }
+
+    if (
+      memes.length < 2 ||
+      (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight')
+    ) {
+      return
+    }
+
+    event.preventDefault()
+    moveBy(event.key === 'ArrowRight' ? 1 : -1)
   }
 
   return (
@@ -380,7 +395,7 @@ export function ScenarioMemes({
           motion='custom'
           overlayClassName={styles.dialogOverlay}
           showCloseButton={false}
-          aria-keyshortcuts='ArrowLeft ArrowRight'
+          aria-keyshortcuts='ArrowLeft ArrowRight D'
           data-scenario-meme-lightbox
           data-scenario-meme-index={activeIndex}
           tabIndex={-1}
@@ -401,7 +416,8 @@ export function ScenarioMemes({
             </DialogTitle>
             <DialogDescription>
               Use the previous and next buttons or the Left and Right Arrow keys
-              to browse. Press Escape to close.
+              to browse. Press D to download the current meme or Escape to
+              close.
             </DialogDescription>
           </DialogHeader>
 
