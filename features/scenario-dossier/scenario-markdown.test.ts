@@ -46,6 +46,87 @@ describe('formatScenarioAsMarkdown', () => {
 
     expect(markdown).not.toContain('**Episode:**')
   })
+
+  it('serializes franchises above the source with absolute, escaped links', () => {
+    const franchises = [
+      {
+        id: 'franchise-one',
+        slug: 'franchise-one',
+        title: 'Franchise *One*',
+        href: '/franchises/franchise-one'
+      }
+    ]
+    const scenario = { ...createScenario(), franchises }
+    const markdown = formatScenarioAsMarkdown(
+      scenario,
+      new URL('https://example.com/base/')
+    )
+
+    expect(markdown).toContain(
+      '- **Franchises:** [Franchise \\*One\\*](https://example.com/franchises/franchise-one)'
+    )
+
+    const detailsStart = markdown.indexOf('## Scenario details\n\n')
+    expect(detailsStart).toBeGreaterThan(-1)
+    const detailsBody = markdown.slice(
+      detailsStart + '## Scenario details\n\n'.length
+    )
+    expect(detailsBody.startsWith('- **Franchises:**')).toBe(true)
+    expect(detailsBody.indexOf('**Franchises:**')).toBeLessThan(
+      detailsBody.indexOf('**Source:**')
+    )
+  })
+
+  it('joins multiple franchises with comma separators in display order', () => {
+    const franchises = [
+      {
+        id: 'franchise-one',
+        slug: 'franchise-one',
+        title: 'Franchise *One*',
+        href: '/franchises/franchise-one'
+      },
+      {
+        id: 'franchise-two',
+        slug: 'franchise-two',
+        title: 'Franchise [Two]',
+        href: '/franchises/franchise-two'
+      }
+    ]
+    const scenario = { ...createScenario(), franchises }
+    const markdown = formatScenarioAsMarkdown(
+      scenario,
+      new URL('https://example.com/')
+    )
+
+    expect(markdown).toContain(
+      '- **Franchises:** [Franchise \\*One\\*](https://example.com/franchises/franchise-one), [Franchise \\[Two\\]](https://example.com/franchises/franchise-two)'
+    )
+    const first = markdown.indexOf(
+      '[Franchise \\*One\\*](https://example.com/franchises/franchise-one)'
+    )
+    const second = markdown.indexOf(
+      '[Franchise \\[Two\\]](https://example.com/franchises/franchise-two)'
+    )
+    expect(first).toBeLessThan(second)
+  })
+
+  it('omits the franchises line for scenarios with no franchise', () => {
+    const scenario = createScenario()
+    const markdown = formatScenarioAsMarkdown(
+      scenario,
+      new URL('https://example.com/')
+    )
+
+    expect(markdown).not.toContain('**Franchises:**')
+    expect(markdown).toContain('**Source:**')
+
+    const detailsStart = markdown.indexOf('## Scenario details\n\n')
+    expect(detailsStart).toBeGreaterThan(-1)
+    const detailsBody = markdown.slice(
+      detailsStart + '## Scenario details\n\n'.length
+    )
+    expect(detailsBody.startsWith('- **Source:**')).toBe(true)
+  })
 })
 
 function createScenario(): ScenarioPage {
