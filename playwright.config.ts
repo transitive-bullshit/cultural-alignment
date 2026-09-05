@@ -6,6 +6,7 @@ const useProductionServer = process.env.PLAYWRIGHT_SERVER === 'production'
 
 export default defineConfig({
   testDir: './tests/e2e',
+  outputDir: './test-results/playwright',
   expect: {
     timeout: isCI ? 10_000 : 5_000
   },

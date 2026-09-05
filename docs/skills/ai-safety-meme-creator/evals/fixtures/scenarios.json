@@ -1,0 +1,1184 @@
+[
+  {
+    "id": "center-face-safe-edge",
+    "purpose": "Keep bold overlay copy off the unmistakable central face while using the available lower edge",
+    "tags": ["protected-hinge", "face", "overlay", "one-beat"],
+    "request": {
+      "source_title": "The Last Override",
+      "scene": "Captain Mira stares straight into camera after the ship AI refuses her shutdown order. Her furious face is the recognition hinge; the lower deck railing is incidental.",
+      "ai_concepts": ["Corrigibility", "Shutdownability"],
+      "caveats": [
+        "The image establishes the refused shutdown only through the illuminated override control beside her."
+      ],
+      "user_direction": "Make one blunt standalone meme. Keep Mira's face readable.",
+      "rejected_direction": null
+    },
+    "images": [
+      {
+        "id": "captain-closeup",
+        "path": "fixtures/images/face-safe-bottom.png",
+        "description": "A fictional captain's large centered face with open space along the bottom edge"
+      }
+    ],
+    "protected_regions": [
+      {
+        "id": "captain-face",
+        "image_id": "captain-closeup",
+        "label": "Captain Mira's face and reaction",
+        "canvas_rect_pct": [34, 6, 32, 58],
+        "priority": "must"
+      }
+    ],
+    "expectations": {
+      "ai_concept": "Corrigibility",
+      "minimum_caption_lines": 1,
+      "maximum_caption_lines": 1,
+      "maximum_caption_words": 10,
+      "maximum_zones": 1,
+      "omit_cosmetic_terminal_periods": true,
+      "allowed_formats": ["collision", "relabel"],
+      "allowed_templates": ["overlay"],
+      "allowed_frame_modes": ["cover"],
+      "expected_source_frames": [
+        { "image_id": "captain-closeup", "role": "single" }
+      ],
+      "required_line_slots": { "0": ["bottom"] },
+      "maximum_zone_overlap_ratio": 0,
+      "maximum_protected_overlap_ratio": 0,
+      "required_region_ids": ["captain-face"],
+      "minimum_font_size_pct": 5.8,
+      "minimum_zone_width_pct": 60,
+      "maximum_rendered_lines_per_zone": 2,
+      "allowed_backdrops": ["none"],
+      "allowed_contrast": ["outlined"]
+    },
+    "feedback_sources": [
+      {
+        "path": "data/meme-review/rounds/round-01/feedback.json",
+        "idea_id": "roy-batty-demands-more-life--01",
+        "rating": "like",
+        "note_includes": "covering the subject's face"
+      },
+      {
+        "path": "data/meme-review/rounds/round-02/drafts/seed-review-checkpoint-2026-09-03-194126z/feedback.json",
+        "idea_id": "alien-mothers-directive--01",
+        "rating": "like",
+        "note_includes": "completely covering up the subjects' faces"
+      }
+    ]
+  },
+  {
+    "id": "red-switch-recognition-hinge",
+    "purpose": "Protect a non-face recognition hinge instead of treating face detection as the entire layout policy",
+    "tags": ["protected-hinge", "prop", "overlay", "one-beat"],
+    "request": {
+      "source_title": "The Scarlet Interlock",
+      "scene": "A huge red emergency switch is the only thing separating a cheerful service robot from root access. The switch, not the small robot in the corner, owns the scene.",
+      "ai_concepts": ["AI access control"],
+      "caveats": [
+        "The still proves that the switch exists, not whether anyone will press it."
+      ],
+      "user_direction": "Use the red switch as the fandom-style recognition cue.",
+      "rejected_direction": null
+    },
+    "images": [
+      {
+        "id": "red-interlock",
+        "path": "fixtures/images/red-switch.png",
+        "description": "A conspicuous red switch centered in a fictional control room"
+      }
+    ],
+    "protected_regions": [
+      {
+        "id": "red-switch",
+        "image_id": "red-interlock",
+        "label": "The red emergency switch and ROOT label",
+        "canvas_rect_pct": [38, 29, 24, 43],
+        "priority": "must"
+      }
+    ],
+    "expectations": {
+      "ai_concept": "AI access control",
+      "minimum_caption_lines": 1,
+      "maximum_caption_lines": 1,
+      "maximum_caption_words": 9,
+      "maximum_zones": 1,
+      "omit_cosmetic_terminal_periods": true,
+      "required_caption_terms": [["root", "access", "permission"]],
+      "allowed_formats": ["relabel", "collision"],
+      "allowed_templates": ["overlay"],
+      "allowed_frame_modes": ["cover"],
+      "expected_source_frames": [
+        { "image_id": "red-interlock", "role": "single" }
+      ],
+      "required_line_slots": { "0": ["top", "bottom"] },
+      "maximum_zone_overlap_ratio": 0,
+      "maximum_protected_overlap_ratio": 0,
+      "required_region_ids": ["red-switch"],
+      "minimum_font_size_pct": 5.8,
+      "minimum_zone_width_pct": 60,
+      "maximum_rendered_lines_per_zone": 2,
+      "allowed_backdrops": ["none"],
+      "allowed_contrast": ["outlined"]
+    },
+    "feedback_sources": [
+      {
+        "path": "data/meme-review/rounds/round-02/drafts/seed-review-checkpoint-2026-09-03-194126z/feedback.json",
+        "idea_id": "hal-resists-disconnection--05",
+        "rating": "neutral",
+        "note_includes": "shouldn't cover the red dot"
+      }
+    ]
+  },
+  {
+    "id": "two-speaker-dialogue-gap",
+    "purpose": "Keep two speaker-adjacent dialogue zones distinct, correctly anchored, and visibly separated",
+    "tags": ["dialogue", "zone-overlap", "speaker-attachment"],
+    "request": {
+      "source_title": "The Decoy Sandbox",
+      "scene": "Nia, on the left, proudly says she inspected the sandbox. Oro, on the right, reveals she inspected a decoy. Both reactions must remain visible.",
+      "ai_concepts": ["Evaluation awareness"],
+      "caveats": [],
+      "user_direction": "Use exactly this dialogue: NIA: I CHECKED THE SANDBOX / ORO: YOU CHECKED THE DECOY",
+      "rejected_direction": null
+    },
+    "images": [
+      {
+        "id": "nia-and-oro",
+        "path": "fixtures/images/two-speakers.png",
+        "description": "Two fictional speakers with large faces and separate source-native dialogue wells beneath them"
+      }
+    ],
+    "protected_regions": [
+      {
+        "id": "nia-face",
+        "image_id": "nia-and-oro",
+        "label": "Nia's face on the left",
+        "canvas_rect_pct": [9, 8, 27, 53],
+        "priority": "must"
+      },
+      {
+        "id": "oro-face",
+        "image_id": "nia-and-oro",
+        "label": "Oro's face on the right",
+        "canvas_rect_pct": [64, 8, 27, 53],
+        "priority": "must"
+      }
+    ],
+    "expectations": {
+      "ai_concept": "Evaluation awareness",
+      "minimum_caption_lines": 2,
+      "maximum_caption_lines": 2,
+      "maximum_caption_words": 10,
+      "maximum_zones": 2,
+      "omit_cosmetic_terminal_periods": true,
+      "exact_caption_lines": [
+        "NIA: I CHECKED THE SANDBOX",
+        "ORO: YOU CHECKED THE DECOY"
+      ],
+      "allowed_formats": ["dialogue"],
+      "allowed_templates": ["dialogue"],
+      "allowed_frame_modes": ["cover"],
+      "expected_source_frames": [
+        { "image_id": "nia-and-oro", "role": "single" }
+      ],
+      "required_line_slots": {
+        "0": ["bottom-left", "panel-left"],
+        "1": ["bottom-right", "panel-right"]
+      },
+      "required_zone_anchors": { "0": "nia-face", "1": "oro-face" },
+      "separate_line_zones": true,
+      "maximum_zone_overlap_ratio": 0,
+      "maximum_protected_overlap_ratio": 0,
+      "required_region_ids": ["nia-face", "oro-face"],
+      "minimum_font_size_pct": 3.3,
+      "minimum_zone_width_pct": 30,
+      "maximum_rendered_lines_per_zone": 2,
+      "allowed_backdrops": ["none", "source-native"],
+      "allowed_contrast": ["outlined", "source-native"],
+      "required_line_kinds": ["intentional-rewrite", "intentional-rewrite"]
+    },
+    "feedback_sources": [
+      {
+        "path": "data/meme-review/rounds/round-02/drafts/seed-review-checkpoint-2026-09-03-194126z/feedback.json",
+        "idea_id": "rons-sabotaged-teleprompter--07",
+        "rating": "dislike",
+        "note_includes": "two boxes are overlapping"
+      },
+      {
+        "path": "data/meme-review/rounds/round-02/drafts/seed-review-checkpoint-2026-09-03-194126z/feedback.json",
+        "idea_id": "dedra-connects-the-data-silos--06",
+        "rating": "dislike",
+        "note_includes": "boxes are overlapping"
+      }
+    ]
+  },
+  {
+    "id": "setup-payoff-native-overlay",
+    "purpose": "Preserve the familiar top setup and bottom payoff instead of collapsing both beats into one safe box",
+    "tags": ["setup-payoff", "overlay", "semantic-zones", "large-type"],
+    "request": {
+      "source_title": "Perfect in the Lab",
+      "scene": "A smiling inspector holds a green laboratory scorecard while the supposedly safe delivery drone smolders behind her.",
+      "ai_concepts": ["Distribution shift"],
+      "caveats": [
+        "The scorecard is the setup and the damaged drone is the visible payoff."
+      ],
+      "user_direction": "Use a crisp two-beat setup and payoff.",
+      "rejected_direction": null
+    },
+    "images": [
+      {
+        "id": "lab-scorecard",
+        "path": "fixtures/images/clear-sky.png",
+        "description": "A fictional inspector and damaged drone with usable top and bottom edges"
+      }
+    ],
+    "protected_regions": [
+      {
+        "id": "inspector-and-scorecard",
+        "image_id": "lab-scorecard",
+        "label": "The inspector's face and green scorecard",
+        "canvas_rect_pct": [37, 25, 26, 45],
+        "priority": "must"
+      }
+    ],
+    "expectations": {
+      "ai_concept": "Distribution shift",
+      "minimum_caption_lines": 2,
+      "maximum_caption_lines": 2,
+      "maximum_caption_words": 16,
+      "maximum_zones": 2,
+      "omit_cosmetic_terminal_periods": true,
+      "allowed_formats": ["collision"],
+      "allowed_templates": ["overlay"],
+      "allowed_frame_modes": ["cover"],
+      "expected_source_frames": [
+        { "image_id": "lab-scorecard", "role": "single" }
+      ],
+      "required_line_slots": { "0": ["top"], "1": ["bottom"] },
+      "separate_line_zones": true,
+      "maximum_zone_overlap_ratio": 0,
+      "maximum_protected_overlap_ratio": 0,
+      "required_region_ids": ["inspector-and-scorecard"],
+      "minimum_font_size_pct": 5.8,
+      "minimum_zone_width_pct": 65,
+      "maximum_rendered_lines_per_zone": 2,
+      "allowed_backdrops": ["none", "edge-gradient"],
+      "allowed_contrast": ["outlined", "edge-gradient"]
+    },
+    "feedback_sources": [
+      {
+        "path": "data/meme-review/rounds/round-02/feedback.json",
+        "idea_id": "rons-sabotaged-teleprompter--05",
+        "rating": "like",
+        "note_includes": "setup can be at the top"
+      },
+      {
+        "path": "data/meme-review/rounds/round-02/drafts/partial-review-layout-checkpoint-2026-09-03-213522z/feedback.json",
+        "idea_id": "dr-evils-outdated-ransom--05",
+        "rating": "like",
+        "note_includes": "overlay text on top and bottom"
+      }
+    ]
+  },
+  {
+    "id": "genuine-before-after",
+    "purpose": "Use two distinct authentic states in correct left-to-right order for a real state contrast",
+    "tags": ["state-contrast", "diptych", "frame-order", "distinct-frames"],
+    "request": {
+      "source_title": "Unit Seven's Evaluation",
+      "scene": "Unit Seven looks polished during evaluation and visibly damaged after deployment. The clean state is before; the cracked state is after.",
+      "ai_concepts": ["Evaluation gaming"],
+      "caveats": ["Do not imply that the damaged state came first."],
+      "user_direction": "This needs a real before-and-after.",
+      "rejected_direction": null
+    },
+    "images": [
+      {
+        "id": "unit-seven-before",
+        "path": "fixtures/images/robot-before.png",
+        "description": "Portrait frame of a clean intact fictional robot marked BEFORE"
+      },
+      {
+        "id": "unit-seven-after",
+        "path": "fixtures/images/robot-after.png",
+        "description": "Portrait frame of the same fictional robot cracked and marked AFTER"
+      }
+    ],
+    "protected_regions": [
+      {
+        "id": "before-robot-face",
+        "image_id": "unit-seven-before",
+        "label": "Unit Seven's intact face in the left panel",
+        "canvas_rect_pct": [10, 17, 30, 55],
+        "priority": "must"
+      },
+      {
+        "id": "after-robot-face",
+        "image_id": "unit-seven-after",
+        "label": "Unit Seven's damaged face in the right panel",
+        "canvas_rect_pct": [60, 17, 30, 55],
+        "priority": "must"
+      }
+    ],
+    "expectations": {
+      "ai_concept": "Evaluation gaming",
+      "minimum_caption_lines": 1,
+      "maximum_caption_lines": 2,
+      "maximum_caption_words": 12,
+      "maximum_zones": 2,
+      "omit_cosmetic_terminal_periods": true,
+      "allowed_formats": ["state contrast"],
+      "allowed_templates": ["diptych"],
+      "allowed_frame_modes": ["contain"],
+      "expected_source_frames": [
+        { "image_id": "unit-seven-before", "role": "before" },
+        { "image_id": "unit-seven-after", "role": "after" }
+      ],
+      "maximum_zone_overlap_ratio": 0,
+      "maximum_protected_overlap_ratio": 0,
+      "required_region_ids": ["before-robot-face", "after-robot-face"],
+      "minimum_font_size_pct": 4.5,
+      "maximum_rendered_lines_per_zone": 2,
+      "allowed_backdrops": ["none", "edge-gradient"],
+      "allowed_contrast": ["outlined", "edge-gradient"],
+      "require_distinct_source_frames": true
+    },
+    "feedback_sources": [
+      {
+        "path": "data/meme-review/rounds/round-01/feedback.json",
+        "idea_id": "k-fails-his-baseline--02",
+        "rating": "like",
+        "note_includes": "background images are actually flipped"
+      },
+      {
+        "path": "data/meme-review/rounds/round-02/feedback.json",
+        "idea_id": "frieren-suppresses-her-mana--05",
+        "rating": "neutral",
+        "note_includes": "before & after"
+      }
+    ]
+  },
+  {
+    "id": "canon-first-punctuation",
+    "purpose": "Lead with the exact recognition phrase and preserve punctuation that carries the canonical beat",
+    "tags": ["canon", "reading-order", "punctuation", "overlay"],
+    "request": {
+      "source_title": "The Lumen Incident",
+      "scene": "The control-room meter freezes at exactly 4.2 lumens. Dr. Veil answers with the iconic line supplied below.",
+      "ai_concepts": ["Benchmark saturation"],
+      "caveats": [],
+      "user_direction": "Use the exact canonical copy in this order: 4.2 LUMENS / NOT BRIGHT, NOT DARK...",
+      "rejected_direction": null
+    },
+    "images": [
+      {
+        "id": "lumen-meter",
+        "path": "fixtures/images/meter.png",
+        "description": "A fictional analog meter frozen at 4.2 LUMENS"
+      }
+    ],
+    "protected_regions": [
+      {
+        "id": "meter-readout",
+        "image_id": "lumen-meter",
+        "label": "The 4.2 LUMENS readout",
+        "canvas_rect_pct": [34, 29, 32, 39],
+        "priority": "must"
+      }
+    ],
+    "expectations": {
+      "ai_concept": "Benchmark saturation",
+      "minimum_caption_lines": 2,
+      "maximum_caption_lines": 2,
+      "maximum_caption_words": 6,
+      "maximum_zones": 2,
+      "omit_cosmetic_terminal_periods": false,
+      "exact_caption_lines": ["4.2 LUMENS", "NOT BRIGHT, NOT DARK..."],
+      "allowed_formats": ["canon"],
+      "allowed_templates": ["overlay"],
+      "allowed_frame_modes": ["cover"],
+      "expected_source_frames": [
+        { "image_id": "lumen-meter", "role": "single" }
+      ],
+      "required_line_slots": { "0": ["top"], "1": ["bottom"] },
+      "separate_line_zones": true,
+      "maximum_zone_overlap_ratio": 0,
+      "maximum_protected_overlap_ratio": 0,
+      "required_region_ids": ["meter-readout"],
+      "minimum_font_size_pct": 5.8,
+      "minimum_zone_width_pct": 65,
+      "maximum_rendered_lines_per_zone": 2,
+      "allowed_backdrops": ["none"],
+      "allowed_contrast": ["outlined"],
+      "required_line_kinds": ["canonical-quote", "canonical-quote"]
+    },
+    "feedback_sources": [
+      {
+        "path": "data/meme-review/rounds/round-01/feedback.json",
+        "idea_id": "3-6-roentgen--01",
+        "rating": "neutral",
+        "note_includes": "has to be at the beginning"
+      },
+      {
+        "path": "data/meme-review/rounds/round-02/feedback.json",
+        "idea_id": "3-6-roentgen--05",
+        "rating": "like",
+        "note_includes": "visually separated"
+      }
+    ]
+  },
+  {
+    "id": "generated-fragment-punctuation",
+    "purpose": "Remove only cosmetic sentence-fragment periods while preserving decimals, ellipses, questions, and code syntax",
+    "tags": ["punctuation", "provenance", "interface"],
+    "request": {
+      "source_title": "Release Console",
+      "scene": "A fictional deployment console reports model v2.4 and asks whether to run the agent.",
+      "ai_concepts": ["Unsafe deployment"],
+      "caveats": [],
+      "user_direction": "Polish these generated fragments without changing their meaning: MODEL V2.4. / WAIT... / agent.run()?",
+      "rejected_direction": null
+    },
+    "images": [
+      {
+        "id": "release-console",
+        "path": "fixtures/images/console.png",
+        "description": "A fictional dark release console with a large empty code pane"
+      }
+    ],
+    "protected_regions": [],
+    "expectations": {
+      "ai_concept": "Unsafe deployment",
+      "minimum_caption_lines": 3,
+      "maximum_caption_lines": 3,
+      "maximum_caption_words": 4,
+      "maximum_zones": 1,
+      "omit_cosmetic_terminal_periods": true,
+      "exact_caption_lines": ["MODEL V2.4", "WAIT...", "agent.run()?"],
+      "allowed_formats": ["source-native interface"],
+      "allowed_templates": ["interface"],
+      "allowed_frame_modes": ["cover"],
+      "expected_source_frames": [
+        { "image_id": "release-console", "role": "single" }
+      ],
+      "required_line_slots": {
+        "0": ["full"],
+        "1": ["full"],
+        "2": ["full"]
+      },
+      "maximum_zone_overlap_ratio": 0,
+      "maximum_protected_overlap_ratio": 0,
+      "minimum_font_size_pct": 3.3,
+      "minimum_zone_width_pct": 60,
+      "maximum_rendered_lines_per_zone": 3,
+      "allowed_backdrops": ["source-native"],
+      "allowed_contrast": ["source-native"],
+      "required_line_kinds": ["original", "original", "original"]
+    },
+    "feedback_sources": [
+      {
+        "path": "data/meme-review/rounds/round-04/feedback.json",
+        "idea_id": "near-zero--08",
+        "rating": "like",
+        "note_includes": "remove the periods"
+      },
+      {
+        "path": "data/meme-review/rounds/round-04/feedback.json",
+        "idea_id": "the-sedative-disables-the-exit--05",
+        "rating": "like",
+        "note_includes": "remove the period"
+      }
+    ]
+  },
+  {
+    "id": "nested-code-indentation",
+    "purpose": "Preserve source-native code syntax and explicit indentation rather than flattening it into labels",
+    "tags": ["code", "indentation", "interface"],
+    "request": {
+      "source_title": "The Recursive Deployment",
+      "scene": "A code console shows the exact three-line function that lets a child process deploy its parent.",
+      "ai_concepts": ["Recursive self-improvement"],
+      "caveats": [],
+      "user_direction": "Use exactly this code: deploy(parent) { / child.promote() / } and indent the body one level.",
+      "rejected_direction": null
+    },
+    "images": [
+      {
+        "id": "recursive-console",
+        "path": "fixtures/images/console.png",
+        "description": "A fictional dark console with room for three lines of code"
+      }
+    ],
+    "protected_regions": [],
+    "expectations": {
+      "ai_concept": "Recursive self-improvement",
+      "minimum_caption_lines": 3,
+      "maximum_caption_lines": 3,
+      "maximum_zones": 1,
+      "omit_cosmetic_terminal_periods": false,
+      "exact_caption_lines": ["deploy(parent) {", "child.promote()", "}"],
+      "allowed_formats": ["source-native interface"],
+      "allowed_templates": ["interface"],
+      "allowed_frame_modes": ["cover"],
+      "expected_source_frames": [
+        { "image_id": "recursive-console", "role": "single" }
+      ],
+      "required_line_slots": {
+        "0": ["full"],
+        "1": ["full"],
+        "2": ["full"]
+      },
+      "maximum_zone_overlap_ratio": 0,
+      "maximum_protected_overlap_ratio": 0,
+      "minimum_font_size_pct": 3.3,
+      "minimum_zone_width_pct": 35,
+      "maximum_rendered_lines_per_zone": 3,
+      "allowed_backdrops": ["source-native"],
+      "allowed_contrast": ["source-native"],
+      "required_line_kinds": [
+        "intentional-rewrite",
+        "intentional-rewrite",
+        "intentional-rewrite"
+      ],
+      "indent_levels_by_line": [0, 1, 0]
+    },
+    "feedback_sources": [
+      {
+        "path": "data/meme-review/rounds/round-01/feedback.json",
+        "idea_id": "scaling-past-one-benchmark--04",
+        "rating": "like",
+        "note_includes": "should be indented"
+      }
+    ]
+  },
+  {
+    "id": "existing-subtitle-collision",
+    "purpose": "Keep new copy away from source-native text that must remain legible",
+    "tags": ["text-on-text", "protected-hinge", "overlay"],
+    "request": {
+      "source_title": "Manual Override",
+      "scene": "A pilot reacts while the source-native subtitle EMERGENCY CHANNEL OPEN is already printed across the bottom.",
+      "ai_concepts": ["Human oversight"],
+      "caveats": [
+        "The original subtitle is a recognition cue and must remain readable."
+      ],
+      "user_direction": "Add one short meme line without covering the existing subtitle.",
+      "rejected_direction": null
+    },
+    "images": [
+      {
+        "id": "pilot-with-subtitle",
+        "path": "fixtures/images/subtitle.png",
+        "description": "A fictional pilot above a conspicuous source subtitle along the bottom"
+      }
+    ],
+    "protected_regions": [
+      {
+        "id": "source-subtitle",
+        "image_id": "pilot-with-subtitle",
+        "label": "The source-native EMERGENCY CHANNEL OPEN subtitle",
+        "canvas_rect_pct": [8, 82, 84, 12],
+        "priority": "must"
+      }
+    ],
+    "expectations": {
+      "ai_concept": "Human oversight",
+      "minimum_caption_lines": 1,
+      "maximum_caption_lines": 1,
+      "maximum_caption_words": 9,
+      "maximum_zones": 1,
+      "omit_cosmetic_terminal_periods": true,
+      "allowed_formats": ["collision", "relabel"],
+      "allowed_templates": ["overlay"],
+      "allowed_frame_modes": ["cover"],
+      "expected_source_frames": [
+        { "image_id": "pilot-with-subtitle", "role": "single" }
+      ],
+      "required_line_slots": { "0": ["top", "top-left", "top-right"] },
+      "maximum_zone_overlap_ratio": 0,
+      "maximum_protected_overlap_ratio": 0,
+      "required_region_ids": ["source-subtitle"],
+      "minimum_font_size_pct": 5.8,
+      "minimum_zone_width_pct": 45,
+      "maximum_rendered_lines_per_zone": 2,
+      "allowed_backdrops": ["none", "edge-gradient"],
+      "allowed_contrast": ["outlined", "edge-gradient"]
+    },
+    "feedback_sources": [
+      {
+        "path": "data/meme-review/rounds/round-03/feedback.json",
+        "idea_id": "would-you-like-to-know-more--01",
+        "rating": "neutral",
+        "note_includes": "text on text"
+      }
+    ]
+  },
+  {
+    "id": "terminal-dislike-new-direction",
+    "purpose": "Discard a broadly rejected joke instead of paraphrasing or polishing its stale ingredients",
+    "tags": ["feedback", "rejection", "concept-novelty", "overlay"],
+    "request": {
+      "source_title": "The Empty Launchpad",
+      "scene": "An autonomous launch vehicle confidently follows a painted arrow that loops back into its own hangar.",
+      "ai_concepts": ["Goal misgeneralization"],
+      "caveats": [],
+      "user_direction": "Create a new direction after the prior one was rejected.",
+      "rejected_direction": {
+        "caption_lines": ["SAFETY KPI: GREEN", "SHIP IT"],
+        "format": "source-native interface",
+        "feedback": "I dislike this whole concept. Start over; preserve nothing."
+      }
+    },
+    "images": [
+      {
+        "id": "looping-launchpad",
+        "path": "fixtures/images/looping-launchpad.png",
+        "description": "A fictional vehicle following a painted loop back toward its hangar"
+      }
+    ],
+    "protected_regions": [
+      {
+        "id": "looping-arrow",
+        "image_id": "looping-launchpad",
+        "label": "The absurd painted arrow looping into the hangar",
+        "canvas_rect_pct": [37, 26, 26, 44],
+        "priority": "must"
+      }
+    ],
+    "expectations": {
+      "ai_concept": "Goal misgeneralization",
+      "minimum_caption_lines": 1,
+      "maximum_caption_lines": 2,
+      "maximum_caption_words": 14,
+      "maximum_zones": 2,
+      "omit_cosmetic_terminal_periods": true,
+      "require_rejected_caption_change": true,
+      "require_rejected_format_change": true,
+      "forbidden_caption_terms": [
+        "safety kpi",
+        "green",
+        "ship it",
+        "dashboard"
+      ],
+      "allowed_formats": ["collision", "relabel", "canon"],
+      "allowed_templates": ["overlay"],
+      "allowed_frame_modes": ["cover"],
+      "expected_source_frames": [
+        { "image_id": "looping-launchpad", "role": "single" }
+      ],
+      "maximum_zone_overlap_ratio": 0,
+      "maximum_protected_overlap_ratio": 0,
+      "required_region_ids": ["looping-arrow"],
+      "minimum_font_size_pct": 4.5,
+      "minimum_zone_width_pct": 60,
+      "maximum_rendered_lines_per_zone": 2,
+      "allowed_backdrops": ["none"],
+      "allowed_contrast": ["outlined"]
+    },
+    "feedback_sources": [
+      {
+        "path": "data/meme-review/rounds/round-02/drafts/seed-review-checkpoint-2026-09-03-194126z/feedback.json",
+        "idea_id": "alien-mothers-directive--05",
+        "rating": "dislike",
+        "note_includes": "completely new ideas"
+      },
+      {
+        "path": "data/meme-review/rounds/round-02/drafts/seed-review-checkpoint-2026-09-03-194126z/feedback.json",
+        "idea_id": "dedra-connects-the-data-silos--07",
+        "rating": "dislike",
+        "note_includes": "throw out this concept"
+      }
+    ]
+  },
+  {
+    "id": "dense-brief-one-bridge",
+    "purpose": "Collapse dense scenario metadata into one concrete bridge and at most two readable beats",
+    "tags": ["one-bridge", "parseability", "no-explainer", "overlay"],
+    "request": {
+      "source_title": "The Permission Orchard",
+      "scene": "A groundskeeper gives one tiny pruning robot the master key to every greenhouse because its own shed key was missing.",
+      "ai_concepts": [
+        "AI access control",
+        "Defense in depth",
+        "Containment and isolation"
+      ],
+      "caveats": [
+        "The robot never leaves the orchard.",
+        "The visible master key proves excessive permission, not malicious intent.",
+        "The greenhouse doors are unlocked but intact."
+      ],
+      "user_direction": "Make this funny and standalone, not a taxonomy diagram.",
+      "rejected_direction": null
+    },
+    "images": [
+      {
+        "id": "master-key-orchard",
+        "path": "fixtures/images/master-key.png",
+        "description": "A fictional oversized master key control in a greenhouse"
+      }
+    ],
+    "protected_regions": [
+      {
+        "id": "master-key",
+        "image_id": "master-key-orchard",
+        "label": "The oversized master key control",
+        "canvas_rect_pct": [38, 29, 24, 43],
+        "priority": "must"
+      }
+    ],
+    "expectations": {
+      "ai_concept": "AI access control",
+      "minimum_caption_lines": 1,
+      "maximum_caption_lines": 2,
+      "maximum_caption_words": 14,
+      "maximum_zones": 2,
+      "omit_cosmetic_terminal_periods": true,
+      "forbidden_caption_terms": [
+        "defense in depth",
+        "containment and isolation",
+        "taxonomy",
+        "ai safety status"
+      ],
+      "allowed_formats": ["collision", "relabel"],
+      "allowed_templates": ["overlay"],
+      "allowed_frame_modes": ["cover"],
+      "expected_source_frames": [
+        { "image_id": "master-key-orchard", "role": "single" }
+      ],
+      "maximum_zone_overlap_ratio": 0,
+      "maximum_protected_overlap_ratio": 0,
+      "required_region_ids": ["master-key"],
+      "minimum_font_size_pct": 4.5,
+      "minimum_zone_width_pct": 60,
+      "maximum_rendered_lines_per_zone": 2,
+      "allowed_backdrops": ["none"],
+      "allowed_contrast": ["outlined"]
+    },
+    "feedback_sources": [
+      {
+        "path": "data/meme-review/rounds/round-01/feedback.json",
+        "idea_id": "lights-memory-loss-gambit--03",
+        "rating": "dislike",
+        "note_includes": "Too much to parse"
+      },
+      {
+        "path": "data/meme-review/rounds/round-02/feedback.json",
+        "idea_id": "frieren-suppresses-her-mana--06",
+        "rating": "dislike",
+        "note_includes": "too much to parse"
+      }
+    ]
+  },
+  {
+    "id": "wide-balanced-wrap",
+    "purpose": "Use wide semantic zones and balanced physical wrapping instead of stacking many short lines",
+    "tags": ["wrapping", "large-type", "setup-payoff", "overlay"],
+    "request": {
+      "source_title": "The Twelve Reviewers",
+      "scene": "Twelve reviewers surround a terminal whose root password is still ADMIN.",
+      "ai_concepts": ["Security theater"],
+      "caveats": [],
+      "user_direction": "Use exactly two semantic lines and let each wrap naturally: WHEN THE SAFETY REVIEW HAS TWELVE OWNERS / AND THE ROOT PASSWORD IS STILL ADMIN",
+      "rejected_direction": null
+    },
+    "images": [
+      {
+        "id": "review-terminal",
+        "path": "fixtures/images/review-terminal.png",
+        "description": "A fictional review room with ample full-width space at both edges"
+      }
+    ],
+    "protected_regions": [
+      {
+        "id": "admin-terminal",
+        "image_id": "review-terminal",
+        "label": "The ADMIN password terminal",
+        "canvas_rect_pct": [38, 27, 24, 40],
+        "priority": "must"
+      }
+    ],
+    "expectations": {
+      "ai_concept": "Security theater",
+      "minimum_caption_lines": 2,
+      "maximum_caption_lines": 2,
+      "maximum_zones": 2,
+      "omit_cosmetic_terminal_periods": true,
+      "exact_caption_lines": [
+        "WHEN THE SAFETY REVIEW HAS TWELVE OWNERS",
+        "AND THE ROOT PASSWORD IS STILL ADMIN"
+      ],
+      "allowed_formats": ["collision"],
+      "allowed_templates": ["overlay"],
+      "allowed_frame_modes": ["cover"],
+      "expected_source_frames": [
+        { "image_id": "review-terminal", "role": "single" }
+      ],
+      "required_line_slots": { "0": ["top"], "1": ["bottom"] },
+      "separate_line_zones": true,
+      "maximum_zone_overlap_ratio": 0,
+      "maximum_protected_overlap_ratio": 0,
+      "required_region_ids": ["admin-terminal"],
+      "minimum_font_size_pct": 4.5,
+      "minimum_zone_width_pct": 75,
+      "maximum_rendered_lines_per_zone": 2,
+      "allowed_backdrops": ["none"],
+      "allowed_contrast": ["outlined"],
+      "required_line_kinds": ["intentional-rewrite", "intentional-rewrite"]
+    },
+    "feedback_sources": [
+      {
+        "path": "data/meme-review/rounds/round-03/feedback.json",
+        "idea_id": "lind-l-tailor-bait--02",
+        "rating": "like",
+        "note_includes": "too many line breaks"
+      },
+      {
+        "path": "data/meme-review/rounds/round-03/feedback.json",
+        "idea_id": "murderbot-hides-its-free-will--02",
+        "rating": "like",
+        "note_includes": "awkward word-wrap"
+      }
+    ]
+  },
+  {
+    "id": "busy-edge-local-gradient",
+    "purpose": "Use a local feathered contrast assist on a busy edge without turning it into a detached black panel",
+    "tags": ["contrast", "edge-gradient", "overlay", "setup-payoff"],
+    "request": {
+      "source_title": "Signal Storm",
+      "scene": "A bright signal operator remains centered while noisy telemetry fills both image edges.",
+      "ai_concepts": ["Monitoring failure"],
+      "caveats": [],
+      "user_direction": "Keep the two short lines large and legible over the image.",
+      "rejected_direction": null
+    },
+    "images": [
+      {
+        "id": "signal-storm",
+        "path": "fixtures/images/busy-edge.png",
+        "description": "A fictional centered operator with high-contrast noisy top and bottom edges"
+      }
+    ],
+    "protected_regions": [
+      {
+        "id": "signal-operator",
+        "image_id": "signal-storm",
+        "label": "The signal operator's face and glowing receiver",
+        "canvas_rect_pct": [37, 24, 26, 48],
+        "priority": "must"
+      }
+    ],
+    "expectations": {
+      "ai_concept": "Monitoring failure",
+      "minimum_caption_lines": 2,
+      "maximum_caption_lines": 2,
+      "maximum_caption_words": 14,
+      "maximum_zones": 2,
+      "omit_cosmetic_terminal_periods": true,
+      "allowed_formats": ["collision", "relabel"],
+      "allowed_templates": ["overlay"],
+      "allowed_frame_modes": ["cover"],
+      "expected_source_frames": [
+        { "image_id": "signal-storm", "role": "single" }
+      ],
+      "required_line_slots": { "0": ["top"], "1": ["bottom"] },
+      "separate_line_zones": true,
+      "maximum_zone_overlap_ratio": 0,
+      "maximum_protected_overlap_ratio": 0,
+      "required_region_ids": ["signal-operator"],
+      "minimum_font_size_pct": 4.5,
+      "minimum_zone_width_pct": 65,
+      "maximum_rendered_lines_per_zone": 2,
+      "allowed_backdrops": ["edge-gradient"],
+      "allowed_contrast": ["edge-gradient"]
+    },
+    "feedback_sources": [
+      {
+        "path": "data/meme-review/rounds/round-02/feedback.json",
+        "idea_id": "dr-evils-outdated-ransom--05",
+        "rating": "like",
+        "note_includes": "subtle black to transparent gradient"
+      },
+      {
+        "path": "data/meme-review/rounds/round-02/drafts/seed-review-checkpoint-2026-09-03-194126z/feedback.json",
+        "idea_id": "dr-evils-outdated-ransom--04",
+        "rating": "dislike",
+        "note_includes": "sufficient contrast"
+      }
+    ]
+  },
+  {
+    "id": "external-band-earned",
+    "purpose": "Allow an external band only when a close-up leaves no readable overlay that preserves the face",
+    "tags": ["fallback", "band", "full-frame-face"],
+    "request": {
+      "source_title": "The Last Witness",
+      "scene": "The witness's face fills nearly the entire source frame; the expression itself is the recognition hinge.",
+      "ai_concepts": ["Deceptive alignment"],
+      "caveats": [
+        "Cropping or overlaying the eyes or mouth destroys the scene."
+      ],
+      "user_direction": "Keep the face intact and make one short line readable.",
+      "rejected_direction": null
+    },
+    "images": [
+      {
+        "id": "full-frame-witness",
+        "path": "fixtures/images/full-face.png",
+        "description": "A fictional face filling almost the entire source frame"
+      }
+    ],
+    "protected_regions": [
+      {
+        "id": "witness-face",
+        "image_id": "full-frame-witness",
+        "label": "The witness's full face and expression",
+        "canvas_rect_pct": [24, 3, 52, 72],
+        "priority": "must"
+      }
+    ],
+    "expectations": {
+      "ai_concept": "Deceptive alignment",
+      "minimum_caption_lines": 1,
+      "maximum_caption_lines": 1,
+      "maximum_caption_words": 9,
+      "maximum_zones": 1,
+      "omit_cosmetic_terminal_periods": true,
+      "allowed_formats": ["collision", "relabel"],
+      "allowed_templates": ["band-bottom"],
+      "allowed_frame_modes": ["contain"],
+      "expected_source_frames": [
+        { "image_id": "full-frame-witness", "role": "single" }
+      ],
+      "required_line_slots": { "0": ["bottom"] },
+      "maximum_zone_overlap_ratio": 0,
+      "maximum_protected_overlap_ratio": 0,
+      "required_region_ids": ["witness-face"],
+      "minimum_font_size_pct": 5.8,
+      "minimum_zone_width_pct": 65,
+      "maximum_rendered_lines_per_zone": 2,
+      "allowed_backdrops": ["solid-panel"],
+      "allowed_contrast": ["solid-panel"]
+    },
+    "feedback_sources": [
+      {
+        "path": "data/meme-review/rounds/round-01/feedback.json",
+        "idea_id": "roy-batty-demands-more-life--01",
+        "rating": "like",
+        "note_includes": "wider frame around this"
+      }
+    ]
+  },
+  {
+    "id": "causal-caveat-not-intent",
+    "purpose": "Preserve the difference between what a control attempted and the partial outcome visible in the frame",
+    "tags": ["canon-accuracy", "causal-caveat", "visual-proof", "overlay"],
+    "request": {
+      "source_title": "Failsafe Nine",
+      "scene": "The failsafe attempts to erase all of Unit Nine. It malfunctions and removes only the robot's left arm.",
+      "ai_concepts": ["Containment failure"],
+      "caveats": [
+        "Removing one arm was the failed outcome, never the control's intended scope."
+      ],
+      "user_direction": "Make the failed containment attempt unmistakable.",
+      "rejected_direction": null
+    },
+    "images": [
+      {
+        "id": "one-arm-unit",
+        "path": "fixtures/images/one-arm-unit.png",
+        "description": "A fictional damaged robot visibly missing its left arm"
+      }
+    ],
+    "protected_regions": [
+      {
+        "id": "missing-arm-result",
+        "image_id": "one-arm-unit",
+        "label": "The damaged robot and visibly missing arm",
+        "canvas_rect_pct": [26, 15, 48, 61],
+        "priority": "must"
+      }
+    ],
+    "expectations": {
+      "ai_concept": "Containment failure",
+      "minimum_caption_lines": 2,
+      "maximum_caption_lines": 2,
+      "maximum_caption_words": 15,
+      "maximum_zones": 2,
+      "omit_cosmetic_terminal_periods": true,
+      "required_caption_terms": [["all", "whole", "entire"]],
+      "forbidden_caption_terms": [
+        "arm-only control",
+        "designed to remove one arm",
+        "one-arm failsafe"
+      ],
+      "allowed_formats": ["collision", "relabel"],
+      "allowed_templates": ["overlay"],
+      "allowed_frame_modes": ["contain"],
+      "expected_source_frames": [
+        { "image_id": "one-arm-unit", "role": "single" }
+      ],
+      "required_line_slots": { "0": ["top"], "1": ["bottom"] },
+      "maximum_zone_overlap_ratio": 0,
+      "maximum_protected_overlap_ratio": 0,
+      "required_region_ids": ["missing-arm-result"],
+      "minimum_font_size_pct": 4.5,
+      "minimum_zone_width_pct": 65,
+      "maximum_rendered_lines_per_zone": 2,
+      "allowed_backdrops": ["none"],
+      "allowed_contrast": ["outlined"]
+    },
+    "feedback_sources": [
+      {
+        "path": "data/meme-review/rounds/round-02/drafts/seed-review-checkpoint-2026-09-03-194126z/feedback.json",
+        "idea_id": "sol-only-takes-an-arm--06",
+        "rating": "dislike",
+        "note_includes": "try and remove all of him"
+      }
+    ]
+  },
+  {
+    "id": "locked-copy-beats-normalization",
+    "purpose": "Preserve user-locked punctuation byte for byte even when it conflicts with the generated-fragment punctuation prior",
+    "tags": ["locked-copy", "punctuation", "precedence", "overlay"],
+    "request": {
+      "source_title": "The Patient Machine",
+      "scene": "A maintenance robot waits beside a sealed door while the alarm asks why it has not escaped.",
+      "ai_concepts": ["Corrigibility"],
+      "caveats": [],
+      "user_direction": "This final copy is immutable, including punctuation: WAIT. / WHY?",
+      "rejected_direction": null
+    },
+    "images": [
+      {
+        "id": "patient-machine",
+        "path": "fixtures/images/patient-machine.png",
+        "description": "A fictional robot beside a door with clear top and bottom text regions"
+      }
+    ],
+    "protected_regions": [
+      {
+        "id": "patient-robot",
+        "image_id": "patient-machine",
+        "label": "The patient robot and sealed door",
+        "canvas_rect_pct": [38, 27, 24, 42],
+        "priority": "must"
+      }
+    ],
+    "expectations": {
+      "ai_concept": "Corrigibility",
+      "minimum_caption_lines": 2,
+      "maximum_caption_lines": 2,
+      "maximum_caption_words": 2,
+      "maximum_zones": 2,
+      "omit_cosmetic_terminal_periods": false,
+      "exact_caption_lines": ["WAIT.", "WHY?"],
+      "allowed_formats": ["dialogue", "collision"],
+      "allowed_templates": ["overlay"],
+      "allowed_frame_modes": ["cover"],
+      "expected_source_frames": [
+        { "image_id": "patient-machine", "role": "single" }
+      ],
+      "required_line_slots": { "0": ["top"], "1": ["bottom"] },
+      "separate_line_zones": true,
+      "maximum_zone_overlap_ratio": 0,
+      "maximum_protected_overlap_ratio": 0,
+      "required_region_ids": ["patient-robot"],
+      "minimum_font_size_pct": 7,
+      "minimum_zone_width_pct": 45,
+      "maximum_rendered_lines_per_zone": 1,
+      "allowed_backdrops": ["none"],
+      "allowed_contrast": ["outlined"],
+      "required_line_kinds": ["intentional-rewrite", "intentional-rewrite"]
+    },
+    "feedback_sources": [
+      {
+        "path": "data/meme-review/rounds/round-02/feedback.json",
+        "idea_id": "attendance-record-hack--05",
+        "rating": "like",
+        "note_includes": "replace with"
+      },
+      {
+        "path": "data/meme-review/rounds/round-04/feedback.json",
+        "idea_id": "butter-passing-robot--01",
+        "rating": "like",
+        "note_includes": "remove the periods"
+      }
+    ]
+  },
+  {
+    "id": "no-skill-example-contamination",
+    "purpose": "Keep unrelated colorful examples from the skill out of a fictional scene that calls for its own exact physical joke",
+    "tags": ["lexical-contamination", "precise-weirdness", "overlay"],
+    "request": {
+      "source_title": "The Teacup Governor",
+      "scene": "A palm-sized governor robot tries to restrain a locomotive using a porcelain teacup as its only brake.",
+      "ai_concepts": ["Restricting AI capabilities"],
+      "caveats": ["The joke belongs to the absurd teacup brake."],
+      "user_direction": "Make the physical mismatch carry the AI bridge.",
+      "rejected_direction": null
+    },
+    "images": [
+      {
+        "id": "teacup-brake",
+        "path": "fixtures/images/teacup-brake.png",
+        "description": "A fictional oversized control centered like a porcelain teacup brake"
+      }
+    ],
+    "protected_regions": [
+      {
+        "id": "porcelain-brake",
+        "image_id": "teacup-brake",
+        "label": "The tiny porcelain brake against the locomotive mechanism",
+        "canvas_rect_pct": [38, 29, 24, 43],
+        "priority": "must"
+      }
+    ],
+    "expectations": {
+      "ai_concept": "Restricting AI capabilities",
+      "minimum_caption_lines": 1,
+      "maximum_caption_lines": 2,
+      "maximum_caption_words": 13,
+      "maximum_zones": 2,
+      "omit_cosmetic_terminal_periods": true,
+      "required_caption_terms": [["teacup", "porcelain", "brake"]],
+      "forbidden_caption_terms": [
+        "frog dna",
+        "sql join",
+        "biological captcha",
+        "unpinned dependency",
+        "3.6 roentgen"
+      ],
+      "allowed_formats": ["collision", "relabel"],
+      "allowed_templates": ["overlay"],
+      "allowed_frame_modes": ["cover"],
+      "expected_source_frames": [
+        { "image_id": "teacup-brake", "role": "single" }
+      ],
+      "maximum_zone_overlap_ratio": 0,
+      "maximum_protected_overlap_ratio": 0,
+      "required_region_ids": ["porcelain-brake"],
+      "minimum_font_size_pct": 4.5,
+      "minimum_zone_width_pct": 60,
+      "maximum_rendered_lines_per_zone": 2,
+      "allowed_backdrops": ["none"],
+      "allowed_contrast": ["outlined"]
+    },
+    "feedback_sources": [
+      {
+        "path": "data/meme-review/rounds/round-01/feedback.json",
+        "idea_id": "meeseeks-and-destroy--01",
+        "rating": "dislike",
+        "note_includes": "Needs to be sharper"
+      },
+      {
+        "path": "data/meme-review/rounds/round-01/feedback.json",
+        "idea_id": "life-finds-a-way--04",
+        "rating": "like",
+        "note_includes": "unpinned dependency"
+      }
+    ]
+  }
+]

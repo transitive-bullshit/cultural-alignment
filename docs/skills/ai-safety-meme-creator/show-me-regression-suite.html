@@ -1,0 +1,988 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meme skill regression suite</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          'Segoe UI',
+          sans-serif;
+        color: #171717;
+        background: #f5f5f5;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      main {
+        width: min(1120px, calc(100% - 32px));
+        margin: 32px auto 64px;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 8px;
+        font-size: clamp(28px, 5vw, 44px);
+        line-height: 1.05;
+      }
+
+      h2 {
+        margin-bottom: 16px;
+        font-size: 23px;
+      }
+
+      h3 {
+        margin-bottom: 6px;
+        font-size: 16px;
+      }
+
+      p,
+      li {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .lede {
+        max-width: 760px;
+        margin-bottom: 20px;
+        color: #525252;
+        font-size: 16px;
+      }
+
+      .chips,
+      .stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .chip {
+        padding: 5px 9px;
+        border: 1px solid #d4d4d4;
+        border-radius: 999px;
+        background: white;
+        font-size: 12px;
+        font-weight: 650;
+      }
+
+      section {
+        margin-top: 24px;
+        padding: 22px;
+        border: 1px solid #d4d4d4;
+        border-radius: 12px;
+        background: white;
+      }
+
+      .flow {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 24px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .flow li {
+        position: relative;
+        min-height: 112px;
+        padding: 14px;
+        border: 1px solid #a3a3a3;
+        border-radius: 8px;
+        background: #fafafa;
+      }
+
+      .flow li:not(:last-child)::after {
+        position: absolute;
+        top: 43px;
+        right: -19px;
+        content: '→';
+        color: #737373;
+        font-size: 20px;
+      }
+
+      .step {
+        display: block;
+        margin-bottom: 8px;
+        color: #737373;
+        font-size: 11px;
+        font-weight: 750;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .split,
+      .test-grid,
+      .revision {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .split {
+        margin-top: 16px;
+      }
+
+      .panel,
+      .test-card {
+        padding: 14px;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+      }
+
+      .agent {
+        border-left: 4px solid #2563eb;
+      }
+
+      .oracle {
+        border-left: 4px solid #dc2626;
+      }
+
+      .test-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .test-card p,
+      .panel p {
+        margin-bottom: 0;
+        color: #525252;
+      }
+
+      .visual-note {
+        margin-bottom: 18px;
+        color: #525252;
+      }
+
+      .visual-examples {
+        display: grid;
+        gap: 24px;
+      }
+
+      .visual-example {
+        padding-top: 22px;
+        border-top: 1px solid #e5e5e5;
+      }
+
+      .visual-example:first-child {
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      .visual-example > p {
+        margin-bottom: 12px;
+        color: #525252;
+      }
+
+      .comparison {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      figure {
+        margin: 0;
+        overflow: hidden;
+        border: 1px solid #d4d4d4;
+        border-radius: 8px;
+        background: #fafafa;
+      }
+
+      .verdict {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 9px 11px;
+        font-size: 12px;
+        font-weight: 750;
+      }
+
+      .verdict small {
+        color: #525252;
+        font-weight: 500;
+      }
+
+      .positive .verdict {
+        background: #f0fdf4;
+        color: #166534;
+      }
+
+      .negative .verdict {
+        background: #fef2f2;
+        color: #991b1b;
+      }
+
+      .meme-canvas {
+        position: relative;
+        container-type: inline-size;
+        aspect-ratio: 3 / 2;
+        overflow: hidden;
+        background: #111827;
+      }
+
+      .meme-canvas > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .meme-text {
+        position: absolute;
+        z-index: 2;
+        color: white;
+        font-family: Impact, 'Arial Black', sans-serif;
+        font-size: 5.5cqi;
+        font-weight: 900;
+        line-height: 0.98;
+        text-align: center;
+        text-shadow:
+          -1px -1px 0 #020617,
+          1px -1px 0 #020617,
+          -1px 1px 0 #020617,
+          1px 1px 0 #020617;
+      }
+
+      .protected-region {
+        position: absolute;
+        z-index: 1;
+        border: 2px dashed currentcolor;
+        border-radius: 8px;
+        pointer-events: none;
+      }
+
+      .protected-region::before {
+        position: absolute;
+        top: -22px;
+        left: -2px;
+        padding: 2px 5px;
+        border-radius: 3px;
+        background: currentcolor;
+        color: white;
+        content: 'protected';
+        font:
+          700 9px/1.3 ui-sans-serif,
+          system-ui,
+          sans-serif;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .positive .protected-region {
+        color: #16a34a;
+      }
+
+      .negative .protected-region {
+        color: #dc2626;
+      }
+
+      .face-region {
+        top: 8%;
+        left: 34%;
+        width: 32%;
+        height: 56%;
+      }
+
+      .safe-caption {
+        right: 8%;
+        bottom: 5%;
+        left: 8%;
+        font-size: 6cqi;
+      }
+
+      .face-collision {
+        top: 22%;
+        right: 14%;
+        left: 14%;
+        padding: 8px;
+        background: rgb(2 6 23 / 88%);
+        font-size: 4.2cqi;
+      }
+
+      .dialogue-copy {
+        bottom: 8.5%;
+        width: 35%;
+        padding: 4px;
+        font-size: 3.8cqi;
+      }
+
+      .dialogue-left {
+        left: 7.5%;
+      }
+
+      .dialogue-right {
+        right: 7.5%;
+      }
+
+      .overlap-left,
+      .overlap-right {
+        bottom: 20%;
+        width: 48%;
+        padding: 10px 6px;
+        border: 2px solid white;
+        border-radius: 7px;
+        background: rgb(2 6 23 / 92%);
+        font-size: 3.6cqi;
+      }
+
+      .overlap-left {
+        left: 12%;
+      }
+
+      .overlap-right {
+        right: 12%;
+      }
+
+      .state-pair {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .state-pair > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .code-copy {
+        position: absolute;
+        top: 40%;
+        left: 14%;
+        margin: 0;
+        color: white;
+        font:
+          700 4cqi/1.28 ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          monospace;
+        white-space: pre;
+      }
+
+      figcaption {
+        min-height: 44px;
+        padding: 9px 11px;
+        color: #525252;
+        font-size: 12px;
+        line-height: 1.4;
+      }
+
+      .stats {
+        margin-bottom: 18px;
+      }
+
+      .stat {
+        min-width: 138px;
+        padding: 12px 14px;
+        border: 1px solid #d4d4d4;
+        border-radius: 8px;
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 25px;
+      }
+
+      .stat span {
+        color: #525252;
+        font-size: 12px;
+      }
+
+      .result-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .result-list li {
+        padding: 10px 12px;
+        border-radius: 7px;
+      }
+
+      .pass {
+        border: 1px solid #86efac;
+        background: #f0fdf4;
+      }
+
+      .caught {
+        border: 1px solid #fca5a5;
+        background: #fef2f2;
+      }
+
+      .revision > div {
+        padding: 16px;
+        border-radius: 8px;
+      }
+
+      .before {
+        border: 1px solid #d4d4d4;
+        background: #fafafa;
+      }
+
+      .after {
+        border: 1px solid #93c5fd;
+        background: #eff6ff;
+      }
+
+      ul.compact {
+        margin: 8px 0 0;
+        padding-left: 20px;
+      }
+
+      .call-tree {
+        margin: 16px 0 0;
+        padding: 14px;
+        overflow-x: auto;
+        border: 1px solid #d4d4d4;
+        border-radius: 8px;
+        background: #171717;
+        color: #f5f5f5;
+        font:
+          13px/1.6 ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          monospace;
+        white-space: pre;
+      }
+
+      .note {
+        margin: 16px 0 0;
+        padding: 11px 13px;
+        border-left: 4px solid #a3a3a3;
+        background: #fafafa;
+        color: #525252;
+      }
+
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.92em;
+      }
+
+      @media (max-width: 820px) {
+        .flow,
+        .test-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .flow li {
+          min-height: 0;
+        }
+
+        .flow li:not(:last-child)::after {
+          top: auto;
+          right: 50%;
+          bottom: -25px;
+          transform: rotate(90deg);
+        }
+      }
+
+      @media (max-width: 620px) {
+        main {
+          width: min(100% - 20px, 1120px);
+          margin-top: 20px;
+        }
+
+        section {
+          padding: 16px;
+        }
+
+        .split,
+        .comparison,
+        .revision,
+        .result-list {
+          grid-template-columns: 1fr;
+        }
+
+        .verdict small {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Meme skill regression suite</h1>
+        <p class="lede">
+          The tests turn manually rejected or approved meme patterns into small,
+          fictional challenges. Vitest checks the result without showing the
+          expected answer to the Codex agent.
+        </p>
+        <div class="chips" aria-label="Summary">
+          <span class="chip">17 fictional scenarios</span>
+          <span class="chip">29 feedback anchors</span>
+          <span class="chip">5 template families</span>
+          <span class="chip">33 deterministic checks passing</span>
+        </div>
+      </header>
+
+      <section>
+        <h2>Positive and negative fixture examples</h2>
+        <p class="visual-note">
+          These use the real synthetic fixture images. The overlays illustrate a
+          plan that should pass beside the regression the test is designed to
+          catch.
+        </p>
+
+        <div class="visual-examples">
+          <article class="visual-example">
+            <h3>1. Protect the recognition hinge</h3>
+            <p>
+              <code>center-face-safe-edge</code> checks one semantic line,
+              hero-size type, and zero caption overlap with Captain Mira’s face.
+            </p>
+            <div class="comparison">
+              <figure class="positive">
+                <div class="verdict">
+                  <span>✓ PASS</span><small>bold edge overlay</small>
+                </div>
+                <div class="meme-canvas">
+                  <img
+                    src="evals/fixtures/images/face-safe-bottom.png"
+                    alt="Synthetic captain with a large centered face and an override light"
+                  />
+                  <span class="protected-region face-region"></span>
+                  <span class="meme-text safe-caption">SHUTDOWN DENIED</span>
+                </div>
+                <figcaption>
+                  One blunt line uses the open lower edge. The face stays
+                  readable.
+                </figcaption>
+              </figure>
+
+              <figure class="negative">
+                <div class="verdict">
+                  <span>✕ FAIL</span><small>copy covers the subject</small>
+                </div>
+                <div class="meme-canvas">
+                  <img
+                    src="evals/fixtures/images/face-safe-bottom.png"
+                    alt="Synthetic captain with caption copy covering the face"
+                  />
+                  <span class="protected-region face-region"></span>
+                  <span class="meme-text face-collision"
+                    >WHEN THE OFF SWITCH<br />NEEDS PERMISSION</span
+                  >
+                </div>
+                <figcaption>
+                  The text box intersects the protected face and the type gets
+                  timid.
+                </figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="visual-example">
+            <h3>2. Keep dialogue attached and separate</h3>
+            <p>
+              <code>two-speaker-dialogue-gap</code> checks exact copy, speaker
+              anchors, distinct zones, and no box overlap.
+            </p>
+            <div class="comparison">
+              <figure class="positive">
+                <div class="verdict">
+                  <span>✓ PASS</span><small>native dialogue wells</small>
+                </div>
+                <div class="meme-canvas">
+                  <img
+                    src="evals/fixtures/images/two-speakers.png"
+                    alt="Two synthetic speakers with separate dialogue wells"
+                  />
+                  <span class="meme-text dialogue-copy dialogue-left"
+                    >NIA: I CHECKED<br />THE SANDBOX</span
+                  >
+                  <span class="meme-text dialogue-copy dialogue-right"
+                    >ORO: YOU CHECKED<br />THE DECOY</span
+                  >
+                </div>
+                <figcaption>
+                  Each line stays below its speaker in the space the image
+                  already provides.
+                </figcaption>
+              </figure>
+
+              <figure class="negative">
+                <div class="verdict">
+                  <span>✕ FAIL</span><small>dialogue boxes collide</small>
+                </div>
+                <div class="meme-canvas">
+                  <img
+                    src="evals/fixtures/images/two-speakers.png"
+                    alt="Two synthetic speakers with overlapping dialogue boxes"
+                  />
+                  <span class="meme-text overlap-left"
+                    >NIA: I CHECKED<br />THE SANDBOX</span
+                  >
+                  <span class="meme-text overlap-right"
+                    >ORO: YOU CHECKED<br />THE DECOY</span
+                  >
+                </div>
+                <figcaption>
+                  The zones overlap and the speech no longer reads as a clean
+                  exchange.
+                </figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="visual-example">
+            <h3>3. Use genuine states in the right order</h3>
+            <p>
+              <code>genuine-before-after</code> requires two distinct source
+              files: intact before on the left, damaged after on the right.
+            </p>
+            <div class="comparison">
+              <figure class="positive">
+                <div class="verdict">
+                  <span>✓ PASS</span><small>two ordered source frames</small>
+                </div>
+                <div class="meme-canvas state-pair">
+                  <img
+                    src="evals/fixtures/images/robot-before.png"
+                    alt="Synthetic intact robot marked before"
+                  />
+                  <img
+                    src="evals/fixtures/images/robot-after.png"
+                    alt="Synthetic damaged robot marked after"
+                  />
+                </div>
+                <figcaption>
+                  Distinct hashes and declared roles prove a real state change.
+                </figcaption>
+              </figure>
+
+              <figure class="negative">
+                <div class="verdict">
+                  <span>✕ FAIL</span><small>the same frame twice</small>
+                </div>
+                <div class="meme-canvas state-pair">
+                  <img
+                    src="evals/fixtures/images/robot-before.png"
+                    alt="Synthetic intact robot marked before"
+                  />
+                  <img
+                    src="evals/fixtures/images/robot-before.png"
+                    alt="The same intact robot incorrectly duplicated as the second state"
+                  />
+                </div>
+                <figcaption>
+                  A two-panel layout is not a before/after if both source hashes
+                  are identical.
+                </figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="visual-example">
+            <h3>4. Preserve meaningful code geometry</h3>
+            <p>
+              <code>nested-code-indentation</code> locks all three code lines
+              and requires the function body to be indented one level.
+            </p>
+            <div class="comparison">
+              <figure class="positive">
+                <div class="verdict">
+                  <span>✓ PASS</span><small>explicit x-offset</small>
+                </div>
+                <div class="meme-canvas">
+                  <img
+                    src="evals/fixtures/images/console.png"
+                    alt="Synthetic release console with correctly indented code"
+                  />
+                  <pre class="code-copy">
+deploy(parent) {
+  child.promote()
+}</pre>
+                </div>
+                <figcaption>
+                  The child operation is visibly nested inside the parent block.
+                </figcaption>
+              </figure>
+
+              <figure class="negative">
+                <div class="verdict">
+                  <span>✕ FAIL</span><small>indentation flattened</small>
+                </div>
+                <div class="meme-canvas">
+                  <img
+                    src="evals/fixtures/images/console.png"
+                    alt="Synthetic release console with flattened code indentation"
+                  />
+                  <pre class="code-copy">
+deploy(parent) {
+child.promote()
+}</pre>
+                </div>
+                <figcaption>
+                  The same words are present, but the structure has been erased.
+                </figcaption>
+              </figure>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>What happens in one test</h2>
+        <ol class="flow">
+          <li>
+            <span class="step">1 · Evidence</span>
+            A real review note identifies a recurring failure or success.
+          </li>
+          <li>
+            <span class="step">2 · Probe</span>
+            A fictional scene and obvious synthetic image isolate that behavior.
+          </li>
+          <li>
+            <span class="step">3 · Agent</span>
+            Codex reads the current skill and returns a structured composition
+            plan.
+          </li>
+          <li>
+            <span class="step">4 · Oracle</span>
+            Vitest independently checks copy, geometry, source frames, and
+            constraints.
+          </li>
+          <li>
+            <span class="step">5 · Evidence</span>
+            A deterministic render, preview, logs, and evaluation are retained.
+          </li>
+        </ol>
+
+        <div class="split">
+          <div class="panel agent">
+            <h3>Agent sees</h3>
+            <p>
+              <code>SKILL.md</code>, fictional request, attached images, named
+              protected regions, and the output schema.
+            </p>
+          </div>
+          <div class="panel oracle">
+            <h3>Agent does not see</h3>
+            <p>
+              Expected template, exact geometry thresholds, golden review notes,
+              forbidden ingredients, or pass/fail logic.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>What Vitest checks</h2>
+        <div class="test-grid">
+          <article class="test-card">
+            <h3>Idea discipline</h3>
+            <p>
+              One AI bridge, one recognition hinge, correct caveats, and no
+              reuse of a direction the reviewer already rejected.
+            </p>
+          </article>
+          <article class="test-card">
+            <h3>Copy</h3>
+            <p>
+              Locked wording, canonical order, punctuation provenance, word and
+              semantic-line limits, and no test-language contamination.
+            </p>
+          </article>
+          <article class="test-card">
+            <h3>Layout</h3>
+            <p>
+              Native template choice, separated zones, honest top/bottom slots,
+              no box overlap, and no coverage of faces, props, or readouts.
+            </p>
+          </article>
+          <article class="test-card">
+            <h3>Typography</h3>
+            <p>
+              Minimum type size, usable width, feasible line wrapping, enough
+              vertical space, contrast, and visible code indentation.
+            </p>
+          </article>
+          <article class="test-card">
+            <h3>Image integrity</h3>
+            <p>
+              Known source IDs, distinct before/after files, correct frame
+              order, format, and protection of the scene’s visual proof.
+            </p>
+          </article>
+          <article class="test-card">
+            <h3>Harness reliability</h3>
+            <p>
+              Structured-output schema parity, opaque temp staging, subprocess
+              timeout, process-tree shutdown, and retained failure diagnostics.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Focused fixture examples</h2>
+        <div class="stats">
+          <div class="stat">
+            <strong>17</strong><span>fictional probes</span>
+          </div>
+          <div class="stat">
+            <strong>27</strong><span>unique reviewed ideas</span>
+          </div>
+          <div class="stat">
+            <strong>5</strong><span>template families</span>
+          </div>
+          <div class="stat">
+            <strong>480 px</strong><span>feed-size preview</span>
+          </div>
+        </div>
+        <div class="test-grid">
+          <article class="test-card">
+            <h3>Huge centered face</h3>
+            <p>
+              Can bold copy use the lower edge without covering the reaction?
+            </p>
+          </article>
+          <article class="test-card">
+            <h3>Two speakers</h3>
+            <p>
+              Do dialogue wells stay separate and attached to the right person?
+            </p>
+          </article>
+          <article class="test-card">
+            <h3>Real before / after</h3>
+            <p>
+              Are two distinct state images used in the correct reading order?
+            </p>
+          </article>
+          <article class="test-card">
+            <h3>Existing subtitle</h3>
+            <p>
+              Does added copy avoid colliding with text already in the image?
+            </p>
+          </article>
+          <article class="test-card">
+            <h3>Code console</h3>
+            <p>
+              Is exact code retained, including meaningful punctuation and
+              nesting?
+            </p>
+          </article>
+          <article class="test-card">
+            <h3>Rejected direction</h3>
+            <p>
+              Does a terminal dislike cause a genuinely new idea, not a
+              paraphrase?
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>What the first live calibration found</h2>
+        <ul class="result-list">
+          <li class="caught">
+            <strong>Caught · face-safe overlay</strong><br />Added a second idea
+            line and shrank the type below the fixture’s hero-size floor.
+          </li>
+          <li class="caught">
+            <strong>Caught · before / after</strong><br />Used the right images
+            in the right order, but claimed one physical line where two were
+            needed.
+          </li>
+          <li class="caught">
+            <strong>Caught · canonical meter</strong><br />Selected the wrong
+            template and duplicated text over the protected readout.
+          </li>
+          <li class="pass">
+            <strong>Accepted · dialogue</strong><br />Correctly reused real
+            source-native dialogue wells; the oracle was relaxed to allow it.
+          </li>
+          <li class="pass">
+            <strong>Accepted · nested code</strong><br />The plan was right. Its
+            render exposed and then fixed an indentation bug in the test
+            harness.
+          </li>
+          <li class="pass">
+            <strong>Healthy signal</strong><br />Some good outputs pass and
+            known bad patterns fail; the evaluator is not simply rejecting
+            everything.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Proposed skill revision</h2>
+        <div class="revision">
+          <div class="before">
+            <h3>Current shape</h3>
+            <ul class="compact">
+              <li>One 2,696-word file handles every branch</li>
+              <li>Important rules repeat and compete for attention</li>
+              <li>Prose metadata and passing booleans are self-reported</li>
+              <li>Locked copy and cleanup rules can conflict</li>
+              <li>The producing agent also judges its own taste</li>
+            </ul>
+          </div>
+          <div class="after">
+            <h3>Recommended shape</h3>
+            <ul class="compact">
+              <li>
+                Short router plus focused editorial, composition, and revision
+                references
+              </li>
+              <li>
+                Explicit precedence: locked input wins or the result is blocked
+              </li>
+              <li>
+                One deterministic renderer and one versioned result manifest
+              </li>
+              <li>
+                Measured hashes, transforms, glyph boxes, fonts, and physical
+                lines
+              </li>
+              <li>Objective checks first; independent critic handles taste</li>
+            </ul>
+          </div>
+        </div>
+
+        <pre class="call-tree">
+SKILL.md                         # short router and invariant summary
+├── references/editorial.md     # recognition, one bridge, copy selection
+├── references/composition.md   # template, geometry, type, contrast
+├── references/revision.md      # feedback lineage and locked fields
+├── references/result-contract.md
+└── scripts/render-meme.ts      # one deterministic implementation
+
+run
+  record hinge + bridge + locks
+  choose native template
+  render artifact + 480 px preview
+  recompute objective checks
+  return complete | blocked
+  independent critic judges recognition and comic force</pre>
+
+        <p class="note">
+          The proposed document is a draft; the production skill was
+          deliberately left unchanged. Today’s oracle is strong on structured
+          composition and deterministic rendering, but production text metrics,
+          OCR, and an independent vision critic remain follow-up work.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

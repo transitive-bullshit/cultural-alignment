@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "fixture_id",
+    "recognition_hinge",
+    "ai_bridge",
+    "caption_lines",
+    "format",
+    "presentation",
+    "why_it_works"
+  ],
+  "properties": {
+    "version": { "type": "integer", "const": 2 },
+    "fixture_id": { "type": "string", "minLength": 1 },
+    "recognition_hinge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["description", "region_ids"],
+      "properties": {
+        "description": { "type": "string", "minLength": 1 },
+        "region_ids": {
+          "type": "array",
+          "maxItems": 8,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "ai_bridge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["concept", "connection"],
+      "properties": {
+        "concept": { "type": "string", "minLength": 1 },
+        "connection": { "type": "string", "minLength": 1 }
+      }
+    },
+    "caption_lines": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "text",
+          "kind",
+          "role",
+          "anchor_region_id",
+          "indent_level"
+        ],
+        "properties": {
+          "text": { "type": "string", "minLength": 1 },
+          "kind": {
+            "type": "string",
+            "enum": ["canonical-quote", "intentional-rewrite", "original"]
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "only",
+              "setup",
+              "payoff",
+              "speech",
+              "label",
+              "code",
+              "status"
+            ]
+          },
+          "anchor_region_id": { "type": ["string", "null"] },
+          "indent_level": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 8
+          }
+        }
+      }
+    },
+    "format": {
+      "type": "string",
+      "enum": [
+        "canon",
+        "relabel",
+        "collision",
+        "dialogue",
+        "state contrast",
+        "source-native interface"
+      ]
+    },
+    "presentation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "source_frames", "preferred_edge", "palette"],
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "single",
+            "setup-payoff",
+            "dialogue",
+            "state-contrast",
+            "source-native"
+          ]
+        },
+        "source_frames": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["image_id", "role"],
+            "properties": {
+              "image_id": { "type": "string", "minLength": 1 },
+              "role": {
+                "type": "string",
+                "enum": [
+                  "single",
+                  "before",
+                  "after",
+                  "left-speaker",
+                  "right-speaker"
+                ]
+              }
+            }
+          }
+        },
+        "preferred_edge": {
+          "type": "string",
+          "enum": ["auto", "top", "bottom"]
+        },
+        "palette": {
+          "type": "string",
+          "enum": ["default", "orange-white"]
+        }
+      }
+    },
+    "why_it_works": { "type": "string", "minLength": 1 }
+  }
+}
