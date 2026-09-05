@@ -81,7 +81,7 @@ function escapeMarkdownText(value: string) {
   return value
     .replace(/\s+/g, ' ')
     .trim()
-    .replace(/[\\`*_[\]{}<>#+.!|]/g, '\\$&')
+    .replace(/[\\`*_[\]{}<>#+.!|~]/g, '\\$&')
 }
 
 function escapeMarkdownAlt(value: string) {
