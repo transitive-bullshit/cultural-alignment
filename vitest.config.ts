@@ -9,6 +9,7 @@ export default defineConfig({
   },
   test: {
     include: ['**/*.test.{ts,tsx}'],
-    exclude: [...configDefaults.exclude, 'tests/e2e/**']
+    exclude: [...configDefaults.exclude, 'tests/e2e/**'],
+    maxWorkers: '50%'
   }
 })

@@ -25,9 +25,10 @@ const testTimeout =
   positiveInteger(process.env.MEME_SKILL_EVAL_TEST_TIMEOUT_MS) ??
   childTimeout + 30_000
 
-describe
-  .skipIf(!enabled || !allowedInCi)
-  .sequential('live Codex meme skill regressions', () => {
+describe.skipIf(!enabled || !allowedInCi)(
+  'live Codex meme skill regressions',
+  { concurrent: false },
+  () => {
     it('selects at least one requested fixture', () => {
       expect(selectedFixtures.length).toBeGreaterThan(0)
     })
@@ -49,7 +50,8 @@ describe
         })
       }
     )
-  })
+  }
+)
 
 function positiveInteger(value: string | undefined): number | undefined {
   if (!value) return undefined

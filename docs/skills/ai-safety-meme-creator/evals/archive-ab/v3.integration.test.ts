@@ -17,9 +17,10 @@ const selectedIds = new Set(
     .filter(Boolean)
 )
 
-describe
-  .skipIf(!enabled || !allowedInCi)
-  .sequential('live Codex semantic meme regressions', () => {
+describe.skipIf(!enabled || !allowedInCi)(
+  'live Codex semantic meme regressions',
+  { concurrent: false },
+  () => {
     let artifactRoot = ''
 
     beforeAll(async () => {
@@ -77,7 +78,8 @@ describe
         }
       }
     )
-  })
+  }
+)
 
 function positiveInteger(value: string | undefined, fallback: number): number {
   if (!value) return fallback
