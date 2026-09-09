@@ -708,6 +708,7 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
             style={{ objectPosition }}
             loading={eager ? 'eager' : undefined}
             onLoad={() => setTransitionPreview(null)}
+            onClick={hasVideo ? togglePlayback : undefined}
             data-scenario-still
           />
         </>

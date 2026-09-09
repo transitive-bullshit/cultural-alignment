@@ -153,6 +153,10 @@
   user-select: none;
 }
 
+.mediaFrame img[data-scenario-still] {
+  pointer-events: auto;
+}
+
 .mediaFrame .transitionPreview {
   position: absolute;
   z-index: 2;
@@ -198,6 +202,10 @@
   border-radius: inherit;
   background: transparent;
   color: inherit;
+}
+
+.mediaFrame[data-showing-still] .mediaToggle {
+  pointer-events: none;
 }
 
 .mediaToggle:focus-visible {
