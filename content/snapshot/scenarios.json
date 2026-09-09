@@ -21773,5 +21773,67 @@
     "scene": "Working from home, Homer rigs a drinking bird to press “Y” on the nuclear plant computer and leaves for the movies. When the bird falls over, the unattended system approaches a meltdown.",
     "whyAnalogyWorks": "The arrangement preserves the appearance of human approval while removing observation and judgment. A rubber-stamp human in the loop is not meaningful oversight, and a brittle automation can fail without anyone noticing.",
     "caveats": "The bird is a mechanical gag, not an intelligent system; the analogy concerns fake oversight and unsafe delegation."
+  },
+  {
+    "id": "3d6edb27-f124-8123-bd9c-f7fe27ecd851",
+    "slug": "supermeth-in-a-garage",
+    "title": "Supermeth in a Garage",
+    "keywords": [
+      "jesse pinkman",
+      "walter white",
+      "gpt-6",
+      "supermeth",
+      "underground lab",
+      "garage lab",
+      "expert advice",
+      "easier access to dangerous skills",
+      "chemical risks",
+      "biological risks"
+    ],
+    "sourceId": "3caedb27-f124-80cc-afa6-e81ab4c07298",
+    "episode": {
+      "label": "Salud",
+      "href": "https://en.wikipedia.org/wiki/Salud_(Breaking_Bad)"
+    },
+    "releaseDate": "2011-09-18",
+    "featured": false,
+    "tags": [
+      "featured"
+    ],
+    "riskFamilyIds": [
+      "3caedb27-f124-80aa-afad-c13fa096c6fd",
+      "3caedb27-f124-80e9-b5e9-c462a175b76a",
+      "3caedb27-f124-80d8-a1de-f68271cab6e1"
+    ],
+    "conceptIds": [
+      "3caedb27-f124-80d2-b423-fcd2da7a6e96",
+      "3caedb27-f124-80ef-88d2-f3018917c898",
+      "3caedb27-f124-8036-8d37-d3e221faf06b"
+    ],
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3d6edb27f1248123bd9cf7fe27ecd851/gallery-4c195dce9280eecc4698f9e5f23e1be28bae9fcf4f9dcefd8581fb4530cfc52a.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3d6edb27f1248123bd9cf7fe27ecd851/detail-b5c495d8f6c82193783752803f51e0bd312d09987676bf3173b2266456deb419.webp",
+      "width": 1440,
+      "height": 961,
+      "alt": "Still from Breaking Bad illustrating Supermeth in a Garage",
+      "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoIAAUAA8BgJbACdADzd4UAAP3B14NcaUdX7c4rNLdnvbtwyJ7C6HmqgAA="
+    },
+    "memes": [
+      {
+        "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3d6edb27f1248123bd9cf7fe27ecd851/memes/gallery-041c008ff144ccddc9189c28b6c2d84e14cce77b5d4ab82e6eff9613e0d21f41.webp",
+        "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3d6edb27f1248123bd9cf7fe27ecd851/memes/detail-694aeea147e9e255dcb3cbae9a05a85b9956a1f8b0572edaae64bb4d5f3e169e.webp",
+        "width": 1600,
+        "height": 800,
+        "alt": "Generated meme related to Supermeth in a Garage",
+        "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACQAQCdASoIAAQAA8BgJZQAAuabAYAA/t4R34peD9VUZ/caPU1N4aBLwAA="
+      }
+    ],
+    "video": {
+      "provider": "youtube",
+      "id": "OPrsf8uv0Nk"
+    },
+    "scene": "Walt uses his chemistry skills to help Jesse make very pure meth. They grow the business from a small operation into Gus’s underground lab. The meme imagines Jesse using GPT-6 instead of Walt, even in a garage.",
+    "whyAnalogyWorks": "Advanced AI can give expert advice to almost anyone. This could help people with little training create harmful chemicals or biological threats. The danger grows when rare skills become easy for many people to access.",
+    "caveats": "Jesse already knows how to make meth, and meth is a chemical drug, not a biological threat. In real life, this work still needs materials, equipment, hands-on skill, and many steps to go right. AI may lower these barriers, but it does not remove them."
   }
 ]
