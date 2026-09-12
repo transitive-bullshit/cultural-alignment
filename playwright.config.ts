@@ -26,7 +26,7 @@ export default defineConfig({
   webServer: {
     command: useProductionServer
       ? `pnpm start --hostname 127.0.0.1 --port ${port}`
-      : `pnpm dev --hostname 127.0.0.1 --port ${port}`,
+      : `pnpm exec next dev --hostname 127.0.0.1 --port ${port}`,
     reuseExistingServer: !isCI,
     timeout: 120_000,
     url: `http://127.0.0.1:${port}`

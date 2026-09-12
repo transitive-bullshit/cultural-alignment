@@ -8,7 +8,7 @@
   "repository": "https://github.com/transitive-bullshit/cultural-alignment",
   "type": "module",
   "scripts": {
-    "dev": "next dev",
+    "dev": "portless run next dev",
     "build": "next build --webpack",
     "start": "next start",
     "content:sync": "node --import tsx scripts/sync.ts",
@@ -93,6 +93,7 @@
     "oxfmt": "^0.67.0",
     "oxlint": "^1.82.0",
     "oxlint-tsgolint": "^7.0.2001",
+    "portless": "^0.15.6",
     "simple-git-hooks": "^2.14.0",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.23.13",
@@ -109,7 +110,7 @@
     ]
   },
   "engines": {
-    "node": ">=22.13"
+    "node": ">=24"
   },
   "packageManager": "pnpm@11.24.0"
 }

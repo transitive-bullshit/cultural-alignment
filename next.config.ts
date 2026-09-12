@@ -50,7 +50,12 @@ const remotePatterns = [
 ]
 
 const nextConfig: NextConfig = {
-  allowedDevOrigins: ['127.0.0.1'],
+  allowedDevOrigins: [
+    '127.0.0.1',
+    ...(process.env.PORTLESS_URL
+      ? [new URL(process.env.PORTLESS_URL).hostname]
+      : [])
+  ],
   images: {
     qualities: [75],
     remotePatterns

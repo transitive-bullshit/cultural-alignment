@@ -164,7 +164,7 @@
   position: relative;
   min-width: 0;
   overflow: hidden;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 8 / 5;
   border: 1px solid color-mix(in srgb, var(--foreground) 24%, transparent);
   background: var(--muted);
   box-shadow: 4px 4px 0 color-mix(in srgb, var(--brand-accent) 32%, transparent);
@@ -184,7 +184,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .analogy {

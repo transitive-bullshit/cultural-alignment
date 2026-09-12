@@ -11,6 +11,7 @@ import {
   getMemeReviewStatePath,
   readMemeReviewState
 } from '../lib/meme-review/store'
+import { getLocalDevUrl } from './local-dev-url'
 import { parseNamedArgument, writeJsonAtomic } from './meme-review-round-utils'
 
 const renderCssWidth = 480
@@ -32,7 +33,7 @@ if (
   throw new Error('--width must be an integer from 1200 through 1600')
 }
 
-const baseUrl = parseNamedArgument('url') ?? 'http://127.0.0.1:3100'
+const baseUrl = parseNamedArgument('url') ?? getLocalDevUrl()
 const catalog = await loadMemeReviewCatalog()
 const state = await readMemeReviewState(
   getMemeReviewStatePath(catalog.feedbackPath),

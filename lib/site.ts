@@ -1,6 +1,10 @@
 const configuredSiteUrl = normalizeEnvironmentValue(
   process.env.NEXT_PUBLIC_SITE_URL
 )
+const localDevUrl =
+  process.env.NODE_ENV === 'development'
+    ? normalizeEnvironmentValue(process.env.PORTLESS_URL)
+    : undefined
 const vercelHostname =
   normalizeEnvironmentValue(process.env.VERCEL_PROJECT_PRODUCTION_URL) ??
   normalizeEnvironmentValue(process.env.VERCEL_URL)
@@ -15,6 +19,7 @@ export const siteSummary = siteDescription
 
 export const siteUrl = new URL(
   configuredSiteUrl ??
+    localDevUrl ??
     (vercelHostname ? `https://${vercelHostname}` : 'http://localhost:3000')
 )
 

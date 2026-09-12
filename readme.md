@@ -29,16 +29,22 @@ This project explores AI safety and alignment concepts via popular scenes from m
 
 ## Local development
 
-Requires Node.js 22 or newer and pnpm 11.
+Requires Node.js 24 or newer and pnpm 11.
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
+Local development uses [Portless](https://portless.sh) at `https://cultural-alignment.localhost`. Portless starts its shared proxy automatically and assigns Next.js a free port. It reuses an existing proxy configuration, so the printed URL may use HTTP or a custom proxy port. On first run, follow its terminal prompts to trust the local certificate and allow the proxy to bind port 443. Linked Git worktrees get a branch subdomain; use the URL printed by `pnpm dev` or `pnpm exec portless get cultural-alignment`.
+
+Run `PORTLESS=0 pnpm dev` to bypass the proxy and use Next.js directly. If you have an existing `NEXT_PUBLIC_SITE_URL` in `.env`, remove it to infer the active Portless URL, or set it deliberately to override the origin.
+
 The app reads its content records from `content/snapshot` and its search corpus from `public/content/search-index.json`. Image URLs, intrinsic dimensions, and alt text are baked into that versioned snapshot; generated image bytes belong in public object storage rather than the Git repository. Normal development, builds, and application runtime do not read Notion or S3 credentials.
 
-The canonical production origin is [cultural-alignment.com](https://cultural-alignment.com). Set `NEXT_PUBLIC_SITE_URL=https://cultural-alignment.com` when it cannot be inferred from Vercel; local builds default to `http://localhost:3000`.
+The canonical production origin is [cultural-alignment.com](https://cultural-alignment.com). Set `NEXT_PUBLIC_SITE_URL=https://cultural-alignment.com` when it cannot be inferred from Vercel; `pnpm dev` infers its origin from Portless, while local builds and direct Next.js development default to `http://localhost:3000`.
+
+The meme preview and finalized asset render scripts look up the current Portless URL, including worktree subdomains and custom proxy settings. Pass `--url=<origin>` to `pnpm memes:render-finalized` or `--url=<origin>/admin/meme-review` to `pnpm memes:preview-contact-sheet` when targeting another server, such as direct Next.js development or a production preview.
 
 ### Local production preview
 
@@ -57,7 +63,7 @@ pnpm build
 
 Use `pnpm fix:format` and `pnpm fix:lint` to apply the repository's Oxc rules.
 
-Local Playwright journeys use an installed Google Chrome and the development server. CI installs its own Chromium, runs `pnpm test:checks`, builds once, and runs `pnpm test:e2e` against the production server.
+Local Playwright journeys use an installed Google Chrome and a direct development server on `http://127.0.0.1:3100` (`PLAYWRIGHT_PORT` overrides the port), bypassing Portless. CI installs its own Chromium, runs `pnpm test:checks`, builds once, and runs `pnpm test:e2e` against the production server.
 
 ## Content synchronization
 

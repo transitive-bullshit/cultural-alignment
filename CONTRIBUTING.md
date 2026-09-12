@@ -4,10 +4,14 @@ Code contributions, bug reports, and focused design-engineering improvements are
 
 ## Setup
 
+Use Node.js 24 or newer and pnpm 11.
+
 ```bash
 pnpm install
 pnpm dev
 ```
+
+Open the Portless URL printed by `pnpm dev` (normally `https://cultural-alignment.localhost`). See [local development](readme.md#local-development) for first-run HTTPS setup, worktree URLs, and the direct-server fallback.
 
 Before opening a change, run:
 

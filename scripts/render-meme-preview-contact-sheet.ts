@@ -8,6 +8,7 @@ import {
   memeIdeaCollectionV2Schema,
   type ScenarioMemeIdeasV2
 } from '../lib/meme-review/schema'
+import { getLocalDevUrl } from './local-dev-url'
 import {
   memeReviewRoundsPath,
   parseNamedArgument,
@@ -41,7 +42,8 @@ const outputRoot =
   parseNamedArgument('output') ??
   join('/private/tmp', 'cultural-alignment-meme-review', roundName, 'previews')
 const baseUrl =
-  parseNamedArgument('url') ?? 'http://127.0.0.1:3100/admin/meme-review'
+  parseNamedArgument('url') ??
+  new URL('/admin/meme-review', getLocalDevUrl()).href
 const browser = await chromium.launch()
 const page = await browser.newPage({
   viewport: { width: 1800, height: 1200 },
