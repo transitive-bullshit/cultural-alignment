@@ -4,7 +4,7 @@ import { contentCatalog } from '@/lib/content/snapshot'
 
 import type { GalleryIntroExample } from './types'
 
-const INTRO_SCENARIO_SLUG = 'serving-the-most-evil-master'
+const INTRO_SCENARIO_SLUG = 'sit-tight-and-assess'
 
 function resolveGalleryIntroExample(): GalleryIntroExample {
   const scenario = contentCatalog.getScenarioPage(INTRO_SCENARIO_SLUG)
