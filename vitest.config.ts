@@ -9,7 +9,11 @@ export default defineConfig({
   },
   test: {
     include: ['**/*.test.{ts,tsx}'],
-    exclude: [...configDefaults.exclude, 'tests/e2e/**'],
+    exclude: [
+      ...configDefaults.exclude,
+      'tests/e2e/**',
+      'docs/skills/ai-safety-meme-creator/**'
+    ],
     maxWorkers: '50%'
   }
 })
