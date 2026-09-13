@@ -46,6 +46,57 @@ describe('formatScenarioAsMarkdown', () => {
 
     expect(markdown).not.toContain('**Episode:**')
   })
+
+  it('escapes tildes so GFM does not strike them through (title, source, episode, taxonomy)', () => {
+    const base = createScenario()
+    const scenario: ScenarioPage = {
+      ...base,
+      title: 'Scenario ~with tildes~',
+      source: { ...base.source, title: 'Source ~One~' },
+      episode: {
+        label: 'Confession ~The Future~',
+        href: 'https://en.wikipedia.org/wiki/Mob_Psycho_100#Anime'
+      },
+      riskFamilies: [
+        {
+          id: 'risk-tilde',
+          slug: 'risk-tilde',
+          title: 'Risk ~foo~',
+          href: '/risk-families/risk-tilde',
+          description: 'A risk description.'
+        }
+      ],
+      concepts: [
+        {
+          id: 'concept-tilde',
+          slug: 'concept-tilde',
+          title: 'Concept ~bar~',
+          href: '/concepts/concept-tilde',
+          description: 'A concept description.'
+        }
+      ]
+    }
+
+    const markdown = formatScenarioAsMarkdown(
+      scenario,
+      new URL('https://example.com/')
+    )
+
+    // title H1 path
+    expect(markdown).toContain('# Scenario \\~with tildes\\~')
+    expect(markdown).not.toContain('# Scenario ~with tildes~')
+    // source link label path
+    expect(markdown).toContain('[Source \\~One\\~](')
+    expect(markdown).not.toContain('[Source ~One~](')
+    // episode-label link path (real production label)
+    expect(markdown).toContain('[Confession \\~The Future\\~](')
+    expect(markdown).not.toContain('[Confession ~The Future~](')
+    // taxonomy-link paths (risk families + AI safety concepts)
+    expect(markdown).toContain('[Risk \\~foo\\~](')
+    expect(markdown).not.toContain('[Risk ~foo~](')
+    expect(markdown).toContain('[Concept \\~bar\\~](')
+    expect(markdown).not.toContain('[Concept ~bar~](')
+  })
 })
 
 function createScenario(): ScenarioPage {
