@@ -13,19 +13,16 @@ export function sortCollectionItemsByReleaseDate<
 >(items: readonly Item[], sort: CollectionSort): readonly Item[] {
   if (sort === 'default') return items
 
-  return items
-    .map((item, index) => ({ index, item }))
-    .toSorted((left, right) => {
-      const leftDate = left.item.releaseDate
-      const rightDate = right.item.releaseDate
+  return items.toSorted((left, right) => {
+    const leftDate = left.releaseDate
+    const rightDate = right.releaseDate
 
-      if (leftDate === rightDate) return left.index - right.index
-      if (leftDate === null) return 1
-      if (rightDate === null) return -1
+    if (leftDate === rightDate) return 0
+    if (leftDate === null) return 1
+    if (rightDate === null) return -1
 
-      const dateOrder = leftDate < rightDate ? -1 : 1
+    const dateOrder = leftDate < rightDate ? -1 : 1
 
-      return sort === 'oldest' ? dateOrder : -dateOrder
-    })
-    .map(({ item }) => item)
+    return sort === 'oldest' ? dateOrder : -dateOrder
+  })
 }

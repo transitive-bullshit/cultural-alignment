@@ -153,7 +153,6 @@ export const contentSnapshotSchema = z.object({
 
 export type FocalPoint = z.infer<typeof focalPointSchema>
 export type ContentImage = z.infer<typeof contentImageSchema>
-export type ScenarioImage = ContentImage
 export type ScenarioVideo = z.infer<typeof scenarioVideoSchema>
 export type Citation = z.infer<typeof citationSchema>
 export type ScenarioRecord = z.infer<typeof scenarioRecordSchema>

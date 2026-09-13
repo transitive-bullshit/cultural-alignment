@@ -1,6 +1,10 @@
 import { isDeepStrictEqual } from 'node:util'
 
 import { assertFinalizedMemesPreserved } from '../lib/meme-review/finalization'
+import {
+  allowedMemeReviewFields,
+  type MemeReviewMutableField
+} from '../lib/meme-review/generation-policy'
 import type {
   MemeFeedbackEntry,
   MemeIdeaV2,
@@ -10,8 +14,7 @@ import type {
 } from '../lib/meme-review/schema'
 import type {
   MemeReviewGenerationPlan,
-  MemeReviewGenerationPlanIdea,
-  MemeReviewMutableField
+  MemeReviewGenerationPlanIdea
 } from './prepare-meme-review-batch'
 import {
   memeReviewIdeaEditorialHash,
@@ -30,22 +33,6 @@ const externalTemplates = new Set<MemeIdeaV2['preview']['template']>([
   'sidecar-left',
   'sidecar-right'
 ])
-const layoutOnlyFields = new Set<MemeReviewMutableField>([
-  'preview',
-  'frame_guidance',
-  'critic',
-  'assets'
-])
-const boundedRevisionFields = new Set<MemeReviewMutableField>([
-  'caption_lines',
-  'preview',
-  'frame_guidance',
-  'why_it_works',
-  'critic',
-  'assets'
-])
-const punctuationOnlyFields = new Set<MemeReviewMutableField>(['caption_lines'])
-
 export type MemeReviewValidationPlan = MemeReviewGenerationPlan
 
 type ResolvedLayoutPolicy = {
@@ -351,18 +338,11 @@ function validateAllowedFields(
   planIdea: MemeReviewGenerationPlanIdea,
   issues: string[]
 ) {
-  const permittedByAction =
-    planIdea.action === 'layout-only'
-      ? layoutOnlyFields
-      : planIdea.action === 'bounded-revision'
-        ? boundedRevisionFields
-        : planIdea.action === 'punctuation-only'
-          ? punctuationOnlyFields
-          : new Set<MemeReviewMutableField>()
+  const permittedByAction = allowedMemeReviewFields(planIdea.action)
   const allowedFields = new Set(planIdea.allowed_changed_fields)
 
   for (const field of allowedFields) {
-    if (!permittedByAction.has(field)) {
+    if (!permittedByAction.includes(field)) {
       issues.push(
         `${planIdea.id} generation plan authorizes invalid ${planIdea.action} field ${field}`
       )

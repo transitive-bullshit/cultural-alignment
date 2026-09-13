@@ -6,6 +6,12 @@ import { pathToFileURL } from 'node:url'
 import { withMemeReviewFileLock } from '../lib/meme-review/file-lock'
 import { assertFinalizedMemesPreserved } from '../lib/meme-review/finalization'
 import {
+  allowedMemeReviewFields,
+  isMutableMemeReviewAction,
+  type MemeReviewGenerationAction,
+  type MemeReviewMutableField
+} from '../lib/meme-review/generation-policy'
+import {
   memeIdeaCollectionV2Schema,
   memeReviewAssetCollectionSchema,
   memeReviewBatchStatusSchema,
@@ -34,20 +40,6 @@ const punctuationRefinementMode = 'punctuation-refinement' as const
 export type MemeReviewPreparationMode =
   | typeof layoutRefinementMode
   | typeof punctuationRefinementMode
-export type MemeReviewGenerationAction =
-  | 'finalized'
-  | 'disabled-unchanged'
-  | 'layout-only'
-  | 'bounded-revision'
-  | 'punctuation-only'
-export type MemeReviewMutableField =
-  | 'caption_lines'
-  | 'preview'
-  | 'frame_guidance'
-  | 'why_it_works'
-  | 'critic'
-  | 'assets'
-
 export type MemeReviewSourceFileName =
   | 'ideas.json'
   | 'assets.json'
@@ -318,7 +310,7 @@ function planMemeReviewBatch({
       retainedPlanIdeas.push(
         planIdea(scenario.scenario_slug, idea, feedback, action)
       )
-      if (isMutableAction(action)) mutableIdeas += 1
+      if (isMutableMemeReviewAction(action)) mutableIdeas += 1
     }
 
     if (retainedIdeas.length === 0) continue
@@ -435,7 +427,7 @@ function planMemeReviewBatch({
     )
   }))
   const mutableIdeas = retainedPlanIdeas.filter(({ action }) =>
-    isMutableAction(action)
+    isMutableMemeReviewAction(action)
   ).length
   const finalizedIdeas = retainedPlanIdeas.filter(
     ({ action }) => action === 'finalized'
@@ -535,13 +527,7 @@ function actionForIdea({
       ? 'bounded-revision'
       : 'punctuation-only'
   }
-  if (!feedback?.rating) {
-    return feedback?.notes.trim() ? 'bounded-revision' : 'layout-only'
-  }
-  if (feedback?.rating === 'like' || feedback?.rating === 'neutral') {
-    return feedback.notes.trim() ? 'bounded-revision' : 'layout-only'
-  }
-  return null
+  return feedback?.notes.trim() ? 'bounded-revision' : 'layout-only'
 }
 
 function planIdea(
@@ -556,7 +542,7 @@ function planIdea(
     action,
     source_idea_sha256: memeReviewIdeaHash(idea),
     source_editorial_sha256: memeReviewIdeaEditorialHash(idea),
-    allowed_changed_fields: allowedChangedFields(action),
+    allowed_changed_fields: allowedMemeReviewFields(action),
     source_feedback: feedback ?? null
   }
 }
@@ -573,34 +559,6 @@ function droppedPlanIdea(
     source_editorial_sha256: memeReviewIdeaEditorialHash(idea),
     source_feedback: feedback ?? null
   }
-}
-
-function allowedChangedFields(
-  action: MemeReviewGenerationAction
-): readonly MemeReviewMutableField[] {
-  if (action === 'layout-only') {
-    return ['preview', 'frame_guidance', 'critic', 'assets']
-  }
-  if (action === 'bounded-revision') {
-    return [
-      'caption_lines',
-      'preview',
-      'frame_guidance',
-      'why_it_works',
-      'critic',
-      'assets'
-    ]
-  }
-  if (action === 'punctuation-only') return ['caption_lines']
-  return []
-}
-
-function isMutableAction(action: MemeReviewGenerationAction) {
-  return (
-    action === 'layout-only' ||
-    action === 'bounded-revision' ||
-    action === 'punctuation-only'
-  )
 }
 
 const punctuationOnlyNotePattern =

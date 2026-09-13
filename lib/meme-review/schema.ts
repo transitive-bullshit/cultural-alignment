@@ -594,24 +594,15 @@ export const memeFeedbackBatchPatchSchema = z
     })
   })
 
-// Round-one aliases keep the original assembly tooling and archive tests stable.
-export const memePreviewLayoutSchema = memePreviewLayoutV1Schema
-export const memeCritiqueSchema = memeCritiqueV1Schema
-export const memeIdeaSchema = memeIdeaV1Schema
-export const scenarioMemeIdeasSchema = scenarioMemeIdeasV1Schema
+// The original assembly tooling still writes round-one idea collections.
 export const memeIdeaCollectionSchema = memeIdeaCollectionV1Schema
-export const memeFeedbackDocumentSchema = memeFeedbackDocumentV1Schema
 
 export type MemeIdeaV1 = z.infer<typeof memeIdeaV1Schema>
 export type MemeIdeaV2 = z.infer<typeof memeIdeaV2Schema>
 export type MemeIdea = MemeIdeaV2
 export type ScenarioMemeIdeasV1 = z.infer<typeof scenarioMemeIdeasV1Schema>
 export type ScenarioMemeIdeasV2 = z.infer<typeof scenarioMemeIdeasV2Schema>
-export type ScenarioMemeIdeas = ScenarioMemeIdeasV2
 export type MemeReviewAsset = z.infer<typeof memeReviewAssetSchema>
-export type MemeReviewScenarioPreviewV1 = z.infer<
-  typeof memeReviewScenarioPreviewV1Schema
->
 export type MemeReviewScenarioPreviewDocumentV1 = z.infer<
   typeof memeReviewScenarioPreviewDocumentV1Schema
 >
@@ -624,13 +615,11 @@ export type MemeReviewStateDocument = z.infer<
   typeof memeReviewStateDocumentSchema
 >
 export type MemeFeedbackDocument = MemeReviewStateDocument
-export type ActiveMemeReviewRound = z.infer<typeof activeMemeReviewRoundSchema>
 export type MemeReviewBatchStatus = z.infer<typeof memeReviewBatchStatusSchema>
 export type MemeReviewScenarioState = z.infer<
   typeof memeReviewScenarioStateSchema
 >
 export type MemeFeedbackPatch = z.infer<typeof memeFeedbackPatchSchema>
-export type MemeScenarioPatch = z.infer<typeof memeScenarioPatchSchema>
 export type MemeReviewBatchPatch = z.infer<typeof memeReviewBatchPatchSchema>
 
 function requireLikeWhenLocked(

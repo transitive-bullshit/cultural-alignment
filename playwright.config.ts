@@ -1,11 +1,14 @@
 import { defineConfig, devices } from '@playwright/test'
 
+import { archiveComparisonTestMatch } from './playwright.artifacts.config'
+
 const port = Number(process.env.PLAYWRIGHT_PORT ?? 3100)
 const isCI = Boolean(process.env.CI)
 const useProductionServer = process.env.PLAYWRIGHT_SERVER === 'production'
 
 export default defineConfig({
   testDir: './tests/e2e',
+  testIgnore: archiveComparisonTestMatch,
   outputDir: './test-results/playwright',
   expect: {
     timeout: isCI ? 10_000 : 5_000
@@ -27,7 +30,7 @@ export default defineConfig({
     command: useProductionServer
       ? `pnpm start --hostname 127.0.0.1 --port ${port}`
       : `pnpm exec next dev --hostname 127.0.0.1 --port ${port}`,
-    reuseExistingServer: !isCI,
+    reuseExistingServer: false,
     timeout: 120_000,
     url: `http://127.0.0.1:${port}`
   },

@@ -38,26 +38,6 @@ export function toroidalDelta(from: number, to: number, span: number) {
   return wrapCentered(to - from, span)
 }
 
-export function centerProjectedSurfaceItem(
-  slots: readonly ProjectedSurfaceSlot[],
-  itemIndex: number,
-  offset: number,
-  span: number
-) {
-  assertFinite(offset, 'offset')
-  assertPositive(span, 'span')
-
-  let closestX: number | null = null
-  for (const slot of slots) {
-    if (slot.itemIndex !== itemIndex) continue
-
-    const x = wrapCentered(slot.x + offset, span)
-    if (closestX === null || Math.abs(x) < Math.abs(closestX)) closestX = x
-  }
-
-  return closestX === null ? null : offset + toroidalDelta(closestX, 0, span)
-}
-
 export function createProjectedSurfaceLayout(
   itemCount: number,
   options: ProjectedSurfaceLayoutOptions

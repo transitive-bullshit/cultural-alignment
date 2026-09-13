@@ -28,12 +28,12 @@ The source code uses the MIT license. The authored structured dataset uses CC0; 
 
 ## Capabilities and Constraints
 
-- Core resource models: scenario, source, AI risk family, and AI safety concept.
+- Core resource models: scenario, source, franchise, AI risk family, and AI safety concept.
 - Recognition-first homepage introduction leading into scenarios carrying the Notion `featured` tag.
 - A `/scenarios` view of the complete gallery with additional risk-family filtering.
-- Global Command-K/header search across all four resource types.
-- Scenario pages present scene media, source identity, explanation, caveats, taxonomy, spoiler handling, more from the same source, and best-effort related scenarios through the Dossier layout. Clips use a YouTube iframe inside branded play/pause, progress, seeking, and return-to-still controls.
-- Source, risk-family, and concept pages act as functional relational pivots. Risk families are the first candidates for richer editorial treatment later.
+- Global Command-K/header search across all five resource types.
+- Scenario pages present scene media, source/franchise identity, explanation, caveats, taxonomy, spoiler handling, optional memes, and deterministic discovery through the Dossier layout. Continuation follows the first authored franchise when available, otherwise the same source; related scenarios use taxonomy overlap outside that scope. Clips use a YouTube iframe inside branded play/pause, progress, seeking, and return-to-still controls.
+- Source, franchise, risk-family, and concept pages act as functional relational pivots. Risk families are the first candidates for richer editorial treatment later.
 - The committed snapshot contains the full collection; content synchronization is an editorial operation, never a request-time dependency.
 - Desktop is the primary visual craft target. Mobile remains functional with a lower-density direct-touch version of the same experience.
 - Targeted keyboard paths, reduced-motion behavior, and a recognizable no-WebGL fallback are included. Comprehensive assistive-technology parity and a dedicated low-power renderer remain post-MVP work.
@@ -44,12 +44,11 @@ The source code uses the MIT license. The authored structured dataset uses CC0; 
 
 "Cultural Alignment" is a working title only. The public artifact should feel like a distinctive speculative cultural archive: bold, playful, intelligent, authored, visually strange, and interactionally legible. It must not use alien narration, broadcast/transmission framing, investigation framing, forced quizzes, or institutional authority. Photoyoshi's elastic infinite image field is the binding gallery reference, adapted to a one-dimensional horizontal projected surface. Motion uses elastic exploration, precise selection, and confident dimensional transitions. Interface fiction remains light and visual.
 
-## Current Content Baseline
+## Content Coverage
 
-- A curated Notion database containing 179 complete scenarios across 129 media sources.
-- Five AI risk families and 65 currently used AI safety concepts.
-- Every scenario includes a scene description, analogy explanation, caveats, release date, source, and taxonomy assignments; 159 include a YouTube clip.
-- The synchronized snapshot contains 358 local gallery/detail image assets.
+- Current resource counts live in [`content/snapshot/manifest.json`](../content/snapshot/manifest.json); `pnpm content:validate` checks them against the snapshot.
+- Every scenario includes a scene description, analogy explanation, caveats, source, taxonomy assignments, and a still image. Release dates, YouTube clips, and meme attachments are optional.
+- The synchronized snapshot stores public image URLs, dimensions, and blur placeholders; generated WebP bytes live in object storage.
 - Scenario stills and clips were manually reviewed by the creator.
 - Consistently branded risk-family and concept artwork remains follow-up work. The current resource pivots are complete without placeholder artwork.
 

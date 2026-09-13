@@ -13,11 +13,11 @@ This project explores AI safety and alignment concepts via popular scenes from m
 ## What is here
 
 - A sexy infinite WebGL gallery of scenarios
-- A manually curated set of over 300 scenarios from films and television series
+- A manually curated archive of scenarios from films and television series
 - Scenario dossiers with clips, authored analysis, caveats, and taxonomy
 - AI risk family and safety concept analogies for each scenario
 - One-way sync from Notion as the underlying CMS
-- Search across scenarios, media sources, AI risk families, and AI safety concepts
+- Search across scenarios, media sources, franchises, AI risk families, and AI safety concepts
 
 ### Gallery
 
@@ -63,7 +63,9 @@ pnpm build
 
 Use `pnpm fix:format` and `pnpm fix:lint` to apply the repository's Oxc rules.
 
-Local Playwright journeys use an installed Google Chrome and a direct development server on `http://127.0.0.1:3100` (`PLAYWRIGHT_PORT` overrides the port), bypassing Portless. CI installs its own Chromium, runs `pnpm test:checks`, builds once, and runs `pnpm test:e2e` against the production server.
+Local Playwright journeys use an installed Google Chrome and a direct development server on `http://127.0.0.1:3100`, bypassing Portless. Playwright starts and stops its own server and fails if the port is occupied; set `PLAYWRIGHT_PORT` to a free port when running another project or worktree. CI installs its own Chromium, runs `pnpm test:checks`, builds once, and runs `pnpm test:e2e` against the production server.
+
+Generated meme comparison reports have a separate browser suite: `pnpm test:meme-skill:e2e`. Generate the reports using the [archive evaluation workflow](docs/skills/ai-safety-meme-creator/evals/archive-ab/EVALS.md) first; their HTML files are ignored and are not required by the application suite.
 
 ## Content synchronization
 
@@ -89,14 +91,18 @@ The sync entry point loads `.env` with dotenvx. Existing process environment val
 
 ## Route map
 
-- `/` — Notion-tagged featured gallery with a one-time scene-to-concept explainer
-- `/scenarios` — complete gallery with risk-family filtering and the same first-visit explainer
+- `/` — Notion-tagged featured gallery with a scene-to-concept explainer that returns until explicitly closed
+- `/scenarios` — complete gallery with risk-family filtering and the explainer on first unacknowledged visit
 - `/scenarios/[slug]` — scenario dossier
 - `/risk-families` and `/risk-families/[slug]` — risk-family index and pivots
 - `/concepts` and `/concepts/[slug]` — concept index and pivots
 - `/sources` and `/sources/[slug]` — source index and pivots
+- `/franchises` and `/franchises/[slug]` — franchise index and pivots
 - `/about` and `/privacy` — project background and privacy policy
 - `/sitemap.xml` and `/robots.txt` — generated discovery endpoints for every static index/detail content URL
+- `/llms.txt` — project summary and entry points for machine readers
+
+The internal `/admin/meme-review` and `/admin/meme-review/export` routes support the filesystem-backed authoring workflow described in [Architecture](docs/ARCHITECTURE.md#meme-authoring-boundary).
 
 The historical design-review artifacts live under `docs/outputs/gate-b`; they are not production navigation.
 

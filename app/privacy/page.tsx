@@ -17,7 +17,7 @@ export default function PrivacyPage() {
     <InformationPage
       eyebrow={
         <p className='flex flex-col gap-0.5'>
-          <span>Last updated</span> <span>August 29th 2026</span>
+          <span>Last updated</span> <span>September 13th 2026</span>
         </p>
       }
       title='Privacy Policy'
@@ -69,7 +69,7 @@ export default function PrivacyPage() {
       <InformationSection index='02' title='Analytics'>
         <p>
           This website collects basic page analytics in order to track general
-          usage over time using
+          usage over time using{' '}
           <a
             href='https://vercel.com/analytics'
             target='_blank'
@@ -80,8 +80,15 @@ export default function PrivacyPage() {
           . This data is anonymous and does not identify you.
         </p>
         <p>
-          You can opt out of analytics by disabling third-party cookies in your
-          browser or using a browser extension that blocks Vercel Web Analytics.
+          Vercel Web Analytics does not use third-party cookies. See{' '}
+          <a
+            href='https://vercel.com/docs/analytics/privacy-policy'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Vercel's privacy documentation
+          </a>{' '}
+          for details about the data it collects.
         </p>
       </InformationSection>
 
