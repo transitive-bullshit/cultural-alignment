@@ -37,6 +37,7 @@ export function GalleryIntroDialog({
   readonly mode: GalleryIntroMode
 }) {
   const [state, setState] = useState<GalleryIntroState>('checking')
+  const dialogRef = useRef<HTMLDivElement>(null)
   const dismissalHandledRef = useRef(false)
   const exampleHeadingId = `gallery-intro-example-${useId().replaceAll(':', '')}`
   const { launchInertiaBurst } = useGalleryIntroMotion()
@@ -96,11 +97,16 @@ export function GalleryIntroDialog({
 
       <Dialog open={state === 'visible'} onOpenChange={updateOpen}>
         <DialogContent
+          ref={dialogRef}
           className={styles.dialog}
           data-gallery-intro-dialog
           motion='custom'
           overlayClassName={styles.overlay}
           showCloseButton={false}
+          onOpenAutoFocus={(event) => {
+            event.preventDefault()
+            dialogRef.current?.focus({ preventScroll: true })
+          }}
           onCloseAutoFocus={(event) => {
             event.preventDefault()
             window.requestAnimationFrame(() => {
@@ -110,7 +116,7 @@ export function GalleryIntroDialog({
             })
           }}
         >
-          <div className={styles.body}>
+          <div className={styles.header}>
             <DialogTitle className={styles.title}>
               Explore AI safety through scenes you already know
             </DialogTitle>
@@ -119,7 +125,9 @@ export function GalleryIntroDialog({
               See how one familiar scene maps to one AI safety concept, then
               explore the gallery.
             </DialogDescription>
+          </div>
 
+          <div className={styles.body} data-gallery-intro-scroll tabIndex={0}>
             <p className={styles.exampleLabel} data-gallery-intro-example-label>
               Example:
             </p>
@@ -156,19 +164,19 @@ export function GalleryIntroDialog({
                 <p className={styles.concept}>{example.concept}</p>
               </div>
             </section>
+          </div>
 
-            <div className={styles.footer}>
-              <Button
-                className={styles.enterButton}
-                data-gallery-intro-dismiss
-                size='lg'
-                type='button'
-                onClick={() => dismiss('acknowledged')}
-              >
-                <span>Explore the gallery</span>
-                <ArrowRightIcon aria-hidden='true' data-icon='inline-end' />
-              </Button>
-            </div>
+          <div className={styles.footer}>
+            <Button
+              className={styles.enterButton}
+              data-gallery-intro-dismiss
+              size='lg'
+              type='button'
+              onClick={() => dismiss('acknowledged')}
+            >
+              <span>Explore the gallery</span>
+              <ArrowRightIcon aria-hidden='true' data-icon='inline-end' />
+            </Button>
           </div>
 
           <button
