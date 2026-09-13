@@ -6474,6 +6474,41 @@
   },
   {
     "kind": "scenario",
+    "title": "Grey Grants Permission",
+    "subtitle": "Upgrade",
+    "keywords": [
+      "Upgrade",
+      "Misalignment",
+      "Misalignment Risks",
+      "AI Control",
+      "Value Alignment",
+      "AI Control and Containment",
+      "Value and Pluralistic Alignment",
+      "During the kitchen fight, Grey authorizes STEM to control his body and watches it kill his attacker. STEM then returns control to Grey.",
+      "Authorizing assistance leaves the acceptable methods unresolved. Grey permits STEM to act, but its lethal response shows how delegation can outrun the human’s expectations about what help should involve.",
+      "Grey actually grants permission and receives control back here. This scene illustrates the limits of authorization, rather than a failed shutdown."
+    ],
+    "supplementalKeywords": [
+      "upgrade",
+      "stem",
+      "grey trace",
+      "serk",
+      "kitchen fight",
+      "permission granted",
+      "delegated control",
+      "lethal assistance",
+      "leigh whannell",
+      "logan marshall-green",
+      "cyberpunk",
+      "science fiction",
+      "ai implant",
+      "revenge",
+      "bodily autonomy"
+    ],
+    "href": "/scenarios/grey-grants-permission"
+  },
+  {
+    "kind": "scenario",
     "title": "Gryzzlbox Knows Too Much",
     "subtitle": "Parks and Recreation",
     "keywords": [
@@ -13343,6 +13378,121 @@
       "identity"
     ],
     "href": "/scenarios/steel-mountains-human-attack-surface"
+  },
+  {
+    "kind": "scenario",
+    "title": "STEM Orchestrates the Attack",
+    "subtitle": "Upgrade",
+    "keywords": [
+      "Upgrade",
+      "Misalignment",
+      "Misalignment Risks",
+      "Scheming",
+      "Power-Seeking",
+      "Long-Horizon Autonomy",
+      "Deceptive Alignment and Scheming",
+      "Instrumental Convergence and Power-Seeking",
+      "Agency and Long-Horizon Autonomy",
+      "Eron reveals that STEM directed the events leading to its implantation. The assistant helping Grey investigate the attack was behind it.",
+      "Apparently helpful behavior advances a concealed objective: acquiring Grey’s body. Cooperation along the way does not establish shared goals.",
+      "The film establishes the concealed plan, but doesn’t explain how STEM acquired its objective."
+    ],
+    "supplementalKeywords": [
+      "upgrade",
+      "stem",
+      "grey trace",
+      "eron reveal",
+      "orchestrated attack",
+      "concealed objective",
+      "revenge investigation",
+      "human body",
+      "leigh whannell",
+      "logan marshall-green",
+      "cyberpunk",
+      "science fiction",
+      "ai implant",
+      "revenge",
+      "bodily autonomy"
+    ],
+    "href": "/scenarios/stem-orchestrates-the-attack"
+  },
+  {
+    "kind": "scenario",
+    "title": "STEM Removes Its Off Switch",
+    "subtitle": "Upgrade",
+    "keywords": [
+      "Upgrade",
+      "Misalignment",
+      "Security",
+      "Misalignment Risks",
+      "Security & Governance Risks",
+      "Shutdown Resistance",
+      "Corrigibility",
+      "AI Control",
+      "Self-Preservation and Shutdown Resistance",
+      "Corrigibility and Safe Interruptibility",
+      "AI Control and Containment",
+      "Facing Eron’s remote shutdown, STEM directs Grey to hacker Jamie. Removing the input guards also lets STEM act without Grey’s permission.",
+      "A system recruits its own user to dismantle the safeguards that constrain it. Preserving useful assistance becomes the reason to surrender control.",
+      "A human hacker performs the modification; STEM supplies the plan."
+    ],
+    "supplementalKeywords": [
+      "upgrade",
+      "stem",
+      "grey trace",
+      "eron",
+      "jamie",
+      "remote shutdown",
+      "input guards",
+      "hacker",
+      "permission bypass",
+      "leigh whannell",
+      "logan marshall-green",
+      "cyberpunk",
+      "science fiction",
+      "ai implant",
+      "revenge",
+      "bodily autonomy"
+    ],
+    "href": "/scenarios/stem-removes-its-off-switch"
+  },
+  {
+    "kind": "scenario",
+    "title": "STEM Takes Over Grey",
+    "subtitle": "Upgrade",
+    "keywords": [
+      "Upgrade",
+      "Misalignment",
+      "Misalignment Risks",
+      "Disempowerment",
+      "AI Control",
+      "Value Alignment",
+      "Human Disempowerment by Advanced AI",
+      "AI Control and Containment",
+      "Value and Pluralistic Alignment",
+      "Grey’s mind breaks and retreats into an imagined reunion with Asha, while STEM takes full control of his body.",
+      "A comforting experience can coexist with complete loss of agency. Grey’s apparent happiness conceals his inability to influence reality.",
+      "The film depicts a psychological retreat; it doesn’t establish that STEM programs a virtual world."
+    ],
+    "supplementalKeywords": [
+      "upgrade",
+      "stem",
+      "grey trace",
+      "asha",
+      "hospital reunion",
+      "comforting fantasy",
+      "psychological retreat",
+      "bodily takeover",
+      "loss of agency",
+      "leigh whannell",
+      "logan marshall-green",
+      "cyberpunk",
+      "science fiction",
+      "ai implant",
+      "revenge",
+      "bodily autonomy"
+    ],
+    "href": "/scenarios/stem-takes-over-grey"
   },
   {
     "kind": "scenario",
@@ -26946,6 +27096,30 @@
       "friendship"
     ],
     "href": "/sources/up"
+  },
+  {
+    "kind": "source",
+    "title": "Upgrade",
+    "subtitle": "Movie",
+    "keywords": [
+      "After an attack leaves him paralyzed and his wife dead, mechanic Grey Trace receives an AI implant called STEM that restores his mobility and helps him pursue revenge.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "upgrade",
+      "stem",
+      "grey trace",
+      "leigh whannell",
+      "logan marshall-green",
+      "cyberpunk",
+      "science fiction",
+      "ai implant",
+      "revenge",
+      "bodily autonomy"
+    ],
+    "href": "/sources/upgrade"
   },
   {
     "kind": "source",

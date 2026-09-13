@@ -26,8 +26,8 @@
     }
   },
   "counts": {
-    "scenarios": 442,
-    "sources": 259,
+    "scenarios": 446,
+    "sources": 260,
     "franchises": 13,
     "riskFamilies": 5,
     "concepts": 69
@@ -502,7 +502,11 @@
       "3cdedb27-f124-81e9-a7f4-ce515bdaebeb": "too-late-to-look-up",
       "3cdedb27-f124-81ef-81c3-ce6adfd6b25e": "sol-only-takes-an-arm",
       "3cdedb27-f124-81ff-9b4e-fc48bbc766c7": "drinking-bird-autopilot",
-      "3d6edb27-f124-8123-bd9c-f7fe27ecd851": "supermeth-in-a-garage"
+      "3d6edb27-f124-8123-bd9c-f7fe27ecd851": "supermeth-in-a-garage",
+      "3daedb27-f124-8142-97dd-eb9cb9bfcd01": "stem-orchestrates-the-attack",
+      "3daedb27-f124-8173-a721-f9297620c623": "stem-takes-over-grey",
+      "3daedb27-f124-81c2-97fa-e0e9b5165031": "stem-removes-its-off-switch",
+      "3daedb27-f124-81c2-9d31-d00b61eb4d9a": "grey-grants-permission"
     },
     "sources": {
       "3caedb27-f124-8000-890f-e4f714860f05": "squid-game",
@@ -763,7 +767,8 @@
       "3cdedb27-f124-81ba-97d7-cdb166ab2fd5": "rogue-one-a-star-wars-story",
       "3cdedb27-f124-81c9-bd84-cb05c269f507": "star-wars-episode-ix-the-rise-of-skywalker",
       "3cdedb27-f124-81f8-8900-e33f694ba56e": "battlestar-galactica-2003-miniseries",
-      "3cdedb27-f124-81ff-b18a-d727d76ca97b": "star-wars-episode-i-the-phantom-menace"
+      "3cdedb27-f124-81ff-b18a-d727d76ca97b": "star-wars-episode-i-the-phantom-menace",
+      "3daedb27-f124-81d3-8c0f-d02fd0f86293": "upgrade"
     },
     "riskFamilies": {
       "3caedb27-f124-8089-af00-d8bbc69c9377": "accidents",
