@@ -2,6 +2,8 @@
 
 Date: September 2, 2026
 
+This is a historical investigation record. Its observations and infrastructure hypotheses describe that date, not a current production verification.
+
 ## Summary
 
 A mobile Safari user reported seeing the site header above an otherwise blank page on their first visit. The failure could not be reproduced naturally in the current production build, but it was reproduced precisely by pausing or ending the initial HTML response immediately after the header and before `<main>`.
@@ -18,7 +20,7 @@ This points to an incomplete document response rather than a React hydration, We
 
 The public domain is proxied through Cloudflare before Vercel. Cloudflare modifies and reframes the otherwise fixed-length Vercel HTML response, so that extra delivery layer is the leading infrastructure suspect. This attribution remains provisional because the affected Safari request was not captured. [Vercel recommends against stacking a reverse proxy in front of Vercel](https://vercel.com/kb/guide/cloudflare-with-vercel) because it can introduce latency and cache-management complications.
 
-## Current decision
+## Decision at the time
 
 Keep the existing Cloudflare configuration unchanged for now. No application or infrastructure changes were made during this investigation.
 

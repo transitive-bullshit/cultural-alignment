@@ -1,5 +1,7 @@
 # QA record
 
+Acceptance checks describe the current implementation. Recorded counts, timings, and captures below are historical evidence from the dated integration passes; obtain current counts with `pnpm content:validate` and current test coverage from the test runner.
+
 ## Automated commands
 
 Run from the repository root:
@@ -29,16 +31,16 @@ The canonical production deployment is [cultural-alignment.com](https://cultural
 
 ## Content contract
 
-- Snapshot schema: version 2. The checked sync manifest remains version 2 until the first authenticated descriptor migration; that sync emits version 3 after descriptor seeding.
+- Snapshot schema: version 3 in `lib/content/schema.ts`; sync manifest: version 4 in `scripts/sync-manifest.ts` and `content/snapshot/manifest.json`.
 - Scenario classifications come from Notion relations to media sources, risk families, and safety concepts; all foreign keys are Notion page IDs.
-- Media sources include a movie/TV type, optional authored metadata and links, direct related-source relations, and an optional generated poster whose public URLs and dimensions are baked into the snapshot.
+- Media sources include a movie/TV type, optional authored metadata and links, direct related-source relations, ordered franchise relations, and an optional generated poster whose public URLs and dimensions are baked into the snapshot. Franchises include authored descriptions and required representative images; scenarios may also include ordered meme attachments.
 - Risk families and safety concepts use their Notion-authored short/full names, descriptions, Wikipedia URLs, and preprocessed citations.
-- The first v2 sync establishes a fresh slug baseline. Established-state syncs preserve slugs for surviving page IDs and release the slugs of deleted records.
+- Schema v2 established a fresh slug baseline. Current syncs preserve slugs for surviving page IDs and release the slugs of deleted records.
 - An unchanged second sync must produce byte-identical snapshot, search index, and manifest. Each media record should resolve from its authenticated R2 descriptor `GET` without Notion block traversal, source download, Sharp, or variant upload.
 
 ## Remote-media acceptance checks
 
-- Notion credentials are required only by `pnpm content:sync`; normal and forced syncs also require S3-compatible credentials. Its Node entry point loads the ignored root `.env` with dotenvx, while development, validation, builds, and application runtime do not read it.
+- For the public snapshot workflow, `pnpm content:sync` requires Notion credentials; normal and forced syncs also require S3-compatible credentials. Its Node entry point loads the ignored root `.env` with dotenvx. Application code, validation, and builds do not access those credentials. The separate `memes:upload-notion` authoring command also requires `NOTION_TOKEN`.
 - `pnpm content:sync --help` (also `-h` or `-help`) prints usage without requiring credentials. `--fast` reuses checked-in snapshot media by stable record ID without image inspection, processing, S3 credentials, or media-storage traffic; it fails if a current record has no previous snapshot baseline. `--force` re-downloads and reprocesses every selected image while retaining content-addressed variant deduplication, and cannot be combined with `--fast`.
 - `S3_API_ENDPOINT` is used only for authenticated storage operations. Snapshot URLs begin with the separately configured `S3_PUBLIC_URL` for `S3_BUCKET_NAME`.
 - When `S3_STATE_BUCKET_NAME` is unset, descriptors use `S3_BUCKET_NAME`; setting it to a different bucket remains supported.
@@ -48,7 +50,7 @@ The canonical production deployment is [cultural-alignment.com](https://cultural
 - A matching page marker and pipeline skips Notion block traversal, source download, and Sharp. A changed page scans the current selection and reuses media when its block ID/edit time or fallback identity matches.
 - Generated object names include the SHA-256 hash of their bytes. Existing keys receive `HEAD` but no `PUT`; only a 404 permits upload.
 - Uploaded variants use `image/webp` and `Cache-Control: public, max-age=31536000, immutable`.
-- Generated variants are committed before a descriptor is conditionally created or replaced. The first v2 migration run seeds descriptors before emitting v3, which retains contracts, counts, fixture IDs, and slugs without media entries.
+- Generated variants are uploaded before a descriptor is conditionally created or replaced. Legacy v2 migration seeds descriptors before replacing the manifest; current manifests retain contracts, counts, fixture IDs, and slugs without media entries.
 - Snapshot image records retain absolute gallery/detail URLs, intrinsic width and height, and alt text.
 - Content validation accepts any HTTPS media host but requires every URL path to contain the owning collection, compact Notion record ID, variant, and 64-character generated-content hash.
 - Next.js image optimization accepts the snapshot's public origin without a storage environment variable.
@@ -56,7 +58,7 @@ The canonical production deployment is [cultural-alignment.com](https://cultural
 - Changing `S3_PUBLIC_URL` to a custom domain rewrites snapshot URLs without changing keys or uploading unchanged objects.
 - `public/media/generated` is absent and a clean checkout can validate and build without hydrating ignored image files.
 
-## Completed review coverage
+## Historical integration review coverage
 
 - Chrome production preview at 1440×900 desktop and 390×844 phone
 - 2560×900 Chrome wrap/duplication stress capture
@@ -84,7 +86,7 @@ The canonical production deployment is [cultural-alignment.com](https://cultural
 - Shared scenario collections render all resource results, retain bounded Dossier previews, and collapse to one column without mobile overflow
 - Missing-video scenario remains composed
 - Spoiler dismissal persists across navigation and reload
-- Search results for all four resource types open existing URLs
+- Search results for all five resource types open existing URLs
 - Direct valid URLs refresh; malformed slugs reach not-found
 - Media-source details place source type, available Notion-authored metadata, and links in the left desktop column with the poster in the right column, without inventing missing optional values
 - Risk-family and safety-concept details use their descriptive names and available Notion-authored references
@@ -97,7 +99,7 @@ The canonical production deployment is [cultural-alignment.com](https://cultural
 
 The selected prototype evidence is under `docs/outputs/gate-b`, including 1440×900 gallery/Dossier captures, 2560×900 wrap stress, mobile captures, fast-shear and exact-instance-hover states, spoiler/media states, and a gallery-to-Dossier transition recording.
 
-## Final integration observations
+## Historical integration observations
 
 - Chrome production preview checked at 1440×900 and 390×844.
 - Fast vertical-wheel travel produced the intended opposing edge shear and returned to a level surface without a blank seam or visible copy pop.
@@ -107,7 +109,7 @@ The selected prototype evidence is under `docs/outputs/gate-b`, including 1440×
 - Search layering hides the gallery crosshair over the portalled dialog and returns grouped, working destinations.
 - Risk-family pivots, the designed 404, the missing-video state, and mobile Dossier hierarchy were visually reviewed in the production build.
 
-## Performance baseline
+## Historical performance baseline
 
 - Featured page: 25 gallery images observed, 934,914 bytes of generated WebP media.
 - Full gallery idle settling eventually requests and retains every optimized gallery image source, while foreground and scroll-direction candidates preempt background work.

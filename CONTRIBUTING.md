@@ -21,7 +21,7 @@ pnpm content:validate
 pnpm build
 ```
 
-Use modern TypeScript, omit semicolons, format with `pnpm fix:format`, and lint with `pnpm fix:lint`. Read `AGENTS.md` and the relevant guide under `node_modules/next/dist/docs/` before changing Next.js 16 framework APIs. Local browser journeys expect an installed Google Chrome; CI installs Chromium separately.
+Use modern TypeScript, omit semicolons, format with `pnpm fix:format`, and lint with `pnpm fix:lint`. Read [AGENTS.md](AGENTS.md) and the relevant guide under `node_modules/next/dist/docs/` before changing Next.js framework APIs. Local browser journeys expect an installed Google Chrome; CI installs Chromium separately.
 
 ## Boundaries
 
@@ -29,7 +29,7 @@ Use modern TypeScript, omit semicolons, format with `pnpm fix:format`, and lint 
 - Add content behavior through `lib/content/catalog.ts`, not ad hoc route joins.
 - Keep spatial-field internals behind the gallery's small public interface.
 - Preserve stable Notion IDs and generated paths in synchronization changes.
-- Regenerate `content/snapshot`, `public/content/search-index.json`, and `public/media/generated` only through `pnpm content:sync`; review and commit their complete atomic diff together.
+- Regenerate `content/snapshot` and `public/content/search-index.json` through `pnpm content:sync`; review and commit their complete atomic diff together. Generated image bytes live in public object storage, as described in [the snapshot contract](content/README.md).
 - Do not commit credentials, temporary Notion asset URLs, or hand-edited files inside any generated target.
 - Avoid reopening the approved gallery/Dossier direction in unrelated changes.
 

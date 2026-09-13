@@ -2,7 +2,7 @@
 
 ## Runtime boundary
 
-The application has no runtime CMS, database, or object-storage credentials. Server Components read a validated local snapshot from `content/snapshot`; client islands receive small page-specific view models. A normal build is offline with respect to Notion and the S3-compatible control plane and never reads their credentials. Image delivery is a separate public data-plane concern: absolute image URLs and dimensions are already present in the snapshot.
+The public archive has no runtime CMS, database, or object-storage credentials. Server Components read a validated local snapshot from `content/snapshot`; client islands receive small page-specific view models. A normal build is offline with respect to Notion and the S3-compatible control plane and never reads their credentials. Image delivery is a separate public data-plane concern: absolute image URLs and dimensions are already present in the snapshot. The internal meme-review routes have a separate writable filesystem boundary described below.
 
 ```text
 Notion scenario and resource data sources
@@ -33,7 +33,7 @@ ContentCatalog page models
 
 Media-source records carry an explicit movie/TV source type, optional description, release date, poster, external media links, and ordered franchise IDs. Franchise records carry an authored name, description, search keywords, required representative image, and optional IMDb link. Risk-family records carry short and full names, authored descriptions, Wikipedia links, and ordered citations with preprocessed titles and publisher/domain labels. Safety-concept records carry short and long names plus the same authored-description and citation structure. Scenario cards and other compact surfaces use short names; detail routes use full or long names.
 
-`ContentImage` is the shared remote-image contract for required scenario stills and franchise images plus optional source posters. Each gallery/detail source is an absolute HTTPS URL produced by the synchronizer, and intrinsic dimensions and alt text travel with it. Slugs are unique within a resource kind; image URL shape, dimensions, source-type/episode consistency, required scenario relations, canonical references, and relational integrity are validated before the catalog is created.
+`ContentImage` is the shared remote-image contract for required scenario stills and franchise images, optional source posters, and ordered scenario meme attachments. Each gallery/detail source is an absolute HTTPS URL produced by the synchronizer, and intrinsic dimensions, alt text, and a blur placeholder travel with it. Slugs are unique within a resource kind; image URL shape, dimensions, source-type/episode consistency, required scenario relations, canonical references, and relational integrity are validated before the catalog is created.
 
 `lib/content/catalog.ts` is the domain seam. Routes ask it for gallery cards, scenario pages, resource pivots, static slugs, or search documents. Routes do not join raw IDs, invent fallbacks, or duplicate relationship/filter semantics. `lib/content/scenario-discovery.ts` owns deterministic continuation previews scoped to the first authored franchise when available, same-source previews otherwise, and cross-scope taxonomy-overlap suggestions.
 
@@ -85,6 +85,12 @@ The historical v2-to-v3 transition was seeded safely. When a v2 manifest and mis
 Remote writes happen before the staged snapshot is committed. A failed sync can leave an unreferenced content-addressed object, but it leaves the previous snapshot untouched and cannot overwrite a referenced object with different bytes. Normal sync does not delete remote objects because an older deployment or rollback may still reference them; any future garbage collection needs a retention window across deployed snapshots.
 
 `public/media/generated` is removed from the generated-output contract. The versioned snapshot and search index remain in Git, while generated image bytes remain in public object storage. Changing `S3_PUBLIC_URL` from the temporary managed R2 hostname to a custom asset domain does not change object keys or re-upload unchanged bytes; the next explicit sync rewrites the public URLs in the snapshot.
+
+## Meme authoring boundary
+
+`/admin/meme-review` and `/admin/meme-review/export` are dynamic, unlisted authoring surfaces. `lib/meme-review/catalog.ts` combines the public content catalog with active batches and immutable history from `data/meme-review`. `PATCH /api/meme-feedback` validates the selected batch, reviewability, and exact finalization revision before saving feedback through `lib/meme-review/store.ts`. The store serializes writes with the shared file lock and replaces its JSON state atomically. Its path defaults to the active batch's feedback file; `MEME_REVIEW_STATE_PATH` can override it, with `MEME_FEEDBACK_PATH` retained as a legacy fallback. This workflow requires a writable filesystem and is distinct from the read-only public snapshot.
+
+The [`generation policy`](../data/meme-review/GENERATION_POLICY.md) owns lineage, feedback, and finalization rules. `lib/meme-review/generation-policy.ts` defines the canonical actions and field permissions shared by batch planning, validation, and publication. The [`creator skill`](skills/ai-safety-meme-creator/SKILL.md) owns composition. The `memes:*` scripts prepare, validate, archive, render, and publish batches. `pnpm memes:upload-notion --help` describes the separate finalized-image upload command: it requires `NOTION_TOKEN`, defaults to a read-only dry run, and writes to Notion only with `--apply`. A subsequent `content:sync` imports the scenario's ordered `Memes` attachments into the public snapshot, with reusable bundle state in `media/state/scenario-memes/{compact-page-id}.json` and immutable variants under the scenario's `memes/` object prefix.
 
 ## Testing seams
 

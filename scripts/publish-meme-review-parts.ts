@@ -8,6 +8,12 @@ import { z } from 'zod'
 import { withMemeReviewFileLock } from '../lib/meme-review/file-lock'
 import { assertFinalizedMemesPreserved } from '../lib/meme-review/finalization'
 import {
+  allowedMemeReviewFields,
+  isMutableMemeReviewAction,
+  memeReviewGenerationActionSchema,
+  memeReviewMutableFieldSchema
+} from '../lib/meme-review/generation-policy'
+import {
   memeFeedbackEntrySchema,
   memeIdeaCollectionV2Schema,
   memeReviewAssetCollectionSchema,
@@ -33,28 +39,13 @@ const digestSchema = z.object({
   bytes: z.number().int().nonnegative(),
   sha256: z.string().regex(/^[a-f0-9]{64}$/)
 })
-const changedFieldSchema = z.enum([
-  'caption_lines',
-  'preview',
-  'frame_guidance',
-  'why_it_works',
-  'critic',
-  'assets'
-])
-const planActionSchema = z.enum([
-  'finalized',
-  'disabled-unchanged',
-  'layout-only',
-  'bounded-revision',
-  'punctuation-only'
-])
 const planIdeaSchema = z.object({
   id: z.string().trim().min(1),
   scenario_slug: z.string().trim().min(1),
-  action: planActionSchema,
+  action: memeReviewGenerationActionSchema,
   source_idea_sha256: z.string().regex(/^[a-f0-9]{64}$/),
   source_editorial_sha256: z.string().regex(/^[a-f0-9]{64}$/),
-  allowed_changed_fields: z.array(changedFieldSchema),
+  allowed_changed_fields: z.array(memeReviewMutableFieldSchema),
   source_feedback: memeFeedbackEntrySchema.nullable()
 })
 const droppedIdeaSchema = planIdeaSchema.omit({
@@ -354,7 +345,7 @@ export async function publishMemeReviewParts({
     const selectedIdeaIds = new Set(
       complete
         ? plan.ideas.flatMap(({ id, action }) =>
-            isMutableAction(action) ? [id] : []
+            isMutableMemeReviewAction(action) ? [id] : []
           )
         : normalizedParts.flatMap(
             (part) =>
@@ -530,7 +521,7 @@ function validateGenerationPlan(
     plan.ideas.map(({ scenario_slug }) => scenario_slug)
   )
   const mutableIdeas = plan.ideas.filter(({ action }) =>
-    isMutableAction(action)
+    isMutableMemeReviewAction(action)
   )
   const mutableScenarioSlugs = new Set(
     mutableIdeas.map(({ scenario_slug }) => scenario_slug)
@@ -717,34 +708,12 @@ function assertAllowedIdeaChanges(
 }
 
 function assertCanonicalAllowedFields(planIdea: PlanIdea) {
-  const expected =
-    planIdea.action === 'layout-only'
-      ? ['preview', 'frame_guidance', 'critic', 'assets']
-      : planIdea.action === 'bounded-revision'
-        ? [
-            'caption_lines',
-            'preview',
-            'frame_guidance',
-            'why_it_works',
-            'critic',
-            'assets'
-          ]
-        : planIdea.action === 'punctuation-only'
-          ? ['caption_lines']
-          : []
+  const expected = allowedMemeReviewFields(planIdea.action)
   if (!isDeepStrictEqual(planIdea.allowed_changed_fields, expected)) {
     throw new Error(
       `${planIdea.id} has invalid allowances for ${planIdea.action}`
     )
   }
-}
-
-function isMutableAction(action: PlanIdea['action']) {
-  return (
-    action === 'layout-only' ||
-    action === 'bounded-revision' ||
-    action === 'punctuation-only'
-  )
 }
 
 function hasRemovableTerminalPeriods(lines: readonly string[]) {

@@ -18,7 +18,6 @@ import { validateContentSnapshot } from './validate'
 export type ScenarioListQuery = {
   readonly featuredOnly?: boolean
   readonly riskFamilySlug?: string
-  readonly sort?: 'release-desc' | 'release-asc'
 }
 
 export const FEATURED_SCENARIO_TAG = 'featured'
@@ -183,9 +182,6 @@ export function createContentCatalog(input: unknown): ContentCatalog {
   )
   const conceptById = new Map(
     snapshot.concepts.map((concept) => [concept.id, concept])
-  )
-  const riskFamilyIdBySlug = new Map(
-    snapshot.riskFamilies.map((family) => [family.slug, family.id])
   )
   const scenariosBySourceId = groupBy(
     snapshot.scenarios,
@@ -546,33 +542,12 @@ export function createContentCatalog(input: unknown): ContentCatalog {
 
   return {
     listScenarioCards(query = {}) {
-      const riskFamilyId = query.riskFamilySlug
-        ? riskFamilyIdBySlug.get(query.riskFamilySlug)
-        : undefined
-
-      if (query.riskFamilySlug && riskFamilyId === undefined) return []
-
-      const matchingScenarios = snapshot.scenarios
-        .map((scenario, index) => ({
-          card: scenarioCards[index]!,
-          scenario,
-          index
-        }))
-        .filter(
-          ({ scenario }) =>
-            (!query.featuredOnly ||
-              scenario.tags.includes(FEATURED_SCENARIO_TAG)) &&
-            (riskFamilyId === undefined ||
-              scenario.riskFamilyIds.includes(riskFamilyId))
-        )
-
-      if (!query.sort) return matchingScenarios.map(({ card }) => card)
-
-      return matchingScenarios
-        .toSorted((left, right) =>
-          compareReleaseDates(left, right, query.sort ?? 'release-desc')
-        )
-        .map(({ card }) => card)
+      return scenarioCards.filter(
+        ({ featured, riskFamilies }) =>
+          (!query.featuredOnly || featured) &&
+          (!query.riskFamilySlug ||
+            riskFamilies.some(({ slug }) => slug === query.riskFamilySlug))
+      )
     },
 
     getScenarioPage(slug) {
@@ -599,28 +574,6 @@ export function createContentCatalog(input: unknown): ContentCatalog {
       return staticSlugs[kind]
     }
   }
-}
-
-type SortableScenario = {
-  readonly scenario: Pick<ScenarioRecord, 'releaseDate'>
-  readonly index: number
-}
-
-function compareReleaseDates(
-  left: SortableScenario,
-  right: SortableScenario,
-  sort: NonNullable<ScenarioListQuery['sort']>
-) {
-  const leftDate = left.scenario.releaseDate
-  const rightDate = right.scenario.releaseDate
-
-  if (leftDate === rightDate) return left.index - right.index
-  if (leftDate === null) return 1
-  if (rightDate === null) return -1
-
-  const dateOrder = leftDate < rightDate ? -1 : 1
-
-  return sort === 'release-asc' ? dateOrder : -dateOrder
 }
 
 function toSourceIdentity(source: SourceRecord): SourceIdentity {

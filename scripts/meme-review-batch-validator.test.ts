@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
+import type { MemeReviewGenerationAction } from '../lib/meme-review/generation-policy'
 import {
   memeIdeaCollectionV2Schema,
   memeReviewAssetCollectionSchema,
@@ -7,10 +8,7 @@ import {
   type MemeFeedbackEntry,
   type MemeIdeaV2
 } from '../lib/meme-review/schema'
-import type {
-  MemeReviewGenerationAction,
-  MemeReviewGenerationPlan
-} from './prepare-meme-review-batch'
+import type { MemeReviewGenerationPlan } from './prepare-meme-review-batch'
 import {
   memeReviewIdeaEditorialHash,
   memeReviewIdeaHash

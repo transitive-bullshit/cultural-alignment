@@ -94,7 +94,6 @@ export type MemeMediaSourceIdentity = z.infer<
   typeof memeMediaSourceIdentitySchema
 >
 export type MemeMediaPayload = z.infer<typeof memeMediaPayloadSchema>
-export type MemeMediaItem = z.infer<typeof memeMediaItemSchema>
 export type MemeMediaDescriptor = z.infer<typeof memeMediaDescriptorSchema>
 
 export type MemeMediaDescriptorBinding = {

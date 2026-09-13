@@ -61,10 +61,7 @@ const nextConfig: NextConfig = {
     remotePatterns
   },
   outputFileTracingIncludes: {
-    '/scenarios/*/opengraph-image': [
-      'assets/fonts/barlow-condensed-latin-800-normal.woff'
-    ],
-    '/sources/*/opengraph-image': [
+    '/{scenarios,sources,franchises}/*/opengraph-image': [
       'assets/fonts/barlow-condensed-latin-800-normal.woff'
     ]
   }

@@ -152,7 +152,10 @@ describe('ContentCatalog', () => {
     ])
   })
 
-  it('composes filters and keeps undated records last in stable order', () => {
+  it('filters by risk family while preserving snapshot order', () => {
+    expect(slugs(catalog.listScenarioCards())).toEqual(
+      slugs(minimalSnapshot.scenarios)
+    )
     expect(
       slugs(
         catalog.listScenarioCards({
@@ -160,20 +163,9 @@ describe('ContentCatalog', () => {
         })
       )
     ).toEqual(['new', 'old-b', 'null-b'])
-    expect(slugs(catalog.listScenarioCards({ sort: 'release-asc' }))).toEqual([
-      'old-a',
-      'old-b',
-      'new',
-      'null-a',
-      'null-b'
-    ])
-    expect(slugs(catalog.listScenarioCards({ sort: 'release-desc' }))).toEqual([
-      'new',
-      'old-a',
-      'old-b',
-      'null-a',
-      'null-b'
-    ])
+    expect(
+      catalog.listScenarioCards({ riskFamilySlug: 'missing-family' })
+    ).toEqual([])
   })
 
   it('filters featured scenarios by their Notion tag, not the legacy flag', () => {
