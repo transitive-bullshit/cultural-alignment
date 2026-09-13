@@ -37,14 +37,22 @@
 }
 
 .dialog[data-gallery-intro-dialog] {
+  --dialog-inset-top: max(20px, env(safe-area-inset-top));
+  --dialog-inset-bottom: max(20px, env(safe-area-inset-bottom));
+  top: calc(
+    (100dvh + var(--dialog-inset-top) - var(--dialog-inset-bottom)) / 2
+  );
   z-index: 200;
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: min(780px, calc(100vw - 40px));
   max-width: min(780px, calc(100vw - 40px));
-  max-height: calc(100svh - 40px);
+  max-height: calc(
+    100dvh - var(--dialog-inset-top) - var(--dialog-inset-bottom)
+  );
   gap: 0;
   padding: 0;
-  overflow: auto;
+  overflow: hidden;
   border: 0;
   border-top: 1px solid var(--foreground);
   border-bottom: 1px solid
@@ -87,8 +95,16 @@
   animation: intro-dialog-out 140ms ease-in both;
 }
 
+.header {
+  flex-shrink: 0;
+  padding: 38px 40px 12px 44px;
+}
+
 .body {
-  padding: 38px 40px 32px 44px;
+  min-height: 0;
+  padding: 0 40px 0 44px;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
 }
 
 .title {
@@ -107,7 +123,7 @@
 }
 
 .exampleLabel {
-  margin: 40px 0 9px;
+  margin: 28px 0 9px;
   color: var(--muted-foreground);
   font-family: var(--font-geist-mono), monospace;
   font-size: 0.69rem;
@@ -214,8 +230,9 @@
 
 .footer {
   display: flex;
+  flex-shrink: 0;
   justify-content: flex-end;
-  margin-top: 24px;
+  padding: 24px 40px 32px 44px;
 }
 
 .enterButton[data-size='lg'] {
@@ -328,31 +345,37 @@
 
 @media (max-width: 680px) {
   .dialog[data-gallery-intro-dialog] {
+    --dialog-inset-top: max(12px, env(safe-area-inset-top));
+    --dialog-inset-bottom: max(12px, env(safe-area-inset-bottom));
     width: calc(100vw - 28px);
     max-width: calc(100vw - 28px);
-    max-height: calc(100svh - 28px);
+  }
+
+  .header {
+    padding: 24px 18px 12px 22px;
   }
 
   .body {
-    padding: 29px 22px 23px 26px;
+    padding-inline: 22px 18px;
   }
 
   .title {
-    padding-right: 38px;
-    font-size: clamp(2.75rem, 13vw, 3.5rem);
+    padding-right: 44px;
+    font-size: clamp(2rem, 9.2vw, 2.75rem);
+    line-height: 0.95;
   }
 
   .example {
-    padding: 18px 18px 20px;
+    padding: 14px 16px 16px;
   }
 
   .exampleLabel {
-    margin-top: 28px;
+    margin-top: 10px;
   }
 
   .exampleHeader {
     grid-template-columns: 1fr;
-    gap: 17px;
+    gap: 14px;
   }
 
   .exampleMedia {
@@ -360,15 +383,80 @@
   }
 
   .reference h3 {
-    font-size: 2.7rem;
+    font-size: 2rem;
+  }
+
+  .reference p {
+    display: none;
+  }
+
+  .analogy {
+    margin-top: 16px;
+    padding-top: 13px;
   }
 
   .concept {
-    font-size: clamp(2.9rem, 13vw, 3.7rem);
+    font-size: clamp(2rem, 8.8vw, 2.5rem);
+    line-height: 0.95;
+  }
+
+  .footer {
+    padding: 18px 18px 22px 22px;
   }
 
   .enterButton[data-size='lg'] {
     width: 100%;
+  }
+}
+
+@media (max-width: 680px) and (max-height: 640px) {
+  .header {
+    padding-top: 20px;
+  }
+
+  .exampleLabel {
+    margin-top: 4px;
+  }
+
+  .example {
+    padding: 12px 14px 14px;
+  }
+
+  .exampleHeader {
+    gap: 12px;
+  }
+
+  .exampleMedia {
+    width: min(100%, 42dvh);
+    margin-inline: auto;
+  }
+
+  .analogy {
+    margin-top: 12px;
+    padding-top: 11px;
+  }
+
+  .footer {
+    padding-block: 14px 18px;
+  }
+}
+
+@media (max-height: 540px) {
+  .header {
+    padding-top: 20px;
+  }
+
+  .title {
+    font-size: clamp(1.75rem, min(9.2vw, 8dvh), 2.25rem);
+    line-height: 0.95;
+  }
+
+  .exampleLabel {
+    margin-top: 4px;
+  }
+
+  .footer {
+    padding-block: 14px 18px;
   }
 }
 
