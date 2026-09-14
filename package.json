@@ -30,7 +30,7 @@
     "lint": "oxlint",
     "test": "run-s test:checks test:e2e",
     "test:checks": "run-s test:format test:lint test:types test:unit",
-    "test:e2e": "playwright test",
+    "test:e2e": "portless run --name cultural-alignment-e2e playwright test",
     "test:format": "oxfmt --check",
     "test:lint": "oxlint",
     "test:meme-skill": "vitest run --config vitest.meme-skill.config.ts docs/skills/ai-safety-meme-creator/evals",

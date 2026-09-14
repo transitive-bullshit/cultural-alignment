@@ -63,7 +63,7 @@ pnpm build
 
 Use `pnpm fix:format` and `pnpm fix:lint` to apply the repository's Oxc rules.
 
-Local Playwright journeys use an installed Google Chrome and a direct development server on `http://127.0.0.1:3100`, bypassing Portless. Playwright starts and stops its own server and fails if the port is occupied; set `PLAYWRIGHT_PORT` to a free port when running another project or worktree. CI installs its own Chromium, runs `pnpm test:checks`, builds once, and runs `pnpm test:e2e` against the production server.
+Local Playwright journeys use an installed Google Chrome and Portless via `pnpm test:e2e`. Portless assigns a free application port and a separate `cultural-alignment-e2e` hostname (normally `https://cultural-alignment-e2e.localhost`), including a branch prefix in linked worktrees. Playwright uses the injected URL, accepts the local HTTPS certificate, and starts and stops its own Next.js server. Run filtered tests with `pnpm test:e2e tests/e2e/mvp.spec.ts`; `PLAYWRIGHT_PORT` is no longer needed. CI installs its own Chromium, runs `pnpm test:checks`, builds once, and runs the production browser journeys through an HTTP Portless proxy on unprivileged port 1355.
 
 Meme-creator evals are opt-in and excluded from `pnpm test` and `pnpm test:unit`; run them with `pnpm test:meme-skill` (or `pnpm test:meme-skill:live` for live evals). Generated meme comparison reports also have a separate browser suite: `pnpm test:meme-skill:e2e`. Generate the reports using the [archive evaluation workflow](docs/skills/ai-safety-meme-creator/evals/archive-ab/EVALS.md) first; their HTML files are ignored and are not required by the application suite.
 
