@@ -23,11 +23,7 @@ const sourceUrlSchema = z.url().refine((value) => {
   )
 }, 'Image source URL must use HTTP or HTTPS without credentials')
 
-export const mediaCollectionSchema = z.enum([
-  'franchises',
-  'scenarios',
-  'sources'
-])
+const mediaCollectionSchema = z.enum(['franchises', 'scenarios', 'sources'])
 
 const notionFileSourceSchema = z.strictObject({
   type: z.literal('notion'),
@@ -50,13 +46,13 @@ const fallbackSourceSchema = z.strictObject({
   url: sourceUrlSchema
 })
 
-export const mediaSourceIdentitySchema = z.union([
+const mediaSourceIdentitySchema = z.union([
   notionFileSourceSchema,
   notionExternalSourceSchema,
   fallbackSourceSchema
 ])
 
-export const reusableMediaPayloadSchema = z.strictObject({
+const reusableMediaPayloadSchema = z.strictObject({
   sourceHash: sha256Schema,
   galleryHash: sha256Schema,
   detailHash: sha256Schema,

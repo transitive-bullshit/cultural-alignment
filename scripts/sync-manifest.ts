@@ -7,7 +7,7 @@ import {
 } from './sync-utils'
 
 export const MEDIA_PIPELINE_VERSION = 3
-export const SYNC_MANIFEST_VERSION = 4
+const SYNC_MANIFEST_VERSION = 4
 
 const sha256Schema = z.string().regex(/^[0-9a-f]{64}$/)
 const legacyGeneratedMediaPathSchema = z
@@ -40,7 +40,7 @@ const syncEntryBaseSchema = z.object({
   caption: z.string()
 })
 
-export const previousSyncEntrySchema = syncEntryBaseSchema.extend({
+const previousSyncEntrySchema = syncEntryBaseSchema.extend({
   pipelineVersion: z.number().int().positive().optional(),
   galleryHash: sha256Schema.optional(),
   detailHash: sha256Schema.optional(),
@@ -62,7 +62,7 @@ export const reusableSyncEntrySchema = syncEntryBaseSchema.extend({
   blurDataURL: blurDataUrlSchema.optional()
 })
 
-export const syncEntrySchema = reusableSyncEntrySchema.extend({
+const syncEntrySchema = reusableSyncEntrySchema.extend({
   pipelineVersion: z.literal(MEDIA_PIPELINE_VERSION),
   blurDataURL: blurDataUrlSchema
 })
@@ -135,7 +135,7 @@ const syncManifestContract = {
   slugs: slugMapsSchema
 }
 
-export const syncManifestSchema = z.strictObject({
+const syncManifestSchema = z.strictObject({
   schemaVersion: z.literal(SYNC_MANIFEST_VERSION),
   ...syncManifestContract
 })
@@ -168,7 +168,7 @@ const transitionalSyncManifestSchema = z.strictObject({
 export type SyncEntry = z.infer<typeof syncEntrySchema>
 export type SyncManifest = z.infer<typeof syncManifestSchema>
 export type PreviousSyncEntry = z.infer<typeof previousSyncEntrySchema>
-export type SlugMaps = z.infer<typeof slugMapsSchema>
+type SlugMaps = z.infer<typeof slugMapsSchema>
 
 export type PreviousSyncManifest = {
   readonly slugs: SlugMaps

@@ -8,12 +8,11 @@ type DiscoverableScenario = Readonly<{
   sourceId: string
 }>
 
-export type RelatedScenarioMatch<Scenario extends DiscoverableScenario> =
-  Readonly<{
-    scenario: Scenario
-    sharedConceptIds: readonly string[]
-    sharedRiskFamilyIds: readonly string[]
-  }>
+type RelatedScenarioMatch<Scenario extends DiscoverableScenario> = Readonly<{
+  scenario: Scenario
+  sharedConceptIds: readonly string[]
+  sharedRiskFamilyIds: readonly string[]
+}>
 
 export type ScenarioDiscovery<Scenario extends DiscoverableScenario> =
   Readonly<{

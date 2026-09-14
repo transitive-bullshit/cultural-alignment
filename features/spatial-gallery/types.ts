@@ -40,7 +40,7 @@ export type SpatialGalleryController = Readonly<{
 
 export type SpatialGalleryTopology = 'desktop' | 'mobile'
 
-export type SpatialGallerySceneState = Readonly<{
+type SpatialGallerySceneState = Readonly<{
   offsetX: number
   topology: SpatialGalleryTopology
 }>

@@ -14,8 +14,7 @@ import { SortableScenarioCollection } from './sortable-scenario-collection'
 export type {
   ScenarioCollectionImageTreatment,
   ScenarioCollectionItem,
-  ScenarioCollectionLayout,
-  ScenarioConnections
+  ScenarioCollectionLayout
 } from './scenario-collection-list'
 
 export function ScenarioCollection({

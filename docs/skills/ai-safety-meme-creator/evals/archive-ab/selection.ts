@@ -10,7 +10,7 @@ import {
 } from '../../../../../lib/meme-review/finalized-renders'
 import { loadMemeReviewWorkspace } from '../../../../../lib/meme-review/rounds'
 
-export type ArchiveCohort = 'finalized' | 'disliked'
+type ArchiveCohort = 'finalized' | 'disliked'
 
 interface SelectionSeed {
   readonly cohort: ArchiveCohort
@@ -133,7 +133,7 @@ const archiveAbDirectory = dirname(fileURLToPath(import.meta.url))
 export const workspaceDirectory = resolve(archiveAbDirectory, '../../../../..')
 const reviewDirectory = join(workspaceDirectory, 'data', 'meme-review')
 const snapshotDirectory = join(workspaceDirectory, 'content', 'snapshot')
-export const selectionManifestPath = join(archiveAbDirectory, 'selection.json')
+const selectionManifestPath = join(archiveAbDirectory, 'selection.json')
 
 const selectionSeeds: readonly SelectionSeed[] = [
   { cohort: 'finalized', round: 5, ideaId: 'rons-sabotaged-teleprompter--05' },
@@ -366,7 +366,7 @@ export async function buildArchiveComparisonManifest(): Promise<ArchiveCompariso
   }
 }
 
-export async function writeArchiveComparisonManifest(): Promise<void> {
+async function writeArchiveComparisonManifest(): Promise<void> {
   const manifest = await buildArchiveComparisonManifest()
   await writeFile(
     selectionManifestPath,

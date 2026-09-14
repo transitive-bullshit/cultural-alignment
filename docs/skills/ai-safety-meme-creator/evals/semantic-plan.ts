@@ -3,11 +3,10 @@ import { z } from 'zod'
 import {
   memeEvalCaptionKindSchema,
   memeEvalFormatSchema,
-  memeEvalFrameRoleSchema,
-  type MemeEvalPlan
+  memeEvalFrameRoleSchema
 } from './schema'
 
-export const semanticMemeModeSchema = z.enum([
+const semanticMemeModeSchema = z.enum([
   'single',
   'setup-payoff',
   'dialogue',
@@ -15,7 +14,7 @@ export const semanticMemeModeSchema = z.enum([
   'source-native'
 ])
 
-export const semanticCaptionRoleSchema = z.enum([
+const semanticCaptionRoleSchema = z.enum([
   'only',
   'setup',
   'payoff',
@@ -188,84 +187,3 @@ export const semanticMemeIntentSchema = z
   })
 
 export type SemanticMemeIntent = z.infer<typeof semanticMemeIntentSchema>
-
-export function semanticIntentFromLegacyPlan(
-  plan: MemeEvalPlan
-): SemanticMemeIntent {
-  const placementByLine = new Map(
-    plan.presentation.zones.flatMap((zone) =>
-      zone.line_indexes.map((lineIndex, position) => [
-        lineIndex,
-        {
-          zone,
-          indentLevel: zone.indent_levels[position] ?? 0
-        }
-      ])
-    )
-  )
-  const mode = semanticModeFromLegacyPlan(plan)
-
-  return semanticMemeIntentSchema.parse({
-    version: 2,
-    fixture_id: plan.fixture_id,
-    recognition_hinge: plan.recognition_hinge,
-    ai_bridge: plan.ai_bridges[0]!,
-    caption_lines: plan.caption_lines.map((line, index) => {
-      const placement = placementByLine.get(index)
-      return {
-        ...line,
-        role: semanticRoleForLine(plan, mode, index, placement?.zone.style),
-        anchor_region_id: placement?.zone.anchor_region_id ?? null,
-        indent_level: placement?.indentLevel ?? 0
-      }
-    }),
-    format: plan.format,
-    presentation: {
-      mode,
-      source_frames: plan.presentation.source_frames,
-      preferred_edge: preferredEdge(plan),
-      palette: plan.presentation.zones.some(
-        ({ palette }) => palette === 'orange-white'
-      )
-        ? 'orange-white'
-        : 'default'
-    },
-    why_it_works: plan.why_it_works
-  })
-}
-
-function semanticModeFromLegacyPlan(
-  plan: MemeEvalPlan
-): SemanticMemeIntent['presentation']['mode'] {
-  if (plan.format === 'state contrast') return 'state-contrast'
-  if (plan.format === 'dialogue') return 'dialogue'
-  if (plan.format === 'source-native interface') return 'source-native'
-  if (plan.caption_lines.length > 1) return 'setup-payoff'
-  return 'single'
-}
-
-function semanticRoleForLine(
-  plan: MemeEvalPlan,
-  mode: SemanticMemeIntent['presentation']['mode'],
-  index: number,
-  style: MemeEvalPlan['presentation']['zones'][number]['style'] | undefined
-): SemanticMemeIntent['caption_lines'][number]['role'] {
-  if (mode === 'single') return 'only'
-  if (mode === 'dialogue') return 'speech'
-  if (mode === 'source-native') {
-    if (style === 'code') return 'code'
-    if (style === 'label') return 'label'
-    return 'status'
-  }
-  if (mode === 'state-contrast') return index === 0 ? 'setup' : 'payoff'
-  return index === plan.caption_lines.length - 1 ? 'payoff' : 'setup'
-}
-
-function preferredEdge(
-  plan: MemeEvalPlan
-): SemanticMemeIntent['presentation']['preferred_edge'] {
-  const slots = plan.presentation.zones.map(({ slot }) => slot)
-  if (slots.every((slot) => slot.startsWith('top'))) return 'top'
-  if (slots.every((slot) => slot.startsWith('bottom'))) return 'bottom'
-  return 'auto'
-}

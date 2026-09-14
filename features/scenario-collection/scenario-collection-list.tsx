@@ -7,7 +7,7 @@ import { focalPointToObjectPosition } from '@/lib/media/crop'
 import styles from './scenario-collection.module.css'
 import type { SortableScenarioEntry } from './scenario-sort'
 
-export type ScenarioConnections = Readonly<{
+type ScenarioConnections = Readonly<{
   concepts: readonly TaxonomyLink[]
   riskFamilies: readonly TaxonomyLink[]
 }>

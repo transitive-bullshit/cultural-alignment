@@ -22,7 +22,7 @@ type LockOwner = {
   readonly acquiredAt: string
 }
 
-export class MemeReviewFileLockTimeoutError extends Error {
+class MemeReviewFileLockTimeoutError extends Error {
   readonly lockPath: string
 
   constructor(lockPath: string) {

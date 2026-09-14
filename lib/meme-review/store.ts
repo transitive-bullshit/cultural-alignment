@@ -50,7 +50,7 @@ export class StaleMemeFinalizationError extends Error {
   }
 }
 
-export function getMemeFeedbackPath() {
+function getMemeFeedbackPath() {
   return process.env.MEME_FEEDBACK_PATH ?? legacyFeedbackPath
 }
 
@@ -196,7 +196,7 @@ function emptyMemeFeedback(): MemeFeedbackDocumentV1 {
   }
 }
 
-export function emptyMemeReviewState(batch: number): MemeReviewStateDocument {
+function emptyMemeReviewState(batch: number): MemeReviewStateDocument {
   return {
     version: 2,
     round: batch,

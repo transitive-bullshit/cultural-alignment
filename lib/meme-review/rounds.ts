@@ -21,7 +21,7 @@ import {
 
 const roundDirectoryPattern = /^round-(\d+)$/
 
-export type MemeReviewBatchV1 = {
+type MemeReviewBatchV1 = {
   readonly kind: 'batch'
   readonly renderer: 1
   readonly number: number
@@ -34,7 +34,7 @@ export type MemeReviewBatchV1 = {
   readonly previews: MemeReviewScenarioPreviewDocumentV1
 }
 
-export type MemeReviewBatchV2 = {
+type MemeReviewBatchV2 = {
   readonly kind: 'batch'
   readonly renderer: 2
   readonly number: number
@@ -48,9 +48,9 @@ export type MemeReviewBatchV2 = {
   readonly status: MemeReviewBatchStatus
 }
 
-export type MemeReviewBatch = MemeReviewBatchV1 | MemeReviewBatchV2
+type MemeReviewBatch = MemeReviewBatchV1 | MemeReviewBatchV2
 
-export type MemeReviewDraftV2 = Omit<MemeReviewBatchV2, 'kind' | 'status'> & {
+type MemeReviewDraftV2 = Omit<MemeReviewBatchV2, 'kind' | 'status'> & {
   readonly kind: 'draft'
 }
 
@@ -64,7 +64,7 @@ export type MemeReviewWorkspace = {
   readonly feedbackPath: string
 }
 
-export function getMemeReviewRoundsPath() {
+function getMemeReviewRoundsPath() {
   return join(process.cwd(), 'data', 'meme-review', 'rounds')
 }
 

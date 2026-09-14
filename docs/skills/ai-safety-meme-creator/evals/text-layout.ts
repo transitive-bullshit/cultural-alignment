@@ -14,7 +14,7 @@ interface MemeTextZone {
   readonly indent_levels: readonly number[]
 }
 
-export interface MemeTextLayoutLine {
+interface MemeTextLayoutLine {
   readonly text: string
   readonly indentCharacters: number
 }

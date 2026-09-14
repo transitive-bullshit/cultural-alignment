@@ -10,7 +10,7 @@ const vercelHostname =
   normalizeEnvironmentValue(process.env.VERCEL_URL)
 
 export const siteName = 'Cultural Alignment'
-export const siteDescription =
+const siteDescription =
   'Exploring real AI risks through the lens of pop culture'
 export const siteDescriptionLong =
   'Exploring real AI risks through the lens of popular culture'

@@ -19,7 +19,7 @@ import {
   type ScenarioMemeIdeasV2
 } from '../lib/meme-review/schema'
 
-export const workspacePath = process.cwd()
+const workspacePath = process.cwd()
 export const memeReviewPath = join(workspacePath, 'data', 'meme-review')
 export const memeReviewRoundsPath = join(memeReviewPath, 'rounds')
 
@@ -35,7 +35,7 @@ export function memeReviewIdeaHash(idea: MemeIdeaV2): string {
   return sha256(JSON.stringify(idea))
 }
 
-export function memeReviewIdeaEditorialPayload(idea: MemeIdeaV2) {
+function memeReviewIdeaEditorialPayload(idea: MemeIdeaV2) {
   return {
     id: idea.id,
     ai_concept: idea.ai_concept,
@@ -157,10 +157,7 @@ export async function writeJsonAtomic(
   await writeTextAtomic(path, jsonText(value))
 }
 
-export async function writeTextAtomic(
-  path: string,
-  text: string
-): Promise<void> {
+async function writeTextAtomic(path: string, text: string): Promise<void> {
   await mkdir(dirname(path), { recursive: true })
   const temporaryPath = join(
     dirname(path),

@@ -33,7 +33,7 @@ export async function renderMemeEvalPlan({
   }
 }
 
-export async function renderMemeBackground(
+async function renderMemeBackground(
   fixture: MemeSkillFixture,
   plan: MemeEvalPlan
 ): Promise<Buffer> {

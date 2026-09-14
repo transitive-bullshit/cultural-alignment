@@ -37,12 +37,12 @@ const externalMemeMediaSourceIdentitySchema = z.strictObject({
   url: externalSourceUrlSchema
 })
 
-export const memeMediaSourceIdentitySchema = z.discriminatedUnion('kind', [
+const memeMediaSourceIdentitySchema = z.discriminatedUnion('kind', [
   hostedMemeMediaSourceIdentitySchema,
   externalMemeMediaSourceIdentitySchema
 ])
 
-export const memeMediaPayloadSchema = z.strictObject({
+const memeMediaPayloadSchema = z.strictObject({
   sourceHash: sha256Schema,
   galleryHash: sha256Schema,
   detailHash: sha256Schema,
@@ -53,7 +53,7 @@ export const memeMediaPayloadSchema = z.strictObject({
   blurDataURL: blurDataUrlSchema
 })
 
-export const memeMediaItemSchema = z.strictObject({
+const memeMediaItemSchema = z.strictObject({
   source: memeMediaSourceIdentitySchema,
   media: memeMediaPayloadSchema
 })

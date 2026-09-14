@@ -46,7 +46,7 @@ type ResolvedLayoutPolicy = {
   readonly nonCoverExceptions: ReadonlySet<string>
 }
 
-export type MemeReviewLayoutMetric = {
+type MemeReviewLayoutMetric = {
   readonly passing: number
   readonly total: number
   readonly ratio: number

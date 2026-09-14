@@ -1,12 +1,12 @@
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 
-export interface ImpactFontIdentity {
+interface ImpactFontIdentity {
   readonly familyNames: readonly string[]
   readonly fullNames: readonly string[]
 }
 
-export interface ResolvedImpactFont {
+interface ResolvedImpactFont {
   readonly status: 'resolved'
   readonly filePath: string
   readonly family: 'Impact'
@@ -14,7 +14,7 @@ export interface ResolvedImpactFont {
   readonly identity: ImpactFontIdentity
 }
 
-export interface UnavailableImpactFont {
+interface UnavailableImpactFont {
   readonly status: 'unavailable'
   readonly reason:
     | 'missing'
@@ -68,7 +68,7 @@ export function resolveImpactFont(
   )
 }
 
-export function defaultImpactFontPaths(
+function defaultImpactFontPaths(
   environment: Readonly<Record<string, string | undefined>> = process.env
 ): readonly string[] {
   const paths = [

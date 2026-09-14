@@ -2,13 +2,13 @@ import sharp from 'sharp'
 
 import { rankBalancedTextLines } from './balanced-wrap'
 
-export interface MeasuredTextBlock {
+interface MeasuredTextBlock {
   readonly id: string
   readonly text: string
   readonly indentLevel?: 0 | 1 | 2 | 3 | 4
 }
 
-export interface MeasuredTextFont {
+interface MeasuredTextFont {
   readonly family: string
   readonly filePath: string
   readonly weight: number
@@ -28,14 +28,14 @@ export interface MeasuredTextStyle {
   readonly indentEm: number
 }
 
-export interface MeasuredPixelBounds {
+interface MeasuredPixelBounds {
   readonly left: number
   readonly top: number
   readonly width: number
   readonly height: number
 }
 
-export interface MeasuredPhysicalLine {
+interface MeasuredPhysicalLine {
   readonly blockId: string
   readonly text: string
   readonly indentLevel: number
@@ -66,7 +66,7 @@ export interface MeasuredTextFit {
   readonly inkBoundsPx: MeasuredPixelBounds
 }
 
-export interface MeasuredTextUnfit {
+interface MeasuredTextUnfit {
   readonly status: 'unfit'
   readonly code: 'unbreakable-token' | 'box-too-small'
   readonly sourceBlocks: readonly MeasuredTextBlock[]

@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-export const memeFormatSchema = z.enum([
+const memeFormatSchema = z.enum([
   'canon',
   'relabel',
   'collision',
@@ -9,7 +9,7 @@ export const memeFormatSchema = z.enum([
   'source-native interface'
 ])
 
-export const memePreviewLayoutV1Schema = z.enum([
+const memePreviewLayoutV1Schema = z.enum([
   'top',
   'bottom',
   'top-bottom',
@@ -19,7 +19,7 @@ export const memePreviewLayoutV1Schema = z.enum([
   'interface'
 ])
 
-export const memeCritiqueV1Schema = z.object({
+const memeCritiqueV1Schema = z.object({
   verdict: z.enum(['keep', 'revise']),
   predicted_rating: z.enum(['dislike', 'neutral', 'like']),
   confidence: z.number().min(0).max(1),
@@ -49,7 +49,7 @@ const memeIdeaCoreSchema = z.object({
   why_it_works: z.string().trim().min(1)
 })
 
-export const memeIdeaV1Schema = memeIdeaCoreSchema
+const memeIdeaV1Schema = memeIdeaCoreSchema
   .extend({
     preview: z.object({
       layout: memePreviewLayoutV1Schema,
@@ -74,7 +74,7 @@ export const memeIdeaV1Schema = memeIdeaCoreSchema
 
 const scoreSchema = z.number().int().min(1).max(5)
 
-export const memeCritiqueV2Schema = memeCritiqueV1Schema.extend({
+const memeCritiqueV2Schema = memeCritiqueV1Schema.extend({
   scores: z.object({
     scene_hinge: scoreSchema,
     ai_payoff: scoreSchema,
@@ -88,7 +88,7 @@ export const memeCritiqueV2Schema = memeCritiqueV1Schema.extend({
   })
 })
 
-export const memePreviewTemplateV2Schema = z.enum([
+const memePreviewTemplateV2Schema = z.enum([
   'overlay',
   'band-top',
   'band-bottom',
@@ -99,7 +99,7 @@ export const memePreviewTemplateV2Schema = z.enum([
   'interface'
 ])
 
-export const memePreviewSlotV2Schema = z.enum([
+const memePreviewSlotV2Schema = z.enum([
   'top',
   'bottom',
   'top-left',
@@ -113,7 +113,7 @@ export const memePreviewSlotV2Schema = z.enum([
   'full'
 ])
 
-export const memePreviewZoneV2Schema = z.object({
+const memePreviewZoneV2Schema = z.object({
   lines: z.array(z.number().int().min(0).max(3)).min(1).max(4),
   slot: memePreviewSlotV2Schema,
   style: z.enum(['impact', 'plain', 'dialogue', 'label', 'code', 'status']),
@@ -125,7 +125,7 @@ export const memePreviewZoneV2Schema = z.object({
   indent_levels: z.array(z.number().int().min(0).max(4)).min(1).max(4)
 })
 
-export const memePreviewV2Schema = z.object({
+const memePreviewV2Schema = z.object({
   renderer: z.literal(2),
   template: memePreviewTemplateV2Schema,
   frame_mode: z.enum(['cover', 'contain-black', 'contain-blur', 'inset-blur']),
@@ -133,7 +133,7 @@ export const memePreviewV2Schema = z.object({
   zones: z.array(memePreviewZoneV2Schema).min(1).max(4)
 })
 
-export const memeIdeaV2Schema = memeIdeaCoreSchema
+const memeIdeaV2Schema = memeIdeaCoreSchema
   .extend({
     preview: memePreviewV2Schema,
     critic: memeCritiqueV2Schema
@@ -232,11 +232,11 @@ function createScenarioMemeIdeasSchema<T extends z.ZodType>(
     })
 }
 
-export const scenarioMemeIdeasV1Schema = createScenarioMemeIdeasSchema(
+const scenarioMemeIdeasV1Schema = createScenarioMemeIdeasSchema(
   memeIdeaV1Schema,
   { minimumIdeas: 3, maximumIdeas: 5 }
 )
-export const scenarioMemeIdeasV2Schema =
+const scenarioMemeIdeasV2Schema =
   createScenarioMemeIdeasSchema(memeIdeaV2Schema)
 
 function createMemeIdeaCollectionSchema<T extends z.ZodType>(
@@ -284,7 +284,7 @@ export const memeIdeaCollectionV2Schema = createMemeIdeaCollectionSchema(
 
 const percentCoordinateSchema = z.number().min(0).max(100)
 
-export const memePercentRectSchema = z
+const memePercentRectSchema = z
   .tuple([
     percentCoordinateSchema,
     percentCoordinateSchema,
@@ -300,7 +300,7 @@ export const memePercentRectSchema = z
     }
   })
 
-export const memeReviewAssetSchema = z.object({
+const memeReviewAssetSchema = z.object({
   id: z.string().trim().min(1),
   scenario_slug: z.string().trim().min(1),
   src: z.url(),
@@ -353,7 +353,7 @@ export const memeReviewAssetCollectionSchema = z
     })
   })
 
-export const memeReviewScenarioPreviewV1Schema = z.object({
+const memeReviewScenarioPreviewV1Schema = z.object({
   scenario_slug: z.string().trim().min(1),
   src: z.url(),
   width: z.number().int().positive(),
@@ -433,9 +433,9 @@ export const memeFeedbackDocumentV1Schema = z.object({
   feedback: z.record(z.string(), memeFeedbackEntrySchema)
 })
 
-export const memeReviewBatchNumberSchema = z.number().int().positive()
+const memeReviewBatchNumberSchema = z.number().int().positive()
 // Legacy name retained for existing callers; the value is no longer hard-coded.
-export const activeMemeReviewRoundSchema = memeReviewBatchNumberSchema
+const activeMemeReviewRoundSchema = memeReviewBatchNumberSchema
 
 export const memeReviewBatchStatusSchema = z
   .object({
@@ -461,7 +461,7 @@ export const memeReviewBatchStatusSchema = z
     })
   })
 
-export const memeReviewScenarioStateSchema = z.object({
+const memeReviewScenarioStateSchema = z.object({
   disabled: z.literal(true)
 })
 
@@ -473,7 +473,7 @@ export const memeReviewStateDocumentSchema = z.object({
   scenarios: z.record(z.string(), memeReviewScenarioStateSchema)
 })
 
-export const memeFeedbackPatchSchema = z
+const memeFeedbackPatchSchema = z
   .object({
     ideaId: z.string().trim().min(1),
     feedback: memeFeedbackPatchEntrySchema,
@@ -531,7 +531,7 @@ export const memeFeedbackPatchSchema = z
     }
   )
 
-export const memeScenarioPatchSchema = z.object({
+const memeScenarioPatchSchema = z.object({
   scenarioSlug: z.string().trim().min(1),
   disabled: z.boolean()
 })
@@ -594,7 +594,7 @@ export const memeFeedbackBatchPatchSchema = z
     })
   })
 
-// The original assembly tooling still writes round-one idea collections.
+/** @alias The original assembly tooling still writes round-one idea collections. */
 export const memeIdeaCollectionSchema = memeIdeaCollectionV1Schema
 
 export type MemeIdeaV1 = z.infer<typeof memeIdeaV1Schema>

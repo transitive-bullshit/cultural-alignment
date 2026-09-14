@@ -15,12 +15,12 @@ import {
 import { discoverScenarios } from './scenario-discovery'
 import { validateContentSnapshot } from './validate'
 
-export type ScenarioListQuery = {
+type ScenarioListQuery = {
   readonly featuredOnly?: boolean
   readonly riskFamilySlug?: string
 }
 
-export const FEATURED_SCENARIO_TAG = 'featured'
+const FEATURED_SCENARIO_TAG = 'featured'
 
 export type StaticContentKind = SearchDocumentKind
 
@@ -61,12 +61,12 @@ export type GalleryScenario = {
   readonly image: ContentImage
 }
 
-export type RelatedScenario = GalleryScenario & {
+type RelatedScenario = GalleryScenario & {
   readonly sharedRiskFamilies: readonly TaxonomyLink[]
   readonly sharedConcepts: readonly TaxonomyLink[]
 }
 
-export type ScenarioContinuation = {
+type ScenarioContinuation = {
   readonly kind: 'franchise' | 'source'
   readonly id: string
   readonly slug: string
@@ -136,21 +136,21 @@ type ResourcePageBase = ResourceSummary & {
   readonly scenarios: readonly GalleryScenario[]
 }
 
-export type SourceResourcePage = ResourcePageBase & {
+type SourceResourcePage = ResourcePageBase & {
   readonly kind: 'source'
   readonly sourceType: SourceRecord['sourceType']
   readonly releaseDate: string | null
   readonly poster: ContentImage | null
 }
 
-export type FranchiseResourcePage = ResourcePageBase & {
+type FranchiseResourcePage = ResourcePageBase & {
   readonly kind: 'franchise'
   readonly description: string
   readonly image: ContentImage
   readonly sources: readonly ResourceSummary[]
 }
 
-export type TaxonomyResourcePage = ResourcePageBase & {
+type TaxonomyResourcePage = ResourcePageBase & {
   readonly kind: 'risk-family' | 'concept'
 }
 

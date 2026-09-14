@@ -57,7 +57,7 @@ export function searchDocuments(
     .map(({ document }) => document)
 }
 
-export function groupSearchResults(
+function groupSearchResults(
   documents: readonly SearchDocument[]
 ): readonly SearchResultGroup[] {
   const documentsByKind = new Map<StaticContentKind, SearchDocument[]>()

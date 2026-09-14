@@ -20,7 +20,7 @@ export type MemeArchivedReviewImage = MemeReviewImage & {
   readonly contentHash: string
 }
 
-export type MemePreviewHistoryEntryV1 = {
+type MemePreviewHistoryEntryV1 = {
   readonly renderer: 1
   readonly batch: number
   readonly revisionKey: string
@@ -30,7 +30,7 @@ export type MemePreviewHistoryEntryV1 = {
   readonly feedback: MemeFeedbackEntry
 }
 
-export type MemePreviewHistoryEntryV2 = {
+type MemePreviewHistoryEntryV2 = {
   readonly renderer: 2
   readonly batch: number
   readonly revisionKey: string

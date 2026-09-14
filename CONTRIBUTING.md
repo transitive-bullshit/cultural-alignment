@@ -23,6 +23,10 @@ pnpm build
 
 Use modern TypeScript, omit semicolons, format with `pnpm fix:format`, and lint with `pnpm fix:lint`. Read [AGENTS.md](AGENTS.md) and the relevant guide under `node_modules/next/dist/docs/` before changing Next.js framework APIs. Local browser journeys expect an installed Google Chrome; CI installs Chromium separately.
 
+## Unused code audit
+
+Run `npx knip` to check unused files, dependencies, exports, and types. `knip.config.ts` supplies Portless placeholders only in the audit process so Knip can evaluate Playwright configuration without starting a server. It also registers the documented meme composer and fixture generator CLI entry points and recognizes Next.js's built-in `server-only` marker. The original assembly schema alias is intentionally retained for its existing callers.
+
 ## Boundaries
 
 - Keep runtime code independent of Notion and other hosted data services.

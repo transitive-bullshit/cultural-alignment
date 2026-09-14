@@ -34,7 +34,7 @@ const citationTitleSchema = z
     'Citation title must not expose the canonical-source field name'
   )
 
-export const focalPointSchema = z.object({
+const focalPointSchema = z.object({
   x: z.number().min(0).max(1),
   y: z.number().min(0).max(1)
 })
@@ -44,7 +44,7 @@ export const blurDataUrlSchema = z
   .max(512)
   .regex(/^data:image\/webp;base64,[A-Za-z0-9+/]+={0,2}$/)
 
-export const contentImageSchema = z.object({
+const contentImageSchema = z.object({
   gallerySrc: remoteMediaUrlSchema,
   detailSrc: remoteMediaUrlSchema,
   width: z.number().int().positive(),
@@ -54,9 +54,9 @@ export const contentImageSchema = z.object({
   focalPoint: focalPointSchema.optional()
 })
 
-export const scenarioImageSchema = contentImageSchema
+const scenarioImageSchema = contentImageSchema
 
-export const scenarioVideoSchema = z.object({
+const scenarioVideoSchema = z.object({
   provider: z.literal('youtube'),
   id: z.string().trim().min(1),
   startSeconds: z.number().int().nonnegative().optional()
@@ -70,7 +70,7 @@ export const citationSchema = z.object({
 
 const searchKeywordsSchema = z.array(z.string().trim().min(1)).default([])
 
-export const scenarioRecordSchema = z.object({
+const scenarioRecordSchema = z.object({
   id: idSchema,
   slug: slugSchema,
   title: z.string().trim().min(1),
@@ -95,7 +95,7 @@ export const scenarioRecordSchema = z.object({
   caveats: z.string().trim().min(1)
 })
 
-export const franchiseRecordSchema = z.object({
+const franchiseRecordSchema = z.object({
   id: idSchema,
   slug: slugSchema,
   title: z.string().trim().min(1),
@@ -105,7 +105,7 @@ export const franchiseRecordSchema = z.object({
   imdbUrl: z.url().nullable()
 })
 
-export const sourceRecordSchema = z.object({
+const sourceRecordSchema = z.object({
   id: idSchema,
   slug: slugSchema,
   title: z.string().trim().min(1),
@@ -121,7 +121,7 @@ export const sourceRecordSchema = z.object({
   relatedSourceIds: z.array(idSchema)
 })
 
-export const riskFamilyRecordSchema = z.object({
+const riskFamilyRecordSchema = z.object({
   id: idSchema,
   slug: slugSchema,
   shortName: z.string().trim().min(1),
@@ -131,7 +131,7 @@ export const riskFamilyRecordSchema = z.object({
   citations: z.array(citationSchema).min(1).max(3)
 })
 
-export const conceptRecordSchema = z.object({
+const conceptRecordSchema = z.object({
   id: idSchema,
   slug: slugSchema,
   shortName: z.string().trim().min(1),

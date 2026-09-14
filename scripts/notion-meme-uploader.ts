@@ -7,9 +7,9 @@ import { Client, isNotionClientError } from '@notionhq/client'
 import pMap from 'p-map'
 import { z } from 'zod'
 
-export const NOTION_MEME_API_VERSION = '2026-03-11'
-export const NOTION_MEMES_PROPERTY = 'Memes'
-export const MAX_NOTION_FILES_PER_PROPERTY = 100
+const NOTION_MEME_API_VERSION = '2026-03-11'
+const NOTION_MEMES_PROPERTY = 'Memes'
+const MAX_NOTION_FILES_PER_PROPERTY = 100
 
 const sha256Schema = z.string().regex(/^[a-f\d]{64}$/i)
 const safeFilenameSchema = z
@@ -23,7 +23,7 @@ const safeFilenameSchema = z
     'must be a JPEG or WebP filename'
   )
 
-export const finalizedMemeExportFileSchema = z.object({
+const finalizedMemeExportFileSchema = z.object({
   scenarioSlug: z.string().min(1),
   ideaId: z.string().min(1),
   revisionKey: z.string().min(1),
@@ -36,7 +36,7 @@ export const finalizedMemeExportFileSchema = z.object({
   terminalPeriodsRemoved: z.number().int().nonnegative()
 })
 
-export const finalizedMemeExportManifestSchema = z.object({
+const finalizedMemeExportManifestSchema = z.object({
   schemaVersion: z.literal(1),
   files: z.array(finalizedMemeExportFileSchema)
 })
@@ -412,7 +412,7 @@ export async function assertReplacementBytesVerified(input: {
   }
 }
 
-export function createNotionMemeGateway(token: string): NotionMemeGateway {
+function createNotionMemeGateway(token: string): NotionMemeGateway {
   const notion = new Client({
     auth: token,
     notionVersion: NOTION_MEME_API_VERSION

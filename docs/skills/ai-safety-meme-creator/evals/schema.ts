@@ -280,5 +280,4 @@ export const memeSkillFixtureCollectionSchema = z.array(memeSkillFixtureSchema)
 export type MemeEvalPlan = z.infer<typeof memeEvalPlanSchema>
 export type MemeEvalFrameMode = z.infer<typeof memeEvalFrameModeSchema>
 export type MemeEvalTemplate = z.infer<typeof memeEvalTemplateSchema>
-export type MemeEvalSlot = z.infer<typeof memeEvalSlotSchema>
 export type MemeSkillFixture = z.infer<typeof memeSkillFixtureSchema>

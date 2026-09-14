@@ -1,4 +1,4 @@
-export const notionSyncCollections = [
+const notionSyncCollections = [
   'scenarios',
   'sources',
   'franchises',

@@ -1,6 +1,6 @@
 import { contentSnapshotSchema, type ContentSnapshot } from './schema'
 
-export type ContentValidationIssueCode =
+type ContentValidationIssueCode =
   | 'invalid-schema'
   | 'duplicate-id'
   | 'duplicate-slug'

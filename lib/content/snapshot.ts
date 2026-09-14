@@ -6,7 +6,7 @@ import sources from '@/content/snapshot/sources.json'
 import { createContentCatalog } from './catalog'
 import { validateContentSnapshot } from './validate'
 
-export const contentSnapshot = validateContentSnapshot({
+const contentSnapshot = validateContentSnapshot({
   schemaVersion: 3,
   scenarios,
   sources,

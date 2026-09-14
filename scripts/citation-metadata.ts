@@ -336,7 +336,7 @@ function curatedCitationTitle(href: string) {
     : null
 }
 
-export function extractCitationMetadataFromHtml(html: string) {
+function extractCitationMetadataFromHtml(html: string) {
   const metadata = new Map<string, string>()
 
   for (const match of html.matchAll(/<meta\b[^>]*>/gi)) {

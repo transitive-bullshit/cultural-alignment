@@ -11,7 +11,7 @@ import type {
 
 import styles from './meme-preview.module.css'
 
-export type MemePreviewV1Image = Readonly<{
+type MemePreviewV1Image = Readonly<{
   src: string
   alt: string
   blurDataURL: string

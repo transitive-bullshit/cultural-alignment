@@ -20,8 +20,8 @@ const DESCRIPTOR_CACHE_CONTROL = 'private,no-store'
 const DEFAULT_REGION = 'auto'
 
 export type MediaCollection = 'franchises' | 'scenarios' | 'sources'
-export type MediaVariant = 'gallery' | 'detail'
-export type MediaPurpose = 'record-image' | 'scenario-meme'
+type MediaVariant = 'gallery' | 'detail'
+type MediaPurpose = 'record-image' | 'scenario-meme'
 
 export type MediaStorageClient = {
   send(

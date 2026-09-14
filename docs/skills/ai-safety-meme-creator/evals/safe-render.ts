@@ -22,7 +22,7 @@ import { memeEvalCanvas } from './text-layout'
 
 type PixelBounds = readonly [number, number, number, number]
 
-export interface SafeMemeTextLayerCheck {
+interface SafeMemeTextLayerCheck {
   readonly zone_id: string
   readonly font_family: string
   readonly display_transform: 'preserve' | 'uppercase'
@@ -40,14 +40,14 @@ export interface SafeMemeTextLayerCheck {
   readonly legibility_pass?: boolean
 }
 
-export interface SafeMemeSourceFrameCheck {
+interface SafeMemeSourceFrameCheck {
   readonly image_id: string
   readonly frame_mode: MemeEvalPlan['presentation']['frame_mode']
   readonly target_bounds_px: PixelBounds
   readonly rendered_bounds_px: PixelBounds
 }
 
-export interface SafeMemeProtectedRegionCheck {
+interface SafeMemeProtectedRegionCheck {
   readonly region_id: string
   readonly image_id: string
   readonly priority: 'must' | 'soft'
@@ -56,7 +56,7 @@ export interface SafeMemeProtectedRegionCheck {
   readonly caption_overlap_px: number
 }
 
-export interface SafeMemeSourceOccupancyCheck {
+interface SafeMemeSourceOccupancyCheck {
   readonly minimum_preview_visible_height_px: number
   readonly minimum_canvas_height_ratio: number
   readonly required_canvas_height_ratio: number

@@ -118,7 +118,7 @@ export function createProjectedSurfaceLayout(
   return { columns, slots, span } as const
 }
 
-export function calculateEdgeProgress(
+function calculateEdgeProgress(
   x: number,
   viewportWidth: number,
   planarWidthRatio = 0.5
@@ -178,7 +178,7 @@ export function projectWheelToHorizontal(deltaX: number, deltaY: number) {
   return Math.abs(deltaY) >= Math.abs(deltaX) ? deltaY : deltaX
 }
 
-export function classifyWheelAxis(
+function classifyWheelAxis(
   deltaX: number,
   deltaY: number,
   horizontalDominance = 1.1

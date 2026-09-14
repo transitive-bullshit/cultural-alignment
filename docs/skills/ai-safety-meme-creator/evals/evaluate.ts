@@ -48,7 +48,7 @@ export type MemeEvalViolationCode =
   | 'typography.size'
   | 'typography.vertical-fit'
 
-export interface MemeEvalViolation {
+interface MemeEvalViolation {
   readonly code: MemeEvalViolationCode
   readonly message: string
 }
