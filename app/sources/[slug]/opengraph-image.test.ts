@@ -66,6 +66,8 @@ describe('media source Open Graph image', () => {
 
     expect(response.status).toBe(200)
     expect(response.headers.get('content-type')).toBe(contentType)
+    expect(contentType).toBe('image/webp')
+    expect(metadata.format).toBe('webp')
     expect(metadata.width).toBe(size.width)
     expect(metadata.height).toBe(size.height)
     expect(

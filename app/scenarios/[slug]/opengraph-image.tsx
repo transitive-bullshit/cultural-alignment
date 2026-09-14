@@ -1,13 +1,12 @@
 import { readFile } from 'node:fs/promises'
 import { join } from 'node:path'
 
-import { ImageResponse } from 'next/og'
+import { ImageResponse } from 'takumi-js/response'
 import { notFound } from 'next/navigation'
-import sharp from 'sharp'
 
 import { shouldShowEpisode } from '@/features/scenario-dossier/source-meta'
 import { contentCatalog } from '@/lib/content/snapshot'
-import { focalPointToObjectPosition } from '@/lib/media/crop'
+import { toSocialImageDataUrl } from '@/lib/media/social-image'
 
 export const alt =
   'A Cultural Alignment scenario with its source and AI safety concepts'
@@ -15,7 +14,7 @@ export const size = {
   width: 1200,
   height: 630
 }
-export const contentType = 'image/png'
+export const contentType = 'image/webp'
 
 const colors = {
   accent: '#ff4d1f',
@@ -24,17 +23,9 @@ const colors = {
   paper: '#f4ecdd'
 } as const
 const mediaWidth = 744
-const [barlowExtraBold, geistRegular] = await Promise.all([
-  readFile(
-    join(process.cwd(), 'assets/fonts/barlow-condensed-latin-800-normal.woff')
-  ),
-  readFile(
-    join(
-      process.cwd(),
-      'node_modules/next/dist/compiled/@vercel/og/Geist-Regular.ttf'
-    )
-  )
-])
+const barlowExtraBold = await readFile(
+  join(process.cwd(), 'assets/fonts/barlow-condensed-latin-800-normal.woff')
+)
 
 export default async function Image({
   params
@@ -46,7 +37,11 @@ export default async function Image({
 
   if (!scenario) notFound()
 
-  const stillSrc = await toJpegDataUrl(scenario.image.detailSrc)
+  const stillSrc = await toSocialImageDataUrl(
+    scenario.image,
+    mediaWidth,
+    size.height
+  )
   const showEpisode = shouldShowEpisode(
     scenario.source.sourceType,
     scenario.episode?.label
@@ -80,17 +75,11 @@ export default async function Image({
       >
         <img
           alt={scenario.image.alt}
-          height={size.height}
           src={stillSrc}
           style={{
             height: size.height,
-            objectFit: 'cover',
-            objectPosition: focalPointToObjectPosition(
-              scenario.image.focalPoint
-            ),
             width: mediaWidth
           }}
-          width={mediaWidth}
         />
         <div
           style={{
@@ -112,6 +101,7 @@ export default async function Image({
           backgroundImage:
             'linear-gradient(rgba(45, 42, 38, 0.028) 1px, transparent 1px), linear-gradient(90deg, rgba(45, 42, 38, 0.028) 1px, transparent 1px)',
           backgroundSize: '74px 74px',
+          backgroundRepeat: 'repeat',
           display: 'flex',
           flex: 1,
           flexDirection: 'column',
@@ -262,19 +252,14 @@ export default async function Image({
     </div>,
     {
       ...size,
-      // debug: true,
+      format: 'webp',
+      quality: 80,
       fonts: [
         {
           data: barlowExtraBold,
           name: 'Barlow Condensed',
           style: 'normal',
           weight: 800
-        },
-        {
-          data: geistRegular,
-          name: 'Geist',
-          style: 'normal',
-          weight: 400
         }
       ]
     }
@@ -321,24 +306,4 @@ function getTitleFontSize(title: string) {
   if (title.length >= 36 || longestToken >= 13) return 68
   if (title.length >= 28 || longestToken >= 12) return 72
   return 77
-}
-
-async function toJpegDataUrl(source: string) {
-  const response = await fetch(source, { cache: 'force-cache' })
-
-  if (!response.ok) {
-    throw new Error(
-      `Could not load scenario image: ${response.status} ${response.statusText}`
-    )
-  }
-
-  const jpeg = await sharp(await response.arrayBuffer())
-    .resize({
-      width: mediaWidth * 2,
-      withoutEnlargement: true
-    })
-    .jpeg({ quality: 90 })
-    .toBuffer()
-
-  return `data:image/jpeg;base64,${jpeg.toString('base64')}`
 }

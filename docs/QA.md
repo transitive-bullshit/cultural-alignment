@@ -130,3 +130,12 @@ The selected prototype evidence is under `docs/outputs/gate-b`, including 1440×
 - Automated wheel events cannot reproduce browser-owned macOS trackpad history swipes faithfully; final native Back/Forward feel requires one physical trackpad check.
 - Exact WebGL screenshots vary by GPU and are reviewed manually rather than used as pixel-diff test oracles.
 - React Three Fiber currently emits a non-blocking upstream `THREE.Clock` deprecation warning; application code does not construct `THREE.Clock`.
+
+## Takumi social-image migration, 2026-09-14
+
+- Scenario, source, and franchise image handlers use Takumi with explicit WebP quality 80 and matching `image/webp` metadata, at 1200×630.
+- Local Barlow Condensed WOFF embedding and Takumi’s bundled Geist remove the dependency on Next.js’s private font files. Integration follows the [Takumi migration guide](https://takumi.kane.tw/docs/comparison-to-satori#migrate-from-nextog).
+- Shared Sharp preparation applies cover cropping and normalized focal positions before rendering. Synthetic horizontal and vertical color-band tests verify both edges and center framing.
+- Formatting, lint, generated route types, TypeScript, and 381 unit tests passed. The full 17-journey browser suite passed before adding scenario social-image coverage; the final focused production run passed all three social-image journeys, including response MIME, decoded format/dimensions, and Open Graph/Twitter URLs.
+- Content validation passed; the production build generated 812 pages. All three image-route deployment traces include the native Takumi addon and local Barlow font; both `takumi-js` and `@takumi-rs/core` are externalized.
+- Local visual review compared the original PNG renderer with WebP for two scenarios (including the longest current title), a source, a franchise, and a missing-poster fallback. Image-backed samples decreased from 489,626–1,421,852 bytes to 40,486–99,802 bytes (91–97% smaller); the fallback decreased from 24,789 to 7,316 bytes. These are sample measurements, not fixed content expectations. Local captures are under ignored `test-results/social-image-migration/`.

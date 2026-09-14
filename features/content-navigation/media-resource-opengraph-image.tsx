@@ -1,34 +1,25 @@
 import { readFile } from 'node:fs/promises'
 import { join } from 'node:path'
 
-import { ImageResponse } from 'next/og'
-import sharp from 'sharp'
+import { ImageResponse } from 'takumi-js/response'
 
 import type { ContentImage } from '@/lib/content/catalog'
-import { focalPointToObjectPosition } from '@/lib/media/crop'
+import { toSocialImageDataUrl } from '@/lib/media/social-image'
 
 export const mediaResourceOpenGraphImageSize = {
   width: 1200,
   height: 630
 } as const
-export const mediaResourceOpenGraphImageContentType = 'image/png'
+export const mediaResourceOpenGraphImageContentType = 'image/webp'
 
 const colors = {
   accent: '#ff4d1f',
   paper: '#f4ecdd',
   stage: '#171713'
 } as const
-const [barlowExtraBold, geistRegular] = await Promise.all([
-  readFile(
-    join(process.cwd(), 'assets/fonts/barlow-condensed-latin-800-normal.woff')
-  ),
-  readFile(
-    join(
-      process.cwd(),
-      'node_modules/next/dist/compiled/@vercel/og/Geist-Regular.ttf'
-    )
-  )
-])
+const barlowExtraBold = await readFile(
+  join(process.cwd(), 'assets/fonts/barlow-condensed-latin-800-normal.woff')
+)
 
 type MediaResourceOpenGraphImageInput = Readonly<{
   image: ContentImage | null
@@ -41,7 +32,13 @@ export async function renderMediaResourceOpenGraphImage({
   releaseYear,
   title
 }: MediaResourceOpenGraphImageInput) {
-  const imageSrc = image ? await toJpegDataUrl(image.detailSrc) : null
+  const imageSrc = image
+    ? await toSocialImageDataUrl(
+        image,
+        mediaResourceOpenGraphImageSize.width,
+        mediaResourceOpenGraphImageSize.height
+      )
+    : null
 
   return new ImageResponse(
     <div
@@ -59,15 +56,11 @@ export async function renderMediaResourceOpenGraphImage({
       {imageSrc && image ? (
         <img
           alt={image.alt}
-          height={mediaResourceOpenGraphImageSize.height}
           src={imageSrc}
           style={{
             height: '100%',
-            objectFit: 'cover',
-            objectPosition: focalPointToObjectPosition(image.focalPoint),
             width: '100%'
           }}
-          width={mediaResourceOpenGraphImageSize.width}
         />
       ) : null}
 
@@ -149,18 +142,14 @@ export async function renderMediaResourceOpenGraphImage({
     </div>,
     {
       ...mediaResourceOpenGraphImageSize,
+      format: 'webp',
+      quality: 80,
       fonts: [
         {
           data: barlowExtraBold,
           name: 'Barlow Condensed',
           style: 'normal',
           weight: 800
-        },
-        {
-          data: geistRegular,
-          name: 'Geist',
-          style: 'normal',
-          weight: 400
         }
       ]
     }
@@ -191,24 +180,4 @@ function TargetMark() {
       />
     </svg>
   )
-}
-
-async function toJpegDataUrl(source: string) {
-  const response = await fetch(source, { cache: 'force-cache' })
-
-  if (!response.ok) {
-    throw new Error(
-      `Could not load media resource image: ${response.status} ${response.statusText}`
-    )
-  }
-
-  const jpeg = await sharp(await response.arrayBuffer())
-    .resize({
-      width: mediaResourceOpenGraphImageSize.width * 2,
-      withoutEnlargement: true
-    })
-    .jpeg({ quality: 90 })
-    .toBuffer()
-
-  return `data:image/jpeg;base64,${jpeg.toString('base64')}`
 }

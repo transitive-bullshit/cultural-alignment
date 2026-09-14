@@ -50,6 +50,8 @@ const remotePatterns = [
 ]
 
 const nextConfig: NextConfig = {
+  // Keep the wrapper external too so deployment tracing includes the native addon.
+  serverExternalPackages: ['takumi-js', '@takumi-rs/core'],
   allowedDevOrigins: [
     '127.0.0.1',
     ...(process.env.PORTLESS_URL

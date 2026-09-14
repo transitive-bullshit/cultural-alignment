@@ -1,6 +1,8 @@
 import { expect, test } from '@playwright/test'
+import sharp from 'sharp'
 
 import franchises from '../../content/snapshot/franchises.json' with { type: 'json' }
+import scenarios from '../../content/snapshot/scenarios.json' with { type: 'json' }
 import sources from '../../content/snapshot/sources.json' with { type: 'json' }
 
 import { mockOptimizedImages } from './image-fixtures'
@@ -18,19 +20,25 @@ if (!franchise) {
 }
 
 const resources = [
+  { kind: 'scenario', route: 'scenarios', slug: scenarios[0]!.slug },
   { kind: 'source', route: 'sources', slug: source.slug },
   { kind: 'franchise', route: 'franchises', slug: franchise.slug }
 ] as const
 
 for (const resource of resources) {
   test(`${resource.kind} detail publishes its generated social image`, async ({
-    page
+    page,
+    request
   }) => {
     await mockOptimizedImages(page)
     await page.goto(`/${resource.route}/${resource.slug}`)
 
     await expect(
-      page.locator(`[data-resource-detail="${resource.kind}"]`)
+      page.locator(
+        resource.kind === 'scenario'
+          ? '[data-scenario-media]'
+          : `[data-resource-detail="${resource.kind}"]`
+      )
     ).toBeVisible()
 
     const expectedPath = `/${resource.route}/${resource.slug}/opengraph-image`
@@ -49,9 +57,16 @@ for (const resource of resources) {
 
     expect(openGraphImageUrl.pathname).toBe(expectedPath)
     expect(twitterImageUrl.pathname).toBe(expectedPath)
+    const response = await request.get(openGraphImageUrl.pathname)
+    expect(response.ok()).toBe(true)
+    expect(response.headers()['content-type']).toBe('image/webp')
+    const metadata = await sharp(await response.body()).metadata()
+    expect(metadata.format).toBe('webp')
+    expect(metadata.width).toBe(1200)
+    expect(metadata.height).toBe(630)
     await expect(
       page.locator('meta[property="og:image:type"]')
-    ).toHaveAttribute('content', 'image/png')
+    ).toHaveAttribute('content', 'image/webp')
     await expect(
       page.locator('meta[property="og:image:width"]')
     ).toHaveAttribute('content', '1200')
