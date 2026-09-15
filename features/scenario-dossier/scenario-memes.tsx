@@ -45,7 +45,7 @@ type MemePreview = Readonly<{
   src: string
 }>
 
-type MemeDownloadState = 'error' | 'idle' | 'loading' | 'success'
+export type MemeDownloadState = 'error' | 'idle' | 'loading' | 'success'
 
 type MediaRect = Readonly<{
   height: number
@@ -79,6 +79,7 @@ export function ScenarioMemes({
   const openingMotionPendingRef = useRef(false)
   const preloadedDetailImagesRef = useRef(new Map<string, HTMLImageElement>())
   const pendingFocusIndexRef = useRef<number | null>(null)
+  const downloadTokenRef = useRef(0)
   const [visibleCount, setVisibleCount] = useState(() =>
     getNextVisibleMemeCount(0, memes.length)
   )
@@ -213,6 +214,7 @@ export function ScenarioMemes({
     openingMotionPendingRef.current = animateFromThumbnail
     setActiveIndex(index)
     setLoadedDetailSrc(null)
+    downloadTokenRef.current += 1
     setDownloadState('idle')
     setPreview(getPreview(index, button))
     setDialogAnnouncement('')
@@ -235,6 +237,7 @@ export function ScenarioMemes({
     }
     setActiveIndex(nextIndex)
     setLoadedDetailSrc(null)
+    downloadTokenRef.current += 1
     setDownloadState('idle')
     setPreview(getPreview(nextIndex))
     setDialogAnnouncement(`Meme ${nextIndex + 1} of ${memes.length}`)
@@ -253,6 +256,7 @@ export function ScenarioMemes({
   const downloadActiveMeme = async () => {
     const meme = activeMeme
     const memeIndex = activeIndex
+    const token = ++downloadTokenRef.current
 
     setDownloadState('loading')
     setDialogAnnouncement(
@@ -279,11 +283,13 @@ export function ScenarioMemes({
       link.click()
       link.remove()
       window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1_000)
+      if (isStaleDownload(token, downloadTokenRef.current)) return
       setDownloadState('success')
       setDialogAnnouncement(
         `Meme ${memeIndex + 1} of ${memes.length} download started`
       )
     } catch {
+      if (isStaleDownload(token, downloadTokenRef.current)) return
       setDownloadState('error')
       setDialogAnnouncement(
         `Could not download meme ${memeIndex + 1}. Open the image in a new tab to save it instead.`
@@ -673,7 +679,14 @@ function getMemePreloadOrder(activeIndex: number, memeCount: number) {
   return indices
 }
 
-function getMemeDownloadFilename(
+export function isStaleDownload(
+  capturedToken: number,
+  currentToken: number
+): boolean {
+  return capturedToken !== currentToken
+}
+
+export function getMemeDownloadFilename(
   scenarioSlug: string,
   memeIndex: number,
   source: string
@@ -683,7 +696,7 @@ function getMemeDownloadFilename(
   return `${scenarioSlug}-meme-${memeIndex + 1}.${extension ?? 'webp'}`
 }
 
-function getDownloadButtonLabel(
+export function getDownloadButtonLabel(
   state: MemeDownloadState,
   memeIndex: number,
   memeCount: number
@@ -696,7 +709,7 @@ function getDownloadButtonLabel(
   return `Download ${position}`
 }
 
-function getDownloadButtonVariant(state: MemeDownloadState) {
+export function getDownloadButtonVariant(state: MemeDownloadState) {
   if (state === 'success') return 'secondary' as const
   if (state === 'error') return 'destructive' as const
   return 'ghost' as const
