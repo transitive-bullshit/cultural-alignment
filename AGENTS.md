@@ -11,6 +11,7 @@
 - [Notion CMS conventions](docs/notion-cms.md): editorial source-of-truth, scenario curation, media selection, and taxonomy rules; read before changing content in Notion.
 - [Meme policy](data/meme-review/GENERATION_POLICY.md) and [creator skill](docs/skills/ai-safety-meme-creator/SKILL.md): batch history/finalization rules and composition workflow; read for meme generation, review, or publication work.
 - [Social-image fonts](assets/fonts/README.md): bundled font provenance and licensing; read when changing social-image assets.
+- [Blank first-load investigation](docs/BLANK-FIRST-LOAD-INVESTIGATION.md): dated evidence and unresolved hypotheses; read if the header-only loading failure recurs.
 
 ## Conventions
 
