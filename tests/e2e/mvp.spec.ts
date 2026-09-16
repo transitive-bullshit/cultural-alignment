@@ -116,7 +116,7 @@ test.describe('functional phone viewport', () => {
     const gallery = page.locator('[data-spatial-gallery="browse"]')
 
     const familyFilter = page
-      .locator('[data-scenario-family-filters] a[href^="/scenarios?family="]')
+      .locator('[data-scenario-family-filters] a[href^="/scenarios/family/"]')
       .first()
 
     const familyHref = await requiredInternalHref(familyFilter)
@@ -132,6 +132,12 @@ test.describe('functional phone viewport', () => {
       page.locator(`[data-scenario-family-filters] a[href="${familyHref}"]`)
     ).toHaveAttribute('data-state', 'on')
     await expect(gallery).toBeVisible()
+
+    const familySlug = familyHref.split('/').at(-1)
+    if (!familySlug) throw new Error('Expected a family slug in the filter URL')
+
+    await page.goto(`/scenarios?family=${familySlug}`)
+    await expect.poll(() => new URL(page.url()).pathname).toBe(familyHref)
   })
 })
 

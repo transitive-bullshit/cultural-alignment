@@ -4,7 +4,10 @@ import { join } from 'node:path'
 import { ImageResponse } from 'takumi-js/response'
 
 import type { ContentImage } from '@/lib/content/catalog'
-import { toSocialImageDataUrl } from '@/lib/media/social-image'
+import {
+  socialImageCacheHeaders,
+  toSocialImageDataUrl
+} from '@/lib/media/social-image'
 
 export const mediaResourceOpenGraphImageSize = {
   width: 1200,
@@ -143,6 +146,7 @@ export async function renderMediaResourceOpenGraphImage({
     {
       ...mediaResourceOpenGraphImageSize,
       format: 'webp',
+      headers: socialImageCacheHeaders,
       quality: 80,
       fonts: [
         {

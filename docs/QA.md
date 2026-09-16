@@ -139,3 +139,14 @@ The selected prototype evidence is under `docs/outputs/gate-b`, including 1440×
 - Formatting, lint, generated route types, TypeScript, and 381 unit tests passed. The full 17-journey browser suite passed before adding scenario social-image coverage; the final focused production run passed all three social-image journeys, including response MIME, decoded format/dimensions, and Open Graph/Twitter URLs.
 - Content validation passed; the production build generated 812 pages. All three image-route deployment traces include the native Takumi addon and local Barlow font; both `takumi-js` and `@takumi-rs/core` are externalized.
 - Local visual review compared the original PNG renderer with WebP for two scenarios (including the longest current title), a source, a franchise, and a missing-poster fallback. Image-backed samples decreased from 489,626–1,421,852 bytes to 40,486–99,802 bytes (91–97% smaller); the fallback decreased from 24,789 to 7,316 bytes. These are sample measurements, not fixed content expectations. Local captures are under ignored `test-results/social-image-migration/`.
+
+## Social-image response caching, 2026-09-16
+
+- Scenario, source, and franchise image responses keep browsers on revalidation, cache at downstream CDNs for one day with a seven-day stale-while-revalidate window, and cache at Vercel for one year per deployment.
+- Focused formatting, lint, generated route types, TypeScript, and three unit tests passed. The production build generated 820 pages; all 18 production browser journeys passed; and local production requests confirmed all three image-route families preserve the configured `Cache-Control`, `CDN-Cache-Control`, and `Vercel-CDN-Cache-Control` headers.
+
+## Pre-rendered scenario archives, 2026-09-16
+
+- `/scenarios` and all five `/scenarios/family/[slug]` variants render during the build with deployment-lifetime server caching. Existing valid `?family=` URLs permanently redirect to the corresponding filtered path.
+- Static page segments use a one-hour client Router Cache stale time. Request-time routes retain their default client-cache behavior.
+- Formatting, lint, generated route types, TypeScript, and four focused unit tests passed. The production build generated 825 pages and classified all six scenario archives as static or SSG; local production responses reported `x-nextjs-prerender: 1` and `x-nextjs-stale-time: 3600`; and all 18 production browser journeys passed.

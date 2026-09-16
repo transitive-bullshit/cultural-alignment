@@ -6,7 +6,10 @@ import { notFound } from 'next/navigation'
 
 import { shouldShowEpisode } from '@/features/scenario-dossier/source-meta'
 import { contentCatalog } from '@/lib/content/snapshot'
-import { toSocialImageDataUrl } from '@/lib/media/social-image'
+import {
+  socialImageCacheHeaders,
+  toSocialImageDataUrl
+} from '@/lib/media/social-image'
 
 export const alt =
   'A Cultural Alignment scenario with its source and AI safety concepts'
@@ -253,6 +256,7 @@ export default async function Image({
     {
       ...size,
       format: 'webp',
+      headers: socialImageCacheHeaders,
       quality: 80,
       fonts: [
         {

@@ -66,6 +66,15 @@ describe('media source Open Graph image', () => {
 
     expect(response.status).toBe(200)
     expect(response.headers.get('content-type')).toBe(contentType)
+    expect(response.headers.get('cache-control')).toBe(
+      'public, max-age=0, must-revalidate'
+    )
+    expect(response.headers.get('cdn-cache-control')).toBe(
+      'public, max-age=86400, stale-while-revalidate=604800'
+    )
+    expect(response.headers.get('vercel-cdn-cache-control')).toBe(
+      'public, max-age=31536000, immutable'
+    )
     expect(contentType).toBe('image/webp')
     expect(metadata.format).toBe('webp')
     expect(metadata.width).toBe(size.width)

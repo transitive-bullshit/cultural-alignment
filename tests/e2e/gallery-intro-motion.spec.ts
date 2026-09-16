@@ -138,7 +138,7 @@ test.describe('gallery introduction motion', () => {
     )
 
     const filter = page
-      .locator('[data-scenario-family-filters] a[href^="/scenarios?family="]')
+      .locator('[data-scenario-family-filters] a[href^="/scenarios/family/"]')
       .first()
     const filterHref = await requiredInternalHref(filter)
     const navigation = page.waitForURL(

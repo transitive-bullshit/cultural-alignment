@@ -4,6 +4,12 @@ import type { ContentImage } from '@/lib/content/catalog'
 
 import { focalPointToObjectPosition } from './crop'
 
+export const socialImageCacheHeaders = {
+  'Cache-Control': 'public, max-age=0, must-revalidate',
+  'CDN-Cache-Control': 'public, max-age=86400, stale-while-revalidate=604800',
+  'Vercel-CDN-Cache-Control': 'public, max-age=31536000, immutable'
+} as const
+
 // Crop before rendering so social images retain the same focal framing across engines.
 export async function toSocialImageDataUrl(
   image: ContentImage,

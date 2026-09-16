@@ -53,6 +53,8 @@ The full archive retains every successfully loaded full-image source for the lif
 
 Gallery history state is scoped by topology: the homepage has its own key, and `/scenarios` keys state by risk-family filter. Each entry records the continuous horizontal field position plus the selected item. Navigation captures it before opening a scenario; remounting after browser Back restores it before the intro coast can run.
 
+The complete `/scenarios` archive and the five `/scenarios/family/[slug]` filters are server-rendered during the build. Legacy `?family=` URLs permanently redirect to the corresponding path. Public pre-rendered page segments remain reusable in the client Router Cache for one hour; request-time administrative and API routes retain their separate cache behavior.
+
 ## Server/client split
 
 - Server: route composition, metadata, static parameter generation, catalog projection, filtering, and scenario discovery

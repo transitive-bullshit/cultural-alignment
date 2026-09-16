@@ -30,7 +30,7 @@ The source code uses the MIT license. The authored structured dataset uses CC0; 
 
 - Core resource models: scenario, source, franchise, AI risk family, and AI safety concept.
 - Recognition-first homepage introduction leading into scenarios carrying the Notion `featured` tag.
-- A `/scenarios` view of the complete gallery with additional risk-family filtering.
+- Pre-rendered `/scenarios` and `/scenarios/family/[slug]` gallery views for the complete archive and each risk-family filter.
 - Global Command-K/header search across all five resource types.
 - Scenario pages present scene media, source/franchise identity, explanation, caveats, taxonomy, spoiler handling, optional memes, and deterministic discovery through the Dossier layout. Continuation follows the first authored franchise when available, otherwise the same source; related scenarios use taxonomy overlap outside that scope. Clips use a YouTube iframe inside branded play/pause, progress, seeking, and return-to-still controls.
 - Source, franchise, risk-family, and concept pages act as functional relational pivots. Risk families are the first candidates for richer editorial treatment later.
