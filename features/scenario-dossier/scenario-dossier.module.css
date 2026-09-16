@@ -43,6 +43,13 @@
   min-width: 0;
 }
 
+.metadataRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
 .titleBlock h1 {
   margin: 0;
   padding: 0.035em 0 0;

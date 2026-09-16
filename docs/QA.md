@@ -150,3 +150,9 @@ The selected prototype evidence is under `docs/outputs/gate-b`, including 1440×
 - `/scenarios` and all five `/scenarios/family/[slug]` variants render during the build with deployment-lifetime server caching. Existing valid `?family=` URLs permanently redirect to the corresponding filtered path.
 - Static page segments use a one-hour client Router Cache stale time. Request-time routes retain their default client-cache behavior.
 - Formatting, lint, generated route types, TypeScript, and four focused unit tests passed. The production build generated 825 pages and classified all six scenario archives as static or SSG; local production responses reported `x-nextjs-prerender: 1` and `x-nextjs-stale-time: 3600`; and all 18 production browser journeys passed.
+
+## Detail-page copy links, 2026-09-16
+
+- Formatting, lint, TypeScript, content validation, and the production build passed (825 generated pages). All 21 browser journeys passed, including copying the complete current URL across all five detail routes at 1440 px and 390 px, keyboard activation, permission failure and retry, repeat-click timer renewal, and reduced motion.
+- The unit suite passed 378 tests and failed the existing sitemap expectation: the expected set omits the five `/scenarios/family/[slug]` paths already emitted by `app/sitemap.ts`. Neither sitemap file is changed by this work.
+- Desktop (1440×900) and mobile (390×844) captures, including the checkmark state, are in ignored `test-results/copy-link-preview/`.

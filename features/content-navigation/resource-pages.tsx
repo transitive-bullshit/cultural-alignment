@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { ExternalLinkIcon } from 'lucide-react'
 
+import { CopyPageLink } from '@/components/copy-page-link'
 import { ScrambleLink } from '@/components/motion/scramble-link'
 import { SiteHeader } from '@/components/site-header'
 import { ScenarioCollection } from '@/features/scenario-collection/scenario-collection'
@@ -192,7 +193,10 @@ export function ResourceDetailPage({
           resource.kind === 'source' && resource.poster ? true : undefined
         }
       >
-        <p className={styles.eyebrow}>{presentation.singular}</p>
+        <div className={styles.detailActions}>
+          <p className={styles.eyebrow}>{presentation.singular}</p>
+          <CopyPageLink key={resource.id} />
+        </div>
         <h1>{resource.detailTitle}</h1>
         <div className={styles.detailSummary}>
           {resource.kind === 'source' ? (

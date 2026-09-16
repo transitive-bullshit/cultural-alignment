@@ -2,6 +2,7 @@ import type { CSSProperties, ReactNode } from 'react'
 import { ViewTransition } from 'react'
 import Link from 'next/link'
 
+import { CopyPageLink } from '@/components/copy-page-link'
 import { ScrambleLink } from '@/components/motion/scramble-link'
 import { SiteHeader } from '@/components/site-header'
 import { CursorCard } from '@/components/ui/cursor-card'
@@ -52,7 +53,10 @@ export function ScenarioDossier({ scenario }: { scenario: ScenarioPage }) {
           <div className={styles.narrativeColumn}>
             <div className={styles.titleBlock}>
               <h1>{scenario.title}</h1>
-              <SourceMeta scenario={scenario} />
+              <div className={styles.metadataRow}>
+                <SourceMeta scenario={scenario} />
+                <CopyPageLink key={scenario.id} />
+              </div>
             </div>
           </div>
         </section>
