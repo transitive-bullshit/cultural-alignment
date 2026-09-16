@@ -26,8 +26,8 @@
     }
   },
   "counts": {
-    "scenarios": 446,
-    "sources": 260,
+    "scenarios": 453,
+    "sources": 261,
     "franchises": 13,
     "riskFamilies": 5,
     "concepts": 69
@@ -506,7 +506,14 @@
       "3daedb27-f124-8142-97dd-eb9cb9bfcd01": "stem-orchestrates-the-attack",
       "3daedb27-f124-8173-a721-f9297620c623": "stem-takes-over-grey",
       "3daedb27-f124-81c2-97fa-e0e9b5165031": "stem-removes-its-off-switch",
-      "3daedb27-f124-81c2-9d31-d00b61eb4d9a": "grey-grants-permission"
+      "3daedb27-f124-81c2-9d31-d00b61eb4d9a": "grey-grants-permission",
+      "3ddedb27-f124-8139-b11f-d9a2579f0fb1": "youre-just-the-cleanup-crew",
+      "3ddedb27-f124-8150-9cf6-df3c13f9e072": "you-are-not-interchangeable",
+      "3ddedb27-f124-8154-9392-e8fcb55872f0": "the-relevant-list-becomes-a-kill-list",
+      "3ddedb27-f124-816b-86e8-f15aae946446": "the-6-741st-simulation",
+      "3ddedb27-f124-81dc-b385-e6700d9e9060": "chess-is-just-a-game",
+      "3ddedb27-f124-81e9-89d0-c6831db610ad": "admin-is-not-admin",
+      "3ddedb27-f124-81fd-8955-e32265e50593": "samaritan-runs-new-york-for-a-day"
     },
     "sources": {
       "3caedb27-f124-8000-890f-e4f714860f05": "squid-game",
@@ -768,7 +775,8 @@
       "3cdedb27-f124-81c9-bd84-cb05c269f507": "star-wars-episode-ix-the-rise-of-skywalker",
       "3cdedb27-f124-81f8-8900-e33f694ba56e": "battlestar-galactica-2003-miniseries",
       "3cdedb27-f124-81ff-b18a-d727d76ca97b": "star-wars-episode-i-the-phantom-menace",
-      "3daedb27-f124-81d3-8c0f-d02fd0f86293": "upgrade"
+      "3daedb27-f124-81d3-8c0f-d02fd0f86293": "upgrade",
+      "3ddedb27-f124-81cd-bf0c-e0fc03783d29": "person-of-interest"
     },
     "riskFamilies": {
       "3caedb27-f124-8089-af00-d8bbc69c9377": "accidents",

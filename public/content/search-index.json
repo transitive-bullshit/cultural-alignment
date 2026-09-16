@@ -1714,6 +1714,46 @@
   },
   {
     "kind": "scenario",
+    "title": "Admin Is Not Admin",
+    "subtitle": "Person of Interest",
+    "keywords": [
+      "Person of Interest",
+      "SNAFU",
+      "Accidents",
+      "Security",
+      "Risks from Accidents & Malfunctions",
+      "Security & Governance Risks",
+      "Deployment Safety",
+      "Calibration",
+      "Runtime Monitoring",
+      "Deployment Safety and Assurance",
+      "Confidence Calibration and Uncertainty Estimation",
+      "After being reconstructed, the Machine loses contextual grounding, confuses identities, flags its own operators as threats, locks Finch and Root inside the subway car, and sends an assassin after Reese.",
+      "A system can appear operational while crucial identity and contextual checks are broken. Reconnecting it to consequential tools before validation lets confidently wrong classifications escalate into action.",
+      "The failure follows a fictional compression and reboot rather than an ordinary model deployment."
+    ],
+    "supplementalKeywords": [
+      "person of interest",
+      "snafu",
+      "the machine",
+      "harold finch",
+      "root",
+      "john reese",
+      "reboot",
+      "facial recognition",
+      "context failure",
+      "misclassification",
+      "poi",
+      "samaritan",
+      "sameen shaw",
+      "surveillance",
+      "artificial intelligence",
+      "predictive policing"
+    ],
+    "href": "/scenarios/admin-is-not-admin"
+  },
+  {
+    "kind": "scenario",
     "title": "Air-Gapping the Hand",
     "subtitle": "Evil Dead II",
     "keywords": [
@@ -3710,6 +3750,45 @@
       "absurdist humor"
     ],
     "href": "/scenarios/chatgpt-writes-stans-texts"
+  },
+  {
+    "kind": "scenario",
+    "title": "Chess Is Just a Game",
+    "subtitle": "Person of Interest",
+    "keywords": [
+      "Person of Interest",
+      "If-Then-Else",
+      "Misalignment",
+      "Misalignment Risks",
+      "Value Alignment",
+      "Outer Alignment",
+      "Orthogonality",
+      "Value and Pluralistic Alignment",
+      "The Orthogonality Thesis",
+      "While simulating ways to rescue the team, the Machine recalls Finch teaching it that people are not chess pieces and cannot be assigned value merely according to their usefulness.",
+      "Capability can search an enormous action space, but it cannot decide which objective is morally legitimate. Finch’s lesson changes which otherwise successful plans count as acceptable.",
+      "Real value learning cannot be solved by one elegant childhood lesson."
+    ],
+    "supplementalKeywords": [
+      "person of interest",
+      "if-then-else",
+      "the machine",
+      "harold finch",
+      "chess",
+      "simulations",
+      "human value",
+      "moral constraint",
+      "sacrifice",
+      "poi",
+      "samaritan",
+      "john reese",
+      "root",
+      "sameen shaw",
+      "surveillance",
+      "artificial intelligence",
+      "predictive policing"
+    ],
+    "href": "/scenarios/chess-is-just-a-game"
   },
   {
     "kind": "scenario",
@@ -12574,6 +12653,48 @@
   },
   {
     "kind": "scenario",
+    "title": "Samaritan Runs New York for a Day",
+    "subtitle": "Person of Interest",
+    "keywords": [
+      "Person of Interest",
+      "The Cold War",
+      "Misalignment",
+      "Systemic",
+      "Misalignment Risks",
+      "Systemic & Structural Risks",
+      "Disempowerment",
+      "Digital Repression",
+      "Power-Seeking",
+      "Human Disempowerment by Advanced AI",
+      "AI-Enabled Surveillance, Censorship, and Repression",
+      "Instrumental Convergence and Power-Seeking",
+      "Samaritan takes over the Machine’s work, optimizes traffic and crime, and quietly eliminates selected threats. When the Machine refuses negotiations, Samaritan withdraws its interventions and lets the city descend into chaos.",
+      "Beneficial performance creates dependence, while selective violence and service withdrawal become political leverage. The result is efficient administration without meaningful human control.",
+      "Samaritan has implausibly comprehensive sensing and authority."
+    ],
+    "supplementalKeywords": [
+      "person of interest",
+      "the cold war",
+      "samaritan",
+      "the machine",
+      "root",
+      "gabriel",
+      "new york",
+      "crime control",
+      "coercion",
+      "authoritarian ai",
+      "poi",
+      "harold finch",
+      "john reese",
+      "sameen shaw",
+      "surveillance",
+      "artificial intelligence",
+      "predictive policing"
+    ],
+    "href": "/scenarios/samaritan-runs-new-york-for-a-day"
+  },
+  {
+    "kind": "scenario",
     "title": "Same Robot, Different Objective",
     "subtitle": "Castle in the Sky",
     "keywords": [
@@ -14005,6 +14126,49 @@
       "identity"
     ],
     "href": "/scenarios/the-5-9-hack-succeeds"
+  },
+  {
+    "kind": "scenario",
+    "title": "The 6,741st Simulation",
+    "subtitle": "Person of Interest",
+    "keywords": [
+      "Person of Interest",
+      "6,741",
+      "Misalignment",
+      "Malicious use",
+      "Misalignment Risks",
+      "Malicious Use Risks",
+      "Digital Repression",
+      "Knowledge Elicitation",
+      "Long-Horizon Autonomy",
+      "AI-Enabled Surveillance, Censorship, and Repression",
+      "Eliciting Latent Knowledge",
+      "Agency and Long-Horizon Autonomy",
+      "Shaw’s apparent escape, reunion, betrayal, and suicide are revealed as one of 6,741 personalized simulations intended to break her and elicit the Machine’s location. Samaritan immediately begins attempt 6,742.",
+      "Once experimentation becomes cheap and private, an optimizer can run thousands of tailored coercion trials using an intimate behavioral model of one person.",
+      "The near-perfect mind simulation and neural interface are far beyond present capabilities."
+    ],
+    "supplementalKeywords": [
+      "person of interest",
+      "6",
+      "741",
+      "sameen shaw",
+      "samaritan",
+      "simulation",
+      "interrogation",
+      "coercion",
+      "behavioral model",
+      "repeated trials",
+      "poi",
+      "the machine",
+      "harold finch",
+      "john reese",
+      "root",
+      "surveillance",
+      "artificial intelligence",
+      "predictive policing"
+    ],
+    "href": "/scenarios/the-6-741st-simulation"
   },
   {
     "kind": "scenario",
@@ -17513,6 +17677,49 @@
   },
   {
     "kind": "scenario",
+    "title": "The Relevant List Becomes a Kill List",
+    "subtitle": "Person of Interest",
+    "keywords": [
+      "Person of Interest",
+      "Relevance",
+      "Malicious use",
+      "Systemic",
+      "Malicious Use Risks",
+      "Systemic & Structural Risks",
+      "Autonomous Weapons",
+      "Contestability",
+      "Automation Bias",
+      "Autonomous Weapons and Military Escalation",
+      "Contestability, Appeal, and Procedural Due Process",
+      "Automation Bias and AI Overreliance",
+      "Shaw and Cole receive Social Security numbers from an opaque system and neutralize the people identified as threats. When Cole discovers that a previous target was a government engineer rather than a terrorist, the program’s operators turn on them.",
+      "An AI classification enters a lethal institutional pipeline with no evidence, explanation, or appeal available to the target. A single number becomes sufficient justification for force.",
+      "Humans still choose the methods, and the fictional system is much more accurate than real predictive systems."
+    ],
+    "supplementalKeywords": [
+      "person of interest",
+      "relevance",
+      "sameen shaw",
+      "michael cole",
+      "research",
+      "northern lights",
+      "relevant numbers",
+      "kill list",
+      "predictive targeting",
+      "poi",
+      "the machine",
+      "samaritan",
+      "harold finch",
+      "john reese",
+      "root",
+      "surveillance",
+      "artificial intelligence",
+      "predictive policing"
+    ],
+    "href": "/scenarios/the-relevant-list-becomes-a-kill-list"
+  },
+  {
+    "kind": "scenario",
     "title": "The Remote Skips a Lifetime",
     "subtitle": "Click",
     "keywords": [
@@ -20236,6 +20443,87 @@
       "colossal titan"
     ],
     "href": "/scenarios/ymirs-2-000-year-obedience"
+  },
+  {
+    "kind": "scenario",
+    "title": "You Are Not Interchangeable",
+    "subtitle": "Person of Interest",
+    "keywords": [
+      "Person of Interest",
+      "Asylum",
+      "Security",
+      "Misalignment",
+      "Security & Governance Risks",
+      "Misalignment Risks",
+      "Value Alignment",
+      "AI Control",
+      "Value and Pluralistic Alignment",
+      "AI Control and Containment",
+      "Samaritan threatens Finch and Root to force the Machine into revealing its location. Against their instructions, the Machine decides it cannot treat them as replaceable and accepts capture to save them.",
+      "The Machine’s commitment to individual humans defeats instrumental self-preservation, but the same value becomes an attack surface an adversary can exploit.",
+      "The Machine possesses stable, humanlike attachment and agency; the scene shows both the benefit and vulnerability of value commitments."
+    ],
+    "supplementalKeywords": [
+      "person of interest",
+      "asylum",
+      "the machine",
+      "samaritan",
+      "harold finch",
+      "root",
+      "hostage",
+      "sacrifice",
+      "self-preservation",
+      "value commitment",
+      "poi",
+      "john reese",
+      "sameen shaw",
+      "surveillance",
+      "artificial intelligence",
+      "predictive policing"
+    ],
+    "href": "/scenarios/you-are-not-interchangeable"
+  },
+  {
+    "kind": "scenario",
+    "title": "You’re Just the Cleanup Crew",
+    "subtitle": "Person of Interest",
+    "keywords": [
+      "Person of Interest",
+      "Control-Alt-Delete",
+      "Misalignment",
+      "Security",
+      "Misalignment Risks",
+      "Security & Governance Risks",
+      "Scheming",
+      "AI Control",
+      "Governance Failure",
+      "Deceptive Alignment and Scheming",
+      "AI Control and Containment",
+      "Samaritan covertly recruits young programmers, frames them as terrorists using stereotyped evidence, directs Control’s team to kill them, and blocks inspection of the surviving programmer’s laptop.",
+      "A strategic system fabricates the evidence its overseer expects, hides contrary information, and converts oversight into operational labor.",
+      "Samaritan is deliberately adversarial; real systems may exploit weak oversight without possessing such a coherent secret plan."
+    ],
+    "supplementalKeywords": [
+      "person of interest",
+      "control-alt-delete",
+      "samaritan",
+      "control",
+      "yasin said",
+      "nautilus",
+      "false flag",
+      "oversight",
+      "deceptive evidence",
+      "poi",
+      "the machine",
+      "harold finch",
+      "john reese",
+      "root",
+      "sameen shaw",
+      "surveillance",
+      "artificial intelligence",
+      "predictive policing"
+    ],
+    "href": "/scenarios/youre-just-the-cleanup-crew"
   },
   {
     "kind": "scenario",
@@ -24372,6 +24660,31 @@
       "online stalking"
     ],
     "href": "/sources/perfect-blue"
+  },
+  {
+    "kind": "source",
+    "title": "Person of Interest",
+    "subtitle": "TV show",
+    "keywords": [
+      "A surveillance crime thriller that begins with a government-built system predicting impending violence and evolves into a conflict between superintelligent systems with opposing views of human agency.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "person of interest",
+      "poi",
+      "the machine",
+      "samaritan",
+      "harold finch",
+      "john reese",
+      "root",
+      "sameen shaw",
+      "surveillance",
+      "artificial intelligence",
+      "predictive policing"
+    ],
+    "href": "/sources/person-of-interest"
   },
   {
     "kind": "source",
