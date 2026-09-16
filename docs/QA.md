@@ -156,3 +156,9 @@ The selected prototype evidence is under `docs/outputs/gate-b`, including 1440×
 - Formatting, lint, TypeScript, content validation, and the production build passed (825 generated pages). All 21 browser journeys passed, including copying the complete current URL across all five detail routes at 1440 px and 390 px, keyboard activation, permission failure and retry, repeat-click timer renewal, and reduced motion.
 - The unit suite passed 378 tests and failed the existing sitemap expectation: the expected set omits the five `/scenarios/family/[slug]` paths already emitted by `app/sitemap.ts`. Neither sitemap file is changed by this work.
 - Desktop (1440×900) and mobile (390×844) captures, including the checkmark state, are in ignored `test-results/copy-link-preview/`.
+
+## Sitemap test repair, 2026-09-16
+
+- The sitemap expectation now derives filtered scenario archive URLs from the current risk-family catalog, preserving complete route coverage and duplicate detection without fixed content slugs or counts.
+- `pnpm test:checks` passed formatting, lint, generated route types, TypeScript, and all 379 unit tests. `pnpm content:validate` and `pnpm build` passed (825 generated pages).
+- `PLAYWRIGHT_SERVER=production pnpm test:e2e` passed all 21 browser journeys in 31.1 seconds with no retries, using local Google Chrome and the Portless production server.

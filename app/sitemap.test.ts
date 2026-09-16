@@ -19,6 +19,9 @@ describe('sitemap', () => {
     ]
     const contentPaths = [
       ...contentCatalog
+        .getStaticSlugs('risk-family')
+        .map((slug) => `/scenarios/family/${slug}`),
+      ...contentCatalog
         .getStaticSlugs('scenario')
         .map((slug) => `/scenarios/${slug}`),
       ...contentCatalog
