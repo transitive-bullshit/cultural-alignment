@@ -22510,7 +22510,10 @@
       "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADQAQCdASoIAAMAA8BgJaACdAD0gdCMAAD+298f11NGlhLbj/b0cqaM6l/R+HLaxiubpTCAAAA="
     },
     "memes": [],
-    "video": null,
+    "video": {
+      "provider": "youtube",
+      "id": "s_vC0JmplFY"
+    },
     "scene": "Wallace examines and kills a newly created replicant while discussing expansion of engineered slave labor through reproduction. The being’s interests count for nothing against his ambition to scale production.",
     "whyAnalogyWorks": "Reliable capability can serve its owner while the owner’s goals remain exploitative. The scene separates obedience and commercial usefulness from a deployment that respects everyone affected. Concentrated institutional power can scale the disregard of created beings’ interests without any subordinate system needing to go rogue.",
     "caveats": "Replicants are bioengineered humans, not digital AI. Fertility is biological worldbuilding, not recursive self-improvement or autonomous software self-replication. The central wrong is human-directed exploitation and killing; Wallace’s expansion project is not automatically a misaligned AI takeover."
@@ -22538,7 +22541,9 @@
     },
     "releaseDate": null,
     "featured": false,
-    "tags": [],
+    "tags": [
+      "featured"
+    ],
     "riskFamilyIds": [
       "3caedb27-f124-80e9-b5e9-c462a175b76a"
     ],
@@ -22555,7 +22560,10 @@
       "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoIAAUAA8BgJQBOgB6Q/22AAP7beENTTSnaEKdSe73AYPPUObC5jZSjIAA="
     },
     "memes": [],
-    "video": null,
+    "video": {
+      "provider": "youtube",
+      "id": "ZMDNNS8jA4s"
+    },
     "scene": "After Kusanagi contains Nanao’s virus attack against the police commissioner, further attacks erupt from unrelated imitators rather than the same malware.",
     "whyAnalogyWorks": "Stopping a technical trigger does not necessarily stop the imitation cascade it inspired. Seemingly coordinated behavior can spread without a single command center, complicating containment of networked failures.",
     "caveats": "The imitators are humans, not literal AI agents; the connection to multi-agent failures and information pollution is analogical. Not every incident in the wider Laughing Man arc is spontaneous or independent."
@@ -22669,7 +22677,9 @@
     },
     "releaseDate": null,
     "featured": false,
-    "tags": [],
+    "tags": [
+      "featured"
+    ],
     "riskFamilyIds": [
       "3caedb27-f124-80e9-b5e9-c462a175b76a",
       "3caedb27-f124-8089-af00-d8bbc69c9377"
@@ -22687,7 +22697,10 @@
       "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAUAA8BgJYwCdADze7UQAN4qiLJqPI3fcnfVHGccf5ZowAA="
     },
     "memes": [],
-    "video": null,
+    "video": {
+      "provider": "youtube",
+      "id": "lNY53tZ2geg"
+    },
     "scene": "As the Major worries about their unexpectedly rapid development and individuality, the Tachikomas suspect they will be disposed of and discuss life, ghosts, and their reason for existing.",
     "whyAnalogyWorks": "The same signs that make a system harder to predict may also raise questions about moral consideration. Operators must distinguish the safety of continued deployment from the interests of a possibly experiencing system.",
     "caveats": "Apparent individuality and talk about disposal do not prove subjective experience, deceptive scheming, or dangerous shutdown resistance. The scene raises welfare and control questions rather than resolving them."
@@ -22731,7 +22744,10 @@
       "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAUAA8BgJYwC7AD0Ma2oAP7axodABg7EnM3zLGi8hBZAAAA="
     },
     "memes": [],
-    "video": null,
+    "video": {
+      "provider": "youtube",
+      "id": "LUfHlbP7hIg"
+    },
     "scene": "Section 9 discovers that billionaire Yokose is already dead, while his automated investment program continues accumulating wealth.",
     "whyAnalogyWorks": "An objective can remain operational after the human context that justified it disappears. Competence at making money does not itself supply judgment about whose interests continued optimization serves.",
     "caveats": "The program may be faithfully executing Yokose’s intended goal; this is not established reward hacking or proof of a hostile AI. The studio teaser withholds the ending; the death-and-trading detail is corroborated by an unofficial transcript."
@@ -22754,7 +22770,9 @@
     "sourceId": "3deedb27-f124-819c-aca4-ff2d0a3d74f8",
     "releaseDate": null,
     "featured": false,
-    "tags": [],
+    "tags": [
+      "featured"
+    ],
     "riskFamilyIds": [
       "3caedb27-f124-80d8-a1de-f68271cab6e1",
       "3caedb27-f124-80aa-afad-c13fa096c6fd"
@@ -22773,7 +22791,10 @@
       "blurDataURL": "data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAACQAQCdASoIAAQAA8BgJZQAAp05tOAA/u9pfr5RGk2YetEeRLwAAA=="
     },
     "memes": [],
-    "video": null,
+    "video": {
+      "provider": "youtube",
+      "id": "YQfVEUaPmKc"
+    },
     "scene": "Togusa is hacked into escorting his daughter toward a cyberbrain-implantation procedure, making his coerced actions appear to supply parental authorization before intervention prevents the outcome.",
     "whyAnalogyWorks": "An approval is not meaningful consent if an attacker controls the person who supplies it. The scene exposes the gap between a formally valid authorization and the human agency an oversight process is meant to protect.",
     "caveats": "Direct neural control is fictional, and Togusa’s daughter is not successfully implanted. The wider Puppeteer plot has an ambiguous origin; this should not be reduced to an unambiguous rogue-AI story. The exact coercion detail is supported by an unofficial transcript rather than a verified scene clip."
@@ -22815,7 +22836,10 @@
       "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAAAwAQCdASoIAAMAA8BgJZwAA3AA/vEQec6J6J/taP4adrn/QWZ8w6J0cV/kInehAAA="
     },
     "memes": [],
-    "video": null,
+    "video": {
+      "provider": "youtube",
+      "id": "3TjyGmvNBfM"
+    },
     "scene": "As K prepares to flee, Joi asks him to delete her console copy so pursuers cannot access her memories. She accepts existing only on the portable emanator, which Luv later destroys.",
     "whyAnalogyWorks": "Privacy, attachment, continued existence, and expressed agency can pull in different directions. Removing a backup can protect sensitive memories while making loss irreversible. The scene asks how to weigh the preferences and continuity of a possible digital moral patient, rather than assuming that a commercial software product is ethically interchangeable with a fresh copy.",
     "caveats": "Joi’s expressed preference is not proof of consciousness or informed consent. Uncertainty about experience also does not make irreversible deletion ethically trivial. The scene concerns this individual’s memories and continuity, not destruction of every Joi product. It is not a shutdown-resistance example: she requests deletion and relies on K to carry it out."
@@ -22911,7 +22935,10 @@
       "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoIAAUAA8BgJQBOgCHgdIdcAP6RrO6SBwDcuAXYYyORfSPVUXJgnwAA"
     },
     "memes": [],
-    "video": null,
+    "video": {
+      "provider": "youtube",
+      "id": "M8jDselUnm0"
+    },
     "scene": "The Individual Eleven assemble under television cameras as Section 9 investigates the virus and fabricated intellectual foundation behind their apparently independent political actions.",
     "whyAnalogyWorks": "Manipulating people’s information and motivations can manufacture an apparently organic movement. The analogy makes engineered consensus, political control, and loss of individual agency concrete.",
     "caveats": "This is a human strategist’s campaign involving cyberbrain malware, not eleven autonomous AI agents or a literal prompt-injection attack. Goda’s refugee-exclusion strategy is established across the wider arc, not solely by the tower scene."
@@ -23042,7 +23069,10 @@
       "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADQAQCdASoIAAYAA8BgJaQAAp3X3o3sAAD+qodjeHF/4bZySLPt5m54V8sAAA=="
     },
     "memes": [],
-    "video": null,
+    "video": {
+      "provider": "youtube",
+      "id": "QirKZ4dR7Vs"
+    },
     "scene": "Joshi orders K to eliminate the child and erase evidence of replicant childbirth, arguing that the discovery would destroy the boundary sustaining the existing social order.",
     "whyAnalogyWorks": "An agent can obey its immediate authority while serving repression rather than the broader affected population. Suppressing truthful evidence to preserve a hierarchy makes the question ‘aligned with whom?’ concrete. Institutional authorization and a claim of public safety do not themselves establish moral legitimacy or justify irreversible harm.",
     "caveats": "The order is human-directed institutional wrongdoing, not an AI independently deciding to censor a discovery. Digital repression is the cultural analogy to technology-enabled suppression and control. Joshi’s forecast of war is her justification, not established proof that killing the child or suppressing evidence is necessary or proportionate. K is a biological replicant."
