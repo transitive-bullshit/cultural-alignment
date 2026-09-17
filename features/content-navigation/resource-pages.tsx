@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { ExternalLinkIcon } from 'lucide-react'
 
 import { CopyPageLink } from '@/components/copy-page-link'
@@ -176,6 +177,10 @@ export function ResourceDetailPage({
       : resource.kind === 'franchise'
         ? resource.image
         : null
+  const sourceFranchises =
+    resource.kind === 'source'
+      ? resource.relatedResources.filter(({ kind }) => kind === 'franchise')
+      : []
 
   return (
     <main
@@ -217,6 +222,18 @@ export function ResourceDetailPage({
                     >
                       {formatReleaseDate(resource.releaseDate)}
                     </time>
+                  </dd>
+                </div>
+              ) : null}
+              {sourceFranchises.length > 0 ? (
+                <div data-source-franchises>
+                  <dt>Franchise</dt>
+                  <dd>
+                    {sourceFranchises.map((franchise) => (
+                      <Link key={franchise.id} href={franchise.href}>
+                        {franchise.title}
+                      </Link>
+                    ))}
                   </dd>
                 </div>
               ) : null}

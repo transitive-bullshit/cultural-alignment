@@ -269,6 +269,23 @@
   text-align: right;
 }
 
+.sourceMetadata a {
+  display: block;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.sourceMetadata a:hover,
+.sourceMetadata a:focus-visible {
+  color: var(--proto-electric);
+}
+
+.sourceMetadata a:focus-visible {
+  outline: 2px solid var(--proto-electric);
+  outline-offset: 4px;
+}
+
 .externalLinks {
   display: flex;
   flex-direction: column;
