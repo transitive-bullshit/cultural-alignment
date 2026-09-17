@@ -292,6 +292,33 @@
     "imdbUrl": "https://www.imdb.com/search/title/?companies=co0048420"
   },
   {
+    "id": "3deedb27-f124-8122-8937-cc3d73a63369",
+    "slug": "harry-potter",
+    "title": "Harry Potter",
+    "keywords": [
+      "harry potter",
+      "wizarding world",
+      "fantasy",
+      "magic",
+      "hogwarts",
+      "hermione granger",
+      "ron weasley",
+      "albus dumbledore",
+      "lord voldemort",
+      "horcruxes"
+    ],
+    "description": "Fantasy franchise based on J. K. Rowling’s stories, following Harry Potter and his friends at Hogwarts as they confront Lord Voldemort and the dangers of dark magic.",
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/franchises/3deedb27f12481228937cc3d73a63369/gallery-47fc4e9d69dcb038149a71684637d72e0b6de245b5eed510da77f26f46e26647.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/franchises/3deedb27f12481228937cc3d73a63369/detail-3538c319d18c922b3993cf25cfda044a9d2b19fcca151d1e273f143bc4496958.webp",
+      "width": 1920,
+      "height": 768,
+      "alt": "Harry Potter, Hermione Granger, and Ron Weasley at Hogwarts",
+      "blurDataURL": "data:image/webp;base64,UklGRi4AAABXRUJQVlA4ICIAAACQAQCdASoIAAMAA8BgJaQAAudGFIAA/vSYVW0nD/DAAAAA"
+    },
+    "imdbUrl": null
+  },
+  {
     "id": "3deedb27-f124-8132-be55-e1a8f88cb90b",
     "slug": "ghost-in-the-shell",
     "title": "Ghost in the Shell",

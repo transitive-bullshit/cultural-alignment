@@ -1261,6 +1261,30 @@
   },
   {
     "kind": "franchise",
+    "title": "Harry Potter",
+    "subtitle": "Media franchise",
+    "keywords": [
+      "Fantasy franchise based on J. K. Rowling’s stories, following Harry Potter and his friends at Hogwarts as they confront Lord Voldemort and the dangers of dark magic.",
+      "Harry Potter and the Sorcerer’s Stone",
+      "Harry Potter and the Half-Blood Prince",
+      "Harry Potter and the Chamber of Secrets"
+    ],
+    "supplementalKeywords": [
+      "harry potter",
+      "wizarding world",
+      "fantasy",
+      "magic",
+      "hogwarts",
+      "hermione granger",
+      "ron weasley",
+      "albus dumbledore",
+      "lord voldemort",
+      "horcruxes"
+    ],
+    "href": "/franchises/harry-potter"
+  },
+  {
+    "kind": "franchise",
     "title": "Jurassic Park",
     "subtitle": "Media franchise",
     "keywords": [
@@ -13466,6 +13490,7 @@
     "subtitle": "Harry Potter and the Half-Blood Prince",
     "keywords": [
       "Harry Potter and the Half-Blood Prince",
+      "Harry Potter",
       "Misalignment",
       "Misalignment Risks",
       "Knowledge Elicitation",
@@ -13488,7 +13513,12 @@
       "hogwarts",
       "horcruxes",
       "altered memory",
-      "half-blood prince"
+      "half-blood prince",
+      "wizarding world",
+      "fantasy",
+      "magic",
+      "hermione granger",
+      "ron weasley"
     ],
     "href": "/scenarios/slughorns-true-memory"
   },
@@ -17373,6 +17403,7 @@
     "subtitle": "Harry Potter and the Sorcerer’s Stone",
     "keywords": [
       "Harry Potter and the Sorcerer’s Stone",
+      "Harry Potter",
       "Security",
       "Misalignment",
       "Security & Governance Risks",
@@ -17408,7 +17439,9 @@
       "witchcraft and wizardry",
       "magic",
       "sorcerer’s stone",
-      "philosopher’s stone"
+      "philosopher’s stone",
+      "wizarding world",
+      "horcruxes"
     ],
     "href": "/scenarios/the-mirror-protects-the-stone"
   },
@@ -19555,6 +19588,7 @@
     "subtitle": "Harry Potter and the Chamber of Secrets",
     "keywords": [
       "Harry Potter and the Chamber of Secrets",
+      "Harry Potter",
       "Security",
       "Malicious use",
       "Security & Governance Risks",
@@ -19586,7 +19620,13 @@
       "chamber of secrets",
       "basilisk",
       "enchanted diary",
-      "horcrux"
+      "horcrux",
+      "wizarding world",
+      "fantasy",
+      "magic",
+      "albus dumbledore",
+      "lord voldemort",
+      "horcruxes"
     ],
     "href": "/scenarios/tom-riddles-diary"
   },
@@ -24004,6 +24044,7 @@
     "subtitle": "Movie",
     "keywords": [
       "During Harry’s second year at Hogwarts, a mysterious diary manipulates Ginny Weasley as the Chamber of Secrets is reopened and students are attacked.",
+      "Harry Potter",
       "IMDb",
       "Rotten Tomatoes",
       "YouTube trailer"
@@ -24019,7 +24060,13 @@
       "chamber of secrets",
       "basilisk",
       "enchanted diary",
-      "horcrux"
+      "horcrux",
+      "wizarding world",
+      "fantasy",
+      "magic",
+      "albus dumbledore",
+      "lord voldemort",
+      "horcruxes"
     ],
     "href": "/sources/harry-potter-and-the-chamber-of-secrets"
   },
@@ -24029,6 +24076,7 @@
     "subtitle": "Movie",
     "keywords": [
       "Harry and Dumbledore investigate Voldemort’s past and try to recover Horace Slughorn’s true memory about Tom Riddle’s interest in creating multiple Horcruxes.",
+      "Harry Potter",
       "IMDb",
       "Rotten Tomatoes",
       "YouTube trailer"
@@ -24043,7 +24091,12 @@
       "hogwarts",
       "horcruxes",
       "altered memory",
-      "half-blood prince"
+      "half-blood prince",
+      "wizarding world",
+      "fantasy",
+      "magic",
+      "hermione granger",
+      "ron weasley"
     ],
     "href": "/sources/harry-potter-and-the-half-blood-prince"
   },
@@ -24053,6 +24106,7 @@
     "subtitle": "Movie",
     "keywords": [
       "An orphaned boy discovers he is a wizard and begins his education at Hogwarts School of Witchcraft and Wizardry.",
+      "Harry Potter",
       "IMDb",
       "Rotten Tomatoes",
       "YouTube trailer"
@@ -24070,7 +24124,9 @@
       "witchcraft and wizardry",
       "magic",
       "sorcerer’s stone",
-      "philosopher’s stone"
+      "philosopher’s stone",
+      "wizarding world",
+      "horcruxes"
     ],
     "href": "/sources/harry-potter"
   },
