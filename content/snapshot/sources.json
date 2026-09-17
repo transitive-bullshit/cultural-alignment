@@ -4881,7 +4881,9 @@
     "imdbUrl": "https://www.imdb.com/title/tt0113568/",
     "rottenTomatoesUrl": "https://www.rottentomatoes.com/m/ghost_in_the_shell",
     "youtubeTrailerUrl": "https://www.youtube.com/watch?v=aADTX6CmIx4",
-    "franchiseIds": [],
+    "franchiseIds": [
+      "3deedb27-f124-8132-be55-e1a8f88cb90b"
+    ],
     "relatedSourceIds": []
   },
   {
@@ -9197,6 +9199,122 @@
     "rottenTomatoesUrl": "https://www.rottentomatoes.com/tv/person_of_interest",
     "youtubeTrailerUrl": "https://www.youtube.com/watch?v=68xN_BNYhc4",
     "franchiseIds": [],
+    "relatedSourceIds": []
+  },
+  {
+    "id": "3deedb27-f124-8197-8ea5-f88dffa93fa6",
+    "slug": "ghost-in-the-shell-stand-alone-complex",
+    "title": "Ghost in the Shell: Stand Alone Complex",
+    "keywords": [
+      "ghost in the shell",
+      "stand alone complex",
+      "sac",
+      "first season",
+      "2002",
+      "2003",
+      "laughing man",
+      "aoi",
+      "tachikoma",
+      "motoko kusanagi",
+      "togusa",
+      "yokose",
+      "cyberbrain"
+    ],
+    "sourceType": "tv-show",
+    "description": "Kenji Kamiyama’s 26-episode classic anime follows Public Security Section 9 through cybercrime cases and the Laughing Man mystery, exploring autonomous Tachikomas, manufactured perception, imitation, and identity in a networked society.",
+    "releaseDate": "2002-10-01",
+    "poster": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/sources/3deedb27f12481978ea5f88dffa93fa6/gallery-7d02b21067c264e744803bcd9fb213be7b7d573f8443e0997c9a42cb0ed64c3e.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/sources/3deedb27f12481978ea5f88dffa93fa6/detail-29a315329fc8f462d254044496f79c9a8afb8430ace088503f5d90987d095b52.webp",
+      "width": 1920,
+      "height": 1080,
+      "alt": "Poster for Ghost in the Shell: Stand Alone Complex",
+      "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoIAAUAA8BgJaQAAudB1hIAAOI1WBxsDmHWcTWyq3LE6QxZdAAAAA=="
+    },
+    "imdbUrl": "https://www.imdb.com/title/tt0346314/",
+    "rottenTomatoesUrl": null,
+    "youtubeTrailerUrl": "https://www.youtube.com/watch?v=Gf6YFrV7zes",
+    "franchiseIds": [
+      "3deedb27-f124-8132-be55-e1a8f88cb90b"
+    ],
+    "relatedSourceIds": []
+  },
+  {
+    "id": "3deedb27-f124-819c-aca4-ff2d0a3d74f8",
+    "slug": "ghost-in-the-shell-s-a-c-solid-state-society",
+    "title": "Ghost in the Shell: S.A.C. Solid State Society",
+    "keywords": [
+      "ghost in the shell",
+      "stand alone complex",
+      "sac",
+      "solid state society",
+      "sss",
+      "2006",
+      "television movie",
+      "togusa",
+      "daughter",
+      "puppeteer",
+      "cyberbrain",
+      "consent",
+      "child abduction",
+      "elderly welfare"
+    ],
+    "sourceType": "movie",
+    "description": "The 2006 feature-length television anime continues the Stand Alone Complex story after 2nd GIG. Togusa leads Section 9 into a child-abduction and welfare-network mystery involving the Puppeteer, raising questions about consent, autonomy, and paternalistic control.",
+    "releaseDate": "2006-09-01",
+    "poster": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/sources/3deedb27f124819caca4ff2d0a3d74f8/gallery-cb395684fe350f00379eb9bd6e9bc9cce54963d103a1c49d6e7d0a8235490b8f.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/sources/3deedb27f124819caca4ff2d0a3d74f8/detail-32332c94b2ec8ebfc8c225179ab38364f8b34402e1afb932a636f00ce4fb0059.webp",
+      "width": 361,
+      "height": 514,
+      "alt": "Poster for Ghost in the Shell: S.A.C. Solid State Society",
+      "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADwAQCdASoIAAsAA8BgJYgAAu1/f8CN9gAA/u0Jsk2p54gIhF4vTQg+LPrquDkdPYoYxSr7nl4439gA"
+    },
+    "imdbUrl": "https://www.imdb.com/title/tt0856797/",
+    "rottenTomatoesUrl": null,
+    "youtubeTrailerUrl": "https://www.youtube.com/watch?v=JFwwv8FvLgU",
+    "franchiseIds": [
+      "3deedb27-f124-8132-be55-e1a8f88cb90b"
+    ],
+    "relatedSourceIds": []
+  },
+  {
+    "id": "3deedb27-f124-81e9-95e4-fa47e4695131",
+    "slug": "ghost-in-the-shell-s-a-c-2nd-gig",
+    "title": "Ghost in the Shell: S.A.C. 2nd GIG",
+    "keywords": [
+      "ghost in the shell",
+      "stand alone complex",
+      "sac",
+      "2nd gig",
+      "second season",
+      "2004",
+      "2005",
+      "individual eleven",
+      "goda",
+      "kuze",
+      "dejima",
+      "tachikoma",
+      "jigabachi",
+      "autonomous helicopter"
+    ],
+    "sourceType": "tv-show",
+    "description": "The 26-episode second Stand Alone Complex series follows Section 9 through the Individual Eleven conspiracy and Dejima refugee crisis, examining political manipulation, autonomous weapons, and the Tachikomas’ choices under pressure.",
+    "releaseDate": "2004-01-01",
+    "poster": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/sources/3deedb27f12481e995e4fa47e4695131/gallery-54dbe57b0a6781728e591d135e647e9ae05ad1c5820e43a3fc42ec9ee2827d3e.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/sources/3deedb27f12481e995e4fa47e4695131/detail-f0bc07bbf1e7c5380e421d7571fb48161f1f0f34669804d9a8ab594e7b7ef738.webp",
+      "width": 1273,
+      "height": 716,
+      "alt": "Poster for Ghost in the Shell: S.A.C. 2nd GIG",
+      "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoIAAQAA8BgJZACdAD0jHvlwAD9U49Cyn193fPZjX+peKxiubpTgYmo2mdr0AAA"
+    },
+    "imdbUrl": "https://www.imdb.com/title/tt0346314/episodes/?season=2",
+    "rottenTomatoesUrl": null,
+    "youtubeTrailerUrl": "https://www.youtube.com/watch?v=D522fRIFfhI",
+    "franchiseIds": [
+      "3deedb27-f124-8132-be55-e1a8f88cb90b"
+    ],
     "relatedSourceIds": []
   }
 ]
