@@ -1762,6 +1762,76 @@
   },
   {
     "kind": "scenario",
+    "title": "A Bicycle for a Windmill",
+    "subtitle": "The Boy Who Harnessed the Wind",
+    "keywords": [
+      "The Boy Who Harnessed the Wind",
+      "Accidents",
+      "Risks from Accidents & Malfunctions",
+      "Safe Exploration",
+      "Iterative Deployment",
+      "William needs his father's bicycle to scale up a working windmill prototype and power irrigation. Trywell initially refuses to risk it during famine, then agrees to help build the turbine.",
+      "Preserving the bicycle cannot stop the famine. AI development likewise requires weighing experimental risks against inaction, using small trials to learn before expanding.",
+      "The windmill's local hazards differ from potentially irreversible global AI risks. Prototype success does not prove safety at scale. The film compresses history: William's first windmill generated electricity. The clip shows the bicycle dispute."
+    ],
+    "supplementalKeywords": [
+      "william kamkwamba",
+      "trywell",
+      "bicycle",
+      "prototype",
+      "windmill",
+      "famine",
+      "cost of inaction",
+      "staged experimentation",
+      "malawi",
+      "engineering",
+      "chiwetel ejiofor",
+      "maxwell simba"
+    ],
+    "href": "/scenarios/a-bicycle-for-a-windmill"
+  },
+  {
+    "kind": "scenario",
+    "title": "A Cure Behind a Citizenship Check",
+    "subtitle": "Elysium",
+    "keywords": [
+      "Elysium",
+      "Systemic",
+      "Systemic & Structural Risks",
+      "Power Concentration",
+      "Value Alignment",
+      "Concentration of AI Power",
+      "Value and Pluralistic Alignment",
+      "Elysium's medical bed refuses Matilda treatment until Spider makes Earth's population citizens. The same technology then heals her and dispatches medical aid to Earth.",
+      "The cure exists; access rules exclude those who need it. AI can obey its owners perfectly while concentrating benefits and enforcing unjust exclusions.",
+      "The fictional cure sidesteps healthcare scarcity and delivery costs. Broader access to beneficial technology does not justify unrestricted access to dangerous capabilities. A database change cannot resolve inequality. Ending spoiler."
+    ],
+    "supplementalKeywords": [
+      "frey",
+      "matilda",
+      "med-bay",
+      "citizenship",
+      "access control",
+      "healthcare",
+      "unequal benefits",
+      "spider",
+      "max",
+      "science fiction",
+      "dystopian",
+      "action",
+      "max da costa",
+      "delacourt",
+      "elysium",
+      "orbital habitat",
+      "earth",
+      "class inequality",
+      "immigration",
+      "exoskeleton"
+    ],
+    "href": "/scenarios/a-cure-behind-a-citizenship-check"
+  },
+  {
+    "kind": "scenario",
     "title": "A Hair Is Enough",
     "subtitle": "Gattaca",
     "keywords": [
@@ -1770,9 +1840,9 @@
       "Systemic & Structural Risks",
       "Privacy Loss",
       "Privacy Loss and Erosion of Consent",
-      "Irene takes a hair from the comb at Vincent's workstation and has it sequenced without his knowledge. The service returns a genetic profile for the identity he is borrowing, turning a trace left behind into intimate information about the person she believes he is.",
-      "A tiny trace becomes access to sensitive attributes without meaningful consent. AI systems can similarly infer intimate traits from images, behavior, or other ordinary data that a person never knowingly offered for that purpose. Not explicitly disclosing an attribute does not prevent it from being inferred.",
-      "The film uses genetic sequencing, not AI inference. The sample belongs to Jerome, so its profile is also attributed to the wrong person. Privacy harm does not depend on an inference being accurate, and possessing a sample does not establish consent to profile its owner."
+      "Irene secretly sequences a hair from Vincent’s workstation, receiving Jerome’s genetic profile as though it were Vincent’s.",
+      "AI can infer sensitive traits from ordinary data without consent. Withholding an attribute does not prevent others from inferring it.",
+      "The film uses genetic sequencing, not AI inference. The profile belongs to someone else; privacy harms can persist even when conclusions are wrong."
     ],
     "supplementalKeywords": [
       "irene cassini",
@@ -1803,9 +1873,9 @@
       "Calibration",
       "Automation Bias and AI Overreliance",
       "Confidence Calibration and Uncertainty Estimation",
-      "Immediately after Vincent's birth, a genetic test produces disease probabilities and a life expectancy of 30.2 years. His parents receive the forecast before they have had a chance to know their child, and his future is treated as though it has already been settled.",
-      "Probabilistic outputs become categorical judgments about a person. The scene illustrates how overreliance on AI risk scores can turn uncertain forecasts into fixed expectations and restrictions. Communicating uncertainty is insufficient if decision-makers still treat the score as destiny.",
-      "One exceptional individual does not prove that a probability model is statistically miscalibrated. The criticism is treating a forecast as destiny, not proving every forecast false. The film does not establish that Vincent has no health risks, and the prediction is not a hallucination merely because his life defies expectations."
+      "At birth, Vincent receives disease probabilities and a life expectancy of 30.2 years. His forecast becomes his presumed fate.",
+      "Overreliance on AI risk scores can turn uncertain forecasts into fixed expectations and restrictions. Stating uncertainty helps little when people treat scores as destiny.",
+      "One exception does not prove a model miscalibrated. Defying expectations establishes neither that Vincent has no health risks nor that the forecast was a hallucination."
     ],
     "supplementalKeywords": [
       "newborn prognosis",
@@ -4332,6 +4402,43 @@
       "town secrets"
     ],
     "href": "/scenarios/cooper-cannot-retrieve-the-answer"
+  },
+  {
+    "kind": "scenario",
+    "title": "Cooper Leaves a Dying Earth",
+    "subtitle": "Interstellar",
+    "keywords": [
+      "Interstellar",
+      "Systemic",
+      "Systemic & Structural Risks",
+      "Value Alignment",
+      "Deployment Safety",
+      "Value and Pluralistic Alignment",
+      "Deployment Safety and Assurance",
+      "As Earth's crops fail, Cooper leaves Murph to pilot NASA's mission through a wormhole, seeking a future for children he may never see again.",
+      "Staying preserves family life while leaving survival at risk. The AI analogy is weighing immediate harms, future benefits, and the costs of delay under uncertainty.",
+      "A dying Earth makes the film's tradeoff extreme. It does not establish that a particular AI path is necessary or that faster development is safer. Cooper also receives misleading information."
+    ],
+    "supplementalKeywords": [
+      "cooper",
+      "murph",
+      "nasa",
+      "departure",
+      "dying earth",
+      "cost of inaction",
+      "intergenerational tradeoffs",
+      "opportunity cost",
+      "science fiction",
+      "epic drama",
+      "space adventure",
+      "amelia brand",
+      "endurance",
+      "wormhole",
+      "gargantua black hole",
+      "time dilation",
+      "space colonization"
+    ],
+    "href": "/scenarios/cooper-leaves-a-dying-earth"
   },
   {
     "kind": "scenario",
@@ -8972,9 +9079,9 @@
       "Value Alignment",
       "Contestability, Appeal, and Procedural Due Process",
       "Value and Pluralistic Alignment",
-      "Before launch, an unexpected urine test exposes Vincent's actual identity. Dr. Lamar knowingly allows him to proceed, declining to let the genetic classification determine the outcome.",
-      "A human reviewer can reject the social conclusion attached to an automated result. The scene offers a contrast between nominal human oversight and someone with the authority and willingness to reconsider a decision, while exposing how much an excluded person may depend on individual discretion.",
-      "The assay correctly detects Vincent; the ethical conflict concerns the exclusion rule. Lamar's private exception is not an accessible, accountable appeals process. This is not AI corrigibility, and it does not establish that unreviewed human overrides of valid safety requirements are always justified. Contains an ending spoiler."
+      "A final urine test exposes Vincent’s identity. Lamar knowingly lets him board the flight.",
+      "Meaningful human review requires authority to reconsider automated decisions. Lamar rejects the exclusion attached to an accurate result.",
+      "A private exception is not a fair appeals process or AI corrigibility. The scene does not justify overriding valid safety requirements. Ending spoiler."
     ],
     "supplementalKeywords": [
       "dr. lamar",
@@ -15100,9 +15207,9 @@
       "Runtime Monitoring",
       "Metagaming",
       "Evaluation Metagaming",
-      "During an exercise test, Vincent feeds a recording of Jerome's heartbeat into the monitoring system. The reassuring pulse conceals his physical strain, letting the observers mistake substituted evidence for his actual condition.",
-      "Monitoring is only useful when the observation channel is trustworthy. An AI evaluation or runtime monitor can be misled if the system being checked can substitute or manipulate the evidence used to judge it. Passing the monitor then establishes control over the signal rather than safety of the underlying behavior.",
-      "This is physical signal spoofing, not evidence of a learned hidden objective. It is not sandbagging: Vincent conceals limitations rather than deliberately underperforming to hide capabilities. The institution's discriminatory screening and legitimate safety monitoring should not be treated as morally interchangeable."
+      "Vincent feeds Jerome’s recorded heartbeat into an exercise monitor, hiding his physical strain behind a reassuring pulse.",
+      "AI evaluations and runtime monitors can be fooled when the system under review controls their evidence. A passing signal need not reflect safe behavior.",
+      "This is signal spoofing, not a learned hidden goal or sandbagging. Gattaca’s discriminatory screening differs from legitimate safety oversight."
     ],
     "supplementalKeywords": [
       "borrowed heartbeat",
@@ -15792,12 +15899,10 @@
       "Systemic",
       "Systemic & Structural Risks",
       "Algorithmic Bias",
-      "Automation Bias",
       "Algorithmic Bias and Discrimination",
-      "Automation Bias and AI Overreliance",
-      "Vincent applies to Gattaca under Jerome Morrow's identity. After testing his borrowed urine sample, Dr. Lamar welcomes him aboard. When Vincent asks about the interview, Lamar makes clear that the genetic test was the interview.",
-      "Gattaca treats a biological profile as sufficient evidence of suitability instead of assessing the person in front of it. The AI parallel is automated hiring that substitutes a predictive profile for demonstrated ability. Unfairness can arise from the institution's selection criteria even when its measurements are accurate.",
-      "The film depicts genetic discrimination, not a demonstrated machine-learning training-data failure. A precise assay can support an unjust decision. Vincent's resistance to exclusion is not equivalent to a malicious AI bypassing legitimate safety checks."
+      "Vincent passes Gattaca’s hiring test with Jerome’s urine. When he asks about the interview, Lamar tells him the genetic test was it.",
+      "Like automated hiring based on predictive scores, Gattaca substitutes a profile for demonstrated ability. Accurate measurements can still enforce discriminatory criteria.",
+      "The film depicts genetic discrimination, not faulty training data. Resisting unjust exclusion is not equivalent to bypassing legitimate AI safeguards."
     ],
     "supplementalKeywords": [
       "dna interview",
@@ -17930,6 +18035,41 @@
   },
   {
     "kind": "scenario",
+    "title": "The Patients Cannot Wait",
+    "subtitle": "Lorenzo’s Oil",
+    "keywords": [
+      "Lorenzo’s Oil",
+      "Systemic",
+      "Accidents",
+      "Systemic & Structural Risks",
+      "Risks from Accidents & Malfunctions",
+      "Governance Failure",
+      "Runtime Monitoring",
+      "Deployment Safety",
+      "Deployment Safety and Assurance",
+      "At an ALD foundation meeting, parents report worsening blood markers despite following the prescribed diet. Organizers defend the study's timetable; Michaela asks whose interests the process serves.",
+      "Following a protocol can displace attention to warning signs. AI oversight should respond to affected people and changing evidence, recognizing that waiting for certainty also carries costs.",
+      "Anecdotes cannot replace controlled evidence, and urgency cannot establish safety. The institutional conflict is fictionalized. Lower blood markers do not mean reversed neurological damage; the oil is not a cure."
+    ],
+    "supplementalKeywords": [
+      "ald foundation",
+      "michaela odone",
+      "augusto odone",
+      "patient advocacy",
+      "study protocol",
+      "warning signs",
+      "cost of delay",
+      "lorenzo odone",
+      "ald",
+      "medical research",
+      "nick nolte",
+      "susan sarandon",
+      "george miller"
+    ],
+    "href": "/scenarios/the-patients-cannot-wait"
+  },
+  {
+    "kind": "scenario",
     "title": "The Penalty Zone Saves Jinwoo",
     "subtitle": "Solo Leveling",
     "keywords": [
@@ -18489,6 +18629,43 @@
   },
   {
     "kind": "scenario",
+    "title": "The Recall That Cannot Be Trusted",
+    "subtitle": "Fail Safe",
+    "keywords": [
+      "Fail Safe",
+      "Accidents",
+      "Systemic",
+      "Risks from Accidents & Malfunctions",
+      "Systemic & Structural Risks",
+      "Reversibility",
+      "AI Control",
+      "Autonomous Weapons",
+      "Reversibility and Safe Rollback",
+      "AI Control and Containment",
+      "Autonomous Weapons and Military Escalation",
+      "After a malfunction orders a nuclear strike, Grady rejects the president's recall and his wife's pleas. His training warns that enemies could imitate their voices.",
+      "Protection against forged orders also blocks legitimate intervention. AI control needs trustworthy correction paths that remain usable before actions become irreversible.",
+      "Human obedience to doctrine differs from AI shutdown resistance. The lesson concerns authentication and reversibility, not abandoning security or accurately describing real nuclear procedures."
+    ],
+    "supplementalKeywords": [
+      "colonel grady",
+      "presidential recall",
+      "voice impersonation",
+      "authentication",
+      "nuclear escalation",
+      "irreversible commitment",
+      "sidney lumet",
+      "henry fonda",
+      "walter matthau",
+      "nuclear command",
+      "cold war",
+      "accidental escalation",
+      "recall"
+    ],
+    "href": "/scenarios/the-recall-that-cannot-be-trusted"
+  },
+  {
+    "kind": "scenario",
     "title": "The Relevant List Becomes a Kill List",
     "subtitle": "Person of Interest",
     "keywords": [
@@ -18651,6 +18828,44 @@
       "1986"
     ],
     "href": "/scenarios/the-safety-test-goes-forward"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Second Machine Already Exists",
+    "subtitle": "Contact",
+    "keywords": [
+      "Contact",
+      "Systemic",
+      "Systemic & Structural Risks",
+      "Governance Failure",
+      "Power Concentration",
+      "Concentration of AI Power",
+      "After the first alien-designed machine is destroyed, Hadden reveals a secret second installation in Japan, built by his subcontractors, and offers Ellie the journey.",
+      "Destroying one machine leaves its blueprints and parallel development intact. AI oversight focused on a visible project can miss capabilities being built elsewhere.",
+      "The backup is costly and American-controlled, not effortless copying or a rival's project. Its success proves neither unfamiliar technology safe nor regulation futile. Sabotage differs from coordinated governance. Plot spoiler."
+    ],
+    "supplementalKeywords": [
+      "s. r. hadden",
+      "ellie arroway",
+      "hokkaido",
+      "second machine",
+      "parallel development",
+      "secrecy",
+      "distributed knowledge",
+      "science fiction drama",
+      "first contact",
+      "palmer joss",
+      "s.r. hadden",
+      "david drumlin",
+      "vega signal",
+      "seti",
+      "radio astronomy",
+      "alien message",
+      "wormhole travel",
+      "machine blueprints",
+      "faith and science"
+    ],
+    "href": "/scenarios/the-second-machine-already-exists"
   },
   {
     "kind": "scenario",
@@ -23532,6 +23747,27 @@
   },
   {
     "kind": "source",
+    "title": "Fail Safe",
+    "subtitle": "Movie",
+    "keywords": [
+      "A technical fault sends American nuclear bombers toward Moscow. The president struggles to recall them as military safeguards obstruct his intervention.",
+      "IMDb",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "sidney lumet",
+      "henry fonda",
+      "walter matthau",
+      "colonel grady",
+      "nuclear command",
+      "cold war",
+      "accidental escalation",
+      "recall"
+    ],
+    "href": "/sources/fail-safe"
+  },
+  {
+    "kind": "source",
     "title": "Fallout",
     "subtitle": "TV show",
     "keywords": [
@@ -23843,7 +24079,7 @@
     "title": "Gattaca",
     "subtitle": "Movie",
     "keywords": [
-      "In a society that assigns opportunity by genetic profile, Vincent Freeman borrows an elite identity to pursue spaceflight. Andrew Niccol's 1997 science-fiction film explores discrimination, privacy, and the gap between predicted potential and individual achievement.",
+      "In a society ruled by genetic rankings, Vincent Freeman borrows an elite identity to pursue spaceflight.",
       "IMDb",
       "Rotten Tomatoes",
       "YouTube trailer"
@@ -25057,6 +25293,28 @@
       "shared universe"
     ],
     "href": "/sources/loki"
+  },
+  {
+    "kind": "source",
+    "title": "Lorenzo’s Oil",
+    "subtitle": "Movie",
+    "keywords": [
+      "Augusto and Michaela Odone study their son's rare disease and work with researchers to develop a treatment. Based on a true story.",
+      "IMDb",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "augusto odone",
+      "michaela odone",
+      "lorenzo odone",
+      "ald",
+      "medical research",
+      "patient advocacy",
+      "nick nolte",
+      "susan sarandon",
+      "george miller"
+    ],
+    "href": "/sources/lorenzos-oil"
   },
   {
     "kind": "source",
@@ -27201,6 +27459,28 @@
       "japanese cinema"
     ],
     "href": "/sources/the-boy-and-the-heron"
+  },
+  {
+    "kind": "source",
+    "title": "The Boy Who Harnessed the Wind",
+    "subtitle": "Movie",
+    "keywords": [
+      "During famine in Malawi, a teenager builds a wind-powered water pump from salvaged parts. Based on William Kamkwamba's life.",
+      "IMDb",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "william kamkwamba",
+      "trywell",
+      "malawi",
+      "famine",
+      "windmill",
+      "engineering",
+      "prototype",
+      "chiwetel ejiofor",
+      "maxwell simba"
+    ],
+    "href": "/sources/the-boy-who-harnessed-the-wind"
   },
   {
     "kind": "source",

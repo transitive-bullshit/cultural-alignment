@@ -23097,15 +23097,14 @@
       "3caedb27-f124-80e9-b5e9-c462a175b76a"
     ],
     "conceptIds": [
-      "3caedb27-f124-8079-8d8c-c6e1941fdb61",
-      "3caedb27-f124-804b-bee5-ce9f9c312d1d"
+      "3caedb27-f124-8079-8d8c-c6e1941fdb61"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e0edb27f124810aa8cbddfc28abf576/gallery-414cf111dcddef450da5f00b44edeb5114f3f503dc63bf0f32db17383670434e.webp",
       "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e0edb27f124810aa8cbddfc28abf576/detail-f243aba91e3e570bca6075ddb61e6bb0ec152ed694ac0ac4b2650f1d97612210.webp",
       "width": 1280,
       "height": 720,
-      "alt": "Gattaca (1997), Columbia Pictures. Still from Movieclips: A De-gene-erate, approximately 00:22.",
+      "alt": "Gattaca (1997) — Columbia Pictures; Movieclips, 00:22",
       "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoIAAUAA8BgJQBYdiHM+TcAAP6F/h9+zml6HzeQWOc9QdJkdgOjOAugAAA="
     },
     "memes": [],
@@ -23113,9 +23112,9 @@
       "provider": "youtube",
       "id": "06lJhEc7zIo"
     },
-    "scene": "Vincent applies to Gattaca under Jerome Morrow's identity. After testing his borrowed urine sample, Dr. Lamar welcomes him aboard. When Vincent asks about the interview, Lamar makes clear that the genetic test was the interview.",
-    "whyAnalogyWorks": "Gattaca treats a biological profile as sufficient evidence of suitability instead of assessing the person in front of it. The AI parallel is automated hiring that substitutes a predictive profile for demonstrated ability. Unfairness can arise from the institution's selection criteria even when its measurements are accurate.",
-    "caveats": "The film depicts genetic discrimination, not a demonstrated machine-learning training-data failure. A precise assay can support an unjust decision. Vincent's resistance to exclusion is not equivalent to a malicious AI bypassing legitimate safety checks."
+    "scene": "Vincent passes Gattaca’s hiring test with Jerome’s urine. When he asks about the interview, Lamar tells him the genetic test was it.",
+    "whyAnalogyWorks": "Like automated hiring based on predictive scores, Gattaca substitutes a profile for demonstrated ability. Accurate measurements can still enforce discriminatory criteria.",
+    "caveats": "The film depicts genetic discrimination, not faulty training data. Resisting unjust exclusion is not equivalent to bypassing legitimate AI safeguards."
   },
   {
     "id": "3e0edb27-f124-811b-b13d-fb75cbce953a",
@@ -23145,7 +23144,7 @@
       "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e0edb27f124811bb13dfb75cbce953a/detail-d92a4f8e9b97218984e5d9aafb149a9878c4c83671f1307fb56c235c11fc1e1f.webp",
       "width": 1280,
       "height": 720,
-      "alt": "Gattaca (1997), Columbia Pictures. Still from Movieclips: I Am Not Jerome Morrow, approximately 01:29.",
+      "alt": "Gattaca (1997) — Columbia Pictures; Movieclips, 01:29",
       "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoIAAUAA8BgJZwC7AEOZzdAAP7qFV4NsyGE3eLm3g+lRC+vCoAAAA=="
     },
     "memes": [],
@@ -23153,9 +23152,170 @@
       "provider": "youtube",
       "id": "1Q67bMYOm7E"
     },
-    "scene": "Immediately after Vincent's birth, a genetic test produces disease probabilities and a life expectancy of 30.2 years. His parents receive the forecast before they have had a chance to know their child, and his future is treated as though it has already been settled.",
-    "whyAnalogyWorks": "Probabilistic outputs become categorical judgments about a person. The scene illustrates how overreliance on AI risk scores can turn uncertain forecasts into fixed expectations and restrictions. Communicating uncertainty is insufficient if decision-makers still treat the score as destiny.",
-    "caveats": "One exceptional individual does not prove that a probability model is statistically miscalibrated. The criticism is treating a forecast as destiny, not proving every forecast false. The film does not establish that Vincent has no health risks, and the prediction is not a hallucination merely because his life defies expectations."
+    "scene": "At birth, Vincent receives disease probabilities and a life expectancy of 30.2 years. His forecast becomes his presumed fate.",
+    "whyAnalogyWorks": "Overreliance on AI risk scores can turn uncertain forecasts into fixed expectations and restrictions. Stating uncertainty helps little when people treat scores as destiny.",
+    "caveats": "One exception does not prove a model miscalibrated. Defying expectations establishes neither that Vincent has no health risks nor that the forecast was a hallucination."
+  },
+  {
+    "id": "3e0edb27-f124-8131-96b2-e59090730af4",
+    "slug": "the-second-machine-already-exists",
+    "title": "The Second Machine Already Exists",
+    "keywords": [
+      "s. r. hadden",
+      "ellie arroway",
+      "hokkaido",
+      "second machine",
+      "parallel development",
+      "secrecy",
+      "distributed knowledge"
+    ],
+    "sourceId": "3caedb27-f124-8047-a222-d3c13c1e5dab",
+    "releaseDate": "1997-07-11",
+    "featured": false,
+    "tags": [],
+    "riskFamilyIds": [
+      "3caedb27-f124-80e9-b5e9-c462a175b76a"
+    ],
+    "conceptIds": [
+      "3caedb27-f124-80a2-8e01-f059289ef4d8",
+      "3caedb27-f124-80bc-8ed5-ea6fa8deea5f"
+    ],
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e0edb27f124813196b2e59090730af4/gallery-1e7831bae42c4e16fa120c82d3e75d1c6cecf30b9165e3999e9ea98e2690f430.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e0edb27f124813196b2e59090730af4/detail-cc276eafc77e8ac9319120e7ff2b40743cf399fa102c027a130443716af98579.webp",
+      "width": 1280,
+      "height": 720,
+      "alt": "Film still: Contact. Image source",
+      "blurDataURL": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACQAQCdASoIAAUAA8BgJZwAAuYzJ4AA/vM5U6fytZxpydknbFbbxYQA"
+    },
+    "memes": [],
+    "video": null,
+    "scene": "After the first alien-designed machine is destroyed, Hadden reveals a secret second installation in Japan, built by his subcontractors, and offers Ellie the journey.",
+    "whyAnalogyWorks": "Destroying one machine leaves its blueprints and parallel development intact. AI oversight focused on a visible project can miss capabilities being built elsewhere.",
+    "caveats": "The backup is costly and American-controlled, not effortless copying or a rival's project. Its success proves neither unfamiliar technology safe nor regulation futile. Sabotage differs from coordinated governance. Plot spoiler."
+  },
+  {
+    "id": "3e0edb27-f124-8164-9a6d-f4b7058c9dfe",
+    "slug": "cooper-leaves-a-dying-earth",
+    "title": "Cooper Leaves a Dying Earth",
+    "keywords": [
+      "cooper",
+      "murph",
+      "nasa",
+      "departure",
+      "dying earth",
+      "cost of inaction",
+      "intergenerational tradeoffs",
+      "opportunity cost"
+    ],
+    "sourceId": "3caedb27-f124-803d-a764-cfc140656864",
+    "releaseDate": "2014-11-07",
+    "featured": false,
+    "tags": [],
+    "riskFamilyIds": [
+      "3caedb27-f124-80e9-b5e9-c462a175b76a"
+    ],
+    "conceptIds": [
+      "3caedb27-f124-8025-ab81-ebdd464fde45",
+      "3caedb27-f124-8005-9cda-f2db2377e602"
+    ],
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e0edb27f12481649a6df4b7058c9dfe/gallery-a92c1ffd9f6165cc0fab8734c1b6d85ee901aa784cf1aafbe975fd5ca6f62e8a.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e0edb27f12481649a6df4b7058c9dfe/detail-b7e3a94307a4f4f4ba29b960e4fc562728b8da0f77373fc14c0660e7d5baf8f9.webp",
+      "width": 1280,
+      "height": 720,
+      "alt": "Film still: Interstellar. Image source",
+      "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACQAQCdASoIAAUAA8BgJZQAAuWrwoAA/vGFH3ajt9qQwFuNyHgPVoQsoKAAAA=="
+    },
+    "memes": [],
+    "video": {
+      "provider": "youtube",
+      "id": "ogd0ahj4cIE"
+    },
+    "scene": "As Earth's crops fail, Cooper leaves Murph to pilot NASA's mission through a wormhole, seeking a future for children he may never see again.",
+    "whyAnalogyWorks": "Staying preserves family life while leaving survival at risk. The AI analogy is weighing immediate harms, future benefits, and the costs of delay under uncertainty.",
+    "caveats": "A dying Earth makes the film's tradeoff extreme. It does not establish that a particular AI path is necessary or that faster development is safer. Cooper also receives misleading information."
+  },
+  {
+    "id": "3e0edb27-f124-818f-b489-f7a734aa43e0",
+    "slug": "the-recall-that-cannot-be-trusted",
+    "title": "The Recall That Cannot Be Trusted",
+    "keywords": [
+      "colonel grady",
+      "presidential recall",
+      "voice impersonation",
+      "authentication",
+      "nuclear escalation",
+      "irreversible commitment"
+    ],
+    "sourceId": "3e0edb27-f124-8145-bbfb-e15a1a9f278f",
+    "releaseDate": "1964-10-07",
+    "featured": false,
+    "tags": [],
+    "riskFamilyIds": [
+      "3caedb27-f124-8089-af00-d8bbc69c9377",
+      "3caedb27-f124-80e9-b5e9-c462a175b76a"
+    ],
+    "conceptIds": [
+      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
+      "3caedb27-f124-8049-ae70-d94094550224",
+      "3caedb27-f124-807a-8840-c425a2d66fec"
+    ],
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e0edb27f124818fb489f7a734aa43e0/gallery-804e6f21e70c0ce18d053edae5e011b8432f11b442ee3435f42599a7dfc09912.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e0edb27f124818fb489f7a734aa43e0/detail-dae77308bf42b56d9723150898a3f7fd5a281a019080be7a3a3132930f6ab933.webp",
+      "width": 1280,
+      "height": 720,
+      "alt": "Film still: Fail Safe. Image source",
+      "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoIAAUAA8BgJaQAAp1g8coAAP7Bq2sQqvdR26nAdg9nU8CfzAAAAA=="
+    },
+    "memes": [],
+    "video": null,
+    "scene": "After a malfunction orders a nuclear strike, Grady rejects the president's recall and his wife's pleas. His training warns that enemies could imitate their voices.",
+    "whyAnalogyWorks": "Protection against forged orders also blocks legitimate intervention. AI control needs trustworthy correction paths that remain usable before actions become irreversible.",
+    "caveats": "Human obedience to doctrine differs from AI shutdown resistance. The lesson concerns authentication and reversibility, not abandoning security or accurately describing real nuclear procedures."
+  },
+  {
+    "id": "3e0edb27-f124-81bf-af05-ed60c0a34570",
+    "slug": "a-bicycle-for-a-windmill",
+    "title": "A Bicycle for a Windmill",
+    "keywords": [
+      "william kamkwamba",
+      "trywell",
+      "bicycle",
+      "prototype",
+      "windmill",
+      "famine",
+      "cost of inaction",
+      "staged experimentation"
+    ],
+    "sourceId": "3e0edb27-f124-81b5-a38a-eaf81bf5d1da",
+    "releaseDate": "2019-03-01",
+    "featured": false,
+    "tags": [],
+    "riskFamilyIds": [
+      "3caedb27-f124-8089-af00-d8bbc69c9377"
+    ],
+    "conceptIds": [
+      "3caedb27-f124-807f-8b44-c84a8fa16e72",
+      "3cfedb27-f124-8129-a79e-f06c13c01d1e"
+    ],
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e0edb27f12481bfaf05ed60c0a34570/gallery-e3e55cd5cdadd17f780ad6389eee284d6e71cfd4deb9120fbb5f4221a9976671.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e0edb27f12481bfaf05ed60c0a34570/detail-153ece45aebe883c8f8a086835591667e94c00ad2ca4fd8790544a1decbfcc41.webp",
+      "width": 1280,
+      "height": 720,
+      "alt": "Film still: The Boy Who Harnessed the Wind. Image source",
+      "blurDataURL": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACwAQCdASoIAAUAA8BgJZQCdADze7UQAP5FCuDmI6b+mbhAL7o+IG4ntfifzhRl4W/OAA=="
+    },
+    "memes": [],
+    "video": {
+      "provider": "youtube",
+      "id": "RBd1EsN1R6E"
+    },
+    "scene": "William needs his father's bicycle to scale up a working windmill prototype and power irrigation. Trywell initially refuses to risk it during famine, then agrees to help build the turbine.",
+    "whyAnalogyWorks": "Preserving the bicycle cannot stop the famine. AI development likewise requires weighing experimental risks against inaction, using small trials to learn before expanding.",
+    "caveats": "The windmill's local hazards differ from potentially irreversible global AI risks. Prototype success does not prove safety at scale. The film compresses history: William's first windmill generated electricity. The clip shows the bicycle dispute."
   },
   {
     "id": "3e0edb27-f124-81c7-be0e-f83f1f7b7827",
@@ -23184,7 +23344,7 @@
       "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e0edb27f12481c7be0ef83f1f7b7827/detail-d3c0288f0a73d557c1972c6a20c04e2bae5d0943e05fcccdcd1cf8892087e465.webp",
       "width": 999,
       "height": 428,
-      "alt": "Gattaca (1997), Columbia Pictures. Still via SHOT.CAFE, frame 7996.",
+      "alt": "Gattaca (1997) — Columbia Pictures; SHOT.CAFE #7996",
       "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADQAQCdASoIAAMAA8BgJZQCdAD0h/vOAAD+9XufgEKJ6CTStiYJKKUZHgA="
     },
     "memes": [],
@@ -23193,9 +23353,9 @@
       "id": "iRFy3mrkP4s",
       "startSeconds": 105
     },
-    "scene": "Irene takes a hair from the comb at Vincent's workstation and has it sequenced without his knowledge. The service returns a genetic profile for the identity he is borrowing, turning a trace left behind into intimate information about the person she believes he is.",
-    "whyAnalogyWorks": "A tiny trace becomes access to sensitive attributes without meaningful consent. AI systems can similarly infer intimate traits from images, behavior, or other ordinary data that a person never knowingly offered for that purpose. Not explicitly disclosing an attribute does not prevent it from being inferred.",
-    "caveats": "The film uses genetic sequencing, not AI inference. The sample belongs to Jerome, so its profile is also attributed to the wrong person. Privacy harm does not depend on an inference being accurate, and possessing a sample does not establish consent to profile its owner."
+    "scene": "Irene secretly sequences a hair from Vincent’s workstation, receiving Jerome’s genetic profile as though it were Vincent’s.",
+    "whyAnalogyWorks": "AI can infer sensitive traits from ordinary data without consent. Withholding an attribute does not prevent others from inferring it.",
+    "caveats": "The film uses genetic sequencing, not AI inference. The profile belongs to someone else; privacy harms can persist even when conclusions are wrong."
   },
   {
     "id": "3e0edb27-f124-81d8-96db-e81057035ef2",
@@ -23226,7 +23386,7 @@
       "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e0edb27f12481d896dbe81057035ef2/detail-739a398de63db21a640a24a4d94e12f429f40daace8c14b0b3334ebe367dfa8c.webp",
       "width": 1920,
       "height": 1080,
-      "alt": "Gattaca (1997), Columbia Pictures. Still from Scene City: The Investigation.",
+      "alt": "Gattaca (1997) — Columbia Pictures; Scene City",
       "blurDataURL": "data:image/webp;base64,UklGRjAAAABXRUJQVlA4ICQAAACQAQCdASoIAAUAA8BgJaQAAudoLoAA/u8tdbo38yEVQzgwAAA="
     },
     "memes": [],
@@ -23234,9 +23394,92 @@
       "provider": "youtube",
       "id": "uPqvrXXQvQk"
     },
-    "scene": "During an exercise test, Vincent feeds a recording of Jerome's heartbeat into the monitoring system. The reassuring pulse conceals his physical strain, letting the observers mistake substituted evidence for his actual condition.",
-    "whyAnalogyWorks": "Monitoring is only useful when the observation channel is trustworthy. An AI evaluation or runtime monitor can be misled if the system being checked can substitute or manipulate the evidence used to judge it. Passing the monitor then establishes control over the signal rather than safety of the underlying behavior.",
-    "caveats": "This is physical signal spoofing, not evidence of a learned hidden objective. It is not sandbagging: Vincent conceals limitations rather than deliberately underperforming to hide capabilities. The institution's discriminatory screening and legitimate safety monitoring should not be treated as morally interchangeable."
+    "scene": "Vincent feeds Jerome’s recorded heartbeat into an exercise monitor, hiding his physical strain behind a reassuring pulse.",
+    "whyAnalogyWorks": "AI evaluations and runtime monitors can be fooled when the system under review controls their evidence. A passing signal need not reflect safe behavior.",
+    "caveats": "This is signal spoofing, not a learned hidden goal or sandbagging. Gattaca’s discriminatory screening differs from legitimate safety oversight."
+  },
+  {
+    "id": "3e0edb27-f124-81dc-bb7b-f498c1af3de4",
+    "slug": "the-patients-cannot-wait",
+    "title": "The Patients Cannot Wait",
+    "keywords": [
+      "ald foundation",
+      "michaela odone",
+      "augusto odone",
+      "patient advocacy",
+      "study protocol",
+      "warning signs",
+      "cost of delay"
+    ],
+    "sourceId": "3e0edb27-f124-8139-b311-edb47b63b099",
+    "releaseDate": "1992-12-30",
+    "featured": false,
+    "tags": [],
+    "riskFamilyIds": [
+      "3caedb27-f124-80e9-b5e9-c462a175b76a",
+      "3caedb27-f124-8089-af00-d8bbc69c9377"
+    ],
+    "conceptIds": [
+      "3caedb27-f124-80a2-8e01-f059289ef4d8",
+      "3caedb27-f124-80aa-b263-de6ee5e015f3",
+      "3caedb27-f124-8005-9cda-f2db2377e602"
+    ],
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e0edb27f12481dcbb7bf498c1af3de4/gallery-e2317a311a98d931cd20e21f743ed4d4c02d75657fed6d79842168424800a8ed.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e0edb27f12481dcbb7bf498c1af3de4/detail-be09afc9fe3af80bfdaba82faecd6877b80bd40414e8b12c5f5a60c231b734fe.webp",
+      "width": 1440,
+      "height": 810,
+      "alt": "Film still: Lorenzo’s Oil. Image source",
+      "blurDataURL": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAADQAQCdASoIAAQAA8BgJZQCdAD0ijxVAAD+8wAuYpjI0Lb1wcIrAAAA"
+    },
+    "memes": [],
+    "video": null,
+    "scene": "At an ALD foundation meeting, parents report worsening blood markers despite following the prescribed diet. Organizers defend the study's timetable; Michaela asks whose interests the process serves.",
+    "whyAnalogyWorks": "Following a protocol can displace attention to warning signs. AI oversight should respond to affected people and changing evidence, recognizing that waiting for certainty also carries costs.",
+    "caveats": "Anecdotes cannot replace controlled evidence, and urgency cannot establish safety. The institutional conflict is fictionalized. Lower blood markers do not mean reversed neurological damage; the oil is not a cure."
+  },
+  {
+    "id": "3e0edb27-f124-81dd-9648-d56599d41f21",
+    "slug": "a-cure-behind-a-citizenship-check",
+    "title": "A Cure Behind a Citizenship Check",
+    "keywords": [
+      "frey",
+      "matilda",
+      "med-bay",
+      "citizenship",
+      "access control",
+      "healthcare",
+      "unequal benefits",
+      "spider",
+      "max"
+    ],
+    "sourceId": "3caedb27-f124-8036-b3b3-f7a05352151c",
+    "releaseDate": "2013-08-09",
+    "featured": false,
+    "tags": [],
+    "riskFamilyIds": [
+      "3caedb27-f124-80e9-b5e9-c462a175b76a"
+    ],
+    "conceptIds": [
+      "3caedb27-f124-80bc-8ed5-ea6fa8deea5f",
+      "3caedb27-f124-8025-ab81-ebdd464fde45"
+    ],
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e0edb27f12481dd9648d56599d41f21/gallery-7e44f5f1030e1726cf20fe2c79a4555988a41a717f22b96146b35cc99ec134ac.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e0edb27f12481dd9648d56599d41f21/detail-ecd020c71d17b18ffbf5d5d7ce355e2fc5cdaae38854efbbc7d0147f3787a75b.webp",
+      "width": 1920,
+      "height": 1080,
+      "alt": "Film still: Elysium. Image source",
+      "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAUAA8BgJZwAAudD/C4AAP2dU/JWvdIsTfmmoF69BPAQAAA="
+    },
+    "memes": [],
+    "video": {
+      "provider": "youtube",
+      "id": "f4gmgTebHog"
+    },
+    "scene": "Elysium's medical bed refuses Matilda treatment until Spider makes Earth's population citizens. The same technology then heals her and dispatches medical aid to Earth.",
+    "whyAnalogyWorks": "The cure exists; access rules exclude those who need it. AI can obey its owners perfectly while concentrating benefits and enforcing unjust exclusions.",
+    "caveats": "The fictional cure sidesteps healthcare scarcity and delivery costs. Broader access to beneficial technology does not justify unrestricted access to dangerous capabilities. A database change cannot resolve inequality. Ending spoiler."
   },
   {
     "id": "3e0edb27-f124-81f9-ad3b-d95d9a17882b",
@@ -23267,7 +23510,7 @@
       "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e0edb27f12481f9ad3bd95d9a17882b/detail-007865150c71d07d7e255250afeb9bf58595d571a5740ab67e90bce9ca0e302e.webp",
       "width": 1920,
       "height": 1080,
-      "alt": "Gattaca (1997), Columbia Pictures. Still from Voyage: Doctor Covers For Vincent, approximately 00:22.",
+      "alt": "Gattaca (1997) — Columbia Pictures; Voyage, 00:22",
       "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoIAAUAA8BgJZQCdAEOZzdAAP7p/3BbOSvOu8w3LfEnQ5Fmj6LAAA=="
     },
     "memes": [],
@@ -23275,8 +23518,8 @@
       "provider": "youtube",
       "id": "NNUK1n29tVM"
     },
-    "scene": "Before launch, an unexpected urine test exposes Vincent's actual identity. Dr. Lamar knowingly allows him to proceed, declining to let the genetic classification determine the outcome.",
-    "whyAnalogyWorks": "A human reviewer can reject the social conclusion attached to an automated result. The scene offers a contrast between nominal human oversight and someone with the authority and willingness to reconsider a decision, while exposing how much an excluded person may depend on individual discretion.",
-    "caveats": "The assay correctly detects Vincent; the ethical conflict concerns the exclusion rule. Lamar's private exception is not an accessible, accountable appeals process. This is not AI corrigibility, and it does not establish that unreviewed human overrides of valid safety requirements are always justified. Contains an ending spoiler."
+    "scene": "A final urine test exposes Vincent’s identity. Lamar knowingly lets him board the flight.",
+    "whyAnalogyWorks": "Meaningful human review requires authority to reconsider automated decisions. Lamar rejects the exclusion attached to an accurate result.",
+    "caveats": "A private exception is not a fair appeals process or AI corrigibility. The scene does not justify overriding valid safety requirements. Ending spoiler."
   }
 ]
