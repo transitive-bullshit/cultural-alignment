@@ -1762,6 +1762,70 @@
   },
   {
     "kind": "scenario",
+    "title": "A Hair Is Enough",
+    "subtitle": "Gattaca",
+    "keywords": [
+      "Gattaca",
+      "Systemic",
+      "Systemic & Structural Risks",
+      "Privacy Loss",
+      "Privacy Loss and Erosion of Consent",
+      "Irene takes a hair from the comb at Vincent's workstation and has it sequenced without his knowledge. The service returns a genetic profile for the identity he is borrowing, turning a trace left behind into intimate information about the person she believes he is.",
+      "A tiny trace becomes access to sensitive attributes without meaningful consent. AI systems can similarly infer intimate traits from images, behavior, or other ordinary data that a person never knowingly offered for that purpose. Not explicitly disclosing an attribute does not prevent it from being inferred.",
+      "The film uses genetic sequencing, not AI inference. The sample belongs to Jerome, so its profile is also attributed to the wrong person. Privacy harm does not depend on an inference being accurate, and possessing a sample does not establish consent to profile its owner."
+    ],
+    "supplementalKeywords": [
+      "irene cassini",
+      "hair sample",
+      "genetic sequencing",
+      "covert profiling",
+      "sensitive inference",
+      "consent",
+      "genetic discrimination",
+      "vincent freeman",
+      "jerome eugene morrow",
+      "andrew niccol",
+      "dna screening",
+      "spaceflight",
+      "genetic determinism"
+    ],
+    "href": "/scenarios/a-hair-is-enough"
+  },
+  {
+    "kind": "scenario",
+    "title": "A Prognosis Becomes a Verdict",
+    "subtitle": "Gattaca",
+    "keywords": [
+      "Gattaca",
+      "Systemic",
+      "Systemic & Structural Risks",
+      "Automation Bias",
+      "Calibration",
+      "Automation Bias and AI Overreliance",
+      "Confidence Calibration and Uncertainty Estimation",
+      "Immediately after Vincent's birth, a genetic test produces disease probabilities and a life expectancy of 30.2 years. His parents receive the forecast before they have had a chance to know their child, and his future is treated as though it has already been settled.",
+      "Probabilistic outputs become categorical judgments about a person. The scene illustrates how overreliance on AI risk scores can turn uncertain forecasts into fixed expectations and restrictions. Communicating uncertainty is insufficient if decision-makers still treat the score as destiny.",
+      "One exceptional individual does not prove that a probability model is statistically miscalibrated. The criticism is treating a forecast as destiny, not proving every forecast false. The film does not establish that Vincent has no health risks, and the prediction is not a hallucination merely because his life defies expectations."
+    ],
+    "supplementalKeywords": [
+      "newborn prognosis",
+      "genetic prediction",
+      "life expectancy",
+      "probability versus destiny",
+      "risk score",
+      "vincent freeman",
+      "genetic discrimination",
+      "jerome eugene morrow",
+      "irene cassini",
+      "andrew niccol",
+      "dna screening",
+      "spaceflight",
+      "genetic determinism"
+    ],
+    "href": "/scenarios/a-prognosis-becomes-a-verdict"
+  },
+  {
+    "kind": "scenario",
     "title": "A Real Memory, the Wrong Owner",
     "subtitle": "Blade Runner 2049",
     "keywords": [
@@ -8898,6 +8962,40 @@
   },
   {
     "kind": "scenario",
+    "title": "Lamar Lets Vincent Through",
+    "subtitle": "Gattaca",
+    "keywords": [
+      "Gattaca",
+      "Systemic",
+      "Systemic & Structural Risks",
+      "Contestability",
+      "Value Alignment",
+      "Contestability, Appeal, and Procedural Due Process",
+      "Value and Pluralistic Alignment",
+      "Before launch, an unexpected urine test exposes Vincent's actual identity. Dr. Lamar knowingly allows him to proceed, declining to let the genetic classification determine the outcome.",
+      "A human reviewer can reject the social conclusion attached to an automated result. The scene offers a contrast between nominal human oversight and someone with the authority and willingness to reconsider a decision, while exposing how much an excluded person may depend on individual discretion.",
+      "The assay correctly detects Vincent; the ethical conflict concerns the exclusion rule. Lamar's private exception is not an accessible, accountable appeals process. This is not AI corrigibility, and it does not establish that unreviewed human overrides of valid safety requirements are always justified. Contains an ending spoiler."
+    ],
+    "supplementalKeywords": [
+      "dr. lamar",
+      "final urine test",
+      "human review",
+      "genetic exclusion",
+      "appeal",
+      "vincent freeman",
+      "launch",
+      "genetic discrimination",
+      "jerome eugene morrow",
+      "irene cassini",
+      "andrew niccol",
+      "dna screening",
+      "spaceflight",
+      "genetic determinism"
+    ],
+    "href": "/scenarios/lamar-lets-vincent-through"
+  },
+  {
+    "kind": "scenario",
     "title": "Lanley Sells the Monorail",
     "subtitle": "The Simpsons",
     "keywords": [
@@ -14992,6 +15090,39 @@
   },
   {
     "kind": "scenario",
+    "title": "The Borrowed Heartbeat",
+    "subtitle": "Gattaca",
+    "keywords": [
+      "Gattaca",
+      "Security",
+      "Security & Governance Risks",
+      "Adversarial Evasion",
+      "Runtime Monitoring",
+      "Metagaming",
+      "Evaluation Metagaming",
+      "During an exercise test, Vincent feeds a recording of Jerome's heartbeat into the monitoring system. The reassuring pulse conceals his physical strain, letting the observers mistake substituted evidence for his actual condition.",
+      "Monitoring is only useful when the observation channel is trustworthy. An AI evaluation or runtime monitor can be misled if the system being checked can substitute or manipulate the evidence used to judge it. Passing the monitor then establishes control over the signal rather than safety of the underlying behavior.",
+      "This is physical signal spoofing, not evidence of a learned hidden objective. It is not sandbagging: Vincent conceals limitations rather than deliberately underperforming to hide capabilities. The institution's discriminatory screening and legitimate safety monitoring should not be treated as morally interchangeable."
+    ],
+    "supplementalKeywords": [
+      "borrowed heartbeat",
+      "treadmill",
+      "spoofed telemetry",
+      "exercise test",
+      "evaluation evidence",
+      "vincent freeman",
+      "genetic discrimination",
+      "jerome eugene morrow",
+      "irene cassini",
+      "andrew niccol",
+      "dna screening",
+      "spaceflight",
+      "genetic determinism"
+    ],
+    "href": "/scenarios/the-borrowed-heartbeat"
+  },
+  {
+    "kind": "scenario",
     "title": "The Card Says Moops",
     "subtitle": "Seinfeld",
     "keywords": [
@@ -15651,6 +15782,39 @@
       "detective squad"
     ],
     "href": "/scenarios/the-dentists-ego"
+  },
+  {
+    "kind": "scenario",
+    "title": "The DNA Job Interview",
+    "subtitle": "Gattaca",
+    "keywords": [
+      "Gattaca",
+      "Systemic",
+      "Systemic & Structural Risks",
+      "Algorithmic Bias",
+      "Automation Bias",
+      "Algorithmic Bias and Discrimination",
+      "Automation Bias and AI Overreliance",
+      "Vincent applies to Gattaca under Jerome Morrow's identity. After testing his borrowed urine sample, Dr. Lamar welcomes him aboard. When Vincent asks about the interview, Lamar makes clear that the genetic test was the interview.",
+      "Gattaca treats a biological profile as sufficient evidence of suitability instead of assessing the person in front of it. The AI parallel is automated hiring that substitutes a predictive profile for demonstrated ability. Unfairness can arise from the institution's selection criteria even when its measurements are accurate.",
+      "The film depicts genetic discrimination, not a demonstrated machine-learning training-data failure. A precise assay can support an unjust decision. Vincent's resistance to exclusion is not equivalent to a malicious AI bypassing legitimate safety checks."
+    ],
+    "supplementalKeywords": [
+      "dna interview",
+      "urine test",
+      "genetic hiring",
+      "proxy discrimination",
+      "vincent freeman",
+      "dr. lamar",
+      "genetic discrimination",
+      "jerome eugene morrow",
+      "irene cassini",
+      "andrew niccol",
+      "dna screening",
+      "spaceflight",
+      "genetic determinism"
+    ],
+    "href": "/scenarios/the-dna-job-interview"
   },
   {
     "kind": "scenario",
@@ -23673,6 +23837,28 @@
       "cult television"
     ],
     "href": "/sources/galaxy-quest"
+  },
+  {
+    "kind": "source",
+    "title": "Gattaca",
+    "subtitle": "Movie",
+    "keywords": [
+      "In a society that assigns opportunity by genetic profile, Vincent Freeman borrows an elite identity to pursue spaceflight. Andrew Niccol's 1997 science-fiction film explores discrimination, privacy, and the gap between predicted potential and individual achievement.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "genetic discrimination",
+      "vincent freeman",
+      "jerome eugene morrow",
+      "irene cassini",
+      "andrew niccol",
+      "dna screening",
+      "spaceflight",
+      "genetic determinism"
+    ],
+    "href": "/sources/gattaca"
   },
   {
     "kind": "source",
