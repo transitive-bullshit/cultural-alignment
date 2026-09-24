@@ -42,7 +42,7 @@
 
 .eyebrow {
   margin: 8px 0 0;
-  color: var(--brand-interactive);
+  color: var(--proto-electric);
 }
 
 .indexIntro h1,
@@ -123,7 +123,7 @@
 .resourceIndex a:hover,
 .resourceIndex a:focus-visible {
   background: var(--proto-raised-paper);
-  color: var(--brand-interactive);
+  color: var(--proto-electric);
 }
 
 .resourceIndex h2,
@@ -278,7 +278,7 @@
 
 .sourceMetadata a:hover,
 .sourceMetadata a:focus-visible {
-  color: var(--brand-interactive);
+  color: var(--proto-electric);
 }
 
 .sourceMetadata a:focus-visible {

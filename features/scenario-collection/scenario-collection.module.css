@@ -82,7 +82,7 @@
 }
 
 .cardIndex {
-  color: var(--brand-interactive);
+  color: var(--proto-electric);
 }
 
 .cardIndex::before {
@@ -122,7 +122,7 @@
 }
 
 .connectionSummary dt {
-  color: var(--brand-interactive);
+  color: var(--proto-electric);
 }
 
 .connectionSummary dd {
@@ -139,7 +139,7 @@
 }
 
 .card:focus-visible .open {
-  color: var(--brand-interactive);
+  color: var(--proto-electric);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -170,7 +170,7 @@
   }
 
   .card:hover .open {
-    color: var(--brand-interactive);
+    color: var(--proto-electric);
   }
 }
 

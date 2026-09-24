@@ -211,7 +211,7 @@
 
 .relation {
   margin-bottom: 7px !important;
-  color: var(--brand-interactive);
+  color: var(--brand-accent);
   font-size: 0.76rem;
   font-weight: 660;
   letter-spacing: -0.008em;

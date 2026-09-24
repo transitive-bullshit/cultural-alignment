@@ -1,5 +1,5 @@
 .header {
-  --header-hover: var(--brand-interactive);
+  --header-hover: var(--brand-accent);
   --header-interactive: var(--brand-interactive);
   position: relative;
   z-index: 60;
@@ -210,7 +210,7 @@
   --proto-rule: #d8cbb8;
   --proto-muted-ink: #71695f;
   --proto-electric: var(--brand-accent, #ff4d1f);
-  --header-hover: var(--brand-interactive, #a83216);
+  --header-hover: var(--brand-accent, #ff4d1f);
   --header-interactive: var(--brand-interactive, #a83216);
   --proto-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   z-index: 80;
@@ -419,7 +419,7 @@
 }
 
 .mobileNavigationIndex {
-  color: var(--brand-interactive);
+  color: var(--brand-accent);
   font-family: var(--font-geist-mono), monospace;
   font-size: 9px;
 }
@@ -447,7 +447,7 @@
 .mobileNavigationLink:hover,
 .mobileNavigationLink[aria-current='page'] {
   background: var(--muted);
-  color: var(--brand-interactive);
+  color: var(--brand-accent);
   outline: none;
   box-shadow: 4px 0 0 var(--brand-accent) inset;
 }

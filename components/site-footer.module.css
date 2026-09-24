@@ -19,7 +19,7 @@
 }
 
 .footer a:focus-visible {
-  color: var(--brand-interactive);
+  color: var(--footer-electric);
   outline: 2px solid var(--footer-electric);
   outline-offset: 5px;
 }
@@ -129,7 +129,7 @@
 
 @media (hover: hover) and (pointer: fine) {
   .footer a:hover {
-    color: var(--brand-interactive);
+    color: var(--footer-electric);
   }
 }
 

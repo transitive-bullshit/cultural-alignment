@@ -83,7 +83,7 @@
 
 .eyebrow {
   margin-bottom: 7px;
-  color: var(--brand-interactive);
+  color: var(--proto-electric);
   font-size: 8px;
   transition: color 180ms var(--proto-ease-out);
 }
@@ -100,7 +100,7 @@
 
 .action {
   margin-top: 10px;
-  color: var(--brand-interactive);
+  color: var(--proto-electric);
   font-size: 8px;
   transition: color 180ms var(--proto-ease-out);
 }
@@ -155,7 +155,7 @@
   border: 1px solid var(--proto-electric);
   border-radius: 50%;
   background: var(--proto-paper);
-  color: var(--brand-interactive);
+  color: var(--proto-electric);
   box-shadow: 0 12px 36px rgb(45 42 38 / 14%);
   isolation: isolate;
   transition:
