@@ -9,7 +9,9 @@ if (!baseURL || !port) {
   throw new Error('Run browser journeys with pnpm test:e2e to start Portless')
 }
 const isCI = Boolean(process.env.CI)
-const useProductionServer = process.env.PLAYWRIGHT_SERVER === 'production'
+const useDevelopmentServer = process.env.PLAYWRIGHT_SERVER === 'development'
+const useExistingBuild = process.env.PLAYWRIGHT_SERVER === 'production'
+const productionCommand = 'pnpm start --hostname 127.0.0.1'
 
 export default defineConfig({
   testDir: './tests/e2e',
@@ -33,11 +35,14 @@ export default defineConfig({
     video: 'off'
   },
   webServer: {
-    command: useProductionServer
-      ? 'pnpm start --hostname 127.0.0.1'
-      : 'pnpm exec next dev --hostname 127.0.0.1',
+    // Compile before parallel journeys, rather than on demand during reloads.
+    command: useDevelopmentServer
+      ? 'pnpm exec next dev --hostname 127.0.0.1'
+      : useExistingBuild
+        ? productionCommand
+        : `pnpm build && ${productionCommand}`,
     reuseExistingServer: false,
-    timeout: 120_000,
+    timeout: 300_000,
     // Probe Next directly so readiness does not depend on Node resolving .localhost.
     url: `http://127.0.0.1:${port}`
   },
