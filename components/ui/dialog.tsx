@@ -43,7 +43,7 @@ function DialogOverlay({
       data-slot='dialog-overlay'
       data-motion={resolvedMotion === 'default' ? undefined : resolvedMotion}
       className={cn(
-        'fixed inset-0 z-50 bg-black/50',
+        'fixed inset-0 z-[100] bg-black/50',
         resolvedMotion === 'default' &&
           'data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:animate-in data-[state=open]:fade-in-0',
         className
@@ -76,7 +76,7 @@ function DialogContent({
         data-slot='dialog-content'
         data-motion={resolvedMotion === 'default' ? undefined : resolvedMotion}
         className={cn(
-          'fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-lg border bg-background p-6 shadow-lg outline-none sm:max-w-lg',
+          'fixed top-[50%] left-[50%] z-[100] grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-lg border bg-background p-6 shadow-lg outline-none sm:max-w-lg',
           resolvedMotion === 'default' &&
             'duration-200 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95',
           className

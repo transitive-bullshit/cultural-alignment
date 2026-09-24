@@ -16,9 +16,9 @@ export default function PrivacyPage() {
   return (
     <InformationPage
       eyebrow={
-        <p className='flex flex-col gap-0.5'>
+        <span className='flex flex-col gap-0.5'>
           <span>Last updated</span> <span>September 13th 2026</span>
-        </p>
+        </span>
       }
       title='Privacy Policy'
       titleSize='compact'

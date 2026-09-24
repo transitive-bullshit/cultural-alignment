@@ -19,7 +19,7 @@
 }
 
 .footer a:focus-visible {
-  color: var(--footer-electric);
+  color: var(--brand-interactive);
   outline: 2px solid var(--footer-electric);
   outline-offset: 5px;
 }
@@ -129,11 +129,11 @@
 
 @media (hover: hover) and (pointer: fine) {
   .footer a:hover {
-    color: var(--footer-electric);
+    color: var(--brand-interactive);
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1120px) {
   .footer {
     grid-template-columns: minmax(0, 1fr) minmax(320px, 1fr);
   }

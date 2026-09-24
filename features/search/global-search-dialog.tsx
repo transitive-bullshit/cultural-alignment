@@ -42,6 +42,7 @@ import styles from './global-search-dialog.module.css'
 export type GlobalSearchDialogProps = {
   readonly documents: readonly SearchDocument[]
   readonly loadState: SearchLoadState
+  readonly onCloseAutoFocus: (event: Event) => void
   readonly onOpenChange: (open: boolean) => void
   readonly open: boolean
 }
@@ -49,6 +50,7 @@ export type GlobalSearchDialogProps = {
 export function GlobalSearchDialog({
   documents,
   loadState,
+  onCloseAutoFocus,
   onOpenChange,
   open
 }: GlobalSearchDialogProps) {
@@ -90,6 +92,7 @@ export function GlobalSearchDialog({
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
+        onCloseAutoFocus={onCloseAutoFocus}
         className='gap-0 overflow-hidden p-2 sm:max-w-2xl sm:p-3'
         disableMotion
         showCloseButton={false}
@@ -220,7 +223,7 @@ function HighlightedSearchText({
   return splitSearchTextMatches(value, query).map((segment) => (
     <Fragment key={`${segment.start}:${segment.isMatch}`}>
       {segment.isMatch ? (
-        <mark className='rounded-sm bg-ring/20 px-1 text-inherit'>
+        <mark className='rounded-sm bg-ring/20 text-inherit'>
           {segment.text}
         </mark>
       ) : (

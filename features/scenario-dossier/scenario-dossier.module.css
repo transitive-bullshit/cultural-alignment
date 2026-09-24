@@ -137,7 +137,7 @@
 
 .sourceMeta a:hover,
 .sourceMeta a:focus-visible {
-  color: var(--proto-electric);
+  color: var(--brand-interactive);
   text-decoration-color: currentColor;
 }
 
@@ -554,7 +554,7 @@
 .sectionLabel span {
   display: block;
   margin-bottom: 8px;
-  color: var(--proto-electric);
+  color: var(--brand-interactive);
 }
 
 .sectionCopy p {
@@ -606,7 +606,7 @@
 
 .taxonomyHeadingLink:hover,
 .taxonomyHeadingLink:focus-visible {
-  color: var(--proto-electric);
+  color: var(--brand-interactive);
 }
 
 .taxonomyHeadingLink:focus-visible {
@@ -655,7 +655,7 @@
 
 .taxonomyLink:hover,
 .taxonomyLink:focus-visible {
-  color: var(--proto-electric);
+  color: var(--brand-interactive);
   transform: translateX(3px);
 }
 
@@ -704,7 +704,7 @@
 
 .discoveryHeader > div > p {
   margin: 0 0 12px;
-  color: var(--proto-electric);
+  color: var(--brand-interactive);
   font-size: 10px;
 }
 

@@ -22,6 +22,8 @@ export function GlobalSearch({
   label = 'Search'
 }: GlobalSearchProps) {
   const openRef = useRef(false)
+  const triggerRef = useRef<HTMLButtonElement>(null)
+  const returnFocusRef = useRef<HTMLElement | null>(null)
   const requestRef = useRef<Promise<void> | null>(null)
   const [activated, setActivated] = useState(false)
   const [open, setOpen] = useState(false)
@@ -56,6 +58,14 @@ export function GlobalSearch({
 
   const handleOpenChange = useCallback(
     (nextOpen: boolean) => {
+      if (nextOpen && !openRef.current) {
+        returnFocusRef.current =
+          document.activeElement instanceof HTMLElement &&
+          document.activeElement !== document.body
+            ? document.activeElement
+            : triggerRef.current
+      }
+
       openRef.current = nextOpen
       setOpen(nextOpen)
 
@@ -100,6 +110,7 @@ export function GlobalSearch({
   return (
     <>
       <Button
+        ref={triggerRef}
         className={className}
         variant='ghost'
         size='sm'
@@ -119,6 +130,11 @@ export function GlobalSearch({
         <GlobalSearchDialog
           documents={documents}
           loadState={loadState}
+          onCloseAutoFocus={(event) => {
+            event.preventDefault()
+            const target = returnFocusRef.current
+            if (target?.isConnected) target.focus({ preventScroll: true })
+          }}
           onOpenChange={handleOpenChange}
           open={open}
         />

@@ -47,7 +47,7 @@
 .eyebrow {
   align-self: start;
   margin: 8px 0 0;
-  color: var(--proto-electric);
+  color: var(--brand-interactive);
 }
 
 .introduction h1 {
@@ -93,7 +93,7 @@
 
 .sectionIndex {
   margin: 4px 0 0;
-  color: var(--proto-electric);
+  color: var(--brand-interactive);
 }
 
 .section h2 {
@@ -172,7 +172,7 @@
 
 .sectionCopy a:focus-visible,
 .links a:focus-visible {
-  color: var(--proto-electric);
+  color: var(--brand-interactive);
   outline: 2px solid var(--proto-electric);
   outline-offset: 4px;
 }
@@ -180,7 +180,7 @@
 @media (hover: hover) and (pointer: fine) {
   .sectionCopy a:hover,
   .links a:hover {
-    color: var(--proto-electric);
+    color: var(--brand-interactive);
   }
 }
 
