@@ -77,9 +77,8 @@ const nextConfig: NextConfig = {
     }))
   },
   outputFileTracingIncludes: {
-    '/{scenarios,sources,franchises}/*/opengraph-image': [
-      'assets/fonts/barlow-condensed-latin-800-normal.woff'
-    ]
+    '/{scenarios,sources,franchises,risk-families,concepts}/*/opengraph-image':
+      ['assets/fonts/barlow-condensed-latin-800-normal.woff']
   }
 }
 

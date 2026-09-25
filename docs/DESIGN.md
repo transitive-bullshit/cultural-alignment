@@ -66,3 +66,7 @@ Avoid scanlines, ambient glitches, fake diagnostics, card collisions, independen
 ## Responsive behavior
 
 Desktop is the craft target. Mobile uses fewer rows—including one fully framed row on short landscape surfaces—direct touch drag, first-tap selection/second-tap opening, no persistent selected-frame panel, centered balanced titles, and the same content hierarchy. Functional clarity outranks reproducing desktop density.
+
+## Taxonomy social images
+
+Risk-family and AI safety concept detail links share a 1200×630 Takumi card with the warm paper grid, charcoal Barlow Condensed full descriptive name, orange target icon, Cultural Alignment wordmark, and a quiet category label. Titles wrap within the card geometry. These image-free cards use the existing WebP quality and shared response-cache policy; Next.js supplies their Open Graph and Twitter image metadata.

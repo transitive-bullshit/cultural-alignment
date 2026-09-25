@@ -1,6 +1,8 @@
 import { expect, test } from '@playwright/test'
 import sharp from 'sharp'
 
+import concepts from '../../content/snapshot/concepts.json' with { type: 'json' }
+import riskFamilies from '../../content/snapshot/risk-families.json' with { type: 'json' }
 import franchises from '../../content/snapshot/franchises.json' with { type: 'json' }
 import scenarios from '../../content/snapshot/scenarios.json' with { type: 'json' }
 import sources from '../../content/snapshot/sources.json' with { type: 'json' }
@@ -20,6 +22,19 @@ if (!franchise) {
 }
 
 const resources = [
+  {
+    kind: 'risk-family',
+    route: 'risk-families',
+    slug: riskFamilies.toSorted(
+      (a, b) => b.fullName.length - a.fullName.length
+    )[0]!.slug
+  },
+  {
+    kind: 'concept',
+    route: 'concepts',
+    slug: concepts.toSorted((a, b) => b.longName.length - a.longName.length)[0]!
+      .slug
+  },
   { kind: 'scenario', route: 'scenarios', slug: scenarios[0]!.slug },
   { kind: 'source', route: 'sources', slug: source.slug },
   { kind: 'franchise', route: 'franchises', slug: franchise.slug }

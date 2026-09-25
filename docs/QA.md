@@ -162,3 +162,10 @@ The selected prototype evidence is under `docs/outputs/gate-b`, including 1440×
 - The sitemap expectation now derives filtered scenario archive URLs from the current risk-family catalog, preserving complete route coverage and duplicate detection without fixed content slugs or counts.
 - `pnpm test:checks` passed formatting, lint, generated route types, TypeScript, and all 379 unit tests. `pnpm content:validate` and `pnpm build` passed (825 generated pages).
 - `PLAYWRIGHT_SERVER=production pnpm test:e2e` passed all 21 browser journeys in 31.1 seconds with no retries, using local Google Chrome and the Portless production server.
+
+## Taxonomy social images, 2026-09-25
+
+- Risk-family and concept detail routes publish Takumi WebP cards using their full descriptive catalog names, the shared orange target icon, and the paper-grid visual system. The handlers reuse the existing quality 80 and three shared cache headers.
+- Formatting, lint, generated route types, TypeScript, all 379 unit tests, content validation, and the production build passed. Both new deployment traces include the local Barlow WOFF and native renderer.
+- All five production social-image browser journeys passed, checking Open Graph and Twitter URLs, response cache headers, MIME, and decoded 1200×630 WebP dimensions. The full browser run passed 22 tests, failed one unrelated gallery-intro timing assertion, and skipped its four serial successors; all five gallery-intro tests passed on an isolated single-worker rerun.
+- Local visual review confirmed complete wrapping for the longest current concept and risk-family names. Example renders are under ignored `test-results/taxonomy-social-images/`.

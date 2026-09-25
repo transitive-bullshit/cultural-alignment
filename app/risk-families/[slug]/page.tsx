@@ -28,7 +28,9 @@ export async function generateMetadata(
   const family = contentCatalog.getResourcePage('risk-family', slug)
 
   return family
-    ? resolveContentSocialMetadata(getResourceSocialMetadata(family), parent)
+    ? resolveContentSocialMetadata(getResourceSocialMetadata(family), parent, {
+        includeImages: false
+      })
     : {}
 }
 

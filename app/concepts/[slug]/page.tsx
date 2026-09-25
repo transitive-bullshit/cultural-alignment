@@ -28,7 +28,9 @@ export async function generateMetadata(
   const concept = contentCatalog.getResourcePage('concept', slug)
 
   return concept
-    ? resolveContentSocialMetadata(getResourceSocialMetadata(concept), parent)
+    ? resolveContentSocialMetadata(getResourceSocialMetadata(concept), parent, {
+        includeImages: false
+      })
     : {}
 }
 
