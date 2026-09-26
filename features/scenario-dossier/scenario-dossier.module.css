@@ -97,6 +97,19 @@
   content: '×';
 }
 
+@media (min-width: 901px) {
+  .sourceMeta li {
+    position: relative;
+    gap: 0;
+  }
+
+  .sourceMeta li::before {
+    position: absolute;
+    inset-inline-start: -20px;
+    width: 12px;
+  }
+}
+
 .sourceMetaLinks {
   display: flex;
   flex: 1 1 auto;

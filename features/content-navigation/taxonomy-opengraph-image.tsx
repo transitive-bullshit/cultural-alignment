@@ -44,10 +44,10 @@ export function renderTaxonomyOpenGraphImage({
           borderBottom: '1px solid rgba(45, 42, 38, 0.24)',
           display: 'flex',
           gap: 16,
+          justifyContent: 'space-between',
           paddingBottom: 22
         }}
       >
-        <SocialImageTargetMark />
         <div
           style={{
             fontFamily: 'Barlow Condensed',
@@ -59,6 +59,7 @@ export function renderTaxonomyOpenGraphImage({
         >
           Cultural Alignment
         </div>
+        <SocialImageTargetMark />
       </div>
       <div
         style={{

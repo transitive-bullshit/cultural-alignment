@@ -232,13 +232,15 @@ export default async function Image({
                   display: 'flex',
                   fontSize: 18,
                   fontWeight: 600,
-                  gap: 11,
+                  position: 'relative',
                   lineHeight: 1.15
                 }}
               >
                 <span
                   style={{
                     color: colors.accent,
+                    position: 'absolute',
+                    left: -25,
                     fontSize: 9,
                     fontWeight: 400,
                     letterSpacing: '0.6px'
@@ -284,14 +286,15 @@ function SourceDetail({
         color: prominent ? colors.ink : colors.mutedInk,
         display: 'flex',
         fontWeight: prominent ? 600 : 400,
-        gap: 8
+        position: 'relative'
       }}
     >
       <span
         style={{
           color: colors.accent,
           display: 'flex',
-          flex: '0 0 10px'
+          position: 'absolute',
+          left: -18
         }}
       >
         ×

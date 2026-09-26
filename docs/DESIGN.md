@@ -38,6 +38,8 @@ Explicit header and lower-chrome safe areas keep cards and brackets on-screen. O
 
 The opening view pairs a cinematic media plate with a grid-owned title and vertical source metadata. The approved title scale is the current, smaller Dossier setting: `clamp(68px, 7.35vw, 120px)` on desktop and `clamp(55px, 17vw, 78px)` on mobile. It has no character-width cap; its layout column governs balanced, complete-word wrapping. The title precedes a vertical, left-× metadata list: source/franchise links are actionable, episode and year are inert, and episodes appear only for TV sources with a non-empty label.
 
+Above 900px, the source metadata's × markers hang in the existing gutter so its text shares the title's left edge. At narrower widths the markers stay inside the metadata rows to preserve the page margin.
+
 The reading order is fixed: scene, analogy, and caveats. Only the second panel is prominent, while all three reserve identical geometry.
 
 A shared ghost icon button copies the current URL on all detail pages. In the Dossier it sits beside the source metadata below the title; resource pages group it with the category label (stacked in the narrow desktop taxonomy column, horizontal above media-resource titles and on mobile). Copy and checkmark icons crossfade with a subtle scale over 160 ms, holding success for 2.5 seconds. Repeated clicks renew the feedback timer; transitions retarget without remounting icons, stale clipboard responses are ignored, and reduced motion keeps only a short fade. Tooltips and a live status describe success or retryable failure.
@@ -69,4 +71,6 @@ Desktop is the craft target. Mobile uses fewer rows—including one fully framed
 
 ## Taxonomy social images
 
-Risk-family and AI safety concept detail links share a 1200×630 Takumi card with the warm paper grid, charcoal Barlow Condensed full descriptive name, orange target icon, Cultural Alignment wordmark, and a quiet category label. Titles wrap within the card geometry. These image-free cards use the existing WebP quality and shared response-cache policy; Next.js supplies their Open Graph and Twitter image metadata.
+Risk-family and AI safety concept detail links share a 1200×630 Takumi card with the warm paper grid, charcoal Barlow Condensed full descriptive name, orange target icon, Cultural Alignment wordmark, and a quiet category label. The masthead wordmark shares the content's left edge, with the full-size target icon at the far right. Titles wrap within the card geometry. These image-free cards use the existing WebP quality and shared response-cache policy; Next.js supplies their Open Graph and Twitter image metadata.
+
+Scenario social images align source metadata and concept text with the title's left edge in the paper panel. The × markers and concept numbers hang in that panel's existing margin.
