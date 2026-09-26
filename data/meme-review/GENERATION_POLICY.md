@@ -46,6 +46,8 @@ Ratings and notes bind to the exact idea-version payload that was reviewed, not 
 
 ## Composition and copy
 
+The editorial principles below apply across composition workflows. The `hero`, `standard`, `compact`, and `display` names and HTML-card checks belong to the renderer-v2 review UI (`preview` in `lib/meme-review/schema.ts` and `app/admin/meme-review/meme-preview.tsx`). The [creator skill's deterministic composer](../../docs/skills/ai-safety-meme-creator/references/composer-contract.md) instead takes semantic intent and returns measured raster output with its own font and size contract. These are separate formats: use the contract of the renderer being changed, and preserve exact finalized versions in both workflows.
+
 - Choose the meme template before fine positioning. Match the joke's reading order: top setup plus bottom payoff for a conventional two-beat meme, left then right for a genuine before/after or state contrast, one forceful zone for a single beat, and a source-native interface only when the interface is itself the joke.
 - Treat familiar aggressive meme composition as the prior, not the fallback. Across a layout pass, roughly 60–70% of eligible multi-beat ideas should use a traditional top/bottom or genuine left/right split with each beat in its own visual zone. This is a batch-level prior, not a quota that overrides a scene that calls for another native format.
 - Default conventional caption type to large, direct, and comfortably readable. Use comparable `hero` or `standard` sizing for setup and payoff; reserve `compact` type for copy or source-native formats that genuinely need density. Two caption lines should not collapse into one small safe box merely because they fit there.

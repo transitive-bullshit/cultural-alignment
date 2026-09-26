@@ -1,33 +1,36 @@
-## Documentation
+# Working in Cultural Alignment
 
-- [README](readme.md): local development, content-sync setup, and public routes.
-- [Contributing](CONTRIBUTING.md): change boundaries and verification before submitting work.
-- [Architecture](docs/ARCHITECTURE.md): runtime/catalog seams, gallery ownership, synchronization, and meme-review persistence; read before changing those boundaries.
-- [Product](docs/PRODUCT.md): audience, purpose, and current capabilities; read when changing product behavior or scope.
-- [MVP scope](docs/MVP.md): accepted design decisions and original implementation scope; read when revisiting those decisions.
-- [Design system](docs/DESIGN.md): built visual, interaction, and responsive behavior; read before UI changes.
-- [QA record](docs/QA.md): acceptance checks, dated verification evidence, and environment limitations; read when validating changes.
-- [Content snapshot](content/README.md): generated-output ownership and data licensing; read before synchronization or dataset changes.
-- [Notion CMS conventions](docs/notion-cms.md): editorial source-of-truth, scenario curation, media selection, and taxonomy rules; read before changing content in Notion.
-- [Meme policy](data/meme-review/GENERATION_POLICY.md) and [creator skill](docs/skills/ai-safety-meme-creator/SKILL.md): batch history/finalization rules and composition workflow; read for meme generation, review, or publication work.
-- [Social-image fonts](assets/fonts/README.md): bundled font provenance and licensing; read when changing social-image assets.
-- [Blank first-load investigation](docs/BLANK-FIRST-LOAD-INVESTIGATION.md): dated evidence and unresolved hypotheses; read if the header-only loading failure recurs.
+Cultural Alignment helps visitors recognize an AI-safety idea through a familiar film or TV scene, then read the analogy and its limits. Preserve that recognition-first exploration and the authored Dossier direction. This is a personally curated archive, not a community submission product.
+
+The public Next.js app reads a committed content snapshot; Notion editing and synchronization are separate workflows. Normal app development needs no CMS or storage credentials. The internal meme-review tool is the exception to the read-only runtime: it persists review state on the local filesystem.
+
+## Find the context for your task
+
+Start with [Contributing](CONTRIBUTING.md) for setup and verification. Read [Architecture](docs/ARCHITECTURE.md) for domain objects, relationships, code ownership, and boundary changes. Then load only the relevant references:
+
+| Task | Read |
+| --- | --- |
+| Product behavior or scope | [Product](docs/PRODUCT.md); [MVP decisions](docs/MVP.md) when revisiting an accepted direction |
+| UI or interaction changes | [Design](docs/DESIGN.md); [QA](docs/QA.md) for visual and device checks |
+| Sync, generated data, or media storage | [Snapshot and sync contract](content/README.md) |
+| Editorial work in Notion | [CMS conventions](docs/notion-cms.md) |
+| Meme generation, review, or publication | [Generation policy](data/meme-review/GENERATION_POLICY.md), then [creator skill](docs/skills/ai-safety-meme-creator/SKILL.md) for composition |
+| Social-image assets | [Font provenance](assets/fonts/README.md) and Architecture's social-image boundary |
+| Header-only first load | [Investigation](docs/BLANK-FIRST-LOAD-INVESTIGATION.md) before changing the renderer or delivery setup |
+
+The top-level [README](readme.md) serves human visitors. Keep agent workflow guidance in these documents. Current contracts live in the linked docs and code; dated QA runs, `docs/outputs/` plans, and skill proposals preserve evidence and alternatives, not an outstanding task list. Update the owning document when behavior changes rather than adding another overlapping guide.
 
 ## Conventions
 
-- use `pnpm`
-- use modern typescript
-- no semicolons
-- oxfmt for formatting (`pnpm fix:format`)
-- oxlint for linting (`pnpm fix:lint`)
-- let display text wrap within its grid or box geometry; reserve character-based width measures (`ch`/`em`) for deliberate prose reading lengths
+- Use `pnpm`, modern TypeScript, and no semicolons.
+- Use Oxfmt (`pnpm fix:format`) and Oxlint (`pnpm fix:lint`); configuration and exact script definitions live in the repository.
+- Let display text wrap within its grid or box geometry; reserve character-based width measures (`ch`/`em`) for deliberate prose reading lengths.
 
 ## Testing
 
-- browser-test critical cross-layer journeys through URLs, state, landmarks, and stable data hooks
-- unit-test complex math, ranking, normalization, validation, parsing, and serialization
-- keep editorial copy and synchronized titles, slugs, counts, and full outputs out of test expectations; derive content invariants from current inputs
-- keep rendered HTML prose out of assertions
+- Browser-test critical cross-layer journeys through URLs, state, landmarks, and stable data hooks.
+- Unit-test complex math, ranking, normalization, validation, parsing, and serialization.
+- Derive content invariants from current inputs. Keep editorial prose, synchronized titles/slugs/counts, and full generated outputs out of fixed expectations.
 
 <!-- BEGIN:nextjs-agent-rules -->
 

@@ -4,7 +4,7 @@ Treat human feedback as lineage, not inspiration.
 
 ## Resolve locks first
 
-An explicitly approved concept, exact caption, canonical phrase, source frame, frame order, semantic mode, semantic placement, or visual treatment is locked. Preserve it exactly unless the current request names that ingredient for change. A broad later request does not silently unlock a specific earlier approval.
+An explicitly approved concept, exact caption, canonical phrase, source frame, frame order, semantic mode, semantic placement, or visual treatment is locked. Preserve it exactly unless the current request names that ingredient for change. A broad later request does not silently unlock a specific earlier approval. For review batches, apply the [generation policy](../../../../data/meme-review/GENERATION_POLICY.md): a Like alone retains a mutable lineage, while Finalized freezes the exact selected version.
 
 For a bounded execution fix, change only the named ingredient. Keep unrelated approved choices intact and resubmit the semantic intent to the composer.
 
@@ -16,4 +16,4 @@ When feedback retains one ingredient, lock only that ingredient and replace the 
 
 ## Handle conflicts
 
-Scene truth and explicit locks remain authoritative. If two locks conflict, or a lock makes measured composition impossible, return the composer's typed blocked result. Preserve the conflict instead of silently rewriting copy, reordering frames, hiding scene evidence, or shrinking below the readability floor.
+Scene truth and explicit locks remain authoritative. If two locks conflict, report the conflict. If composition returns a typed block, preserve that result. Neither case permits silently rewriting copy, reordering frames, hiding scene evidence, or shrinking below the readability floor.

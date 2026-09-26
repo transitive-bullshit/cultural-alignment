@@ -1,6 +1,6 @@
 # Notion CMS conventions
 
-Notion is the editorial source of truth for most site content. The application reads the generated repository snapshot, so publish Notion changes with `pnpm content:sync` rather than by editing generated content directly. See [Content synchronization](../readme.md#content-synchronization) for sync modes and requirements.
+Notion is the editorial source of truth for most site content. The application reads the generated repository snapshot, so publish Notion changes with `pnpm content:sync` rather than by editing generated content directly. See the [snapshot and sync contract](../content/README.md) for modes and requirements.
 
 ## Canonical databases
 
@@ -23,8 +23,12 @@ Treat Scenarios as the project's most important content table.
 - Every scenario must have at least one AI safety concept. Most should have two or three; five is a soft cap.
 - Make a best-effort attempt to add a `YouTube Clip`. Prefer a clip of the exact scene from an authoritative source or a well-viewed upload. Source authority and view count are signals, not hard requirements. Leave the field blank if no suitable clip exists.
 - Use the scene itself: exclude parodies, livestreams, reactions, and videos with commentary over the scene.
-- Leave `featured` unset on new scenarios. The project owner curates it manually.
+- Leave the `featured` value out of `Tags` on new scenarios unless directed by the project owner. That tag controls homepage selection; the snapshot's legacy `featured` boolean is a separate fixture flag.
 - Put exactly one representative still image in the page body. Prefer a recognizable, relatively bright frame at least 1200 px wide with a roughly 16:9 aspect ratio. Avoid images dominated by darkness or overlaid text, logos, or unrelated graphics.
+
+### Meme attachments
+
+Scenario memes belong in the ordered `Memes` files property, separate from the representative page-body still. The [generation policy](../data/meme-review/GENERATION_POLICY.md) governs review and finalization. `pnpm memes:upload-notion --help` describes uploading a finalized export manifest: it requires `NOTION_TOKEN` even for its default read-only dry run, and appends attachments only with `--apply`. A subsequent normal `pnpm content:sync` imports them into the public snapshot; fast mode deliberately retains the previous attachments.
 
 ## Media sources
 
@@ -57,4 +61,4 @@ Before finishing a scenario, confirm that:
 - at least one safety concept is present;
 - a suitable YouTube clip was sought;
 - one uploaded—not hotlinked—representative still is present; and
-- `featured` remains unset unless the project owner explicitly directed otherwise.
+- the `featured` tag remains absent unless the project owner explicitly directed otherwise.

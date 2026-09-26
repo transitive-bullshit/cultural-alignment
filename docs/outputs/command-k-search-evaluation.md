@@ -2,6 +2,8 @@
 
 Research date: 2026-08-29
 
+Status: historical research, not an approved migration plan. Counts, timings, dependency comparisons, and corpus gaps below describe that investigation. The current five-resource corpus includes authored keyword fields; use [search-documents.ts](../../lib/content/search-documents.ts) and [search.ts](../../lib/content/search.ts) for the implemented projection and ranking. Recheck a present recall problem before applying the proposed remedies.
+
 ## Recommendation
 
 Use a two-stage plan:

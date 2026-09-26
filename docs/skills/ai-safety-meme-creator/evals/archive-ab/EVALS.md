@@ -131,7 +131,7 @@ Then open `http://127.0.0.1:4310/archive-ab-comparison.html`.
 
 The focused V3/V4 typography comparison is `http://127.0.0.1:4310/archive-impact-comparison.html` after running the V4 report command.
 
-The focused V4/V5 stroke and wrapping comparison is `http://127.0.0.1:4312/archive-stroke-wrap-comparison.html` while the local review server is running on port 4312.
+The focused V4/V5 stroke and wrapping comparison is `http://127.0.0.1:4310/archive-stroke-wrap-comparison.html` after running the V5 report command.
 
 The report is deliberately compact and self-contained. Each row shows archived copy and human feedback, the three image columns, status badges, measured v3 type and clearance, and expandable invariant details.
 

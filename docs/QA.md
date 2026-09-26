@@ -1,18 +1,47 @@
 # QA record
 
-Acceptance checks describe the current implementation. Recorded counts, timings, and captures below are historical evidence from the dated integration passes; obtain current counts with `pnpm content:validate` and current test coverage from the test runner.
+Use [Contributing](../CONTRIBUTING.md#change-workflow) for commands and check selection. The acceptance checks below guide validation of the changed behavior. The [historical evidence](#historical-evidence) records past runs; its counts, timings, captures, and failures do not establish the current state. Obtain current content counts with `pnpm content:validate` and test coverage from the test runner.
 
-## Automated commands
+The canonical production deployment is [cultural-alignment.com](https://cultural-alignment.com).
 
-Run from the repository root:
+## Current acceptance checks
 
-```bash
-pnpm test
-pnpm content:validate
-pnpm build
-```
+### UI and navigation
 
-Citation and source-layout integration pass on 2026-08-29:
+Use [Design](DESIGN.md) for intended behavior and the relevant journeys under `tests/e2e/` for executable coverage. Inspect real media at desktop and phone widths when changing layout or image rendering; many journeys mock optimized images.
+
+- Gallery travel and reversal: no blank edge or visible copy pop; opposing deformation settles flat; picking, vividness, and brackets stay on the exact projected copy.
+- Gallery navigation: family filters update the URL without transient excluded cards; scenario navigation and browser Back restore position and selection; route cycles do not duplicate the canvas/frame loop or grow texture use without bounds.
+- Scenario media: whole-frame play/pause, seeking, Return to still, idle chrome, and the composed missing-video state behave as described in Design.
+- Persistence: spoiler dismissal survives navigation and reload; test first-visit behavior with fresh browser state when changing the introduction or spoiler flow.
+- Routes and search: all five resource types open working destinations; direct valid URLs refresh; malformed slugs reach not-found; shared scenario collections retain all results and bounded Dossier previews.
+- Resource details: authored names, references, optional metadata, poster layout, and plural parent breadcrumbs remain correct. Episodes appear only for TV scenarios with a non-empty episode, including copied Markdown.
+- Responsive layout: long current titles wrap within their grid; one-column mobile layouts have no horizontal overflow; search overlays hide the gallery crosshair.
+- Social images: all five detail-route families expose matching Open Graph/Twitter URLs and return the expected format, dimensions, and cache headers; inspect long names and missing-image fallbacks visually.
+
+### Content and synchronization
+
+Use the [snapshot contract](../content/README.md) for generated-output ownership, sync modes, and storage/reuse rules. Exercise the affected contract when changing synchronization; a live sync reads Notion, and normal/forced modes can publish media.
+
+- Validate the complete generated diff, including search and manifest output. An unchanged second sync should be byte-identical.
+- Verify the relevant reuse path: unchanged media avoids block traversal, downloads, processing, and variant uploads; absent optional posters remain reusable; changed media preserves content-addressed deduplication.
+- Check public URL/dimension/alt-text records and any origin changes. Public delivery and cache directives do not replace descriptor access control.
+- Confirm a clean checkout validates and builds from the committed snapshot without storage credentials or local generated image files. Gallery network inspection should show bounded same-origin image-optimizer requests.
+
+## Environment limitations
+
+- Automated wheel events cannot reproduce browser-owned macOS trackpad history swipes. Native Back/Forward feel needs a physical trackpad check.
+- WebGL screenshots vary by GPU; inspect them manually instead of treating pixel differences as test oracles.
+- Earlier review recorded a non-blocking upstream `THREE.Clock` deprecation warning from React Three Fiber; application code does not construct `THREE.Clock`.
+- The 2026-09-25 full run hit a gallery-intro timing assertion and skipped its four serial successors; the isolated single-worker rerun passed. Preserve that distinction when diagnosing a similar failure.
+
+Broader device coverage remains a manual follow-up: Safari desktop, large/Retina Chrome, and a physical tablet including orientation changes. For the reported header-only first load, consult the [dated investigation](BLANK-FIRST-LOAD-INVESTIGATION.md); its infrastructure attribution remains provisional.
+
+## Historical evidence
+
+Append dated verification evidence here when it adds a useful result or limitation. Preserve the original environment, scope, and failures; do not update old counts to match current content. Selected prototype captures are indexed in [Gate B](outputs/gate-b/README.md); other paths under `test-results/` are ignored local artifacts and may not exist in a fresh checkout.
+
+### Citation and source-layout integration, 2026-08-29
 
 - Oxfmt: 118 files
 - Oxlint: pass
@@ -23,42 +52,9 @@ Citation and source-layout integration pass on 2026-08-29:
 - unchanged second sync: byte-identical citation snapshots, manifest, and search index
 - production build: 597 static/SSG pages generated
 
-`pnpm test` combines Oxfmt checking, Oxlint, generated-route type checking, the TypeScript compiler, unit tests, and browser journeys. The production build uses Next.js 16's documented webpack fallback because clean-cache Turbopack builds reproducibly stalled in this local environment.
+### Gallery integration evidence (undated)
 
-## Production deployment
-
-The canonical production deployment is [cultural-alignment.com](https://cultural-alignment.com).
-
-## Content contract
-
-- Snapshot schema: version 3 in `lib/content/schema.ts`; sync manifest: version 4 in `scripts/sync-manifest.ts` and `content/snapshot/manifest.json`.
-- Scenario classifications come from Notion relations to media sources, risk families, and safety concepts; all foreign keys are Notion page IDs.
-- Media sources include a movie/TV type, optional authored metadata and links, direct related-source relations, ordered franchise relations, and an optional generated poster whose public URLs and dimensions are baked into the snapshot. Franchises include authored descriptions and required representative images; scenarios may also include ordered meme attachments.
-- Risk families and safety concepts use their Notion-authored short/full names, descriptions, Wikipedia URLs, and preprocessed citations.
-- Schema v2 established a fresh slug baseline. Current syncs preserve slugs for surviving page IDs and release the slugs of deleted records.
-- An unchanged second sync must produce byte-identical snapshot, search index, and manifest. Each media record should resolve from its authenticated R2 descriptor `GET` without Notion block traversal, source download, Sharp, or variant upload.
-
-## Remote-media acceptance checks
-
-- For the public snapshot workflow, `pnpm content:sync` requires Notion credentials; normal and forced syncs also require S3-compatible credentials. Its Node entry point loads the ignored root `.env` with dotenvx. Application code, validation, and builds do not access those credentials. The separate `memes:upload-notion` authoring command also requires `NOTION_TOKEN`.
-- `pnpm content:sync --help` (also `-h` or `-help`) prints usage without requiring credentials. `--fast` reuses checked-in snapshot media by stable record ID without image inspection, processing, S3 credentials, or media-storage traffic; it fails if a current record has no previous snapshot baseline. `--force` re-downloads and reprocesses every selected image while retaining content-addressed variant deduplication, and cannot be combined with `--fast`.
-- `S3_API_ENDPOINT` is used only for authenticated storage operations. Snapshot URLs begin with the separately configured `S3_PUBLIC_URL` for `S3_BUCKET_NAME`.
-- When `S3_STATE_BUCKET_NAME` is unset, descriptors use `S3_BUCKET_NAME`; setting it to a different bucket remains supported.
-- Each record's `media/state/{collection}/{compact-page-id}.json` descriptor is read with an authenticated `GET`; its JSON body, rather than `HEAD` metadata, contains the reusable media state.
-- If descriptors share a publicly delivered media bucket, the delivery layer denies `media/state/` when public descriptor access is unacceptable. `Cache-Control: private, no-store` is verified as a cache directive, not treated as access control.
-- Optional sources without posters store an `absent` descriptor, preventing a descriptor miss and recursive block scan on every unchanged sync.
-- A matching page marker and pipeline skips Notion block traversal, source download, and Sharp. A changed page scans the current selection and reuses media when its block ID/edit time or fallback identity matches.
-- Generated object names include the SHA-256 hash of their bytes. Existing keys receive `HEAD` but no `PUT`; only a 404 permits upload.
-- Uploaded variants use `image/webp` and `Cache-Control: public, max-age=31536000, immutable`.
-- Generated variants are uploaded before a descriptor is conditionally created or replaced. Legacy v2 migration seeds descriptors before replacing the manifest; current manifests retain contracts, counts, fixture IDs, and slugs without media entries.
-- Snapshot image records retain absolute gallery/detail URLs, intrinsic width and height, and alt text.
-- Content validation accepts any HTTPS media host but requires every URL path to contain the owning collection, compact Notion record ID, variant, and 64-character generated-content hash.
-- Next.js image optimization accepts the snapshot's public origin without a storage environment variable.
-- The homepage gallery requests one bounded `w=640&q=75` texture variant through the same-origin Next Image Optimization endpoint. Browser network inspection shows optimizer requests and no direct R2 requests.
-- Changing `S3_PUBLIC_URL` to a custom domain rewrites snapshot URLs without changing keys or uploading unchanged objects.
-- `public/media/generated` is absent and a clean checkout can validate and build without hydrating ignored image files.
-
-## Historical integration review coverage
+#### Review coverage
 
 - Chrome production preview at 1440×900 desktop and 390×844 phone
 - 2560×900 Chrome wrap/duplication stress capture
@@ -66,40 +62,7 @@ The canonical production deployment is [cultural-alignment.com](https://cultural
 - Mobile-width drag/tap, filter controls, Dossier reading, spoiler, and video states
 - Nine automated Chromium journeys covering gallery/Dossier state, Markdown copy and media controls, generated search, spoiler persistence, filtering, resource metadata and breadcrumbs, episode rules, and mobile containment
 
-## Creator follow-up coverage
-
-- Physical macOS high-resolution trackpad Back/Forward feel
-- Safari desktop at 1440×900 and 1920×1080
-- Chrome desktop at 1920×1080 and Retina density
-- One physical tablet, including touch orientation change
-
-## Manual acceptance checks
-
-- No blank edge or visible copy pop during fast travel and reversal
-- Left/right deformation opposes correctly and settles completely flat
-- Exact projected copy alone receives vividness and brackets
-- Pointer picking remains aligned during peak deformation
-- Family-filter changes update the URL and never show excluded cards transiently
-- Scenario navigation and browser Back restore field position and selection
-- Whole-frame video activation, pause/resume, seeking, and Return to still
-- Playing chrome hides after idle, returns on hover/input, and remains visible while paused
-- Shared scenario collections render all resource results, retain bounded Dossier previews, and collapse to one column without mobile overflow
-- Missing-video scenario remains composed
-- Spoiler dismissal persists across navigation and reload
-- Search results for all five resource types open existing URLs
-- Direct valid URLs refresh; malformed slugs reach not-found
-- Media-source details place source type, available Notion-authored metadata, and links in the left desktop column with the poster in the right column, without inventing missing optional values
-- Risk-family and safety-concept details use their descriptive names and available Notion-authored references
-- Scenario episodes appear only for TV sources with a non-empty episode; movie scenarios omit the episode in both the page and copied Markdown
-- Media Sources, Risk Families, and AI Safety Concepts detail breadcrumbs use plural parent labels
-- No duplicate canvas/frame loop or growing texture count after route cycles
-- No mobile horizontal overflow
-
-## Existing visual evidence
-
-The selected prototype evidence is under `docs/outputs/gate-b`, including 1440×900 gallery/Dossier captures, 2560×900 wrap stress, mobile captures, fast-shear and exact-instance-hover states, spoiler/media states, and a gallery-to-Dossier transition recording.
-
-## Historical integration observations
+#### Observations
 
 - Chrome production preview checked at 1440×900 and 390×844.
 - Fast vertical-wheel travel produced the intended opposing edge shear and returned to a level surface without a blank seam or visible copy pop.
@@ -109,7 +72,7 @@ The selected prototype evidence is under `docs/outputs/gate-b`, including 1440×
 - Search layering hides the gallery crosshair over the portalled dialog and returns grouped, working destinations.
 - Risk-family pivots, the designed 404, the missing-video state, and mobile Dossier hierarchy were visually reviewed in the production build.
 
-## Historical performance baseline
+#### Performance baseline
 
 - Featured page: 25 gallery images observed, 934,914 bytes of generated WebP media.
 - Full gallery idle settling eventually requests and retains every optimized gallery image source, while foreground and scroll-direction candidates preempt background work.
@@ -119,19 +82,13 @@ The selected prototype evidence is under `docs/outputs/gate-b`, including 1440×
 - Built client static directory: 2.5 MB. Search index: 441,862 bytes.
 - Rapid travel, reversal, hover, filter changes, and gallery/detail/Back cycles remained visually responsive on the primary Chrome review machine; exact frame-time instrumentation was not available through the review browser.
 
-## Remote-media migration status
+### Remote-media migration, 2026-08-29
 
 - The authenticated migration completed on 2026-08-29: 330 scenarios and 207 source posters produced 537 image records and 1,074 content-addressed WebP objects. Every snapshot URL is remote HTTPS, and `public/media/generated` is absent.
 - Public R2 delivery returns `image/webp` with immutable caching, and its optional read-only CORS policy responds with `Access-Control-Allow-Origin: *`. The application gallery itself uses same-origin Next Image Optimization and does not depend on CORS.
 - Generated image bytes are not part of the Git-tracked release artifact. The checked-in snapshot retains their public URLs and intrinsic dimensions; R2 descriptors retain the reusable content-addressed media state.
 
-## Known environment limitations
-
-- Automated wheel events cannot reproduce browser-owned macOS trackpad history swipes faithfully; final native Back/Forward feel requires one physical trackpad check.
-- Exact WebGL screenshots vary by GPU and are reviewed manually rather than used as pixel-diff test oracles.
-- React Three Fiber currently emits a non-blocking upstream `THREE.Clock` deprecation warning; application code does not construct `THREE.Clock`.
-
-## Takumi social-image migration, 2026-09-14
+### Takumi social-image migration, 2026-09-14
 
 - Scenario, source, and franchise image handlers use Takumi with explicit WebP quality 80 and matching `image/webp` metadata, at 1200×630.
 - Local Barlow Condensed WOFF embedding and Takumi’s bundled Geist remove the dependency on Next.js’s private font files. Integration follows the [Takumi migration guide](https://takumi.kane.tw/docs/comparison-to-satori#migrate-from-nextog).
@@ -140,30 +97,30 @@ The selected prototype evidence is under `docs/outputs/gate-b`, including 1440×
 - Content validation passed; the production build generated 812 pages. All three image-route deployment traces include the native Takumi addon and local Barlow font; both `takumi-js` and `@takumi-rs/core` are externalized.
 - Local visual review compared the original PNG renderer with WebP for two scenarios (including the longest current title), a source, a franchise, and a missing-poster fallback. Image-backed samples decreased from 489,626–1,421,852 bytes to 40,486–99,802 bytes (91–97% smaller); the fallback decreased from 24,789 to 7,316 bytes. These are sample measurements, not fixed content expectations. Local captures are under ignored `test-results/social-image-migration/`.
 
-## Social-image response caching, 2026-09-16
+### Social-image response caching, 2026-09-16
 
 - Scenario, source, and franchise image responses keep browsers on revalidation, cache at downstream CDNs for one day with a seven-day stale-while-revalidate window, and cache at Vercel for one year per deployment.
 - Focused formatting, lint, generated route types, TypeScript, and three unit tests passed. The production build generated 820 pages; all 18 production browser journeys passed; and local production requests confirmed all three image-route families preserve the configured `Cache-Control`, `CDN-Cache-Control`, and `Vercel-CDN-Cache-Control` headers.
 
-## Pre-rendered scenario archives, 2026-09-16
+### Pre-rendered scenario archives, 2026-09-16
 
 - `/scenarios` and all five `/scenarios/family/[slug]` variants render during the build with deployment-lifetime server caching. Existing valid `?family=` URLs permanently redirect to the corresponding filtered path.
 - Static page segments use a one-hour client Router Cache stale time. Request-time routes retain their default client-cache behavior.
 - Formatting, lint, generated route types, TypeScript, and four focused unit tests passed. The production build generated 825 pages and classified all six scenario archives as static or SSG; local production responses reported `x-nextjs-prerender: 1` and `x-nextjs-stale-time: 3600`; and all 18 production browser journeys passed.
 
-## Detail-page copy links, 2026-09-16
+### Detail-page copy links, 2026-09-16
 
 - Formatting, lint, TypeScript, content validation, and the production build passed (825 generated pages). All 21 browser journeys passed, including copying the complete current URL across all five detail routes at 1440 px and 390 px, keyboard activation, permission failure and retry, repeat-click timer renewal, and reduced motion.
 - The unit suite passed 378 tests and failed the existing sitemap expectation: the expected set omits the five `/scenarios/family/[slug]` paths already emitted by `app/sitemap.ts`. Neither sitemap file is changed by this work.
 - Desktop (1440×900) and mobile (390×844) captures, including the checkmark state, are in ignored `test-results/copy-link-preview/`.
 
-## Sitemap test repair, 2026-09-16
+### Sitemap test repair, 2026-09-16
 
 - The sitemap expectation now derives filtered scenario archive URLs from the current risk-family catalog, preserving complete route coverage and duplicate detection without fixed content slugs or counts.
 - `pnpm test:checks` passed formatting, lint, generated route types, TypeScript, and all 379 unit tests. `pnpm content:validate` and `pnpm build` passed (825 generated pages).
 - `PLAYWRIGHT_SERVER=production pnpm test:e2e` passed all 21 browser journeys in 31.1 seconds with no retries, using local Google Chrome and the Portless production server.
 
-## Taxonomy social images, 2026-09-25
+### Taxonomy social images, 2026-09-25
 
 - Risk-family and concept detail routes publish Takumi WebP cards using their full descriptive catalog names, the shared orange target icon, and the paper-grid visual system. The handlers reuse the existing quality 80 and three shared cache headers.
 - Formatting, lint, generated route types, TypeScript, all 379 unit tests, content validation, and the production build passed. Both new deployment traces include the local Barlow WOFF and native renderer.

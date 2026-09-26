@@ -1,6 +1,6 @@
-# Regression-grounded skill revision
+# Meme composer decision record
 
-Status: accepted as the production `SKILL.md`, with the V5 typography contract and reusable regression harness retained for later passes. This filename is retained for links from the earlier review.
+Status: accepted; retained under its original filename for earlier review links. This document records why the composer boundary changed. Use [SKILL.md](SKILL.md) and the [composer contract](references/composer-contract.md) for current behavior, and the [archive evaluation workflow](evals/archive-ab/EVALS.md) for commands. Historical “current” and “proposed” labels refer to the original A/B samples, not competing instructions for new work.
 
 ## Why the first two versions failed
 
@@ -56,16 +56,7 @@ The standalone report combines:
 
 Historical files remain visible even when their legacy invariant checks failed; they are explicitly labeled `historical invalid`. A row becomes ready only when all three previews are present and v3 has hashes plus passing copy, canvas, text-legibility, source-occupancy, source-frame, and must-preserve-region evidence. Pending, invalid, blocked, failed, and stale unverifiable v3 rows stay in the separate WIP filter.
 
-Run the gate with:
-
-```bash
-pnpm test:meme-skill
-pnpm memes:skill-v3
-pnpm memes:skill-v3:recompose
-pnpm memes:skill-v3:recover-report
-```
-
-Review `docs/skills/ai-safety-meme-creator/archive-ab-comparison.html` with the status filter left on **Ready for comparison**. The latest manifest, rather than a count copied into this document, is the source of truth for readiness.
+Use the [archive evaluation workflow](evals/archive-ab/EVALS.md) to run or recompose the opt-in comparison. Review its generated HTML with the status filter left on **Ready for comparison**. The latest manifest, rather than a count copied into this document, is the source of truth for readiness.
 
 ## Acceptance standard
 
@@ -73,8 +64,8 @@ Mechanical acceptance requires all selected v3 cases to be `complete` and report
 
 The strongest next iteration is driven by rejected ready-only examples: record the exact human objection, reduce it to a focused fixture or invariant where possible, adjust either the semantic guidance or compositor ownership boundary, and rerun the same 50 scenes. Do not tune against WIP rasters as if they were finished candidates.
 
-## Current boundary
+## Implementation boundary
 
-The executable v3 composer is currently a repository integration owned by `v3-runner.ts`; the Markdown skill package supplies the semantic behavior and contract. Installing the skill text alone does not install a standalone composer command. General production use should either keep this host-owned handoff or package the compositor and its pinned dependencies as an explicit tool.
+The repository now exposes [`scripts/compose-meme.ts`](scripts/compose-meme.ts) for direct fixture/intent composition. The archive runner uses the same renderer and adds editorial evaluation, retry handling, and report generation. The Markdown package supplies semantic guidance; installing its text alone does not install the renderer, dependencies, or Impact font.
 
-The current compositor targets the fixed 1200 × 800 evaluation canvas and a compact set of templates. Broader output sizes and aesthetic range should be added only with the same measured completion checks and new regression fixtures.
+The supported formats, schemas, and completion boundary live in the [composer contract](references/composer-contract.md). Broader output sizes and aesthetic range should be added only with the same measured completion checks and new regression fixtures.

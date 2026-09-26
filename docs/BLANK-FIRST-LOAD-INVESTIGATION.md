@@ -26,6 +26,8 @@ Keep the existing Cloudflare configuration unchanged for now. No application or 
 
 ## Recommended next steps
 
+These are proposals from the investigation, not implemented recovery behavior or an approved infrastructure change. Reconfirm the symptom and gather fresh evidence before acting on the provisional diagnosis.
+
 1. Add a production mobile check that independently requires the site header and meaningful `<main>` content.
 2. Add a one-time recovery and telemetry guard when the header loads without `<main>`.
 3. If the issue recurs, capture the URL, timestamp, browser version, reload outcome, and—if possible—a Safari HAR.

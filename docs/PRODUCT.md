@@ -1,65 +1,37 @@
 # Product
 
-## Platform
+Cultural Alignment is an independent, open-source web archive that makes AI safety, risk, and alignment concepts accessible through familiar pop-culture analogies. The experience is the leading product value; learning is its payoff. Success means the creator is proud of the artifact, rather than meeting a traffic or attention target.
 
-web
+## Audience and learning loop
 
-## Stack
+The primary visitor is culture-literate and already uses AI, but cannot yet define concepts such as Goodhart’s law. Technical AI early adopters who appreciate science fiction and design craft are a secondary audience.
 
-Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, and Three.js/WebGL, with Vercel as the intended hosting target. No application database.
+The loop is **recognize a scene → open its dossier → understand the analogy and its limits → explore related culture or concepts**. Technical terminology follows recognition. A scene need not depict literal AI: popular stories act as a shared simulation library for unfamiliar problems. Every mapping is an authored analogy, not evidence or prediction.
 
-## Users
+A scenario therefore needs three distinct pieces: what happens in the scene, why the analogy works, and where it breaks. Familiarity opens the door; honest caveats make the learning useful.
 
-The primary visitor is culture-literate and already uses AI, but cannot yet define concepts such as Goodhart's law. They should recognize a familiar film or television scene, become curious about its connection to AI, and explore from there. Technical AI early adopters who appreciate science fiction and strong design craft are an important secondary audience.
+## Current experience
 
-## Product Purpose
+- The homepage introduces the premise over a gallery of scenarios carrying the Notion `featured` tag. `/scenarios` exposes the complete archive and URL-addressable risk-family filters.
+- A scenario Dossier combines a still, an optional YouTube clip, source/franchise identity, the authored analysis, taxonomy, optional memes, and onward discovery. Continuation follows its source’s first authored franchise, or the source itself; related scenarios use deterministic taxonomy overlap outside that scope.
+- Source, franchise, risk-family, and safety-concept indexes and detail pages provide relational entry points. Global header/Command-K search covers all five resource types locally.
+- Public pages include share metadata, social images, a sitemap, and machine-reader entry points. The site is deployed at [cultural-alignment.com](https://cultural-alignment.com), with Vercel Web Analytics included in the app shell.
+- Internal meme authoring supports generation, versioned review, finalization, and publication back through Notion. It is a separate authoring workflow, not a public contribution surface.
 
-Create an independent, open-source exploratory website that makes AI safety, risk, and alignment concepts more accessible through familiar pop-culture analogies. The experience is the leading product value; learning is its payoff. Success is ultimately the creator being proud of the resulting artifact, not traffic or external attention.
+The [architecture](ARCHITECTURE.md) defines the domain and runtime boundaries; the [design system](DESIGN.md) defines the built interactions. Current content counts come from [the manifest](../content/snapshot/manifest.json), checked by `pnpm content:validate`.
 
-## Positioning
+## Editorial and technical intent
 
-The project treats popular stories as a shared simulation library for unfamiliar AI problems. It accepts any useful cultural analogy, including scenes that do not depict literal AI. Each mapping is presented as an authored analogy rather than evidence or prediction, with an explanation of why it works and where it breaks.
+The creator personally curates the collection. Notion is the editorial source, and explicit one-way synchronization publishes a versioned snapshot. The public app reads that snapshot without a runtime CMS or application database. Images are delivered from public object storage; their URLs and presentation fields travel with the snapshot. This keeps browsing independent of editorial-service availability and credentials.
 
-## Operating Context
+The code is MIT licensed and authored structured data is CC0. Third-party imagery, titles, trademarks, and clips are outside that data dedication; see the [snapshot contract and license](../content/README.md).
 
-The project is personally curated and published through the creator's public persona and GitHub account. Notion is the editorial source. An explicit one-way synchronization command uses the official Notion API and `NOTION_TOKEN`—regardless of the source's public visibility—to create a normalized, read-only snapshot containing content plus public image URLs and intrinsic dimensions. Generated image bytes live in public object storage rather than Git. The application builds and runs exclusively from that snapshot.
+## Commitments and scope
 
-The source code uses the MIT license. The authored structured dataset uses CC0; that dedication does not cover third-party film and television imagery, titles, trademarks, or linked clips.
+The public artifact should feel bold, playful, intelligent, authored, visually strange, and easy to explore. The selected direction is a speculative cultural archive with light visual fiction. Alien narration, broadcast/transmission framing, investigation framing, forced quizzes, and institutional authority do not belong to that direction. “Dossier” names the scenario layout, not a detective narrative.
 
-## Capabilities and Constraints
+Desktop is the visual craft target. Mobile remains usable with direct touch and lower gallery density. Primary controls retain DOM keyboard paths, reduced motion is respected, and a recognizable no-WebGL fallback exists. Full assistive-technology parity, full mobile visual parity, and a dedicated low-power renderer remain follow-up work.
 
-- Core resource models: scenario, source, franchise, AI risk family, and AI safety concept.
-- Recognition-first homepage introduction leading into scenarios carrying the Notion `featured` tag.
-- Pre-rendered `/scenarios` and `/scenarios/family/[slug]` gallery views for the complete archive and each risk-family filter.
-- Global Command-K/header search across all five resource types.
-- Scenario pages present scene media, source/franchise identity, explanation, caveats, taxonomy, spoiler handling, optional memes, and deterministic discovery through the Dossier layout. Continuation follows the first authored franchise when available, otherwise the same source; related scenarios use taxonomy overlap outside that scope. Clips use a YouTube iframe inside branded play/pause, progress, seeking, and return-to-still controls.
-- Source, franchise, risk-family, and concept pages act as functional relational pivots. Risk families are the first candidates for richer editorial treatment later.
-- The committed snapshot contains the full collection; content synchronization is an editorial operation, never a request-time dependency.
-- Desktop is the primary visual craft target. Mobile remains functional with a lower-density direct-touch version of the same experience.
-- Targeted keyboard paths, reduced-motion behavior, and a recognizable no-WebGL fallback are included. Comprehensive assistive-technology parity and a dedicated low-power renderer remain post-MVP work.
-- Scenario dossiers link outward to their source, risk families, and concepts. Related scenarios use a deliberately simple, deterministic taxonomy-overlap heuristic rather than a permanent editorial ranking.
-- Dark mode, popularity ranking, response/agency material, and community contribution workflows remain post-MVP work.
+Popularity ranking, personalization, public submissions/moderation, dark mode, guided learning paths, and response/agency material are outside the current scope. Richer risk-family editorial pages and consistent in-page taxonomy artwork are possible extensions; the existing pivots work without that artwork. The current taxonomy social images are already implemented.
 
-## Brand Commitments
-
-"Cultural Alignment" is a working title only. The public artifact should feel like a distinctive speculative cultural archive: bold, playful, intelligent, authored, visually strange, and interactionally legible. It must not use alien narration, broadcast/transmission framing, investigation framing, forced quizzes, or institutional authority. Photoyoshi's elastic infinite image field is the binding gallery reference, adapted to a one-dimensional horizontal projected surface. Motion uses elastic exploration, precise selection, and confident dimensional transitions. Interface fiction remains light and visual.
-
-## Content Coverage
-
-- Current resource counts live in [`content/snapshot/manifest.json`](../content/snapshot/manifest.json); `pnpm content:validate` checks them against the snapshot.
-- Every scenario includes a scene description, analogy explanation, caveats, source, taxonomy assignments, and a still image. Release dates, YouTube clips, and meme attachments are optional.
-- The synchronized snapshot stores public image URLs, dimensions, and blur placeholders; generated WebP bytes live in object storage.
-- Scenario stills and clips were manually reviewed by the creator.
-- Consistently branded risk-family and concept artwork remains follow-up work. The current resource pivots are complete without placeholder artwork.
-
-## Product Principles
-
-1. Familiarity opens the door: recognizable culture precedes technical terminology.
-2. Exploration before instruction: visitors discover the learning loop organically.
-3. Spectacle must expose content, not obscure it.
-4. Analogies remain honest by making both their usefulness and limits visible.
-5. A few deeply crafted surfaces outrank broad but shallow completeness during prototyping.
-
-## Accessibility & Inclusion
-
-The MVP is explicitly desktop-first and prioritizes a differentiated visual identity over full accessibility parity. Mobile remains usable; primary links and controls retain DOM keyboard paths; reduced motion disables the automatic gallery coast; video seeking and spoiler dismissal are keyboard operable; and a recognizable non-WebGL fallback exists. A comprehensive assistive-technology audit and a dedicated low-power experience remain follow-up work.
+Favor a few deeply crafted surfaces over broad, shallow completeness. Spectacle must expose content, and exploration should invite learning without becoming a conventional educational dashboard. For the reasons behind the selected gallery and Dossier direction, read [MVP decisions](MVP.md).

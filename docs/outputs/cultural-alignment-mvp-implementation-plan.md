@@ -1,11 +1,11 @@
 # Cultural Alignment — MVP Implementation Plan
 
-- Status: local MVP implementation and content expansion complete; repository packaging and deployment follow-ups remain
+- Status: historical execution plan; MVP, repository packaging, and deployment are complete
 - Working title: Cultural Alignment
 - Audience: Codex implementation agents
 - Durable product context: ../PRODUCT.md
 
-This document is an execution history. Sections 1–22 preserve the original staged plan and are non-normative where later creator decisions differ. The dated overrides and completion checklist in section 23 are authoritative; `PRODUCT.md`, `MVP.md`, `DESIGN.md`, `ARCHITECTURE.md`, and `QA.md` describe the shipped system. Do not rerun the feedback gates or restore the removed prototype routes.
+This document is execution history, not a pending task list. Sections 1–22 preserve the original staged plan; section 23 records the decisions that superseded it during that run. Current guidance lives in [Product](../PRODUCT.md), [MVP decisions](../MVP.md), [Design](../DESIGN.md), [Architecture](../ARCHITECTURE.md), and [QA](../QA.md). Later changes include deployment and analytics. The old feedback gates are complete, and removed prototype variants remain historical.
 
 ## 1. Implementation directive
 

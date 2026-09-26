@@ -12,22 +12,23 @@ Produce one unmistakable scene cue + one concrete AI bridge, then stop.
 - Read [references/editorial.md](references/editorial.md) when the concept, caption, frame choice, or semantic mode is mutable.
 - Read [references/revision.md](references/revision.md) whenever prior output, ratings, notes, approvals, rejections, or requested fixes are supplied.
 - Read [references/composer-contract.md](references/composer-contract.md) for every finished image, layout change, or plan consumed by a renderer.
+- Read the repository's [generation policy](../../../data/meme-review/GENERATION_POLICY.md) when working with review batches, lineage, finalization, or publication. This skill's composer does not publish to the review tool or Notion.
 
-Read every branch that applies. A finished revision normally requires all three.
+Read every branch that applies. A finished revision normally requires the editorial, revision, and composer references.
 
 ## Authority and locks
 
 Treat supplied scene facts, scenario caveats, authentic assets, and fictional fixture provenance as authoritative. Verify only relevant external facts the request does not establish.
 
-Explicitly finalized copy, canonical wording, source assets, source order, output requirements, semantic placement, and visual treatments are locks. Preserve them exactly unless the user asks to change that ingredient. If locks conflict with scene truth or a measured render invariant, return a blocked result naming the conflict.
+Explicitly approved copy, canonical wording, source assets, source order, output requirements, semantic placement, and visual treatments are locks. Preserve them exactly unless the user asks to change that ingredient. In the review tool, a Like alone keeps a lineage mutable; `locked: true` freezes its exact finalized version under the generation policy. If locks conflict with scene truth or a measured render invariant, report the conflict without claiming a finished image.
 
 ## Core workflow
 
 1. Inspect every candidate source image. Record one recognition hinge, one AI bridge, and the visible regions that carry the scene. The intent is ready when each is explicit and every must-preserve region belongs to a selected source.
 2. If concept or copy is mutable, use the editorial branch to choose one direction and its semantic mode. The direction is ready when every caption beat serves either recognition or the single bridge.
-3. Express the result as semantic intent: exact caption beats and provenance, source IDs and roles, protected regions, semantic mode, output requirements, and explicit human locks.
-4. Submit that intent to the deterministic composer. In this repository, write validated fixture and intent JSON and run `node --import tsx docs/skills/ai-safety-meme-creator/scripts/compose-meme.ts --fixture <fixture.json> --intent <intent.json> --output <render.png> --preview <preview.png>`. The composer exclusively owns crop coordinates, text boxes, physical wrapping, font size, line height, baselines, padding, contrast geometry, and export. Never estimate or self-report those values as measured layout. If neither this entry point nor a host-owned equivalent is available, return concept-only semantic intent and do not claim a finished image.
-5. Deliver only a composer result with `status: complete`. When the composer returns `blocked`, revise only mutable ingredients identified by the reason or return the blocked result. A blocked render is not a finished meme.
+3. Write the fixture and semantic intent using the schemas and field ownership in the composer contract. The fixture carries source evidence and human locks; intent carries exact caption beats, provenance, source roles, and semantic mode.
+4. From the repository root, run `node --import tsx docs/skills/ai-safety-meme-creator/scripts/compose-meme.ts --fixture <fixture.json> --intent <intent.json> --output <render.png> --preview <preview.png>`. This implementation exports a 1200 × 800 PNG and a 480-pixel-wide preview, and requires an actual Impact font. It exclusively owns crop coordinates, text boxes, physical wrapping, font size, line height, baselines, padding, contrast geometry, and export. If neither this entry point nor a host-owned equivalent is available, return concept-only semantic intent.
+5. Deliver only when the composer returns `status: complete`, the caption and selected sources honor the request and locks, and the preview passes visual inspection. The CLI verifies physical composition; it does not run the archive's additional editorial evaluator. When it returns `blocked`, revise only mutable ingredients identified by the reason or return that result.
 
 ## Content invariants
 
@@ -42,4 +43,4 @@ Explicitly finalized copy, canonical wording, source assets, source order, outpu
 
 Unless the user requests concepts or variants, return the single strongest complete image, its dimensions and path, and a compact record of the concept, hinge, exact semantic beats, source roles, semantic mode, and locks honored.
 
-For concept-only work, return semantic intent without claiming a render exists. For an impossible locked request, return the composer's typed blocked result without inventing an asset.
+For concept-only work, return semantic intent without claiming a render exists. For an impossible locked request, report the conflict and include the composer's typed blocked result when available.

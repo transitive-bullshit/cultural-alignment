@@ -4,7 +4,7 @@ Status: approved and archived. The creator selected Dossier, approved the spatia
 
 ## Former review routes
 
-The `/prototypes` routes and rejected variant code were removed after approval. Their production replacements are `/`, `/scenarios`, `/scenarios/[slug]`, and the source, risk-family, and concept pivots. This directory preserves the fixed captures and transition recording as decision evidence only.
+The original prototype picker and rejected variant code were removed after approval. Their production replacements are `/`, `/scenarios`, `/scenarios/[slug]`, and the resource pivots. The current `/prototypes/homepage` and `/prototypes/social-image` routes are later experiments. This directory preserves gate-era captures and a transition recording as decision evidence only; counts and implementation details below describe that revision.
 
 The user explicitly excluded deployment from this workstream, so the production replacement routes were reviewed in a local production preview rather than at a Vercel URL.
 

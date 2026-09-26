@@ -2,6 +2,8 @@
 
 The suite separates creative intent from physical composition. Codex chooses the scene hinge, one AI bridge, exact caption beats, source roles, and semantic mode. It does not choose crop rectangles, text boxes, font sizes, or physical wrapping. The deterministic v3 composer owns those values and measures the raster it exports.
 
+These checks are opt-in and excluded from `pnpm test` and `pnpm test:unit`. Use this suite when changing the creator skill, its renderer, or its regression harness. For creating one image, follow [SKILL.md](../SKILL.md); for archive comparisons and generated report browser checks, follow [archive-ab/EVALS.md](archive-ab/EVALS.md). Archived candidate skills under `archive-ab/candidate/` reproduce historical runs and do not govern new work.
+
 ## Test layers
 
 Run the deterministic Vitest suite with:
@@ -33,11 +35,9 @@ The live test defaults to one archive case. It does not run in CI unless both `M
 
 ## V3 boundary
 
-The agent-visible output is `SemanticMemeIntent` from `semantic-plan.ts` and `semantic-plan.schema.json`. It contains semantic caption roles, provenance, source IDs, the recognition hinge, one bridge, presentation mode, preferred edge, and palette. Fixture-owned source geometry, expectations, and human locks remain host inputs.
+The [composer contract](../references/composer-contract.md) owns input schemas, font prerequisites, typography, render invariants, and supported output. `safe-render.ts` turns semantic intent into measured geometry using `measured-text.ts` and the same Sharp/Pango path used for export. Fixture-owned geometry, expectations, and human locks remain host inputs.
 
-`safe-render.ts` converts that intent into a concrete plan. `measured-text.ts` uses the pinned fonts and the same Sharp/Pango raster path used for export. It finds the largest whole-pixel fit above the readability floor, ranks alternate non-code line breaks against measured glyph width without increasing the minimum feasible line count, allows at most a two-pixel font retreat for raster-rounding balance failures, preserves exact caption characters and semantic indentation, and returns a typed block rather than painting an invalid candidate. Code retains greedy wrapping. A one-zone external layout tries the compact well first but continues when its type is below the 55-pixel source / 22-pixel review comfort target.
-
-The composer records measured text layers, wrap mode, font identity, display-case transform, fill/stroke evidence and width, rasterized stroke-pixel counts, source placements and occupancy, protected-region projections, preview font size, edge clearance, caption area, and copy/canvas checks. Default Impact text requires uppercase display, white fill, a `0.05em` pure-black stroke even over an opaque backplate, and balanced non-code wrapping. Code may preserve case, use greedy wrapping, and use an opaque backplate. Must-preserve regions must remain at least 99.5% visible with zero caption overlap, and external fallbacks must retain review-scale source imagery, for a result to be review-ready.
+The direct composer CLI checks physical rendering. This harness additionally runs the semantic/source/feedback evaluator before accepting `complete`, so a CLI `complete` result alone does not establish archive readiness.
 
 ## Result states
 
