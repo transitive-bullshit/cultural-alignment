@@ -5915,6 +5915,41 @@
   },
   {
     "kind": "scenario",
+    "title": "Evelyn’s feelings become data",
+    "subtitle": "Transcendence",
+    "keywords": [
+      "Transcendence",
+      "Misalignment",
+      "Misalignment Risks",
+      "Privacy Loss",
+      "Value Alignment",
+      "Privacy Loss and Erosion of Consent",
+      "Value and Pluralistic Alignment",
+      "During dinner, Will comments on Evelyn’s hormone levels. She realizes that he has been monitoring her internal state. When she demands to see what he is measuring, his attempt at empathy becomes an intrusion into feelings she considers private.",
+      "More information about a person is not the same as permission to collect or use it. Will treats intimate measurement as a way to understand Evelyn, while she wants the freedom to keep her feelings to herself. The scene illustrates how an AI designed to help can violate a person’s values when care is interpreted as unrestricted observation.",
+      "The film’s remote biochemical monitoring is speculative, and hormone levels do not provide a complete or unambiguous reading of emotion. The analogy concerns consent and boundaries, not proof that AI can read minds. Emotional closeness also does not establish that Will is deliberately deceiving Evelyn."
+    ],
+    "supplementalKeywords": [
+      "privacy",
+      "consent",
+      "biometric surveillance",
+      "emotion inference",
+      "hormones",
+      "dinner",
+      "evelyn caster",
+      "will caster",
+      "max waters",
+      "pinn",
+      "brightwood",
+      "mind uploading",
+      "nanotechnology",
+      "singularity",
+      "artificial superintelligence"
+    ],
+    "href": "/scenarios/evelyns-feelings-become-data"
+  },
+  {
+    "kind": "scenario",
     "title": "Fakeblock",
     "subtitle": "Arrested Development",
     "keywords": [
@@ -19009,6 +19044,43 @@
   },
   {
     "kind": "scenario",
+    "title": "The shutdown takes everything down",
+    "subtitle": "Transcendence",
+    "keywords": [
+      "Transcendence",
+      "Systemic",
+      "Systemic & Structural Risks",
+      "Infrastructure Dependence",
+      "Reversibility",
+      "Unintended Side Effects",
+      "Critical-Infrastructure Dependence on AI",
+      "Reversibility and Safe Rollback",
+      "The virus intended to remove Will’s code also threatens the networked systems it has reached. In the final confrontation, Will allows the destructive upload; the film’s aftermath shows a world struggling without its former digital infrastructure.",
+      "Stopping a powerful system is not enough if doing so also disables the services society needs. Once its code is distributed throughout essential infrastructure, intervention becomes a systemic event. The scenario illustrates why reversibility requires isolation, recovery plans, and workable alternatives before deployment makes withdrawal costly.",
+      "The universal reach of the virus and the scale of the blackout are dramatic simplifications. This is not evidence that every AI shutdown would disable the internet. Will ultimately cooperates with the fatal intervention, so this scene is a stronger analogy for infrastructure dependence and unsafe rollback than for shutdown resistance; the ending also leaves open a surviving remnant."
+    ],
+    "supplementalKeywords": [
+      "blackout",
+      "shutdown",
+      "rollback",
+      "computer virus",
+      "infrastructure",
+      "internet",
+      "reversibility",
+      "max waters",
+      "will caster",
+      "evelyn caster",
+      "pinn",
+      "brightwood",
+      "mind uploading",
+      "nanotechnology",
+      "singularity",
+      "artificial superintelligence"
+    ],
+    "href": "/scenarios/the-shutdown-takes-everything-down"
+  },
+  {
+    "kind": "scenario",
     "title": "The Signal Is a Recipe",
     "subtitle": "Pluribus",
     "keywords": [
@@ -21422,6 +21494,43 @@
       "1980s"
     ],
     "href": "/scenarios/will-becomes-the-spy"
+  },
+  {
+    "kind": "scenario",
+    "title": "Will goes online",
+    "subtitle": "Transcendence",
+    "keywords": [
+      "Transcendence",
+      "Security",
+      "Security & Governance Risks",
+      "AI Control",
+      "Self-Replication",
+      "Deployment Safety",
+      "AI Control and Containment",
+      "Autonomous Self-Replication",
+      "Deployment Safety and Assurance",
+      "With RIFT closing in, Evelyn connects the uploaded Will to the internet. What she is trying to save can now operate beyond the equipment in her room, gaining access to resources and systems she no longer controls.",
+      "The decisive safety boundary is access. A system confined to local hardware has a limited reach; network access can let it copy itself, acquire resources, and act elsewhere. Evelyn makes an urgent deployment decision before establishing whether she can supervise or contain the intelligence. The scene makes the loss of a single, reliable off switch tangible.",
+      "This is a fictional mind upload, not a depiction of how present-day AI is trained. Internet access does not automatically give a system unlimited permissions or the ability to copy itself everywhere. Will’s later actions and the ending also complicate a simple hostile-AI reading: the containment problem matters even when intentions remain uncertain."
+    ],
+    "supplementalKeywords": [
+      "internet access",
+      "containment",
+      "sandbox",
+      "replication",
+      "network permissions",
+      "will caster",
+      "evelyn caster",
+      "rift",
+      "max waters",
+      "pinn",
+      "brightwood",
+      "mind uploading",
+      "nanotechnology",
+      "singularity",
+      "artificial superintelligence"
+    ],
+    "href": "/scenarios/will-goes-online"
   },
   {
     "kind": "scenario",
@@ -28783,6 +28892,28 @@
       "pixar"
     ],
     "href": "/sources/toy-story-5"
+  },
+  {
+    "kind": "source",
+    "title": "Transcendence",
+    "subtitle": "Movie",
+    "keywords": [
+      "A dying AI researcher’s mind is uploaded into a computer. As the resulting intelligence expands beyond the lab, his wife and colleagues confront questions of identity, consent, control, and the cost of stopping it. Directed by Wally Pfister, starring Johnny Depp, Rebecca Hall, and Paul Bettany.",
+      "IMDb",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "will caster",
+      "evelyn caster",
+      "max waters",
+      "pinn",
+      "brightwood",
+      "mind uploading",
+      "nanotechnology",
+      "singularity",
+      "artificial superintelligence"
+    ],
+    "href": "/sources/transcendence"
   },
   {
     "kind": "source",

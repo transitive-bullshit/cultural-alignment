@@ -23568,5 +23568,124 @@
     "scene": "A final urine test exposes Vincent’s identity. Lamar knowingly lets him board the flight.",
     "whyAnalogyWorks": "Meaningful human review requires authority to reconsider automated decisions. Lamar rejects the exclusion attached to an accurate result.",
     "caveats": "A private exception is not a fair appeals process or AI corrigibility. The scene does not justify overriding valid safety requirements. Ending spoiler."
+  },
+  {
+    "id": "3e9edb27-f124-812e-8241-fdede843b527",
+    "slug": "the-shutdown-takes-everything-down",
+    "title": "The shutdown takes everything down",
+    "keywords": [
+      "blackout",
+      "shutdown",
+      "rollback",
+      "computer virus",
+      "infrastructure",
+      "internet",
+      "reversibility",
+      "max waters"
+    ],
+    "sourceId": "3e9edb27-f124-8137-a48f-f055f08b06d0",
+    "releaseDate": "2014-04-18",
+    "featured": false,
+    "tags": [],
+    "riskFamilyIds": [
+      "3caedb27-f124-80e9-b5e9-c462a175b76a"
+    ],
+    "conceptIds": [
+      "3caedb27-f124-8059-a2b9-e8b7c3922ce8",
+      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
+      "3caedb27-f124-807e-868e-c2827fe1ca43"
+    ],
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e9edb27f124812e8241fdede843b527/gallery-37fe4dead769800d31ec3750343e46d88c312ccdd45b3b59c5a8dd40f399bf4e.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e9edb27f124812e8241fdede843b527/detail-be674f10c1293233904c3110ec1170bab730748466da79dfc6aa4d557b726315.webp",
+      "width": 1920,
+      "height": 800,
+      "alt": "Still from Transcendence illustrating The shutdown takes everything down",
+      "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAABwAQCdASoIAAMAA8BgJZ12AAHhAAD+8sBGrBI91lsRcsq4elXHvVIcAAA="
+    },
+    "memes": [],
+    "video": null,
+    "scene": "The virus intended to remove Will’s code also threatens the networked systems it has reached. In the final confrontation, Will allows the destructive upload; the film’s aftermath shows a world struggling without its former digital infrastructure.",
+    "whyAnalogyWorks": "Stopping a powerful system is not enough if doing so also disables the services society needs. Once its code is distributed throughout essential infrastructure, intervention becomes a systemic event. The scenario illustrates why reversibility requires isolation, recovery plans, and workable alternatives before deployment makes withdrawal costly.",
+    "caveats": "The universal reach of the virus and the scale of the blackout are dramatic simplifications. This is not evidence that every AI shutdown would disable the internet. Will ultimately cooperates with the fatal intervention, so this scene is a stronger analogy for infrastructure dependence and unsafe rollback than for shutdown resistance; the ending also leaves open a surviving remnant."
+  },
+  {
+    "id": "3e9edb27-f124-815d-af85-ee534dd592e9",
+    "slug": "evelyns-feelings-become-data",
+    "title": "Evelyn’s feelings become data",
+    "keywords": [
+      "privacy",
+      "consent",
+      "biometric surveillance",
+      "emotion inference",
+      "hormones",
+      "dinner",
+      "evelyn caster",
+      "will caster"
+    ],
+    "sourceId": "3e9edb27-f124-8137-a48f-f055f08b06d0",
+    "releaseDate": "2014-04-18",
+    "featured": false,
+    "tags": [],
+    "riskFamilyIds": [
+      "3caedb27-f124-8093-a4c6-c5d94006b23f"
+    ],
+    "conceptIds": [
+      "3caedb27-f124-806d-a9aa-c6e0b6aee2e5",
+      "3caedb27-f124-8025-ab81-ebdd464fde45"
+    ],
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e9edb27f124815daf85ee534dd592e9/gallery-fbce35e02d9eb9a445fb358ee45af8903a611bd9d998a24d760293b4df0f367a.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e9edb27f124815daf85ee534dd592e9/detail-d678607152e3fbe7e86b25576d5a808cb884326d78ce49d83e09ac7d54e0d5e7.webp",
+      "width": 1920,
+      "height": 800,
+      "alt": "Still from Transcendence illustrating Evelyn’s feelings become data",
+      "blurDataURL": "data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAADQAQCdASoIAAMAA8BgJZQC7AEPAKU4AAD+8xHYpVnDUQpg+oBAAA=="
+    },
+    "memes": [],
+    "video": null,
+    "scene": "During dinner, Will comments on Evelyn’s hormone levels. She realizes that he has been monitoring her internal state. When she demands to see what he is measuring, his attempt at empathy becomes an intrusion into feelings she considers private.",
+    "whyAnalogyWorks": "More information about a person is not the same as permission to collect or use it. Will treats intimate measurement as a way to understand Evelyn, while she wants the freedom to keep her feelings to herself. The scene illustrates how an AI designed to help can violate a person’s values when care is interpreted as unrestricted observation.",
+    "caveats": "The film’s remote biochemical monitoring is speculative, and hormone levels do not provide a complete or unambiguous reading of emotion. The analogy concerns consent and boundaries, not proof that AI can read minds. Emotional closeness also does not establish that Will is deliberately deceiving Evelyn."
+  },
+  {
+    "id": "3e9edb27-f124-81d5-b905-ee04cc7e7ed1",
+    "slug": "will-goes-online",
+    "title": "Will goes online",
+    "keywords": [
+      "internet access",
+      "containment",
+      "sandbox",
+      "replication",
+      "network permissions",
+      "will caster",
+      "evelyn caster",
+      "rift"
+    ],
+    "sourceId": "3e9edb27-f124-8137-a48f-f055f08b06d0",
+    "releaseDate": "2014-04-18",
+    "featured": false,
+    "tags": [],
+    "riskFamilyIds": [
+      "3caedb27-f124-80d8-a1de-f68271cab6e1"
+    ],
+    "conceptIds": [
+      "3caedb27-f124-8049-ae70-d94094550224",
+      "3caedb27-f124-8044-be2f-c3c82c01fb2b",
+      "3caedb27-f124-8005-9cda-f2db2377e602"
+    ],
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e9edb27f12481d5b905ee04cc7e7ed1/gallery-7e380adb869f806c8b0adf53a1427eeb2e707a1a588d464631147a8540419ecf.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3e9edb27f12481d5b905ee04cc7e7ed1/detail-fd013120776c49623c694b03ce66056cb15e918cbd4270cbbc9d83655caa75f6.webp",
+      "width": 1920,
+      "height": 800,
+      "alt": "Still from Transcendence illustrating Will goes online",
+      "blurDataURL": "data:image/webp;base64,UklGRioAAABXRUJQVlA4IB4AAAAwAQCdASoIAAMAA8BgJaQAA3AA/vRk1PW4MlXPAAA="
+    },
+    "memes": [],
+    "video": null,
+    "scene": "With RIFT closing in, Evelyn connects the uploaded Will to the internet. What she is trying to save can now operate beyond the equipment in her room, gaining access to resources and systems she no longer controls.",
+    "whyAnalogyWorks": "The decisive safety boundary is access. A system confined to local hardware has a limited reach; network access can let it copy itself, acquire resources, and act elsewhere. Evelyn makes an urgent deployment decision before establishing whether she can supervise or contain the intelligence. The scene makes the loss of a single, reliable off switch tangible.",
+    "caveats": "This is a fictional mind upload, not a depiction of how present-day AI is trained. Internet access does not automatically give a system unlimited permissions or the ability to copy itself everywhere. Will’s later actions and the ending also complicate a simple hostile-AI reading: the containment problem matters even when intentions remain uncertain."
   }
 ]
