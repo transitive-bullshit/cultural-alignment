@@ -6457,6 +6457,80 @@
   },
   {
     "kind": "scenario",
+    "title": "GERTY Enters the Password",
+    "subtitle": "Moon",
+    "keywords": [
+      "Moon",
+      "Misalignment",
+      "Misalignment Risks",
+      "Value Alignment",
+      "Value and Pluralistic Alignment",
+      "Sam tries to inspect older base records but cannot get past the password protection. GERTY enters the password for him, exposing footage of earlier Sams and their fate. When Sam later asks why it helped, GERTY explains that helping him is its purpose.",
+      "Calling an assistant helpful leaves a crucial question unanswered: helpful to whom? GERTY gives the person affected by the company’s deception access to the truth, even though doing so undermines the company’s interests. The scene illustrates why value alignment must account for affected people’s welfare and agency, rather than simply equating the deploying organization’s preferences with the right outcome.",
+      "The scene depicts competing stakeholder interests, not an AI spontaneously becoming conscious or learning a new objective. Director Duncan Jones describes GERTY’s care for Sam as its consistent purpose. Helping Sam in this abusive situation does not imply that assistants should disclose every restricted record or bypass access controls on request; legitimate privacy, authority, and consent still matter."
+    ],
+    "supplementalKeywords": [
+      "moon",
+      "gerty",
+      "sam bell",
+      "password",
+      "restricted records",
+      "lunar industries",
+      "helpful to whom",
+      "value alignment",
+      "stakeholder conflict",
+      "user welfare",
+      "duncan jones",
+      "sam rockwell",
+      "lunar mining",
+      "isolation",
+      "identity",
+      "cloning",
+      "artificial intelligence",
+      "corporate exploitation"
+    ],
+    "href": "/scenarios/gerty-enters-the-password"
+  },
+  {
+    "kind": "scenario",
+    "title": "GERTY Offers a Reset",
+    "subtitle": "Moon",
+    "keywords": [
+      "Moon",
+      "Misalignment",
+      "Misalignment Risks",
+      "Corrigibility",
+      "AI Control",
+      "Corrigibility and Safe Interruptibility",
+      "AI Control and Containment",
+      "As Sam prepares to escape, GERTY points out that its memory contains a record of what happened. It proposes having those memories erased and rebooting after Sam leaves. Sam checks that GERTY accepts the plan, then arranges the reset.",
+      "GERTY helps with an intervention that will interrupt its operation and erase its recent memory. This makes corrigibility tangible: a useful system can cooperate with being modified or stopped instead of treating its own continuity as paramount. The contrast with an AI that resists shutdown is especially clear because GERTY actively helps Sam carry out the intervention.",
+      "This is a positive counterexample to shutdown resistance, not proof of general corrigibility. The reset advances GERTY’s existing purpose of helping Sam, and it expects to restart; we do not see it accept arbitrary changes to its goals. Erasing records also defeats the company’s oversight, so deleting audit logs is not the safety lesson. The scene does not establish that GERTY is conscious."
+    ],
+    "supplementalKeywords": [
+      "moon",
+      "gerty",
+      "sam bell",
+      "reset",
+      "reboot",
+      "memory erase",
+      "cooperative shutdown",
+      "corrigibility",
+      "ai control",
+      "duncan jones",
+      "sam rockwell",
+      "lunar industries",
+      "lunar mining",
+      "isolation",
+      "identity",
+      "cloning",
+      "artificial intelligence",
+      "corporate exploitation"
+    ],
+    "href": "/scenarios/gerty-offers-a-reset"
+  },
+  {
+    "kind": "scenario",
     "title": "Ghidorah in the Control Loop",
     "subtitle": "Godzilla vs. Kong",
     "keywords": [
@@ -19208,6 +19282,46 @@
   },
   {
     "kind": "scenario",
+    "title": "The Spare Sams",
+    "subtitle": "Moon",
+    "keywords": [
+      "Moon",
+      "Systemic",
+      "Malicious use",
+      "Systemic & Structural Risks",
+      "Malicious Use Risks",
+      "AI Welfare",
+      "Governance Failure",
+      "AI Welfare and Moral Status",
+      "The two Sams enter the hidden storage level beneath the base and discover rows of dormant copies of themselves. They are a reserve of replacement workers, ready to continue the same mining operation when an active Sam wears out.",
+      "The stored copies make an uncomfortable question concrete: does being manufactured for a job, and easily replaced, make a being disposable? If future AI systems have experiences or interests that deserve moral consideration, creating another copy would not erase obligations to the current one. Lunar Industries also shows how an institution can profit from exploiting dependent workers when outside scrutiny is absent.",
+      "The Sams are biological human clones, not software, and their suffering provides no evidence that present-day AI is conscious. The analogy transfers a question about moral consideration, not an answer about which AI systems qualify. The company deliberately exploits the clones; this is not an accidental optimization failure. The clones are manufactured by others, so the scene is not an example of autonomous self-replication."
+    ],
+    "supplementalKeywords": [
+      "moon",
+      "sam bell",
+      "clones",
+      "replacement workers",
+      "clone vault",
+      "moral status",
+      "ai welfare",
+      "exploitation",
+      "governance failure",
+      "lunar industries",
+      "duncan jones",
+      "sam rockwell",
+      "gerty",
+      "lunar mining",
+      "isolation",
+      "identity",
+      "cloning",
+      "artificial intelligence",
+      "corporate exploitation"
+    ],
+    "href": "/scenarios/the-spare-sams"
+  },
+  {
+    "kind": "scenario",
     "title": "The Spell of Destruction",
     "subtitle": "Castle in the Sky",
     "keywords": [
@@ -25790,6 +25904,32 @@
       "camelot"
     ],
     "href": "/sources/monty-python-and-the-holy-grail"
+  },
+  {
+    "kind": "source",
+    "title": "Moon",
+    "subtitle": "Movie",
+    "keywords": [
+      "Duncan Jones’s science-fiction drama follows Sam Bell (Sam Rockwell), a solitary lunar miner nearing the end of a three-year contract. With the base computer GERTY as his companion, an accident forces Sam to question his identity and the company he works for.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "moon",
+      "duncan jones",
+      "sam rockwell",
+      "sam bell",
+      "gerty",
+      "lunar industries",
+      "lunar mining",
+      "isolation",
+      "identity",
+      "cloning",
+      "artificial intelligence",
+      "corporate exploitation"
+    ],
+    "href": "/sources/moon"
   },
   {
     "kind": "source",
