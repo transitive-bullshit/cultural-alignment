@@ -62,7 +62,10 @@ export function SiteFooter() {
             ))}
             <li>
               <a href={notionSourceUrl} target='_blank' rel='noreferrer'>
-                Source notion database <span aria-hidden='true'>↗</span>
+                Source notion database{' '}
+                <span className={styles.linkMark} aria-hidden='true'>
+                  ↗
+                </span>
               </a>
             </li>
           </ul>

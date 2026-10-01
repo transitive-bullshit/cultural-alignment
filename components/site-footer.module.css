@@ -83,8 +83,11 @@
   line-height: 1.35;
 }
 
-.navigation a span {
+.navigation a .linkMark {
   color: var(--footer-electric);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 12px;
+  line-height: 1;
 }
 
 .socials {

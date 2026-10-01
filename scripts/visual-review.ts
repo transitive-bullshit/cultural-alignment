@@ -341,9 +341,12 @@ function figure(
   label: string
 ) {
   const boxes = record.highlights
+    .map((h) => clipToFrame(h, record))
+    .filter((h): h is Highlight => h !== null)
     .map((h, index) => {
       const style = `left:${pct(h.x, record.width)};top:${pct(h.y, record.height)};width:${pct(h.w, record.width)};height:${pct(h.h, record.height)}`
-      return `<span class="mark" style="${style}"><span class="mark-tag">${index + 1}. ${escapeHtml(h.label)}</span></span>`
+      const inside = h.y < 24 ? ' mark-inside' : ''
+      return `<span class="mark${inside}" style="${style}"><span class="mark-tag">${index + 1}. ${escapeHtml(h.label)}</span></span>`
     })
     .join('')
   return `<figure class="shot">
@@ -352,6 +355,15 @@ function figure(
     <img src="${src}" alt="${escapeHtml(label || 'Screenshot')}" width="${record.width}" height="${record.height}" loading="lazy">${boxes}
   </div>
 </figure>`
+}
+
+/** The part of a highlight inside the screenshot, or null when none is. */
+function clipToFrame(h: Highlight, frame: { width: number; height: number }) {
+  const x = Math.max(0, h.x)
+  const y = Math.max(0, h.y)
+  const w = Math.min(frame.width, h.x + h.w) - x
+  const height = Math.min(frame.height, h.y + h.h) - y
+  return w > 4 && height > 4 ? { ...h, x, y, w, h: height } : null
 }
 
 function pct(value: number, total: number) {
@@ -410,6 +422,7 @@ figcaption { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; 
 .shot-frame { position: relative; display: block; max-width: 100%; border: 1px solid var(--rule); background: var(--raised); }
 .shot-frame img { display: block; width: 100%; height: auto; }
 .mark { position: absolute; border: 2px solid var(--accent); pointer-events: none; }
+.mark-inside .mark-tag { bottom: auto; top: 0; }
 .mark-tag { position: absolute; left: -2px; bottom: 100%; background: var(--accent); color: var(--on-accent); font: 500 11px/1.3 var(--mono); padding: 2px 6px; white-space: nowrap; max-width: 60vw; overflow: hidden; text-overflow: ellipsis; }
 .choices { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
 .choice { display: grid; gap: 8px; align-content: start; padding: 10px; border: 1px solid var(--rule); background: var(--raised); cursor: pointer; min-width: 0; }
