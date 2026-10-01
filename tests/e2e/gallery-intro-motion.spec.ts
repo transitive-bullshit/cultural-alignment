@@ -19,6 +19,12 @@ test.describe('gallery introduction motion', () => {
     await expect(introduction).toHaveAttribute('data-state', 'visible')
     await page.locator('[data-gallery-intro-dismiss]').click()
     await expect(introduction).toHaveAttribute('data-state', 'dismissed')
+    // The intro coast settles about a second after it starts, and a busy main
+    // thread can spend that on protocol round trips alone. Keep the clock
+    // paused through the reload so the new page advances only when the test
+    // steps it. The target stays ahead of a slow round trip; the jump only
+    // fast-forwards the page being replaced.
+    await page.clock.pauseAt(await page.evaluate(() => Date.now() + 5_000))
     await page.reload({ waitUntil: 'commit' })
 
     const gallery = page.locator('[data-spatial-gallery="browse"]')
@@ -27,11 +33,25 @@ test.describe('gallery introduction motion', () => {
     await expect(introduction).toHaveAttribute('data-state', 'dismissed', {
       timeout: 15_000
     })
-    await expect(canvas).toBeVisible({ timeout: 15_000 })
-    await expect(canvas).toHaveAttribute('data-gallery-intro-motion', 'running')
-    // Keep the target ahead of a slow protocol round trip. The render loop caps
-    // the resulting frame delta, and the assertion below guards the test state.
-    await page.clock.pauseAt(await page.evaluate(() => Date.now() + 5_000))
+    // Mounting the canvas needs page timers, so step one frame per probe: the
+    // coast can advance at most a frame before the test observes it. The read
+    // must not wait for the canvas, which cannot appear between steps.
+    await expect
+      .poll(
+        async () => {
+          await page.clock.runFor(16)
+          return canvas.evaluateAll(
+            ([element]) =>
+              element?.getAttribute('data-gallery-intro-motion') ?? null
+          )
+        },
+        { intervals: [0], timeout: 15_000 }
+      )
+      .toBe('running')
+    await expect(canvas).toBeVisible()
+    // Coast for a few frames so the render loop has measured the current
+    // viewport and the layout correction below lands mid-motion.
+    await page.clock.runFor(100)
     await expect(canvas).toHaveAttribute('data-gallery-intro-motion', 'running')
 
     const viewport = page.viewportSize()
