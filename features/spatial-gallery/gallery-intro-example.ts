@@ -4,9 +4,9 @@ import { contentCatalog } from '@/lib/content/snapshot'
 
 import type { GalleryIntroExample } from './types'
 
-const INTRO_SCENARIO_SLUG = 'sit-tight-and-assess'
+const INTRO_SCENARIO_SLUG = 'keep-summer-safe'
 const INTRO_MEME_SRC =
-  'https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481bdb2f5e77a3b7320b6/memes/detail-24f69cb00c9464b4eb60fd61f123cdd9098649cdf0a8705b0766ec8dd2a41061.webp'
+  'https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12480cc92d5c8f2f2e3a7fa/memes/detail-68f8685a354878ea72b8134b820b2ddd2b41fdff2abe5519a537839d222f447c.webp'
 
 function resolveGalleryIntroExample(): GalleryIntroExample {
   const scenario = contentCatalog.getScenarioPage(INTRO_SCENARIO_SLUG)
@@ -27,7 +27,7 @@ function resolveGalleryIntroExample(): GalleryIntroExample {
     concept: primaryConcept.title,
     image: {
       src: image.detailSrc,
-      alt: 'A worried scientist captioned “Extinction probability: 99.78%” and “Sit tight and assess”.',
+      alt: 'Summer cowering in the car, captioned “Keep Summer safe” and “Acceptable means: [not specified]”.',
       blurDataURL: image.blurDataURL,
       width: image.width,
       height: image.height,

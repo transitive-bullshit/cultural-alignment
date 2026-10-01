@@ -871,7 +871,8 @@
     order: 3;
     grid-template-columns: 1fr;
     gap: 12px;
-    padding: 22px 18px;
+    /* 11px plus the 1px border puts text on the 18px edge. */
+    padding: 22px 11px;
   }
 
   .sectionLabel span {
@@ -879,9 +880,15 @@
     margin-right: 8px;
   }
 
+  /* Section boxes share the media plate's 6px inset; text inside them
+     keeps the 18px edge of the title and concept block. */
   .reading {
     width: auto;
-    padding: 0 18px;
+    padding: 0 6px;
+  }
+
+  .copyScenarioAction {
+    padding-inline: 12px;
   }
 
   .copySection[data-prominent] {
@@ -891,7 +898,7 @@
   .taxonomy {
     grid-template-columns: 1fr;
     gap: 44px;
-    padding: 48px 0 0;
+    padding: 48px 12px 0;
   }
 
   .page .detailSpoiler {
