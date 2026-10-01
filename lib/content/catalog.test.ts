@@ -143,6 +143,32 @@ const minimalSnapshot = {
 describe('ContentCatalog', () => {
   const catalog = createContentCatalog(minimalSnapshot)
 
+  it('ranks related resources by the scenes they share with the page', () => {
+    const skewed = createContentCatalog({
+      ...minimalSnapshot,
+      scenarios: minimalSnapshot.scenarios.map((scenario) =>
+        scenario.id === 'null-a'
+          ? { ...scenario, riskFamilyIds: ['risk-b'] }
+          : scenario
+      )
+    })
+    const related = (kind: ResourceKind, slug: string) =>
+      skewed
+        .getResourcePage(kind, slug)!
+        .relatedResources.map(
+          ({ kind, slug, sharedScenarioCount }) =>
+            `${kind}:${slug}:${sharedScenarioCount}`
+        )
+
+    expect(related('concept', 'concept-one')).toEqual([
+      'risk-family:family-b:4',
+      'risk-family:family-a:2'
+    ])
+    expect(related('risk-family', 'family-a')).toEqual([
+      'concept:concept-one:2'
+    ])
+  })
+
   it('projects scenario memes in their authored order', () => {
     const page = catalog.getScenarioPage('old-a')!
 

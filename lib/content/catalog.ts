@@ -132,13 +132,19 @@ export type ResourceScenario = GalleryScenario & {
   readonly analogy?: string
 }
 
+/** A resource linked to a page, with how many of that page's scenes it shares. */
+export type RelatedResource = ResourceSummary & {
+  readonly sharedScenarioCount: number
+}
+
 type ResourcePageBase = ResourceSummary & {
   readonly externalLinks: readonly {
     readonly label: string
     readonly href: string
     readonly description?: string
   }[]
-  readonly relatedResources: readonly ResourceSummary[]
+  /** Grouped by kind, most shared scenes first. */
+  readonly relatedResources: readonly RelatedResource[]
   readonly scenarios: readonly ResourceScenario[]
 }
 
@@ -416,12 +422,17 @@ export function createContentCatalog(input: unknown): ContentCatalog {
             poster: source.poster,
             externalLinks: sourceExternalLinks(source),
             relatedResources: mergeRelatedResources(
-              source.franchiseIds.map((id) =>
-                getRequired(resourceSummaryById, resourceKey('franchise', id))
-              ),
-              source.relatedSourceIds.map((id) =>
-                getRequired(resourceSummaryById, resourceKey('source', id))
-              ),
+              source.franchiseIds.map((id) => ({
+                ...getRequired(
+                  resourceSummaryById,
+                  resourceKey('franchise', id)
+                ),
+                sharedScenarioCount: scenarios.length
+              })),
+              source.relatedSourceIds.map((id) => ({
+                ...getRequired(resourceSummaryById, resourceKey('source', id)),
+                sharedScenarioCount: 0
+              })),
               collectRelatedResources(
                 scenarios,
                 resourceSummaryById,
@@ -495,7 +506,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
               scenarios,
               resourceSummaryById,
               sourceById,
-              ['concept', 'franchise', 'source']
+              ['concept']
             ),
             scenarios: scenarios.map((scenario) =>
               getRequired(scenarioCardById, scenario.id)
@@ -525,7 +536,8 @@ export function createContentCatalog(input: unknown): ContentCatalog {
               scenarios,
               resourceSummaryById,
               sourceById,
-              ['risk-family', 'franchise', 'source']
+              ['risk-family', 'concept'],
+              resourceKey('concept', concept.id)
             ),
             scenarios: scenarios.map((scenario) => ({
               ...getRequired(scenarioCardById, scenario.id),
@@ -661,9 +673,10 @@ function collectRelatedResources(
   scenarios: readonly ScenarioRecord[],
   resources: ReadonlyMap<string, ResourceSummary>,
   sources: ReadonlyMap<string, SourceRecord>,
-  kinds: readonly ResourceKind[]
-) {
-  const related = new Map<string, ResourceSummary>()
+  kinds: readonly ResourceKind[],
+  excludeKey?: string
+): RelatedResource[] {
+  const related = new Map<string, RelatedResource>()
 
   for (const scenario of scenarios) {
     const source = getRequired(sources, scenario.sourceId)
@@ -675,26 +688,40 @@ function collectRelatedResources(
     } satisfies Record<ResourceKind, readonly string[]>
 
     for (const kind of kinds) {
-      for (const id of idsByKind[kind]) {
-        const resource = getRequired(resources, resourceKey(kind, id))
-        related.set(`${resource.kind}:${resource.id}`, resource)
+      for (const id of new Set(idsByKind[kind])) {
+        const key = resourceKey(kind, id)
+        if (key === excludeKey) continue
+        const resource = getRequired(resources, key)
+        related.set(key, {
+          ...resource,
+          sharedScenarioCount: (related.get(key)?.sharedScenarioCount ?? 0) + 1
+        })
       }
     }
   }
 
-  return sortResources([...related.values()])
+  return sortRelatedResources([...related.values()])
 }
 
 function mergeRelatedResources(
-  ...groups: readonly (readonly ResourceSummary[])[]
+  ...groups: readonly (readonly RelatedResource[])[]
 ) {
-  const resources = new Map<string, ResourceSummary>()
+  const resources = new Map<string, RelatedResource>()
 
   for (const resource of groups.flat()) {
     resources.set(resourceKey(resource.kind, resource.id), resource)
   }
 
-  return sortResources([...resources.values()])
+  return sortRelatedResources([...resources.values()])
+}
+
+function sortRelatedResources(resources: readonly RelatedResource[]) {
+  return resources.toSorted(
+    (left, right) =>
+      resourceKindOrder(left.kind) - resourceKindOrder(right.kind) ||
+      right.sharedScenarioCount - left.sharedScenarioCount ||
+      left.title.localeCompare(right.title, 'en', { sensitivity: 'base' })
+  )
 }
 
 function sourceExternalLinks(source: SourceRecord): readonly ExternalLink[] {
