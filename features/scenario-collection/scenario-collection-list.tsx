@@ -15,6 +15,8 @@ type ScenarioConnections = Readonly<{
 export type ScenarioCollectionItem = Readonly<{
   connections?: ScenarioConnections
   scenario: GalleryScenario
+  /** One line on how the scene shows the page's concept. */
+  summary?: string
 }>
 
 export type ScenarioCollectionLayout = 'continuous' | 'preview'
@@ -41,12 +43,13 @@ export function ScenarioCollectionList({
       data-image-treatment={imageTreatment}
       data-layout={layout}
     >
-      {items.map(({ connections, scenario }) => (
+      {items.map(({ connections, scenario, summary }) => (
         <li key={scenario.id}>
           <ScenarioCollectionCard
             connections={connections}
             imageSizes={imageSizes}
             scenario={scenario}
+            summary={summary}
           />
         </li>
       ))}
@@ -60,7 +63,7 @@ export function createSortableScenarioEntries(
   const imageSizes =
     '(max-width: 680px) calc(100vw - 36px), (max-width: 860px) 46vw, 31vw'
 
-  return items.map(({ connections, scenario }) => ({
+  return items.map(({ connections, scenario, summary }) => ({
     featured: scenario.featured,
     releaseDate: scenario.releaseDate,
     content: (
@@ -69,6 +72,7 @@ export function createSortableScenarioEntries(
           connections={connections}
           imageSizes={imageSizes}
           scenario={scenario}
+          summary={summary}
         />
       </li>
     )
@@ -78,11 +82,13 @@ export function createSortableScenarioEntries(
 function ScenarioCollectionCard({
   connections,
   imageSizes,
-  scenario
+  scenario,
+  summary
 }: {
   readonly connections?: ScenarioConnections
   readonly imageSizes: string
   readonly scenario: GalleryScenario
+  readonly summary?: string
 }) {
   const year = scenario.releaseDate?.slice(0, 4) ?? 'Date unknown'
 
@@ -116,6 +122,11 @@ function ScenarioCollectionCard({
           <span>{year}</span>
         </p>
         <h3>{scenario.title}</h3>
+        {summary ? (
+          <p className={styles.cardSummary} data-scenario-card-summary>
+            {summary}
+          </p>
+        ) : null}
         {connections ? <ConnectionSummary connections={connections} /> : null}
         <span className={styles.open} aria-hidden='true'>
           View scenario ↗

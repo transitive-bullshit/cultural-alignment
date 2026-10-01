@@ -75,4 +75,7 @@ test('scenario taxonomy links reveal their descriptions', async ({ page }) => {
   await conceptLink.click()
   await navigation
   await expect(page.locator('[data-resource-detail="concept"]')).toBeVisible()
+  await expect(
+    page.locator('[data-scenario-card-summary]').first()
+  ).not.toBeEmpty()
 })

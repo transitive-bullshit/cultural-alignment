@@ -1,3 +1,4 @@
+import { summarizeAnalogy } from './analogy-summary'
 import type {
   ConceptRecord,
   ContentImage as ContentImageRecord,
@@ -126,6 +127,11 @@ type ExternalLink = {
   readonly description?: string
 }
 
+/** A scenario card on a resource page; concept pages add its analogy line. */
+export type ResourceScenario = GalleryScenario & {
+  readonly analogy?: string
+}
+
 type ResourcePageBase = ResourceSummary & {
   readonly externalLinks: readonly {
     readonly label: string
@@ -133,7 +139,7 @@ type ResourcePageBase = ResourceSummary & {
     readonly description?: string
   }[]
   readonly relatedResources: readonly ResourceSummary[]
-  readonly scenarios: readonly GalleryScenario[]
+  readonly scenarios: readonly ResourceScenario[]
 }
 
 type SourceResourcePage = ResourcePageBase & {
@@ -521,9 +527,10 @@ export function createContentCatalog(input: unknown): ContentCatalog {
               sourceById,
               ['risk-family', 'franchise', 'source']
             ),
-            scenarios: scenarios.map((scenario) =>
-              getRequired(scenarioCardById, scenario.id)
-            )
+            scenarios: scenarios.map((scenario) => ({
+              ...getRequired(scenarioCardById, scenario.id),
+              analogy: summarizeAnalogy(scenario.whyAnalogyWorks)
+            }))
           } satisfies TaxonomyResourcePage
         ] as const
       })
