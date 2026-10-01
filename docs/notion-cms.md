@@ -63,7 +63,7 @@ The first concept is the scenario's **primary concept**: the gallery panel and D
 
 ### Meme attachments
 
-Scenario memes belong in the ordered `Memes` files property, separate from the representative page-body still. The [generation policy](../data/meme-review/GENERATION_POLICY.md) governs review and finalization. `pnpm memes:upload-notion --help` describes uploading a finalized export manifest: it requires `NOTION_TOKEN` even for its default read-only dry run, and appends attachments only with `--apply`. A subsequent normal `pnpm content:sync` imports them into the public snapshot; fast mode deliberately retains the previous attachments.
+Scenario memes belong in the ordered `Memes` files property, separate from the representative page-body still. The [meme skill's riff branch](skills/ai-safety-meme-creator/references/riff.md) creates and exports them. `pnpm memes:upload-notion --help` describes uploading an export manifest: it requires `NOTION_TOKEN` even for its default read-only dry run, and appends attachments only with `--apply`. A subsequent normal `pnpm content:sync` imports them into the public snapshot; fast mode deliberately retains the previous attachments.
 
 ## Media sources
 

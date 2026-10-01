@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto'
-import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { parseArgs } from 'node:util'
@@ -19,7 +19,7 @@ import {
 } from './notion-meme-uploader'
 
 /**
- * Single-meme workflow outside review rounds. `prepare` stages a scenario's
+ * Single-meme workflow. `prepare` stages a scenario's
  * still and composer fixture; `export` turns a chosen composer render into a
  * JPEG plus the manifest `pnpm memes:upload-notion` consumes.
  */
@@ -29,32 +29,39 @@ const HELP = `Usage:
   pnpm memes:riff export <scenario-slug> <render.png> [--out=<dir>]
 
 prepare  Download the scenario still and write a composer fixture, reusing the
-         latest review round's protected regions when they match the still.
+         annotated protected regions when they match the current still.
 export   Convert a chosen render to JPEG and add it to <dir>/export/manifest.json.
          Upload with: pnpm memes:upload-notion --manifest=<manifest> [--apply]
 
 --out defaults to work/meme-riffs/<scenario-slug>.`
 
 const projectRoot = fileURLToPath(new URL('..', import.meta.url))
-const roundsRoot = join(projectRoot, 'data/meme-review/rounds')
+const regionsPath = join(
+  projectRoot,
+  'docs/skills/ai-safety-meme-creator/protected-regions.json'
+)
 
-type RoundAsset = {
-  scenario_slug: string
-  src: string
-  protected_regions: {
-    id: string
-    label: string
-    priority: 'must' | 'soft'
-    source_rect: [number, number, number, number]
-  }[]
-}
+/** Hand-annotated regions keyed by scenario slug, valid only for `still`. */
+type ProtectedRegions = Record<
+  string,
+  {
+    still: string
+    regions: {
+      id: string
+      label: string
+      priority: 'must' | 'soft'
+      /** `[x, y, width, height]` as percentages of the still. */
+      rect: [number, number, number, number]
+    }[]
+  }
+>
 
 export function buildRiffFixture(
   scenario: ScenarioRecord,
   context: {
     sourceTitle: string
     conceptNames: readonly string[]
-    regions: RoundAsset['protected_regions']
+    regions: ProtectedRegions[string]['regions']
   }
 ): MemeSkillFixture {
   const id = `${scenario.slug}--riff`
@@ -78,10 +85,10 @@ export function buildRiffFixture(
       }
     ],
     protected_regions: context.regions.map((region) => ({
-      id: region.id.replace(`${scenario.slug}--`, ''),
+      id: region.id,
       image_id: 'still',
       label: region.label,
-      canvas_rect_pct: region.source_rect,
+      canvas_rect_pct: region.rect,
       priority: region.priority
     })),
     expectations: {
@@ -104,26 +111,13 @@ export function buildRiffFixture(
   })
 }
 
-/** Protected regions annotated for this exact still in the newest round. */
-async function findRoundRegions(scenario: ScenarioRecord) {
-  const rounds = (await readdir(roundsRoot)).toSorted().toReversed()
-  for (const round of rounds) {
-    let assets: RoundAsset[]
-    try {
-      assets = JSON.parse(
-        await readFile(join(roundsRoot, round, 'assets.json'), 'utf8')
-      )
-    } catch {
-      continue
-    }
-    const asset = assets.find(
-      (candidate) =>
-        candidate.scenario_slug === scenario.slug &&
-        candidate.src === scenario.image.gallerySrc
-    )
-    if (asset) return { round, regions: asset.protected_regions }
-  }
-  return { round: null, regions: [] }
+/** Annotated regions, or none when the scenario's still has since changed. */
+async function findRegions(scenario: ScenarioRecord) {
+  const all = JSON.parse(
+    await readFile(regionsPath, 'utf8')
+  ) as ProtectedRegions
+  const entry = all[scenario.slug]
+  return entry?.still === scenario.image.gallerySrc ? entry.regions : []
 }
 
 async function loadSnapshot() {
@@ -162,7 +156,7 @@ async function prepare(slug: string, outDir: string) {
     Buffer.from(await response.arrayBuffer())
   )
 
-  const { round, regions } = await findRoundRegions(scenario)
+  const regions = await findRegions(scenario)
   const fixture = buildRiffFixture(scenario, {
     sourceTitle: source.title,
     conceptNames,
@@ -185,10 +179,9 @@ async function prepare(slug: string, outDir: string) {
         still: join(outDir, 'still.webp'),
         fixture: fixturePath,
         protectedRegions: fixture.protected_regions.map((r) => r.id),
-        regionsFrom: round,
         warning:
           regions.length === 0
-            ? 'No annotated regions match this still. Add protected_regions for faces and the scene hinge before composing.'
+            ? 'No annotated regions match this still. Add protected_regions for faces and the scene hinge to the fixture, and to protected-regions.json for reuse.'
             : undefined,
         compose: `node --import tsx docs/skills/ai-safety-meme-creator/scripts/compose-meme.ts --fixture ${fixturePath} --intent ${join(outDir, 'intent-1.json')} --output ${join(outDir, 'render-1.png')} --preview ${join(outDir, 'preview-1.png')}`
       },

@@ -7,9 +7,7 @@ import {
   type MemeSkillFixture
 } from './schema'
 
-export const memeEvalDirectory = dirname(fileURLToPath(import.meta.url))
-export const memeSkillDirectory = resolve(memeEvalDirectory, '..')
-export const workspaceDirectory = resolve(memeEvalDirectory, '../../../..')
+const memeEvalDirectory = dirname(fileURLToPath(import.meta.url))
 
 export const memeSkillFixtures = memeSkillFixtureCollectionSchema.parse(
   JSON.parse(
@@ -24,24 +22,4 @@ export function fixtureImagePath(
   const image = fixture.images.find(({ id }) => id === imageId)
   if (!image) throw new Error(`Fixture ${fixture.id} has no image ${imageId}`)
   return resolve(memeEvalDirectory, image.path)
-}
-
-export function toAgentVisibleFixture(fixture: MemeSkillFixture) {
-  return {
-    id: fixture.id,
-    request: fixture.request,
-    images: fixture.images.map(({ id, path, description }) => ({
-      id,
-      filename: path.split('/').at(-1),
-      description
-    })),
-    protected_regions: fixture.protected_regions.map(
-      ({ id, image_id, label, priority }) => ({
-        id,
-        image_id,
-        label,
-        priority
-      })
-    )
-  }
 }

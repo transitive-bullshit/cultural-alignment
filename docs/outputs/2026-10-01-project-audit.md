@@ -96,3 +96,12 @@ The archive's thesis is “this scene is an example of this idea, because …”
 - Reference-first entry: paste a tweet and let local search suggest the three best-matching scenarios before riffing.
 - Keep taste current: append picks and rejections to `references/taste.md`, or to a `riffs.jsonl` log if volume grows.
 - Freeze rounds 1–5 as an archive, as in finding 5.
+
+## Follow-up decisions
+
+The owner reviewed this audit the same day and resolved findings 3–5:
+
+- `/admin/meme-review`, its feedback API, `lib/meme-review`, and `/prototypes/*` were removed from the app rather than gated.
+- Review rounds 1–5, round-one idea parts, the round scripts, the archive A/B and Codex-runner evals, and their reports were deleted. A backup lives in the main checkout's ignored `work/backups/2026-10-01-meme-review/`; git history before that date has every file.
+- The composer is the single meme style going forward. Protected regions still matching current stills moved to `docs/skills/ai-safety-meme-creator/protected-regions.json` for the riff workflow.
+- Clip start times are not worth pursuing, and title length stays a guide rather than a rule.

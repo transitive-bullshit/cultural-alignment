@@ -6,7 +6,7 @@ This is the map for changing runtime boundaries, domain behavior, and feature ow
 
 The public archive reads a validated, versioned snapshot from `content/snapshot`. Notion is the editorial source, reached only through an explicit synchronization operation. This keeps browsing and deployments independent of CMS availability and credentials while preserving a reviewable content history in Git. There is no application database.
 
-Server Components request page models from the content catalog; client islands receive the data needed for interaction. A normal build needs no Notion or object-storage credentials. Public image delivery remains a network dependency, including image optimization and social-image rendering. The internal meme-review workflow has a separate writable-filesystem boundary.
+Server Components request page models from the content catalog; client islands receive the data needed for interaction. A normal build needs no Notion or object-storage credentials. Public image delivery remains a network dependency, including image optimization and social-image rendering.
 
 ```text
 Notion: scenarios, sources, franchises, risk families, concepts
@@ -49,7 +49,7 @@ A **Dossier** is the scenario-detail presentation, not a sixth record type. **Re
 | Shared scenario cards and collection sorting | [features/scenario-collection](../features/scenario-collection), [features/collection-sort](../features/collection-sort) |
 | Resource pages and social cards | [features/content-navigation](../features/content-navigation), [lib/media](../lib/media) |
 | Synchronization and media reuse | [scripts/sync.ts](../scripts/sync.ts); detailed contract in [content/README.md](../content/README.md) |
-| Meme review, feedback, finalization | [lib/meme-review](../lib/meme-review), [generation policy](../data/meme-review/GENERATION_POLICY.md) |
+| Meme composition and publication | [creator skill](skills/ai-safety-meme-creator/SKILL.md), [meme-riff.ts](../scripts/meme-riff.ts) |
 
 `ContentCatalog` is the domain boundary. Add relationship/filter behavior there and return a page model rather than joining raw IDs in routes or clients. Feature directories own presentation and interaction; route components compose them. This keeps different entry points consistent and makes domain behavior testable without rendering.
 
@@ -69,7 +69,7 @@ The server owns content projection, filtering, discovery, metadata, and static p
 
 Content detail pages enumerate known slugs and disable unknown dynamic parameters. `/scenarios` and its risk-family paths are pre-rendered; legacy `?family=` URLs permanently redirect to `/scenarios/family/[slug]`. Public pre-rendered page segments remain reusable in the client Router Cache for one hour, configured in [next.config.ts](../next.config.ts); administrative/API routes retain separate behavior.
 
-[lib/site.ts](../lib/site.ts) resolves the origin used by canonical metadata, sitemap, and machine-facing links. The sitemap derives public resource URLs from the catalog. `llms.txt` supplies a compact project description and entry points. The unlisted `/prototypes/homepage` and `/prototypes/social-image` routes preserve later design experiments; the accepted product direction lives in the current feature components and design docs.
+[lib/site.ts](../lib/site.ts) resolves the origin used by canonical metadata, sitemap, and machine-facing links. The sitemap derives public resource URLs from the catalog. `llms.txt` supplies a compact project description and entry points.
 
 ## Spatial gallery invariants
 
@@ -99,9 +99,7 @@ Read [the content contract](../content/README.md) before synchronization, schema
 
 ## Meme authoring boundary
 
-The dynamic `/admin/meme-review` and export routes combine public content with active batches and immutable history in `data/meme-review`. Feedback writes require a writable filesystem; they are separate from the public snapshot. `PATCH /api/meme-feedback` validates the batch and review target, then rechecks exact finalization state under the store lock before atomically replacing feedback. [store.ts](../lib/meme-review/store.ts) owns state-path overrides and persistence.
-
-The [generation policy](../data/meme-review/GENERATION_POLICY.md) owns lineage, feedback, and finalization; the [creator skill](skills/ai-safety-meme-creator/SKILL.md) owns composition. Finalized-image upload to Notion is a separate operation, followed by content synchronization to publish ordered attachments. Review state is not itself public content.
+Memes are authored outside the app. The [creator skill](skills/ai-safety-meme-creator/SKILL.md)'s deterministic composer renders them locally; `pnpm memes:riff export` and `pnpm memes:upload-notion` attach a chosen image to a scenario's Notion `Memes` property, and a normal content sync publishes it. The app only displays snapshot memes. The round-based review tool and its history were retired on 2026-10-01; git history keeps them.
 
 ## Verification seams
 

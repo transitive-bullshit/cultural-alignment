@@ -2,7 +2,7 @@
 
 Cultural Alignment helps visitors recognize an AI-safety idea through a familiar film or TV scene, then read the analogy and its limits. Preserve that recognition-first exploration and the authored Dossier direction. This is a personally curated archive, not a community submission product.
 
-The public Next.js app reads a committed content snapshot; Notion editing and synchronization are separate workflows. Normal app development needs no CMS or storage credentials. The internal meme-review tool is the exception to the read-only runtime: it persists review state on the local filesystem.
+The public Next.js app reads a committed content snapshot; Notion editing and synchronization are separate workflows. Normal app development needs no CMS or storage credentials.
 
 ## Find the context for your task
 
@@ -17,7 +17,6 @@ Start with [Contributing](CONTRIBUTING.md) for setup and verification. Read [Arc
 | Add a media source or scenarios | [add-scenarios](.agents/skills/add-scenarios/SKILL.md) skill |
 | Audit or critique existing content | [audit-scenarios](.agents/skills/audit-scenarios/SKILL.md) skill (`pnpm content:audit`) |
 | Make, riff on, or publish a meme | [ai-safety-meme-creator](docs/skills/ai-safety-meme-creator/SKILL.md) skill |
-| Meme review batches, lineage, or finalization | [Generation policy](data/meme-review/GENERATION_POLICY.md) |
 | Social-image assets | [Font provenance](assets/fonts/README.md) and Architecture's social-image boundary |
 | Header-only first load | [Investigation](docs/BLANK-FIRST-LOAD-INVESTIGATION.md) before changing the renderer or delivery setup |
 

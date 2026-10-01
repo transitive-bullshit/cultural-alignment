@@ -13,7 +13,6 @@ Produce one unmistakable scene cue + one concrete AI bridge, then stop.
 - Read [references/revision.md](references/revision.md) whenever prior output, ratings, notes, approvals, rejections, or requested fixes are supplied.
 - Read [references/composer-contract.md](references/composer-contract.md) for every finished image, layout change, or plan consumed by a renderer.
 - Read [references/riff.md](references/riff.md) when the user supplies an outside reference (a tweet, meme format, or joke) or wants candidates to pick from and publish to a scenario. It owns staging, candidate count, and publication for one-off memes.
-- Read the repository's [generation policy](../../../data/meme-review/GENERATION_POLICY.md) when working with review batches, lineage, or finalization. The composer never publishes; only the riff branch's explicit export and upload reach Notion.
 
 Read every branch that applies. A finished revision normally requires the editorial, revision, and composer references.
 
@@ -21,7 +20,7 @@ Read every branch that applies. A finished revision normally requires the editor
 
 Treat supplied scene facts, scenario caveats, authentic assets, and fictional fixture provenance as authoritative. Verify only relevant external facts the request does not establish.
 
-Explicitly approved copy, canonical wording, source assets, source order, output requirements, semantic placement, and visual treatments are locks. Preserve them exactly unless the user asks to change that ingredient. In the review tool, a Like alone keeps a lineage mutable; `locked: true` freezes its exact finalized version under the generation policy. If locks conflict with scene truth or a measured render invariant, report the conflict without claiming a finished image.
+Explicitly approved copy, canonical wording, source assets, source order, output requirements, semantic placement, and visual treatments are locks. Preserve them exactly unless the user asks to change that ingredient. If locks conflict with scene truth or a measured render invariant, report the conflict without claiming a finished image.
 
 ## Core workflow
 
@@ -29,7 +28,7 @@ Explicitly approved copy, canonical wording, source assets, source order, output
 2. If concept or copy is mutable, use the editorial branch to choose one direction and its semantic mode. The direction is ready when every caption beat serves either recognition or the single bridge.
 3. Write the fixture and semantic intent using the schemas and field ownership in the composer contract. The fixture carries source evidence and human locks; intent carries exact caption beats, provenance, source roles, and semantic mode.
 4. From the repository root, run `node --import tsx docs/skills/ai-safety-meme-creator/scripts/compose-meme.ts --fixture <fixture.json> --intent <intent.json> --output <render.png> --preview <preview.png>`. This implementation exports a 1200 × 800 PNG and a 480-pixel-wide preview, and requires an actual Impact font. It exclusively owns crop coordinates, text boxes, physical wrapping, font size, line height, baselines, padding, contrast geometry, and export. If neither this entry point nor a host-owned equivalent is available, return concept-only semantic intent.
-5. Deliver only when the composer returns `status: complete`, the caption and selected sources honor the request and locks, and the preview passes visual inspection. The CLI verifies physical composition; it does not run the archive's additional editorial evaluator. When it returns `blocked`, revise only mutable ingredients identified by the reason or return that result.
+5. Deliver only when the composer returns `status: complete`, the caption and selected sources honor the request and locks, and the preview passes visual inspection. The CLI verifies physical composition only; checking the caption against the request and locks is yours. When it returns `blocked`, revise only mutable ingredients identified by the reason or return that result.
 
 ## Content invariants
 

@@ -1,6 +1,6 @@
 # Taste
 
-Distilled from the owner's ratings and notes across review rounds 1–5 (203 finalized memes). The round files under `data/meme-review/rounds/` hold the evidence; this is the working summary. Add a line here when a pick or rejection teaches something reusable.
+Distilled from the owner's ratings and notes across review rounds 1–5 (203 finalized memes). The retired round files remain in git history before 2026-10-01; this is the working summary. Add a line here when a pick or rejection teaches something reusable.
 
 ## What gets finalized
 

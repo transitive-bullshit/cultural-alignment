@@ -4,7 +4,7 @@ Treat human feedback as lineage, not inspiration.
 
 ## Resolve locks first
 
-An explicitly approved concept, exact caption, canonical phrase, source frame, frame order, semantic mode, semantic placement, or visual treatment is locked. Preserve it exactly unless the current request names that ingredient for change. A broad later request does not silently unlock a specific earlier approval. For review batches, apply the [generation policy](../../../../data/meme-review/GENERATION_POLICY.md): a Like alone retains a mutable lineage, while Finalized freezes the exact selected version.
+An explicitly approved concept, exact caption, canonical phrase, source frame, frame order, semantic mode, semantic placement, or visual treatment is locked. Preserve it exactly unless the current request names that ingredient for change. A broad later request does not silently unlock a specific earlier approval.
 
 For a bounded execution fix, change only the named ingredient. Keep unrelated approved choices intact and resubmit the semantic intent to the composer.
 

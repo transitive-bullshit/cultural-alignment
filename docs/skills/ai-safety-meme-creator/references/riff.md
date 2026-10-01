@@ -1,12 +1,12 @@
 # Riff branch
 
-Use this branch to turn an outside reference (a tweet, meme format, headline, or joke) plus one archive scenario into a few candidates the owner picks from, and optionally publish the pick to the scenario's `Memes`. It replaces review rounds for one-off memes; the [generation policy](../../../../data/meme-review/GENERATION_POLICY.md) still governs batch rounds.
+Use this branch to turn an outside reference (a tweet, meme format, headline, or joke) plus one archive scenario into a few candidates the owner picks from, and optionally publish the pick to the scenario's `Memes`. This is the project's meme workflow; the composer never publishes on its own.
 
 Read [taste.md](taste.md) and [editorial.md](editorial.md) before writing captions.
 
 ## Steps
 
-1. **Stage the scenario.** Run `pnpm memes:riff prepare <scenario-slug>`. It downloads the still and writes `fixture.json` to `work/meme-riffs/<slug>/`, reusing the latest round's protected regions when they match the still. When it warns that no regions match, view the still and add `protected_regions` for faces and the recognition hinge, as `[x, y, width, height]` percentages of the image. Done when the fixture protects every face and hinge.
+1. **Stage the scenario.** Run `pnpm memes:riff prepare <scenario-slug>`. It downloads the still and writes `fixture.json` to `work/meme-riffs/<slug>/`, reusing the hand-annotated regions in [protected-regions.json](../protected-regions.json) when they match the still. When it warns that no regions match, view the still and add `protected_regions` for faces and the recognition hinge as `[x, y, width, height]` percentages of the image, and save them to `protected-regions.json` for reuse. Done when the fixture protects every face and hinge.
 
 2. **Extract one ingredient from the reference.** Name what it contributes: a meme grammar (“nobody: / me:”, a catchphrase), a topical AI event, or a joke angle. The scene stays the recognition hinge; the reference supplies one ingredient, not a template to fill. Its exact words are a lock only when the owner says so.
 

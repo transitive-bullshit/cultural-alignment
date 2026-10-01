@@ -1,7 +1,5 @@
 import { defineConfig, devices } from '@playwright/test'
 
-import { archiveComparisonTestMatch } from './playwright.artifacts.config'
-
 const baseURL = process.env.PORTLESS_URL
 const port = process.env.PORT
 
@@ -15,7 +13,6 @@ const productionCommand = 'pnpm start --hostname 127.0.0.1'
 
 export default defineConfig({
   testDir: './tests/e2e',
-  testIgnore: archiveComparisonTestMatch,
   outputDir: './test-results/playwright',
   expect: {
     timeout: isCI ? 10_000 : 5_000
