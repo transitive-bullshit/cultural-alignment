@@ -14,9 +14,14 @@ Start with [Contributing](CONTRIBUTING.md) for setup and verification. Read [Arc
 | UI or interaction changes | [Design](docs/DESIGN.md); [QA](docs/QA.md) for visual and device checks |
 | Sync, generated data, or media storage | [Snapshot and sync contract](content/README.md) |
 | Editorial work in Notion | [CMS conventions](docs/notion-cms.md) |
-| Meme generation, review, or publication | [Generation policy](data/meme-review/GENERATION_POLICY.md), then [creator skill](docs/skills/ai-safety-meme-creator/SKILL.md) for composition |
+| Add a media source or scenarios | [add-scenarios](.agents/skills/add-scenarios/SKILL.md) skill |
+| Audit or critique existing content | [audit-scenarios](.agents/skills/audit-scenarios/SKILL.md) skill (`pnpm content:audit`) |
+| Make, riff on, or publish a meme | [ai-safety-meme-creator](docs/skills/ai-safety-meme-creator/SKILL.md) skill |
+| Meme review batches, lineage, or finalization | [Generation policy](data/meme-review/GENERATION_POLICY.md) |
 | Social-image assets | [Font provenance](assets/fonts/README.md) and Architecture's social-image boundary |
 | Header-only first load | [Investigation](docs/BLANK-FIRST-LOAD-INVESTIGATION.md) before changing the renderer or delivery setup |
+
+Project skills live in `.agents/skills/`; `.claude/skills` links there so Claude Code and Codex share them, and the meme skill is linked in from `docs/skills/`. When a recurring task gains a trap or a better recipe, update its skill.
 
 The top-level [README](readme.md) serves human visitors. Keep agent workflow guidance in these documents. Current contracts live in the linked docs and code; dated QA runs, `docs/outputs/` plans, and skill proposals preserve evidence and alternatives, not an outstanding task list. Update the owning document when behavior changes rather than adding another overlapping guide.
 

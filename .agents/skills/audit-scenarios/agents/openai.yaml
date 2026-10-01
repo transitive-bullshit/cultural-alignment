@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Scenarios"
+  short_description: "Critique scenarios against the CMS conventions and fix them"
+  default_prompt: "Use $audit-scenarios to audit these scenarios and propose fixes."

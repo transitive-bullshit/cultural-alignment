@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Scenarios"
+  short_description: "Add a source and its scenarios to Notion, then sync"
+  default_prompt: "Use $add-scenarios to brainstorm, add, and publish scenarios from this work."

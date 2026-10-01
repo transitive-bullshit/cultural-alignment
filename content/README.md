@@ -17,7 +17,7 @@ The entry point loads the ignored root `.env` with dotenvx; existing process env
 
 Fast mode assumes all media is unchanged, including ordered meme attachments and intentional missing posters. Generated alt text follows current record titles; custom/caption-authored alt text stays unchanged. It fails when a current scenario, source, or franchise lacks a previous snapshot record; run a normal sync for new records or attachments. Fast and force are mutually exclusive.
 
-After syncing, run `pnpm content:validate` and review the snapshot/search-index diff. For changes to sync logic, also verify an unchanged second sync produces byte-identical output when credentials are available. Ordinary code or documentation changes do not require a sync. Use [Contributing](../CONTRIBUTING.md#change-workflow) for application checks.
+After syncing, run `pnpm content:validate` and review the snapshot/search-index diff. `pnpm content:audit` separately reports drift from the [CMS conventions](../docs/notion-cms.md). For changes to sync logic, also verify an unchanged second sync produces byte-identical output when credentials are available. Ordinary code or documentation changes do not require a sync. Use [Contributing](../CONTRIBUTING.md#change-workflow) for application checks.
 
 ## Ownership and contracts
 
@@ -34,7 +34,7 @@ Surviving page IDs keep their slugs. New IDs receive deterministic slugs; deleti
 
 The synchronizer checks all five data-source/property contracts, paginates rows and relation values, and resolves relationships by page ID. Scenario prose becomes Markdown-compatible strings; resource descriptions become plain text. Citation metadata is resolved during sync, with bounded requests to reviewed publication hosts and deterministic URL-derived titles when retrieval fails. Existing metadata is reused; `REFRESH_CITATIONS=1 pnpm content:sync` explicitly refreshes it.
 
-Image selection follows the authored Notion media rules, including configured scenario overrides or YouTube-thumbnail fallbacks. Sharp produces gallery/detail WebP variants and a small blur placeholder. A missing optional source poster stays absent; a missing scenario or franchise image fails the sync. Scenario `Memes` files are imported in order and have separate bundle descriptors under `media/state/scenario-memes/`.
+Each record's image is the first image block in its Notion page body, and a non-empty caption becomes its alt text. A scenario without one falls back to a code-configured override or its clip's 480 × 360 YouTube thumbnail. Sharp produces gallery/detail WebP variants and a small blur placeholder. A missing optional source poster stays absent; a missing scenario or franchise image fails the sync. Scenario `Memes` files are imported in order and have separate bundle descriptors under `media/state/scenario-memes/`.
 
 Record errors are collected and reported with titles and Notion IDs so a run can expose multiple problems. Any record error prevents publication of the staged local output. Remote objects and descriptors are written before staged validation/replacement: a failed run can leave unreferenced remote objects, but the previous local snapshot/search index stays intact. Review and commit both generated targets together.
 

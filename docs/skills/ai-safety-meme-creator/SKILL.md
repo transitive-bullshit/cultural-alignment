@@ -1,6 +1,6 @@
 ---
 name: ai-safety-meme-creator
-description: Create or revise a finished pop-culture meme that maps an exact scene to one concrete AI or AI-safety concept, using authentic source frames and deterministic composition.
+description: Create, revise, or riff on pop-culture memes that map an exact archive scene to one concrete AI or AI-safety concept, using authentic source frames and deterministic composition. Use when asked to make memes for a scenario or source, including from a supplied tweet, meme format, or joke.
 ---
 
 # Create AI-safety pop-culture memes
@@ -12,7 +12,8 @@ Produce one unmistakable scene cue + one concrete AI bridge, then stop.
 - Read [references/editorial.md](references/editorial.md) when the concept, caption, frame choice, or semantic mode is mutable.
 - Read [references/revision.md](references/revision.md) whenever prior output, ratings, notes, approvals, rejections, or requested fixes are supplied.
 - Read [references/composer-contract.md](references/composer-contract.md) for every finished image, layout change, or plan consumed by a renderer.
-- Read the repository's [generation policy](../../../data/meme-review/GENERATION_POLICY.md) when working with review batches, lineage, finalization, or publication. This skill's composer does not publish to the review tool or Notion.
+- Read [references/riff.md](references/riff.md) when the user supplies an outside reference (a tweet, meme format, or joke) or wants candidates to pick from and publish to a scenario. It owns staging, candidate count, and publication for one-off memes.
+- Read the repository's [generation policy](../../../data/meme-review/GENERATION_POLICY.md) when working with review batches, lineage, or finalization. The composer never publishes; only the riff branch's explicit export and upload reach Notion.
 
 Read every branch that applies. A finished revision normally requires the editorial, revision, and composer references.
 

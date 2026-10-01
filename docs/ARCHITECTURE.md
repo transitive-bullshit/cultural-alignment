@@ -28,7 +28,7 @@ The five record types live in [schema.ts](../lib/content/schema.ts). Relationshi
 | Term | Meaning and relationships |
 | --- | --- |
 | Scenario | One recognizable scene and its authored AI analogy: what happens, why the analogy works, and its caveats. Belongs to one source, at least one risk family, and at least one safety concept. Requires a still; a clip, release date, and ordered meme attachments are optional. |
-| Source | One movie or TV work, with optional poster and descriptive metadata. Owns ordered franchise memberships and authored related-source links. TV episode identity belongs to the scenario. |
+| Source | One movie or TV work, with optional poster and descriptive metadata. Owns ordered franchise memberships. Its `relatedSourceIds` field has no Notion property yet, so sync always writes an empty list. TV episode identity belongs to the scenario. |
 | Franchise | A collection of sources with an authored description and required representative image. Scenarios belong indirectly through their source. |
 | Risk family | A broad classification of AI risk, with short/full names, description, and citations. |
 | Safety concept | A more specific idea used to explain the analogy, with short/long names, description, search keywords, and citations. |
