@@ -305,18 +305,27 @@
   font-weight: 400;
 }
 
+/* External links keep their text on the shared leading edge: the ↗ trails
+   inline links and sits flush right on stacked rows, as in the footer. */
 .externalLinks,
 .linkRow {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.externalLinks {
+  flex-direction: column;
+  border-top: 1px solid var(--proto-rule);
+}
+
+/* A section header already draws the rule above the stacked list. */
+.readingSection .externalLinks {
+  border-top: 0;
+}
+
 .linkRow {
-  flex-direction: row;
   flex-wrap: wrap;
   gap: 10px 24px;
   margin-top: 22px;
@@ -324,20 +333,29 @@
 
 .externalLinks a,
 .linkRow a {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 10px;
-  align-items: start;
-  width: fit-content;
-  max-width: 100%;
   text-decoration: none;
 }
 
+.externalLinks a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: baseline;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--proto-rule);
+}
+
+.linkRow a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
 .externalLinkMark {
-  width: 11px;
-  height: 11px;
-  margin-top: 3px;
   color: var(--proto-electric);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 12px;
+  line-height: 1;
 }
 
 .externalLinkCopy {
@@ -440,6 +458,7 @@
 
 .moreChips summary {
   width: fit-content;
+  list-style: none;
   color: var(--proto-ink);
   font-family: var(--font-geist-mono), monospace;
   font-size: 10px;
@@ -453,6 +472,19 @@
   text-transform: uppercase;
   text-underline-offset: 4px;
   cursor: pointer;
+}
+
+.moreChips summary::-webkit-details-marker {
+  display: none;
+}
+
+/* The disclosure cue trails the label so the text keeps the leading edge. */
+.moreChips summary::after {
+  display: inline-block;
+  margin-left: 6px;
+  color: var(--proto-electric);
+  content: '+';
+  text-decoration: none;
 }
 
 .moreChips summary:hover,

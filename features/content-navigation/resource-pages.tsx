@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { ExternalLinkIcon } from 'lucide-react'
 import type { ReactNode } from 'react'
 
 import { CopyPageLink } from '@/components/copy-page-link'
@@ -463,10 +462,6 @@ function ExternalLinks({
       {links.map((link) => (
         <li key={link.href}>
           <a href={link.href} target='_blank' rel='noreferrer'>
-            <ExternalLinkIcon
-              className={styles.externalLinkMark}
-              aria-hidden='true'
-            />
             <span className={styles.externalLinkCopy}>
               <span className={styles.externalLinkTitle}>{link.label}</span>
               {link.description ? (
@@ -474,6 +469,9 @@ function ExternalLinks({
                   {link.description}
                 </small>
               ) : null}
+            </span>
+            <span className={styles.externalLinkMark} aria-hidden='true'>
+              ↗
             </span>
           </a>
         </li>

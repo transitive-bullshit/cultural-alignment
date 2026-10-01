@@ -59,7 +59,9 @@ Resource detail pages use two hero layouts, chosen by what a visitor recognizes 
 
 Taxonomy titles use a restrained `clamp(55.2px, 7.82vw, 115px)` scale and media titles `clamp(52px, 6.2vw, 100px)` beside their image, both reduced to `clamp(46px, 12.88vw, 82.8px)` at `860px` and below, where both layouts stack into one column. Their `0.96` line height gives multiline titles breathing room; balanced wrapping uses whole words, with an emergency break only for a word wider than its layout column.
 
-Section headers share the page's leading edge: a mono count or label above a title that names the subject (“Scenes showing Goodhart's Law”, “Scenes from Black Mirror”). Risk families list their concepts before the scenes. Concepts end with the concepts they most often appear with, and media pages with the risk families and concepts their scenes illustrate. These lists are ranked chips whose counts are scenes shared with the current page; the first 12 show, and the rest open from a “Show all” disclosure.
+Section headers share the page's leading edge: a mono count or label above a title that names the subject (“Scenes showing Goodhart's Law”, “Scenes from Black Mirror”). Risk families list their concepts before the scenes. Concepts end with the concepts they most often appear with, and media pages with the risk families and concepts their scenes illustrate. These lists are ranked chips whose counts are scenes shared with the current page; the first 12 show, and the rest open from a “Show all” disclosure whose + cue trails its label.
+
+External links keep their text on the shared leading edge. As in the footer, an orange ↗ trails each link in an inline row and sits flush right on stacked, ruled rows; no icon precedes link text.
 
 ## Media and spoilers
 
