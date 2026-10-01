@@ -58,6 +58,8 @@ export function ScenarioDossier({ scenario }: { scenario: ScenarioPage }) {
                 <CopyPageLink key={scenario.id} />
               </div>
             </div>
+
+            <PrimaryConcept concept={scenario.concepts[0]} />
           </div>
         </section>
 
@@ -169,6 +171,34 @@ function SourceMeta({ scenario }: { scenario: ScenarioPage }) {
         )}
       </li>
     </ul>
+  )
+}
+
+/**
+ * Names the idea the scene illustrates before the reader scrolls, using the
+ * same primary concept and wording as the gallery's selected-frame panel.
+ */
+function PrimaryConcept({
+  concept
+}: {
+  readonly concept: DescribedTaxonomyLink | undefined
+}) {
+  if (!concept) return null
+
+  return (
+    <aside
+      className={styles.primaryConcept}
+      aria-label='Primary AI safety concept'
+      data-scenario-primary-concept={concept.slug}
+    >
+      <p className={styles.primaryConceptRelation}>
+        This scene is an example of
+      </p>
+      <Link className={styles.primaryConceptLink} href={concept.href}>
+        {concept.title}
+      </Link>
+      <p className={styles.primaryConceptDescription}>{concept.description}</p>
+    </aside>
   )
 }
 

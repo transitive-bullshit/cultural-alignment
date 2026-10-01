@@ -40,6 +40,8 @@ The opening view pairs a cinematic media plate with a grid-owned title and verti
 
 Above 900px, the source metadata's × markers hang in the existing gutter so its text shares the title's left edge. At narrower widths the markers stay inside the metadata rows to preserve the page margin.
 
+Below the metadata, a ruled block names the scenario's primary (first) AI safety concept with the gallery panel's wording, “This scene is an example of,” followed by the linked short name and its one-sentence description. A visitor arriving from a shared link learns what the scene illustrates before scrolling. On mobile it follows the media plate.
+
 The reading order is fixed: scene, analogy, and caveats. Only the second panel is prominent, while all three reserve identical geometry.
 
 A shared ghost icon button copies the current URL on all detail pages. In the Dossier it sits beside the source metadata below the title; resource pages group it with the category label (stacked in the narrow desktop taxonomy column, horizontal above media-resource titles and on mobile). Copy and checkmark icons crossfade with a subtle scale over 160 ms, holding success for 2.5 seconds. Repeated clicks renew the feedback timer; transitions retarget without remounting icons, stale clipboard responses are ignored, and reduced motion keeps only a short fade. Tooltips and a live status describe success or retryable failure.
