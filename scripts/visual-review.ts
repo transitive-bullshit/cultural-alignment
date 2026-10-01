@@ -201,7 +201,14 @@ const reviewSpecSchema = z.object({
       summary: z.string(),
       /** Before/after pairs by shot id. */
       compare: z
-        .array(z.object({ shot: z.string(), label: z.string() }))
+        .array(
+          z.object({
+            shot: z.string(),
+            label: z.string(),
+            beforeLabel: z.string().default('Before · production'),
+            afterLabel: z.string().default('After · this branch')
+          })
+        )
         .default([]),
       /** One side only, for candidates or new surfaces. */
       shots: z
@@ -272,7 +279,7 @@ async function build(specPath: string, outPath: string | undefined) {
       const after = await imageFor(`after:${pair.shot}`)
       parts.push(`<figure class="pair">
   <figcaption>${escapeHtml(pair.label)}</figcaption>
-  <div class="pair-grid">${figure(before, 'Before · production')}${figure(after, 'After · this branch')}</div>
+  <div class="pair-grid">${figure(before, pair.beforeLabel)}${figure(after, pair.afterLabel)}</div>
 </figure>`)
     }
     if (change.shots.length > 0) {
