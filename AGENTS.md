@@ -11,7 +11,7 @@ Start with [Contributing](CONTRIBUTING.md) for setup and verification. Read [Arc
 | Task | Read |
 | --- | --- |
 | Product behavior or scope | [Product](docs/PRODUCT.md); [MVP decisions](docs/MVP.md) when revisiting an accepted direction |
-| UI or interaction changes | [Design](docs/DESIGN.md); [QA](docs/QA.md) for visual and device checks |
+| UI or interaction changes | [Design](docs/DESIGN.md); [QA](docs/QA.md) for visual and device checks; [visual-review](.agents/skills/visual-review/SKILL.md) skill |
 | Sync, generated data, or media storage | [Snapshot and sync contract](content/README.md) |
 | Editorial work in Notion | [CMS conventions](docs/notion-cms.md) |
 | Add a media source or scenarios | [add-scenarios](.agents/skills/add-scenarios/SKILL.md) skill |
@@ -29,6 +29,7 @@ The top-level [README](readme.md) serves human visitors. Keep agent workflow gui
 - Use `pnpm`, modern TypeScript, and no semicolons.
 - Use Oxfmt (`pnpm fix:format`) and Oxlint (`pnpm fix:lint`); configuration and exact script definitions live in the repository.
 - Let display text wrap within its grid or box geometry; reserve character-based width measures (`ch`/`em`) for deliberate prose reading lengths.
+- Before merging a change to how the site looks or behaves, show the owner annotated before/after screenshots with the visual-review skill.
 
 ## Testing
 
