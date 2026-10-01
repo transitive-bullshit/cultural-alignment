@@ -16,7 +16,7 @@ A scenario therefore needs three distinct pieces: what happens in the scene, why
 - A scenario Dossier combines a still, an optional YouTube clip, source/franchise identity, the authored analysis, taxonomy, optional memes, and onward discovery. Continuation follows its source’s first authored franchise, or the source itself; related scenarios use deterministic taxonomy overlap outside that scope.
 - Source, franchise, risk-family, and safety-concept indexes and detail pages provide relational entry points. Global header/Command-K search covers all five resource types locally.
 - Public pages include share metadata, social images, a sitemap, and machine-reader entry points. The site is deployed at [cultural-alignment.com](https://cultural-alignment.com), with Vercel Web Analytics included in the app shell.
-- Internal meme authoring supports generation, versioned review, finalization, and publication back through Notion. It is a separate authoring workflow, not a public contribution surface.
+- Memes are authored locally with the creator skill's composer and published through Notion. The app has no authoring or public contribution surface.
 
 The [architecture](ARCHITECTURE.md) defines the domain and runtime boundaries; the [design system](DESIGN.md) defines the built interactions. Current content counts come from [the manifest](../content/snapshot/manifest.json), checked by `pnpm content:validate`.
 

@@ -43,7 +43,7 @@ A CLI `complete` result contains:
 - measured physical lines, wrap mode, resolved font identity, display-case transform, font metrics, glyph bounds, fill/stroke values and widths, rasterized stroke-pixel counts, opaque-backplate evidence, backdrop bounds, source occupancy, and transformed protected regions;
 - recomputed clearances for canvas edges, caption zones, and must-preserve regions.
 
-`complete` means the composer's physical render checks passed. File creation alone is not completion. The CLI does not run [`evaluateMemePlan`](../evals/evaluate.ts), which the archive runner additionally uses to check semantic, source, and feedback expectations. Honor those expectations and inspect the preview before delivery; archive acceptance also requires its evaluator to pass.
+`complete` means the composer's physical render checks passed. File creation alone is not completion. The CLI does not run [`evaluateMemePlan`](../evals/evaluate.ts), which the regression suite uses to check semantic, source, and feedback expectations. Honor those expectations and inspect the preview before delivery.
 
 A `blocked` result contains a reason code and actionable message. The implemented codes are `missing_source`, `missing_font`, `unplaceable_text`, `protected_region_conflict`, and `render_invariant_failed`. Invalid fixture/intent JSON or a mismatched fixture ID causes a CLI error rather than a typed render block. Read the JSON `status`: a typed block does not itself produce a nonzero process exit.
 

@@ -9,7 +9,7 @@ export const memeEvalFormatSchema = z.enum([
   'source-native interface'
 ])
 
-export const memeEvalTemplateSchema = z.enum([
+const memeEvalTemplateSchema = z.enum([
   'overlay',
   'dialogue',
   'diptych',
@@ -20,9 +20,9 @@ export const memeEvalTemplateSchema = z.enum([
   'sidecar-right'
 ])
 
-export const memeEvalFrameModeSchema = z.enum(['cover', 'contain', 'extend'])
+const memeEvalFrameModeSchema = z.enum(['cover', 'contain', 'extend'])
 
-export const memeEvalSlotSchema = z.enum([
+const memeEvalSlotSchema = z.enum([
   'top',
   'bottom',
   'top-left',
@@ -48,7 +48,7 @@ export const memeEvalCaptionKindSchema = z.enum([
   'original'
 ])
 
-export const memeEvalZoneStyleSchema = z.enum([
+const memeEvalZoneStyleSchema = z.enum([
   'impact',
   'dialogue',
   'code',
@@ -56,21 +56,21 @@ export const memeEvalZoneStyleSchema = z.enum([
   'status'
 ])
 
-export const memeEvalBackdropSchema = z.enum([
+const memeEvalBackdropSchema = z.enum([
   'none',
   'edge-gradient',
   'solid-panel',
   'source-native'
 ])
 
-export const memeEvalContrastSchema = z.enum([
+const memeEvalContrastSchema = z.enum([
   'outlined',
   'edge-gradient',
   'solid-panel',
   'source-native'
 ])
 
-export const memeEvalPaletteSchema = z.enum(['default', 'orange-white'])
+const memeEvalPaletteSchema = z.enum(['default', 'orange-white'])
 
 const percentageRectSchema = z
   .tuple([
@@ -279,5 +279,4 @@ export const memeSkillFixtureCollectionSchema = z.array(memeSkillFixtureSchema)
 
 export type MemeEvalPlan = z.infer<typeof memeEvalPlanSchema>
 export type MemeEvalFrameMode = z.infer<typeof memeEvalFrameModeSchema>
-export type MemeEvalTemplate = z.infer<typeof memeEvalTemplateSchema>
 export type MemeSkillFixture = z.infer<typeof memeSkillFixtureSchema>

@@ -32,7 +32,7 @@ Choose checks for the changed behavior while iterating:
 | App code | `pnpm test:checks` for formatting, lint, route types, TypeScript, and unit tests |
 | Browser behavior | `pnpm test:e2e tests/e2e/relevant.spec.ts`, plus applicable [manual acceptance checks](docs/QA.md#current-acceptance-checks) |
 | Snapshot or synchronization | `pnpm content:validate`, affected sync unit tests, and the [content contract](content/README.md) |
-| Meme creator or evals | `pnpm test:meme-skill`; see the [evaluation guide](docs/skills/ai-safety-meme-creator/evals/EVALS.md) for live evals |
+| Meme composer or evals | `pnpm test:meme-skill`; see the [evaluation guide](docs/skills/ai-safety-meme-creator/evals/EVALS.md) |
 
 Before submitting application, configuration, or synchronized-content changes, run the full checks with one production build:
 
@@ -57,7 +57,7 @@ Run app journeys through `pnpm test:e2e` so Portless supplies the required URL a
 
 `pnpm build` deliberately uses webpack: clean-cache Turbopack builds stalled during the original integration work. Preserve that choice unless a focused investigation establishes that the problem is resolved.
 
-The main suites exclude meme-skill evals and generated comparison reports. For report changes, generate the ignored HTML via the [archive evaluation workflow](docs/skills/ai-safety-meme-creator/evals/archive-ab/EVALS.md), then run `pnpm test:meme-skill:e2e`.
+The main suites exclude the opt-in meme composer suite, `pnpm test:meme-skill`.
 
 For manual UI review, check real media as well as the relevant journeys: many browser tests replace optimized images with a tiny fixture, and WebGL/trackpad behavior has [environment limitations](docs/QA.md#environment-limitations).
 

@@ -26,130 +26,6 @@
   white-space: nowrap;
 }
 
-.guideLayer {
-  position: absolute;
-  z-index: 120;
-  top: clamp(90px, 12vh, 112px);
-  left: clamp(24px, 3vw, 46px);
-  width: min(570px, calc(100vw - 60px));
-  opacity: 1;
-  pointer-events: none;
-  transform: translateY(0);
-  visibility: visible;
-  transition:
-    opacity 180ms var(--proto-ease-out, cubic-bezier(0.23, 1, 0.32, 1)),
-    transform 180ms var(--proto-ease-out, cubic-bezier(0.23, 1, 0.32, 1)),
-    visibility 0s linear;
-}
-
-.guideLayer[data-dismissed] {
-  opacity: 0;
-  transform: translateY(-8px);
-  visibility: hidden;
-  transition:
-    opacity 180ms var(--proto-ease-out, cubic-bezier(0.23, 1, 0.32, 1)),
-    transform 180ms var(--proto-ease-out, cubic-bezier(0.23, 1, 0.32, 1)),
-    visibility 0s linear 180ms;
-}
-
-.panel {
-  position: relative;
-  width: 100%;
-  padding: 16px 66px 17px 22px;
-  border-top: 1px solid var(--proto-ink, #2d2a26);
-  border-bottom: 1px solid rgb(45 42 38 / 28%);
-  background: color-mix(in srgb, var(--proto-paper, #f4ecdd) 94%, transparent);
-  box-shadow:
-    14px 0 0 -12px var(--proto-electric, #ff4d1f) inset,
-    0 20px 54px rgb(45 42 38 / 12%);
-  pointer-events: none;
-  backdrop-filter: blur(16px);
-}
-
-.panel::before,
-.panel::after {
-  position: absolute;
-  left: 0;
-  width: 13px;
-  height: 13px;
-  border-left: 1px solid var(--proto-ink, #2d2a26);
-  content: '';
-}
-
-.panel::before {
-  top: 0;
-  border-top: 1px solid var(--proto-ink, #2d2a26);
-}
-
-.panel::after {
-  bottom: 0;
-  border-bottom: 1px solid var(--proto-ink, #2d2a26);
-}
-
-.panel h1 {
-  max-width: 520px;
-  margin: 0 0 15px;
-  font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
-  font-size: clamp(2.9rem, 4vw, 4rem);
-  font-weight: 790;
-  letter-spacing: -0.045em;
-  line-height: 0.88;
-  text-wrap: balance;
-}
-
-.dismissButton {
-  position: absolute;
-  top: 11px;
-  right: 12px;
-  display: grid;
-  width: 44px;
-  height: 44px;
-  padding: 0;
-  border: 1px solid var(--proto-rule, #d8cbb8);
-  border-radius: 0;
-  background: color-mix(
-    in srgb,
-    var(--proto-raised-paper, #f8f0df) 82%,
-    transparent
-  );
-  color: var(--proto-ink, #2d2a26);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 1.05rem;
-  line-height: 1;
-  pointer-events: auto;
-  place-items: center;
-  transition:
-    background-color 150ms var(--proto-ease-out, cubic-bezier(0.23, 1, 0.32, 1)),
-    color 150ms var(--proto-ease-out, cubic-bezier(0.23, 1, 0.32, 1)),
-    transform 150ms var(--proto-ease-out, cubic-bezier(0.23, 1, 0.32, 1));
-}
-
-.dismissButton:focus-visible {
-  color: var(--proto-electric, #ff4d1f);
-  outline: 2px solid var(--proto-electric, #ff4d1f);
-  outline-offset: 3px;
-}
-
-.dismissButton:active {
-  transform: translateY(1px);
-}
-
-.instruction {
-  max-width: 100%;
-  margin: 0;
-  color: var(--proto-muted-ink, #71695f);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.56rem;
-  font-weight: 600;
-  letter-spacing: 0.045em;
-  line-height: 1.45;
-}
-
-.instruction span {
-  margin-right: 5px;
-  color: var(--proto-electric, #ff4d1f);
-}
-
 .contextCard {
   position: absolute;
   z-index: 35;
@@ -274,52 +150,13 @@
   text-wrap: balance;
 }
 
-.root:has(.dismissButton:hover) :global([data-gallery-cursor]) {
-  opacity: 0 !important;
-}
-
 @media (max-width: 680px) {
-  .guideLayer {
-    top: 78px;
-    left: 16px;
-    width: calc(100vw - 32px);
-  }
-
-  .panel h1 {
-    font-size: clamp(2.45rem, 12vw, 3rem);
-  }
-
   .contextCard {
     display: none;
   }
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .dismissButton:hover {
-    background: var(--proto-muted-paper, #e8dece);
-    color: var(--proto-electric, #ff4d1f);
-    transform: translateY(-1px);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .guideLayer,
-  .guideLayer[data-dismissed] {
-    transform: none;
-    transition:
-      opacity 120ms linear,
-      visibility 0s linear 120ms;
-  }
-
-  .dismissButton {
-    transition:
-      background-color 120ms linear,
-      color 120ms linear;
-  }
-}
-
 @media (prefers-reduced-transparency: reduce) {
-  .panel,
   .contextCard {
     background: var(--proto-paper, #f4ecdd);
     backdrop-filter: none;

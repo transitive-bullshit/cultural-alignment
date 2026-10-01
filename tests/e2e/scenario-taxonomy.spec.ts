@@ -7,6 +7,23 @@ const scenario = scenarios.find(
     conceptIds.length > 0 && riskFamilyIds.length > 0
 )!
 
+test('the dossier opening names the primary concept', async ({ page }) => {
+  await page.goto(`/scenarios/${scenario.slug}`)
+
+  const firstConcept = await page
+    .locator('[data-scenario-taxonomy-item^="concept:"]')
+    .first()
+    .getAttribute('data-scenario-taxonomy-item')
+  const slug = firstConcept?.replace(/^concept:/, '')
+  const primary = page.locator('[data-scenario-primary-concept]')
+
+  await expect(primary).toHaveAttribute('data-scenario-primary-concept', slug!)
+  await expect(primary.locator('a')).toHaveAttribute(
+    'href',
+    `/concepts/${slug}`
+  )
+})
+
 test('scenario taxonomy links reveal their descriptions', async ({ page }) => {
   await page.goto(`/scenarios/${scenario.slug}`)
 
@@ -58,4 +75,7 @@ test('scenario taxonomy links reveal their descriptions', async ({ page }) => {
   await conceptLink.click()
   await navigation
   await expect(page.locator('[data-resource-detail="concept"]')).toBeVisible()
+  await expect(
+    page.locator('[data-scenario-card-summary]').first()
+  ).not.toBeEmpty()
 })

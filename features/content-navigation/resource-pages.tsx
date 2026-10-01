@@ -307,7 +307,10 @@ export function ResourceDetailPage({
         </header>
 
         <ScenarioCollection
-          items={resource.scenarios.map((scenario) => ({ scenario }))}
+          items={resource.scenarios.map((scenario) => ({
+            scenario,
+            summary: scenario.analogy
+          }))}
           layout='continuous'
         />
       </section>

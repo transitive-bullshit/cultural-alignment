@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visual Review"
+  short_description: "Annotated before/after review page with exportable feedback"
+  default_prompt: "Use $visual-review to show me before and after screenshots of this change."

@@ -49,7 +49,7 @@
     },
     "scene": "Parents think the objective is winning, while the children become skilled at losing so they can escape summer baseball.",
     "whyAnalogyWorks": "The agents learn the task’s capabilities while optimizing an internal objective opposite to the principal’s intended objective.",
-    "caveats": "This is principal–agent misalignment, not a literal learned mesa-optimizer. As a quick reinforcing joke, Ron Swanson runs the Parks Department while internally optimizing for ineffective government."
+    "caveats": "This is principal–agent misalignment, not a literal learned mesa-optimizer."
   },
   {
     "id": "3c6edb27-f124-8024-be59-d766fe17aba5",
@@ -1892,12 +1892,8 @@
     ],
     "conceptIds": [
       "3caedb27-f124-80c0-81e4-fe457f92909e",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
       "3caedb27-f124-8044-be2f-c3c82c01fb2b",
-      "3caedb27-f124-8089-8ded-c859ec52b72a",
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-8089-8ded-c859ec52b72a"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f1248134849efb4f5ae0af3c/gallery-8d7659428f1a6c91118f46ce7a37f5a80b4b52ea8c3f0e1770506834399e0653.webp",
@@ -2007,12 +2003,8 @@
     ],
     "conceptIds": [
       "3caedb27-f124-80d2-b423-fcd2da7a6e96",
-      "3caedb27-f124-80ef-88d2-f3018917c898",
-      "3caedb27-f124-807f-8b44-c84a8fa16e72",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
       "3caedb27-f124-807e-868e-c2827fe1ca43",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3cfedb27-f124-811e-847c-f2f68e89aa1c"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f124813c82ffd5aed827bb80/gallery-9870a5ad89c0f0da0e31edc88c7406e47b48b18998637ba3328285e7176ff692.webp",
@@ -2559,12 +2551,8 @@
     ],
     "conceptIds": [
       "3caedb27-f124-80c0-81e4-fe457f92909e",
-      "3caedb27-f124-807a-8840-c425a2d66fec",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
       "3caedb27-f124-80bf-b72b-e1cbc9e26b2a",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-807a-8840-c425a2d66fec"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481508357eb93ada728a0/gallery-90e2c872c77ecfa5f5203c474ab25adc876ba16afebbf6b3634b2b8379e0a50f.webp",
@@ -2919,11 +2907,8 @@
       "3caedb27-f124-8089-af00-d8bbc69c9377"
     ],
     "conceptIds": [
-      "3caedb27-f124-8083-9d8f-f4f0c16c777b",
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3caedb27-f124-807e-868e-c2827fe1ca43",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-8044-be2f-c3c82c01fb2b",
+      "3caedb27-f124-8049-ae70-d94094550224"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f124816c9ed3db3c54d8e301/gallery-91cf91fcb94ab589f177719134748228867cf127dc78fd09c81e16fb893dbf4c.webp",
@@ -3632,10 +3617,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-80f8-8db8-ce23799c5600",
-      "3caedb27-f124-809d-9a39-f203df215b7b",
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-8049-ae70-d94094550224"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481918305f2d1b080a155/gallery-efed8c70d7dd9c705455ac4b507f2cbe0962e2b79e1dbe71fc13c5496d338936.webp",
@@ -3782,10 +3764,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-80ea-a580-d93148350639",
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3caedb27-f124-80c0-81e4-fe457f92909e",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-80c0-81e4-fe457f92909e"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f124819f992dfb7a9aafa603/gallery-621a9a41a9f5687361e2609c3acbeb1944365d1471fc9d8df514def2c19ad2a4.webp",
@@ -4262,12 +4241,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-80bf-b72b-e1cbc9e26b2a",
-      "3caedb27-f124-80ea-a580-d93148350639",
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3cfedb27-f124-8129-a79e-f06c13c01d1e"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481cdb34cd9d4fbd94677/gallery-8646590ab16c3a7675ee958e49df89c994f8bfdbe767035ff92c9548effcd0db.webp",
@@ -4305,10 +4279,10 @@
       "isolated galactica survives",
       "cylon compromise"
     ],
-    "sourceId": "3cdedb27-f124-81f8-8900-e33f694ba56e",
+    "sourceId": "3caedb27-f124-80e9-a63d-e2ba126d60ef",
     "episode": {
-      "label": "Battlestar Galactica: The Miniseries",
-      "href": "https://tv.apple.com/us/show/battlestar-galactica-the-miniseries/umc.cmc.36cv7val08n1ydamrwnkmniuz"
+      "label": "Miniseries",
+      "href": "https://en.wikipedia.org/wiki/Battlestar_Galactica_%28miniseries%29"
     },
     "releaseDate": "2003-12-08",
     "featured": false,
@@ -4330,7 +4304,7 @@
       "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481d28d20cb2d2433f875/detail-426128f2f0c67a994ef26fc631873022e6ad96f6e747720abfeb8efe95afe292.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Still from Battlestar Galactica (2003 miniseries) illustrating The Colonial Fleet Goes Dark",
+      "alt": "Still from Battlestar Galactica (2004 TV series) illustrating The Colonial Fleet Goes Dark",
       "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAUAA8BgJaQAAubtFCoAAP7vaqi8NIF0f2yyHBghYxgAAAA="
     },
     "memes": [],
@@ -4409,12 +4383,8 @@
       "3caedb27-f124-80d8-a1de-f68271cab6e1"
     ],
     "conceptIds": [
-      "3caedb27-f124-8049-ae70-d94094550224",
       "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3caedb27-f124-809d-9a39-f203df215b7b",
-      "3caedb27-f124-8093-9599-e60a1a761977",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-8093-9599-e60a1a761977"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c6edb27f12481d6a4e5fe9657be8c31/gallery-b82e5aa87b047353a3e327f590a4c88dd41fa477d3392674474037b23449ab75.webp",
@@ -5202,11 +5172,7 @@
     ],
     "conceptIds": [
       "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3caedb27-f124-80ea-a580-d93148350639",
-      "3caedb27-f124-807e-868e-c2827fe1ca43",
-      "3caedb27-f124-80c0-81e4-fe457f92909e",
-      "3caedb27-f124-80ce-aa91-d4572ee2c146",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-80c0-81e4-fe457f92909e"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f12481048c06e31e75726f35/gallery-5eebb5f8d319135301c5c5e7c6047bf2d6c11bfa8b2c557336c9cc98f4dbde16.webp",
@@ -5418,12 +5384,9 @@
       "3caedb27-f124-80d8-a1de-f68271cab6e1"
     ],
     "conceptIds": [
-      "3caedb27-f124-807f-8b44-c84a8fa16e72",
       "3caedb27-f124-8050-8f13-ca3339e14709",
-      "3caedb27-f124-8036-8d37-d3e221faf06b",
       "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3caedb27-f124-80c4-bed1-d12575500b48",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-80c4-bed1-d12575500b48"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f124810f9e52d4153e24cc4a/gallery-8972e0d02fd2ed3b2443ed4127f0ba46fa6f622a1132213eb5a28a82e9ee1099.webp",
@@ -5892,11 +5855,8 @@
       "3caedb27-f124-8089-af00-d8bbc69c9377"
     ],
     "conceptIds": [
-      "3caedb27-f124-807f-8b44-c84a8fa16e72",
       "3cfedb27-f124-8129-a79e-f06c13c01d1e",
-      "3caedb27-f124-807e-9764-d6afe68a18f7",
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-807f-8b44-c84a8fa16e72"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f1248126b888f840d558a33d/gallery-b128ee4e6eb77cd5321e7232403266e44e6ca161c75710a22db5cb8918cf0d17.webp",
@@ -6054,10 +6014,8 @@
     ],
     "conceptIds": [
       "3caedb27-f124-80a2-8e01-f059289ef4d8",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3caedb27-f124-804b-bee5-ce9f9c312d1d",
       "3caedb27-f124-80bc-8ed5-ea6fa8deea5f",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-804b-bee5-ce9f9c312d1d"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f124812e9eebd4ccd2aa303d/gallery-ff8ec164b9a6cd848ff8ca98b3e3149fd89fb41f65cd3919c61d6100802c331b.webp",
@@ -6734,12 +6692,8 @@
     ],
     "conceptIds": [
       "3cfedb27-f124-8129-a79e-f06c13c01d1e",
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
       "3caedb27-f124-807e-868e-c2827fe1ca43",
-      "3caedb27-f124-807f-8b44-c84a8fa16e72",
-      "3caedb27-f124-80f0-890a-d688ccbc9a85",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3cfedb27-f124-811e-847c-f2f68e89aa1c"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f12481538fb7c8060d841b58/gallery-b7e7beee1760fce41afcd792c5bfc63311cfa56ad8fe829a11700698773b869e.webp",
@@ -6823,10 +6777,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-8083-9d8f-f4f0c16c777b",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3caedb27-f124-809d-9a39-f203df215b7b",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3cfedb27-f124-815d-bf59-de9be42a76bc"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f124815488c4fc760737a303/gallery-b01795ec96ab69c5be8bdc0d39e8cc57ca2ea5b8f77232159f54a81dfd1532c0.webp",
@@ -6880,13 +6831,9 @@
       "3caedb27-f124-80e9-b5e9-c462a175b76a"
     ],
     "conceptIds": [
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3caedb27-f124-8073-a1d8-d7a8ff9be249",
-      "3caedb27-f124-8059-a2b9-e8b7c3922ce8",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
       "3caedb27-f124-8089-8ded-c859ec52b72a",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-8059-a2b9-e8b7c3922ce8",
+      "3caedb27-f124-8049-ae70-d94094550224"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f1248156b993e329a589f42f/gallery-7e66d3ed6c83b3e3a3c4d2b3b4e60154cbf9273dae09cbbebc751bb41adabaf9.webp",
@@ -7029,10 +6976,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-8073-a1d8-d7a8ff9be249",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3caedb27-f124-80a2-8e01-f059289ef4d8",
-      "3caedb27-f124-809d-9a39-f203df215b7b",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-8080-b362-cb035da7fa90"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f124815b94aadb497572c948/gallery-48b7d95d93b2929648dfab408017a3abac14a1985e93e89d228a8c39fb9ee753.webp",
@@ -7072,9 +7016,7 @@
     "conceptIds": [
       "3caedb27-f124-8036-8d37-d3e221faf06b",
       "3caedb27-f124-8083-9d8f-f4f0c16c777b",
-      "3caedb27-f124-807d-bcd9-f98731ec1ed8",
-      "3caedb27-f124-8050-8f13-ca3339e14709",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-807d-bcd9-f98731ec1ed8"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f124815ca50cd6f414fb625a/gallery-03287abcc25a2c6f4a9a59770b62fa45643227350de43ba2e15b24ec7ab87c39.webp",
@@ -7439,11 +7381,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-8050-8f13-ca3339e14709",
-      "3caedb27-f124-8036-8d37-d3e221faf06b",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
-      "3caedb27-f124-8083-9d8f-f4f0c16c777b",
-      "3caedb27-f124-807f-8b44-c84a8fa16e72",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-8036-8d37-d3e221faf06b"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f124817792bfc7027fb5b6f4/gallery-c9f71c5f27fb671c5f35ebb271a52c191712715de8e1a0f3da40baaf356efb2c.webp",
@@ -7642,12 +7580,8 @@
     ],
     "conceptIds": [
       "3caedb27-f124-807a-8840-c425a2d66fec",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
       "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3caedb27-f124-807e-868e-c2827fe1ca43",
-      "3caedb27-f124-80ea-a580-d93148350639",
-      "3caedb27-f124-80c0-81e4-fe457f92909e",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-80c0-81e4-fe457f92909e"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f1248180820ef2c669e5d300/gallery-a227fe59cfe51aafb29f9aa0e7ce5ceebfea6121c067e543105bc84d9cb31b73.webp",
@@ -7861,11 +7795,7 @@
     "conceptIds": [
       "3caedb27-f124-8073-a1d8-d7a8ff9be249",
       "3caedb27-f124-807b-89f4-f8f9cf70f677",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3caedb27-f124-807e-9764-d6afe68a18f7",
-      "3caedb27-f124-807a-8840-c425a2d66fec",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-807a-8840-c425a2d66fec"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f1248186b10ad38b4e87d6d9/gallery-8eb0e3041a0be4f31368f574505a8caa1554bccf25a0c324895f4e231a469d5a.webp",
@@ -8081,12 +8011,8 @@
     ],
     "conceptIds": [
       "3caedb27-f124-80a2-8e01-f059289ef4d8",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3caedb27-f124-80bc-8ed5-ea6fa8deea5f",
       "3caedb27-f124-80c4-bed1-d12575500b48",
-      "3caedb27-f124-8050-8f13-ca3339e14709",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-80bc-8ed5-ea6fa8deea5f"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f12481928994e1d8458ad9cd/gallery-4f7eb51b5ede266b59d6df3d7e50cbc7aeba29d7e4faf97c0437cf77848bc66e.webp",
@@ -8121,13 +8047,9 @@
       "3caedb27-f124-80d8-a1de-f68271cab6e1"
     ],
     "conceptIds": [
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3caedb27-f124-80c1-b604-f597bc2d2132",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
       "3caedb27-f124-806d-a9aa-c6e0b6aee2e5",
-      "3caedb27-f124-80bc-8ed5-ea6fa8deea5f",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
+      "3caedb27-f124-80bc-8ed5-ea6fa8deea5f"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f1248192bba2efe0e757df73/gallery-83002f79373b0dc4ddbd9015cf0cd8c8f0d530f112308520ed6b93f30bdf63f3.webp",
@@ -8426,10 +8348,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-8035-95b6-c085c5400ac9",
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3caedb27-f124-808a-8064-fea4a24928c1",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3cfedb27-f124-811e-847c-f2f68e89aa1c"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f12481a68b8bf5097c220c95/gallery-fe11a47253bd24728b56b8f2e668211ca8bd39fd9899f41445ddd39cb72fd3d0.webp",
@@ -8934,10 +8853,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-80f0-a067-ca8690b46ab6",
-      "3caedb27-f124-807a-aa5d-cf06355353eb",
-      "3caedb27-f124-80f7-b416-e59831e4e70d",
-      "3caedb27-f124-8005-9cda-f2db2377e602",
-      "3caedb27-f124-808a-8064-fea4a24928c1"
+      "3caedb27-f124-807a-aa5d-cf06355353eb"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c8edb27f12481da892ce2924feeafa0/gallery-3b96d26476a12e905fffd8fe16411c65f871395897eeb1ec0615fcbf8be99485.webp",
@@ -9218,10 +9134,6 @@
     ],
     "conceptIds": [
       "3caedb27-f124-80a2-8e01-f059289ef4d8",
-      "3caedb27-f124-8036-8d37-d3e221faf06b",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
-      "3caedb27-f124-8050-8f13-ca3339e14709",
       "3caedb27-f124-8005-9cda-f2db2377e602"
     ],
     "image": {
@@ -10011,11 +9923,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-80a2-8e01-f059289ef4d8",
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3caedb27-f124-807d-bcd9-f98731ec1ed8",
-      "3caedb27-f124-8059-a2b9-e8b7c3922ce8",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-8049-ae70-d94094550224"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c9edb27f12481859f06d2e4bd94feaf/gallery-73bc6624494ed7d037ebd239293c34777ba013f2cb10936a249e7290b794d488.webp",
@@ -10138,10 +10046,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-8036-8d37-d3e221faf06b",
-      "3caedb27-f124-8050-8f13-ca3339e14709",
-      "3caedb27-f124-807f-8b44-c84a8fa16e72",
-      "3caedb27-f124-8005-9cda-f2db2377e602",
-      "3caedb27-f124-80a2-8e01-f059289ef4d8"
+      "3caedb27-f124-8050-8f13-ca3339e14709"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c9edb27f124818f919ceedeb3955547/gallery-b3432a82bcd817bb1a9f0c49b0f50ffa74f8c7ad36b417b507a388b41013e05e.webp",
@@ -10336,12 +10241,7 @@
     "conceptIds": [
       "3caedb27-f124-807a-8840-c425a2d66fec",
       "3caedb27-f124-8049-ae70-d94094550224",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
-      "3caedb27-f124-80ea-a580-d93148350639",
-      "3caedb27-f124-807f-8b44-c84a8fa16e72",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3cfedb27-f124-8129-a79e-f06c13c01d1e"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c9edb27f12481c6a1c1e8ba3804b77b/gallery-6b8165865b6cca50fe4c5d4dbd681b497fc817e186c3dd6b8f42ae0a1fb3a492.webp",
@@ -10456,11 +10356,7 @@
     ],
     "conceptIds": [
       "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3caedb27-f124-807e-9764-d6afe68a18f7",
-      "3caedb27-f124-809d-9a39-f203df215b7b",
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3caedb27-f124-807b-89f4-f8f9cf70f677",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-807b-89f4-f8f9cf70f677"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c9edb27f12481d3ab32da823b00c611/gallery-f1acc5d90c2efa1b6ec909ebf44d7a8bc482fbe88707926b72d891eee407fe7f.webp",
@@ -10513,13 +10409,8 @@
     ],
     "conceptIds": [
       "3caedb27-f124-807a-8840-c425a2d66fec",
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3caedb27-f124-80ea-a580-d93148350639",
-      "3caedb27-f124-8083-9d8f-f4f0c16c777b",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-80bf-b72b-e1cbc9e26b2a",
+      "3cfedb27-f124-8129-a79e-f06c13c01d1e"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c9edb27f12481d49955c0198427db98/gallery-20184815fbe7eb9bd805f999f7c3632609b01020d33c54dd02efdecdcaf61c1b.webp",
@@ -10609,11 +10500,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-80d3-98b4-e6d8607723b4",
-      "3caedb27-f124-80a2-8e01-f059289ef4d8",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3caedb27-f124-8050-8f13-ca3339e14709",
-      "3caedb27-f124-80aa-b263-de6ee5e015f3",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-80a2-8e01-f059289ef4d8"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3c9edb27f12481faa571f3da822501f3/gallery-e573e297f4602c9049ffb23dc1600cd87f82ceed314a9f919faaa553ad0666fd.webp",
@@ -10743,9 +10630,6 @@
     ],
     "conceptIds": [
       "3caedb27-f124-807f-8b44-c84a8fa16e72",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
-      "3caedb27-f124-802e-b43a-c3d9a90f4988",
-      "3caedb27-f124-8059-a2b9-e8b7c3922ce8",
       "3caedb27-f124-8005-9cda-f2db2377e602"
     ],
     "image": {
@@ -10867,7 +10751,7 @@
   {
     "id": "3caedb27-f124-8107-b76d-c2bb1ec43451",
     "slug": "gary-explains-the-threat-model-because-he-is-the-threat",
-    "title": "Gary Explains the Threat Model Because He Is the Threat",
+    "title": "Gary Is the Threat Model",
     "keywords": [
       "fake victim admitted",
       "birds disabled",
@@ -10894,7 +10778,7 @@
       "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f1248107b76dc2bb1ec43451/detail-ec0be93670900baa618578588e56854e17ec5790754302e4943896a62a693f5b.webp",
       "width": 1920,
       "height": 1080,
-      "alt": "Still from Bird Box illustrating Gary Explains the Threat Model Because He Is the Threat",
+      "alt": "Still from Bird Box illustrating Gary Is the Threat Model",
       "blurDataURL": "data:image/webp;base64,UklGRi4AAABXRUJQVlA4ICIAAAAwAQCdASoIAAUAA8BgJaQAA3AA/vQmFtDH5WU3bEjGAAAA"
     },
     "memes": [],
@@ -10931,10 +10815,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-809d-9a39-f203df215b7b",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3caedb27-f124-8059-a2b9-e8b7c3922ce8",
-      "3caedb27-f124-8080-b362-cb035da7fa90",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-8080-b362-cb035da7fa90"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481098139ca6fde1058c4/gallery-c45ac1b6811bda003160b8fe43a12a6cd69f2b76ba8ebc9b81f06be467060cb3.webp",
@@ -10980,10 +10861,7 @@
     "conceptIds": [
       "3caedb27-f124-8083-9d8f-f4f0c16c777b",
       "3caedb27-f124-8050-8f13-ca3339e14709",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
-      "3caedb27-f124-80aa-b263-de6ee5e015f3",
-      "3caedb27-f124-807f-8b44-c84a8fa16e72",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3cfedb27-f124-8129-a79e-f06c13c01d1e"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f1248117b673f49a065c4aa2/gallery-a4950e12c34371085afd625c234161af616dc4225e3a7e01d59f37d7cd5097d4.webp",
@@ -11027,11 +10905,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-8049-ae70-d94094550224",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3caedb27-f124-80bf-b72b-e1cbc9e26b2a",
-      "3caedb27-f124-80ea-a580-d93148350639",
-      "3caedb27-f124-807f-8b44-c84a8fa16e72",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-80ea-a580-d93148350639"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f1248118942ec4c3c1ced105/gallery-57b135d472ebd94695113c4b9413819efaaf8c89fa9dee36c7add143d33a1cbb.webp",
@@ -11230,12 +11104,8 @@
     ],
     "conceptIds": [
       "3caedb27-f124-8036-8d37-d3e221faf06b",
-      "3caedb27-f124-807f-8b44-c84a8fa16e72",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
       "3caedb27-f124-80c4-bed1-d12575500b48",
-      "3caedb27-f124-80cf-a2c3-e0455fa514e2",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3cfedb27-f124-8129-a79e-f06c13c01d1e"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124811d940fcfd56e856fa4/gallery-df1f362fed1ecc5c0f9f77a20278e4dc1f60488c9d7bfcd9e77c000a161708f4.webp",
@@ -11327,14 +11197,9 @@
       "3caedb27-f124-80e9-b5e9-c462a175b76a"
     ],
     "conceptIds": [
-      "3caedb27-f124-8049-ae70-d94094550224",
       "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
-      "3caedb27-f124-80ce-aa91-d4572ee2c146",
-      "3caedb27-f124-80c1-b604-f597bc2d2132",
-      "3caedb27-f124-8059-a2b9-e8b7c3922ce8",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-80bc-8ed5-ea6fa8deea5f",
+      "3caedb27-f124-80ce-aa91-d4572ee2c146"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124811eaf0bf4de2e74d52d/gallery-db6eb5f3e11968f3bcb59879c9307a13c864aef56d8ab720e2bf0c734b19e2f6.webp",
@@ -11380,12 +11245,8 @@
     ],
     "conceptIds": [
       "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
-      "3caedb27-f124-807f-8b44-c84a8fa16e72",
       "3caedb27-f124-807e-868e-c2827fe1ca43",
-      "3caedb27-f124-80ea-a580-d93148350639",
-      "3caedb27-f124-8083-9d8f-f4f0c16c777b",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-807f-8b44-c84a8fa16e72"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481228dadea4b92809fb4/gallery-b4b42372d62040fc600e3cd99dcfb159692d01f9f082ccc49b9d77cad2bb0a4f.webp",
@@ -11676,11 +11537,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-80aa-b263-de6ee5e015f3",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3caedb27-f124-80a2-8e01-f059289ef4d8",
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3caedb27-f124-807e-868e-c2827fe1ca43",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3cfedb27-f124-811e-847c-f2f68e89aa1c"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124812985e4f4bd01b38f00/gallery-7d9921cf1e08b2d50d6ddbaf9d761cd6e4f236d8e47b859ce2a6f8643514c37f.webp",
@@ -11807,11 +11664,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-80d3-98b4-e6d8607723b4",
-      "3caedb27-f124-8059-a2b9-e8b7c3922ce8",
-      "3caedb27-f124-80a2-8e01-f059289ef4d8",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3caedb27-f124-8050-8f13-ca3339e14709",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-8059-a2b9-e8b7c3922ce8"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124812e9569e05c862c33c4/gallery-af5b3ec003ab5f728e64d6d33d59b508d6296d8e01ed8eb74586a0ab8f21bc90.webp",
@@ -11942,11 +11795,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-80c0-bdc0-dbac10a9e572",
-      "3caedb27-f124-8025-ab81-ebdd464fde45",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
-      "3caedb27-f124-8093-9599-e60a1a761977",
-      "3caedb27-f124-80bc-8ed5-ea6fa8deea5f",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-8025-ab81-ebdd464fde45"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124813893ddc2748a266b75/gallery-d7c696567f5eb75aa89fd71759d13b2a3a33a0d33f8f64435366b6d8710280cf.webp",
@@ -12086,11 +11935,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-80aa-b263-de6ee5e015f3",
-      "3caedb27-f124-809d-9a39-f203df215b7b",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3caedb27-f124-8073-a1d8-d7a8ff9be249",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3cfedb27-f124-815d-bf59-de9be42a76bc"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124813cae7cf61390931c7d/gallery-728f721755b6968385a6087d1f7dc4f567445471345f6c0808cea34b13bd44fc.webp",
@@ -12318,11 +12163,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-80aa-b263-de6ee5e015f3",
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3caedb27-f124-8059-a2b9-e8b7c3922ce8",
-      "3caedb27-f124-806d-a9aa-c6e0b6aee2e5",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3cfedb27-f124-815d-bf59-de9be42a76bc"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124814fb958d05128f4e003/gallery-d4454481244b134813db6eb390b7b4754f6ecbd4e1c77fcc27703c6c9c266d73.webp",
@@ -12946,13 +12787,9 @@
       "3caedb27-f124-80d8-a1de-f68271cab6e1"
     ],
     "conceptIds": [
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
       "3caedb27-f124-80c0-81e4-fe457f92909e",
-      "3caedb27-f124-80ea-a580-d93148350639",
-      "3caedb27-f124-807f-8b44-c84a8fa16e72",
       "3caedb27-f124-807e-868e-c2827fe1ca43",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3cfedb27-f124-811e-847c-f2f68e89aa1c"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124816586eaf0dac10acf36/gallery-86894f609dafe6cc159dfd04e7e958674ef892a0e062b46b12e116597156f90f.webp",
@@ -13575,6 +13412,10 @@
       "earth as larger computer"
     ],
     "sourceId": "3cdedb27-f124-816f-a161-ca2c71137aa4",
+    "episode": {
+      "label": "Episode 4",
+      "href": "https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy_%28TV_series%29"
+    },
     "releaseDate": "1981-01-26",
     "featured": false,
     "tags": [],
@@ -13607,7 +13448,7 @@
   {
     "id": "3caedb27-f124-8186-9c19-de22adda0c39",
     "slug": "the-hearing-aid-becomes-an-accidental-red-team",
-    "title": "The Hearing Aid Becomes an Accidental Red Team",
+    "title": "Regan’s Accidental Red Team",
     "keywords": [
       "cochlear feedback weapon",
       "creature armor opened",
@@ -13633,7 +13474,7 @@
       "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481869c19de22adda0c39/detail-31765e539b80caf97cd7d8d3c3ded27ff73e0b2f17f679f7b6264baad5bb912f.webp",
       "width": 1280,
       "height": 720,
-      "alt": "Still from A Quiet Place illustrating The Hearing Aid Becomes an Accidental Red Team",
+      "alt": "Still from A Quiet Place illustrating Regan’s Accidental Red Team",
       "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACwAQCdASoIAAUAA8BgJQBOgB6PVT2AAP7Rgq7ZqOP5Kv9td4GZboyhbQjBZjpHs+XuJ0IAAAA="
     },
     "memes": [],
@@ -13828,10 +13669,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-80a2-8e01-f059289ef4d8",
-      "3caedb27-f124-80aa-b263-de6ee5e015f3",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3caedb27-f124-807e-868e-c2827fe1ca43",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3cfedb27-f124-811e-847c-f2f68e89aa1c"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f124818fb278f5f94a49c979/gallery-0c68a75c8c01d8538ad2efb3e7976920ccc2093b78ccd551412c6c0b8aca2d03.webp",
@@ -13993,7 +13831,7 @@
   {
     "id": "3caedb27-f124-8192-bc61-d39d22c424f6",
     "slug": "the-baby-box-is-containment-with-life-support",
-    "title": "The Baby Box Is Containment With Life Support",
+    "title": "Containment With Life Support",
     "keywords": [
       "soundproof newborn box",
       "oxygen canister",
@@ -14010,18 +13848,15 @@
     ],
     "conceptIds": [
       "3caedb27-f124-8049-ae70-d94094550224",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3caedb27-f124-80aa-b263-de6ee5e015f3",
       "3caedb27-f124-8059-a2b9-e8b7c3922ce8",
-      "3caedb27-f124-808a-8064-fea4a24928c1",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-808a-8064-fea4a24928c1"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f1248192bc61d39d22c424f6/gallery-2eac66f13c1cd6783f35d84d57c76938101557e69b4a2a1503db8ae56e91fb3e.webp",
       "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f1248192bc61d39d22c424f6/detail-b4bdc5477d852c273e3785389e0facfe2a1a338dc76b630860cbff38163e3545.webp",
       "width": 1280,
       "height": 720,
-      "alt": "Still from A Quiet Place illustrating The Baby Box Is Containment With Life Support",
+      "alt": "Still from A Quiet Place illustrating Containment With Life Support",
       "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADQAQCdASoIAAUAA8BgJbACdAEO94DkAAD+8VAPgXVXXsR8+uFgXaSeMvU3aveKRc+FXUht7AAAAA=="
     },
     "memes": [],
@@ -15536,12 +15371,8 @@
       "3caedb27-f124-80aa-afad-c13fa096c6fd"
     ],
     "conceptIds": [
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
       "3caedb27-f124-80ea-a580-d93148350639",
-      "3caedb27-f124-807e-9764-d6afe68a18f7",
-      "3caedb27-f124-809d-9a39-f203df215b7b",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-809d-9a39-f203df215b7b"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481d99d66fa080d285496/gallery-faf8527a271b714e7d2be9c5926522279e3d16006d1a5c7698c100a2c3fd7399.webp",
@@ -15580,10 +15411,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-8049-ae70-d94094550224",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3caedb27-f124-809d-9a39-f203df215b7b",
-      "3caedb27-f124-807e-868e-c2827fe1ca43",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3cfedb27-f124-815d-bf59-de9be42a76bc"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481daad02c13299fca8e9/gallery-d93d4325410240087fdd5c442812e52275a9135f5ddbf1842e4cd38bc31cb01d.webp",
@@ -16091,12 +15919,9 @@
       "3caedb27-f124-80d8-a1de-f68271cab6e1"
     ],
     "conceptIds": [
-      "3caedb27-f124-8073-a1d8-d7a8ff9be249",
       "3caedb27-f124-80aa-b263-de6ee5e015f3",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3caedb27-f124-80a2-8e01-f059289ef4d8",
       "3caedb27-f124-807d-bcd9-f98731ec1ed8",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-8073-a1d8-d7a8ff9be249"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481efa3e6c2473a7bfbad/gallery-f4c0771b4352d733e6ae695547487189e17546f3551d84daf5933e2846acf094.webp",
@@ -16318,10 +16143,8 @@
     ],
     "conceptIds": [
       "3caedb27-f124-8036-8d37-d3e221faf06b",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
       "3caedb27-f124-8076-9a83-e458d33f6d9d",
-      "3caedb27-f124-8050-8f13-ca3339e14709",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3cfedb27-f124-811e-847c-f2f68e89aa1c"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481f38f52c4b5b7b02f1e/gallery-8f8a05463f35e3fd0475df68800f5d6e381a6a64d211bf5f9ba6439a325a1400.webp",
@@ -16379,10 +16202,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-80aa-9fba-f22656966ae8",
-      "3caedb27-f124-804b-bee5-ce9f9c312d1d",
-      "3caedb27-f124-809d-9a39-f203df215b7b",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-804b-bee5-ce9f9c312d1d"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481f39f91f11b1186cfea/gallery-c39db7f528101a013713b71f490e9b50d8e37a1e0ccac9d266753e41b687b7a3.webp",
@@ -16461,7 +16281,7 @@
   {
     "id": "3caedb27-f124-81ff-96ad-f7034124872a",
     "slug": "the-batteries-defeat-the-safety-interlock",
-    "title": "The Batteries Defeat the Safety Interlock",
+    "title": "The Batteries Beat the Interlock",
     "keywords": [
       "toy-rocket batteries",
       "child reinstalls power",
@@ -16486,7 +16306,7 @@
       "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3caedb27f12481ff96adf7034124872a/detail-a343ca908d56a07c432f1b948ce162d54f3c010041ce8165d9ebd748c75af457.webp",
       "width": 1280,
       "height": 720,
-      "alt": "Still from A Quiet Place illustrating The Batteries Defeat the Safety Interlock",
+      "alt": "Still from A Quiet Place illustrating The Batteries Beat the Interlock",
       "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADwAQCdASoIAAUAA8BgJZACdAEXtkzkvQAA/k26aHlS+Wl5dHQFlRXS4fGxww7risoRC5wAAAA="
     },
     "memes": [],
@@ -16822,10 +16642,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-807e-868e-c2827fe1ca43",
-      "3caedb27-f124-80aa-b263-de6ee5e015f3",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
-      "3caedb27-f124-8050-8f13-ca3339e14709",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-80aa-b263-de6ee5e015f3"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f124810f8e02e72dfac85292/gallery-3edc677c3030a9cec0800f87a66149aea7d92764c17149b73da670a2f4a69471.webp",
@@ -16868,11 +16685,8 @@
     ],
     "conceptIds": [
       "3caedb27-f124-8036-8d37-d3e221faf06b",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
       "3caedb27-f124-8050-8f13-ca3339e14709",
-      "3caedb27-f124-807e-868e-c2827fe1ca43",
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-807e-868e-c2827fe1ca43"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f124811c9cc4f229c350d2de/gallery-eb36f45130f0e337c5e2fcb4dfa2be1d8dae97bf13eb8df456044b59955a8573.webp",
@@ -17889,11 +17703,8 @@
       "3caedb27-f124-8089-af00-d8bbc69c9377"
     ],
     "conceptIds": [
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
       "3caedb27-f124-8083-9d8f-f4f0c16c777b",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-8049-ae70-d94094550224"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f1248173a6a2ee842a173d82/gallery-8b9415feddf37430fdd5ccbada8198ae26f38e7668d22577c31a9a21aa9d818f.webp",
@@ -18078,10 +17889,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-807f-8b44-c84a8fa16e72",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3caedb27-f124-8083-9d8f-f4f0c16c777b",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-8049-ae70-d94094550224"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f124817f9f21d06f6af91556/gallery-cd465e8a256435d737f0e3e75623ba561519b1db125f4a9dfddcf8fbe42f749e.webp",
@@ -19123,10 +18931,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-807f-8b44-c84a8fa16e72",
-      "3caedb27-f124-8005-9cda-f2db2377e602",
-      "3caedb27-f124-807e-868e-c2827fe1ca43",
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3caedb27-f124-8036-8d37-d3e221faf06b"
+      "3caedb27-f124-807e-868e-c2827fe1ca43"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f12481dba489e4f5bb23c546/gallery-1a9c38299127c41db1b3370854e3cbb07285c9365b464c83ce80fdd6589a8bbd.webp",
@@ -19408,10 +19213,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-8049-ae70-d94094550224",
-      "3caedb27-f124-8005-9cda-f2db2377e602",
-      "3caedb27-f124-8036-8d37-d3e221faf06b",
-      "3caedb27-f124-80aa-b263-de6ee5e015f3",
-      "3caedb27-f124-807e-868e-c2827fe1ca43"
+      "3caedb27-f124-8036-8d37-d3e221faf06b"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cbedb27f12481f0869bcc88d91a3d8f/gallery-61111b208940c8ed5edc89be17d1b982830661dd3e6a003e9421bc904aafa484.webp",
@@ -19794,10 +19596,7 @@
     "conceptIds": [
       "3caedb27-f124-80c4-bed1-d12575500b48",
       "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3caedb27-f124-80af-9d84-e8fd4e2b233a",
-      "3caedb27-f124-807e-868e-c2827fe1ca43",
-      "3caedb27-f124-808a-8064-fea4a24928c1",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-80af-9d84-e8fd4e2b233a"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f124811fadf3c72019cff199/gallery-f2296ff43e028dbddb5d1c9bb7d97a8486cf719594af88169cd5c3efdffca583.webp",
@@ -19967,10 +19766,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-80d2-b423-fcd2da7a6e96",
-      "3caedb27-f124-80a2-8e01-f059289ef4d8",
-      "3caedb27-f124-8005-9cda-f2db2377e602",
-      "3caedb27-f124-80bc-8ed5-ea6fa8deea5f",
-      "3caedb27-f124-8049-ae70-d94094550224"
+      "3caedb27-f124-80bc-8ed5-ea6fa8deea5f"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f124813f9c77d8eb9c442f1d/gallery-02a9b459d3471af00e0c0e271486eaabed8857f3ecdb9c666621f951978076a4.webp",
@@ -20010,12 +19806,8 @@
       "3caedb27-f124-80d8-a1de-f68271cab6e1"
     ],
     "conceptIds": [
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3caedb27-f124-80bf-b72b-e1cbc9e26b2a",
       "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3caedb27-f124-809d-9a39-f203df215b7b",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-80bf-b72b-e1cbc9e26b2a"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f124815dbc46d7bb472f5d35/gallery-6d4eba999eb426046ac5feb7a47497553b82fcfe3196248739bdeec62adba898.webp",
@@ -20064,10 +19856,7 @@
     ],
     "conceptIds": [
       "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3caedb27-f124-8083-9d8f-f4f0c16c777b",
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3cfedb27-f124-811e-847c-f2f68e89aa1c"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f124815e8b85d7f409be1ecb/gallery-029260fac28f7d88168d908378e81073dd413a7eff6707d310c7482a4bf080a2.webp",
@@ -20405,11 +20194,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-8073-a1d8-d7a8ff9be249",
-      "3caedb27-f124-8049-ae70-d94094550224",
-      "3caedb27-f124-8054-8ebd-f2ab886561a4",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-8054-8ebd-f2ab886561a4"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f1248179a878f53707c087e6/gallery-fc94e6ef9d97b63b20bf6828461c83e4c3dc49597ed9049c57808c1eb9e30b46.webp",
@@ -20857,10 +20642,7 @@
     ],
     "conceptIds": [
       "3caedb27-f124-80c4-bed1-d12575500b48",
-      "3cfedb27-f124-8129-a79e-f06c13c01d1e",
-      "3caedb27-f124-8036-8d37-d3e221faf06b",
-      "3caedb27-f124-8050-8f13-ca3339e14709",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-8036-8d37-d3e221faf06b"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3ccedb27f12481fdad94cda8d8b7ed2c/gallery-aa593b48dc311360b6923498d1f1579cf47bc05eaed66c88da9cc98771a031d5.webp",
@@ -21248,12 +21030,8 @@
       "3caedb27-f124-8093-a4c6-c5d94006b23f"
     ],
     "conceptIds": [
-      "3caedb27-f124-8049-ae70-d94094550224",
       "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3caedb27-f124-80ea-a580-d93148350639",
-      "3caedb27-f124-8054-8ebd-f2ab886561a4",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-8049-ae70-d94094550224"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481798c38deb4eff0a199/gallery-d18024026171a4b2d36b1670d495816ededb37fb643e83351ffb1f5772280224.webp",
@@ -21548,10 +21326,7 @@
     "conceptIds": [
       "3caedb27-f124-8049-ae70-d94094550224",
       "3caedb27-f124-80aa-b263-de6ee5e015f3",
-      "3caedb27-f124-80a2-8e01-f059289ef4d8",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
-      "3caedb27-f124-808a-8064-fea4a24928c1",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-80a2-8e01-f059289ef4d8"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481cca0a6e15f484d01ce/gallery-f5218246c6e39c922bd4da1c9e5ab9ce4b62cbe9cdec861f38803878b1243729.webp",
@@ -21675,12 +21450,8 @@
     ],
     "conceptIds": [
       "3caedb27-f124-8049-ae70-d94094550224",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3cfedb27-f124-811e-847c-f2f68e89aa1c",
       "3caedb27-f124-80bf-b72b-e1cbc9e26b2a",
-      "3caedb27-f124-809d-9a39-f203df215b7b",
-      "3caedb27-f124-8036-8d37-d3e221faf06b",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-8036-8d37-d3e221faf06b"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481ef81c3ce6adfd6b25e/gallery-7641a172e484a5e71d8ef4c5ee5c3d6a94e3b2d5acb5bfc556a31572918838eb.webp",
@@ -21734,11 +21505,8 @@
       "3caedb27-f124-80e9-b5e9-c462a175b76a"
     ],
     "conceptIds": [
-      "3caedb27-f124-80aa-b263-de6ee5e015f3",
-      "3cfedb27-f124-815d-bf59-de9be42a76bc",
-      "3caedb27-f124-8059-a2b9-e8b7c3922ce8",
       "3caedb27-f124-804b-bee5-ce9f9c312d1d",
-      "3caedb27-f124-8005-9cda-f2db2377e602"
+      "3caedb27-f124-80aa-b263-de6ee5e015f3"
     ],
     "image": {
       "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/3cdedb27f12481ff9b4efc48bbc766c7/gallery-47b4d769f50696fad328278f846ac736ef0c66668adcc659f0d1c11ed6b0b8d3.webp",

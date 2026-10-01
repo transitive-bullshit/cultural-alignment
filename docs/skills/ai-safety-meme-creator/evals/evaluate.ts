@@ -1,10 +1,20 @@
-import { stripTerminalMemePeriod } from '../../../../scripts/meme-review-round-utils'
 import {
   memeEvalPlanSchema,
   type MemeEvalPlan,
   type MemeSkillFixture
 } from './schema'
 import { layoutMemeTextZone, memeEvalCanvas } from './text-layout'
+
+const trailingMemePeriodPattern =
+  /(?<!\.)\.(?=["'\u2018\u2019\u201c\u201d\u00ab\u00bb\u2039\u203a)\]}]*\s*$)/u
+const meaningfulTerminalAbbreviationPattern =
+  /(?:\b(?:[a-z]\.){2,}|\b(?:co|corp|dr|e\.g|etc|i\.e|inc|jr|ltd|mr|mrs|ms|sr|st|vs)\.)(?=["'\u2018\u2019\u201c\u201d\u00ab\u00bb\u2039\u203a)\]}]*\s*$)/iu
+
+/** Removes a cosmetic final period while keeping abbreviations and ellipses. */
+function stripTerminalMemePeriod(line: string): string {
+  if (meaningfulTerminalAbbreviationPattern.test(line)) return line
+  return line.replace(trailingMemePeriodPattern, '')
+}
 
 export type MemeEvalViolationCode =
   | 'caption.exact-copy'
@@ -604,13 +614,6 @@ export function evaluateMemePlan(
     violations,
     plan
   }
-}
-
-export function summarizeViolations(result: MemeEvalResult): string {
-  if (result.pass) return 'pass'
-  return result.violations
-    .map(({ code, message }) => `- ${code}: ${message}`)
-    .join('\n')
 }
 
 function addViolation(

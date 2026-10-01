@@ -47,8 +47,3 @@ yarn-error.log*
 # local
 .content-sync-*
 /work/
-
-# generated meme-skill comparison reports
-/docs/skills/ai-safety-meme-creator/archive-ab-comparison*.html
-/docs/skills/ai-safety-meme-creator/archive-impact-comparison.html
-/docs/skills/ai-safety-meme-creator/archive-stroke-wrap-comparison.html

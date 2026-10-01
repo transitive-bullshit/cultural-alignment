@@ -7,8 +7,6 @@ import { calculateFrameGeometry, protectedRegionFocus } from './frame-geometry'
 import type { MemeEvalPlan, MemeSkillFixture } from './schema'
 import { layoutMemeTextZone, memeEvalCanvas } from './text-layout'
 
-export { memeEvalCanvas } from './text-layout'
-
 export async function renderMemeEvalPlan({
   fixture,
   plan,

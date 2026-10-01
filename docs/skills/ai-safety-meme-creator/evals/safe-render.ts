@@ -63,7 +63,7 @@ interface SafeMemeSourceOccupancyCheck {
   readonly meets_review_floor: true
 }
 
-export interface SafeMemeRenderComplete {
+interface SafeMemeRenderComplete {
   readonly status: 'complete'
   readonly plan: MemeEvalPlan
   readonly checks: {
@@ -81,7 +81,7 @@ export interface SafeMemeRenderComplete {
   }
 }
 
-export interface SafeMemeRenderBlocked {
+interface SafeMemeRenderBlocked {
   readonly status: 'blocked'
   readonly reason: {
     readonly code:

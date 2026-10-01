@@ -20,7 +20,7 @@ A recognition-first elastic gallery can invite a broad audience into unfamiliar 
 
 ## Decisions that supersede the original plan
 
-- Screening Room, Threshold, and the original prototype picker were removed after Dossier was selected. [Gate B captures](outputs/gate-b/README.md) remain decision evidence. The current `/prototypes/homepage` and `/prototypes/social-image` routes are separate later experiments.
+- Screening Room, Threshold, and the original prototype picker were removed after Dossier was selected. [Gate B captures](outputs/gate-b/README.md) remain decision evidence. Later homepage and social-image prototype routes were removed on 2026-10-01; git history keeps them.
 - The creator brought Notion synchronization and full-content expansion into the same implementation run. Historical references to ten or 25 scenarios describe prototype stages; use the current manifest for collection size.
 - On 2026-08-28 the creator authorized work past the former feedback gates. Those gates are complete and do not require a new pause when making routine changes.
 - Deployment and analytics were excluded from the original workstream; the site is now deployed and `app/layout.tsx` includes Vercel Web Analytics. The old exclusion is historical.

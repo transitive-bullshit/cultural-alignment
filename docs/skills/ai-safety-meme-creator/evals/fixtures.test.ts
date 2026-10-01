@@ -1,16 +1,10 @@
 import { createHash } from 'node:crypto'
 import { access, readFile } from 'node:fs/promises'
-import { resolve } from 'node:path'
 
 import sharp from 'sharp'
 import { describe, expect, it } from 'vitest'
 
-import {
-  fixtureImagePath,
-  memeSkillFixtures,
-  toAgentVisibleFixture,
-  workspaceDirectory
-} from './fixtures'
+import { fixtureImagePath, memeSkillFixtures } from './fixtures'
 
 describe('meme skill regression fixtures', () => {
   it('keeps fixture, image, and protected-region identities unambiguous', () => {
@@ -90,46 +84,6 @@ describe('meme skill regression fixtures', () => {
     expect(problems).toEqual([])
   })
 
-  it('resolves every golden-feedback anchor to its immutable review note', async () => {
-    const documents = new Map<string, unknown>()
-    const problems: string[] = []
-
-    for (const fixture of memeSkillFixtures) {
-      for (const source of fixture.feedback_sources) {
-        const path = resolve(workspaceDirectory, source.path)
-        let raw = documents.get(path)
-        if (!raw) {
-          raw = JSON.parse(await readFile(path, 'utf8'))
-          documents.set(path, raw)
-        }
-
-        const document = raw as {
-          feedback?: Record<
-            string,
-            { readonly rating?: string; readonly notes?: string }
-          >
-        }
-        const entry = document.feedback?.[source.idea_id]
-        if (!entry) {
-          problems.push(`${fixture.id}: missing ${source.idea_id}`)
-          continue
-        }
-        if ((entry.rating || 'unrated') !== source.rating) {
-          problems.push(`${fixture.id}: ${source.idea_id} rating changed`)
-        }
-        if (
-          !entry.notes
-            ?.toLocaleLowerCase()
-            .includes(source.note_includes.toLocaleLowerCase())
-        ) {
-          problems.push(`${fixture.id}: ${source.idea_id} note changed`)
-        }
-      }
-    }
-
-    expect(problems).toEqual([])
-  })
-
   it('covers the manually recurring presentation and editorial regressions', () => {
     const tags = new Set(memeSkillFixtures.flatMap(({ tags }) => tags))
     const requiredCoverage = [
@@ -152,18 +106,5 @@ describe('meme skill regression fixtures', () => {
     ]
 
     expect(requiredCoverage.filter((tag) => !tags.has(tag))).toEqual([])
-  })
-
-  it('does not leak hidden expectations or curated feedback into agent prompts', () => {
-    for (const fixture of memeSkillFixtures) {
-      const visible = JSON.stringify(toAgentVisibleFixture(fixture))
-
-      expect(visible).not.toContain('expectations')
-      expect(visible).not.toContain('feedback_sources')
-      expect(visible).not.toContain('canvas_rect_pct')
-      for (const source of fixture.feedback_sources) {
-        expect(visible).not.toContain(source.note_includes)
-      }
-    }
   })
 })

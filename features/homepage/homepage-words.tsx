@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useMemo, useState, type ReactNode } from 'react'
+import { useMemo, type ReactNode } from 'react'
 
 import { GalleryExperience } from '@/features/spatial-gallery/gallery-experience'
 import type { SpatialGalleryDesktopSelection } from '@/features/spatial-gallery/spatial-gallery'
@@ -59,7 +59,6 @@ export function HomepageWords({
   header,
   historyKey,
   initialItemId,
-  inlineIntroduction,
   items,
   mainId = 'home-gallery-main'
 }: {
@@ -67,7 +66,6 @@ export function HomepageWords({
   readonly header: ReactNode
   readonly historyKey: string
   readonly initialItemId: string
-  readonly inlineIntroduction?: ReactNode
   readonly items: readonly HomepageWordsItem[]
   readonly mainId?: string
 }) {
@@ -82,11 +80,9 @@ export function HomepageWords({
       data-homepage-words
       data-site-footer='hidden'
     >
-      {inlineIntroduction === undefined ? (
-        <h1 className={styles.srOnly}>
-          Understand AI safety through scenes you already know.
-        </h1>
-      ) : null}
+      <h1 className={styles.srOnly}>
+        Understand AI safety through scenes you already know.
+      </h1>
       <GalleryExperience
         className={styles.gallery}
         header={header}
@@ -96,60 +92,6 @@ export function HomepageWords({
         mainId={mainId}
         renderDesktopSelection={renderWordsDesktopSelection}
       />
-      {inlineIntroduction}
-    </div>
-  )
-}
-
-export function HomepageWordsInlineIntroduction({
-  introDismissed: controlledIntroDismissed,
-  onDismissIntro
-}: {
-  readonly introDismissed?: boolean
-  readonly onDismissIntro?: () => void
-}) {
-  const [internalIntroDismissed, setInternalIntroDismissed] = useState(false)
-  const introDismissed = controlledIntroDismissed ?? internalIntroDismissed
-  const dismissIntro = useCallback(() => {
-    if (controlledIntroDismissed === undefined) {
-      setInternalIntroDismissed(true)
-    }
-    onDismissIntro?.()
-  }, [controlledIntroDismissed, onDismissIntro])
-
-  return (
-    <div
-      className={styles.guideLayer}
-      data-dismissed={introDismissed || undefined}
-      data-homepage-intro
-    >
-      <aside
-        aria-describedby='homepage-words-inline-instruction'
-        aria-hidden={introDismissed || undefined}
-        aria-labelledby='homepage-words-inline-heading'
-        className={styles.panel}
-        inert={introDismissed ? true : undefined}
-      >
-        <button
-          className={styles.dismissButton}
-          data-homepage-intro-dismiss
-          type='button'
-          aria-label='Dismiss introduction'
-          onClick={dismissIntro}
-        >
-          <span aria-hidden='true'>×</span>
-        </button>
-        <h1 id='homepage-words-inline-heading'>
-          Understand AI safety through scenes you already know.
-        </h1>
-        <p
-          className={styles.instruction}
-          id='homepage-words-inline-instruction'
-        >
-          <span aria-hidden='true'>⊹</span>
-          Drag or scroll. Hover a scene to reveal its AI safety concept.
-        </p>
-      </aside>
     </div>
   )
 }

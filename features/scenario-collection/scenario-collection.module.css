@@ -105,6 +105,18 @@
   text-wrap: balance;
 }
 
+.cardSummary {
+  display: -webkit-box;
+  margin: -8px 0 24px;
+  overflow: hidden;
+  color: var(--proto-muted-ink);
+  font-size: 14px;
+  line-height: 1.5;
+  text-wrap: pretty;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
 .connectionSummary {
   display: grid;
   gap: 10px;
