@@ -42,7 +42,7 @@ export function ScenarioDiscovery({ scenario }: { scenario: ScenarioPage }) {
               >
                 View all {continuation.scenarioCount}{' '}
                 {continuation.scenarioCount === 1 ? 'scenario' : 'scenarios'}
-                <span aria-hidden='true'>↗</span>
+                <span aria-hidden='true'>→</span>
               </Link>
             }
           />
@@ -99,9 +99,11 @@ function DiscoveryHeader({
 }) {
   return (
     <header className={styles.discoveryHeader}>
-      <div>
+      <div className={styles.discoveryTitle}>
         <p>{eyebrow}</p>
-        <h2 id={id}>{title}</h2>
+        <h2 className={styles.sectionHeading} id={id}>
+          {title}
+        </h2>
       </div>
       {description ? (
         <p className={styles.discoveryDescription}>{description}</p>

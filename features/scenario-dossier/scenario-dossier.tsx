@@ -60,6 +60,8 @@ export function ScenarioDossier({ scenario }: { scenario: ScenarioPage }) {
             </div>
 
             <PrimaryConcept concept={scenario.concepts[0]} />
+
+            <SpoilerWarning className={styles.detailSpoiler} />
           </div>
         </section>
 
@@ -96,8 +98,6 @@ export function ScenarioDossier({ scenario }: { scenario: ScenarioPage }) {
 
         <ScenarioDiscovery scenario={scenario} />
       </article>
-
-      <SpoilerWarning className={styles.detailSpoiler} />
     </main>
   )
 }
@@ -139,30 +139,28 @@ function SourceMeta({ scenario }: { scenario: ScenarioPage }) {
         </li>
       ) : null}
       <li data-scenario-source>
-        <span className={styles.sourceMetaLinks}>
-          <Link href={scenario.source.href}>{scenario.source.title}</Link>
-          {showEpisode && scenario.episode ? (
-            <span className={styles.sourceMetaLinkGroup}>
-              <span className={styles.sourceMetaSeparator} aria-hidden='true'>
-                ·
-              </span>
-              <span className='sr-only'>, </span>
-              {scenario.episode.href ? (
-                <a
-                  href={scenario.episode.href}
-                  data-scenario-episode
-                  rel='noreferrer'
-                  target='_blank'
-                >
-                  {scenario.episode.label}
-                </a>
-              ) : (
-                <span data-scenario-episode>{scenario.episode.label}</span>
-              )}
-            </span>
-          ) : null}
-        </span>
+        <Link href={scenario.source.href}>{scenario.source.title}</Link>
       </li>
+      {showEpisode && scenario.episode ? (
+        <li>
+          {scenario.episode.href ? (
+            <a
+              className={styles.episodeLink}
+              href={scenario.episode.href}
+              data-scenario-episode
+              rel='noreferrer'
+              target='_blank'
+            >
+              <span className='external-link'>{scenario.episode.label}</span>
+              <span className={styles.externalLinkMark} aria-hidden='true'>
+                ↗
+              </span>
+            </a>
+          ) : (
+            <span data-scenario-episode>{scenario.episode.label}</span>
+          )}
+        </li>
+      ) : null}
       <li>
         {scenario.releaseDate ? (
           <time dateTime={scenario.releaseDate}>{year}</time>
