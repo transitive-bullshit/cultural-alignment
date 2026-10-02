@@ -26,7 +26,15 @@ const CURATED_CITATION_TITLES = {
   'https://www.lesswrong.com/s/3ni2P2GZzBvNebWYZ/p/RzsXRbk2ETNqjhsma':
     'AI Safety Strategies Landscape',
   'https://www.lesswrong.com/s/r9tYkB2a8Fp4DN8yB':
-    'Risks from Learned Optimization'
+    'Risks from Learned Optimization',
+  // LessWrong wiki slugs drop punctuation and add suffixes ("goodhart-s-law",
+  // "corrigibility-1"), so a blocked fetch would otherwise mangle the title.
+  'https://www.lesswrong.com/w/corrigibility-1': 'Corrigibility',
+  'https://www.lesswrong.com/w/goodhart-s-law': "Goodhart's Law",
+  'https://www.lesswrong.com/w/instrumental-convergence':
+    'Instrumental convergence',
+  'https://www.lesswrong.com/w/orthogonality-thesis': 'Orthogonality Thesis',
+  'https://www.lesswrong.com/w/outer-alignment': 'Outer Alignment'
 } as const satisfies Readonly<Record<string, string>>
 
 // Citation URLs are editorial input, so build-time fetching were originally limited to the publication hosts represented in the taxonomy, but it proved too brittle, so I decided to relax it.
