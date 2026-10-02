@@ -81,3 +81,33 @@ test('privacy hydrates without replacing its server-rendered content', async ({
   await expect(page.getByRole('combobox')).toBeFocused()
   expect(errors).toEqual([])
 })
+
+test('phone galleries start directly beneath their overlaid header', async ({
+  page
+}) => {
+  const viewport = { width: 390, height: 844 }
+  await page.setViewportSize(viewport)
+
+  for (const route of ['/', '/scenarios']) {
+    await page.goto(route)
+    const header = page.locator('[data-site-header]')
+    const canvas = page.locator('[data-spatial-gallery] canvas')
+    await expect(canvas).toBeVisible()
+
+    // Development and production order module CSS differently, so a lost
+    // shell override shows up here as a band between header and canvas.
+    await expect
+      .poll(async () => {
+        const [headerBox, canvasBox] = await Promise.all([
+          header.boundingBox(),
+          canvas.boundingBox()
+        ])
+        if (!headerBox || !canvasBox) return null
+        return {
+          gap: canvasBox.y - (headerBox.y + headerBox.height),
+          bottom: canvasBox.y + canvasBox.height
+        }
+      })
+      .toEqual({ gap: 0, bottom: viewport.height })
+  }
+})
