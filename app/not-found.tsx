@@ -1,5 +1,8 @@
+import { ArrowRightIcon } from 'lucide-react'
+
 import { IntentPrefetchLink } from '@/components/intent-prefetch-link'
 import { SiteHeader } from '@/components/site-header'
+import { OpenSearchButton } from '@/features/search/open-search-button'
 
 import styles from './not-found.module.css'
 
@@ -14,10 +17,23 @@ export default function NotFound() {
         <p className={styles.explanation}>
           The address may have changed, or the record may never have existed.
         </p>
-        <nav aria-label='Not found recovery'>
-          <IntentPrefetchLink href='/scenarios'>
-            Browse all scenarios
+        <nav className={styles.actions} aria-label='Not found recovery'>
+          <IntentPrefetchLink
+            className={styles.browseAction}
+            data-not-found-browse
+            href='/scenarios'
+          >
+            <span>Browse all scenarios</span>
+            <ArrowRightIcon aria-hidden='true' />
           </IntentPrefetchLink>
+          {/* Opens the header's search rather than mounting a second one. */}
+          <OpenSearchButton
+            className={styles.searchAction}
+            data-not-found-search
+          >
+            <span>Search the archive</span>
+            <kbd>⌘K</kbd>
+          </OpenSearchButton>
         </nav>
       </section>
 

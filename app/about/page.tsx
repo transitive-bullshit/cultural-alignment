@@ -90,6 +90,7 @@ export default function AboutPage() {
           The site&rsquo;s code is{' '}
           <a
             href='https://choosealicense.com/licenses/mit/'
+            className='external-link'
             target='_blank'
             rel='noreferrer'
           >
@@ -98,6 +99,7 @@ export default function AboutPage() {
           . The underlying data uses Notion as a CMS which is released under{' '}
           <a
             href='https://choosealicense.com/licenses/cc0-1.0/'
+            className='external-link'
             target='_blank'
             rel='noreferrer'
           >
@@ -108,10 +110,10 @@ export default function AboutPage() {
         </p>
         <InformationLinks label='Project sources'>
           <a href={repositoryUrl} target='_blank' rel='noreferrer'>
-            GitHub repository
+            <span className='external-link'>GitHub repository</span>
           </a>
           <a href={notionSourceUrl} target='_blank' rel='noreferrer'>
-            Public Notion database
+            <span className='external-link'>Public Notion database</span>
           </a>
         </InformationLinks>
       </InformationSection>
@@ -119,7 +121,12 @@ export default function AboutPage() {
       <InformationSection index='05' title='Contributing'>
         <p>
           Cultural Alignment is an independent project made by{' '}
-          <a href={xProfileUrl} target='_blank' rel='noreferrer'>
+          <a
+            href={xProfileUrl}
+            className='external-link'
+            target='_blank'
+            rel='noreferrer'
+          >
             Travis Fischer
           </a>
           . Its taxonomy and interpretations are editorial judgments and may
@@ -127,7 +134,12 @@ export default function AboutPage() {
         </p>
         <p>
           Corrections and contributions are welcome through the{' '}
-          <a href={repositoryUrl} target='_blank' rel='noreferrer'>
+          <a
+            href={repositoryUrl}
+            className='external-link'
+            target='_blank'
+            rel='noreferrer'
+          >
             GitHub repository
           </a>
         </p>

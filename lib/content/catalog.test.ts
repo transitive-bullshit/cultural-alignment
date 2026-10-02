@@ -169,6 +169,48 @@ describe('ContentCatalog', () => {
     ])
   })
 
+  it('projects index card art and counts for media resources', () => {
+    const sourcesById = new Map(
+      minimalSnapshot.sources.map((source) => [source.id, source])
+    )
+
+    for (const summary of catalog.listSourceResources()) {
+      const source = sourcesById.get(summary.id)!
+
+      expect(summary.sourceType).toBe(source.sourceType)
+      expect(summary.poster?.gallerySrc ?? null).toBe(
+        source.poster?.gallerySrc ?? null
+      )
+      // Index cards ship only the gallery image, not the detail-size source.
+      expect(summary.poster ?? {}).not.toHaveProperty('detailSrc')
+    }
+
+    for (const summary of catalog.listFranchiseResources()) {
+      const franchise = minimalSnapshot.franchises.find(
+        ({ id }) => id === summary.id
+      )!
+
+      expect(summary.image.gallerySrc).toBe(franchise.image.gallerySrc)
+      expect(summary.image).not.toHaveProperty('detailSrc')
+      expect(summary.sourceCount).toBe(
+        minimalSnapshot.sources.filter(({ franchiseIds }) =>
+          franchiseIds.includes(summary.id)
+        ).length
+      )
+
+      const page = catalog.getResourcePage('franchise', summary.slug)!
+      if (page.kind !== 'franchise') throw new Error('Expected franchise page')
+      expect(page.sources).toHaveLength(summary.sourceCount)
+      expect(
+        page.sources.every(
+          ({ id, poster }) =>
+            (poster?.gallerySrc ?? null) ===
+            (sourcesById.get(id)!.poster?.gallerySrc ?? null)
+        )
+      ).toBe(true)
+    }
+  })
+
   it('projects scenario memes in their authored order', () => {
     const page = catalog.getScenarioPage('old-a')!
 

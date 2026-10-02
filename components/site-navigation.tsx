@@ -28,7 +28,7 @@ import styles from './site-header.module.css'
 export function DesktopSiteNavigation() {
   const pathname = usePathname()
   const projectIsActive = projectNavigationLinks.some((link) =>
-    isNavigationLinkActive(pathname, link.href)
+    isNavigationLinkActive(pathname, link)
   )
 
   return (
@@ -44,7 +44,7 @@ export function DesktopSiteNavigation() {
             key={link.href}
           >
             <NavigationMenuPrimitive.Link
-              active={isNavigationLinkActive(pathname, link.href)}
+              active={isNavigationLinkActive(pathname, link)}
               className={styles.navigationLink}
               data-site-navigation-link={link.href}
               render={<Link href={link.href} />}
@@ -73,7 +73,7 @@ export function DesktopSiteNavigation() {
               {projectNavigationLinks.map((link) => (
                 <li key={link.href}>
                   <NavigationMenuPrimitive.Link
-                    active={isNavigationLinkActive(pathname, link.href)}
+                    active={isNavigationLinkActive(pathname, link)}
                     className={styles.projectLink}
                     closeOnClick
                     data-site-navigation-link={link.href}
@@ -224,9 +224,7 @@ function NavigationGroup({
                 className={styles.mobileNavigationLink}
                 href={link.href}
                 aria-current={
-                  isNavigationLinkActive(pathname, link.href)
-                    ? 'page'
-                    : undefined
+                  isNavigationLinkActive(pathname, link) ? 'page' : undefined
                 }
                 data-site-navigation-link={link.href}
                 onNavigate={onNavigate}
@@ -254,6 +252,8 @@ function NavigationGroup({
   )
 }
 
-function isNavigationLinkActive(pathname: string, href: string) {
-  return pathname === href || pathname.startsWith(`${href}/`)
+function isNavigationLinkActive(pathname: string, link: SiteNavigationLink) {
+  return [link.href, ...(link.activePaths ?? [])].some(
+    (href) => pathname === href || pathname.startsWith(`${href}/`)
+  )
 }

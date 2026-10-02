@@ -31,8 +31,12 @@ export function ScenarioCollectionList({
   readonly items: readonly ScenarioCollectionItem[]
   readonly layout: ScenarioCollectionLayout
 }) {
-  const imageSizes =
-    layout === 'continuous'
+  // A lone continuous card spans the row and, on wide screens, sits beside
+  // its still instead of leaving two empty columns.
+  const isSingle = layout === 'continuous' && items.length === 1
+  const imageSizes = isSingle
+    ? '(max-width: 860px) calc(100vw - 36px), 52vw'
+    : layout === 'continuous'
       ? '(max-width: 680px) calc(100vw - 36px), (max-width: 860px) 46vw, 31vw'
       : '(max-width: 620px) calc(100vw - 36px), (max-width: 1279px) 46vw, (max-width: 1439px) 30vw, 420px'
 
@@ -42,6 +46,7 @@ export function ScenarioCollectionList({
       data-scenario-collection
       data-image-treatment={imageTreatment}
       data-layout={layout}
+      data-single={isSingle ? true : undefined}
     >
       {items.map(({ connections, scenario, summary }) => (
         <li key={scenario.id}>
@@ -129,7 +134,7 @@ function ScenarioCollectionCard({
         ) : null}
         {connections ? <ConnectionSummary connections={connections} /> : null}
         <span className={styles.open} aria-hidden='true'>
-          View scenario ↗
+          View scenario →
         </span>
       </div>
     </Link>

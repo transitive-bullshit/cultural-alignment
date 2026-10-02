@@ -32,12 +32,18 @@ export default function PrivacyPage() {
       <InformationSection index='01' title='Open source and open data'>
         <p>
           The source code is available on{' '}
-          <a href={repositoryUrl} target='_blank' rel='noreferrer'>
+          <a
+            href={repositoryUrl}
+            className='external-link'
+            target='_blank'
+            rel='noreferrer'
+          >
             GitHub
           </a>{' '}
           under an{' '}
           <a
             href='https://choosealicense.com/licenses/mit/'
+            className='external-link'
             target='_blank'
             rel='noreferrer'
           >
@@ -47,16 +53,27 @@ export default function PrivacyPage() {
         </p>
         <p>
           The underlying data curated by{' '}
-          <a href={xProfileUrl} target='_blank' rel='noreferrer'>
+          <a
+            href={xProfileUrl}
+            className='external-link'
+            target='_blank'
+            rel='noreferrer'
+          >
             Travis Fischer
           </a>{' '}
           is publicly available in a{' '}
-          <a href={notionSourceUrl} target='_blank' rel='noreferrer'>
+          <a
+            href={notionSourceUrl}
+            className='external-link'
+            target='_blank'
+            rel='noreferrer'
+          >
             Notion database
           </a>{' '}
           under the{' '}
           <a
             href='https://choosealicense.com/licenses/cc0-1.0/'
+            className='external-link'
             target='_blank'
             rel='noreferrer'
           >
@@ -72,6 +89,7 @@ export default function PrivacyPage() {
           usage over time using{' '}
           <a
             href='https://vercel.com/analytics'
+            className='external-link'
             target='_blank'
             rel='noreferrer'
           >
@@ -83,6 +101,7 @@ export default function PrivacyPage() {
           Vercel Web Analytics does not use third-party cookies. See{' '}
           <a
             href='https://vercel.com/docs/analytics/privacy-policy'
+            className='external-link'
             target='_blank'
             rel='noreferrer'
           >
@@ -120,7 +139,12 @@ export default function PrivacyPage() {
       <InformationSection index='06' title='Contact'>
         <p>
           For further info, please reach out to me on X{' '}
-          <a href={xProfileUrl} target='_blank' rel='noreferrer'>
+          <a
+            href={xProfileUrl}
+            className='external-link'
+            target='_blank'
+            rel='noreferrer'
+          >
             @transitive_bs
           </a>
           .

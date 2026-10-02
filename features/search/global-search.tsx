@@ -6,6 +6,8 @@ import dynamic from 'next/dynamic'
 import { Button } from '@/components/ui/button'
 import type { SearchDocument, StaticContentKind } from '@/lib/content/catalog'
 
+import { onGlobalSearchRequest } from './search-request'
+
 const GlobalSearchDialog = dynamic(() =>
   import('./global-search-dialog').then((module) => module.GlobalSearchDialog)
 )
@@ -102,9 +104,15 @@ export function GlobalSearch({
     }
 
     window.addEventListener('keydown', handleShortcut)
+    const removeRequestListener = onGlobalSearchRequest(() =>
+      handleOpenChange(true)
+    )
     setShortcutReady(true)
 
-    return () => window.removeEventListener('keydown', handleShortcut)
+    return () => {
+      window.removeEventListener('keydown', handleShortcut)
+      removeRequestListener()
+    }
   }, [handleOpenChange])
 
   return (

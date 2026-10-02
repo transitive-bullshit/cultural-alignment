@@ -1,4 +1,6 @@
 export type SiteNavigationLink = {
+  /** Other sections this destination owns for active-link state. */
+  readonly activePaths?: readonly string[]
   readonly description: string
   readonly footerLabel?: string
   readonly href: string
@@ -25,7 +27,8 @@ export const exploreNavigationLinks = [
   {
     href: '/sources',
     label: 'Media sources',
-    description: 'Explore the movies and shows behind the scenarios.'
+    description: 'Explore the movies and shows behind the scenarios.',
+    activePaths: ['/franchises']
   }
 ] as const satisfies readonly SiteNavigationLink[]
 

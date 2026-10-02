@@ -66,7 +66,7 @@ test('media sources sort by age with an independent persisted preference', async
 
 async function readOrderedSources(page: Page) {
   const hrefs = await page
-    .locator('[data-resource-list][data-resource-kind="source"] > li > a')
+    .locator('[data-resource-list][data-resource-kind="source"] li > a')
     .evaluateAll((links) => links.map((link) => link.getAttribute('href')))
 
   return hrefs.map((href) => {

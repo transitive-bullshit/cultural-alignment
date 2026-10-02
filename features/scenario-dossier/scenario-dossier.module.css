@@ -1,4 +1,8 @@
 .page {
+  /* The opening's shell: a centered 1600px frame inset by the header's
+     gutter. Every section below the opening takes its edges from it. */
+  --dossier-gutter: clamp(22px, 3vw, 48px);
+  --dossier-content-width: min(calc(1600px - 2 * var(--dossier-gutter)), 100%);
   min-height: 100svh;
   overflow-x: clip;
   background: var(--proto-paper);
@@ -11,8 +15,7 @@
   gap: clamp(30px, 4.3vw, 70px);
   width: min(1600px, 100%);
   margin: 0 auto;
-  padding: clamp(26px, 3.5vw, 52px) clamp(22px, 3vw, 48px)
-    clamp(30px, 3vw, 44px);
+  padding: clamp(26px, 3.5vw, 52px) var(--dossier-gutter) clamp(30px, 3vw, 44px);
 }
 
 .mediaColumn,
@@ -33,7 +36,7 @@
 .copyScenarioAction {
   display: flex;
   justify-content: flex-end;
-  padding: 48px 0 112px;
+  padding: 48px var(--copy-inset) 112px;
 }
 
 .titleBlock {
@@ -200,6 +203,24 @@
 .sourceMeta a:focus-visible {
   color: var(--proto-electric);
   text-decoration-color: currentColor;
+}
+
+/* An episode opens its listing on another site, so it takes the shared
+   external-link rule and a trailing ↗ instead of the internal underline. */
+.sourceMeta .episodeLink,
+.sourceMeta .episodeLink:hover,
+.sourceMeta .episodeLink:focus-visible {
+  color: var(--proto-ink);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.externalLinkMark {
+  margin-left: 5px;
+  color: var(--proto-electric);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 12px;
+  line-height: 1;
 }
 
 .mediaFrame {
@@ -568,8 +589,10 @@
   }
 }
 
+/* Shares the label layer so the still cannot paint over the note. */
 .missingVideo {
   position: absolute;
+  z-index: 4;
   right: 14px;
   bottom: 14px;
   display: grid;
@@ -601,7 +624,7 @@
   display: grid;
   grid-template-columns: minmax(150px, 0.42fr) minmax(0, 1fr);
   gap: clamp(16px, 2vw, 28px);
-  padding: clamp(24px, 3vw, 34px);
+  padding: var(--copy-section-padding);
   border: 1px solid transparent;
 }
 
@@ -625,8 +648,13 @@
   line-height: 1.58;
 }
 
+/* The reading column keeps at least the shell gutter on each side. Its
+   taxonomy and closing action share the copy sections' inner inset, so their
+   text lands on the section-label edge. */
 .reading {
-  width: min(1120px, calc(100% - 44px));
+  --copy-section-padding: clamp(24px, 3vw, 34px);
+  --copy-inset: calc(var(--copy-section-padding) + 1px);
+  width: min(1120px, calc(100% - 2 * var(--dossier-gutter)));
   margin: 0 auto;
   padding: 0;
 }
@@ -640,7 +668,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(36px, 7vw, 100px);
-  padding: 58px 0 0;
+  padding: 58px var(--copy-inset) 0;
 }
 
 .taxonomyHeader {
@@ -732,14 +760,14 @@
 }
 
 .discovery {
-  padding: clamp(64px, 8vw, 116px) clamp(22px, 3vw, 48px)
+  padding: clamp(64px, 8vw, 116px) var(--dossier-gutter)
     clamp(88px, 10vw, 148px);
   border-top: 1px solid var(--proto-ink);
   background: var(--proto-muted-paper);
 }
 
 .discoverySection {
-  width: min(1320px, 100%);
+  width: var(--dossier-content-width);
   margin-inline: auto;
 }
 
@@ -747,15 +775,39 @@
   margin-top: clamp(82px, 10vw, 144px);
 }
 
+/* The header repeats the preview card grid's columns and gap (two, three
+   from 1280px, one from 620px), so its action or note sits over the last
+   card column. */
 .discoveryHeader {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.42fr);
-  gap: clamp(24px, 4vw, 72px);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px clamp(16px, 2.2vw, 30px);
   align-items: end;
   margin-bottom: clamp(26px, 3.6vw, 48px);
 }
 
-.discoveryHeader > div > p,
+.discoveryTitle {
+  grid-column: 1 / -2;
+}
+
+.discoveryDescription,
+.discoveryAction {
+  grid-column: -2 / -1;
+}
+
+/* Discovery and meme headings share the resource pages' section-heading
+   scale, quieter than the Dossier title. */
+.sectionHeading {
+  margin: 0;
+  font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
+  font-size: clamp(32px, 4.5vw, 62px);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 0.92;
+  text-wrap: balance;
+}
+
+.discoveryTitle > p,
 .discoveryDescription,
 .discoveryAction {
   font-family: var(--font-geist-mono), monospace;
@@ -763,20 +815,10 @@
   text-transform: uppercase;
 }
 
-.discoveryHeader > div > p {
+.discoveryTitle > p {
   margin: 0 0 12px;
   color: var(--proto-electric);
   font-size: 10px;
-}
-
-.discoveryHeader h2 {
-  margin: 0;
-  font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
-  font-size: clamp(48px, 6vw, 86px);
-  font-weight: 800;
-  letter-spacing: -0.035em;
-  line-height: 0.94;
-  text-wrap: balance;
 }
 
 .discoveryDescription {
@@ -811,19 +853,34 @@
   color: #fff;
 }
 
+/* Until the label gutter can hold it, the spoiler note closes the opening's
+   text column in normal flow instead of floating over the reading copy. */
 .page .detailSpoiler {
-  position: fixed;
-  z-index: 40;
-  right: 28px;
-  bottom: 28px;
+  margin-top: clamp(30px, 2.8vw, 44px);
+}
+
+/* From 1360px the note fits left of the reading copy, so it anchors
+   bottom-left on the shell gutter, over the empty label column. */
+@media (min-width: 1360px) {
+  .page .detailSpoiler {
+    position: fixed;
+    z-index: 40;
+    bottom: 28px;
+    left: var(--dossier-gutter);
+    margin: 0;
+  }
 }
 
 @media (max-width: 820px) {
+  .page {
+    --dossier-gutter: clamp(18px, 3vw, 46px);
+  }
+
   .opening {
     display: flex;
     flex-direction: column;
     gap: 0;
-    padding: 24px 18px 26px;
+    padding: 24px var(--dossier-gutter) 26px;
   }
 
   .narrativeColumn {
@@ -846,8 +903,8 @@
 
   .mediaColumn {
     order: 2;
-    width: calc(100% + 36px);
-    margin: 0 0 0 -18px;
+    width: calc(100% + 2 * var(--dossier-gutter));
+    margin: 0 0 0 calc(-1 * var(--dossier-gutter));
     padding-inline: 6px;
   }
 
@@ -871,8 +928,8 @@
     order: 3;
     grid-template-columns: 1fr;
     gap: 12px;
-    /* 11px plus the 1px border puts text on the 18px edge. */
-    padding: 22px 11px;
+    /* The inset less the 1px border puts text on the gutter edge. */
+    padding: 22px calc(var(--copy-inset) - 1px);
   }
 
   .sectionLabel span {
@@ -881,14 +938,11 @@
   }
 
   /* Section boxes share the media plate's 6px inset; text inside them
-     keeps the 18px edge of the title and concept block. */
+     keeps the gutter edge of the title and concept block. */
   .reading {
+    --copy-inset: calc(var(--dossier-gutter) - 6px);
     width: auto;
     padding: 0 6px;
-  }
-
-  .copyScenarioAction {
-    padding-inline: 12px;
   }
 
   .copySection[data-prominent] {
@@ -898,12 +952,7 @@
   .taxonomy {
     grid-template-columns: 1fr;
     gap: 44px;
-    padding: 48px 12px 0;
-  }
-
-  .page .detailSpoiler {
-    right: 16px;
-    bottom: 18px;
+    padding-top: 48px;
   }
 
   .mediaIndex {
@@ -946,16 +995,35 @@
   }
 
   .discovery {
-    padding: 64px 18px 96px;
+    padding: 64px var(--dossier-gutter) 96px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .discoveryHeader {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .sectionHeading {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 620px) {
+  .discoverySection + .discoverySection {
+    margin-top: 84px;
   }
 
   .discoveryHeader {
     grid-template-columns: 1fr;
-    gap: 20px;
   }
 
-  .discoveryHeader h2 {
-    font-size: clamp(48px, 12vw, 72px);
+  .discoveryTitle,
+  .discoveryDescription,
+  .discoveryAction {
+    grid-column: 1 / -1;
   }
 
   .discoveryDescription {
@@ -964,12 +1032,6 @@
 
   .discoveryAction {
     width: fit-content;
-  }
-}
-
-@media (max-width: 620px) {
-  .discoverySection + .discoverySection {
-    margin-top: 84px;
   }
 }
 

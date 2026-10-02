@@ -28,7 +28,7 @@ import {
   DialogHeader,
   DialogTitle
 } from '@/components/ui/dialog'
-import type { SearchDocument } from '@/lib/content/catalog'
+import type { SearchDocument, StaticContentKind } from '@/lib/content/catalog'
 import {
   normalizeSearchText,
   searchDocumentGroups,
@@ -38,6 +38,13 @@ import { cn } from '@/lib/utils'
 
 import type { SearchLoadState } from './global-search'
 import styles from './global-search-dialog.module.css'
+
+/** Kinds whose subtitle only names the type, which the group label already says. */
+const TYPE_ONLY_SUBTITLE_KINDS: ReadonlySet<StaticContentKind> = new Set([
+  'concept',
+  'franchise',
+  'risk-family'
+])
 
 export type GlobalSearchDialogProps = {
   readonly documents: readonly SearchDocument[]
@@ -93,7 +100,11 @@ export function GlobalSearchDialog({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
         onCloseAutoFocus={onCloseAutoFocus}
-        className='gap-0 overflow-hidden p-2 sm:max-w-2xl sm:p-3'
+        // A fixed top edge keeps the input still while results grow or empty.
+        className={cn(
+          'top-[max(16px,12vh)] translate-y-0 gap-0 overflow-hidden p-0 sm:max-w-2xl',
+          styles.dialog
+        )}
         disableMotion
         showCloseButton={false}
       >
@@ -106,7 +117,10 @@ export function GlobalSearchDialog({
         </DialogHeader>
 
         <Command
-          className='relative **:data-[slot=command-input-wrapper]:h-12 **:data-[slot=command-input-wrapper]:px-4 [&_[cmdk-group]]:px-1 [&_[cmdk-item]]:px-3 [&_[cmdk-item]]:py-2.5'
+          className={cn(
+            'relative **:data-[slot=command-input-wrapper]:h-12 **:data-[slot=command-input-wrapper]:px-4 [&_[cmdk-group]]:px-0 [&_[cmdk-item]]:px-4 [&_[cmdk-item]]:py-2.5',
+            styles.command
+          )}
           onValueChange={handleIntent}
           shouldFilter={false}
           loop
@@ -143,7 +157,7 @@ export function GlobalSearchDialog({
               <Fragment key={group.kind}>
                 {groupIndex > 0 ? (
                   <CommandSeparator
-                    className='mx-3 my-3'
+                    className='mx-4 my-3'
                     variant='accent'
                     data-search-result-divider
                     alwaysRender
@@ -152,6 +166,9 @@ export function GlobalSearchDialog({
                 <CommandGroup heading={group.label}>
                   {group.documents.map((document) => {
                     const context = supportingKeyword(document, deferredQuery)
+                    const showSubtitle = !TYPE_ONLY_SUBTITLE_KINDS.has(
+                      document.kind
+                    )
 
                     return (
                       <CommandItem
@@ -174,12 +191,17 @@ export function GlobalSearchDialog({
                               query={deferredQuery}
                             />
                           </span>
-                          <span className='truncate text-xs text-muted-foreground'>
-                            <HighlightedSearchText
-                              value={document.subtitle}
-                              query={deferredQuery}
-                            />
-                          </span>
+                          {showSubtitle ? (
+                            <span
+                              className='truncate text-xs text-muted-foreground'
+                              data-search-result-subtitle
+                            >
+                              <HighlightedSearchText
+                                value={document.subtitle}
+                                query={deferredQuery}
+                              />
+                            </span>
+                          ) : null}
                           {context ? (
                             <span className='truncate text-xs text-muted-foreground'>
                               <span className='sr-only'>

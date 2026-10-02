@@ -19,9 +19,13 @@
 }
 
 .footer a:focus-visible {
-  color: var(--footer-electric);
   outline: 2px solid var(--footer-electric);
   outline-offset: 5px;
+}
+
+/* External links keep their ink label; the global sweep is their cue. */
+.footer a:not([target='_blank']):focus-visible {
+  color: var(--footer-electric);
 }
 
 .lead {
@@ -59,7 +63,7 @@
 .baseline,
 .socials {
   font-family: var(--font-geist-mono), monospace;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
 }
@@ -112,6 +116,11 @@
   height: 15px;
 }
 
+/* The label's underline hugs its text rather than the whole track. */
+.socials a > span:first-of-type {
+  justify-self: start;
+}
+
 .socials a > span:last-child {
   color: var(--footer-electric);
 }
@@ -131,7 +140,7 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .footer a:hover {
+  .footer a:not([target='_blank']):hover {
     color: var(--footer-electric);
   }
 }

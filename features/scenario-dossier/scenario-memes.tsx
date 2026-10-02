@@ -33,6 +33,7 @@ import {
 import type { ContentImage } from '@/lib/content/catalog'
 
 import { getNextVisibleMemeCount, MEME_BATCH_SIZE } from './meme-gallery-state'
+import dossierStyles from './scenario-dossier.module.css'
 import styles from './scenario-memes.module.css'
 
 const MEME_DETAIL_SIZES =
@@ -166,6 +167,7 @@ export function ScenarioMemes({
   if (memes.length === 0) return null
 
   const activeMeme = memes[activeIndex]!
+  const isSingleMeme = memes.length === 1
   const visibleMemes = memes.slice(0, visibleCount)
   const remainingCount = Math.max(0, memes.length - visibleCount)
   const nextBatchCount = Math.min(MEME_BATCH_SIZE, remainingCount)
@@ -331,10 +333,16 @@ export function ScenarioMemes({
         <header className={styles.header}>
           <div>
             <p className={styles.eyebrow}>Scenario artifacts</p>
-            <h2 id={headingId}>Memes</h2>
+            <h2 className={dossierStyles.sectionHeading} id={headingId}>
+              Memes
+            </h2>
           </div>
-          <p className={styles.count} aria-label={`${memes.length} memes`}>
-            {String(memes.length).padStart(2, '0')} images
+          <p
+            className={styles.count}
+            aria-label={`${memes.length} ${isSingleMeme ? 'meme' : 'memes'}`}
+          >
+            {String(memes.length).padStart(2, '0')}{' '}
+            {isSingleMeme ? 'image' : 'images'}
           </p>
         </header>
 
@@ -361,7 +369,7 @@ export function ScenarioMemes({
                     fill
                     placeholder='blur'
                     blurDataURL={meme.blurDataURL}
-                    sizes='(max-width: 620px) 45vw, (max-width: 820px) 30vw, (max-width: 1279px) 23vw, 250px'
+                    sizes='(max-width: 620px) 100vw, (max-width: 820px) 48vw, (max-width: 1600px) 31vw, 490px'
                   />
                 </span>
               </button>

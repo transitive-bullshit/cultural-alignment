@@ -42,6 +42,18 @@ const captureSpecSchema = z.object({
       scrollOffset: z.number().default(24),
       waitFor: z.string().optional(),
       storage: z.record(z.string(), z.string()).default({}),
+      /** Interactions run after scrolling, e.g. to show hover or open states. */
+      steps: z
+        .array(
+          z.union([
+            z.object({ hover: z.string() }),
+            z.object({ click: z.string() }),
+            z.object({ type: z.string() }),
+            z.object({ press: z.string() }),
+            z.object({ wait: z.number().int().nonnegative() })
+          ])
+        )
+        .default([]),
       highlights: z
         .array(
           z.object({
@@ -72,7 +84,8 @@ const VIEWPORTS = {
 
 /** Storage that keeps transient overlays out of review screenshots. */
 const DEFAULT_STORAGE = {
-  'cultural-alignment:spoiler-warning:v2': 'dismissed'
+  'cultural-alignment:spoiler-warning:v2': 'dismissed',
+  'cultural-alignment:gallery-intro:v1': 'explicitly-dismissed'
 }
 
 async function capture(specPath: string) {
@@ -139,6 +152,14 @@ async function capture(specPath: string) {
             },
             [shot.scrollTo, shot.scrollOffset] as const
           )
+        }
+        for (const step of shot.steps) {
+          if ('hover' in step) await page.locator(step.hover).first().hover()
+          else if ('click' in step)
+            await page.locator(step.click).first().click()
+          else if ('type' in step) await page.keyboard.type(step.type)
+          else if ('press' in step) await page.keyboard.press(step.press)
+          else await page.waitForTimeout(step.wait)
         }
         await page.waitForTimeout(900)
 

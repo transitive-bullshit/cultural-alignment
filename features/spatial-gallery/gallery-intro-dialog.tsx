@@ -162,6 +162,12 @@ export function GalleryIntroDialog({
               <div className={styles.analogy}>
                 <p className={styles.relation}>This scene is an example of</p>
                 <p className={styles.concept}>{example.concept}</p>
+                <p
+                  className={styles.conceptDefinition}
+                  data-gallery-intro-concept-definition
+                >
+                  {example.conceptDefinition}
+                </p>
               </div>
             </section>
           </div>

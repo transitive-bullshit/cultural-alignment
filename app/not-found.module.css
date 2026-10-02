@@ -51,29 +51,104 @@
   line-height: 1.55;
 }
 
-.message nav {
+.actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 24px;
+  align-items: center;
+  gap: 14px 18px;
 }
 
-.message nav a {
-  padding: 11px 0 8px;
-  border-bottom: 1px solid var(--proto-ink);
+/* The primary action matches the gallery introduction's ink button. */
+.browseAction,
+.searchAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  min-height: 52px;
+  padding: 0 27px;
+  border: 1px solid var(--proto-ink);
+  border-radius: 0;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 10px;
-  letter-spacing: 0.07em;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.068em;
+  line-height: 1;
   text-decoration: none;
   text-transform: uppercase;
   transition:
-    color 150ms var(--proto-ease-out),
-    border-color 150ms var(--proto-ease-out);
+    background-color 150ms var(--proto-ease-out),
+    background-position 260ms var(--proto-ease-out),
+    box-shadow 160ms var(--proto-ease-out),
+    color 120ms var(--proto-ease-out),
+    transform 150ms var(--proto-ease-out);
 }
 
-.message nav a:hover,
-.message nav a:focus-visible {
-  border-color: var(--proto-electric);
-  color: var(--proto-electric);
+/* Qualified to outrank the experience scope's inherited link color. */
+.actions .browseAction {
+  background-color: var(--proto-ink);
+  background-image: linear-gradient(
+    105deg,
+    var(--proto-electric) 0%,
+    var(--proto-electric) 50%,
+    transparent 50.5%,
+    transparent 100%
+  );
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  background-size: 210% 100%;
+  box-shadow: 4px 4px 0
+    color-mix(in srgb, var(--proto-electric) 38%, transparent);
+  color: var(--proto-raised-paper);
+}
+
+.browseAction svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  transition: transform 150ms var(--proto-ease-out);
+}
+
+.actions .searchAction {
+  background: transparent;
+  color: var(--proto-ink);
+  cursor: pointer;
+}
+
+.searchAction kbd {
+  color: var(--proto-muted-ink);
+  font: inherit;
+  font-weight: 500;
+}
+
+.browseAction:focus-visible,
+.searchAction:focus-visible {
+  outline: 2px solid var(--proto-electric);
+  outline-offset: 4px;
+}
+
+.browseAction:active,
+.searchAction:active {
+  transform: translateY(1px) scale(0.985);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .actions .browseAction:hover:not(:active) {
+    background-position: 0 0;
+    box-shadow: 2px 2px 0
+      color-mix(in srgb, var(--proto-electric) 54%, transparent);
+    color: var(--proto-stage);
+    transform: translateY(-1px);
+  }
+
+  .browseAction:hover:not(:active) svg {
+    transform: translateX(4px);
+  }
+
+  .actions .searchAction:hover:not(:active) {
+    background: var(--proto-muted-paper);
+    color: var(--proto-electric);
+    transform: translateY(-1px);
+  }
 }
 
 .crosshair {
@@ -89,5 +164,30 @@
 @media (max-width: 680px) {
   .message h1 {
     font-size: clamp(66px, 23vw, 112px);
+  }
+
+  .browseAction,
+  .searchAction {
+    width: 100%;
+  }
+}
+
+/* Like the header's Search trigger, phones drop the keyboard hint. */
+@media (max-width: 460px) {
+  .searchAction kbd {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .browseAction,
+  .browseAction svg,
+  .searchAction {
+    transition: none;
+  }
+
+  .browseAction:active,
+  .searchAction:active {
+    transform: none;
   }
 }

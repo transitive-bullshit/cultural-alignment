@@ -84,7 +84,16 @@ export function createProjectedSurfaceLayout(
   // same value for some item counts, turning every row into a one-column copy
   // of its neighbor. Expressing the offset in columns preserves full coverage
   // within every lane while spreading nearby rows across the ring.
-  const laneColumnOffset = Math.max(1, Math.floor(itemCount / assignmentLanes))
+  const laneColumnStep = Math.max(1, Math.floor(itemCount / assignmentLanes))
+  // Denser layouts show more lanes than were assigned. Wrapping their offsets
+  // around the ring would replay an assigned lane a column or two over, so
+  // extra lanes interleave halfway between the assigned ones instead, leaving
+  // the assigned lanes' composition untouched.
+  const laneColumnOffset = (lane: number) =>
+    lane < assignmentLanes
+      ? lane * laneColumnStep
+      : ((lane - assignmentLanes) % assignmentLanes) * laneColumnStep +
+        Math.max(1, Math.floor(laneColumnStep / 2))
   const slots = Array.from(
     { length: columns * options.lanes },
     (_, slotIndex): ProjectedSurfaceSlot => {
@@ -105,7 +114,7 @@ export function createProjectedSurfaceLayout(
       return {
         column: logicalColumn,
         itemIndex: positiveModulo(
-          (modularColumn + lane * laneColumnOffset) * columnStride,
+          (modularColumn + laneColumnOffset(lane)) * columnStride,
           itemCount
         ),
         lane,

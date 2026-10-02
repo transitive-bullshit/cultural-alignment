@@ -61,8 +61,10 @@ export function SiteFooter() {
               </li>
             ))}
             <li>
+              {/* The no-break space keeps the ↗ on the label's last line. */}
               <a href={notionSourceUrl} target='_blank' rel='noreferrer'>
-                Source notion database{' '}
+                <span className='external-link'>Source notion database</span>
+                {'\u00a0'}
                 <span className={styles.linkMark} aria-hidden='true'>
                   ↗
                 </span>
@@ -75,19 +77,24 @@ export function SiteFooter() {
       <nav className={styles.socials} aria-label='Social links'>
         <a href={repositoryUrl} target='_blank' rel='noreferrer'>
           <GithubIcon />
-          <span>GitHub</span>
+          <span className='external-link'>GitHub</span>
           <span aria-hidden='true'>↗</span>
         </a>
         <a href={xProfileUrl} target='_blank' rel='noreferrer'>
           <XIcon />
-          <span>@transitive_bs</span>
+          <span className='external-link'>@transitive_bs</span>
           <span aria-hidden='true'>↗</span>
         </a>
       </nav>
 
       <div className={styles.baseline}>
         <p>
-          <a href={xProfileUrl} target='_blank' rel='noreferrer'>
+          <a
+            className='external-link'
+            href={xProfileUrl}
+            target='_blank'
+            rel='noreferrer'
+          >
             © {copyrightYear} Travis Fischer
           </a>
         </p>
@@ -100,7 +107,12 @@ export function SiteFooter() {
             {contentManifest.counts.sources} sources
           </IntentPrefetchLink>{' '}
           ·{' '}
-          <a href={notionSourceUrl} target='_blank' rel='noreferrer'>
+          <a
+            className='external-link'
+            href={notionSourceUrl}
+            target='_blank'
+            rel='noreferrer'
+          >
             CC0 data
           </a>
         </p>

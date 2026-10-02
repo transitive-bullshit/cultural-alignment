@@ -10,10 +10,16 @@ export const metadata: Metadata = {
 }
 
 export default function SourcesPage() {
+  const franchiseCount = contentCatalog.listFranchiseResources().length
+
   return (
     <ResourceIndexPage
       kind='source'
       resources={contentCatalog.listSourceResources()}
+      crossLink={{
+        href: '/franchises',
+        label: `Browse all ${franchiseCount} franchises`
+      }}
     />
   )
 }

@@ -8,29 +8,32 @@ import { isCollectionSort, type CollectionSort } from './collection-sort'
 import styles from './collection-sort-controls.module.css'
 
 const DEFAULT_SORT: CollectionSort = 'default'
-const options = [
-  { label: 'Default', value: 'default' },
-  { label: 'Newest first', value: 'newest' },
-  { label: 'Oldest first', value: 'oldest' }
-] as const satisfies readonly {
-  readonly label: string
-  readonly value: CollectionSort
-}[]
 
 export function CollectionSortControls({
   announcement,
   collectionId,
+  defaultLabel,
   label,
   onValueChange,
   value
 }: {
   readonly announcement: string
   readonly collectionId: string
+  /** Names what the default order is for this collection, e.g. "A–Z". */
+  readonly defaultLabel: string
   readonly label: string
   readonly onValueChange: (value: CollectionSort) => void
   readonly value: CollectionSort
 }) {
   const labelId = `${useId()}-sort-label`
+  const options = [
+    { label: defaultLabel, value: 'default' },
+    { label: 'Newest first', value: 'newest' },
+    { label: 'Oldest first', value: 'oldest' }
+  ] as const satisfies readonly {
+    readonly label: string
+    readonly value: CollectionSort
+  }[]
 
   const handleValueChange = (nextValue: string) => {
     if (isCollectionSort(nextValue)) onValueChange(nextValue)

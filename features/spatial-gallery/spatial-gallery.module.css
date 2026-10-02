@@ -85,12 +85,13 @@
   text-transform: uppercase;
 }
 
+/* The panel sits on the site header's gutter, like the homepage context card. */
 .metadata {
   position: absolute;
   z-index: 35;
-  bottom: 30px;
-  left: 30px;
-  width: min(410px, calc(100vw - 60px));
+  bottom: clamp(18px, 3vw, 46px);
+  left: clamp(18px, 3vw, 46px);
+  width: min(410px, calc(100vw - 2 * clamp(18px, 3vw, 46px)));
   padding: 16px 18px 17px;
   border-top: 1px solid var(--proto-ink);
   border-bottom: 1px solid rgb(45 42 38 / 28%);
@@ -272,8 +273,8 @@
   bottom: 26px;
   margin: 0;
   color: var(--proto-muted-ink);
-  font-size: 0.52rem;
-  letter-spacing: 0.09em;
+  font-size: 10px;
+  letter-spacing: 0.07em;
 }
 
 .fieldHint .hintMark {
@@ -509,8 +510,9 @@
 }
 
 @media (max-width: 680px) {
+  /* Pages with fixed chrome below the header move the surface edges in. */
   .surface {
-    inset: 62px 0 0;
+    inset: var(--gallery-surface-top, 62px) 0 var(--gallery-surface-bottom, 0px);
   }
 
   .metadata {
@@ -556,8 +558,7 @@
   .fieldHint {
     right: auto;
     bottom: calc(16px + env(safe-area-inset-bottom, 0px));
-    left: 17px;
-    font-size: 0.45rem;
+    left: 16px;
   }
 
   .desktopHint {

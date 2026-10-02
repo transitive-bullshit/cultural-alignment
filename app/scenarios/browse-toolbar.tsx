@@ -34,6 +34,7 @@ export function BrowseToolbar({
   readonly resultCount: number
 }) {
   const activeFilterRef = useRef<HTMLAnchorElement>(null)
+  const filterListRef = useRef<HTMLDivElement>(null)
   const activePointerIdRef = useRef<number | null>(null)
   const itemSizeTransitionRef = useRef<GalleryItemSizeTransition>('instant')
   const sizeControlRef = useRef<HTMLDivElement>(null)
@@ -125,18 +126,57 @@ export function BrowseToolbar({
     }
   }, [abortPointerSizing])
 
+  // Reveal the active chip with the least scrolling. The list's
+  // scroll-padding keeps a whole neighbor beside it, so "All" stays in reach.
   useEffect(() => {
     const activeFilter = activeFilterRef.current
-    const filterList = activeFilter?.closest('[role="radiogroup"]')
+    const filterList = filterListRef.current
 
-    if (!(filterList instanceof HTMLElement) || !activeFilter) return
+    if (!filterList || !activeFilter) return
+
+    const style = getComputedStyle(filterList)
+    const start =
+      activeFilter.offsetLeft -
+      (Number.parseFloat(style.scrollPaddingInlineStart) || 0)
+    const end =
+      activeFilter.offsetLeft +
+      activeFilter.offsetWidth +
+      (Number.parseFloat(style.scrollPaddingInlineEnd) || 0) -
+      filterList.clientWidth
 
     filterList.scrollLeft = Math.max(
       0,
-      activeFilter.offsetLeft -
-        (filterList.clientWidth - activeFilter.clientWidth) / 2
+      Math.min(start, Math.max(end, filterList.scrollLeft))
     )
   }, [params.family])
+
+  // Mark which edges have more chips so CSS fades only those edges.
+  useEffect(() => {
+    const filterList = filterListRef.current
+    if (!filterList) return
+
+    const updateOverflow = () => {
+      const { clientWidth, scrollLeft, scrollWidth } = filterList
+      filterList.toggleAttribute('data-overflow-start', scrollLeft > 1)
+      filterList.toggleAttribute(
+        'data-overflow-end',
+        scrollLeft + clientWidth < scrollWidth - 1
+      )
+    }
+
+    // Chips resize when fonts load, which changes overflow without resizing
+    // the list itself.
+    const resizeObserver = new ResizeObserver(updateOverflow)
+    resizeObserver.observe(filterList)
+    for (const chip of filterList.children) resizeObserver.observe(chip)
+    filterList.addEventListener('scroll', updateOverflow, { passive: true })
+    updateOverflow()
+
+    return () => {
+      resizeObserver.disconnect()
+      filterList.removeEventListener('scroll', updateOverflow)
+    }
+  }, [])
 
   return (
     <nav
@@ -144,6 +184,7 @@ export function BrowseToolbar({
       aria-label='Scenario gallery controls'
     >
       <ToggleGroup
+        ref={filterListRef}
         className={styles.filterList}
         data-scenario-family-filters
         type='single'

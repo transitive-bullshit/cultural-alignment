@@ -96,6 +96,63 @@ test.each([
 )
 
 test.each([
+  { label: 'desktop', mobile: false, width: 1_440, height: 782 },
+  { label: 'mobile', mobile: true, width: 390, height: 740 }
+])(
+  'the $label gallery never shows a scenario twice in one view',
+  ({ mobile, width, height }) => {
+    const geometry = getGalleryGeometry(mobile)
+    const galleries = [
+      contentCatalog.listScenarioCards(),
+      contentCatalog.listScenarioCards({ featuredOnly: true }),
+      ...contentCatalog
+        .listResources('risk-family')
+        .map(({ slug }) =>
+          contentCatalog.listScenarioCards({ riskFamilySlug: slug })
+        )
+    ]
+    const repeats = galleries.flatMap((scenarios) => {
+      const layout = createGalleryLayout(scenarios.length, mobile)
+
+      return [GALLERY_ITEM_SIZE_MIN, GALLERY_ITEM_SIZE_DEFAULT].flatMap(
+        (itemSize) => {
+          const viewportWidth =
+            width / getGalleryTargetZoom(mobile, width, height, itemSize)
+          const visibleLanes = getGalleryLaneCount(
+            mobile,
+            width,
+            height,
+            itemSize
+          )
+
+          return Array.from(
+            { length: geometry.maximumLanes - visibleLanes + 1 },
+            (_, windowStart) => windowStart
+          ).flatMap((windowStart) => {
+            const visibleItems = layout.slots
+              .filter(
+                ({ lane, x }) =>
+                  isGalleryLaneActive(lane, windowStart, visibleLanes) &&
+                  Math.abs(x) <= viewportWidth / 2 + geometry.frameWidth / 2
+              )
+              .map(({ itemIndex }) => itemIndex)
+            const repeated = visibleItems.filter(
+              (itemIndex, index) => visibleItems.indexOf(itemIndex) !== index
+            )
+
+            return repeated.length > 0
+              ? [{ count: scenarios.length, itemSize, windowStart, repeated }]
+              : []
+          })
+        }
+      )
+    })
+
+    expect(repeats.slice(0, 5)).toEqual([])
+  }
+)
+
+test.each([
   { label: 'desktop', mobile: false },
   { label: 'mobile', mobile: true }
 ])(
