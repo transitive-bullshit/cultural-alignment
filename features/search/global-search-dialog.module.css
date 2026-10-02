@@ -1,3 +1,36 @@
+/* A square ink frame with the Project popover's offset shadow; one surface,
+   so the command list sits directly on the dialog without an inner frame. */
+.dialog {
+  border: 1px solid var(--foreground);
+  border-radius: 0;
+  background: var(--popover);
+  box-shadow: 8px 8px 0 rgb(45 42 38 / 10%);
+}
+
+.command {
+  border-radius: 0;
+  background: transparent;
+}
+
+.command :global([cmdk-group-heading]) {
+  padding: 8px 16px 6px;
+  color: var(--muted-foreground);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.result {
+  border-radius: 0;
+}
+
+.result[data-selected='true'] {
+  background: var(--muted);
+  box-shadow: 3px 0 0 var(--brand-accent) inset;
+}
+
 .resultTitle {
   transition: color 150ms ease;
 }

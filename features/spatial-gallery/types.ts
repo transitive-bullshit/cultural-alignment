@@ -22,6 +22,8 @@ export type GalleryIntroExample = Readonly<{
   source: string
   title: string
   concept: string
+  /** The concept description's first sentence, which defines it. */
+  conceptDefinition: string
   image: SpatialGalleryItem['image']
 }>
 

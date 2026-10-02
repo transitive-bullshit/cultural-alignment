@@ -228,6 +228,16 @@
   text-wrap: balance;
 }
 
+/* Matches the Dossier's primary-concept description. */
+.example .conceptDefinition {
+  margin-top: 12px;
+  color: var(--muted-foreground);
+  font-family: var(--font-geist-sans), sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
 .footer {
   display: flex;
   flex-shrink: 0;

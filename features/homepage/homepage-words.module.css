@@ -26,11 +26,13 @@
   white-space: nowrap;
 }
 
+/* The card sits on the site header's gutter, like the archive's selected
+   frame panel. */
 .contextCard {
   position: absolute;
   z-index: 35;
-  bottom: var(--homepage-words-context-bottom, clamp(24px, 3vw, 46px));
-  left: clamp(24px, 3vw, 46px);
+  bottom: var(--homepage-words-context-bottom, clamp(18px, 3vw, 46px));
+  left: clamp(18px, 3vw, 46px);
   width: min(520px, calc(100vw - 92px));
   padding: 21px 24px 24px 28px;
   border-top: 1px solid var(--proto-ink, #2d2a26);
@@ -130,8 +132,8 @@
 .keyboardOpen:focus-visible {
   position: absolute;
   z-index: 42;
-  right: clamp(24px, 3vw, 46px);
-  bottom: var(--homepage-words-context-bottom, clamp(24px, 3vw, 46px));
+  right: clamp(18px, 3vw, 46px);
+  bottom: var(--homepage-words-context-bottom, clamp(18px, 3vw, 46px));
   max-width: min(340px, calc(100vw - 92px));
   padding: 11px 14px;
   border: 1px solid var(--proto-ink, #2d2a26);

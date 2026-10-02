@@ -36,20 +36,25 @@
   transform: scale(0.97);
 }
 
+/* The toolbar shares the site header's gutter so its first chip sits under
+   the wordmark. */
 .browseToolbar {
   position: relative;
   z-index: 45;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(12.5rem, 14.5rem) auto;
+  grid-template-areas: 'filters size count';
+  grid-template-columns: minmax(0, 1fr) clamp(12.5rem, 18vw, 14.5rem) auto;
   align-items: center;
   gap: 1.25rem;
   min-height: 48px;
-  padding: 0 30px;
+  padding: 0 max(clamp(18px, 3vw, 46px), env(safe-area-inset-right, 0px)) 0
+    max(clamp(18px, 3vw, 46px), env(safe-area-inset-left, 0px));
   border-bottom: 1px solid rgb(45 42 38 / 13%);
   background: color-mix(in srgb, var(--proto-paper, #f4ecdd) 92%, transparent);
 }
 
 .sizeControl {
+  grid-area: size;
   display: grid;
   grid-template-columns: auto minmax(6.5rem, 1fr) 2.35rem;
   align-items: center;
@@ -68,7 +73,7 @@
 .sizeLabel,
 .sizeValue {
   color: var(--proto-muted-ink, #756d63);
-  font-size: 0.54rem;
+  font-size: 10px;
   font-weight: 650;
   letter-spacing: 0.065em;
   line-height: 1;
@@ -145,7 +150,13 @@
     0 0 0 5px rgb(255 77 31 / 28%);
 }
 
+/* Overflowing chips scroll; the toolbar marks a clipped edge with
+   data-overflow-start/end so the mask fades only the side that continues. */
 .filterList {
+  --filter-fade-start: 0px;
+  --filter-fade-end: 0px;
+  position: relative;
+  grid-area: filters;
   display: flex;
   align-items: center;
   gap: 0.3rem;
@@ -156,11 +167,24 @@
   padding: 0;
   justify-self: stretch;
   list-style: none;
+  overflow-x: auto;
+  scroll-padding-inline: 6rem;
+  scrollbar-width: none;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 var(--filter-fade-start),
+    #000 calc(100% - var(--filter-fade-end)),
+    transparent
+  );
 }
 
-.filterList {
-  overflow-x: auto;
-  scrollbar-width: none;
+.filterList[data-overflow-start] {
+  --filter-fade-start: 2rem;
+}
+
+.filterList[data-overflow-end] {
+  --filter-fade-end: 2rem;
 }
 
 .filterList::-webkit-scrollbar {
@@ -174,7 +198,7 @@
   padding: 0 0.52rem;
   border: 1px solid transparent;
   color: var(--proto-muted-ink, #756d63);
-  font-size: 0.54rem;
+  font-size: 10px;
   font-weight: 650;
   letter-spacing: 0.065em;
   text-decoration: none;
@@ -193,9 +217,10 @@
 }
 
 .resultCount {
+  grid-area: count;
   margin: 0;
   color: var(--proto-muted-ink, #756d63);
-  font-size: 0.58rem;
+  font-size: 10px;
   letter-spacing: 0.08em;
   white-space: nowrap;
 }
@@ -236,38 +261,58 @@
   }
 }
 
+/* Below the header's menu breakpoint the filters take their own row, so all
+   six stay visible at tablet widths. */
+@media (max-width: 900px) {
+  .browseToolbar {
+    grid-template-areas:
+      'filters filters'
+      'size count';
+    grid-template-columns: minmax(0, 14.5rem) minmax(0, 1fr);
+    gap: 6px 1.25rem;
+    padding-block: 8px;
+  }
+
+  .resultCount {
+    justify-self: end;
+  }
+}
+
 @media (max-width: 680px) {
+  /* The fixed toolbar's height also moves the gallery surface below it, and
+     the surface stops above the touch hint so the lower row never covers it. */
+  .browsePage {
+    --browse-toolbar-height: 92px;
+    --gallery-surface-top: calc(62px + var(--browse-toolbar-height));
+    --gallery-surface-bottom: calc(40px + env(safe-area-inset-bottom, 0px));
+  }
+
   .browseToolbar {
     position: fixed;
     top: 62px;
     right: 0;
     left: 0;
-    grid-template-columns: minmax(0, 1fr) minmax(7.4rem, 8.4rem) auto;
-    gap: 0.35rem;
-    min-height: 42px;
-    padding: 6px 10px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-content: center;
+    gap: 6px 12px;
+    height: var(--browse-toolbar-height);
+    padding: 6px 16px;
+  }
+
+  .filterLink {
+    min-height: 40px;
   }
 
   .sizeControl {
-    grid-template-columns: auto minmax(2.9rem, 1fr) 2rem;
-    gap: 0.35rem;
+    grid-template-columns: auto minmax(2.9rem, 1fr) 2.35rem;
+    gap: 0.5rem;
     min-width: 0;
-    padding: 0 0.35rem;
-  }
-
-  .sizeLabel,
-  .sizeValue {
-    font-size: 0.48rem;
+    min-height: 32px;
   }
 
   .resultCount {
-    padding-left: 10px;
+    padding-left: 12px;
     border-left: 1px solid rgb(45 42 38 / 18%);
-    font-size: 0.52rem;
-  }
-
-  .resultCount strong {
-    font-size: 0.7rem;
   }
 }
 
@@ -275,8 +320,8 @@
   .galleryHeader {
     min-height: calc(70px + env(safe-area-inset-top, 0px));
     padding: env(safe-area-inset-top, 0px)
-      max(30px, env(safe-area-inset-right, 0px)) 0
-      max(30px, env(safe-area-inset-left, 0px));
+      max(clamp(18px, 3vw, 46px), env(safe-area-inset-right, 0px)) 0
+      max(clamp(18px, 3vw, 46px), env(safe-area-inset-left, 0px));
   }
 }
 

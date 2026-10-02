@@ -603,7 +603,7 @@ function SelectedMetadata({
         transitionTypes={['scenario-forward']}
         onClick={(event) => handleTransitionLink(event, onOpen)}
       >
-        Open this scenario <span aria-hidden='true'>↗</span>
+        Open this scenario <span aria-hidden='true'>→</span>
       </Link>
     </section>
   )
@@ -631,7 +631,7 @@ function MobileSelectedScenario({
         transitionTypes={['scenario-forward']}
         onClick={(event) => handleTransitionLink(event, onOpen)}
       >
-        Open {item.title} <span aria-hidden='true'>↗</span>
+        Open {item.title} <span aria-hidden='true'>→</span>
       </Link>
     </section>
   )
