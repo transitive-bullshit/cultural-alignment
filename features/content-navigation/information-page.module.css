@@ -20,13 +20,16 @@
 }
 
 .article {
+  /* One fixed first track keeps the page title and section headings on the
+     same edge; fractional tracks resolved differently in the two grids. */
+  --information-index-column: clamp(82px, 9vw, 150px);
   max-width: 1500px;
   margin: 0 auto;
 }
 
 .introduction {
   display: grid;
-  grid-template-columns: minmax(82px, 0.13fr) minmax(0, 1fr) minmax(
+  grid-template-columns: var(--information-index-column) minmax(0, 1fr) minmax(
       260px,
       0.38fr
     );
@@ -82,10 +85,10 @@
 
 .section {
   display: grid;
-  grid-template-columns: minmax(82px, 0.13fr) minmax(220px, 0.35fr) minmax(
-      280px,
-      0.62fr
-    );
+  grid-template-columns: var(--information-index-column) minmax(
+      220px,
+      0.35fr
+    ) minmax(280px, 0.62fr);
   column-gap: clamp(24px, 5vw, 78px);
   padding: clamp(32px, 4.5vw, 64px) 0;
   border-bottom: 1px solid var(--proto-rule);
@@ -107,9 +110,9 @@
 }
 
 .sectionCopy {
-  max-width: 68ch;
+  max-width: 36em;
   color: var(--proto-muted-ink);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.65;
 }
 
@@ -137,12 +140,9 @@
 .sectionCopy a,
 .links a {
   color: var(--proto-ink);
-  text-decoration-color: color-mix(
-    in srgb,
-    var(--proto-electric) 55%,
-    transparent
-  );
-  text-underline-offset: 0.2em;
+}
+
+.links a:not([target='_blank']) {
   transition: color 150ms var(--proto-ease-out);
 }
 
@@ -164,9 +164,14 @@
   text-decoration: none;
 }
 
+/* ↗ marks links that leave the site; in-site links take a plain arrow. */
 .links a::after {
   margin-left: 0.45em;
   color: var(--proto-electric);
+  content: '→';
+}
+
+.links a[target='_blank']::after {
   content: '↗';
 }
 
@@ -178,8 +183,7 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .sectionCopy a:hover,
-  .links a:hover {
+  .links a:not([target='_blank']):hover {
     color: var(--proto-electric);
   }
 }
@@ -205,18 +209,16 @@
   }
 
   .section {
-    grid-template-columns: 42px minmax(0, 1fr);
-    gap: 18px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
   }
 
   .sectionCopy {
-    grid-column: 2;
-    margin-top: 6px;
+    margin-top: 8px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .sectionCopy a,
   .links a {
     transition: none;
   }

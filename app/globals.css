@@ -23,6 +23,8 @@
   --ring: #a66f33;
   --brand-accent: #ff4d1f;
   --brand-interactive: #a83216;
+  --link-rule: color-mix(in srgb, #71695f 42%, transparent);
+  --link-sweep: linear-gradient(90.68deg, #ff4d1f 0.26%, #e5337e 102.37%);
   --radius: 0.5rem;
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -107,6 +109,38 @@ body:has([data-site-footer='hidden']) [data-site-footer-root] {
 
 .experience-scope a {
   color: inherit;
+}
+
+/* External links rest on a muted rule; on hover, keyboard focus, or press an
+   orange sweep grows out from the middle to replace it. Put the class on the
+   anchor or on the span holding its label, never on the trailing ↗. */
+.external-link {
+  padding-bottom: 0.15em;
+  border-bottom: 0.1rem solid var(--link-rule);
+  background-image: var(--link-sweep);
+  background-origin: border-box;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 0 0.1rem;
+  text-decoration: none;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+a.external-link:is(:hover, :focus-visible, :active),
+a:is(:hover, :focus-visible, :active) .external-link {
+  border-bottom-color: transparent;
+  background-position: 0 100%;
+  background-size: 100% 0.1rem;
+  transition-duration: 300ms;
+  transition-property: background-position, background-size;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a.external-link:is(:hover, :focus-visible, :active),
+  a:is(:hover, :focus-visible, :active) .external-link {
+    transition: none;
+  }
 }
 
 ::view-transition {
