@@ -9,11 +9,12 @@ import {
 import type { CollectionSort } from '@/features/collection-sort/collection-sort'
 import type { SourceResourceSummary } from '@/lib/content/catalog'
 
-import { DirectResourceListItem } from './direct-resource-list-item'
-import { sortMediaSources } from './media-source-sort'
+import { MediaResourceCard } from './media-resource-card'
+import { groupMediaSources, sortMediaSources } from './media-source-sort'
 import styles from './resource-pages.module.css'
 
 const STORAGE_KEY = 'cultural-alignment:media-source-collection-sort:v1'
+const ALPHABET = ['#', ...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')]
 
 export function SortableMediaSourceList({
   resources
@@ -25,37 +26,91 @@ export function SortableMediaSourceList({
     STORAGE_KEY,
     getSortAnnouncement
   )
-  const sortedResources = useMemo(
-    () => sortMediaSources(resources, sort),
+  const groups = useMemo(
+    () => groupMediaSources(sortMediaSources(resources, sort), sort),
     [resources, sort]
   )
+  const isAlphabetical = sort === 'default'
+  const groupByLabel = new Map(groups.map((group) => [group.label, group]))
+  // The alphabet stays whole so a missing letter reads as absent, not broken.
+  const jumpLabels = isAlphabetical
+    ? ALPHABET
+    : groups.map(({ label }) => label)
 
   return (
     <div>
       <CollectionSortControls
         announcement={announcement}
         collectionId={collectionId}
+        defaultLabel='A–Z'
         label='Sort media sources'
         value={sort}
         onValueChange={handleSortChange}
       />
 
-      <ol
+      <nav
+        className={styles.jumpBar}
+        aria-label={isAlphabetical ? 'Jump to letter' : 'Jump to decade'}
+        data-source-jump-bar={isAlphabetical ? 'letter' : 'decade'}
+      >
+        <ol>
+          {jumpLabels.map((label) => {
+            const group = groupByLabel.get(label)
+
+            return (
+              <li key={label}>
+                {group ? (
+                  <a
+                    href={`#${group.id}`}
+                    aria-label={`${label === '#' ? 'Numbers and symbols' : label}, ${group.items.length}`}
+                    data-source-jump-link={label}
+                  >
+                    {label}
+                  </a>
+                ) : (
+                  <span aria-hidden='true'>{label}</span>
+                )}
+              </li>
+            )
+          })}
+        </ol>
+      </nav>
+
+      <div
         id={collectionId}
-        className={styles.resourceIndex}
-        data-resource-kind='source'
         data-resource-list
+        data-resource-kind='source'
         data-resource-sort={sort}
       >
-        {sortedResources.map((resource, index) => (
-          <DirectResourceListItem
-            key={resource.id}
-            index={index}
-            releaseDate={resource.releaseDate}
-            resource={resource}
-          />
+        {groups.map((group) => (
+          <section
+            key={group.id}
+            id={group.id}
+            className={styles.sourceGroup}
+            aria-labelledby={`${group.id}-heading`}
+            data-source-group={group.label}
+          >
+            <h2
+              id={`${group.id}-heading`}
+              className={styles.sourceGroupHeading}
+            >
+              <span>{group.label}</span>
+              <span className={styles.sourceGroupCount} aria-hidden='true'>
+                {group.items.length}
+              </span>
+            </h2>
+            <ol className={styles.mediaGrid} data-media-art='poster'>
+              {group.items.map((resource) => (
+                <MediaResourceCard
+                  key={resource.id}
+                  headingLevel={3}
+                  resource={resource}
+                />
+              ))}
+            </ol>
+          </section>
         ))}
-      </ol>
+      </div>
     </div>
   )
 }

@@ -116,9 +116,23 @@ export type ResourceSummary = {
   readonly scenarioCount: number
 }
 
+/** The gallery-size image an index card needs; detail pages keep the full image. */
+type ResourceCardImage = Pick<
+  ContentImage,
+  'gallerySrc' | 'width' | 'height' | 'alt' | 'blurDataURL' | 'focalPoint'
+>
+
 export type SourceResourceSummary = ResourceSummary & {
   readonly kind: 'source'
+  readonly sourceType: SourceRecord['sourceType']
   readonly releaseDate: string | null
+  readonly poster: ResourceCardImage | null
+}
+
+export type FranchiseResourceSummary = ResourceSummary & {
+  readonly kind: 'franchise'
+  readonly image: ResourceCardImage
+  readonly sourceCount: number
 }
 
 type ExternalLink = {
@@ -159,7 +173,7 @@ type FranchiseResourcePage = ResourcePageBase & {
   readonly kind: 'franchise'
   readonly description: string
   readonly image: ContentImage
-  readonly sources: readonly ResourceSummary[]
+  readonly sources: readonly SourceResourceSummary[]
 }
 
 type TaxonomyResourcePage = ResourcePageBase & {
@@ -175,6 +189,7 @@ export type ContentCatalog = {
   listScenarioCards(query?: ScenarioListQuery): readonly GalleryScenario[]
   getScenarioPage(slug: string): ScenarioPage | null
   listSourceResources(): readonly SourceResourceSummary[]
+  listFranchiseResources(): readonly FranchiseResourceSummary[]
   listResources(kind: ResourceKind): readonly ResourceSummary[]
   getResourcePage(kind: ResourceKind, slug: string): ResourcePage | null
   getSearchDocuments(): readonly SearchDocument[]
@@ -380,7 +395,8 @@ export function createContentCatalog(input: unknown): ContentCatalog {
   const franchiseSummaries = snapshot.franchises.map((franchise) =>
     toFranchiseSummary(
       franchise,
-      scenariosByFranchiseId.get(franchise.id)?.length ?? 0
+      scenariosByFranchiseId.get(franchise.id)?.length ?? 0,
+      sourcesByFranchiseId.get(franchise.id)?.length ?? 0
     )
   )
   const riskFamilySummaries = snapshot.riskFamilies.map((family) =>
@@ -402,6 +418,9 @@ export function createContentCatalog(input: unknown): ContentCatalog {
     Object.values(resourceSummaries)
       .flat()
       .map((resource) => [resourceKey(resource.kind, resource.id), resource])
+  )
+  const sourceSummaryById = new Map(
+    resourceSummaries.source.map((source) => [source.id, source])
   )
   const resourcePageByKind = {
     source: new Map(
@@ -464,12 +483,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
             description: franchise.description,
             image: franchise.image,
             sources: sortResources(
-              sources.map((source) =>
-                getRequired(
-                  resourceSummaryById,
-                  resourceKey('source', source.id)
-                )
-              )
+              sources.map((source) => getRequired(sourceSummaryById, source.id))
             ),
             externalLinks: franchiseExternalLinks(franchise),
             relatedResources: collectRelatedResources(
@@ -577,6 +591,10 @@ export function createContentCatalog(input: unknown): ContentCatalog {
       return resourceSummaries.source
     },
 
+    listFranchiseResources() {
+      return resourceSummaries.franchise
+    },
+
     listResources(kind) {
       return resourceSummaries[kind]
     },
@@ -616,15 +634,18 @@ function toSourceSummary(
     title: source.title,
     detailTitle: source.title,
     description: source.description,
+    sourceType: source.sourceType,
     releaseDate: source.releaseDate,
+    poster: source.poster ? toCardImage(source.poster) : null,
     scenarioCount
   }
 }
 
 function toFranchiseSummary(
   franchise: FranchiseRecord,
-  scenarioCount: number
-): ResourceSummary {
+  scenarioCount: number,
+  sourceCount: number
+): FranchiseResourceSummary {
   return {
     kind: 'franchise',
     id: franchise.id,
@@ -633,8 +654,18 @@ function toFranchiseSummary(
     title: franchise.title,
     detailTitle: franchise.title,
     description: franchise.description,
+    image: toCardImage(franchise.image),
+    sourceCount,
     scenarioCount
   }
+}
+
+function toCardImage(image: ContentImage): ResourceCardImage {
+  const { alt, blurDataURL, focalPoint, gallerySrc, height, width } = image
+
+  return focalPoint
+    ? { gallerySrc, width, height, alt, blurDataURL, focalPoint }
+    : { gallerySrc, width, height, alt, blurDataURL }
 }
 
 function toRiskFamilySummary(

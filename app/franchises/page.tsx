@@ -14,7 +14,8 @@ export default function FranchisesPage() {
   return (
     <ResourceIndexPage
       kind='franchise'
-      resources={contentCatalog.listResources('franchise')}
+      resources={contentCatalog.listFranchiseResources()}
+      crossLink={{ href: '/sources', label: 'All media sources' }}
     />
   )
 }

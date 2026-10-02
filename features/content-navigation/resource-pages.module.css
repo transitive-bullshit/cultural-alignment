@@ -1,6 +1,8 @@
 .page {
+  --page-gutter: clamp(18px, 3vw, 46px);
+
   min-height: 100svh;
-  padding: 0 clamp(18px, 3vw, 46px) clamp(76px, 9vw, 132px);
+  padding: 0 var(--page-gutter) clamp(76px, 9vw, 132px);
   background:
     linear-gradient(
       color-mix(in srgb, var(--proto-rule) 34%, transparent) 1px,
@@ -15,22 +17,23 @@
   background-size: 52px 52px;
 }
 
+/* Index intros stack on the page edge at the taxonomy detail title scale. */
 .indexIntro {
-  display: grid;
-  grid-template-columns: minmax(82px, 0.13fr) minmax(0, 1fr) minmax(
-      250px,
-      0.38fr
-    );
-  column-gap: clamp(24px, 5vw, 78px);
-  padding: clamp(66px, 9vw, 132px) 0 clamp(54px, 7vw, 98px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(56px, 7vw, 96px) 0 clamp(40px, 5vw, 64px);
 }
 
 .eyebrow,
 .recordCount,
+.crossLink,
 .sectionHeader p,
 .asideLabel,
 .indexNumber,
 .itemCount,
+.mediaMeta,
+.sourceGroupCount,
 .detailFacts dt {
   font-family: var(--font-geist-mono), monospace;
   font-size: 9px;
@@ -46,34 +49,80 @@
 .indexIntro h1,
 .detailIntro h1 {
   min-width: 0;
+  max-width: 100%;
   margin: 0;
   font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
-  font-size: clamp(76px, 12vw, 174px);
+  font-size: clamp(55.2px, 7.82vw, 115px);
   font-weight: 800;
   letter-spacing: -0.045em;
-  line-height: 0.82;
-  text-wrap: balance;
-}
-
-.detailIntro h1 {
-  font-size: clamp(55.2px, 7.82vw, 115px);
   line-height: 0.96;
+  text-wrap: balance;
   hyphens: manual;
   overflow-wrap: break-word;
 }
 
-.introCopy {
-  align-self: end;
+.indexIntro .eyebrow {
   margin: 0;
-  color: var(--proto-muted-ink);
-  font-size: 15px;
-  line-height: 1.55;
+}
+
+.indexIntro h1 {
+  margin-top: clamp(16px, 1.8vw, 26px);
+}
+
+/* The index description reads like a detail page's lead. */
+.introCopy,
+.detailLead {
+  max-width: 34em;
+  margin: clamp(20px, 2.2vw, 32px) 0 0;
+  color: var(--proto-ink);
+  font-size: clamp(17px, 1.45vw, 21px);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.introMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px 28px;
+  margin-top: clamp(20px, 2.2vw, 28px);
 }
 
 .recordCount {
-  grid-column: 3;
-  margin: 22px 0 0;
+  margin: 0;
   color: var(--proto-muted-ink);
+}
+
+/* A quiet pivot between the two media indexes. */
+.crossLink {
+  color: var(--proto-ink);
+  font-size: 10px;
+  text-decoration: underline;
+  text-decoration-color: color-mix(
+    in srgb,
+    var(--proto-electric) 55%,
+    transparent
+  );
+  text-underline-offset: 4px;
+  transition: color 150ms var(--proto-ease-out);
+}
+
+.crossLink::after {
+  display: inline-block;
+  margin-left: 6px;
+  color: var(--proto-electric);
+  content: '→';
+  text-decoration: none;
+}
+
+.crossLink:hover,
+.crossLink:focus-visible {
+  color: var(--proto-electric);
+}
+
+.crossLink:focus-visible {
+  outline: 2px solid var(--proto-electric);
+  outline-offset: 3px;
 }
 
 .resourceIndex {
@@ -89,21 +138,35 @@
 }
 
 .resourceIndex li {
+  display: flex;
   min-width: 0;
   border-bottom: 1px solid var(--proto-rule);
   content-visibility: auto;
-  contain-intrinsic-size: 140px;
+  contain-intrinsic-size: auto 140px;
 }
 
 .resourceIndex li:not(:nth-child(3n + 1)) {
   border-left: 1px solid var(--proto-rule);
 }
 
+/* A short final row spans the open cells so the ruled grid stays closed. */
+.resourceIndex li:last-child:nth-child(3n + 1) {
+  grid-column: span 3;
+}
+
+.resourceIndex li:last-child:nth-child(3n + 2) {
+  grid-column: span 2;
+}
+
+/* The link fills its cell; the number sits above the title on the same
+   edge, and the count is pinned to the bottom so a row's counts align. */
 .resourceIndex a {
   position: relative;
-  display: grid;
-  grid-template-columns: 34px minmax(0, 1fr) auto;
-  gap: 8px 14px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
   min-height: 132px;
   padding: 22px 20px;
   text-decoration: none;
@@ -112,19 +175,15 @@
     background 240ms var(--proto-ease-out);
 }
 
-.resourceIndex[data-resource-kind='risk-family'] a {
-  min-height: 216px;
-}
-
 .resourceIndex a:hover,
 .resourceIndex a:focus-visible {
   background: var(--proto-raised-paper);
   color: var(--proto-electric);
 }
 
-.resourceIndex h2,
-.resourceIndex h3 {
-  margin: 0;
+.resourceIndex h2 {
+  max-width: 100%;
+  margin: 10px 0 0;
   font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
   font-size: clamp(27px, 3vw, 43px);
   font-weight: 700;
@@ -134,12 +193,19 @@
 }
 
 .resourceIndex p {
-  grid-column: 2 / -1;
   max-width: 46ch;
-  margin: 10px 0 18px;
+  margin: 10px 0 0;
   color: var(--proto-muted-ink);
   font-size: 13px;
   line-height: 1.5;
+}
+
+/* Concept definitions are a preview; the detail page owns the full text. */
+.resourceIndex[data-resource-kind='concept'] p {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .indexNumber,
@@ -148,14 +214,202 @@
 }
 
 .itemCount {
-  grid-column: 2;
-  align-self: end;
+  margin-top: auto;
+  padding-top: 18px;
 }
 
-.openMark {
+/* Media indexes are poster grids: about seven 2:3 posters a row at 1440 and
+   five 16:9 key art frames, two of either on phones. */
+.mediaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+  gap: clamp(28px, 3vw, 40px) clamp(14px, 1.4vw, 20px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mediaGrid[data-media-art='key-art'] {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.mediaGrid li {
+  min-width: 0;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 320px;
+}
+
+.mediaCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  color: var(--proto-ink);
+  text-decoration: none;
+}
+
+.mediaCard:focus-visible {
+  outline: 2px solid var(--proto-electric);
+  outline-offset: 4px;
+}
+
+/* The resource image plate's ink frame, without its offset shadow at this
+   density. */
+.mediaFrame {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  border: 1px solid var(--proto-ink);
+  background: var(--proto-raised-paper);
+  transition: border-color 180ms var(--proto-ease-out);
+}
+
+.mediaGrid[data-media-art='key-art'] .mediaFrame {
+  aspect-ratio: 16 / 9;
+}
+
+.mediaFrame img {
+  transition: transform 240ms var(--proto-ease-out);
+}
+
+.mediaTitle {
+  max-width: 100%;
+  margin: 12px 0 0;
+  font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
+  font-size: clamp(20px, 1.6vw, 24px);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1;
+  text-wrap: balance;
+  transition: color 150ms var(--proto-ease-out);
+}
+
+.mediaMeta {
+  margin: 7px 0 0;
+  color: var(--proto-muted-ink);
+  line-height: 1.4;
+}
+
+.mediaCard:hover .mediaFrame,
+.mediaCard:focus-visible .mediaFrame {
+  border-color: var(--proto-electric);
+}
+
+.mediaCard:hover .mediaTitle,
+.mediaCard:focus-visible .mediaTitle {
   color: var(--proto-electric);
+}
+
+/* Like the Dossier's discovery cards: washed grayscale until deliberate
+   hover or keyboard focus, so hundreds of posters stay quiet on the paper. */
+@media (hover: hover) and (pointer: fine) {
+  .mediaFrame img {
+    filter: grayscale(1) sepia(0.16) saturate(0.45) contrast(0.78);
+    transition:
+      filter 180ms var(--proto-ease-out),
+      transform 240ms var(--proto-ease-out);
+  }
+
+  .mediaCard:hover .mediaFrame img,
+  .mediaCard:focus-visible .mediaFrame img {
+    filter: none;
+  }
+
+  .mediaCard:hover .mediaFrame img {
+    transform: scale(1.025);
+  }
+}
+
+/* Wayfinding for the long source list: a jump bar of letters (or decades
+   when sorted by date) that stays in reach while scrolling. */
+.jumpBar {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  margin: 0 calc(-1 * var(--page-gutter)) clamp(24px, 3vw, 36px);
+  padding: 0 var(--page-gutter);
+  border-top: 1px solid var(--proto-rule);
+  border-bottom: 1px solid var(--proto-rule);
+  background: var(--proto-paper);
+}
+
+.jumpBar ol {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.jumpBar a,
+.jumpBar span {
+  display: grid;
+  min-width: 30px;
+  min-height: 40px;
+  place-items: center;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 12px;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+/* The first letter keeps the page's leading edge. */
+.jumpBar li:first-child :is(a, span) {
+  min-width: 0;
+  padding: 0 10px 0 0;
+  place-items: center start;
+}
+
+.jumpBar a {
+  padding-inline: 6px;
+  color: var(--proto-ink);
+  text-decoration: none;
+  transition:
+    color 150ms var(--proto-ease-out),
+    background 240ms var(--proto-ease-out);
+}
+
+.jumpBar a:hover,
+.jumpBar a:focus-visible {
+  background: var(--proto-raised-paper);
+  color: var(--proto-electric);
+}
+
+.jumpBar a:focus-visible {
+  outline: 2px solid var(--proto-electric);
+  outline-offset: -2px;
+}
+
+.jumpBar span {
+  color: color-mix(in srgb, var(--proto-muted-ink) 45%, transparent);
+}
+
+.sourceGroup {
+  scroll-margin-top: 64px;
+}
+
+.sourceGroup + .sourceGroup {
+  margin-top: clamp(40px, 4.5vw, 64px);
+}
+
+.sourceGroupHeading {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 0 0 clamp(16px, 1.8vw, 24px);
+  padding-top: 12px;
+  border-top: 1px solid var(--proto-ink);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+
+.sourceGroupCount {
+  color: var(--proto-muted-ink);
+  font-weight: 400;
 }
 
 .detailIntro {
@@ -195,15 +449,6 @@
   margin-top: var(--detail-title-gap);
 }
 
-.detailLead {
-  max-width: 34em;
-  margin: clamp(20px, 2.2vw, 32px) 0 0;
-  color: var(--proto-ink);
-  font-size: clamp(17px, 1.45vw, 21px);
-  line-height: 1.5;
-  text-wrap: pretty;
-}
-
 .detailFacts {
   display: flex;
   flex-wrap: wrap;
@@ -237,23 +482,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2px 14px;
-}
-
-.inlineLinks a {
-  text-decoration: underline;
-  text-decoration-color: color-mix(
-    in srgb,
-    var(--proto-electric) 55%,
-    transparent
-  );
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
-
-.inlineLinks a:hover,
-.inlineLinks a:focus-visible {
-  color: var(--proto-electric);
-  text-decoration-color: currentColor;
 }
 
 .inlineLinks a:focus-visible {
@@ -371,15 +599,6 @@
   overflow-wrap: anywhere;
 }
 
-.externalLinks a:hover .externalLinkTitle,
-.externalLinks a:focus-visible .externalLinkTitle,
-.linkRow a:hover .externalLinkTitle,
-.linkRow a:focus-visible .externalLinkTitle {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
-
 .externalLinks a:focus-visible,
 .linkRow a:focus-visible {
   outline: 2px solid var(--proto-ink);
@@ -423,7 +642,7 @@
 .sectionHeader h2 {
   margin: 0;
   font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
-  font-size: clamp(32px, 4.5vw, 62px);
+  font-size: clamp(40px, 4.5vw, 62px);
   font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 0.92;
@@ -545,29 +764,21 @@
 }
 
 @media (max-width: 860px) {
-  .indexIntro {
-    display: block;
-    padding: 56px 0 48px;
-  }
-
-  .indexIntro h1 {
-    margin-top: 18px;
-    font-size: clamp(64px, 14vw, 98px);
-  }
-
-  .introCopy {
-    margin-top: 28px;
-  }
-
   .detailIntro,
   .detailIntro[data-has-aside] {
     grid-template-columns: minmax(0, 1fr);
     padding: 48px 0 44px;
   }
 
+  .indexIntro h1,
   .detailIntro h1,
   .detailIntro[data-layout='media'] h1 {
     font-size: clamp(46px, 12.88vw, 82.8px);
+  }
+
+  /* Section titles stay between the page title and the card titles. */
+  .sectionHeader h2 {
+    font-size: clamp(40px, 6vw, 52px);
   }
 
   .detailIntro[data-layout='media'][data-has-resource-image],
@@ -600,6 +811,15 @@
     border-left: 1px solid var(--proto-rule);
   }
 
+  .resourceIndex li:last-child:nth-child(3n + 1),
+  .resourceIndex li:last-child:nth-child(3n + 2) {
+    grid-column: auto;
+  }
+
+  .resourceIndex li:last-child:nth-child(odd) {
+    grid-column: span 2;
+  }
+
   .pivotGroups {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -607,26 +827,14 @@
 
 @media (max-width: 680px) {
   .page {
-    padding: 0 18px 72px;
+    --page-gutter: 18px;
+
+    padding: 0 var(--page-gutter) 72px;
     background-size: 42px 42px;
   }
 
   .indexIntro {
-    display: block;
-    padding: 56px 0 48px;
-  }
-
-  .indexIntro h1 {
-    margin-top: 18px;
-    font-size: clamp(64px, 22vw, 98px);
-  }
-
-  .introCopy {
-    margin-top: 28px;
-  }
-
-  .recordCount {
-    margin-top: 20px;
+    padding: 40px 0 36px;
   }
 
   .detailIntro,
@@ -654,12 +862,45 @@
     border-left: 0;
   }
 
+  .resourceIndex li:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+
   .resourceIndex a {
+    min-height: 0;
     padding-inline: 0;
   }
 
+  .mediaGrid,
+  .mediaGrid[data-media-art='key-art'] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 14px;
+  }
+
+  /* One scrollable row of 44px targets instead of a wrapped block. */
+  .jumpBar ol {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .jumpBar ol::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Letters sit at the start of even 44px targets, so the first one keeps
+     the leading edge without uneven spacing after it. */
+  .jumpBar a,
+  .jumpBar span,
+  .jumpBar li:first-child :is(a, span) {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+    place-items: center start;
+  }
+
   .sectionHeader h2 {
-    font-size: 38px;
+    font-size: 42px;
   }
 
   .chip {
@@ -669,7 +910,16 @@
 
 @media (prefers-reduced-motion: reduce) {
   .resourceIndex a,
+  .crossLink,
+  .mediaFrame,
+  .mediaFrame img,
+  .mediaTitle,
+  .jumpBar a,
   .chip {
     transition: none;
+  }
+
+  .mediaCard:hover .mediaFrame img {
+    transform: none;
   }
 }

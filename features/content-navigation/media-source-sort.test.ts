@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { sortMediaSources } from './media-source-sort'
+import { groupMediaSources, sortMediaSources } from './media-source-sort'
 
 const sources = [
   { id: 'middle-b', title: 'Beta', releaseDate: '2005-02-03' },
@@ -39,5 +39,79 @@ describe('media source sorting', () => {
       'newest',
       'unknown'
     ])
+  })
+
+  it('groups the alphabetical list by first letter, digits and symbols first', () => {
+    const titled = [
+      ...sources,
+      {
+        id: 'digit',
+        title: '2001: A Space Odyssey',
+        releaseDate: '1968-04-02'
+      },
+      { id: 'accent', title: 'Éclair', releaseDate: '2010-01-01' },
+      { id: 'quoted', title: '“Quoted”', releaseDate: null }
+    ]
+    const groups = groupMediaSources(
+      sortMediaSources(titled, 'default'),
+      'default'
+    )
+
+    expect(groups.map(({ label }) => label)).toEqual([
+      '#',
+      'A',
+      'B',
+      'C',
+      'D',
+      'E'
+    ])
+    expect(groups[0]!.items.map(({ id }) => id).toSorted()).toEqual([
+      'digit',
+      'quoted'
+    ])
+    expect(groups.find(({ label }) => label === 'E')!.items).toHaveLength(2)
+    expect(groups.map(({ id }) => id)).toEqual([
+      'sources-numbers',
+      'sources-a',
+      'sources-b',
+      'sources-c',
+      'sources-d',
+      'sources-e'
+    ])
+  })
+
+  it('keeps every source, in sorted order, across contiguous groups', () => {
+    for (const sort of ['default', 'newest', 'oldest'] as const) {
+      const sorted = sortMediaSources(sources, sort)
+      const groups = groupMediaSources(sorted, sort)
+
+      expect(groups.flatMap(({ items }) => items)).toEqual(sorted)
+      expect(new Set(groups.map(({ id }) => id)).size).toBe(groups.length)
+    }
+  })
+
+  it('groups date sorts by release decade with undated sources last', () => {
+    const newest = groupMediaSources(
+      sortMediaSources(sources, 'newest'),
+      'newest'
+    )
+    const oldest = groupMediaSources(
+      sortMediaSources(sources, 'oldest'),
+      'oldest'
+    )
+
+    expect(newest.map(({ label }) => label)).toEqual([
+      '2020s',
+      '2000s',
+      '1990s',
+      'Undated'
+    ])
+    expect(oldest.map(({ label }) => label)).toEqual([
+      '1990s',
+      '2000s',
+      '2020s',
+      'Undated'
+    ])
+    expect(newest.at(-1)!.id).toBe('sources-undated')
   })
 })

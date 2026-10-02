@@ -7,6 +7,7 @@ import { ScrambleLink } from '@/components/motion/scramble-link'
 import { SiteHeader } from '@/components/site-header'
 import { ScenarioCollection } from '@/features/scenario-collection/scenario-collection'
 import type {
+  FranchiseResourceSummary,
   RelatedResource,
   ResourceKind,
   ResourcePage,
@@ -15,9 +16,10 @@ import type {
 } from '@/lib/content/catalog'
 
 import {
-  DirectResourceListItem,
-  formatScenarioCount
-} from './direct-resource-list-item'
+  formatSceneCount,
+  formatSourceType,
+  MediaResourceCard
+} from './media-resource-card'
 import { SortableMediaSourceList } from './sortable-media-source-list'
 import styles from './resource-pages.module.css'
 
@@ -60,74 +62,122 @@ const PRESENTATION = {
   }
 >
 
-type ResourceIndexPageProps =
-  | Readonly<{
-      kind: 'source'
-      resources: readonly SourceResourceSummary[]
-    }>
-  | Readonly<{
-      kind: Exclude<ResourceKind, 'source'>
-      resources: readonly ResourceSummary[]
-    }>
+type IndexCrossLink = Readonly<{ href: string; label: string }>
 
-export function ResourceIndexPage({ kind, resources }: ResourceIndexPageProps) {
+type ResourceIndexPageProps = Readonly<{
+  /** A quiet link to the sibling media index. */
+  crossLink?: IndexCrossLink
+}> &
+  (
+    | Readonly<{
+        kind: 'source'
+        resources: readonly SourceResourceSummary[]
+      }>
+    | Readonly<{
+        kind: 'franchise'
+        resources: readonly FranchiseResourceSummary[]
+      }>
+    | Readonly<{
+        kind: 'risk-family' | 'concept'
+        resources: readonly ResourceSummary[]
+      }>
+  )
+
+export function ResourceIndexPage(props: ResourceIndexPageProps) {
+  const { crossLink, kind, resources } = props
   const presentation = PRESENTATION[kind]
 
   return (
-    <main className={`experience-scope ${styles.page}`}>
+    <main
+      className={`experience-scope ${styles.page}`}
+      data-resource-index={kind}
+    >
       <SiteHeader inset />
 
       <section className={styles.indexIntro}>
         <p className={styles.eyebrow}>{presentation.eyebrow}</p>
         <h1>{presentation.indexTitle}</h1>
         <p className={styles.introCopy}>{presentation.description}</p>
-        <p className={styles.recordCount}>
-          {String(resources.length).padStart(2, '0')} records
-        </p>
+        <div className={styles.introMeta}>
+          <p className={styles.recordCount}>
+            {String(resources.length).padStart(2, '0')} records
+          </p>
+          {crossLink ? (
+            <Link
+              className={styles.crossLink}
+              href={crossLink.href}
+              data-index-cross-link
+            >
+              {crossLink.label}
+            </Link>
+          ) : null}
+        </div>
       </section>
 
-      {kind === 'source' ? (
-        <SortableMediaSourceList resources={resources} />
+      {props.kind === 'source' ? (
+        <SortableMediaSourceList resources={props.resources} />
+      ) : props.kind === 'franchise' ? (
+        <MediaResourceGrid kind='franchise' resources={props.resources} />
       ) : (
-        <ResourceList kind={kind} resources={resources} />
+        <TaxonomyResourceList kind={props.kind} resources={props.resources} />
       )}
     </main>
   )
 }
 
-function ResourceList({
+function MediaResourceGrid({
   headingLevel = 2,
   kind,
   label,
   resources
 }: {
   readonly headingLevel?: 2 | 3
-  readonly kind: ResourceKind
   readonly label?: string
+} & (
+  | {
+      readonly kind: 'source'
+      readonly resources: readonly SourceResourceSummary[]
+    }
+  | {
+      readonly kind: 'franchise'
+      readonly resources: readonly FranchiseResourceSummary[]
+    }
+)) {
+  return (
+    <ol
+      className={styles.mediaGrid}
+      aria-label={label}
+      data-media-art={kind === 'source' ? 'poster' : 'key-art'}
+      data-resource-kind={kind}
+      data-resource-list
+    >
+      {resources.map((resource) => (
+        <MediaResourceCard
+          key={resource.id}
+          headingLevel={headingLevel}
+          resource={resource}
+        />
+      ))}
+    </ol>
+  )
+}
+
+/** Concepts and risk families are text-led: index, title, definition, count. */
+function TaxonomyResourceList({
+  kind,
+  resources
+}: {
+  readonly kind: 'risk-family' | 'concept'
   readonly resources: readonly ResourceSummary[]
 }) {
-  const usesDirectLink = kind === 'source' || kind === 'franchise'
-
   return (
     <ol
       className={styles.resourceIndex}
-      aria-label={label}
       data-resource-kind={kind}
       data-resource-list
     >
       {resources.map((resource, index) => {
-        const scenarioCount = formatScenarioCount(resource.scenarioCount)
-
-        if (usesDirectLink) {
-          return (
-            <DirectResourceListItem
-              key={resource.id}
-              headingLevel={headingLevel}
-              index={index}
-              resource={resource}
-            />
-          )
-        }
+        const sceneCount = formatSceneCount(resource.scenarioCount)
 
         return (
           <li key={resource.id}>
@@ -136,22 +186,21 @@ function ResourceList({
               copyElement='h2'
               duration={260}
               href={resource.href}
-              label={`${resource.title}, ${scenarioCount}`}
+              label={`${resource.title}, ${sceneCount}`}
               leadingContent={
-                <span className={styles.indexNumber}>
+                <span className={styles.indexNumber} aria-hidden='true'>
                   {String(index + 1).padStart(2, '0')}
                 </span>
               }
               prefetch='auto'
               trailingContent={
                 <>
-                  {kind === 'risk-family' && resource.description ? (
-                    <p>{resource.description}</p>
+                  {resource.description ? (
+                    <p data-resource-index-description>
+                      {resource.description}
+                    </p>
                   ) : null}
-                  <span className={styles.itemCount}>{scenarioCount}</span>
-                  <span className={styles.openMark} aria-hidden='true'>
-                    ↗
-                  </span>
+                  <span className={styles.itemCount}>{sceneCount}</span>
                 </>
               }
             >
@@ -183,6 +232,8 @@ export function ResourceDetailPage({
   const families = related('risk-family')
   const concepts = related('concept')
   const hasReading = isTaxonomy && resource.externalLinks.length > 0
+  // With one scene every shared count is 1, so counts carry no information.
+  const showSharedCounts = resource.scenarioCount > 1
   const imageOrientation = heroImage
     ? heroImage.width / heroImage.height < 0.9
       ? 'portrait'
@@ -281,7 +332,7 @@ export function ResourceDetailPage({
             eyebrow={formatCount(concepts.length, 'concept')}
             title='Concepts in this risk family'
           />
-          <RelatedChips resources={concepts} />
+          <RelatedChips resources={concepts} showCounts={showSharedCounts} />
         </section>
       ) : null}
 
@@ -305,7 +356,7 @@ export function ResourceDetailPage({
             eyebrow={formatCount(resource.sources.length, 'work')}
             title={`Works in ${resource.title}`}
           />
-          <ResourceList
+          <MediaResourceGrid
             headingLevel={3}
             kind='source'
             label={`Media sources in ${resource.title}`}
@@ -320,10 +371,12 @@ export function ResourceDetailPage({
             eyebrow='Related concepts'
             title={`Often paired with ${resource.title}`}
           />
-          <p className={styles.sectionNote}>
-            Counts are scenes on this page that share the concept.
-          </p>
-          <RelatedChips resources={concepts} />
+          {showSharedCounts ? (
+            <p className={styles.sectionNote}>
+              Counts are scenes on this page that share the concept.
+            </p>
+          ) : null}
+          <RelatedChips resources={concepts} showCounts={showSharedCounts} />
         </section>
       ) : null}
 
@@ -343,21 +396,30 @@ export function ResourceDetailPage({
             eyebrow='AI safety ideas'
             title={`What ${resource.title} illustrates`}
           />
-          <p className={styles.sectionNote}>
-            Counts are scenes from this {presentation.singular.toLowerCase()}{' '}
-            tagged with each idea.
-          </p>
+          {showSharedCounts ? (
+            <p className={styles.sectionNote}>
+              Counts are scenes from this {presentation.singular.toLowerCase()}{' '}
+              tagged with each idea.
+            </p>
+          ) : null}
           <div className={styles.pivotGroups}>
             {families.length > 0 ? (
               <div>
                 <h3 className={styles.asideLabel}>AI risk families</h3>
-                <RelatedChips noun='risk family' resources={families} />
+                <RelatedChips
+                  noun='risk family'
+                  resources={families}
+                  showCounts={showSharedCounts}
+                />
               </div>
             ) : null}
             {concepts.length > 0 ? (
               <div>
                 <h3 className={styles.asideLabel}>AI safety concepts</h3>
-                <RelatedChips resources={concepts} />
+                <RelatedChips
+                  resources={concepts}
+                  showCounts={showSharedCounts}
+                />
               </div>
             ) : null}
           </div>
@@ -442,7 +504,7 @@ function InlineLinks({
   return (
     <span className={styles.inlineLinks}>
       {resources.map((resource) => (
-        <Link key={resource.id} href={resource.href}>
+        <Link key={resource.id} className='external-link' href={resource.href}>
           {resource.title}
         </Link>
       ))}
@@ -463,7 +525,9 @@ function ExternalLinks({
         <li key={link.href}>
           <a href={link.href} target='_blank' rel='noreferrer'>
             <span className={styles.externalLinkCopy}>
-              <span className={styles.externalLinkTitle}>{link.label}</span>
+              <span className={styles.externalLinkTitle}>
+                <span className='external-link'>{link.label}</span>
+              </span>
               {link.description ? (
                 <small className={styles.externalLinkDescription}>
                   {link.description}
@@ -503,21 +567,23 @@ const VISIBLE_CHIPS = 12
  */
 function RelatedChips({
   noun = 'concept',
-  resources
+  resources,
+  showCounts
 }: {
   readonly noun?: string
   readonly resources: readonly RelatedResource[]
+  readonly showCounts: boolean
 }) {
   const visible = resources.slice(0, VISIBLE_CHIPS)
   const rest = resources.slice(VISIBLE_CHIPS)
 
   return (
     <div className={styles.chips}>
-      <ChipList resources={visible} />
+      <ChipList resources={visible} showCounts={showCounts} />
       {rest.length > 0 ? (
         <details className={styles.moreChips}>
           <summary>Show all {formatCount(resources.length, noun)}</summary>
-          <ChipList resources={rest} />
+          <ChipList resources={rest} showCounts={showCounts} />
         </details>
       ) : null}
     </div>
@@ -525,9 +591,11 @@ function RelatedChips({
 }
 
 function ChipList({
-  resources
+  resources,
+  showCounts
 }: {
   readonly resources: readonly RelatedResource[]
+  readonly showCounts: boolean
 }) {
   return (
     <ul className={styles.chipList}>
@@ -536,12 +604,18 @@ function ChipList({
           <Link
             className={styles.chip}
             href={resource.href}
-            aria-label={`${resource.title}, ${formatCount(resource.sharedScenarioCount, 'shared scene')}`}
+            aria-label={
+              showCounts
+                ? `${resource.title}, ${formatCount(resource.sharedScenarioCount, 'shared scene')}`
+                : undefined
+            }
           >
             <span>{resource.title}</span>
-            <span className={styles.chipCount} aria-hidden='true'>
-              {resource.sharedScenarioCount}
-            </span>
+            {showCounts ? (
+              <span className={styles.chipCount} aria-hidden='true'>
+                {resource.sharedScenarioCount}
+              </span>
+            ) : null}
           </Link>
         </li>
       ))}
@@ -563,24 +637,30 @@ function primaryFamilies(
 }
 
 function scenesHeading(resource: ResourcePage) {
+  const isSingle = resource.scenarioCount === 1
+
   switch (resource.kind) {
     case 'concept':
-      return `Scenes showing ${resource.title}`
+      return isSingle
+        ? `The scene showing ${resource.title}`
+        : `Scenes showing ${resource.title}`
     case 'risk-family':
-      return 'Scenes in this risk family'
+      return isSingle
+        ? 'The scene in this risk family'
+        : 'Scenes in this risk family'
     case 'source':
-      return `Scenes from ${resource.title}`
+      return isSingle
+        ? `The scene from ${resource.title}`
+        : `Scenes from ${resource.title}`
     case 'franchise':
-      return `Scenes across ${resource.title}`
+      return isSingle
+        ? `The scene from ${resource.title}`
+        : `Scenes across ${resource.title}`
   }
 }
 
 function formatCount(count: number, noun: string) {
   return `${count} ${noun}${count === 1 ? '' : 's'}`
-}
-
-function formatSourceType(sourceType: 'movie' | 'tv-show') {
-  return sourceType === 'movie' ? 'Movie' : 'TV show'
 }
 
 function formatReleaseDate(releaseDate: string) {
