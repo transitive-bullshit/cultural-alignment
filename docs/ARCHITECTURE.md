@@ -59,7 +59,7 @@ A **Dossier** is the scenario-detail presentation, not a sixth record type. **Re
 
 **Franchise order is meaningful.** The first authored franchise on a source defines a scenario's continuation collection; without one, continuation uses the same source. Related scenarios come from outside that collection and use deterministic taxonomy overlap, weighted toward concepts. This is a simple discovery heuristic, not an editorial popularity ranking. Keep its selection logic in `scenario-discovery.ts`.
 
-**Collections share one card implementation.** Resource pages render the full result set in a continuous collection; dossier discovery renders bounded previews. Continuous default ordering is a stable featured-first partition; date sorts are explicit alternatives. Previews retain discovery order. Layout density and image treatment are separate inputs.
+**Collections share one card implementation.** Resource pages pass the full result set to a continuous collection, which shows the first 12 until the visitor expands it; dossier discovery renders bounded previews. Continuous default ordering is a stable featured-first partition; date sorts are explicit alternatives. Previews retain discovery order. Layout density and image treatment are separate inputs.
 
 **Search is local.** Synchronization writes matching snapshot/public search documents for all five resource kinds. The lazy Command-K palette loads the public index; normalization, ranking, and grouping belong to `lib/content/search.ts`. Every indexed URL must resolve through the catalog. Search has no dedicated query route.
 
