@@ -29,6 +29,7 @@ The top-level [README](readme.md) serves human visitors. Keep agent workflow gui
 - Use `pnpm`, modern TypeScript, and no semicolons.
 - Use Oxfmt (`pnpm fix:format`) and Oxlint (`pnpm fix:lint`); configuration and exact script definitions live in the repository.
 - Let display text wrap within its grid or box geometry; reserve character-based width measures (`ch`/`em`) for deliberate prose reading lengths.
+- Let one CSS module own each property on an element. When a module must override another module's class, outrank it with a compound selector such as `.page .galleryHeader`: `next dev` (Turbopack) and `pnpm build` (webpack) order module stylesheets differently.
 - Before merging a change to how the site looks or behaves, show the owner annotated before/after screenshots with the visual-review skill.
 
 ## Testing

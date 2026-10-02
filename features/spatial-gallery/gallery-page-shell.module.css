@@ -10,7 +10,9 @@
   overscroll-behavior-y: none;
 }
 
-.galleryHeader {
+/* The `.page` scope outranks the site header's single-class rules, because
+   development and production bundles order module CSS differently. */
+.page .galleryHeader {
   position: fixed;
   top: 0;
   right: 0;
@@ -230,7 +232,7 @@
     grid-template-rows: auto auto minmax(0, 1fr);
   }
 
-  .galleryHeader {
+  .page .galleryHeader {
     position: relative;
     inset: auto;
   }
@@ -272,7 +274,7 @@
 }
 
 @media (min-width: 761px) {
-  .galleryHeader {
+  .page .galleryHeader {
     min-height: calc(70px + env(safe-area-inset-top, 0px));
     padding: env(safe-area-inset-top, 0px)
       max(30px, env(safe-area-inset-right, 0px)) 0
@@ -281,7 +283,7 @@
 }
 
 @media (prefers-reduced-transparency: reduce) {
-  .galleryHeader,
+  .page .galleryHeader,
   .browseToolbar {
     background: var(--proto-paper, #f4ecdd);
     backdrop-filter: none;

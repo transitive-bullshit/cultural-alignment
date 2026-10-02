@@ -84,7 +84,6 @@ export function HomepageWords({
         Understand AI safety through scenes you already know.
       </h1>
       <GalleryExperience
-        className={styles.gallery}
         header={header}
         historyKey={historyKey}
         initialItemId={initialItemId}

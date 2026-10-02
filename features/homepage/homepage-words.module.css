@@ -8,11 +8,6 @@
   background: var(--proto-paper, #f4ecdd);
 }
 
-.gallery {
-  position: absolute;
-  inset: 0;
-}
-
 .srOnly {
   position: absolute;
   width: 1px;

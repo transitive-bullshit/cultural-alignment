@@ -1,7 +1,5 @@
 import type { ReactNode } from 'react'
 
-import { cn } from '@/lib/utils'
-
 import galleryShellStyles from './gallery-page-shell.module.css'
 import styles from './gallery-experience.module.css'
 import {
@@ -13,7 +11,6 @@ import type { SpatialGalleryItem } from './types'
 export function GalleryExperience<
   TItem extends SpatialGalleryItem = SpatialGalleryItem
 >({
-  className,
   contentInert = false,
   header,
   headerInert = false,
@@ -25,7 +22,6 @@ export function GalleryExperience<
   overlay,
   renderDesktopSelection
 }: {
-  readonly className?: string
   readonly contentInert?: boolean
   readonly header: ReactNode
   readonly headerInert?: boolean
@@ -39,7 +35,7 @@ export function GalleryExperience<
 }) {
   return (
     <div
-      className={cn(galleryShellStyles.page, styles.experience, className)}
+      className={`${galleryShellStyles.page} ${styles.experience}`}
       data-gallery-experience
     >
       <div
