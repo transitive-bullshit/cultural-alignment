@@ -102,17 +102,22 @@
   border-top: 1px solid var(--border);
 }
 
-/* Labels start on the column's rule edge; the ↗ sits flush right. */
 .socials a {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: 18px minmax(0, 1fr) auto;
   gap: 10px;
   align-items: center;
   min-height: 49px;
   border-bottom: 1px solid var(--border);
 }
 
-.socials a > span:first-child {
+.socials svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* The label's underline hugs its text rather than the whole track. */
+.socials a > span:first-of-type {
   justify-self: start;
 }
 

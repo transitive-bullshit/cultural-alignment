@@ -813,7 +813,7 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
       ) : (
         <div className={styles.missingVideo} role='status'>
           <span>Archive note</span>
-          <strong>No clip in the collection</strong>
+          <strong>No YouTube clip in the collection</strong>
           <small>The scene analysis remains available in full.</small>
         </div>
       )}
