@@ -44,10 +44,14 @@ A **Dossier** is the scenario-detail presentation, not a sixth record type. **Re
 | Domain validation, relationships, page models | [lib/content](../lib/content): `schema.ts`, `validate.ts`, `catalog.ts`; `snapshot.ts` wires the checked-in data into the runtime |
 | Route composition and metadata | [app](../app); [lib/site.ts](../lib/site.ts) owns deployment-origin resolution |
 | Discovery and search | [scenario-discovery.ts](../lib/content/scenario-discovery.ts), [search-documents.ts](../lib/content/search-documents.ts), [search.ts](../lib/content/search.ts) |
-| Gallery layout, input, rendering, state | [features/spatial-gallery](../features/spatial-gallery) |
-| Dossier media, spoilers, memes, discovery presentation | [features/scenario-dossier](../features/scenario-dossier), [features/spoiler](../features/spoiler) |
-| Shared scenario cards and collection sorting | [features/scenario-collection](../features/scenario-collection), [features/collection-sort](../features/collection-sort) |
-| Resource pages and social cards | [features/content-navigation](../features/content-navigation), [lib/media](../lib/media) |
+| Gallery orchestration and rendering | [spatial-gallery.tsx](../features/spatial-gallery/spatial-gallery.tsx) owns hydration, restoration, and interaction; [spatial-gallery-canvas.tsx](../features/spatial-gallery/spatial-gallery-canvas.tsx) owns the frame loop, motion, and diagnostics |
+| Gallery shell geometry | [gallery-page-shell.module.css](../features/spatial-gallery/gallery-page-shell.module.css); [gallery-experience.tsx](../features/spatial-gallery/gallery-experience.tsx) composes the shell |
+| Dossier and source metadata markup | [scenario-dossier.tsx](../features/scenario-dossier/scenario-dossier.tsx), including its internal `SourceMeta`; [source-meta.ts](../features/scenario-dossier/source-meta.ts) owns episode visibility logic |
+| Dossier media, memes, discovery, and spoilers | [scenario-media.tsx](../features/scenario-dossier/scenario-media.tsx), [scenario-memes.tsx](../features/scenario-dossier/scenario-memes.tsx), [scenario-discovery.tsx](../features/scenario-dossier/scenario-discovery.tsx), [spoiler-warning.tsx](../features/spoiler/spoiler-warning.tsx) |
+| Shared scenario cards and collection sorting | [scenario-collection-list.tsx](../features/scenario-collection/scenario-collection-list.tsx) owns the internal `ScenarioCollectionCard`; [sortable-scenario-collection.tsx](../features/scenario-collection/sortable-scenario-collection.tsx) composes sorting and expansion |
+| Resource page composition | [resource-pages.tsx](../features/content-navigation/resource-pages.tsx) |
+| Social cards | [taxonomy-opengraph-image.tsx](../features/content-navigation/taxonomy-opengraph-image.tsx), [media-resource-opengraph-image.tsx](../features/content-navigation/media-resource-opengraph-image.tsx); [social-image.ts](../lib/media/social-image.ts) owns shared media preparation and cache policy |
+| Site navigation and wordmark | [site-header.tsx](../components/site-header.tsx), [site-footer.tsx](../components/site-footer.tsx), [site-wordmark.tsx](../components/site-wordmark.tsx); header and footer modules style the shared wordmark |
 | Synchronization and media reuse | [scripts/sync.ts](../scripts/sync.ts); detailed contract in [content/README.md](../content/README.md) |
 | Meme composition and publication | [creator skill](skills/ai-safety-meme-creator/SKILL.md), [meme-riff.ts](../scripts/meme-riff.ts) |
 
@@ -67,7 +71,7 @@ A **Dossier** is the scenario-detail presentation, not a sixth record type. **Re
 
 The server owns content projection, filtering, discovery, metadata, and static parameters. The client owns WebGL, gestures, local preferences, the command palette, clipboard feedback, YouTube playback controls, and navigation transitions. Keep content decisions on the server and pass small resolved models across the boundary.
 
-Content detail pages enumerate known slugs and disable unknown dynamic parameters. `/scenarios` and its risk-family paths are pre-rendered; legacy `?family=` URLs permanently redirect to `/scenarios/family/[slug]`. Public pre-rendered page segments remain reusable in the client Router Cache for one hour, configured in [next.config.ts](../next.config.ts); administrative/API routes retain separate behavior.
+Content detail pages enumerate known slugs and disable unknown dynamic parameters. `/scenarios` and its risk-family paths are pre-rendered; legacy `?family=` URLs permanently redirect to `/scenarios/family/[slug]`. Public pre-rendered page segments remain reusable in the client Router Cache for one hour, configured in [next.config.ts](../next.config.ts).
 
 [lib/site.ts](../lib/site.ts) resolves the origin used by canonical metadata, sitemap, and machine-facing links. The sitemap derives public resource URLs from the catalog. `llms.txt` supplies a compact project description and entry points.
 
@@ -82,6 +86,8 @@ Content detail pages enumerate known slugs and disable unknown dynamic parameter
 - **Back restores exploration.** History stores continuous field position and selection, keyed separately for the homepage and each archive risk-family filter. Capture before navigation; restore before the intro coast. See `history-state.ts` and `selection.ts`.
 
 These constraints preserve visual continuity while allowing input, density, and resource management to evolve independently. [Design](DESIGN.md) owns appearance and motion behavior; [QA](QA.md) records browser evidence and known limitations.
+
+For intro/reload timing, start with [gallery-intro-motion.spec.ts](../tests/e2e/gallery-intro-motion.spec.ts): its comments explain the clock and canvas-mounting sequence. [QA](QA.md#gallery-intro-clock-race-resolved-2026-10-01) records the resolved race.
 
 ## Media delivery and social images
 

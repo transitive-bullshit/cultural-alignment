@@ -9,12 +9,12 @@ export default defineConfig({
   },
   test: {
     include: ['**/*.test.{ts,tsx}'],
-    // Nested Claude worktrees and the symlinked skill directory would
-    // otherwise rerun other branches' tests and the opt-in meme evals.
+    // Local backups, nested worktrees, and linked skills are not test roots.
     exclude: [
       ...configDefaults.exclude,
       '.claude/**',
       '.agents/**',
+      'work/**',
       'tests/e2e/**',
       'docs/skills/**'
     ],

@@ -82,7 +82,7 @@ test('privacy hydrates without replacing its server-rendered content', async ({
   expect(errors).toEqual([])
 })
 
-test('phone galleries start directly beneath their overlaid header', async ({
+test('phone galleries keep their header and archive controls clear', async ({
   page
 }) => {
   const viewport = { width: 390, height: 844 }
@@ -93,6 +93,36 @@ test('phone galleries start directly beneath their overlaid header', async ({
     const header = page.locator('[data-site-header]')
     const canvas = page.locator('[data-spatial-gallery] canvas')
     await expect(canvas).toBeVisible()
+    // A lost shell override makes the header participate in normal flow.
+    await expect(header).toHaveCSS('position', 'fixed')
+
+    if (route === '/scenarios') {
+      const toolbar = page.getByRole('navigation', {
+        name: 'Scenario gallery controls',
+        includeHidden: true
+      })
+      const touchHint = page.getByText('Tap once to select · again to open', {
+        exact: true
+      })
+      await expect(toolbar).toBeVisible()
+      await expect(touchHint).toBeVisible()
+      // The archive reserves room for its toolbar and touch guidance.
+      await expect
+        .poll(async () => {
+          const [toolbarBox, canvasBox, hintBox] = await Promise.all([
+            toolbar.boundingBox(),
+            canvas.boundingBox(),
+            touchHint.boundingBox()
+          ])
+          if (!toolbarBox || !canvasBox || !hintBox) return null
+          return {
+            gap: canvasBox.y - (toolbarBox.y + toolbarBox.height),
+            hintClear: canvasBox.y + canvasBox.height <= hintBox.y
+          }
+        })
+        .toEqual({ gap: 0, hintClear: true })
+      continue
+    }
 
     // Development and production order module CSS differently, so a lost
     // shell override shows up here as a band between header and canvas.
