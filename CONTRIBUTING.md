@@ -13,11 +13,24 @@ pnpm dev
 
 The app runs from the committed content snapshot; ordinary development, validation, and builds need no Notion or storage credentials. Synchronization and authoring setup are documented in [content/README.md](content/README.md).
 
+Keep scratch files and retired-code backups in ignored `work/`; TypeScript and the main unit suite exclude it.
+
 `pnpm dev` starts Next.js through Portless. Use the printed URL: linked worktrees get branch subdomains, and the shared proxy may use HTTP or a custom port. On first run, follow Portless's terminal prompts for HTTPS setup. Find a running instance with `pnpm exec portless get cultural-alignment`, or use `PORTLESS=0 pnpm dev` to bypass the proxy.
 
 `NEXT_PUBLIC_SITE_URL` overrides the inferred origin. Remove a stale local value when using Portless, or set it deliberately when testing metadata for another origin. A direct local server or build defaults to `http://localhost:3000`.
 
 ## Change workflow
+
+When starting new work or resuming after a merged PR, establish the checkout's revision before treating its docs as current:
+
+```bash
+git fetch origin
+git status --short --branch
+git log -1 --oneline
+git log --oneline HEAD..origin/main
+```
+
+For new work based on current main, preserve local edits, switch to `main`, and run `git pull --ff-only` before creating the task branch. Existing task branches may intentionally have an older base; compare relevant files with `origin/main` before diagnosing documentation drift. Remote-tracking refs reflect the last fetch, and each worktree has its own checkout.
 
 Use [AGENTS.md](AGENTS.md) to choose the relevant project guide. Read [Architecture](docs/ARCHITECTURE.md) when changing boundaries, [Design](docs/DESIGN.md) for UI work, and the [snapshot contract](content/README.md) before changing synchronization or generated content. Next.js API changes require the relevant installed guide under `node_modules/next/dist/docs/`.
 
@@ -60,6 +73,19 @@ Run app journeys through `pnpm test:e2e` so Portless supplies the required URL a
 The main suites exclude the opt-in meme composer suite, `pnpm test:meme-skill`.
 
 For manual UI review, check real media as well as the relevant journeys: many browser tests replace optimized images with a tiny fixture, and WebGL/trackpad behavior has [environment limitations](docs/QA.md#environment-limitations).
+
+### Desktop previews in a fresh worktree
+
+For Claude desktop's preview tool, copy the [launch starter](docs/examples/claude-preview.launch.json) into the worktree only when it has no local configuration:
+
+```bash
+mkdir -p .claude
+cp -n docs/examples/claude-preview.launch.json .claude/launch.json
+```
+
+The ignored local configuration supplies `next-dev` and `next-prod`. Both bypass Portless; use the URL printed by the preview. If a port is occupied, change both its `--port` argument and `port` field. Run `pnpm build` before starting `next-prod`, and rebuild after source changes. Next.js keeps dev output in `.next/dev` separately from the production build. Stop previews owned by the task when finished; keep any pre-existing configuration.
+
+Use the [visual-review skill](.agents/skills/visual-review/SKILL.md) for capture, review, and publication; it includes copyable spec examples. Other environments can use the Portless or direct-server commands above.
 
 ## Unused code audit
 

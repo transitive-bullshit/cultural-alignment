@@ -33,7 +33,6 @@ Use the [snapshot contract](../content/README.md) for generated-output ownership
 - Automated wheel events cannot reproduce browser-owned macOS trackpad history swipes. Native Back/Forward feel needs a physical trackpad check.
 - WebGL screenshots vary by GPU; inspect them manually instead of treating pixel differences as test oracles.
 - Earlier review recorded a non-blocking upstream `THREE.Clock` deprecation warning from React Three Fiber; application code does not construct `THREE.Clock`.
-- The 2026-09-25 full run hit a gallery-intro timing assertion and skipped its four serial successors; the isolated single-worker rerun passed. Preserve that distinction when diagnosing a similar failure.
 
 Broader device coverage remains a manual follow-up: Safari desktop, large/Retina Chrome, and a physical tablet including orientation changes. For the reported header-only first load, consult the [dated investigation](BLANK-FIRST-LOAD-INVESTIGATION.md); its infrastructure attribution remains provisional.
 
@@ -126,3 +125,15 @@ Append dated verification evidence here when it adds a useful result or limitati
 - Formatting, lint, generated route types, TypeScript, all 379 unit tests, content validation, and the production build passed. Both new deployment traces include the local Barlow WOFF and native renderer.
 - All five production social-image browser journeys passed, checking Open Graph and Twitter URLs, response cache headers, MIME, and decoded 1200×630 WebP dimensions. The full browser run passed 22 tests, failed one unrelated gallery-intro timing assertion, and skipped its four serial successors; all five gallery-intro tests passed on an isolated single-worker rerun.
 - Local visual review confirmed complete wrapping for the longest current concept and risk-family names. Example renders are under ignored `test-results/taxonomy-social-images/`.
+
+### Gallery intro clock race resolved, 2026-10-01
+
+The September 25 full-suite timing failure above was resolved in commit `46c8a62`. A failure trace showed that browser round trips consumed the intro coast's time before the test paused its clock. The [reload regression](../tests/e2e/gallery-intro-motion.spec.ts) now pauses before reload and steps frames until motion starts; its inline comments own the timing recipe, including why waiting for an unmounted canvas would stall the test.
+
+The fixing session reported 60 consecutive target-test passes, 50 passes across repeated spec runs, and a fresh-build full browser-suite pass. Restoring the original application regression made the test fail three of three times. These are dated results, not a current verification run. For another timing failure, inspect the first failing assertion and trace action durations before treating it as this resolved race.
+
+### Scratch isolation and gallery acceptance checks, 2026-10-04
+
+- A local retired-code backup under ignored `work/` entered TypeScript and unit-test discovery. [tsconfig.json](../tsconfig.json) and [vitest.config.ts](../vitest.config.ts) now exclude that scratch directory; the compiler input list confirms the exclusion.
+- The phone-layout regression still expected the archive to fill the same area as the homepage after the archive gained toolbar and touch-hint safe areas. [design-regressions.spec.ts](../tests/e2e/design-regressions.spec.ts) now checks a fixed header on both routes, the homepage's uninterrupted canvas, and the archive canvas's clearance from its visible controls, without copying pixel dimensions from CSS.
+- Content validation, formatting, lint, types, 295 unit tests, a production build, and all 29 browser journeys passed. The first browser run also hit a fallback-navigation timeout; that journey passed in isolation and in the final full run. Preview-copy preservation, the review starters' actual CLI schemas, and review HTML generation were checked separately.

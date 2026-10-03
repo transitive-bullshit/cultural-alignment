@@ -9,7 +9,7 @@ The owner reviews visual work on one page: production before, this branch after,
 
 ## Steps
 
-1. **Serve the after state.** Start the branch locally (the desktop app's `next-dev` preview, or `PORTLESS=0 pnpm exec next dev --port 3017`) and load each changed route once so it compiles. Production, `https://cultural-alignment.com`, is the before state because it tracks `main`.
+1. **Serve the after state.** Use [Contributing's preview setup](../../../CONTRIBUTING.md#desktop-previews-in-a-fresh-worktree), then load each changed route once so it compiles. Production, `https://cultural-alignment.com`, is the default before state. For an exact commit baseline or a dev/production comparison, serve that revision locally and set the origins explicitly.
 
 2. **Capture.** Write `work/reviews/<date>/capture.json` and run `pnpm review:visual capture <path>`. Cover every changed surface at `desktop` and `mobile`. Scroll each shot to the change and outline exactly what changed with `highlights` on stable `data-*` selectors. Render candidates that exist only locally (one edit, one capture each, then restore the file) with `"sides": ["after"]`. For a follow-up round, the useful before is the branch's previous state: point both origins at the local server, restore the old file, capture `"sides": ["before"]`, then reapply the change and capture `"sides": ["after"]`. Look at every screenshot. Done when each change is visible and outlined in its after shot, with no loading state or overlay hiding it.
 
@@ -21,8 +21,17 @@ The owner reviews visual work on one page: production before, this branch after,
 
 A design audit ends in implemented fixes, not a list of problems. Critique the surface, implement every supported fix (settled owner preferences in DESIGN.md are not findings), and review each one as its own before/after section titled by its outcome. Fixes ship by default and the owner comments by exception, so open the page with a findings `table` whose flag column is "Hold".
 
-## Spec formats
+## Starter specs
 
-`capture.json`: `before` and `after` origins, `out` (shot directory relative to the spec), and `shots[]`, each with `id`, `path`, `viewport` (`desktop` 1440 × 900, `mobile` 390 × 844, or `{width, height}`), and optional `sides`, `scrollTo` + `scrollOffset`, `waitFor`, `storage` (localStorage entries), `steps[]` (`{hover}`, `{click}` selectors, `{type}`, `{press}`, `{wait}` ms, run after scrolling to show hover or open states), and `highlights[]` (`selector`, `label`, `side`: `after` by default, `limit`). Captures run with reduced motion, dismiss the spoiler warning and gallery intro (override with `storage` to show them), hide the Next.js dev indicator, and merge into `shots.json`, so specs can be captured in parts.
+Copy the paired [capture](../../../docs/examples/visual-review/capture.json) and [review](../../../docs/examples/visual-review/review.json) starters into one ignored review folder:
 
-`review.json`: `title` (a short name for the round), `intro`, `shots` (the shot directory), and `changes[]` with `id`, `title`, `summary`, and any of `compare[]` (`shot`, `label`, optional `beforeLabel`/`afterLabel` when the before side is not production), `shots[]` (`shot`, `label`, `side`), `choices[]` (`id`, `label`, `detail`, `shot`), and `table` (`columns`, `rows[]` of `id` and `cells`, `flagLabel`). The schemas in [visual-review.ts](../../../scripts/visual-review.ts) are authoritative.
+```bash
+mkdir -p work/reviews/my-change
+cp docs/examples/visual-review/*.json work/reviews/my-change/
+pnpm review:visual capture work/reviews/my-change/capture.json
+pnpm review:visual build work/reviews/my-change/review.json
+```
+
+Before capture, edit the origins to the running servers and replace the routes and highlight selectors with the changed surfaces. Before build, replace the review copy with the actual outcomes. Keep desktop/mobile coverage and matching shot IDs between the files. Output paths are relative to each spec; `capture` merges into `shots.json` for partial recaptures.
+
+The schemas and defaults in [visual-review.ts](../../../scripts/visual-review.ts) own the formats. Captures reduce motion and dismiss the spoiler warning and gallery intro; `storage` overrides those defaults. Use `steps` for interactions after scrolling, `sides` for one-sided candidates, `choices` for picks, and `table` for data edits.

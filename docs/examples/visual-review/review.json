@@ -1,0 +1,16 @@
+{
+  "title": "Source index review",
+  "intro": "Describe the actual change after copying this starter",
+  "shots": "shots",
+  "changes": [
+    {
+      "id": "source-heading",
+      "title": "Source index heading",
+      "summary": "Replace this with the outcome shown in the highlighted screenshots",
+      "compare": [
+        { "shot": "source-heading-desktop", "label": "Desktop" },
+        { "shot": "source-heading-mobile", "label": "Mobile" }
+      ]
+    }
+  ]
+}

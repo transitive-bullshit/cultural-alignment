@@ -1,0 +1,31 @@
+{
+  "before": "https://cultural-alignment.com",
+  "after": "http://127.0.0.1:3017",
+  "out": "shots",
+  "shots": [
+    {
+      "id": "source-heading-desktop",
+      "path": "/sources",
+      "viewport": "desktop",
+      "waitFor": "[data-resource-index] h1",
+      "highlights": [
+        {
+          "selector": "[data-resource-index] h1",
+          "label": "Source index heading"
+        }
+      ]
+    },
+    {
+      "id": "source-heading-mobile",
+      "path": "/sources",
+      "viewport": "mobile",
+      "waitFor": "[data-resource-index] h1",
+      "highlights": [
+        {
+          "selector": "[data-resource-index] h1",
+          "label": "Source index heading"
+        }
+      ]
+    }
+  ]
+}
