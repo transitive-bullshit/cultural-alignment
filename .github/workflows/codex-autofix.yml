@@ -83,6 +83,17 @@ jobs:
           FAILED_RUN_ID: ${{ github.event.workflow_run.id }}
         run: gh run view "$FAILED_RUN_ID" --repo "$GITHUB_REPOSITORY" --log-failed > "$RUNNER_TEMP/failed-ci.log"
 
+      - name: Configure Codex for local browser tests
+        if: steps.target.outputs.pr_number != ''
+        run: |
+          mkdir -p "$RUNNER_TEMP/codex-home"
+          cat > "$RUNNER_TEMP/codex-home/config.toml" <<'CONFIG'
+          [permissions.ci]
+          extends = ":workspace"
+          [permissions.ci.network]
+          enabled = true
+          CONFIG
+
       - name: Repair the CI failure with Codex
         if: steps.target.outputs.pr_number != ''
         uses: openai/codex-action@86365089eb2b84e0a8fb0717b304f8bdcb13b20e # v1
@@ -95,7 +106,8 @@ jobs:
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
           safety-strategy: drop-sudo
-          permission-profile: ':workspace'
+          codex-home: ${{ runner.temp }}/codex-home
+          permission-profile: ci
           output-file: ${{ runner.temp }}/codex-summary.md
           prompt: |
             CI failed for commit ${{ github.event.workflow_run.head_sha }} on PR #${{ steps.target.outputs.pr_number }}.
