@@ -62,7 +62,7 @@ This follows [CI](.github/workflows/build.yml). `pnpm test` is a shortcut for ch
 
 [Codex CI autofix](.github/workflows/codex-autofix.yml) follows failed CI runs for open, current PRs from trusted collaborators on branches in this repository. It reads failure logs, reproduces the checks, and opens a repair PR targeting the failing branch. Review and merge the repair, then rerun the original PR's CI. Forks, obsolete commits, non-PR branches, and autofix branches are skipped.
 
-The Codex job has read permissions and receives `OPENAI_API_KEY` only through the official action's protected proxy. A separate job publishes the patch and explicitly dispatches CI because `GITHUB_TOKEN` pushes do not trigger workflows. Workflow and agent-instruction changes are rejected. Repairs are never automatically approved or merged.
+Codex uses a workspace filesystem profile with network access so Portless and Playwright can run on the disposable GitHub runner. The Codex job has read permissions and receives `OPENAI_API_KEY` only through the official action's protected proxy. A separate job publishes the patch and explicitly dispatches CI because `GITHUB_TOKEN` pushes do not trigger workflows. Workflow and agent-instruction changes are rejected. Repairs are never automatically approved or merged.
 
 Repository setup requires the Actions secret `OPENAI_API_KEY` and GitHub's “Allow Actions to create and approve pull requests” setting. API usage is billed to that key. Disable autofix from the workflow's Actions page when needed.
 
