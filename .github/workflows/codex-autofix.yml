@@ -202,7 +202,7 @@ jobs:
           FAILED_RUN_ID: ${{ github.event.workflow_run.id }}
           ORIGINAL_PR: ${{ needs.generate_fix.outputs.pr_number }}
         run: |
-          branch="codex/auto-fix-$FAILED_RUN_ID-$GITHUB_RUN_ATTEMPT"
+          branch="codex/auto-fix-$FAILED_RUN_ID-$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT"
           git apply --index "$RUNNER_TEMP/codex-fix/codex.patch"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
