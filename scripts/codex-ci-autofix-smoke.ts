@@ -1,1 +1,1 @@
-export const codexAutofixSmoke = "disposable";
+export const codexAutofixSmoke = 'disposable'
