@@ -103,6 +103,7 @@ jobs:
           PORTLESS_HTTPS: '0'
           PORTLESS_PORT: '1355'
           PORTLESS_SYNC_HOSTS: '0'
+          PORTLESS_STATE_DIR: /tmp/codex-portless
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
           safety-strategy: drop-sudo
