@@ -8,7 +8,7 @@ on:
 permissions: {}
 
 concurrency:
-  group: codex-autofix-${{ github.event.workflow_run.head_branch }}
+  group: codex-autofix-${{ github.event.workflow_run.head_branch }}-${{ github.event.workflow_run.head_sha }}
   cancel-in-progress: true
 
 jobs:
