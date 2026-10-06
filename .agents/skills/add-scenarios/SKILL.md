@@ -1,6 +1,6 @@
 ---
 name: add-scenarios
-description: Add a movie or TV show and new scenarios from it to the Notion CMS, from scene research through a published snapshot commit. Use when asked to add a media source, add scenarios or scenes from a work, or brainstorm scenarios for one.
+description: Add a movie or TV show and new scenarios to the Notion CMS, publish the snapshot, then generate local meme candidates for human review. Use when asked to add a media source, add scenarios or scenes from a work, or brainstorm scenarios for one.
 ---
 
 # Add scenarios
@@ -36,6 +36,8 @@ Notion writes go through the Notion MCP tools. Data source IDs are in `notion.da
 
    New records need the normal sync, not `--fast`. Done when the sync reports zero record errors, validation passes, the audit shows no `fix` findings for the new scenarios, and `git diff --stat` touches only the snapshot, the search index, and the expected records. Report unrelated record changes rather than reverting them: they are someone's Notion edits. Run the synchronized-content checks in [Contributing](../../../CONTRIBUTING.md#change-workflow), then commit as `Add <Source> scenarios from Notion`.
 
+7. **Generate meme candidates.** After the scenarios are added and published, always run the [meme creator](../../../docs/skills/ai-safety-meme-creator/SKILL.md) and its [batch review workflow](../../../docs/skills/ai-safety-meme-creator/references/batch-review.md) for every added scenario. Use its authored analogy, concepts, caveats, and scene visuals to guide distinct jokes; inspect existing memes to avoid duplicates. The scenario still and media source are useful starting points, not required meme imagery. Keep candidates in ignored `work/` and present the entire addition as one temporary local HTML review, grouped by media source and then scenario. Done when every added scenario has viewable candidates or a specific generation blocker, and the review supports likes, dislikes, individual text feedback, and copying candidate data or selected results back into this chat. Candidate generation never changes scenario fields, the page-body still, or Notion `Memes`; a scenario remains complete even if the owner chooses no memes.
+
 ## Hand-off
 
-Report each created page's Notion link and site path (`/scenarios/<slug>` from the snapshot), the sync and audit results, and any field left blank with the reason. Keep the brainstorm in the conversation; save it under `docs/outputs/` only when the user asks.
+Report each created page's Notion link and site path (`/scenarios/<slug>` from the snapshot), the sync and audit results, any field left blank with the reason, and the local meme review link with candidate counts or blockers. Wait for copied review results and the owner's requested next action: refine candidates, upload explicitly approved candidates, or keep the scenarios without memes. A like is a preference, not upload authorization. Keep the scenario brainstorm in the conversation; save it under `docs/outputs/` only when the user asks.

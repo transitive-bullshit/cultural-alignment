@@ -8,6 +8,8 @@ The current implementation exports a fixed 1200 × 800 PNG. `--preview` optional
 
 Default captions require an actual Impact font. The resolver checks platform font locations or an explicit `MEME_IMPACT_FONT_PATH`; it returns `missing_font` when no verified Impact face is available. Impact is not the bundled Barlow Condensed font used for site social images. Use the installed repository dependencies for the Sharp/Pango raster backend and code styles.
 
+If Sharp/Pango reports a missing default Fontconfig file, locate the host's installed `fonts.conf` and set `FONTCONFIG_PATH` and `FONTCONFIG_FILE` for the renderer process. The local Homebrew installation uses `/opt/homebrew/etc/fonts` and `/opt/homebrew/etc/fonts/fonts.conf`. Font-cache permission failures require permitted cache access or a writable temporary Fontconfig cache; they do not justify substituting another face.
+
 ## Input ownership
 
 Use the executable schemas rather than inventing JSON fields:

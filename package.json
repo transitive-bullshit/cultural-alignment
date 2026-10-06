@@ -16,6 +16,7 @@
     "content:audit": "node --import tsx scripts/content-audit.ts",
     "memes:upload-notion": "node --import tsx scripts/upload-finalized-memes-to-notion.ts",
     "memes:riff": "node --import tsx scripts/meme-riff.ts",
+    "memes:review": "node --import tsx scripts/meme-candidate-review.ts",
     "review:visual": "node --import tsx scripts/visual-review.ts",
     "lint": "oxlint",
     "test": "run-s test:checks test:e2e",

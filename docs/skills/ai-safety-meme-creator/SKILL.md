@@ -1,11 +1,11 @@
 ---
 name: ai-safety-meme-creator
-description: Create, revise, or riff on pop-culture memes that map an exact archive scene to one concrete AI or AI-safety concept, using authentic source frames and deterministic composition. Use when asked to make memes for a scenario or source, including from a supplied tweet, meme format, or joke.
+description: Create, revise, or riff on pop-culture memes for archive scenarios, using recognizable imagery, one concrete AI or AI-safety concept, and deterministic composition. Use for scenario additions, candidate review batches, or supplied tweets, meme formats, and jokes.
 ---
 
 # Create AI-safety pop-culture memes
 
-Produce one unmistakable scene cue + one concrete AI bridge, then stop.
+Produce one unmistakable visual cue + one concrete AI bridge, then stop.
 
 ## Route
 
@@ -13,6 +13,7 @@ Produce one unmistakable scene cue + one concrete AI bridge, then stop.
 - Read [references/revision.md](references/revision.md) whenever prior output, ratings, notes, approvals, rejections, or requested fixes are supplied.
 - Read [references/composer-contract.md](references/composer-contract.md) for every finished image, layout change, or plan consumed by a renderer.
 - Read [references/riff.md](references/riff.md) when the user supplies an outside reference (a tweet, meme format, or joke) or wants candidates to pick from and publish to a scenario. It owns staging, candidate count, and publication for one-off memes.
+- Read [references/batch-review.md](references/batch-review.md) after adding scenarios or when generating a set for local human review. It owns batch grouping, feedback export, approval, and optional promotion.
 
 Read every branch that applies. A finished revision normally requires the editorial, revision, and composer references.
 
@@ -32,9 +33,10 @@ Explicitly approved copy, canonical wording, source assets, source order, output
 
 ## Content invariants
 
+- Choose imagery for the joke. A scenario's still, exact scene, and media source are starting points, not locks unless the owner approved them. Another authentic frame, familiar work, or recognizable meme template may communicate its AI bridge better; record the actual visual provenance and explain its connection to the target scenario. Preserve the scenario's authored analogy and caveats, and distinguish an alternate reference from a depiction of its scene.
 - Preserve canon accuracy: names, spelling, numbers, units, speaker, capability state, chronology, and before/after order.
 - Make the visible scene support the caption; do not rely on invisible intent or unsupported plot claims.
-- Use one authentic frame unless a real state contrast requires two distinct, correctly ordered frames.
+- Use one authentic source image unless a real state contrast requires two distinct, correctly ordered source images.
 - Keep semantic copy exact. The composer may add physical line breaks and the declared display-case transform; neither may change words, punctuation, numbers, or character order.
 - Render final text as a deterministic foreground layer. Generated imagery may extend nonsemantic background pixels, but it does not spell the caption.
 - Keep the recognition evidence large enough to read at the review-preview size. A fully visible face, prop, or scene hinge that has been reduced to an unusable thumbnail does not satisfy completion.

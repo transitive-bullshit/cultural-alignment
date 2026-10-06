@@ -41,6 +41,6 @@ The mode describes meaning, not physical geometry. Leave placement, wrapping, si
 
 At the 480-pixel review preview, every complete caption must render at 18 pixels or larger. If exact locked copy cannot meet that floor, return a typed block. If copy is mutable, shorten or simplify it and compose again.
 
-Select an authentic frame where the hinge is visible. Prefer another authentic frame over reconstructing the scene. A state contrast needs two genuinely different source images; never duplicate one image to simulate change.
+Select an authentic frame, official illustration, or recognizable template where the hinge is visible. Compare the curated still with alternate moments and other recognizable works; use the image that makes the joke clearest. When an alternate work supplies the visual, name that reference separately from the target scenario and keep its AI bridge faithful to the scenario's analysis. Prefer another authentic source image over reconstructing the scene. A state contrast needs two genuinely different source images; never duplicate one image to simulate change.
 
-Before composition, ask whether a fan can recognize the exact moment, whether one AI mapping is clear, whether the image proves the caption, and whether anything can be removed without weakening the realization.
+Before composition, ask whether the chosen reference is recognizable, whether one AI mapping is clear, whether the image proves the caption, and whether anything can be removed without weakening the realization.
