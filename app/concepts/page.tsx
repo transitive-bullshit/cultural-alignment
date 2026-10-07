@@ -6,7 +6,7 @@ import { contentCatalog } from '@/lib/content/snapshot'
 export const metadata: Metadata = {
   title: 'AI Safety Concepts',
   description:
-    'AI safety and alignment concepts in plain language, each illustrated with familiar movie and TV scenes.',
+    'Key AI safety and alignment concepts, explained through familiar movie and TV scenes.',
   alternates: { canonical: '/concepts' }
 }
 

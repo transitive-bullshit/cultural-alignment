@@ -18,7 +18,7 @@ import { siteName } from '@/lib/site'
 
 const homepageTitle = `${siteName} — AI safety through pop culture`
 const homepageDescription =
-  'AI safety and alignment explained through familiar movie and TV scenes, and where each analogy breaks.'
+  'AI safety and alignment explained through familiar movie and TV scenes.'
 
 export const metadata: Metadata = {
   title: { absolute: homepageTitle },

@@ -17,7 +17,7 @@ import {
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Why this archive uses familiar film and TV scenes as analogies for AI risks, and how to read them.',
+    'Why Cultural Alignment uses familiar movie and TV scenes to explain AI safety, risks, and alignment.',
   alternates: { canonical: '/about' }
 }
 

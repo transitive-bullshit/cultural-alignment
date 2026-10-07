@@ -6,7 +6,7 @@ import { contentCatalog } from '@/lib/content/snapshot'
 export const metadata: Metadata = {
   title: 'Movies and TV Shows',
   description:
-    'The movies and TV shows in the archive and the AI safety lessons their scenes illustrate.',
+    'What popular movies and TV shows can teach us about AI safety, risks, and alignment.',
   alternates: { canonical: '/sources' }
 }
 

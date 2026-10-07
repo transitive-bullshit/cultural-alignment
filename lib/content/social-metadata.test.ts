@@ -4,50 +4,98 @@ import { describe, expect, it } from 'vitest'
 import { contentCatalog } from '@/lib/content/snapshot'
 
 import {
+  formatMediaFormats,
   getResourceSocialMetadata,
+  getSceneContext,
   getScenarioSocialMetadata,
   resolveContentSocialMetadata,
   SOCIAL_DESCRIPTION_MAX_LENGTH,
-  summarizeDescription,
-  truncateAtWord,
+  toProsePhrase,
   type ContentSocialMetadata
 } from './social-metadata'
 
 const resourceKinds = ['risk-family', 'concept', 'source', 'franchise'] as const
-const longClause = 'a clause that keeps going '.repeat(4).trim()
 
 describe('social metadata derivation', () => {
-  it('keeps the first authored sentence without splitting on initials', () => {
-    expect(summarizeDescription('Dr. No meets James T. Kirk. Then more.')).toBe(
-      'Dr. No meets James T. Kirk.'
+  it('writes taxonomy names into prose without losing proper nouns', () => {
+    expect(toProsePhrase('Contestability')).toBe('contestability')
+    expect(toProsePhrase('Algorithmic Bias')).toBe('algorithmic bias')
+    expect(toProsePhrase('Value Lock-In')).toBe('value lock-in')
+    expect(toProsePhrase('AI Control')).toBe('AI control')
+    expect(toProsePhrase('CBRN Assistance')).toBe('CBRN assistance')
+    expect(toProsePhrase('Goodhart’s Law')).toBe('Goodhart’s Law')
+    expect(toProsePhrase('AI Security & Governance Risks')).toBe(
+      'AI security and governance risks'
     )
-    expect(summarizeDescription(null)).toBe('')
+
+    // Every current concept: only capitalization changes, acronyms survive,
+    // and eponymous names stay as authored.
+    for (const { title } of contentCatalog.listResources('concept')) {
+      const phrase = toProsePhrase(title)
+      const acronyms = title.match(/\b\p{Lu}{2,}\b/gu) ?? []
+
+      expect(phrase.toLowerCase()).toBe(title.toLowerCase())
+      for (const acronym of acronyms) expect(phrase).toContain(acronym)
+      const eponym = /[’']s\b/u.test(title)
+      expect(
+        eponym
+          ? phrase === title
+          : /^(?:[\p{Ll}\p{N}]|\p{Lu}{2,}\b)/u.test(phrase)
+      ).toBe(true)
+    }
   })
 
-  it('ends an overlong sentence at a clause break, else at a word', () => {
-    expect(
-      summarizeDescription(
-        `The pianist hides in the ruins of occupied Warsaw for several long years as he survives ${longClause} ${longClause}.`
+  it('names only the media formats a page draws on', () => {
+    expect(formatMediaFormats(['tv', 'movie', 'anime'])).toBe(
+      'across TV, movies, and anime'
+    )
+    expect(formatMediaFormats(['tv', 'movie'])).toBe('across TV and movies')
+    expect(formatMediaFormats(['movie'])).toBe('in movies')
+    expect(formatMediaFormats([])).toBe('across film and TV')
+  })
+
+  it('places a scene by episode for TV and by year for movies', () => {
+    const scenarios = contentCatalog
+      .getStaticSlugs('scenario')
+      .map((slug) => contentCatalog.getScenarioPage(slug)!)
+    const numbered = scenarios.find(({ episode }) =>
+      /\bS\d+\s?E\d+\b/u.test(episode?.label ?? '')
+    )!
+    const movie = scenarios.find(
+      ({ releaseDate, source }) => source.sourceType === 'movie' && releaseDate
+    )!
+
+    expect(getSceneContext(numbered)).toMatch(/^Season \d+, Episodes? \d+/u)
+    expect(getSceneContext(movie)).toBe(movie.releaseDate!.slice(0, 4))
+  })
+
+  it('keeps every description one short sentence without counts', () => {
+    const descriptions = [
+      ...contentCatalog
+        .getStaticSlugs('scenario')
+        .map(
+          (slug) =>
+            getScenarioSocialMetadata(contentCatalog.getScenarioPage(slug)!)
+              .description
+        ),
+      ...resourceKinds.flatMap((kind) =>
+        contentCatalog
+          .getStaticSlugs(kind)
+          .map(
+            (slug) =>
+              getResourceSocialMetadata(
+                contentCatalog.getResourcePage(kind, slug)!
+              ).description
+          )
       )
-    ).toBe(
-      'The pianist hides in the ruins of occupied Warsaw for several long years.'
-    )
-    expect(truncateAtWord('alpha beta gamma', 12)).toBe('alpha beta…')
-    expect(truncateAtWord('alpha beta', 12)).toBe('alpha beta')
-  })
+    ]
 
-  it('describes every resource with its own trimmed copy', () => {
-    for (const kind of resourceKinds) {
-      for (const slug of contentCatalog.getStaticSlugs(kind)) {
-        const resource = contentCatalog.getResourcePage(kind, slug)!
-        const { description } = getResourceSocialMetadata(resource)
-
-        expect(description).toBe(summarizeDescription(resource.description))
-        expect(description.length).toBeGreaterThan(0)
-        expect(description.length).toBeLessThanOrEqual(
-          SOCIAL_DESCRIPTION_MAX_LENGTH
-        )
-      }
+    for (const description of descriptions) {
+      expect(description.length).toBeGreaterThan(0)
+      expect(description.length).toBeLessThanOrEqual(
+        SOCIAL_DESCRIPTION_MAX_LENGTH
+      )
+      expect(description).not.toMatch(/\b\d+ (?:AI|examples|scenes)\b/u)
     }
   })
 
@@ -74,7 +122,9 @@ describe('social metadata derivation', () => {
 
     expect(social.title).toContain(scenario.title)
     expect(social.description).toContain(scenario.source.title)
-    expect(social.description).toContain(scenario.concepts[0]!.title)
+    expect(social.description).toContain(
+      toProsePhrase(scenario.concepts[0]!.title)
+    )
     expect(social.description.length).toBeLessThanOrEqual(
       SOCIAL_DESCRIPTION_MAX_LENGTH
     )

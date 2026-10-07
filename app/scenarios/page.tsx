@@ -21,7 +21,7 @@ const initialItem = findInitialSpatialGalleryItem(items)
 export const metadata: Metadata = {
   title: 'AI Safety Scenarios',
   description:
-    'Movie and TV scenes mapped to AI safety concepts, with why each analogy works and where it breaks.',
+    'Familiar movie and TV scenes that illustrate AI safety risks and alignment concepts.',
   alternates: { canonical: '/scenarios' }
 }
 

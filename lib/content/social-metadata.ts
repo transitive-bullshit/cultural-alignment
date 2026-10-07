@@ -2,20 +2,27 @@ import type { Metadata, ResolvingMetadata } from 'next'
 
 import { siteName, siteUrl } from '@/lib/site'
 
-import type { ContentImage, ResourcePage, ScenarioPage } from './catalog'
+import type {
+  ContentImage,
+  MediaFormat,
+  ResourcePage,
+  ScenarioPage
+} from './catalog'
 
-/** Descriptions stay one short sentence; longer authored sentences are cut. */
+/** Descriptions are one short sentence in the project's voice. */
 export const SOCIAL_DESCRIPTION_MAX_LENGTH = 150
 
-// A sentence ends at terminal punctuation before a capitalized word, but not
-// after an initial or a common title ("James T. Kirk", "Dr. Strange").
-const SENTENCE_BOUNDARY =
-  /(?<=[.!?…])(?<!(?:^|[\s(])\p{Lu}\.)(?<!\b(?:Dr|Mr|Mrs|Ms|St|Jr|Sr|vs)\.)\s+(?=["“‘(]?[A-Z0-9])/u
+const MEDIA_FORMAT_LABELS = {
+  tv: 'TV',
+  movie: 'movies',
+  anime: 'anime'
+} as const satisfies Record<MediaFormat, string>
 
-// Places where a long sentence can end early and still read as complete.
-const CLAUSE_BOUNDARY =
-  /;\s|\s[—–]\s|,\s(?=(?:as|while|where|which|forcing|leaving|until|after|before|when|only)\b)|\s(?=as (?:he|she|they|it|his|her|their|the)\b)/gu
-const MIN_CLAUSE_LENGTH = 60
+const SINGLE_MEDIA_FORMAT_PHRASES = {
+  tv: 'on TV',
+  movie: 'in movies',
+  anime: 'in anime'
+} as const satisfies Record<MediaFormat, string>
 
 export type ContentSocialMetadata = Readonly<{
   canonical: string
@@ -34,29 +41,30 @@ type ResolveContentSocialMetadataOptions = Readonly<{
 export function getResourceSocialMetadata(
   resource: ResourcePage
 ): ContentSocialMetadata {
-  const description = summarizeDescription(resource.description)
-
   switch (resource.kind) {
-    case 'risk-family':
+    case 'risk-family': {
+      const title = /^AI\b/u.test(resource.detailTitle)
+        ? resource.detailTitle
+        : `AI ${resource.detailTitle}`
+
       return {
         canonical: resource.href,
-        description,
-        title: /^AI\b/u.test(resource.detailTitle)
-          ? resource.detailTitle
-          : `AI ${resource.detailTitle}`,
+        description: `Examples of ${toProsePhrase(title)} ${formatMediaFormats(resource.mediaFormats)}.`,
+        title,
         type: 'website'
       }
+    }
     case 'concept':
       return {
         canonical: resource.href,
-        description,
+        description: `Examples of ${toProsePhrase(resource.title)} ${formatMediaFormats(resource.mediaFormats)}.`,
         title: `${resource.title} in film and TV`,
         type: 'website'
       }
     case 'franchise':
       return {
         canonical: resource.href,
-        description,
+        description: `What can ${/^\p{Lu}{2,}$/u.test(resource.title) ? `the ${resource.title}` : resource.title} teach us about AI safety, risks, and alignment?`,
         image: resource.image,
         title: `${resource.title} franchise: AI safety lessons`,
         type: 'website'
@@ -64,7 +72,7 @@ export function getResourceSocialMetadata(
     case 'source':
       return {
         canonical: resource.href,
-        description: description || `AI safety lessons from ${resource.title}.`,
+        description: describeSourceScenes(resource),
         title: `AI safety lessons from ${resource.title}`,
         type: 'website'
       }
@@ -76,13 +84,21 @@ export function getScenarioSocialMetadata(
 ): ContentSocialMetadata {
   const source = scenario.source.title
   const concept = scenario.concepts[0]?.title
+  const describe = (scene: string) =>
+    concept
+      ? `This scene from ${scene} is an example of the AI safety concept of ${toProsePhrase(concept)}.`
+      : `This scene from ${scene} illustrates an AI safety concept.`
+  const withContext = describe(
+    withSceneContext(source, getSceneContext(scenario))
+  )
 
   return {
     canonical: `/scenarios/${scenario.slug}`,
-    // The Dossier's own framing: the scene and its primary concept.
-    description: concept
-      ? `This scene from ${source} is an example of ${concept}.`
-      : `A scene from ${source}.`,
+    // A long episode title gives way to a shorter description.
+    description:
+      withContext.length <= SOCIAL_DESCRIPTION_MAX_LENGTH
+        ? withContext
+        : describe(source),
     image: scenario.image,
     keywords: [
       ...scenario.franchises.map(({ title }) => title),
@@ -95,6 +111,90 @@ export function getScenarioSocialMetadata(
       : `${scenario.title} (${source})`,
     type: 'article'
   }
+}
+
+/**
+ * Writes a title-case taxonomy name into running prose: common nouns are
+ * lowercased, acronyms keep their capitals, and eponymous names such as
+ * “Goodhart’s Law” stay as authored.
+ */
+export function toProsePhrase(name: string) {
+  if (/\p{L}[’']s\b/u.test(name)) return name
+
+  return name
+    .replaceAll(' & ', ' and ')
+    .replace(/[\p{L}\p{N}]+/gu, (word) =>
+      /^\p{Lu}{2,}$/u.test(word) ? word : word.toLocaleLowerCase('en-US')
+    )
+}
+
+/** “across TV, movies, and anime”, or the single format a page draws on. */
+export function formatMediaFormats(formats: readonly MediaFormat[]) {
+  const [only] = formats
+  if (!only) return 'across film and TV'
+  if (formats.length === 1) return SINGLE_MEDIA_FORMAT_PHRASES[only]
+
+  return `across ${formatList(formats.map((format) => MEDIA_FORMAT_LABELS[format]))}`
+}
+
+/** Where the scene sits: a movie's year, or a TV episode's season and number. */
+export function getSceneContext(scenario: ScenarioPage) {
+  if (scenario.source.sourceType === 'movie') {
+    return scenario.releaseDate?.slice(0, 4) ?? null
+  }
+
+  const sourcePrefix = `${scenario.source.title} — `
+  const rawLabel = scenario.episode?.label.trim() ?? ''
+  const label = rawLabel.startsWith(sourcePrefix)
+    ? rawLabel.slice(sourcePrefix.length)
+    : rawLabel
+  if (!label) return null
+
+  const numbered = label.match(/\bS(\d+)\s?E(\d+)(?:\s?[–-]\s?(\d+))?/u)
+  if (numbered) {
+    const [, season, first, last] = numbered
+    return last
+      ? `Season ${season}, Episodes ${first}–${last}`
+      : `Season ${season}, Episode ${first}`
+  }
+
+  return /^(?:Episode|Chapter|Part)\s+\d+$/iu.test(label)
+    ? label
+    : `“${label.replace(/^[“"]|[”"]$/gu, '')}”`
+}
+
+/** Adds context in parentheses, merging with a title's own, e.g. “(1981 TV series, Episode 4)”. */
+function withSceneContext(source: string, context: string | null) {
+  if (!context) return source
+
+  return source.endsWith(')')
+    ? `${source.slice(0, -1)}, ${context})`
+    : `${source} (${context})`
+}
+
+function describeSourceScenes(
+  resource: Extract<ResourcePage, { kind: 'source' }>
+) {
+  const concepts = resource.primaryConcepts
+    .slice(0, 2)
+    .map(({ title }) => toProsePhrase(title))
+  const scenes =
+    resource.scenarios.length === 1
+      ? `A scene from ${resource.title} that illustrates`
+      : `Scenes from ${resource.title} that illustrate`
+
+  if (concepts.length === 0) return `${scenes} AI safety risks and alignment.`
+  if (concepts.length === 1) {
+    return `${scenes} the AI safety concept of ${concepts[0]}.`
+  }
+
+  return `${scenes} AI safety concepts, including ${formatList(concepts)}.`
+}
+
+function formatList(values: readonly string[]) {
+  if (values.length <= 2) return values.join(' and ')
+
+  return `${values.slice(0, -1).join(', ')}, and ${values.at(-1)}`
 }
 
 export async function resolveContentSocialMetadata(
@@ -135,35 +235,4 @@ export async function resolveContentSocialMetadata(
   if (social.keywords) metadata.keywords = [...social.keywords]
 
   return metadata
-}
-
-/**
- * The first sentence of authored copy. A sentence over the limit ends at its
- * last natural clause break, or else at a word boundary.
- */
-export function summarizeDescription(copy: string | null) {
-  const sentence = copy?.trim().split(SENTENCE_BOUNDARY)[0]?.trim() ?? ''
-  if (sentence.length <= SOCIAL_DESCRIPTION_MAX_LENGTH) return sentence
-
-  const clauseEnd = [...sentence.matchAll(CLAUSE_BOUNDARY)]
-    .map(({ index }) => index)
-    .filter(
-      (index) =>
-        index >= MIN_CLAUSE_LENGTH && index < SOCIAL_DESCRIPTION_MAX_LENGTH
-    )
-    .at(-1)
-
-  return clauseEnd === undefined
-    ? truncateAtWord(sentence, SOCIAL_DESCRIPTION_MAX_LENGTH)
-    : `${sentence.slice(0, clauseEnd).replace(/[,;:]$/u, '')}.`
-}
-
-export function truncateAtWord(text: string, maxLength: number) {
-  if (text.length <= maxLength) return text
-
-  const clipped = text.slice(0, maxLength - 1)
-  const wordEnd = clipped.lastIndexOf(' ')
-  const words = wordEnd > 0 ? clipped.slice(0, wordEnd) : clipped
-
-  return `${words.replace(/[\s,;:—–-]+$/u, '')}…`
 }

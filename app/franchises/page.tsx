@@ -6,7 +6,7 @@ import { contentCatalog } from '@/lib/content/snapshot'
 export const metadata: Metadata = {
   title: 'Film and TV Franchises',
   description:
-    'Film and TV franchises and the AI safety lessons drawn from their scenes.',
+    'What popular film and TV franchises can teach us about AI safety, risks, and alignment.',
   alternates: { canonical: '/franchises' }
 }
 
