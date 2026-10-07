@@ -4,97 +4,79 @@ import { describe, expect, it } from 'vitest'
 import { contentCatalog } from '@/lib/content/snapshot'
 
 import {
-  getLeadingSourceCredit,
   getResourceSocialMetadata,
+  getScenarioSocialMetadata,
   resolveContentSocialMetadata,
-  toSocialSentenceFragment,
+  SOCIAL_DESCRIPTION_MAX_LENGTH,
+  summarizeDescription,
+  truncateAtWord,
   type ContentSocialMetadata
 } from './social-metadata'
 
+const resourceKinds = ['risk-family', 'concept', 'source', 'franchise'] as const
+const longClause = 'a clause that keeps going '.repeat(4).trim()
+
 describe('social metadata derivation', () => {
-  it('normalizes prose labels without lowercasing acronyms', () => {
-    expect(toSocialSentenceFragment('AI-Enabled Data Exfiltration')).toBe(
-      'AI-enabled data exfiltration'
+  it('keeps the first authored sentence without splitting on initials', () => {
+    expect(summarizeDescription('Dr. No meets James T. Kirk. Then more.')).toBe(
+      'Dr. No meets James T. Kirk.'
     )
-    expect(toSocialSentenceFragment('Malicious Use')).toBe('malicious use')
+    expect(summarizeDescription(null)).toBe('')
   })
 
-  it('extracts only a clear leading possessive production credit', () => {
+  it('ends an overlong sentence at a clause break, else at a word', () => {
     expect(
-      getLeadingSourceCredit(
-        'Christopher Nolan’s epic adaptation follows a long voyage home.'
+      summarizeDescription(
+        `The pianist hides in the ruins of occupied Warsaw for several long years as he survives ${longClause} ${longClause}.`
       )
-    ).toBe('Christopher Nolan’s')
-    expect(
-      getLeadingSourceCredit(
-        'A family’s last defense against a worldwide robot uprising.'
-      )
-    ).toBeNull()
-    expect(
-      getLeadingSourceCredit(
-        'Christopher Nolan’s The Odyssey film follows a long voyage home.'
-      )
-    ).toBe('Christopher Nolan’s')
+    ).toBe(
+      'The pianist hides in the ruins of occupied Warsaw for several long years.'
+    )
+    expect(truncateAtWord('alpha beta gamma', 12)).toBe('alpha beta…')
+    expect(truncateAtWord('alpha beta', 12)).toBe('alpha beta')
   })
 
-  it('projects current catalog records through their route hierarchy', () => {
-    const risk = contentCatalog.getResourcePage(
-      'risk-family',
-      contentCatalog.getStaticSlugs('risk-family')[0]!
-    )!
-    const concept = contentCatalog.getResourcePage(
-      'concept',
-      contentCatalog.getStaticSlugs('concept')[0]!
-    )!
-    const franchise = contentCatalog.getResourcePage(
-      'franchise',
-      contentCatalog.getStaticSlugs('franchise')[0]!
-    )!
-    const creditedSource = contentCatalog
-      .getStaticSlugs('source')
-      .map((slug) => contentCatalog.getResourcePage('source', slug)!)
-      .find(({ description }) => getLeadingSourceCredit(description))!
+  it('describes every resource with its own trimmed copy', () => {
+    for (const kind of resourceKinds) {
+      for (const slug of contentCatalog.getStaticSlugs(kind)) {
+        const resource = contentCatalog.getResourcePage(kind, slug)!
+        const { description } = getResourceSocialMetadata(resource)
 
-    const riskSocial = getResourceSocialMetadata(risk)
-    const conceptSocial = getResourceSocialMetadata(concept)
-    const sourceSocial = getResourceSocialMetadata(creditedSource)
-    const franchiseSocial = getResourceSocialMetadata(franchise)
-    const sourceCredit = getLeadingSourceCredit(creditedSource.description)!
-
-    expect(riskSocial.title).toBe(`Risk families / ${risk.title}`)
-    expect(riskSocial.description).toContain(
-      toSocialSentenceFragment(risk.title)
-    )
-    expect(conceptSocial.title).toBe(`AI safety concepts / ${concept.title}`)
-    expect(conceptSocial.description).toContain(
-      toSocialSentenceFragment(concept.title)
-    )
-    expect(sourceSocial.title).toBe(
-      `AI safety lessons from ${creditedSource.title}`
-    )
-    expect(sourceSocial.description).toContain(
-      `${sourceCredit} ${creditedSource.title}`
-    )
-    expect(franchiseSocial.title).toBe(`Media franchises / ${franchise.title}`)
-    expect(franchiseSocial.image).toBe(
-      franchise.kind === 'franchise' ? franchise.image : null
-    )
+        expect(description).toBe(summarizeDescription(resource.description))
+        expect(description.length).toBeGreaterThan(0)
+        expect(description.length).toBeLessThanOrEqual(
+          SOCIAL_DESCRIPTION_MAX_LENGTH
+        )
+      }
+    }
   })
 
-  it('keeps singular and plural risk-family descriptions grammatical', () => {
-    const resources = contentCatalog
-      .getStaticSlugs('risk-family')
-      .map((slug) => contentCatalog.getResourcePage('risk-family', slug)!)
-    const maliciousUse = resources.find(
-      ({ title }) => title === 'Malicious use'
-    )!
-    const accidents = resources.find(({ title }) => title === 'Accidents')!
+  it('names each resource in its title and keeps authored capitalization', () => {
+    for (const kind of resourceKinds) {
+      const resource = contentCatalog.getResourcePage(
+        kind,
+        contentCatalog.getStaticSlugs(kind)[0]!
+      )!
+      const social = getResourceSocialMetadata(resource)
+      const name =
+        kind === 'risk-family' ? resource.detailTitle : resource.title
 
-    expect(getResourceSocialMetadata(maliciousUse).description).toBe(
-      'Examples of malicious use AI risks from popular TV shows and movies.'
-    )
-    expect(getResourceSocialMetadata(accidents).description).toBe(
-      'Examples of AI risks involving accidents in popular TV shows and movies.'
+      expect(social.title).toContain(name)
+      expect(social.canonical).toBe(resource.href)
+    }
+  })
+
+  it('describes a scenario through its source and primary concept', () => {
+    const scenario = contentCatalog.getScenarioPage(
+      contentCatalog.getStaticSlugs('scenario')[0]!
+    )!
+    const social = getScenarioSocialMetadata(scenario)
+
+    expect(social.title).toContain(scenario.title)
+    expect(social.description).toContain(scenario.source.title)
+    expect(social.description).toContain(scenario.concepts[0]!.title)
+    expect(social.description.length).toBeLessThanOrEqual(
+      SOCIAL_DESCRIPTION_MAX_LENGTH
     )
   })
 
@@ -112,6 +94,10 @@ describe('social metadata derivation', () => {
 
     const fallback = await resolveContentSocialMetadata(social, parent)
     expect(fallback.openGraph?.images).toEqual([inheritedImage])
+    // A plain title lets the root layout's template append the site name, and
+    // Open Graph inherits the resolved title rather than repeating it.
+    expect(fallback.title).toBe(social.title)
+    expect(fallback.openGraph).not.toHaveProperty('title')
 
     const withImage = await resolveContentSocialMetadata(
       {

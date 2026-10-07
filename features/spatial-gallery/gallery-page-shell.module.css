@@ -34,7 +34,7 @@
   outline-offset: 4px;
 }
 
-.filterLink:active {
+a.filterLink:active {
   transform: scale(0.97);
 }
 
@@ -193,10 +193,21 @@
   display: none;
 }
 
+/* The page heading leads the row as its active chip; the risk-family links
+   that follow open each family's page. */
+.familyLinks {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.3rem;
+}
+
 .filterLink {
   display: inline-flex;
+  flex: 0 0 auto;
   align-items: center;
   min-height: 27px;
+  margin: 0;
   padding: 0 0.52rem;
   border: 1px solid transparent;
   color: var(--proto-muted-ink, #756d63);
@@ -240,7 +251,7 @@
     cursor: none !important;
   }
 
-  .filterLink:hover {
+  a.filterLink:hover {
     color: var(--proto-electric, #ff4d1f);
   }
 }
@@ -339,6 +350,15 @@
   .page,
   .page * {
     cursor: auto !important;
+  }
+}
+
+/* Without scripting nothing draws the gallery crosshair, so keep the native
+   pointer for the server-rendered scenario index. */
+@media (scripting: none) and (hover: hover) and (pointer: fine) {
+  .page,
+  .page * {
+    cursor: revert !important;
   }
 }
 

@@ -6,7 +6,7 @@ import { contentCatalog } from '@/lib/content/snapshot'
 export const metadata: Metadata = {
   title: 'AI Risk Families',
   description:
-    'Explore five broad families of AI risk through familiar cultural scenes.',
+    'The broad families of AI risk, each explained through familiar movie and TV scenes.',
   alternates: { canonical: '/risk-families' }
 }
 

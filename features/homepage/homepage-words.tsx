@@ -3,7 +3,10 @@
 import { useMemo, type ReactNode } from 'react'
 
 import { GalleryExperience } from '@/features/spatial-gallery/gallery-experience'
-import type { SpatialGalleryDesktopSelection } from '@/features/spatial-gallery/spatial-gallery'
+import type {
+  SpatialGalleryDesktopSelection,
+  SpatialGalleryIndexHeading
+} from '@/features/spatial-gallery/spatial-gallery'
 import type { SpatialGalleryItem } from '@/features/spatial-gallery/types'
 import { cn } from '@/lib/utils'
 
@@ -58,6 +61,7 @@ export function HomepageWords({
   className,
   header,
   historyKey,
+  index,
   initialItemId,
   items,
   mainId = 'home-gallery-main'
@@ -65,6 +69,7 @@ export function HomepageWords({
   readonly className?: string
   readonly header: ReactNode
   readonly historyKey: string
+  readonly index: SpatialGalleryIndexHeading
   readonly initialItemId: string
   readonly items: readonly HomepageWordsItem[]
   readonly mainId?: string
@@ -80,12 +85,10 @@ export function HomepageWords({
       data-homepage-words
       data-site-footer='hidden'
     >
-      <h1 className={styles.srOnly}>
-        Understand AI safety through scenes you already know.
-      </h1>
       <GalleryExperience
         header={header}
         historyKey={historyKey}
+        index={index}
         initialItemId={initialItemId}
         items={galleryItems}
         mainId={mainId}

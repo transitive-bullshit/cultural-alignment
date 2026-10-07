@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 import {
   HomepageWords,
@@ -13,15 +14,19 @@ import {
   toSpatialGalleryItems
 } from '@/features/spatial-gallery/gallery-items'
 import { contentCatalog } from '@/lib/content/snapshot'
-import { siteName, siteSummary } from '@/lib/site'
+import { siteName } from '@/lib/site'
+
+const homepageTitle = `${siteName} — AI safety through pop culture`
+const homepageDescription =
+  'AI safety and alignment explained through familiar movie and TV scenes, and where each analogy breaks.'
 
 export const metadata: Metadata = {
-  title: siteName,
-  description: siteSummary,
+  title: { absolute: homepageTitle },
+  description: homepageDescription,
   alternates: { canonical: '/' },
   openGraph: {
-    title: siteName,
-    description: siteSummary,
+    title: homepageTitle,
+    description: homepageDescription,
     url: '/',
     siteName,
     locale: 'en_US',
@@ -52,6 +57,19 @@ export default function HomePage() {
       <HomepageWords
         header={<GalleryHeader />}
         historyKey='archive:featured'
+        index={{
+          level: 1,
+          // Matches the visible introduction dialog's title.
+          title: 'Explore AI safety through scenes you already know',
+          description: (
+            <>
+              Each scenario pairs a familiar film or TV scene with the AI safety
+              concept it illustrates, then explains why the analogy works and
+              where it breaks. These are featured scenes;{' '}
+              <Link href='/scenarios'>browse all scenarios</Link>.
+            </>
+          )
+        }}
         initialItemId={initialItem.id}
         items={featuredItems}
       />

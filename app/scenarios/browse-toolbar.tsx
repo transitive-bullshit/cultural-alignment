@@ -1,14 +1,9 @@
 'use client'
 
+import Link from 'next/link'
 import { useCallback, useEffect, useRef } from 'react'
 
-import { IntentPrefetchLink } from '@/components/intent-prefetch-link'
 import { Slider } from '@/components/ui/slider'
-import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
-import {
-  createBrowseGalleryHref,
-  type BrowseGalleryParams
-} from '@/features/spatial-gallery/browse-params'
 import {
   setGalleryItemSizePreference,
   setGalleryItemSizeTransition,
@@ -24,16 +19,17 @@ import type { ResourceSummary } from '@/lib/content/catalog'
 
 import styles from '@/features/spatial-gallery/gallery-page-shell.module.css'
 
+/**
+ * The archive's title row: the page heading, links to each risk family's page,
+ * the frame-size control, and the scenario count.
+ */
 export function BrowseToolbar({
   families,
-  params,
   resultCount
 }: {
   readonly families: readonly ResourceSummary[]
-  readonly params: BrowseGalleryParams
   readonly resultCount: number
 }) {
-  const activeFilterRef = useRef<HTMLAnchorElement>(null)
   const filterListRef = useRef<HTMLDivElement>(null)
   const activePointerIdRef = useRef<number | null>(null)
   const itemSizeTransitionRef = useRef<GalleryItemSizeTransition>('instant')
@@ -126,30 +122,6 @@ export function BrowseToolbar({
     }
   }, [abortPointerSizing])
 
-  // Reveal the active chip with the least scrolling. The list's
-  // scroll-padding keeps a whole neighbor beside it, so "All" stays in reach.
-  useEffect(() => {
-    const activeFilter = activeFilterRef.current
-    const filterList = filterListRef.current
-
-    if (!filterList || !activeFilter) return
-
-    const style = getComputedStyle(filterList)
-    const start =
-      activeFilter.offsetLeft -
-      (Number.parseFloat(style.scrollPaddingInlineStart) || 0)
-    const end =
-      activeFilter.offsetLeft +
-      activeFilter.offsetWidth +
-      (Number.parseFloat(style.scrollPaddingInlineEnd) || 0) -
-      filterList.clientWidth
-
-    filterList.scrollLeft = Math.max(
-      0,
-      Math.min(start, Math.max(end, filterList.scrollLeft))
-    )
-  }, [params.family])
-
   // Mark which edges have more chips so CSS fades only those edges.
   useEffect(() => {
     const filterList = filterListRef.current
@@ -179,49 +151,27 @@ export function BrowseToolbar({
   }, [])
 
   return (
-    <nav
-      className={styles.browseToolbar}
-      aria-label='Scenario gallery controls'
-    >
-      <ToggleGroup
+    <div className={styles.browseToolbar} data-browse-toolbar>
+      <div
         ref={filterListRef}
         className={styles.filterList}
         data-scenario-family-filters
-        type='single'
-        value={params.family ?? 'all'}
-        variant='outline'
-        size='sm'
-        aria-label='Filter by risk family'
       >
-        <ToggleGroupItem className={styles.filterLink} value='all' asChild>
-          <IntentPrefetchLink
-            ref={params.family === null ? activeFilterRef : undefined}
-            href={createBrowseGalleryHref({ ...params, family: null })}
-            scroll={false}
-          >
-            All
-          </IntentPrefetchLink>
-        </ToggleGroupItem>
-        {families.map((family) => (
-          <ToggleGroupItem
-            key={family.id}
-            className={styles.filterLink}
-            value={family.slug}
-            asChild
-          >
-            <IntentPrefetchLink
-              ref={params.family === family.slug ? activeFilterRef : undefined}
-              href={createBrowseGalleryHref({
-                ...params,
-                family: family.slug
-              })}
-              scroll={false}
+        <h1 className={styles.filterLink} data-state='on'>
+          All scenarios
+        </h1>
+        <nav className={styles.familyLinks} aria-label='Risk families'>
+          {families.map((family) => (
+            <Link
+              key={family.id}
+              className={styles.filterLink}
+              href={family.href}
             >
               {family.title}
-            </IntentPrefetchLink>
-          </ToggleGroupItem>
-        ))}
-      </ToggleGroup>
+            </Link>
+          ))}
+        </nav>
+      </div>
 
       <div
         ref={sizeControlRef}
@@ -288,9 +238,9 @@ export function BrowseToolbar({
         </span>
       </div>
 
-      <p className={styles.resultCount} aria-live='polite'>
+      <p className={styles.resultCount}>
         <strong>{String(resultCount).padStart(3, '0')}</strong> scenarios
       </p>
-    </nav>
+    </div>
   )
 }

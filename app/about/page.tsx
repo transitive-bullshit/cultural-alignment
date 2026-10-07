@@ -10,14 +10,14 @@ import {
 import {
   notionSourceUrl,
   repositoryUrl,
-  siteSummary,
   siteDescriptionLong,
   xProfileUrl
 } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'About',
-  description: siteSummary,
+  description:
+    'Why this archive uses familiar film and TV scenes as analogies for AI risks, and how to read them.',
   alternates: { canonical: '/about' }
 }
 

@@ -181,7 +181,7 @@
   padding-bottom: 0.08em;
 }
 
-.metadata h1 {
+.metadata h2 {
   margin: 12px 0 14px;
   font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
   font-size: clamp(2.25rem, 3.35vw, 3.8rem);
@@ -457,6 +457,164 @@
   animation-delay: 200ms;
 }
 
+/* The server-rendered text index (ScenarioIndex). Without scripting it is
+   the gallery; with scripting it yields to the canvas or the no-WebGL
+   fallback and returns as an overlay while keyboard focus is inside it. */
+.scenarioIndex {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: clamp(20px, 3vw, 40px)
+    max(clamp(18px, 3vw, 46px), env(safe-area-inset-right, 0px))
+    clamp(28px, 4vw, 56px)
+    max(clamp(18px, 3vw, 46px), env(safe-area-inset-left, 0px));
+  background: var(--proto-paper);
+  color: var(--proto-ink);
+}
+
+/* Keyboard focus raises the index over the selected-frame panel. */
+.scenarioIndex:focus-within {
+  z-index: 40;
+}
+
+.scenarioIndex[data-enhanced]:not(:focus-within) {
+  inset: auto;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Hide the index before hydration where the browser can say scripts will
+   run, so the canvas loading state paints first exactly as before. */
+@media (scripting: enabled) {
+  .scenarioIndex:not(:focus-within) {
+    inset: auto;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
+@media (scripting: none) {
+  .canvasLoading,
+  .fieldHint {
+    display: none;
+  }
+}
+
+.indexIntro {
+  margin-bottom: clamp(20px, 3vw, 34px);
+}
+
+.indexIntro h1,
+.indexIntro h2 {
+  margin: 0;
+  font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
+  font-size: clamp(2.5rem, 4.6vw, 4.25rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.92;
+  text-wrap: balance;
+}
+
+.indexIntro p {
+  max-width: 62ch;
+  margin: 12px 0 0;
+  color: var(--proto-muted-ink);
+  font-family: var(--font-geist-sans), sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.indexIntro p a {
+  color: var(--proto-ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgb(45 42 38 / 35%);
+  text-underline-offset: 0.2em;
+}
+
+.indexList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+  column-gap: clamp(16px, 2vw, 28px);
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--proto-ink);
+  list-style: none;
+}
+
+.indexList li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-content: start;
+  column-gap: 0.75rem;
+  padding: 12px 0 14px;
+  border-bottom: 1px solid rgb(45 42 38 / 14%);
+}
+
+.indexNumber {
+  grid-row: span 2;
+  padding-top: 0.35em;
+  color: var(--proto-electric);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.08em;
+}
+
+.indexList a {
+  display: grid;
+  gap: 4px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.indexList a:focus-visible {
+  outline: 2px solid var(--proto-electric);
+  outline-offset: 4px;
+}
+
+.indexTitle {
+  overflow-wrap: break-word;
+  font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  text-wrap: balance;
+}
+
+.indexSource {
+  color: var(--proto-muted-ink);
+  font-family: var(--font-geist-sans), sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.indexMeta {
+  grid-column: 2;
+  margin-top: 6px;
+  color: var(--proto-muted-ink);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.065em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
 @keyframes title-reveal {
   from {
     opacity: 0;
@@ -486,7 +644,8 @@
     display: block;
   }
 
-  .openStudy:hover {
+  .openStudy:hover,
+  .indexList a:hover .indexTitle {
     color: var(--proto-electric);
   }
 }
@@ -511,7 +670,8 @@
 
 @media (max-width: 680px) {
   /* Pages with fixed chrome below the header move the surface edges in. */
-  .surface {
+  .surface,
+  .scenarioIndex {
     inset: var(--gallery-surface-top, 62px) 0 var(--gallery-surface-bottom, 0px);
   }
 
@@ -523,7 +683,7 @@
     display: block;
   }
 
-  .mobileSelection h1,
+  .mobileSelection h2,
   .mobileSelectedLink:not(:focus-visible) {
     position: absolute;
     width: 1px;
@@ -571,7 +731,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .metadata h1,
+  .metadata h2,
   .canvasLoading span {
     animation: none;
   }

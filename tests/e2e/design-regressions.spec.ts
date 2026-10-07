@@ -97,10 +97,7 @@ test('phone galleries keep their header and archive controls clear', async ({
     await expect(header).toHaveCSS('position', 'fixed')
 
     if (route === '/scenarios') {
-      const toolbar = page.getByRole('navigation', {
-        name: 'Scenario gallery controls',
-        includeHidden: true
-      })
+      const toolbar = page.locator('[data-browse-toolbar]')
       const touchHint = page.getByText('Tap once to select · again to open', {
         exact: true
       })

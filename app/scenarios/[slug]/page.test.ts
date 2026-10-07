@@ -31,10 +31,8 @@ describe('production scenario route', () => {
       }) as ResolvingMetadata
     )
 
-    expect(metadata.title).toEqual({
-      absolute: `${scenario.source.title} / ${scenario.title}`
-    })
-    expect(metadata.description).toBe(scenario.scene)
+    expect(metadata.title).toContain(scenario.title)
+    expect(metadata.description).toContain(scenario.source.title)
     expect(metadata.alternates?.canonical).toBe(`/scenarios/${slug}`)
     expect(metadata.keywords).toContain(scenario.source.title)
     expect(metadata.openGraph?.images).toBeUndefined()

@@ -71,7 +71,11 @@ A **Dossier** is the scenario-detail presentation, not a sixth record type. **Re
 
 The server owns content projection, filtering, discovery, metadata, and static parameters. The client owns WebGL, gestures, local preferences, the command palette, clipboard feedback, YouTube playback controls, and navigation transitions. Keep content decisions on the server and pass small resolved models across the boundary.
 
-Content detail pages enumerate known slugs and disable unknown dynamic parameters. `/scenarios` and its risk-family paths are pre-rendered; legacy `?family=` URLs permanently redirect to `/scenarios/family/[slug]`. Public pre-rendered page segments remain reusable in the client Router Cache for one hour, configured in [next.config.ts](../next.config.ts).
+Content detail pages enumerate known slugs and disable unknown dynamic parameters. `/scenarios` is pre-rendered. The filtered `/scenarios/family/[slug]` archives duplicated the risk-family pages and were removed without redirects, so they return 404; the archive links each family to `/risk-families/[slug]`, and a legacy `?family=` query simply renders `/scenarios`. Public pre-rendered page segments remain reusable in the client Router Cache for one hour, configured in [next.config.ts](../next.config.ts).
+
+Gallery pages must not depend on WebGL or hydration for their content. `SpatialGallery` server-renders a text index of its items, with real links, alongside the client-only canvas; CSS keeps it visually hidden once scripting is available. See [Design](DESIGN.md#gallery).
+
+Page titles pass through the root layout's `%s — Cultural Alignment` template; only the homepage sets an absolute title. Detail titles and descriptions come from [social-metadata.ts](../lib/content/social-metadata.ts). A description is one sentence of the record's own authored copy, ended early at a clause break or word past 150 characters; scenarios name their source and primary concept. Titles and descriptions carry no content counts, which would go stale and add little. Open Graph and Twitter omit their own title and description so Next.js copies the resolved ones.
 
 [lib/site.ts](../lib/site.ts) resolves the origin used by canonical metadata, sitemap, and machine-facing links. The sitemap derives public resource URLs from the catalog. `llms.txt` supplies a compact project description and entry points.
 
@@ -83,7 +87,7 @@ Content detail pages enumerate known slugs and disable unknown dynamic parameter
 - **Selection identifies a projected slot.** A scenario can appear more than once. Hover, the transition proxy, and pointer picking must target the exact projection. Picking inverts the live shader deformation so visible and interactive geometry stay aligned during motion.
 - **Density changes preserve the field.** The versioned frame-size preference applies to both homepage and archive; only the archive exposes its control. Camera zoom scales frames and gaps together. A maximum-capacity field changes its active lane window instead of rebuilding item assignments. Pointer changes interpolate; keyboard and reduced-motion changes snap. See `gallery-sizing.ts`, `gallery-lane-motion.ts`, and `gallery-item-size-preference.ts` before changing this behavior.
 - **Loaded images and GPU residency are separate.** Successfully loaded full-image sources live until gallery teardown. A bounded prioritized set remains bound to GPU textures; eviction preserves the source so returning cards need no repeat download or blurred fallback. `texture-residency.ts` owns the priority policy; teardown releases resources and stale callbacks are discarded.
-- **Back restores exploration.** History stores continuous field position and selection, keyed separately for the homepage and each archive risk-family filter. Capture before navigation; restore before the intro coast. See `history-state.ts` and `selection.ts`.
+- **Back restores exploration.** History stores continuous field position and selection, keyed separately for the homepage and the archive. Capture before navigation; restore before the intro coast. See `history-state.ts` and `selection.ts`.
 
 These constraints preserve visual continuity while allowing input, density, and resource management to evolve independently. [Design](DESIGN.md) owns appearance and motion behavior; [QA](QA.md) records browser evidence and known limitations.
 
