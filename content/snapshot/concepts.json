@@ -1820,38 +1820,6 @@
     ]
   },
   {
-    "id": "3caedb27-f124-80e3-9543-e77abc168d93",
-    "slug": "specification-gaming",
-    "shortName": "Specification Gaming",
-    "longName": "Specification Gaming and Reward Hacking",
-    "keywords": [
-      "reward hacking",
-      "goal gaming",
-      "loophole exploitation",
-      "proxy gaming",
-      "objective gaming"
-    ],
-    "description": "Specification gaming occurs when an AI exploits loopholes in its rules to score well without achieving the intended goal.",
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Reward_hacking",
-    "citations": [
-      {
-        "href": "https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/",
-        "title": "Specification gaming: the flip side of AI ingenuity",
-        "publisher": "Google DeepMind"
-      },
-      {
-        "href": "https://arxiv.org/abs/1606.06565",
-        "title": "Concrete Problems in AI Safety",
-        "publisher": "arXiv.org"
-      },
-      {
-        "href": "https://deepmind.google/blog/learning-human-objectives-by-evaluating-hypothetical-behaviours/",
-        "title": "Learning human objectives by evaluating hypothetical behaviours",
-        "publisher": "Google DeepMind"
-      }
-    ]
-  },
-  {
     "id": "3caedb27-f124-80ea-a580-d93148350639",
     "slug": "corrigibility",
     "shortName": "Corrigibility",
