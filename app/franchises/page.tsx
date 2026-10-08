@@ -4,9 +4,9 @@ import { ResourceIndexPage } from '@/features/content-navigation/resource-pages'
 import { contentCatalog } from '@/lib/content/snapshot'
 
 export const metadata: Metadata = {
-  title: 'Media Franchises',
+  title: 'Film and TV Franchises',
   description:
-    'Browse the media franchises represented across the cultural alignment collection.',
+    'What popular film and TV franchises can teach us about AI safety, risks, and alignment.',
   alternates: { canonical: '/franchises' }
 }
 

@@ -4,97 +4,134 @@ import { describe, expect, it } from 'vitest'
 import { contentCatalog } from '@/lib/content/snapshot'
 
 import {
-  getLeadingSourceCredit,
+  formatMediaFormats,
   getResourceSocialMetadata,
+  getSceneContext,
+  getScenarioSocialMetadata,
   resolveContentSocialMetadata,
-  toSocialSentenceFragment,
+  SOCIAL_DESCRIPTION_MAX_LENGTH,
+  toProsePhrase,
   type ContentSocialMetadata
 } from './social-metadata'
 
+const resourceKinds = ['risk-family', 'concept', 'source', 'franchise'] as const
+
 describe('social metadata derivation', () => {
-  it('normalizes prose labels without lowercasing acronyms', () => {
-    expect(toSocialSentenceFragment('AI-Enabled Data Exfiltration')).toBe(
-      'AI-enabled data exfiltration'
+  it('writes taxonomy names into prose without losing proper nouns', () => {
+    expect(toProsePhrase('Contestability')).toBe('contestability')
+    expect(toProsePhrase('Algorithmic Bias')).toBe('algorithmic bias')
+    expect(toProsePhrase('Value Lock-In')).toBe('value lock-in')
+    expect(toProsePhrase('AI Control')).toBe('AI control')
+    expect(toProsePhrase('CBRN Assistance')).toBe('CBRN assistance')
+    expect(toProsePhrase('Goodhart’s Law')).toBe('Goodhart’s Law')
+    expect(toProsePhrase('AI Security & Governance Risks')).toBe(
+      'AI security and governance risks'
     )
-    expect(toSocialSentenceFragment('Malicious Use')).toBe('malicious use')
+
+    // Every current concept: only capitalization changes, acronyms survive,
+    // and eponymous names stay as authored.
+    for (const { title } of contentCatalog.listResources('concept')) {
+      const phrase = toProsePhrase(title)
+      const acronyms = title.match(/\b\p{Lu}{2,}\b/gu) ?? []
+
+      expect(phrase.toLowerCase()).toBe(title.toLowerCase())
+      for (const acronym of acronyms) expect(phrase).toContain(acronym)
+      const eponym = /[’']s\b/u.test(title)
+      expect(
+        eponym
+          ? phrase === title
+          : /^(?:[\p{Ll}\p{N}]|\p{Lu}{2,}\b)/u.test(phrase)
+      ).toBe(true)
+    }
   })
 
-  it('extracts only a clear leading possessive production credit', () => {
-    expect(
-      getLeadingSourceCredit(
-        'Christopher Nolan’s epic adaptation follows a long voyage home.'
-      )
-    ).toBe('Christopher Nolan’s')
-    expect(
-      getLeadingSourceCredit(
-        'A family’s last defense against a worldwide robot uprising.'
-      )
-    ).toBeNull()
-    expect(
-      getLeadingSourceCredit(
-        'Christopher Nolan’s The Odyssey film follows a long voyage home.'
-      )
-    ).toBe('Christopher Nolan’s')
+  it('names only the media formats a page draws on', () => {
+    expect(formatMediaFormats(['tv', 'movie', 'anime'])).toBe(
+      'across TV, movies, and anime'
+    )
+    expect(formatMediaFormats(['tv', 'movie'])).toBe('across TV and movies')
+    expect(formatMediaFormats(['movie'])).toBe('in movies')
+    expect(formatMediaFormats([])).toBe('across film and TV')
   })
 
-  it('projects current catalog records through their route hierarchy', () => {
-    const risk = contentCatalog.getResourcePage(
-      'risk-family',
-      contentCatalog.getStaticSlugs('risk-family')[0]!
+  it('places a scene by episode for TV and by year for movies', () => {
+    const scenarios = contentCatalog
+      .getStaticSlugs('scenario')
+      .map((slug) => contentCatalog.getScenarioPage(slug)!)
+    const numbered = scenarios.find(({ episode }) =>
+      /\bS\d+\s?E\d+\b/u.test(episode?.label ?? '')
     )!
-    const concept = contentCatalog.getResourcePage(
-      'concept',
-      contentCatalog.getStaticSlugs('concept')[0]!
-    )!
-    const franchise = contentCatalog.getResourcePage(
-      'franchise',
-      contentCatalog.getStaticSlugs('franchise')[0]!
-    )!
-    const creditedSource = contentCatalog
-      .getStaticSlugs('source')
-      .map((slug) => contentCatalog.getResourcePage('source', slug)!)
-      .find(({ description }) => getLeadingSourceCredit(description))!
+    const movies = scenarios.filter(
+      ({ source }) => source.sourceType === 'movie' && source.releaseDate
+    )
 
-    const riskSocial = getResourceSocialMetadata(risk)
-    const conceptSocial = getResourceSocialMetadata(concept)
-    const sourceSocial = getResourceSocialMetadata(creditedSource)
-    const franchiseSocial = getResourceSocialMetadata(franchise)
-    const sourceCredit = getLeadingSourceCredit(creditedSource.description)!
-
-    expect(riskSocial.title).toBe(`Risk families / ${risk.title}`)
-    expect(riskSocial.description).toContain(
-      toSocialSentenceFragment(risk.title)
-    )
-    expect(conceptSocial.title).toBe(`AI safety concepts / ${concept.title}`)
-    expect(conceptSocial.description).toContain(
-      toSocialSentenceFragment(concept.title)
-    )
-    expect(sourceSocial.title).toBe(
-      `AI safety lessons from ${creditedSource.title}`
-    )
-    expect(sourceSocial.description).toContain(
-      `${sourceCredit} ${creditedSource.title}`
-    )
-    expect(franchiseSocial.title).toBe(`Media franchises / ${franchise.title}`)
-    expect(franchiseSocial.image).toBe(
-      franchise.kind === 'franchise' ? franchise.image : null
-    )
+    expect(getSceneContext(numbered)).toMatch(/^Season \d+, Episodes? \d+/u)
+    // Scenario records can carry their own date (e.g. a Blade Runner scene
+    // dated 2026); the description uses the film's release year.
+    expect(movies.length).toBeGreaterThan(0)
+    for (const movie of movies) {
+      expect(getSceneContext(movie)).toBe(movie.source.releaseDate!.slice(0, 4))
+    }
   })
 
-  it('keeps singular and plural risk-family descriptions grammatical', () => {
-    const resources = contentCatalog
-      .getStaticSlugs('risk-family')
-      .map((slug) => contentCatalog.getResourcePage('risk-family', slug)!)
-    const maliciousUse = resources.find(
-      ({ title }) => title === 'Malicious use'
-    )!
-    const accidents = resources.find(({ title }) => title === 'Accidents')!
+  it('keeps every description one short sentence without counts', () => {
+    const descriptions = [
+      ...contentCatalog
+        .getStaticSlugs('scenario')
+        .map(
+          (slug) =>
+            getScenarioSocialMetadata(contentCatalog.getScenarioPage(slug)!)
+              .description
+        ),
+      ...resourceKinds.flatMap((kind) =>
+        contentCatalog
+          .getStaticSlugs(kind)
+          .map(
+            (slug) =>
+              getResourceSocialMetadata(
+                contentCatalog.getResourcePage(kind, slug)!
+              ).description
+          )
+      )
+    ]
 
-    expect(getResourceSocialMetadata(maliciousUse).description).toBe(
-      'Examples of malicious use AI risks from popular TV shows and movies.'
+    for (const description of descriptions) {
+      expect(description.length).toBeGreaterThan(0)
+      expect(description.length).toBeLessThanOrEqual(
+        SOCIAL_DESCRIPTION_MAX_LENGTH
+      )
+      expect(description).not.toMatch(/\b\d+ (?:AI|examples|scenes)\b/u)
+    }
+  })
+
+  it('names each resource in its title and keeps authored capitalization', () => {
+    for (const kind of resourceKinds) {
+      const resource = contentCatalog.getResourcePage(
+        kind,
+        contentCatalog.getStaticSlugs(kind)[0]!
+      )!
+      const social = getResourceSocialMetadata(resource)
+      const name =
+        kind === 'risk-family' ? resource.detailTitle : resource.title
+
+      expect(social.title).toContain(name)
+      expect(social.canonical).toBe(resource.href)
+    }
+  })
+
+  it('describes a scenario through its source and primary concept', () => {
+    const scenario = contentCatalog.getScenarioPage(
+      contentCatalog.getStaticSlugs('scenario')[0]!
+    )!
+    const social = getScenarioSocialMetadata(scenario)
+
+    expect(social.title).toContain(scenario.title)
+    expect(social.description).toContain(scenario.source.title)
+    expect(social.description).toContain(
+      toProsePhrase(scenario.concepts[0]!.title)
     )
-    expect(getResourceSocialMetadata(accidents).description).toBe(
-      'Examples of AI risks involving accidents in popular TV shows and movies.'
+    expect(social.description.length).toBeLessThanOrEqual(
+      SOCIAL_DESCRIPTION_MAX_LENGTH
     )
   })
 
@@ -112,6 +149,10 @@ describe('social metadata derivation', () => {
 
     const fallback = await resolveContentSocialMetadata(social, parent)
     expect(fallback.openGraph?.images).toEqual([inheritedImage])
+    // A plain title lets the root layout's template append the site name, and
+    // Open Graph inherits the resolved title rather than repeating it.
+    expect(fallback.title).toBe(social.title)
+    expect(fallback.openGraph).not.toHaveProperty('title')
 
     const withImage = await resolveContentSocialMetadata(
       {

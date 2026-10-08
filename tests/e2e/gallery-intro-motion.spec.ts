@@ -1,4 +1,4 @@
-import { expect, test, type Locator } from '@playwright/test'
+import { expect, test } from '@playwright/test'
 
 import { mockOptimizedImages } from './image-fixtures'
 
@@ -137,48 +137,6 @@ test.describe('gallery introduction motion', () => {
     )
   })
 
-  test('a scenario filter remount does not replay the dismissal burst', async ({
-    page
-  }) => {
-    await mockOptimizedImages(page)
-    await page.goto('/scenarios')
-
-    const gallery = page.locator('[data-spatial-gallery="browse"]')
-    const canvas = gallery.locator('canvas')
-
-    await expect(canvas).toHaveAttribute(
-      'data-gallery-inertia-burst',
-      'pending',
-      { timeout: 15_000 }
-    )
-    await page.locator('[data-gallery-intro-dismiss]').click()
-    await expect(canvas).toHaveAttribute(
-      'data-gallery-inertia-burst',
-      /^(launched|settled)$/
-    )
-
-    const filter = page
-      .locator('[data-scenario-family-filters] a[href^="/scenarios/family/"]')
-      .first()
-    const filterHref = await requiredInternalHref(filter)
-    const navigation = page.waitForURL(
-      (url) => `${url.pathname}${url.search}${url.hash}` === filterHref,
-      { waitUntil: 'commit' }
-    )
-
-    await filter.click()
-    await navigation
-
-    await expect(gallery).not.toHaveAttribute(
-      'data-gallery-inertia-burst-requested'
-    )
-    await expect(gallery.locator('canvas')).toHaveAttribute(
-      'data-gallery-inertia-burst',
-      'pending',
-      { timeout: 15_000 }
-    )
-  })
-
   test.describe('phone viewport', () => {
     test.use({ hasTouch: true, viewport: { height: 844, width: 390 } })
 
@@ -208,13 +166,3 @@ test.describe('gallery introduction motion', () => {
     })
   })
 })
-
-async function requiredInternalHref(locator: Locator) {
-  const href = await locator.getAttribute('href')
-
-  if (!href?.startsWith('/')) {
-    throw new Error('Expected an internal navigation link')
-  }
-
-  return href
-}

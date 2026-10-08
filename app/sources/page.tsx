@@ -4,8 +4,9 @@ import { ResourceIndexPage } from '@/features/content-navigation/resource-pages'
 import { contentCatalog } from '@/lib/content/snapshot'
 
 export const metadata: Metadata = {
-  title: 'Sources',
-  description: 'Browse every cultural source represented in the collection.',
+  title: 'Movies and TV Shows',
+  description:
+    'What popular movies and TV shows can teach us about AI safety, risks, and alignment.',
   alternates: { canonical: '/sources' }
 }
 

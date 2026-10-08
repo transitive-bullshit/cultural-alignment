@@ -107,37 +107,37 @@ test('gallery fallback completes a dossier round trip', async ({ page }) => {
 test.describe('functional phone viewport', () => {
   test.use({ hasTouch: true, viewport: { width: 390, height: 844 } })
 
-  test('filters the scenario gallery through the URL', async ({ page }) => {
+  test('links each risk family from the archive heading row', async ({
+    page
+  }) => {
     await disableWebGl2(page)
     await mockOptimizedImages(page)
     await page.goto('/scenarios')
     await acknowledgeGalleryIntro(page)
 
-    const gallery = page.locator('[data-spatial-gallery="browse"]')
+    await expect(
+      page.getByRole('heading', { level: 1, name: 'All scenarios' })
+    ).toBeVisible()
 
-    const familyFilter = page
-      .locator('[data-scenario-family-filters] a[href^="/scenarios/family/"]')
+    const familyLink = page
+      .locator('[data-scenario-family-filters] a[href^="/risk-families/"]')
       .first()
-
-    const familyHref = await requiredInternalHref(familyFilter)
+    const familyHref = await requiredInternalHref(familyLink)
     const navigation = page.waitForURL(
       (url) => matchesInternalHref(url, familyHref),
       { timeout: 15_000, waitUntil: 'commit' }
     )
 
-    await familyFilter.click()
+    await familyLink.click()
     await navigation
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
 
-    await expect(
-      page.locator(`[data-scenario-family-filters] a[href="${familyHref}"]`)
-    ).toHaveAttribute('data-state', 'on')
-    await expect(gallery).toBeVisible()
-
+    // The retired filtered archive has no route or redirect.
     const familySlug = familyHref.split('/').at(-1)
-    if (!familySlug) throw new Error('Expected a family slug in the filter URL')
-
-    await page.goto(`/scenarios?family=${familySlug}`)
-    await expect.poll(() => new URL(page.url()).pathname).toBe(familyHref)
+    const retired = await page.request.get(`/scenarios/family/${familySlug}`, {
+      maxRedirects: 0
+    })
+    expect(retired.status()).toBe(404)
   })
 })
 

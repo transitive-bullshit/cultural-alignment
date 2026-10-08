@@ -169,6 +169,42 @@ describe('ContentCatalog', () => {
     ])
   })
 
+  it('summarizes the formats and primary concepts of a page’s scenes', () => {
+    const summarized = createContentCatalog({
+      ...minimalSnapshot,
+      sources: minimalSnapshot.sources.map((source) =>
+        source.id === 'source-2'
+          ? { ...source, keywords: ['Mecha anime'] }
+          : source
+      ),
+      concepts: [
+        ...minimalSnapshot.concepts,
+        {
+          ...minimalSnapshot.concepts[0]!,
+          id: 'concept-2',
+          slug: 'concept-two',
+          shortName: 'Concept Two'
+        }
+      ],
+      scenarios: minimalSnapshot.scenarios.map((scenario) =>
+        scenario.id === 'new' || scenario.id === 'null-b'
+          ? { ...scenario, conceptIds: ['concept-2', 'concept-1'] }
+          : scenario
+      )
+    })
+    const family = summarized.getResourcePage('risk-family', 'family-b')!
+
+    // An anime keyword outranks the source type; formats keep display order.
+    expect(family.mediaFormats).toEqual(['movie', 'anime'])
+    expect(family.primaryConcepts.map(({ slug }) => slug)).toEqual([
+      'concept-two',
+      'concept-one'
+    ])
+    expect(
+      summarized.getResourcePage('source', 'shared-source')!.mediaFormats
+    ).toEqual(['movie'])
+  })
+
   it('projects index card art and counts for media resources', () => {
     const sourcesById = new Map(
       minimalSnapshot.sources.map((source) => [source.id, source])

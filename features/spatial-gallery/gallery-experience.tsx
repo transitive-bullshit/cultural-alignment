@@ -4,7 +4,8 @@ import galleryShellStyles from './gallery-page-shell.module.css'
 import styles from './gallery-experience.module.css'
 import {
   SpatialGallery,
-  type SpatialGalleryDesktopSelectionRenderer
+  type SpatialGalleryDesktopSelectionRenderer,
+  type SpatialGalleryIndexHeading
 } from './spatial-gallery'
 import type { SpatialGalleryItem } from './types'
 
@@ -15,6 +16,7 @@ export function GalleryExperience<
   header,
   headerInert = false,
   historyKey,
+  index,
   inertiaBurst = false,
   initialItemId,
   items,
@@ -26,6 +28,7 @@ export function GalleryExperience<
   readonly header: ReactNode
   readonly headerInert?: boolean
   readonly historyKey: string
+  readonly index: SpatialGalleryIndexHeading
   readonly inertiaBurst?: boolean
   readonly initialItemId: string
   readonly items: readonly TItem[]
@@ -53,6 +56,7 @@ export function GalleryExperience<
         >
           <SpatialGallery
             historyKey={historyKey}
+            index={index}
             inertiaBurst={inertiaBurst}
             items={items}
             initialItemId={initialItemId}

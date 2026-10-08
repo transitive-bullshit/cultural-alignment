@@ -5,8 +5,10 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import {
   ViewTransition,
+  memo,
   useCallback,
   useEffect,
+  useId,
   useRef,
   useState,
   type CSSProperties,
@@ -69,16 +71,26 @@ export type SpatialGalleryDesktopSelectionRenderer<
   TItem extends SpatialGalleryItem = SpatialGalleryItem
 > = (selection: SpatialGalleryDesktopSelection<TItem>) => ReactNode
 
+/** The heading and introduction of the gallery's server-rendered text index. */
+export type SpatialGalleryIndexHeading = Readonly<{
+  description?: ReactNode
+  /** Level 1 only when the page has no other visible title. */
+  level?: 1 | 2
+  title: string
+}>
+
 export function SpatialGallery<
   TItem extends SpatialGalleryItem = SpatialGalleryItem
 >({
   historyKey,
+  index,
   inertiaBurst = false,
   initialItemId,
   items,
   renderDesktopSelection
 }: {
   readonly historyKey: string
+  readonly index: SpatialGalleryIndexHeading
   readonly inertiaBurst?: boolean
   readonly initialItemId?: string
   readonly items: readonly TItem[]
@@ -466,6 +478,8 @@ export function SpatialGallery<
         )}
       </div>
 
+      <ScenarioIndex enhanced={historyReady} heading={index} items={items} />
+
       {transitionProxy ? (
         <ViewTransition
           name={`scenario-media-${transitionProxy.item.id}`}
@@ -577,7 +591,7 @@ function SelectedMetadata({
       </div>
 
       <div className={styles.titleClip}>
-        <h1 id='selected-scenario'>{item.title}</h1>
+        <h2 id='selected-scenario'>{item.title}</h2>
       </div>
 
       <dl className={styles.metadataFacts}>
@@ -622,7 +636,7 @@ function MobileSelectedScenario({
       data-mobile-selected-scenario
       aria-labelledby='mobile-selected-scenario'
     >
-      <h1 id='mobile-selected-scenario'>Selected scenario: {item.title}</h1>
+      <h2 id='mobile-selected-scenario'>Selected scenario: {item.title}</h2>
       <Link
         className={styles.mobileSelectedLink}
         data-selected-scenario-link='mobile'
@@ -654,6 +668,57 @@ function handleTransitionLink(
   event.preventDefault()
   open()
 }
+
+/**
+ * Lists every scenario in the gallery as ordinary links, rendered on the
+ * server. Without scripting it is the visible gallery; once the client takes
+ * over it stays in the document as the text equivalent of the canvas, and it
+ * reappears when keyboard focus enters it.
+ */
+const ScenarioIndex = memo(function ScenarioIndex({
+  enhanced,
+  heading,
+  items
+}: {
+  readonly enhanced: boolean
+  readonly heading: SpatialGalleryIndexHeading
+  readonly items: readonly SpatialGalleryItem[]
+}) {
+  const headingId = `scenario-index-${useId().replaceAll(':', '')}`
+  const Heading = heading.level === 1 ? 'h1' : 'h2'
+  const numberWidth = Math.max(2, String(items.length).length)
+
+  return (
+    <section
+      className={styles.scenarioIndex}
+      data-enhanced={enhanced || undefined}
+      data-scenario-index
+      aria-labelledby={headingId}
+    >
+      <div className={styles.indexIntro}>
+        <Heading id={headingId}>{heading.title}</Heading>
+        {heading.description ? <p>{heading.description}</p> : null}
+      </div>
+
+      <ol className={styles.indexList}>
+        {items.map((item, itemIndex) => (
+          <li key={item.id}>
+            <span className={styles.indexNumber} aria-hidden='true'>
+              {String(itemIndex + 1).padStart(numberWidth, '0')}
+            </span>
+            <Link href={item.href} prefetch={false}>
+              <span className={styles.indexTitle}>{item.title}</span>
+              <span className={styles.indexSource}>{item.source}</span>
+            </Link>
+            <span className={styles.indexMeta}>
+              {item.releaseYear} · {item.lens}
+            </span>
+          </li>
+        ))}
+      </ol>
+    </section>
+  )
+})
 
 function CanvasLoading() {
   return (

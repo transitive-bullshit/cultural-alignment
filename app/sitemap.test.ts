@@ -19,9 +19,6 @@ describe('sitemap', () => {
     ]
     const contentPaths = [
       ...contentCatalog
-        .getStaticSlugs('risk-family')
-        .map((slug) => `/scenarios/family/${slug}`),
-      ...contentCatalog
         .getStaticSlugs('scenario')
         .map((slug) => `/scenarios/${slug}`),
       ...contentCatalog
@@ -47,5 +44,6 @@ describe('sitemap', () => {
 
     expect(new Set(urls)).toEqual(expectedUrls)
     expect(urls).toHaveLength(expectedUrls.size)
+    expect(urls.some((url) => url.includes('/scenarios/family/'))).toBe(false)
   })
 })

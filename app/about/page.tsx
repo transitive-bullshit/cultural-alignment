@@ -10,14 +10,14 @@ import {
 import {
   notionSourceUrl,
   repositoryUrl,
-  siteSummary,
   siteDescriptionLong,
   xProfileUrl
 } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'About',
-  description: siteSummary,
+  description:
+    'Why Cultural Alignment uses familiar movie and TV scenes to explain AI safety, risks, and alignment.',
   alternates: { canonical: '/about' }
 }
 

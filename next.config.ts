@@ -1,7 +1,6 @@
 import type { NextConfig } from 'next'
 
 import franchises from './content/snapshot/franchises.json'
-import riskFamilies from './content/snapshot/risk-families.json'
 import scenarios from './content/snapshot/scenarios.json'
 import sources from './content/snapshot/sources.json'
 
@@ -67,14 +66,6 @@ const nextConfig: NextConfig = {
     staleTimes: {
       static: 3_600
     }
-  },
-  redirects() {
-    return riskFamilies.map(({ slug }) => ({
-      source: '/scenarios',
-      has: [{ type: 'query' as const, key: 'family', value: slug }],
-      destination: `/scenarios/family/${slug}`,
-      permanent: true
-    }))
   },
   outputFileTracingIncludes: {
     '/{scenarios,sources,franchises,risk-families,concepts}/*/opengraph-image':

@@ -90,7 +90,7 @@ The sync entry point loads `.env` with dotenvx. Existing process environment val
 ## Route map
 
 - `/` — Notion-tagged featured gallery with a scene-to-concept explainer that returns until explicitly closed
-- `/scenarios` and `/scenarios/family/[slug]` — pre-rendered complete and risk-family-filtered galleries with the explainer on first unacknowledged visit
+- `/scenarios` — pre-rendered complete gallery, with links to each risk family and the explainer on first unacknowledged visit
 - `/scenarios/[slug]` — scenario dossier
 - `/risk-families` and `/risk-families/[slug]` — risk-family index and pivots
 - `/concepts` and `/concepts/[slug]` — concept index and pivots

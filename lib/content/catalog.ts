@@ -88,6 +88,7 @@ export type ScenarioPage = {
       readonly href: string
     }[]
     readonly scenarioCount: number
+    readonly releaseDate: string | null
   }
   readonly episode: ScenarioRecord['episode']
   readonly releaseDate: string | null
@@ -151,12 +152,19 @@ export type RelatedResource = ResourceSummary & {
   readonly sharedScenarioCount: number
 }
 
+/** How a source reaches viewers; anime is told apart by source keywords. */
+export type MediaFormat = 'tv' | 'movie' | 'anime'
+
 type ResourcePageBase = ResourceSummary & {
   readonly externalLinks: readonly {
     readonly label: string
     readonly href: string
     readonly description?: string
   }[]
+  /** The formats of the page's scenes, in display order: TV, movies, anime. */
+  readonly mediaFormats: readonly MediaFormat[]
+  /** The primary (first-listed) concepts of the page's scenes, most common first. */
+  readonly primaryConcepts: readonly TaxonomyLink[]
   /** Grouped by kind, most shared scenes first. */
   readonly relatedResources: readonly RelatedResource[]
   readonly scenarios: readonly ResourceScenario[]
@@ -321,7 +329,8 @@ export function createContentCatalog(input: unknown): ContentCatalog {
           href: `/sources/${source.slug}`,
           description: source.description,
           links: sourceExternalLinks(source),
-          scenarioCount: scenariosBySourceId.get(source.id)?.length ?? 0
+          scenarioCount: scenariosBySourceId.get(source.id)?.length ?? 0,
+          releaseDate: source.releaseDate
         },
         episode: scenario.episode,
         releaseDate: scenario.releaseDate,
@@ -422,6 +431,18 @@ export function createContentCatalog(input: unknown): ContentCatalog {
   const sourceSummaryById = new Map(
     resourceSummaries.source.map((source) => [source.id, source])
   )
+  const describeScenes = (scenarios: readonly ScenarioRecord[]) => ({
+    mediaFormats: getMediaFormats(
+      scenarios.map(({ sourceId }) => getRequired(sourceById, sourceId))
+    ),
+    primaryConcepts: rankPrimaryConceptIds(scenarios).map((id) => {
+      const { href, slug, title } = getRequired(
+        resourceSummaryById,
+        resourceKey('concept', id)
+      )
+      return { id, href, slug, title }
+    })
+  })
   const resourcePageByKind = {
     source: new Map(
       snapshot.sources.map((source) => {
@@ -440,6 +461,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
             releaseDate: source.releaseDate,
             poster: source.poster,
             externalLinks: sourceExternalLinks(source),
+            ...describeScenes(scenarios),
             relatedResources: mergeRelatedResources(
               source.franchiseIds.map((id) => ({
                 ...getRequired(
@@ -486,6 +508,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
               sources.map((source) => getRequired(sourceSummaryById, source.id))
             ),
             externalLinks: franchiseExternalLinks(franchise),
+            ...describeScenes(scenarios),
             relatedResources: collectRelatedResources(
               scenarios,
               resourceSummaryById,
@@ -516,6 +539,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
               family.wikipediaUrl,
               family.citations
             ),
+            ...describeScenes(scenarios),
             relatedResources: collectRelatedResources(
               scenarios,
               resourceSummaryById,
@@ -546,6 +570,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
               concept.wikipediaUrl,
               concept.citations
             ),
+            ...describeScenes(scenarios),
             relatedResources: collectRelatedResources(
               scenarios,
               resourceSummaryById,
@@ -698,6 +723,37 @@ function toConceptSummary(
     description: concept.description,
     scenarioCount
   }
+}
+
+const MEDIA_FORMAT_ORDER = ['tv', 'movie', 'anime'] as const
+const ANIME_KEYWORD = /\banime\b/iu
+
+function getMediaFormats(sources: readonly SourceRecord[]): MediaFormat[] {
+  const formats = new Set<MediaFormat>(
+    sources.map((source) =>
+      source.keywords.some((keyword) => ANIME_KEYWORD.test(keyword))
+        ? 'anime'
+        : source.sourceType === 'movie'
+          ? 'movie'
+          : 'tv'
+    )
+  )
+
+  return MEDIA_FORMAT_ORDER.filter((format) => formats.has(format))
+}
+
+/** Counts each scene's first concept; ties keep scene order. */
+function rankPrimaryConceptIds(scenarios: readonly ScenarioRecord[]) {
+  const counts = new Map<string, number>()
+
+  for (const { conceptIds } of scenarios) {
+    const [primary] = conceptIds
+    if (primary) counts.set(primary, (counts.get(primary) ?? 0) + 1)
+  }
+
+  return [...counts.keys()].toSorted(
+    (left, right) => (counts.get(right) ?? 0) - (counts.get(left) ?? 0)
+  )
 }
 
 function collectRelatedResources(
