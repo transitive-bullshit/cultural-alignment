@@ -4,7 +4,7 @@
   border: 1px solid var(--foreground);
   border-radius: 0;
   background: var(--popover);
-  box-shadow: 8px 8px 0 rgb(45 42 38 / 10%);
+  box-shadow: 8px 8px 0 color-mix(in oklch, var(--foreground) 10%, transparent);
 }
 
 .command {
@@ -13,7 +13,10 @@
 }
 
 .command :global([cmdk-group-heading]) {
-  padding: 8px 16px 6px;
+  padding-block-start: 8px;
+  padding-inline-end: 16px;
+  padding-block-end: 6px;
+  padding-inline-start: 16px;
   color: var(--muted-foreground);
   font-family: var(--font-geist-mono), monospace;
   font-size: 10px;

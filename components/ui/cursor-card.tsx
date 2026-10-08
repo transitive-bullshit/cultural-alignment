@@ -181,7 +181,7 @@ export function CursorCard({
                     // This primitive accepts arbitrary local or remote preview URLs.
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
-                      className='mb-3 h-auto w-full rounded-md object-cover'
+                      className='[margin-block-end:0.75rem] h-auto w-full rounded-md object-cover'
                       src={image}
                       alt={imageAlt}
                     />

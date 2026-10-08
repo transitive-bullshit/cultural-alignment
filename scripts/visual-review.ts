@@ -47,6 +47,8 @@ const captureSpecSchema = z.object({
         .array(
           z.union([
             z.object({ hover: z.string() }),
+            z.object({ focus: z.string() }),
+            z.object({ pointerDown: z.string() }),
             z.object({ click: z.string() }),
             z.object({ type: z.string() }),
             z.object({ press: z.string() }),
@@ -58,6 +60,7 @@ const captureSpecSchema = z.object({
         .array(
           z.object({
             selector: z.string(),
+            pseudo: z.enum(['::before', '::after']).optional(),
             label: z.string(),
             side: z.enum(['before', 'after', 'both']).default('after'),
             limit: z.number().int().positive().default(1)
@@ -155,7 +158,12 @@ async function capture(specPath: string) {
         }
         for (const step of shot.steps) {
           if ('hover' in step) await page.locator(step.hover).first().hover()
-          else if ('click' in step)
+          else if ('focus' in step)
+            await page.locator(step.focus).first().focus()
+          else if ('pointerDown' in step) {
+            await page.locator(step.pointerDown).first().hover()
+            await page.mouse.down()
+          } else if ('click' in step)
             await page.locator(step.click).first().click()
           else if ('type' in step) await page.keyboard.type(step.type)
           else if ('press' in step) await page.keyboard.press(step.press)
@@ -190,17 +198,37 @@ async function capture(specPath: string) {
 
 async function measureHighlights(
   page: Page,
-  specs: readonly { selector: string; label: string; limit: number }[]
+  specs: readonly {
+    selector: string
+    label: string
+    limit: number
+    pseudo?: '::before' | '::after'
+  }[]
 ): Promise<Highlight[]> {
   const highlights: Highlight[] = []
-  for (const { selector, label, limit } of specs) {
+  for (const { selector, label, limit, pseudo } of specs) {
     const rects = await page.evaluate(
-      ([sel, max]) =>
+      ([sel, max, pseudoElement]) =>
         [...document.querySelectorAll(sel)].slice(0, max).map((element) => {
           const rect = element.getBoundingClientRect()
+          if (pseudoElement) {
+            const style = getComputedStyle(element, pseudoElement)
+            if (style.content !== 'none' && style.content !== 'normal') {
+              const start = Number.parseFloat(style.insetInlineStart) || 0
+              const top = Number.parseFloat(style.insetBlockStart) || 0
+              const end = Number.parseFloat(style.insetInlineEnd) || 0
+              const bottom = Number.parseFloat(style.insetBlockEnd) || 0
+              return {
+                x: rect.x + start,
+                y: rect.y + top,
+                w: rect.width - start - end,
+                h: rect.height - top - bottom
+              }
+            }
+          }
           return { x: rect.x, y: rect.y, w: rect.width, h: rect.height }
         }),
-      [selector, limit] as const
+      [selector, limit, pseudo] as const
     )
     if (rects.length === 0) {
       console.warn(`highlight selector matched nothing: ${selector}`)
@@ -367,7 +395,8 @@ function figure(
     .map((h, index) => {
       const style = `left:${pct(h.x, record.width)};top:${pct(h.y, record.height)};width:${pct(h.w, record.width)};height:${pct(h.h, record.height)}`
       const inside = h.y < 24 ? ' mark-inside' : ''
-      return `<span class="mark${inside}" style="${style}"><span class="mark-tag">${index + 1}. ${escapeHtml(h.label)}</span></span>`
+      const end = h.x > record.width / 2 ? ' mark-end' : ''
+      return `<span class="mark${inside}${end}" style="${style}"><span class="mark-tag">${index + 1}. ${escapeHtml(h.label)}</span></span>`
     })
     .join('')
   return `<figure class="shot">
@@ -401,7 +430,11 @@ function escapeHtml(value: string) {
 
 function renderPage(spec: ReviewSpec, sections: readonly string[]) {
   const storageKey = `visual-review:${spec.title}`
-  return `<title>${escapeHtml(spec.title)}</title>
+  return `<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${escapeHtml(spec.title)}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&display=swap">
@@ -444,6 +477,7 @@ figcaption { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; 
 .shot-frame img { display: block; width: 100%; height: auto; }
 .mark { position: absolute; border: 2px solid var(--accent); pointer-events: none; }
 .mark-inside .mark-tag { bottom: auto; top: 0; }
+.mark-end .mark-tag { inset-inline-start: auto; inset-inline-end: -2px; }
 .mark-tag { position: absolute; left: -2px; bottom: 100%; background: var(--accent); color: var(--on-accent); font: 500 11px/1.3 var(--mono); padding: 2px 6px; white-space: nowrap; max-width: 60vw; overflow: hidden; text-overflow: ellipsis; }
 .choices { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
 .choice { display: grid; gap: 8px; align-content: start; padding: 10px; border: 1px solid var(--rule); background: var(--raised); cursor: pointer; min-width: 0; }
@@ -526,6 +560,7 @@ textarea { width: 100%; box-sizing: border-box; font: 15px/1.5 var(--body); colo
   });
 })();
 </script>
+</html>
 `
 }
 

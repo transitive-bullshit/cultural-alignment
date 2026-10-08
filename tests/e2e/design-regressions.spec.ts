@@ -138,3 +138,65 @@ test('phone galleries keep their header and archive controls clear', async ({
       .toEqual({ gap: 0, bottom: viewport.height })
   }
 })
+
+test('shared card type stays stable across the desktop density breakpoint', async ({
+  page
+}) => {
+  await page.goto('/concepts/outer-alignment')
+  await page.evaluate(() => document.fonts.ready)
+  const card = page.locator('[data-scenario-collection] li').first()
+  const measure = async (width: number) => {
+    await page.setViewportSize({ width, height: 900 })
+    await card.scrollIntoViewIfNeeded()
+    return card.evaluate((element) => ({
+      width: element.getBoundingClientRect().width,
+      font: Number.parseFloat(
+        getComputedStyle(element.querySelector('h3')!).fontSize
+      )
+    }))
+  }
+  const before = await measure(1279)
+  const after = await measure(1280)
+  expect(Math.abs(after.width - before.width)).toBeLessThan(1)
+  expect(Math.abs(after.font - before.font)).toBeLessThan(1)
+})
+
+test('compact phone buttons respond beyond their visible icon box', async ({
+  browser,
+  baseURL
+}) => {
+  const context = await browser.newContext({
+    baseURL,
+    viewport: { width: 390, height: 844 },
+    hasTouch: true
+  })
+  try {
+    const page = await context.newPage()
+    await mockOptimizedImages(page)
+    await page.goto('/scenarios/keep-summer-safe')
+    const help = page.locator('[data-taxonomy-help]').first()
+    await help.scrollIntoViewIfNeeded()
+    const box = await help.boundingBox()
+    expect(box).not.toBeNull()
+    // Five pixels outside the 24px visual box must still reach its control.
+    await page.touchscreen.tap(box!.x - 5, box!.y + box!.height / 2)
+    await expect(page.getByRole('tooltip')).toBeVisible()
+    await page.keyboard.press('Escape')
+
+    await page.getByRole('button', { name: /search site/i }).click()
+    await page.getByRole('combobox').fill('alignment')
+    const clear = page.getByRole('button', {
+      name: 'Clear search',
+      exact: true
+    })
+    const clearBox = await clear.boundingBox()
+    expect(clearBox).not.toBeNull()
+    await page.touchscreen.tap(
+      clearBox!.x - 5,
+      clearBox!.y + clearBox!.height / 2
+    )
+    await expect(page.getByRole('combobox')).toHaveValue('')
+  } finally {
+    await context.close()
+  }
+})

@@ -2,17 +2,20 @@
   position: relative;
   display: grid;
   grid-template-rows: auto 1fr;
-  min-height: 100svh;
-  padding: 0 clamp(18px, 3vw, 46px) clamp(24px, 3vw, 46px);
-  overflow: hidden;
+  min-block-size: 100svh;
+  padding-block-start: 0;
+  padding-inline-end: clamp(18px, 3vw, 46px);
+  padding-block-end: clamp(24px, 3vw, 46px);
+  padding-inline-start: clamp(18px, 3vw, 46px);
+  overflow: clip;
   background:
     linear-gradient(
-      color-mix(in srgb, var(--proto-rule) 34%, transparent) 1px,
+      color-mix(in oklch, var(--proto-rule) 34%, transparent) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      color-mix(in srgb, var(--proto-rule) 28%, transparent) 1px,
+      color-mix(in oklch, var(--proto-rule) 28%, transparent) 1px,
       transparent 1px
     ),
     var(--proto-paper);
@@ -21,12 +24,16 @@
 
 .message {
   align-self: center;
-  max-width: 960px;
-  padding: clamp(54px, 8vw, 110px) 0;
+  max-inline-size: 960px;
+  padding-block: clamp(54px, 8vw, 110px);
+  padding-inline: 0;
 }
 
 .code {
-  margin: 0 0 clamp(22px, 3vw, 42px);
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-block-end: clamp(22px, 3vw, 42px);
+  margin-inline-start: 0;
   color: var(--proto-electric);
   font-family: var(--font-geist-mono), monospace;
   font-size: 10px;
@@ -44,8 +51,9 @@
 }
 
 .explanation {
-  max-width: 46ch;
-  margin: clamp(28px, 4vw, 52px) 0;
+  max-inline-size: 46ch;
+  margin-block: clamp(28px, 4vw, 52px);
+  margin-inline: 0;
   color: var(--proto-muted-ink);
   font-size: clamp(14px, 1.2vw, 17px);
   line-height: 1.55;
@@ -65,8 +73,9 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
-  min-height: 52px;
-  padding: 0 27px;
+  min-block-size: 52px;
+  padding-block: 0;
+  padding-inline: 27px;
   border: 1px solid var(--proto-ink);
   border-radius: 0;
   font-family: var(--font-geist-mono), monospace;
@@ -78,10 +87,19 @@
   text-transform: uppercase;
   transition:
     background-color 150ms var(--proto-ease-out),
-    background-position 260ms var(--proto-ease-out),
     box-shadow 160ms var(--proto-ease-out),
-    color 120ms var(--proto-ease-out),
-    transform 150ms var(--proto-ease-out);
+    color 120ms var(--proto-ease-out);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .browseAction,
+  .searchAction {
+    transition:
+      background-color 150ms var(--proto-ease-out),
+      background-position 260ms var(--proto-ease-out),
+      box-shadow 160ms var(--proto-ease-out),
+      color 120ms var(--proto-ease-out),
+      transform 150ms var(--proto-ease-out);
+  }
 }
 
 /* Qualified to outrank the experience scope's inherited link color. */
@@ -98,14 +116,19 @@
   background-repeat: no-repeat;
   background-size: 210% 100%;
   box-shadow: 4px 4px 0
-    color-mix(in srgb, var(--proto-electric) 38%, transparent);
+    color-mix(in oklch, var(--proto-electric) 38%, transparent);
   color: var(--proto-raised-paper);
 }
 
 .browseAction svg {
-  width: 1.1rem;
-  height: 1.1rem;
-  transition: transform 150ms var(--proto-ease-out);
+  inline-size: 1.1rem;
+  block-size: 1.1rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .browseAction svg {
+    transition: transform 150ms var(--proto-ease-out);
+  }
 }
 
 .actions .searchAction {
@@ -135,7 +158,7 @@
   .actions .browseAction:hover:not(:active) {
     background-position: 0 0;
     box-shadow: 2px 2px 0
-      color-mix(in srgb, var(--proto-electric) 54%, transparent);
+      color-mix(in oklch, var(--proto-electric) 54%, transparent);
     color: var(--proto-stage);
     transform: translateY(-1px);
   }
@@ -153,8 +176,8 @@
 
 .crosshair {
   position: absolute;
-  right: clamp(18px, 3vw, 46px);
-  bottom: clamp(18px, 3vw, 42px);
+  inset-inline-end: clamp(18px, 3vw, 46px);
+  inset-block-end: clamp(18px, 3vw, 42px);
   color: var(--proto-electric);
   font-family: var(--font-geist-mono), monospace;
   font-size: 25px;
@@ -168,7 +191,7 @@
 
   .browseAction,
   .searchAction {
-    width: 100%;
+    inline-size: 100%;
   }
 }
 

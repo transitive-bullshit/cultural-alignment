@@ -1,14 +1,17 @@
 .page {
-  min-height: 100svh;
-  padding: 0 clamp(18px, 3vw, 46px) clamp(84px, 10vw, 148px);
+  min-block-size: 100svh;
+  padding-block-start: 0;
+  padding-inline-end: clamp(18px, 3vw, 46px);
+  padding-block-end: clamp(84px, 10vw, 148px);
+  padding-inline-start: clamp(18px, 3vw, 46px);
   background:
     linear-gradient(
-      color-mix(in srgb, var(--proto-rule) 34%, transparent) 1px,
+      color-mix(in oklch, var(--proto-rule) 34%, transparent) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      color-mix(in srgb, var(--proto-rule) 28%, transparent) 1px,
+      color-mix(in oklch, var(--proto-rule) 28%, transparent) 1px,
       transparent 1px
     ),
     var(--proto-paper);
@@ -16,15 +19,16 @@
 }
 
 .siteHeader {
-  border-bottom-color: var(--proto-rule);
+  border-block-end-color: var(--proto-rule);
 }
 
 .article {
   /* One fixed first track keeps the page title and section headings on the
      same edge; fractional tracks resolved differently in the two grids. */
   --information-index-column: clamp(82px, 9vw, 150px);
-  max-width: 1500px;
-  margin: 0 auto;
+  max-inline-size: 1500px;
+  margin-block: 0;
+  margin-inline: auto;
 }
 
 .introduction {
@@ -35,21 +39,27 @@
     );
   column-gap: clamp(24px, 5vw, 78px);
   align-items: end;
-  padding: clamp(72px, 9vw, 136px) 0 clamp(76px, 9vw, 132px);
+  padding-block-start: clamp(72px, 9vw, 136px);
+  padding-inline-end: 0;
+  padding-block-end: clamp(76px, 9vw, 132px);
+  padding-inline-start: 0;
 }
 
 .eyebrow,
 .sectionIndex,
 .links {
   font-family: var(--font-geist-mono), monospace;
-  font-size: 9px;
+  font-size: var(--text-metadata);
   letter-spacing: 0.07em;
   text-transform: uppercase;
 }
 
 .eyebrow {
   align-self: start;
-  margin: 8px 0 0;
+  margin-block-start: 8px;
+  margin-inline-end: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
   color: var(--proto-electric);
 }
 
@@ -80,7 +90,7 @@
 }
 
 .sections {
-  border-top: 1px solid var(--proto-ink);
+  border-block-start: 1px solid var(--proto-ink);
 }
 
 .section {
@@ -90,12 +100,16 @@
       0.35fr
     ) minmax(280px, 0.62fr);
   column-gap: clamp(24px, 5vw, 78px);
-  padding: clamp(32px, 4.5vw, 64px) 0;
-  border-bottom: 1px solid var(--proto-rule);
+  padding-block: clamp(32px, 4.5vw, 64px);
+  padding-inline: 0;
+  border-block-end: 1px solid var(--proto-rule);
 }
 
 .sectionIndex {
-  margin: 4px 0 0;
+  margin-block-start: 4px;
+  margin-inline-end: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
   color: var(--proto-electric);
 }
 
@@ -110,7 +124,7 @@
 }
 
 .sectionCopy {
-  max-width: 36em;
+  max-inline-size: 36em;
   color: var(--proto-muted-ink);
   font-size: 16px;
   line-height: 1.65;
@@ -121,15 +135,15 @@
 }
 
 .sectionCopy > p + p {
-  margin-top: clamp(22px, 2.2vw, 30px);
+  margin-block-start: clamp(22px, 2.2vw, 30px);
 }
 
 .sectionCopy > :first-child {
-  margin-top: 0;
+  margin-block-start: 0;
 }
 
 .sectionCopy > :last-child {
-  margin-bottom: 0;
+  margin-block-end: 0;
 }
 
 .sectionCopy strong {
@@ -150,14 +164,14 @@
   display: flex;
   flex-direction: column;
   gap: 9px;
-  padding-left: 1.1em;
+  padding-inline-start: 1.1em;
 }
 
 .links {
   display: flex;
   flex-wrap: wrap;
   gap: 9px 20px;
-  margin-top: 28px;
+  margin-block-start: 28px;
 }
 
 .links a {
@@ -166,7 +180,7 @@
 
 /* ↗ marks links that leave the site; in-site links take a plain arrow. */
 .links a::after {
-  margin-left: 0.45em;
+  margin-inline-start: 0.45em;
   color: var(--proto-electric);
   content: '→';
 }
@@ -190,22 +204,28 @@
 
 @media (max-width: 760px) {
   .page {
-    padding: 0 18px 76px;
+    padding-block-start: 0;
+    padding-inline-end: 18px;
+    padding-block-end: 76px;
+    padding-inline-start: 18px;
     background-size: 42px 42px;
   }
 
   .introduction {
     display: block;
-    padding: 58px 0 62px;
+    padding-block-start: 58px;
+    padding-inline-end: 0;
+    padding-block-end: 62px;
+    padding-inline-start: 0;
   }
 
   .introduction h1 {
-    margin-top: 18px;
+    margin-block-start: 18px;
     font-size: clamp(62px, 20vw, 94px);
   }
 
   .introductionCopy {
-    margin-top: 30px;
+    margin-block-start: 30px;
   }
 
   .section {
@@ -214,7 +234,7 @@
   }
 
   .sectionCopy {
-    margin-top: 8px;
+    margin-block-start: 8px;
   }
 }
 

@@ -102,7 +102,7 @@ export function GlobalSearchDialog({
         onCloseAutoFocus={onCloseAutoFocus}
         // A fixed top edge keeps the input still while results grow or empty.
         className={cn(
-          'top-[max(16px,12vh)] translate-y-0 gap-0 overflow-hidden p-0 sm:max-w-2xl',
+          '[inset-block-start:max(16px,12vh)] translate-y-0 gap-0 overflow-hidden p-0 sm:max-w-2xl',
           styles.dialog
         )}
         disableMotion
@@ -127,7 +127,7 @@ export function GlobalSearchDialog({
         >
           <CommandInput
             ref={inputRef}
-            className='pr-8'
+            className='[padding-inline-end:2rem]'
             value={query}
             onValueChange={handleQueryChange}
             placeholder='Search the cultural archive…'
@@ -135,7 +135,8 @@ export function GlobalSearchDialog({
           />
           {query.length > 0 ? (
             <Button
-              className='absolute top-3 right-4'
+              data-search-clear
+              className='absolute [inset-block-start:0.75rem] [inset-inline-end:1rem]'
               variant='ghost'
               size='icon-xs'
               type='button'

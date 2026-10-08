@@ -1,0 +1,30 @@
+.control {
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+  transition:
+    background-color 150ms var(--ease-out),
+    border-color 150ms var(--ease-out),
+    color 150ms var(--ease-out),
+    box-shadow 150ms var(--ease-out),
+    filter 120ms var(--ease-out);
+}
+
+.control:not([data-search-clear]) {
+  position: relative;
+}
+
+.control:focus-visible {
+  outline-color: var(--ring);
+}
+
+.control:active:not(:disabled) {
+  filter: brightness(0.92);
+}
+
+/* Keep compact icons and their layout; expand only the pointer target. */
+.control::after {
+  position: absolute;
+  inset-block: min(0px, (100% - 44px) / 2);
+  inset-inline: min(0px, (100% - 44px) / 2);
+  content: '';
+}

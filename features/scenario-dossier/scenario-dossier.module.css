@@ -3,7 +3,7 @@
      gutter. Every section below the opening takes its edges from it. */
   --dossier-gutter: clamp(22px, 3vw, 48px);
   --dossier-content-width: min(calc(1600px - 2 * var(--dossier-gutter)), 100%);
-  min-height: 100svh;
+  min-block-size: 100svh;
   overflow-x: clip;
   background: var(--proto-paper);
   color: var(--proto-ink);
@@ -13,14 +13,18 @@
   display: grid;
   grid-template-columns: minmax(0, 1.18fr) minmax(360px, 0.94fr);
   gap: clamp(30px, 4.3vw, 70px);
-  width: min(1600px, 100%);
-  margin: 0 auto;
-  padding: clamp(26px, 3.5vw, 52px) var(--dossier-gutter) clamp(30px, 3vw, 44px);
+  inline-size: min(1600px, 100%);
+  margin-block: 0;
+  margin-inline: auto;
+  padding-block-start: clamp(26px, 3.5vw, 52px);
+  padding-inline-end: var(--dossier-gutter);
+  padding-block-end: clamp(30px, 3vw, 44px);
+  padding-inline-start: var(--dossier-gutter);
 }
 
 .mediaColumn,
 .narrativeColumn {
-  min-width: 0;
+  min-inline-size: 0;
 }
 
 .mediaColumn {
@@ -36,14 +40,17 @@
 .copyScenarioAction {
   display: flex;
   justify-content: flex-end;
-  padding: 48px var(--copy-inset) 112px;
+  padding-block-start: 48px;
+  padding-inline-end: var(--copy-inset);
+  padding-block-end: 112px;
+  padding-inline-start: var(--copy-inset);
 }
 
 .titleBlock {
   display: flex;
   flex-direction: column;
   gap: clamp(32px, 3vw, 48px);
-  min-width: 0;
+  min-inline-size: 0;
 }
 
 .metadataRow {
@@ -57,13 +64,16 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: clamp(30px, 2.8vw, 44px);
-  padding-top: clamp(18px, 1.6vw, 24px);
-  border-top: 1px solid var(--proto-rule);
+  margin-block-start: clamp(30px, 2.8vw, 44px);
+  padding-block-start: clamp(18px, 1.6vw, 24px);
+  border-block-start: 1px solid var(--proto-rule);
 }
 
 .primaryConceptRelation {
-  margin: 0 0 6px;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-block-end: 6px;
+  margin-inline-start: 0;
   color: var(--proto-electric);
   font-size: 0.8rem;
   font-weight: 660;
@@ -83,9 +93,14 @@
   transition: color 160ms var(--proto-ease-out);
 }
 
-.primaryConceptLink:hover,
 .primaryConceptLink:focus-visible {
   color: var(--proto-electric);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .primaryConceptLink:hover {
+    color: var(--proto-electric);
+  }
 }
 
 .primaryConceptLink:focus-visible {
@@ -94,7 +109,10 @@
 }
 
 .primaryConceptDescription {
-  margin: 12px 0 0;
+  margin-block-start: 12px;
+  margin-inline-end: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
   color: var(--proto-muted-ink);
   font-size: 15px;
   line-height: 1.5;
@@ -103,7 +121,10 @@
 
 .titleBlock h1 {
   margin: 0;
-  padding: 0.035em 0 0;
+  padding-block-start: 0.035em;
+  padding-inline-end: 0;
+  padding-block-end: 0;
+  padding-inline-start: 0;
   font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
   font-size: clamp(68px, 7.35vw, 120px);
   font-weight: 800;
@@ -139,7 +160,7 @@
   display: flex;
   gap: 8px;
   align-items: baseline;
-  min-width: 0;
+  min-inline-size: 0;
 }
 
 .sourceMeta li::before {
@@ -157,7 +178,7 @@
   .sourceMeta li::before {
     position: absolute;
     inset-inline-start: -20px;
-    width: 12px;
+    inline-size: 12px;
   }
 }
 
@@ -167,7 +188,7 @@
   flex-wrap: wrap;
   gap: 5px 7px;
   align-items: baseline;
-  min-width: 0;
+  min-inline-size: 0;
 }
 
 .sourceMetaLinkGroup {
@@ -175,7 +196,7 @@
   flex: 0 1 auto;
   gap: 7px;
   align-items: baseline;
-  min-width: 0;
+  min-inline-size: 0;
 }
 
 .sourceMetaSeparator {
@@ -188,7 +209,7 @@
   font-weight: 700;
   text-decoration: underline;
   text-decoration-color: color-mix(
-    in srgb,
+    in oklch,
     var(--proto-electric) 55%,
     transparent
   );
@@ -199,24 +220,36 @@
     text-decoration-color 160ms var(--proto-ease-out);
 }
 
-.sourceMeta a:hover,
 .sourceMeta a:focus-visible {
   color: var(--proto-electric);
   text-decoration-color: currentColor;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .sourceMeta a:hover {
+    color: var(--proto-electric);
+    text-decoration-color: currentColor;
+  }
+}
+
 /* An episode opens its listing on another site, so it takes the shared
    external-link rule and a trailing ↗ instead of the internal underline. */
 .sourceMeta .episodeLink,
-.sourceMeta .episodeLink:hover,
 .sourceMeta .episodeLink:focus-visible {
   color: var(--proto-ink);
   font-weight: 400;
   text-decoration: none;
 }
+@media (hover: hover) and (pointer: fine) {
+  .sourceMeta .episodeLink:hover {
+    color: var(--proto-ink);
+    font-weight: 400;
+    text-decoration: none;
+  }
+}
 
 .externalLinkMark {
-  margin-left: 5px;
+  margin-inline-start: 5px;
   color: var(--proto-electric);
   font-family: var(--font-geist-mono), monospace;
   font-size: 12px;
@@ -225,14 +258,14 @@
 
 .mediaFrame {
   position: relative;
-  width: 100%;
+  inline-size: 100%;
   aspect-ratio: 3 / 2;
-  overflow: hidden;
+  overflow: clip;
   border: 1px solid var(--proto-ink);
   border-radius: 2px;
-  background: #0e0e0b;
+  background: oklch(0.1625353 0.0061292 107.06253);
   color: var(--proto-stage-ink);
-  box-shadow: 11px 13px 0 rgb(45 42 38 / 7%);
+  box-shadow: 11px 13px 0 color-mix(in oklch, var(--foreground) 7%, transparent);
 }
 
 .mediaFrame img {
@@ -251,16 +284,16 @@
   z-index: 2;
   inset: 0;
   display: block;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .mediaFrame iframe {
   position: relative;
   z-index: 0;
   display: block;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   border: 0;
   pointer-events: none;
 }
@@ -268,13 +301,22 @@
 .mediaIndex {
   position: absolute;
   z-index: 4;
-  top: 10px;
-  left: 10px;
-  max-width: calc(100% - 20px);
-  padding: 6px 8px;
-  overflow: hidden;
-  background: rgb(14 14 11 / 72%);
-  color: rgb(244 236 221 / 76%);
+  inset-block-start: 10px;
+  inset-inline-start: 10px;
+  max-inline-size: calc(100% - 20px);
+  padding-block: 6px;
+  padding-inline: 8px;
+  overflow: clip;
+  background: color-mix(
+    in oklch,
+    oklch(0.1625353 0.0061292 107.06253) 72%,
+    transparent
+  );
+  color: color-mix(
+    in oklch,
+    oklch(0.9453056 0.0217054 83.26387) 76%,
+    transparent
+  );
   text-overflow: ellipsis;
   white-space: nowrap;
   backdrop-filter: blur(8px);
@@ -285,7 +327,7 @@
   position: absolute;
   z-index: 3;
   inset: 0;
-  width: 100%;
+  inline-size: 100%;
   padding: 0;
   border: 0;
   border-radius: inherit;
@@ -298,7 +340,7 @@
 }
 
 .mediaToggle:focus-visible {
-  outline: none;
+  outline: 2px solid transparent;
 }
 
 .mediaFrame:has(.mediaToggle:focus-visible) {
@@ -308,8 +350,8 @@
 
 .posterPlayAction {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
   display: grid;
   justify-items: center;
   transform: translate(-50%, -50%);
@@ -318,31 +360,42 @@
 
 .posterPlayIcon {
   display: grid;
-  width: clamp(74px, 7vw, 94px);
+  inline-size: clamp(74px, 7vw, 94px);
   aspect-ratio: 1.48;
   place-items: center;
-  border: 1px solid rgb(14 14 11 / 78%);
+  border: 1px solid
+    color-mix(in oklch, oklch(0.1625353 0.0061292 107.06253) 78%, transparent);
   border-radius: 10px;
   background: var(--proto-electric);
   box-shadow:
-    0 13px 36px rgb(14 14 11 / 36%),
-    inset 0 0 0 1px rgb(255 255 255 / 18%);
-  color: #fff;
-  transition:
-    background-color 160ms var(--proto-ease-out),
-    transform 160ms var(--proto-ease-out);
+    0 13px 36px
+      color-mix(in oklch, oklch(0.1625353 0.0061292 107.06253) 36%, transparent),
+    inset 0 0 0 1px color-mix(in oklch, oklch(1 0 none) 18%, transparent);
+  color: oklch(1 0 none);
+  transition: background-color 160ms var(--proto-ease-out);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .posterPlayIcon {
+    transition:
+      background-color 160ms var(--proto-ease-out),
+      transform 160ms var(--proto-ease-out);
+  }
 }
 
 .posterPlayIcon .playbackGlyph {
-  width: 42%;
-  height: 42%;
-  filter: drop-shadow(0 1px 0 rgb(14 14 11 / 24%));
+  inline-size: 42%;
+  block-size: 42%;
+  filter: drop-shadow(
+    0 1px 0
+      color-mix(in oklch, oklch(0.1625353 0.0061292 107.06253) 24%, transparent)
+  );
 }
 
 .playbackGlyph {
   display: block;
-  width: 16px;
-  height: 16px;
+  inline-size: 16px;
+  block-size: 16px;
   fill: currentColor;
 }
 
@@ -353,11 +406,17 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  min-height: 42px;
-  padding: 0 16px;
-  border: 1px solid rgb(244 236 221 / 50%);
+  min-block-size: 42px;
+  padding-block: 0;
+  padding-inline: 16px;
+  border: 1px solid
+    color-mix(in oklch, oklch(0.9453056 0.0217054 83.26387) 50%, transparent);
   border-radius: 999px;
-  background: rgb(14 14 11 / 78%);
+  background: color-mix(
+    in oklch,
+    oklch(0.1625353 0.0061292 107.06253) 78%,
+    transparent
+  );
   color: var(--proto-stage-ink);
   font-family: var(--font-geist-mono), monospace;
   font-size: 10px;
@@ -367,27 +426,44 @@
   transition:
     color 160ms var(--proto-ease-out),
     background-color 160ms var(--proto-ease-out),
-    transform 120ms var(--proto-ease-out),
     opacity 180ms var(--proto-ease-out);
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .playButton,
+  .stopButton {
+    transition:
+      color 160ms var(--proto-ease-out),
+      background-color 160ms var(--proto-ease-out),
+      transform 120ms var(--proto-ease-out),
+      opacity 180ms var(--proto-ease-out);
+  }
+}
+
 .playButton {
-  right: 14px;
-  bottom: 14px;
+  inset-inline-end: 14px;
+  inset-block-end: 14px;
 }
 
 .stopButton {
-  top: 14px;
-  right: 14px;
+  inset-block-start: 14px;
+  inset-inline-end: 14px;
 }
 
-.playButton:hover,
 .playButton:focus-visible,
-.stopButton:hover,
 .stopButton:focus-visible {
   border-color: var(--proto-electric);
   background: var(--proto-electric);
-  color: #fff;
+  color: oklch(1 0 none);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .playButton:hover,
+  .stopButton:hover {
+    border-color: var(--proto-electric);
+    background: var(--proto-electric);
+    color: oklch(1 0 none);
+  }
 }
 
 .playButton:active,
@@ -398,9 +474,9 @@
 .mediaControlBar {
   position: absolute;
   z-index: 6;
-  left: 14px;
-  right: 14px;
-  bottom: 14px;
+  inset-inline-start: 14px;
+  inset-inline-end: 14px;
+  inset-block-end: 14px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 10px;
@@ -425,12 +501,18 @@
   grid-template-columns: minmax(88px, 1fr) auto;
   align-items: center;
   gap: 11px;
-  min-width: 0;
-  min-height: 42px;
-  padding: 0 14px;
-  border: 1px solid rgb(244 236 221 / 50%);
+  min-inline-size: 0;
+  min-block-size: 42px;
+  padding-block: 0;
+  padding-inline: 14px;
+  border: 1px solid
+    color-mix(in oklch, oklch(0.9453056 0.0217054 83.26387) 50%, transparent);
   border-radius: 999px;
-  background: rgb(14 14 11 / 78%);
+  background: color-mix(
+    in oklch,
+    oklch(0.1625353 0.0061292 107.06253) 78%,
+    transparent
+  );
   color: var(--proto-stage-ink);
   backdrop-filter: blur(10px);
 }
@@ -442,8 +524,8 @@
 }
 
 .mediaProgressInput {
-  width: 100%;
-  height: 20px;
+  inline-size: 100%;
+  block-size: 20px;
   margin: 0;
   padding: 0;
   appearance: none;
@@ -452,19 +534,20 @@
 }
 
 .mediaProgressInput::-webkit-slider-runnable-track {
-  height: 2px;
+  block-size: 2px;
   border-radius: 999px;
   background: linear-gradient(
     90deg,
     var(--proto-electric) 0 var(--media-progress),
-    rgb(244 236 221 / 34%) var(--media-progress) 100%
+    color-mix(in oklch, oklch(0.9453056 0.0217054 83.26387) 34%, transparent)
+      var(--media-progress) 100%
   );
 }
 
 .mediaProgressInput::-webkit-slider-thumb {
-  width: 11px;
-  height: 11px;
-  margin-top: -4.5px;
+  inline-size: 11px;
+  block-size: 11px;
+  margin-block-start: -4.5px;
   appearance: none;
   border: 1px solid var(--proto-stage-ink);
   border-radius: 50%;
@@ -472,20 +555,24 @@
 }
 
 .mediaProgressInput::-moz-range-track {
-  height: 2px;
+  block-size: 2px;
   border-radius: 999px;
-  background: rgb(244 236 221 / 34%);
+  background: color-mix(
+    in oklch,
+    oklch(0.9453056 0.0217054 83.26387) 34%,
+    transparent
+  );
 }
 
 .mediaProgressInput::-moz-range-progress {
-  height: 2px;
+  block-size: 2px;
   border-radius: 999px;
   background: var(--proto-electric);
 }
 
 .mediaProgressInput::-moz-range-thumb {
-  width: 11px;
-  height: 11px;
+  inline-size: 11px;
+  block-size: 11px;
   border: 1px solid var(--proto-stage-ink);
   border-radius: 50%;
   background: var(--proto-electric);
@@ -498,7 +585,7 @@
 
 .mediaProgressTime {
   font-family: var(--font-geist-mono), monospace;
-  font-size: 9px;
+  font-size: var(--text-metadata);
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.04em;
   line-height: 1;
@@ -510,52 +597,60 @@
   display: none;
   position: absolute;
   z-index: 8;
-  top: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   opacity: 0;
   pointer-events: none;
   will-change: transform;
 }
 
 .mediaPointer {
-  width: 34px;
-  height: 34px;
+  inline-size: 34px;
+  block-size: 34px;
   transform: translate3d(-200%, -200%, 0);
   transition: opacity 125ms var(--proto-ease-out);
 }
 
 .mediaPointerSurface {
   display: grid;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   place-items: center;
   border: 1px solid var(--proto-ink);
   border-radius: 50%;
   background: var(--proto-electric);
-  box-shadow: 0 5px 15px rgb(14 14 11 / 28%);
-  color: #fff;
-  transition:
-    background-color 120ms var(--proto-ease-out),
-    transform 120ms var(--proto-ease-out);
+  box-shadow: 0 5px 15px
+    color-mix(in oklch, oklch(0.1625353 0.0061292 107.06253) 28%, transparent);
+  color: oklch(1 0 none);
+  transition: background-color 120ms var(--proto-ease-out);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .mediaPointerSurface {
+    transition:
+      background-color 120ms var(--proto-ease-out),
+      transform 120ms var(--proto-ease-out);
+  }
 }
 
 .mediaPointerSurface .playbackGlyph {
-  width: 15px;
-  height: 15px;
+  inline-size: 15px;
+  block-size: 15px;
 }
 
 .mediaFrame:has(button:active) .mediaPointerSurface {
-  background: color-mix(in srgb, var(--proto-electric) 78%, var(--proto-ink));
+  background: color-mix(in oklch, var(--proto-electric) 78%, var(--proto-ink));
   transform: scale(0.86);
 }
 
 .floatingMediaLabel {
-  padding: 7px 9px;
+  padding-block: 7px;
+  padding-inline: 9px;
   border: 1px solid var(--proto-ink);
   background: var(--proto-electric);
-  color: #fff;
+  color: oklch(1 0 none);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 9px;
+  font-size: var(--text-metadata);
   font-weight: 700;
   letter-spacing: 0.07em;
   line-height: 1;
@@ -580,7 +675,7 @@
   }
 
   .mediaFrame[data-showing-still]:hover .posterPlayIcon {
-    background: color-mix(in srgb, var(--proto-electric) 88%, white);
+    background: color-mix(in oklch, var(--proto-electric) 88%, white);
     transform: scale(1.04);
   }
 
@@ -593,23 +688,32 @@
 .missingVideo {
   position: absolute;
   z-index: 4;
-  right: 14px;
-  bottom: 14px;
+  inset-inline-end: 14px;
+  inset-block-end: 14px;
   display: grid;
-  max-width: min(320px, calc(100% - 28px));
+  max-inline-size: min(320px, calc(100% - 28px));
   gap: 3px;
-  padding: 13px 15px;
-  border-left: 2px solid var(--proto-electric);
-  background: rgb(14 14 11 / 84%);
+  padding-block: 13px;
+  padding-inline: 15px;
+  border-inline-start: 2px solid var(--proto-electric);
+  background: color-mix(
+    in oklch,
+    oklch(0.1625353 0.0061292 107.06253) 84%,
+    transparent
+  );
   color: var(--proto-stage-ink);
   backdrop-filter: blur(10px);
 }
 
 .missingVideo span,
 .missingVideo small {
-  color: rgb(244 236 221 / 60%);
+  color: color-mix(
+    in oklch,
+    oklch(0.9453056 0.0217054 83.26387) 60%,
+    transparent
+  );
   font-family: var(--font-geist-mono), monospace;
-  font-size: 9px;
+  font-size: var(--text-metadata);
   letter-spacing: 0.05em;
   line-height: 1.35;
   text-transform: uppercase;
@@ -637,12 +741,12 @@
 
 .sectionLabel span {
   display: block;
-  margin-bottom: 8px;
+  margin-block-end: 8px;
   color: var(--proto-electric);
 }
 
 .sectionCopy p {
-  max-width: 67ch;
+  max-inline-size: 67ch;
   margin: 0;
   font-size: clamp(16px, 1.25vw, 19px);
   line-height: 1.58;
@@ -654,8 +758,9 @@
 .reading {
   --copy-section-padding: clamp(24px, 3vw, 34px);
   --copy-inset: calc(var(--copy-section-padding) + 1px);
-  width: min(1120px, calc(100% - 2 * var(--dossier-gutter)));
-  margin: 0 auto;
+  inline-size: min(1120px, calc(100% - 2 * var(--dossier-gutter)));
+  margin-block: 0;
+  margin-inline: auto;
   padding: 0;
 }
 
@@ -668,7 +773,10 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(36px, 7vw, 100px);
-  padding: 58px var(--copy-inset) 0;
+  padding-block-start: 58px;
+  padding-inline-end: var(--copy-inset);
+  padding-block-end: 0;
+  padding-inline-start: var(--copy-inset);
 }
 
 .taxonomyHeader {
@@ -693,9 +801,14 @@
   color: var(--proto-electric);
 }
 
-.taxonomyHeadingLink:hover,
 .taxonomyHeadingLink:focus-visible {
   color: var(--proto-electric);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .taxonomyHeadingLink:hover {
+    color: var(--proto-electric);
+  }
 }
 
 .taxonomyHeadingLink:focus-visible {
@@ -704,23 +817,31 @@
 }
 
 .taxonomy ol {
-  margin: 16px 0 0;
+  margin-block-start: 16px;
+  margin-inline-end: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
   padding: 0;
-  border-top: 1px solid var(--proto-rule);
+  border-block-start: 1px solid var(--proto-rule);
   list-style: none;
 }
 
 .taxonomy li {
   font-size: 13px;
   line-height: 1.35;
-  animation: taxonomy-enter 300ms var(--proto-ease-out) both;
   animation-delay: var(--taxonomy-delay, 0ms);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .taxonomy li {
+    animation: taxonomy-enter 300ms var(--proto-ease-out) both;
+  }
 }
 
 .taxonomyIndex {
   color: var(--proto-muted-ink);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 9px;
+  font-size: var(--text-metadata);
 }
 
 .taxonomyCursorCard {
@@ -731,21 +852,34 @@
   display: grid;
   grid-template-columns: 34px minmax(0, 1fr);
   gap: 12px;
-  min-width: 0;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--proto-rule);
+  min-inline-size: 0;
+  padding-block: 12px;
+  padding-inline: 0;
+  border-block-end: 1px solid var(--proto-rule);
   color: inherit;
   overflow-wrap: anywhere;
   text-decoration: none;
-  transition:
-    color 160ms var(--proto-ease-out),
-    transform 160ms var(--proto-ease-out);
+  transition: color 160ms var(--proto-ease-out);
 }
 
-.taxonomyLink:hover,
+@media (prefers-reduced-motion: no-preference) {
+  .taxonomyLink {
+    transition:
+      color 160ms var(--proto-ease-out),
+      transform 160ms var(--proto-ease-out);
+  }
+}
+
 .taxonomyLink:focus-visible {
   color: var(--proto-electric);
   transform: translateX(3px);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .taxonomyLink:hover {
+    color: var(--proto-electric);
+    transform: translateX(3px);
+  }
 }
 
 @keyframes taxonomy-enter {
@@ -760,19 +894,21 @@
 }
 
 .discovery {
-  padding: clamp(64px, 8vw, 116px) var(--dossier-gutter)
-    clamp(88px, 10vw, 148px);
-  border-top: 1px solid var(--proto-ink);
+  padding-block-start: clamp(64px, 8vw, 116px);
+  padding-inline-end: var(--dossier-gutter);
+  padding-block-end: clamp(88px, 10vw, 148px);
+  padding-inline-start: var(--dossier-gutter);
+  border-block-start: 1px solid var(--proto-ink);
   background: var(--proto-muted-paper);
 }
 
 .discoverySection {
-  width: var(--dossier-content-width);
+  inline-size: var(--dossier-content-width);
   margin-inline: auto;
 }
 
 .discoverySection + .discoverySection {
-  margin-top: clamp(82px, 10vw, 144px);
+  margin-block-start: clamp(82px, 10vw, 144px);
 }
 
 /* The header repeats the preview card grid's columns and gap (two, three
@@ -783,7 +919,7 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px clamp(16px, 2.2vw, 30px);
   align-items: end;
-  margin-bottom: clamp(26px, 3.6vw, 48px);
+  margin-block-end: clamp(26px, 3.6vw, 48px);
 }
 
 .discoveryTitle {
@@ -816,13 +952,16 @@
 }
 
 .discoveryTitle > p {
-  margin: 0 0 12px;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-block-end: 12px;
+  margin-inline-start: 0;
   color: var(--proto-electric);
   font-size: 10px;
 }
 
 .discoveryDescription {
-  max-width: 42ch;
+  max-inline-size: 42ch;
   margin: 0;
   color: var(--proto-muted-ink);
   font-size: 10px;
@@ -834,8 +973,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 22px;
-  min-height: 44px;
-  padding: 0 14px;
+  min-block-size: 44px;
+  padding-block: 0;
+  padding-inline: 14px;
   border: 1px solid var(--proto-ink);
   color: inherit;
   font-size: 10px;
@@ -846,17 +986,24 @@
     color 160ms var(--proto-ease-out);
 }
 
-.discoveryAction:hover,
 .discoveryAction:focus-visible {
   border-color: var(--proto-electric);
   background: var(--proto-electric);
-  color: #fff;
+  color: oklch(1 0 none);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .discoveryAction:hover {
+    border-color: var(--proto-electric);
+    background: var(--proto-electric);
+    color: oklch(1 0 none);
+  }
 }
 
 /* Until the label gutter can hold it, the spoiler note closes the opening's
    text column in normal flow instead of floating over the reading copy. */
 .page .detailSpoiler {
-  margin-top: clamp(30px, 2.8vw, 44px);
+  margin-block-start: clamp(30px, 2.8vw, 44px);
 }
 
 /* From 1360px the note fits left of the reading copy, so it anchors
@@ -865,8 +1012,8 @@
   .page .detailSpoiler {
     position: fixed;
     z-index: 40;
-    bottom: 28px;
-    left: var(--dossier-gutter);
+    inset-block-end: 28px;
+    inset-inline-start: var(--dossier-gutter);
     margin: 0;
   }
 }
@@ -880,7 +1027,10 @@
     display: flex;
     flex-direction: column;
     gap: 0;
-    padding: 24px var(--dossier-gutter) 26px;
+    padding-block-start: 24px;
+    padding-inline-end: var(--dossier-gutter);
+    padding-block-end: 26px;
+    padding-inline-start: var(--dossier-gutter);
   }
 
   .narrativeColumn {
@@ -889,7 +1039,7 @@
 
   .titleBlock {
     order: 1;
-    margin-bottom: 22px;
+    margin-block-end: 22px;
   }
 
   .titleBlock h1 {
@@ -903,21 +1053,24 @@
 
   .mediaColumn {
     order: 2;
-    width: calc(100% + 2 * var(--dossier-gutter));
-    margin: 0 0 0 calc(-1 * var(--dossier-gutter));
+    inline-size: calc(100% + 2 * var(--dossier-gutter));
+    margin-block-start: 0;
+    margin-inline-end: 0;
+    margin-block-end: 0;
+    margin-inline-start: calc(-1 * var(--dossier-gutter));
     padding-inline: 6px;
   }
 
   .mediaFrame {
-    border-right: 0;
-    border-left: 0;
+    border-inline-end: 0;
+    border-inline-start: 0;
     border-radius: 0;
     box-shadow: none;
   }
 
   .primaryConcept {
     order: 3;
-    margin-top: 24px;
+    margin-block-start: 24px;
   }
 
   .primaryConceptLink {
@@ -929,20 +1082,22 @@
     grid-template-columns: 1fr;
     gap: 12px;
     /* The inset less the 1px border puts text on the gutter edge. */
-    padding: 22px calc(var(--copy-inset) - 1px);
+    padding-block: 22px;
+    padding-inline: calc(var(--copy-inset) - 1px);
   }
 
   .sectionLabel span {
     display: inline;
-    margin-right: 8px;
+    margin-inline-end: 8px;
   }
 
   /* Section boxes share the media plate's 6px inset; text inside them
      keeps the gutter edge of the title and concept block. */
   .reading {
     --copy-inset: calc(var(--dossier-gutter) - 6px);
-    width: auto;
-    padding: 0 6px;
+    inline-size: auto;
+    padding-block: 0;
+    padding-inline: 6px;
   }
 
   .copySection[data-prominent] {
@@ -952,24 +1107,24 @@
   .taxonomy {
     grid-template-columns: 1fr;
     gap: 44px;
-    padding-top: 48px;
+    padding-block-start: 48px;
   }
 
   .mediaIndex {
-    top: 8px;
-    left: 8px;
+    inset-block-start: 8px;
+    inset-inline-start: 8px;
     font-size: 8px;
   }
 
   .playButton {
-    right: 10px;
-    bottom: 10px;
+    inset-inline-end: 10px;
+    inset-block-end: 10px;
   }
 
   .mediaControlBar {
-    right: 10px;
-    left: 10px;
-    bottom: 10px;
+    inset-inline-end: 10px;
+    inset-inline-start: 10px;
+    inset-block-end: 10px;
     grid-template-columns: minmax(0, 1fr);
   }
 
@@ -984,18 +1139,21 @@
   }
 
   .stopButton {
-    top: 10px;
-    right: 10px;
+    inset-block-start: 10px;
+    inset-inline-end: 10px;
   }
 
   .missingVideo {
-    right: 10px;
-    bottom: 10px;
-    max-width: calc(100% - 20px);
+    inset-inline-end: 10px;
+    inset-block-end: 10px;
+    max-inline-size: calc(100% - 20px);
   }
 
   .discovery {
-    padding: 64px var(--dossier-gutter) 96px;
+    padding-block-start: 64px;
+    padding-inline-end: var(--dossier-gutter);
+    padding-block-end: 96px;
+    padding-inline-start: var(--dossier-gutter);
   }
 }
 
@@ -1013,7 +1171,7 @@
 
 @media (max-width: 620px) {
   .discoverySection + .discoverySection {
-    margin-top: 84px;
+    margin-block-start: 84px;
   }
 
   .discoveryHeader {
@@ -1027,11 +1185,11 @@
   }
 
   .discoveryDescription {
-    max-width: 54ch;
+    max-inline-size: 54ch;
   }
 
   .discoveryAction {
-    width: fit-content;
+    inline-size: fit-content;
   }
 }
 

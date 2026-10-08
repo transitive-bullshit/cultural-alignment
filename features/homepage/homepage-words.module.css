@@ -1,11 +1,11 @@
 .root {
   position: relative;
   isolation: isolate;
-  width: 100%;
-  height: 100svh;
-  min-height: 0;
-  overflow: hidden;
-  background: var(--proto-paper, #f4ecdd);
+  inline-size: 100%;
+  block-size: 100svh;
+  min-block-size: 0;
+  overflow: clip;
+  background: var(--proto-paper);
 }
 
 /* The card sits on the site header's gutter, like the archive's selected
@@ -13,17 +13,21 @@
 .contextCard {
   position: absolute;
   z-index: 35;
-  bottom: var(--homepage-words-context-bottom, clamp(18px, 3vw, 46px));
-  left: clamp(18px, 3vw, 46px);
-  width: min(520px, calc(100vw - 92px));
-  padding: 21px 24px 24px 28px;
-  border-top: 1px solid var(--proto-ink, #2d2a26);
-  border-bottom: 1px solid rgb(45 42 38 / 28%);
-  background: color-mix(in srgb, var(--proto-paper, #f4ecdd) 94%, transparent);
+  inset-block-end: var(--homepage-words-context-bottom, clamp(18px, 3vw, 46px));
+  inset-inline-start: clamp(18px, 3vw, 46px);
+  inline-size: min(520px, calc(100vw - 92px));
+  padding-block-start: 21px;
+  padding-inline-end: 24px;
+  padding-block-end: 24px;
+  padding-inline-start: 28px;
+  border-block-start: 1px solid var(--proto-ink);
+  border-block-end: 1px solid
+    color-mix(in oklch, var(--foreground) 28%, transparent);
+  background: color-mix(in oklch, var(--proto-paper) 94%, transparent);
   box-shadow:
-    8px 0 0 -5px var(--proto-electric, #ff4d1f) inset,
-    0 16px 44px rgb(45 42 38 / 10%);
-  color: var(--proto-ink, #2d2a26);
+    8px 0 0 -5px var(--proto-electric) inset,
+    0 16px 44px color-mix(in oklch, var(--foreground) 10%, transparent);
+  color: var(--proto-ink);
   pointer-events: none;
   backdrop-filter: blur(14px);
 }
@@ -31,21 +35,21 @@
 .contextCard::before,
 .contextCard::after {
   position: absolute;
-  left: 0;
-  width: 13px;
-  height: 13px;
-  border-left: 1px solid var(--proto-ink, #2d2a26);
+  inset-inline-start: 0;
+  inline-size: 13px;
+  block-size: 13px;
+  border-inline-start: 1px solid var(--proto-ink);
   content: '';
 }
 
 .contextCard::before {
-  top: 0;
-  border-top: 1px solid var(--proto-ink, #2d2a26);
+  inset-block-start: 0;
+  border-block-start: 1px solid var(--proto-ink);
 }
 
 .contextCard::after {
-  bottom: 0;
-  border-bottom: 1px solid var(--proto-ink, #2d2a26);
+  inset-block-end: 0;
+  border-block-end: 1px solid var(--proto-ink);
 }
 
 .contextCard h2,
@@ -64,9 +68,9 @@
 }
 
 .contextCard [data-words-scenario] {
-  margin-top: 9px;
+  margin-block-start: 9px;
   overflow-wrap: break-word;
-  color: var(--proto-muted-ink, #71695f);
+  color: var(--proto-muted-ink);
   font-family: var(--font-geist-sans), sans-serif;
   font-size: 1rem;
   font-weight: 600;
@@ -76,14 +80,14 @@
 }
 
 .contextCard [data-words-analogy] {
-  margin-top: 18px;
-  padding-top: 16px;
-  border-top: 1px solid var(--proto-rule, #d8cbb8);
+  margin-block-start: 18px;
+  padding-block-start: 16px;
+  border-block-start: 1px solid var(--proto-rule);
 }
 
 .contextCard [data-words-relation] {
-  margin-bottom: 7px;
-  color: var(--proto-electric, #ff4d1f);
+  margin-block-end: 7px;
+  color: var(--proto-electric);
   font-family: var(--font-geist-sans), sans-serif;
   font-size: 0.76rem;
   font-weight: 660;
@@ -103,8 +107,8 @@
 
 .keyboardOpen:not(:focus-visible) {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  inline-size: 1px;
+  block-size: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -114,22 +118,23 @@
 .keyboardOpen:focus-visible {
   position: absolute;
   z-index: 42;
-  right: clamp(18px, 3vw, 46px);
-  bottom: var(--homepage-words-context-bottom, clamp(18px, 3vw, 46px));
-  max-width: min(340px, calc(100vw - 92px));
-  padding: 11px 14px;
-  border: 1px solid var(--proto-ink, #2d2a26);
+  inset-inline-end: clamp(18px, 3vw, 46px);
+  inset-block-end: var(--homepage-words-context-bottom, clamp(18px, 3vw, 46px));
+  max-inline-size: min(340px, calc(100vw - 92px));
+  padding-block: 11px;
+  padding-inline: 14px;
+  border: 1px solid var(--proto-ink);
   border-radius: 0;
-  background: var(--proto-paper, #f4ecdd);
-  color: var(--proto-ink, #2d2a26);
+  background: var(--proto-paper);
+  color: var(--proto-ink);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 0.58rem;
+  font-size: var(--text-metadata);
   font-weight: 700;
   letter-spacing: 0.07em;
   line-height: 1.4;
-  outline: 2px solid var(--proto-electric, #ff4d1f);
+  outline: 2px solid var(--proto-electric);
   outline-offset: 3px;
-  text-align: left;
+  text-align: start;
   text-transform: uppercase;
   text-wrap: balance;
 }
@@ -142,7 +147,7 @@
 
 @media (prefers-reduced-transparency: reduce) {
   .contextCard {
-    background: var(--proto-paper, #f4ecdd);
+    background: var(--proto-paper);
     backdrop-filter: none;
   }
 }

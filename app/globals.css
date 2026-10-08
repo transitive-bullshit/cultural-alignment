@@ -1,32 +1,51 @@
 @import 'tailwindcss';
 
+@custom-variant fine-hover (@media (hover: hover) and (pointer: fine));
+
 :root {
+  --text-metadata: 0.625rem;
   --font-geist-sans: 'Geist Variable';
   --font-geist-mono: 'Geist Mono Variable';
-  --background: #f4ecdd;
-  --foreground: #2d2a26;
-  --card: #f8f0df;
-  --card-foreground: #2d2a26;
-  --popover: #f8f0df;
-  --popover-foreground: #2d2a26;
-  --primary: #2d2a26;
-  --primary-foreground: #f8f0df;
-  --secondary: #e8dece;
-  --secondary-foreground: #38332d;
-  --muted: #e8dece;
-  --muted-foreground: #756d63;
-  --accent: #ead8bb;
-  --accent-foreground: #332d25;
-  --destructive: #a14737;
-  --border: #d8cbb8;
-  --input: #d8cbb8;
-  --ring: #a66f33;
-  --brand-accent: #ff4d1f;
-  --brand-interactive: #a83216;
-  --link-rule: color-mix(in srgb, #71695f 42%, transparent);
-  --link-sweep: linear-gradient(90.68deg, #ff4d1f 0.26%, #e5337e 102.37%);
+  --background: oklch(0.9453056 0.0217054 83.26387);
+  --foreground: oklch(0.2867803 0.0083883 75.24891);
+  --card: oklch(0.9568335 0.0240538 85.78807);
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+  --primary: var(--foreground);
+  --primary-foreground: var(--card);
+  --secondary: var(--muted);
+  --secondary-foreground: oklch(0.3242763 0.0125711 72.38746);
+  --muted: oklch(0.9042269 0.0240882 79.73567);
+  --muted-foreground: oklch(0.5390527 0.0182345 73.52726);
+  --accent: oklch(0.8893868 0.0433871 79.77339);
+  --accent-foreground: oklch(0.3009589 0.0164325 74.99978);
+  --destructive: oklch(0.511872 0.1232601 31.85567);
+  --border: oklch(0.847592 0.0296004 77.51627);
+  --input: var(--border);
+  --ring: oklch(0.5879358 0.1029121 65.60604);
+  --brand-accent: oklch(0.6686441 0.2210654 34.59294);
+  --brand-interactive: oklch(0.4921617 0.1588676 34.23673);
+  --link-rule: color-mix(in oklch, var(--archive-muted-ink) 42%, transparent);
+  --link-sweep: linear-gradient(
+    90.68deg,
+    oklch(0.6686441 0.2210654 34.59294) 0.26%,
+    oklch(0.6185516 0.2179869 0.95693) 102.37%
+  );
   --radius: 0.5rem;
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --archive-muted-ink: oklch(0.5251409 0.0183484 73.51623);
+  --archive-stage: oklch(0.2030857 0.0077285 107.06843);
+  --proto-paper: var(--background);
+  --proto-raised-paper: var(--card);
+  --proto-ink: var(--foreground);
+  --proto-muted-paper: var(--muted);
+  --proto-rule: var(--border);
+  --proto-muted-ink: var(--archive-muted-ink);
+  --proto-stage: var(--archive-stage);
+  --proto-stage-ink: var(--background);
+  --proto-electric: var(--brand-accent);
+  --proto-ease-out: var(--ease-out);
 }
 
 @theme inline {
@@ -63,12 +82,12 @@
 }
 
 html {
-  min-height: 100%;
+  min-block-size: 100%;
   background: var(--background);
 }
 
 body {
-  min-height: 100%;
+  min-block-size: 100%;
   margin: 0;
   background: var(--background);
   color: var(--foreground);
@@ -86,17 +105,7 @@ body:has([data-site-footer='hidden']) [data-site-footer-root] {
 }
 
 .experience-scope {
-  --proto-paper: #f4ecdd;
-  --proto-raised-paper: #f8f0df;
-  --proto-ink: #2d2a26;
-  --proto-muted-paper: #e8dece;
-  --proto-rule: #d8cbb8;
-  --proto-muted-ink: #71695f;
-  --proto-stage: #171713;
-  --proto-stage-ink: #f4ecdd;
-  --proto-electric: var(--brand-accent);
-  --proto-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
-  min-height: 100svh;
+  min-block-size: 100svh;
   color: var(--proto-ink);
   font-family: var(--font-geist-sans), sans-serif;
 }
@@ -115,8 +124,8 @@ body:has([data-site-footer='hidden']) [data-site-footer-root] {
    orange sweep grows out from the middle to replace it. Put the class on the
    anchor or on the span holding its label, never on the trailing ↗. */
 .external-link {
-  padding-bottom: 0.15em;
-  border-bottom: 0.1rem solid var(--link-rule);
+  padding-block-end: 0.15em;
+  border-block-end: 0.1rem solid var(--link-rule);
   background-image: var(--link-sweep);
   background-origin: border-box;
   background-position: 50% 100%;
@@ -127,19 +136,49 @@ body:has([data-site-footer='hidden']) [data-site-footer-root] {
   box-decoration-break: clone;
 }
 
-a.external-link:is(:hover, :focus-visible, :active),
-a:is(:hover, :focus-visible, :active) .external-link {
-  border-bottom-color: transparent;
+a.external-link:is(:focus-visible, :active),
+a:is(:focus-visible, :active) .external-link {
+  border-block-end-color: transparent;
   background-position: 0 100%;
   background-size: 100% 0.1rem;
-  transition-duration: 300ms;
-  transition-property: background-position, background-size;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a.external-link:hover,
+  a:hover .external-link {
+    border-block-end-color: transparent;
+    background-position: 0 100%;
+    background-size: 100% 0.1rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a.external-link:is(:focus-visible, :active),
+  a:is(:focus-visible, :active) .external-link {
+    transition:
+      background-position 300ms var(--ease-out),
+      background-size 300ms var(--ease-out);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    a.external-link:hover,
+    a:hover .external-link {
+      transition:
+        background-position 300ms var(--ease-out),
+        background-size 300ms var(--ease-out);
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  a.external-link:is(:hover, :focus-visible, :active),
-  a:is(:hover, :focus-visible, :active) .external-link {
+  a.external-link:is(:focus-visible, :active),
+  a:is(:focus-visible, :active) .external-link {
     transition: none;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    a.external-link:hover,
+    a:hover .external-link {
+      transition: none;
+    }
   }
 }
 
@@ -176,8 +215,17 @@ button:not(:disabled),
   cursor: pointer;
 }
 
+a:active {
+  opacity: 0.8;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-interactive);
+  outline-offset: 3px;
+}
+
 ::selection {
-  background: color-mix(in srgb, var(--ring) 25%, transparent);
+  background: color-mix(in oklch, var(--ring) 25%, transparent);
 }
 
 @media (prefers-reduced-motion: reduce) {
