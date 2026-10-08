@@ -29,7 +29,7 @@ This project explores AI safety and alignment concepts via popular scenes from m
 
 ## Local development
 
-Requires Node.js 24 or newer and pnpm 11.
+Requires Node.js 24 or newer and the pnpm version pinned in `package.json`.
 
 ```bash
 pnpm install
