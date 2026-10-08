@@ -3,8 +3,8 @@
 .note {
   position: relative;
   display: block;
-  width: min(420px, 100%);
-  height: 118px;
+  inline-size: min(420px, 100%);
+  block-size: 118px;
   padding: 0;
   border: 0;
   background: transparent;
@@ -12,9 +12,14 @@
   font: inherit;
   opacity: 1;
   transform: translateY(0) scale(1);
-  transition:
-    opacity 180ms var(--proto-ease-out),
-    transform 180ms var(--proto-ease-out);
+  transition: opacity 180ms var(--proto-ease-out);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .note {
+    transition:
+      opacity 180ms var(--proto-ease-out),
+      transform 180ms var(--proto-ease-out);
+  }
 }
 
 .note[data-spoiler-warning] {
@@ -39,15 +44,16 @@
 
 .panel {
   position: absolute;
-  top: 7px;
-  right: 48px;
-  bottom: 7px;
-  left: 0;
+  inset-block-start: 7px;
+  inset-inline-end: 48px;
+  inset-block-end: 7px;
+  inset-inline-start: 0;
   display: block;
-  overflow: hidden;
+  overflow: clip;
   border: 1px solid var(--proto-ink);
-  background: color-mix(in srgb, var(--proto-paper) 96%, transparent);
-  box-shadow: 0 12px 36px rgb(45 42 38 / 14%);
+  background: color-mix(in oklch, var(--proto-paper) 96%, transparent);
+  box-shadow: 0 12px 36px
+    color-mix(in oklch, var(--foreground) 14%, transparent);
   transform: scaleX(1);
   transform-origin: right center;
   backdrop-filter: blur(12px);
@@ -55,8 +61,18 @@
     background-color 180ms var(--proto-ease-out),
     border-color 180ms var(--proto-ease-out),
     color 180ms var(--proto-ease-out),
-    opacity 180ms var(--proto-ease-out),
-    transform 240ms var(--proto-ease-out);
+    opacity 180ms var(--proto-ease-out);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .panel {
+    transition:
+      background-color 180ms var(--proto-ease-out),
+      border-color 180ms var(--proto-ease-out),
+      color 180ms var(--proto-ease-out),
+      opacity 180ms var(--proto-ease-out),
+      transform 240ms var(--proto-ease-out);
+  }
 }
 
 .warningCopy,
@@ -66,11 +82,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 14px 82px 14px 18px;
-  text-align: left;
-  transition:
-    opacity 160ms var(--proto-ease-out),
-    transform 180ms var(--proto-ease-out);
+  padding-block-start: 14px;
+  padding-inline-end: 82px;
+  padding-block-end: 14px;
+  padding-inline-start: 18px;
+  text-align: start;
+  transition: opacity 160ms var(--proto-ease-out);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .warningCopy,
+  .confirmation {
+    transition:
+      opacity 160ms var(--proto-ease-out),
+      transform 180ms var(--proto-ease-out);
+  }
 }
 
 .eyebrow,
@@ -84,14 +110,14 @@
 }
 
 .eyebrow {
-  margin-bottom: 7px;
+  margin-block-end: 7px;
   color: var(--proto-electric);
   font-size: 8px;
   transition: color 180ms var(--proto-ease-out);
 }
 
 .warningCopy strong {
-  max-width: 250px;
+  max-inline-size: 250px;
   font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
   font-size: 21px;
   font-weight: 800;
@@ -101,7 +127,7 @@
 }
 
 .action {
-  margin-top: 10px;
+  margin-block-start: 10px;
   color: var(--proto-electric);
   font-size: 8px;
   transition: color 180ms var(--proto-ease-out);
@@ -111,7 +137,7 @@
   flex-direction: row;
   align-items: center;
   gap: 12px;
-  color: #fff;
+  color: oklch(1 0 none);
   opacity: 0;
   transform: translateY(4px);
 }
@@ -119,9 +145,9 @@
 .confirmationMark {
   display: grid;
   flex: 0 0 auto;
-  width: 32px;
-  height: 32px;
-  border: 1px solid rgb(255 255 255 / 60%);
+  inline-size: 32px;
+  block-size: 32px;
+  border: 1px solid color-mix(in oklch, oklch(1 0 none) 60%, transparent);
   border-radius: 50%;
   font-size: 16px;
   place-items: center;
@@ -148,39 +174,54 @@
 
 .seal {
   position: absolute;
-  top: 0;
-  right: 0;
+  inset-block-start: 0;
+  inset-inline-end: 0;
   display: block;
-  width: 118px;
-  height: 118px;
-  overflow: hidden;
+  inline-size: 118px;
+  block-size: 118px;
+  overflow: clip;
   border: 1px solid var(--proto-electric);
   border-radius: 50%;
   background: var(--proto-paper);
   color: var(--proto-electric);
-  box-shadow: 0 12px 36px rgb(45 42 38 / 14%);
+  box-shadow: 0 12px 36px
+    color-mix(in oklch, var(--foreground) 14%, transparent);
   isolation: isolate;
   transition:
     background-color 180ms var(--proto-ease-out),
     color 180ms var(--proto-ease-out),
-    opacity 140ms var(--proto-ease-out) 100ms,
-    transform 180ms var(--proto-ease-out);
+    opacity 140ms var(--proto-ease-out) 100ms;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .seal {
+    transition:
+      background-color 180ms var(--proto-ease-out),
+      color 180ms var(--proto-ease-out),
+      opacity 140ms var(--proto-ease-out) 100ms,
+      transform 180ms var(--proto-ease-out);
+  }
 }
 
 .orbit {
   position: absolute;
   inset: 6px;
   display: block;
-  width: calc(100% - 12px);
-  height: calc(100% - 12px);
-  animation: spoiler-orbit 14s linear infinite;
+  inline-size: calc(100% - 12px);
+  block-size: calc(100% - 12px);
   transition: opacity 140ms var(--proto-ease-out);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .orbit {
+    animation: spoiler-orbit 14s linear infinite;
+  }
 }
 
 .orbit svg {
   display: block;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   overflow: visible;
 }
 
@@ -198,7 +239,7 @@
   inset: 0;
   display: grid;
   padding: 20px;
-  color: #fff;
+  color: oklch(1 0 none);
   font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -216,13 +257,13 @@
 .note[data-state='leaving'] .panel {
   border-color: var(--proto-electric);
   background: var(--proto-electric);
-  color: #fff;
+  color: oklch(1 0 none);
 }
 
 .note[data-state='noted'] .seal,
 .note[data-state='leaving'] .seal {
   background: var(--proto-electric);
-  color: #fff;
+  color: oklch(1 0 none);
 }
 
 .note[data-state='noted'] .orbit,
@@ -259,8 +300,8 @@
 
 .srOnly {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  inline-size: 1px;
+  block-size: 1px;
   padding: 0;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
@@ -275,7 +316,7 @@
 
 .note[data-state='warning']:focus-visible .seal {
   background: var(--proto-electric);
-  color: #fff;
+  color: oklch(1 0 none);
 }
 
 .note[data-state='warning']:focus-visible .action {
@@ -298,7 +339,7 @@
 
   .note[data-state='warning']:hover .seal {
     background: var(--proto-electric);
-    color: #fff;
+    color: oklch(1 0 none);
   }
 
   .note[data-state='warning']:hover .action {

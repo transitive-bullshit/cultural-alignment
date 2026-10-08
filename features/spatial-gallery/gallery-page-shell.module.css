@@ -1,11 +1,11 @@
 .page {
   position: relative;
   isolation: isolate;
-  width: 100%;
-  min-height: 100svh;
-  overflow: hidden;
-  color: var(--proto-ink, #2d2a26);
-  background: var(--proto-paper, #f4ecdd);
+  inline-size: 100%;
+  min-block-size: 100svh;
+  overflow: clip;
+  color: var(--proto-ink);
+  background: var(--proto-paper);
   overscroll-behavior-x: auto;
   overscroll-behavior-y: none;
 }
@@ -14,11 +14,11 @@
    development and production bundles order module CSS differently. */
 .page .galleryHeader {
   position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  border-color: rgb(45 42 38 / 15%);
-  background: color-mix(in srgb, var(--proto-paper, #f4ecdd) 86%, transparent);
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  inset-inline-start: 0;
+  border-color: color-mix(in oklch, var(--foreground) 15%, transparent);
+  background: color-mix(in oklch, var(--proto-paper) 86%, transparent);
   backdrop-filter: blur(14px);
 }
 
@@ -30,7 +30,7 @@
 }
 
 .filterLink:focus-visible {
-  outline: 2px solid var(--proto-electric, #ff4d1f);
+  outline: 2px solid var(--proto-electric);
   outline-offset: 4px;
 }
 
@@ -48,11 +48,20 @@ a.filterLink:active {
   grid-template-columns: minmax(0, 1fr) clamp(12.5rem, 18vw, 14.5rem) auto;
   align-items: center;
   gap: 1.25rem;
-  min-height: 48px;
-  padding: 0 max(clamp(18px, 3vw, 46px), env(safe-area-inset-right, 0px)) 0
-    max(clamp(18px, 3vw, 46px), env(safe-area-inset-left, 0px));
-  border-bottom: 1px solid rgb(45 42 38 / 13%);
-  background: color-mix(in srgb, var(--proto-paper, #f4ecdd) 92%, transparent);
+  min-block-size: 48px;
+  padding-block-start: 0;
+  padding-inline-end: max(
+    clamp(18px, 3vw, 46px),
+    env(safe-area-inset-right, 0px)
+  );
+  padding-block-end: 0;
+  padding-inline-start: max(
+    clamp(18px, 3vw, 46px),
+    env(safe-area-inset-left, 0px)
+  );
+  border-block-end: 1px solid
+    color-mix(in oklch, var(--foreground) 13%, transparent);
+  background: color-mix(in oklch, var(--proto-paper) 92%, transparent);
 }
 
 .sizeControl {
@@ -61,20 +70,19 @@ a.filterLink:active {
   grid-template-columns: auto minmax(6.5rem, 1fr) 2.35rem;
   align-items: center;
   gap: 0.55rem;
-  min-height: 27px;
-  padding: 0 0.52rem;
-  border-right: 1px solid rgb(45 42 38 / 16%);
-  border-left: 1px solid rgb(45 42 38 / 16%);
-  background: color-mix(
-    in srgb,
-    var(--proto-raised-paper, #f8f0df) 46%,
-    transparent
-  );
+  min-block-size: 27px;
+  padding-block: 0;
+  padding-inline: 0.52rem;
+  border-inline-end: 1px solid
+    color-mix(in oklch, var(--foreground) 16%, transparent);
+  border-inline-start: 1px solid
+    color-mix(in oklch, var(--foreground) 16%, transparent);
+  background: color-mix(in oklch, var(--proto-raised-paper) 46%, transparent);
 }
 
 .sizeLabel,
 .sizeValue {
-  color: var(--proto-muted-ink, #756d63);
+  color: var(--proto-muted-ink);
   font-size: 10px;
   font-weight: 650;
   letter-spacing: 0.065em;
@@ -83,34 +91,40 @@ a.filterLink:active {
 }
 
 .sizeValue {
-  color: var(--proto-ink, #2d2a26);
+  color: var(--proto-ink);
   font-variant-numeric: tabular-nums;
-  text-align: right;
+  text-align: end;
 }
 
 .sizeSlider {
-  min-width: 0;
-  height: 27px;
+  min-inline-size: 0;
+  block-size: 44px;
+}
+
+.sizeSlider :global([data-slot='slider-thumb'])::after {
+  position: absolute;
+  inset: -16px;
+  content: '';
 }
 
 .sizeSlider :global([data-slot='slider-track']) {
-  height: 2px;
+  block-size: 2px;
   border-radius: 0;
-  background: rgb(45 42 38 / 22%);
+  background: color-mix(in oklch, var(--foreground) 22%, transparent);
 }
 
 .sizeSlider :global([data-slot='slider-range']) {
-  background: rgb(45 42 38 / 38%);
+  background: color-mix(in oklch, var(--foreground) 38%, transparent);
   transition: background-color 140ms
     var(--proto-ease-out, cubic-bezier(0.23, 1, 0.32, 1));
 }
 
 .sizeSlider :global([data-slot='slider-thumb']) {
-  width: 12px;
-  height: 12px;
-  border: 1px solid var(--proto-ink, #2d2a26);
-  background: var(--proto-muted-ink, #756d63);
-  box-shadow: 0 0 0 2px var(--proto-raised-paper, #f8f0df);
+  inline-size: 12px;
+  block-size: 12px;
+  border: 1px solid var(--proto-ink);
+  background: var(--proto-muted-ink);
+  box-shadow: 0 0 0 2px var(--proto-raised-paper);
   transition:
     background-color 140ms var(--proto-ease-out, cubic-bezier(0.23, 1, 0.32, 1)),
     box-shadow 140ms var(--proto-ease-out, cubic-bezier(0.23, 1, 0.32, 1));
@@ -124,36 +138,64 @@ a.filterLink:active {
 .sizeControl[data-size-dragging]
   .sizeSlider
   :global([data-slot='slider-thumb']) {
-  background: var(--proto-electric, #ff4d1f);
+  background: var(--proto-electric);
 }
 
 .sizeSlider :global([data-slot='slider-thumb']):focus-visible {
-  outline: 2px solid var(--proto-electric, #ff4d1f);
+  outline: 2px solid var(--proto-electric);
   outline-offset: 4px;
-  box-shadow: 0 0 0 2px var(--proto-raised-paper, #f8f0df);
+  box-shadow: 0 0 0 2px var(--proto-raised-paper);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .sizeSlider:hover :global([data-slot='slider-range']),
   .sizeSlider:hover :global([data-slot='slider-thumb']) {
-    background: var(--proto-electric, #ff4d1f);
+    background: var(--proto-electric);
   }
 
   .sizeSlider :global([data-slot='slider-thumb']):hover {
     box-shadow:
-      0 0 0 2px var(--proto-raised-paper, #f8f0df),
-      0 0 0 5px rgb(255 77 31 / 18%);
+      0 0 0 2px var(--proto-raised-paper),
+      0 0 0 5px color-mix(in oklch, var(--brand-accent) 18%, transparent);
   }
 }
 
 .sizeSlider :global([data-slot='slider-thumb']):active {
   box-shadow:
-    0 0 0 2px var(--proto-raised-paper, #f8f0df),
-    0 0 0 5px rgb(255 77 31 / 28%);
+    0 0 0 2px var(--proto-raised-paper),
+    0 0 0 5px color-mix(in oklch, var(--brand-accent) 28%, transparent);
 }
 
-/* Overflowing chips scroll; the toolbar marks a clipped edge with
-   data-overflow-start/end so the mask fades only the side that continues. */
+@property --filter-fade-start {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 0px;
+}
+
+@property --filter-fade-end {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 0px;
+}
+
+@keyframes filter-edges {
+  from {
+    --filter-fade-start: 0px;
+    --filter-fade-end: 2rem;
+  }
+  10%,
+  90% {
+    --filter-fade-start: 2rem;
+    --filter-fade-end: 2rem;
+  }
+  to {
+    --filter-fade-start: 2rem;
+    --filter-fade-end: 0px;
+  }
+}
+
+/* A scroll timeline reveals only the edges with more chips. Unsupported
+   browsers retain the native scroller without a decorative fade. */
 .filterList {
   --filter-fade-start: 0px;
   --filter-fade-end: 0px;
@@ -162,31 +204,26 @@ a.filterLink:active {
   display: flex;
   align-items: center;
   gap: 0.3rem;
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
+  inline-size: 100%;
+  max-inline-size: 100%;
+  min-inline-size: 0;
   margin: 0;
   padding: 0;
   justify-self: stretch;
   list-style: none;
   overflow-x: auto;
+  overscroll-behavior-inline: contain;
   scroll-padding-inline: 6rem;
   scrollbar-width: none;
+  animation: filter-edges linear;
+  animation-timeline: scroll(self inline);
   mask-image: linear-gradient(
     to right,
     transparent,
-    #000 var(--filter-fade-start),
-    #000 calc(100% - var(--filter-fade-end)),
+    oklch(0 0 none) var(--filter-fade-start),
+    oklch(0 0 none) calc(100% - var(--filter-fade-end)),
     transparent
   );
-}
-
-.filterList[data-overflow-start] {
-  --filter-fade-start: 2rem;
-}
-
-.filterList[data-overflow-end] {
-  --filter-fade-end: 2rem;
 }
 
 .filterList::-webkit-scrollbar {
@@ -206,11 +243,12 @@ a.filterLink:active {
   display: inline-flex;
   flex: 0 0 auto;
   align-items: center;
-  min-height: 27px;
+  min-block-size: 27px;
   margin: 0;
-  padding: 0 0.52rem;
+  padding-block: 0;
+  padding-inline: 0.52rem;
   border: 1px solid transparent;
-  color: var(--proto-muted-ink, #756d63);
+  color: var(--proto-muted-ink);
   font-size: 10px;
   font-weight: 650;
   letter-spacing: 0.065em;
@@ -223,23 +261,23 @@ a.filterLink:active {
 }
 
 .filterLink[data-state='on'] {
-  border-color: rgb(45 42 38 / 28%);
-  background: var(--proto-raised-paper, #f8f0df);
-  color: var(--proto-ink, #2d2a26);
-  box-shadow: 7px 0 0 -6px var(--proto-electric, #ff4d1f) inset;
+  border-color: color-mix(in oklch, var(--foreground) 28%, transparent);
+  background: var(--proto-raised-paper);
+  color: var(--proto-ink);
+  box-shadow: 7px 0 0 -6px var(--proto-electric) inset;
 }
 
 .resultCount {
   grid-area: count;
   margin: 0;
-  color: var(--proto-muted-ink, #756d63);
+  color: var(--proto-muted-ink);
   font-size: 10px;
   letter-spacing: 0.08em;
   white-space: nowrap;
 }
 
 .resultCount strong {
-  color: var(--proto-ink, #2d2a26);
+  color: var(--proto-ink);
   font-size: 0.78rem;
   font-weight: 720;
   letter-spacing: 0.04em;
@@ -252,7 +290,7 @@ a.filterLink:active {
   }
 
   a.filterLink:hover {
-    color: var(--proto-electric, #ff4d1f);
+    color: var(--proto-electric);
   }
 }
 
@@ -260,8 +298,8 @@ a.filterLink:active {
   .page {
     display: grid;
     grid-template-rows: auto minmax(0, 1fr);
-    height: 100svh;
-    min-height: 0;
+    block-size: 100svh;
+    min-block-size: 0;
   }
 
   .browsePage {
@@ -295,53 +333,62 @@ a.filterLink:active {
   /* The fixed toolbar's height also moves the gallery surface below it, and
      the surface stops above the touch hint so the lower row never covers it. */
   .browsePage {
-    --browse-toolbar-height: 92px;
+    --browse-toolbar-height: 108px;
     --gallery-surface-top: calc(62px + var(--browse-toolbar-height));
     --gallery-surface-bottom: calc(40px + env(safe-area-inset-bottom, 0px));
   }
 
   .browseToolbar {
     position: fixed;
-    top: 62px;
-    right: 0;
-    left: 0;
+    inset-block-start: 62px;
+    inset-inline-end: 0;
+    inset-inline-start: 0;
     grid-template-columns: minmax(0, 1fr) auto;
     align-content: center;
     gap: 6px 12px;
-    height: var(--browse-toolbar-height);
-    padding: 6px 16px;
+    block-size: var(--browse-toolbar-height);
+    padding-block: 6px;
+    padding-inline: 16px;
   }
 
   .filterLink {
-    min-height: 40px;
+    min-block-size: 44px;
   }
 
   .sizeControl {
     grid-template-columns: auto minmax(2.9rem, 1fr) 2.35rem;
     gap: 0.5rem;
-    min-width: 0;
-    min-height: 32px;
+    min-inline-size: 0;
+    min-block-size: 32px;
   }
 
   .resultCount {
-    padding-left: 12px;
-    border-left: 1px solid rgb(45 42 38 / 18%);
+    padding-inline-start: 12px;
+    border-inline-start: 1px solid
+      color-mix(in oklch, var(--foreground) 18%, transparent);
   }
 }
 
 @media (min-width: 761px) {
   .page .galleryHeader {
-    min-height: calc(70px + env(safe-area-inset-top, 0px));
-    padding: env(safe-area-inset-top, 0px)
-      max(clamp(18px, 3vw, 46px), env(safe-area-inset-right, 0px)) 0
-      max(clamp(18px, 3vw, 46px), env(safe-area-inset-left, 0px));
+    min-block-size: calc(70px + env(safe-area-inset-top, 0px));
+    padding-block-start: env(safe-area-inset-top, 0px);
+    padding-inline-end: max(
+      clamp(18px, 3vw, 46px),
+      env(safe-area-inset-right, 0px)
+    );
+    padding-block-end: 0;
+    padding-inline-start: max(
+      clamp(18px, 3vw, 46px),
+      env(safe-area-inset-left, 0px)
+    );
   }
 }
 
 @media (prefers-reduced-transparency: reduce) {
   .page .galleryHeader,
   .browseToolbar {
-    background: var(--proto-paper, #f4ecdd);
+    background: var(--proto-paper);
     backdrop-filter: none;
   }
 }

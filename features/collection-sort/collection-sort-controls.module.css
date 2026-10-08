@@ -3,15 +3,15 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 10px 16px;
-  margin-bottom: 18px;
-  padding-bottom: 12px;
+  margin-block-end: 18px;
+  padding-block-end: 12px;
 }
 
 .label {
   margin: 0;
   color: var(--proto-muted-ink);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 9px;
+  font-size: var(--text-metadata);
   letter-spacing: 0.07em;
   text-transform: uppercase;
 }
@@ -19,7 +19,7 @@
 .options {
   flex-wrap: wrap;
   justify-content: flex-start;
-  max-width: 100%;
+  max-inline-size: 100%;
 }
 
 @media (max-width: 680px) {
@@ -30,12 +30,12 @@
   }
 
   .options {
-    width: 100%;
+    inline-size: 100%;
   }
 
   .option {
     flex: 1;
-    min-height: 44px;
+    min-block-size: 44px;
     padding-inline: 8px;
   }
 }

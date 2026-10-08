@@ -1,16 +1,19 @@
 .page {
   --page-gutter: clamp(18px, 3vw, 46px);
 
-  min-height: 100svh;
-  padding: 0 var(--page-gutter) clamp(76px, 9vw, 132px);
+  min-block-size: 100svh;
+  padding-block-start: 0;
+  padding-inline-end: var(--page-gutter);
+  padding-block-end: clamp(76px, 9vw, 132px);
+  padding-inline-start: var(--page-gutter);
   background:
     linear-gradient(
-      color-mix(in srgb, var(--proto-rule) 34%, transparent) 1px,
+      color-mix(in oklch, var(--proto-rule) 34%, transparent) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      color-mix(in srgb, var(--proto-rule) 28%, transparent) 1px,
+      color-mix(in oklch, var(--proto-rule) 28%, transparent) 1px,
       transparent 1px
     ),
     var(--proto-paper);
@@ -22,7 +25,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: clamp(56px, 7vw, 96px) 0 clamp(40px, 5vw, 64px);
+  padding-block-start: clamp(56px, 7vw, 96px);
+  padding-inline-end: 0;
+  padding-block-end: clamp(40px, 5vw, 64px);
+  padding-inline-start: 0;
 }
 
 .eyebrow,
@@ -36,20 +42,23 @@
 .sourceGroupCount,
 .detailFacts dt {
   font-family: var(--font-geist-mono), monospace;
-  font-size: 9px;
+  font-size: var(--text-metadata);
   letter-spacing: 0.07em;
   text-transform: uppercase;
 }
 
 .eyebrow {
-  margin: 8px 0 0;
+  margin-block-start: 8px;
+  margin-inline-end: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
   color: var(--proto-electric);
 }
 
 .indexIntro h1,
 .detailIntro h1 {
-  min-width: 0;
-  max-width: 100%;
+  min-inline-size: 0;
+  max-inline-size: 100%;
   margin: 0;
   font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
   font-size: clamp(55.2px, 7.82vw, 115px);
@@ -66,14 +75,17 @@
 }
 
 .indexIntro h1 {
-  margin-top: clamp(16px, 1.8vw, 26px);
+  margin-block-start: clamp(16px, 1.8vw, 26px);
 }
 
 /* The index description reads like a detail page's lead. */
 .introCopy,
 .detailLead {
-  max-width: 34em;
-  margin: clamp(20px, 2.2vw, 32px) 0 0;
+  max-inline-size: 34em;
+  margin-block-start: clamp(20px, 2.2vw, 32px);
+  margin-inline-end: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
   color: var(--proto-ink);
   font-size: clamp(17px, 1.45vw, 21px);
   line-height: 1.5;
@@ -85,7 +97,7 @@
   flex-wrap: wrap;
   align-items: baseline;
   gap: 10px 28px;
-  margin-top: clamp(20px, 2.2vw, 28px);
+  margin-block-start: clamp(20px, 2.2vw, 28px);
 }
 
 .recordCount {
@@ -99,7 +111,7 @@
   font-size: 10px;
   text-decoration: underline;
   text-decoration-color: color-mix(
-    in srgb,
+    in oklch,
     var(--proto-electric) 55%,
     transparent
   );
@@ -109,15 +121,20 @@
 
 .crossLink::after {
   display: inline-block;
-  margin-left: 6px;
+  margin-inline-start: 6px;
   color: var(--proto-electric);
   content: '→';
   text-decoration: none;
 }
 
-.crossLink:hover,
 .crossLink:focus-visible {
   color: var(--proto-electric);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .crossLink:hover {
+    color: var(--proto-electric);
+  }
 }
 
 .crossLink:focus-visible {
@@ -134,19 +151,19 @@
 .resourceIndex {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  background: color-mix(in srgb, var(--proto-paper) 91%, transparent);
+  background: color-mix(in oklch, var(--proto-paper) 91%, transparent);
 }
 
 .resourceIndex li {
   display: flex;
-  min-width: 0;
-  border-bottom: 1px solid var(--proto-rule);
+  min-inline-size: 0;
+  border-block-end: 1px solid var(--proto-rule);
   content-visibility: auto;
   contain-intrinsic-size: auto 140px;
 }
 
 .resourceIndex li:not(:nth-child(3n + 1)) {
-  border-left: 1px solid var(--proto-rule);
+  border-inline-start: 1px solid var(--proto-rule);
 }
 
 /* A short final row spans the open cells so the ruled grid stays closed. */
@@ -166,25 +183,35 @@
   flex: 1;
   flex-direction: column;
   align-items: flex-start;
-  min-width: 0;
-  min-height: 132px;
-  padding: 22px 20px;
+  min-inline-size: 0;
+  min-block-size: 132px;
+  padding-block: 22px;
+  padding-inline: 20px;
   text-decoration: none;
   transition:
     color 150ms var(--proto-ease-out),
     background 240ms var(--proto-ease-out);
 }
 
-.resourceIndex a:hover,
 .resourceIndex a:focus-visible {
   background: var(--proto-raised-paper);
   color: var(--proto-electric);
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .resourceIndex a:hover {
+    background: var(--proto-raised-paper);
+    color: var(--proto-electric);
+  }
+}
+
 .resourceIndex h2 {
-  width: 100%;
-  max-width: 100%;
-  margin: 10px 0 0;
+  inline-size: 100%;
+  max-inline-size: 100%;
+  margin-block-start: 10px;
+  margin-inline-end: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
   font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
   font-size: clamp(27px, 3vw, 43px);
   font-weight: 700;
@@ -194,8 +221,11 @@
 }
 
 .resourceIndex p {
-  max-width: 46ch;
-  margin: 10px 0 0;
+  max-inline-size: 46ch;
+  margin-block-start: 10px;
+  margin-inline-end: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
   color: var(--proto-muted-ink);
   font-size: 13px;
   line-height: 1.5;
@@ -204,7 +234,7 @@
 /* Concept definitions are a preview; the detail page owns the full text. */
 .resourceIndex[data-resource-kind='concept'] p {
   display: -webkit-box;
-  overflow: hidden;
+  overflow: clip;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
@@ -215,8 +245,8 @@
 }
 
 .itemCount {
-  margin-top: auto;
-  padding-top: 18px;
+  margin-block-start: auto;
+  padding-block-start: 18px;
 }
 
 /* Media indexes are poster grids: about seven 2:3 posters a row at 1440 and
@@ -235,7 +265,7 @@
 }
 
 .mediaGrid li {
-  min-width: 0;
+  min-inline-size: 0;
   content-visibility: auto;
   contain-intrinsic-size: auto 320px;
 }
@@ -244,7 +274,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 100%;
+  block-size: 100%;
   color: var(--proto-ink);
   text-decoration: none;
 }
@@ -254,14 +284,25 @@
   outline-offset: 4px;
 }
 
+.mediaCard:active {
+  color: var(--proto-electric);
+}
+
+.resourceIndex a:active,
+.chip:active,
+.moreChips summary:active {
+  background: var(--proto-muted-paper);
+  color: var(--proto-ink);
+}
+
 /* The resource image plate's ink frame, without its offset shadow at this
    density. */
 .mediaFrame {
   position: relative;
   display: block;
-  width: 100%;
+  inline-size: 100%;
   aspect-ratio: 2 / 3;
-  overflow: hidden;
+  overflow: clip;
   border: 1px solid var(--proto-ink);
   background: var(--proto-raised-paper);
   transition: border-color 180ms var(--proto-ease-out);
@@ -271,13 +312,18 @@
   aspect-ratio: 16 / 9;
 }
 
-.mediaFrame img {
-  transition: transform 240ms var(--proto-ease-out);
+@media (prefers-reduced-motion: no-preference) {
+  .mediaFrame img {
+    transition: transform 240ms var(--proto-ease-out);
+  }
 }
 
 .mediaTitle {
-  max-width: 100%;
-  margin: 12px 0 0;
+  max-inline-size: 100%;
+  margin-block-start: 12px;
+  margin-inline-end: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
   font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
   font-size: clamp(20px, 1.6vw, 24px);
   font-weight: 700;
@@ -288,19 +334,32 @@
 }
 
 .mediaMeta {
-  margin: 7px 0 0;
+  margin-block-start: 7px;
+  margin-inline-end: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
   color: var(--proto-muted-ink);
   line-height: 1.4;
 }
 
-.mediaCard:hover .mediaFrame,
 .mediaCard:focus-visible .mediaFrame {
   border-color: var(--proto-electric);
 }
 
-.mediaCard:hover .mediaTitle,
+@media (hover: hover) and (pointer: fine) {
+  .mediaCard:hover .mediaFrame {
+    border-color: var(--proto-electric);
+  }
+}
+
 .mediaCard:focus-visible .mediaTitle {
   color: var(--proto-electric);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .mediaCard:hover .mediaTitle {
+    color: var(--proto-electric);
+  }
 }
 
 /* Like the Dossier's discovery cards: washed grayscale until deliberate
@@ -308,9 +367,14 @@
 @media (hover: hover) and (pointer: fine) {
   .mediaFrame img {
     filter: grayscale(1) sepia(0.16) saturate(0.45) contrast(0.78);
-    transition:
-      filter 180ms var(--proto-ease-out),
-      transform 240ms var(--proto-ease-out);
+    transition: filter 180ms var(--proto-ease-out);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .mediaFrame img {
+      transition:
+        filter 180ms var(--proto-ease-out),
+        transform 240ms var(--proto-ease-out);
+    }
   }
 
   .mediaCard:hover .mediaFrame img,
@@ -328,11 +392,15 @@
 .jumpBar {
   position: sticky;
   z-index: 2;
-  top: 0;
-  margin: 0 calc(-1 * var(--page-gutter)) clamp(24px, 3vw, 36px);
-  padding: 0 var(--page-gutter);
-  border-top: 1px solid var(--proto-rule);
-  border-bottom: 1px solid var(--proto-rule);
+  inset-block-start: 0;
+  margin-block-start: 0;
+  margin-inline-end: calc(-1 * var(--page-gutter));
+  margin-block-end: clamp(24px, 3vw, 36px);
+  margin-inline-start: calc(-1 * var(--page-gutter));
+  padding-block: 0;
+  padding-inline: var(--page-gutter);
+  border-block-start: 1px solid var(--proto-rule);
+  border-block-end: 1px solid var(--proto-rule);
   background: var(--proto-paper);
 }
 
@@ -347,8 +415,8 @@
 .jumpBar a,
 .jumpBar span {
   display: grid;
-  min-width: 30px;
-  min-height: 40px;
+  min-inline-size: 30px;
+  min-block-size: 40px;
   place-items: center;
   font-family: var(--font-geist-mono), monospace;
   font-size: 11px;
@@ -357,8 +425,11 @@
 
 /* The first letter keeps the page's leading edge. */
 .jumpBar li:first-child :is(a, span) {
-  min-width: 0;
-  padding: 0 10px 0 0;
+  min-inline-size: 0;
+  padding-block-start: 0;
+  padding-inline-end: 10px;
+  padding-block-end: 0;
+  padding-inline-start: 0;
   place-items: center start;
 }
 
@@ -371,10 +442,16 @@
     background 240ms var(--proto-ease-out);
 }
 
-.jumpBar a:hover,
 .jumpBar a:focus-visible {
   background: var(--proto-raised-paper);
   color: var(--proto-electric);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .jumpBar a:hover {
+    background: var(--proto-raised-paper);
+    color: var(--proto-electric);
+  }
 }
 
 .jumpBar a:focus-visible {
@@ -383,24 +460,27 @@
 }
 
 .jumpBar span {
-  color: color-mix(in srgb, var(--proto-muted-ink) 45%, transparent);
+  color: color-mix(in oklch, var(--proto-muted-ink) 45%, transparent);
 }
 
 .sourceGroup {
-  scroll-margin-top: 64px;
+  scroll-margin-block-start: 64px;
 }
 
 .sourceGroup + .sourceGroup {
-  margin-top: clamp(40px, 4.5vw, 64px);
+  margin-block-start: clamp(40px, 4.5vw, 64px);
 }
 
 .sourceGroupHeading {
   display: flex;
   align-items: baseline;
   gap: 12px;
-  margin: 0 0 clamp(16px, 1.8vw, 24px);
-  padding-top: 12px;
-  border-top: 1px solid var(--proto-ink);
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-block-end: clamp(16px, 1.8vw, 24px);
+  margin-inline-start: 0;
+  padding-block-start: 12px;
+  border-block-start: 1px solid var(--proto-ink);
   font-family: var(--font-geist-mono), monospace;
   font-size: 14px;
   font-weight: 500;
@@ -422,7 +502,10 @@
   grid-template-columns: minmax(0, 1fr);
   gap: clamp(32px, 4vw, 56px) clamp(40px, 6vw, 104px);
   align-items: start;
-  padding: clamp(56px, 7vw, 96px) 0 clamp(48px, 6vw, 80px);
+  padding-block-start: clamp(56px, 7vw, 96px);
+  padding-inline-end: 0;
+  padding-block-end: clamp(48px, 6vw, 80px);
+  padding-inline-start: 0;
 }
 
 .detailIntro[data-has-aside] {
@@ -432,14 +515,14 @@
 .detailMain {
   display: flex;
   flex-direction: column;
-  min-width: 0;
+  min-inline-size: 0;
 }
 
 .detailActions {
   display: flex;
   align-items: center;
   gap: 12px;
-  min-height: var(--detail-actions-height);
+  min-block-size: var(--detail-actions-height);
 }
 
 .detailActions .eyebrow {
@@ -447,24 +530,27 @@
 }
 
 .detailIntro h1 {
-  margin-top: var(--detail-title-gap);
+  margin-block-start: var(--detail-title-gap);
 }
 
 .detailFacts {
   display: flex;
   flex-wrap: wrap;
   gap: 16px clamp(28px, 3.4vw, 52px);
-  max-width: 44em;
-  margin: clamp(24px, 2.6vw, 36px) 0 0;
-  padding-top: 16px;
-  border-top: 1px solid var(--proto-rule);
+  max-inline-size: 44em;
+  margin-block-start: clamp(24px, 2.6vw, 36px);
+  margin-inline-end: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  padding-block-start: 16px;
+  border-block-start: 1px solid var(--proto-rule);
 }
 
 .detailFacts > div {
   display: grid;
   align-content: start;
   gap: 6px;
-  min-width: 0;
+  min-inline-size: 0;
 }
 
 .detailFacts dt {
@@ -506,22 +592,24 @@
 }
 
 .resourceImage {
-  min-width: 0;
+  min-inline-size: 0;
   margin: 0;
   border: 1px solid var(--proto-ink);
   background: var(--proto-raised-paper);
-  box-shadow: 11px 13px 0 rgb(45 42 38 / 7%);
+  box-shadow: 11px 13px 0 color-mix(in oklch, var(--foreground) 7%, transparent);
 }
 
 .resourceImage img {
   display: block;
-  width: 100%;
-  height: auto;
+  inline-size: 100%;
+  block-size: auto;
 }
 
 .furtherReading {
-  min-width: 0;
-  padding-top: calc(var(--detail-actions-height) + var(--detail-title-gap));
+  min-inline-size: 0;
+  padding-block-start: calc(
+    var(--detail-actions-height) + var(--detail-title-gap)
+  );
 }
 
 .readingSection {
@@ -529,7 +617,10 @@
 }
 
 .asideLabel {
-  margin: 0 0 14px;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-block-end: 14px;
+  margin-inline-start: 0;
   color: var(--proto-muted-ink);
   font-weight: 400;
 }
@@ -546,18 +637,18 @@
 
 .externalLinks {
   flex-direction: column;
-  border-top: 1px solid var(--proto-rule);
+  border-block-start: 1px solid var(--proto-rule);
 }
 
 /* A section header already draws the rule above the stacked list. */
 .readingSection .externalLinks {
-  border-top: 0;
+  border-block-start: 0;
 }
 
 .linkRow {
   flex-wrap: wrap;
   gap: 10px 24px;
-  margin-top: 22px;
+  margin-block-start: 22px;
 }
 
 .externalLinks a,
@@ -571,7 +662,8 @@
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 16px;
   align-items: baseline;
-  padding: 9px 0;
+  padding-block: 9px;
+  padding-inline: 0;
 }
 
 .linkRow a {
@@ -590,7 +682,7 @@
 .externalLinkCopy {
   display: grid;
   gap: 2px;
-  min-width: 0;
+  min-inline-size: 0;
 }
 
 .externalLinkTitle {
@@ -609,7 +701,7 @@
 .externalLinkDescription {
   color: var(--proto-muted-ink);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 9px;
+  font-size: var(--text-metadata);
   letter-spacing: 0.05em;
   line-height: 1.4;
   text-transform: uppercase;
@@ -619,20 +711,23 @@
 .resourceSection,
 .relatedSection,
 .pivotSection {
-  margin-top: clamp(56px, 6.5vw, 96px);
+  margin-block-start: clamp(56px, 6.5vw, 96px);
 }
 
 .detailIntro + .scenarioSection,
 .detailIntro + .pivotSection {
-  margin-top: clamp(12px, 1.5vw, 28px);
+  margin-block-start: clamp(12px, 1.5vw, 28px);
 }
 
 .sectionHeader {
   display: grid;
   gap: 10px;
-  margin-bottom: 18px;
-  padding: 0 0 16px;
-  border-bottom: 1px solid var(--proto-ink);
+  margin-block-end: 18px;
+  padding-block-start: 0;
+  padding-inline-end: 0;
+  padding-block-end: 16px;
+  padding-inline-start: 0;
+  border-block-end: 1px solid var(--proto-ink);
 }
 
 .sectionHeader p {
@@ -651,8 +746,11 @@
 }
 
 .sectionNote {
-  max-width: 60ch;
-  margin: 0 0 18px;
+  max-inline-size: 60ch;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-block-end: 18px;
+  margin-inline-start: 0;
   color: var(--proto-muted-ink);
   font-size: 13px;
   line-height: 1.5;
@@ -673,11 +771,11 @@
 .moreChips {
   display: grid;
   gap: 14px;
-  width: 100%;
+  inline-size: 100%;
 }
 
 .moreChips summary {
-  width: fit-content;
+  inline-size: fit-content;
   list-style: none;
   color: var(--proto-ink);
   font-family: var(--font-geist-mono), monospace;
@@ -685,7 +783,7 @@
   letter-spacing: 0.07em;
   text-decoration: underline;
   text-decoration-color: color-mix(
-    in srgb,
+    in oklch,
     var(--proto-electric) 55%,
     transparent
   );
@@ -701,15 +799,20 @@
 /* The disclosure cue trails the label so the text keeps the leading edge. */
 .moreChips summary::after {
   display: inline-block;
-  margin-left: 6px;
+  margin-inline-start: 6px;
   color: var(--proto-electric);
   content: '+';
   text-decoration: none;
 }
 
-.moreChips summary:hover,
 .moreChips summary:focus-visible {
   color: var(--proto-electric);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .moreChips summary:hover {
+    color: var(--proto-electric);
+  }
 }
 
 .moreChips summary:focus-visible {
@@ -734,9 +837,10 @@
   display: inline-flex;
   align-items: baseline;
   gap: 10px;
-  padding: 9px 12px;
+  padding-block: 9px;
+  padding-inline: 12px;
   border: 1px solid var(--proto-rule);
-  background: color-mix(in srgb, var(--proto-raised-paper) 82%, transparent);
+  background: color-mix(in oklch, var(--proto-raised-paper) 82%, transparent);
   color: var(--proto-ink);
   font-size: 14px;
   line-height: 1.2;
@@ -746,10 +850,16 @@
     color 150ms var(--proto-ease-out);
 }
 
-.chip:hover,
 .chip:focus-visible {
   border-color: var(--proto-electric);
   color: var(--proto-electric);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .chip:hover {
+    border-color: var(--proto-electric);
+    color: var(--proto-electric);
+  }
 }
 
 .chip:focus-visible {
@@ -768,7 +878,10 @@
   .detailIntro,
   .detailIntro[data-has-aside] {
     grid-template-columns: minmax(0, 1fr);
-    padding: 48px 0 44px;
+    padding-block-start: 48px;
+    padding-inline-end: 0;
+    padding-block-end: 44px;
+    padding-inline-start: 0;
   }
 
   .indexIntro h1,
@@ -788,7 +901,7 @@
   }
 
   .detailIntro[data-image-orientation='portrait'] .resourceImage {
-    width: min(100%, 380px);
+    inline-size: min(100%, 380px);
   }
 
   .furtherReading {
@@ -797,7 +910,7 @@
 
   .readingSection {
     display: block;
-    margin-top: clamp(56px, 6.5vw, 96px);
+    margin-block-start: clamp(56px, 6.5vw, 96px);
   }
 
   .resourceIndex {
@@ -805,11 +918,11 @@
   }
 
   .resourceIndex li:not(:nth-child(3n + 1)) {
-    border-left: 0;
+    border-inline-start: 0;
   }
 
   .resourceIndex li:nth-child(even) {
-    border-left: 1px solid var(--proto-rule);
+    border-inline-start: 1px solid var(--proto-rule);
   }
 
   .resourceIndex li:last-child:nth-child(3n + 1),
@@ -830,22 +943,34 @@
   .page {
     --page-gutter: 18px;
 
-    padding: 0 var(--page-gutter) 72px;
+    padding-block-start: 0;
+
+    padding-inline-end: var(--page-gutter);
+
+    padding-block-end: 72px;
+
+    padding-inline-start: var(--page-gutter);
     background-size: 42px 42px;
   }
 
   .indexIntro {
-    padding: 40px 0 36px;
+    padding-block-start: 40px;
+    padding-inline-end: 0;
+    padding-block-end: 36px;
+    padding-inline-start: 0;
   }
 
   .detailIntro,
   .detailIntro[data-has-aside] {
     gap: 28px;
-    padding: 40px 0 36px;
+    padding-block-start: 40px;
+    padding-inline-end: 0;
+    padding-block-end: 36px;
+    padding-inline-start: 0;
   }
 
   .detailIntro[data-image-orientation='portrait'] .resourceImage {
-    width: min(100%, 300px);
+    inline-size: min(100%, 300px);
   }
 
   /* Like the Dossier's mobile media plate: a 6px inset from the screen edge. */
@@ -860,7 +985,7 @@
   }
 
   .resourceIndex li:nth-child(even) {
-    border-left: 0;
+    border-inline-start: 0;
   }
 
   .resourceIndex li:last-child:nth-child(odd) {
@@ -868,7 +993,7 @@
   }
 
   .resourceIndex a {
-    min-height: 0;
+    min-block-size: 0;
     padding-inline: 0;
   }
 
@@ -894,8 +1019,8 @@
   .jumpBar a,
   .jumpBar span,
   .jumpBar li:first-child :is(a, span) {
-    min-width: 44px;
-    min-height: 44px;
+    min-inline-size: 44px;
+    min-block-size: 44px;
     padding: 0;
     place-items: center start;
   }
@@ -920,7 +1045,9 @@
     transition: none;
   }
 
-  .mediaCard:hover .mediaFrame img {
-    transform: none;
+  @media (hover: hover) and (pointer: fine) {
+    .mediaCard:hover .mediaFrame img {
+      transform: none;
+    }
   }
 }

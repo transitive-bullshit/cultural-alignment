@@ -36,7 +36,7 @@ function SheetOverlay({
     <SheetPrimitive.Overlay
       data-slot='sheet-overlay'
       className={cn(
-        'fixed inset-0 z-[70] bg-black/50 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:animate-in data-[state=open]:fade-in-0 motion-reduce:data-[state=closed]:animate-none motion-reduce:data-[state=open]:animate-none',
+        'fixed inset-0 z-[70] bg-black/50 motion-safe:data-[state=closed]:animate-out data-[state=closed]:fade-out-0 motion-safe:data-[state=open]:animate-in data-[state=open]:fade-in-0 motion-reduce:data-[state=closed]:animate-none motion-reduce:data-[state=open]:animate-none',
         className
       )}
       {...props}
@@ -60,22 +60,22 @@ function SheetContent({
       <SheetPrimitive.Content
         data-slot='sheet-content'
         className={cn(
-          'fixed z-[70] flex flex-col gap-4 bg-background shadow-lg transition ease-in-out data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:animate-in data-[state=open]:duration-500 motion-reduce:data-[state=closed]:animate-none motion-reduce:data-[state=closed]:duration-0 motion-reduce:data-[state=open]:animate-none motion-reduce:data-[state=open]:duration-0',
+          'fixed z-[70] flex flex-col gap-4 bg-background shadow-lg transition ease-in-out motion-safe:data-[state=closed]:animate-out data-[state=closed]:duration-300 motion-safe:data-[state=open]:animate-in data-[state=open]:duration-500 motion-reduce:data-[state=closed]:animate-none motion-reduce:data-[state=closed]:duration-0 motion-reduce:data-[state=open]:animate-none motion-reduce:data-[state=open]:duration-0',
           side === 'right' &&
-            'inset-y-0 right-0 h-full w-3/4 border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm',
+            '[inset-block:0] [inset-inline-end:0rem] h-full w-3/4 [border-inline-start-width:1px] motion-safe:data-[state=closed]:slide-out-to-right motion-safe:data-[state=open]:slide-in-from-right sm:max-w-sm',
           side === 'left' &&
-            'inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm',
+            '[inset-block:0] [inset-inline-start:0rem] h-full w-3/4 [border-inline-end-width:1px] motion-safe:data-[state=closed]:slide-out-to-left motion-safe:data-[state=open]:slide-in-from-left sm:max-w-sm',
           side === 'top' &&
-            'inset-x-0 top-0 h-auto border-b data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top',
+            '[inset-inline:0] [inset-block-start:0rem] h-auto [border-block-end-width:1px] motion-safe:data-[state=closed]:slide-out-to-top motion-safe:data-[state=open]:slide-in-from-top',
           side === 'bottom' &&
-            'inset-x-0 bottom-0 h-auto border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom',
+            '[inset-inline:0] [inset-block-end:0rem] h-auto [border-block-start-width:1px] motion-safe:data-[state=closed]:slide-out-to-bottom motion-safe:data-[state=open]:slide-in-from-bottom',
           className
         )}
         {...props}
       >
         {children}
         {showCloseButton && (
-          <SheetPrimitive.Close className='absolute top-4 right-4 rounded-xs opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none data-[state=open]:bg-secondary'>
+          <SheetPrimitive.Close className='absolute [inset-block-start:1rem] [inset-inline-end:1rem] rounded-xs opacity-70 ring-offset-background transition-opacity fine-hover:opacity-100 focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none data-[state=open]:bg-secondary'>
             <XIcon />
             <span className='sr-only'>Close</span>
           </SheetPrimitive.Close>

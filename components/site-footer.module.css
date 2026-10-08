@@ -1,13 +1,16 @@
 .footer {
-  --footer-electric: #ff4d1f;
+  --footer-electric: oklch(0.6686441 0.2210654 34.59294);
   display: grid;
   grid-template-columns: minmax(280px, 1.25fr) minmax(320px, 1fr) minmax(
       230px,
       0.72fr
     );
   gap: clamp(44px, 7vw, 112px);
-  padding: clamp(54px, 7vw, 92px) clamp(18px, 3vw, 46px) 24px;
-  border-top: 1px solid var(--foreground);
+  padding-block-start: clamp(54px, 7vw, 92px);
+  padding-inline-end: clamp(18px, 3vw, 46px);
+  padding-block-end: 24px;
+  padding-inline-start: clamp(18px, 3vw, 46px);
+  border-block-start: 1px solid var(--foreground);
   background: var(--background);
   color: var(--foreground);
 }
@@ -35,7 +38,7 @@
 }
 
 .wordmark {
-  width: fit-content;
+  inline-size: fit-content;
   font-family: 'Barlow Condensed', var(--font-geist-sans), sans-serif;
   font-size: clamp(38px, 4.4vw, 66px);
   font-weight: 800;
@@ -46,7 +49,7 @@
 }
 
 .lead > p {
-  max-width: 42ch;
+  max-inline-size: 42ch;
   margin: 0;
   color: var(--muted-foreground);
   font-size: 14px;
@@ -69,7 +72,10 @@
 }
 
 .navigation nav > p {
-  margin: 0 0 17px;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-block-end: 17px;
+  margin-inline-start: 0;
   color: var(--muted-foreground);
 }
 
@@ -99,7 +105,7 @@
   flex-direction: column;
   gap: 0;
   align-self: start;
-  border-top: 1px solid var(--border);
+  border-block-start: 1px solid var(--border);
 }
 
 .socials a {
@@ -107,13 +113,13 @@
   grid-template-columns: 18px minmax(0, 1fr) auto;
   gap: 10px;
   align-items: center;
-  min-height: 49px;
-  border-bottom: 1px solid var(--border);
+  min-block-size: 49px;
+  border-block-end: 1px solid var(--border);
 }
 
 .socials svg {
-  width: 15px;
-  height: 15px;
+  inline-size: 15px;
+  block-size: 15px;
 }
 
 /* The label's underline hugs its text rather than the whole track. */
@@ -130,8 +136,8 @@
   grid-column: 1 / -1;
   justify-content: space-between;
   gap: 18px;
-  padding-top: 18px;
-  border-top: 1px solid var(--border);
+  padding-block-start: 18px;
+  border-block-start: 1px solid var(--border);
   color: var(--muted-foreground);
 }
 
@@ -157,8 +163,8 @@
   }
 
   .socials a:nth-child(even) {
-    padding-left: 18px;
-    border-left: 1px solid var(--border);
+    padding-inline-start: 18px;
+    border-inline-start: 1px solid var(--border);
   }
 }
 
@@ -166,7 +172,10 @@
   .footer {
     grid-template-columns: 1fr;
     gap: 42px;
-    padding: 48px 18px 22px;
+    padding-block-start: 48px;
+    padding-inline-end: 18px;
+    padding-block-end: 22px;
+    padding-inline-start: 18px;
   }
 
   .navigation,
@@ -179,8 +188,8 @@
   }
 
   .socials a:nth-child(even) {
-    padding-left: 0;
-    border-left: 0;
+    padding-inline-start: 0;
+    border-inline-start: 0;
   }
 
   .baseline {

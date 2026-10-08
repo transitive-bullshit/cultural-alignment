@@ -79,3 +79,39 @@ test('scenario taxonomy links reveal their descriptions', async ({ page }) => {
     page.locator('[data-scenario-card-summary]').first()
   ).not.toBeEmpty()
 })
+
+test('taxonomy heading links keep their full touch target beside Help', async ({
+  browser,
+  baseURL
+}) => {
+  const context = await browser.newContext({
+    baseURL,
+    viewport: { width: 390, height: 844 },
+    hasTouch: true,
+    reducedMotion: 'reduce'
+  })
+  try {
+    const page = await context.newPage()
+    for (const href of ['/risk-families', '/concepts']) {
+      await page.goto(`/scenarios/${scenario.slug}`)
+      const link = page.locator(
+        `[aria-label="Scenario taxonomy"] h2 a[href="${href}"]`
+      )
+      await link.scrollIntoViewIfNeeded()
+      const box = await link.boundingBox()
+      if (!box) throw new Error('Expected a taxonomy heading link')
+      const point = { x: box.x + box.width - 1, y: box.y + box.height / 2 }
+      const hitHref = await page.evaluate(({ x, y }) => {
+        return document
+          .elementFromPoint(x, y)
+          ?.closest('a')
+          ?.getAttribute('href')
+      }, point)
+      expect(hitHref).toBe(href)
+      await page.touchscreen.tap(point.x, point.y)
+      await expect(page).toHaveURL(new RegExp(`${href}$`))
+    }
+  } finally {
+    await context.close()
+  }
+})

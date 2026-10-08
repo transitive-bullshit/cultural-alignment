@@ -2,9 +2,15 @@
   opacity: 1;
   transform: scale(1);
   transform-origin: var(--radix-tooltip-content-transform-origin);
-  transition:
-    opacity 125ms var(--ease-out),
-    transform 125ms var(--ease-out);
+  transition: opacity 125ms var(--ease-out);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .content {
+    transition:
+      opacity 125ms var(--ease-out),
+      transform 125ms var(--ease-out);
+  }
 }
 
 .content[data-state='instant-open'] {
