@@ -161,7 +161,8 @@
   grid-template-columns: minmax(0, 1fr);
 }
 
-.closeButton {
+/* Outrank the shared control's relative positioning in both CSS bundle orders. */
+.dialog[data-scenario-meme-lightbox] .closeButton {
   position: absolute;
   inset-block-start: 10px;
   inset-inline-end: 10px;
@@ -365,7 +366,7 @@
   .dialogBody {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
-    padding-block-start: 52px;
+    padding-block-start: 64px;
     padding-inline-end: 10px;
     padding-block-end: 0;
     padding-inline-start: 10px;
