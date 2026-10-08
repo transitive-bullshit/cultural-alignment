@@ -112,7 +112,8 @@ function createScenario(): ScenarioPage {
       href: '/sources/source-one',
       description: null,
       links: [],
-      scenarioCount: 1
+      scenarioCount: 1,
+      releaseDate: null
     },
     episode: { label: 'Episode 1', href: 'https://example.org/episode' },
     releaseDate: '2024-05-01',

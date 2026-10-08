@@ -54,4 +54,19 @@ test.describe('server-rendered scenario index', () => {
       .poll(() => index.evaluate((element) => element.clientWidth))
       .toBeGreaterThan(200)
   })
+
+  test('returns when the gallery never hydrates', async ({ page }) => {
+    await page.route('**/_next/static/chunks/**', (route) => route.abort())
+    await page.goto('/scenarios')
+
+    const index = page.locator('[data-scenario-index]')
+
+    await expect(index).not.toHaveAttribute('data-enhanced')
+    await expect
+      .poll(() => index.evaluate((element) => element.clientWidth), {
+        timeout: 15_000
+      })
+      .toBeGreaterThan(200)
+    await expect(index.locator('a[href^="/scenarios/"]').first()).toBeVisible()
+  })
 })

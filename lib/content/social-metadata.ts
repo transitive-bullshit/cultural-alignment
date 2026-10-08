@@ -139,8 +139,11 @@ export function formatMediaFormats(formats: readonly MediaFormat[]) {
 
 /** Where the scene sits: a movie's year, or a TV episode's season and number. */
 export function getSceneContext(scenario: ScenarioPage) {
+  // A movie's year is its release, not the scenario record's own date.
   if (scenario.source.sourceType === 'movie') {
-    return scenario.releaseDate?.slice(0, 4) ?? null
+    return (
+      (scenario.source.releaseDate ?? scenario.releaseDate)?.slice(0, 4) ?? null
+    )
   }
 
   const sourcePrefix = `${scenario.source.title} — `

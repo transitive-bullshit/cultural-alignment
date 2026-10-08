@@ -461,15 +461,18 @@
    the gallery; with scripting it yields to the canvas or the no-WebGL
    fallback and returns as an overlay while keyboard focus is inside it. */
 .scenarioIndex {
-  position: absolute;
-  z-index: 3;
-  inset: 0;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  padding: clamp(20px, 3vw, 40px)
+  --scenario-index-inset: 0;
+  --scenario-index-padding: clamp(20px, 3vw, 40px)
     max(clamp(18px, 3vw, 46px), env(safe-area-inset-right, 0px))
     clamp(28px, 4vw, 56px)
     max(clamp(18px, 3vw, 46px), env(safe-area-inset-left, 0px));
+
+  position: absolute;
+  z-index: 3;
+  inset: var(--scenario-index-inset);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: var(--scenario-index-padding);
   background: var(--proto-paper);
   color: var(--proto-ink);
 }
@@ -491,7 +494,9 @@
 }
 
 /* Hide the index before hydration where the browser can say scripts will
-   run, so the canvas loading state paints first exactly as before. */
+   run, so the canvas loading state paints first exactly as before. If the
+   gallery never hydrates (a blocked or failed bundle), the index returns
+   after a grace period instead of leaving only the loading state. */
 @media (scripting: enabled) {
   .scenarioIndex:not(:focus-within) {
     inset: auto;
@@ -502,6 +507,23 @@
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     white-space: nowrap;
+  }
+
+  .scenarioIndex:not([data-enhanced]) {
+    animation: scenario-index-fallback 0s 8s forwards;
+  }
+}
+
+@keyframes scenario-index-fallback {
+  to {
+    inset: var(--scenario-index-inset);
+    width: auto;
+    height: auto;
+    padding: var(--scenario-index-padding);
+    overflow: auto;
+    clip: auto;
+    clip-path: none;
+    white-space: normal;
   }
 }
 
@@ -670,9 +692,13 @@
 
 @media (max-width: 680px) {
   /* Pages with fixed chrome below the header move the surface edges in. */
-  .surface,
-  .scenarioIndex {
+  .surface {
     inset: var(--gallery-surface-top, 62px) 0 var(--gallery-surface-bottom, 0px);
+  }
+
+  .scenarioIndex {
+    --scenario-index-inset: var(--gallery-surface-top, 62px) 0
+      var(--gallery-surface-bottom, 0px);
   }
 
   .metadata {

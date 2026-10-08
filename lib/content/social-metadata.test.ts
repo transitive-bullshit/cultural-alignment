@@ -61,12 +61,17 @@ describe('social metadata derivation', () => {
     const numbered = scenarios.find(({ episode }) =>
       /\bS\d+\s?E\d+\b/u.test(episode?.label ?? '')
     )!
-    const movie = scenarios.find(
-      ({ releaseDate, source }) => source.sourceType === 'movie' && releaseDate
-    )!
+    const movies = scenarios.filter(
+      ({ source }) => source.sourceType === 'movie' && source.releaseDate
+    )
 
     expect(getSceneContext(numbered)).toMatch(/^Season \d+, Episodes? \d+/u)
-    expect(getSceneContext(movie)).toBe(movie.releaseDate!.slice(0, 4))
+    // Scenario records can carry their own date (e.g. a Blade Runner scene
+    // dated 2026); the description uses the film's release year.
+    expect(movies.length).toBeGreaterThan(0)
+    for (const movie of movies) {
+      expect(getSceneContext(movie)).toBe(movie.source.releaseDate!.slice(0, 4))
+    }
   })
 
   it('keeps every description one short sentence without counts', () => {

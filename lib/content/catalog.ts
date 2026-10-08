@@ -88,6 +88,7 @@ export type ScenarioPage = {
       readonly href: string
     }[]
     readonly scenarioCount: number
+    readonly releaseDate: string | null
   }
   readonly episode: ScenarioRecord['episode']
   readonly releaseDate: string | null
@@ -328,7 +329,8 @@ export function createContentCatalog(input: unknown): ContentCatalog {
           href: `/sources/${source.slug}`,
           description: source.description,
           links: sourceExternalLinks(source),
-          scenarioCount: scenariosBySourceId.get(source.id)?.length ?? 0
+          scenarioCount: scenariosBySourceId.get(source.id)?.length ?? 0,
+          releaseDate: source.releaseDate
         },
         episode: scenario.episode,
         releaseDate: scenario.releaseDate,
