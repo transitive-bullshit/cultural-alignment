@@ -22,6 +22,6 @@ node --import tsx docs/skills/ai-safety-meme-creator/evals/generate-fixture-imag
 
 ## Oracle boundary
 
-Vitest recomputes objective invariants; the producer's rationale is not evidence. Geometry checks use measured glyph ink and transformed source regions from the compositor. Editorial checks cover exact and retained copy, rejected directions, concepts, source identity and order, semantic placement, punctuation, palette, and explicit feedback locks.
+Vitest recomputes objective invariants; the producer's rationale is not evidence. Geometry checks use measured glyph ink and transformed source regions from the compositor. Export formats and panel identity are checked through the active composer; code indentation and external-caption source landmarks are checked in the resulting pixels. Editorial checks cover exact and retained copy, rejected directions, concepts, source identity and order, semantic placement, punctuation, palette, and explicit feedback locks.
 
 A deterministic pass does not prove that a meme is funny, surprising, or worth publishing. The owner's pick in the riff workflow is the taste gate.

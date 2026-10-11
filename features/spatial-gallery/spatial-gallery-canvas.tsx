@@ -1401,6 +1401,9 @@ function SpatialField({
       )
       slotYPositions[slotIndex] = laneMotion.y[slot.lane] ?? slot.y
     }
+    // Expose a fixed slot's actual position, also consumed by the mesh transforms.
+    gl.domElement.dataset.galleryPositionX =
+      slotXPositions[Math.floor(layout.slots.length / 2)]!.toFixed(6)
 
     const textureVisibilityLimit =
       viewportWidthRef.current / 2 + frameWidth * 1.75
@@ -2480,6 +2483,7 @@ function setInertiaBurstDiagnostic(
 }
 
 function clearMotionDiagnostics(gl: WebGLRenderer) {
+  delete gl.domElement.dataset.galleryPositionX
   delete gl.domElement.dataset.galleryAutoMotionLayoutCount
   delete gl.domElement.dataset.galleryAutoMotionLayoutDirection
   delete gl.domElement.dataset.galleryInertiaBurst

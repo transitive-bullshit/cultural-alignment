@@ -1,6 +1,8 @@
 import { expect, test } from '@playwright/test'
 
 import scenarios from '../../content/snapshot/scenarios.json' with { type: 'json' }
+import concepts from '../../content/snapshot/concepts.json' with { type: 'json' }
+import riskFamilies from '../../content/snapshot/risk-families.json' with { type: 'json' }
 
 const scenario = scenarios.find(
   ({ conceptIds, riskFamilyIds }) =>
@@ -10,34 +12,39 @@ const scenario = scenarios.find(
 test('the dossier opening names the primary concept', async ({ page }) => {
   await page.goto(`/scenarios/${scenario.slug}`)
 
-  const firstConcept = await page
-    .locator('[data-scenario-taxonomy-item^="concept:"]')
-    .first()
-    .getAttribute('data-scenario-taxonomy-item')
-  const slug = firstConcept?.replace(/^concept:/, '')
+  const concept = concepts.find(({ id }) => id === scenario.conceptIds[0])!
   const primary = page.locator('[data-scenario-primary-concept]')
 
-  await expect(primary).toHaveAttribute('data-scenario-primary-concept', slug!)
+  await expect(primary).toHaveAttribute(
+    'data-scenario-primary-concept',
+    concept.slug
+  )
   await expect(primary.locator('a')).toHaveAttribute(
     'href',
-    `/concepts/${slug}`
+    `/concepts/${concept.slug}`
   )
+  await expect(primary).toContainText(concept.shortName)
+  await expect(primary).toContainText(concept.description)
 })
 
 test('scenario taxonomy links reveal their descriptions', async ({ page }) => {
   await page.goto(`/scenarios/${scenario.slug}`)
 
   for (const kind of ['risk-family', 'concept'] as const) {
-    const item = page
-      .locator(`[data-scenario-taxonomy-item^="${kind}:"]`)
-      .first()
+    const term =
+      kind === 'concept'
+        ? concepts.find(({ id }) => id === scenario.conceptIds[0])!
+        : riskFamilies.find(({ id }) => id === scenario.riskFamilyIds[0])!
+    const item = page.locator(
+      `[data-scenario-taxonomy-item="${kind}:${term.slug}"]`
+    )
     const trigger = item.locator('[data-cursor-card-trigger]')
     const link = item.locator('a')
 
     await expect(link).toHaveCount(1)
     await expect(link).toHaveAttribute(
       'href',
-      kind === 'risk-family' ? /^\/risk-families\// : /^\/concepts\//
+      `/${kind === 'risk-family' ? 'risk-families' : 'concepts'}/${term.slug}`
     )
 
     await trigger.hover()
@@ -46,7 +53,8 @@ test('scenario taxonomy links reveal their descriptions', async ({ page }) => {
 
     await expect(card).toBeVisible()
     await expect(card).toHaveAttribute('role', 'tooltip')
-    await expect(card).toContainText(/\S/)
+    expect(term.description.trim()).not.toBe('')
+    await expect(card).toContainText(term.description)
     const cardId = await card.getAttribute('id')
 
     expect(cardId).toBeTruthy()

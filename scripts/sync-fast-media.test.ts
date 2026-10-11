@@ -2,11 +2,7 @@ import { describe, expect, it } from 'vitest'
 
 import type { ContentImage } from '../lib/content/schema'
 import {
-  franchiseImageAlt,
   reuseSnapshotMedia,
-  scenarioImageAlt,
-  scenarioMemeAlt,
-  sourcePosterAlt,
   type CurrentMediaRecords,
   type PreviousSnapshotMedia
 } from './sync-fast-media'
@@ -82,7 +78,7 @@ describe('reuseSnapshotMedia', () => {
     const previousSource = {
       id: 'source',
       title: 'Previous source',
-      poster: image('poster', sourcePosterAlt('Previous source'))
+      poster: image('poster', 'Poster for Previous source')
     }
     const previousScenario = {
       id: 'scenario',
@@ -90,17 +86,20 @@ describe('reuseSnapshotMedia', () => {
       sourceId: previousSource.id,
       image: image(
         'scenario',
-        scenarioImageAlt(previousSource.title, 'Previous scenario')
+        'Still from Previous source illustrating Previous scenario'
       ),
       memes: [
-        image('generated-meme', scenarioMemeAlt('Previous scenario', 0, 2)),
+        image(
+          'generated-meme',
+          'Generated meme 1 of 2 related to Previous scenario'
+        ),
         image('custom-meme', 'Custom meme description')
       ]
     }
     const previousFranchise = {
       id: 'franchise',
       title: 'Previous franchise',
-      image: image('franchise', franchiseImageAlt('Previous franchise'))
+      image: image('franchise', 'Representative image for Previous franchise')
     }
     const next = {
       scenarios: [{ ...previousScenario, title: 'Current scenario' }],
@@ -118,17 +117,15 @@ describe('reuseSnapshotMedia', () => {
     )
 
     expect(result.scenarioImages[0]!.alt).toBe(
-      scenarioImageAlt(next.sources[0]!.title, next.scenarios[0]!.title)
+      'Still from Current source illustrating Current scenario'
     )
     expect(result.scenarioMemes[0]![0]!.alt).toBe(
-      scenarioMemeAlt(next.scenarios[0]!.title, 0, 2)
+      'Generated meme 1 of 2 related to Current scenario'
     )
     expect(result.scenarioMemes[0]![1]).toBe(previousScenario.memes[1])
-    expect(result.sourcePosters[0]!.alt).toBe(
-      sourcePosterAlt(next.sources[0]!.title)
-    )
+    expect(result.sourcePosters[0]!.alt).toBe('Poster for Current source')
     expect(result.franchiseImages[0]!.alt).toBe(
-      franchiseImageAlt(next.franchises[0]!.title)
+      'Representative image for Current franchise'
     )
   })
 

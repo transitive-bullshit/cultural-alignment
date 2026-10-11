@@ -16,12 +16,14 @@ describe('scenario discovery', () => {
     const first = scenario('first', 'source-a', [], [])
     const second = scenario('second', 'source-a', [], [])
     const third = scenario('third', 'source-a', [], [])
+    const fourth = scenario('fourth', 'source-a', [], [])
 
     const discovery = discoverScenarios(current, [
       first,
       current,
       second,
-      third
+      third,
+      fourth
     ])
 
     expect(discovery.moreFromCollection.map(({ slug }) => slug)).toEqual([
@@ -97,12 +99,14 @@ describe('scenario discovery', () => {
       ['concept-a', 'concept-b']
     )
     const both = scenario('both', 'source-d', ['risk-a'], ['concept-a'])
+    const fourth = scenario('z-risk-only', 'source-e', ['risk-a'], [])
 
     const discovery = discoverScenarios(current, [
       riskOnly,
       conceptsOnly,
       current,
-      both
+      both,
+      fourth
     ])
 
     expect(

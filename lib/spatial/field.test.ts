@@ -155,6 +155,9 @@ describe('spatial field invariants', () => {
 
     expect(center.amount).toBe(0)
     expect(restingEdge.amount).toBe(0)
+    expect(left.amount).toBeCloseTo(1)
+    expect(left.verticalOffset).toBeCloseTo(-1)
+    expect(right.verticalOffset).toBeCloseTo(1)
     expect(left.amount).toBeCloseTo(right.amount)
     expect(left.verticalOffset).toBeCloseTo(-right.verticalOffset)
     expect(left.shear).toBeCloseTo(right.shear)
@@ -176,6 +179,14 @@ describe('spatial field invariants', () => {
     const oneStep = decayInertia(initial, 1 / 30, 5)
     const halfStep = decayInertia(initial, 1 / 60, 5)
     const twoSteps = decayInertia(halfStep, 1 / 60, 5)
+
+    // A half-life of one second halves the distance to the target.
+    expect(damp(0, 100, Math.LN2, 1)).toBeCloseTo(50, 12)
+    expect(damp(100, 0, Math.LN2, 1)).toBeCloseTo(50, 12)
+    const halfLife = decayInertia(initial, 1, Math.LN2)
+    expect(halfLife.offset.x).toBeCloseTo(3 + 60 / Math.LN2, 12)
+    expect(halfLife.offset.y).toBeCloseTo(-4 - 30 / Math.LN2, 12)
+    expect(halfLife.velocity).toEqual({ x: 60, y: -30 })
 
     expect(damp(damp(0, 100, 7, 1 / 60), 100, 7, 1 / 60)).toBeCloseTo(
       damp(0, 100, 7, 1 / 30),

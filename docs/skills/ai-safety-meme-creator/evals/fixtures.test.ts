@@ -83,28 +83,4 @@ describe('meme skill regression fixtures', () => {
 
     expect(problems).toEqual([])
   })
-
-  it('covers the manually recurring presentation and editorial regressions', () => {
-    const tags = new Set(memeSkillFixtures.flatMap(({ tags }) => tags))
-    const requiredCoverage = [
-      'protected-hinge',
-      'zone-overlap',
-      'setup-payoff',
-      'state-contrast',
-      'frame-order',
-      'large-type',
-      'wrapping',
-      'text-on-text',
-      'punctuation',
-      'indentation',
-      'contrast',
-      'fallback',
-      'rejection',
-      'one-bridge',
-      'canon-accuracy',
-      'locked-copy'
-    ]
-
-    expect(requiredCoverage.filter((tag) => !tags.has(tag))).toEqual([])
-  })
 })

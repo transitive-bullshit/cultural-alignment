@@ -1,6 +1,10 @@
 import { describe, expect, it } from 'vitest'
 
 import {
+  GALLERY_BRACKET_INSET_RATIO,
+  GALLERY_BRACKET_THICKNESS_RATIO,
+  GALLERY_FRAME_ASPECT,
+  GALLERY_SELECTED_SCALE,
   GALLERY_ITEM_SIZE_DEFAULT,
   GALLERY_ITEM_SIZE_MAX,
   GALLERY_ITEM_SIZE_MIN,
@@ -58,10 +62,6 @@ describe('gallery density projection', () => {
     GALLERY_ITEM_SIZE_MAX
   )
 
-  it('keeps the current five-lane composition as the default', () => {
-    expect(standard.lanes).toBe(5)
-  })
-
   it('reflows the field as frames become smaller or larger', () => {
     expect([compact.lanes, standard.lanes, expanded.lanes]).toEqual([7, 5, 2])
     expect(compact.frameWidthPixels).toBeLessThan(standard.frameWidthPixels)
@@ -69,19 +69,47 @@ describe('gallery density projection', () => {
   })
 
   it('uses each fully fitting desktop row count instead of skipping even counts', () => {
-    expect(
-      Array.from({ length: 27 }, (_, index) =>
-        getGalleryViewportMetrics(
-          false,
-          viewport.width,
-          viewport.height,
-          GALLERY_ITEM_SIZE_MIN + index * 5
-        )
-      ).map(({ lanes }) => lanes)
-    ).toEqual([
-      7, 6, 6, 6, 5, 5, 5, 5, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2,
-      2, 2
-    ])
+    const metrics = Array.from({ length: 27 }, (_, index) =>
+      getGalleryViewportMetrics(
+        false,
+        viewport.width,
+        viewport.height,
+        GALLERY_ITEM_SIZE_MIN + index * 5
+      )
+    )
+    const laneCounts = metrics.map(({ lanes }) => lanes)
+    expect([...new Set(laneCounts)]).toEqual([7, 6, 5, 4, 3, 2])
+    // Derive the outer frame/bracket extent from the rendered primitives,
+    // rather than accepting the producer's reported composition height.
+    const measured = metrics.map((metric) => {
+      const selectedWidth = metric.frameWidthPixels * GALLERY_SELECTED_SCALE
+      const decoratedHeight =
+        selectedWidth / GALLERY_FRAME_ASPECT +
+        selectedWidth *
+          (2 * GALLERY_BRACKET_INSET_RATIO + GALLERY_BRACKET_THICKNESS_RATIO)
+      return {
+        ...metric,
+        expectedHeight:
+          decoratedHeight + (metric.lanes - 1) * metric.rowPitchPixels
+      }
+    })
+    for (const metric of measured) {
+      expect(metric.compositionHeightPixels).toBeCloseTo(
+        metric.expectedHeight,
+        10
+      )
+      expect(metric.expectedHeight).toBeLessThanOrEqual(viewport.height)
+    }
+    for (const metric of measured.filter(({ lanes }) => lanes < 7)) {
+      // The chosen composition fits, and adding one complete row would not.
+      expect(metric.expectedHeight + metric.rowPitchPixels).toBeGreaterThan(
+        viewport.height
+      )
+    }
+    laneCounts.slice(1).forEach((lanes, index) => {
+      expect(lanes).toBeLessThanOrEqual(laneCounts[index]!)
+      expect(laneCounts[index]! - lanes).toBeLessThanOrEqual(1)
+    })
   })
 
   it('scales the row and column spacing in proportion with each frame', () => {

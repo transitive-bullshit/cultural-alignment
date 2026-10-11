@@ -69,6 +69,12 @@ async function readOrderedSources(page: Page) {
     .locator('[data-resource-list][data-resource-kind="source"] li > a')
     .evaluateAll((links) => links.map((link) => link.getAttribute('href')))
 
+  expect(hrefs.toSorted((a, b) => (a ?? '').localeCompare(b ?? ''))).toEqual(
+    sources
+      .map(({ slug }) => `/sources/${slug}`)
+      .toSorted((a, b) => a.localeCompare(b))
+  )
+  expect(new Set(hrefs).size).toBe(sources.length)
   return hrefs.map((href) => {
     const slug = href?.match(/^\/sources\/([^/]+)$/)?.[1]
     const source = slug ? sourcesBySlug.get(slug) : undefined

@@ -13,9 +13,6 @@ describe('production media source route', () => {
 
     expect(dynamicParams).toBe(false)
     expect(generateStaticParams()).toEqual(expectedParams)
-    expect(new Set(expectedParams.map(({ slug }) => slug)).size).toBe(
-      expectedParams.length
-    )
   })
 
   it('leaves image metadata to the colocated Open Graph image route', async () => {

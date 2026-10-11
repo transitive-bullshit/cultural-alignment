@@ -240,8 +240,10 @@ describe('auditContent', () => {
     )
     const markdown = formatAuditMarkdown(audit, { limit: 5 })
 
-    expect(markdown.indexOf('`title-length`')).toBeLessThan(
-      markdown.indexOf('`clip-missing`')
+    expect(markdown).toContain('## `title-length`')
+    expect(markdown).toContain('## `clip-missing`')
+    expect(markdown.indexOf('## `title-length`')).toBeLessThan(
+      markdown.indexOf('## `clip-missing`')
     )
   })
 })

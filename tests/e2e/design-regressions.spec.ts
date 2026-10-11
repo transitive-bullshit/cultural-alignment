@@ -1,5 +1,7 @@
 import { expect, test } from '@playwright/test'
 
+import concepts from '../../content/snapshot/concepts.json' with { type: 'json' }
+import scenarios from '../../content/snapshot/scenarios.json' with { type: 'json' }
 import { mockOptimizedImages } from './image-fixtures'
 
 test.beforeEach(async ({ page }) => {
@@ -142,7 +144,11 @@ test('phone galleries keep their header and archive controls clear', async ({
 test('shared card type stays stable across the desktop density breakpoint', async ({
   page
 }) => {
-  await page.goto('/concepts/outer-alignment')
+  const concept = concepts.find(
+    ({ id }) =>
+      scenarios.filter(({ conceptIds }) => conceptIds.includes(id)).length > 1
+  )!
+  await page.goto(`/concepts/${concept.slug}`)
   await page.evaluate(() => document.fonts.ready)
   const card = page.locator('[data-scenario-collection] li').first()
   const measure = async (width: number) => {
@@ -173,7 +179,11 @@ test('compact phone buttons respond beyond their visible icon box', async ({
   try {
     const page = await context.newPage()
     await mockOptimizedImages(page)
-    await page.goto('/scenarios/keep-summer-safe')
+    const scenario = scenarios.find(
+      ({ conceptIds, riskFamilyIds }) =>
+        conceptIds.length > 0 && riskFamilyIds.length > 0
+    )!
+    await page.goto(`/scenarios/${scenario.slug}`)
     const help = page.locator('[data-taxonomy-help]').first()
     await help.scrollIntoViewIfNeeded()
     const box = await help.boundingBox()
