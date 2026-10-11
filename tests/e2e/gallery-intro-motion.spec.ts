@@ -120,11 +120,17 @@ test.describe('gallery introduction motion', () => {
     expect(first).toBeLessThan(before)
     await page.clock.runFor(128)
     expect(await readPosition(canvas)).toBeLessThan(first)
-    await page.clock.runFor(3_000)
-    await expect(canvas).toHaveAttribute(
-      'data-gallery-inertia-burst',
-      'settled'
-    )
+    // Stop advancing once the burst settles. Rendering several extra seconds
+    // of WebGL frames can exhaust the test timeout on a software GPU.
+    await expect
+      .poll(
+        async () => {
+          await page.clock.runFor(128)
+          return canvas.getAttribute('data-gallery-inertia-burst')
+        },
+        { intervals: [0], timeout: 15_000 }
+      )
+      .toBe('settled')
     const settled = await readPosition(canvas)
     await page.clock.runFor(500)
     expect(await readPosition(canvas)).toBe(settled)
