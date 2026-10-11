@@ -315,6 +315,7 @@ function SpatialField({
   const hoveredSlotRef = useRef<ActiveSlot | null>(null)
   const initializedStateRef = useRef<string | null>(null)
   const autoMotionLayoutCountRef = useRef(0)
+  const positionDiagnosticRef = useRef<number | null>(null)
   const pendingAutoMotionLayoutRef = useRef<{
     count: number
     offsetX: number
@@ -708,6 +709,7 @@ function SpatialField({
   )
 
   useEffect(() => {
+    positionDiagnosticRef.current = null
     setIntroMotionDiagnostic(
       gl,
       initialOffsetX === null ? 'waiting' : 'skipped'
@@ -1402,8 +1404,14 @@ function SpatialField({
       slotYPositions[slotIndex] = laneMotion.y[slot.lane] ?? slot.y
     }
     // Expose a fixed slot's actual position, also consumed by the mesh transforms.
-    gl.domElement.dataset.galleryPositionX =
-      slotXPositions[Math.floor(layout.slots.length / 2)]!.toFixed(6)
+    const positionX = slotXPositions[Math.floor(layout.slots.length / 2)]!
+    if (positionDiagnosticRef.current !== positionX) {
+      positionDiagnosticRef.current = positionX
+      const positionValue = positionX.toFixed(6)
+      if (gl.domElement.dataset.galleryPositionX !== positionValue) {
+        gl.domElement.dataset.galleryPositionX = positionValue
+      }
+    }
 
     const textureVisibilityLimit =
       viewportWidthRef.current / 2 + frameWidth * 1.75
