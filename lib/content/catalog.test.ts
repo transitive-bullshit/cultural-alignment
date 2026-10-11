@@ -210,6 +210,19 @@ describe('ContentCatalog', () => {
       minimalSnapshot.sources.map((source) => [source.id, source])
     )
 
+    expect(
+      catalog
+        .listSourceResources()
+        .map(({ id }) => id)
+        .toSorted()
+    ).toEqual(['source-1', 'source-2'])
+    expect(
+      catalog
+        .listFranchiseResources()
+        .map(({ id }) => id)
+        .toSorted()
+    ).toEqual(['franchise-a', 'franchise-b'])
+
     for (const summary of catalog.listSourceResources()) {
       const source = sourcesById.get(summary.id)!
 
@@ -236,7 +249,9 @@ describe('ContentCatalog', () => {
 
       const page = catalog.getResourcePage('franchise', summary.slug)!
       if (page.kind !== 'franchise') throw new Error('Expected franchise page')
-      expect(page.sources).toHaveLength(summary.sourceCount)
+      expect(page.sources.map(({ id }) => id).toSorted()).toEqual(
+        summary.id === 'franchise-a' ? ['source-1'] : ['source-1', 'source-2']
+      )
       expect(
         page.sources.every(
           ({ id, poster }) =>
@@ -372,11 +387,12 @@ describe('ContentCatalog', () => {
       'Rotten Tomatoes',
       'YouTube trailer'
     ])
-    expect(sourcePage.scenarios).toHaveLength(
-      minimalSnapshot.scenarios.filter(
-        ({ sourceId }) => sourceId === sourcePage.id
-      ).length
-    )
+    expect(sourcePage.scenarios.map(({ id }) => id)).toEqual([
+      'old-a',
+      'null-a',
+      'old-b',
+      'null-b'
+    ])
     expect(
       new Set(
         sourcePage.relatedResources.map(({ kind, slug }) => `${kind}:${slug}`)
@@ -428,9 +444,13 @@ describe('ContentCatalog', () => {
       'related-source',
       'shared-source'
     ])
-    expect(franchisePage.scenarios).toHaveLength(
-      minimalSnapshot.scenarios.length
-    )
+    expect(franchisePage.scenarios.map(({ id }) => id)).toEqual([
+      'old-a',
+      'null-a',
+      'new',
+      'old-b',
+      'null-b'
+    ])
     expect(franchisePage.externalLinks.map(({ label }) => label)).toEqual([
       'IMDb'
     ])

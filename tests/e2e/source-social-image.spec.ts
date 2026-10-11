@@ -43,7 +43,8 @@ const resources = [
 for (const resource of resources) {
   test(`${resource.kind} detail publishes its generated social image`, async ({
     page,
-    request
+    request,
+    baseURL
   }) => {
     await mockOptimizedImages(page)
     await page.goto(`/${resource.route}/${resource.slug}`)
@@ -70,9 +71,12 @@ for (const resource of resources) {
       (await twitterImage.getAttribute('content'))!
     )
 
-    expect(openGraphImageUrl.pathname).toBe(expectedPath)
-    expect(twitterImageUrl.pathname).toBe(expectedPath)
-    const response = await request.get(openGraphImageUrl.pathname)
+    const expectedURL = new URL(expectedPath, baseURL)
+    // Next adds a cache-busting query; preserve it in the actual image request.
+    expectedURL.search = openGraphImageUrl.search
+    expect(openGraphImageUrl.href).toBe(expectedURL.href)
+    expect(twitterImageUrl.href).toBe(expectedURL.href)
+    const response = await request.get(openGraphImageUrl.href)
     expect(response.ok()).toBe(true)
     expect(response.headers()['content-type']).toBe('image/webp')
     expect(response.headers()['cache-control']).toBe(

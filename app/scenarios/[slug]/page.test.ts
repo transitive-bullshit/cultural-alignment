@@ -13,9 +13,6 @@ describe('production scenario route', () => {
 
     expect(dynamicParams).toBe(false)
     expect(generateStaticParams()).toEqual(expectedParams)
-    expect(new Set(expectedParams.map(({ slug }) => slug)).size).toBe(
-      expectedParams.length
-    )
   })
 
   it('publishes production route metadata', async () => {

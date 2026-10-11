@@ -1,10 +1,8 @@
-import { expect, test } from '@playwright/test'
+import { expect, test, type Locator } from '@playwright/test'
 
 import { mockOptimizedImages } from './image-fixtures'
 
 test.describe('gallery introduction motion', () => {
-  test.describe.configure({ mode: 'serial' })
-
   test('reloading the scenarios gallery keeps moving left through its initial layout correction', async ({
     page
   }) => {
@@ -88,6 +86,7 @@ test.describe('gallery introduction motion', () => {
     page
   }) => {
     await mockOptimizedImages(page)
+    await page.clock.install()
     await page.goto('/')
 
     const gallery = page.locator('[data-spatial-gallery="browse"]')
@@ -98,6 +97,9 @@ test.describe('gallery introduction motion', () => {
       'pending',
       { timeout: 15_000 }
     )
+    await expect(canvas).toHaveAttribute('data-gallery-position-x', /-?\d/)
+    await page.clock.pauseAt(await page.evaluate(() => Date.now() + 5_000))
+    const before = await readPosition(canvas)
 
     await page.locator('[data-gallery-intro-dismiss]').click()
 
@@ -113,6 +115,19 @@ test.describe('gallery introduction motion', () => {
       'data-gallery-inertia-burst',
       /^(launched|settled)$/
     )
+    await page.clock.runFor(64)
+    const first = await readPosition(canvas)
+    expect(first).toBeLessThan(before)
+    await page.clock.runFor(128)
+    expect(await readPosition(canvas)).toBeLessThan(first)
+    await page.clock.runFor(3_000)
+    await expect(canvas).toHaveAttribute(
+      'data-gallery-inertia-burst',
+      'settled'
+    )
+    const settled = await readPosition(canvas)
+    await page.clock.runFor(500)
+    expect(await readPosition(canvas)).toBe(settled)
   })
 
   test('reduced motion dismisses without positional movement', async ({
@@ -120,6 +135,7 @@ test.describe('gallery introduction motion', () => {
   }) => {
     await page.emulateMedia({ reducedMotion: 'reduce' })
     await mockOptimizedImages(page)
+    await page.clock.install()
     await page.goto('/')
 
     const canvas = page.locator('[data-spatial-gallery="browse"] canvas')
@@ -129,12 +145,17 @@ test.describe('gallery introduction motion', () => {
       'pending',
       { timeout: 15_000 }
     )
+    await expect(canvas).toHaveAttribute('data-gallery-position-x', /-?\d/)
+    await page.clock.pauseAt(await page.evaluate(() => Date.now() + 5_000))
+    const before = await readPosition(canvas)
     await page.locator('[data-gallery-intro-dismiss]').click()
 
     await expect(canvas).toHaveAttribute(
       'data-gallery-inertia-burst',
       'skipped'
     )
+    await page.clock.runFor(500)
+    expect(await readPosition(canvas)).toBe(before)
   })
 
   test.describe('phone viewport', () => {
@@ -166,3 +187,11 @@ test.describe('gallery introduction motion', () => {
     })
   })
 })
+
+async function readPosition(canvas: Locator) {
+  const value = await canvas.getAttribute('data-gallery-position-x')
+  expect(value).not.toBeNull()
+  const position = Number(value)
+  expect(Number.isFinite(position)).toBe(true)
+  return position
+}

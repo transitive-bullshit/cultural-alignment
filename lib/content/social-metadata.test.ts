@@ -9,7 +9,6 @@ import {
   getSceneContext,
   getScenarioSocialMetadata,
   resolveContentSocialMetadata,
-  SOCIAL_DESCRIPTION_MAX_LENGTH,
   toProsePhrase,
   type ContentSocialMetadata
 } from './social-metadata'
@@ -28,15 +27,16 @@ describe('social metadata derivation', () => {
       'AI security and governance risks'
     )
 
-    // Every current concept: only capitalization changes, acronyms survive,
-    // and eponymous names stay as authored.
+    // Current concepts retain words, acronyms, and eponyms; prose expands &.
     for (const { title } of contentCatalog.listResources('concept')) {
       const phrase = toProsePhrase(title)
       const acronyms = title.match(/\b\p{Lu}{2,}\b/gu) ?? []
 
-      expect(phrase.toLowerCase()).toBe(title.toLowerCase())
-      for (const acronym of acronyms) expect(phrase).toContain(acronym)
       const eponym = /[’']s\b/u.test(title)
+      expect(phrase.toLowerCase()).toBe(
+        (eponym ? title : title.replaceAll(' & ', ' and ')).toLowerCase()
+      )
+      for (const acronym of acronyms) expect(phrase).toContain(acronym)
       expect(
         eponym
           ? phrase === title
@@ -74,7 +74,7 @@ describe('social metadata derivation', () => {
     }
   })
 
-  it('keeps every description one short sentence without counts', () => {
+  it('keeps current descriptions short and free of scene counts', () => {
     const descriptions = [
       ...contentCatalog
         .getStaticSlugs('scenario')
@@ -97,11 +97,38 @@ describe('social metadata derivation', () => {
 
     for (const description of descriptions) {
       expect(description.length).toBeGreaterThan(0)
-      expect(description.length).toBeLessThanOrEqual(
-        SOCIAL_DESCRIPTION_MAX_LENGTH
-      )
+      expect(description.length).toBeLessThanOrEqual(150)
       expect(description).not.toMatch(/\b\d+ (?:AI|examples|scenes)\b/u)
     }
+  })
+
+  it('writes one sentence and drops overlong episode context without losing the mapping', () => {
+    const base = contentCatalog.getScenarioPage(
+      contentCatalog.getStaticSlugs('scenario')[0]!
+    )!
+    const scenario = {
+      ...base,
+      source: {
+        ...base.source,
+        title: 'Example Show',
+        sourceType: 'tv-show' as const
+      },
+      concepts: [{ ...base.concepts[0]!, title: 'AI Control' }],
+      episode: { label: 'Episode 4' }
+    }
+    expect(getScenarioSocialMetadata(scenario).description).toBe(
+      'This scene from Example Show (Episode 4) is an example of the AI safety concept of AI control.'
+    )
+    expect(
+      getScenarioSocialMetadata({
+        ...scenario,
+        episode: {
+          label: 'An exceptionally long episode title '.repeat(6).trim()
+        }
+      }).description
+    ).toBe(
+      'This scene from Example Show is an example of the AI safety concept of AI control.'
+    )
   })
 
   it('names each resource in its title and keeps authored capitalization', () => {
@@ -130,9 +157,7 @@ describe('social metadata derivation', () => {
     expect(social.description).toContain(
       toProsePhrase(scenario.concepts[0]!.title)
     )
-    expect(social.description.length).toBeLessThanOrEqual(
-      SOCIAL_DESCRIPTION_MAX_LENGTH
-    )
+    expect(social.description.length).toBeLessThanOrEqual(150)
   })
 
   it('uses a detail image when present and otherwise preserves the parent image', async () => {

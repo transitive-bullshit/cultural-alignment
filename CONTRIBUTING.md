@@ -52,8 +52,8 @@ Before submitting application, configuration, or synchronized-content changes, r
 ```bash
 pnpm content:validate
 pnpm test:checks
-pnpm build
-PLAYWRIGHT_SERVER=production pnpm test:e2e
+pnpm exec portless run --name cultural-alignment-e2e sh -c \
+  'NEXT_PUBLIC_SITE_URL="$PORTLESS_URL" pnpm build && PLAYWRIGHT_SERVER=production pnpm exec playwright test'
 ```
 
 This follows [CI](.github/workflows/build.yml). `pnpm test` is a shortcut for checks plus browser journeys and builds automatically; it does not include content validation. Documentation-only changes need the focused checks above. Report what ran and any failures or unavailable checks; dated passes in [QA](docs/QA.md) are evidence, not a current test result.
@@ -63,7 +63,7 @@ This follows [CI](.github/workflows/build.yml). `pnpm test` is a shortcut for ch
 Run app journeys through `pnpm test:e2e` so Portless supplies the required URL and port. The suite starts and stops its own server and does not reuse `pnpm dev`.
 
 - Default: build, then test a production server.
-- `PLAYWRIGHT_SERVER=production`: reuse an existing production **build**. Rebuild after changing code or content.
+- `PLAYWRIGHT_SERVER=production`: reuse an existing production **build**. Rebuild after changing code or content, with `NEXT_PUBLIC_SITE_URL` set to the same Portless URL used by the tests. The full-check command above sets it from Portless; the default runner also supplies it when building.
 - `PLAYWRIGHT_SERVER=development`: test a development server explicitly.
 - Local runs use installed Google Chrome; CI installs Chromium. `PLAYWRIGHT_CHANNEL` selects another installed channel.
 - Failure screenshots and traces are in ignored `test-results/playwright/`; CI also uploads its failure artifacts.

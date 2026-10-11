@@ -1,5 +1,6 @@
 import { expect, test } from '@playwright/test'
 
+import scenarios from '../../content/snapshot/scenarios.json' with { type: 'json' }
 import { mockOptimizedImages } from './image-fixtures'
 
 // Each gallery page ships a server-rendered index of its scenarios. It is the
@@ -17,13 +18,35 @@ test.describe('server-rendered scenario index', () => {
         const gallery = page.locator('[data-spatial-gallery="browse"]')
         const index = page.locator('[data-scenario-index]')
         const links = index.locator('a[href^="/scenarios/"]')
-        const itemCount = Number(
-          await gallery.getAttribute('data-gallery-item-count')
-        )
+        const expected =
+          route === '/'
+            ? scenarios.filter(({ tags }) =>
+                tags.some((tag) => tag === 'featured')
+              )
+            : scenarios
+        const expectedHrefs = expected.map(({ slug }) => `/scenarios/${slug}`)
 
         await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
         await expect(index).toBeVisible()
-        await expect(links).toHaveCount(itemCount)
+        await expect(links).toHaveCount(expected.length)
+        const hrefs = await links.evaluateAll((nodes) =>
+          nodes.map((node) => node.getAttribute('href'))
+        )
+        expect(
+          hrefs.toSorted((a, b) => (a ?? '').localeCompare(b ?? ''))
+        ).toEqual(expectedHrefs.toSorted((a, b) => a.localeCompare(b)))
+        expect(new Set(hrefs).size).toBe(expected.length)
+        const titles = new Map(
+          expected.map(({ slug, title }) => [`/scenarios/${slug}`, title])
+        )
+        const labels = await links.allTextContents()
+        labels.forEach((label, index) =>
+          expect(label).toContain(titles.get(hrefs[index]!)!)
+        )
+        await expect(gallery).toHaveAttribute(
+          'data-gallery-item-count',
+          String(expected.length)
+        )
         await expect(links.first()).toBeVisible()
         await expect(links.first()).not.toHaveText('')
       })

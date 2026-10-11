@@ -38,12 +38,27 @@ describe('structured data', () => {
     expect(structuredData.image.url).toBe(
       new URL(scenario.image.detailSrc, siteUrl).href
     )
-    expect(structuredData.about).toHaveLength(
-      scenario.franchises.length +
-        1 +
-        scenario.riskFamilies.length +
-        scenario.concepts.length
-    )
+    const expectedSubjects = [
+      ...scenario.franchises.map((franchise) => ({
+        '@type': 'CreativeWorkSeries',
+        '@id': new URL(`${franchise.href}#franchise`, siteUrl).href,
+        name: franchise.title,
+        url: new URL(franchise.href, siteUrl).href
+      })),
+      {
+        '@type': scenario.source.sourceType === 'movie' ? 'Movie' : 'TVSeries',
+        '@id': new URL(`${scenario.source.href}#source`, siteUrl).href,
+        name: scenario.source.title,
+        url: new URL(scenario.source.href, siteUrl).href
+      },
+      ...[...scenario.riskFamilies, ...scenario.concepts].map((term) => ({
+        '@type': 'DefinedTerm',
+        '@id': new URL(`${term.href}#term`, siteUrl).href,
+        name: term.title,
+        url: new URL(term.href, siteUrl).href
+      }))
+    ]
+    expect(structuredData.about).toEqual(expectedSubjects)
   })
 
   it.each(['risk-family', 'concept', 'source', 'franchise'] as const)(
@@ -60,7 +75,14 @@ describe('structured data', () => {
       expect(structuredData.name).toBe(social.title)
       expect(structuredData.description).toBe(social.description)
       expect(structuredData.url).toBe(new URL(resource.href, siteUrl).href)
-      expect(structuredData.hasPart).toHaveLength(resource.scenarios.length)
+      expect(structuredData.hasPart).toEqual(
+        resource.scenarios.map((scenario) => ({
+          '@type': 'Article',
+          '@id': new URL(`${scenario.href}#article`, siteUrl).href,
+          url: new URL(scenario.href, siteUrl).href,
+          headline: scenario.title
+        }))
+      )
     }
   )
 })

@@ -32,6 +32,7 @@ export default defineConfig({
     video: 'off'
   },
   webServer: {
+    env: { NEXT_PUBLIC_SITE_URL: baseURL },
     // Compile before parallel journeys, rather than on demand during reloads.
     command: useDevelopmentServer
       ? 'pnpm exec next dev --hostname 127.0.0.1'

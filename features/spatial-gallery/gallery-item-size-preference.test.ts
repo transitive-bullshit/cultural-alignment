@@ -1,136 +1,175 @@
-import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
-const externalStoreTestState = vi.hoisted(() => ({
+const observer = vi.hoisted(() => ({
   notifications: 0,
   server: false,
   subscribed: false
 }))
 
+// This harness observes the store contract. The browser journey exercises
+// React hydration and pointer/keyboard wiring with the real hook and control.
 vi.mock('react', () => ({
   useSyncExternalStore<T>(
     subscribe: (listener: () => void) => () => void,
     getClientSnapshot: () => T,
     getServerSnapshot: () => T
   ) {
-    if (externalStoreTestState.server) return getServerSnapshot()
-
-    if (!externalStoreTestState.subscribed) {
+    if (observer.server) return getServerSnapshot()
+    if (!observer.subscribed) {
       subscribe(() => {
-        externalStoreTestState.notifications += 1
+        observer.notifications += 1
       })
-      externalStoreTestState.subscribed = true
+      observer.subscribed = true
     }
     return getClientSnapshot()
   }
 }))
 
-import {
-  GALLERY_ITEM_SIZE_STORAGE_KEY,
-  setGalleryItemSizePreference,
-  setGalleryItemSizeTransition,
-  useGalleryItemSizePreference
-} from './gallery-item-size-preference'
+const storageKey = 'cultural-alignment:gallery-item-size:v1'
+let preference: typeof import('./gallery-item-size-preference')
+let events: EventTarget
+let stored: Map<string, string>
+let storage: {
+  getItem: ReturnType<typeof vi.fn<(key: string) => string | null>>
+  removeItem: ReturnType<typeof vi.fn<(key: string) => void>>
+  setItem: ReturnType<typeof vi.fn<(key: string, value: string) => void>>
+}
 
-describe('gallery item-size preference snapshots', () => {
-  const windowListeners = new Map<string, EventListener>()
-  const storedValues = new Map([[GALLERY_ITEM_SIZE_STORAGE_KEY, '110']])
-  const storage = {
+beforeEach(async () => {
+  vi.resetModules()
+  vi.useFakeTimers()
+  Object.assign(observer, {
+    notifications: 0,
+    server: false,
+    subscribed: false
+  })
+  events = new EventTarget()
+  stored = new Map([[storageKey, '110']])
+  storage = {
     getItem: vi.fn<(key: string) => string | null>(
-      (key) => storedValues.get(key) ?? null
+      (key) => stored.get(key) ?? null
     ),
     removeItem: vi.fn<(key: string) => void>((key) => {
-      storedValues.delete(key)
+      stored.delete(key)
     }),
     setItem: vi.fn<(key: string, value: string) => void>((key, value) => {
-      storedValues.set(key, value)
+      stored.set(key, value)
     })
-  } as unknown as Storage
-
-  beforeAll(() => {
-    vi.stubGlobal('window', {
-      addEventListener(type: string, listener: EventListener) {
-        windowListeners.set(type, listener)
-      },
-      clearTimeout: vi.fn<(timer: number) => void>(),
-      localStorage: storage,
-      setTimeout: vi.fn<() => number>(() => 1)
-    })
+  }
+  vi.stubGlobal('window', {
+    addEventListener: events.addEventListener.bind(events),
+    localStorage: storage,
+    setTimeout: globalThis.setTimeout,
+    clearTimeout: globalThis.clearTimeout
   })
+  preference = await import('./gallery-item-size-preference')
+})
 
-  afterAll(() => vi.unstubAllGlobals())
+afterEach(() => {
+  vi.clearAllTimers()
+  vi.useRealTimers()
+  vi.unstubAllGlobals()
+})
 
-  it('requests motion only for pointer-originated size changes', () => {
-    externalStoreTestState.server = true
-    expect(useGalleryItemSizePreference()).toEqual({
+function read() {
+  return preference.useGalleryItemSizePreference()
+}
+
+function remotePreference(value: string) {
+  events.dispatchEvent(
+    Object.assign(new Event('storage'), {
+      key: storageKey,
+      newValue: value,
+      storageArea: storage
+    })
+  )
+}
+
+describe('gallery item-size preference store', () => {
+  it('offers a default server snapshot and restores the stored client value', () => {
+    observer.server = true
+    expect(read()).toEqual({
       hydrated: false,
       itemSize: 100,
       itemSizeTransition: 'instant'
     })
-
-    externalStoreTestState.server = false
-    expect(useGalleryItemSizePreference()).toEqual({
+    observer.server = false
+    expect(read()).toEqual({
       hydrated: true,
       itemSize: 110,
       itemSizeTransition: 'instant'
     })
+    expect(storage.setItem).not.toHaveBeenCalled()
+  })
 
-    setGalleryItemSizePreference(120, 'smooth')
-    expect(useGalleryItemSizePreference()).toEqual({
+  it('debounces live changes and persists only the most recent size', () => {
+    read()
+    preference.setGalleryItemSizePreference(120, 'smooth')
+    expect(read()).toEqual({
       hydrated: true,
       itemSize: 120,
       itemSizeTransition: 'smooth'
     })
+    vi.advanceTimersByTime(249)
+    expect(stored.get(storageKey)).toBe('110')
+    preference.setGalleryItemSizePreference(130, 'smooth')
+    vi.advanceTimersByTime(249)
+    expect(storage.setItem).not.toHaveBeenCalled()
+    vi.advanceTimersByTime(1)
+    expect(stored.get(storageKey)).toBe('130')
+    expect(storage.setItem).toHaveBeenCalledExactlyOnceWith(storageKey, '130')
+  })
 
-    const persistenceCallsAfterSizeChange = vi.mocked(window.setTimeout).mock
-      .calls.length
-    setGalleryItemSizeTransition('instant')
-    expect(useGalleryItemSizePreference()).toEqual({
+  it('changes transition state without scheduling another storage write', () => {
+    read()
+    preference.setGalleryItemSizePreference(120, 'smooth')
+    vi.advanceTimersByTime(250)
+    storage.setItem.mockClear()
+    preference.setGalleryItemSizeTransition('instant')
+    expect(read()).toEqual({
       hydrated: true,
       itemSize: 120,
       itemSizeTransition: 'instant'
     })
-    expect(vi.mocked(window.setTimeout)).toHaveBeenCalledTimes(
-      persistenceCallsAfterSizeChange
-    )
+    vi.advanceTimersByTime(250)
+    expect(storage.setItem).not.toHaveBeenCalled()
+  })
 
-    setGalleryItemSizeTransition('smooth')
-
-    windowListeners.get('storage')?.({
-      key: GALLERY_ITEM_SIZE_STORAGE_KEY,
-      newValue: '90',
-      storageArea: storage
-    } as unknown as Event)
-    expect(useGalleryItemSizePreference()).toEqual({
+  it('keeps pending local changes over storage events and accepts later remote changes', () => {
+    read()
+    preference.setGalleryItemSizePreference(120, 'smooth')
+    remotePreference('90')
+    expect(read()).toEqual({
       hydrated: true,
       itemSize: 120,
       itemSizeTransition: 'smooth'
     })
-
-    const notificationsAfterPointerChange = externalStoreTestState.notifications
-    windowListeners.get('pagehide')?.({} as Event)
-    expect(storedValues.get(GALLERY_ITEM_SIZE_STORAGE_KEY)).toBe('120')
-    expect(externalStoreTestState.notifications).toBe(
-      notificationsAfterPointerChange
-    )
-
-    setGalleryItemSizePreference(115)
-    expect(useGalleryItemSizePreference()).toEqual({
-      hydrated: true,
-      itemSize: 115,
-      itemSizeTransition: 'instant'
-    })
-
-    windowListeners.get('pagehide')?.({} as Event)
-
-    windowListeners.get('storage')?.({
-      key: GALLERY_ITEM_SIZE_STORAGE_KEY,
-      newValue: '90',
-      storageArea: storage
-    } as unknown as Event)
-    expect(useGalleryItemSizePreference()).toEqual({
+    vi.advanceTimersByTime(250)
+    expect(stored.get(storageKey)).toBe('120')
+    remotePreference('90')
+    expect(read()).toEqual({
       hydrated: true,
       itemSize: 90,
       itemSizeTransition: 'instant'
     })
+  })
+
+  it('flushes pending changes on pagehide without notifying or writing twice', () => {
+    read()
+    preference.setGalleryItemSizePreference(115)
+    const notifications = observer.notifications
+    events.dispatchEvent(new Event('pagehide'))
+    expect(stored.get(storageKey)).toBe('115')
+    expect(observer.notifications).toBe(notifications)
+    vi.advanceTimersByTime(250)
+    expect(storage.setItem).toHaveBeenCalledExactlyOnceWith(storageKey, '115')
+  })
+
+  it('removes the stored override when the default size is restored', () => {
+    read()
+    preference.setGalleryItemSizePreference(100)
+    vi.advanceTimersByTime(250)
+    expect(stored.has(storageKey)).toBe(false)
+    expect(storage.removeItem).toHaveBeenCalledExactlyOnceWith(storageKey)
   })
 })

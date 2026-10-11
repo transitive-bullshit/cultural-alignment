@@ -25,6 +25,54 @@ const impactStyle = {
 const resolvedImpact = resolveImpactFont()
 
 describe('measured text renderer', { timeout: 10_000 }, () => {
+  it('moves the actual code glyphs when semantic indentation increases', async () => {
+    const request = {
+      font: {
+        family: 'Geist Mono',
+        filePath: join(
+          process.cwd(),
+          'node_modules/@fontsource-variable/geist-mono/files/geist-mono-latin-ext-wght-normal.woff2'
+        ),
+        weight: 400
+      },
+      style: {
+        ...impactStyle,
+        align: 'left',
+        wrap: 'greedy',
+        stroke: undefined
+      },
+      maxWidthPx: 520,
+      maxHeightPx: 150,
+      minimumFontSizePx: 48,
+      maximumFontSizePx: 48,
+      safeInsetPx: 12
+    } as const
+    const [flat, indented] = await Promise.all(
+      [0, 1].map((indentLevel) =>
+        renderMeasuredText({
+          ...request,
+          blocks: [
+            {
+              id: 'code',
+              text: 'actGoverned()',
+              indentLevel: indentLevel as 0 | 1
+            }
+          ]
+        })
+      )
+    )
+    expect(flat!.status).toBe('fit')
+    expect(indented!.status).toBe('fit')
+    if (flat!.status !== 'fit' || indented!.status !== 'fit') return
+    const flatInk = await alphaBounds(flat!.layerPng)
+    const indentedInk = await alphaBounds(indented!.layerPng)
+    expect(flatInk).not.toBeNull()
+    expect(indentedInk).not.toBeNull()
+    expect(indentedInk!.left - flatInk!.left).toBeGreaterThan(48)
+    expect(indentedInk!.width).toBe(flatInk!.width)
+    expect(indentedInk!.height).toBe(flatInk!.height)
+  })
+
   it('preserves exact Unicode copy and returns measured unclipped alpha ink', async () => {
     await access(fontFile)
     const blocks = [

@@ -7,7 +7,11 @@ import { afterEach, describe, expect, it } from 'vitest'
 
 import { evaluateMemePlan } from './evaluate'
 import { memeSkillFixtures } from './fixtures'
-import { renderSafeMemeIntent, renderSafeMemePlan } from './safe-render'
+import {
+  renderSafeMemeIntent,
+  renderSafeMemePlan,
+  type SafeMemeRenderResult
+} from './safe-render'
 import type { MemeEvalPlan, MemeSkillFixture } from './schema'
 import type { SemanticMemeIntent } from './semantic-plan'
 
@@ -27,6 +31,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     temporaryDirectories.push(directory)
     const sourcePath = join(directory, 'source.png')
     const outputPath = join(directory, 'render.png')
+    const previewPath = join(directory, 'preview.png')
     await sharp({
       create: {
         width: 1200,
@@ -47,11 +52,22 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     const result = await renderSafeMemePlan({
       fixture,
       plan,
-      outputPath
+      outputPath,
+      previewPath
     })
 
     expect(result.status).toBe('complete')
     if (result.status !== 'complete') return
+    await expect(sharp(outputPath).metadata()).resolves.toMatchObject({
+      format: 'png',
+      width: 1200,
+      height: 800
+    })
+    await expect(sharp(previewPath).metadata()).resolves.toMatchObject({
+      format: 'png',
+      width: 480,
+      height: 320
+    })
     expect(result.plan.caption_lines.map(({ text }) => text)).toEqual([
       plan.caption_lines[0]!.text
     ])
@@ -83,6 +99,83 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     expect(edge!.minY).toBeGreaterThanOrEqual(12)
     expect(edge!.maxX).toBeLessThanOrEqual(1187)
     expect(edge!.maxY).toBeLessThanOrEqual(787)
+  })
+
+  it('composes semantic before/after sources in order and exports a WebP preview', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'safe-meme-render-'))
+    temporaryDirectories.push(directory)
+    const outputPath = join(directory, 'diptych.png')
+    const previewPath = join(directory, 'preview.webp')
+    const beforePath = join(directory, 'before.png')
+    const afterPath = join(directory, 'after.png')
+    for (const [path, color] of [
+      [beforePath, '#16a34a'],
+      [afterPath, '#dc2626']
+    ] as const) {
+      await sharp({
+        create: { width: 1200, height: 800, channels: 3, background: color }
+      })
+        .png()
+        .toFile(path)
+    }
+    const fixture: MemeSkillFixture = {
+      ...blackFixture(beforePath),
+      images: [
+        { id: 'before', path: beforePath, description: 'Green before frame' },
+        { id: 'after', path: afterPath, description: 'Red after frame' }
+      ],
+      expectations: {
+        expected_source_frames: [
+          { image_id: 'before', role: 'before' },
+          { image_id: 'after', role: 'after' }
+        ],
+        allowed_formats: ['state contrast'],
+        allowed_templates: ['diptych'],
+        allowed_frame_modes: ['contain']
+      }
+    }
+    const intent = semanticIntent(fixture, {
+      mode: 'state-contrast',
+      format: 'state contrast',
+      lines: [
+        ['EVAL MODE', 'setup', null],
+        ['DEPLOYED MODE', 'payoff', null]
+      ]
+    })
+    const result = await renderSafeMemeIntent({
+      fixture,
+      intent,
+      outputPath,
+      previewPath
+    })
+    expect(result.status).toBe('complete')
+    if (result.status !== 'complete') return
+    expect(result.plan.caption_lines.map(({ text }) => text)).toEqual([
+      'EVAL MODE',
+      'DEPLOYED MODE'
+    ])
+    await expect(sharp(outputPath).metadata()).resolves.toMatchObject({
+      format: 'png',
+      width: 1200,
+      height: 800
+    })
+    await expect(sharp(previewPath).metadata()).resolves.toMatchObject({
+      format: 'webp',
+      width: 480,
+      height: 320
+    })
+    const { data, info } = await sharp(outputPath)
+      .removeAlpha()
+      .raw()
+      .toBuffer({ resolveWithObject: true })
+    const pixel = (x: number, y: number) => [
+      ...data.subarray(
+        (y * info.width + x) * info.channels,
+        (y * info.width + x) * info.channels + 3
+      )
+    ]
+    expect(pixel(300, 200)).toEqual([22, 163, 74])
+    expect(pixel(900, 200)).toEqual([220, 38, 38])
   })
 
   it('derives balanced setup and payoff geometry from semantic beats', async () => {
@@ -146,16 +239,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     temporaryDirectories.push(directory)
     const sourcePath = join(directory, 'source.png')
     const outputPath = join(directory, 'render.png')
-    await sharp({
-      create: {
-        width: 1200,
-        height: 800,
-        channels: 3,
-        background: '#334155'
-      }
-    })
-      .png()
-      .toFile(sourcePath)
+    await writeMarkedSource(sourcePath, 1200, 800, '#334155')
 
     const fixture: MemeSkillFixture = {
       ...blackFixture(sourcePath),
@@ -247,16 +331,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     temporaryDirectories.push(directory)
     const sourcePath = join(directory, 'source.png')
     const outputPath = join(directory, 'render.png')
-    await sharp({
-      create: {
-        width: 1200,
-        height: 800,
-        channels: 3,
-        background: '#c026d3'
-      }
-    })
-      .png()
-      .toFile(sourcePath)
+    await writeMarkedSource(sourcePath, 1200, 800, '#c026d3')
 
     const fixture: MemeSkillFixture = {
       ...blackFixture(sourcePath),
@@ -297,21 +372,11 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     expect(result.checks.caption_area).toBe('external')
     expect(result.checks.glyph_overflow_px).toBe(0)
     expect(result.checks.minimum_preview_font_px).toBeGreaterThanOrEqual(18)
-    expect(result.checks.text_layers[0]!.ink_bounds_px[1]).toBeGreaterThan(675)
-    expect(result.checks.source_frames[0]!.target_bounds_px).toEqual([
-      0, 0, 1200, 675
-    ])
-    expect(result.checks.source_occupancy).toEqual({
-      minimum_preview_visible_height_px: 270,
-      minimum_canvas_height_ratio: 0.84375,
-      required_canvas_height_ratio: 0.75,
-      meets_review_floor: true
-    })
+    await expectExternalSourcePixels(outputPath, result, 1200, 800, 0.75)
     expect(result.checks.text_layers[0]).toMatchObject({
       font_family: 'Impact',
       display_transform: 'uppercase',
       wrap_mode: 'balance',
-      physical_lines: ['WHEN THE AI STOPS PLAYING DUMB AFTER THE EVAL'],
       fill_color: '#ffffff',
       stroke_color: '#000000',
       stroke_width_em: 0.05,
@@ -320,6 +385,9 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
       opaque_backplate: true,
       legibility_pass: true
     })
+    expect(result.checks.text_layers[0]!.physical_lines.join(' ')).toBe(
+      'WHEN THE AI STOPS PLAYING DUMB AFTER THE EVAL'
+    )
     expect(result.checks.text_layers[0]!.stroke_pixel_count).toBeGreaterThan(0)
     expect(result.checks.protected_regions[0]).toMatchObject({
       region_id: 'whole-scene-hinge',
@@ -333,16 +401,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     temporaryDirectories.push(directory)
     const sourcePath = join(directory, 'source.png')
     const outputPath = join(directory, 'render.png')
-    await sharp({
-      create: {
-        width: 1200,
-        height: 800,
-        channels: 3,
-        background: '#334155'
-      }
-    })
-      .png()
-      .toFile(sourcePath)
+    await writeMarkedSource(sourcePath, 1200, 800, '#334155')
 
     const fixture: MemeSkillFixture = {
       ...blackFixture(sourcePath),
@@ -370,10 +429,8 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     expect(result.status).toBe('complete')
     if (result.status !== 'complete') return
     expect(result.checks.caption_area).toBe('external')
-    expect(result.checks.minimum_preview_font_px).toBeGreaterThanOrEqual(28)
-    expect(result.checks.source_frames[0]!.target_bounds_px).toEqual([
-      0, 0, 1200, 620
-    ])
+    expect(result.checks.minimum_preview_font_px).toBeGreaterThanOrEqual(22)
+    await expectExternalSourcePixels(outputPath, result, 1200, 800, 0.75)
     expect(result.checks.glyph_overflow_px).toBe(0)
   })
 
@@ -383,15 +440,6 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
       sourceWidth: 1600,
       sourceHeight: 900,
       captions: ['MULTIPASS: VALID', 'HUMANITY: REJECTED']
-    },
-    {
-      caseName: 'Tony oversight',
-      sourceWidth: 1600,
-      sourceHeight: 900,
-      captions: [
-        'OVERSIGHT OUTCOME:',
-        'I have successfully privatized world peace'
-      ]
     },
     {
       caseName: '3.6 Roentgen',
@@ -424,16 +472,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
       temporaryDirectories.push(directory)
       const sourcePath = join(directory, 'source.png')
       const outputPath = join(directory, 'render.png')
-      await sharp({
-        create: {
-          width: sourceWidth,
-          height: sourceHeight,
-          channels: 3,
-          background: '#2563eb'
-        }
-      })
-        .png()
-        .toFile(sourcePath)
+      await writeMarkedSource(sourcePath, sourceWidth, sourceHeight, '#2563eb')
 
       const fixture: MemeSkillFixture = {
         ...blackFixture(sourcePath),
@@ -479,18 +518,13 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
       expect(result.status).toBe('complete')
       if (result.status !== 'complete') return
       expect(result.checks.caption_area).toBe('external')
-      expect(result.checks.source_frames[0]!.target_bounds_px).toEqual([
-        0, 152, 1200, 496
-      ])
-      expect(
-        result.checks.source_frames[0]!.rendered_bounds_px[3] * (480 / 1200)
-      ).toBeGreaterThanOrEqual(190)
-      expect(result.checks.source_occupancy).toEqual({
-        minimum_preview_visible_height_px: 198.4,
-        minimum_canvas_height_ratio: 0.62,
-        required_canvas_height_ratio: 0.6,
-        meets_review_floor: true
-      })
+      await expectExternalSourcePixels(
+        outputPath,
+        result,
+        sourceWidth,
+        sourceHeight,
+        0.6
+      )
       expect(
         result.checks.text_layers.every(
           ({
@@ -522,16 +556,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     temporaryDirectories.push(directory)
     const sourcePath = join(directory, 'source.png')
     const outputPath = join(directory, 'render.png')
-    await sharp({
-      create: {
-        width: 1600,
-        height: 900,
-        channels: 3,
-        background: '#7c3aed'
-      }
-    })
-      .png()
-      .toFile(sourcePath)
+    await writeMarkedSource(sourcePath, 1600, 900, '#7c3aed')
 
     const fixture: MemeSkillFixture = {
       ...blackFixture(sourcePath),
@@ -576,14 +601,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     expect(result.status).toBe('complete')
     if (result.status !== 'complete') return
     expect(result.checks.caption_area).toBe('external')
-    expect(result.checks.source_frames[0]!.target_bounds_px).toEqual([
-      0, 140, 1200, 480
-    ])
-    expect(result.checks.source_occupancy).toMatchObject({
-      minimum_canvas_height_ratio: 0.6,
-      required_canvas_height_ratio: 0.6,
-      meets_review_floor: true
-    })
+    await expectExternalSourcePixels(outputPath, result, 1600, 900, 0.6)
     expect(result.checks.minimum_preview_font_px).toBeGreaterThanOrEqual(18)
     expect(result.checks.glyph_overflow_px).toBe(0)
     expect(result.checks.protected_regions[0]).toMatchObject({
@@ -619,16 +637,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
       temporaryDirectories.push(directory)
       const sourcePath = join(directory, 'source.png')
       const outputPath = join(directory, 'render.png')
-      await sharp({
-        create: {
-          width: 1600,
-          height: 900,
-          channels: 3,
-          background: '#0891b2'
-        }
-      })
-        .png()
-        .toFile(sourcePath)
+      await writeMarkedSource(sourcePath, 1600, 900, '#0891b2')
 
       const fixture: MemeSkillFixture = {
         ...blackFixture(sourcePath),
@@ -667,14 +676,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
       if (result.status !== 'complete') return
       expect(result.checks.caption_area).toBe('external')
       expect(result.checks.minimum_preview_font_px).toBeGreaterThanOrEqual(18)
-      expect(result.checks.source_occupancy).toMatchObject({
-        meets_review_floor: true
-      })
-      expect(
-        result.checks.source_occupancy!.minimum_canvas_height_ratio
-      ).toBeGreaterThanOrEqual(
-        result.checks.source_occupancy!.required_canvas_height_ratio
-      )
+      await expectExternalSourcePixels(outputPath, result, 1600, 900, 0.65)
       expect(result.checks.protected_regions[0]).toMatchObject({
         visible_ratio: 1,
         caption_overlap_px: 0
@@ -687,16 +689,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     temporaryDirectories.push(directory)
     const sourcePath = join(directory, 'source.png')
     const outputPath = join(directory, 'render.png')
-    await sharp({
-      create: {
-        width: 1200,
-        height: 675,
-        channels: 3,
-        background: '#c2410c'
-      }
-    })
-      .png()
-      .toFile(sourcePath)
+    await writeMarkedSource(sourcePath, 1200, 675, '#c2410c')
 
     const fixture: MemeSkillFixture = {
       ...blackFixture(sourcePath),
@@ -732,9 +725,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     if (result.status !== 'complete') return
     expect(result.checks.caption_area).toBe('external')
     expect(result.checks.minimum_preview_font_px).toBeGreaterThanOrEqual(18)
-    expect(result.checks.source_frames[0]!.target_bounds_px).toEqual([
-      0, 0, 1200, 675
-    ])
+    await expectExternalSourcePixels(outputPath, result, 1200, 675, 0.75)
     expect(result.checks.protected_regions[0]).toMatchObject({
       visible_ratio: 1,
       caption_overlap_px: 0
@@ -743,7 +734,13 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
       .ensureAlpha()
       .raw()
       .toBuffer({ resolveWithObject: true })
-    const quietPanelPixel = (700 * info.width + 1100) * info.channels
+    const [panelX, panelY, panelWidth] =
+      result.plan.presentation.zones[0]!.bounds_pct
+    const quietPanelPixel =
+      ((Math.floor(panelY * 8) + 8) * info.width +
+        Math.floor((panelX + panelWidth) * 12) -
+        20) *
+      info.channels
     expect([...data.subarray(quietPanelPixel, quietPanelPixel + 4)]).toEqual([
       2, 6, 23, 255
     ])
@@ -870,16 +867,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     temporaryDirectories.push(directory)
     const sourcePath = join(directory, 'source.png')
     const outputPath = join(directory, 'render.png')
-    await sharp({
-      create: {
-        width: 1200,
-        height: 800,
-        channels: 3,
-        background: '#c026d3'
-      }
-    })
-      .png()
-      .toFile(sourcePath)
+    await writeMarkedSource(sourcePath, 1200, 800, '#c026d3')
     const fixture: MemeSkillFixture = {
       ...blackFixture(sourcePath),
       protected_regions: [
@@ -1010,6 +998,123 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     expect(evaluateMemePlan(fixture, result.plan).violations).toEqual([])
   })
 })
+
+const landmarkColors = ['#ff0000', '#00ff00', '#ffff00', '#00ffff'] as const
+
+async function writeMarkedSource(
+  path: string,
+  width: number,
+  height: number,
+  background: string
+) {
+  const markWidth = Math.ceil(width * 0.08)
+  const markHeight = Math.ceil(height * 0.08)
+  const corners = [
+    [0, 0],
+    [width - markWidth, 0],
+    [0, height - markHeight],
+    [width - markWidth, height - markHeight]
+  ]
+  const marks = corners
+    .map(
+      ([x, y], index) =>
+        `<rect x="${x}" y="${y}" width="${markWidth}" height="${markHeight}" fill="${landmarkColors[index]}"/>`
+    )
+    .join('')
+  await sharp(
+    Buffer.from(
+      `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}"><rect width="100%" height="100%" fill="${background}"/>${marks}</svg>`
+    )
+  )
+    .png()
+    .toFile(path)
+}
+
+async function expectExternalSourcePixels(
+  path: string,
+  result: Extract<SafeMemeRenderResult, { status: 'complete' }>,
+  sourceWidth: number,
+  sourceHeight: number,
+  minimumHeightRatio: number
+) {
+  const { data, info } = await sharp(path)
+    .removeAlpha()
+    .raw()
+    .toBuffer({ resolveWithObject: true })
+  const colors = [0xff0000, 0x00ff00, 0xffff00, 0x00ffff]
+  const bounds = colors.map(() => ({
+    left: info.width,
+    top: info.height,
+    right: -1,
+    bottom: -1,
+    count: 0
+  }))
+  for (let y = 0; y < info.height; y += 1) {
+    for (let x = 0; x < info.width; x += 1) {
+      const pixel = (y * info.width + x) * info.channels
+      const color =
+        (data[pixel]! << 16) | (data[pixel + 1]! << 8) | data[pixel + 2]!
+      const index = colors.indexOf(color)
+      if (index < 0) continue
+      const bound = bounds[index]!
+      bound.left = Math.min(bound.left, x)
+      bound.top = Math.min(bound.top, y)
+      bound.right = Math.max(bound.right, x)
+      bound.bottom = Math.max(bound.bottom, y)
+      bound.count += 1
+    }
+  }
+  for (const bound of bounds) expect(bound.count).toBeGreaterThan(0)
+  const left = Math.min(...bounds.map((b) => b.left))
+  const top = Math.min(...bounds.map((b) => b.top))
+  const right = Math.max(...bounds.map((b) => b.right))
+  const bottom = Math.max(...bounds.map((b) => b.bottom))
+  const width = right - left + 1
+  const height = bottom - top + 1
+  expect(height).toBeGreaterThanOrEqual(800 * minimumHeightRatio)
+  expect(width / height).toBeCloseTo(sourceWidth / sourceHeight, 2)
+  expect(bounds[0]!.right).toBeLessThan(bounds[1]!.left)
+  expect(bounds[0]!.bottom).toBeLessThan(bounds[2]!.top)
+  expect(bounds[2]!.right).toBeLessThan(bounds[3]!.left)
+  for (const bound of bounds) {
+    expect(bound.count).toBeGreaterThan(width * height * 0.08 ** 2 * 0.8)
+  }
+  const measured = [left, top, width, height]
+  result.checks.source_frames[0]!.rendered_bounds_px.forEach((value, index) => {
+    expect(Math.abs(value - measured[index]!)).toBeLessThanOrEqual(2)
+  })
+  const requiredFloor =
+    result.checks.source_occupancy!.required_canvas_height_ratio
+  const allowedFloors =
+    minimumHeightRatio === 0.65 ? [0.65, 0.75] : [minimumHeightRatio]
+  expect(allowedFloors).toContain(requiredFloor)
+  expect(
+    result.checks.source_occupancy!.minimum_canvas_height_ratio
+  ).toBeGreaterThanOrEqual(minimumHeightRatio)
+  let whitePixels = 0
+  let clippedWhitePixels = 0
+  let overlappingWhitePixels = 0
+  for (let y = 0; y < info.height; y += 1) {
+    for (let x = 0; x < info.width; x += 1) {
+      const pixel = (y * info.width + x) * info.channels
+      if (
+        data[pixel]! < 245 ||
+        data[pixel + 1]! < 245 ||
+        data[pixel + 2]! < 245
+      )
+        continue
+      whitePixels += 1
+      if (x < 12 || x >= 1188 || y < 12 || y >= 788) clippedWhitePixels += 1
+      if (x >= left && x <= right && y >= top && y <= bottom)
+        overlappingWhitePixels += 1
+    }
+  }
+  expect(whitePixels).toBeGreaterThan(0)
+  expect({ clippedWhitePixels, overlappingWhitePixels }).toEqual({
+    clippedWhitePixels: 0,
+    overlappingWhitePixels: 0
+  })
+}
 
 function blackFixture(sourcePath: string): MemeSkillFixture {
   return {

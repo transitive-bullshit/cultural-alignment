@@ -106,8 +106,29 @@ describe('descriptorMatchesSource', () => {
     const descriptor = imageDescriptor()
 
     expect(
-      descriptorMatchesSource(descriptor, descriptor.source, pipelineVersion)
+      descriptorMatchesSource(
+        descriptor,
+        { ...descriptor.source },
+        pipelineVersion
+      )
     ).toBe(true)
+    expect(
+      descriptorMatchesSource(
+        descriptor,
+        descriptor.source,
+        pipelineVersion + 1
+      )
+    ).toBe(false)
+    expect(
+      descriptorMatchesSource(
+        descriptor,
+        {
+          ...descriptor.source,
+          blockId: '5e80fd49-1461-42bb-a72b-76f069cf62a3'
+        },
+        pipelineVersion
+      )
+    ).toBe(false)
     expect(
       descriptorMatchesSource(
         descriptor,
@@ -119,6 +140,48 @@ describe('descriptorMatchesSource', () => {
       descriptorMatchesSource(
         absentDescriptor(),
         descriptor.source,
+        pipelineVersion
+      )
+    ).toBe(false)
+    expect(
+      descriptorMatchesSource(null, descriptor.source, pipelineVersion)
+    ).toBe(false)
+
+    const externalSource = {
+      ...descriptor.source,
+      kind: 'external',
+      url: 'https://images.example.com/original.png'
+    } as const
+    const external = { ...descriptor, source: externalSource }
+    expect(
+      descriptorMatchesSource(external, { ...externalSource }, pipelineVersion)
+    ).toBe(true)
+    expect(
+      descriptorMatchesSource(
+        external,
+        { ...externalSource, url: 'https://images.example.com/changed.png' },
+        pipelineVersion
+      )
+    ).toBe(false)
+
+    const fallback = fallbackDescriptor()
+    expect(
+      descriptorMatchesSource(fallback, { ...fallback.source }, pipelineVersion)
+    ).toBe(true)
+    expect(
+      descriptorMatchesSource(
+        fallback,
+        { ...fallback.source, imageBlockId: 'another-thumbnail' },
+        pipelineVersion
+      )
+    ).toBe(false)
+    expect(
+      descriptorMatchesSource(
+        fallback,
+        {
+          ...fallback.source,
+          url: 'https://i.ytimg.com/vi/another/hqdefault.jpg'
+        },
         pipelineVersion
       )
     ).toBe(false)
