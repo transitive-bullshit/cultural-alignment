@@ -23,7 +23,7 @@ Preconditions:
 - The snapshot has a source without a poster; otherwise the first source is used.
 
 - **Metadata.** Load each target detail page. Both `meta[property="og:image"]` and `meta[name="twitter:image"]` have the path `/<route>/<slug>/opengraph-image`.
-- **Render.** Request that path from the instance with Playwright's `request.get`. The response is 200 with `content-type: image/webp`; Sharp reads `webp` at 1200×630. The image and its `cache-control`, `cdn-cache-control`, and `vercel-cdn-cache-control` headers are saved.
+- **Render.** Request that path from the instance with Playwright's `request.get`. The response is 200 with `content-type: image/webp`; Sharp reads `webp` at 1200×630, and `Cache-Control`, `CDN-Cache-Control`, and `Vercel-CDN-Cache-Control` equal `socialImageCacheHeaders` in `lib/media/social-image.ts`. The image and its headers are saved.
 - **Sitemap.** `GET /sitemap.xml` lists the path of every snapshot scenario, source, franchise, risk family, and concept, and no `/scenarios/family/` paths.
 - **Robots and llms.txt.** `GET /robots.txt` contains a `Sitemap:` line ending in `/sitemap.xml`. `GET /llms.txt` returns 200 and names Cultural Alignment.
 - **Proof.** Run `.agents/skills/verify-cultural-alignment/verify.ts drive .agents/skills/verify-cultural-alignment/journeys/social-images.journey.ts --run=<id> -- --project=desktop`. Evidence includes five `.webp` cards to inspect visually, their response records, and the sitemap, robots, and `llms.txt` bodies.
