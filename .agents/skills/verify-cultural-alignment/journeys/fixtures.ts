@@ -23,7 +23,8 @@ export type Evidence = {
   file(label: string, extension: string, body: Buffer): Promise<void>
   /**
    * Declares problems the journey causes on purpose, such as a deliberate
-   * 404, matched against each problem's kind, text, and page URL.
+   * 404. The pattern is matched against `<kind> <text>`, where text names the
+   * failing URL; other problems on the same page stay findings.
    */
   expectProblems(pattern: RegExp, reason: string): void
 }
@@ -48,9 +49,11 @@ export const test = base.extend<{ evidence: Evidence }>({
 
     page.on('console', (message) => {
       if (message.type() === 'error' || message.type() === 'warning') {
+        // The location names the failing resource for "Failed to load" errors.
+        const { url } = message.location()
         problems.push({
           kind: `console.${message.type()}`,
-          text: message.text(),
+          text: url ? `${message.text()} at ${url}` : message.text(),
           url: page.url()
         })
       }
@@ -112,7 +115,7 @@ export const test = base.extend<{ evidence: Evidence }>({
     const classified = problems.map((problem) => ({
       ...problem,
       reason: expected.find(({ pattern }) =>
-        pattern.test(`${problem.kind} ${problem.text} ${problem.url}`)
+        pattern.test(`${problem.kind} ${problem.text}`)
       )?.reason
     }))
 

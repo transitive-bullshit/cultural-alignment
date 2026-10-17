@@ -24,7 +24,7 @@ Preconditions:
 
 - **Open from header.** Load `/about`, wait for `[data-search-ready="true"]`, and click `getByRole('button', { name: /Search site/ })`. A `/content/search-index.json` response returns 200, the combobox is focused, and the prompt `Type a title, franchise, source, risk, or concept.` is visible.
 - **No match.** Fill the combobox with `zzqxv volcano`. `No matching records.` appears. Escape closes the palette.
-- **Not-found page.** Load an unknown path such as `/no-such-archive-page`. `[data-not-found]` is visible; after `[data-search-ready="true"]`, clicking `[data-not-found-search]` focuses the combobox.
+- **Not-found page.** Load an unknown path such as `/no-such-archive-page`. `[data-not-found]` is visible; after `[data-search-ready="true"]`, clicking `[data-not-found-search]` focuses the combobox, and Escape returns focus to that button.
 - **Shortcut.** Press `ControlOrMeta+k` on desktop; phones use the header button. The combobox is focused again.
 - **Each resource type.** Fill the combobox with a document's title. `[data-search-result-href="<href>"]` is visible; clicking it navigates to the href, where `[data-scenario-dossier]` or `[data-resource-detail="<kind>"]` is visible.
 - **Proof.** Run `.agents/skills/verify-cultural-alignment/verify.ts drive .agents/skills/verify-cultural-alignment/journeys/search.journey.ts --run=<id>`. Captures show the prompt, the no-match state, the not-found entry, and a result plus destination for each kind.
@@ -33,5 +33,6 @@ Preconditions:
 
 - The shortcut works only after hydration; wait for `[data-search-ready="true"]` before pressing it.
 - The index loads once per page session. Catch its response with `waitForResponse` before opening, or it will already have loaded.
-- The not-found step causes a deliberate 404, which the journey declares with `evidence.expectProblems`; `steps.json` lists it under `expectedProblems`, not `problems`.
+- The not-found step causes a deliberate 404, which the journey declares with `evidence.expectProblems`; `steps.json` lists that response and its console message under `expectedProblems`. Any other problem on the not-found page, such as the Vercel Analytics 404, stays under `problems`.
+- Wait for focus to return to the opener after Escape before reopening the palette; reopening while the close finishes leaves the new input unfocused.
 - Common titles can match several records. Select the result by its `data-search-result-href`, not its position.
