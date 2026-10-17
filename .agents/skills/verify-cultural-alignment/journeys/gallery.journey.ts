@@ -129,7 +129,12 @@ test('keyboard focus reveals the index and opens a scenario', async ({
     'Keyboard access is a desktop path'
   )
   await page.goto('/scenarios')
+  // Escape before the dialog opens would be lost, and the late dialog would
+  // then trap the Tab presses.
+  const intro = page.locator('[data-gallery-intro]')
+  await expect(intro).toHaveAttribute('data-state', 'visible')
   await page.keyboard.press('Escape')
+  await expect(intro).toHaveAttribute('data-state', 'dismissed')
   await expect(page.locator('[data-spatial-gallery] canvas')).toBeVisible()
 
   // The canvas is not focusable; its text index is the keyboard path.

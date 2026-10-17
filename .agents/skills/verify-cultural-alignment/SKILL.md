@@ -17,7 +17,7 @@ Run every command from the repository root. Prerequisites: `pnpm install` and Go
 .agents/skills/verify-cultural-alignment/verify.ts launch
 ```
 
-- Builds with `pnpm build` (about 20 seconds) when build-relevant files changed since the last verification build, otherwise reuses `.next`. Edits under `.agents/`, `docs/`, `tests/`, or to `*.md` files do not count. `--rebuild` forces a build.
+- Builds with `pnpm build` (about 20 seconds) when build inputs changed since the last verification build, otherwise reuses `.next`. Inputs are the working tree, except `.agents/`, `docs/`, `tests/`, and `*.md` files, plus `NEXT_PUBLIC_*` and `VERCEL_*` settings from the environment or `.env*` files. `--rebuild` forces a build.
 - Starts `next start` on a free port bound to 127.0.0.1 and waits until it is usable: `/` serves the site header and gallery markup, and `/content/search-index.json` responds. It then prints the `run` ID, the `url` (always `http://localhost:<port>`), and the `evidence` directory. A nonzero exit means the server is not ready; the message says why and how to stop what started.
 - Pass `--run=<id>` to every later command whenever another agent may be using this checkout.
 - `--dev` starts `next dev` instead, for repeated edits without rebuilding. Next.js allows one dev server per checkout, so launch refuses when `.next/dev/lock` names a live server that this skill did not start: that is the owner's session; do not drive or stop it. `next dev` may also rewrite the managed block in `AGENTS.md`; check `git status` afterward.
@@ -36,7 +36,7 @@ A read-only check of whether the instance is worth driving. Run it first wheneve
 | `port` | Another process holds the port | `stop`, then relaunch |
 | `http` | `/` lacks the header or gallery, or search index is missing | Read `server.log` |
 | `build` | `.next` was rebuilt under the server (`pnpm build`, default `pnpm test:e2e`) | `stop`, then relaunch |
-| `source` | Build-relevant files changed since the build | `stop`, then relaunch to verify current code |
+| `source` | Build inputs changed since the build | `stop`, then relaunch to verify current code |
 | `content` | `/scenarios` does not link every scenario in `content/snapshot/scenarios.json` | Rebuild; if it persists, it is a finding |
 
 ## Drive
@@ -96,7 +96,7 @@ Proof standards:
 
 ## Isolation
 
-Each launch gets its own port, and several production instances can share one build. `launch` refuses to rebuild while any verification server from this checkout, or any other Next.js process using this checkout, is running, because a rebuild replaces `.next` under it. To verify different code in parallel, use a separate worktree. While an instance is up, do not run `pnpm build` or a default `pnpm test:e2e`; `PLAYWRIGHT_SERVER=production pnpm test:e2e` reuses the build and is safe.
+Each launch gets its own port, and several production instances can share one build. Concurrent production launches in one checkout take turns: each waits for the launch lock, then reuses the build the previous one registered. `launch` refuses to rebuild while any verification server from this checkout, or any other Next.js process using this checkout, is running, because a rebuild replaces `.next` under it. To verify different code in parallel, use a separate worktree. While an instance is up, do not run `pnpm build` or a default `pnpm test:e2e`; `PLAYWRIGHT_SERVER=production pnpm test:e2e` reuses the build and is safe.
 
 ## Files
 
