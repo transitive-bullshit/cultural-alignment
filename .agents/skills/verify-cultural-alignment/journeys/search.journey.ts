@@ -44,6 +44,10 @@ test('search loads on demand, explains empty states, and opens every resource ty
   await expect(input).toBeHidden()
 
   // The not-found page offers search as a recovery action.
+  evidence.expectProblems(
+    /no-such-archive-page/,
+    'Deliberate 404 for the not-found entry point'
+  )
   await page.goto('/no-such-archive-page')
   await expect(page.locator('[data-not-found]')).toBeVisible()
   await page.locator('[data-search-ready="true"]').first().waitFor()

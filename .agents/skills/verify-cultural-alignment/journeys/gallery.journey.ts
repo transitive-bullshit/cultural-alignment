@@ -33,10 +33,11 @@ test('homepage gallery selects a frame and round-trips through its dossier', asy
     /^(settled|skipped)$/,
     { timeout: 30_000 }
   )
-  await evidence.record(
-    'intro acknowledgement in storage',
-    await readLocalStorage(page, [storageKeys.galleryIntro])
-  )
+  const acknowledgement = await readLocalStorage(page, [
+    storageKeys.galleryIntro
+  ])
+  expect(acknowledgement[storageKeys.galleryIntro]).toBe('acknowledged')
+  await evidence.record('intro acknowledgement in storage', acknowledgement)
 
   const point = await selectFrame(page, mobile)
   const selectedId = await gallery.getAttribute('data-selected-scenario-id')

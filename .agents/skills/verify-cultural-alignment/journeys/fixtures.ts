@@ -8,6 +8,7 @@ import { test as base, expect, type Locator, type Page } from '@playwright/test'
  * `<drive evidence>/<project>/<test title>/`: numbered screenshots and ARIA
  * snapshots per capture, JSON records, and `steps.json` with the outcome,
  * console errors, failed requests, and HTTP errors seen during the test.
+ * Problems a journey causes on purpose are listed apart as `expectedProblems`.
  */
 export type Evidence = {
   readonly dir: string
@@ -20,10 +21,15 @@ export type Evidence = {
   record(label: string, data: unknown): Promise<void>
   /** Saves a binary artifact the app produced, such as a social image. */
   file(label: string, extension: string, body: Buffer): Promise<void>
+  /**
+   * Declares problems the journey causes on purpose, such as a deliberate
+   * 404, matched against each problem's kind, text, and page URL.
+   */
+  expectProblems(pattern: RegExp, reason: string): void
 }
 
 type Step = { step: number; label: string; url: string; files: string[] }
-type Problem = { kind: string; text: string; url: string }
+type Problem = { kind: string; text: string; url: string; reason?: string }
 
 export const test = base.extend<{ evidence: Evidence }>({
   evidence: async ({ page }, use, testInfo) => {
@@ -35,6 +41,7 @@ export const test = base.extend<{ evidence: Evidence }>({
 
     const steps: Step[] = []
     const problems: Problem[] = []
+    const expected: { pattern: RegExp; reason: string }[] = []
     let counter = 0
     const next = (label: string) =>
       `${String(++counter).padStart(2, '0')}-${slug(label)}`
@@ -96,8 +103,18 @@ export const test = base.extend<{ evidence: Evidence }>({
         const name = `${next(label)}.${extension}`
         await writeFile(join(dir, name), body)
         steps.push({ step: counter, label, url: page.url(), files: [name] })
+      },
+      expectProblems(pattern, reason) {
+        expected.push({ pattern, reason })
       }
     })
+
+    const classified = problems.map((problem) => ({
+      ...problem,
+      reason: expected.find(({ pattern }) =>
+        pattern.test(`${problem.kind} ${problem.text} ${problem.url}`)
+      )?.reason
+    }))
 
     await writeFile(
       join(dir, 'steps.json'),
@@ -109,7 +126,8 @@ export const test = base.extend<{ evidence: Evidence }>({
           error: testInfo.error?.message,
           baseURL: testInfo.project.use.baseURL,
           steps,
-          problems
+          problems: classified.filter(({ reason }) => !reason),
+          expectedProblems: classified.filter(({ reason }) => reason)
         },
         null,
         2

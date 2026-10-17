@@ -52,10 +52,11 @@ test('dossier opening, spoiler, clip, taxonomy, copy, and memes', async ({
     await warning.click()
     await expect(warning).toHaveAttribute('data-state', /^(noted|leaving)$/)
     await expect(warning).toHaveCount(0)
-    await evidence.record(
-      'spoiler acknowledgement in storage',
-      await readLocalStorage(page, [storageKeys.spoilerWarning])
-    )
+    const acknowledgement = await readLocalStorage(page, [
+      storageKeys.spoilerWarning
+    ])
+    expect(acknowledgement[storageKeys.spoilerWarning]).toBe('dismissed')
+    await evidence.record('spoiler acknowledgement in storage', acknowledgement)
     await page.reload()
     await page.locator('[data-search-ready="true"]').first().waitFor()
     await expect(warning).toHaveCount(0)

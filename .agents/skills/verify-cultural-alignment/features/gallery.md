@@ -26,7 +26,7 @@ Preconditions:
 - `verify.ts doctor --run=<id>` passes.
 - Fresh browser state, so the introduction is visible.
 
-- **Introduction.** Load `/`. `page.locator('[data-gallery-intro-dialog]')` is visible. Explore with `page.locator('[data-gallery-intro-dismiss]').click()`; `[data-gallery-intro]` reaches `data-state="dismissed"` and storage holds `cultural-alignment:gallery-intro:v1`.
+- **Introduction.** Load `/`. `page.locator('[data-gallery-intro-dialog]')` is visible. Explore with `page.locator('[data-gallery-intro-dismiss]').click()`; `[data-gallery-intro]` reaches `data-state="dismissed"` and storage holds `cultural-alignment:gallery-intro:v1` = `acknowledged`.
 - **Settle.** Wait for `[data-spatial-gallery="browse"] canvas` to have `data-gallery-inertia-burst` of `settled` or `skipped` before selecting.
 - **Select.** Hover (desktop) or tap (mobile) down the canvas centre line until `[data-spatial-gallery="browse"]` has `data-selected-scenario-id`. The homepage card `[data-words-context-card]` (desktop) or `[data-mobile-selected-scenario]` (mobile) names the snapshot scenario with that ID.
 - **Open.** Click the same point (desktop) or tap it again after about 800 ms (mobile). The URL becomes `/scenarios/<slug>` and `[data-scenario-dossier]` shows an H1 with the scenario title.

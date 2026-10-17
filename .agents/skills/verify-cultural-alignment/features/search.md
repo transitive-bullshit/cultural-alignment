@@ -33,4 +33,5 @@ Preconditions:
 
 - The shortcut works only after hydration; wait for `[data-search-ready="true"]` before pressing it.
 - The index loads once per page session. Catch its response with `waitForResponse` before opening, or it will already have loaded.
+- The not-found step causes a deliberate 404, which the journey declares with `evidence.expectProblems`; `steps.json` lists it under `expectedProblems`, not `problems`.
 - Common titles can match several records. Select the result by its `data-search-result-href`, not its position.
