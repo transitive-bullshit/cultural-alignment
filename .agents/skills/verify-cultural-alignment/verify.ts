@@ -27,7 +27,7 @@ const repoRoot = resolve(skillDir, '../../..')
 const verifyRoot = join(repoRoot, 'work/verify')
 const instancesRoot = join(verifyRoot, 'instances')
 const evidenceRoot = join(verifyRoot, 'evidence')
-const buildLockPath = join(verifyRoot, 'build.lock')
+const launchLockPath = join(verifyRoot, 'launch.lock')
 const buildRecordPath = join(repoRoot, '.next/verify-build.json')
 const buildIdPath = join(repoRoot, '.next/BUILD_ID')
 const devLockPath = join(repoRoot, '.next/dev/lock')
@@ -38,6 +38,15 @@ const buildIrrelevantPaths = [
   ':(exclude)docs',
   ':(exclude)tests',
   ':(exclude,glob)**/*.md'
+]
+
+/** Settings Next.js inlines or uses for the site origin at build time. */
+const buildSettingPattern = /^(NEXT_PUBLIC_|VERCEL_)/
+const buildEnvironmentFiles = [
+  '.env',
+  '.env.local',
+  '.env.production',
+  '.env.production.local'
 ]
 
 type Mode = 'production' | 'development'
@@ -110,20 +119,76 @@ async function launch(mode: Mode) {
   await mkdir(instanceDir, { recursive: true })
   await mkdir(evidenceDir, { recursive: true })
 
+  // Production launches hold the launch lock from the build check until the
+  // instance is registered, so a concurrent launch can neither rebuild .next
+  // under this server nor miss it when deciding whether to rebuild.
+  const release = mode === 'production' ? await acquireLaunchLock() : undefined
+  let instance: Instance
+  try {
+    instance = await startServer(mode, runId, instanceDir, evidenceDir)
+  } catch (err) {
+    await abandonLaunch(instanceDir, evidenceDir)
+    throw err
+  } finally {
+    await release?.()
+  }
+  const { buildId, serverLog, url } = instance
+
+  const timeoutMs = mode === 'production' ? 60_000 : 180_000
+  const deadline = Date.now() + timeoutMs
+  let problems: string[] = []
+
+  while (Date.now() < deadline) {
+    if (!isAlive(instance.pid)) {
+      throw new Error(
+        `The server exited before it was ready. Log: ${relative(repoRoot, serverLog)}\n${await tail(serverLog)}`
+      )
+    }
+    problems = await readinessProblems(url)
+    if (problems.length === 0) break
+    await sleep(500)
+  }
+
+  if (problems.length > 0) {
+    throw new Error(
+      `Not ready after ${timeoutMs / 1000}s (${problems.join('; ')}). ` +
+        `The server is still running; stop it with: ${CLI} stop --run=${runId}`
+    )
+  }
+
+  console.log(
+    [
+      `run       ${runId}`,
+      `mode      ${mode}${buildId ? ` (build ${buildId})` : ''}`,
+      `url       ${url}`,
+      `evidence  ${relative(repoRoot, evidenceDir)}`,
+      `log       ${relative(repoRoot, serverLog)}`,
+      `next      ${CLI} doctor --run=${runId}`
+    ].join('\n')
+  )
+
+  if (mode === 'development') {
+    console.log(
+      'note      next dev may rewrite the managed block in AGENTS.md; check git status before committing.'
+    )
+  }
+}
+
+/** Builds when needed, spawns the server, and registers the instance. */
+async function startServer(
+  mode: Mode,
+  runId: string,
+  instanceDir: string,
+  evidenceDir: string
+) {
   const fingerprint = await sourceFingerprint()
   let buildId: string | undefined
 
   if (mode === 'production') {
-    try {
-      buildId = await ensureBuild(fingerprint, evidenceDir)
-    } catch (err) {
-      await abandonLaunch(instanceDir, evidenceDir)
-      throw err
-    }
+    buildId = await ensureBuild(fingerprint, evidenceDir)
   } else {
     const lock = await readDevLock()
     if (lock && isAlive(lock.pid)) {
-      await abandonLaunch(instanceDir, evidenceDir)
       throw new Error(
         `next dev is already running for this checkout (pid ${lock.pid}${lock.url ? `, ${lock.url}` : ''}). ` +
           'Next.js allows one dev server per checkout and it is not ours to drive or stop; launch without --dev instead.'
@@ -179,45 +244,7 @@ async function launch(mode: Mode) {
     join(instanceDir, 'instance.json'),
     `${JSON.stringify(instance, null, 2)}\n`
   )
-
-  const timeoutMs = mode === 'production' ? 60_000 : 180_000
-  const deadline = Date.now() + timeoutMs
-  let problems: string[] = []
-
-  while (Date.now() < deadline) {
-    if (!isAlive(child.pid)) {
-      throw new Error(
-        `The server exited before it was ready. Log: ${relative(repoRoot, serverLog)}\n${await tail(serverLog)}`
-      )
-    }
-    problems = await readinessProblems(url)
-    if (problems.length === 0) break
-    await sleep(500)
-  }
-
-  if (problems.length > 0) {
-    throw new Error(
-      `Not ready after ${timeoutMs / 1000}s (${problems.join('; ')}). ` +
-        `The server is still running; stop it with: ${CLI} stop --run=${runId}`
-    )
-  }
-
-  console.log(
-    [
-      `run       ${runId}`,
-      `mode      ${mode}${buildId ? ` (build ${buildId})` : ''}`,
-      `url       ${url}`,
-      `evidence  ${relative(repoRoot, evidenceDir)}`,
-      `log       ${relative(repoRoot, serverLog)}`,
-      `next      ${CLI} doctor --run=${runId}`
-    ].join('\n')
-  )
-
-  if (mode === 'development') {
-    console.log(
-      'note      next dev may rewrite the managed block in AGENTS.md; check git status before committing.'
-    )
-  }
+  return instance
 }
 
 /** Removes state from a launch that never started a server; keeps a build log. */
@@ -240,7 +267,7 @@ async function ensureBuild(fingerprint: string, evidenceDir: string) {
     record?.fingerprint === fingerprint &&
     record.buildId === currentBuildId
   ) {
-    console.log(`build     reusing ${currentBuildId} (tree unchanged)`)
+    console.log(`build     reusing ${currentBuildId} (build inputs unchanged)`)
     return currentBuildId
   }
 
@@ -260,46 +287,64 @@ async function ensureBuild(fingerprint: string, evidenceDir: string) {
     )
   }
 
-  await mkdir(verifyRoot, { recursive: true })
-  let lock: number
-  try {
-    lock = openSync(buildLockPath, 'wx')
-  } catch {
-    const holder = Number((await readFile(buildLockPath, 'utf8')).trim())
-    if (isAlive(holder)) {
-      throw new Error(
-        `Another verification build is running (pid ${holder}); wait for it to finish.`
-      )
-    }
-    await rm(buildLockPath, { force: true })
-    lock = openSync(buildLockPath, 'wx')
+  const buildLog = join(evidenceDir, 'build.log')
+  console.log(`build     pnpm build (log: ${relative(repoRoot, buildLog)})`)
+  const log = openSync(buildLog, 'a')
+  const result = spawnSync('pnpm', ['build'], {
+    cwd: repoRoot,
+    env: { ...process.env, NEXT_TELEMETRY_DISABLED: '1' },
+    stdio: ['ignore', log, log]
+  })
+  closeSync(log)
+  if (result.status !== 0) {
+    throw new Error(`pnpm build failed:\n${await tail(buildLog)}`)
   }
-  writeFileSync(lock, String(process.pid))
-  closeSync(lock)
 
-  try {
-    const buildLog = join(evidenceDir, 'build.log')
-    console.log(`build     pnpm build (log: ${relative(repoRoot, buildLog)})`)
-    const log = openSync(buildLog, 'a')
-    const result = spawnSync('pnpm', ['build'], {
-      cwd: repoRoot,
-      env: { ...process.env, NEXT_TELEMETRY_DISABLED: '1' },
-      stdio: ['ignore', log, log]
-    })
-    closeSync(log)
-    if (result.status !== 0) {
-      throw new Error(`pnpm build failed:\n${await tail(buildLog)}`)
+  const buildId = await readBuildId()
+  if (!buildId) throw new Error('pnpm build succeeded without a BUILD_ID')
+  await writeFile(
+    buildRecordPath,
+    `${JSON.stringify({ fingerprint, buildId, builtAt: new Date().toISOString() }, null, 2)}\n`
+  )
+  return buildId
+}
+
+/**
+ * Waits for the checkout's launch lock and returns its release. A holder that
+ * has exited leaves a stale lock, which is cleared.
+ */
+async function acquireLaunchLock() {
+  await mkdir(verifyRoot, { recursive: true })
+  const deadline = Date.now() + 10 * 60_000
+  let announced = false
+
+  for (;;) {
+    try {
+      const lock = openSync(launchLockPath, 'wx')
+      writeFileSync(lock, String(process.pid))
+      closeSync(lock)
+      return () => rm(launchLockPath, { force: true })
+    } catch {
+      const text = await readFile(launchLockPath, 'utf8').catch(() => '')
+      const holder = Number(text.trim())
+      // An empty file means the holder is still writing its pid.
+      if (holder > 0 && !isAlive(holder)) {
+        await rm(launchLockPath, { force: true })
+        continue
+      }
+      if (Date.now() > deadline) {
+        throw new Error(
+          `Another launch (pid ${holder}) has held ${relative(repoRoot, launchLockPath)} for 10 minutes`
+        )
+      }
+      if (!announced) {
+        console.log(
+          `wait      another launch is building or starting (pid ${holder})`
+        )
+        announced = true
+      }
+      await sleep(500)
     }
-
-    const buildId = await readBuildId()
-    if (!buildId) throw new Error('pnpm build succeeded without a BUILD_ID')
-    await writeFile(
-      buildRecordPath,
-      `${JSON.stringify({ fingerprint, buildId, builtAt: new Date().toISOString() }, null, 2)}\n`
-    )
-    return buildId
-  } finally {
-    await rm(buildLockPath, { force: true })
   }
 }
 
@@ -363,7 +408,7 @@ async function doctor(instance: Instance): Promise<Check[]> {
       fingerprint === instance.fingerprint ? 'pass' : 'fail',
       fingerprint === instance.fingerprint
         ? `build matches the working tree (HEAD ${instance.head})`
-        : 'the working tree changed since this build; stop and relaunch to verify current code'
+        : 'the working tree or NEXT_PUBLIC_/VERCEL_ settings changed since this build; stop and relaunch'
     )
   } else {
     const lock = await readDevLock()
@@ -559,9 +604,31 @@ async function liveInstances() {
   )
 }
 
-/** Hashes HEAD plus build-relevant uncommitted changes, including untracked files. */
+/**
+ * Hashes HEAD, build-relevant uncommitted changes including untracked files,
+ * and the NEXT_PUBLIC_ and VERCEL_ settings a build reads from the
+ * environment or ignored .env files. Other .env values are never hashed.
+ */
 async function sourceFingerprint() {
   const hash = createHash('sha256')
+  const settings = Object.entries(process.env).filter(([key]) =>
+    buildSettingPattern.test(key)
+  )
+  for (const file of buildEnvironmentFiles) {
+    const text = await readFile(join(repoRoot, file), 'utf8').catch(() => '')
+    for (const line of text.split('\n')) {
+      const match = line.match(/^\s*(?:export\s+)?([A-Z0-9_]+)\s*=(.*)$/)
+      if (match && buildSettingPattern.test(match[1]!)) {
+        settings.push([`${file}:${match[1]}`, match[2]!.trim()])
+      }
+    }
+  }
+  for (const [key, value] of settings.toSorted(([a], [b]) =>
+    a.localeCompare(b)
+  )) {
+    hash.update(`${key}=${value ?? ''}\0`)
+  }
+
   hash.update(git(['rev-parse', 'HEAD']))
   hash.update(
     git(['diff', 'HEAD', '--binary', '--', '.', ...buildIrrelevantPaths])
