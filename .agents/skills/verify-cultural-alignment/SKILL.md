@@ -96,7 +96,7 @@ Proof standards:
 
 ## Isolation
 
-Each launch gets its own port, and several production instances can share one build. Concurrent production launches in one checkout take turns: each waits for the launch lock, then reuses the build the previous one registered. `launch` refuses to rebuild while any verification server from this checkout, or any other Next.js process using this checkout, is running, because a rebuild replaces `.next` under it. It reads process working directories from `/proc` or `lsof`; when it cannot read one, it treats that Next.js process as using this checkout and refuses. To verify different code in parallel, use a separate worktree. While an instance is up, do not run `pnpm build` or a default `pnpm test:e2e`; `PLAYWRIGHT_SERVER=production pnpm test:e2e` reuses the build and is safe.
+Each launch gets its own port, and several production instances can share one build. Concurrent production launches in one checkout take turns: each waits for the launch lock, then reuses the build the previous one registered. `launch` refuses to rebuild while a production verification server from this checkout, or any other Next.js process using this checkout, is running, because a rebuild replaces `.next` under it. A `--dev` instance does not block it: `next dev` serves from `.next/dev`, which `next build` leaves alone. It reads process working directories from `/proc` or `lsof`; when it cannot read one, it treats that Next.js process as using this checkout and refuses. To verify different code in parallel, use a separate worktree. While an instance is up, do not run `pnpm build` or a default `pnpm test:e2e`; `PLAYWRIGHT_SERVER=production pnpm test:e2e` reuses the build and is safe.
 
 ## Files
 

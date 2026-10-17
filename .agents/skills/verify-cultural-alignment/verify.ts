@@ -280,6 +280,8 @@ async function ensureBuild(fingerprint: string, evidenceDir: string) {
   }
 
   const servers = await liveInstances()
+  // Development servers read .next/dev, which next build leaves in place
+  // (Next.js documents running both at once), so only production ones block.
   const sharing = servers.filter(({ mode }) => mode === 'production')
   if (sharing.length > 0) {
     throw new Error(
