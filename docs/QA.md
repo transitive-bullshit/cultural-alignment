@@ -34,6 +34,7 @@ Use the [snapshot contract](../content/README.md) for generated-output ownership
 - Automated wheel events cannot reproduce browser-owned macOS trackpad history swipes. Native Back/Forward feel needs a physical trackpad check.
 - WebGL screenshots vary by GPU; inspect them manually instead of treating pixel differences as test oracles.
 - Earlier review recorded a non-blocking upstream `THREE.Clock` deprecation warning from React Three Fiber; application code does not construct `THREE.Clock`.
+- The YouTube embed answers “This video is unavailable” on a page served from `http://127.0.0.1:<port>`; the same server plays clips at `http://localhost:<port>`. Browse local servers through `localhost` (or Portless) when checking clip playback.
 
 Broader device coverage remains a manual follow-up: Safari desktop, large/Retina Chrome, and a physical tablet including orientation changes. For the reported header-only first load, consult the [dated investigation](BLANK-FIRST-LOAD-INVESTIGATION.md); its infrastructure attribution remains provisional.
 
@@ -145,3 +146,9 @@ The fixing session reported 60 consecutive target-test passes, 50 passes across 
 - Local production build: `/` ships its H1 and a link to every featured scenario, and `/scenarios` an “All scenarios” H1 and a link to every scenario, where production had none. `/scenarios/family/misalignment` returns 404 and the sitemap lists no family archives. Every hub reports `x-nextjs-prerender: 1`. Gzipped HTML grew by about 10 KB on `/` and 22 KB on `/scenarios`.
 - Titles and descriptions were shortened to one count-free sentence in the project's voice (what each page's scenes teach about AI safety), and detail titles now carry the site name.
 - `pnpm content:validate`, `pnpm test:checks`, `pnpm build`, and `PLAYWRIGHT_SERVER=production pnpm test:e2e` (including new no-JavaScript and keyboard-reveal checks) passed. Chrome at 1440×900 and 375×812 confirmed the WebGL gallery, selection, dossier round trip, and Back restoration behave as before; no-JavaScript captures show the index as the visible gallery.
+
+### Verification skill, 2026-10-17
+
+- The new [verification skill](../.agents/skills/verify-cultural-alignment/SKILL.md) drove a local production build with real media in headless Google Chrome at 1440×900 and 390×844: 21 journey tests across the gallery, dossier, search, resource pages, and social images passed (three phone runs skip as not applicable), covering WebGL rendering, hover and two-tap selection, Back restoration, keyboard access to the index, clipboard copies, and five 1200×630 WebP cards.
+- Clip playback first passed only because `data-playing` flips on click; the embed itself reported “This video is unavailable” on the `127.0.0.1` origin. Requiring an advancing clip time, served through `localhost`, showed real playback. The limitation is recorded above.
+- Expected local console noise: `/_vercel/insights/script.js` 404s, the `THREE.Clock` warning, aborted YouTube stats requests, and CSS preload warnings on dossiers.
