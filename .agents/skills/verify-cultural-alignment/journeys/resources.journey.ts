@@ -86,6 +86,7 @@ test('media sources sort by age and remember the choice', async ({
   await page.goto('/sources')
   const list = page.locator('[data-resource-list][data-resource-kind="source"]')
   await expect(list).toHaveAttribute('data-resource-sort', 'default')
+  const before = await readLocalStorage(page, [storageKeys.scenarioSort])
 
   await page.locator('[data-collection-sort-option="newest"]').click()
   await expect(list).toHaveAttribute('data-resource-sort', 'newest')
@@ -97,13 +98,14 @@ test('media sources sort by age and remember the choice', async ({
     `/sources/${newest.slug}`
   )
   await evidence.capture('sources sorted newest first')
-  await evidence.record(
-    'sort preference in storage',
-    await readLocalStorage(page, [
-      storageKeys.sourceSort,
-      storageKeys.scenarioSort
-    ])
-  )
+  // The source preference must not overwrite the separate scenario sort.
+  const after = await readLocalStorage(page, [
+    storageKeys.sourceSort,
+    storageKeys.scenarioSort
+  ])
+  expect(after[storageKeys.sourceSort]).toBe('newest')
+  expect(after[storageKeys.scenarioSort]).toBe(before[storageKeys.scenarioSort])
+  await evidence.record('sort preference in storage', after)
 
   await page.reload()
   await expect(list).toHaveAttribute('data-resource-sort', 'newest')

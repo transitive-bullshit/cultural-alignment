@@ -72,15 +72,15 @@ Everything lands in `work/verify/evidence/<run>/`, which is git-ignored and is n
 - `server.log`, plus `build.log` when the launch built
 - `<NN>-<journeys>/report.json`: the Playwright result for that drive
 - `<NN>-<journeys>/playwright/`: a `trace.zip` and final screenshot per test; open a trace with `pnpm exec playwright show-trace <path>`
-- `<NN>-<journeys>/<project>/<test>/`: numbered captures (`.png` and `.aria.yml`), records (`.json`), produced files (`.md`, `.webp`, `.xml`), and `steps.json` with the outcome, the URL for each step, and every console error, failed request, and HTTP error seen
+- `<NN>-<journeys>/<project>/<test>/`: numbered captures (`.png` and `.aria.yml`), records (`.json`), produced files (`.md`, `.webp`, `.xml`), and `steps.json` with the outcome, the URL for each step, and every console error, failed request, and HTTP error seen. Problems a journey declared with `evidence.expectProblems` are listed apart under `expectedProblems` with their reason
 
-The fixture in [`journeys/fixtures.ts`](journeys/fixtures.ts) provides `evidence.capture(label, { target?, fullPage? })`, `evidence.record(label, data)`, and `evidence.file(label, extension, body)`, plus `exploreFromGalleryIntro`, `readLocalStorage`, and the app's `storageKeys`.
+The fixture in [`journeys/fixtures.ts`](journeys/fixtures.ts) provides `evidence.capture(label, { target?, fullPage? })`, `evidence.record(label, data)`, `evidence.file(label, extension, body)`, and `evidence.expectProblems(pattern, reason)` for problems a step causes on purpose, plus `exploreFromGalleryIntro`, `readLocalStorage`, and the app's `storageKeys`.
 
 Proof standards:
 
 - Exercise the visitor's path: URLs, clicks, taps, keys, and Back. Never seed localStorage or call app internals to reach a state. Reading storage after a user action is valid proof of a side effect.
 - Capture the action and its result, not just the final screen.
-- Verify side effects alongside the screen: clipboard text, persisted preferences, URLs, response headers and bytes, and restored selection after Back.
+- Verify side effects alongside the screen: clipboard text, persisted preferences, URLs, response headers and bytes, and restored selection after Back. Assert them; a value that is only recorded proves nothing.
 - Do not mock images, WebGL, routes, or YouTube. Those are real boundaries for visitors. If one is unreachable, report the step as unverified rather than stubbing it.
 - Assert the downstream effect when the UI flips a flag optimistically. For example, `data-playing` changes on click, but only an advancing clip time proves playback.
 - Known noise in `steps.json` problems: `/_vercel/insights/script.js` 404s (Vercel Analytics exists only on Vercel), the `THREE.Clock` deprecation warning, aborted YouTube `qoe` stats requests, and CSS preload warnings. Treat anything else as a finding.

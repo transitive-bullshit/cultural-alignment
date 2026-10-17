@@ -28,7 +28,7 @@ Preconditions:
 - Network access to YouTube and the media origin.
 
 - **Opening.** Load the scenario and wait for `[data-search-ready="true"]`. The H1 contains the title, and `[data-scenario-primary-concept]` names the scenario's first concept slug and links `/concepts/<slug>`.
-- **Spoiler (desktop).** `[data-spoiler-warning]` has `data-state="warning"`. Click it; it passes through `noted` and disappears, and storage holds `cultural-alignment:spoiler-warning:v2`. After a reload it stays absent. On mobile it is hidden.
+- **Spoiler (desktop).** `[data-spoiler-warning]` has `data-state="warning"`. Click it; it passes through `noted` and disappears, and storage holds `cultural-alignment:spoiler-warning:v2` = `dismissed`. After a reload it stays absent. On mobile it is hidden.
 - **Clip.** Click `[data-scenario-still]`. `[data-scenario-media]` loses `data-showing-still`, `[data-scenario-media-progress]` becomes enabled, and its value advances. Hover the plate and click `[data-scenario-media-playback-control]`; `data-playing` is removed.
 - **Taxonomy.** Hover `[data-scenario-taxonomy-item^="concept:"] [data-cursor-card-trigger]` (desktop) or focus its link (mobile). `[data-cursor-card-content]` appears with `role="tooltip"`.
 - **Copy link.** Click `[data-copy-page-link]`. It reaches `data-state="success"` and the clipboard equals the page URL.
