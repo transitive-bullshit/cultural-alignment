@@ -1,7 +1,13 @@
 #!/usr/bin/env -S node --import tsx
 import { spawn, spawnSync } from 'node:child_process'
 import { createHash, randomBytes } from 'node:crypto'
-import { closeSync, existsSync, openSync, writeFileSync } from 'node:fs'
+import {
+  closeSync,
+  existsSync,
+  openSync,
+  readlinkSync,
+  writeFileSync
+} from 'node:fs'
 import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises'
 import { createServer } from 'node:net'
 import { dirname, join, relative, resolve, sep } from 'node:path'
@@ -282,7 +288,7 @@ async function ensureBuild(fingerprint: string, evidenceDir: string) {
   const foreign = foreignNextProcesses(new Set(servers.map(({ pid }) => pid)))
   if (foreign.length > 0) {
     throw new Error(
-      `Another Next.js process is using this checkout (${foreign.join('; ')}). ` +
+      `Another Next.js process may be using this checkout (${foreign.join('; ')}). ` +
         'A rebuild would replace its .next output; ask its owner or verify from a separate worktree.'
     )
   }
@@ -684,7 +690,10 @@ function isNextProcess({ command }: GroupMember) {
   return /next/.test(command)
 }
 
-/** Next.js processes whose working directory is this checkout but not ours. */
+/**
+ * Next.js processes that are not ours and run in this checkout, or whose
+ * working directory cannot be read; an unknown one blocks a rebuild too.
+ */
 function foreignNextProcesses(ownGroups: Set<number>) {
   const result = spawnSync('ps', ['-A', '-o', 'pid=,pgid=,command='], {
     encoding: 'utf8'
@@ -698,22 +707,30 @@ function foreignNextProcesses(ownGroups: Set<number>) {
         !ownGroups.has(Number(match[2])) &&
         /next-server|next (start|dev|build)/.test(match[3]!)
     )
-    .filter((match) => processCwd(Number(match[1])) === repoRoot)
-    .map((match) => `pid ${match[1]}: ${match[3]!.slice(0, 60)}`)
+    .flatMap((match) => {
+      const cwd = processCwd(Number(match[1]))
+      if (cwd !== undefined && cwd !== repoRoot) return []
+      const where = cwd === undefined ? ' (working directory unknown)' : ''
+      return [`pid ${match[1]}${where}: ${match[3]!.slice(0, 60)}`]
+    })
 }
 
+/** Reads /proc on Linux and asks lsof elsewhere; undefined when neither can. */
 function processCwd(pid: number) {
-  const result = spawnSync(
-    'lsof',
-    ['-a', '-p', String(pid), '-d', 'cwd', '-Fn'],
-    {
-      encoding: 'utf8'
-    }
-  )
-  return result.stdout
-    ?.split('\n')
-    .find((line) => line.startsWith('n'))
-    ?.slice(1)
+  try {
+    return readlinkSync(`/proc/${pid}/cwd`)
+  } catch {
+    const result = spawnSync(
+      'lsof',
+      ['-a', '-p', String(pid), '-d', 'cwd', '-Fn'],
+      { encoding: 'utf8' }
+    )
+    if (result.error || result.status !== 0) return undefined
+    return result.stdout
+      .split('\n')
+      .find((line) => line.startsWith('n'))
+      ?.slice(1)
+  }
 }
 
 function listenerPids(port: number) {

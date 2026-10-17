@@ -6,6 +6,8 @@ import families from '../../../../content/snapshot/risk-families.json' with { ty
 import scenarios from '../../../../content/snapshot/scenarios.json' with { type: 'json' }
 import sources from '../../../../content/snapshot/sources.json' with { type: 'json' }
 
+import { socialImageCacheHeaders } from '../../../../lib/media/social-image'
+
 import { expect, test } from './fixtures'
 
 // The longest names stress wrapping; a posterless source exercises the fallback.
@@ -49,6 +51,9 @@ test('every detail family publishes a 1200×630 WebP social image', async ({
     const response = await request.get(expectedPath)
     expect(response.status()).toBe(200)
     expect(response.headers()['content-type']).toBe('image/webp')
+    for (const [name, value] of Object.entries(socialImageCacheHeaders)) {
+      expect(response.headers()[name.toLowerCase()], name).toBe(value)
+    }
     const body = await response.body()
     const { format, width, height } = await sharp(body).metadata()
     expect({ format, width, height }).toEqual({
