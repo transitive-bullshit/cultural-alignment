@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verify Cultural Alignment"
+  short_description: "Launch, drive, and prove site behavior with evidence"
+  default_prompt: "Use $verify-cultural-alignment to prove this change works in the running site."

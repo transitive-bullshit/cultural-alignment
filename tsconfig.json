@@ -12,6 +12,12 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "*.config.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "*.config.ts",
+    ".agents/skills/verify-cultural-alignment/**/*.ts"
+  ],
   "exclude": ["node_modules", "work"]
 }

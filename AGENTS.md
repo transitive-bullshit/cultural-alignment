@@ -12,6 +12,7 @@ Start with [Contributing](CONTRIBUTING.md) for setup and verification. Read [Arc
 | --- | --- |
 | Product behavior or scope | [Product](docs/PRODUCT.md); [MVP decisions](docs/MVP.md) when revisiting an accepted direction |
 | UI or interaction changes | [Design](docs/DESIGN.md); [QA](docs/QA.md) for visual and device checks; [visual-review](.agents/skills/visual-review/SKILL.md) skill |
+| Prove a change in the running site | [verify-cultural-alignment](.agents/skills/verify-cultural-alignment/SKILL.md) skill |
 | Sync, generated data, or media storage | [Snapshot and sync contract](content/README.md) |
 | Editorial work in Notion | [CMS conventions](docs/notion-cms.md) |
 | Add a media source or scenarios | [add-scenarios](.agents/skills/add-scenarios/SKILL.md) skill |
@@ -20,7 +21,7 @@ Start with [Contributing](CONTRIBUTING.md) for setup and verification. Read [Arc
 | Social-image assets | [Font provenance](assets/fonts/README.md) and Architecture's social-image boundary |
 | Header-only first load | [Investigation](docs/BLANK-FIRST-LOAD-INVESTIGATION.md) before changing the renderer or delivery setup |
 
-Project skills live in `.agents/skills/`; `.claude/skills` links there so Claude Code and Codex share them, and the meme skill is linked in from `docs/skills/`. When a recurring task gains a trap or a better recipe, update its skill.
+Project skills live in `.agents/skills/`, and the meme skill is linked in from `docs/skills/`. When a recurring task gains a trap or a better recipe, update its skill.
 
 The top-level [README](readme.md) serves human visitors. Keep agent workflow guidance in these documents. Current contracts live in the linked docs and code; dated QA runs, `docs/outputs/` plans, and skill proposals preserve evidence and alternatives, not an outstanding task list. Update the owning document when behavior changes rather than adding another overlapping guide.
 
