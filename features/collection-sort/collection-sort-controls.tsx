@@ -1,6 +1,7 @@
 'use client'
 
-import { useId, useLayoutEffect, useState } from 'react'
+import { useId, useLayoutEffect, useState, useSyncExternalStore } from 'react'
+import { motion } from 'framer-motion'
 
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
 
@@ -8,6 +9,22 @@ import { isCollectionSort, type CollectionSort } from './collection-sort'
 import styles from './collection-sort-controls.module.css'
 
 const DEFAULT_SORT: CollectionSort = 'default'
+const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)'
+
+function subscribeMotionPreference(onChange: () => void) {
+  const query = window.matchMedia(REDUCED_MOTION_QUERY)
+  query.addEventListener('change', onChange)
+  return () => query.removeEventListener('change', onChange)
+}
+
+function getMotionPreference() {
+  return window.matchMedia(REDUCED_MOTION_QUERY).matches
+}
+
+// Restore the saved sort before enabling movement after hydration.
+function getServerMotionPreference() {
+  return true
+}
 
 export function CollectionSortControls({
   announcement,
@@ -26,6 +43,15 @@ export function CollectionSortControls({
   readonly value: CollectionSort
 }) {
   const labelId = `${useId()}-sort-label`
+  const selectionId = `${labelId}-selection`
+  const reduceMotion = useSyncExternalStore(
+    subscribeMotionPreference,
+    getMotionPreference,
+    getServerMotionPreference
+  )
+  // Remount the highlight when this changes to register or cancel projection.
+  const animateSelection = !reduceMotion
+
   const options = [
     { label: defaultLabel, value: 'default' },
     { label: 'Newest first', value: 'newest' },
@@ -62,7 +88,18 @@ export function CollectionSortControls({
             data-collection-sort-option={option.value}
             value={option.value}
           >
-            {option.label}
+            {value === option.value ? (
+              <motion.span
+                key={animateSelection ? 'animated' : 'static'}
+                aria-hidden='true'
+                className={styles.selection}
+                data-collection-sort-selection
+                layoutId={animateSelection ? selectionId : undefined}
+                initial={false}
+                transition={{ type: 'spring', stiffness: 500, damping: 40 }}
+              />
+            ) : null}
+            <span className={styles.optionLabel}>{option.label}</span>
           </ToggleGroupItem>
         ))}
       </ToggleGroup>

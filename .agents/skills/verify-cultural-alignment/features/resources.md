@@ -5,7 +5,7 @@ Media sources, franchises, risk families, and AI safety concepts each have an in
 ## Sub-features
 
 - `resources-index` links every snapshot record from `/sources`, `/franchises`, `/risk-families`, and `/concepts`.
-- `resources-source-sort` sorts media sources by default, newest, or oldest and keeps the choice after reload.
+- `resources-source-sort` sorts media sources by default, newest, or oldest and keeps the choice after reload. The shared control on this index and larger detail-page scene collections marks the selected option with orange text and a bordered paper background. The background retargets during rapid changes and snaps under reduced motion.
 - `resources-expand` expands a detail page's scene collection from 12 to all scenes and focuses card 13.
 - `resources-card` opens a scenario's dossier from its card.
 
