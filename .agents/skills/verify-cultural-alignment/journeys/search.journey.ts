@@ -45,7 +45,7 @@ test('search loads on demand, explains empty states, and opens every resource ty
 
   // The not-found page offers search as a recovery action.
   evidence.expectProblems(
-    /no-such-archive-page/,
+    /^(http\.404 |console\.error Failed to load resource: .* 404 .* at )\S+\/no-such-archive-page$/,
     'Deliberate 404 for the not-found entry point'
   )
   await page.goto('/no-such-archive-page')
@@ -56,6 +56,9 @@ test('search loads on demand, explains empty states, and opens every resource ty
   await evidence.capture('search opened from the not-found page')
   await page.keyboard.press('Escape')
   await expect(input).toBeHidden()
+  // Closing returns focus to the opener; reopening before that finishes
+  // leaves the new input unfocused.
+  await expect(page.locator('[data-not-found-search]')).toBeFocused()
 
   for (const target of targets) {
     // Phones open search from the header; desktop also has the shortcut.

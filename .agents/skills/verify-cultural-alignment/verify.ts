@@ -39,10 +39,9 @@ const buildIdPath = join(repoRoot, '.next/BUILD_ID')
 const devLockPath = join(repoRoot, '.next/dev/lock')
 
 /** Paths that cannot change the built site, so editing them needs no rebuild. */
+const buildIrrelevantDirectories = ['.agents', 'docs', 'tests']
 const buildIrrelevantPaths = [
-  ':(exclude).agents',
-  ':(exclude)docs',
-  ':(exclude)tests',
+  ...buildIrrelevantDirectories.map((directory) => `:(exclude)${directory}`),
   ':(exclude,glob)**/*.md'
 ]
 
@@ -68,6 +67,8 @@ type Instance = {
   fingerprint?: string
   head: string
   startedAt: string
+  /** The leader's start time from ps, which tells it apart from a reused pid. */
+  startTime?: string
   instanceDir: string
   evidenceDir: string
   serverLog: string
@@ -242,6 +243,7 @@ async function startServer(
     fingerprint,
     head: git(['rev-parse', '--short', 'HEAD']).toString().trim(),
     startedAt: new Date().toISOString(),
+    startTime: processStartTime(child.pid),
     instanceDir,
     evidenceDir,
     serverLog
@@ -361,7 +363,7 @@ async function doctor(instance: Instance): Promise<Check[]> {
 
   add('run', 'pass', `${instance.runId} (${instance.mode}, ${instance.url})`)
 
-  const members = processGroup(instance.pid)
+  const members = instanceGroup(instance)
   if (members.length === 0) {
     add('process', 'fail', `process group ${instance.pid} is gone`)
     return checks
@@ -514,7 +516,7 @@ async function list() {
     return
   }
   for (const instance of instances) {
-    const state = processGroup(instance.pid).length > 0 ? 'running' : 'dead'
+    const state = instanceGroup(instance).length > 0 ? 'running' : 'dead'
     console.log(
       `${instance.runId}  ${state}  ${instance.mode}  ${instance.url}  evidence: ${relative(repoRoot, instance.evidenceDir)}`
     )
@@ -527,7 +529,7 @@ async function stop(all: boolean) {
     : [await resolveInstance(flags.get('run'))]
 
   for (const instance of instances) {
-    const members = processGroup(instance.pid)
+    const members = instanceGroup(instance)
     if (members.length > 0 && !members.some(isNextProcess)) {
       console.log(
         `${instance.runId}: process group ${instance.pid} no longer runs Next.js; not signalling it`
@@ -535,10 +537,10 @@ async function stop(all: boolean) {
     } else if (members.length > 0) {
       signalGroup(instance.pid, 'SIGTERM')
       const deadline = Date.now() + 10_000
-      while (processGroup(instance.pid).length > 0 && Date.now() < deadline) {
+      while (instanceGroup(instance).length > 0 && Date.now() < deadline) {
         await sleep(200)
       }
-      if (processGroup(instance.pid).length > 0) {
+      if (instanceGroup(instance).length > 0) {
         signalGroup(instance.pid, 'SIGKILL')
       }
     }
@@ -583,7 +585,7 @@ async function resolveInstance(runId: string | undefined) {
   }
 
   const running = instances.filter(
-    (instance) => processGroup(instance.pid).length > 0
+    (instance) => instanceGroup(instance).length > 0
   )
   if (running.length === 1) return running[0]!
   if (running.length === 0) {
@@ -606,7 +608,7 @@ async function allInstances() {
 
 async function liveInstances() {
   return (await allInstances()).filter(
-    (instance) => processGroup(instance.pid).length > 0
+    (instance) => instanceGroup(instance).length > 0
   )
 }
 
@@ -635,7 +637,15 @@ async function sourceFingerprint() {
     hash.update(`${key}=${value ?? ''}\0`)
   }
 
-  hash.update(git(['rev-parse', 'HEAD']))
+  // Hash the committed build-relevant tree rather than the commit, so commits
+  // that only touch excluded paths keep the build.
+  for (const entry of git(['ls-tree', '-r', '-z', 'HEAD'])
+    .toString()
+    .split('\0')) {
+    if (entry && isBuildRelevant(entry.slice(entry.indexOf('\t') + 1))) {
+      hash.update(`${entry}\0`)
+    }
+  }
   hash.update(
     git(['diff', 'HEAD', '--binary', '--', '.', ...buildIrrelevantPaths])
   )
@@ -684,6 +694,40 @@ function processGroup(pgid: number): GroupMember[] {
     .map((line) => line.trim().match(/^(\d+)\s+(\d+)\s+(.*)$/))
     .filter((match) => match && Number(match[2]) === pgid)
     .map((match) => ({ pid: Number(match![1]), command: match![3]! }))
+}
+
+/**
+ * The live members of an instance's process group. When the leader's pid now
+ * belongs to a process started at another time, the OS reused it after this
+ * run's group exited, and the group is someone else's.
+ */
+function instanceGroup(instance: Instance) {
+  const members = processGroup(instance.pid)
+  const leaderAlive = members.some(({ pid }) => pid === instance.pid)
+  if (
+    leaderAlive &&
+    instance.startTime &&
+    processStartTime(instance.pid) !== instance.startTime
+  ) {
+    return []
+  }
+  return members
+}
+
+function processStartTime(pid: number) {
+  const result = spawnSync('ps', ['-o', 'lstart=', '-p', String(pid)], {
+    encoding: 'utf8'
+  })
+  return result.stdout.trim() || undefined
+}
+
+function isBuildRelevant(path: string) {
+  return (
+    !path.endsWith('.md') &&
+    !buildIrrelevantDirectories.some(
+      (directory) => path === directory || path.startsWith(`${directory}/`)
+    )
+  )
 }
 
 function isNextProcess({ command }: GroupMember) {

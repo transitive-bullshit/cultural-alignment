@@ -74,7 +74,7 @@ Everything lands in `work/verify/evidence/<run>/`, which is git-ignored and is n
 - `<NN>-<journeys>/playwright/`: a `trace.zip` and final screenshot per test; open a trace with `pnpm exec playwright show-trace <path>`
 - `<NN>-<journeys>/<project>/<test>/`: numbered captures (`.png` and `.aria.yml`), records (`.json`), produced files (`.md`, `.webp`, `.xml`), and `steps.json` with the outcome, the URL for each step, and every console error, failed request, and HTTP error seen. Problems a journey declared with `evidence.expectProblems` are listed apart under `expectedProblems` with their reason
 
-The fixture in [`journeys/fixtures.ts`](journeys/fixtures.ts) provides `evidence.capture(label, { target?, fullPage? })`, `evidence.record(label, data)`, `evidence.file(label, extension, body)`, and `evidence.expectProblems(pattern, reason)` for problems a step causes on purpose, plus `exploreFromGalleryIntro`, `readLocalStorage`, and the app's `storageKeys`.
+The fixture in [`journeys/fixtures.ts`](journeys/fixtures.ts) provides `evidence.capture(label, { target?, fullPage? })`, `evidence.record(label, data)`, `evidence.file(label, extension, body)`, and `evidence.expectProblems(pattern, reason)` for problems a step causes on purpose (matched against the problem's kind and failing URL, never the page URL), plus `exploreFromGalleryIntro`, `readLocalStorage`, and the app's `storageKeys`.
 
 Proof standards:
 
