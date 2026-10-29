@@ -181,10 +181,7 @@ export function GlobalSearchDialog({
                       >
                         <span className='flex min-w-0 flex-1 flex-col gap-1'>
                           <span
-                            className={cn(
-                              'truncate font-medium',
-                              styles.resultTitle
-                            )}
+                            className={cn('font-medium', styles.resultTitle)}
                             data-search-result-title
                           >
                             <HighlightedSearchText

@@ -13,6 +13,8 @@
 }
 
 .command :global([cmdk-input]) {
+  /* iOS Safari zooms focused inputs below 16px, including after navigation. */
+  font-size: max(1rem, 16px);
   outline: none;
 }
 
@@ -39,6 +41,7 @@
 }
 
 .resultTitle {
+  overflow-wrap: anywhere;
   transition: color 150ms ease;
 }
 

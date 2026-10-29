@@ -377,7 +377,34 @@ async function build(specPath: string, outPath: string | undefined) {
 </section>`)
   }
 
-  const html = renderPage(spec, sections)
+  const fonts = await Promise.all(
+    [
+      [
+        'Barlow Condensed',
+        '700',
+        '@fontsource/barlow-condensed/files/barlow-condensed-latin-700-normal.woff2'
+      ],
+      [
+        'Barlow Condensed',
+        '800',
+        '@fontsource/barlow-condensed/files/barlow-condensed-latin-800-normal.woff2'
+      ],
+      [
+        'Geist',
+        '100 900',
+        '@fontsource-variable/geist/files/geist-latin-wght-normal.woff2'
+      ],
+      [
+        'Geist Mono',
+        '100 900',
+        '@fontsource-variable/geist-mono/files/geist-mono-latin-wght-normal.woff2'
+      ]
+    ].map(async ([family, weight, file]) => {
+      const bytes = await readFile(new URL(import.meta.resolve(file!)))
+      return `@font-face { font-family: '${family}'; font-style: normal; font-weight: ${weight}; font-display: swap; src: url(data:font/woff2;base64,${bytes.toString('base64')}) format('woff2'); }`
+    })
+  )
+  const html = renderPage(spec, sections, fonts.join('\n'))
   const target = outPath
     ? resolve(outPath)
     : join(dirname(resolve(specPath)), 'review.html')
@@ -428,17 +455,19 @@ function escapeHtml(value: string) {
     .replaceAll('"', '&quot;')
 }
 
-function renderPage(spec: ReviewSpec, sections: readonly string[]) {
+function renderPage(
+  spec: ReviewSpec,
+  sections: readonly string[],
+  fonts: string
+) {
   const storageKey = `visual-review:${spec.title}`
   return `<!doctype html>
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${escapeHtml(spec.title)}</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&display=swap">
 <style>
+${fonts}
 /* Layout: one reading column of changes; comparisons widen to two columns. */
 :root {
   --paper: #f3ece0;

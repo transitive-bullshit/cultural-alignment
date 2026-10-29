@@ -15,7 +15,7 @@ The owner reviews visual work on one page: production before, this branch after,
 
 3. **Build.** Write `review.json` beside it and run `pnpm review:visual build <path>` (pass `--out=<name>.html` when another review already lives in that folder). Give each independent change its own section, and say in its summary what changed and what deliberately did not. Use `choices` for picks, and a `table` with a flag column for data edits such as Notion changes.
 
-4. **Publish.** Publish `review.html` as an artifact and share the link. The page saves drafts locally, and **Copy feedback** produces Markdown the owner pastes back. Apply that feedback, recapture, and republish the same file path so the link stays stable.
+4. **Publish.** Publish `review.html` as an artifact and share the link. The generated page embeds its screenshots and fonts, so viewing it needs no external network requests. For local HTTP delivery, use a threaded server (for example, `python3 -m http.server --bind 127.0.0.1`), keep it running while the owner reviews, and check the shared URL before handing it over. A single-threaded `HTTPServer` can stall behind an idle browser connection. The page saves drafts locally, and **Copy feedback** produces Markdown the owner pastes back. Apply that feedback, recapture, and republish the same file path so the link stays stable.
 
 ## Audits
 
