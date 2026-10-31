@@ -1,5 +1,3 @@
-import type { Metadata } from 'next'
-
 import { SiteHeader } from '@/components/site-header'
 import {
   findInitialSpatialGalleryItem,
@@ -10,6 +8,7 @@ import { galleryIntroExample } from '@/features/spatial-gallery/gallery-intro-ex
 import { GalleryIntroMotionProvider } from '@/features/spatial-gallery/gallery-intro-motion'
 import { SpatialGallery } from '@/features/spatial-gallery/spatial-gallery'
 import { contentCatalog } from '@/lib/content/snapshot'
+import { createPageMetadata } from '@/lib/page-metadata'
 
 import styles from '@/features/spatial-gallery/gallery-page-shell.module.css'
 import { BrowseToolbar } from './browse-toolbar'
@@ -18,12 +17,12 @@ const families = contentCatalog.listResources('risk-family')
 const items = toSpatialGalleryItems(contentCatalog.listScenarioCards())
 const initialItem = findInitialSpatialGalleryItem(items)
 
-export const metadata: Metadata = {
+export const generateMetadata = createPageMetadata({
   title: 'AI Safety Scenarios',
   description:
     'Familiar movie and TV scenes that illustrate AI safety risks and alignment concepts.',
-  alternates: { canonical: '/scenarios' }
-}
+  canonical: '/scenarios'
+})
 
 export default function ScenariosPage() {
   if (!initialItem) {

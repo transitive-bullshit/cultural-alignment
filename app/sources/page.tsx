@@ -1,14 +1,13 @@
-import type { Metadata } from 'next'
-
 import { ResourceIndexPage } from '@/features/content-navigation/resource-pages'
 import { contentCatalog } from '@/lib/content/snapshot'
+import { createPageMetadata } from '@/lib/page-metadata'
 
-export const metadata: Metadata = {
+export const generateMetadata = createPageMetadata({
   title: 'Movies and TV Shows',
   description:
     'What popular movies and TV shows can teach us about AI safety, risks, and alignment.',
-  alternates: { canonical: '/sources' }
-}
+  canonical: '/sources'
+})
 
 export default function SourcesPage() {
   const franchiseCount = contentCatalog.listFranchiseResources().length

@@ -34,3 +34,4 @@ Preconditions:
 - Cards are viewport-independent, so the journey skips the mobile project.
 - Check wrapping and fallbacks by looking at the saved WebP files; header and dimension checks cannot catch clipped titles.
 - The first request for a card renders it on demand and can take a few seconds.
+- Next.js shallowly merges Open Graph metadata. Adding a static page’s `openGraph.url` can silently remove the layout’s file-based image; preserve the parent image with `createPageMetadata` in `lib/page-metadata.ts`. Run `pnpm test:e2e tests/e2e/seo.spec.ts` to check the static pages as well as the five detail families. An `og:url` assertion alone does not catch lost images.

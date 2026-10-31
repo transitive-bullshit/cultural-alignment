@@ -1,16 +1,15 @@
-import type { Metadata } from 'next'
-
 import {
   InformationPage,
   InformationSection
 } from '@/features/content-navigation/information-page'
+import { createPageMetadata } from '@/lib/page-metadata'
 import { notionSourceUrl, repositoryUrl, xProfileUrl } from '@/lib/site'
 
-export const metadata: Metadata = {
+export const generateMetadata = createPageMetadata({
   title: 'Privacy',
   description: 'How Cultural Alignment handles data and third-party media.',
-  alternates: { canonical: '/privacy' }
-}
+  canonical: '/privacy'
+})
 
 export default function PrivacyPage() {
   return (

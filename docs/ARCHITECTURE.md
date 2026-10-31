@@ -79,6 +79,8 @@ Page titles pass through the root layout's `%s — Cultural Alignment` template;
 
 [lib/site.ts](../lib/site.ts) resolves the origin used by canonical metadata, sitemap, and machine-facing links. The sitemap derives public resource URLs from the catalog. `llms.txt` supplies a compact project description and entry points.
 
+[page-metadata.ts](../lib/page-metadata.ts) keeps static archive, resource-index, and information-page canonical and Open Graph URLs aligned. The root layout permits large image previews with `max-image-preview:large`; this allows larger search previews without guaranteeing placement. File-based social images remain inherited, and metadata is emitted in the initial HTML. [seo.spec.ts](../tests/e2e/seo.spec.ts) checks search and sharing metadata without JavaScript, including query-free canonicals and resolved titles, descriptions, and images across static pages and all five detail families.
+
 ## Spatial gallery invariants
 
 `features/spatial-gallery` owns the projected surface from deterministic layout through rendering and restoration. Route components choose the content set; they do not coordinate its geometry.
