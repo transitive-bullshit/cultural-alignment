@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     template: '%s — Cultural Alignment'
   },
   description: siteSummary,
+  robots: { 'max-image-preview': 'large' },
   // Pages supply the title and description; Next.js copies them into Open
   // Graph and Twitter metadata so shared cards match search results.
   openGraph: {

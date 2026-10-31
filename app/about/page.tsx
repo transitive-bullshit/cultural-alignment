@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import { IntentPrefetchLink } from '@/components/intent-prefetch-link'
@@ -7,6 +6,7 @@ import {
   InformationPage,
   InformationSection
 } from '@/features/content-navigation/information-page'
+import { createPageMetadata } from '@/lib/page-metadata'
 import {
   notionSourceUrl,
   repositoryUrl,
@@ -14,12 +14,12 @@ import {
   xProfileUrl
 } from '@/lib/site'
 
-export const metadata: Metadata = {
+export const generateMetadata = createPageMetadata({
   title: 'About',
   description:
     'Why Cultural Alignment uses familiar movie and TV scenes to explain AI safety, risks, and alignment.',
-  alternates: { canonical: '/about' }
-}
+  canonical: '/about'
+})
 
 export default function AboutPage() {
   return (
