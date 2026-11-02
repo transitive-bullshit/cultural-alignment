@@ -33,6 +33,7 @@ export function protectedRegionFocus(
   let top = 100
   let right = 0
   let bottom = 0
+
   for (const {
     canvas_rect_pct: [x, y, width, height]
   } of focusRegions) {
@@ -41,6 +42,7 @@ export function protectedRegionFocus(
     right = Math.max(right, x + width)
     bottom = Math.max(bottom, y + height)
   }
+
   return { x: (left + right) / 2, y: (top + bottom) / 2 }
 }
 
@@ -64,11 +66,14 @@ export function calculateFrameGeometry({
   readonly focus?: FrameFocus
 }): FrameGeometry {
   const cover = frameMode === 'cover'
+
   const scale = cover
     ? Math.max(targetWidth / sourceWidth, targetHeight / sourceHeight)
     : Math.min(targetWidth / sourceWidth, targetHeight / sourceHeight)
+
   const renderedWidth = sourceWidth * scale
   const renderedHeight = sourceHeight * scale
+
   return {
     scale,
     renderedWidth,

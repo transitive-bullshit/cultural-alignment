@@ -155,6 +155,7 @@ describe('validateContentSnapshot', () => {
 
   it('rejects local generated-media paths', () => {
     const input = structuredClone(minimalSnapshot)
+
     input.scenarios[0]!.image.gallerySrc =
       '/media/generated/scenarios/scenario-1/gallery.webp'
 
@@ -172,8 +173,10 @@ describe('validateContentSnapshot', () => {
 
   it('accepts immutable HTTPS media URLs and rejects unsafe remote URLs', () => {
     const remote = structuredClone(minimalSnapshot)
+
     remote.scenarios[0]!.image.gallerySrc =
       'https://assets.example.com/media/generated/scenarios/example/gallery-abc.webp'
+
     remote.scenarios[0]!.image.detailSrc =
       'https://assets.example.com/media/generated/scenarios/example/detail-def.webp'
 
@@ -182,10 +185,12 @@ describe('validateContentSnapshot', () => {
     )
 
     const unsafe = structuredClone(remote)
+
     unsafe.scenarios[0]!.image.gallerySrc =
       'http://assets.example.com/gallery.webp?mutable=true'
 
     const error = captureValidationError(() => validateContentSnapshot(unsafe))
+
     expect(error.issues).toEqual([
       expect.objectContaining({
         code: 'invalid-schema',
@@ -196,6 +201,7 @@ describe('validateContentSnapshot', () => {
 
   it('requires a succinct WebP blur placeholder', () => {
     const input = structuredClone(minimalSnapshot)
+
     input.scenarios[0]!.image.blurDataURL =
       'data:image/png;base64,i-am-not-a-webp'
 
@@ -258,6 +264,7 @@ describe('validateContentSnapshot', () => {
         path: 'scenarios[0].conceptIds[0]'
       }
     ])
+
     expect(error.issues.map(({ message }) => message)).toEqual([
       expect.stringContaining('scenario "Keep Summer Safe" (ID: scenario-1)'),
       expect.stringContaining('scenario "Keep Summer Safe" (ID: scenario-1)'),
@@ -277,6 +284,7 @@ describe('validateContentSnapshot', () => {
         path: 'sources[0].relatedSourceIds[0]'
       }
     ])
+
     expect(error.issues[0]!.message).toContain(
       'source "Rick and Morty" (ID: source-1)'
     )
@@ -294,6 +302,7 @@ describe('validateContentSnapshot', () => {
         path: 'sources[0].franchiseIds[0]'
       }
     ])
+
     expect(error.issues[0]!.message).toContain(
       'source "Rick and Morty" (ID: source-1)'
     )

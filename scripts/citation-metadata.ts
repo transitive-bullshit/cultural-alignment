@@ -186,9 +186,11 @@ export async function resolveCitationMetadata(
   } = {}
 ) {
   const uniqueHrefs = [...new Set(hrefs)]
+
   const cachedByHref = new Map(
     (options.cachedCitations ?? []).map((citation) => [citation.href, citation])
   )
+
   const citationsByHref = new Map<string, Citation>()
   const hrefsToFetch: string[] = []
   const warnings: string[] = []
@@ -197,6 +199,7 @@ export async function resolveCitationMetadata(
     try {
       const cached = cachedByHref.get(href)
       const curatedTitle = curatedCitationTitle(href)
+
       if (curatedTitle) {
         const baseCitation = cached ?? fallbackCitationMetadata(href)
         citationsByHref.set(href, { ...baseCitation, title: curatedTitle })
@@ -229,17 +232,21 @@ export async function resolveCitationMetadata(
 
   for (const item of results) {
     const { href } = item
+
     if ('error' in item) {
       warnings.push(
         `Citation metadata resolution failed for ${displayUrl(href)} (${errorMessage(item.error)})`
       )
+
       continue
     }
 
     const { result } = item
     const cached = cachedByHref.get(href)
+
     if (result.usedFallbackTitle && cached) {
       citationsByHref.set(href, cached)
+
       warnings.push(
         `Citation metadata refresh failed for ${displayUrl(href)}; retained cached title “${cached.title}”`
       )
@@ -257,6 +264,7 @@ export async function fetchCitationMetadata(
   fetcher: CitationFetcher = fetch
 ): Promise<CitationMetadataResult> {
   const fallback = fallbackCitationMetadata(href)
+
   if (curatedCitationTitle(href)) {
     return {
       citation: fallback,
@@ -267,6 +275,7 @@ export async function fetchCitationMetadata(
   try {
     const signal = AbortSignal.timeout(FETCH_TIMEOUT_MS)
     const doiMetadata = await fetchDoiMetadata(href, signal, fetcher)
+
     if (doiMetadata) {
       return {
         citation: {
@@ -283,18 +292,23 @@ export async function fetchCitationMetadata(
       signal,
       fetcher
     )
+
     if (!response.ok) {
       throw new Error(`received HTTP ${response.status}`)
     }
 
     const contentType = response.headers.get('content-type') ?? ''
+
     const expectsPdf =
       contentType.toLowerCase().includes('application/pdf') ||
       finalUrl.pathname.toLowerCase().endsWith('.pdf')
+
     const bytes = expectsPdf
       ? await readBoundedResponse(response, MAXIMUM_PDF_BYTES)
       : await readResponsePrefix(response)
+
     const isPdf = expectsPdf || startsWithPdfSignature(bytes)
+
     const extracted = isPdf
       ? {
           title:
@@ -305,10 +319,13 @@ export async function fetchCitationMetadata(
           publisher: null
         }
       : extractCitationMetadataFromHtml(decodeResponse(bytes, contentType))
+
     const publisher =
       normalizeCitationText(extracted.publisher, 100) ??
       publisherFromUrl(finalUrl)
+
     const extractedTitle = normalizeCitationText(extracted.title, 300)
+
     const title =
       isUsefulRemoteTitle(extractedTitle) &&
       !(isPdf && isGenericPdfTitle(extractedTitle))
@@ -320,6 +337,7 @@ export async function fetchCitationMetadata(
       title,
       publisher: publisher ?? fallback.publisher
     }
+
     if (title === fallback.title) {
       return {
         citation,
@@ -327,6 +345,7 @@ export async function fetchCitationMetadata(
         warning: `Citation metadata for ${displayUrl(href)} did not contain a usable title; using “${fallback.title}”`
       }
     }
+
     return { citation, usedFallbackTitle: false }
   } catch (err) {
     return {
@@ -339,6 +358,7 @@ export async function fetchCitationMetadata(
 
 function curatedCitationTitle(href: string) {
   const url = new URL(href)
+
   return url.href in CURATED_CITATION_TITLES
     ? CURATED_CITATION_TITLES[url.href as keyof typeof CURATED_CITATION_TITLES]
     : null
@@ -349,11 +369,13 @@ function extractCitationMetadataFromHtml(html: string) {
 
   for (const match of html.matchAll(/<meta\b[^>]*>/gi)) {
     const attributes = parseTagAttributes(match[0])
+
     const key = (
       attributes.property ??
       attributes.name ??
       attributes.itemprop
     )?.toLowerCase()
+
     const content = attributes.content
     if (key && content && !metadata.has(key)) metadata.set(key, content)
   }
@@ -411,6 +433,7 @@ async function fetchDoiMetadata(
       redirect: 'manual',
       signal
     })
+
     if (!response.ok) return null
 
     const value: unknown = JSON.parse(
@@ -419,17 +442,22 @@ async function fetchDoiMetadata(
         response.headers.get('content-type') ?? ''
       )
     )
+
     if (!value || typeof value !== 'object' || !('message' in value)) {
       return null
     }
+
     const message = value.message
     if (!message || typeof message !== 'object') return null
     const titleValue = 'title' in message ? message.title : null
+
     const title = normalizeCitationText(
       Array.isArray(titleValue) ? titleValue[0] : null,
       300
     )
+
     if (!title) return null
+
     const publisherValue =
       'publisher' in message && typeof message.publisher === 'string'
         ? message.publisher
@@ -467,6 +495,7 @@ async function fetchFollowingSafeRedirects(
     if (!REDIRECT_STATUSES.has(response.status)) {
       return { response, finalUrl: currentUrl }
     }
+
     if (redirectCount >= MAXIMUM_REDIRECTS) {
       throw new Error(`exceeded ${MAXIMUM_REDIRECTS} redirects`)
     }
@@ -489,8 +518,10 @@ async function readResponsePrefix(response: Response) {
       const { done, value } = await reader.read()
       if (done) break
       const remaining = MAXIMUM_RESPONSE_BYTES - byteCount
+
       const chunk =
         value.byteLength > remaining ? value.slice(0, remaining) : value
+
       chunks.push(chunk)
       byteCount += chunk.byteLength
     }
@@ -500,15 +531,18 @@ async function readResponsePrefix(response: Response) {
 
   const bytes = new Uint8Array(byteCount)
   let offset = 0
+
   for (const chunk of chunks) {
     bytes.set(chunk, offset)
     offset += chunk.byteLength
   }
+
   return bytes
 }
 
 async function readBoundedResponse(response: Response, maximumBytes: number) {
   const contentLength = Number(response.headers.get('content-length'))
+
   if (Number.isFinite(contentLength) && contentLength > maximumBytes) {
     throw new Error(
       `PDF response exceeded the ${Math.round(maximumBytes / 1024 / 1024)} MB limit`
@@ -525,11 +559,13 @@ async function readBoundedResponse(response: Response, maximumBytes: number) {
       const { done, value } = await reader.read()
       if (done) break
       byteCount += value.byteLength
+
       if (byteCount > maximumBytes) {
         throw new Error(
           `PDF response exceeded the ${Math.round(maximumBytes / 1024 / 1024)} MB limit`
         )
       }
+
       chunks.push(value)
     }
   } finally {
@@ -538,15 +574,18 @@ async function readBoundedResponse(response: Response, maximumBytes: number) {
 
   const bytes = new Uint8Array(byteCount)
   let offset = 0
+
   for (const chunk of chunks) {
     bytes.set(chunk, offset)
     offset += chunk.byteLength
   }
+
   return bytes
 }
 
 function decodeResponse(bytes: Uint8Array, contentType: string) {
   const charset = contentType.match(/charset\s*=\s*["']?([^;"'\s]+)/i)?.[1]
+
   try {
     return new TextDecoder(charset ?? 'utf-8').decode(bytes)
   } catch {
@@ -569,6 +608,7 @@ async function extractPdfTitle(bytes: Uint8Array) {
   try {
     const { getDocument, VerbosityLevel } =
       await import('pdfjs-dist/legacy/build/pdf.mjs')
+
     const loadingTask = getDocument({
       data: bytes.slice(),
       enableXfa: false,
@@ -581,13 +621,16 @@ async function extractPdfTitle(bytes: Uint8Array) {
       const document = await loadingTask.promise
       const { info, metadata } = await document.getMetadata()
       const infoTitle = getPdfInfoTitle(info)
+
       const metadataTitle = metadata
         ? getStringValue(metadata.get('dc:title'))
         : null
+
       const title = firstDefined(
         metadataTitle ?? undefined,
         infoTitle ?? undefined
       )
+
       if (title) return title
     } finally {
       await loadingTask.destroy().catch(() => undefined)
@@ -602,9 +645,11 @@ async function extractPdfTitle(bytes: Uint8Array) {
 
 function extractRawPdfTitle(bytes: Uint8Array) {
   const source = new TextDecoder('latin1').decode(bytes)
+
   const value = source.match(
     /\/Title\s*(?:\(((?:\\.|[^\\)])*)\)|<([0-9a-f]+)>)/i
   )
+
   if (!value) return null
 
   if (value[1] !== undefined) return decodePdfLiteral(value[1])
@@ -634,28 +679,35 @@ function decodePdfLiteral(value: string) {
         r: '\r',
         t: '\t'
       }
+
       return values[escaped as keyof typeof values] ?? escaped
     })
 }
 
 function decodePdfHex(value: string) {
   const normalized = value.length % 2 === 0 ? value : `${value}0`
+
   const bytes = Uint8Array.from(normalized.match(/.{2}/g) ?? [], (pair) =>
     Number.parseInt(pair, 16)
   )
+
   if (bytes[0] === 0xfe && bytes[1] === 0xff) {
     const codePoints: number[] = []
+
     for (let index = 2; index + 1 < bytes.length; index += 2) {
       codePoints.push((bytes[index]! << 8) | bytes[index + 1]!)
     }
+
     return String.fromCharCode(...codePoints)
   }
+
   return new TextDecoder().decode(bytes)
 }
 
 function titleFromContentDisposition(value: string | null) {
   if (!value) return null
   const encoded = value.match(/filename\*\s*=\s*UTF-8''([^;]+)/i)?.[1]
+
   if (encoded) {
     try {
       return stripFileExtension(decodeURIComponent(encoded.trim()))
@@ -663,6 +715,7 @@ function titleFromContentDisposition(value: string | null) {
       return stripFileExtension(encoded.trim())
     }
   }
+
   const filename = value.match(/filename\s*=\s*(?:"([^"]+)"|([^;\s]+))/i)
   return stripFileExtension(filename?.[1] ?? filename?.[2] ?? '')
 }
@@ -670,6 +723,7 @@ function titleFromContentDisposition(value: string | null) {
 function parseTagAttributes(tag: string) {
   const attributes: Record<string, string> = {}
   const source = tag.replace(/^<meta\b/i, '').replace(/\/?\s*>$/, '')
+
   const pattern =
     /([^\s=/>]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'=<>`]+)))?/g
 
@@ -677,6 +731,7 @@ function parseTagAttributes(tag: string) {
     const name = match[1]!.toLowerCase()
     attributes[name] = match[2] ?? match[3] ?? match[4] ?? ''
   }
+
   return attributes
 }
 
@@ -685,12 +740,14 @@ function normalizeCitationText(
   maximum: number
 ) {
   if (!value) return null
+
   const normalized = decodeHtmlEntities(value)
     .replace(/<[^>]*>/g, ' ')
     .replace(/\s+/g, ' ')
     .replace(/\s+([,.;:!?])/g, '$1')
     .replace(/[,;:]$/, '')
     .trim()
+
   return normalized ? normalized.slice(0, maximum).trim() : null
 }
 
@@ -703,12 +760,14 @@ function decodeHtmlEntities(value: string) {
           decimal || hexadecimal,
           decimal ? 10 : 16
         )
+
         try {
           return String.fromCodePoint(codePoint)
         } catch {
           return entity
         }
       }
+
       return (
         NAMED_HTML_ENTITIES[
           named.toLowerCase() as keyof typeof NAMED_HTML_ENTITIES
@@ -744,12 +803,15 @@ function stripPublisherSuffix(title: string, publisher: string | null) {
   for (const separator of [' | ', ' — ', ' – ', ' - ']) {
     const separatorIndex = title.lastIndexOf(separator)
     if (separatorIndex < 1) continue
+
     const suffix = title
       .slice(separatorIndex + separator.length)
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, '')
+
     if (suffix === normalizedPublisher) return title.slice(0, separatorIndex)
   }
+
   return title
 }
 
@@ -758,6 +820,7 @@ function fallbackTitleFromUrl(url: URL, publisher: string | null) {
     const identifier = url.pathname.match(/^\/(?:abs|pdf)\/([^/]+)/)?.[1]
     if (identifier) return `arXiv: ${stripFileExtension(identifier)}`
   }
+
   if (url.hostname === 'doi.org') {
     return `DOI ${decodePathSegment(url.pathname.slice(1))}`
   }
@@ -766,11 +829,15 @@ function fallbackTitleFromUrl(url: URL, publisher: string | null) {
     .split('/')
     .map(decodePathSegment)
     .filter(Boolean)
+
   const ignoredSegments = new Set(['en', 'eng', 'final', 'index', 'oj'])
+
   const candidates = segments
     .toReversed()
     .filter((candidate) => !ignoredSegments.has(candidate.toLowerCase()))
+
   let segment = candidates[0]
+
   if (
     segment &&
     looksLikeOpaqueIdentifier(stripFileExtension(segment)) &&
@@ -778,6 +845,7 @@ function fallbackTitleFromUrl(url: URL, publisher: string | null) {
   ) {
     return `${publisher ?? 'LessWrong'} ${url.pathname.includes('/p/') ? 'article' : 'sequence'}`
   }
+
   if (
     segment &&
     looksLikeOpaqueIdentifier(stripFileExtension(segment)) &&
@@ -785,18 +853,23 @@ function fallbackTitleFromUrl(url: URL, publisher: string | null) {
   ) {
     return 'NeurIPS paper'
   }
+
   if (segment && looksLikeOpaqueIdentifier(stripFileExtension(segment))) {
     const descriptiveCandidate = candidates.slice(1).find((candidate) => {
       const normalized = stripFileExtension(candidate)
+
       return (
         normalized.length > 3 &&
         !/^\d+$/.test(normalized) &&
         !looksLikeOpaqueIdentifier(normalized)
       )
     })
+
     if (descriptiveCandidate) segment = descriptiveCandidate
   }
+
   if (segment) segment = stripOpaqueSuffix(stripFileExtension(segment))
+
   if (segment && url.pathname.toLowerCase().endsWith('.pdf')) {
     segment = cleanPdfFilename(segment)
   }
@@ -804,6 +877,7 @@ function fallbackTitleFromUrl(url: URL, publisher: string | null) {
   if (segment && /^\d+$/.test(segment)) {
     return `${publisher ?? url.hostname} publication ${segment}`
   }
+
   if (segment) return humanizeUrlText(segment)
 
   const hostLabel = url.hostname.replace(/^www\./, '').split('.')[0]!
@@ -819,18 +893,23 @@ function humanizeUrlText(value: string) {
     .replace(/[._-]+/g, ' ')
     .replace(/\s+/g, ' ')
     .trim()
+
   if (!normalized) return 'Linked publication'
+
   const words = normalized.split(' ').map((word) => {
     const acronym =
       FALLBACK_ACRONYMS[word.toLowerCase() as keyof typeof FALLBACK_ACRONYMS]
+
     return acronym ?? word
   })
+
   const title = words.join(' ')
   return `${title[0]!.toUpperCase()}${title.slice(1)}`.slice(0, 300)
 }
 
 function looksLikeOpaqueIdentifier(value: string) {
   const normalized = value.replace(/-abstract$/i, '')
+
   return (
     /^[0-9a-f]{8,}(?:-en)?$/i.test(normalized) ||
     (/^[a-z0-9]{14,}$/i.test(normalized) && /\d/.test(normalized))
@@ -855,6 +934,7 @@ function stripOpaqueSuffix(value: string) {
 
 function publisherFromUrl(url: URL) {
   const hostname = url.hostname.replace(/^www\./, '').toLowerCase()
+
   if (
     hostname === 'storage.googleapis.com' &&
     url.pathname.toLowerCase().includes('deepmind')
@@ -865,14 +945,17 @@ function publisherFromUrl(url: URL) {
   for (const [domain, publisher] of Object.entries(PUBLISHERS_BY_HOSTNAME)) {
     if (hostname === domain || hostname.endsWith(`.${domain}`)) return publisher
   }
+
   return hostname || null
 }
 
 function assertFetchableUrl(value: string) {
   const url = new URL(value)
+
   if (url.protocol !== 'http:' && url.protocol !== 'https:') {
     throw new Error('citation URL must use HTTP or HTTPS')
   }
+
   if (url.username || url.password) {
     throw new Error('citation URL must not contain credentials')
   }
@@ -881,6 +964,7 @@ function assertFetchableUrl(value: string) {
     .replace(/^\[|\]$/g, '')
     .replace(/\.$/, '')
     .toLowerCase()
+
   if (
     hostname === 'localhost' ||
     hostname.endsWith('.localhost') ||
@@ -889,12 +973,14 @@ function assertFetchableUrl(value: string) {
   ) {
     throw new Error('citation URL must not target a local network address')
   }
+
   if (!isKnownCitationHostname(hostname)) {
     console.warn(
       `Citation URL ${url.href} is not on the approved host list`,
       url.href
     )
   }
+
   return url
 }
 
@@ -907,13 +993,16 @@ function isKnownCitationHostname(hostname: string) {
       return true
     }
   }
+
   return false
 }
 
 function isPrivateIpAddress(hostname: string) {
   const ipVersion = isIP(hostname)
+
   if (ipVersion === 4) {
     const [first, second] = hostname.split('.').map(Number)
+
     return (
       first === 0 ||
       first === 10 ||
@@ -926,6 +1015,7 @@ function isPrivateIpAddress(hostname: string) {
       first! >= 224
     )
   }
+
   if (ipVersion === 6) {
     return (
       hostname === '::' ||
@@ -936,6 +1026,7 @@ function isPrivateIpAddress(hostname: string) {
       hostname.startsWith('::ffff:')
     )
   }
+
   return false
 }
 

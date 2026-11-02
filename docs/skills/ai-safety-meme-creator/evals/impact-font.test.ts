@@ -21,6 +21,7 @@ describe('Impact font resolution', () => {
     const directory = await temporaryDirectory()
     const wrongFontPath = join(directory, 'Impact.ttf')
     const systemImpactPath = join(directory, 'system-impact.ttf')
+
     await Promise.all([
       writeFile(
         wrongFontPath,
@@ -97,8 +98,10 @@ async function temporaryDirectory(): Promise<string> {
 function sfntWithNames(familyName: string, fullName: string): Buffer {
   const encodedNames = [familyName, fullName].map(utf16BigEndian)
   const stringOffset = 6 + encodedNames.length * 12
+
   const nameTableLength =
     stringOffset + encodedNames.reduce((total, name) => total + name.length, 0)
+
   const nameTableOffset = 12 + 16
   const buffer = Buffer.alloc(nameTableOffset + nameTableLength)
 
@@ -113,6 +116,7 @@ function sfntWithNames(familyName: string, fullName: string): Buffer {
   buffer.writeUInt16BE(stringOffset, nameTableOffset + 4)
 
   let storedNameOffset = 0
+
   encodedNames.forEach((encodedName, index) => {
     const recordOffset = nameTableOffset + 6 + index * 12
     buffer.writeUInt16BE(3, recordOffset)
@@ -130,8 +134,10 @@ function sfntWithNames(familyName: string, fullName: string): Buffer {
 
 function utf16BigEndian(value: string): Buffer {
   const buffer = Buffer.alloc(value.length * 2)
+
   for (let index = 0; index < value.length; index += 1) {
     buffer.writeUInt16BE(value.charCodeAt(index), index * 2)
   }
+
   return buffer
 }

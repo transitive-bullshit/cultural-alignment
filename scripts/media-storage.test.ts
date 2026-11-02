@@ -28,9 +28,11 @@ describe('createMediaStorage', () => {
     expect(() => createMediaStorage({ env: {}, clientFactory })).toThrow(
       'S3_ACCESS_KEY_ID is required'
     )
+
     expect(clientFactory).not.toHaveBeenCalled()
 
     createMediaStorage({ env: environment, clientFactory })
+
     expect(clientFactory).toHaveBeenCalledWith(
       expect.objectContaining({
         credentials: {
@@ -74,12 +76,14 @@ describe('createMediaStorage', () => {
       Body: { transformToString: async () => '{}' },
       ETag: '"etag"'
     }))
+
     const storage = createMediaStorage({
       env: { ...environment, S3_STATE_BUCKET_NAME: 'media-state-bucket' },
       client
     })
 
     await storage.getDescriptor('scenarios', notionId)
+
     expect(commandInput(client, 0)).toMatchObject({
       Bucket: 'media-state-bucket'
     })
@@ -99,13 +103,16 @@ describe('createMediaStorage', () => {
 
     const hash = createHash('sha256').update(bytes).digest('hex')
     const key = `media/generated/scenarios/3c6edb27f12480cc92d5c8f2f2e3a7fa/detail-${hash}.webp`
+
     expect(result).toEqual({
       hash,
       key,
       uploaded: false,
       url: `https://media.example.com/assets/${key}`
     })
+
     expect(client.send).toHaveBeenCalledTimes(1)
+
     expect(commandInput(client, 0)).toEqual({
       Bucket: 'media-bucket',
       Key: key
@@ -127,12 +134,14 @@ describe('createMediaStorage', () => {
 
     const hash = createHash('sha256').update(bytes).digest('hex')
     const key = `media/generated/scenarios/3c6edb27f12480cc92d5c8f2f2e3a7fa/memes/detail-${hash}.webp`
+
     expect(result).toEqual({
       hash,
       key,
       uploaded: false,
       url: `https://media.example.com/assets/${key}`
     })
+
     expect(commandInput(client, 0)).toEqual({
       Bucket: 'media-bucket',
       Key: key
@@ -158,12 +167,15 @@ describe('createMediaStorage', () => {
 
   it('uploads a missing franchise image with immutable WebP metadata', async () => {
     const bytes = Buffer.from('new final bytes')
+
     const client = fakeClient(async (command) => {
       if (command instanceof HeadObjectCommand) {
         throw awsError('NotFound', 404)
       }
+
       return {}
     })
+
     const storage = createMediaStorage({ env: environment, client })
 
     const result = await storage.publish({
@@ -174,10 +186,13 @@ describe('createMediaStorage', () => {
     })
 
     expect(result.uploaded).toBe(true)
+
     expect(result.key).toMatch(
       /^media\/generated\/franchises\/[0-9a-f]{32}\/gallery-[0-9a-f]{64}\.webp$/
     )
+
     expect(client.send).toHaveBeenCalledTimes(2)
+
     expect(commandInput(client, 1)).toEqual({
       Body: bytes,
       Bucket: 'media-bucket',
@@ -193,8 +208,10 @@ describe('createMediaStorage', () => {
       if (command instanceof HeadObjectCommand) {
         throw awsError('NotFound', 404)
       }
+
       throw awsError('PreconditionFailed', 412)
     })
+
     const storage = createMediaStorage({ env: environment, client })
 
     await expect(
@@ -209,9 +226,11 @@ describe('createMediaStorage', () => {
 
   it('uses strict HEAD semantics for manifest object checks', async () => {
     const unavailable = awsError('ServiceUnavailable', 503)
+
     const missingClient = fakeClient(async () => {
       throw awsError('NotFound')
     })
+
     const unavailableClient = fakeClient(async () => {
       throw unavailable
     })
@@ -221,11 +240,13 @@ describe('createMediaStorage', () => {
         'known-key'
       )
     ).resolves.toBe(true)
+
     await expect(
       createMediaStorage({ env: environment, client: missingClient }).hasObject(
         'missing-key'
       )
     ).resolves.toBe(false)
+
     await expect(
       createMediaStorage({
         env: environment,
@@ -236,6 +257,7 @@ describe('createMediaStorage', () => {
 
   it('does not mistake an unclassified storage error for a missing object', async () => {
     const error = awsError('NoSuchKey')
+
     const client = fakeClient(async () => {
       throw error
     })
@@ -248,6 +270,7 @@ describe('createMediaStorage', () => {
         variant: 'gallery'
       })
     ).rejects.toBe(error)
+
     expect(client.send).toHaveBeenCalledTimes(1)
   })
 
@@ -255,10 +278,12 @@ describe('createMediaStorage', () => {
     const transformToString = vi.fn<() => Promise<string>>(async () =>
       JSON.stringify({ schemaVersion: 1 })
     )
+
     const client = fakeClient(async (command) => {
       expect(command).toBeInstanceOf(GetObjectCommand)
       return { Body: { transformToString }, ETag: '"descriptor-etag"' }
     })
+
     const storage = createMediaStorage({ env: environment, client })
 
     await expect(storage.getDescriptor('scenarios', notionId)).resolves.toEqual(
@@ -267,7 +292,9 @@ describe('createMediaStorage', () => {
         etag: '"descriptor-etag"'
       }
     )
+
     expect(transformToString).toHaveBeenCalledWith('utf-8')
+
     expect(commandInput(client, 0)).toEqual({
       Bucket: 'media-bucket',
       Key: mediaDescriptorObjectKey('scenarios', notionId)
@@ -279,12 +306,14 @@ describe('createMediaStorage', () => {
       Body: { transformToString: async () => '{"state":"bundle"}' },
       ETag: '"meme-etag"'
     }))
+
     const storage = createMediaStorage({ env: environment, client })
 
     await expect(storage.getMemeDescriptor(notionId)).resolves.toEqual({
       body: '{"state":"bundle"}',
       etag: '"meme-etag"'
     })
+
     expect(commandInput(client, 0)).toEqual({
       Bucket: 'media-bucket',
       Key: memeMediaDescriptorObjectKey(notionId)
@@ -295,7 +324,9 @@ describe('createMediaStorage', () => {
     const missing = fakeClient(async () => {
       throw awsError('NoSuchKey', 404)
     })
+
     const unavailableError = awsError('ServiceUnavailable', 503)
+
     const unavailable = fakeClient(async () => {
       throw unavailableError
     })
@@ -306,6 +337,7 @@ describe('createMediaStorage', () => {
         notionId
       )
     ).resolves.toBeNull()
+
     await expect(
       createMediaStorage({
         env: environment,
@@ -352,6 +384,7 @@ describe('createMediaStorage', () => {
       previousEtag: null,
       value
     })
+
     await storage.putDescriptor({
       collection: 'scenarios',
       notionId,
@@ -360,6 +393,7 @@ describe('createMediaStorage', () => {
     })
 
     expect(client.send.mock.calls[0]?.[0]).toBeInstanceOf(PutObjectCommand)
+
     expect(commandInput(client, 0)).toEqual({
       Body: Buffer.from(`${JSON.stringify(value)}\n`),
       Bucket: 'media-bucket',
@@ -368,6 +402,7 @@ describe('createMediaStorage', () => {
       IfNoneMatch: '*',
       Key: mediaDescriptorObjectKey('scenarios', notionId)
     })
+
     expect(commandInput(client, 1)).toEqual({
       Body: Buffer.from(`${JSON.stringify(value)}\n`),
       Bucket: 'media-bucket',
@@ -381,6 +416,7 @@ describe('createMediaStorage', () => {
   it('creates and conditionally replaces separately keyed meme descriptors', async () => {
     const client = fakeClient()
     const storage = createMediaStorage({ env: environment, client })
+
     const value = {
       schemaVersion: 1,
       collection: 'scenario-memes',
@@ -393,6 +429,7 @@ describe('createMediaStorage', () => {
       previousEtag: null,
       value
     })
+
     await storage.putMemeDescriptor({
       notionId,
       previousEtag: '"previous"',
@@ -407,6 +444,7 @@ describe('createMediaStorage', () => {
       IfNoneMatch: '*',
       Key: memeMediaDescriptorObjectKey(notionId)
     })
+
     expect(commandInput(client, 1)).toEqual({
       Body: Buffer.from(`${JSON.stringify(value)}\n`),
       Bucket: 'media-bucket',

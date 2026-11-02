@@ -34,9 +34,11 @@ export function layoutMemeTextZone(
   const fontSize = (zone.font_size_pct / 100) * memeEvalCanvas.width
   const lineHeight = fontSize * (zone.style === 'code' ? 1.28 : 1.06)
   const isCode = zone.style === 'code'
+
   const lines = zone.line_indexes.flatMap((lineIndex, index) => {
     const indentCharacters = isCode ? (zone.indent_levels[index] ?? 0) * 2 : 0
     const text = captionLines[lineIndex]?.text ?? ''
+
     const wrapped = wrapTextGreedily(
       text,
       zoneWidth,
@@ -44,6 +46,7 @@ export function layoutMemeTextZone(
       indentCharacters,
       zone.style === 'impact' ? 0.5 : 0.58
     )
+
     return (isCode ? wrapped : balanceWrappedTextLines(wrapped)).map(
       (wrappedText) => ({ text: wrappedText, indentCharacters })
     )
@@ -68,12 +71,14 @@ export function wrapTextGreedily(
     1,
     Math.floor(width / (fontSize * averageGlyphWidthEm)) - indentCharacters
   )
+
   const words = text.split(/\s+/)
   const lines: string[] = []
   let line = ''
 
   for (const word of words) {
     const next = line ? `${line} ${word}` : word
+
     if (line && next.length > capacity) {
       lines.push(line)
       line = word
@@ -81,6 +86,7 @@ export function wrapTextGreedily(
       line = next
     }
   }
+
   if (line) lines.push(line)
   return lines.length ? lines : ['']
 }

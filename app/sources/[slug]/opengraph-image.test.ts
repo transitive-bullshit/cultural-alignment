@@ -37,11 +37,14 @@ describe('media source Open Graph image', () => {
     })
       .png()
       .toBuffer()
+
     const posterUrl = source.poster.detailSrc
+
     const fetchSpy = vi
       .spyOn(globalThis, 'fetch')
       .mockImplementation(async (...args) => {
         const input = args[0]
+
         const url =
           typeof input === 'string'
             ? input
@@ -61,24 +64,30 @@ describe('media source Open Graph image', () => {
     const response = await Image({
       params: Promise.resolve({ slug: source.slug })
     })
+
     const image = await response.arrayBuffer()
     const metadata = await sharp(image).metadata()
 
     expect(response.status).toBe(200)
     expect(response.headers.get('content-type')).toBe(contentType)
+
     expect(response.headers.get('cache-control')).toBe(
       'public, max-age=0, must-revalidate'
     )
+
     expect(response.headers.get('cdn-cache-control')).toBe(
       'public, max-age=86400, stale-while-revalidate=604800'
     )
+
     expect(response.headers.get('vercel-cdn-cache-control')).toBe(
       'public, max-age=31536000, immutable'
     )
+
     expect(contentType).toBe('image/webp')
     expect(metadata.format).toBe('webp')
     expect(metadata.width).toBe(size.width)
     expect(metadata.height).toBe(size.height)
+
     expect(
       fetchSpy.mock.calls.filter(([input]) => {
         const url =

@@ -50,6 +50,7 @@ export function discoverScenarios<Scenario extends DiscoverableScenario>(
       current.riskFamilyIds,
       candidate.riskFamilyIds
     )
+
     const sharedConceptIds = intersectIds(
       current.conceptIds,
       candidate.conceptIds

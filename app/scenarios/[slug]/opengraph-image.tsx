@@ -25,7 +25,9 @@ const colors = {
   mutedInk: '#71695f',
   paper: '#f4ecdd'
 } as const
+
 const mediaWidth = 744
+
 const barlowExtraBold = await readFile(
   join(process.cwd(), 'assets/fonts/barlow-condensed-latin-800-normal.woff')
 )
@@ -45,10 +47,12 @@ export default async function Image({
     mediaWidth,
     size.height
   )
+
   const showEpisode = shouldShowEpisode(
     scenario.source.sourceType,
     scenario.episode?.label
   )
+
   const concepts = scenario.concepts.slice(0, 3)
   const titleFontSize = getTitleFontSize(scenario.title)
 

@@ -7,6 +7,7 @@ import { layoutMemeTextZone, memeEvalCanvas } from './text-layout'
 
 const trailingMemePeriodPattern =
   /(?<!\.)\.(?=["'\u2018\u2019\u201c\u201d\u00ab\u00bb\u2039\u203a)\]}]*\s*$)/u
+
 const meaningfulTerminalAbbreviationPattern =
   /(?:\b(?:[a-z]\.){2,}|\b(?:co|corp|dr|e\.g|etc|i\.e|inc|jr|ltd|mr|mrs|ms|sr|st|vs)\.)(?=["'\u2018\u2019\u201c\u201d\u00ab\u00bb\u2039\u203a)\]}]*\s*$)/iu
 
@@ -177,6 +178,7 @@ export function evaluateMemePlan(
     expectation.exact_caption_lines_by_index ?? {}
   )) {
     const lineIndex = Number(lineIndexText)
+
     if (plan.caption_lines[lineIndex]?.text !== expectedLine) {
       addViolation(
         violations,
@@ -187,6 +189,7 @@ export function evaluateMemePlan(
   }
 
   const rejectedDirection = fixture.request.rejected_direction
+
   if (
     expectation.require_rejected_caption_change &&
     rejectedDirection &&
@@ -270,6 +273,7 @@ export function evaluateMemePlan(
   }
 
   const actualFrames = plan.presentation.source_frames
+
   if (!objectsEqual(actualFrames, expectation.expected_source_frames)) {
     addViolation(
       violations,
@@ -301,6 +305,7 @@ export function evaluateMemePlan(
   }
 
   const expectedFrameCount = plan.presentation.template === 'diptych' ? 2 : 1
+
   if (actualFrames.length !== expectedFrameCount) {
     addViolation(
       violations,
@@ -324,6 +329,7 @@ export function evaluateMemePlan(
 
   const requiredRegions = new Set(expectation.required_region_ids ?? [])
   const acknowledgedRegions = new Set(plan.recognition_hinge.region_ids)
+
   for (const regionId of requiredRegions) {
     if (!acknowledgedRegions.has(regionId)) {
       addViolation(
@@ -361,10 +367,12 @@ export function evaluateMemePlan(
 
     zone.line_indexes.forEach((lineIndex, index) => {
       const placements = linePlacements.get(lineIndex) ?? []
+
       placements.push({
         zoneIndex,
         indent: zone.indent_levels[index] ?? -1
       })
+
       linePlacements.set(lineIndex, placements)
     })
 
@@ -403,14 +411,17 @@ export function evaluateMemePlan(
 
     const textLayout = layoutMemeTextZone(plan.caption_lines, zone)
     const actualRenderedLineCount = textLayout.lines.length
+
     const requiredRenderedLineCount = Math.max(
       zone.rendered_line_count,
       actualRenderedLineCount
     )
+
     const minimumHeightPct =
       ((requiredRenderedLineCount * textLayout.lineHeight) /
         memeEvalCanvas.height) *
       100
+
     if (minimumHeightPct > zone.bounds_pct[3] + 0.25) {
       addViolation(
         violations,
@@ -514,6 +525,7 @@ export function evaluateMemePlan(
     const usedZoneIndexes = plan.caption_lines.flatMap((_, lineIndex) =>
       (linePlacements.get(lineIndex) ?? []).map(({ zoneIndex }) => zoneIndex)
     )
+
     if (new Set(usedZoneIndexes).size !== plan.caption_lines.length) {
       addViolation(
         violations,
@@ -528,10 +540,12 @@ export function evaluateMemePlan(
   )) {
     const lineIndex = Number(lineIndexText)
     const placement = linePlacements.get(lineIndex)?.[0]
+
     const actualSlot =
       placement === undefined
         ? undefined
         : plan.presentation.zones[placement.zoneIndex]?.slot
+
     if (!actualSlot || !allowedSlots.includes(actualSlot)) {
       addViolation(
         violations,
@@ -546,10 +560,12 @@ export function evaluateMemePlan(
   )) {
     const lineIndex = Number(lineIndexText)
     const placement = linePlacements.get(lineIndex)?.[0]
+
     const actualAnchor =
       placement === undefined
         ? undefined
         : plan.presentation.zones[placement.zoneIndex]?.anchor_region_id
+
     if (actualAnchor !== expectedAnchor) {
       addViolation(
         violations,
@@ -561,6 +577,7 @@ export function evaluateMemePlan(
 
   expectation.indent_levels_by_line?.forEach((expectedIndent, lineIndex) => {
     const placements = linePlacements.get(lineIndex) ?? []
+
     if (placements.length !== 1 || placements[0]?.indent !== expectedIndent) {
       addViolation(
         violations,
@@ -571,9 +588,11 @@ export function evaluateMemePlan(
   })
 
   const maximumZoneOverlap = expectation.maximum_zone_overlap_ratio
+
   if (maximumZoneOverlap !== undefined) {
     forEachPair(plan.presentation.zones, (left, right) => {
       const ratio = overlapRatio(left.bounds_pct, right.bounds_pct, 'minimum')
+
       if (ratio > maximumZoneOverlap) {
         addViolation(
           violations,
@@ -585,8 +604,10 @@ export function evaluateMemePlan(
   }
 
   const maximumProtectedOverlap = expectation.maximum_protected_overlap_ratio
+
   if (maximumProtectedOverlap !== undefined) {
     const usedImages = new Set(actualFrames.map(({ image_id }) => image_id))
+
     for (const region of fixture.protected_regions) {
       if (region.priority !== 'must' || !usedImages.has(region.image_id)) {
         continue
@@ -598,6 +619,7 @@ export function evaluateMemePlan(
           region.canvas_rect_pct,
           'right'
         )
+
         if (ratio > maximumProtectedOverlap) {
           addViolation(
             violations,
@@ -628,6 +650,7 @@ function addViolation(
   ) {
     return
   }
+
   violations.push({ code, message })
 }
 
@@ -674,6 +697,7 @@ function slotMatchesBounds(
 ): boolean {
   const centerX = x + width / 2
   const centerY = y + height / 2
+
   switch (slot) {
     case 'top':
       return centerY < 50
@@ -718,24 +742,29 @@ function overlapRatio(
 ): number {
   const intersection = intersectionArea(left, right)
   if (intersection === 0) return 0
+
   const denominatorArea =
     denominator === 'right'
       ? rectArea(right)
       : Math.min(rectArea(left), rectArea(right))
+
   return intersection / denominatorArea
 }
 
 function intersectionArea(left: PercentageRect, right: PercentageRect): number {
   const [leftX, leftY, leftWidth, leftHeight] = left
   const [rightX, rightY, rightWidth, rightHeight] = right
+
   const width = Math.max(
     0,
     Math.min(leftX + leftWidth, rightX + rightWidth) - Math.max(leftX, rightX)
   )
+
   const height = Math.max(
     0,
     Math.min(leftY + leftHeight, rightY + rightHeight) - Math.max(leftY, rightY)
   )
+
   return width * height
 }
 

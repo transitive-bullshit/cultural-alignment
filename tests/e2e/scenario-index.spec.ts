@@ -18,35 +18,45 @@ test.describe('server-rendered scenario index', () => {
         const gallery = page.locator('[data-spatial-gallery="browse"]')
         const index = page.locator('[data-scenario-index]')
         const links = index.locator('a[href^="/scenarios/"]')
+
         const expected =
           route === '/'
             ? scenarios.filter(({ tags }) =>
                 tags.some((tag) => tag === 'featured')
               )
             : scenarios
+
         const expectedHrefs = expected.map(({ slug }) => `/scenarios/${slug}`)
 
         await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
         await expect(index).toBeVisible()
         await expect(links).toHaveCount(expected.length)
+
         const hrefs = await links.evaluateAll((nodes) =>
           nodes.map((node) => node.getAttribute('href'))
         )
+
         expect(
           hrefs.toSorted((a, b) => (a ?? '').localeCompare(b ?? ''))
         ).toEqual(expectedHrefs.toSorted((a, b) => a.localeCompare(b)))
+
         expect(new Set(hrefs).size).toBe(expected.length)
+
         const titles = new Map(
           expected.map(({ slug, title }) => [`/scenarios/${slug}`, title])
         )
+
         const labels = await links.allTextContents()
+
         labels.forEach((label, index) =>
           expect(label).toContain(titles.get(hrefs[index]!)!)
         )
+
         await expect(gallery).toHaveAttribute(
           'data-gallery-item-count',
           String(expected.length)
         )
+
         await expect(links.first()).toBeVisible()
         await expect(links.first()).not.toHaveText('')
       })
@@ -66,13 +76,16 @@ test.describe('server-rendered scenario index', () => {
     await expect(page.locator('[data-spatial-gallery] canvas')).toBeVisible({
       timeout: 15_000
     })
+
     await expect(index).toHaveAttribute('data-enhanced', 'true')
+
     await expect
       .poll(() => index.evaluate((element) => element.clientWidth))
       .toBeLessThanOrEqual(1)
 
     await firstLink.focus()
     await expect(firstLink).toBeFocused()
+
     await expect
       .poll(() => index.evaluate((element) => element.clientWidth))
       .toBeGreaterThan(200)
@@ -85,11 +98,13 @@ test.describe('server-rendered scenario index', () => {
     const index = page.locator('[data-scenario-index]')
 
     await expect(index).not.toHaveAttribute('data-enhanced')
+
     await expect
       .poll(() => index.evaluate((element) => element.clientWidth), {
         timeout: 15_000
       })
       .toBeGreaterThan(200)
+
     await expect(index.locator('a[href^="/scenarios/"]').first()).toBeVisible()
   })
 })

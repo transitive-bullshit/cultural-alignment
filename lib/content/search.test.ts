@@ -50,12 +50,15 @@ describe('searchDocuments', () => {
     expect(
       searchDocuments(documents, 'black').map(({ title }) => title)
     ).toEqual(['Black Mirror', 'The Rating Game'])
+
     expect(
       searchDocuments(documents, 'rating game').map(({ title }) => title)
     ).toEqual(['The Rating Game', 'A Different Story'])
+
     expect(searchDocuments(documents, 'GOODHARTS')[0]?.title).toBe(
       "Goodhart's law"
     )
+
     expect(searchDocuments(documents, 'rating black')).toEqual([
       expect.objectContaining({ title: 'The Rating Game' })
     ])
@@ -136,6 +139,7 @@ describe('searchDocuments', () => {
         subtitle: 'Source'
       })
     ]
+
     const groups = searchDocumentGroups(crowdedDocuments, 'shared match', 3)
 
     expect(groups.map(({ kind }) => kind)).toEqual([
@@ -145,9 +149,11 @@ describe('searchDocuments', () => {
       'scenario',
       'source'
     ])
+
     expect(groups.map(({ documents }) => documents.length)).toEqual([
       1, 1, 1, 3, 1
     ])
+
     expect(searchDocumentGroups(documents, 'source', 0)).toEqual([])
     expect(searchDocuments(documents, '   ')).toEqual([])
   })
@@ -159,9 +165,11 @@ describe('splitSearchTextMatches', () => {
       { start: 0, text: 'Goodhart’s', isMatch: true },
       { start: 10, text: ' law', isMatch: false }
     ])
+
     expect(splitSearchTextMatches('Café—rating', 'cafe rating')).toEqual([
       { start: 0, text: 'Café—rating', isMatch: true }
     ])
+
     expect(splitSearchTextMatches('AI for AI', 'ai')).toEqual([
       { start: 0, text: 'AI', isMatch: true },
       { start: 2, text: ' for ', isMatch: false },

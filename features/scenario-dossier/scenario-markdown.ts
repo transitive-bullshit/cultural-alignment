@@ -11,7 +11,9 @@ export function formatScenarioAsMarkdown(scenario: ScenarioPage, siteUrl: URL) {
     `- **AI safety concepts:** ${formatTaxonomyLinks(scenario.concepts, siteUrl)}`,
     `- **Scenario page:** ${markdownLink('View the original dossier', `/scenarios/${scenario.slug}`, siteUrl)}`
   ].filter((line) => line !== null)
+
   const imageUrl = markdownDestination(scenario.image.detailSrc, siteUrl)
+
   const sections = [
     `# ${escapeMarkdownText(scenario.title)}`,
     `## Scenario details\n\n${details.join('\n')}`,

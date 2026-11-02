@@ -32,10 +32,12 @@ export function readGalleryHistoryState(
   if (typeof candidate.offsetX !== 'number') return null
   if (!Number.isFinite(candidate.offsetX)) return null
   let topology: SpatialGalleryTopology | null = null
+
   if (candidate.version === 2) {
     if (candidate.topology !== 'desktop' && candidate.topology !== 'mobile') {
       return null
     }
+
     topology = candidate.topology
   }
 
@@ -53,6 +55,7 @@ export function mergeGalleryHistoryState(
   galleryState: SpatialGalleryHistoryState
 ) {
   const currentHistory = isRecord(historyState) ? historyState : {}
+
   const currentGalleries = isRecord(currentHistory[GALLERY_HISTORY_STATE_KEY])
     ? currentHistory[GALLERY_HISTORY_STATE_KEY]
     : {}

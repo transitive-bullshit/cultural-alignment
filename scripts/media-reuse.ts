@@ -29,6 +29,7 @@ export function mediaDescriptorFastPath(input: {
   readonly fallback?: CurrentFallback
 }): MediaDescriptorFastPath {
   const descriptor = input.descriptor
+
   if (
     input.force ||
     !descriptor ||
@@ -39,11 +40,13 @@ export function mediaDescriptorFastPath(input: {
   }
 
   if (descriptor.state === 'absent') return { kind: 'absent' }
+
   if (descriptor.source.type !== 'fallback') {
     return { kind: 'image', descriptor, needsDescriptorWrite: false }
   }
 
   const fallback = input.fallback
+
   if (
     !fallback ||
     descriptor.source.imageBlockId !== fallback.imageBlockId ||

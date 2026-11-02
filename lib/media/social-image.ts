@@ -29,7 +29,9 @@ export async function toSocialImageDataUrl(
     .resize({ width, height, fit: 'outside' })
     .raw()
     .toBuffer({ resolveWithObject: true })
+
   const focalPoint = image.focalPoint ?? { x: 0.5, y: 0.5 }
+
   const jpeg = await sharp(data, { raw: info })
     .extract({
       left: Math.round((info.width - width) * focalPoint.x),

@@ -28,6 +28,7 @@ export function toSpatialGalleryItems(
           scenario.image.width
       )
     )
+
     const { props } = getImageProps({
       src: scenario.image.gallerySrc,
       alt: scenario.image.alt,

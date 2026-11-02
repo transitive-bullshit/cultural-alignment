@@ -109,9 +109,11 @@ export function splitSearchTextMatches(
   const needles = normalizedValue.text.includes(normalizedQuery)
     ? [normalizedQuery]
     : [...new Set(normalizedQuery.split(' '))]
+
   const matches = needles
     .flatMap((needle) => findOriginalMatchRanges(normalizedValue, needle))
     .toSorted((left, right) => left.start - right.start || left.end - right.end)
+
   const mergedMatches: MatchRange[] = []
 
   for (const match of matches) {
@@ -145,6 +147,7 @@ export function splitSearchTextMatches(
       text: value.slice(match.start, match.end),
       isMatch: true
     })
+
     cursor = match.end
   }
 
@@ -167,9 +170,11 @@ function scoreDocument(
   const title = normalizeSearchText(document.title)
   const subtitle = normalizeSearchText(document.subtitle)
   const keywords = document.keywords.map(normalizeSearchText)
+
   const supplementalKeywords = (document.supplementalKeywords ?? []).map(
     normalizeSearchText
   )
+
   const titleScore = scoreField(title, query, tokens, 0)
 
   if (titleScore !== null) return titleScore
@@ -261,6 +266,7 @@ function normalizeSearchTextWithSource(value: string): NormalizedSearchText {
   for (const sourceCharacter of value) {
     const start = sourceOffset
     sourceOffset += sourceCharacter.length
+
     const normalizedCharacter = sourceCharacter
       .normalize('NFKD')
       .replace(/\p{Diacritic}/gu, '')

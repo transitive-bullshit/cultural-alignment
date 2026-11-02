@@ -15,12 +15,15 @@ vi.mock('react', () => ({
     getServerSnapshot: () => T
   ) {
     if (observer.server) return getServerSnapshot()
+
     if (!observer.subscribed) {
       subscribe(() => {
         observer.notifications += 1
       })
+
       observer.subscribed = true
     }
+
     return getClientSnapshot()
   }
 }))
@@ -29,6 +32,7 @@ const storageKey = 'cultural-alignment:gallery-item-size:v1'
 let preference: typeof import('./gallery-item-size-preference')
 let events: EventTarget
 let stored: Map<string, string>
+
 let storage: {
   getItem: ReturnType<typeof vi.fn<(key: string) => string | null>>
   removeItem: ReturnType<typeof vi.fn<(key: string) => void>>
@@ -38,13 +42,16 @@ let storage: {
 beforeEach(async () => {
   vi.resetModules()
   vi.useFakeTimers()
+
   Object.assign(observer, {
     notifications: 0,
     server: false,
     subscribed: false
   })
+
   events = new EventTarget()
   stored = new Map([[storageKey, '110']])
+
   storage = {
     getItem: vi.fn<(key: string) => string | null>(
       (key) => stored.get(key) ?? null
@@ -56,12 +63,14 @@ beforeEach(async () => {
       stored.set(key, value)
     })
   }
+
   vi.stubGlobal('window', {
     addEventListener: events.addEventListener.bind(events),
     localStorage: storage,
     setTimeout: globalThis.setTimeout,
     clearTimeout: globalThis.clearTimeout
   })
+
   preference = await import('./gallery-item-size-preference')
 })
 
@@ -88,28 +97,34 @@ function remotePreference(value: string) {
 describe('gallery item-size preference store', () => {
   it('offers a default server snapshot and restores the stored client value', () => {
     observer.server = true
+
     expect(read()).toEqual({
       hydrated: false,
       itemSize: 100,
       itemSizeTransition: 'instant'
     })
+
     observer.server = false
+
     expect(read()).toEqual({
       hydrated: true,
       itemSize: 110,
       itemSizeTransition: 'instant'
     })
+
     expect(storage.setItem).not.toHaveBeenCalled()
   })
 
   it('debounces live changes and persists only the most recent size', () => {
     read()
     preference.setGalleryItemSizePreference(120, 'smooth')
+
     expect(read()).toEqual({
       hydrated: true,
       itemSize: 120,
       itemSizeTransition: 'smooth'
     })
+
     vi.advanceTimersByTime(249)
     expect(stored.get(storageKey)).toBe('110')
     preference.setGalleryItemSizePreference(130, 'smooth')
@@ -126,11 +141,13 @@ describe('gallery item-size preference store', () => {
     vi.advanceTimersByTime(250)
     storage.setItem.mockClear()
     preference.setGalleryItemSizeTransition('instant')
+
     expect(read()).toEqual({
       hydrated: true,
       itemSize: 120,
       itemSizeTransition: 'instant'
     })
+
     vi.advanceTimersByTime(250)
     expect(storage.setItem).not.toHaveBeenCalled()
   })
@@ -139,14 +156,17 @@ describe('gallery item-size preference store', () => {
     read()
     preference.setGalleryItemSizePreference(120, 'smooth')
     remotePreference('90')
+
     expect(read()).toEqual({
       hydrated: true,
       itemSize: 120,
       itemSizeTransition: 'smooth'
     })
+
     vi.advanceTimersByTime(250)
     expect(stored.get(storageKey)).toBe('120')
     remotePreference('90')
+
     expect(read()).toEqual({
       hydrated: true,
       itemSize: 90,

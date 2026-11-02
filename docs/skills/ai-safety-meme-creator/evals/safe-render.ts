@@ -197,9 +197,11 @@ export async function renderSafeMemeIntent({
   readonly previewPath?: string
 }): Promise<SafeMemeRenderResult> {
   const knownImages = new Set(fixture.images.map(({ id }) => id))
+
   const missingImage = intent.presentation.source_frames.find(
     ({ image_id }) => !knownImages.has(image_id)
   )
+
   if (missingImage) {
     return {
       status: 'blocked',
@@ -230,9 +232,11 @@ export async function renderSafeMemePlan({
   readonly previewPath?: string
 }): Promise<SafeMemeRenderResult> {
   const knownImages = new Set(fixture.images.map(({ id }) => id))
+
   const missingImage = plan.presentation.source_frames.find(
     ({ image_id }) => !knownImages.has(image_id)
   )
+
   if (missingImage) {
     return {
       status: 'blocked',
@@ -242,6 +246,7 @@ export async function renderSafeMemePlan({
       }
     }
   }
+
   if (
     plan.presentation.zones.some(({ style }) => style === 'impact') &&
     impactFont.status !== 'resolved'
@@ -254,9 +259,11 @@ export async function renderSafeMemePlan({
       }
     }
   }
+
   const invalidWhitespace = plan.caption_lines.find(
     ({ text }) => !hasCanonicalCaptionWhitespace(text)
   )
+
   if (invalidWhitespace) {
     return {
       status: 'blocked',
@@ -269,6 +276,7 @@ export async function renderSafeMemePlan({
   }
 
   let sourceDimensions: ReadonlyMap<string, SourceDimensions>
+
   try {
     sourceDimensions = await readSourceDimensions(fixture)
   } catch (err) {
@@ -280,24 +288,31 @@ export async function renderSafeMemePlan({
       }
     }
   }
+
   const fittedPlan = await fitPlan(plan, fixture, sourceDimensions)
+
   if (fittedPlan.status === 'blocked') {
     return fittedPlan
   }
+
   const fitted = fittedPlan.zones
 
   const realizedPlan = realizePlan(plan, fitted, fittedPlan.captionArea)
+
   const background = await renderSafeBackground(
     fixture,
     fittedPlan.sourcePlacements
   )
+
   const composites: {
     readonly input: Buffer
     readonly left: number
     readonly top: number
   }[] = []
+
   for (const zone of fitted) {
     const backdrop = await renderZoneBackdrop(zone)
+
     if (backdrop) {
       composites.push({
         input: backdrop,
@@ -305,14 +320,17 @@ export async function renderSafeMemePlan({
         top: zone.box.top
       })
     }
+
     composites.push({
       input: zone.fit.layerPng,
       left: zone.box.left,
       top: zone.box.top
     })
   }
+
   const raster = await sharp(background).composite(composites).png().toBuffer()
   const metadata = await sharp(raster).metadata()
+
   if (
     metadata.width !== memeEvalCanvas.width ||
     metadata.height !== memeEvalCanvas.height
@@ -330,12 +348,15 @@ export async function renderSafeMemePlan({
     fitted.map(async (zone): Promise<SafeMemeTextLayerCheck> => {
       const bounds = globalInkBounds(zone)
       const style = textStyleFor(zone.sourceZone, fittedPlan.captionArea)
+
       const opaqueBackplate =
         fittedPlan.captionArea === 'external' ||
         zone.sourceZone.backdrop === 'solid-panel'
+
       const strokePixelCount = style.stroke
         ? await countOpaqueColorPixels(zone.fit.layerPng, style.stroke.color)
         : 0
+
       return {
         zone_id: zone.sourceZone.id,
         font_family: fontForStyle(zone.sourceZone.style).family,
@@ -357,6 +378,7 @@ export async function renderSafeMemePlan({
       }
     })
   )
+
   const copyPreserved = fitted.every(({ sourceZone, fit }) =>
     sourceZone.line_indexes.every(
       (lineIndex) =>
@@ -370,16 +392,20 @@ export async function renderSafeMemePlan({
         )
     )
   )
+
   const glyphOverflowPx = Math.max(
     0,
     ...textLayers.map(({ ink_bounds_px }) =>
       overflowOutsideCanvas(ink_bounds_px)
     )
   )
+
   const zonesInsideCanvas = fitted.every(({ box }) => isInsideCanvas(box))
+
   const textLegibilityPass = textLayers.every(
     ({ legibility_pass }) => legibility_pass
   )
+
   if (
     !copyPreserved ||
     glyphOverflowPx > 0 ||
@@ -396,8 +422,10 @@ export async function renderSafeMemePlan({
   }
 
   await sharp(raster).toFile(outputPath)
+
   if (previewPath) {
     const preview = sharp(raster).resize({ width: 480 })
+
     if (extname(previewPath).toLowerCase() === '.webp') {
       await preview.webp({ quality: 84 }).toFile(previewPath)
     } else {
@@ -433,6 +461,7 @@ function planFromSemanticIntent(
   intent: SemanticMemeIntent
 ): MemeEvalPlan {
   const template = chooseTemplate(fixture, intent)
+
   const frameMode =
     fixture.expectations.allowed_frame_modes.length === 1
       ? fixture.expectations.allowed_frame_modes[0]!
@@ -441,6 +470,7 @@ function planFromSemanticIntent(
             mode as MemeEvalPlan['presentation']['frame_mode']
           )
         ) as MemeEvalPlan['presentation']['frame_mode'])
+
   const zoneGroups = semanticZoneGroups(intent, template)
 
   return {
@@ -461,8 +491,10 @@ function planFromSemanticIntent(
         const sourceLines = group.lineIndexes.map(
           (lineIndex) => intent.caption_lines[lineIndex]!
         )
+
         const palette = intent.presentation.palette
         const treatment = chooseTreatment(fixture, group.style, palette)
+
         return {
           id: group.id,
           line_indexes: group.lineIndexes,
@@ -500,6 +532,7 @@ function chooseTemplate(
 ): MemeEvalPlan['presentation']['template'] {
   const allowed = fixture.expectations.allowed_templates
   if (allowed.length === 1) return allowed[0]!
+
   const preferred =
     intent.presentation.mode === 'state-contrast'
       ? 'diptych'
@@ -508,6 +541,7 @@ function chooseTemplate(
         : intent.presentation.mode === 'source-native'
           ? 'interface'
           : 'overlay'
+
   return allowed.includes(preferred) ? preferred : allowed[0]!
 }
 
@@ -520,15 +554,18 @@ function chooseTreatment(
     fixture.expectations.allowed_backdrops?.length === 1
       ? fixture.expectations.allowed_backdrops[0]
       : undefined
+
   const lockedContrast =
     fixture.expectations.allowed_contrast?.length === 1
       ? fixture.expectations.allowed_contrast[0]
       : undefined
+
   if (lockedBackdrop || lockedContrast) {
     const backdrop = lockedBackdrop ?? contrastToBackdrop(lockedContrast!)
     const contrast = lockedContrast ?? backdropToContrast(backdrop)
     return { backdrop, contrast }
   }
+
   if (
     palette === 'orange-white' ||
     style === 'code' ||
@@ -537,6 +574,7 @@ function chooseTreatment(
   ) {
     return { backdrop: 'solid-panel', contrast: 'solid-panel' }
   }
+
   return { backdrop: 'none', contrast: 'outlined' }
 }
 
@@ -548,16 +586,20 @@ function resolveSemanticSlot(
 ): MemeEvalPlan['presentation']['zones'][number]['slot'] {
   if (template === 'band-top') return 'top'
   if (template === 'band-bottom' || template === 'interface') return 'bottom'
+
   const locks = lineIndexes
     .map((lineIndex) => fixture.expectations.required_line_slots?.[lineIndex])
     .filter((slots): slots is NonNullable<typeof slots> => Boolean(slots))
+
   if (!locks.length) return fallback
+
   const common = locks.reduce<
     readonly MemeEvalPlan['presentation']['zones'][number]['slot'][]
   >(
     (values, slots) => values.filter((value) => slots.includes(value)),
     locks[0]!
   )
+
   return common.includes(fallback) ? fallback : (common[0] ?? fallback)
 }
 
@@ -583,6 +625,7 @@ function semanticZoneGroups(
   readonly style: MemeEvalPlan['presentation']['zones'][number]['style']
 }[] {
   const indexes = intent.caption_lines.map((_, index) => index)
+
   const styleFor = (lineIndex: number) => {
     const role = intent.caption_lines[lineIndex]!.role
     if (role === 'code') return 'code' as const
@@ -591,6 +634,7 @@ function semanticZoneGroups(
     if (role === 'speech') return 'dialogue' as const
     return 'impact' as const
   }
+
   if (
     template === 'band-top' ||
     template === 'band-bottom' ||
@@ -613,6 +657,7 @@ function semanticZoneGroups(
       }
     ]
   }
+
   if (intent.presentation.mode === 'state-contrast') {
     return indexes.map((lineIndex, index) => ({
       id: index === 0 ? 'before' : 'after',
@@ -621,6 +666,7 @@ function semanticZoneGroups(
       style: styleFor(lineIndex)
     }))
   }
+
   if (intent.presentation.mode === 'dialogue') {
     return indexes.map((lineIndex, index) => ({
       id: `speaker-${index + 1}`,
@@ -633,7 +679,9 @@ function semanticZoneGroups(
   const payoffIndexes = indexes.filter(
     (index) => intent.caption_lines[index]!.role === 'payoff'
   )
+
   const setupIndexes = indexes.filter((index) => !payoffIndexes.includes(index))
+
   return [
     {
       id: 'setup',
@@ -670,18 +718,23 @@ async function fitPlan(
     'sidecar-right',
     'diptych'
   ].includes(plan.presentation.template)
+
   let fittedAnyText = false
   let rejectedForProtectedRegion = false
+
   for (const boxes of candidateBoxSets(plan)) {
     const captionArea = templateOwnsCaptionArea ? 'external' : 'overlay'
+
     const balanced = await fitBoxes(
       plan,
       boxes,
       fixture.expectations.maximum_rendered_lines_per_zone,
       captionArea
     )
+
     if (!balanced) continue
     fittedAnyText = true
+
     const assessed = assessCandidate({
       fixture,
       plan,
@@ -689,6 +742,7 @@ async function fitPlan(
       captionArea,
       sourceDimensions
     })
+
     if (assessed) return { status: 'fit', ...assessed }
     rejectedForProtectedRegion = true
   }
@@ -696,6 +750,7 @@ async function fitPlan(
   if (fittedAnyText && !templateOwnsCaptionArea) {
     for (const boxSets of externalCandidateBoxSetPhases(plan)) {
       let bestExternal: FittedPlan | undefined
+
       for (const boxes of boxSets) {
         const balanced = await fitBoxes(
           plan,
@@ -703,7 +758,9 @@ async function fitPlan(
           fixture.expectations.maximum_rendered_lines_per_zone,
           'external'
         )
+
         if (!balanced) continue
+
         const assessed = assessCandidate({
           fixture,
           plan,
@@ -711,19 +768,23 @@ async function fitPlan(
           captionArea: 'external',
           sourceDimensions
         })
+
         if (!assessed) {
           rejectedForProtectedRegion = true
           continue
         }
+
         if (plan.presentation.zones.length !== 1) {
           return { status: 'fit', ...assessed }
         }
+
         if (
           !bestExternal ||
           minimumFittedFontSize(assessed) > minimumFittedFontSize(bestExternal)
         ) {
           bestExternal = assessed
         }
+
         if (
           bestExternal &&
           minimumFittedFontSize(bestExternal) >= comfortableExternalFontSizePx
@@ -731,9 +792,11 @@ async function fitPlan(
           break
         }
       }
+
       if (bestExternal) return { status: 'fit', ...bestExternal }
     }
   }
+
   return {
     status: 'blocked',
     reason: rejectedForProtectedRegion
@@ -760,6 +823,7 @@ function externalCandidateBoxSetPhases(
   plan: MemeEvalPlan
 ): readonly (readonly (readonly ZoneBox[])[])[] {
   const candidates = externalCandidateBoxSets(plan)
+
   return plan.presentation.zones.length === 1
     ? [candidates.slice(0, 3), candidates.slice(3)]
     : [candidates]
@@ -785,23 +849,29 @@ function assessCandidate({
     captionArea,
     sourceDimensions
   })
+
   if (!sourcePlacements) return null
+
   const sourceOccupancy = measureSourceOccupancy({
     plan,
     zones,
     captionArea,
     sourcePlacements
   })
+
   if (!sourceOccupancy) return null
+
   const protectedRegions = projectProtectedRegions(
     fixture,
     sourcePlacements,
     zones
   )
+
   const invalidMustRegion = protectedRegions.some(
     ({ priority, visible_ratio, caption_overlap_px }) =>
       priority === 'must' && (visible_ratio < 0.995 || caption_overlap_px > 0)
   )
+
   return invalidMustRegion
     ? null
     : {
@@ -835,7 +905,9 @@ function measureSourceOccupancy({
       )
     )
   )
+
   const minimumCanvasHeightRatio = minimumVisibleHeight / memeEvalCanvas.height
+
   const templateOwnsCaptionArea = [
     'band-top',
     'band-bottom',
@@ -843,6 +915,7 @@ function measureSourceOccupancy({
     'sidecar-right',
     'diptych'
   ].includes(plan.presentation.template)
+
   const requiredCanvasHeightRatio =
     captionArea === 'external' && !templateOwnsCaptionArea
       ? zones.length === 1
@@ -853,9 +926,11 @@ function measureSourceOccupancy({
           ? 0.6
           : 0
       : 0
+
   if (minimumCanvasHeightRatio + Number.EPSILON < requiredCanvasHeightRatio) {
     return null
   }
+
   return {
     minimum_preview_visible_height_px:
       minimumVisibleHeight * (480 / memeEvalCanvas.width),
@@ -885,12 +960,14 @@ function sourcePlacementsFor({
     if (frames.length !== 2 || zones.length !== 2) return null
     const imageBottom = Math.min(...zones.map(({ box }) => box.top))
     if (imageBottom <= 0) return null
+
     targets = [
       { left: 0, top: 0, width: 600, height: imageBottom },
       { left: 600, top: 0, width: 600, height: imageBottom }
     ]
   } else {
     if (frames.length !== 1) return null
+
     if (plan.presentation.template === 'sidecar-left') {
       targets = [{ left: 330, top: 0, width: 870, height: 800 }]
     } else if (plan.presentation.template === 'sidecar-right') {
@@ -901,18 +978,23 @@ function sourcePlacementsFor({
         .filter(
           ({ top, height }) => top + height / 2 < memeEvalCanvas.height / 2
         )
+
       const bottomBoxes = zones
         .map(({ box }) => box)
         .filter(
           ({ top, height }) => top + height / 2 >= memeEvalCanvas.height / 2
         )
+
       const imageTop = topBoxes.length
         ? Math.max(...topBoxes.map(({ top, height }) => top + height))
         : 0
+
       const imageBottom = bottomBoxes.length
         ? Math.min(...bottomBoxes.map(({ top }) => top))
         : memeEvalCanvas.height
+
       if (imageBottom <= imageTop) return null
+
       targets = [
         {
           left: 0,
@@ -934,15 +1016,18 @@ function sourcePlacementsFor({
   }
 
   const placements: SourcePlacement[] = []
+
   for (const [index, frame] of frames.entries()) {
     const target = targets[index]!
     const dimensions = sourceDimensions.get(frame.image_id)
     if (!target || !dimensions) return null
+
     const focus = protectedRegionFocus(
       fixture.protected_regions.filter(
         ({ image_id }) => image_id === frame.image_id
       )
     )
+
     const geometry = calculateFrameGeometry({
       sourceWidth: dimensions.width,
       sourceHeight: dimensions.height,
@@ -956,6 +1041,7 @@ function sourcePlacementsFor({
           : plan.presentation.frame_mode,
       focus
     })
+
     placements.push({
       imageId: frame.image_id,
       frameMode: plan.presentation.frame_mode,
@@ -965,6 +1051,7 @@ function sourcePlacementsFor({
       sourceHeight: dimensions.height
     })
   }
+
   return placements
 }
 
@@ -974,10 +1061,12 @@ function projectProtectedRegions(
   zones: readonly FittedZone[]
 ): readonly SafeMemeProtectedRegionCheck[] {
   const captionBounds = zones.map(paintedCaptionBounds)
+
   return fixture.protected_regions.map((region) => {
     const placement = placements.find(
       ({ imageId }) => imageId === region.image_id
     )
+
     if (!placement) {
       return {
         region_id: region.id,
@@ -988,7 +1077,9 @@ function projectProtectedRegions(
         caption_overlap_px: 0
       }
     }
+
     const projection = projectRegion(region.canvas_rect_pct, placement)
+
     return {
       region_id: region.id,
       image_id: region.image_id,
@@ -1011,21 +1102,29 @@ function projectRegion(
   placement: SourcePlacement
 ): RegionProjection {
   const geometry = placement.geometry
+
   const rawLeft =
     geometry.imageLeft + (x / 100) * placement.sourceWidth * geometry.scale
+
   const rawTop =
     geometry.imageTop + (y / 100) * placement.sourceHeight * geometry.scale
+
   const rawRight =
     rawLeft + (width / 100) * placement.sourceWidth * geometry.scale
+
   const rawBottom =
     rawTop + (height / 100) * placement.sourceHeight * geometry.scale
+
   const left = clamp(rawLeft, geometry.clipLeft, geometry.clipRight)
   const top = clamp(rawTop, geometry.clipTop, geometry.clipBottom)
   const right = clamp(rawRight, geometry.clipLeft, geometry.clipRight)
   const bottom = clamp(rawBottom, geometry.clipTop, geometry.clipBottom)
+
   const rawArea =
     Math.max(0, rawRight - rawLeft) * Math.max(0, rawBottom - rawTop)
+
   const visibleArea = Math.max(0, right - left) * Math.max(0, bottom - top)
+
   return {
     bounds:
       right > left && bottom > top
@@ -1050,11 +1149,13 @@ function rectangleIntersectionArea(
     Math.min(left[0] + left[2], right[0] + right[2]) -
       Math.max(left[0], right[0])
   )
+
   const intersectionHeight = Math.max(
     0,
     Math.min(left[1] + left[3], right[1] + right[3]) -
       Math.max(left[1], right[1])
   )
+
   return intersectionWidth * intersectionHeight
 }
 
@@ -1065,6 +1166,7 @@ async function fitBoxes(
   captionArea: 'overlay' | 'external'
 ): Promise<readonly FittedZone[] | null> {
   if (boxes.length !== plan.presentation.zones.length) return null
+
   const initial = await Promise.all(
     plan.presentation.zones.map((zone, index) =>
       fitZone(
@@ -1077,9 +1179,11 @@ async function fitBoxes(
       )
     )
   )
+
   if (initial.some((fit) => fit === null)) return null
   const fits = initial as FittedZone[]
   const sharedFontSize = Math.min(...fits.map(({ fit }) => fit.fontSizePx))
+
   const balanced = await Promise.all(
     fits.map(({ sourceZone, box }) =>
       fitZone(
@@ -1092,6 +1196,7 @@ async function fitBoxes(
       )
     )
   )
+
   return balanced.every((fit) => fit !== null)
     ? (balanced as FittedZone[])
     : null
@@ -1108,6 +1213,7 @@ async function fitZone(
   const style = textStyleFor(zone, captionArea)
   const minimumFontSize = minimumFontSizePx(zone.style)
   const maximumFontSize = maximumFontSizePx(zone.style)
+
   const blocks = zone.line_indexes.map((lineIndex, index) => ({
     id: `line-${lineIndex}`,
     text: displayTextForStyle(
@@ -1116,7 +1222,9 @@ async function fitZone(
     ),
     indentLevel: clampIndent(zone.indent_levels[index] ?? 0)
   }))
+
   if (!blocks.length || blocks.some(({ text }) => !text)) return null
+
   const result = await renderMeasuredText({
     blocks: blocks as [
       {
@@ -1142,6 +1250,7 @@ async function fitZone(
         ? 8
         : 12
   })
+
   return result.status === 'fit' ? { sourceZone: zone, box, fit: result } : null
 }
 
@@ -1178,15 +1287,18 @@ function fontForStyle(
     if (impactFont.status !== 'resolved') {
       throw new Error('Impact font preflight was skipped')
     }
+
     return {
       family: impactFont.family,
       filePath: impactFont.filePath,
       weight: 400
     }
   }
+
   if (style === 'code') {
     return { family: 'Geist Mono', filePath: codeFontFilePath, weight: 700 }
   }
+
   return {
     family: 'Barlow Condensed',
     filePath: supportFontFilePath,
@@ -1202,11 +1314,14 @@ async function countOpaqueColorPixels(
     .slice(1)
     .match(/.{2}/gu)!
     .map((channel) => Number.parseInt(channel, 16))
+
   const { data, info } = await sharp(buffer)
     .ensureAlpha()
     .raw()
     .toBuffer({ resolveWithObject: true })
+
   let count = 0
+
   for (let offset = 0; offset < data.length; offset += info.channels) {
     if (
       data[offset] === red &&
@@ -1217,22 +1332,27 @@ async function countOpaqueColorPixels(
       count += 1
     }
   }
+
   return count
 }
 
 function candidateBoxSets(plan: MemeEvalPlan): readonly (readonly ZoneBox[])[] {
   const zones = plan.presentation.zones
   const { template } = plan.presentation
+
   if (template === 'interface' && zones.length === 1) {
     const semanticLineCount = zones[0]!.line_indexes.length
+
     const bandHeight = Math.min(
       300,
       Math.max(190, 130 + semanticLineCount * 32)
     )
+
     const tightHeight = Math.min(
       290,
       Math.max(155, 65 + semanticLineCount * 45)
     )
+
     return [
       [
         {
@@ -1252,16 +1372,20 @@ function candidateBoxSets(plan: MemeEvalPlan): readonly (readonly ZoneBox[])[] {
       ]
     ]
   }
+
   if (template === 'band-top') {
     return [[{ left: 24, top: 12, width: 1152, height: 248 }]]
   }
+
   if (template === 'band-bottom') {
     return [[{ left: 24, top: 540, width: 1152, height: 248 }]]
   }
+
   if (template === 'sidecar-left' || template === 'sidecar-right') {
     const left = template === 'sidecar-left' ? 12 : 882
     const gap = 12
     const height = Math.floor((752 - gap * (zones.length - 1)) / zones.length)
+
     return [
       zones.map((_, index) => ({
         left,
@@ -1271,6 +1395,7 @@ function candidateBoxSets(plan: MemeEvalPlan): readonly (readonly ZoneBox[])[] {
       }))
     ]
   }
+
   if (template === 'diptych' && zones.length === 2) {
     return [
       [
@@ -1279,33 +1404,40 @@ function candidateBoxSets(plan: MemeEvalPlan): readonly (readonly ZoneBox[])[] {
       ]
     ]
   }
+
   if (template === 'dialogue' && zones.length === 2) {
     return [zones.map(({ slot }) => dialogueBox(slot))]
   }
+
   if (zones.length === 1) {
     const tall = template === 'interface' || zones[0]!.style === 'code'
     const height = tall ? 380 : 240
     const top = { left: 30, top: 18, width: 1140, height }
+
     const bottom = {
       left: 30,
       top: memeEvalCanvas.height - height - 18,
       width: 1140,
       height
     }
+
     return zones[0]!.slot.startsWith('top')
       ? [[top], [bottom]]
       : [[bottom], [top]]
   }
+
   if (zones.length === 2) {
     const top = { left: 30, top: 12, width: 1140, height: 180 }
     const bottom = { left: 30, top: 608, width: 1140, height: 180 }
     const compactTop = { left: 30, top: 12, width: 1140, height: 140 }
     const compactBottom = { left: 30, top: 648, width: 1140, height: 140 }
+
     const place = (zone: (typeof zones)[number], compact: boolean) => {
       const useTop = zone.slot.startsWith('top')
       if (compact) return useTop ? compactTop : compactBottom
       return useTop ? top : bottom
     }
+
     return [
       zones.map((zone) => place(zone, false)),
       zones.map((zone) => place(zone, true))
@@ -1313,9 +1445,11 @@ function candidateBoxSets(plan: MemeEvalPlan): readonly (readonly ZoneBox[])[] {
   }
 
   const gap = 10
+
   const height = Math.floor(
     (memeEvalCanvas.height - 36 - gap * (zones.length - 1)) / zones.length
   )
+
   return [
     zones.map((_, index) => ({
       left: 30,
@@ -1338,6 +1472,7 @@ function externalCandidateBoxSets(
   plan: MemeEvalPlan
 ): readonly (readonly ZoneBox[])[] {
   const zones = plan.presentation.zones
+
   if (zones.length === 1) {
     const bottom = [{ left: 24, top: 552, width: 1152, height: 236 }]
     const top = [{ left: 24, top: 12, width: 1152, height: 236 }]
@@ -1345,10 +1480,12 @@ function externalCandidateBoxSets(
     const compactTop = [{ left: 24, top: 0, width: 1152, height: 125 }]
     const reviewBottom = [{ left: 24, top: 620, width: 1152, height: 180 }]
     const reviewTop = [{ left: 24, top: 0, width: 1152, height: 180 }]
+
     return zones[0]!.slot.startsWith('top')
       ? [compactTop, reviewTop, top, compactBottom, reviewBottom, bottom]
       : [compactBottom, reviewBottom, bottom, compactTop, reviewTop, top]
   }
+
   if (zones.length === 2) {
     const place = (topHeight: number, bottomHeight: number, edgeInset = 0) =>
       zones.map((zone, index) => {
@@ -1357,7 +1494,9 @@ function externalCandidateBoxSets(
           : zone.slot.startsWith('bottom')
             ? false
             : index === 0
+
         const height = topSlot ? topHeight : bottomHeight
+
         return {
           left: 30,
           top: topSlot ? edgeInset : memeEvalCanvas.height - edgeInset - height,
@@ -1365,6 +1504,7 @@ function externalCandidateBoxSets(
           height
         }
       })
+
     return [
       place(140, 140, 12),
       place(140, 180),
@@ -1376,6 +1516,7 @@ function externalCandidateBoxSets(
       ]
     ]
   }
+
   return []
 }
 
@@ -1396,6 +1537,7 @@ async function renderSafeBackground(
       top: target.top
     }))
   )
+
   return sharp({
     create: {
       ...memeEvalCanvas,
@@ -1420,8 +1562,10 @@ function realizePlan(
       zones: fitted.map(({ sourceZone, fit, box }) => {
         const externalPanel =
           captionArea === 'external' && sourceZone.backdrop === 'none'
+
         const backdrop = externalPanel ? 'solid-panel' : sourceZone.backdrop
         const contrast = externalPanel ? 'solid-panel' : sourceZone.contrast
+
         return {
           ...sourceZone,
           bounds_pct: [
@@ -1444,13 +1588,16 @@ async function renderZoneBackdrop(zone: FittedZone): Promise<Buffer | null> {
   if (!usesPaintedBackdrop(zone.sourceZone)) {
     return null
   }
+
   if (zone.sourceZone.backdrop === 'edge-gradient') {
     const topEdge = zone.sourceZone.slot.startsWith('top')
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${zone.box.width}" height="${zone.box.height}"><defs><linearGradient id="edge" x1="0" y1="${topEdge ? 0 : 1}" x2="0" y2="${topEdge ? 1 : 0}"><stop offset="0" stop-color="#020617" stop-opacity=".82"/><stop offset="1" stop-color="#020617" stop-opacity="0"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#edge)"/></svg>`
     return sharp(Buffer.from(svg)).png().toBuffer()
   }
+
   const fill =
     zone.sourceZone.palette === 'orange-white' ? '#d96b18' : '#020617'
+
   const inset = 4
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${zone.box.width}" height="${zone.box.height}"><rect x="${inset}" y="${inset}" width="${zone.box.width - inset * 2}" height="${zone.box.height - inset * 2}" rx="14" fill="${fill}"/></svg>`
   return sharp(Buffer.from(svg)).png().toBuffer()
@@ -1507,9 +1654,11 @@ async function readSourceDimensions(
     await Promise.all(
       fixture.images.map(async ({ id }) => {
         const metadata = await sharp(fixtureImagePath(fixture, id)).metadata()
+
         if (!metadata.width || !metadata.height) {
           throw new Error(`Could not read source dimensions for ${id}`)
         }
+
         return [id, { width: metadata.width, height: metadata.height }] as const
       })
     )

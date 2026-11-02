@@ -10,17 +10,21 @@ export const MEDIA_PIPELINE_VERSION = 3
 const SYNC_MANIFEST_VERSION = 4
 
 const sha256Schema = z.string().regex(/^[0-9a-f]{64}$/)
+
 const legacyGeneratedMediaPathSchema = z
   .string()
   .refine(isGeneratedMediaPublicPath, 'Invalid generated media path')
+
 const generatedMediaObjectKeySchema = z
   .string()
   .regex(
     /^media\/generated\/(?:franchises|scenarios|sources)\/[0-9a-f]{32}\/(?:gallery|detail)-[0-9a-f]{64}\.webp$/
   )
+
 const remoteMediaUrlSchema = z.url().refine((value) => {
   if (!URL.canParse(value)) return false
   const url = new URL(value)
+
   return (
     url.protocol === 'https:' &&
     !url.username &&
@@ -198,6 +202,7 @@ export function parsePreviousSyncManifest(
   input: unknown
 ): PreviousSyncManifest {
   const current = currentSyncManifestHistorySchema.safeParse(input)
+
   if (current.success) {
     return {
       slugs: current.data.slugs,
@@ -206,6 +211,7 @@ export function parsePreviousSyncManifest(
   }
 
   const previousCurrent = previousSyncManifestHistorySchema.safeParse(input)
+
   if (previousCurrent.success) {
     return {
       slugs: {
@@ -217,6 +223,7 @@ export function parsePreviousSyncManifest(
   }
 
   const previous = previousCurrentSyncManifestSchema.safeParse(input)
+
   if (previous.success) {
     return {
       slugs: {
@@ -261,6 +268,7 @@ export function validateCheckedSyncManifest(
   snapshot: ContentSnapshot
 ) {
   const current = syncManifestSchema.safeParse(input)
+
   if (current.success) {
     validateSnapshotContract(current.data, snapshot)
     return current.data
@@ -268,6 +276,7 @@ export function validateCheckedSyncManifest(
 
   const manifest = transitionalSyncManifestSchema.parse(input)
   validateHistoricalSnapshotContract(manifest, snapshot)
+
   validateMediaOwnership(
     'scenario',
     'scenarios',
@@ -277,6 +286,7 @@ export function validateCheckedSyncManifest(
       image: scenario.image
     }))
   )
+
   validateMediaOwnership(
     'source',
     'sources',
@@ -307,9 +317,11 @@ function validateSnapshotContract(
         `Manifest ${name} count ${manifest.counts[name]} does not match snapshot count ${records.length}`
       )
     }
+
     const expectedSlugs = Object.fromEntries(
       records.map((record) => [record.id, record.slug])
     )
+
     if (!recordsMatch(manifest.slugs[name], expectedSlugs)) {
       throw new Error(`Manifest ${name} slugs do not match the snapshot`)
     }
@@ -335,9 +347,11 @@ function validateHistoricalSnapshotContract(
         `Manifest ${name} count ${manifest.counts[name]} does not match snapshot count ${records.length}`
       )
     }
+
     const expectedSlugs = Object.fromEntries(
       records.map((record) => [record.id, record.slug])
     )
+
     if (!recordsMatch(manifest.slugs[name], expectedSlugs)) {
       throw new Error(`Manifest ${name} slugs do not match the snapshot`)
     }
@@ -351,6 +365,7 @@ function validateFixtureScenarioIds(
   snapshot: ContentSnapshot
 ) {
   const scenarioIds = new Set(snapshot.scenarios.map((scenario) => scenario.id))
+
   for (const fixtureId of fixtureScenarioIds) {
     if (!scenarioIds.has(fixtureId)) {
       throw new Error(
@@ -377,6 +392,7 @@ function validateMediaOwnership(
 ) {
   const expectedIds = records.map((record) => record.id).toSorted()
   const actualIds = Object.keys(entries).toSorted()
+
   if (!arraysMatch(actualIds, expectedIds)) {
     throw new Error(
       `Manifest ${label} image ownership does not match snapshot ${label === 'source' ? 'posters' : 'images'}`
@@ -385,6 +401,7 @@ function validateMediaOwnership(
 
   for (const { id, image } of records) {
     const entry = entries[id]!
+
     if (
       entry.gallerySrc !== image.gallerySrc ||
       entry.detailSrc !== image.detailSrc ||
@@ -403,12 +420,14 @@ function validateMediaOwnership(
       'gallery',
       entry.galleryHash
     )
+
     const detailKey = generatedMediaObjectKey(
       collection,
       id,
       'detail',
       entry.detailHash
     )
+
     if (entry.galleryKey !== galleryKey || entry.detailKey !== detailKey) {
       throw new Error(
         `Manifest ${label} image entry ${id} has invalid content-addressed keys`
@@ -424,9 +443,11 @@ function recordsMatch(
   const leftEntries = Object.entries(left).toSorted(([a], [b]) =>
     a.localeCompare(b)
   )
+
   const rightEntries = Object.entries(right).toSorted(([a], [b]) =>
     a.localeCompare(b)
   )
+
   return JSON.stringify(leftEntries) === JSON.stringify(rightEntries)
 }
 

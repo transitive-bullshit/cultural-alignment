@@ -34,6 +34,7 @@ export function ScenarioCollectionList({
   // A lone continuous card spans the row and, on wide screens, sits beside
   // its still instead of leaving two empty columns.
   const isSingle = layout === 'continuous' && items.length === 1
+
   const imageSizes = isSingle
     ? '(max-width: 860px) calc(100vw - 36px), 52vw'
     : layout === 'continuous'

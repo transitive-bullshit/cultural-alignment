@@ -38,6 +38,7 @@ import styles from './scenario-memes.module.css'
 
 const MEME_DETAIL_SIZES =
   '(max-width: 620px) calc(100vw - 36px), (max-width: 1100px) calc(100vw - 9rem), 960px'
+
 const MEME_DOWNLOAD_FEEDBACK_MILLISECONDS = 1_800
 const MEME_PRELOAD_IDLE_TIMEOUT_MILLISECONDS = 500
 
@@ -80,17 +81,21 @@ export function ScenarioMemes({
   const openingMotionPendingRef = useRef(false)
   const preloadedDetailImagesRef = useRef(new Map<string, HTMLImageElement>())
   const pendingFocusIndexRef = useRef<number | null>(null)
+
   const [visibleCount, setVisibleCount] = useState(() =>
     getNextVisibleMemeCount(0, memes.length)
   )
+
   const [activeIndex, setActiveIndex] = useState(0)
   const [open, setOpen] = useState(false)
   const [loadedDetailSrc, setLoadedDetailSrc] = useState<string | null>(null)
   const [downloadState, setDownloadState] = useState<MemeDownloadState>('idle')
+
   const [preview, setPreview] = useState<MemePreview>(() => ({
     isBlurred: true,
     src: memes[0]?.blurDataURL ?? ''
   }))
+
   const [gridAnnouncement, setGridAnnouncement] = useState('')
   const [dialogAnnouncement, setDialogAnnouncement] = useState('')
 
@@ -118,6 +123,7 @@ export function ScenarioMemes({
           sizes: MEME_DETAIL_SIZES,
           unoptimized: true
         })
+
         const image = new window.Image()
 
         image.decoding = 'async'
@@ -125,11 +131,13 @@ export function ScenarioMemes({
         image.sizes = props.sizes ?? MEME_DETAIL_SIZES
         image.srcset = props.srcSet ?? ''
         image.src = props.src
+
         image.addEventListener(
           'error',
           () => preloadedDetailImagesRef.current.delete(meme.detailSrc),
           { once: true }
         )
+
         preloadedDetailImagesRef.current.set(meme.detailSrc, image)
       }
     })
@@ -194,6 +202,7 @@ export function ScenarioMemes({
     }
 
     const meme = memes[index]!
+
     spatialOriginRectRef.current = getContainedMediaRect(
       button.getBoundingClientRect(),
       meme.width / meme.height
@@ -207,11 +216,13 @@ export function ScenarioMemes({
   ) => {
     originatingButtonRef.current = button
     spatialMotionEnabledRef.current = animateFromThumbnail
+
     if (animateFromThumbnail) {
       setSpatialOrigin(index, button)
     } else {
       spatialOriginRectRef.current = null
     }
+
     openingMotionPendingRef.current = animateFromThumbnail
     setActiveIndex(index)
     setLoadedDetailSrc(null)
@@ -229,12 +240,15 @@ export function ScenarioMemes({
     if (imageStageRef.current) {
       delete imageStageRef.current.dataset.openingMotion
     }
+
     openingMotionPendingRef.current = false
+
     if (spatialMotionEnabledRef.current) {
       setSpatialOrigin(nextIndex)
     } else {
       spatialOriginRectRef.current = null
     }
+
     setActiveIndex(nextIndex)
     setLoadedDetailSrc(null)
     setDownloadState('idle')
@@ -248,6 +262,7 @@ export function ScenarioMemes({
     if (nextVisibleCount === memes.length) {
       pendingFocusIndexRef.current = visibleCount
     }
+
     setVisibleCount(nextVisibleCount)
     setGridAnnouncement(`Showing ${nextVisibleCount} of ${memes.length} memes`)
   }
@@ -257,6 +272,7 @@ export function ScenarioMemes({
     const memeIndex = activeIndex
 
     setDownloadState('loading')
+
     setDialogAnnouncement(
       `Preparing meme ${memeIndex + 1} of ${memes.length} for download`
     )
@@ -271,22 +287,26 @@ export function ScenarioMemes({
       const link = document.createElement('a')
 
       link.href = objectUrl
+
       link.download = getMemeDownloadFilename(
         scenarioSlug,
         memeIndex,
         meme.detailSrc
       )
+
       link.hidden = true
       document.body.append(link)
       link.click()
       link.remove()
       window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1_000)
       setDownloadState('success')
+
       setDialogAnnouncement(
         `Meme ${memeIndex + 1} of ${memes.length} download started`
       )
     } catch {
       setDownloadState('error')
+
       setDialogAnnouncement(
         `Could not download meme ${memeIndex + 1}. Open the image in a new tab to save it instead.`
       )
@@ -573,6 +593,7 @@ function configureMemeStageMotion(
   }
 
   const targetRect = imageStage.getBoundingClientRect()
+
   if (targetRect.width === 0 || targetRect.height === 0) {
     return { configured: false }
   }
@@ -581,10 +602,12 @@ function configureMemeStageMotion(
     originRect.left +
     originRect.width / 2 -
     (targetRect.left + targetRect.width / 2)
+
   const translateY =
     originRect.top +
     originRect.height / 2 -
     (targetRect.top + targetRect.height / 2)
+
   const scale = originRect.width / targetRect.width
 
   imageStage.style.setProperty('--meme-origin-x', `${translateX}px`)

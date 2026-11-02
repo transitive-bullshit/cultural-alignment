@@ -23,6 +23,7 @@ describe('social metadata derivation', () => {
     expect(toProsePhrase('AI Control')).toBe('AI control')
     expect(toProsePhrase('CBRN Assistance')).toBe('CBRN assistance')
     expect(toProsePhrase('Goodhart’s Law')).toBe('Goodhart’s Law')
+
     expect(toProsePhrase('AI Security & Governance Risks')).toBe(
       'AI security and governance risks'
     )
@@ -33,10 +34,13 @@ describe('social metadata derivation', () => {
       const acronyms = title.match(/\b\p{Lu}{2,}\b/gu) ?? []
 
       const eponym = /[’']s\b/u.test(title)
+
       expect(phrase.toLowerCase()).toBe(
         (eponym ? title : title.replaceAll(' & ', ' and ')).toLowerCase()
       )
+
       for (const acronym of acronyms) expect(phrase).toContain(acronym)
+
       expect(
         eponym
           ? phrase === title
@@ -49,6 +53,7 @@ describe('social metadata derivation', () => {
     expect(formatMediaFormats(['tv', 'movie', 'anime'])).toBe(
       'across TV, movies, and anime'
     )
+
     expect(formatMediaFormats(['tv', 'movie'])).toBe('across TV and movies')
     expect(formatMediaFormats(['movie'])).toBe('in movies')
     expect(formatMediaFormats([])).toBe('across film and TV')
@@ -58,9 +63,11 @@ describe('social metadata derivation', () => {
     const scenarios = contentCatalog
       .getStaticSlugs('scenario')
       .map((slug) => contentCatalog.getScenarioPage(slug)!)
+
     const numbered = scenarios.find(({ episode }) =>
       /\bS\d+\s?E\d+\b/u.test(episode?.label ?? '')
     )!
+
     const movies = scenarios.filter(
       ({ source }) => source.sourceType === 'movie' && source.releaseDate
     )
@@ -69,6 +76,7 @@ describe('social metadata derivation', () => {
     // Scenario records can carry their own date (e.g. a Blade Runner scene
     // dated 2026); the description uses the film's release year.
     expect(movies.length).toBeGreaterThan(0)
+
     for (const movie of movies) {
       expect(getSceneContext(movie)).toBe(movie.source.releaseDate!.slice(0, 4))
     }
@@ -106,6 +114,7 @@ describe('social metadata derivation', () => {
     const base = contentCatalog.getScenarioPage(
       contentCatalog.getStaticSlugs('scenario')[0]!
     )!
+
     const scenario = {
       ...base,
       source: {
@@ -116,9 +125,11 @@ describe('social metadata derivation', () => {
       concepts: [{ ...base.concepts[0]!, title: 'AI Control' }],
       episode: { label: 'Episode 4' }
     }
+
     expect(getScenarioSocialMetadata(scenario).description).toBe(
       'This scene from Example Show (Episode 4) is an example of the AI safety concept of AI control.'
     )
+
     expect(
       getScenarioSocialMetadata({
         ...scenario,
@@ -137,7 +148,9 @@ describe('social metadata derivation', () => {
         kind,
         contentCatalog.getStaticSlugs(kind)[0]!
       )!
+
       const social = getResourceSocialMetadata(resource)
+
       const name =
         kind === 'risk-family' ? resource.detailTitle : resource.title
 
@@ -150,21 +163,26 @@ describe('social metadata derivation', () => {
     const scenario = contentCatalog.getScenarioPage(
       contentCatalog.getStaticSlugs('scenario')[0]!
     )!
+
     const social = getScenarioSocialMetadata(scenario)
 
     expect(social.title).toContain(scenario.title)
     expect(social.description).toContain(scenario.source.title)
+
     expect(social.description).toContain(
       toProsePhrase(scenario.concepts[0]!.title)
     )
+
     expect(social.description.length).toBeLessThanOrEqual(150)
   })
 
   it('uses a detail image when present and otherwise preserves the parent image', async () => {
     const inheritedImage = { url: 'https://example.com/global.jpg' }
+
     const parent = Promise.resolve({
       openGraph: { images: [inheritedImage] }
     }) as ResolvingMetadata
+
     const social = {
       canonical: '/scenarios/example',
       description: 'A scene description.',
@@ -194,7 +212,9 @@ describe('social metadata derivation', () => {
       },
       parent
     )
+
     const resolvedImages = withImage.openGraph?.images
+
     const image = Array.isArray(resolvedImages)
       ? resolvedImages[0]
       : resolvedImages
@@ -205,6 +225,7 @@ describe('social metadata derivation', () => {
       alt: 'Scenario still',
       type: 'image/webp'
     })
+
     const imageUrl =
       image instanceof URL
         ? image

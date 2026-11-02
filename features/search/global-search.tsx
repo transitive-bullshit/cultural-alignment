@@ -37,6 +37,7 @@ export function GlobalSearch({
     if (loadState === 'ready' || requestRef.current) return
 
     setLoadState('loading')
+
     requestRef.current = fetch('/content/search-index.json')
       .then(async (response) => {
         if (!response.ok) {
@@ -104,9 +105,11 @@ export function GlobalSearch({
     }
 
     window.addEventListener('keydown', handleShortcut)
+
     const removeRequestListener = onGlobalSearchRequest(() =>
       handleOpenChange(true)
     )
+
     setShortcutReady(true)
 
     return () => {

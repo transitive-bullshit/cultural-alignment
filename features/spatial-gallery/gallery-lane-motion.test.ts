@@ -22,6 +22,7 @@ describe('gallery lane motion', () => {
     'centers and orders a %s-row composition',
     (visibleLanes) => {
       const windowStart = Math.floor((7 - visibleLanes) / 2)
+
       const activeY = Array.from({ length: 7 }, (_, lane) => lane)
         .filter((lane) => isGalleryLaneActive(lane, windowStart, visibleLanes))
         .map((lane) =>
@@ -38,6 +39,7 @@ describe('gallery lane motion', () => {
   it('keeps inactive lanes clipped and removes the fake center stagger for even rows', () => {
     expect(getGalleryLaneTargetY(0, 1, 4, 1.45, 5)).toBe(5)
     expect(getGalleryLaneTargetY(6, 1, 4, 1.45, 5)).toBe(-6.45)
+
     expect(
       [1, 2, 3, 4].map((lane) => getGalleryLaneTargetXOffset(lane, 1, 4, 0.28))
     ).toEqual([-0.28, 0.28, -0.28, 0.28])

@@ -14,9 +14,11 @@ const localPath = z
     (value) => !/^[a-z][a-z\d+.-]*:/i.test(value) && !value.includes('\0'),
     'Expected a local file path'
   )
+
 const text = z.string().min(1)
 const sha256 = z.string().regex(/^[a-f\d]{64}$/)
 const sourceSchema = z.object({ id: text, slug: text, title: text }).strict()
+
 const candidateSchema = z
   .object({
     id: text,
@@ -80,13 +82,16 @@ export const memeCandidateBatchSchema = z
   .strict()
 
 export type MemeCandidateBatch = z.infer<typeof memeCandidateBatchSchema>
+
 export type MemeCandidate =
   MemeCandidateBatch['scenarios'][number]['candidates'][number]
+
 export type MemeReviewFeedback = {
   rating: 'unrated' | 'liked' | 'disliked'
   feedback: string
   approvedForUpload: boolean
 }
+
 export type PreparedMemeCandidateBatch = MemeCandidateBatch & {
   manifestPath: string
   batchFingerprint: string
@@ -101,26 +106,34 @@ export function parseMemeCandidateBatch(value: unknown): MemeCandidateBatch {
   const scenarioIds = new Set<string>()
   const candidateIds = new Set<string>()
   const sources = new Map<string, string>()
+
   for (const scenario of batch.scenarios) {
     if (scenarioIds.has(scenario.id))
       throw new Error(`Duplicate scenario ID: ${scenario.id}`)
+
     scenarioIds.add(scenario.id)
     const sourceIdentity = JSON.stringify(scenario.source)
+
     if (
       sources.has(scenario.source.id) &&
       sources.get(scenario.source.id) !== sourceIdentity
     ) {
       throw new Error(`Inconsistent source identity: ${scenario.source.id}`)
     }
+
     sources.set(scenario.source.id, sourceIdentity)
+
     for (const candidate of scenario.candidates) {
       if (['all', 'reviewed', 'approved'].includes(candidate.id))
         throw new Error(`Reserved candidate ID: ${candidate.id}`)
+
       if (candidateIds.has(candidate.id))
         throw new Error(`Duplicate candidate ID: ${candidate.id}`)
+
       candidateIds.add(candidate.id)
     }
   }
+
   return batch
 }
 
@@ -132,13 +145,16 @@ export async function prepareMemeCandidateBatch(
   const batch = parseMemeCandidateBatch(value)
   const root = dirname(resolve(manifestPath))
   const candidateFingerprints: Record<string, string> = Object.create(null)
+
   for (const scenario of batch.scenarios) {
     for (const meme of scenario.existingMemes ?? []) {
       meme.path = resolve(root, meme.path)
       await readFile(meme.path)
     }
+
     for (const candidate of scenario.candidates) {
       const fileHashes: Record<string, string> = {}
+
       for (const field of [
         'fixturePath',
         'intentPath',
@@ -148,34 +164,42 @@ export async function prepareMemeCandidateBatch(
         candidate[field] = resolve(root, candidate[field])
         const bytes = await readFile(candidate[field])
         fileHashes[field] = digest(bytes)
+
         if (field === 'fixturePath' || field === 'intentPath')
           JSON.parse(bytes.toString('utf8'))
         else {
           const metadata = await sharp(bytes).metadata()
+
           if (metadata.format !== 'png' || !metadata.width || !metadata.height)
             throw new Error(`${candidate.id}: ${field} must be a rendered PNG`)
         }
       }
+
       if (fileHashes.artifactPath !== candidate.sha256)
         throw new Error(
           `${candidate.id}: artifact SHA-256 differs from the manifest`
         )
+
       if (candidate.visualSource) {
         candidate.visualSource.path = resolve(root, candidate.visualSource.path)
+
         fileHashes.visualSource = digest(
           await readFile(candidate.visualSource.path)
         )
       }
+
       const {
         candidates: _otherCandidates,
         existingMemes,
         ...context
       } = scenario
+
       candidateFingerprints[candidate.id] = digest(
         JSON.stringify({ context, existingMemes, candidate, fileHashes })
       )
     }
   }
+
   return {
     ...batch,
     manifestPath: resolve(manifestPath),
@@ -191,6 +215,7 @@ type CandidateBinding = {
   candidateFingerprint: string
   sha256: string
 }
+
 export type MemeReviewExport = {
   schemaVersion: 1
   kind: 'meme-candidate-review'
@@ -232,9 +257,12 @@ export function restoreMemeReviewFeedback(
   value: unknown
 ) {
   const restored: Record<string, MemeReviewFeedback> = Object.create(null)
+
   if (!value || typeof value !== 'object')
     throw new Error('Expected a feedback JSON object')
+
   const envelope = value as Partial<MemeReviewExport>
+
   if (
     envelope.schemaVersion !== 1 ||
     envelope.kind !== 'meme-candidate-review' ||
@@ -243,13 +271,17 @@ export function restoreMemeReviewFeedback(
   ) {
     throw new Error('Feedback belongs to a different batch or format')
   }
+
   const known = new Map(
     bindings.map((binding) => [binding.candidateId, binding])
   )
+
   let skipped = 0
+
   for (const entry of envelope.candidates) {
     const binding = entry && known.get(entry.candidateId)
     const review = entry?.review
+
     if (
       !binding ||
       binding.candidateFingerprint !== entry.candidateFingerprint ||
@@ -262,6 +294,7 @@ export function restoreMemeReviewFeedback(
       skipped++
       continue
     }
+
     // Disliking a direction always clears any earlier upload approval.
     restored[entry.candidateId] = {
       rating: review.rating,
@@ -270,6 +303,7 @@ export function restoreMemeReviewFeedback(
         review.approvedForUpload && review.rating !== 'disliked'
     }
   }
+
   return { restored, skipped }
 }
 
@@ -293,6 +327,7 @@ export function buildMemeReviewExport(
           feedback: '',
           approvedForUpload: false
         }
+
         const selected =
           selection === 'all' ||
           selection === candidate.id ||
@@ -302,11 +337,15 @@ export function buildMemeReviewExport(
               (review.rating !== 'unrated' ||
                 review.feedback.trim() !== '' ||
                 review.approvedForUpload))
+
         if (!selected) return []
         const candidateFingerprint = batch.candidateFingerprints[candidate.id]
+
         if (!candidateFingerprint)
           throw new Error(`Missing candidate fingerprint: ${candidate.id}`)
+
         const { candidates: _candidates, source, ...scenarioData } = scenario
+
         return [
           {
             candidateId: candidate.id,
@@ -337,6 +376,7 @@ const escapeHtml = (value: string) =>
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;')
     .replaceAll("'", '&#39;')
+
 const inlineJson = (value: unknown) =>
   JSON.stringify(value)
     .replaceAll('<', '\\u003c')
@@ -355,11 +395,13 @@ export function renderMemeCandidateReview(
       .split('/')
       .map(encodeURIComponent)
       .join('/')
+
   const sources = [
     ...new Map(
       batch.scenarios.map((scenario) => [scenario.source.id, scenario.source])
     ).values()
   ]
+
   const cards = sources
     .map(
       (
@@ -398,7 +440,9 @@ export function renderMemeCandidateReview(
   </section>`
     )
     .join('')
+
   const browserEntries = buildMemeReviewExport(batch, {}, 'all')
+
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' file: data:; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
@@ -465,23 +509,30 @@ async function main() {
     },
     strict: true
   })
+
   if (values.help) {
     console.log(HELP)
     return
   }
+
   if (!values.manifest) throw new Error(HELP)
   const manifestPath = resolve(values.manifest)
+
   const outputPath = resolve(
     values.out ?? resolve(dirname(manifestPath), 'review.html')
   )
+
   if (outputPath === manifestPath)
     throw new Error('Review output cannot overwrite its manifest')
+
   const batch = await prepareMemeCandidateBatch(
     JSON.parse(await readFile(manifestPath, 'utf8')),
     manifestPath
   )
+
   await mkdir(dirname(outputPath), { recursive: true })
   await writeFile(outputPath, renderMemeCandidateReview(batch, outputPath))
+
   console.log(
     JSON.stringify(
       {

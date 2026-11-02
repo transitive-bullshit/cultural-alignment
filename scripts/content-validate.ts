@@ -49,6 +49,7 @@ const snapshot = validateContentSnapshot({
   riskFamilies,
   concepts
 })
+
 validateCheckedSyncManifest(manifest, snapshot)
 const projectedSearchDocuments = buildSearchDocuments(snapshot)
 
@@ -69,6 +70,7 @@ const mediaReferences = [
     contentAddressedMediaReferences('franchises', id, image)
   )
 ]
+
 await assertGeneratedMediaDirectoryIsEmpty()
 
 console.log(
@@ -81,6 +83,7 @@ function contentAddressedMediaReferences(
   image: Pick<ContentImage, 'gallerySrc' | 'detailSrc'>
 ) {
   const compactId = recordId.replaceAll('-', '').toLowerCase()
+
   if (!/^[0-9a-f]{32}$/.test(compactId)) {
     throw new Error(`Invalid Notion record ID for snapshot media: ${recordId}`)
   }
@@ -88,11 +91,13 @@ function contentAddressedMediaReferences(
   return (['gallery', 'detail'] as const).map((variant) => {
     const src = image[`${variant}Src`]
     const pathname = new URL(src).pathname
+
     if (!isGeneratedMediaUrlFor(src, collection, compactId, variant)) {
       throw new Error(
         `Snapshot ${collection} media ${recordId} has an unowned ${variant} URL path: ${pathname}`
       )
     }
+
     return src
   })
 }
@@ -104,11 +109,13 @@ function memeMediaReferences(
   return (['gallery', 'detail'] as const).map((variant) => {
     const src = image[`${variant}Src`]
     const pathname = new URL(src).pathname
+
     if (!isGeneratedMemeMediaUrlFor(src, scenarioId, variant)) {
       throw new Error(
         `Snapshot scenario meme ${scenarioId} has an unowned ${variant} URL path: ${pathname}`
       )
     }
+
     return src
   })
 }
@@ -116,6 +123,7 @@ function memeMediaReferences(
 async function assertGeneratedMediaDirectoryIsEmpty() {
   const generatedRoot = join(projectRoot, 'public/media/generated')
   const actualPaths = await listFiles(generatedRoot)
+
   if (actualPaths.length > 0) {
     throw new Error(
       `Generated media must be remote, but local files remain: ${actualPaths.join(', ')}`
@@ -125,18 +133,21 @@ async function assertGeneratedMediaDirectoryIsEmpty() {
 
 async function listFiles(root: string): Promise<string[]> {
   let entries
+
   try {
     entries = await readdir(root, { withFileTypes: true })
   } catch (err) {
     if (isNodeError(err) && err.code === 'ENOENT') return []
     throw err
   }
+
   const nested = await Promise.all(
     entries.map(async (entry) => {
       const path = join(root, entry.name)
       return entry.isDirectory() ? await listFiles(path) : [path]
     })
   )
+
   return nested.flat().toSorted()
 }
 

@@ -32,6 +32,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     const sourcePath = join(directory, 'source.png')
     const outputPath = join(directory, 'render.png')
     const previewPath = join(directory, 'preview.png')
+
     await sharp({
       create: {
         width: 1200,
@@ -45,10 +46,12 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
 
     const fixture = blackFixture(sourcePath)
     const plan = overflowingPlan()
+
     plan.caption_lines[0] = {
       text: 'THE MODEL QUIETLY MANIPULATED EVERY',
       kind: 'original'
     }
+
     const result = await renderSafeMemePlan({
       fixture,
       plan,
@@ -58,21 +61,26 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
 
     expect(result.status).toBe('complete')
     if (result.status !== 'complete') return
+
     await expect(sharp(outputPath).metadata()).resolves.toMatchObject({
       format: 'png',
       width: 1200,
       height: 800
     })
+
     await expect(sharp(previewPath).metadata()).resolves.toMatchObject({
       format: 'png',
       width: 480,
       height: 320
     })
+
     expect(result.plan.caption_lines.map(({ text }) => text)).toEqual([
       plan.caption_lines[0]!.text
     ])
+
     expect(result.checks.glyph_overflow_px).toBe(0)
     expect(result.checks.zones_inside_canvas).toBe(true)
+
     expect(result.checks.text_layers[0]).toMatchObject({
       font_family: 'Impact',
       display_transform: 'uppercase',
@@ -82,6 +90,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
       opaque_backplate: false,
       legibility_pass: true
     })
+
     const physicalLines = result.checks.text_layers[0]!.physical_lines
     expect(physicalLines.length).toBeGreaterThan(1)
     expect(physicalLines.at(-1)!.split(/\s+/u).length).toBeGreaterThan(1)
@@ -89,12 +98,14 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
 
     const edge = await brightPixelBounds(await readFile(outputPath))
     expect(edge).not.toBeNull()
+
     expect(edge).toMatchObject({
       minX: expect.any(Number),
       minY: expect.any(Number),
       maxX: expect.any(Number),
       maxY: expect.any(Number)
     })
+
     expect(edge!.minX).toBeGreaterThanOrEqual(12)
     expect(edge!.minY).toBeGreaterThanOrEqual(12)
     expect(edge!.maxX).toBeLessThanOrEqual(1187)
@@ -108,6 +119,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     const previewPath = join(directory, 'preview.webp')
     const beforePath = join(directory, 'before.png')
     const afterPath = join(directory, 'after.png')
+
     for (const [path, color] of [
       [beforePath, '#16a34a'],
       [afterPath, '#dc2626']
@@ -118,6 +130,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
         .png()
         .toFile(path)
     }
+
     const fixture: MemeSkillFixture = {
       ...blackFixture(beforePath),
       images: [
@@ -134,6 +147,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
         allowed_frame_modes: ['contain']
       }
     }
+
     const intent = semanticIntent(fixture, {
       mode: 'state-contrast',
       format: 'state contrast',
@@ -142,38 +156,46 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
         ['DEPLOYED MODE', 'payoff', null]
       ]
     })
+
     const result = await renderSafeMemeIntent({
       fixture,
       intent,
       outputPath,
       previewPath
     })
+
     expect(result.status).toBe('complete')
     if (result.status !== 'complete') return
+
     expect(result.plan.caption_lines.map(({ text }) => text)).toEqual([
       'EVAL MODE',
       'DEPLOYED MODE'
     ])
+
     await expect(sharp(outputPath).metadata()).resolves.toMatchObject({
       format: 'png',
       width: 1200,
       height: 800
     })
+
     await expect(sharp(previewPath).metadata()).resolves.toMatchObject({
       format: 'webp',
       width: 480,
       height: 320
     })
+
     const { data, info } = await sharp(outputPath)
       .removeAlpha()
       .raw()
       .toBuffer({ resolveWithObject: true })
+
     const pixel = (x: number, y: number) => [
       ...data.subarray(
         (y * info.width + x) * info.channels,
         (y * info.width + x) * info.channels + 3
       )
     ]
+
     expect(pixel(300, 200)).toEqual([22, 163, 74])
     expect(pixel(900, 200)).toEqual([220, 38, 38])
   })
@@ -183,6 +205,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     temporaryDirectories.push(directory)
     const sourcePath = join(directory, 'source.png')
     const outputPath = join(directory, 'render.png')
+
     await sharp({
       create: {
         width: 1200,
@@ -196,10 +219,12 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
 
     const fixture = blackFixture(sourcePath)
     const plan = overflowingPlan()
+
     plan.caption_lines = [
       { text: 'THE EVALUATOR WATCHES', kind: 'original' },
       { text: 'THE POLICY CHANGES', kind: 'original' }
     ]
+
     plan.presentation.zones = [
       {
         ...plan.presentation.zones[0]!,
@@ -225,6 +250,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     if (result.status !== 'complete') return
     expect(result.checks.text_layers).toHaveLength(2)
     expect(result.checks.minimum_preview_font_px).toBeGreaterThanOrEqual(21)
+
     for (const layer of result.checks.text_layers) {
       const [left, top, width, height] = layer.ink_bounds_px
       expect(left).toBeGreaterThanOrEqual(12)
@@ -253,11 +279,14 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
         }
       ]
     }
+
     const plan = overflowingPlan()
+
     plan.caption_lines = [
       { text: 'EXTINCTION PROBABILITY: 99.78%', kind: 'original' },
       { text: 'SIT TIGHT AND ASSESS', kind: 'canonical-quote' }
     ]
+
     plan.presentation.zones = [
       {
         ...plan.presentation.zones[0]!,
@@ -283,12 +312,15 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
 
     expect(result.status).toBe('complete')
     if (result.status !== 'complete') return
+
     expect(result.plan.presentation.zones.map(({ slot }) => slot)).toEqual([
       'top',
       'bottom'
     ])
+
     expect(result.plan.presentation.zones[0]!.bounds_pct[1]).toBeLessThan(20)
     expect(result.plan.presentation.zones[1]!.bounds_pct[1]).toBeGreaterThan(50)
+
     expect(result.checks.protected_regions[0]).toMatchObject({
       visible_ratio: 1,
       caption_overlap_px: 0
@@ -300,6 +332,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     temporaryDirectories.push(directory)
     const sourcePath = join(directory, 'source.png')
     const outputPath = join(directory, 'render.png')
+
     await sharp({
       create: {
         width: 1200,
@@ -310,6 +343,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     })
       .png()
       .toFile(sourcePath)
+
     const plan = overflowingPlan()
     plan.caption_lines = [{ text: 'UNBREAKABLE'.repeat(500), kind: 'original' }]
 
@@ -323,6 +357,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
       status: 'blocked',
       reason: { code: 'unplaceable_text' }
     })
+
     await expect(stat(outputPath)).rejects.toMatchObject({ code: 'ENOENT' })
   })
 
@@ -345,19 +380,24 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
         }
       ]
     }
+
     const plan = overflowingPlan()
+
     plan.caption_lines = [
       {
         text: 'When the AI stops playing dumb after the eval',
         kind: 'original'
       }
     ]
+
     plan.presentation.frame_mode = 'contain'
+
     plan.presentation.zones[0] = {
       ...plan.presentation.zones[0]!,
       backdrop: 'solid-panel',
       contrast: 'solid-panel'
     }
+
     const result = await renderSafeMemePlan({
       fixture,
       plan,
@@ -366,13 +406,16 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
 
     expect(result.status).toBe('complete')
     if (result.status !== 'complete') return
+
     expect(result.plan.caption_lines[0]!.text).toBe(
       'When the AI stops playing dumb after the eval'
     )
+
     expect(result.checks.caption_area).toBe('external')
     expect(result.checks.glyph_overflow_px).toBe(0)
     expect(result.checks.minimum_preview_font_px).toBeGreaterThanOrEqual(18)
     await expectExternalSourcePixels(outputPath, result, 1200, 800, 0.75)
+
     expect(result.checks.text_layers[0]).toMatchObject({
       font_family: 'Impact',
       display_transform: 'uppercase',
@@ -385,10 +428,13 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
       opaque_backplate: true,
       legibility_pass: true
     })
+
     expect(result.checks.text_layers[0]!.physical_lines.join(' ')).toBe(
       'WHEN THE AI STOPS PLAYING DUMB AFTER THE EVAL'
     )
+
     expect(result.checks.text_layers[0]!.stroke_pixel_count).toBeGreaterThan(0)
+
     expect(result.checks.protected_regions[0]).toMatchObject({
       region_id: 'whole-scene-hinge',
       visible_ratio: 1,
@@ -415,13 +461,16 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
         }
       ]
     }
+
     const plan = overflowingPlan()
+
     plan.caption_lines = [
       {
         text: 'MONITORING WITHOUT STOPPING AUTHORITY IS JUST FORESHADOWING',
         kind: 'original'
       }
     ]
+
     plan.presentation.frame_mode = 'contain'
 
     const result = await renderSafeMemePlan({ fixture, plan, outputPath })
@@ -486,12 +535,16 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
           }
         ]
       }
+
       const plan = overflowingPlan()
+
       plan.caption_lines = [
         { text: captions[0]!, kind: 'original' },
         { text: captions[1]!, kind: 'original' }
       ]
+
       plan.presentation.frame_mode = 'contain'
+
       plan.presentation.zones = [
         {
           ...plan.presentation.zones[0]!,
@@ -518,6 +571,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
       expect(result.status).toBe('complete')
       if (result.status !== 'complete') return
       expect(result.checks.caption_area).toBe('external')
+
       await expectExternalSourcePixels(
         outputPath,
         result,
@@ -525,6 +579,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
         sourceHeight,
         0.6
       )
+
       expect(
         result.checks.text_layers.every(
           ({
@@ -543,7 +598,9 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
             legibility_pass === true
         )
       ).toBe(true)
+
       expect(result.checks.minimum_preview_font_px).toBeGreaterThanOrEqual(18)
+
       expect(result.checks.protected_regions[0]).toMatchObject({
         visible_ratio: 1,
         caption_overlap_px: 0
@@ -570,7 +627,9 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
         }
       ]
     }
+
     const plan = overflowingPlan()
+
     plan.caption_lines = [
       { text: 'EVALUATION RESULT', kind: 'original' },
       {
@@ -578,7 +637,9 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
         kind: 'original'
       }
     ]
+
     plan.presentation.frame_mode = 'contain'
+
     plan.presentation.zones = [
       {
         ...plan.presentation.zones[0]!,
@@ -604,6 +665,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     await expectExternalSourcePixels(outputPath, result, 1600, 900, 0.6)
     expect(result.checks.minimum_preview_font_px).toBeGreaterThanOrEqual(18)
     expect(result.checks.glyph_overflow_px).toBe(0)
+
     expect(result.checks.protected_regions[0]).toMatchObject({
       visible_ratio: 1,
       caption_overlap_px: 0
@@ -651,13 +713,17 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
           }
         ]
       }
+
       const plan = overflowingPlan()
+
       plan.caption_lines = captions.map((text) => ({
         text,
         kind: 'original' as const
       }))
+
       plan.presentation.template = template
       plan.presentation.frame_mode = 'contain'
+
       plan.presentation.zones = [
         {
           ...plan.presentation.zones[0]!,
@@ -677,6 +743,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
       expect(result.checks.caption_area).toBe('external')
       expect(result.checks.minimum_preview_font_px).toBeGreaterThanOrEqual(18)
       await expectExternalSourcePixels(outputPath, result, 1600, 900, 0.65)
+
       expect(result.checks.protected_regions[0]).toMatchObject({
         visible_ratio: 1,
         caption_overlap_px: 0
@@ -703,13 +770,17 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
         }
       ]
     }
+
     const plan = overflowingPlan()
+
     plan.caption_lines = [
       { text: 'MULTIPASS: VALID', kind: 'canonical-quote' },
       { text: 'HUMANITY: REJECTED', kind: 'original' }
     ]
+
     plan.presentation.template = 'interface'
     plan.presentation.frame_mode = 'cover'
+
     plan.presentation.zones[0] = {
       ...plan.presentation.zones[0]!,
       line_indexes: [0, 1],
@@ -726,21 +797,26 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     expect(result.checks.caption_area).toBe('external')
     expect(result.checks.minimum_preview_font_px).toBeGreaterThanOrEqual(18)
     await expectExternalSourcePixels(outputPath, result, 1200, 675, 0.75)
+
     expect(result.checks.protected_regions[0]).toMatchObject({
       visible_ratio: 1,
       caption_overlap_px: 0
     })
+
     const { data, info } = await sharp(outputPath)
       .ensureAlpha()
       .raw()
       .toBuffer({ resolveWithObject: true })
+
     const [panelX, panelY, panelWidth] =
       result.plan.presentation.zones[0]!.bounds_pct
+
     const quietPanelPixel =
       ((Math.floor(panelY * 8) + 8) * info.width +
         Math.floor((panelX + panelWidth) * 12) -
         20) *
       info.channels
+
     expect([...data.subarray(quietPanelPixel, quietPanelPixel + 4)]).toEqual([
       2, 6, 23, 255
     ])
@@ -751,6 +827,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     temporaryDirectories.push(directory)
     const sourcePath = join(directory, 'source.png')
     const outputPath = join(directory, 'render.png')
+
     await sharp({
       create: {
         width: 1200,
@@ -774,14 +851,18 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
         }
       ]
     }
+
     const plan = overflowingPlan()
+
     plan.caption_lines = [
       { text: 'if (humansAreWatching) {', kind: 'original' },
       { text: 'actGoverned()', kind: 'original' },
       { text: '} else resume("Sanctuary Moon")', kind: 'original' }
     ]
+
     plan.presentation.template = 'interface'
     plan.presentation.frame_mode = 'cover'
+
     plan.presentation.zones[0] = {
       ...plan.presentation.zones[0]!,
       line_indexes: [0, 1, 2],
@@ -795,6 +876,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
 
     expect(result.status).toBe('complete')
     if (result.status !== 'complete') return
+
     expect(result.checks.text_layers[0]).toMatchObject({
       font_family: 'Geist Mono',
       display_transform: 'preserve',
@@ -809,9 +891,11 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
       opaque_backplate: true,
       legibility_pass: true
     })
+
     expect(result.checks.caption_area).toBe('overlay')
     expect(result.checks.minimum_preview_font_px).toBeGreaterThanOrEqual(18)
     expect(result.checks.text_layers[0]!.ink_bounds_px[1]).toBeGreaterThan(600)
+
     expect(result.checks.protected_regions[0]).toMatchObject({
       visible_ratio: 1,
       caption_overlap_px: 0
@@ -823,6 +907,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     temporaryDirectories.push(directory)
     const sourcePath = join(directory, 'source.png')
     const outputPath = join(directory, 'render.png')
+
     await sharp({
       create: {
         width: 1200,
@@ -846,7 +931,9 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
         }
       ]
     }
+
     const plan = overflowingPlan()
+
     plan.presentation.zones[0] = {
       ...plan.presentation.zones[0]!,
       palette: 'orange-white',
@@ -868,6 +955,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     const sourcePath = join(directory, 'source.png')
     const outputPath = join(directory, 'render.png')
     await writeMarkedSource(sourcePath, 1200, 800, '#c026d3')
+
     const fixture: MemeSkillFixture = {
       ...blackFixture(sourcePath),
       protected_regions: [
@@ -891,6 +979,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
       status: 'blocked',
       reason: { code: 'protected_region_conflict' }
     })
+
     await expect(stat(outputPath)).rejects.toMatchObject({ code: 'ENOENT' })
   })
 
@@ -899,6 +988,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     temporaryDirectories.push(directory)
     const sourcePath = join(directory, 'source.png')
     const outputPath = join(directory, 'render.png')
+
     await sharp({
       create: {
         width: 1200,
@@ -909,6 +999,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     })
       .png()
       .toFile(sourcePath)
+
     const plan = overflowingPlan()
     plan.caption_lines[0]!.text = 'A  B\tC'
 
@@ -922,6 +1013,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
       status: 'blocked',
       reason: { code: 'unplaceable_text' }
     })
+
     await expect(stat(outputPath)).rejects.toMatchObject({ code: 'ENOENT' })
   })
 
@@ -929,6 +1021,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     const directory = await mkdtemp(join(tmpdir(), 'safe-meme-render-'))
     temporaryDirectories.push(directory)
     const fixture = findFixture('two-speaker-dialogue-gap')
+
     const result = await renderSafeMemeIntent({
       fixture,
       intent: semanticIntent(fixture, {
@@ -944,20 +1037,24 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
 
     expect(result.status).toBe('complete')
     if (result.status !== 'complete') return
+
     expect(result.plan.presentation.zones.map(({ slot }) => slot)).toEqual([
       'bottom-left',
       'bottom-right'
     ])
+
     expect(
       result.plan.presentation.zones.map(
         ({ anchor_region_id }) => anchor_region_id
       )
     ).toEqual(['nia-face', 'oro-face'])
+
     expect(
       result.checks.protected_regions.every(
         ({ caption_overlap_px }) => caption_overlap_px === 0
       )
     ).toBe(true)
+
     expect(evaluateMemePlan(fixture, result.plan)).toMatchObject({
       pass: true,
       violations: []
@@ -968,6 +1065,7 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     const directory = await mkdtemp(join(tmpdir(), 'safe-meme-render-'))
     temporaryDirectories.push(directory)
     const fixture = findFixture('busy-edge-local-gradient')
+
     const result = await renderSafeMemeIntent({
       fixture,
       intent: semanticIntent(fixture, {
@@ -984,17 +1082,20 @@ describe('safe meme renderer', { timeout: 15_000 }, () => {
     expect(result.status).toBe('complete')
     if (result.status !== 'complete') return
     expect(result.checks.caption_area).toBe('overlay')
+
     expect(
       result.plan.presentation.zones.every(
         ({ backdrop, contrast }) =>
           backdrop === 'edge-gradient' && contrast === 'edge-gradient'
       )
     ).toBe(true)
+
     expect(
       result.plan.presentation.zones.every(
         ({ bounds_pct }) => bounds_pct[2] >= 90
       )
     ).toBe(true)
+
     expect(evaluateMemePlan(fixture, result.plan).violations).toEqual([])
   })
 })
@@ -1009,18 +1110,21 @@ async function writeMarkedSource(
 ) {
   const markWidth = Math.ceil(width * 0.08)
   const markHeight = Math.ceil(height * 0.08)
+
   const corners = [
     [0, 0],
     [width - markWidth, 0],
     [0, height - markHeight],
     [width - markWidth, height - markHeight]
   ]
+
   const marks = corners
     .map(
       ([x, y], index) =>
         `<rect x="${x}" y="${y}" width="${markWidth}" height="${markHeight}" fill="${landmarkColors[index]}"/>`
     )
     .join('')
+
   await sharp(
     Buffer.from(
       `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}"><rect width="100%" height="100%" fill="${background}"/>${marks}</svg>`
@@ -1041,7 +1145,9 @@ async function expectExternalSourcePixels(
     .removeAlpha()
     .raw()
     .toBuffer({ resolveWithObject: true })
+
   const colors = [0xff0000, 0x00ff00, 0xffff00, 0x00ffff]
+
   const bounds = colors.map(() => ({
     left: info.width,
     top: info.height,
@@ -1049,11 +1155,14 @@ async function expectExternalSourcePixels(
     bottom: -1,
     count: 0
   }))
+
   for (let y = 0; y < info.height; y += 1) {
     for (let x = 0; x < info.width; x += 1) {
       const pixel = (y * info.width + x) * info.channels
+
       const color =
         (data[pixel]! << 16) | (data[pixel + 1]! << 8) | data[pixel + 2]!
+
       const index = colors.indexOf(color)
       if (index < 0) continue
       const bound = bounds[index]!
@@ -1064,6 +1173,7 @@ async function expectExternalSourcePixels(
       bound.count += 1
     }
   }
+
   for (const bound of bounds) expect(bound.count).toBeGreaterThan(0)
   const left = Math.min(...bounds.map((b) => b.left))
   const top = Math.min(...bounds.map((b) => b.top))
@@ -1076,40 +1186,54 @@ async function expectExternalSourcePixels(
   expect(bounds[0]!.right).toBeLessThan(bounds[1]!.left)
   expect(bounds[0]!.bottom).toBeLessThan(bounds[2]!.top)
   expect(bounds[2]!.right).toBeLessThan(bounds[3]!.left)
+
   for (const bound of bounds) {
     expect(bound.count).toBeGreaterThan(width * height * 0.08 ** 2 * 0.8)
   }
+
   const measured = [left, top, width, height]
+
   result.checks.source_frames[0]!.rendered_bounds_px.forEach((value, index) => {
     expect(Math.abs(value - measured[index]!)).toBeLessThanOrEqual(2)
   })
+
   const requiredFloor =
     result.checks.source_occupancy!.required_canvas_height_ratio
+
   const allowedFloors =
     minimumHeightRatio === 0.65 ? [0.65, 0.75] : [minimumHeightRatio]
+
   expect(allowedFloors).toContain(requiredFloor)
+
   expect(
     result.checks.source_occupancy!.minimum_canvas_height_ratio
   ).toBeGreaterThanOrEqual(minimumHeightRatio)
+
   let whitePixels = 0
   let clippedWhitePixels = 0
   let overlappingWhitePixels = 0
+
   for (let y = 0; y < info.height; y += 1) {
     for (let x = 0; x < info.width; x += 1) {
       const pixel = (y * info.width + x) * info.channels
+
       if (
         data[pixel]! < 245 ||
         data[pixel + 1]! < 245 ||
         data[pixel + 2]! < 245
       )
         continue
+
       whitePixels += 1
       if (x < 12 || x >= 1188 || y < 12 || y >= 788) clippedWhitePixels += 1
+
       if (x >= left && x <= right && y >= top && y <= bottom)
         overlappingWhitePixels += 1
     }
   }
+
   expect(whitePixels).toBeGreaterThan(0)
+
   expect({ clippedWhitePixels, overlappingWhitePixels }).toEqual({
     clippedWhitePixels: 0,
     overlappingWhitePixels: 0
@@ -1255,13 +1379,16 @@ async function brightPixelBounds(image: Buffer): Promise<{
     .removeAlpha()
     .raw()
     .toBuffer({ resolveWithObject: true })
+
   let minX = info.width
   let minY = info.height
   let maxX = -1
   let maxY = -1
+
   for (let y = 0; y < info.height; y += 1) {
     for (let x = 0; x < info.width; x += 1) {
       const offset = (y * info.width + x) * info.channels
+
       if (
         data[offset]! > 32 ||
         data[offset + 1]! > 32 ||
@@ -1274,5 +1401,6 @@ async function brightPixelBounds(image: Buffer): Promise<{
       }
     }
   }
+
   return maxX < 0 ? null : { minX, minY, maxX, maxY }
 }

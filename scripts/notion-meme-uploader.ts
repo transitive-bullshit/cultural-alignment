@@ -12,6 +12,7 @@ const NOTION_MEMES_PROPERTY = 'Memes'
 const MAX_NOTION_FILES_PER_PROPERTY = 100
 
 const sha256Schema = z.string().regex(/^[a-f\d]{64}$/i)
+
 const safeFilenameSchema = z
   .string()
   .min(1)
@@ -67,9 +68,11 @@ const checkpointSchema = z.object({
 export type FinalizedMemeExportFile = z.infer<
   typeof finalizedMemeExportFileSchema
 >
+
 export type FinalizedMemeExportManifest = z.infer<
   typeof finalizedMemeExportManifestSchema
 >
+
 type CheckpointEntry = z.infer<typeof checkpointEntrySchema>
 type UploadCheckpoint = z.infer<typeof checkpointSchema>
 
@@ -169,6 +172,7 @@ export function parseFinalizedMemeExportManifest(input: unknown) {
     if (seen.has(file.filename)) {
       throw new Error(`Duplicate export filename: ${file.filename}`)
     }
+
     seen.add(file.filename)
   }
 
@@ -186,16 +190,19 @@ export function bindManifestToScenarios(
     if (pageIdBySlug.has(scenario.slug)) {
       throw new Error(`Duplicate scenario slug in snapshot: ${scenario.slug}`)
     }
+
     pageIdBySlug.set(scenario.slug, scenario.id)
   }
 
   const filesBySlug = new Map<string, FinalizedMemeExportFile[]>()
+
   for (const file of manifest.files) {
     if (!pageIdBySlug.has(file.scenarioSlug)) {
       throw new Error(
         `Export references unknown scenario slug: ${file.scenarioSlug}`
       )
     }
+
     const files = filesBySlug.get(file.scenarioSlug) ?? []
     files.push(file)
     filesBySlug.set(file.scenarioSlug, files)
@@ -217,12 +224,15 @@ export function planScenarioAppend(
   existing: readonly ExistingNotionFile[]
 ): ScenarioAppendPlan {
   const existingNames = new Set(existing.map((file) => file.name))
+
   const alreadyPresent = scenario.files.filter((file) =>
     existingNames.has(file.filename)
   )
+
   const missing = scenario.files.filter(
     (file) => !existingNames.has(file.filename)
   )
+
   const finalCount = existing.length + missing.length
 
   if (finalCount > MAX_NOTION_FILES_PER_PROPERTY) {
@@ -244,6 +254,7 @@ export function appendUploadedFiles(
   uploads: readonly { filename: string; fileUploadId: string }[]
 ): (ExistingNotionFile | NewNotionFile)[] {
   const existingNames = new Set(existing.map((file) => file.name))
+
   const appended = uploads
     .filter((upload) => !existingNames.has(upload.filename))
     .map((upload): NewNotionFile => ({
@@ -263,11 +274,13 @@ export function planScenarioReplacement(
     const matchCount = existing.filter(
       (file) => file.name === target.filename
     ).length
+
     if (matchCount === 0) {
       throw new Error(
         `${scenario.scenarioSlug} does not contain attachment ${target.filename}; replacement refuses to append a missing target`
       )
     }
+
     if (matchCount !== 1) {
       throw new Error(
         `${scenario.scenarioSlug} contains ${matchCount} attachments named ${target.filename}; replacement requires exactly one`
@@ -287,19 +300,23 @@ export function replaceUploadedFiles(
   uploads: readonly { filename: string; fileUploadId: string }[]
 ): (ExistingNotionFile | NewNotionFile)[] {
   const uploadByName = new Map<string, string>()
+
   for (const upload of uploads) {
     if (uploadByName.has(upload.filename)) {
       throw new Error(`Duplicate replacement filename: ${upload.filename}`)
     }
+
     uploadByName.set(upload.filename, upload.fileUploadId)
   }
 
   const matchCountByName = new Map<string, number>()
+
   const next = existing.map((file): ExistingNotionFile | NewNotionFile => {
     const fileUploadId = uploadByName.get(file.name)
     if (!fileUploadId) return file
 
     matchCountByName.set(file.name, (matchCountByName.get(file.name) ?? 0) + 1)
+
     return {
       type: 'file_upload',
       name: file.name,
@@ -309,6 +326,7 @@ export function replaceUploadedFiles(
 
   for (const filename of uploadByName.keys()) {
     const matchCount = matchCountByName.get(filename) ?? 0
+
     if (matchCount !== 1) {
       throw new Error(
         `Cannot replace ${filename}: expected exactly one existing attachment, received ${matchCount}`
@@ -336,6 +354,7 @@ export function assertAppendVerified(input: {
   }
 
   const afterNames = new Set(input.after.map((file) => file.name))
+
   for (const filename of input.expectedNames) {
     if (!afterNames.has(filename)) {
       throw new Error(
@@ -351,6 +370,7 @@ export function assertReplacementVerified(input: {
   after: readonly ExistingNotionFile[]
 }) {
   const targets = new Set(input.targetNames)
+
   if (targets.size !== input.targetNames.length) {
     throw new Error('Replacement verification received duplicate target names')
   }
@@ -359,6 +379,7 @@ export function assertReplacementVerified(input: {
   const unrelatedAfter = input.after.filter((file) => !targets.has(file.name))
   const unrelatedBeforeCounts = countFileIdentities(unrelatedBefore)
   const unrelatedAfterCounts = countFileIdentities(unrelatedAfter)
+
   if (!sameCounts(unrelatedBeforeCounts, unrelatedAfterCounts)) {
     throw new Error(
       `Notion replacement verification failed: an unrelated “${NOTION_MEMES_PROPERTY}” attachment or name changed`
@@ -367,17 +388,20 @@ export function assertReplacementVerified(input: {
 
   for (const filename of targets) {
     const matches = input.after.filter((file) => file.name === filename)
+
     if (matches.length !== 1) {
       throw new Error(
         `Notion replacement verification failed: ${filename} must appear exactly once`
       )
     }
+
     if (matches[0]!.type !== 'file') {
       throw new Error(
         `Notion replacement verification failed: ${filename} is not an uploaded file`
       )
     }
   }
+
   if (input.after.length !== input.before.length) {
     throw new Error(
       `Notion replacement verification failed: file count changed from ${input.before.length} to ${input.after.length}`
@@ -395,6 +419,7 @@ export async function assertReplacementBytesVerified(input: {
       (file): file is InternalNotionFile =>
         file.name === expected.filename && file.type === 'file'
     )
+
     if (matches.length !== 1) {
       throw new Error(
         `Notion byte verification failed: ${expected.filename} must appear exactly once as an uploaded file`
@@ -404,6 +429,7 @@ export async function assertReplacementBytesVerified(input: {
     const actualSha256 = createHash('sha256')
       .update(await input.download(matches[0]!.file.url))
       .digest('hex')
+
     if (actualSha256 !== expected.sha256.toLowerCase()) {
       throw new Error(
         `Notion byte verification failed for ${expected.filename}: expected ${expected.sha256}, received ${actualSha256}`
@@ -431,6 +457,7 @@ function createNotionMemeGateway(token: string): NotionMemeGateway {
         filename,
         content_type: contentType
       })
+
       return { id: response.id, status: response.status }
     },
     async sendFileUpload({ fileUploadId, filename, contentType, bytes }) {
@@ -441,12 +468,14 @@ function createNotionMemeGateway(token: string): NotionMemeGateway {
           data: new Blob([new Uint8Array(bytes).buffer], { type: contentType })
         }
       })
+
       return { id: response.id, status: response.status }
     },
     async retrieveFileUpload(fileUploadId) {
       const response = await notion.fileUploads.retrieve({
         file_upload_id: fileUploadId
       })
+
       return {
         id: response.id,
         status: response.status,
@@ -455,15 +484,19 @@ function createNotionMemeGateway(token: string): NotionMemeGateway {
     },
     async downloadFile(url) {
       const parsed = new URL(url)
+
       if (parsed.protocol !== 'https:') {
         throw new Error(`Refusing to download a non-HTTPS Notion file URL`)
       }
+
       const response = await fetch(parsed, { redirect: 'follow' })
+
       if (!response.ok) {
         throw new Error(
           `Notion file download failed with HTTP ${response.status}`
         )
       }
+
       return new Uint8Array(await response.arrayBuffer())
     },
     async updateMemes(pageId, files) {
@@ -485,10 +518,12 @@ export async function runNotionMemeUpload(
   gateway = createNotionMemeGateway(options.token)
 ): Promise<UploadSummary> {
   const log = options.log ?? console.log
+
   const [manifestText, scenariosText] = await Promise.all([
     readFile(options.manifestPath, 'utf8'),
     readFile(options.scenariosPath, 'utf8')
   ])
+
   const manifest = parseFinalizedMemeExportManifest(JSON.parse(manifestText))
   const scenarios = bindManifestToScenarios(manifest, JSON.parse(scenariosText))
 
@@ -497,6 +532,7 @@ export async function runNotionMemeUpload(
   const checkpoint = options.apply
     ? await CheckpointStore.load(options.checkpointPath)
     : undefined
+
   let alreadyPresentCount = 0
   let uploadedCount = 0
   let attachedCount = 0
@@ -514,6 +550,7 @@ export async function runNotionMemeUpload(
           retries: options.retries,
           log
         })
+
         alreadyPresentCount += result.alreadyPresentCount
         uploadedCount += result.uploadedCount
         replacedCount += result.replacedCount
@@ -525,6 +562,7 @@ export async function runNotionMemeUpload(
         scenario.pageId,
         options.retries
       )
+
       const plan = planScenarioAppend(scenario, before.files)
       alreadyPresentCount += plan.alreadyPresent.length
 
@@ -549,10 +587,12 @@ export async function runNotionMemeUpload(
       }
 
       const uploads: { filename: string; fileUploadId: string }[] = []
+
       for (const file of plan.missing) {
         const entry = checkpoint!.get(
           fileCheckpointKey(scenario.pageId, file.filename)
         )
+
         const reusableId = await reusableCheckpointUpload(
           gateway,
           entry,
@@ -560,6 +600,7 @@ export async function runNotionMemeUpload(
           scenario,
           options.retries
         )
+
         const fileUploadId =
           reusableId ??
           (await uploadFile(
@@ -582,6 +623,7 @@ export async function runNotionMemeUpload(
         uploads,
         retries: options.retries
       })
+
       assertAppendVerified({
         before: before.files,
         expectedNames: uploads.map((upload) => upload.filename),
@@ -592,6 +634,7 @@ export async function runNotionMemeUpload(
         const file = scenario.files.find(
           (candidate) => candidate.filename === upload.filename
         )!
+
         await checkpoint!.set(
           fileCheckpointKey(scenario.pageId, upload.filename),
           {
@@ -605,6 +648,7 @@ export async function runNotionMemeUpload(
           }
         )
       }
+
       attachedCount += uploads.length
     },
     { concurrency: options.concurrency }
@@ -635,16 +679,20 @@ async function runScenarioReplacement(input: {
     input.scenario.pageId,
     input.retries
   )
+
   const plan = planScenarioReplacement(input.scenario, before.files)
+
   const alreadyCorrect = await matchingReplacementFiles(
     input.gateway,
     plan.targets,
     before.files,
     input.retries
   )
+
   const alreadyCorrectNames = new Set(
     alreadyCorrect.map((file) => file.filename)
   )
+
   const replacements = plan.targets.filter(
     (file) => !alreadyCorrectNames.has(file.filename)
   )
@@ -652,6 +700,7 @@ async function runScenarioReplacement(input: {
   input.log(
     `${input.apply ? 'Apply' : 'Dry run'} replacement ${input.scenario.scenarioSlug}: ${replacements.length} to replace, ${alreadyCorrect.length} already corrected, ${plan.finalCount} final`
   )
+
   if (!input.apply) {
     return {
       alreadyPresentCount: alreadyCorrect.length,
@@ -676,10 +725,12 @@ async function runScenarioReplacement(input: {
 
   const uploads: { filename: string; fileUploadId: string }[] = []
   let uploadedCount = 0
+
   for (const file of replacements) {
     const entry = input.checkpoint!.get(
       fileCheckpointKey(input.scenario.pageId, file.filename)
     )
+
     const reusableId = await reusableCheckpointUpload(
       input.gateway,
       entry,
@@ -687,6 +738,7 @@ async function runScenarioReplacement(input: {
       input.scenario,
       input.retries
     )
+
     const fileUploadId =
       reusableId ??
       (await uploadFile(
@@ -696,6 +748,7 @@ async function runScenarioReplacement(input: {
         input.checkpoint!,
         input.retries
       ))
+
     if (!reusableId) uploadedCount += 1
     uploads.push({ filename: file.filename, fileUploadId })
   }
@@ -711,6 +764,7 @@ async function runScenarioReplacement(input: {
   const expected = replacements.filter((file) =>
     uploads.some((upload) => upload.filename === file.filename)
   )
+
   await replaceWithRetry({
     gateway: input.gateway,
     scenario: input.scenario,
@@ -723,6 +777,7 @@ async function runScenarioReplacement(input: {
     const file = expected.find(
       (candidate) => candidate.filename === upload.filename
     )!
+
     await input.checkpoint!.set(
       fileCheckpointKey(input.scenario.pageId, upload.filename),
       {
@@ -749,17 +804,21 @@ async function verifyLocalExports(files: readonly FinalizedMemeExportFile[]) {
     files,
     async (file) => {
       const metadata = await stat(file.path)
+
       if (!metadata.isFile()) {
         throw new Error(`Export is not a file: ${file.path}`)
       }
+
       if (basename(file.path) !== file.filename) {
         throw new Error(
           `Manifest filename ${file.filename} does not match path ${file.path}`
         )
       }
+
       const actualSha256 = createHash('sha256')
         .update(await readFile(file.path))
         .digest('hex')
+
       if (actualSha256 !== file.sha256.toLowerCase()) {
         throw new Error(
           `SHA-256 mismatch for ${file.filename}: expected ${file.sha256}, received ${actualSha256}`
@@ -789,6 +848,7 @@ async function retrieveMemesWithRetry(
     const response = asRecord(
       await gateway.retrievePageProperty(pageId, property.id)
     )
+
     if (
       response.object !== 'property_item' ||
       response.type !== 'files' ||
@@ -816,6 +876,7 @@ async function uploadFile(
   retries: number
 ) {
   const contentType = contentTypeForFilename(file.filename)
+
   const created = await withRetry(
     `create file upload ${file.filename}`,
     retries,
@@ -829,6 +890,7 @@ async function uploadFile(
   }
 
   const bytes = await readFile(file.path)
+
   const sent = await sendFileWithRetry({
     gateway,
     fileUploadId: created.id,
@@ -837,6 +899,7 @@ async function uploadFile(
     bytes,
     retries
   })
+
   if (sent.status !== 'uploaded') {
     throw new Error(
       `File upload ${sent.id} for ${file.filename} has unexpected status ${sent.status}`
@@ -852,6 +915,7 @@ async function uploadFile(
     state: 'uploaded',
     updatedAt: new Date().toISOString()
   })
+
   return sent.id
 }
 
@@ -881,6 +945,7 @@ async function sendFileWithRetry(input: {
         const upload = await input.gateway.retrieveFileUpload(
           input.fileUploadId
         )
+
         if (upload.status === 'uploaded') return upload
       } catch {
         // Retry the send below. Its original error remains authoritative.
@@ -915,10 +980,13 @@ async function reusableCheckpointUpload(
       retries,
       () => gateway.retrieveFileUpload(entry.fileUploadId!)
     )
+
     if (upload.status !== 'uploaded') return undefined
+
     if (upload.expiryTime && Date.parse(upload.expiryTime) <= Date.now()) {
       return undefined
     }
+
     return upload.id
   } catch {
     return undefined
@@ -940,17 +1008,20 @@ async function attachWithRetry(input: {
         input.scenario.pageId,
         input.retries
       )
+
       const missing = input.uploads.filter(
         (upload) => !current.files.some((file) => file.name === upload.filename)
       )
 
       if (missing.length > 0) {
         const nextFiles = appendUploadedFiles(current.files, missing)
+
         if (nextFiles.length > MAX_NOTION_FILES_PER_PROPERTY) {
           throw new Error(
             `${input.scenario.scenarioSlug} would exceed Notion’s ${MAX_NOTION_FILES_PER_PROPERTY}-file property limit`
           )
         }
+
         await input.gateway.updateMemes(input.scenario.pageId, nextFiles)
       }
 
@@ -959,11 +1030,13 @@ async function attachWithRetry(input: {
         input.scenario.pageId,
         input.retries
       )
+
       assertAppendVerified({
         before: current.files,
         expectedNames: input.uploads.map((upload) => upload.filename),
         after: verified.files
       })
+
       return verified.files
     }
   )
@@ -982,12 +1055,15 @@ async function matchingReplacementFiles(
         (candidate): candidate is InternalNotionFile =>
           candidate.name === file.filename && candidate.type === 'file'
       )
+
       if (matches.length !== 1) return undefined
+
       const sha256 = await downloadSha256WithRetry(
         gateway,
         matches[0]!.file.url,
         retries
       )
+
       return sha256 === file.sha256.toLowerCase() ? file : undefined
     },
     { concurrency: 4 }
@@ -1010,6 +1086,7 @@ async function replaceWithRetry(input: {
         input.scenario.pageId,
         input.retries
       )
+
       planScenarioReplacement(
         { ...input.scenario, files: [...input.expected] },
         current.files
@@ -1021,9 +1098,11 @@ async function replaceWithRetry(input: {
         current.files,
         input.retries
       )
+
       const alreadyCorrectNames = new Set(
         alreadyCorrect.map((file) => file.filename)
       )
+
       const pendingUploads = input.uploads.filter(
         (upload) => !alreadyCorrectNames.has(upload.filename)
       )
@@ -1038,17 +1117,20 @@ async function replaceWithRetry(input: {
         input.scenario.pageId,
         input.retries
       )
+
       assertReplacementVerified({
         before: current.files,
         targetNames: input.uploads.map((upload) => upload.filename),
         after: verified.files
       })
+
       await assertReplacementBytesVerified({
         expected: input.expected,
         after: verified.files,
         download: (url) =>
           downloadBytesWithRetry(input.gateway, url, input.retries)
       })
+
       return verified.files
     }
   )
@@ -1070,6 +1152,7 @@ async function downloadBytesWithRetry(
   retries: number
 ) {
   let lastError: unknown
+
   for (let attempt = 0; attempt <= retries; attempt += 1) {
     try {
       return await gateway.downloadFile(url)
@@ -1079,6 +1162,7 @@ async function downloadBytesWithRetry(
       await retryDelay(attempt)
     }
   }
+
   throw lastError
 }
 
@@ -1095,8 +1179,10 @@ async function withRetry<T>(
         if (err instanceof Error) {
           err.message = `${label}: ${err.message}`
         }
+
         throw err
       }
+
       await retryDelay(attempt)
     }
   }
@@ -1104,9 +1190,11 @@ async function withRetry<T>(
 
 function isRetryable(error: unknown) {
   if (!isNotionClientError(error)) return false
+
   if ('status' in error) {
     return [409, 429, 500, 502, 503, 504].includes(error.status)
   }
+
   return error.code === 'notionhq_client_request_timeout'
 }
 
@@ -1120,6 +1208,7 @@ function parseExistingNotionFile(
   index: number
 ): ExistingNotionFile {
   const file = asRecord(input)
+
   if (typeof file.name !== 'string' || file.name.length === 0) {
     throw new Error(
       `Page ${pageId} has an invalid “${NOTION_MEMES_PROPERTY}” filename at index ${index}`
@@ -1128,25 +1217,31 @@ function parseExistingNotionFile(
 
   if (file.type === 'file') {
     const value = asRecord(file.file)
+
     if (typeof value.url !== 'string') {
       throw new Error(`Page ${pageId} has an invalid internal file at ${index}`)
     }
+
     const parsed: ExistingNotionFile = {
       type: 'file',
       name: file.name,
       file: { url: value.url }
     }
+
     if (typeof value.expiry_time === 'string') {
       parsed.file.expiry_time = value.expiry_time
     }
+
     return parsed
   }
 
   if (file.type === 'external') {
     const value = asRecord(file.external)
+
     if (typeof value.url !== 'string') {
       throw new Error(`Page ${pageId} has an invalid external file at ${index}`)
     }
+
     return {
       type: 'external',
       name: file.name,
@@ -1161,10 +1256,12 @@ function parseExistingNotionFile(
 
 function countFileIdentities(files: readonly ExistingNotionFile[]) {
   const counts = new Map<string, number>()
+
   for (const file of files) {
     const identity = `${file.type}:${file.name}`
     counts.set(identity, (counts.get(identity) ?? 0) + 1)
   }
+
   return counts
 }
 
@@ -1173,9 +1270,11 @@ function sameCounts(
   right: ReadonlyMap<string, number>
 ) {
   if (left.size !== right.size) return false
+
   for (const [identity, count] of left) {
     if (right.get(identity) !== count) return false
   }
+
   return true
 }
 
@@ -1193,6 +1292,7 @@ function asRecord(input: unknown): Record<string, unknown> {
   if (!input || typeof input !== 'object' || Array.isArray(input)) {
     return {}
   }
+
   return input as Record<string, unknown>
 }
 
@@ -1206,6 +1306,7 @@ class CheckpointStore {
 
   static async load(path: string) {
     let checkpoint: UploadCheckpoint
+
     try {
       checkpoint = checkpointSchema.parse(
         JSON.parse(await readFile(path, 'utf8'))
@@ -1213,13 +1314,16 @@ class CheckpointStore {
     } catch (err) {
       const code =
         err && typeof err === 'object' && 'code' in err ? err.code : undefined
+
       if (code !== 'ENOENT') throw err
+
       checkpoint = {
         schemaVersion: 1,
         updatedAt: new Date(0).toISOString(),
         entries: {}
       }
     }
+
     return new CheckpointStore(resolve(path), checkpoint)
   }
 
@@ -1238,6 +1342,7 @@ class CheckpointStore {
       await writeFile(temporaryPath, serialized)
       await rename(temporaryPath, this.path)
     })
+
     await this.writeQueue
   }
 }

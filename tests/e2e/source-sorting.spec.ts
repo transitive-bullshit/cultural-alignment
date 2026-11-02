@@ -10,6 +10,7 @@ test('media sources sort by age with an independent persisted preference', async
   page
 }) => {
   await page.goto('/sources')
+
   await page.evaluate(
     ({ scenarioKey, sourceKey }) => {
       window.localStorage.setItem(scenarioKey, 'oldest')
@@ -17,6 +18,7 @@ test('media sources sort by age with an independent persisted preference', async
     },
     { scenarioKey: scenarioSortKey, sourceKey: sourceSortKey }
   )
+
   await page.reload()
 
   const list = page.locator('[data-resource-list][data-resource-kind="source"]')
@@ -31,6 +33,7 @@ test('media sources sort by age with an independent persisted preference', async
   await newestOption.click()
   await expect(list).toHaveAttribute('data-resource-sort', 'newest')
   expectChronological(await readOrderedSources(page), 'newest')
+
   expect(
     await page.evaluate(
       ({ scenarioKey, sourceKey }) => ({
@@ -53,6 +56,7 @@ test('media sources sort by age with an independent persisted preference', async
   await defaultOption.click()
   await expect(list).toHaveAttribute('data-resource-sort', 'default')
   expectAlphabetical(await readOrderedSources(page))
+
   expect(
     await page.evaluate(
       ({ scenarioKey, sourceKey }) => ({
@@ -74,7 +78,9 @@ async function readOrderedSources(page: Page) {
       .map(({ slug }) => `/sources/${slug}`)
       .toSorted((a, b) => a.localeCompare(b))
   )
+
   expect(new Set(hrefs).size).toBe(sources.length)
+
   return hrefs.map((href) => {
     const slug = href?.match(/^\/sources\/([^/]+)$/)?.[1]
     const source = slug ? sourcesBySlug.get(slug) : undefined
@@ -101,6 +107,7 @@ function expectChronological(
         sensitivity: 'base'
       })
     }
+
     if (left.releaseDate === null) return 1
     if (right.releaseDate === null) return -1
 

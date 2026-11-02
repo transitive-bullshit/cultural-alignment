@@ -36,6 +36,7 @@ export   Convert a chosen render to JPEG and add it to <dir>/export/manifest.jso
 --out defaults to work/meme-riffs/<scenario-slug>.`
 
 const projectRoot = fileURLToPath(new URL('..', import.meta.url))
+
 const regionsPath = join(
   projectRoot,
   'docs/skills/ai-safety-meme-creator/protected-regions.json'
@@ -65,6 +66,7 @@ export function buildRiffFixture(
   }
 ): MemeSkillFixture {
   const id = `${scenario.slug}--riff`
+
   return memeSkillFixtureSchema.parse({
     id,
     purpose: 'Riff on a supplied reference using the scenario’s curated still.',
@@ -116,6 +118,7 @@ async function findRegions(scenario: ScenarioRecord) {
   const all = JSON.parse(
     await readFile(regionsPath, 'utf8')
   ) as ProtectedRegions
+
   const entry = all[scenario.slug]
   return entry?.still === scenario.image.gallerySrc ? entry.regions : []
 }
@@ -125,6 +128,7 @@ async function loadSnapshot() {
     JSON.parse(
       await readFile(join(projectRoot, 'content/snapshot', name), 'utf8')
     )
+
   return validateContentSnapshot({
     schemaVersion: 3,
     scenarios: await read('scenarios.json'),
@@ -140,28 +144,33 @@ async function prepare(slug: string, outDir: string) {
   const scenario = snapshot.scenarios.find((s) => s.slug === slug)
   if (!scenario) throw new Error(`Unknown scenario slug: ${slug}`)
   const source = snapshot.sources.find((s) => s.id === scenario.sourceId)!
+
   const conceptNames = scenario.conceptIds.map(
     (id) => snapshot.concepts.find((c) => c.id === id)!.shortName
   )
 
   await mkdir(outDir, { recursive: true })
   const response = await fetch(scenario.image.detailSrc)
+
   if (!response.ok) {
     throw new Error(
       `Failed to download ${scenario.image.detailSrc}: ${response.status}`
     )
   }
+
   await writeFile(
     join(outDir, 'still.webp'),
     Buffer.from(await response.arrayBuffer())
   )
 
   const regions = await findRegions(scenario)
+
   const fixture = buildRiffFixture(scenario, {
     sourceTitle: source.title,
     conceptNames,
     regions
   })
+
   const fixturePath = join(outDir, 'fixture.json')
   await writeFile(fixturePath, `${JSON.stringify(fixture, null, 2)}\n`)
 
@@ -195,6 +204,7 @@ async function exportRender(slug: string, renderPath: string, outDir: string) {
   const { data, info } = await sharp(renderPath)
     .jpeg({ quality: 92, chromaSubsampling: '4:4:4', mozjpeg: true })
     .toBuffer({ resolveWithObject: true })
+
   const sha256 = createHash('sha256').update(data).digest('hex')
   const exportDir = join(outDir, 'export')
   const filename = `${slug}--riff-${sha256.slice(0, 12)}.jpg`
@@ -204,6 +214,7 @@ async function exportRender(slug: string, renderPath: string, outDir: string) {
 
   const manifestPath = join(exportDir, 'manifest.json')
   let manifest: FinalizedMemeExportManifest = { schemaVersion: 1, files: [] }
+
   try {
     manifest = parseFinalizedMemeExportManifest(
       JSON.parse(await readFile(manifestPath, 'utf8'))
@@ -211,6 +222,7 @@ async function exportRender(slug: string, renderPath: string, outDir: string) {
   } catch (err) {
     if ((err as NodeJS.ErrnoException).code !== 'ENOENT') throw err
   }
+
   manifest = parseFinalizedMemeExportManifest({
     schemaVersion: 1,
     files: [
@@ -229,6 +241,7 @@ async function exportRender(slug: string, renderPath: string, outDir: string) {
       }
     ]
   })
+
   bindManifestToScenarios(
     manifest,
     JSON.parse(
@@ -238,6 +251,7 @@ async function exportRender(slug: string, renderPath: string, outDir: string) {
       )
     )
   )
+
   await writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`)
 
   console.log(
@@ -266,22 +280,27 @@ async function main() {
       help: { type: 'boolean', short: 'h', default: false }
     }
   })
+
   const [command, slug, render] = positionals
 
   if (values.help || !command) {
     console.log(HELP)
     return
   }
+
   if (!slug) throw new Error(`Missing <scenario-slug>.\n\n${HELP}`)
+
   const outDir = resolve(
     values.out ?? join(projectRoot, 'work/meme-riffs', slug)
   )
 
   if (command === 'prepare') return prepare(slug, outDir)
+
   if (command === 'export') {
     if (!render) throw new Error(`Missing <render.png>.\n\n${HELP}`)
     return exportRender(slug, resolve(render), outDir)
   }
+
   throw new Error(`Unknown command "${command}".\n\n${HELP}`)
 }
 

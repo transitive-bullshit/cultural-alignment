@@ -72,6 +72,7 @@ const captureSpecSchema = z.object({
 })
 
 type Highlight = { label: string; x: number; y: number; w: number; h: number }
+
 type ShotRecord = {
   file: string
   width: number
@@ -95,9 +96,11 @@ async function capture(specPath: string) {
   const spec = captureSpecSchema.parse(
     JSON.parse(await readFile(specPath, 'utf8'))
   )
+
   const outDir = resolve(dirname(specPath), spec.out)
   await mkdir(outDir, { recursive: true })
   const manifestPath = join(outDir, 'shots.json')
+
   const manifest: Record<string, ShotRecord> = await readFile(
     manifestPath,
     'utf8'
@@ -108,12 +111,14 @@ async function capture(specPath: string) {
   const browser = await chromium.launch({
     channel: process.env.PLAYWRIGHT_CHANNEL ?? 'chrome'
   })
+
   try {
     for (const shot of spec.shots) {
       const viewport =
         typeof shot.viewport === 'string'
           ? VIEWPORTS[shot.viewport]
           : { ...shot.viewport, deviceScaleFactor: 1 }
+
       for (const side of shot.sides) {
         const context = await browser.newContext({
           viewport: { width: viewport.width, height: viewport.height },
@@ -121,7 +126,9 @@ async function capture(specPath: string) {
           reducedMotion: 'reduce',
           ignoreHTTPSErrors: true
         })
+
         const storage = { ...DEFAULT_STORAGE, ...shot.storage }
+
         await context.addInitScript((entries) => {
           for (const [key, value] of Object.entries(entries)) {
             try {
@@ -131,21 +138,28 @@ async function capture(specPath: string) {
             }
           }
         }, storage)
+
         const page = await context.newPage()
+
         const url = new URL(
           shot.path,
           side === 'before' ? spec.before : spec.after
         )
+
         await page.goto(url.href, { waitUntil: 'networkidle' })
+
         await page.addStyleTag({
           content: 'nextjs-portal { display: none !important; }'
         })
+
         if (shot.waitFor) await page.locator(shot.waitFor).first().waitFor()
         await page.evaluate(() => document.fonts.ready)
+
         if (shot.scrollTo) {
           await page.evaluate(
             ([selector, offset]) => {
               const element = document.querySelector(selector)
+
               if (element) {
                 window.scrollTo(
                   0,
@@ -156,6 +170,7 @@ async function capture(specPath: string) {
             [shot.scrollTo, shot.scrollOffset] as const
           )
         }
+
         for (const step of shot.steps) {
           if ('hover' in step) await page.locator(step.hover).first().hover()
           else if ('focus' in step)
@@ -169,14 +184,17 @@ async function capture(specPath: string) {
           else if ('press' in step) await page.keyboard.press(step.press)
           else await page.waitForTimeout(step.wait)
         }
+
         await page.waitForTimeout(900)
 
         const highlights = await measureHighlights(
           page,
           shot.highlights.filter((h) => h.side === side || h.side === 'both')
         )
+
         const file = `${side}-${shot.id}.png`
         await page.screenshot({ path: join(outDir, file) })
+
         manifest[`${side}:${shot.id}`] = {
           file,
           width: viewport.width,
@@ -184,15 +202,18 @@ async function capture(specPath: string) {
           url: url.href,
           highlights
         }
+
         console.log(
           `captured ${side}:${shot.id} (${highlights.length} highlights)`
         )
+
         await context.close()
       }
     }
   } finally {
     await browser.close()
   }
+
   await writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`)
 }
 
@@ -206,18 +227,22 @@ async function measureHighlights(
   }[]
 ): Promise<Highlight[]> {
   const highlights: Highlight[] = []
+
   for (const { selector, label, limit, pseudo } of specs) {
     const rects = await page.evaluate(
       ([sel, max, pseudoElement]) =>
         [...document.querySelectorAll(sel)].slice(0, max).map((element) => {
           const rect = element.getBoundingClientRect()
+
           if (pseudoElement) {
             const style = getComputedStyle(element, pseudoElement)
+
             if (style.content !== 'none' && style.content !== 'normal') {
               const start = Number.parseFloat(style.insetInlineStart) || 0
               const top = Number.parseFloat(style.insetBlockStart) || 0
               const end = Number.parseFloat(style.insetInlineEnd) || 0
               const bottom = Number.parseFloat(style.insetBlockEnd) || 0
+
               return {
                 x: rect.x + start,
                 y: rect.y + top,
@@ -226,15 +251,19 @@ async function measureHighlights(
               }
             }
           }
+
           return { x: rect.x, y: rect.y, w: rect.width, h: rect.height }
         }),
       [selector, limit, pseudo] as const
     )
+
     if (rects.length === 0) {
       console.warn(`highlight selector matched nothing: ${selector}`)
     }
+
     highlights.push(...rects.map((rect) => ({ label, ...rect })))
   }
+
   return highlights
 }
 
@@ -298,15 +327,19 @@ async function build(specPath: string, outPath: string | undefined) {
   const spec = reviewSpecSchema.parse(
     JSON.parse(await readFile(specPath, 'utf8'))
   )
+
   const shotsDir = resolve(dirname(specPath), spec.shots)
+
   const manifest = JSON.parse(
     await readFile(join(shotsDir, 'shots.json'), 'utf8')
   ) as Record<string, ShotRecord>
 
   const images = new Map<string, string>()
+
   const imageFor = async (key: string) => {
     const record = manifest[key]
     if (!record) throw new Error(`Missing shot ${key}; run capture first`)
+
     if (!images.has(key)) {
       const data = await sharp(join(shotsDir, record.file))
         .resize({
@@ -315,37 +348,47 @@ async function build(specPath: string, outPath: string | undefined) {
         })
         .webp({ quality: 78 })
         .toBuffer()
+
       images.set(key, `data:image/webp;base64,${data.toString('base64')}`)
     }
+
     return { record, src: images.get(key)! }
   }
 
   const sections: string[] = []
+
   for (const change of spec.changes) {
     const parts: string[] = []
+
     for (const pair of change.compare) {
       const before = await imageFor(`before:${pair.shot}`)
       const after = await imageFor(`after:${pair.shot}`)
+
       parts.push(`<figure class="pair">
   <figcaption>${escapeHtml(pair.label)}</figcaption>
   <div class="pair-grid">${figure(before, pair.beforeLabel)}${figure(after, pair.afterLabel)}</div>
 </figure>`)
     }
+
     if (change.shots.length > 0) {
       const figures = await Promise.all(
         change.shots.map(async ({ shot, label, side }) =>
           figure(await imageFor(`${side}:${shot}`), label)
         )
       )
+
       parts.push(`<div class="singles">${figures.join('')}</div>`)
     }
+
     if (change.choices.length > 0) {
       const cards = await Promise.all(
         change.choices.map(async (choice) => {
           const image = choice.shot
             ? figure(await imageFor(`after:${choice.shot}`), '')
             : ''
+
           const inputId = `pick-${change.id}-${choice.id}`
+
           return `<label class="choice" for="${inputId}">
   ${image}
   <span class="choice-head"><input type="radio" id="${inputId}" name="pick-${change.id}" value="${escapeHtml(choice.label)}" data-change="${change.id}"><strong>${escapeHtml(choice.label)}</strong></span>
@@ -353,10 +396,13 @@ async function build(specPath: string, outPath: string | undefined) {
 </label>`
         })
       )
+
       parts.push(`<div class="choices">${cards.join('')}</div>`)
     }
+
     if (change.table) {
       const { columns, rows, flagLabel } = change.table
+
       parts.push(`<div class="table-wrap"><table>
 <thead><tr><th scope="col">${escapeHtml(flagLabel)}</th>${columns.map((c) => `<th scope="col">${escapeHtml(c)}</th>`).join('')}</tr></thead>
 <tbody>${rows
@@ -367,6 +413,7 @@ async function build(specPath: string, outPath: string | undefined) {
         .join('\n')}</tbody>
 </table></div>`)
     }
+
     sections.push(`<section class="change" id="${change.id}" data-change-id="${change.id}" data-change-title="${escapeHtml(change.title)}">
   <header><h2>${escapeHtml(change.title)}</h2><p>${escapeHtml(change.summary)}</p></header>
   ${parts.join('\n')}
@@ -404,10 +451,13 @@ async function build(specPath: string, outPath: string | undefined) {
       return `@font-face { font-family: '${family}'; font-style: normal; font-weight: ${weight}; font-display: swap; src: url(data:font/woff2;base64,${bytes.toString('base64')}) format('woff2'); }`
     })
   )
+
   const html = renderPage(spec, sections, fonts.join('\n'))
+
   const target = outPath
     ? resolve(outPath)
     : join(dirname(resolve(specPath)), 'review.html')
+
   await writeFile(target, html)
   console.log(`wrote ${target} (${(html.length / 1024 / 1024).toFixed(1)} MB)`)
 }
@@ -426,6 +476,7 @@ function figure(
       return `<span class="mark${inside}${end}" style="${style}"><span class="mark-tag">${index + 1}. ${escapeHtml(h.label)}</span></span>`
     })
     .join('')
+
   return `<figure class="shot">
   ${label ? `<figcaption>${escapeHtml(label)}</figcaption>` : ''}
   <div class="shot-frame" style="aspect-ratio:${record.width}/${record.height}">
@@ -461,6 +512,7 @@ function renderPage(
   fonts: string
 ) {
   const storageKey = `visual-review:${spec.title}`
+
   return `<!doctype html>
 <html lang="en">
 <meta charset="utf-8">
@@ -595,15 +647,19 @@ textarea { width: 100%; box-sizing: border-box; font: 15px/1.5 var(--body); colo
 
 async function main() {
   const [command, specPath, ...rest] = process.argv.slice(2)
+
   if (!command || !specPath || command === '--help' || command === '-h') {
     console.log(HELP)
     return
   }
+
   if (command === 'capture') return capture(resolve(specPath))
+
   if (command === 'build') {
     const out = rest.find((arg) => arg.startsWith('--out='))?.slice(6)
     return build(resolve(specPath), out)
   }
+
   throw new Error(`Unknown command "${command}".\n\n${HELP}`)
 }
 

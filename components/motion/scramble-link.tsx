@@ -56,6 +56,7 @@ export function ScrambleLink({
     entryTimerRef.current = null
 
     const copy = copyRef.current
+
     if (copy) {
       copy.textContent = children
     }
@@ -73,6 +74,7 @@ export function ScrambleLink({
     }
 
     const startedAt = performance.now()
+
     const draw = (now: number) => {
       const progress = Math.min((now - startedAt) / duration, 1)
       const eased = 1 - Math.pow(1 - progress, 3)
@@ -102,6 +104,7 @@ export function ScrambleLink({
     if (!animateOnReveal) return stop
 
     const copy = copyRef.current
+
     if (!copy || !('IntersectionObserver' in window)) {
       entryTimerRef.current = window.setTimeout(scramble, delay)
       return stop

@@ -27,6 +27,7 @@ import styles from './site-header.module.css'
 
 export function DesktopSiteNavigation() {
   const pathname = usePathname()
+
   const projectIsActive = projectNavigationLinks.some((link) =>
     isNavigationLinkActive(pathname, link)
   )

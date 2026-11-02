@@ -72,6 +72,7 @@ type CreateMediaStorageOptions = {
 
 export function createMediaStorage(options: CreateMediaStorageOptions = {}) {
   const config = mediaStorageConfig(options.env ?? process.env)
+
   const client =
     options.client ??
     (options.clientFactory ?? ((input) => new S3Client(input)))(
@@ -87,6 +88,7 @@ export function createMediaStorage(options: CreateMediaStorageOptions = {}) {
       await client.send(
         new HeadObjectCommand({ Bucket: config.mediaBucketName, Key: key })
       )
+
       return true
     } catch (err) {
       if (isNotFound(err)) return false
@@ -112,6 +114,7 @@ export function createMediaStorage(options: CreateMediaStorageOptions = {}) {
     key: string
   ): Promise<StoredMediaDescriptor | null> {
     let response: GetObjectCommandOutput
+
     try {
       response = (await client.send(
         new GetObjectCommand({ Bucket: config.stateBucketName, Key: key })
@@ -124,6 +127,7 @@ export function createMediaStorage(options: CreateMediaStorageOptions = {}) {
     if (!response.Body) {
       throw new Error(`Media descriptor ${key} has no body`)
     }
+
     if (!response.ETag) {
       throw new Error(`Media descriptor ${key} has no ETag`)
     }
@@ -182,11 +186,13 @@ export function createMediaStorage(options: CreateMediaStorageOptions = {}) {
           Key: key
         })
       )
+
       return { hash, key, uploaded: true, url }
     } catch (err) {
       if (isPreconditionFailed(err)) {
         return { hash, key, uploaded: false, url }
       }
+
       throw err
     }
   }
@@ -209,6 +215,7 @@ function mediaObjectKey(input: PublishMediaInput, hash: string) {
         'Scenario meme media must belong to the scenarios collection'
       )
     }
+
     return generatedMemeMediaObjectKey(input.notionId, input.variant, hash)
   }
 
@@ -223,14 +230,18 @@ function mediaObjectKey(input: PublishMediaInput, hash: string) {
 function mediaStorageConfig(env: Environment) {
   const accessKeyId = requiredEnvironmentValue(env, 'S3_ACCESS_KEY_ID')
   const secretAccessKey = requiredEnvironmentValue(env, 'S3_SECRET_ACCESS_KEY')
+
   const endpoint = normalizeApiEndpoint(
     requiredEnvironmentValue(env, 'S3_API_ENDPOINT')
   )
+
   const mediaBucketName = requiredEnvironmentValue(env, 'S3_BUCKET_NAME')
   const stateBucketName = env.S3_STATE_BUCKET_NAME?.trim() || mediaBucketName
+
   const publicBaseUrl = normalizePublicBaseUrl(
     requiredEnvironmentValue(env, 'S3_PUBLIC_URL')
   )
+
   const region = env.S3_REGION?.trim() || DEFAULT_REGION
 
   if (
@@ -257,11 +268,13 @@ function mediaStorageConfig(env: Environment) {
 
 function normalizeApiEndpoint(value: string) {
   let url: URL
+
   try {
     url = new URL(value)
   } catch {
     throw new Error('S3_API_ENDPOINT must be a valid URL')
   }
+
   if (
     url.protocol !== 'https:' ||
     url.username ||
@@ -279,14 +292,17 @@ function normalizeApiEndpoint(value: string) {
 
 function requiredEnvironmentValue(env: Environment, name: string) {
   const value = env[name]?.trim()
+
   if (!value) {
     throw new Error(`${name} is required to sync generated media`)
   }
+
   return value
 }
 
 function normalizePublicBaseUrl(value: string) {
   let url: URL
+
   try {
     url = new URL(value)
   } catch {
@@ -296,11 +312,13 @@ function normalizePublicBaseUrl(value: string) {
   if (url.protocol !== 'https:') {
     throw new Error('S3_PUBLIC_URL must use HTTPS')
   }
+
   if (url.hostname.toLowerCase().endsWith('.r2.cloudflarestorage.com')) {
     throw new Error(
       'S3_PUBLIC_URL must be a public r2.dev or custom-domain URL, not the authenticated R2 API endpoint'
     )
   }
+
   if (url.username || url.password || url.search || url.hash) {
     throw new Error(
       'S3_PUBLIC_URL must not contain credentials, a query, or a fragment'

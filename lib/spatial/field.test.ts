@@ -48,6 +48,7 @@ describe('spatial field invariants', () => {
     'builds a complete, bounded, seam-safe projected surface',
     ({ itemCount, options }) => {
       const layout = createProjectedSurfaceLayout(itemCount, options)
+
       const fullExitDistance =
         options.viewportWidth / 2 + options.itemWidth / 2 + options.overscan
 
@@ -72,10 +73,12 @@ describe('spatial field invariants', () => {
 
       for (const slot of layout.slots) {
         const boundaryOffset = layout.span / 2 - slot.x
+
         const before = wrapCentered(
           slot.x + boundaryOffset - 0.001,
           layout.span
         )
+
         const after = wrapCentered(slot.x + boundaryOffset + 0.001, layout.span)
 
         expect(Math.abs(before)).toBeGreaterThan(fullExitDistance)
@@ -87,6 +90,7 @@ describe('spatial field invariants', () => {
   it('keeps a large projected surface locally unique throughout its wrap', () => {
     const viewportWidth = 11.44
     const itemWidth = 1.4
+
     const layout = createProjectedSurfaceLayout(330, {
       lanes: 5,
       columnGap: 1.76,
@@ -96,7 +100,9 @@ describe('spatial field invariants', () => {
       overscan: 0.75,
       stagger: 0.28
     })
+
     const slotsByItem = Map.groupBy(layout.slots, ({ itemIndex }) => itemIndex)
+
     const nearbyCopies = [...slotsByItem].flatMap(([itemIndex, slots]) =>
       slots.flatMap((first, firstIndex) =>
         slots.slice(firstIndex + 1).flatMap((second) => {
@@ -123,10 +129,12 @@ describe('spatial field invariants', () => {
       overscan: 0.75,
       stagger: 0
     } as const
+
     const establishedLayout = createProjectedSurfaceLayout(25, {
       ...sharedGeometry,
       lanes: 5
     })
+
     const fixedCapacityLayout = createProjectedSurfaceLayout(25, {
       ...sharedGeometry,
       assignmentLanes: 5,
@@ -139,6 +147,7 @@ describe('spatial field invariants', () => {
       const establishedAssignment = establishedLayout.slots
         .filter((slot) => slot.lane === lane)
         .map(({ column, itemIndex, x }) => ({ column, itemIndex, x }))
+
       const fixedCapacityAssignment = fixedCapacityLayout.slots
         .filter((slot) => slot.lane === lane)
         .map(({ column, itemIndex, x }) => ({ column, itemIndex, x }))
@@ -176,6 +185,7 @@ describe('spatial field invariants', () => {
       offset: { x: 3, y: -4 },
       velocity: { x: 120, y: -60 }
     }
+
     const oneStep = decayInertia(initial, 1 / 30, 5)
     const halfStep = decayInertia(initial, 1 / 60, 5)
     const twoSteps = decayInertia(halfStep, 1 / 60, 5)
@@ -192,6 +202,7 @@ describe('spatial field invariants', () => {
       damp(0, 100, 7, 1 / 30),
       12
     )
+
     expect(twoSteps.offset.x).toBeCloseTo(oneStep.offset.x, 12)
     expect(twoSteps.offset.y).toBeCloseTo(oneStep.offset.y, 12)
     expect(twoSteps.velocity.x).toBeCloseTo(oneStep.velocity.x, 12)
@@ -202,6 +213,7 @@ describe('spatial field invariants', () => {
     const travel = -6.336
     const damping = 3.4
     const velocity = calculateInertialLaunchVelocity(travel, damping)
+
     const settled = decayInertia(
       { offset: { x: 0, y: 0 }, velocity: { x: velocity, y: 0 } },
       10,

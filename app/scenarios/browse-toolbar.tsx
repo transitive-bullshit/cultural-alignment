@@ -60,12 +60,14 @@ export function BrowseToolbar({
       const canvas = document.querySelector<HTMLCanvasElement>(
         '#scenario-gallery canvas[data-gallery-sizing-motion]'
       )
+
       if (
         canvas?.dataset.gallerySizingMotion === 'running' &&
         window.performance.now() < deadline
       ) {
         transitionResetFrameRef.current =
           window.requestAnimationFrame(checkGalleryMotion)
+
         return
       }
 
@@ -79,6 +81,7 @@ export function BrowseToolbar({
   const finishPointerSizing = useCallback(
     (pointerId: number | null, deferUntilAfterPointerEvent = false) => {
       const activePointerId = activePointerIdRef.current
+
       if (
         activePointerId === null ||
         (pointerId !== null && pointerId !== activePointerId)
@@ -155,6 +158,7 @@ export function BrowseToolbar({
           value={[itemSize]}
           onKeyDownCapture={() => {
             publishInstantTransition()
+
             queueMicrotask(() => {
               if (activePointerIdRef.current !== null) {
                 itemSizeTransitionRef.current = 'smooth'

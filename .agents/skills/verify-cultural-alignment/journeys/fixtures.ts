@@ -44,6 +44,7 @@ export const test = base.extend<{ evidence: Evidence }>({
     const problems: Problem[] = []
     const expected: { pattern: RegExp; reason: string }[] = []
     let counter = 0
+
     const next = (label: string) =>
       `${String(++counter).padStart(2, '0')}-${slug(label)}`
 
@@ -51,6 +52,7 @@ export const test = base.extend<{ evidence: Evidence }>({
       if (message.type() === 'error' || message.type() === 'warning') {
         // The location names the failing resource for "Failed to load" errors.
         const { url } = message.location()
+
         problems.push({
           kind: `console.${message.type()}`,
           text: url ? `${message.text()} at ${url}` : message.text(),
@@ -58,9 +60,11 @@ export const test = base.extend<{ evidence: Evidence }>({
         })
       }
     })
+
     page.on('pageerror', (error) =>
       problems.push({ kind: 'pageerror', text: error.message, url: page.url() })
     )
+
     page.on('requestfailed', (request) =>
       problems.push({
         kind: 'requestfailed',
@@ -68,6 +72,7 @@ export const test = base.extend<{ evidence: Evidence }>({
         url: page.url()
       })
     )
+
     page.on('response', (response) => {
       if (response.status() >= 400) {
         problems.push({
@@ -84,12 +89,15 @@ export const test = base.extend<{ evidence: Evidence }>({
         const name = next(label)
         const screenshot = `${name}.png`
         const aria = `${name}.aria.yml`
+
         if (target) await target.screenshot({ path: join(dir, screenshot) })
         else await page.screenshot({ path: join(dir, screenshot), fullPage })
+
         await writeFile(
           join(dir, aria),
           await (target ?? page.locator('body')).ariaSnapshot()
         )
+
         steps.push({
           step: counter,
           label,
@@ -159,8 +167,10 @@ export async function openFromHeader(
   mobile: boolean
 ) {
   const navigation = page.waitForURL((url) => url.pathname === href)
+
   if (mobile) {
     await page.locator('[data-site-navigation-toggle]').click()
+
     await page
       .locator(
         `[data-site-navigation="mobile"] [data-site-navigation-link="${href}"]`
@@ -173,6 +183,7 @@ export async function openFromHeader(
       )
       .click()
   }
+
   await navigation
 }
 

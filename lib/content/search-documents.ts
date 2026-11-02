@@ -22,18 +22,23 @@ export function buildSearchDocuments(
   const sourceById = new Map(
     snapshot.sources.map((source) => [source.id, source])
   )
+
   const franchiseById = new Map(
     snapshot.franchises.map((franchise) => [franchise.id, franchise])
   )
+
   const riskFamilyById = new Map(
     snapshot.riskFamilies.map((family) => [family.id, family])
   )
+
   const conceptById = new Map(
     snapshot.concepts.map((concept) => [concept.id, concept])
   )
+
   const documents: SearchDocument[] = [
     ...snapshot.scenarios.map((scenario) => {
       const source = getRequired(sourceById, scenario.sourceId)
+
       const franchises = source.franchiseIds.map((id) =>
         getRequired(franchiseById, id)
       )

@@ -27,6 +27,7 @@ const scenarioA = {
   image: image('scenario-a'),
   memes: [image('scenario-a-meme')]
 }
+
 const scenarioB = {
   id: 'scenario-b',
   title: 'Scenario B',
@@ -34,17 +35,21 @@ const scenarioB = {
   image: image('scenario-b'),
   memes: []
 }
+
 const sourceA = {
   id: 'source-a',
   title: 'Source A',
   poster: image('source-a')
 }
+
 const sourceB = { id: 'source-b', title: 'Source B', poster: null }
+
 const franchiseA = {
   id: 'franchise-a',
   title: 'Franchise A',
   image: image('franchise-a')
 }
+
 const franchiseB = {
   id: 'franchise-b',
   title: 'Franchise B',
@@ -80,6 +85,7 @@ describe('reuseSnapshotMedia', () => {
       title: 'Previous source',
       poster: image('poster', 'Poster for Previous source')
     }
+
     const previousScenario = {
       id: 'scenario',
       title: 'Previous scenario',
@@ -96,11 +102,13 @@ describe('reuseSnapshotMedia', () => {
         image('custom-meme', 'Custom meme description')
       ]
     }
+
     const previousFranchise = {
       id: 'franchise',
       title: 'Previous franchise',
       image: image('franchise', 'Representative image for Previous franchise')
     }
+
     const next = {
       scenarios: [{ ...previousScenario, title: 'Current scenario' }],
       sources: [{ ...previousSource, title: 'Current source' }],
@@ -119,11 +127,14 @@ describe('reuseSnapshotMedia', () => {
     expect(result.scenarioImages[0]!.alt).toBe(
       'Still from Current source illustrating Current scenario'
     )
+
     expect(result.scenarioMemes[0]![0]!.alt).toBe(
       'Generated meme 1 of 2 related to Current scenario'
     )
+
     expect(result.scenarioMemes[0]![1]).toBe(previousScenario.memes[1])
     expect(result.sourcePosters[0]!.alt).toBe('Poster for Current source')
+
     expect(result.franchiseImages[0]!.alt).toBe(
       'Representative image for Current franchise'
     )

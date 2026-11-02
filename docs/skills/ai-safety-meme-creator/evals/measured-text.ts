@@ -122,6 +122,7 @@ export async function renderMeasuredText(
   while (lower <= upper) {
     const fontSizePx = Math.floor((lower + upper) / 2)
     const layout = await fitAtFontSize(request, fontSizePx, safeInsetPx, cache)
+
     if ('fontSizePx' in layout) {
       best = layout
       lower = fontSizePx + 1
@@ -137,6 +138,7 @@ export async function renderMeasuredText(
         request.minimumFontSizePx,
         best.fontSizePx - 2
       )
+
       for (
         let fontSizePx = best.fontSizePx;
         fontSizePx >= minimumBalancedFontSize;
@@ -149,12 +151,14 @@ export async function renderMeasuredText(
           cache,
           'balance'
         )
+
         if ('fontSizePx' in balanced) {
           best = balanced
           break
         }
       }
     }
+
     return renderFittedLayout(request, best, safeInsetPx)
   }
 
@@ -167,6 +171,7 @@ export async function renderMeasuredText(
           safeInsetPx,
           cache
         )
+
   const failed =
     'fontSizePx' in minimumFailure
       ? { unbreakableToken: false }
@@ -196,15 +201,18 @@ async function fitAtFontSize(
 
   for (const block of request.blocks) {
     const indentLevel = block.indentLevel ?? 0
+
     const indentPx = Math.ceil(
       indentLevel * request.style.indentEm * fontSizePx
     )
+
     const wrap = await wrapBlock({
       text: block.text,
       maximumWidth: usableWidth - indentPx,
       mode: wrapMode,
       renderLine: (text) => cachedRenderLine(cache, request, text, fontSizePx)
     })
+
     if (wrap.status === 'unfit') return { unbreakableToken: true }
 
     for (const { text, rendered } of wrap.lines) {
@@ -212,6 +220,7 @@ async function fitAtFontSize(
         rendered.height,
         Math.ceil(fontSizePx * request.style.lineHeight)
       )
+
       lines.push({
         blockId: block.id,
         text,
@@ -221,16 +230,19 @@ async function fitAtFontSize(
         rowHeight
       })
     }
+
     blockEndIndexes.add(lines.length - 1)
   }
 
   const blockGap = Math.ceil(fontSizePx * request.style.blockGapEm)
+
   if (
     request.maximumPhysicalLines !== undefined &&
     lines.length > request.maximumPhysicalLines
   ) {
     return { unbreakableToken: false }
   }
+
   const totalHeight = lines.reduce(
     (height, line, index) =>
       height +
@@ -238,6 +250,7 @@ async function fitAtFontSize(
       (blockEndIndexes.has(index) && index < lines.length - 1 ? blockGap : 0),
     0
   )
+
   if (totalHeight > usableHeight) return { unbreakableToken: false }
 
   return { fontSizePx, lines, totalHeight, blockEndIndexes }
@@ -266,15 +279,19 @@ async function wrapBlock({
   for (const paragraph of paragraphs) {
     const words = paragraph.match(/\S+/gu) ?? []
     if (!words.length) return { status: 'unfit' }
+
     if (words.some((word) => Array.from(word).length > 512)) {
       return { status: 'unfit' }
     }
+
     const wrapped = await wrapWordsGreedily({
       words,
       maximumWidth,
       renderLine
     })
+
     if (!wrapped) return { status: 'unfit' }
+
     physicalLines.push(
       ...(mode === 'balance' && wrapped.length > 1
         ? await balanceWrappedLines({
@@ -305,6 +322,7 @@ async function wrapWordsGreedily({
   for (const word of words) {
     const candidateText = currentText ? `${currentText} ${word}` : word
     const candidateRender = await renderLine(candidateText)
+
     if (candidateRender.width <= maximumWidth) {
       currentText = candidateText
       currentRender = candidateRender
@@ -334,12 +352,15 @@ async function balanceWrappedLines({
   readonly renderLine: (text: string) => Promise<RenderedLine>
 }): Promise<readonly { text: string; rendered: RenderedLine }[]> {
   const candidates = rankBalancedTextLines(initialLines.map(({ text }) => text))
+
   for (const texts of candidates) {
     const rendered = await Promise.all(texts.map(renderLine))
+
     if (rendered.every((line) => line.width <= maximumWidth)) {
       return texts.map((text, index) => ({ text, rendered: rendered[index]! }))
     }
   }
+
   return initialLines
 }
 
@@ -363,6 +384,7 @@ async function renderLine(
   fontSizePx: number
 ): Promise<RenderedLine> {
   const markup = `<span foreground="${request.style.fill}">${escapeMarkup(text)}</span>`
+
   const glyphs = await sharp({
     text: {
       text: markup,
@@ -375,8 +397,10 @@ async function renderLine(
   })
     .png()
     .toBuffer()
+
   const strokeWidth = strokeWidthPx(request.style, fontSizePx)
   const padding = strokeWidth + 2
+
   const paddedGlyphs = await sharp(glyphs)
     .extend({
       top: padding,
@@ -387,18 +411,22 @@ async function renderLine(
     })
     .png()
     .toBuffer()
+
   const metadata = await sharp(paddedGlyphs).metadata()
+
   if (!metadata.width || !metadata.height) {
     throw new Error('Text rasterizer returned an empty image')
   }
 
   let decorated = paddedGlyphs
+
   if (request.style.stroke && strokeWidth > 0) {
     const strokeAlpha = await sharp(paddedGlyphs)
       .extractChannel('alpha')
       .erode(strokeWidth)
       .png()
       .toBuffer()
+
     const stroke = await sharp({
       create: {
         width: metadata.width,
@@ -410,6 +438,7 @@ async function renderLine(
       .joinChannel(strokeAlpha)
       .png()
       .toBuffer()
+
     decorated = await sharp(stroke)
       .composite([{ input: paddedGlyphs, left: 0, top: 0 }])
       .png()
@@ -418,6 +447,7 @@ async function renderLine(
 
   const inkBounds = await measureAlphaBounds(decorated)
   if (!inkBounds) throw new Error('Text rasterizer produced no visible ink')
+
   return {
     buffer: decorated,
     width: metadata.width,
@@ -433,12 +463,14 @@ async function renderFittedLayout(
 ): Promise<MeasuredTextFit> {
   const usableWidth = request.maxWidthPx - safeInsetPx * 2
   const usableHeight = request.maxHeightPx - safeInsetPx * 2
+
   const verticalOffset =
     request.style.verticalAlign === 'top'
       ? safeInsetPx
       : request.style.verticalAlign === 'bottom'
         ? safeInsetPx + usableHeight - layout.totalHeight
         : safeInsetPx + Math.floor((usableHeight - layout.totalHeight) / 2)
+
   const composites: TextComposite[] = []
   const physicalLines: MeasuredPhysicalLine[] = []
   const blockGap = Math.ceil(layout.fontSizePx * request.style.blockGapEm)
@@ -446,6 +478,7 @@ async function renderFittedLayout(
 
   layout.lines.forEach((line, index) => {
     const availableWidth = usableWidth - line.indentPx
+
     const x =
       request.style.align === 'left'
         ? safeInsetPx + line.indentPx
@@ -454,8 +487,10 @@ async function renderFittedLayout(
           : safeInsetPx +
             line.indentPx +
             Math.floor((availableWidth - line.rendered.width) / 2)
+
     const lineTop = y + Math.floor((line.rowHeight - line.rendered.height) / 2)
     composites.push({ input: line.rendered.buffer, left: x, top: lineTop })
+
     physicalLines.push({
       blockId: line.blockId,
       text: line.text,
@@ -467,7 +502,9 @@ async function renderFittedLayout(
         height: line.rendered.inkBounds.height
       }
     })
+
     y += line.rowHeight
+
     if (layout.blockEndIndexes.has(index) && index < layout.lines.length - 1) {
       y += blockGap
     }
@@ -484,6 +521,7 @@ async function renderFittedLayout(
     .composite(composites)
     .png()
     .toBuffer()
+
   const inkBoundsPx = await measureAlphaBounds(layerPng)
   if (!inkBoundsPx) throw new Error('Fitted text layer produced no visible ink')
   assertSafeBounds(request, inkBoundsPx, safeInsetPx)
@@ -513,6 +551,7 @@ async function measureAlphaBounds(
     .ensureAlpha()
     .raw()
     .toBuffer({ resolveWithObject: true })
+
   let left = info.width
   let top = info.height
   let right = -1
@@ -527,6 +566,7 @@ async function measureAlphaBounds(
       bottom = Math.max(bottom, y)
     }
   }
+
   return right < 0
     ? null
     : { left, top, width: right - left + 1, height: bottom - top + 1 }
@@ -558,9 +598,11 @@ function validateRequest(request: RenderMeasuredTextRequest) {
       throw new TypeError(`${name} must be a positive integer`)
     }
   }
+
   if (request.minimumFontSizePx > request.maximumFontSizePx) {
     throw new TypeError('minimumFontSizePx cannot exceed maximumFontSizePx')
   }
+
   if (
     request.maximumPhysicalLines !== undefined &&
     (!Number.isInteger(request.maximumPhysicalLines) ||
@@ -568,27 +610,33 @@ function validateRequest(request: RenderMeasuredTextRequest) {
   ) {
     throw new TypeError('maximumPhysicalLines must be a positive integer')
   }
+
   const safeInsetPx = request.safeInsetPx ?? 0
+
   if (!Number.isInteger(safeInsetPx) || safeInsetPx < 0) {
     throw new TypeError('safeInsetPx must be a non-negative integer')
   }
+
   if (
     safeInsetPx * 2 >= request.maxWidthPx ||
     safeInsetPx * 2 >= request.maxHeightPx
   ) {
     throw new TypeError('safeInsetPx leaves no usable rendering area')
   }
+
   if (
     !request.blocks.length ||
     request.blocks.some(({ id, text }) => !id || !text)
   ) {
     throw new TypeError('Every measured text block needs an id and exact text')
   }
+
   if (
     new Set(request.blocks.map(({ id }) => id)).size !== request.blocks.length
   ) {
     throw new TypeError('Measured text block ids must be unique')
   }
+
   if (
     request.style.lineHeight <= 0 ||
     request.style.blockGapEm < 0 ||
@@ -597,6 +645,7 @@ function validateRequest(request: RenderMeasuredTextRequest) {
   ) {
     throw new TypeError('Text spacing and stroke values must be non-negative')
   }
+
   for (const color of [request.style.fill, request.style.stroke?.color]) {
     if (color && !/^#[\da-f]{6}$/iu.test(color)) {
       throw new TypeError('Text colors must use six-digit hexadecimal notation')

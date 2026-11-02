@@ -53,6 +53,7 @@ describe('spatial gallery instance selection', () => {
         viewportWidth: 10
       })
     ).toBe(1)
+
     expect(
       resolveVisibleRestoredOffset({
         frameWidth: 2,
@@ -68,6 +69,7 @@ describe('spatial gallery instance selection', () => {
     const edgeSlot: readonly ProjectedSurfaceSlot[] = [
       { column: 2, itemIndex: 4, lane: 0, x: 4, y: 0 }
     ]
+
     const sharedOptions = {
       frameHeight: 1,
       frameWidth: 2,
@@ -86,6 +88,7 @@ describe('spatial gallery instance selection', () => {
         pointerNdc: { x: 0.8, y: 0.32 }
       })
     ).toEqual({ itemIndex: 4, slotIndex: 0 })
+
     expect(
       resolveWarpedPointerSlot({
         ...sharedOptions,
@@ -98,6 +101,7 @@ describe('spatial gallery instance selection', () => {
     const centerSlot: readonly ProjectedSurfaceSlot[] = [
       { column: 0, itemIndex: 2, lane: 0, x: 0, y: 0 }
     ]
+
     const sharedOptions = {
       frameHeight: 1,
       frameWidth: 2,
@@ -112,6 +116,7 @@ describe('spatial gallery instance selection', () => {
     } as const
 
     expect(resolveWarpedPointerSlot(sharedOptions)).toBeNull()
+
     expect(
       resolveWarpedPointerSlot({ ...sharedOptions, hitPadding: 0.1 })
     ).toEqual({ itemIndex: 2, slotIndex: 0 })
@@ -145,6 +150,7 @@ describe('spatial gallery instance selection', () => {
       { column: 0, itemIndex: 2, lane: 0, x: 0, y: 1 },
       { column: 0, itemIndex: 4, lane: 1, x: 0, y: 0 }
     ]
+
     const sharedOptions = {
       activeLanes: [0, 1],
       frameHeight: 1,
@@ -164,6 +170,7 @@ describe('spatial gallery instance selection', () => {
       itemIndex: 4,
       slotIndex: 1
     })
+
     expect(
       resolveWarpedPointerSlot({
         ...sharedOptions,

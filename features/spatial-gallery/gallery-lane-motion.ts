@@ -6,15 +6,18 @@ export function getGalleryLaneWindowStart(
 ) {
   assertLaneCount(maximumLanes, 'maximumLanes')
   assertLaneCount(visibleLanes, 'visibleLanes')
+
   if (visibleLanes > maximumLanes) {
     throw new RangeError('visibleLanes must not exceed maximumLanes')
   }
+
   if (!Number.isInteger(selectedLane) || selectedLane < 0) {
     throw new RangeError('selectedLane must be a non-negative integer')
   }
 
   const resolvedSelectedLane = Math.min(maximumLanes - 1, selectedLane)
   const minimumStart = Math.max(0, resolvedSelectedLane - visibleLanes + 1)
+
   const maximumStart = Math.min(
     resolvedSelectedLane,
     maximumLanes - visibleLanes
@@ -64,6 +67,7 @@ export function getGalleryLaneTargetXOffset(
   if (!isGalleryLaneActive(lane, windowStart, visibleLanes)) return 0
 
   const rank = lane - windowStart
+
   if (visibleLanes % 2 === 1 && rank === Math.floor(visibleLanes / 2)) {
     return 0
   }

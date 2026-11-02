@@ -9,6 +9,7 @@ import type {
 
 const generatedMediaPattern =
   /^\/media\/generated\/(?:franchises|scenarios|sources)\/[0-9a-f]{32}\/(?:gallery|detail)\.webp$/
+
 const sha256Pattern = /^[0-9a-f]{64}$/
 
 export function parseSearchKeywords(value: string) {
@@ -34,6 +35,7 @@ export function generatedMediaPublicPaths(
   pageId: string
 ) {
   const compactId = pageId.replaceAll('-', '').toLowerCase()
+
   if (!/^[0-9a-f]{32}$/.test(compactId)) {
     throw new Error(`Invalid Notion page ID for generated media: ${pageId}`)
   }
@@ -74,11 +76,13 @@ export function isGeneratedMediaUrlFor(
   variant: 'gallery' | 'detail'
 ) {
   let url: URL
+
   try {
     url = new URL(value)
   } catch {
     return false
   }
+
   if (
     url.protocol !== 'https:' ||
     url.username ||
@@ -91,6 +95,7 @@ export function isGeneratedMediaUrlFor(
 
   const hash = url.pathname.match(/-([0-9a-f]{64})\.webp$/)?.[1]
   if (!hash) return false
+
   try {
     const expectedSuffix = `/${generatedMediaObjectKey(
       collection,
@@ -98,6 +103,7 @@ export function isGeneratedMediaUrlFor(
       variant,
       hash
     )}`
+
     return url.pathname.endsWith(expectedSuffix)
   } catch {
     return false
@@ -141,9 +147,11 @@ export function sha256(value: Uint8Array) {
 
 function compactNotionId(pageId: string) {
   const compactId = pageId.replaceAll('-', '').toLowerCase()
+
   if (!/^[0-9a-f]{32}$/.test(compactId)) {
     throw new Error(`Invalid Notion page ID for generated media: ${pageId}`)
   }
+
   return compactId
 }
 
@@ -158,11 +166,13 @@ function isGeneratedMediaUrlForKey(
   objectKey: (hash: string) => string
 ) {
   let url: URL
+
   try {
     url = new URL(value)
   } catch {
     return false
   }
+
   if (
     url.protocol !== 'https:' ||
     url.username ||
@@ -175,6 +185,7 @@ function isGeneratedMediaUrlForKey(
 
   const hash = url.pathname.match(/-([0-9a-f]{64})\.webp$/)?.[1]
   if (!hash) return false
+
   try {
     return url.pathname.endsWith(`/${objectKey(hash)}`)
   } catch {
@@ -195,25 +206,31 @@ export function allocateStableSlugs(
     a.localeCompare(b)
   )) {
     if (!currentIds.has(id)) continue
+
     if (used.has(priorSlug)) {
       throw new Error(
         `Previous manifest contains duplicate slug “${priorSlug}” at ${id}`
       )
     }
+
     slugs[id] = priorSlug
     used.add(priorSlug)
   }
 
   for (const item of sortedItems) {
     if (slugs[item.id]) continue
+
     const base =
       slugify(item.title) || `item-${item.id.replaceAll('-', '').slice(0, 8)}`
+
     let candidate = base
     let suffixLength = 6
+
     while (used.has(candidate)) {
       candidate = `${base}-${item.id.replaceAll('-', '').slice(-suffixLength)}`
       suffixLength += 2
     }
+
     slugs[item.id] = candidate
     used.add(candidate)
   }
@@ -259,6 +276,7 @@ export async function retrieveRelationIds(
           `Page ${pageId} relation ${propertyId} returned ${item.type}; expected relation`
         )
       }
+
       ids.push(item.relation.id)
     }
 
@@ -274,6 +292,7 @@ export function richTextToMarkdown(items: readonly RichTextItemResponse[]) {
 
 function richTextItemToMarkdown(item: RichTextItemResponse) {
   const { annotations } = item
+
   let value = annotations.code
     ? markdownCodeSpan(item.plain_text)
     : escapeMarkdownText(item.plain_text)
@@ -305,12 +324,15 @@ function markdownCodeSpan(value: string) {
     0,
     ...Array.from(value.matchAll(/`+/g), (match) => match[0].length)
   )
+
   const fence = '`'.repeat(longestRun + 1)
+
   const needsPadding =
     value.startsWith('`') ||
     value.endsWith('`') ||
     value.startsWith(' ') ||
     value.endsWith(' ')
+
   const padding = needsPadding ? ' ' : ''
 
   return `${fence}${padding}${value}${padding}${fence}`

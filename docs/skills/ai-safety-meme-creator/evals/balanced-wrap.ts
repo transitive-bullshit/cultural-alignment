@@ -18,13 +18,16 @@ export function rankBalancedTextLines(
   if (initialLines.length < 2) return [initialLines]
   const candidateLimit = Math.max(1, Math.floor(maximumCandidates))
   const words = initialLines.flatMap((text) => text.match(/\S+/gu) ?? [])
+
   const maximumCharacters = Math.max(
     ...initialLines.map((text) => Array.from(text).length)
   )
+
   const totalCharacters =
     words.reduce((sum, word) => sum + Array.from(word).length, 0) +
     words.length -
     initialLines.length
+
   const targetCharacters = totalCharacters / initialLines.length
   const memo = new Map<string, readonly TextBalanceCandidate[]>()
 
@@ -35,6 +38,7 @@ export function rankBalancedTextLines(
     const key = `${wordIndex}:${remainingLines}`
     const memoized = memo.get(key)
     if (memoized) return memoized
+
     if (remainingLines === 0) {
       const result =
         wordIndex === words.length
@@ -47,17 +51,20 @@ export function rankBalancedTextLines(
               }
             ]
           : []
+
       memo.set(key, result)
       return result
     }
 
     const candidates: TextBalanceCandidate[] = []
     const latestEnd = words.length - remainingLines + 1
+
     for (let end = wordIndex + 1; end <= latestEnd; end += 1) {
       const lineWords = words.slice(wordIndex, end)
       const text = lineWords.join(' ')
       const characterCount = Array.from(text).length
       if (characterCount > maximumCharacters) break
+
       for (const suffix of solve(end, remainingLines - 1)) {
         candidates.push({
           lines: [text, ...suffix.lines],
@@ -72,6 +79,7 @@ export function rankBalancedTextLines(
         })
       }
     }
+
     const ranked = rankCandidates(candidates, candidateLimit)
     memo.set(key, ranked)
     return ranked
@@ -86,9 +94,11 @@ function rankCandidates(
   limit: number
 ): readonly TextBalanceCandidate[] {
   const unique = new Map<string, TextBalanceCandidate>()
+
   for (const candidate of candidates) {
     unique.set(candidate.lines.join('\u0000'), candidate)
   }
+
   return [...unique.values()]
     .sort(
       (left, right) =>

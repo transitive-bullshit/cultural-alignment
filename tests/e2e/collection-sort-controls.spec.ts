@@ -9,6 +9,7 @@ const concept = concepts.find(
   ({ id }) =>
     scenarios.filter(({ conceptIds }) => conceptIds.includes(id)).length > 3
 )!
+
 const option = (value: string) => `[data-collection-sort-option="${value}"]`
 const selection = '[data-collection-sort-selection]'
 
@@ -28,6 +29,7 @@ test('sort selection stays visible for keyboard, reduced motion, and narrow scre
   await expect(newest).toBeFocused()
   await page.keyboard.press('Space')
   await expect(newest).toHaveAttribute('data-state', 'on')
+
   await expect(newest).toHaveCSS(
     'color',
     await newest.evaluate((element) => {
@@ -39,12 +41,16 @@ test('sort selection stays visible for keyboard, reduced motion, and narrow scre
       return color
     })
   )
+
   await expect(controls.locator(selection)).toHaveCount(1)
+
   await expect(controls.locator(selection)).toHaveCSS(
     'border-top-style',
     'solid'
   )
+
   await expect(controls.locator(selection)).toHaveCSS('border-top-width', '1px')
+
   expect(
     await controls
       .locator(selection)
@@ -54,16 +60,20 @@ test('sort selection stays visible for keyboard, reduced motion, and narrow scre
       .locator('[data-slot="toggle-group"]')
       .evaluate((element) => getComputedStyle(element).backgroundColor)
   )
+
   await expectAligned(controls.locator(selection), newest)
   await expect(controls.locator(selection)).toHaveCSS('transform', 'none')
+
   for (const button of await controls
     .locator('[data-collection-sort-option]')
     .all()) {
     expect((await button.boundingBox())!.height).toBeGreaterThanOrEqual(44)
   }
+
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(
     320
   )
+
   await page.reload()
   await expect(newest).toHaveAttribute('data-state', 'on')
   await expectAligned(controls.locator(selection), newest)
@@ -119,6 +129,7 @@ async function expectAligned(background: Locator, button: Locator) {
       const a = await background.boundingBox()
       const b = await button.boundingBox()
       if (!a || !b) return Number.POSITIVE_INFINITY
+
       return Math.max(
         ...(['x', 'y', 'width', 'height'] as const).map((key) =>
           Math.abs(a[key] - b[key])

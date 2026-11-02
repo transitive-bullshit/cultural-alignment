@@ -24,10 +24,12 @@ test('resource index titles stay inside their column near the tablet breakpoint'
     const title = page.getByRole('heading', { level: 1 })
 
     await expect(title).toBeVisible()
+
     const bounds = await title.evaluate((element) => ({
       available: element.clientWidth,
       content: element.scrollWidth
     }))
+
     expect(bounds.content).toBeLessThanOrEqual(bounds.available + 1)
   }
 })
@@ -43,6 +45,7 @@ test('the shared footer fits a small laptop without horizontal scrolling', async
     available: document.documentElement.clientWidth,
     content: document.documentElement.scrollWidth
   }))
+
   expect(bounds.content).toBeLessThanOrEqual(bounds.available)
 })
 
@@ -60,12 +63,14 @@ test('search stays above the site header on a short landscape screen', async ({
     .poll(async () =>
       dialog.evaluate((element) => {
         const rect = element.getBoundingClientRect()
+
         return element.contains(
           document.elementFromPoint(rect.left + 24, rect.top + 8)
         )
       })
     )
     .toBe(true)
+
   await page.keyboard.press('Escape')
   await expect(dialog).toBeHidden()
   await expect(page.getByRole('button', { name: /search/i })).toBeFocused()
@@ -100,11 +105,14 @@ test('phone galleries keep their header and archive controls clear', async ({
 
     if (route === '/scenarios') {
       const toolbar = page.locator('[data-browse-toolbar]')
+
       const touchHint = page.getByText('Tap once to select · again to open', {
         exact: true
       })
+
       await expect(toolbar).toBeVisible()
       await expect(touchHint).toBeVisible()
+
       // The archive reserves room for its toolbar and touch guidance.
       await expect
         .poll(async () => {
@@ -113,13 +121,16 @@ test('phone galleries keep their header and archive controls clear', async ({
             canvas.boundingBox(),
             touchHint.boundingBox()
           ])
+
           if (!toolbarBox || !canvasBox || !hintBox) return null
+
           return {
             gap: canvasBox.y - (toolbarBox.y + toolbarBox.height),
             hintClear: canvasBox.y + canvasBox.height <= hintBox.y
           }
         })
         .toEqual({ gap: 0, hintClear: true })
+
       continue
     }
 
@@ -131,7 +142,9 @@ test('phone galleries keep their header and archive controls clear', async ({
           header.boundingBox(),
           canvas.boundingBox()
         ])
+
         if (!headerBox || !canvasBox) return null
+
         return {
           gap: canvasBox.y - (headerBox.y + headerBox.height),
           bottom: canvasBox.y + canvasBox.height
@@ -148,12 +161,15 @@ test('shared card type stays stable across the desktop density breakpoint', asyn
     ({ id }) =>
       scenarios.filter(({ conceptIds }) => conceptIds.includes(id)).length > 1
   )!
+
   await page.goto(`/concepts/${concept.slug}`)
   await page.evaluate(() => document.fonts.ready)
   const card = page.locator('[data-scenario-collection] li').first()
+
   const measure = async (width: number) => {
     await page.setViewportSize({ width, height: 900 })
     await card.scrollIntoViewIfNeeded()
+
     return card.evaluate((element) => ({
       width: element.getBoundingClientRect().width,
       font: Number.parseFloat(
@@ -161,6 +177,7 @@ test('shared card type stays stable across the desktop density breakpoint', asyn
       )
     }))
   }
+
   const before = await measure(1279)
   const after = await measure(1280)
   expect(Math.abs(after.width - before.width)).toBeLessThan(1)
@@ -176,13 +193,16 @@ test('compact phone buttons respond beyond their visible icon box', async ({
     viewport: { width: 390, height: 844 },
     hasTouch: true
   })
+
   try {
     const page = await context.newPage()
     await mockOptimizedImages(page)
+
     const scenario = scenarios.find(
       ({ conceptIds, riskFamilyIds }) =>
         conceptIds.length > 0 && riskFamilyIds.length > 0
     )!
+
     await page.goto(`/scenarios/${scenario.slug}`)
     const help = page.locator('[data-taxonomy-help]').first()
     await help.scrollIntoViewIfNeeded()
@@ -195,16 +215,20 @@ test('compact phone buttons respond beyond their visible icon box', async ({
 
     await page.getByRole('button', { name: /search site/i }).click()
     await page.getByRole('combobox').fill('alignment')
+
     const clear = page.getByRole('button', {
       name: 'Clear search',
       exact: true
     })
+
     const clearBox = await clear.boundingBox()
     expect(clearBox).not.toBeNull()
+
     await page.touchscreen.tap(
       clearBox!.x - 5,
       clearBox!.y + clearBox!.height / 2
     )
+
     await expect(page.getByRole('combobox')).toHaveValue('')
   } finally {
     await context.close()

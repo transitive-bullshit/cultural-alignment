@@ -21,6 +21,7 @@ const colors = {
   paper: '#f4ecdd',
   stage: '#171713'
 } as const
+
 const barlowExtraBold = await readFile(
   join(process.cwd(), 'assets/fonts/barlow-condensed-latin-800-normal.woff')
 )

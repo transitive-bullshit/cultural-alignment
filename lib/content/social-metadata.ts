@@ -84,10 +84,12 @@ export function getScenarioSocialMetadata(
 ): ContentSocialMetadata {
   const source = scenario.source.title
   const concept = scenario.concepts[0]?.title
+
   const describe = (scene: string) =>
     concept
       ? `This scene from ${scene} is an example of the AI safety concept of ${toProsePhrase(concept)}.`
       : `This scene from ${scene} illustrates an AI safety concept.`
+
   const withContext = describe(
     withSceneContext(source, getSceneContext(scenario))
   )
@@ -148,14 +150,18 @@ export function getSceneContext(scenario: ScenarioPage) {
 
   const sourcePrefix = `${scenario.source.title} — `
   const rawLabel = scenario.episode?.label.trim() ?? ''
+
   const label = rawLabel.startsWith(sourcePrefix)
     ? rawLabel.slice(sourcePrefix.length)
     : rawLabel
+
   if (!label) return null
 
   const numbered = label.match(/\bS(\d+)\s?E(\d+)(?:\s?[–-]\s?(\d+))?/u)
+
   if (numbered) {
     const [, season, first, last] = numbered
+
     return last
       ? `Season ${season}, Episodes ${first}–${last}`
       : `Season ${season}, Episode ${first}`
@@ -181,12 +187,14 @@ function describeSourceScenes(
   const concepts = resource.primaryConcepts
     .slice(0, 2)
     .map(({ title }) => toProsePhrase(title))
+
   const scenes =
     resource.scenarios.length === 1
       ? `A scene from ${resource.title} that illustrates`
       : `Scenes from ${resource.title} that illustrate`
 
   if (concepts.length === 0) return `${scenes} AI safety risks and alignment.`
+
   if (concepts.length === 1) {
     return `${scenes} the AI safety concept of ${concepts[0]}.`
   }

@@ -7,21 +7,26 @@ import { formatScenarioAsMarkdown } from './scenario-markdown'
 describe('formatScenarioAsMarkdown', () => {
   it('serializes escaped metadata, absolute media links, and optional video', () => {
     const scenario = createScenario()
+
     const markdown = formatScenarioAsMarkdown(
       scenario,
       new URL('https://example.com/base/')
     )
 
     expect(markdown).toContain('# A \\[complicated\\] scenario')
+
     expect(markdown).toContain(
       '[Source \\*One\\*](https://example.com/sources/source-one)'
     )
+
     expect(markdown).toContain(
       '- **Episode:** [Episode 1](https://example.org/episode)'
     )
+
     expect(markdown).toContain(
       '![A still with \\[brackets\\]](https://example.com/media/detail%20%28final%29.webp)'
     )
+
     expect(markdown).toContain('https://www.youtube.com/watch?v=abc123&t=0s')
     expect(markdown).not.toContain('](<')
     expect(markdown).toContain(scenario.whyAnalogyWorks)
@@ -36,6 +41,7 @@ describe('formatScenarioAsMarkdown', () => {
 
   it('omits episode metadata for movies even when legacy data includes it', () => {
     const scenario = createScenario()
+
     const markdown = formatScenarioAsMarkdown(
       {
         ...scenario,
@@ -49,6 +55,7 @@ describe('formatScenarioAsMarkdown', () => {
 
   it('escapes tildes so GFM does not strike them through (title, source, episode, taxonomy)', () => {
     const base = createScenario()
+
     const scenario: ScenarioPage = {
       ...base,
       title: 'Scenario ~with tildes~',

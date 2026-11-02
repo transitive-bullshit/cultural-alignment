@@ -136,6 +136,7 @@ function clearSky(): string {
 
 function robotState(state: 'before' | 'after'): string {
   const damaged = state === 'after'
+
   return canvas(
     `
       <rect x="0" y="0" width="600" height="800" fill="${damaged ? '#3f1d2e' : '#16324f'}"/>
@@ -191,6 +192,7 @@ function busyEdge(): string {
     const color = index % 2 === 0 ? '#f8fafc' : '#020617'
     return `<rect x="${x}" y="0" width="60" height="150" fill="${color}"/><rect x="${x}" y="650" width="60" height="150" fill="${color}"/>`
   }).join('')
+
   return canvas(`
     ${bars}
     <rect x="0" y="150" width="1200" height="500" fill="#0f766e"/>

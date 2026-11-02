@@ -55,11 +55,13 @@ test('each resource index links every snapshot record', async ({
       await page.locator(`main a[href="/${route}"]`).first().click()
       await page.waitForURL((url) => url.pathname === `/${route}`)
     }
+
     await expect(
       page.locator(`[data-resource-list][data-resource-kind="${kind}"]`).first()
     ).toBeVisible()
 
     const pattern = new RegExp(`^/${route}/[^/]+$`)
+
     const hrefs = new Set(
       (
         await page
@@ -69,6 +71,7 @@ test('each resource index links every snapshot record', async ({
           )
       ).filter((href): href is string => !!href && pattern.test(href))
     )
+
     const missing = records
       .map(({ slug }) => `/${route}/${slug}`)
       .filter((href) => !hrefs.has(href))
@@ -90,28 +93,35 @@ test('media sources sort by age and remember the choice', async ({
 
   await page.locator('[data-collection-sort-option="newest"]').click()
   await expect(list).toHaveAttribute('data-resource-sort', 'newest')
+
   const newest = sources
     .filter(({ releaseDate }) => releaseDate)
     .toSorted((a, b) => b.releaseDate!.localeCompare(a.releaseDate!))[0]!
+
   await expect(list.locator('li > a').first()).toHaveAttribute(
     'href',
     `/sources/${newest.slug}`
   )
+
   await evidence.capture('sources sorted newest first')
+
   // The source preference must not overwrite the separate scenario sort.
   const after = await readLocalStorage(page, [
     storageKeys.sourceSort,
     storageKeys.scenarioSort
   ])
+
   expect(after[storageKeys.sourceSort]).toBe('newest')
   expect(after[storageKeys.scenarioSort]).toBe(before[storageKeys.scenarioSort])
   await evidence.record('sort preference in storage', after)
 
   await page.reload()
   await expect(list).toHaveAttribute('data-resource-sort', 'newest')
+
   await expect(
     page.locator('[data-collection-sort-option="newest"]')
   ).toHaveAttribute('data-state', 'on')
+
   await evidence.capture('newest sort survives reload')
 })
 
@@ -120,6 +130,7 @@ test('a concept page expands its full scene collection', async ({
   evidence
 }) => {
   const { concept, count } = largeConcept
+
   expect(
     count,
     'the largest concept needs more than 12 scenes'

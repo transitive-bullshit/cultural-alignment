@@ -33,6 +33,7 @@ export function CopyPageLink() {
     if (timer.current) clearTimeout(timer.current)
 
     let nextState: CopyState
+
     try {
       await navigator.clipboard.writeText(window.location.href)
       nextState = 'success'

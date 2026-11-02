@@ -48,6 +48,7 @@ export function normalizeGalleryItemSize(value: number) {
     GALLERY_ITEM_SIZE_MAX,
     Math.max(GALLERY_ITEM_SIZE_MIN, value)
   )
+
   const steps = Math.round(
     (clamped - GALLERY_ITEM_SIZE_MIN) / GALLERY_ITEM_SIZE_STEP
   )
@@ -59,6 +60,7 @@ export function parseStoredGalleryItemSize(value: string | null) {
   if (value === null || value.trim() === '') return GALLERY_ITEM_SIZE_DEFAULT
 
   const parsed = Number(value)
+
   if (
     !Number.isFinite(parsed) ||
     parsed < GALLERY_ITEM_SIZE_MIN ||
@@ -83,11 +85,13 @@ export function getGalleryTargetZoom(
   const baseZoom = mobile
     ? Math.max(76, width / 5.2, height / 10.4)
     : getDesktopBaseZoom(width, height)
+
   const requestedZoom = baseZoom * (normalizeGalleryItemSize(itemSize) / 100)
 
   if (!mobile) return requestedZoom
 
   const geometry = getGalleryGeometry(true)
+
   const oneLaneFitZoom =
     height / (getGalleryDecoratedFrameHalfHeight(geometry.frameWidth) * 2)
 
@@ -111,9 +115,11 @@ export function getGalleryLaneCountForZoom(
   zoom: number
 ) {
   const geometry = getGalleryGeometry(mobile)
+
   const decoratedFrameHalfHeight = getGalleryDecoratedFrameHalfHeight(
     geometry.frameWidth
   )
+
   const fittingLanes =
     Math.floor(
       Math.max(0, height / zoom - decoratedFrameHalfHeight * 2) /
@@ -163,9 +169,11 @@ export function getGalleryViewportMetrics(
 function getDesktopBaseZoom(width: number, height: number) {
   const densityZoom = Math.max(90, width / 20.5, height / 7.15)
   const outerLaneCenter = 2 * DESKTOP_GEOMETRY.rowGap
+
   const requiredHalfHeight =
     outerLaneCenter +
     getGalleryDecoratedFrameHalfHeight(DESKTOP_GEOMETRY.frameWidth)
+
   const verticalFitZoom = height / (requiredHalfHeight * 2)
 
   return Math.min(densityZoom, verticalFitZoom)

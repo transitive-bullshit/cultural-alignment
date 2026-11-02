@@ -47,6 +47,7 @@ export function parseUploadCliArgs(argv: readonly string[]): CliOptions {
     retries: 5,
     help: false
   }
+
   let explicitDryRun = false
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -57,14 +58,17 @@ export function parseUploadCliArgs(argv: readonly string[]): CliOptions {
       options.apply = true
       continue
     }
+
     if (name === '--dry-run') {
       explicitDryRun = true
       continue
     }
+
     if (name === '--replace-existing') {
       options.replaceExisting = true
       continue
     }
+
     if (name === '--help' || name === '-h') {
       options.help = true
       continue
@@ -77,6 +81,7 @@ export function parseUploadCliArgs(argv: readonly string[]): CliOptions {
       '--concurrency',
       '--retries'
     ].includes(name)
+
     if (!takesValue) throw new Error(`Unknown option: ${argument}`)
 
     const value = inlineValue ?? argv[++index]
@@ -85,22 +90,27 @@ export function parseUploadCliArgs(argv: readonly string[]): CliOptions {
     if (name === '--manifest') options.manifestPath = value
     if (name === '--scenarios') options.scenariosPath = value
     if (name === '--checkpoint') options.checkpointPath = value
+
     if (name === '--concurrency')
       options.concurrency = parseInteger(value, name)
+
     if (name === '--retries') options.retries = parseInteger(value, name, true)
   }
 
   if (options.apply && explicitDryRun) {
     throw new Error('--apply and --dry-run cannot be combined')
   }
+
   if (!options.help && !options.manifestPath) {
     throw new Error('--manifest is required')
   }
+
   return options
 }
 
 async function main() {
   let options: CliOptions
+
   try {
     options = parseUploadCliArgs(process.argv.slice(2))
   } catch (err) {
@@ -116,15 +126,18 @@ async function main() {
   }
 
   const token = process.env.NOTION_TOKEN
+
   if (!token) {
     console.error(
       'NOTION_TOKEN is required, including for the read-only dry run'
     )
+
     process.exitCode = 1
     return
   }
 
   const manifestPath = resolve(options.manifestPath!)
+
   const checkpointPath = resolve(
     options.checkpointPath ?? `${manifestPath}.notion-upload-checkpoint.json`
   )
@@ -144,6 +157,7 @@ async function main() {
     console.log(
       `${summary.mode === 'apply' ? 'Applied' : 'Dry run complete'} ${summary.operation}: ${summary.fileCount} exports across ${summary.scenarioCount} scenarios; ${summary.alreadyPresentCount} already present; ${summary.uploadedCount} uploaded; ${summary.attachedCount} attached; ${summary.replacedCount} replaced`
     )
+
     if (!options.apply) {
       console.log('No Notion data or local checkpoints were changed')
     }
@@ -156,12 +170,15 @@ async function main() {
 function parseInteger(value: string, name: string, allowZero = false) {
   const parsed = Number(value)
   const minimum = allowZero ? 0 : 1
+
   if (!Number.isInteger(parsed) || parsed < minimum) {
     throw new Error(`${name} must be an integer >= ${minimum}`)
   }
+
   return parsed
 }
 
 const isMain =
   process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])
+
 if (isMain) await main()

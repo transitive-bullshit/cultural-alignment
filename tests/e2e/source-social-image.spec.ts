@@ -67,6 +67,7 @@ for (const resource of resources) {
     const openGraphImageUrl = new URL(
       (await openGraphImage.getAttribute('content'))!
     )
+
     const twitterImageUrl = new URL(
       (await twitterImage.getAttribute('content'))!
     )
@@ -79,25 +80,32 @@ for (const resource of resources) {
     const response = await request.get(openGraphImageUrl.href)
     expect(response.ok()).toBe(true)
     expect(response.headers()['content-type']).toBe('image/webp')
+
     expect(response.headers()['cache-control']).toBe(
       'public, max-age=0, must-revalidate'
     )
+
     expect(response.headers()['cdn-cache-control']).toBe(
       'public, max-age=86400, stale-while-revalidate=604800'
     )
+
     expect(response.headers()['vercel-cdn-cache-control']).toBe(
       'public, max-age=31536000, immutable'
     )
+
     const metadata = await sharp(await response.body()).metadata()
     expect(metadata.format).toBe('webp')
     expect(metadata.width).toBe(1200)
     expect(metadata.height).toBe(630)
+
     await expect(
       page.locator('meta[property="og:image:type"]')
     ).toHaveAttribute('content', 'image/webp')
+
     await expect(
       page.locator('meta[property="og:image:width"]')
     ).toHaveAttribute('content', '1200')
+
     await expect(
       page.locator('meta[property="og:image:height"]')
     ).toHaveAttribute('content', '630')

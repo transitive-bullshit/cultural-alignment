@@ -19,10 +19,12 @@ test('the dossier opening names the primary concept', async ({ page }) => {
     'data-scenario-primary-concept',
     concept.slug
   )
+
   await expect(primary.locator('a')).toHaveAttribute(
     'href',
     `/concepts/${concept.slug}`
   )
+
   await expect(primary).toContainText(concept.shortName)
   await expect(primary).toContainText(concept.description)
 })
@@ -35,13 +37,16 @@ test('scenario taxonomy links reveal their descriptions', async ({ page }) => {
       kind === 'concept'
         ? concepts.find(({ id }) => id === scenario.conceptIds[0])!
         : riskFamilies.find(({ id }) => id === scenario.riskFamilyIds[0])!
+
     const item = page.locator(
       `[data-scenario-taxonomy-item="${kind}:${term.slug}"]`
     )
+
     const trigger = item.locator('[data-cursor-card-trigger]')
     const link = item.locator('a')
 
     await expect(link).toHaveCount(1)
+
     await expect(link).toHaveAttribute(
       'href',
       `/${kind === 'risk-family' ? 'risk-families' : 'concepts'}/${term.slug}`
@@ -72,6 +77,7 @@ test('scenario taxonomy links reveal their descriptions', async ({ page }) => {
   const conceptLink = page
     .locator('[data-scenario-taxonomy-item^="concept:"] a')
     .first()
+
   const conceptHref = await conceptLink.getAttribute('href')
 
   if (!conceptHref) throw new Error('Expected a concept detail link')
@@ -83,6 +89,7 @@ test('scenario taxonomy links reveal their descriptions', async ({ page }) => {
   await conceptLink.click()
   await navigation
   await expect(page.locator('[data-resource-detail="concept"]')).toBeVisible()
+
   await expect(
     page.locator('[data-scenario-card-summary]').first()
   ).not.toBeEmpty()
@@ -98,23 +105,29 @@ test('taxonomy heading links keep their full touch target beside Help', async ({
     hasTouch: true,
     reducedMotion: 'reduce'
   })
+
   try {
     const page = await context.newPage()
+
     for (const href of ['/risk-families', '/concepts']) {
       await page.goto(`/scenarios/${scenario.slug}`)
+
       const link = page.locator(
         `[aria-label="Scenario taxonomy"] h2 a[href="${href}"]`
       )
+
       await link.scrollIntoViewIfNeeded()
       const box = await link.boundingBox()
       if (!box) throw new Error('Expected a taxonomy heading link')
       const point = { x: box.x + box.width - 1, y: box.y + box.height / 2 }
+
       const hitHref = await page.evaluate(({ x, y }) => {
         return document
           .elementFromPoint(x, y)
           ?.closest('a')
           ?.getAttribute('href')
       }, point)
+
       expect(hitHref).toBe(href)
       await page.touchscreen.tap(point.x, point.y)
       await expect(page).toHaveURL(new RegExp(`${href}$`))

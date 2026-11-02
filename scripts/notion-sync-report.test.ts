@@ -18,6 +18,7 @@ const totals = {
 describe('NotionSyncReport', () => {
   it('keeps processing after a record operation throws', async () => {
     const warn = vi.fn<(message: string) => void>()
+
     const report = new NotionSyncReport(totals, {
       log: vi.fn<(message: string) => void>(),
       warn
@@ -31,6 +32,7 @@ describe('NotionSyncReport', () => {
         throw new Error('received HTTP 503')
       }
     )
+
     const succeeded = await report.capture(
       'scenarios',
       { id: 'scenario-2', title: 'Order 66' },
@@ -40,11 +42,13 @@ describe('NotionSyncReport', () => {
 
     expect(failed).toBeNull()
     expect(succeeded).toBe('image-result')
+
     expect(report.counts('scenarios')).toEqual({
       total: 3,
       succeeded: 2,
       errors: 1
     })
+
     expect(warn).toHaveBeenCalledWith(
       expect.stringContaining(
         '"Keep Summer Safe" (Notion ID: scenario-1): received HTTP 503'
@@ -64,6 +68,7 @@ describe('NotionSyncReport', () => {
       'parsing',
       new Error('first')
     )
+
     report.recordError(
       'sources',
       { id: 'source-1', title: 'Rick and Morty' },
@@ -80,10 +85,12 @@ describe('NotionSyncReport', () => {
 
   it('prints successful and errored counts for every Notion collection', () => {
     const log = vi.fn<(message: string) => void>()
+
     const report = new NotionSyncReport(totals, {
       log,
       warn: vi.fn<(message: string) => void>()
     })
+
     report.recordError(
       'concepts',
       { id: 'concept-1', title: 'Specification Gaming' },
@@ -109,9 +116,11 @@ describe('Notion sync diagnostics', () => {
     expect(formatNotionRecord({ id: 'opaque-id', title: '  WALL-E  ' })).toBe(
       '"WALL-E" (Notion ID: opaque-id)'
     )
+
     expect(formatNotionRecord({ id: 'opaque-id' })).toBe(
       '(Notion ID: opaque-id)'
     )
+
     expect(boldWarning('Something failed')).toBe(
       '\u001B[1mWARNING:\u001B[22m Something failed'
     )

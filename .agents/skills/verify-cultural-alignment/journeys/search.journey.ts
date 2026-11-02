@@ -31,6 +31,7 @@ test('search loads on demand, explains empty states, and opens every resource ty
     (response) =>
       new URL(response.url()).pathname === '/content/search-index.json'
   )
+
   await trigger.click()
   expect((await indexResponse).status()).toBe(200)
   await expect(input).toBeFocused()
@@ -48,6 +49,7 @@ test('search loads on demand, explains empty states, and opens every resource ty
     /^(http\.404 |console\.error Failed to load resource: .* 404 .* at )\S+\/no-such-archive-page$/,
     'Deliberate 404 for the not-found entry point'
   )
+
   await page.goto('/no-such-archive-page')
   await expect(page.locator('[data-not-found]')).toBeVisible()
   await page.locator('[data-search-ready="true"]').first().waitFor()
@@ -64,6 +66,7 @@ test('search loads on demand, explains empty states, and opens every resource ty
     // Phones open search from the header; desktop also has the shortcut.
     if (mobile) await trigger.click()
     else await page.keyboard.press('ControlOrMeta+k')
+
     await expect(input).toBeFocused()
     await input.fill(target.title)
 

@@ -61,18 +61,23 @@ export function CursorCard({
       CARD_WIDTH,
       Math.max(0, window.innerWidth - VIEWPORT_GUTTER * 2)
     )
+
     const height = cardRef.current?.offsetHeight ?? CARD_HEIGHT_FALLBACK
+
     const maxLeft = Math.max(
       VIEWPORT_GUTTER,
       window.innerWidth - width - VIEWPORT_GUTTER
     )
+
     const left = clamp(
       anchor.horizontalCenter - width / 2,
       VIEWPORT_GUTTER,
       maxLeft
     )
+
     const belowFits =
       anchor.belowTop + height <= window.innerHeight - VIEWPORT_GUTTER
+
     const top = belowFits
       ? anchor.belowTop
       : Math.max(VIEWPORT_GUTTER, anchor.aboveBottom - height)
@@ -111,6 +116,7 @@ export function CursorCard({
     const bounds = event.currentTarget.getBoundingClientRect()
 
     setIsFocused(true)
+
     positionCard({
       aboveBottom: bounds.top - FOCUS_OFFSET,
       belowTop: bounds.bottom + FOCUS_OFFSET,

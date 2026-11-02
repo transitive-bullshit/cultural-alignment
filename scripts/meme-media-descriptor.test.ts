@@ -17,11 +17,13 @@ describe('memeMediaDescriptorSchema', () => {
     const descriptor = memeDescriptor()
 
     expect(parseMemeMediaDescriptor(descriptor)).toEqual(descriptor)
+
     expect(
       parseMemeMediaDescriptor(descriptor).memes.map(
         ({ source }) => source.name
       )
     ).toEqual(['hosted-meme.jpg', 'external-meme.png'])
+
     expect(parseMemeMediaDescriptor(descriptor).memes[1]?.source).toEqual({
       kind: 'external',
       name: 'external-meme.png',
@@ -37,10 +39,13 @@ describe('memeMediaDescriptorSchema', () => {
 
   it('never accepts a signed URL or expiry marker for a hosted source', () => {
     const signedUrl = structuredClone(memeDescriptor())
+
     Object.assign(signedUrl.memes[0]!.source, {
       url: 'https://notion.example.com/temporary-signed-url?signature=secret'
     })
+
     const expiry = structuredClone(memeDescriptor())
+
     Object.assign(expiry.memes[0]!.source, {
       expiryTime: '2026-08-31T09:15:00.000Z'
     })
@@ -63,9 +68,11 @@ describe('memeMediaDescriptorSchema', () => {
       ...memeDescriptor(),
       sourceUrls: ['https://notion.example.com/signed']
     }
+
     const itemField = structuredClone(memeDescriptor())
     Object.assign(itemField.memes[0]!, { index: 0 })
     const mediaField = structuredClone(memeDescriptor())
+
     Object.assign(mediaField.memes[0]!.media, {
       gallerySrc: 'https://media.example.com/meme.webp'
     })
@@ -73,21 +80,27 @@ describe('memeMediaDescriptorSchema', () => {
     expect(memeMediaDescriptorSchema.safeParse(descriptorField).success).toBe(
       false
     )
+
     expect(memeMediaDescriptorSchema.safeParse(itemField).success).toBe(false)
     expect(memeMediaDescriptorSchema.safeParse(mediaField).success).toBe(false)
   })
 
   it('binds every generated key to the record, variant, and output hash', () => {
     const wrongOwner = structuredClone(memeDescriptor())
+
     wrongOwner.memes[0]!.media.galleryKey =
       wrongOwner.memes[0]!.media.galleryKey.replace(
         notionId.replaceAll('-', ''),
         'a'.repeat(32)
       )
+
     const wrongVariant = structuredClone(memeDescriptor())
+
     wrongVariant.memes[0]!.media.galleryKey =
       wrongVariant.memes[0]!.media.galleryKey.replace('/gallery-', '/detail-')
+
     const wrongHash = structuredClone(memeDescriptor())
+
     wrongHash.memes[0]!.media.detailKey =
       wrongHash.memes[0]!.media.detailKey.replace(
         'c'.repeat(64),
@@ -95,9 +108,11 @@ describe('memeMediaDescriptorSchema', () => {
       )
 
     expect(memeMediaDescriptorSchema.safeParse(wrongOwner).success).toBe(false)
+
     expect(memeMediaDescriptorSchema.safeParse(wrongVariant).success).toBe(
       false
     )
+
     expect(memeMediaDescriptorSchema.safeParse(wrongHash).success).toBe(false)
   })
 })
@@ -107,6 +122,7 @@ describe('meme descriptor binding and reuse', () => {
     expect(memeMediaDescriptorObjectKey(notionId.toUpperCase())).toBe(
       'media/state/scenario-memes/3c6edb27f12480cc92d5c8f2f2e3a7fa.json'
     )
+
     expect(() => memeMediaDescriptorObjectKey('../not-a-notion-id')).toThrow(
       'Invalid Notion ID for meme media descriptor'
     )
@@ -118,6 +134,7 @@ describe('meme descriptor binding and reuse', () => {
         notionId: notionId.replaceAll('-', '').toUpperCase()
       })
     ).toEqual(memeDescriptor())
+
     expect(() =>
       parseMemeMediaDescriptor(memeDescriptor(), {
         notionId: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa'
@@ -131,6 +148,7 @@ describe('meme descriptor binding and reuse', () => {
     expect(
       parseMemeMediaDescriptorJson(JSON.stringify(descriptor), { notionId })
     ).toEqual(descriptor)
+
     expect(() => parseMemeMediaDescriptorJson('{')).toThrow(
       'Meme media descriptor body is not valid JSON'
     )
@@ -138,6 +156,7 @@ describe('meme descriptor binding and reuse', () => {
 
   it('reuses only the current pipeline and exact page edit marker', () => {
     const descriptor = memeDescriptor()
+
     const input = {
       descriptor,
       pageLastEditedTime: descriptor.pageLastEditedTime,
@@ -147,18 +166,21 @@ describe('meme descriptor binding and reuse', () => {
 
     expect(memeMediaDescriptorFastPath(input)).toBe(descriptor)
     expect(memeMediaDescriptorFastPath({ ...input, force: true })).toBeNull()
+
     expect(
       memeMediaDescriptorFastPath({
         ...input,
         pageLastEditedTime: '2026-08-31T08:16:00.000Z'
       })
     ).toBeNull()
+
     expect(
       memeMediaDescriptorFastPath({
         ...input,
         descriptor: { ...descriptor, pipelineVersion: 999 }
       })
     ).toBeNull()
+
     expect(
       memeMediaDescriptorFastPath({ ...input, descriptor: null })
     ).toBeNull()
@@ -167,6 +189,7 @@ describe('meme descriptor binding and reuse', () => {
   it('uses an empty bundle as durable state and rejects stale media', () => {
     const descriptor = memeDescriptor()
     const emptyDescriptor = { ...descriptor, memes: [] }
+
     const input = {
       pageLastEditedTime: descriptor.pageLastEditedTime,
       force: false,
@@ -176,6 +199,7 @@ describe('meme descriptor binding and reuse', () => {
     expect(
       memeMediaDescriptorFastPath({ ...input, descriptor: emptyDescriptor })
     ).toBe(emptyDescriptor)
+
     expect(memeMediaDescriptorFastPath({ ...input, descriptor })).toBeNull()
   })
 

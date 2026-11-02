@@ -44,11 +44,13 @@ export function CollectionSortControls({
 }) {
   const labelId = `${useId()}-sort-label`
   const selectionId = `${labelId}-selection`
+
   const reduceMotion = useSyncExternalStore(
     subscribeMotionPreference,
     getMotionPreference,
     getServerMotionPreference
   )
+
   // Remount the highlight when this changes to register or cancel projection.
   const animateSelection = !reduceMotion
 

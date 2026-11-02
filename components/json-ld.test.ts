@@ -9,6 +9,7 @@ describe('JSON-LD serialization', () => {
     })
 
     expect(serialized).not.toContain('<')
+
     expect(JSON.parse(serialized)).toEqual({
       description: '</script><script>alert(1)</script>'
     })

@@ -28,14 +28,17 @@ test('homepage gallery selects a frame and round-trips through its dossier', asy
 
   await exploreFromGalleryIntro(page)
   await expect(canvas).toBeVisible()
+
   await expect(canvas).toHaveAttribute(
     'data-gallery-inertia-burst',
     /^(settled|skipped)$/,
     { timeout: 30_000 }
   )
+
   const acknowledgement = await readLocalStorage(page, [
     storageKeys.galleryIntro
   ])
+
   expect(acknowledgement[storageKeys.galleryIntro]).toBe('acknowledged')
   await evidence.record('intro acknowledgement in storage', acknowledgement)
 
@@ -47,6 +50,7 @@ test('homepage gallery selects a frame and round-trips through its dossier', asy
   const card = mobile
     ? page.locator('[data-mobile-selected-scenario]')
     : page.locator('[data-words-context-card]')
+
   await expect(card).toContainText(selected.title)
   await evidence.capture(mobile ? 'first tap selects' : 'hover selects')
 
@@ -56,18 +60,22 @@ test('homepage gallery selects a frame and round-trips through its dossier', asy
     (url) => url.pathname === `/scenarios/${selected.slug}`,
     { timeout: 15_000 }
   )
+
   if (mobile) {
     await page.waitForTimeout(800)
     await page.touchscreen.tap(point.x, point.y)
   } else {
     await page.mouse.click(point.x, point.y)
   }
+
   await navigation
 
   await expect(page.locator('[data-scenario-dossier]')).toBeVisible()
+
   await expect(page.getByRole('heading', { level: 1 })).toContainText(
     selected.title
   )
+
   await evidence.capture('selected scenario dossier')
 
   // The homepage shows its introduction again on every later entry.
@@ -76,10 +84,12 @@ test('homepage gallery selects a frame and round-trips through its dossier', asy
   await expect(page.locator('[data-gallery-intro-dialog]')).toBeVisible()
   await evidence.capture('back shows the introduction again')
   await exploreFromGalleryIntro(page)
+
   await expect(gallery).toHaveAttribute(
     'data-selected-scenario-id',
     selected.id
   )
+
   await expect(card).toContainText(selected.title)
   await evidence.capture('back restores the selection')
 })
@@ -94,6 +104,7 @@ test('archive shows every scenario and links each risk family', async ({
   const gallery = page.locator('[data-spatial-gallery="browse"]')
   await expect(page.locator('[data-gallery-intro-dialog]')).toBeVisible()
   await page.keyboard.press('Escape')
+
   await expect(page.locator('[data-gallery-intro]')).toHaveAttribute(
     'data-state',
     'dismissed'
@@ -102,22 +113,27 @@ test('archive shows every scenario and links each risk family', async ({
   await expect(
     page.getByRole('heading', { level: 1, name: 'All scenarios' })
   ).toBeVisible()
+
   await expect(gallery).toHaveAttribute(
     'data-gallery-item-count',
     String(scenarios.length)
   )
+
   const chips = page.locator(
     '[data-scenario-family-filters] a[href^="/risk-families/"]'
   )
+
   await expect(chips).toHaveCount(families.length)
   await evidence.capture('archive toolbar and gallery')
 
   const href = (await chips.first().getAttribute('href'))!
   await chips.first().click()
   await page.waitForURL((url) => url.pathname === href)
+
   await expect(
     page.locator('[data-resource-detail="risk-family"]')
   ).toBeVisible()
+
   await evidence.capture('risk family from archive chip')
 })
 
@@ -129,6 +145,7 @@ test('keyboard focus reveals the index and opens a scenario', async ({
     testInfo.project.name === 'mobile',
     'Keyboard access is a desktop path'
   )
+
   await page.goto('/scenarios')
   // Escape before the dialog opens would be lost, and the late dialog would
   // then trap the Tab presses.
@@ -140,22 +157,28 @@ test('keyboard focus reveals the index and opens a scenario', async ({
 
   // The canvas is not focusable; its text index is the keyboard path.
   const index = page.locator('[data-scenario-index]')
+
   const inIndex = () =>
     page.evaluate(
       () => !!document.activeElement?.closest('[data-scenario-index]')
     )
+
   for (let presses = 0; presses < 80 && !(await inIndex()); presses += 1) {
     await page.keyboard.press('Tab')
   }
+
   expect(await inIndex(), 'Tab reaches the scenario index').toBe(true)
+
   await expect
     .poll(() => index.evaluate((element) => element.clientWidth))
     .toBeGreaterThan(200)
+
   await evidence.capture('index revealed by keyboard focus')
 
   const href = await page.evaluate(() =>
     document.activeElement?.getAttribute('href')
   )
+
   expect(href).toMatch(scenarioPath)
   await page.keyboard.press('Enter')
   await page.waitForURL((url) => url.pathname === href)
@@ -174,17 +197,20 @@ test.describe('without JavaScript', () => {
       await page.goto(route)
       const gallery = page.locator('[data-spatial-gallery="browse"]')
       const links = page.locator('[data-scenario-index] a[href^="/scenarios/"]')
+
       const count = Number(
         await gallery.getAttribute('data-gallery-item-count')
       )
 
       await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
       await expect(links).toHaveCount(count)
+
       for (const href of await links.evaluateAll((anchors) =>
         anchors.slice(0, 5).map((anchor) => anchor.getAttribute('href'))
       )) {
         expect(href).toMatch(scenarioPath)
       }
+
       await evidence.capture(
         `index without javascript at ${route === '/' ? 'home' : route}`
       )
@@ -199,6 +225,7 @@ async function selectFrame(page: Page, mobile: boolean) {
 
   for (const fraction of [0.5, 0.42, 0.58, 0.34, 0.66, 0.26, 0.74]) {
     const point = { x: box.x + box.width / 2, y: box.y + box.height * fraction }
+
     if (mobile) await page.touchscreen.tap(point.x, point.y)
     else await page.mouse.move(point.x, point.y)
 
@@ -206,7 +233,9 @@ async function selectFrame(page: Page, mobile: boolean) {
       .toHaveAttribute('data-selected-scenario-id', /\S/, { timeout: 1_500 })
       .then(() => true)
       .catch(() => false)
+
     if (selected) return point
   }
+
   throw new Error('No gallery frame under the canvas centre line')
 }

@@ -85,6 +85,7 @@ export const semanticMemeIntentSchema = z
   .strict()
   .superRefine(({ caption_lines, format, presentation }, context) => {
     const frameCount = presentation.source_frames.length
+
     if (presentation.mode === 'state-contrast' && frameCount !== 2) {
       context.addIssue({
         code: 'custom',
@@ -92,6 +93,7 @@ export const semanticMemeIntentSchema = z
         message: 'State contrast requires exactly two source frames'
       })
     }
+
     if (presentation.mode === 'state-contrast' && caption_lines.length !== 2) {
       context.addIssue({
         code: 'custom',
@@ -99,6 +101,7 @@ export const semanticMemeIntentSchema = z
         message: 'State contrast requires exactly two caption beats'
       })
     }
+
     if (presentation.mode !== 'state-contrast' && frameCount !== 1) {
       context.addIssue({
         code: 'custom',
@@ -106,6 +109,7 @@ export const semanticMemeIntentSchema = z
         message: 'This semantic mode requires exactly one source frame'
       })
     }
+
     if (
       (format === 'state contrast') !==
       (presentation.mode === 'state-contrast')
@@ -116,7 +120,9 @@ export const semanticMemeIntentSchema = z
         message: 'State-contrast format and semantic mode must agree'
       })
     }
+
     const roles = caption_lines.map(({ role }) => role)
+
     if (presentation.mode === 'single' && caption_lines.length !== 1) {
       context.addIssue({
         code: 'custom',
@@ -124,6 +130,7 @@ export const semanticMemeIntentSchema = z
         message: 'Single mode requires exactly one caption beat'
       })
     }
+
     if (
       presentation.mode === 'setup-payoff' &&
       (caption_lines.length !== 2 ||
@@ -136,6 +143,7 @@ export const semanticMemeIntentSchema = z
         message: 'Setup-payoff requires exactly one setup then one payoff'
       })
     }
+
     if (
       presentation.mode === 'dialogue' &&
       (caption_lines.length !== 2 ||
@@ -150,6 +158,7 @@ export const semanticMemeIntentSchema = z
         message: 'Dialogue lines require speech roles and speaker anchors'
       })
     }
+
     if (
       presentation.mode === 'state-contrast' &&
       (roles[0] !== 'setup' || roles[1] !== 'payoff')
@@ -160,7 +169,9 @@ export const semanticMemeIntentSchema = z
         message: 'State contrast requires before/setup then after/payoff'
       })
     }
+
     const frameRoles = presentation.source_frames.map(({ role }) => role)
+
     if (
       presentation.mode === 'state-contrast' &&
       (frameRoles[0] !== 'before' ||
@@ -174,6 +185,7 @@ export const semanticMemeIntentSchema = z
         message: 'State contrast requires distinct before and after frames'
       })
     }
+
     if (
       presentation.mode !== 'state-contrast' &&
       frameRoles.some((role) => role !== 'single')

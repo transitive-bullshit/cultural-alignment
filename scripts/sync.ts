@@ -101,6 +101,7 @@ import {
 } from './sync-utils'
 
 const NOTION_API_VERSION = '2026-03-11'
+
 const NOTION_DATA_SOURCES = {
   scenarios: {
     databaseId: '3c6edb27-f124-8070-9d6d-ca256d247c80',
@@ -151,6 +152,7 @@ const FEATURED_SCENARIO_IDS = [
   '3c8edb27-f124-8156-b993-e329a589f42f', // Miss Minutes Takes Root Control
   '3c8edb27-f124-819d-9e1d-cf6c33462d03' // Balance the Universe
 ] as const
+
 const featuredScenarioIds = new Set<string>(FEATURED_SCENARIO_IDS)
 
 const SCENARIO_PROPERTIES = {
@@ -266,10 +268,12 @@ const mediaTarget = join(projectRoot, 'public/media/generated')
 const searchTarget = join(projectRoot, 'public/content/search-index.json')
 
 type PageProperty = PageObjectResponse['properties'][string]
+
 type NotionFileAttachment = Extract<
   PageProperty,
   { readonly type: 'files' }
 >['files'][number]
+
 type PropertyContract = Readonly<
   Record<
     string,
@@ -311,6 +315,7 @@ type ParsedFranchise = Omit<FranchiseRecord, 'slug' | 'image'> & {
 type ParsedRiskFamily = Omit<RiskFamilyRecord, 'slug' | 'citations'> & {
   readonly canonicalUrls: readonly string[]
 }
+
 type ParsedConcept = Omit<ConceptRecord, 'slug' | 'citations'> & {
   readonly canonicalUrls: readonly string[]
 }
@@ -372,14 +377,17 @@ function getProperty(
     Object.values(page.properties).find(
       (candidate) => expectedId && propertyIdsMatch(candidate.id, expectedId)
     )
+
   if (!property) {
     throw new Error(`Page ${page.id} is missing the “${name}” property`)
   }
+
   if (property.type !== expectedType) {
     throw new Error(
       `Page ${page.id} property “${name}” is ${property.type}; expected ${expectedType}`
     )
   }
+
   return property
 }
 
@@ -391,6 +399,7 @@ function propertyIdsMatch(left: string, right: string) {
       return value
     }
   }
+
   return decode(left) === decode(right)
 }
 
@@ -469,6 +478,7 @@ async function retrieveRichTextItems(
     expectedType,
     expectedProperty(contract, name).id
   )
+
   const inlineItems =
     property.type === 'title'
       ? property.title
@@ -496,6 +506,7 @@ async function retrieveRichTextItems(
         `Page ${page.id} property “${name}” did not return a paginated list`
       )
     }
+
     assertPropertyListType(page, name, response, expectedType)
 
     for (const item of response.results) {
@@ -503,6 +514,7 @@ async function retrieveRichTextItems(
         items.push(item.title)
         continue
       }
+
       if (expectedType === 'rich_text' && item.type === 'rich_text') {
         items.push(item.rich_text)
         continue
@@ -549,10 +561,13 @@ function select(
     'select',
     expectedProperty(contract, name).id
   )
+
   if (property.type !== 'select') throw new Error('Unreachable property type')
+
   if (!property.select) {
     throw new Error(`Page ${page.id} has no “${name}” selection`)
   }
+
   return property.select
 }
 
@@ -567,9 +582,11 @@ function multiSelect(
     'multi_select',
     expectedProperty(contract, name).id
   )
+
   if (property.type !== 'multi_select') {
     throw new Error('Unreachable property type')
   }
+
   return property.multi_select
 }
 
@@ -584,6 +601,7 @@ function date(
     'date',
     expectedProperty(contract, name).id
   )
+
   if (property.type !== 'date') throw new Error('Unreachable property type')
   return property.date?.start.slice(0, 10) ?? null
 }
@@ -599,6 +617,7 @@ function url(
     'url',
     expectedProperty(contract, name).id
   )
+
   if (property.type !== 'url') throw new Error('Unreachable property type')
   return property.url
 }
@@ -614,6 +633,7 @@ function files(
     'files',
     expectedProperty(contract, name).id
   )
+
   if (property.type !== 'files') throw new Error('Unreachable property type')
   return property.files
 }
@@ -629,15 +649,18 @@ async function retrieveFiles(
     'files',
     expectedProperty(contract, name).id
   )
+
   const response = await notion.pages.properties.retrieve({
     page_id: page.id,
     property_id: property.id
   })
+
   if (response.object !== 'property_item' || response.type !== 'files') {
     throw new Error(
       `Page ${page.id} property “${name}” did not return a files property`
     )
   }
+
   return response.files
 }
 
@@ -652,6 +675,7 @@ async function relation(
     'relation',
     expectedProperty(contract, name).id
   )
+
   if (property.type !== 'relation') throw new Error('Unreachable property type')
 
   return retrieveRelationIds(page.id, property.id, property.relation, (args) =>
@@ -680,6 +704,7 @@ function parseYouTubeVideo(value: string | null): ScenarioRecord['video'] {
   if (!value) return null
 
   let url: URL
+
   try {
     url = new URL(value)
   } catch {
@@ -688,12 +713,16 @@ function parseYouTubeVideo(value: string | null): ScenarioRecord['video'] {
 
   const hostname = url.hostname.replace(/^www\./, '')
   let id: string | null = null
+
   if (hostname === 'youtu.be')
     id = url.pathname.split('/').filter(Boolean)[0] ?? null
+
   if (hostname === 'youtube.com' || hostname === 'm.youtube.com') {
     id = url.searchParams.get('v')
+
     if (!id) {
       const parts = url.pathname.split('/').filter(Boolean)
+
       if (['embed', 'shorts', 'live'].includes(parts[0] ?? ''))
         id = parts[1] ?? null
     }
@@ -719,6 +748,7 @@ async function parseScenario(
   const memeAttachments = includeMemeAttachments
     ? files(page, 'Memes', SCENARIO_PROPERTIES)
     : []
+
   const [
     titleItems,
     episodeItems,
@@ -745,14 +775,17 @@ async function parseScenario(
     relation(page, 'AI risk families', SCENARIO_PROPERTIES),
     relation(page, 'AI safety concepts', SCENARIO_PROPERTIES)
   ])
+
   if (sourceIds.length !== 1) {
     throw new Error(
       `Page ${page.id} must relate to exactly one media source; received ${sourceIds.length}`
     )
   }
+
   if (riskFamilyIds.length === 0) {
     throw new Error(`Page ${page.id} must relate to an AI risk family`)
   }
+
   if (conceptIds.length === 0) {
     throw new Error(`Page ${page.id} must relate to an AI safety concept`)
   }
@@ -797,13 +830,16 @@ async function parseSource(page: PageObjectResponse): Promise<ParsedSource> {
       retrieveRichTextItems(page, 'Keywords', 'rich_text', SOURCE_PROPERTIES),
       relation(page, 'Media Franchises', SOURCE_PROPERTIES)
     ])
+
   const sourceTypeOption = select(page, 'Source Type', SOURCE_PROPERTIES).name
+
   const sourceType =
     sourceTypeOption === 'Movie'
       ? ('movie' as const)
       : sourceTypeOption === 'TV Show'
         ? ('tv-show' as const)
         : null
+
   if (!sourceType) {
     throw new Error(
       `Page ${page.id} has unsupported source type “${sourceTypeOption}”`
@@ -933,6 +969,7 @@ async function readPreviousManifest(): Promise<PreviousSyncManifest> {
     const value: unknown = JSON.parse(
       await readFile(join(snapshotTarget, 'manifest.json'), 'utf8')
     )
+
     return parsePreviousSyncManifest(value)
   } catch (err) {
     if (isNodeError(err) && err.code === 'ENOENT') {
@@ -985,19 +1022,23 @@ async function readPreviousCitationCache(): Promise<readonly Citation[]> {
       ),
       readFile(join(snapshotTarget, 'concepts.json'), 'utf8').then(JSON.parse)
     ])
+
     const citationsByHref = new Map<string, Citation>()
 
     for (const collection of collections) {
       if (!Array.isArray(collection)) {
         throw new Error('Previous taxonomy snapshot must contain an array')
       }
+
       for (const record of collection) {
         if (!record || typeof record !== 'object' || !('citations' in record)) {
           continue
         }
+
         if (!Array.isArray(record.citations)) {
           throw new Error('Previous taxonomy citations must contain an array')
         }
+
         for (const value of record.citations) {
           const citation = citationSchema.parse(value)
           citationsByHref.set(citation.href, citation)
@@ -1008,6 +1049,7 @@ async function readPreviousCitationCache(): Promise<readonly Citation[]> {
     return [...citationsByHref.values()]
   } catch (err) {
     if (isNodeError(err) && err.code === 'ENOENT') return []
+
     throw new Error('Existing citation metadata cache is invalid', {
       cause: err
     })
@@ -1031,20 +1073,24 @@ async function reusableLegacyImageEntry(
   if (!entry || entry.lastEditedTime !== page.last_edited_time) return null
 
   const remote = reusableSyncEntrySchema.safeParse(entry)
+
   if (remote.success) {
     const current = remote.data
+
     const expectedGalleryKey = generatedMediaObjectKey(
       collection,
       page.id,
       'gallery',
       current.galleryHash
     )
+
     const expectedDetailKey = generatedMediaObjectKey(
       collection,
       page.id,
       'detail',
       current.detailHash
     )
+
     if (
       current.galleryKey !== expectedGalleryKey ||
       current.detailKey !== expectedDetailKey
@@ -1056,13 +1102,16 @@ async function reusableLegacyImageEntry(
       mediaStorage.hasObject(current.galleryKey),
       mediaStorage.hasObject(current.detailKey)
     ])
+
     if (!galleryExists || !detailExists) return null
     reusedMediaObjects += 2
 
     const gallerySrc = mediaStorage.publicUrl(current.galleryKey)
+
     const blurDataURL =
       current.blurDataURL ??
       (await createBlurDataURL(await downloadImage(gallerySrc, record)))
+
     const {
       pipelineVersion: _pipelineVersion,
       lastEditedTime: _lastEditedTime,
@@ -1101,8 +1150,10 @@ async function publishMediaVariant(
     notionId,
     variant
   })
+
   if (result.uploaded) uploadedMediaObjects += 1
   else reusedMediaObjects += 1
+
   return result
 }
 
@@ -1118,8 +1169,10 @@ async function publishMemeMediaVariant(
     purpose: 'scenario-meme',
     variant
   })
+
   if (result.uploaded) uploadedMediaObjects += 1
   else reusedMediaObjects += 1
+
   return result
 }
 
@@ -1131,6 +1184,7 @@ async function migrateLegacyImageEntry(
   if (!entry.galleryHash || !entry.detailHash) return null
 
   const expectedPaths = generatedMediaPublicPaths(collection, page.id)
+
   if (
     entry.gallerySrc !== expectedPaths.gallerySrc ||
     entry.detailSrc !== expectedPaths.detailSrc
@@ -1140,21 +1194,25 @@ async function migrateLegacyImageEntry(
 
   const galleryFile = publicFilePath(projectRoot, entry.gallerySrc)
   const detailFile = publicFilePath(projectRoot, entry.detailSrc)
+
   const [galleryMatches, detailMatches] = await Promise.all([
     fileMatchesHash(galleryFile, entry.galleryHash),
     fileMatchesHash(detailFile, entry.detailHash)
   ])
+
   if (!galleryMatches || !detailMatches) return null
 
   const [galleryBytes, detailBytes] = await Promise.all([
     readFile(galleryFile),
     readFile(detailFile)
   ])
+
   const [gallery, detail, blurDataURL] = await Promise.all([
     publishMediaVariant(collection, page.id, 'gallery', galleryBytes),
     publishMediaVariant(collection, page.id, 'detail', detailBytes),
     createBlurDataURL(galleryBytes)
   ])
+
   if (gallery.hash !== entry.galleryHash || detail.hash !== entry.detailHash) {
     throw new Error(`Legacy generated media hash changed for ${page.id}`)
   }
@@ -1187,15 +1245,18 @@ async function findImageBlocks(
 
   const fullBlocks = blocks.filter(isFullBlock)
   const images: BlockObjectResponse[] = []
+
   for (const block of fullBlocks) {
     if (block.type === 'image') images.push(block)
     if (block.has_children) images.push(...(await findImageBlocks(block.id)))
   }
+
   return images
 }
 
 function imageUrl(block: BlockObjectResponse) {
   if (block.type !== 'image') throw new Error('Expected an image block')
+
   return block.image.type === 'file'
     ? block.image.file.url
     : block.image.external.url
@@ -1215,10 +1276,12 @@ async function downloadImage(url: string, record?: NotionRecordReference) {
       const response = await fetch(url, {
         signal: AbortSignal.timeout(120_000)
       })
+
       if (!response.ok) {
         const err = new Error(
           `Image download failed with HTTP ${response.status}`
         )
+
         if (response.status < 500 && response.status !== 429) throw err
         lastError = err
       } else {
@@ -1235,6 +1298,7 @@ async function downloadImage(url: string, record?: NotionRecordReference) {
           `Image download failed${record ? ` for ${formatNotionRecord(record)}` : ''}; retrying (${attempt}/${maximumAttempts}) ${downloadLabel(url)}`
         )
       )
+
       await delay(500 * 2 ** (attempt - 1))
     }
   }
@@ -1297,6 +1361,7 @@ function findReusableExternalMeme(
       item.source.name === source.name &&
       item.source.url === source.url
   )
+
   if (index < 0) return null
 
   usedIndexes.add(index)
@@ -1313,6 +1378,7 @@ async function processMemeAttachment(
   try {
     const input = await downloadImage(memeAttachmentUrl(attachment), record)
     const sourceHash = sha256(input)
+
     const [gallery, detail, blurDataURL] = await Promise.all([
       sharp(input)
         .rotate()
@@ -1326,6 +1392,7 @@ async function processMemeAttachment(
         .toBuffer({ resolveWithObject: true }),
       createBlurDataURL(input)
     ])
+
     const [publishedGallery, publishedDetail] = await Promise.all([
       publishMemeMediaVariant(page.id, 'gallery', gallery.data),
       publishMemeMediaVariant(page.id, 'detail', detail.data)
@@ -1360,12 +1427,15 @@ async function syncMemeImages(
   force: boolean
 ) {
   const stored = await mediaStorage.getMemeDescriptor(page.id)
+
   const descriptor = stored
     ? parseMemeMediaDescriptorJson(stored.body, { notionId: page.id })
     : null
+
   if (!stored && attachments.length === 0) return []
 
   const sources = attachments.map(memeMediaSourceIdentity)
+
   const fastPath = memeMediaDescriptorFastPath({
     descriptor,
     pageLastEditedTime: page.last_edited_time,
@@ -1379,13 +1449,16 @@ async function syncMemeImages(
   }
 
   const reusedExternalIndexes = new Set<number>()
+
   const memes = await pMap(
     attachments,
     async (attachment) => {
       const source = memeMediaSourceIdentity(attachment)
+
       const reusable = force
         ? null
         : findReusableExternalMeme(descriptor, source, reusedExternalIndexes)
+
       if (reusable) {
         reusedMediaObjects += 2
         return memeImageFromDescriptor({ ...reusable, source })
@@ -1405,6 +1478,7 @@ async function syncMemeImages(
     state: 'bundle',
     memes: memes.map(({ source, media }) => ({ source, media }))
   } satisfies MemeMediaDescriptor
+
   await mediaStorage.putMemeDescriptor({
     notionId: page.id,
     previousEtag: stored?.etag ?? null,
@@ -1420,21 +1494,26 @@ async function selectImage(
 ): Promise<ImageSelection | null> {
   const blocks = await findImageBlocks(page.id)
   const images = blocks.filter((block) => block.type === 'image')
+
   const overrideId =
     options.collection === 'scenarios'
       ? IMAGE_BLOCK_OVERRIDES.get(page.id)
       : undefined
+
   const selectedImage = overrideId
     ? images.find((image) => image.id === overrideId)
     : images[0]
+
   if (overrideId && !selectedImage) {
     throw new Error(
       `Page ${page.id} is missing configured image block ${overrideId}`
     )
   }
+
   if (!selectedImage && !options.fallback && options.required) {
     throw new Error(`Page ${page.id} has no image block`)
   }
+
   if (!selectedImage && !options.fallback) return null
 
   // if (images.length > 1) {
@@ -1463,6 +1542,7 @@ async function selectImage(
   }
 
   const fallback = options.fallback!
+
   return {
     source: {
       type: 'fallback',
@@ -1483,6 +1563,7 @@ function imageSourceIdentity(block: BlockObjectResponse): MediaSourceIdentity {
     blockId: block.id,
     blockLastEditedTime: block.last_edited_time
   }
+
   return block.image.type === 'file'
     ? { ...identity, kind: 'file' }
     : { ...identity, kind: 'external', url: block.image.external.url }
@@ -1535,6 +1616,7 @@ async function processSelectedImage(
 
 function imageFromDescriptor(descriptor: ImageMediaDescriptor): ImageResult {
   const { media, source } = descriptor
+
   return {
     ...media,
     gallerySrc: mediaStorage.publicUrl(media.galleryKey),
@@ -1613,6 +1695,7 @@ async function syncImage(
   force: boolean
 ): Promise<ImageResult | null> {
   const stored = await mediaStorage.getDescriptor(options.collection, page.id)
+
   const descriptor =
     stored && !force
       ? parseMediaDescriptorJson(stored.body, {
@@ -1628,9 +1711,12 @@ async function syncImage(
     force,
     fallback: options.fallback
   })
+
   if (fastPath.kind === 'absent') return null
+
   if (fastPath.kind === 'image') {
     const image = imageFromDescriptor(fastPath.descriptor)
+
     if (fastPath.needsDescriptorWrite) {
       await putImageDescriptor(
         page,
@@ -1640,17 +1726,20 @@ async function syncImage(
         stored?.etag ?? null
       )
     }
+
     reusedMediaObjects += 2
     return image
   }
 
   const selection = await selectImage(page, options)
+
   if (!selection) {
     if (options.collection !== 'sources') {
       throw new Error(
         `Required ${options.collection} record ${page.id} has no image selection`
       )
     }
+
     await putAbsentImageDescriptor(page, stored?.etag ?? null)
     return null
   }
@@ -1672,6 +1761,7 @@ async function syncImage(
         caption: selection.caption
       }
     })
+
     await putImageDescriptor(
       page,
       options.collection,
@@ -1679,6 +1769,7 @@ async function syncImage(
       image,
       stored?.etag ?? null
     )
+
     reusedMediaObjects += 2
     return image
   }
@@ -1694,6 +1785,7 @@ async function syncImage(
       options.collection,
       options.record
     )
+
     if (legacyImage) {
       await putImageDescriptor(
         page,
@@ -1702,11 +1794,13 @@ async function syncImage(
         legacyImage,
         stored?.etag ?? null
       )
+
       return legacyImage
     }
   }
 
   const image = await processSelectedImage(page, options, selection)
+
   await putImageDescriptor(
     page,
     options.collection,
@@ -1714,6 +1808,7 @@ async function syncImage(
     image,
     stored?.etag ?? null
   )
+
   return image
 }
 
@@ -1814,12 +1909,14 @@ async function replaceGeneratedOutputs(stageRoot: string) {
       target: searchTarget
     }
   ]
+
   const backupRoot = join(stageRoot, 'backup')
   const movedExisting: { backup: string; target: string }[] = []
   const installed: string[] = []
 
   try {
     await mkdir(backupRoot, { recursive: true })
+
     for (const [index, operation] of operations.entries()) {
       await mkdir(dirname(operation.target), { recursive: true })
       if (!(await pathExists(operation.target))) continue
@@ -1842,9 +1939,11 @@ async function replaceGeneratedOutputs(stageRoot: string) {
     for (const target of installed.toReversed()) {
       await rm(target, { force: true, recursive: true })
     }
+
     for (const operation of movedExisting.toReversed()) {
       await rename(operation.backup, operation.target)
     }
+
     throw err
   }
 }
@@ -1879,6 +1978,7 @@ async function verifyDataSource(
       Object.values(dataSource.properties).find((candidate) =>
         propertyIdsMatch(candidate.id, expectation.id)
       )
+
     const relationTarget =
       property?.type === 'relation'
         ? property.relation.data_source_id
@@ -1902,6 +2002,7 @@ async function readDataSourcePages(
   filterProperties?: readonly string[]
 ) {
   const pages: PageObjectResponse[] = []
+
   for await (const row of iterateAllDataSourceRows(notion, {
     data_source_id: dataSourceId,
     ...(filterProperties
@@ -1912,6 +2013,7 @@ async function readDataSourcePages(
   })) {
     if (isFullPage(row) && !row.in_trash) pages.push(row)
   }
+
   return pages.toSorted((a, b) => a.id.localeCompare(b.id))
 }
 
@@ -1934,6 +2036,7 @@ function recordContentValidationErrors(
     const match = issue.path.match(
       /^(scenarios|sources|franchises|riskFamilies|concepts)\[(\d+)\]/
     )
+
     if (!match) {
       hasGlobalError = true
       console.warn(boldWarning(`${issue.path}: ${issue.message}`))
@@ -1943,6 +2046,7 @@ function recordContentValidationErrors(
     const collection = match[1] as NotionSyncCollection
     const index = Number(match[2])
     const record = candidate[collection][index]
+
     if (!record) {
       hasGlobalError = true
       console.warn(boldWarning(`${issue.path}: ${issue.message}`))
@@ -1978,6 +2082,7 @@ let reusedMediaObjects = 0
 
 async function main(options: SyncCliOptions) {
   const stageRoot = join(projectRoot, `.content-sync-${randomUUID()}`)
+
   const [previousManifest, cachedCitations, previousSnapshot] =
     await Promise.all([
       readPreviousManifest(),
@@ -1986,10 +2091,12 @@ async function main(options: SyncCliOptions) {
         ? readPreviousSnapshotForFastSync()
         : Promise.resolve<ContentSnapshot | null>(null)
     ])
+
   await mkdir(stageRoot, { recursive: true })
 
   try {
     console.log('Verifying five Notion database and data-source contracts…')
+
     await pMap(
       [
         ['scenario', NOTION_DATA_SOURCES.scenarios, SCENARIO_PROPERTIES],
@@ -2007,6 +2114,7 @@ async function main(options: SyncCliOptions) {
     )
 
     console.log('Reading all related Notion rows…')
+
     const [
       scenarioPages,
       sourcePages,
@@ -2023,6 +2131,7 @@ async function main(options: SyncCliOptions) {
       readDataSourcePages(NOTION_DATA_SOURCES.riskFamilies.dataSourceId),
       readDataSourcePages(NOTION_DATA_SOURCES.concepts.dataSourceId)
     ])
+
     const report = new NotionSyncReport({
       scenarios: scenarioPages.length,
       sources: sourcePages.length,
@@ -2030,6 +2139,7 @@ async function main(options: SyncCliOptions) {
       riskFamilies: riskFamilyPages.length,
       concepts: conceptPages.length
     })
+
     const [
       scenarioResults,
       sourceResults,
@@ -2050,6 +2160,7 @@ async function main(options: SyncCliOptions) {
       ),
       parseNotionPages(report, 'concepts', conceptPages, parseConcept)
     ])
+
     const parsedRows = successfulResults(scenarioResults)
     const sourceSeeds = successfulResults(sourceResults)
     const franchiseSeeds = successfulResults(franchiseResults)
@@ -2060,14 +2171,17 @@ async function main(options: SyncCliOptions) {
       ...riskFamilySeeds.flatMap((family) => family.canonicalUrls),
       ...conceptSeeds.flatMap((concept) => concept.canonicalUrls)
     ]
+
     console.log(
       `Resolving metadata for ${new Set(citationUrls).size} unique citations…`
     )
+
     const { citationsByHref, warnings: citationWarnings } =
       await resolveCitationMetadata(citationUrls, {
         cachedCitations,
         refresh: process.env.REFRESH_CITATIONS === '1'
       })
+
     for (const warning of citationWarnings) {
       console.warn(boldWarning(warning))
     }
@@ -2075,9 +2189,12 @@ async function main(options: SyncCliOptions) {
     const missingFeatured = FEATURED_SCENARIO_IDS.filter(
       (expectedId) => !scenarioPages.some((page) => page.id === expectedId)
     )
+
     let hasGlobalError = false
+
     if (missingFeatured.length > 0) {
       hasGlobalError = true
+
       console.warn(
         boldWarning(
           `Notion is missing configured featured scenario IDs: ${missingFeatured.join(', ')}`
@@ -2114,6 +2231,7 @@ async function main(options: SyncCliOptions) {
     const sourceSeedById = new Map(
       sourceSeeds.map((source) => [source.id, source])
     )
+
     const fastMedia = previousSnapshot
       ? reuseSnapshotMedia(previousSnapshot, {
           scenarios: parsedRows,
@@ -2121,6 +2239,7 @@ async function main(options: SyncCliOptions) {
           franchises: franchiseSeeds
         })
       : null
+
     let scenarioImageResults: readonly (RecordImageResult | null)[]
     let scenarioMemeResults: readonly (readonly ScenarioMemeResult[] | null)[]
     let sourceImageResults: readonly (RecordImageResult | null)[]
@@ -2130,6 +2249,7 @@ async function main(options: SyncCliOptions) {
       console.log(
         'Fast mode: reusing all image data from the existing snapshot.'
       )
+
       scenarioImageResults = fastMedia.scenarioImages
       scenarioMemeResults = fastMedia.scenarioMemes
       sourceImageResults = fastMedia.sourcePosters
@@ -2137,22 +2257,27 @@ async function main(options: SyncCliOptions) {
     } else {
       let completedImages = 0
       console.log(`Syncing ${parsedRows.length} scenario images…`)
+
       const syncedScenarioImages = await pMap(
         parsedRows,
         async (row) => {
           const record = notionPageReference(row.page, row.title)
+
           const result = await report!.capture(
             'scenarios',
             record,
             'processing the image for',
             async () => {
               const source = sourceSeedById.get(row.sourceId)
+
               if (!source) {
                 throw new Error(
                   `Related media source ${row.sourceId} could not be found or parsed`
                 )
               }
+
               const previousEntry = previousManifest.entries.scenarios[row.id]
+
               const image = await syncImage(
                 row.page,
                 {
@@ -2164,12 +2289,14 @@ async function main(options: SyncCliOptions) {
                 previousEntry,
                 options.force
               )
+
               if (!image) throw new Error('No image was produced')
               return image
             }
           )
 
           completedImages += 1
+
           if (
             completedImages % 20 === 0 ||
             completedImages >= parsedRows.length
@@ -2178,11 +2305,14 @@ async function main(options: SyncCliOptions) {
               `Processed ${completedImages}/${parsedRows.length} images`
             )
           }
+
           return result
         },
         { concurrency: 16 }
       )
+
       scenarioImageResults = syncedScenarioImages
+
       console.log(
         formatImageBatchSummary('Scenario images', syncedScenarioImages)
       )
@@ -2190,19 +2320,24 @@ async function main(options: SyncCliOptions) {
       const memeScenarioCount = parsedRows.filter(
         (row) => row.memeAttachments.length > 0
       ).length
+
       const memeAttachmentCount = parsedRows.reduce(
         (total, row) => total + row.memeAttachments.length,
         0
       )
+
       let completedMemeScenarios = 0
+
       console.log(
         `Syncing ${memeAttachmentCount} meme attachments across ${memeScenarioCount} scenarios…`
       )
+
       scenarioMemeResults = await pMap(
         parsedRows,
         async (row) => {
           const hasMemeAttachments = row.memeAttachments.length > 0
           const record = notionPageReference(row.page, row.title)
+
           const result = await report!.capture(
             'scenarios',
             record,
@@ -2211,6 +2346,7 @@ async function main(options: SyncCliOptions) {
               const attachments = hasMemeAttachments
                 ? await retrieveFiles(row.page, 'Memes', SCENARIO_PROPERTIES)
                 : []
+
               return syncMemeImages(
                 row.page,
                 attachments,
@@ -2223,6 +2359,7 @@ async function main(options: SyncCliOptions) {
           if (!hasMemeAttachments) return result
 
           completedMemeScenarios += 1
+
           if (
             completedMemeScenarios % 10 === 0 ||
             completedMemeScenarios >= memeScenarioCount
@@ -2231,6 +2368,7 @@ async function main(options: SyncCliOptions) {
               `Processed meme attachments for ${completedMemeScenarios}/${memeScenarioCount} scenarios`
             )
           }
+
           return result
         },
         { concurrency: 16 }
@@ -2238,10 +2376,12 @@ async function main(options: SyncCliOptions) {
 
       completedImages = 0
       console.log(`Syncing ${sourceSeeds.length} optional source posters…`)
+
       const syncedSourceImages = await pMap(
         sourceSeeds,
         async (source) => {
           const record = notionPageReference(source.page, source.title)
+
           const result = await report!.capture(
             'sources',
             record,
@@ -2260,6 +2400,7 @@ async function main(options: SyncCliOptions) {
           )
 
           completedImages += 1
+
           if (
             completedImages % 20 === 0 ||
             completedImages >= sourceSeeds.length
@@ -2268,21 +2409,26 @@ async function main(options: SyncCliOptions) {
               `Processed ${completedImages}/${sourceSeeds.length} source posters`
             )
           }
+
           return result
         },
         { concurrency: 16 }
       )
+
       sourceImageResults = syncedSourceImages
+
       console.log(
         formatImageBatchSummary('Media source images', syncedSourceImages)
       )
 
       completedImages = 0
       console.log(`Syncing ${franchiseSeeds.length} required franchise images…`)
+
       const syncedFranchiseImages = await pMap(
         franchiseSeeds,
         async (franchise) => {
           const record = notionPageReference(franchise.page, franchise.title)
+
           const result = await report!.capture(
             'franchises',
             record,
@@ -2298,12 +2444,14 @@ async function main(options: SyncCliOptions) {
                 previousManifest.entries.franchises[franchise.id],
                 options.force
               )
+
               if (!image) throw new Error('No image was produced')
               return image
             }
           )
 
           completedImages += 1
+
           if (
             completedImages % 20 === 0 ||
             completedImages >= franchiseSeeds.length
@@ -2312,11 +2460,14 @@ async function main(options: SyncCliOptions) {
               `Processed ${completedImages}/${franchiseSeeds.length} franchise images`
             )
           }
+
           return result
         },
         { concurrency: 16 }
       )
+
       franchiseImageResults = syncedFranchiseImages
+
       console.log(
         formatImageBatchSummary('Franchise images', syncedFranchiseImages)
       )
@@ -2331,6 +2482,7 @@ async function main(options: SyncCliOptions) {
           'building citation data for',
           () => {
             const { canonicalUrls, ...record } = family
+
             return {
               ...record,
               slug: slugs.riskFamilies[family.id]!,
@@ -2342,7 +2494,9 @@ async function main(options: SyncCliOptions) {
         ),
       { concurrency: 16 }
     )
+
     const riskFamilies = successfulResults(riskFamilyRecordResults)
+
     const conceptRecordResults = await pMap(
       conceptSeeds,
       (concept) =>
@@ -2352,6 +2506,7 @@ async function main(options: SyncCliOptions) {
           'building citation data for',
           () => {
             const { canonicalUrls, ...record } = concept
+
             return {
               ...record,
               slug: slugs.concepts[concept.id]!,
@@ -2363,6 +2518,7 @@ async function main(options: SyncCliOptions) {
         ),
       { concurrency: 16 }
     )
+
     const concepts = successfulResults(conceptRecordResults)
 
     if (report.hasErrors || hasGlobalError) {
@@ -2398,6 +2554,7 @@ async function main(options: SyncCliOptions) {
         whyAnalogyWorks: row.whyAnalogyWorks,
         caveats: row.caveats
       }
+
       if (row.episode) scenario.episode = row.episode
       return scenario
     })
@@ -2405,6 +2562,7 @@ async function main(options: SyncCliOptions) {
     const sources: SourceRecord[] = sourceSeeds.map((source, index) => {
       const image = sourceImageResults[index]
       const { page: _page, ...record } = source
+
       return {
         ...record,
         slug: slugs.sources[source.id]!,
@@ -2418,6 +2576,7 @@ async function main(options: SyncCliOptions) {
       (franchise, index) => {
         const image = franchiseImageResults[index]!
         const { page: _page, ...record } = franchise
+
         return {
           ...record,
           slug: slugs.franchises[franchise.id]!,
@@ -2433,7 +2592,9 @@ async function main(options: SyncCliOptions) {
       riskFamilies,
       concepts
     }
+
     let snapshot: ContentSnapshot
+
     try {
       snapshot = validateContentSnapshot({
         schemaVersion: 3,
@@ -2447,6 +2608,7 @@ async function main(options: SyncCliOptions) {
       printPreservedSnapshotWarning()
       return false
     }
+
     assertPublishedMedia(snapshot)
 
     const fixtureScenarioIds = [...FEATURED_SCENARIO_IDS]
@@ -2467,9 +2629,11 @@ async function main(options: SyncCliOptions) {
       fixtureScenarioIds,
       slugs
     }
+
     const validatedManifest = validateSyncManifest(manifest, snapshot)
 
     const stageSnapshot = join(stageRoot, 'content/snapshot')
+
     await Promise.all([
       writeJson(join(stageSnapshot, 'manifest.json'), validatedManifest),
       writeJson(join(stageSnapshot, 'scenarios.json'), snapshot.scenarios),
@@ -2483,6 +2647,7 @@ async function main(options: SyncCliOptions) {
     ])
 
     const searchDocuments = buildSearchDocuments(snapshot)
+
     await Promise.all([
       writeJson(join(stageSnapshot, 'search-documents.json'), searchDocuments),
       writeJson(
@@ -2493,9 +2658,11 @@ async function main(options: SyncCliOptions) {
 
     await replaceGeneratedOutputs(stageRoot)
     report.printSummary()
+
     console.log(
       `Synced ${snapshot.scenarios.length} scenarios, ${snapshot.sources.length} sources, ${snapshot.franchises.length} franchises, ${snapshot.riskFamilies.length} risk families, and ${snapshot.concepts.length} concepts.`
     )
+
     if (options.fast) {
       console.log('Media processing skipped (--fast).')
     } else {
@@ -2503,6 +2670,7 @@ async function main(options: SyncCliOptions) {
         `Media storage: ${uploadedMediaObjects} uploaded, ${reusedMediaObjects} already present.`
       )
     }
+
     return true
   } catch (err) {
     console.error(
@@ -2510,6 +2678,7 @@ async function main(options: SyncCliOptions) {
         `Content sync failed: ${err instanceof Error ? err.message || err.name : String(err)}`
       )
     )
+
     printPreservedSnapshotWarning()
     return false
   } finally {
@@ -2519,6 +2688,7 @@ async function main(options: SyncCliOptions) {
 
 async function runCli() {
   let options: SyncCliOptions
+
   try {
     options = parseSyncCliArgs(process.argv.slice(2))
   } catch (err) {
@@ -2532,6 +2702,7 @@ async function runCli() {
   }
 
   const notionToken = process.env.NOTION_TOKEN
+
   if (!notionToken) {
     console.error('NOTION_TOKEN is required to run pnpm content:sync')
     return false
@@ -2553,12 +2724,14 @@ async function runCli() {
 
   uploadedMediaObjects = 0
   reusedMediaObjects = 0
+
   try {
     return await main(options)
   } catch (err) {
     console.error(
       `Content sync failed: ${err instanceof Error ? err.message || err.name : String(err)}`
     )
+
     return false
   }
 }

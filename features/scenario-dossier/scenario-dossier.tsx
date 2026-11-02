@@ -104,6 +104,7 @@ export function ScenarioDossier({ scenario }: { scenario: ScenarioPage }) {
 
 function SourceMeta({ scenario }: { scenario: ScenarioPage }) {
   const year = scenario.releaseDate?.slice(0, 4) ?? 'Date unknown'
+
   const showEpisode = shouldShowEpisode(
     scenario.source.sourceType,
     scenario.episode?.label
@@ -284,6 +285,7 @@ function TaxonomyList({
         {items.map((item, index) => {
           const delay = 90 + index * 48
           const descriptionId = `taxonomy-description-${kind}-${item.slug}`
+
           const animationStyle = {
             '--taxonomy-delay': `${delay}ms`
           } as CSSProperties

@@ -209,6 +209,7 @@ export function auditContent(
     )
 
     const luminance = options.stillLuminance?.get(scenario.id)
+
     if (luminance !== undefined && luminance < AUDIT_LIMITS.stillMinLuminance) {
       add(
         'still-dark',
@@ -236,12 +237,16 @@ export function auditContent(
         (id) => franchisesById.get(id)?.title ?? ''
       )
     ].map((title) => title.toLowerCase())
+
     const prose = [scenario.scene, scenario.whyAnalogyWorks, scenario.caveats]
+
     for (const { source: other, name } of sourceTitleMentions) {
       if (other.id === scenario.sourceId) continue
+
       if (ownTitles.some((title) => title.includes(name.toLowerCase()))) {
         continue
       }
+
       if (prose.some((text) => containsPhrase(text, name))) {
         add(
           'prose-names-other-source',
@@ -254,11 +259,14 @@ export function auditContent(
   }
 
   const scenarioCountBySource = countBy(snapshot.scenarios, (s) => s.sourceId)
+
   for (const source of snapshot.sources) {
     if (!inSourceScope(source)) continue
+
     if (!source.youtubeTrailerUrl) {
       add('trailer-missing', 'source', source, 'No YouTube trailer')
     }
+
     if (!source.poster) {
       add('poster-missing', 'source', source, 'No page-body image')
     } else if (source.poster.alt !== sourcePosterAlt(source.title)) {
@@ -269,6 +277,7 @@ export function auditContent(
         `Image caption became alt text: “${source.poster.alt}”`
       )
     }
+
     if (!scenarioCountBySource.get(source.id)) {
       add(
         'source-without-scenarios',
@@ -294,6 +303,7 @@ export function auditContent(
   }
 
   const usage = new Map<string, { scenarios: number; primary: number }>()
+
   for (const scenario of snapshot.scenarios) {
     scenario.conceptIds.forEach((id, index) => {
       const entry = usage.get(id) ?? { scenarios: 0, primary: 0 }
@@ -336,7 +346,9 @@ function checkImage(
   if (image.width < AUDIT_LIMITS.stillMinWidth) {
     report('still-small', `${image.width} × ${image.height}`)
   }
+
   const aspect = image.width / image.height
+
   if (aspect < minAspect || aspect > maxAspect) {
     report(
       'still-aspect',
@@ -352,6 +364,7 @@ function displayTitle(title: string) {
 
 function containsPhrase(text: string, phrase: string) {
   const escaped = phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+
   return new RegExp(
     `(?<![\\p{L}\\p{N}])${escaped}(?![\\p{L}\\p{N}])`,
     'u'
@@ -360,10 +373,12 @@ function containsPhrase(text: string, phrase: string) {
 
 function countBy<T, K>(items: readonly T[], key: (item: T) => K) {
   const counts = new Map<K, number>()
+
   for (const item of items) {
     const value = key(item)
     counts.set(value, (counts.get(value) ?? 0) + 1)
   }
+
   return counts
 }
 
@@ -379,6 +394,7 @@ export function formatAuditMarkdown(
   const { stats } = audit
   const total = stats.scenarios
   const inRange = (stats.conceptCounts[2] ?? 0) + (stats.conceptCounts[3] ?? 0)
+
   lines.push(
     `${total} scenarios, ${stats.sources} sources, ${stats.featured} tagged featured.`,
     `Concepts per scenario: ${formatDistribution(stats.conceptCounts)} (${percent(inRange, total)} have the recommended two or three).`,
@@ -393,22 +409,27 @@ export function formatAuditMarkdown(
           Number(RULE_SEVERITY[ruleB] === 'review') || b.length - a.length
     )
   )
+
   if (byRule.size === 0) {
     lines.push('No findings.')
   } else {
     lines.push('| Rule | Severity | Count |', '| --- | --- | --- |')
+
     for (const [rule, findings] of byRule) {
       lines.push(
         `| \`${rule}\` | ${RULE_SEVERITY[rule]} | ${findings.length} |`
       )
     }
+
     for (const [rule, findings] of byRule) {
       lines.push('', `## \`${rule}\` (${RULE_SEVERITY[rule]})`, '')
+
       for (const finding of findings.slice(0, limit)) {
         lines.push(
           `- [${finding.title}](${notionUrl(finding.id)}) \`${finding.slug}\`: ${finding.detail}`
         )
       }
+
       if (findings.length > limit) {
         lines.push(`- …and ${findings.length - limit} more (raise \`--limit\`)`)
       }
@@ -416,6 +437,7 @@ export function formatAuditMarkdown(
   }
 
   const usage = stats.conceptUsage
+
   lines.push(
     '',
     '## Concept usage',
@@ -429,6 +451,7 @@ export function formatAuditMarkdown(
       .map((c) => `${c.title} ${c.scenarios}`)
       .join(', ')}.`
   )
+
   return `${lines.join('\n')}\n`
 }
 
@@ -447,13 +470,16 @@ async function readStillLuminance(snapshot: ContentSnapshot) {
   const entries = await Promise.all(
     snapshot.scenarios.map(async (scenario) => {
       const base64 = scenario.image.blurDataURL.split(',')[1] ?? ''
+
       const { channels } = await sharp(Buffer.from(base64, 'base64'))
         .removeAlpha()
         .stats()
+
       const [r, g, b] = channels.map((channel) => channel.mean / 255)
       return [scenario.id, 0.2126 * r! + 0.7152 * g! + 0.0722 * b!] as const
     })
   )
+
   return new Map(entries)
 }
 
@@ -480,10 +506,12 @@ Options:
   --limit <n>        Findings listed per rule in Markdown (default 25)
   --json             Print every finding as JSON
   -h, --help         Show this help message`)
+
     return
   }
 
   const projectRoot = fileURLToPath(new URL('..', import.meta.url))
+
   const read = async (name: string): Promise<unknown> =>
     JSON.parse(
       await readFile(join(projectRoot, 'content/snapshot', name), 'utf8')
@@ -500,11 +528,13 @@ Options:
 
   const scenarioSlugs = values.scenario ? new Set(values.scenario) : undefined
   const sourceSlugs = values.source ? new Set(values.source) : undefined
+
   for (const slug of scenarioSlugs ?? []) {
     if (!snapshot.scenarios.some((s) => s.slug === slug)) {
       throw new Error(`Unknown scenario slug: ${slug}`)
     }
   }
+
   for (const slug of sourceSlugs ?? []) {
     if (!snapshot.sources.some((s) => s.slug === slug)) {
       throw new Error(`Unknown source slug: ${slug}`)
@@ -521,11 +551,13 @@ Options:
     console.log(JSON.stringify(audit, null, 2))
   } else {
     const limit = Number.parseInt(values.limit, 10)
+
     if (!Number.isInteger(limit) || limit < 1) {
       throw new Error(
         `--limit must be a positive integer, received ${values.limit}`
       )
     }
+
     process.stdout.write(formatAuditMarkdown(audit, { limit }))
   }
 }

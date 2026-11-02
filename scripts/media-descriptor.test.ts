@@ -22,6 +22,7 @@ describe('mediaDescriptorSchema', () => {
 
   it('accepts a franchise image in its separately owned collection', () => {
     const descriptor = hostedFileDescriptor()
+
     const franchise = {
       ...descriptor,
       collection: 'franchises' as const,
@@ -52,18 +53,21 @@ describe('mediaDescriptorSchema', () => {
     }
 
     expect(parseMediaDescriptor(descriptor)).toEqual(descriptor)
+
     expect(
       mediaDescriptorSchema.safeParse({
         ...descriptor,
         media: hostedFileDescriptor().media
       }).success
     ).toBe(false)
+
     expect(
       mediaDescriptorSchema.safeParse({
         ...descriptor,
         collection: 'scenarios'
       }).success
     ).toBe(false)
+
     expect(
       mediaDescriptorSchema.safeParse({
         ...descriptor,
@@ -83,6 +87,7 @@ describe('mediaDescriptorSchema', () => {
         url: 'https://images.example.com/still.jpg?version=2'
       }
     }
+
     const fallback = {
       ...hostedFileDescriptor(),
       source: {
@@ -95,6 +100,7 @@ describe('mediaDescriptorSchema', () => {
     expect(parseMediaDescriptor(external)).toEqual(external)
     expect(parseMediaDescriptor(fallback)).toEqual(fallback)
     expect(mediaSourceImageBlockId(external.source)).toBe(blockId)
+
     expect(mediaSourceImageBlockId(fallback.source)).toBe(
       'youtube-thumbnail:2yfXgu37iyI'
     )
@@ -108,6 +114,7 @@ describe('mediaDescriptorSchema', () => {
         url: 'https://notion.example.com/temporary-signed-url'
       }
     }
+
     const externalWithoutUrl = {
       ...hostedFileDescriptor(),
       source: {
@@ -115,6 +122,7 @@ describe('mediaDescriptorSchema', () => {
         kind: 'external'
       }
     }
+
     const fallbackWithBlockTimestamp = {
       ...hostedFileDescriptor(),
       source: {
@@ -128,9 +136,11 @@ describe('mediaDescriptorSchema', () => {
     expect(mediaDescriptorSchema.safeParse(fileWithSignedUrl).success).toBe(
       false
     )
+
     expect(mediaDescriptorSchema.safeParse(externalWithoutUrl).success).toBe(
       false
     )
+
     expect(
       mediaDescriptorSchema.safeParse(fallbackWithBlockTimestamp).success
     ).toBe(false)
@@ -141,6 +151,7 @@ describe('mediaDescriptorSchema', () => {
       ...hostedFileDescriptor(),
       generation: 'unused'
     }
+
     const descriptorWithUnknownMediaField = {
       ...hostedFileDescriptor(),
       media: {
@@ -152,6 +163,7 @@ describe('mediaDescriptorSchema', () => {
     expect(
       mediaDescriptorSchema.safeParse(descriptorWithUnknownField).success
     ).toBe(false)
+
     expect(
       mediaDescriptorSchema.safeParse(descriptorWithUnknownMediaField).success
     ).toBe(false)
@@ -159,16 +171,21 @@ describe('mediaDescriptorSchema', () => {
 
   it('rejects generated keys that do not match the record, variant, or hash', () => {
     const wrongCollection = structuredClone(hostedFileDescriptor())
+
     wrongCollection.media.galleryKey = wrongCollection.media.galleryKey.replace(
       '/scenarios/',
       '/sources/'
     )
+
     const wrongVariant = structuredClone(hostedFileDescriptor())
+
     wrongVariant.media.galleryKey = wrongVariant.media.galleryKey.replace(
       '/gallery-',
       '/detail-'
     )
+
     const wrongHash = structuredClone(hostedFileDescriptor())
+
     wrongHash.media.detailKey = wrongHash.media.detailKey.replace(
       detailHash,
       'd'.repeat(64)
@@ -192,12 +209,14 @@ describe('descriptor binding', () => {
 
   it('parses the JSON body and reports malformed JSON separately', () => {
     const descriptor = hostedFileDescriptor()
+
     expect(
       parseMediaDescriptorJson(JSON.stringify(descriptor), {
         collection: 'scenarios',
         notionId
       })
     ).toEqual(descriptor)
+
     expect(() => parseMediaDescriptorJson('{')).toThrow(
       'Media descriptor body is not valid JSON'
     )
@@ -210,6 +229,7 @@ describe('descriptor binding', () => {
         notionId
       })
     ).toThrow('Media descriptor is bound to')
+
     expect(() =>
       parseMediaDescriptor(hostedFileDescriptor(), {
         collection: 'scenarios',
@@ -222,6 +242,7 @@ describe('descriptor binding', () => {
     expect(mediaDescriptorObjectKey('scenarios', notionId.toUpperCase())).toBe(
       'media/state/scenarios/3c6edb27f12480cc92d5c8f2f2e3a7fa.json'
     )
+
     expect(() =>
       mediaDescriptorObjectKey('sources', '../not-a-notion-id')
     ).toThrow('Invalid Notion ID for media descriptor')

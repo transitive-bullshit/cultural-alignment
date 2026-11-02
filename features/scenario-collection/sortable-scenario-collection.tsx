@@ -32,21 +32,26 @@ export function SortableScenarioCollection({
   const collectionId = `${id}-scenarios`
   const listRef = useRef<HTMLOListElement>(null)
   const [isExpanded, setIsExpanded] = useState(false)
+
   const { announcement, handleSortChange, sort } = usePersistedCollectionSort(
     STORAGE_KEY,
     getSortAnnouncement
   )
+
   const sortedEntries = useMemo(
     () => sortScenarioCollectionItems(entries, sort),
     [entries, sort]
   )
+
   const isCollapsed = !isExpanded && entries.length > COLLAPSED_SCENE_COUNT
+
   const visibleEntries = isCollapsed
     ? sortedEntries.slice(0, COLLAPSED_SCENE_COUNT)
     : sortedEntries
 
   const expand = () => {
     flushSync(() => setIsExpanded(true))
+
     listRef.current?.children
       .item(COLLAPSED_SCENE_COUNT)
       ?.querySelector<HTMLElement>('a')

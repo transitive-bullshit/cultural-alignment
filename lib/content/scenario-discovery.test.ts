@@ -35,12 +35,14 @@ describe('scenario discovery', () => {
 
   it('uses every source in a franchise continuation without duplicating taxonomy neighbors', () => {
     const current = scenario('current', 'source-a', ['risk-a'], ['concept-a'])
+
     const sameFranchise = scenario(
       'same-franchise',
       'source-b',
       ['risk-a'],
       ['concept-a']
     )
+
     const taxonomyNeighbor = scenario(
       'taxonomy-neighbor',
       'source-c',
@@ -55,6 +57,7 @@ describe('scenario discovery', () => {
     )
 
     expect(discovery.moreFromCollection).toEqual([sameFranchise])
+
     expect(
       discovery.relatedScenarios.map(({ scenario: related }) => related)
     ).toEqual([taxonomyNeighbor])
@@ -62,12 +65,14 @@ describe('scenario discovery', () => {
 
   it('excludes the current source and candidates with no taxonomy overlap', () => {
     const current = scenario('current', 'source-a', ['risk-a'], ['concept-a'])
+
     const sameSource = scenario(
       'same-source',
       'source-a',
       ['risk-a'],
       ['concept-a']
     )
+
     const unrelated = scenario(
       'unrelated',
       'source-b',
@@ -91,13 +96,16 @@ describe('scenario discovery', () => {
       ['risk-a'],
       ['concept-a', 'concept-b']
     )
+
     const riskOnly = scenario('risk-only', 'source-b', ['risk-a'], [])
+
     const conceptsOnly = scenario(
       'concepts-only',
       'source-c',
       [],
       ['concept-a', 'concept-b']
     )
+
     const both = scenario('both', 'source-d', ['risk-a'], ['concept-a'])
     const fourth = scenario('z-risk-only', 'source-e', ['risk-a'], [])
 
@@ -112,6 +120,7 @@ describe('scenario discovery', () => {
     expect(
       discovery.relatedScenarios.map(({ scenario }) => scenario.slug)
     ).toEqual(['both', 'concepts-only', 'risk-only'])
+
     expect(discovery.relatedScenarios[0]).toMatchObject({
       sharedRiskFamilyIds: ['risk-a'],
       sharedConceptIds: ['concept-a']
@@ -129,6 +138,7 @@ describe('scenario discovery', () => {
     expect(
       forward.relatedScenarios.map(({ scenario }) => scenario.slug)
     ).toEqual(['alpha', 'beta'])
+
     expect(reverse.relatedScenarios).toEqual(forward.relatedScenarios)
   })
 
@@ -139,6 +149,7 @@ describe('scenario discovery', () => {
       ['risk-b', 'risk-a', 'risk-b'],
       ['concept-b', 'concept-a', 'concept-b']
     )
+
     const related = scenario(
       'related',
       'source-b',

@@ -219,21 +219,26 @@ export function ResourceDetailPage({
   readonly resource: ResourcePage
 }) {
   const presentation = PRESENTATION[resource.kind]
+
   const isTaxonomy =
     resource.kind === 'concept' || resource.kind === 'risk-family'
+
   const heroImage =
     resource.kind === 'source'
       ? resource.poster
       : resource.kind === 'franchise'
         ? resource.image
         : null
+
   const related = (kind: ResourceKind) =>
     resource.relatedResources.filter((item) => item.kind === kind)
+
   const families = related('risk-family')
   const concepts = related('concept')
   const hasReading = isTaxonomy && resource.externalLinks.length > 0
   // With one scene every shared count is 1, so counts carry no information.
   const showSharedCounts = resource.scenarioCount > 1
+
   const imageOrientation = heroImage
     ? heroImage.width / heroImage.height < 0.9
       ? 'portrait'
@@ -451,6 +456,7 @@ function ResourceFacts({
         </span>
       )
     })
+
     if (resource.releaseDate) {
       facts.push({
         label: 'Released',
@@ -461,6 +467,7 @@ function ResourceFacts({
         )
       })
     }
+
     if (franchises.length > 0) {
       facts.push({
         label: 'Franchise',
@@ -469,15 +476,20 @@ function ResourceFacts({
       })
     }
   }
+
   if (resource.kind === 'franchise') {
     facts.push({ label: 'Works', value: resource.sources.length })
   }
+
   facts.push({ label: 'Scenes', value: resource.scenarioCount })
+
   if (resource.kind === 'risk-family') {
     facts.push({ label: 'Concepts', value: conceptCount })
   }
+
   if (resource.kind === 'concept' && families.length > 0) {
     const mainFamilies = primaryFamilies(families, resource.scenarioCount)
+
     facts.push({
       label: mainFamilies.length === 1 ? 'Risk family' : 'Risk families',
       value: <InlineLinks resources={mainFamilies} />

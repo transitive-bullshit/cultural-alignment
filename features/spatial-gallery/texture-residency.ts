@@ -44,6 +44,7 @@ export function prioritizeTextureItemIndices(
     const x = xPositions[slotIndex] ?? slot.x
     const insideCurrentRange = Math.abs(x) <= visibilityLimit
     const insideDirectionalLookahead = x >= minimumX && x <= maximumX
+
     const candidate = {
       distance:
         insideCurrentRange || !insideDirectionalLookahead
@@ -52,7 +53,9 @@ export function prioritizeTextureItemIndices(
       itemIndex: slot.itemIndex,
       zone: insideCurrentRange ? 0 : insideDirectionalLookahead ? 1 : 2
     }
+
     const current = bestCandidateByItem.get(slot.itemIndex)
+
     if (
       current &&
       (current.zone < candidate.zone ||
@@ -70,6 +73,7 @@ export function prioritizeTextureItemIndices(
     if (zoneOrder !== 0) return zoneOrder
 
     const distanceOrder = left.distance - right.distance
+
     return distanceOrder !== 0
       ? distanceOrder
       : left.itemIndex - right.itemIndex
@@ -114,12 +118,14 @@ export function planTextureBindings({
 
   for (const itemIndex of prioritizedItemIndices) {
     if (desiredItemIndices.length >= maximum) break
+
     if (fullItemIndices.has(itemIndex) && residentItemIndices.has(itemIndex)) {
       desiredItemIndices.push(itemIndex)
     }
   }
 
   const desired = new Set(desiredItemIndices)
+
   return {
     bindItemIndices: desiredItemIndices.filter(
       (itemIndex) => !boundItemIndices.has(itemIndex)
@@ -222,6 +228,7 @@ export function settleTextureLoad<TextureResource>({
   residentTextures.set(itemIndex, texture)
   if (stage === 'full') fullItemIndices.add(itemIndex)
   onBind(texture)
+
   if (previousTexture && previousTexture !== texture) {
     dispose(previousTexture)
   }

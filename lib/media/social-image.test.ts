@@ -11,6 +11,7 @@ it.each(['horizontal', 'vertical'] as const)(
   'preserves %s focal framing in the prepared image',
   async (axis) => {
     const horizontal = axis === 'horizontal'
+
     const bands = await Promise.all(
       ['#ff0000', '#00ff00', '#0000ff'].map((background) =>
         sharp({ create: { width: 40, height: 40, channels: 3, background } })
@@ -18,6 +19,7 @@ it.each(['horizontal', 'vertical'] as const)(
           .toBuffer()
       )
     )
+
     const source = await sharp({
       create: {
         width: horizontal ? 120 : 40,
@@ -35,6 +37,7 @@ it.each(['horizontal', 'vertical'] as const)(
       )
       .png()
       .toBuffer()
+
     vi.spyOn(globalThis, 'fetch').mockImplementation(
       async () => new Response(source)
     )
@@ -51,11 +54,14 @@ it.each(['horizontal', 'vertical'] as const)(
           ? { x: position, y: 0.5 }
           : { x: 0.5, y: position }
       }
+
       const dataUrl = await toSocialImageDataUrl(image, 40, 40)
       const bytes = Buffer.from(dataUrl.split(',')[1]!, 'base64')
+
       const { data, info } = await sharp(bytes)
         .raw()
         .toBuffer({ resolveWithObject: true })
+
       expect(info.width).toBe(40)
       expect(info.height).toBe(40)
       const center = (20 * 40 + 20) * info.channels

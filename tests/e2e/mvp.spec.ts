@@ -14,14 +14,18 @@ test('homepage keeps a curated gallery while the archive exposes the full collec
 
   await expect(page).toHaveURL('/')
   await expectGalleryIntroComposition(page)
+
   await expect(gallery).not.toHaveAttribute(
     'data-gallery-inertia-burst-requested'
   )
+
   await acknowledgeGalleryIntro(page)
+
   await expect(gallery).toHaveAttribute(
     'data-gallery-inertia-burst-requested',
     'true'
   )
+
   const homepageItemCount = await readGalleryItemCount(gallery)
 
   await openScenariosFromHeader(page)
@@ -82,6 +86,7 @@ test('gallery fallback completes a dossier round trip', async ({ page }) => {
   const selectedLink = gallery.locator('[data-gallery-fallback] a').first()
   await expect(selectedLink).toBeVisible()
   const selectedHref = await requiredInternalHref(selectedLink)
+
   const dossierNavigation = page.waitForURL((url) => isScenarioDetail(url), {
     timeout: 15_000,
     waitUntil: 'commit'
@@ -96,6 +101,7 @@ test('gallery fallback completes a dossier round trip', async ({ page }) => {
     (url) => `${url.pathname}${url.search}${url.hash}` === '/scenarios',
     { timeout: 15_000, waitUntil: 'commit' }
   )
+
   await page.goBack()
   await galleryNavigation
 
@@ -122,7 +128,9 @@ test.describe('functional phone viewport', () => {
     const familyLink = page
       .locator('[data-scenario-family-filters] a[href^="/risk-families/"]')
       .first()
+
     const familyHref = await requiredInternalHref(familyLink)
+
     const navigation = page.waitForURL(
       (url) => matchesInternalHref(url, familyHref),
       { timeout: 15_000, waitUntil: 'commit' }
@@ -134,9 +142,11 @@ test.describe('functional phone viewport', () => {
 
     // The retired filtered archive has no route or redirect.
     const familySlug = familyHref.split('/').at(-1)
+
     const retired = await page.request.get(`/scenarios/family/${familySlug}`, {
       maxRedirects: 0
     })
+
     expect(retired.status()).toBe(404)
   })
 })
@@ -180,6 +190,7 @@ async function expectGalleryIntroVisible(page: Page) {
     'data-state',
     'visible'
   )
+
   await expect(page.locator('[data-gallery-intro-dialog]')).toBeVisible()
 }
 
@@ -188,12 +199,15 @@ async function expectGalleryIntroComposition(page: Page) {
   const exampleImage = dialog.locator('[data-gallery-intro-example-image]')
 
   await expect(dialog.locator('[data-slot="dialog-title"]')).toBeVisible()
+
   await expect(
     dialog.locator('[data-gallery-intro-example-label]')
   ).toBeVisible()
+
   await expect(exampleImage).toBeVisible()
   await expect(exampleImage).toHaveAttribute('src', /\S/)
   await expect(exampleImage).toHaveAttribute('alt', /\S/)
+
   await expect(dialog.locator('[data-gallery-intro-dismiss]')).toHaveAttribute(
     'data-slot',
     'button'
@@ -205,6 +219,7 @@ async function expectGalleryIntroDismissed(page: Page) {
     'data-state',
     'dismissed'
   )
+
   await expect(page.locator('[data-gallery-intro-dialog]')).toBeHidden()
 }
 
@@ -227,6 +242,7 @@ async function openScenariosFromHeader(page: Page) {
       '[data-site-navigation="desktop"] [data-site-navigation-link="/scenarios"]'
     )
     .click()
+
   await navigation
 }
 

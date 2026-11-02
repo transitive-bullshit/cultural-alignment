@@ -6,6 +6,7 @@ const port = process.env.PORT
 if (!baseURL || !port) {
   throw new Error('Run browser journeys with pnpm test:e2e to start Portless')
 }
+
 const isCI = Boolean(process.env.CI)
 const useDevelopmentServer = process.env.PLAYWRIGHT_SERVER === 'development'
 const useExistingBuild = process.env.PLAYWRIGHT_SERVER === 'production'

@@ -5,17 +5,22 @@ import { generatedMediaObjectKey } from './sync-utils'
 
 const notionIdPattern =
   /^(?:[0-9a-f]{32}|[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$/i
+
 const sha256Pattern = /^[0-9a-f]{64}$/
+
 const generatedMediaObjectKeyPattern =
   /^media\/generated\/(?:franchises|scenarios|sources)\/[0-9a-f]{32}\/(?:gallery|detail)-[0-9a-f]{64}\.webp$/
 
 const notionIdSchema = z.string().regex(notionIdPattern)
 const sha256Schema = z.string().regex(sha256Pattern)
+
 const generatedMediaObjectKeySchema = z
   .string()
   .regex(generatedMediaObjectKeyPattern)
+
 const sourceUrlSchema = z.url().refine((value) => {
   const url = new URL(value)
+
   return (
     (url.protocol === 'http:' || url.protocol === 'https:') &&
     !url.username &&
@@ -93,6 +98,7 @@ export const mediaDescriptorSchema = z
     for (const variant of ['gallery', 'detail'] as const) {
       const hash = descriptor.media[`${variant}Hash`]
       const actualKey = descriptor.media[`${variant}Key`]
+
       const expectedKey = generatedMediaObjectKey(
         descriptor.collection,
         descriptor.notionId,
@@ -114,10 +120,12 @@ export type MediaCollection = z.infer<typeof mediaCollectionSchema>
 export type MediaSourceIdentity = z.infer<typeof mediaSourceIdentitySchema>
 export type ReusableMediaPayload = z.infer<typeof reusableMediaPayloadSchema>
 export type MediaDescriptor = z.infer<typeof mediaDescriptorSchema>
+
 export type ImageMediaDescriptor = Extract<
   MediaDescriptor,
   { readonly state: 'image' }
 >
+
 export type AbsentMediaDescriptor = Extract<
   MediaDescriptor,
   { readonly state: 'absent' }
@@ -144,6 +152,7 @@ export function parseMediaDescriptor(
 
   const expectedNotionId = compactNotionId(binding.notionId)
   const actualNotionId = compactNotionId(descriptor.notionId)
+
   if (
     descriptor.collection !== binding.collection ||
     actualNotionId !== expectedNotionId
@@ -161,11 +170,13 @@ export function parseMediaDescriptorJson(
   binding?: MediaDescriptorBinding
 ) {
   let input: unknown
+
   try {
     input = JSON.parse(body) as unknown
   } catch (err) {
     throw new Error('Media descriptor body is not valid JSON', { cause: err })
   }
+
   return parseMediaDescriptor(input, binding)
 }
 
@@ -177,5 +188,6 @@ function compactNotionId(notionId: string) {
   if (!notionIdPattern.test(notionId)) {
     throw new Error(`Invalid Notion ID for media descriptor: ${notionId}`)
   }
+
   return notionId.replaceAll('-', '').toLowerCase()
 }

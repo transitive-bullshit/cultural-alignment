@@ -31,6 +31,7 @@ test.describe('gallery introduction motion', () => {
     await expect(introduction).toHaveAttribute('data-state', 'dismissed', {
       timeout: 15_000
     })
+
     // Mounting the canvas needs page timers, so step one frame per probe: the
     // coast can advance at most a frame before the test observes it. The read
     // must not wait for the canvas, which cannot appear between steps.
@@ -38,6 +39,7 @@ test.describe('gallery introduction motion', () => {
       .poll(
         async () => {
           await page.clock.runFor(16)
+
           return canvas.evaluateAll(
             ([element]) =>
               element?.getAttribute('data-gallery-intro-motion') ?? null
@@ -46,6 +48,7 @@ test.describe('gallery introduction motion', () => {
         { intervals: [0], timeout: 15_000 }
       )
       .toBe('running')
+
     await expect(canvas).toBeVisible()
     // Coast for a few frames so the render loop has measured the current
     // viewport and the layout correction below lands mid-motion.
@@ -54,12 +57,15 @@ test.describe('gallery introduction motion', () => {
 
     const viewport = page.viewportSize()
     const canvasWidth = await canvas.getAttribute('width')
+
     const previousLayoutCorrectionCount = Number(
       (await canvas.getAttribute('data-gallery-auto-motion-layout-count')) ?? 0
     )
+
     if (!viewport || !canvasWidth) {
       throw new Error('Expected a measured gallery viewport')
     }
+
     await page.setViewportSize({
       height: viewport.height,
       width: viewport.width - 1
@@ -67,6 +73,7 @@ test.describe('gallery introduction motion', () => {
 
     await expect.poll(() => canvas.getAttribute('width')).not.toBe(canvasWidth)
     await page.clock.runFor(32)
+
     await expect
       .poll(async () =>
         Number(
@@ -76,6 +83,7 @@ test.describe('gallery introduction motion', () => {
         )
       )
       .toBeGreaterThan(previousLayoutCorrectionCount)
+
     await expect(canvas).toHaveAttribute(
       'data-gallery-auto-motion-layout-direction',
       'left'
@@ -97,6 +105,7 @@ test.describe('gallery introduction motion', () => {
       'pending',
       { timeout: 15_000 }
     )
+
     await expect(canvas).toHaveAttribute('data-gallery-position-x', /-?\d/)
     await page.clock.pauseAt(await page.evaluate(() => Date.now() + 5_000))
     const before = await readPosition(canvas)
@@ -107,19 +116,23 @@ test.describe('gallery introduction motion', () => {
       'data-state',
       'dismissed'
     )
+
     await expect(gallery).toHaveAttribute(
       'data-gallery-inertia-burst-requested',
       'true'
     )
+
     await expect(canvas).toHaveAttribute(
       'data-gallery-inertia-burst',
       /^(launched|settled)$/
     )
+
     await page.clock.runFor(64)
     const first = await readPosition(canvas)
     expect(first).toBeLessThan(before)
     await page.clock.runFor(128)
     expect(await readPosition(canvas)).toBeLessThan(first)
+
     // Stop advancing once the burst settles. Rendering several extra seconds
     // of WebGL frames can exhaust the test timeout on a software GPU.
     await expect
@@ -131,6 +144,7 @@ test.describe('gallery introduction motion', () => {
         { intervals: [0], timeout: 15_000 }
       )
       .toBe('settled')
+
     const settled = await readPosition(canvas)
     await page.clock.runFor(500)
     expect(await readPosition(canvas)).toBe(settled)
@@ -151,6 +165,7 @@ test.describe('gallery introduction motion', () => {
       'pending',
       { timeout: 15_000 }
     )
+
     await expect(canvas).toHaveAttribute('data-gallery-position-x', /-?\d/)
     await page.clock.pauseAt(await page.evaluate(() => Date.now() + 5_000))
     const before = await readPosition(canvas)
@@ -160,6 +175,7 @@ test.describe('gallery introduction motion', () => {
       'data-gallery-inertia-burst',
       'skipped'
     )
+
     await page.clock.runFor(500)
     expect(await readPosition(canvas)).toBe(before)
   })
@@ -182,9 +198,11 @@ test.describe('gallery introduction motion', () => {
       const canvas = gallery.locator('canvas')
 
       await expect(gallery).toBeVisible()
+
       await expect
         .poll(async () => (await canvas.boundingBox())?.height ?? 0)
         .toBeGreaterThan(0)
+
       await expect
         .poll(async () =>
           Number(await canvas.getAttribute('data-gallery-bound-textures'))

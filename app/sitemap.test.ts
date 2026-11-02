@@ -17,6 +17,7 @@ describe('sitemap', () => {
       '/about',
       '/privacy'
     ]
+
     const contentPaths = [
       ...contentCatalog
         .getStaticSlugs('scenario')
@@ -34,11 +35,13 @@ describe('sitemap', () => {
         .getStaticSlugs('concept')
         .map((slug) => `/concepts/${slug}`)
     ]
+
     const expectedUrls = new Set(
       [...fixedPaths, ...contentPaths].map((path) =>
         new URL(path, siteUrl).toString()
       )
     )
+
     const entries = sitemap()
     const urls = entries.map(({ url }) => url)
 

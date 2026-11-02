@@ -48,6 +48,7 @@ describe('spatial gallery texture residency', () => {
       bindItemIndices: [3],
       evictItemIndices: [2]
     })
+
     expect(fullItemIndices).toEqual(new Set([0, 1, 2, 3, 4]))
     expect(residentItemIndices).toEqual(new Set([0, 1, 2, 3, 4]))
   })
@@ -59,6 +60,7 @@ describe('spatial gallery texture residency', () => {
       foregroundItemIndices: [2, 1, 0],
       idleItemIndices: [3]
     })
+
     expect(prioritizeTextureItemIndices(slots, positions, 2, -10, 0.2)).toEqual(
       {
         foregroundItemIndices: [2, 1, 3],
@@ -119,6 +121,7 @@ describe('spatial gallery texture residency', () => {
       { length: 100 },
       (_, itemIndex) => itemIndex
     )
+
     const plan = planTextureLoads({
       failedFull: new Set<number>(),
       failedPlaceholder: new Set<number>(),
@@ -133,6 +136,7 @@ describe('spatial gallery texture residency', () => {
 
     expect(plan.fullItemIndices).toHaveLength(32)
     expect(plan.placeholderItemIndices).toHaveLength(4)
+
     expect(
       plan.fullItemIndices.length + plan.placeholderItemIndices.length
     ).toBeLessThanOrEqual(36)
@@ -191,6 +195,7 @@ describe('spatial gallery texture residency', () => {
         texture: 'full'
       })
     ).toBe(true)
+
     expect(disposed).toEqual([])
     expect(residentTextures).toEqual(new Map([[0, 'full']]))
     expect(fullItemIndices).toEqual(new Set([0]))

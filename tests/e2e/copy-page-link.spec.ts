@@ -32,9 +32,11 @@ for (const width of [1440, 390]) {
       await expect(button).toBeInViewport()
       await button.click()
       await expect(button).toHaveAttribute('data-state', 'success')
+
       expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(
         page.url()
       )
+
       expect(
         await page.evaluate(() => document.documentElement.scrollWidth)
       ).toBeLessThanOrEqual(width)
@@ -47,6 +49,7 @@ test('copy feedback restarts on repeated clicks and recovers from errors', async
 }) => {
   await mockOptimizedImages(page)
   await page.goto(routes[0]!)
+
   await page.evaluate(() => {
     Object.defineProperty(navigator.clipboard, 'writeText', {
       configurable: true,
@@ -55,16 +58,19 @@ test('copy feedback restarts on repeated clicks and recovers from errors', async
       }
     })
   })
+
   const button = page.locator('[data-copy-page-link]')
   await button.focus()
   await page.keyboard.press('Enter')
   await expect(button).toHaveAttribute('data-state', 'error')
+
   await page.evaluate(() => {
     Object.defineProperty(navigator.clipboard, 'writeText', {
       configurable: true,
       value: async () => {}
     })
   })
+
   await page.clock.install()
   await button.click()
   await expect(button).toHaveAttribute('data-state', 'success')

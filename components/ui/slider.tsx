@@ -20,6 +20,7 @@ function Slider({
   ...props
 }: SliderProps) {
   const { className: thumbClassName, ...resolvedThumbProps } = thumbProps ?? {}
+
   const _values = React.useMemo(
     () =>
       Array.isArray(value)

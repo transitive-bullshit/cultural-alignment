@@ -1,6 +1,7 @@
 import { z } from 'zod'
 
 const idSchema = z.string().trim().min(1)
+
 const slugSchema = z
   .string()
   .trim()
@@ -10,6 +11,7 @@ const slugSchema = z
 const remoteMediaUrlSchema = z.url().refine((value) => {
   if (!URL.canParse(value)) return false
   const url = new URL(value)
+
   return (
     url.protocol === 'https:' &&
     !url.username &&

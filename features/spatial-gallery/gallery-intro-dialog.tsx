@@ -56,6 +56,7 @@ export function GalleryIntroDialog({
         sessionAcknowledgement,
         parseAcknowledgement(event.newValue)
       )
+
       sessionAcknowledgement = acknowledgement
 
       if (!shouldShowIntroduction(mode, acknowledgement)) {
@@ -109,6 +110,7 @@ export function GalleryIntroDialog({
           }}
           onCloseAutoFocus={(event) => {
             event.preventDefault()
+
             window.requestAnimationFrame(() => {
               document
                 .querySelector<HTMLElement>('[data-gallery-main]')
@@ -224,6 +226,7 @@ function readAcknowledgement() {
     sessionAcknowledgement,
     storedAcknowledgement
   )
+
   return sessionAcknowledgement
 }
 
@@ -232,6 +235,7 @@ function persistAcknowledgement(dismissal: GalleryIntroDismissal) {
     readAcknowledgement(),
     dismissal
   )
+
   sessionAcknowledgement = acknowledgement
 
   try {

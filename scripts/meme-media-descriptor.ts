@@ -7,18 +7,24 @@ export const MEME_MEDIA_PIPELINE_VERSION = 1
 
 const notionIdPattern =
   /^(?:[0-9a-f]{32}|[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$/i
+
 const sha256Pattern = /^[0-9a-f]{64}$/
+
 const generatedMemeMediaObjectKeyPattern =
   /^media\/generated\/scenarios\/[0-9a-f]{32}\/memes\/(?:gallery|detail)-[0-9a-f]{64}\.webp$/
 
 const notionIdSchema = z.string().regex(notionIdPattern)
 const sha256Schema = z.string().regex(sha256Pattern)
+
 const generatedMemeMediaObjectKeySchema = z
   .string()
   .regex(generatedMemeMediaObjectKeyPattern)
+
 const sourceNameSchema = z.string().min(1)
+
 const externalSourceUrlSchema = z.url().refine((value) => {
   const url = new URL(value)
+
   return (
     (url.protocol === 'http:' || url.protocol === 'https:') &&
     !url.username &&
@@ -73,6 +79,7 @@ export const memeMediaDescriptorSchema = z
       for (const variant of ['gallery', 'detail'] as const) {
         const hash = media[`${variant}Hash`]
         const actualKey = media[`${variant}Key`]
+
         const expectedKey = generatedMemeMediaObjectKey(
           descriptor.notionId,
           variant,
@@ -93,6 +100,7 @@ export const memeMediaDescriptorSchema = z
 export type MemeMediaSourceIdentity = z.infer<
   typeof memeMediaSourceIdentitySchema
 >
+
 export type MemeMediaPayload = z.infer<typeof memeMediaPayloadSchema>
 export type MemeMediaDescriptor = z.infer<typeof memeMediaDescriptorSchema>
 
@@ -113,6 +121,7 @@ export function parseMemeMediaDescriptor(
 
   const expectedNotionId = compactNotionId(binding.notionId)
   const actualNotionId = compactNotionId(descriptor.notionId)
+
   if (actualNotionId !== expectedNotionId) {
     throw new Error(
       `Meme media descriptor is bound to ${actualNotionId}, not ${expectedNotionId}`
@@ -127,6 +136,7 @@ export function parseMemeMediaDescriptorJson(
   binding?: MemeMediaDescriptorBinding
 ) {
   let input: unknown
+
   try {
     input = JSON.parse(body) as unknown
   } catch (err) {
@@ -134,6 +144,7 @@ export function parseMemeMediaDescriptorJson(
       cause: err
     })
   }
+
   return parseMemeMediaDescriptor(input, binding)
 }
 
@@ -144,6 +155,7 @@ export function memeMediaDescriptorFastPath(input: {
   readonly sources: readonly MemeMediaSourceIdentity[]
 }) {
   const descriptor = input.descriptor
+
   if (
     input.force ||
     !descriptor ||
@@ -173,5 +185,6 @@ function compactNotionId(notionId: string) {
   if (!notionIdPattern.test(notionId)) {
     throw new Error(`Invalid Notion ID for meme media descriptor: ${notionId}`)
   }
+
   return notionId.replaceAll('-', '').toLowerCase()
 }

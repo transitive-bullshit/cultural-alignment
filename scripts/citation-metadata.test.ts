@@ -11,6 +11,7 @@ import {
 describe('fetchCitationMetadata', () => {
   it('prefers citation metadata and normalizes entities and whitespace', async () => {
     const href = 'https://example.org/research/alignment'
+
     const fetcher = vi.fn<CitationFetcher>(async () =>
       htmlResponse(`
         <html>
@@ -44,6 +45,7 @@ describe('fetchCitationMetadata', () => {
 
   it('extracts a known publisher from a subdomain and removes its title suffix', async () => {
     const href = 'https://research.anthropic.com/policies/responsible-scaling'
+
     const fetcher = vi.fn<CitationFetcher>(async () =>
       htmlResponse('<title>Responsible Scaling Policy — Anthropic</title>')
     )
@@ -55,12 +57,14 @@ describe('fetchCitationMetadata', () => {
       title: 'Responsible Scaling Policy',
       publisher: 'Anthropic'
     })
+
     expect(result.usedFallbackTitle).toBe(false)
   })
 
   it('follows safe redirects and derives metadata from the final URL', async () => {
     const href = 'https://example.org/publications/ai-risk'
     const destination = 'https://www.nist.gov/itl/ai-risk-management-framework'
+
     const fetcher = vi
       .fn<CitationFetcher>()
       .mockResolvedValueOnce(
@@ -83,10 +87,12 @@ describe('fetchCitationMetadata', () => {
       },
       usedFallbackTitle: false
     })
+
     expect(fetcher.mock.calls.map(([input]) => input)).toEqual([
       href,
       destination
     ])
+
     expect(fetcher).toHaveBeenNthCalledWith(
       1,
       href,
@@ -96,6 +102,7 @@ describe('fetchCitationMetadata', () => {
 
   it('uses deterministic URL metadata when HTML has a failure title', async () => {
     const href = 'https://example.com/research/model-evaluations.html'
+
     const fetcher = vi.fn<CitationFetcher>(async () =>
       htmlResponse('<html><head><title>Access denied</title></head></html>')
     )
@@ -111,6 +118,7 @@ describe('fetchCitationMetadata', () => {
   it('extracts a normalized title from PDF metadata', async () => {
     const href = 'https://arxiv.org/pdf/2401.12345.pdf'
     const pdf = pdfWithTitle('  A Safety Case (Revised)  ')
+
     const fetcher = vi.fn<CitationFetcher>(
       async () =>
         new Response(pdf, {
@@ -132,6 +140,7 @@ describe('fetchCitationMetadata', () => {
   it('uses a descriptive PDF filename when embedded metadata is generic', async () => {
     const href =
       'https://www.nist.gov/system/files/Concept%20Note_%20Development%20of%20the%20NIST%20AI%20RMF%20Profile.pdf'
+
     const fetcher = vi.fn<CitationFetcher>(
       async () =>
         new Response(pdfWithTitle('Concept Note:'), {
@@ -145,11 +154,13 @@ describe('fetchCitationMetadata', () => {
     expect(result.citation.title).toBe(
       'Concept Note Development of the NIST AI RMF Profile'
     )
+
     expect(result.usedFallbackTitle).toBe(true)
   })
 
   it('resolves DOI titles through Crossref before visiting the publisher', async () => {
     const href = 'https://doi.org/10.1145/3571730'
+
     const fetcher = vi.fn<CitationFetcher>(async () =>
       Response.json({
         message: {
@@ -167,6 +178,7 @@ describe('fetchCitationMetadata', () => {
       },
       usedFallbackTitle: false
     })
+
     expect(fetcher).toHaveBeenCalledWith(
       'https://api.crossref.org/works/10.1145%2F3571730',
       expect.objectContaining({
@@ -181,11 +193,13 @@ describe('fetchCitationMetadata', () => {
     await expect(
       fetchCitationMetadata('http://127.0.0.1/private', fetcher)
     ).rejects.toThrow('citation URL must not target a local network address')
+
     expect(fetcher).not.toHaveBeenCalled()
   })
 
   it('falls back without following a redirect to a local URL', async () => {
     const href = 'https://example.org/research/safe-start'
+
     const fetcher = vi.fn<CitationFetcher>(
       async () =>
         new Response(null, {
@@ -198,9 +212,11 @@ describe('fetchCitationMetadata', () => {
 
     expect(result.citation).toEqual(fallbackCitationMetadata(href))
     expect(result.usedFallbackTitle).toBe(true)
+
     expect(result.warning).toContain(
       'citation URL must not target a local network address'
     )
+
     expect(fetcher).toHaveBeenCalledTimes(1)
   })
 })
@@ -208,13 +224,16 @@ describe('fetchCitationMetadata', () => {
 describe('resolveCitationMetadata', () => {
   it('reuses cached entries, refreshes explicitly, and deduplicates URLs', async () => {
     const cachedHref = 'https://openai.com/index/preparedness-framework'
+
     const cachedCitation: Citation = {
       href: cachedHref,
       title: 'Preparedness Framework',
       publisher: 'OpenAI'
     }
+
     const freshHref = 'https://example.org/research/fresh-paper'
     const fallbackHref = 'https://example.org/research/retry-paper'
+
     const fetcher = vi.fn<CitationFetcher>(async (input: string) =>
       htmlResponse(
         input === freshHref
@@ -237,12 +256,15 @@ describe('resolveCitationMetadata', () => {
     expect(fetcher.mock.calls.map(([input]) => input)).toEqual([freshHref])
     expect(result.citationsByHref.size).toBe(3)
     expect(result.citationsByHref.get(cachedHref)).toBe(cachedCitation)
+
     expect(result.citationsByHref.get(freshHref)?.title).toBe(
       'Fresh safety paper'
     )
+
     expect(result.citationsByHref.get(fallbackHref)).toEqual(
       fallbackCitationMetadata(fallbackHref)
     )
+
     expect(result.warnings).toEqual([])
 
     const refreshed = await resolveCitationMetadata(
@@ -258,6 +280,7 @@ describe('resolveCitationMetadata', () => {
       freshHref,
       fallbackHref
     ])
+
     expect(refreshed.citationsByHref.get(fallbackHref)?.title).toBe(
       'Retried safety paper'
     )
@@ -265,11 +288,13 @@ describe('resolveCitationMetadata', () => {
 
   it('retains a good cached title when an explicit refresh fails', async () => {
     const href = 'https://example.org/research/verified-paper'
+
     const cachedCitation: Citation = {
       href,
       title: 'Verified paper title',
       publisher: 'Example Research'
     }
+
     const fetcher = vi.fn<CitationFetcher>(async () =>
       htmlResponse('<title>Access denied</title>')
     )
@@ -281,6 +306,7 @@ describe('resolveCitationMetadata', () => {
     })
 
     expect(result.citationsByHref.get(href)).toBe(cachedCitation)
+
     expect(result.warnings).toEqual([
       expect.stringContaining('retained cached title “Verified paper title”')
     ])
@@ -288,6 +314,7 @@ describe('resolveCitationMetadata', () => {
 
   it('reports one invalid citation without rejecting the metadata batch', async () => {
     const validHref = 'https://example.org/research/valid-paper'
+
     const fetcher = vi.fn<CitationFetcher>(async () =>
       htmlResponse(
         '<meta name="citation_title" content="A Valid Research Paper">'
@@ -302,7 +329,9 @@ describe('resolveCitationMetadata', () => {
     expect(result.citationsByHref.get(validHref)?.title).toBe(
       'A Valid Research Paper'
     )
+
     expect(result.citationsByHref.has('not-a-valid-url')).toBe(false)
+
     expect(result.warnings).toEqual([
       expect.stringContaining('Citation metadata setup failed')
     ])
@@ -316,6 +345,7 @@ describe('fallbackCitationMetadata', () => {
         'https://www.lesswrong.com/s/3ni2P2GZzBvNebWYZ/p/RzsXRbk2ETNqjhsma'
       ).title
     ).toBe('AI Safety Strategies Landscape')
+
     expect(
       fallbackCitationMetadata(
         'https://www.oecd.org/en/publications/artificial-intelligence-data-and-competition_e7e88884-en.html'
@@ -335,6 +365,7 @@ describe('fallbackCitationMetadata', () => {
       },
       usedFallbackTitle: false
     })
+
     expect(fetcher).not.toHaveBeenCalled()
   })
 })
@@ -348,11 +379,13 @@ function htmlResponse(html: string) {
 
 function pdfWithTitle(title: string) {
   const escapedTitle = title.replace(/[\\()]/g, '\\$&')
+
   const objects = [
     '<< /Type /Catalog /Pages 2 0 R >>',
     '<< /Type /Pages /Kids [] /Count 0 >>',
     `<< /Title (${escapedTitle}) >>`
   ]
+
   let source = '%PDF-1.4\n'
   const offsets = [0]
 
@@ -364,10 +397,12 @@ function pdfWithTitle(title: string) {
   const xrefOffset = source.length
   source += `xref\n0 ${objects.length + 1}\n`
   source += '0000000000 65535 f \n'
+
   source += offsets
     .slice(1)
     .map((offset) => `${String(offset).padStart(10, '0')} 00000 n \n`)
     .join('')
+
   source += `trailer\n<< /Size ${objects.length + 1} /Root 1 0 R /Info 3 0 R >>\n`
   source += `startxref\n${xrefOffset}\n%%EOF`
   return source

@@ -35,6 +35,7 @@ describe('parsePreviousSyncManifest', () => {
       riskFamilies: {},
       concepts: {}
     })
+
     expect(Object.keys(result.entries.scenarios)).toEqual(['scenario-1'])
     expect(result.entries.sources).toEqual({})
     expect(result.entries.franchises).toEqual({})
@@ -44,9 +45,11 @@ describe('parsePreviousSyncManifest', () => {
     const scenarioEntry = imageEntry(
       '/media/generated/scenarios/3c6edb27f12480cc92d5c8f2f2e3a7fa'
     )
+
     const sourceEntry = imageEntry(
       '/media/generated/sources/3caedb27f12480319026e39581c85c47'
     )
+
     const slugs = historicalSlugs()
 
     expect(
@@ -154,6 +157,7 @@ describe('validateCheckedSyncManifest', () => {
 
   it('retains v2 media ownership validation during descriptor migration', () => {
     const current = transitionalManifest()
+
     const manifest = {
       ...current,
       entries: { ...current.entries, sources: {} }
@@ -198,8 +202,10 @@ function currentManifest() {
 
 function previousManifest() {
   const current = currentManifest()
+
   const { franchises: _franchiseDataSource, ...dataSources } =
     current.notion.dataSources
+
   const { franchises: _franchiseCount, ...counts } = current.counts
   const { franchises: _franchiseSlugs, ...slugs } = current.slugs
 
@@ -229,6 +235,7 @@ function historicalSlugs() {
 
 function transitionalManifest() {
   const current = previousManifest()
+
   return {
     ...current,
     schemaVersion: 2 as const,

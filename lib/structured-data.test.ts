@@ -28,6 +28,7 @@ describe('structured data', () => {
     const scenario = contentCatalog.getScenarioPage(
       contentCatalog.getStaticSlugs('scenario')[0]!
     )!
+
     const social = getScenarioSocialMetadata(scenario)
     const structuredData = getScenarioStructuredData(scenario)
 
@@ -35,9 +36,11 @@ describe('structured data', () => {
     expect(structuredData.headline).toBe(social.title)
     expect(structuredData.description).toBe(social.description)
     expect(structuredData.url).toBe(new URL(social.canonical, siteUrl).href)
+
     expect(structuredData.image.url).toBe(
       new URL(scenario.image.detailSrc, siteUrl).href
     )
+
     const expectedSubjects = [
       ...scenario.franchises.map((franchise) => ({
         '@type': 'CreativeWorkSeries',
@@ -58,6 +61,7 @@ describe('structured data', () => {
         url: new URL(term.href, siteUrl).href
       }))
     ]
+
     expect(structuredData.about).toEqual(expectedSubjects)
   })
 
@@ -68,6 +72,7 @@ describe('structured data', () => {
         kind,
         contentCatalog.getStaticSlugs(kind)[0]!
       )!
+
       const social = getResourceSocialMetadata(resource)
       const structuredData = getResourceStructuredData(resource)
 
@@ -75,6 +80,7 @@ describe('structured data', () => {
       expect(structuredData.name).toBe(social.title)
       expect(structuredData.description).toBe(social.description)
       expect(structuredData.url).toBe(new URL(resource.href, siteUrl).href)
+
       expect(structuredData.hasPart).toEqual(
         resource.scenarios.map((scenario) => ({
           '@type': 'Article',

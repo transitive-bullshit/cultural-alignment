@@ -152,6 +152,7 @@ describe('ContentCatalog', () => {
           : scenario
       )
     })
+
     const related = (kind: ResourceKind, slug: string) =>
       skewed
         .getResourcePage(kind, slug)!
@@ -164,6 +165,7 @@ describe('ContentCatalog', () => {
       'risk-family:family-b:4',
       'risk-family:family-a:2'
     ])
+
     expect(related('risk-family', 'family-a')).toEqual([
       'concept:concept-one:2'
     ])
@@ -192,14 +194,17 @@ describe('ContentCatalog', () => {
           : scenario
       )
     })
+
     const family = summarized.getResourcePage('risk-family', 'family-b')!
 
     // An anime keyword outranks the source type; formats keep display order.
     expect(family.mediaFormats).toEqual(['movie', 'anime'])
+
     expect(family.primaryConcepts.map(({ slug }) => slug)).toEqual([
       'concept-two',
       'concept-one'
     ])
+
     expect(
       summarized.getResourcePage('source', 'shared-source')!.mediaFormats
     ).toEqual(['movie'])
@@ -216,6 +221,7 @@ describe('ContentCatalog', () => {
         .map(({ id }) => id)
         .toSorted()
     ).toEqual(['source-1', 'source-2'])
+
     expect(
       catalog
         .listFranchiseResources()
@@ -227,9 +233,11 @@ describe('ContentCatalog', () => {
       const source = sourcesById.get(summary.id)!
 
       expect(summary.sourceType).toBe(source.sourceType)
+
       expect(summary.poster?.gallerySrc ?? null).toBe(
         source.poster?.gallerySrc ?? null
       )
+
       // Index cards ship only the gallery image, not the detail-size source.
       expect(summary.poster ?? {}).not.toHaveProperty('detailSrc')
     }
@@ -241,6 +249,7 @@ describe('ContentCatalog', () => {
 
       expect(summary.image.gallerySrc).toBe(franchise.image.gallerySrc)
       expect(summary.image).not.toHaveProperty('detailSrc')
+
       expect(summary.sourceCount).toBe(
         minimalSnapshot.sources.filter(({ franchiseIds }) =>
           franchiseIds.includes(summary.id)
@@ -249,9 +258,11 @@ describe('ContentCatalog', () => {
 
       const page = catalog.getResourcePage('franchise', summary.slug)!
       if (page.kind !== 'franchise') throw new Error('Expected franchise page')
+
       expect(page.sources.map(({ id }) => id).toSorted()).toEqual(
         summary.id === 'franchise-a' ? ['source-1'] : ['source-1', 'source-2']
       )
+
       expect(
         page.sources.every(
           ({ id, poster }) =>
@@ -275,6 +286,7 @@ describe('ContentCatalog', () => {
     expect(slugs(catalog.listScenarioCards())).toEqual(
       slugs(minimalSnapshot.scenarios)
     )
+
     expect(
       slugs(
         catalog.listScenarioCards({
@@ -282,6 +294,7 @@ describe('ContentCatalog', () => {
         })
       )
     ).toEqual(['new', 'old-b', 'null-b'])
+
     expect(
       catalog.listScenarioCards({ riskFamilySlug: 'missing-family' })
     ).toEqual([])
@@ -297,6 +310,7 @@ describe('ContentCatalog', () => {
     expect(
       slugs(featuredCatalog.listScenarioCards({ featuredOnly: true }))
     ).toEqual(['new'])
+
     expect(
       featuredCatalog
         .getResourcePage('risk-family', 'family-b')!
@@ -306,6 +320,7 @@ describe('ContentCatalog', () => {
       { featured: false, slug: 'old-b' },
       { featured: false, slug: 'null-b' }
     ])
+
     expect(
       slugs(
         featuredCatalog.listScenarioCards({
@@ -323,11 +338,13 @@ describe('ContentCatalog', () => {
     const page = fallbackCatalog.getScenarioPage('old-b')!
 
     expect(page.franchises).toEqual([])
+
     expect(page.continuation).toMatchObject({
       kind: 'source',
       id: page.source.id,
       href: page.source.href
     })
+
     expect(
       page.moreFromCollection.every(
         ({ source }) => source.id === page.source.id
@@ -340,37 +357,46 @@ describe('ContentCatalog', () => {
 
     expect(page.source.slug).toBe('shared-source')
     expect(page.source.sourceType).toBe('movie')
+
     expect(page.source.scenarioCount).toBe(
       minimalSnapshot.scenarios.filter(
         ({ sourceId }) => sourceId === page.source.id
       ).length
     )
+
     expect(page.franchises.map(({ slug }) => slug)).toEqual([
       'franchise-b',
       'franchise-a'
     ])
+
     expect(page.continuation).toMatchObject({
       kind: 'franchise',
       slug: 'franchise-b'
     })
+
     expect(new Set(page.riskFamilies.map(({ slug }) => slug))).toEqual(
       new Set(['family-a', 'family-b'])
     )
+
     expect(page.concepts.map(({ slug }) => slug)).toEqual(['concept-one'])
+
     const descriptionsByTaxonomyId = new Map(
       [...minimalSnapshot.riskFamilies, ...minimalSnapshot.concepts].map(
         ({ description, id }) => [id, description]
       )
     )
+
     expect(
       [...page.riskFamilies, ...page.concepts].every(
         ({ description, id }) =>
           description === descriptionsByTaxonomyId.get(id)
       )
     ).toBe(true)
+
     expect(
       page.moreFromCollection.every((related) => related.id !== page.id)
     ).toBe(true)
+
     expect(
       page.moreFromCollection.some(({ source }) => source.id === 'source-2')
     ).toBe(true)
@@ -378,21 +404,26 @@ describe('ContentCatalog', () => {
     const sourcePage = catalog.getResourcePage('source', 'shared-source')!
     expect(sourcePage.kind).toBe('source')
     if (sourcePage.kind !== 'source') throw new Error('Expected source page')
+
     expect(sourcePage.poster?.detailSrc).toBe(
       'https://assets.example.com/media/generated/sources/source1/detail.webp'
     )
+
     expect(sourcePage.sourceType).toBe('movie')
+
     expect(sourcePage.externalLinks.map(({ label }) => label)).toEqual([
       'IMDb',
       'Rotten Tomatoes',
       'YouTube trailer'
     ])
+
     expect(sourcePage.scenarios.map(({ id }) => id)).toEqual([
       'old-a',
       'null-a',
       'old-b',
       'null-b'
     ])
+
     expect(
       new Set(
         sourcePage.relatedResources.map(({ kind, slug }) => `${kind}:${slug}`)
@@ -411,7 +442,9 @@ describe('ContentCatalog', () => {
     expect(
       catalog.getResourcePage('risk-family', 'family-a')?.detailTitle
     ).toBe('The First Risk Family')
+
     const riskPage = catalog.getResourcePage('risk-family', 'family-a')!
+
     expect(riskPage.externalLinks).toEqual([
       {
         label: 'Wikipedia',
@@ -427,23 +460,29 @@ describe('ContentCatalog', () => {
         href: 'https://example.com/example-research'
       }
     ])
+
     expect(
       riskPage.externalLinks.some(({ label }) =>
         /^canonical source/i.test(label)
       )
     ).toBe(false)
+
     expect(catalog.getResourcePage('concept', 'concept-one')?.detailTitle).toBe(
       'Concept One With a Descriptive Name'
     )
+
     const franchisePage = catalog.getResourcePage('franchise', 'franchise-b')!
     expect(franchisePage.kind).toBe('franchise')
+
     if (franchisePage.kind !== 'franchise') {
       throw new Error('Expected franchise page')
     }
+
     expect(franchisePage.sources.map(({ slug }) => slug)).toEqual([
       'related-source',
       'shared-source'
     ])
+
     expect(franchisePage.scenarios.map(({ id }) => id)).toEqual([
       'old-a',
       'null-a',
@@ -451,6 +490,7 @@ describe('ContentCatalog', () => {
       'old-b',
       'null-b'
     ])
+
     expect(franchisePage.externalLinks.map(({ label }) => label)).toEqual([
       'IMDb'
     ])
@@ -458,6 +498,7 @@ describe('ContentCatalog', () => {
     const sourceDatesById = new Map(
       minimalSnapshot.sources.map(({ id, releaseDate }) => [id, releaseDate])
     )
+
     const sourceResources = catalog.listSourceResources()
 
     expect(
@@ -465,6 +506,7 @@ describe('ContentCatalog', () => {
         ({ id, releaseDate }) => releaseDate === sourceDatesById.get(id)
       )
     ).toBe(true)
+
     expect(
       sourceResources.every(
         (resource, index) =>
@@ -487,11 +529,13 @@ describe('ContentCatalog', () => {
         expect(catalog.getResourcePage(kind, slug)).not.toBeNull()
       }
     }
+
     expect(catalog.getScenarioPage('missing')).toBeNull()
   })
 
   it('projects every searchable resource kind to a resolvable href', () => {
     const documents = catalog.getSearchDocuments()
+
     const scenarioDocument = documents.find(
       ({ href }) => href === '/scenarios/old-a'
     )
@@ -499,6 +543,7 @@ describe('ContentCatalog', () => {
     expect(new Set(documents.map(({ kind }) => kind))).toEqual(
       new Set(['scenario', 'source', 'franchise', 'risk-family', 'concept'])
     )
+
     expect(scenarioDocument?.keywords).toEqual(
       expect.arrayContaining([
         'Scene copy.',
@@ -506,26 +551,33 @@ describe('ContentCatalog', () => {
         'Where the analogy breaks.'
       ])
     )
+
     expect(scenarioDocument?.supplementalKeywords).toEqual(
       expect.arrayContaining(['scenario-only', 'source-only'])
     )
+
     expect(scenarioDocument?.supplementalKeywords).not.toContain('concept-only')
+
     expect(
       (scenarioDocument?.supplementalKeywords ?? []).filter(
         (keyword) => keyword === 'shared keyword'
       )
     ).toHaveLength(1)
+
     expect(
       documents.find(({ href }) => href === '/sources/shared-source')
         ?.supplementalKeywords
     ).toContain('source-only')
+
     expect(
       documents.find(({ href }) => href === '/concepts/concept-one')?.keywords
     ).toContain('Concept One With a Descriptive Name')
+
     expect(
       documents.find(({ href }) => href === '/concepts/concept-one')
         ?.supplementalKeywords
     ).toContain('concept-only')
+
     expect(documents.every(({ href }) => resolveDocument(catalog, href))).toBe(
       true
     )
@@ -540,15 +592,19 @@ function resolveDocument(
 
   if (!segment || !slug || trailing) return false
   if (segment === 'scenarios') return catalog.getScenarioPage(slug) !== null
+
   if (segment === 'sources') {
     return catalog.getResourcePage('source', slug) !== null
   }
+
   if (segment === 'franchises') {
     return catalog.getResourcePage('franchise', slug) !== null
   }
+
   if (segment === 'risk-families') {
     return catalog.getResourcePage('risk-family', slug) !== null
   }
+
   if (segment === 'concepts') {
     return catalog.getResourcePage('concept', slug) !== null
   }

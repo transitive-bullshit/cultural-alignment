@@ -18,6 +18,7 @@ describe('production scenario route', () => {
   it('publishes production route metadata', async () => {
     const slug = contentCatalog.getStaticSlugs('scenario')[0]!
     const scenario = contentCatalog.getScenarioPage(slug)!
+
     const metadata = await generateMetadata(
       {
         params: Promise.resolve({ slug }),

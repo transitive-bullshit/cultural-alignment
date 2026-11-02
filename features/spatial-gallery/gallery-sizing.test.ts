@@ -29,7 +29,9 @@ describe('gallery item-size preference', () => {
     expect(normalizeGalleryItemSize(GALLERY_ITEM_SIZE_MIN - 20)).toBe(
       GALLERY_ITEM_SIZE_MIN
     )
+
     expect(normalizeGalleryItemSize(83)).toBe(85)
+
     expect(normalizeGalleryItemSize(GALLERY_ITEM_SIZE_MAX + 20)).toBe(
       GALLERY_ITEM_SIZE_MAX
     )
@@ -43,18 +45,21 @@ describe('gallery item-size preference', () => {
 
 describe('gallery density projection', () => {
   const viewport = { height: 782, width: 1_440 }
+
   const compact = getGalleryViewportMetrics(
     false,
     viewport.width,
     viewport.height,
     GALLERY_ITEM_SIZE_MIN
   )
+
   const standard = getGalleryViewportMetrics(
     false,
     viewport.width,
     viewport.height,
     GALLERY_ITEM_SIZE_DEFAULT
   )
+
   const expanded = getGalleryViewportMetrics(
     false,
     viewport.width,
@@ -77,35 +82,43 @@ describe('gallery density projection', () => {
         GALLERY_ITEM_SIZE_MIN + index * 5
       )
     )
+
     const laneCounts = metrics.map(({ lanes }) => lanes)
     expect([...new Set(laneCounts)]).toEqual([7, 6, 5, 4, 3, 2])
+
     // Derive the outer frame/bracket extent from the rendered primitives,
     // rather than accepting the producer's reported composition height.
     const measured = metrics.map((metric) => {
       const selectedWidth = metric.frameWidthPixels * GALLERY_SELECTED_SCALE
+
       const decoratedHeight =
         selectedWidth / GALLERY_FRAME_ASPECT +
         selectedWidth *
           (2 * GALLERY_BRACKET_INSET_RATIO + GALLERY_BRACKET_THICKNESS_RATIO)
+
       return {
         ...metric,
         expectedHeight:
           decoratedHeight + (metric.lanes - 1) * metric.rowPitchPixels
       }
     })
+
     for (const metric of measured) {
       expect(metric.compositionHeightPixels).toBeCloseTo(
         metric.expectedHeight,
         10
       )
+
       expect(metric.expectedHeight).toBeLessThanOrEqual(viewport.height)
     }
+
     for (const metric of measured.filter(({ lanes }) => lanes < 7)) {
       // The chosen composition fits, and adding one complete row would not.
       expect(metric.expectedHeight + metric.rowPitchPixels).toBeGreaterThan(
         viewport.height
       )
     }
+
     laneCounts.slice(1).forEach((lanes, index) => {
       expect(lanes).toBeLessThanOrEqual(laneCounts[index]!)
       expect(laneCounts[index]! - lanes).toBeLessThanOrEqual(1)
@@ -116,12 +129,15 @@ describe('gallery density projection', () => {
     expect(compact.rowPitchPixels / compact.frameWidthPixels).toBeCloseTo(
       standard.rowPitchPixels / standard.frameWidthPixels
     )
+
     expect(expanded.rowPitchPixels / expanded.frameWidthPixels).toBeCloseTo(
       standard.rowPitchPixels / standard.frameWidthPixels
     )
+
     expect(compact.columnPitchPixels / compact.frameWidthPixels).toBeCloseTo(
       standard.columnPitchPixels / standard.frameWidthPixels
     )
+
     expect(expanded.columnPitchPixels / expanded.frameWidthPixels).toBeCloseTo(
       standard.columnPitchPixels / standard.frameWidthPixels
     )
@@ -134,6 +150,7 @@ describe('gallery density projection', () => {
       740,
       GALLERY_ITEM_SIZE_MIN
     )
+
     const standardPhone = getGalleryViewportMetrics(
       true,
       390,
@@ -149,20 +166,24 @@ describe('gallery density projection', () => {
     const metrics = Array.from({ length: 27 }, (_, index) =>
       getGalleryViewportMetrics(true, 375, 605, 70 + index * 5)
     )
+
     const laneCounts = metrics.map(({ lanes }) => lanes)
 
     expect([...new Set(laneCounts)]).toEqual([5, 4, 3, 2, 1])
+
     expect(
       laneCounts.every(
         (lanes, index) =>
           index === 0 || Math.abs(lanes - laneCounts[index - 1]!) <= 1
       )
     ).toBe(true)
+
     expect(
       metrics.every(({ compositionHeightPixels }) =>
         Number.isFinite(compositionHeightPixels)
       )
     ).toBe(true)
+
     expect(
       metrics.every(
         ({ compositionHeightPixels }) => compositionHeightPixels <= 605

@@ -80,6 +80,7 @@ function loadYouTubeIframeApi() {
     const resolveIfReady = () => {
       if (window.YT?.Player) resolve(window.YT)
     }
+
     const previousReady = window.onYouTubeIframeAPIReady
 
     window.onYouTubeIframeAPIReady = () => {
@@ -93,9 +94,11 @@ function loadYouTubeIframeApi() {
     const existingScript = document.getElementById(
       YOUTUBE_IFRAME_API_ID
     ) as HTMLScriptElement | null
+
     const script = existingScript ?? document.createElement('script')
 
     script.addEventListener('load', resolveIfReady, { once: true })
+
     script.addEventListener(
       'error',
       () => reject(new Error('Unable to load the YouTube IFrame API')),
@@ -148,9 +151,11 @@ function PlaybackGlyph({ isPlaying }: { readonly isPlaying: boolean }) {
 
 export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
   const { id, image, sourceTitle, title, video, eager } = media
+
   const [transitionPreview, setTransitionPreview] = useState(() =>
     typeof window === 'undefined' ? null : readScenarioTransitionPreview(id)
   )
+
   const [hasActivatedVideo, setHasActivatedVideo] = useState(false)
   const [isShowingStill, setIsShowingStill] = useState(true)
   const [isPlaying, setIsPlaying] = useState(false)
@@ -181,11 +186,14 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
   const customCursorEnabledRef = useRef(false)
   const pointerInsideFrameRef = useRef(false)
   const pointerOverForegroundControlRef = useRef(false)
+
   const objectPosition = image.focalPoint
     ? `${image.focalPoint.x * 100}% ${image.focalPoint.y * 100}%`
     : '50% 50%'
+
   const hasVideo = video !== null
   const actionLabel = isPlaying ? 'Pause clip' : 'Play clip'
+
   const explicitActionLabel = isPlaying
     ? 'Pause clip'
     : isShowingStill
@@ -263,6 +271,7 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
 
     if (Number.isFinite(nextDuration) && nextDuration > 0) {
       durationRef.current = nextDuration
+
       setDuration((previousDuration) =>
         Math.abs(previousDuration - nextDuration) < 0.05
           ? previousDuration
@@ -271,6 +280,7 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
     }
 
     currentTimeRef.current = nextTime
+
     setCurrentTime((previousTime) =>
       Math.abs(previousTime - nextTime) < 0.05 ? previousTime : nextTime
     )
@@ -367,6 +377,7 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
     if (pointerRef.current) {
       pointerRef.current.style.opacity = cursorVisible ? '1' : '0'
     }
+
     if (floatingLabelRef.current) {
       floatingLabelRef.current.style.opacity =
         cursorVisible && !pointerOverForegroundControlRef.current ? '1' : '0'
@@ -393,6 +404,7 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
     if (pointerRef.current) {
       pointerRef.current.style.transform = `translate3d(${position.cursorX}px, ${position.cursorY}px, 0) translate(-50%, -50%)`
     }
+
     if (floatingLabelRef.current) {
       floatingLabelRef.current.style.transform = `translate3d(${position.labelX}px, ${position.labelY}px, 0)`
     }
@@ -403,6 +415,7 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
 
     const bounds =
       frameBoundsRef.current ?? event.currentTarget.getBoundingClientRect()
+
     const cursorX = event.clientX - bounds.left
     const cursorY = event.clientY - bounds.top
 
@@ -442,6 +455,7 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
   const enterMediaFrame = (event: ReactPointerEvent<HTMLDivElement>) => {
     pointerHoverPinnedRef.current =
       fineHoverRef.current && event.pointerType === 'mouse'
+
     showChrome()
 
     if (!pointerHoverPinnedRef.current) scheduleChromeHide()
@@ -500,10 +514,12 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
 
     const syncCustomCursor = () => {
       fineHoverRef.current = finePointer.matches
+
       customCursorEnabledRef.current =
         finePointer.matches && !reducedMotion.matches
 
       if (!customCursorEnabledRef.current) hideCursor()
+
       if (!finePointer.matches) {
         pointerHoverPinnedRef.current = false
         scheduleChromeHide()
@@ -517,6 +533,7 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
     return () => {
       finePointer.removeEventListener('change', syncCustomCursor)
       reducedMotion.removeEventListener('change', syncCustomCursor)
+
       if (cursorFrameRef.current !== null) {
         cancelAnimationFrame(cursorFrameRef.current)
       }
@@ -599,10 +616,12 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
               if (disposed || showingStillRef.current) return
 
               if (data === 1) setPlaybackState(true)
+
               if (data === 0 || data === 2 || data === 5) {
                 playbackIntentRef.current = false
                 setPlaybackState(false)
               }
+
               syncProgress(target)
             }
           }
@@ -615,29 +634,37 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
 
     return () => {
       disposed = true
+
       if (progressTimerRef.current) {
         clearInterval(progressTimerRef.current)
         progressTimerRef.current = null
       }
+
       playerRef.current = null
       player?.destroy()
     }
   }, [hasActivatedVideo, setPlaybackState, syncProgress, video])
 
   const start = clipStart > 0 ? `&start=${clipStart}` : ''
+
   const origin =
     typeof window === 'undefined'
       ? ''
       : `&origin=${encodeURIComponent(window.location.origin)}`
+
   const progressMax =
     duration > 0 ? duration : Math.max(currentTime, clipStart + 1)
+
   const progressPercent =
     progressMax > 0 ? (currentTime / progressMax) * 100 : 0
+
   const progressStyle = {
     '--media-progress': `${progressPercent}%`
   } as CSSProperties
+
   const formattedCurrentTime = formatMediaTime(currentTime)
   const formattedDuration = duration > 0 ? formatMediaTime(duration) : '--:--'
+
   const playControl = (
     <button
       className={styles.playButton}

@@ -34,25 +34,31 @@ for (const path of paths) {
     const response = await page.goto(`${path}?utm_source=seo-check`, {
       waitUntil: 'domcontentloaded'
     })
+
     expect(response?.status()).toBe(200)
 
     const canonical = page.locator('head link[rel="canonical"]')
     const openGraphUrl = page.locator('head meta[property="og:url"]')
     const expectedUrl = new URL(path, baseURL).href
     await expect(canonical).toHaveCount(1)
+
     expect(new URL((await canonical.getAttribute('href'))!).href).toBe(
       expectedUrl
     )
+
     await expect(openGraphUrl).toHaveCount(1)
+
     expect(new URL((await openGraphUrl.getAttribute('content'))!).href).toBe(
       expectedUrl
     )
 
     const title = await page.title()
     expect(title).toContain('Cultural Alignment')
+
     await expect(
       page.locator('head meta[property="og:title"]')
     ).toHaveAttribute('content', title)
+
     await expect(
       page.locator('head meta[name="twitter:title"]')
     ).toHaveAttribute('content', title)
@@ -60,10 +66,13 @@ for (const path of paths) {
     const description = await page
       .locator('head meta[name="description"]')
       .getAttribute('content')
+
     expect(description).toBeTruthy()
+
     await expect(
       page.locator('head meta[property="og:description"]')
     ).toHaveAttribute('content', description!)
+
     await expect(
       page.locator('head meta[name="twitter:description"]')
     ).toHaveAttribute('content', description!)
@@ -71,19 +80,24 @@ for (const path of paths) {
     const image = await page
       .locator('head meta[property="og:image"]')
       .getAttribute('content')
+
     expect(new URL(image!).origin).toBe(new URL(baseURL!).origin)
+
     expect(new URL(image!).pathname).toBe(
       path.split('/').length === 3
         ? `${path}/opengraph-image`
         : '/opengraph-image.jpg'
     )
+
     await expect(
       page.locator('head meta[name="twitter:image"]')
     ).toHaveAttribute('content', image!)
+
     await expect(page.locator('head meta[name="robots"]')).toHaveAttribute(
       'content',
       'max-image-preview:large'
     )
+
     expect(response?.headers()['x-robots-tag'] ?? '').not.toMatch(/noindex/i)
   })
 }

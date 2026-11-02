@@ -60,10 +60,12 @@ export default defineConfig({
 function commonDirectory(files: string[]) {
   const [first, ...others] = files.map((file) => dirname(file).split(sep))
   const shared: string[] = []
+
   for (const [index, segment] of first!.entries()) {
     if (!others.every((parts) => parts[index] === segment)) break
     shared.push(segment)
   }
+
   return shared.join(sep) || sep
 }
 

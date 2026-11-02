@@ -5,7 +5,9 @@ import scenarios from './content/snapshot/scenarios.json'
 import sources from './content/snapshot/sources.json'
 
 const generatedMediaPathSegment = '/media/generated/'
+
 type ImageSource = Readonly<{ gallerySrc: string; detailSrc: string }>
+
 type SnapshotScenario = (typeof scenarios)[number] & {
   readonly memes?: readonly ImageSource[]
 }
@@ -32,10 +34,12 @@ const remotePatterns = [
 
       const url = new URL(source)
       const generatedPathIndex = url.pathname.indexOf(generatedMediaPathSegment)
+
       const pathname =
         generatedPathIndex >= 0
           ? `${url.pathname.slice(0, generatedPathIndex)}${generatedMediaPathSegment}**`
           : url.pathname
+
       const pattern = {
         protocol: 'https' as const,
         hostname: url.hostname,

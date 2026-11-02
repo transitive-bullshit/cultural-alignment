@@ -104,6 +104,7 @@ describe('bindManifestToScenarios', () => {
       path: '/tmp/ava--01--bbbbbbbbbbbb.jpg',
       filename: 'ava--01--bbbbbbbbbbbb.jpg'
     })
+
     const manifest: FinalizedMemeExportManifest = {
       schemaVersion: 1,
       files: [exportFile(), second]
@@ -147,6 +148,7 @@ describe('append planning', () => {
 
   it('is idempotent by filename', () => {
     const exported = exportFile()
+
     const alreadyUploaded: ExistingNotionFile = {
       type: 'file',
       name: exported.filename,
@@ -248,6 +250,7 @@ describe('exact-filename replacement planning', () => {
     expect(() => planScenarioReplacement(scenario(), [existing])).toThrow(
       /does not contain/
     )
+
     expect(() =>
       planScenarioReplacement(scenario(), [contaminated, contaminated])
     ).toThrow(/contains 2 attachments/)
@@ -308,10 +311,13 @@ describe('exact-filename replacement planning', () => {
 
   it('verifies the downloaded replacement bytes, not only its filename', async () => {
     const correctedBytes = new TextEncoder().encode('corrected image bytes')
+
     const correctedSha256 = createHash('sha256')
       .update(correctedBytes)
       .digest('hex')
+
     const correctedFile = exportFile({ sha256: correctedSha256 })
+
     const after: ExistingNotionFile[] = [
       {
         type: 'file',
@@ -343,17 +349,21 @@ describe('replacement upload workflow', () => {
     const temporaryDirectory = await mkdtemp(
       join(tmpdir(), 'notion-meme-replacement-')
     )
+
     try {
       const staleBytes = new TextEncoder().encode('image with dev-server icon')
       const correctedBytes = new TextEncoder().encode('corrected image')
+
       const correctedSha256 = createHash('sha256')
         .update(correctedBytes)
         .digest('hex')
+
       const filename = 'keep-summer-safe--01--aaaaaaaaaaaa.jpg'
       const imagePath = join(temporaryDirectory, filename)
       const manifestPath = join(temporaryDirectory, 'manifest.json')
       const scenariosPath = join(temporaryDirectory, 'scenarios.json')
       const checkpointPath = join(temporaryDirectory, 'checkpoint.json')
+
       await Promise.all([
         writeFile(imagePath, correctedBytes),
         writeFile(
@@ -383,11 +393,14 @@ describe('replacement upload workflow', () => {
           file: { url: 'memory://stale' }
         }
       ]
+
       const bytesByUrl = new Map<string, Uint8Array>([
         ['memory://stale', staleBytes]
       ])
+
       const uploadedBytes = new Map<string, Uint8Array>()
       const updates: (ExistingNotionFile | NewNotionFile)[][] = []
+
       const gateway: NotionMemeGateway = {
         retrievePage: async () => ({
           properties: { Memes: { id: 'memes-property', type: 'files' } }
@@ -414,6 +427,7 @@ describe('replacement upload workflow', () => {
         },
         updateMemes: async (_pageId, files) => {
           updates.push(files)
+
           currentFiles = files.map((file) => {
             if (file.type !== 'file_upload') return file
             const url = `memory://${file.file_upload.id}`
@@ -434,6 +448,7 @@ describe('replacement upload workflow', () => {
         token: 'unused-by-fake-gateway',
         log: () => {}
       }
+
       await expect(
         runNotionMemeUpload(options, gateway)
       ).resolves.toMatchObject({
@@ -441,7 +456,9 @@ describe('replacement upload workflow', () => {
         uploadedCount: 1,
         replacedCount: 1
       })
+
       expect(updates).toHaveLength(1)
+
       expect(updates[0]).toEqual([
         existing,
         {
@@ -459,6 +476,7 @@ describe('replacement upload workflow', () => {
         uploadedCount: 0,
         replacedCount: 0
       })
+
       expect(updates).toHaveLength(1)
     } finally {
       await rm(temporaryDirectory, { recursive: true, force: true })

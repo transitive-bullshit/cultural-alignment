@@ -53,6 +53,7 @@ const SpatialGalleryCanvas = dynamic(
 )
 
 type RenderMode = 'checking' | 'webgl' | 'fallback'
+
 type TransitionProxy = Readonly<{
   item: SpatialGalleryItem
   rect: SpatialFrameRect
@@ -100,8 +101,10 @@ export function SpatialGallery<
     0,
     items.findIndex(({ id }) => id === initialItemId)
   )
+
   const { consumeInertiaBurst, inertiaBurst: contextInertiaBurst } =
     useGalleryIntroMotion()
+
   const router = useRouter()
   const surfaceRef = useRef<HTMLDivElement>(null)
   const cursorRef = useRef<HTMLSpanElement>(null)
@@ -114,23 +117,29 @@ export function SpatialGallery<
   const [historyReady, setHistoryReady] = useState(false)
   const [sceneInitialIndex, setSceneInitialIndex] = useState(initialIndex)
   const [initialOffsetX, setInitialOffsetX] = useState<number | null>(null)
+
   const [initialTopology, setInitialTopology] =
     useState<SpatialGalleryTopology | null>(null)
+
   const [dragging, setDragging] = useState(false)
   const [renderMode, setRenderMode] = useState<RenderMode>('checking')
   const [reducedMotion, setReducedMotion] = useState(false)
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
   const [introInertiaBurst, setIntroInertiaBurst] = useState(false)
   const [transitionReady, setTransitionReady] = useState(false)
+
   const [transitionProxy, setTransitionProxy] =
     useState<TransitionProxy | null>(null)
+
   const {
     hydrated: itemSizeHydrated,
     itemSize,
     itemSizeTransition
   } = useGalleryItemSizePreference()
+
   const selectedItem =
     selectedIndex === null ? null : (items[selectedIndex] ?? null)
+
   const requestedInertiaBurst =
     inertiaBurst || contextInertiaBurst || introInertiaBurst
 
@@ -143,6 +152,7 @@ export function SpatialGallery<
 
   useEffect(() => {
     const itemIds = new Set(items.map(({ id }) => id))
+
     const restoredState = readGalleryHistoryState(
       window.history.state,
       historyKey,
@@ -153,10 +163,12 @@ export function SpatialGallery<
       const restoredIndex = items.findIndex(
         ({ id }) => id === restoredState.itemId
       )
+
       if (restoredIndex >= 0) {
         setSelectedIndex(restoredIndex)
         setSceneInitialIndex(restoredIndex)
       }
+
       setInitialOffsetX(restoredState.offsetX)
       setInitialTopology(restoredState.topology)
     }
@@ -197,6 +209,7 @@ export function SpatialGallery<
           version: 2
         }
       )
+
       window.history.replaceState(nextHistoryState, '', window.location.href)
     },
     [historyKey, items, selectedIndex]
@@ -205,12 +218,14 @@ export function SpatialGallery<
   useEffect(() => {
     const persistBeforeLinkNavigation = (event: globalThis.MouseEvent) => {
       const target = event.target
+
       if (target instanceof Element && target.closest('a[href]')) {
         persistGalleryState()
       }
     }
 
     document.addEventListener('click', persistBeforeLinkNavigation, true)
+
     return () =>
       document.removeEventListener('click', persistBeforeLinkNavigation, true)
   }, [persistGalleryState])
@@ -218,6 +233,7 @@ export function SpatialGallery<
   useEffect(() => {
     const surface = surfaceRef.current
     if (!surface) return
+
     const finePointerQuery = window.matchMedia(
       '(hover: hover) and (pointer: fine)'
     )
@@ -235,6 +251,7 @@ export function SpatialGallery<
 
       event.preventDefault()
       const multiplier = event.deltaMode === WheelEvent.DOM_DELTA_LINE ? 20 : 1
+
       controllerRef.current?.wheelBy(
         event.deltaX * multiplier,
         event.deltaY * multiplier
@@ -251,14 +268,17 @@ export function SpatialGallery<
     if (!cursor || !galleryPage) return
 
     let bounds = galleryPage.getBoundingClientRect()
+
     const updateBounds = () => {
       bounds = galleryPage.getBoundingClientRect()
     }
+
     const resizeObserver = new ResizeObserver(updateBounds)
     resizeObserver.observe(galleryPage)
 
     const moveCursor = (event: globalThis.PointerEvent) => {
       const target = event.target
+
       const overDialog =
         target instanceof Element &&
         Boolean(
@@ -266,6 +286,7 @@ export function SpatialGallery<
             '[data-slot="dialog-overlay"], [data-slot="dialog-content"]'
           )
         )
+
       const overSiteNavigation =
         target instanceof Element &&
         Boolean(
@@ -273,6 +294,7 @@ export function SpatialGallery<
             '[data-site-header], [data-site-navigation-popup], [data-site-navigation-panel="mobile"]'
           )
         )
+
       const insideGallery =
         !overDialog &&
         !overSiteNavigation &&
@@ -290,6 +312,7 @@ export function SpatialGallery<
       cursor.style.setProperty('--cursor-y', `${event.clientY}px`)
       cursor.style.opacity = '1'
     }
+
     const hideCursor = (event: globalThis.PointerEvent) => {
       if (event.relatedTarget === null) cursor.style.opacity = '0'
     }
@@ -314,15 +337,18 @@ export function SpatialGallery<
       persistGalleryState(index)
 
       const rect = controllerRef.current?.getFrameRect(index)
+
       if (rect) {
         stageScenarioTransitionPreview({
           scenarioId: item.id,
           src: item.image.src
         })
+
         flushSync(() => setTransitionProxy({ item, rect }))
       }
 
       navigatingRef.current = true
+
       router.push(item.href, {
         scroll: false,
         transitionTypes: ['scenario-forward']
@@ -343,11 +369,13 @@ export function SpatialGallery<
     controllerRef.current?.cancelIntro()
     event.currentTarget.setPointerCapture(event.pointerId)
     pointerStartRef.current = { x: event.clientX, y: event.clientY }
+
     pointerPreviousRef.current = {
       x: event.clientX,
       y: event.clientY,
       time: event.timeStamp
     }
+
     pressedIndexRef.current = null
     draggingRef.current = false
     controllerRef.current?.pressAt(event.clientX, event.clientY)
@@ -358,6 +386,7 @@ export function SpatialGallery<
       if (event.pointerType === 'mouse') {
         controllerRef.current?.hoverAt(event.clientX, event.clientY)
       }
+
       return
     }
 
@@ -365,6 +394,7 @@ export function SpatialGallery<
     const deltaX = event.clientX - previous.x
     const deltaY = event.clientY - previous.y
     const deltaMilliseconds = Math.max(1, event.timeStamp - previous.time)
+
     pointerPreviousRef.current = {
       x: event.clientX,
       y: event.clientY,
@@ -395,10 +425,12 @@ export function SpatialGallery<
     }
 
     controllerRef.current?.endDrag()
+
     const gesture = classifyGesture(pointerStartRef.current, {
       x: event.clientX,
       y: event.clientY
     })
+
     const pressedIndex = pressedIndexRef.current
 
     if (gesture === 'click' && pressedIndex !== null) {
@@ -418,6 +450,7 @@ export function SpatialGallery<
     if (event.currentTarget.hasPointerCapture(event.pointerId)) {
       event.currentTarget.releasePointerCapture(event.pointerId)
     }
+
     controllerRef.current?.endDrag()
     pressedIndexRef.current = null
     draggingRef.current = false
@@ -743,6 +776,7 @@ function GalleryFallback({
 }) {
   const fieldRef = useRef<HTMLOListElement>(null)
   const previousItemSizeRef = useRef(itemSize)
+
   const [layoutState, setLayoutState] =
     useState<GalleryFallbackLayoutState | null>(null)
 
@@ -765,7 +799,9 @@ function GalleryFallback({
         height,
         itemSize
       )
+
       const frameHeightPixels = metrics.frameWidthPixels / GALLERY_FRAME_ASPECT
+
       const nextLayout = {
         columnGapPixels: Math.max(
           0,
@@ -788,11 +824,13 @@ function GalleryFallback({
         return { layout: nextLayout, motion }
       })
     }
+
     const resizeObserver = new ResizeObserver(([entry]) => {
       if (entry) updateLayout(entry.contentRect, 'instant')
     })
 
     resizeObserver.observe(surface)
+
     updateLayout(
       surface.getBoundingClientRect(),
       itemSizeChanged && animateItemSize ? 'smooth' : 'instant'
@@ -876,6 +914,7 @@ type GalleryFallbackLayout = Readonly<{
 }>
 
 type GalleryFallbackLayoutMotion = 'instant' | 'smooth'
+
 type GalleryFallbackLayoutState = Readonly<{
   layout: GalleryFallbackLayout
   motion: GalleryFallbackLayoutMotion

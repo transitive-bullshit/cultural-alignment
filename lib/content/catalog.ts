@@ -206,26 +206,33 @@ export type ContentCatalog = {
 
 export function createContentCatalog(input: unknown): ContentCatalog {
   const snapshot = validateContentSnapshot(input)
+
   const sourceById = new Map(
     snapshot.sources.map((source) => [source.id, source])
   )
+
   const franchiseById = new Map(
     snapshot.franchises.map((franchise) => [franchise.id, franchise])
   )
+
   const riskFamilyById = new Map(
     snapshot.riskFamilies.map((family) => [family.id, family])
   )
+
   const conceptById = new Map(
     snapshot.concepts.map((concept) => [concept.id, concept])
   )
+
   const scenariosBySourceId = groupBy(
     snapshot.scenarios,
     (scenario) => scenario.sourceId
   )
+
   const sourcesByFranchiseId = groupRelations(
     snapshot.sources,
     (source) => source.franchiseIds
   )
+
   const scenariosByFranchiseId = new Map(
     snapshot.franchises.map((franchise) => {
       const sourceIds = new Set(
@@ -242,10 +249,12 @@ export function createContentCatalog(input: unknown): ContentCatalog {
       ] as const
     })
   )
+
   const scenariosByRiskFamilyId = groupRelations(
     snapshot.scenarios,
     (scenario) => scenario.riskFamilyIds
   )
+
   const scenariosByConceptId = groupRelations(
     snapshot.scenarios,
     (scenario) => scenario.conceptIds
@@ -276,6 +285,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
       image: scenario.image
     } satisfies GalleryScenario
   })
+
   const scenarioCardById = new Map(
     scenarioCards.map((scenario) => [scenario.id, scenario])
   )
@@ -283,6 +293,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
   const scenarioPageBySlug = new Map(
     snapshot.scenarios.map((scenario) => {
       const source = getRequired(sourceById, scenario.sourceId)
+
       const franchises = source.franchiseIds.map((id) => {
         const franchise = getRequired(franchiseById, id)
 
@@ -293,17 +304,21 @@ export function createContentCatalog(input: unknown): ContentCatalog {
           href: `/franchises/${franchise.slug}`
         }
       })
+
       const primaryFranchise = franchises[0]
+
       const continuationSources = primaryFranchise
         ? (sourcesByFranchiseId.get(primaryFranchise.id) ?? []).map(
             (relatedSource) => relatedSource.id
           )
         : [source.id]
+
       const discovery = discoverScenarios(
         scenario,
         snapshot.scenarios,
         continuationSources
       )
+
       const continuation = primaryFranchise
         ? {
             kind: 'franchise' as const,
@@ -401,6 +416,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
   const sourceSummaries = snapshot.sources.map((source) =>
     toSourceSummary(source, scenariosBySourceId.get(source.id)?.length ?? 0)
   )
+
   const franchiseSummaries = snapshot.franchises.map((franchise) =>
     toFranchiseSummary(
       franchise,
@@ -408,29 +424,35 @@ export function createContentCatalog(input: unknown): ContentCatalog {
       sourcesByFranchiseId.get(franchise.id)?.length ?? 0
     )
   )
+
   const riskFamilySummaries = snapshot.riskFamilies.map((family) =>
     toRiskFamilySummary(
       family,
       scenariosByRiskFamilyId.get(family.id)?.length ?? 0
     )
   )
+
   const conceptSummaries = snapshot.concepts.map((concept) =>
     toConceptSummary(concept, scenariosByConceptId.get(concept.id)?.length ?? 0)
   )
+
   const resourceSummaries = {
     source: sortResources(sourceSummaries),
     franchise: sortResources(franchiseSummaries),
     'risk-family': sortResources(riskFamilySummaries),
     concept: sortResources(conceptSummaries)
   } satisfies Record<ResourceKind, readonly ResourceSummary[]>
+
   const resourceSummaryById = new Map(
     Object.values(resourceSummaries)
       .flat()
       .map((resource) => [resourceKey(resource.kind, resource.id), resource])
   )
+
   const sourceSummaryById = new Map(
     resourceSummaries.source.map((source) => [source.id, source])
   )
+
   const describeScenes = (scenarios: readonly ScenarioRecord[]) => ({
     mediaFormats: getMediaFormats(
       scenarios.map(({ sourceId }) => getRequired(sourceById, sourceId))
@@ -440,9 +462,11 @@ export function createContentCatalog(input: unknown): ContentCatalog {
         resourceSummaryById,
         resourceKey('concept', id)
       )
+
       return { id, href, slug, title }
     })
   })
+
   const resourcePageByKind = {
     source: new Map(
       snapshot.sources.map((source) => {
@@ -450,6 +474,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
           resourceSummaryById,
           resourceKey('source', source.id)
         )
+
         const scenarios = scenariosBySourceId.get(source.id) ?? []
 
         return [
@@ -494,6 +519,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
           resourceSummaryById,
           resourceKey('franchise', franchise.id)
         )
+
         const sources = sourcesByFranchiseId.get(franchise.id) ?? []
         const scenarios = scenariosByFranchiseId.get(franchise.id) ?? []
 
@@ -528,6 +554,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
           resourceSummaryById,
           resourceKey('risk-family', family.id)
         )
+
         const scenarios = scenariosByRiskFamilyId.get(family.id) ?? []
 
         return [
@@ -559,6 +586,7 @@ export function createContentCatalog(input: unknown): ContentCatalog {
           resourceSummaryById,
           resourceKey('concept', concept.id)
         )
+
         const scenarios = scenariosByConceptId.get(concept.id) ?? []
 
         return [
@@ -767,6 +795,7 @@ function collectRelatedResources(
 
   for (const scenario of scenarios) {
     const source = getRequired(sources, scenario.sourceId)
+
     const idsByKind = {
       source: [scenario.sourceId],
       franchise: source.franchiseIds,
@@ -779,6 +808,7 @@ function collectRelatedResources(
         const key = resourceKey(kind, id)
         if (key === excludeKey) continue
         const resource = getRequired(resources, key)
+
         related.set(key, {
           ...resource,
           sharedScenarioCount: (related.get(key)?.sharedScenarioCount ?? 0) + 1
@@ -840,6 +870,7 @@ function taxonomyExternalLinks(
         citation.title,
         citation.publisher
       )
+
       return description
         ? {
             label: citation.title,

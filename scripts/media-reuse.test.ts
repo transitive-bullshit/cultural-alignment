@@ -9,17 +9,21 @@ import { descriptorMatchesSource, mediaDescriptorFastPath } from './media-reuse'
 
 const pageLastEditedTime = '2026-08-31T08:15:00.000Z'
 const pipelineVersion = 3
+
 type NotionFileSource = Extract<
   MediaSourceIdentity,
   { readonly type: 'notion'; readonly kind: 'file' }
 >
+
 type FallbackSource = Extract<
   MediaSourceIdentity,
   { readonly type: 'fallback' }
 >
+
 type NotionFileDescriptor = ImageMediaDescriptor & {
   readonly source: NotionFileSource
 }
+
 type FallbackDescriptor = ImageMediaDescriptor & {
   readonly source: FallbackSource
 }
@@ -51,6 +55,7 @@ describe('mediaDescriptorFastPath', () => {
 
   it('inspects when forced or when the page or pipeline changed', () => {
     const descriptor = imageDescriptor()
+
     for (const input of [
       { force: true, pageLastEditedTime, pipelineVersion },
       {
@@ -94,6 +99,7 @@ describe('mediaDescriptorFastPath', () => {
         caption: 'Updated source title'
       }
     })
+
     expect(result.kind).toBe('image')
     if (result.kind !== 'image') throw new Error('Expected image reuse')
     expect(result.needsDescriptorWrite).toBe(true)
@@ -112,6 +118,7 @@ describe('descriptorMatchesSource', () => {
         pipelineVersion
       )
     ).toBe(true)
+
     expect(
       descriptorMatchesSource(
         descriptor,
@@ -119,6 +126,7 @@ describe('descriptorMatchesSource', () => {
         pipelineVersion + 1
       )
     ).toBe(false)
+
     expect(
       descriptorMatchesSource(
         descriptor,
@@ -129,6 +137,7 @@ describe('descriptorMatchesSource', () => {
         pipelineVersion
       )
     ).toBe(false)
+
     expect(
       descriptorMatchesSource(
         descriptor,
@@ -136,6 +145,7 @@ describe('descriptorMatchesSource', () => {
         pipelineVersion
       )
     ).toBe(false)
+
     expect(
       descriptorMatchesSource(
         absentDescriptor(),
@@ -143,6 +153,7 @@ describe('descriptorMatchesSource', () => {
         pipelineVersion
       )
     ).toBe(false)
+
     expect(
       descriptorMatchesSource(null, descriptor.source, pipelineVersion)
     ).toBe(false)
@@ -152,10 +163,13 @@ describe('descriptorMatchesSource', () => {
       kind: 'external',
       url: 'https://images.example.com/original.png'
     } as const
+
     const external = { ...descriptor, source: externalSource }
+
     expect(
       descriptorMatchesSource(external, { ...externalSource }, pipelineVersion)
     ).toBe(true)
+
     expect(
       descriptorMatchesSource(
         external,
@@ -165,9 +179,11 @@ describe('descriptorMatchesSource', () => {
     ).toBe(false)
 
     const fallback = fallbackDescriptor()
+
     expect(
       descriptorMatchesSource(fallback, { ...fallback.source }, pipelineVersion)
     ).toBe(true)
+
     expect(
       descriptorMatchesSource(
         fallback,
@@ -175,6 +191,7 @@ describe('descriptorMatchesSource', () => {
         pipelineVersion
       )
     ).toBe(false)
+
     expect(
       descriptorMatchesSource(
         fallback,
@@ -193,6 +210,7 @@ function imageDescriptor(): NotionFileDescriptor {
   const galleryHash = 'b'.repeat(64)
   const detailHash = 'c'.repeat(64)
   const root = `media/generated/scenarios/${notionId.replaceAll('-', '')}`
+
   return {
     schemaVersion: 1,
     collection: 'scenarios',

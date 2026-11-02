@@ -18,6 +18,7 @@ describe('production media source route', () => {
   it('leaves image metadata to the colocated Open Graph image route', async () => {
     const slug = contentCatalog.getStaticSlugs('source')[0]!
     const source = contentCatalog.getResourcePage('source', slug)!
+
     const metadata = await generateMetadata(
       {
         params: Promise.resolve({ slug })

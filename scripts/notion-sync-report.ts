@@ -72,6 +72,7 @@ export class NotionSyncReport {
     err: unknown
   ) {
     this.#errorIds.get(collection)!.add(record.id)
+
     this.#output.warn(
       boldWarning(
         `Failed while ${operation} ${collectionLabels[collection].singular} ${formatNotionRecord(record)}: ${errorMessage(err)}`
@@ -88,6 +89,7 @@ export class NotionSyncReport {
   counts(collection: NotionSyncCollection) {
     const total = this.#totals[collection]
     const errors = this.#errorIds.get(collection)!.size
+
     return {
       total,
       succeeded: Math.max(0, total - errors),
@@ -97,8 +99,10 @@ export class NotionSyncReport {
 
   printSummary() {
     this.#output.log('Notion record sync summary:')
+
     for (const collection of notionSyncCollections) {
       const { succeeded, errors } = this.counts(collection)
+
       this.#output.log(
         `- ${collectionLabels[collection].plural}: ${succeeded} succeeded, ${errors} encountered ${errors === 1 ? 'an error' : 'errors'}`
       )
@@ -108,6 +112,7 @@ export class NotionSyncReport {
 
 export function formatNotionRecord(record: NotionRecordReference) {
   const title = record.title?.trim()
+
   return title
     ? `${JSON.stringify(title)} (Notion ID: ${record.id})`
     : `(Notion ID: ${record.id})`

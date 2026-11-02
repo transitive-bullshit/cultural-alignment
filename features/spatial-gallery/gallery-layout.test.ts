@@ -29,10 +29,13 @@ test.each([
     const width = 1_440
     const height = 782
     const geometry = getGalleryGeometry(false)
+
     const viewportWidth =
       width / getGalleryTargetZoom(false, width, height, itemSize)
+
     const layout = createGalleryLayout(items.length)
     const visibleLanes = getGalleryLaneCount(false, width, height, itemSize)
+
     const adjacentRepeats = Array.from(
       { length: geometry.maximumLanes - visibleLanes + 1 },
       (_, windowStart) => windowStart
@@ -102,6 +105,7 @@ test.each([
   'the $label gallery never shows a scenario twice in one view',
   ({ mobile, width, height }) => {
     const geometry = getGalleryGeometry(mobile)
+
     const galleries = [
       contentCatalog.listScenarioCards(),
       contentCatalog.listScenarioCards({ featuredOnly: true }),
@@ -111,6 +115,7 @@ test.each([
           contentCatalog.listScenarioCards({ riskFamilySlug: slug })
         )
     ]
+
     const repeats = galleries.flatMap((scenarios) => {
       const layout = createGalleryLayout(scenarios.length, mobile)
 
@@ -118,6 +123,7 @@ test.each([
         (itemSize) => {
           const viewportWidth =
             width / getGalleryTargetZoom(mobile, width, height, itemSize)
+
           const visibleLanes = getGalleryLaneCount(
             mobile,
             width,
@@ -136,6 +142,7 @@ test.each([
                   Math.abs(x) <= viewportWidth / 2 + geometry.frameWidth / 2
               )
               .map(({ itemIndex }) => itemIndex)
+
             const repeated = visibleItems.filter(
               (itemIndex, index) => visibleItems.indexOf(itemIndex) !== index
             )

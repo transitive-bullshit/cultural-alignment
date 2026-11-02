@@ -34,6 +34,7 @@ describe('scenario transition preview', () => {
       scenarioId: 'scenario-1',
       src: '/gallery-1.webp'
     })
+
     vi.advanceTimersByTime(60_001)
 
     expect(readScenarioTransitionPreview('scenario-1')).toBeNull()
@@ -44,12 +45,14 @@ describe('scenario transition preview', () => {
       scenarioId: 'scenario-1',
       src: '/gallery-1.webp'
     })
+
     const olderPreview = readScenarioTransitionPreview('scenario-1')!
 
     stageScenarioTransitionPreview({
       scenarioId: 'scenario-2',
       src: '/gallery-2.webp'
     })
+
     clearScenarioTransitionPreview(olderPreview.token)
 
     const newerPreview = readScenarioTransitionPreview('scenario-2')

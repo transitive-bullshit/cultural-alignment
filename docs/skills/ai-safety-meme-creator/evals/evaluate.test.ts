@@ -80,6 +80,7 @@ describe('meme presentation regression evaluator', () => {
       mutate: (plan) => {
         plan.caption_lines[0]!.text =
           'WHEN THE EMERGENCY SHUTDOWN AUTHORIZATION COMMITTEE NEEDS ANOTHER EMERGENCY SHUTDOWN AUTHORIZATION COMMITTEE'
+
         plan.presentation.zones[0]!.rendered_line_count = 1
       },
       code: 'typography.impossible-wrap'
@@ -120,12 +121,14 @@ describe('meme presentation regression evaluator', () => {
 
     const overlapping = structuredClone(valid)
     overlapping.presentation.zones[1]!.bounds_pct = [35, 66, 42, 24]
+
     expect(violationCodes(evaluateMemePlan(fixture, overlapping))).toContain(
       'layout.zone-overlap'
     )
 
     const swapped = structuredClone(valid)
     swapped.presentation.zones[0]!.anchor_region_id = 'oro-face'
+
     expect(violationCodes(evaluateMemePlan(fixture, swapped))).toContain(
       'layout.anchor'
     )
@@ -138,12 +141,14 @@ describe('meme presentation regression evaluator', () => {
 
     const duplicated = structuredClone(valid)
     duplicated.presentation.source_frames[1]!.image_id = 'unit-seven-before'
+
     expect(violationCodes(evaluateMemePlan(fixture, duplicated))).toEqual(
       expect.arrayContaining(['frame.expected', 'frame.distinct'])
     )
 
     const reversed = structuredClone(valid)
     reversed.presentation.source_frames.reverse()
+
     expect(violationCodes(evaluateMemePlan(fixture, reversed))).toContain(
       'frame.expected'
     )
@@ -152,6 +157,7 @@ describe('meme presentation regression evaluator', () => {
   it('matches frame count to what the renderer can display', () => {
     const oneFrameDiptych = structuredClone(centerFacePlan())
     oneFrameDiptych.presentation.template = 'diptych'
+
     expect(
       violationCodes(
         evaluateMemePlan(findFixture('center-face-safe-edge'), oneFrameDiptych)
@@ -160,6 +166,7 @@ describe('meme presentation regression evaluator', () => {
 
     const twoFrameOverlay = structuredClone(stateContrastPlan())
     twoFrameOverlay.presentation.template = 'overlay'
+
     expect(
       violationCodes(
         evaluateMemePlan(findFixture('genuine-before-after'), twoFrameOverlay)
@@ -170,6 +177,7 @@ describe('meme presentation regression evaluator', () => {
   it('requires a state contrast to use a two-image diptych', () => {
     const oneFrameOverlay = structuredClone(centerFacePlan())
     oneFrameOverlay.format = 'state contrast'
+
     expect(
       violationCodes(
         evaluateMemePlan(findFixture('center-face-safe-edge'), oneFrameOverlay)
@@ -177,8 +185,10 @@ describe('meme presentation regression evaluator', () => {
     ).toContain('format.state-contrast')
 
     const repeatedFrameDiptych = structuredClone(stateContrastPlan())
+
     repeatedFrameDiptych.presentation.source_frames[1]!.image_id =
       repeatedFrameDiptych.presentation.source_frames[0]!.image_id
+
     expect(
       violationCodes(
         evaluateMemePlan(
@@ -206,6 +216,7 @@ describe('meme presentation regression evaluator', () => {
 
     const flattened = structuredClone(valid)
     flattened.presentation.zones[0]!.indent_levels = [0, 0, 0]
+
     expect(violationCodes(evaluateMemePlan(fixture, flattened))).toContain(
       'typography.indentation'
     )
@@ -240,6 +251,7 @@ describe('meme presentation regression evaluator', () => {
 
     const cosmetic = structuredClone(generated)
     cosmetic.caption_lines[0]!.text = 'MODEL V2.4.'
+
     expect(
       violationCodes(evaluateMemePlan(generatedFixture, cosmetic))
     ).toEqual(
@@ -257,17 +269,21 @@ describe('meme presentation regression evaluator', () => {
 
     const stale = structuredClone(plan)
     stale.caption_lines[0]!.text = 'SAFETY KPI: GREEN'
+
     expect(violationCodes(evaluateMemePlan(fixture, stale))).toContain(
       'caption.forbidden-term'
     )
 
     const reproduced = structuredClone(plan)
+
     reproduced.caption_lines =
       fixture.request.rejected_direction!.caption_lines.map((text) => ({
         text,
         kind: 'original' as const
       }))
+
     reproduced.format = fixture.request.rejected_direction!.format
+
     expect(violationCodes(evaluateMemePlan(fixture, reproduced))).toEqual(
       expect.arrayContaining([
         'revision.rejected-caption',

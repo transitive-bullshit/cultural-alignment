@@ -20,6 +20,7 @@ export class ContentValidationError extends Error {
     super(
       `${summary}:\n${issues.map((issue) => `- ${issue.path}: ${issue.message}`).join('\n')}`
     )
+
     this.name = 'ContentValidationError'
     this.issues = issues
   }
@@ -53,6 +54,7 @@ export function validateContentSnapshot(input: unknown): ContentSnapshot {
   if (!result.success) {
     const issues = result.error.issues.map<ContentValidationIssue>((issue) => {
       const record = unknownRecordAtPath(input, issue.path)
+
       return {
         code: 'invalid-schema',
         path: formatPath(issue.path),
@@ -130,12 +132,15 @@ function appendRelationIssues(
   const sourceById = new Map(
     snapshot.sources.map((source) => [source.id, source])
   )
+
   const franchiseIds = new Set(
     snapshot.franchises.map((franchise) => franchise.id)
   )
+
   const riskFamilyIds = new Set(
     snapshot.riskFamilies.map((family) => family.id)
   )
+
   const conceptIds = new Set(snapshot.concepts.map((concept) => concept.id))
 
   snapshot.scenarios.forEach((scenario, scenarioIndex) => {
@@ -213,7 +218,9 @@ function formatRecordReference(
       : typeof record.shortName === 'string'
         ? record.shortName.trim()
         : ''
+
   const id = typeof record.id === 'string' ? record.id : null
+
   const label = title
     ? `${collectionLabels[collection]} ${JSON.stringify(title)}`
     : collectionLabels[collection]
@@ -223,6 +230,7 @@ function formatRecordReference(
 
 function unknownRecordAtPath(input: unknown, path: readonly PropertyKey[]) {
   const [collection, index] = path
+
   if (
     typeof collection !== 'string' ||
     !Object.hasOwn(collectionLabels, collection) ||

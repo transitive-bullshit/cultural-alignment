@@ -9,6 +9,7 @@ import { fixtureImagePath, memeSkillFixtures } from './fixtures'
 describe('meme skill regression fixtures', () => {
   it('keeps fixture, image, and protected-region identities unambiguous', () => {
     const problems: string[] = []
+
     expect(new Set(memeSkillFixtures.map(({ id }) => id)).size).toBe(
       memeSkillFixtures.length
     )
@@ -20,9 +21,11 @@ describe('meme skill regression fixtures', () => {
       if (imageIds.size !== fixture.images.length) {
         problems.push(`${fixture.id}: duplicate image id`)
       }
+
       if (regionIds.size !== fixture.protected_regions.length) {
         problems.push(`${fixture.id}: duplicate protected-region id`)
       }
+
       if (
         !fixture.protected_regions.every(({ image_id }) =>
           imageIds.has(image_id)
@@ -32,6 +35,7 @@ describe('meme skill regression fixtures', () => {
           `${fixture.id}: protected region references unknown image`
         )
       }
+
       if (
         !fixture.expectations.expected_source_frames.every(({ image_id }) =>
           imageIds.has(image_id)
@@ -39,6 +43,7 @@ describe('meme skill regression fixtures', () => {
       ) {
         problems.push(`${fixture.id}: expected source references unknown image`)
       }
+
       if (
         !(fixture.expectations.required_region_ids ?? []).every((regionId) =>
           regionIds.has(regionId)
@@ -53,8 +58,10 @@ describe('meme skill regression fixtures', () => {
 
   it('uses valid local raster fixtures with their declared state frames distinct', async () => {
     const problems: string[] = []
+
     for (const fixture of memeSkillFixtures) {
       const hashes = []
+
       for (const image of fixture.images) {
         const path = fixtureImagePath(fixture, image.id)
         await access(path)
@@ -64,12 +71,15 @@ describe('meme skill regression fixtures', () => {
         if (metadata.format !== 'png') {
           problems.push(`${fixture.id}: ${image.id} is not PNG`)
         }
+
         if (!metadata.width || metadata.width < 600) {
           problems.push(`${fixture.id}: ${image.id} is narrower than 600px`)
         }
+
         if (metadata.height !== 800) {
           problems.push(`${fixture.id}: ${image.id} is not 800px high`)
         }
+
         hashes.push(createHash('sha256').update(bytes).digest('hex'))
       }
 

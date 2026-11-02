@@ -136,6 +136,7 @@ export function resolveWarpedPointerSlot({
       warpSpeed,
       viewportAspect
     )
+
     const unwarpedPointerY = pointerNdc.y - warpOffset
     const centerY = (y * 2) / viewportHeight
     const halfHeight = (frameHeight * scale + hitPadding * 2) / viewportHeight

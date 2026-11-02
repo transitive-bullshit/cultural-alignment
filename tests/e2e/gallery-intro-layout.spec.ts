@@ -30,6 +30,7 @@ test.describe('gallery introduction phone layout', () => {
     await expect
       .poll(() => content.evaluate((element) => element.scrollTop))
       .toBe(0)
+
     await expectIntroductionInViewport(page)
 
     for (const viewport of [
@@ -54,19 +55,23 @@ test.describe('gallery introduction phone layout', () => {
         await content.evaluate((element) => {
           element.scrollTop = 0
         })
+
         await dialog.focus()
         await page.keyboard.press('Tab')
         await expect(content).toBeFocused()
         await page.keyboard.press('PageDown')
+
         await expect
           .poll(() => content.evaluate((element) => element.scrollTop))
           .toBeGreaterThan(0)
+
         await expectIntroductionInViewport(page)
       }
 
       await content.evaluate((element) => {
         element.scrollTop = element.scrollHeight
       })
+
       await expect
         .poll(() =>
           content.evaluate(
@@ -75,6 +80,7 @@ test.describe('gallery introduction phone layout', () => {
           )
         )
         .toBeLessThanOrEqual(1)
+
       await expectIntroductionInViewport(page)
 
       await image.scrollIntoViewIfNeeded()
@@ -92,12 +98,15 @@ async function expectIntroductionInViewport(page: Page) {
   await expect(page.locator('[data-gallery-intro-dialog]')).toBeInViewport({
     ratio: 1
   })
+
   await expect(
     page.locator('[data-gallery-intro-dialog] [data-slot="dialog-title"]')
   ).toBeInViewport({ ratio: 1 })
+
   await expect(page.locator('[data-gallery-intro-close]')).toBeInViewport({
     ratio: 1
   })
+
   await expect(page.locator('[data-gallery-intro-dismiss]')).toBeInViewport({
     ratio: 1
   })

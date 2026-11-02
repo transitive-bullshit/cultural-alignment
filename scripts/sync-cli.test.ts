@@ -17,21 +17,25 @@ describe('parseSyncCliArgs', () => {
       force: false,
       help: false
     })
+
     expect(parseSyncCliArgs(['--force'])).toEqual({
       fast: false,
       force: true,
       help: false
     })
+
     expect(parseSyncCliArgs(['--help'])).toEqual({
       fast: false,
       force: false,
       help: true
     })
+
     expect(parseSyncCliArgs(['-help'])).toEqual({
       fast: false,
       force: false,
       help: true
     })
+
     expect(parseSyncCliArgs(['-h', '--fast'])).toEqual({
       fast: true,
       force: false,

@@ -20,6 +20,7 @@ describe('spatial gallery history state', () => {
       topology: 'mobile',
       version: 2
     })
+
     const merged = mergeGalleryHistoryState(
       existing,
       'browse:all',
@@ -27,6 +28,7 @@ describe('spatial gallery history state', () => {
     )
 
     expect((merged as { __NA?: unknown }).__NA).toBe(true)
+
     expect(
       readGalleryHistoryState(
         merged,
@@ -39,6 +41,7 @@ describe('spatial gallery history state', () => {
       topology: 'mobile',
       version: 2
     })
+
     expect(
       readGalleryHistoryState(
         merged,
@@ -58,6 +61,7 @@ describe('spatial gallery history state', () => {
         new Set(['scenario-1', 'scenario-2'])
       )
     ).toEqual(galleryState)
+
     expect(
       readGalleryHistoryState(merged, 'archive:all', new Set(['scenario-1']))
     ).toBeNull()
@@ -77,6 +81,7 @@ describe('spatial gallery history state', () => {
         new Set(['scenario-2'])
       )
     ).toBeNull()
+
     expect(
       readGalleryHistoryState(merged, 'browse:all', new Set(['scenario-2']))
     ).toBeNull()
@@ -87,18 +92,23 @@ describe('spatial gallery history state', () => {
       ...galleryState,
       offsetX: Number.NaN
     })
+
     const versionMismatched = structuredClone(
       mergeGalleryHistoryState(null, 'archive:all', galleryState)
     )
+
     const envelope = versionMismatched as Record<string, unknown>
+
     const galleryStates = Object.values(envelope).find(
       (value) => typeof value === 'object' && value !== null
     ) as Record<string, Record<string, unknown>>
+
     galleryStates['archive:all']!.version = 3
 
     expect(
       readGalleryHistoryState(malformed, 'archive:all', new Set(['scenario-2']))
     ).toBeNull()
+
     expect(
       readGalleryHistoryState(
         versionMismatched,

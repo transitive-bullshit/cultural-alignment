@@ -32,6 +32,7 @@ export function GalleryIntroMotionProvider({
   const [inertiaBurst, setInertiaBurst] = useState(false)
   const consumeInertiaBurst = useCallback(() => setInertiaBurst(false), [])
   const launchInertiaBurst = useCallback(() => setInertiaBurst(true), [])
+
   const value = useMemo(
     () => ({ consumeInertiaBurst, inertiaBurst, launchInertiaBurst }),
     [consumeInertiaBurst, inertiaBurst, launchInertiaBurst]

@@ -22,16 +22,20 @@ export function SortableMediaSourceList({
   readonly resources: readonly SourceResourceSummary[]
 }) {
   const collectionId = `${useId()}-media-sources`
+
   const { announcement, handleSortChange, sort } = usePersistedCollectionSort(
     STORAGE_KEY,
     getSortAnnouncement
   )
+
   const groups = useMemo(
     () => groupMediaSources(sortMediaSources(resources, sort), sort),
     [resources, sort]
   )
+
   const isAlphabetical = sort === 'default'
   const groupByLabel = new Map(groups.map((group) => [group.label, group]))
+
   // The alphabet stays whole so a missing letter reads as absent, not broken.
   const jumpLabels = isAlphabetical
     ? ALPHABET

@@ -66,6 +66,7 @@ export function GlobalSearchDialog({
   const resultsRef = useRef<HTMLDivElement>(null)
   const [query, setQuery] = useState('')
   const deferredQuery = useDeferredValue(query)
+
   const groups = useMemo(
     () => searchDocumentGroups(documents, deferredQuery),
     [documents, deferredQuery]
@@ -167,6 +168,7 @@ export function GlobalSearchDialog({
                 <CommandGroup heading={group.label}>
                   {group.documents.map((document) => {
                     const context = supportingKeyword(document, deferredQuery)
+
                     const showSubtitle = !TYPE_ONLY_SUBTITLE_KINDS.has(
                       document.kind
                     )
@@ -255,9 +257,11 @@ function HighlightedSearchText({
 
 function supportingKeyword(document: SearchDocument, query: string) {
   const queryTokens = normalizeSearchText(query).split(' ').filter(Boolean)
+
   const visibleText = normalizeSearchText(
     `${document.title} ${document.subtitle}`
   )
+
   const missingTokens = queryTokens.filter(
     (token) => !visibleText.includes(token)
   )
@@ -302,8 +306,10 @@ function searchSnippet(value: string, query: string, maxLength = 128) {
   if (!firstMatch) return `${value.slice(0, maxLength).trimEnd()}…`
 
   const matchLength = firstMatch.text.length
+
   const desiredStart =
     firstMatch.start - Math.max(0, Math.floor((maxLength - matchLength) / 2))
+
   const start = Math.max(0, Math.min(desiredStart, value.length - maxLength))
   const end = Math.min(value.length, start + maxLength)
   const excerpt = value.slice(start, end).trim()

@@ -12,6 +12,7 @@ export const GALLERY_ITEM_SIZE_STORAGE_KEY =
   'cultural-alignment:gallery-item-size:v1'
 
 const PERSIST_DEBOUNCE_MILLISECONDS = 250
+
 const SERVER_SNAPSHOT = {
   hydrated: false,
   itemSize: GALLERY_ITEM_SIZE_DEFAULT,
@@ -167,6 +168,7 @@ function handleStorageChange(event: StorageEvent) {
     itemSize,
     itemSizeTransition: 'instant'
   }
+
   notifyListeners()
 }
 

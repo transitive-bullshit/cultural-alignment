@@ -47,6 +47,7 @@ describe('measured text renderer', { timeout: 10_000 }, () => {
       maximumFontSizePx: 48,
       safeInsetPx: 12
     } as const
+
     const [flat, indented] = await Promise.all(
       [0, 1].map((indentLevel) =>
         renderMeasuredText({
@@ -61,6 +62,7 @@ describe('measured text renderer', { timeout: 10_000 }, () => {
         })
       )
     )
+
     expect(flat!.status).toBe('fit')
     expect(indented!.status).toBe('fit')
     if (flat!.status !== 'fit' || indented!.status !== 'fit') return
@@ -75,6 +77,7 @@ describe('measured text renderer', { timeout: 10_000 }, () => {
 
   it('preserves exact Unicode copy and returns measured unclipped alpha ink', async () => {
     await access(fontFile)
+
     const blocks = [
       { id: 'setup', text: 'Café says “no”—exactly 3.6×' },
       { id: 'payoff', text: 'PUNCTUATION STAYS!' }
@@ -95,6 +98,7 @@ describe('measured text renderer', { timeout: 10_000 }, () => {
     if (result.status !== 'fit') return
 
     expect(result.sourceBlocks).toEqual(blocks)
+
     for (const block of blocks) {
       expect(
         result.physicalLines
@@ -105,6 +109,7 @@ describe('measured text renderer', { timeout: 10_000 }, () => {
     }
 
     const metadata = await sharp(result.layerPng).metadata()
+
     expect(metadata).toMatchObject({
       format: 'png',
       width: 520,
@@ -117,9 +122,11 @@ describe('measured text renderer', { timeout: 10_000 }, () => {
     expect(independentlyMeasured).not.toBeNull()
     expect(independentlyMeasured!.left).toBeGreaterThanOrEqual(8)
     expect(independentlyMeasured!.top).toBeGreaterThanOrEqual(8)
+
     expect(
       independentlyMeasured!.left + independentlyMeasured!.width
     ).toBeLessThanOrEqual(512)
+
     expect(
       independentlyMeasured!.top + independentlyMeasured!.height
     ).toBeLessThanOrEqual(252)
@@ -129,6 +136,7 @@ describe('measured text renderer', { timeout: 10_000 }, () => {
     const blocks = [
       { id: 'caption', text: 'WHEN THE BENCHMARK BECOMES THE CURRICULUM' }
     ] as const
+
     const request = {
       blocks,
       font: { family: 'Barlow Condensed', filePath: fontFile, weight: 800 },
@@ -152,6 +160,7 @@ describe('measured text renderer', { timeout: 10_000 }, () => {
       minimumFontSizePx: result.fontSizePx + 1,
       maximumFontSizePx: result.fontSizePx + 1
     })
+
     expect(nextSize).toMatchObject({ status: 'unfit' })
   })
 
@@ -190,6 +199,7 @@ describe('measured text renderer', { timeout: 10_000 }, () => {
       maximumFontSizePx: 48,
       safeInsetPx: 12
     } as const
+
     const [greedy, balanced] = await Promise.all([
       renderMeasuredText({
         ...request,
@@ -205,13 +215,17 @@ describe('measured text renderer', { timeout: 10_000 }, () => {
     expect(balanced.status).toBe('fit')
     if (greedy.status !== 'fit' || balanced.status !== 'fit') return
     expect(balanced.physicalLines).toHaveLength(greedy.physicalLines.length)
+
     expect(balanced.physicalLines.map(({ text }) => text).join(' ')).toBe(
       request.blocks[0].text
     )
+
     expect(wordsIn(greedy.physicalLines.at(-1)!.text)).toHaveLength(1)
+
     expect(wordsIn(balanced.physicalLines.at(-1)!.text).length).toBeGreaterThan(
       1
     )
+
     expect(
       balanced.physicalLines.some(({ text }) => wordsIn(text).length === 1)
     ).toBe(false)
@@ -246,6 +260,7 @@ describe('measured text renderer', { timeout: 10_000 }, () => {
       if (result.status !== 'fit') return
       expect(result.physicalLines.map(({ text }) => text).join(' ')).toBe(text)
       expect(result.physicalLines).toHaveLength(2)
+
       expect(wordsIn(result.physicalLines.at(-1)!.text).length).toBeGreaterThan(
         1
       )
@@ -308,6 +323,7 @@ async function alphaBounds(buffer: Buffer): Promise<{
     .ensureAlpha()
     .raw()
     .toBuffer({ resolveWithObject: true })
+
   let left = info.width
   let top = info.height
   let right = -1
@@ -336,13 +352,16 @@ async function opaqueColorCounts(
     .ensureAlpha()
     .raw()
     .toBuffer({ resolveWithObject: true })
+
   let white = 0
   let black = 0
+
   for (let offset = 0; offset < data.length; offset += info.channels) {
     if (data[offset + 3] !== 255) continue
     const [red, green, blue] = data.subarray(offset, offset + 3)
     if (red === 255 && green === 255 && blue === 255) white += 1
     if (red === 0 && green === 0 && blue === 0) black += 1
   }
+
   return { white, black }
 }

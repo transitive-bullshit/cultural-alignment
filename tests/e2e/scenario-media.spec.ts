@@ -35,6 +35,7 @@ test('the scenario still keeps the native image context menu', async ({
         queueMicrotask(() => {
           document.documentElement.dataset.scenarioContextMenuTarget =
             target.dataset.scenarioStill === 'true' ? 'still' : target.tagName
+
           document.documentElement.dataset.scenarioContextMenuPrevented =
             String(event.defaultPrevented)
         })
@@ -57,10 +58,12 @@ test('the scenario still keeps the native image context menu', async ({
     'data-scenario-context-menu-target',
     'still'
   )
+
   await expect(page.locator('html')).toHaveAttribute(
     'data-scenario-context-menu-prevented',
     'false'
   )
+
   await expect(media).toHaveAttribute('data-showing-still', 'true')
 
   await still.click()

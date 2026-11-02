@@ -25,6 +25,7 @@ describe('scenario collection sorting', () => {
     expect(
       sortScenarioCollectionItems(listedItems, 'newest').map(({ id }) => id)
     ).toEqual(['newest', 'middle-a', 'middle-b', 'oldest', 'unknown'])
+
     expect(
       sortScenarioCollectionItems(listedItems, 'oldest').map(({ id }) => id)
     ).toEqual(['oldest', 'middle-a', 'middle-b', 'newest', 'unknown'])

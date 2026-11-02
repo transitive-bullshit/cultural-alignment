@@ -21,6 +21,7 @@ describe('media source sorting', () => {
       'newest',
       'unknown'
     ])
+
     expect(sources.map(({ id }) => id)).toEqual(originalOrder)
   })
 
@@ -32,6 +33,7 @@ describe('media source sorting', () => {
       'oldest',
       'unknown'
     ])
+
     expect(sortMediaSources(sources, 'oldest').map(({ id }) => id)).toEqual([
       'oldest',
       'middle-a',
@@ -52,6 +54,7 @@ describe('media source sorting', () => {
       { id: 'accent', title: 'Éclair', releaseDate: '2010-01-01' },
       { id: 'quoted', title: '“Quoted”', releaseDate: null }
     ]
+
     const groups = groupMediaSources(
       sortMediaSources(titled, 'default'),
       'default'
@@ -65,11 +68,14 @@ describe('media source sorting', () => {
       'D',
       'E'
     ])
+
     expect(groups[0]!.items.map(({ id }) => id).toSorted()).toEqual([
       'digit',
       'quoted'
     ])
+
     expect(groups.find(({ label }) => label === 'E')!.items).toHaveLength(2)
+
     expect(groups.map(({ id }) => id)).toEqual([
       'sources-numbers',
       'sources-a',
@@ -95,6 +101,7 @@ describe('media source sorting', () => {
       sortMediaSources(sources, 'newest'),
       'newest'
     )
+
     const oldest = groupMediaSources(
       sortMediaSources(sources, 'oldest'),
       'oldest'
@@ -106,12 +113,14 @@ describe('media source sorting', () => {
       '1990s',
       'Undated'
     ])
+
     expect(oldest.map(({ label }) => label)).toEqual([
       '1990s',
       '2000s',
       '2020s',
       'Undated'
     ])
+
     expect(newest.at(-1)!.id).toBe('sources-undated')
   })
 })

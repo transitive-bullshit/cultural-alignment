@@ -21,6 +21,7 @@ import { fileURLToPath } from 'node:url'
  */
 
 const CLI = '.agents/skills/verify-cultural-alignment/verify.ts'
+
 const HELP = `Usage (from the repository root):
   ${CLI} launch [--dev] [--rebuild]
   ${CLI} doctor [--run=<id>]
@@ -40,6 +41,7 @@ const devLockPath = join(repoRoot, '.next/dev/lock')
 
 /** Paths that cannot change the built site, so editing them needs no rebuild. */
 const buildIrrelevantDirectories = ['.agents', 'docs', 'tests']
+
 const buildIrrelevantPaths = [
   ...buildIrrelevantDirectories.map((directory) => `:(exclude)${directory}`),
   ':(exclude,glob)**/*.md'
@@ -47,6 +49,7 @@ const buildIrrelevantPaths = [
 
 /** Settings Next.js inlines or uses for the site origin at build time. */
 const buildSettingPattern = /^(NEXT_PUBLIC_|VERCEL_)/
+
 const buildEnvironmentFiles = [
   '.env',
   '.env.local',
@@ -80,6 +83,7 @@ const [command, ...rest] = process.argv.slice(2)
 const separator = rest.indexOf('--')
 const args = separator === -1 ? rest : rest.slice(0, separator)
 const passthrough = separator === -1 ? [] : rest.slice(separator + 1)
+
 const flags = new Map(
   args
     .filter((arg) => arg.startsWith('--'))
@@ -88,6 +92,7 @@ const flags = new Map(
       return [key!, value ?? 'true'] as const
     })
 )
+
 const positional = args.filter((arg) => !arg.startsWith('--'))
 
 try {
@@ -131,6 +136,7 @@ async function launch(mode: Mode) {
   // under this server nor miss it when deciding whether to rebuild.
   const release = mode === 'production' ? await acquireLaunchLock() : undefined
   let instance: Instance
+
   try {
     instance = await startServer(mode, runId, instanceDir, evidenceDir)
   } catch (err) {
@@ -139,6 +145,7 @@ async function launch(mode: Mode) {
   } finally {
     await release?.()
   }
+
   const { buildId, serverLog, url } = instance
 
   const timeoutMs = mode === 'production' ? 60_000 : 180_000
@@ -151,6 +158,7 @@ async function launch(mode: Mode) {
         `The server exited before it was ready. Log: ${relative(repoRoot, serverLog)}\n${await tail(serverLog)}`
       )
     }
+
     problems = await readinessProblems(url)
     if (problems.length === 0) break
     await sleep(500)
@@ -195,6 +203,7 @@ async function startServer(
     buildId = await ensureBuild(fingerprint, evidenceDir)
   } else {
     const lock = await readDevLock()
+
     if (lock && isAlive(lock.pid)) {
       throw new Error(
         `next dev is already running for this checkout (pid ${lock.pid}${lock.url ? `, ${lock.url}` : ''}). ` +
@@ -228,6 +237,7 @@ async function startServer(
     ],
     { cwd: repoRoot, detached: true, env, stdio: ['ignore', log, log] }
   )
+
   child.unref()
   closeSync(log)
 
@@ -248,16 +258,19 @@ async function startServer(
     evidenceDir,
     serverLog
   }
+
   await writeFile(
     join(instanceDir, 'instance.json'),
     `${JSON.stringify(instance, null, 2)}\n`
   )
+
   return instance
 }
 
 /** Removes state from a launch that never started a server; keeps a build log. */
 async function abandonLaunch(instanceDir: string, evidenceDir: string) {
   await rm(instanceDir, { recursive: true, force: true })
+
   if ((await readdir(evidenceDir).catch(() => [])).length === 0) {
     await rm(evidenceDir, { recursive: true, force: true })
   }
@@ -268,6 +281,7 @@ async function ensureBuild(fingerprint: string, evidenceDir: string) {
   const record = await readJson<{ fingerprint: string; buildId: string }>(
     buildRecordPath
   )
+
   const currentBuildId = await readBuildId()
 
   if (
@@ -283,13 +297,16 @@ async function ensureBuild(fingerprint: string, evidenceDir: string) {
   // Development servers read .next/dev, which next build leaves in place
   // (Next.js documents running both at once), so only production ones block.
   const sharing = servers.filter(({ mode }) => mode === 'production')
+
   if (sharing.length > 0) {
     throw new Error(
       `Rebuilding would replace .next under running verification servers: ${sharing.map(({ runId }) => runId).join(', ')}. ` +
         `Stop them first (${CLI} stop --run=<id>), or verify from a separate worktree.`
     )
   }
+
   const foreign = foreignNextProcesses(new Set(servers.map(({ pid }) => pid)))
+
   if (foreign.length > 0) {
     throw new Error(
       `Another Next.js process may be using this checkout (${foreign.join('; ')}). ` +
@@ -300,22 +317,27 @@ async function ensureBuild(fingerprint: string, evidenceDir: string) {
   const buildLog = join(evidenceDir, 'build.log')
   console.log(`build     pnpm build (log: ${relative(repoRoot, buildLog)})`)
   const log = openSync(buildLog, 'a')
+
   const result = spawnSync('pnpm', ['build'], {
     cwd: repoRoot,
     env: { ...process.env, NEXT_TELEMETRY_DISABLED: '1' },
     stdio: ['ignore', log, log]
   })
+
   closeSync(log)
+
   if (result.status !== 0) {
     throw new Error(`pnpm build failed:\n${await tail(buildLog)}`)
   }
 
   const buildId = await readBuildId()
   if (!buildId) throw new Error('pnpm build succeeded without a BUILD_ID')
+
   await writeFile(
     buildRecordPath,
     `${JSON.stringify({ fingerprint, buildId, builtAt: new Date().toISOString() }, null, 2)}\n`
   )
+
   return buildId
 }
 
@@ -337,22 +359,27 @@ async function acquireLaunchLock() {
     } catch {
       const text = await readFile(launchLockPath, 'utf8').catch(() => '')
       const holder = Number(text.trim())
+
       // An empty file means the holder is still writing its pid.
       if (holder > 0 && !isAlive(holder)) {
         await rm(launchLockPath, { force: true })
         continue
       }
+
       if (Date.now() > deadline) {
         throw new Error(
           `Another launch (pid ${holder}) has held ${relative(repoRoot, launchLockPath)} for 10 minutes`
         )
       }
+
       if (!announced) {
         console.log(
           `wait      another launch is building or starting (pid ${holder})`
         )
+
         announced = true
       }
+
       await sleep(500)
     }
   }
@@ -360,19 +387,23 @@ async function acquireLaunchLock() {
 
 async function doctor(instance: Instance): Promise<Check[]> {
   const checks: Check[] = []
+
   const add = (name: string, status: Check['status'], detail: string) =>
     checks.push({ name, status, detail })
 
   add('run', 'pass', `${instance.runId} (${instance.mode}, ${instance.url})`)
 
   const members = instanceGroup(instance)
+
   if (members.length === 0) {
     add('process', 'fail', `process group ${instance.pid} is gone`)
     return checks
   }
+
   add('process', 'pass', `process group ${instance.pid} is running`)
 
   const listeners = listenerPids(instance.port)
+
   if (listeners === undefined) {
     add('port', 'warn', 'lsof is unavailable; port ownership not checked')
   } else if (listeners.length === 0) {
@@ -390,6 +421,7 @@ async function doctor(instance: Instance): Promise<Check[]> {
   }
 
   const problems = await readinessProblems(instance.url)
+
   add(
     'http',
     problems.length === 0 ? 'pass' : 'fail',
@@ -402,6 +434,7 @@ async function doctor(instance: Instance): Promise<Check[]> {
     const onDisk = await readBuildId()
     const html = await fetchText(`${instance.url}/about`)
     const served = html?.match(/\\?"b\\?":\\?"([\w-]+)\\?"/)?.[1]
+
     if (served !== instance.buildId || onDisk !== instance.buildId) {
       add(
         'build',
@@ -413,6 +446,7 @@ async function doctor(instance: Instance): Promise<Check[]> {
     }
 
     const fingerprint = await sourceFingerprint()
+
     add(
       'source',
       fingerprint === instance.fingerprint ? 'pass' : 'fail',
@@ -422,6 +456,7 @@ async function doctor(instance: Instance): Promise<Check[]> {
     )
   } else {
     const lock = await readDevLock()
+
     add(
       'dev-lock',
       lock && members.some(({ pid }) => pid === lock.pid) ? 'pass' : 'warn',
@@ -432,13 +467,17 @@ async function doctor(instance: Instance): Promise<Check[]> {
   const scenarios = await readJson<{ slug: string }[]>(
     join(repoRoot, 'content/snapshot/scenarios.json')
   )
+
   const archive = await fetchText(`${instance.url}/scenarios`)
+
   const linked = new Set(
     [...(archive ?? '').matchAll(/href="\/scenarios\/([^"/?#]+)"/g)].map(
       (match) => match[1]
     )
   )
+
   const missing = (scenarios ?? []).filter(({ slug }) => !linked.has(slug))
+
   add(
     'content',
     scenarios && missing.length === 0 ? 'pass' : 'fail',
@@ -456,12 +495,14 @@ async function drive(instance: Instance, journeys: string[]) {
   if (journeys.length === 0) throw new Error(`Name a journey file.\n${HELP}`)
 
   const checks = await doctor(instance)
+
   if (checks.some(({ status }) => status === 'fail')) {
     printChecks(checks)
     throw new Error('Doctor failed; refusing to drive this instance')
   }
 
   const files = journeys.map((journey) => resolve(journey))
+
   for (const file of files) {
     if (!existsSync(file)) throw new Error(`No journey at ${file}`)
   }
@@ -469,6 +510,7 @@ async function drive(instance: Instance, journeys: string[]) {
   const drives = (await readdir(instance.evidenceDir).catch(() => [])).filter(
     (entry) => /^\d{2}-/.test(entry)
   )
+
   const name = files
     .map((file) =>
       file
@@ -477,10 +519,12 @@ async function drive(instance: Instance, journeys: string[]) {
         .replace(/\.journey\.ts$/, '')
     )
     .join('+')
+
   const evidenceDir = join(
     instance.evidenceDir,
     `${String(drives.length + 1).padStart(2, '0')}-${name}`
   )
+
   await mkdir(evidenceDir, { recursive: true })
 
   const result = spawnSync(
@@ -513,12 +557,15 @@ async function drive(instance: Instance, journeys: string[]) {
 
 async function list() {
   const instances = await allInstances()
+
   if (instances.length === 0) {
     console.log('No verification instances in this checkout.')
     return
   }
+
   for (const instance of instances) {
     const state = instanceGroup(instance).length > 0 ? 'running' : 'dead'
+
     console.log(
       `${instance.runId}  ${state}  ${instance.mode}  ${instance.url}  evidence: ${relative(repoRoot, instance.evidenceDir)}`
     )
@@ -532,6 +579,7 @@ async function stop(all: boolean) {
 
   for (const instance of instances) {
     const members = instanceGroup(instance)
+
     if (members.length > 0 && !members.some(isNextProcess)) {
       console.log(
         `${instance.runId}: process group ${instance.pid} no longer runs Next.js; not signalling it`
@@ -539,15 +587,18 @@ async function stop(all: boolean) {
     } else if (members.length > 0) {
       signalGroup(instance.pid, 'SIGTERM')
       const deadline = Date.now() + 10_000
+
       while (instanceGroup(instance).length > 0 && Date.now() < deadline) {
         await sleep(200)
       }
+
       if (instanceGroup(instance).length > 0) {
         signalGroup(instance.pid, 'SIGKILL')
       }
     }
 
     await rm(instance.instanceDir, { recursive: true, force: true })
+
     console.log(
       `${instance.runId}: stopped; evidence kept in ${relative(repoRoot, instance.evidenceDir)}`
     )
@@ -565,6 +616,7 @@ async function readinessProblems(url: string) {
   } else {
     if (!home.includes('data-site-header'))
       problems.push('/ has no site header')
+
     if (!home.includes('data-spatial-gallery'))
       problems.push('/ has no gallery')
   }
@@ -572,6 +624,7 @@ async function readinessProblems(url: string) {
   const index = await fetch(`${url}/content/search-index.json`, {
     signal: AbortSignal.timeout(30_000)
   }).catch(() => undefined)
+
   if (!index?.ok) problems.push('search index unavailable')
 
   return problems
@@ -589,10 +642,13 @@ async function resolveInstance(runId: string | undefined) {
   const running = instances.filter(
     (instance) => instanceGroup(instance).length > 0
   )
+
   if (running.length === 1) return running[0]!
+
   if (running.length === 0) {
     throw new Error(`No running verification instance; run ${CLI} launch`)
   }
+
   throw new Error(
     `Several instances are running (${running.map(({ runId }) => runId).join(', ')}); pass --run=<id>`
   )
@@ -600,11 +656,13 @@ async function resolveInstance(runId: string | undefined) {
 
 async function allInstances() {
   const entries = await readdir(instancesRoot).catch(() => [])
+
   const instances = await Promise.all(
     entries.map((entry) =>
       readJson<Instance>(join(instancesRoot, entry, 'instance.json'))
     )
   )
+
   return instances.filter((instance): instance is Instance => !!instance)
 }
 
@@ -621,18 +679,23 @@ async function liveInstances() {
  */
 async function sourceFingerprint() {
   const hash = createHash('sha256')
+
   const settings = Object.entries(process.env).filter(([key]) =>
     buildSettingPattern.test(key)
   )
+
   for (const file of buildEnvironmentFiles) {
     const text = await readFile(join(repoRoot, file), 'utf8').catch(() => '')
+
     for (const line of text.split('\n')) {
       const match = line.match(/^\s*(?:export\s+)?([A-Z0-9_]+)\s*=(.*)$/)
+
       if (match && buildSettingPattern.test(match[1]!)) {
         settings.push([`${file}:${match[1]}`, match[2]!.trim()])
       }
     }
   }
+
   for (const [key, value] of settings.toSorted(([a], [b]) =>
     a.localeCompare(b)
   )) {
@@ -648,6 +711,7 @@ async function sourceFingerprint() {
       hash.update(`${entry}\0`)
     }
   }
+
   hash.update(
     git(['diff', 'HEAD', '--binary', '--', '.', ...buildIrrelevantPaths])
   )
@@ -679,9 +743,11 @@ function git(gitArgs: string[]) {
     cwd: repoRoot,
     maxBuffer: 512 * 1024 * 1024
   })
+
   if (result.status !== 0) {
     throw new Error(`git ${gitArgs.join(' ')}: ${result.stderr.toString()}`)
   }
+
   return result.stdout
 }
 
@@ -691,6 +757,7 @@ function processGroup(pgid: number): GroupMember[] {
   const result = spawnSync('ps', ['-A', '-o', 'pid=,pgid=,command='], {
     encoding: 'utf8'
   })
+
   return result.stdout
     .split('\n')
     .map((line) => line.trim().match(/^(\d+)\s+(\d+)\s+(.*)$/))
@@ -706,6 +773,7 @@ function processGroup(pgid: number): GroupMember[] {
 function instanceGroup(instance: Instance) {
   const members = processGroup(instance.pid)
   const leaderAlive = members.some(({ pid }) => pid === instance.pid)
+
   if (
     leaderAlive &&
     instance.startTime &&
@@ -713,6 +781,7 @@ function instanceGroup(instance: Instance) {
   ) {
     return []
   }
+
   return members
 }
 
@@ -720,6 +789,7 @@ function processStartTime(pid: number) {
   const result = spawnSync('ps', ['-o', 'lstart=', '-p', String(pid)], {
     encoding: 'utf8'
   })
+
   return result.stdout.trim() || undefined
 }
 
@@ -744,6 +814,7 @@ function foreignNextProcesses(ownGroups: Set<number>) {
   const result = spawnSync('ps', ['-A', '-o', 'pid=,pgid=,command='], {
     encoding: 'utf8'
   })
+
   return result.stdout
     .split('\n')
     .map((line) => line.trim().match(/^(\d+)\s+(\d+)\s+(.*)$/))
@@ -771,7 +842,9 @@ function processCwd(pid: number) {
       ['-a', '-p', String(pid), '-d', 'cwd', '-Fn'],
       { encoding: 'utf8' }
     )
+
     if (result.error || result.status !== 0) return undefined
+
     return result.stdout
       .split('\n')
       .find((line) => line.startsWith('n'))
@@ -785,6 +858,7 @@ function listenerPids(port: number) {
     ['-nP', `-iTCP:${port}`, '-sTCP:LISTEN', '-t'],
     { encoding: 'utf8' }
   )
+
   if (result.error) return undefined
   return result.stdout.split('\n').filter(Boolean).map(Number)
 }
@@ -809,8 +883,10 @@ function isAlive(pid: number) {
 async function readDevLock() {
   const text = await readFile(devLockPath, 'utf8').catch(() => undefined)
   if (!text) return undefined
+
   try {
     const lock = JSON.parse(text) as { pid?: number; url?: string }
+
     return typeof lock.pid === 'number'
       ? { pid: lock.pid, url: lock.url }
       : undefined
@@ -833,6 +909,7 @@ async function fetchText(url: string) {
   const response = await fetch(url, {
     signal: AbortSignal.timeout(30_000)
   }).catch(() => undefined)
+
   return response?.ok ? response.text() : undefined
 }
 
@@ -840,8 +917,10 @@ function freePort() {
   return new Promise<number>((resolvePort, reject) => {
     const server = createServer()
     server.on('error', reject)
+
     server.listen(0, '127.0.0.1', () => {
       const address = server.address()
+
       server.close(() =>
         typeof address === 'object' && address
           ? resolvePort(address.port)

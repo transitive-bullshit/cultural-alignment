@@ -38,12 +38,15 @@ test('every detail family publishes a 1200×630 WebP social image', async ({
   for (const { route, slug } of targets) {
     await page.goto(`/${route}/${slug}`)
     const expectedPath = `/${route}/${slug}/opengraph-image`
+
     const og = await page
       .locator('meta[property="og:image"]')
       .getAttribute('content')
+
     const twitter = await page
       .locator('meta[name="twitter:image"]')
       .getAttribute('content')
+
     expect(new URL(og!).pathname).toBe(expectedPath)
     expect(new URL(twitter!).pathname).toBe(expectedPath)
 
@@ -51,11 +54,14 @@ test('every detail family publishes a 1200×630 WebP social image', async ({
     const response = await request.get(expectedPath)
     expect(response.status()).toBe(200)
     expect(response.headers()['content-type']).toBe('image/webp')
+
     for (const [name, value] of Object.entries(socialImageCacheHeaders)) {
       expect(response.headers()[name.toLowerCase()], name).toBe(value)
     }
+
     const body = await response.body()
     const { format, width, height } = await sharp(body).metadata()
+
     expect({ format, width, height }).toEqual({
       format: 'webp',
       width: 1200,
@@ -63,6 +69,7 @@ test('every detail family publishes a 1200×630 WebP social image', async ({
     })
 
     await evidence.file(`${route} social image`, 'webp', body)
+
     await evidence.record(`${route} social image response`, {
       page: page.url(),
       og,
@@ -92,11 +99,13 @@ test('sitemap, robots, and llms.txt describe the archive', async ({
   const sitemap = await request.get('/sitemap.xml')
   expect(sitemap.status()).toBe(200)
   const xml = await sitemap.text()
+
   const listed = new Set(
     [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(
       (match) => new URL(match[1]!).pathname
     )
   )
+
   const expected = [
     ...scenarios.map(({ slug }) => `/scenarios/${slug}`),
     ...sources.map(({ slug }) => `/sources/${slug}`),
@@ -104,10 +113,13 @@ test('sitemap, robots, and llms.txt describe the archive', async ({
     ...families.map(({ slug }) => `/risk-families/${slug}`),
     ...concepts.map(({ slug }) => `/concepts/${slug}`)
   ]
+
   expect(expected.filter((path) => !listed.has(path))).toEqual([])
+
   expect(
     [...listed].filter((path) => path.startsWith('/scenarios/family/'))
   ).toEqual([])
+
   await evidence.file('sitemap', 'xml', Buffer.from(xml))
 
   const robots = await request.get('/robots.txt')

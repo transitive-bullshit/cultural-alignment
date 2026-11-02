@@ -71,6 +71,7 @@ function snapshot(
   sources: SourceRecord[] = [source()]
 ): ContentSnapshot {
   const titles = new Map(sources.map(({ id, title }) => [id, title]))
+
   const withAlt = (record: ContentImage, alt: string) =>
     record.alt === GENERATED_ALT ? { ...record, alt } : record
 
@@ -117,12 +118,14 @@ describe('auditContent', () => {
       { length: AUDIT_LIMITS.concepts + 1 },
       (_, i) => `concept-${i}`
     )
+
     const tv = source({
       id: 'source-tv',
       slug: 'show',
       title: 'The Show',
       sourceType: 'tv-show'
     })
+
     const audit = auditContent(
       snapshot(
         [
@@ -185,6 +188,7 @@ describe('auditContent', () => {
       slug: 'other',
       title: 'Parks and Recreation'
     })
+
     const audit = auditContent(
       snapshot(
         [
@@ -211,6 +215,7 @@ describe('auditContent', () => {
       slug: 'other',
       youtubeTrailerUrl: null
     })
+
     const audit = auditContent(
       snapshot(
         [
@@ -238,10 +243,12 @@ describe('auditContent', () => {
     const audit = auditContent(
       snapshot([scenario({ video: null, title: 'x'.repeat(50) })])
     )
+
     const markdown = formatAuditMarkdown(audit, { limit: 5 })
 
     expect(markdown).toContain('## `title-length`')
     expect(markdown).toContain('## `clip-missing`')
+
     expect(markdown.indexOf('## `title-length`')).toBeLessThan(
       markdown.indexOf('## `clip-missing`')
     )

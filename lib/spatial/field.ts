@@ -51,6 +51,7 @@ export function createProjectedSurfaceLayout(
   }
 
   const assignmentLanes = options.assignmentLanes ?? options.lanes
+
   if (!Number.isInteger(assignmentLanes) || assignmentLanes <= 0) {
     throw new RangeError('assignmentLanes must be a positive integer')
   }
@@ -66,16 +67,20 @@ export function createProjectedSurfaceLayout(
 
   const protectedWidth =
     options.viewportWidth + options.itemWidth * 2 + overscan * 2
+
   const minimumColumns = Math.max(
     3,
     itemCount,
     Math.ceil(protectedWidth / options.columnGap)
   )
+
   const centeredColumns =
     minimumColumns % 2 === 0 ? minimumColumns + 1 : minimumColumns
+
   // A two-item odd ring cannot close without equal neighbors.
   const columns =
     itemCount === 2 ? minimumColumns + (minimumColumns % 2) : centeredColumns
+
   const centerColumn = (columns - 1) / 2
   const span = columns * options.columnGap
   const columnStride = findCoprimeStep(itemCount, assignmentLanes + 2)
@@ -85,6 +90,7 @@ export function createProjectedSurfaceLayout(
   // of its neighbor. Expressing the offset in columns preserves full coverage
   // within every lane while spreading nearby rows across the ring.
   const laneColumnStep = Math.max(1, Math.floor(itemCount / assignmentLanes))
+
   // Denser layouts show more lanes than were assigned. Wrapping their offsets
   // around the ring would replay an assigned lane a column or two over, so
   // extra lanes interleave halfway between the assigned ones instead, leaving
@@ -94,6 +100,7 @@ export function createProjectedSurfaceLayout(
       ? lane * laneColumnStep
       : ((lane - assignmentLanes) % assignmentLanes) * laneColumnStep +
         Math.max(1, Math.floor(laneColumnStep / 2))
+
   const slots = Array.from(
     { length: columns * options.lanes },
     (_, slotIndex): ProjectedSurfaceSlot => {
@@ -102,6 +109,7 @@ export function createProjectedSurfaceLayout(
       const lane = slotIndex % options.lanes
       const staggerDirection = lane % 2 === 0 ? -1 : 1
       const laneOffset = lane === Math.floor(options.lanes / 2) ? 0 : stagger
+
       // When the final slot would repeat the first at the seam, place the
       // unavoidable extra copy halfway around the item ring.
       const modularColumn =
@@ -145,6 +153,7 @@ function calculateEdgeProgress(
 
   const viewportHalf = viewportWidth / 2
   const planarHalf = (viewportWidth * planarWidthRatio) / 2
+
   const linearProgress = Math.min(
     1,
     Math.max(0, (Math.abs(x) - planarHalf) / (viewportHalf - planarHalf))

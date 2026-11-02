@@ -43,15 +43,19 @@ export function reuseSnapshotMedia(
   const scenarioById = new Map(
     snapshot.scenarios.map((scenario) => [scenario.id, scenario])
   )
+
   const sourceById = new Map(
     snapshot.sources.map((source) => [source.id, source])
   )
+
   const franchiseById = new Map(
     snapshot.franchises.map((franchise) => [franchise.id, franchise])
   )
+
   const currentSourceById = new Map(
     current.sources.map((source) => [source.id, source])
   )
+
   const missing = [
     missingMedia('scenarios', current.scenarios, scenarioById),
     missingMedia('sources', current.sources, sourceById),
@@ -68,10 +72,12 @@ export function reuseSnapshotMedia(
     current: record,
     previous: scenarioById.get(record.id)!
   }))
+
   const sources = current.sources.map((record) => ({
     current: record,
     previous: sourceById.get(record.id)!
   }))
+
   const franchises = current.franchises.map((record) => ({
     current: record,
     previous: franchiseById.get(record.id)!
@@ -162,6 +168,7 @@ function missingMedia<T extends { readonly id: string }>(
   const missingIds = current
     .map((record) => record.id)
     .filter((id) => !records.has(id))
+
   if (missingIds.length === 0) return null
   return `${collection}: ${missingIds.map((id) => JSON.stringify(id)).join(', ')}`
 }

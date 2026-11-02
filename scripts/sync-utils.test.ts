@@ -119,6 +119,7 @@ describe('generatedMediaObjectKey', () => {
     expect(() =>
       generatedMediaObjectKey('sources', 'not-a-notion-id', 'gallery', 'a')
     ).toThrow('Invalid Notion page ID')
+
     expect(() =>
       generatedMediaObjectKey(
         'sources',
@@ -147,6 +148,7 @@ describe('generatedMemeMediaObjectKey', () => {
     expect(() =>
       generatedMemeMediaObjectKey('not-a-notion-id', 'gallery', 'a'.repeat(64))
     ).toThrow('Invalid Notion page ID')
+
     expect(() =>
       generatedMemeMediaObjectKey(
         '3c6edb27-f124-80cc-92d5-c8f2f2e3a7fa',
@@ -170,6 +172,7 @@ describe('isGeneratedMediaUrlFor', () => {
         'gallery'
       )
     ).toBe(true)
+
     expect(
       isGeneratedMediaUrlFor(
         `https://media.example.com/assets/${key}`,
@@ -189,6 +192,7 @@ describe('isGeneratedMediaUrlFor', () => {
         'gallery'
       )
     ).toBe(false)
+
     expect(
       isGeneratedMediaUrlFor(
         `https://media.example.com/${key}`,
@@ -197,6 +201,7 @@ describe('isGeneratedMediaUrlFor', () => {
         'detail'
       )
     ).toBe(false)
+
     expect(
       isGeneratedMediaUrlFor(
         `https://media.example.com/${key}?download=1`,
@@ -205,6 +210,7 @@ describe('isGeneratedMediaUrlFor', () => {
         'gallery'
       )
     ).toBe(false)
+
     expect(
       isGeneratedMediaUrlFor('not-a-url', 'scenarios', pageId, 'gallery')
     ).toBe(false)
@@ -218,6 +224,7 @@ describe('isGeneratedMediaUrlFor', () => {
     expect(
       isGeneratedMediaUrlFor(url, 'franchises', franchiseId, 'detail')
     ).toBe(true)
+
     expect(isGeneratedMediaUrlFor(url, 'sources', franchiseId, 'detail')).toBe(
       false
     )
@@ -236,6 +243,7 @@ describe('isGeneratedMemeMediaUrlFor', () => {
         'gallery'
       )
     ).toBe(true)
+
     expect(
       isGeneratedMemeMediaUrlFor(
         `https://media.example.com/assets/${key}`,
@@ -243,6 +251,7 @@ describe('isGeneratedMemeMediaUrlFor', () => {
         'detail'
       )
     ).toBe(false)
+
     expect(
       isGeneratedMemeMediaUrlFor(
         `https://media.example.com/assets/${key}`,
@@ -250,6 +259,7 @@ describe('isGeneratedMemeMediaUrlFor', () => {
         'gallery'
       )
     ).toBe(false)
+
     expect(
       isGeneratedMemeMediaUrlFor(
         `https://media.example.com/assets/${key}?download=1`,

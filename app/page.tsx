@@ -17,6 +17,7 @@ import { contentCatalog } from '@/lib/content/snapshot'
 import { siteName } from '@/lib/site'
 
 const homepageTitle = `${siteName} — AI safety through pop culture`
+
 const homepageDescription =
   'AI safety and alignment explained through familiar movie and TV scenes.'
 
@@ -45,6 +46,7 @@ const featuredItems: readonly HomepageWordsItem[] = toSpatialGalleryItems(
 
   return { ...item, concept }
 })
+
 const initialItem = findInitialSpatialGalleryItem(featuredItems)
 
 export default function HomePage() {
