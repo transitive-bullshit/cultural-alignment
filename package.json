@@ -33,50 +33,50 @@
     "fix:lint": "oxlint --fix"
   },
   "dependencies": {
-    "@base-ui/react": "^1.8.0",
+    "@base-ui/react": "^1.9.0",
     "@fontsource-variable/geist": "^5.3.0",
     "@fontsource-variable/geist-mono": "^5.3.0",
     "@fontsource/barlow-condensed": "^5.3.0",
-    "@notionhq/client": "^5.27.0",
-    "@react-three/fiber": "^9.8.1",
+    "@notionhq/client": "^5.31.0",
+    "@react-three/fiber": "^9.8.2",
     "@vercel/analytics": "^2.0.1",
     "class-variance-authority": "^0.7.1",
     "cmdk": "^1.1.1",
-    "cn": "^0.5.1",
-    "framer-motion": "^14.0.0",
-    "lucide-react": "^1.52.0",
-    "next": "^16.4.3",
+    "cn": "^0.5.2",
+    "framer-motion": "^14.9.1",
+    "lucide-react": "^1.69.0",
+    "next": "^16.4.5",
     "p-map": "^7.1.1",
-    "pdfjs-dist": "^6.4.299",
-    "radix-ui": "^1.7.0",
+    "pdfjs-dist": "^6.5.438",
+    "radix-ui": "^1.8.1",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "sharp": "^0.35.5",
-    "takumi-js": "^2.14.0",
-    "three": "^0.186.1",
+    "takumi-js": "^2.19.0",
+    "three": "^0.187.0",
     "zod": "^4.6.7"
   },
   "devDependencies": {
-    "@aws-sdk/client-s3": "^3.1147.0",
+    "@aws-sdk/client-s3": "^3.1162.0",
     "@dotenvx/dotenvx": "^2.38.2",
     "@fisch0920/config": "^2.5.0",
-    "@playwright/test": "^1.63.0",
-    "@tailwindcss/postcss": "^4.3.3",
-    "@types/node": "^26.6.4",
+    "@playwright/test": "^1.64.1",
+    "@tailwindcss/postcss": "^4.3.4",
+    "@types/node": "^26.6.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "@types/three": "^0.186.0",
+    "@types/three": "^0.187.0",
     "lint-staged": "^17.6.0",
     "npm-run-all2": "^9.0.4",
-    "oxfmt": "^0.75.0",
-    "oxlint": "^1.90.0",
+    "oxfmt": "^0.76.0",
+    "oxlint": "^1.91.0",
     "oxlint-tsgolint": "^7.0.2005",
-    "portless": "^0.15.12",
+    "portless": "^0.16.0",
     "simple-git-hooks": "^2.14.0",
-    "tailwindcss": "^4.3.3",
+    "tailwindcss": "^4.3.4",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
-    "vitest": "^5.0.5"
+    "vitest": "^5.1.0"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
@@ -90,5 +90,5 @@
   "engines": {
     "node": ">=24"
   },
-  "packageManager": "pnpm@12.10.1"
+  "packageManager": "pnpm@12.18.0"
 }

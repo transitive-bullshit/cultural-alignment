@@ -633,6 +633,7 @@ export function ScenarioMedia({ media }: { media: ScenarioMediaModel }) {
       })
 
     return () => {
+      // oxlint-disable-next-line react/immutability -- This cancellation flag is local to this effect instance, not render state.
       disposed = true
 
       if (progressTimerRef.current) {

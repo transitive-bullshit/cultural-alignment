@@ -270,6 +270,7 @@ export function SpatialGallery<
     let bounds = galleryPage.getBoundingClientRect()
 
     const updateBounds = () => {
+      // oxlint-disable-next-line react/immutability -- This DOM bounds cache is local to this effect instance, not render state.
       bounds = galleryPage.getBoundingClientRect()
     }
 
