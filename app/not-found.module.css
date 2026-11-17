@@ -3,10 +3,7 @@
   display: grid;
   grid-template-rows: auto 1fr;
   min-block-size: 100svh;
-  padding-block-start: 0;
-  padding-inline-end: clamp(18px, 3vw, 46px);
   padding-block-end: clamp(24px, 3vw, 46px);
-  padding-inline-start: clamp(18px, 3vw, 46px);
   overflow: clip;
   background:
     linear-gradient(
@@ -25,6 +22,7 @@
 .message {
   align-self: center;
   max-inline-size: 960px;
+  margin-inline: clamp(18px, 3vw, 46px);
   padding-block: clamp(54px, 8vw, 110px);
   padding-inline: 0;
 }

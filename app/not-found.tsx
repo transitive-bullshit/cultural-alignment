@@ -8,10 +8,10 @@ import styles from './not-found.module.css'
 
 export default function NotFound() {
   return (
-    <main className={`${styles.page} experience-scope`} data-not-found>
-      <SiteHeader inset />
+    <div className={`${styles.page} experience-scope`}>
+      <SiteHeader />
 
-      <section className={styles.message}>
+      <main className={styles.message} data-not-found>
         <p className={styles.code}>404 / RECORD NOT FOUND</p>
         <h1>This scene isn&rsquo;t in the archive.</h1>
         <p className={styles.explanation}>
@@ -35,11 +35,11 @@ export default function NotFound() {
             <kbd>⌘K</kbd>
           </OpenSearchButton>
         </nav>
-      </section>
+      </main>
 
       <span className={styles.crosshair} aria-hidden='true'>
         +
       </span>
-    </main>
+    </div>
   )
 }

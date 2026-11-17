@@ -83,17 +83,35 @@ type ResourceIndexPageProps = Readonly<{
       }>
   )
 
+function ResourcePageShell({
+  children,
+  kind,
+  view
+}: {
+  readonly children: ReactNode
+  readonly kind: ResourceKind
+  readonly view: 'index' | 'detail'
+}) {
+  return (
+    <div className={`experience-scope ${styles.page}`}>
+      <SiteHeader />
+      <main
+        className={styles.content}
+        data-resource-index={view === 'index' ? kind : undefined}
+        data-resource-detail={view === 'detail' ? kind : undefined}
+      >
+        {children}
+      </main>
+    </div>
+  )
+}
+
 export function ResourceIndexPage(props: ResourceIndexPageProps) {
   const { crossLink, kind, resources } = props
   const presentation = PRESENTATION[kind]
 
   return (
-    <main
-      className={`experience-scope ${styles.page}`}
-      data-resource-index={kind}
-    >
-      <SiteHeader inset />
-
+    <ResourcePageShell kind={kind} view='index'>
       <section className={styles.indexIntro}>
         <p className={styles.eyebrow}>{presentation.eyebrow}</p>
         <h1>{presentation.indexTitle}</h1>
@@ -121,7 +139,7 @@ export function ResourceIndexPage(props: ResourceIndexPageProps) {
       ) : (
         <TaxonomyResourceList kind={props.kind} resources={props.resources} />
       )}
-    </main>
+    </ResourcePageShell>
   )
 }
 
@@ -246,12 +264,7 @@ export function ResourceDetailPage({
     : undefined
 
   return (
-    <main
-      className={`experience-scope ${styles.page}`}
-      data-resource-detail={resource.kind}
-    >
-      <SiteHeader inset />
-
+    <ResourcePageShell kind={resource.kind} view='detail'>
       <section
         className={styles.detailIntro}
         data-resource-hero={resource.kind}
@@ -430,7 +443,7 @@ export function ResourceDetailPage({
           </div>
         </section>
       ) : null}
-    </main>
+    </ResourcePageShell>
   )
 }
 

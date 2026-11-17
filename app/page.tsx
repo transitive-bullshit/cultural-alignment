@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+import { SiteHeader } from '@/components/site-header'
 import {
   HomepageWords,
   type HomepageWordsItem
@@ -8,7 +9,6 @@ import {
 import { GalleryIntroDialog } from '@/features/spatial-gallery/gallery-intro-dialog'
 import { galleryIntroExample } from '@/features/spatial-gallery/gallery-intro-example'
 import { GalleryIntroMotionProvider } from '@/features/spatial-gallery/gallery-intro-motion'
-import { GalleryHeader } from '@/features/spatial-gallery/gallery-header'
 import {
   findInitialSpatialGalleryItem,
   toSpatialGalleryItems
@@ -57,7 +57,7 @@ export default function HomePage() {
   return (
     <GalleryIntroMotionProvider>
       <HomepageWords
-        header={<GalleryHeader />}
+        header={<SiteHeader fixedOnMobile />}
         historyKey='archive:featured'
         index={{
           level: 1,

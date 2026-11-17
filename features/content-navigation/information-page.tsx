@@ -18,19 +18,21 @@ export function InformationPage({
   readonly titleSize?: 'compact' | 'default'
 }) {
   return (
-    <main className={`experience-scope ${styles.page}`}>
-      <SiteHeader className={styles.siteHeader} inset />
+    <div className={`experience-scope ${styles.page}`}>
+      <SiteHeader />
 
-      <article className={styles.article}>
-        <header className={styles.introduction}>
-          <p className={styles.eyebrow}>{eyebrow}</p>
-          <h1 data-size={titleSize}>{title}</h1>
-          <div className={styles.introductionCopy}>{introduction}</div>
-        </header>
+      <main className={styles.content}>
+        <article className={styles.article}>
+          <header className={styles.introduction}>
+            <p className={styles.eyebrow}>{eyebrow}</p>
+            <h1 data-size={titleSize}>{title}</h1>
+            <div className={styles.introductionCopy}>{introduction}</div>
+          </header>
 
-        <div className={styles.sections}>{children}</div>
-      </article>
-    </main>
+          <div className={styles.sections}>{children}</div>
+        </article>
+      </main>
+    </div>
   )
 }
 
