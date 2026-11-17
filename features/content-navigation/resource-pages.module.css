@@ -2,10 +2,6 @@
   --page-gutter: clamp(18px, 3vw, 46px);
 
   min-block-size: 100svh;
-  padding-block-start: 0;
-  padding-inline-end: var(--page-gutter);
-  padding-block-end: clamp(76px, 9vw, 132px);
-  padding-inline-start: var(--page-gutter);
   background:
     linear-gradient(
       color-mix(in oklch, var(--proto-rule) 34%, transparent) 1px,
@@ -18,6 +14,11 @@
     ),
     var(--proto-paper);
   background-size: 52px 52px;
+}
+
+.content {
+  padding-block-end: clamp(76px, 9vw, 132px);
+  padding-inline: var(--page-gutter);
 }
 
 /* Index intros stack on the page edge at the taxonomy detail title scale. */
@@ -943,14 +944,11 @@
   .page {
     --page-gutter: 18px;
 
-    padding-block-start: 0;
-
-    padding-inline-end: var(--page-gutter);
-
-    padding-block-end: 72px;
-
-    padding-inline-start: var(--page-gutter);
     background-size: 42px 42px;
+  }
+
+  .content {
+    padding-block-end: 72px;
   }
 
   .indexIntro {

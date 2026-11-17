@@ -37,7 +37,7 @@ export default function ScenariosPage() {
         data-site-footer='hidden'
         tabIndex={-1}
       >
-        <SiteHeader className={styles.galleryHeader} />
+        <SiteHeader fixedOnMobile />
         <BrowseToolbar families={families} resultCount={items.length} />
         <SpatialGallery
           historyKey='archive:all'

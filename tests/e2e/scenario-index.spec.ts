@@ -69,6 +69,7 @@ test.describe('server-rendered scenario index', () => {
     await mockOptimizedImages(page)
     await page.goto('/scenarios')
     await page.locator('[data-gallery-intro-dismiss]').click()
+    await expect(page.locator('[data-gallery-main]')).toBeFocused()
 
     const index = page.locator('[data-scenario-index]')
     const firstLink = index.locator('a[href^="/scenarios/"]').first()

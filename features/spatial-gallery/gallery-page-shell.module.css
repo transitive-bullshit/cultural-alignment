@@ -10,18 +10,6 @@
   overscroll-behavior-y: none;
 }
 
-/* The `.page` scope outranks the site header's single-class rules, because
-   development and production bundles order module CSS differently. */
-.page .galleryHeader {
-  position: fixed;
-  inset-block-start: 0;
-  inset-inline-end: 0;
-  inset-inline-start: 0;
-  border-color: color-mix(in oklch, var(--foreground) 15%, transparent);
-  background: color-mix(in oklch, var(--proto-paper) 86%, transparent);
-  backdrop-filter: blur(14px);
-}
-
 .browseToolbar,
 .resultCount,
 .sizeControl {
@@ -305,11 +293,6 @@ a.filterLink:active {
   .browsePage {
     grid-template-rows: auto auto minmax(0, 1fr);
   }
-
-  .page .galleryHeader {
-    position: relative;
-    inset: auto;
-  }
 }
 
 /* Below the header's menu breakpoint the filters take their own row, so all
@@ -369,24 +352,7 @@ a.filterLink:active {
   }
 }
 
-@media (min-width: 761px) {
-  .page .galleryHeader {
-    min-block-size: calc(70px + env(safe-area-inset-top, 0px));
-    padding-block-start: env(safe-area-inset-top, 0px);
-    padding-inline-end: max(
-      clamp(18px, 3vw, 46px),
-      env(safe-area-inset-right, 0px)
-    );
-    padding-block-end: 0;
-    padding-inline-start: max(
-      clamp(18px, 3vw, 46px),
-      env(safe-area-inset-left, 0px)
-    );
-  }
-}
-
 @media (prefers-reduced-transparency: reduce) {
-  .page .galleryHeader,
   .browseToolbar {
     background: var(--proto-paper);
     backdrop-filter: none;

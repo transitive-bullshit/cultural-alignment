@@ -4,20 +4,16 @@ import {
 } from '@/components/site-navigation'
 import { SiteWordmark } from '@/components/site-wordmark'
 import { GlobalSearch } from '@/features/search/global-search'
-import { cn } from '@/lib/utils'
 
 import styles from './site-header.module.css'
 
-export type SiteHeaderProps = {
-  readonly className?: string
-  readonly inset?: boolean
-}
-
-export function SiteHeader({ className, inset = false }: SiteHeaderProps) {
+export function SiteHeader({
+  fixedOnMobile = false
+}: { readonly fixedOnMobile?: boolean } = {}) {
   return (
     <header
-      className={cn(styles.header, className)}
-      data-inset={inset || undefined}
+      className={styles.header}
+      data-fixed-on-mobile={fixedOnMobile || undefined}
       data-site-header
     >
       <SiteWordmark className={styles.wordmark} />

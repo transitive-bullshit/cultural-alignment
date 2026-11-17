@@ -1,9 +1,5 @@
 .page {
   min-block-size: 100svh;
-  padding-block-start: 0;
-  padding-inline-end: clamp(18px, 3vw, 46px);
-  padding-block-end: clamp(84px, 10vw, 148px);
-  padding-inline-start: clamp(18px, 3vw, 46px);
   background:
     linear-gradient(
       color-mix(in oklch, var(--proto-rule) 34%, transparent) 1px,
@@ -18,8 +14,9 @@
   background-size: 52px 52px;
 }
 
-.siteHeader {
-  border-block-end-color: var(--proto-rule);
+.content {
+  padding-block-end: clamp(84px, 10vw, 148px);
+  padding-inline: clamp(18px, 3vw, 46px);
 }
 
 .article {
@@ -204,11 +201,12 @@
 
 @media (max-width: 760px) {
   .page {
-    padding-block-start: 0;
-    padding-inline-end: 18px;
-    padding-block-end: 76px;
-    padding-inline-start: 18px;
     background-size: 42px 42px;
+  }
+
+  .content {
+    padding-block-end: 76px;
+    padding-inline: 18px;
   }
 
   .introduction {

@@ -13,15 +13,12 @@
   padding-block: 0;
   padding-inline: clamp(18px, 3vw, 46px);
   border-block-end: 1px solid var(--proto-rule);
+  background: var(--proto-paper);
   color: var(--proto-ink);
   font-family: var(--font-geist-mono), monospace;
   font-size: 10px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-}
-
-.header[data-inset] {
-  padding-inline: 0;
 }
 
 .wordmark {
@@ -571,14 +568,31 @@
   }
 }
 
+@media (min-width: 761px) {
+  .header {
+    min-block-size: calc(70px + env(safe-area-inset-top, 0px));
+    padding-block-start: env(safe-area-inset-top, 0px);
+    padding-inline-end: max(
+      clamp(18px, 3vw, 46px),
+      env(safe-area-inset-right, 0px)
+    );
+    padding-inline-start: max(
+      clamp(18px, 3vw, 46px),
+      env(safe-area-inset-left, 0px)
+    );
+  }
+}
+
 @media (max-width: 680px) {
   .header {
     min-block-size: 62px;
     padding-inline: 16px;
   }
 
-  .header[data-inset] {
-    padding-inline: 0;
+  .header[data-fixed-on-mobile] {
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline: 0;
   }
 
   .wordmark {
