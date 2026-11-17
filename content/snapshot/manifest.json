@@ -26,8 +26,8 @@
     }
   },
   "counts": {
-    "scenarios": 487,
-    "sources": 268,
+    "scenarios": 490,
+    "sources": 269,
     "franchises": 15,
     "riskFamilies": 5,
     "concepts": 68
@@ -547,7 +547,10 @@
       "3e9edb27-f124-81d5-b905-ee04cc7e7ed1": "will-goes-online",
       "3ebedb27-f124-8132-a6dc-d2dec0e859a5": "gerty-enters-the-password",
       "3ebedb27-f124-8164-a4b3-d900ac4d4055": "gerty-offers-a-reset",
-      "3ebedb27-f124-81f7-9521-fe1f2d0ef2bb": "the-spare-sams"
+      "3ebedb27-f124-81f7-9521-fe1f2d0ef2bb": "the-spare-sams",
+      "41bedb27-f124-813f-b2da-df123fd0c546": "cage-knows-her-coffee-order",
+      "41bedb27-f124-81d6-9dc1-f4bd6e16e94a": "the-mimics-throw-the-battle",
+      "41bedb27-f124-81e6-94f6-deb073307836": "rita-resets-the-drill"
     },
     "sources": {
       "3caedb27-f124-8000-890f-e4f714860f05": "squid-game",
@@ -817,7 +820,8 @@
       "3e0edb27-f124-8145-bbfb-e15a1a9f278f": "fail-safe",
       "3e0edb27-f124-81b5-a38a-eaf81bf5d1da": "the-boy-who-harnessed-the-wind",
       "3e9edb27-f124-8137-a48f-f055f08b06d0": "transcendence",
-      "3ebedb27-f124-81a5-86c0-c3fc356bc689": "moon"
+      "3ebedb27-f124-81a5-86c0-c3fc356bc689": "moon",
+      "41bedb27-f124-81ab-a872-c2a9d70b4ba4": "edge-of-tomorrow"
     },
     "riskFamilies": {
       "3caedb27-f124-8089-af00-d8bbc69c9377": "accidents",

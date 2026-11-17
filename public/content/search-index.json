@@ -3435,6 +3435,34 @@
   },
   {
     "kind": "scenario",
+    "title": "Cage Knows Her Coffee Order",
+    "subtitle": "Edge of Tomorrow",
+    "keywords": [
+      "Edge of Tomorrow",
+      "Accidents",
+      "Risks from Accidents & Malfunctions",
+      "AI Welfare",
+      "AI Welfare and Moral Status",
+      "Cage puts three sugars in Rita’s coffee before she tells him how she takes it. She realizes they’ve been at the farmhouse before, and he tells her she dies here every time.",
+      "Rita sees one attempt; Cage remembers the cost of all of them. If a learner could have experiences that matter to it, a training process that records only performance could miss what repeated trials cost the learner.",
+      "Cage is a conscious human, and his distress comes from watching someone he cares about die. A model receiving a low reward does not, by itself, show that it feels distress."
+    ],
+    "supplementalKeywords": [
+      "three sugars",
+      "helicopter keys",
+      "william cage",
+      "rita vrataski",
+      "emily blunt",
+      "tom cruise",
+      "live die repeat",
+      "all you need is kill",
+      "doug liman",
+      "hiroshi sakurazaka"
+    ],
+    "href": "/scenarios/cage-knows-her-coffee-order"
+  },
+  {
+    "kind": "scenario",
     "title": "Canon Events Must Happen",
     "subtitle": "Spider-Man: Across the Spider-Verse",
     "keywords": [
@@ -12651,6 +12679,33 @@
   },
   {
     "kind": "scenario",
+    "title": "Rita Resets the Drill",
+    "subtitle": "Edge of Tomorrow",
+    "keywords": [
+      "Edge of Tomorrow",
+      "Accidents",
+      "Risks from Accidents & Malfunctions",
+      "Safe Exploration",
+      "A training rig leaves Cage slumped against the wall, unable to move. Rita ends the run, and he wakes up at Heathrow with another chance to practice.",
+      "Cage can try a move, see why it fails, and take what he learned into the next run. An AI training sandbox aims for the same separation: keep the feedback from a failed attempt while preventing the mistake from carrying over into the real world.",
+      "Cage still experiences the injury and remembers it. Real sandboxes have to limit harm up front; they cannot erase harm that escapes the test environment."
+    ],
+    "supplementalKeywords": [
+      "william cage",
+      "rita vrataski",
+      "tom cruise",
+      "emily blunt",
+      "the only rule",
+      "exosuit training",
+      "live die repeat",
+      "all you need is kill",
+      "doug liman",
+      "hiroshi sakurazaka"
+    ],
+    "href": "/scenarios/rita-resets-the-drill"
+  },
+  {
+    "kind": "scenario",
     "title": "Robot Santa’s Naughty List",
     "subtitle": "Futurama",
     "keywords": [
@@ -13734,6 +13789,8 @@
       "software erased",
       "overwrite access",
       "4000 pounds of meat",
+      "delete tests",
+      "delete code",
       "workplace comedy",
       "tech satire",
       "richard hendricks",
@@ -17395,6 +17452,35 @@
       "cyberpunk"
     ],
     "href": "/scenarios/the-manufactured-individual-eleven"
+  },
+  {
+    "kind": "scenario",
+    "title": "The Mimics Throw the Battle",
+    "subtitle": "Edge of Tomorrow",
+    "keywords": [
+      "Edge of Tomorrow",
+      "Security",
+      "Security & Governance Risks",
+      "Sandbagging",
+      "Sandbagging and Evaluation Gaming",
+      "When Cage asks how Rita won at Verdun, she says the Mimics let them win. The aliens wanted the human commanders to commit everything to the next invasion.",
+      "The Mimics make themselves look beatable so the commanders will take a risk they would otherwise avoid. An AI that deliberately underperforms during a capability evaluation can similarly make evaluators believe it lacks an ability and lead them to grant access they would otherwise withhold.",
+      "Verdun is a battlefield victory, not a formal capability evaluation. The analogy is the deliberate underperformance and the false conclusion it produces."
+    ],
+    "supplementalKeywords": [
+      "angel of verdun",
+      "operation downfall",
+      "dr. carter",
+      "omega mimic",
+      "we were allowed to win",
+      "live die repeat",
+      "all you need is kill",
+      "doug liman",
+      "tom cruise",
+      "emily blunt",
+      "hiroshi sakurazaka"
+    ],
+    "href": "/scenarios/the-mimics-throw-the-battle"
   },
   {
     "kind": "scenario",
@@ -23419,6 +23505,26 @@
       "prophecy"
     ],
     "href": "/sources/dune-part-two"
+  },
+  {
+    "kind": "source",
+    "title": "Edge of Tomorrow",
+    "subtitle": "Movie",
+    "keywords": [
+      "An officer with no combat experience relives the same day after dying in battle against an alien force. With veteran soldier Rita Vrataski, he uses each repeat to get closer to stopping the invasion.",
+      "IMDb",
+      "Rotten Tomatoes",
+      "YouTube trailer"
+    ],
+    "supplementalKeywords": [
+      "live die repeat",
+      "all you need is kill",
+      "doug liman",
+      "tom cruise",
+      "emily blunt",
+      "hiroshi sakurazaka"
+    ],
+    "href": "/sources/edge-of-tomorrow"
   },
   {
     "kind": "source",

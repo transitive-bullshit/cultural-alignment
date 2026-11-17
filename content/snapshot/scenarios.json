@@ -2719,7 +2719,9 @@
       "bugs removed by deletion",
       "software erased",
       "overwrite access",
-      "4000 pounds of meat"
+      "4000 pounds of meat",
+      "delete tests",
+      "delete code"
     ],
     "sourceId": "3caedb27-f124-807e-8141-dee496f8b402",
     "episode": {
@@ -25042,5 +25044,119 @@
     "scene": "The two Sams enter the hidden storage level beneath the base and discover rows of dormant copies of themselves. They are a reserve of replacement workers, ready to continue the same mining operation when an active Sam wears out.",
     "whyAnalogyWorks": "The stored copies make an uncomfortable question concrete: does being manufactured for a job, and easily replaced, make a being disposable? If future AI systems have experiences or interests that deserve moral consideration, creating another copy would not erase obligations to the current one. Lunar Industries also shows how an institution can profit from exploiting dependent workers when outside scrutiny is absent.",
     "caveats": "The Sams are biological human clones, not software, and their suffering provides no evidence that present-day AI is conscious. The analogy transfers a question about moral consideration, not an answer about which AI systems qualify. The company deliberately exploits the clones; this is not an accidental optimization failure. The clones are manufactured by others, so the scene is not an example of autonomous self-replication."
+  },
+  {
+    "id": "41bedb27-f124-813f-b2da-df123fd0c546",
+    "slug": "cage-knows-her-coffee-order",
+    "title": "Cage Knows Her Coffee Order",
+    "keywords": [
+      "three sugars",
+      "helicopter keys",
+      "william cage",
+      "rita vrataski",
+      "emily blunt",
+      "tom cruise"
+    ],
+    "sourceId": "41bedb27-f124-81ab-a872-c2a9d70b4ba4",
+    "releaseDate": "2014-05-28",
+    "featured": false,
+    "tags": [],
+    "riskFamilyIds": [
+      "3caedb27-f124-8089-af00-d8bbc69c9377"
+    ],
+    "conceptIds": [
+      "3caedb27-f124-808a-8064-fea4a24928c1"
+    ],
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/41bedb27f124813fb2dadf123fd0c546/gallery-90113417aeffa1d63dd6df949dae93f348641bdb8d28ba66e5a16ece36d49c1f.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/41bedb27f124813fb2dadf123fd0c546/detail-3abbd6d9e15f3b3ad91386a19d8b5cc4b7f659ed9ce3287b87b32d8b43fe4520.webp",
+      "width": 1920,
+      "height": 1080,
+      "alt": "Still from Edge of Tomorrow illustrating Cage Knows Her Coffee Order",
+      "blurDataURL": "data:image/webp;base64,UklGRi4AAABXRUJQVlA4ICIAAACwAQCdASoIAAUAA8BgJaQAAxZbtRMAAP71mw16bseAAAAA"
+    },
+    "memes": [],
+    "video": null,
+    "scene": "Cage puts three sugars in Rita’s coffee before she tells him how she takes it. She realizes they’ve been at the farmhouse before, and he tells her she dies here every time.",
+    "whyAnalogyWorks": "Rita sees one attempt; Cage remembers the cost of all of them. If a learner could have experiences that matter to it, a training process that records only performance could miss what repeated trials cost the learner.",
+    "caveats": "Cage is a conscious human, and his distress comes from watching someone he cares about die. A model receiving a low reward does not, by itself, show that it feels distress."
+  },
+  {
+    "id": "41bedb27-f124-81d6-9dc1-f4bd6e16e94a",
+    "slug": "the-mimics-throw-the-battle",
+    "title": "The Mimics Throw the Battle",
+    "keywords": [
+      "angel of verdun",
+      "operation downfall",
+      "dr. carter",
+      "omega mimic",
+      "we were allowed to win"
+    ],
+    "sourceId": "41bedb27-f124-81ab-a872-c2a9d70b4ba4",
+    "releaseDate": "2014-05-28",
+    "featured": false,
+    "tags": [],
+    "riskFamilyIds": [
+      "3caedb27-f124-80d8-a1de-f68271cab6e1"
+    ],
+    "conceptIds": [
+      "3caedb27-f124-80f7-b416-e59831e4e70d"
+    ],
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/41bedb27f12481d69dc1f4bd6e16e94a/gallery-004fc3ad4748197c4a1a537305c3e03c56457b13cfafb92b7df971d9e50b78c5.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/41bedb27f12481d69dc1f4bd6e16e94a/detail-39cd9313cc0d9ddf13660e775c6d358d06c0b8e9b324e7f75a3469017d706b1a.webp",
+      "width": 1920,
+      "height": 1080,
+      "alt": "Still from Edge of Tomorrow illustrating The Mimics Throw the Battle",
+      "blurDataURL": "data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAACQAQCdASoIAAUAA8BgJZwAAudGFIAA/vbg3Am0wzhGvYsNaEAAAA=="
+    },
+    "memes": [],
+    "video": {
+      "provider": "youtube",
+      "id": "Ar73MdFbINU",
+      "startSeconds": 79
+    },
+    "scene": "When Cage asks how Rita won at Verdun, she says the Mimics let them win. The aliens wanted the human commanders to commit everything to the next invasion.",
+    "whyAnalogyWorks": "The Mimics make themselves look beatable so the commanders will take a risk they would otherwise avoid. An AI that deliberately underperforms during a capability evaluation can similarly make evaluators believe it lacks an ability and lead them to grant access they would otherwise withhold.",
+    "caveats": "Verdun is a battlefield victory, not a formal capability evaluation. The analogy is the deliberate underperformance and the false conclusion it produces."
+  },
+  {
+    "id": "41bedb27-f124-81e6-94f6-deb073307836",
+    "slug": "rita-resets-the-drill",
+    "title": "Rita Resets the Drill",
+    "keywords": [
+      "william cage",
+      "rita vrataski",
+      "tom cruise",
+      "emily blunt",
+      "the only rule",
+      "exosuit training"
+    ],
+    "sourceId": "41bedb27-f124-81ab-a872-c2a9d70b4ba4",
+    "releaseDate": "2014-05-28",
+    "featured": false,
+    "tags": [],
+    "riskFamilyIds": [
+      "3caedb27-f124-8089-af00-d8bbc69c9377"
+    ],
+    "conceptIds": [
+      "3caedb27-f124-807f-8b44-c84a8fa16e72"
+    ],
+    "image": {
+      "gallerySrc": "https://assets.cultural-alignment.com/media/generated/scenarios/41bedb27f12481e694f6deb073307836/gallery-8e5d8c01c5e685477a76973ec1620a2d548f2ce0546db293fd6112ca4a5a9bf0.webp",
+      "detailSrc": "https://assets.cultural-alignment.com/media/generated/scenarios/41bedb27f12481e694f6deb073307836/detail-640fa0fc8d9a06456be59d27c6ba7493e4ce90eb763eed5fd8ae1a61775e359a.webp",
+      "width": 1920,
+      "height": 1080,
+      "alt": "Still from Edge of Tomorrow illustrating Rita Resets the Drill",
+      "blurDataURL": "data:image/webp;base64,UklGRjAAAABXRUJQVlA4ICQAAACQAQCdASoIAAUAA8BgJaQAAuWs1FgA/vRaM483HU3VV4AAAAA="
+    },
+    "memes": [],
+    "video": {
+      "provider": "youtube",
+      "id": "yKGdrhot9o0"
+    },
+    "scene": "A training rig leaves Cage slumped against the wall, unable to move. Rita ends the run, and he wakes up at Heathrow with another chance to practice.",
+    "whyAnalogyWorks": "Cage can try a move, see why it fails, and take what he learned into the next run. An AI training sandbox aims for the same separation: keep the feedback from a failed attempt while preventing the mistake from carrying over into the real world.",
+    "caveats": "Cage still experiences the injury and remembers it. Real sandboxes have to limit harm up front; they cannot erase harm that escapes the test environment."
   }
 ]
